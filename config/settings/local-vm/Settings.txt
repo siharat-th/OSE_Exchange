@@ -1,0 +1,33 @@
+Exchanges = cmeIL3.conf
+
+#NOTE: SecDefs V2 are in the appropriate config5/<environment> directory
+Cme.SecDefDir = config5/nr
+Cme.SecDefFile = cme.secdefs.nr.csv
+
+#NOTE: These have been moved to the appropriate config5/<environment> directory
+Cme.MsgwDir = config5/nr
+Cme.MsgwFile = MSGW.csv
+Cme.MsgwProductFile = prodgw.csv
+
+Affinity = 1
+AlgoAffinity = 1
+AlgoArchetype = MultiSpreader
+
+ArgoServer = 127.0.0.1
+ArgoPort = 20169
+ArgoPushPort = 21169
+
+Source = BATMAN
+Account = UD1234565
+Key = BATMAN.AKL
+
+Services.Orders = True
+Services.Algos = True
+Services.Exchanges = True
+
+Algos.Topics = ALGO/PARAMS,ALGO/ACTION,ALGO/PLMON,ALGO,ALGO/CRYPTO
+
+Orders.Topics = ORDERS,ADM,HB
+Orders.ShowMsgs = True
+
+Logger.Type = Console

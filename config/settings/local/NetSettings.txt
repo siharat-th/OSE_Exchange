@@ -1,0 +1,39 @@
+#TCP SETTINGS
+Tcp.UseDelegatedSends = True
+Tcp.UseCtpio = True
+Tcp.Affinity = 4
+Tcp.CalculateUDPLatency = False
+Tcp.EventPollLooper = 100000
+Tcp.PollWaitNs = 1000000
+Tcp.EFVI_OFFSET = 42
+
+Tcp.InterfaceA = host.docker.internal
+Tcp.InterfaceB = host.docker.internal
+Tcp.InterfaceNameA = eth0
+Tcp.InterfaceNameB = eth0
+
+Tcp.MsgBuffSize = 2048
+Tcp.RxCapacity = 64
+Tcp.RxPollCnt = 1000000
+Tcp.RxBatchSize = 16
+Tcp.TimeoutMS = 100
+Tcp.EFVI_OFFSET = 42
+
+#UDP SETTINGS
+Udp.Affinity = 5
+Udp.CalculateUDPLatency = False
+
+Udp.InterfaceA = host.docker.internal
+Udp.InterfaceB = host.docker.internal
+Udp.InterfaceNameA = eth0
+Udp.InterfaceNameB = eth0
+
+Udp.MsgBuffSize = 2048
+Udp.RxCapacity = 64
+Udp.RxBatchSize = 32
+Udp.TimeoutMS = 100
+Udp.EFVI_OFFSET = 42
+Udp.UseFeedA = True
+Udp.UseFeedB = False
+Udp.PollWaitNs = 1000000
+Udp.RxPollCnt = 1000

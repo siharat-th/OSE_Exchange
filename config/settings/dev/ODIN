@@ -1,0 +1,20 @@
+export EF_CTPIO=1
+export EF_CTPIO_MODE=ct
+export EF_CTPIO_MAX_FRAME_LEN=2048
+
+maxfds=`ulimit -Hn`
+
+if [ ${maxfds} -gt 1024 ]
+then
+  ulimit -Hn 1024
+  ulimit -Sn 1024
+else
+  ulimit -Sn ${maxfds}
+fi
+
+free && sync && echo 3 > /proc/sys/vm/drop_caches && echo "" && free
+
+export EF_RX_TIMESTAMPING=0
+export EF_TX_TIMESTAMPING=0
+
+taskset -c 2 nice --20 onload -v --profile ktn_sf ./ExchangeHandler Settings.txt 2>&1 | tee -a ./Logs/AKL-OSE-EXH.log

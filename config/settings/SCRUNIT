@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Name for the screen session
+session_name="DAGOBAH"
+
+# Command to start the application
+app_command=DAGOBAH
+
+# Start the screen session with the specified name
+screen -dmS "$session_name"
+
+# Wait for a moment to ensure the screen session is created
+sleep 1
+
+# Send the command to the screen session
+screen -S "$session_name" -X stuff "$app_command$(printf \\r)"

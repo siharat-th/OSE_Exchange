@@ -1,0 +1,291 @@
+//============================================================================
+// Name        	: OmnetSession.cpp
+// Author      	: Katana Financial
+// Copyright   	: Copyright (C) 2026 Katana Financial
+//============================================================================
+
+#include "OmnetSession.hpp"
+#include <KT01/Core/Log.hpp>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+
+#undef __CLASS__
+#define __CLASS__ "OmnetSession"
+
+namespace KTN::OSE {
+
+OmnetSession::OmnetSession()
+	: _hSession(nullptr)
+	, _ep0(0)
+	, _loggedIn(false)
+{
+	memset(&_userCode, 0, sizeof(_userCode));
+}
+
+OmnetSession::~OmnetSession()
+{
+	if (_loggedIn)
+		Logout();
+}
+
+bool OmnetSession::Login(const OseSessionSettings& sett, bool forceLogin)
+{
+	int32 txstatus = 0;
+
+	// Create session (returns handle directly, no status param)
+	_hSession = omniapi_create_session();
+	if (_hSession == nullptr)
+	{
+		KT01_LOG_ERROR(__CLASS__, "omniapi_create_session returned NULL");
+		return false;
+	}
+
+	// Build login struct
+	omni_login_t login;
+	memset(&login, 0, sizeof(login));
+
+	strncpy(login.user_s, sett.LoginId.c_str(), sizeof(login.user_s) - 1);
+	strncpy(login.pass_s, sett.Password.c_str(), sizeof(login.pass_s) - 1);
+	strncpy(login.gateway_node_s, sett.GatewayHost.c_str(), sizeof(login.gateway_node_s) - 1);
+	login.port_u = (uint32_t)sett.GatewayPort;
+
+	if (forceLogin)
+		login.forced_u = 1;  // LOGIN_FORCED
+
+	KT01_LOG_INFO(__CLASS__, "Logging in to OMnet Gateway: " + sett.GatewayHost +
+	              ":" + std::to_string(sett.GatewayPort) +
+	              " user=" + sett.LoginId +
+	              " forced=" + std::to_string(forceLogin));
+
+	// Login
+	int32 status = omniapi_login_ex(_hSession, &txstatus, &login);
+
+	// Handle password expired (2027) — auto change if NewPassword is configured
+	if (status == OMNIAPI_PWD_CHANGE_REQ)
+	{
+		KT01_LOG_INFO(__CLASS__, "Password expired (2027) — attempting password change");
+
+		if (sett.NewPassword.empty())
+		{
+			KT01_LOG_ERROR(__CLASS__, "Password expired but OSE.NewPassword not set in config!");
+			omniapi_close_session(_hSession);
+			_hSession = nullptr;
+			return false;
+		}
+
+		omni_set_password_t pwdchange;
+		memset(&pwdchange, 0, sizeof(pwdchange));
+		strncpy(pwdchange.pass_s, sett.Password.c_str(), sizeof(pwdchange.pass_s) - 1);
+		strncpy(pwdchange.new_pass_s, sett.NewPassword.c_str(), sizeof(pwdchange.new_pass_s) - 1);
+
+		int32 pwdstatus = 0;
+		int32 rc = omniapi_set_newpwd_ex(_hSession, &pwdstatus, &pwdchange);
+		if (rc != OMNIAPI_SUCCESS)
+		{
+			std::string errmsg = GetErrorMessage(rc);
+			KT01_LOG_ERROR(__CLASS__, "Password change failed: status=" + std::to_string(rc) +
+			               " txstatus=" + std::to_string(pwdstatus) + " msg=" + errmsg);
+			omniapi_close_session(_hSession);
+			_hSession = nullptr;
+			return false;
+		}
+
+		KT01_LOG_INFO(__CLASS__, "Password changed successfully! Update OSE.Password in config and remove OSE.NewPassword");
+	}
+	else if (status == OMNIAPI_PWD_IMPEND_EXP)
+	{
+		KT01_LOG_INFO(__CLASS__, "Login OK — password expiration impending (2028), consider changing soon");
+	}
+	else if (status != OMNIAPI_SUCCESS)
+	{
+		std::string errmsg = GetErrorMessage(status);
+		KT01_LOG_ERROR(__CLASS__, "omniapi_login_ex failed: status=" + std::to_string(status) +
+		               " txstatus=" + std::to_string(txstatus) + " msg=" + errmsg);
+		omniapi_close_session(_hSession);
+		_hSession = nullptr;
+		return false;
+	}
+
+	KT01_LOG_INFO(__CLASS__, "Login successful");
+
+	// Get user code
+	uint32 len = sizeof(user_code_t);
+	status = omniapi_get_info_ex(_hSession, &txstatus, OMNI_INFTYP_USERCODE, &len, (char*)&_userCode);
+	if (status != OMNIAPI_SUCCESS)
+	{
+		KT01_LOG_ERROR(__CLASS__, "Failed to get user code: " + std::to_string(status));
+	}
+
+	// Get facility EP0
+	len = sizeof(_ep0);
+	status = omniapi_get_info_ex(_hSession, &txstatus, OMNI_INFTYP_FACTYP_E0, &len, (char*)&_ep0);
+	if (status != OMNIAPI_SUCCESS)
+	{
+		KT01_LOG_ERROR(__CLASS__, "Failed to get EP0 facility: " + std::to_string(status));
+	}
+	else
+	{
+		PUTLONG(_ep0, _ep0); // Convert to host byte order
+		KT01_LOG_INFO(__CLASS__, "EP0 facility: " + std::to_string(_ep0));
+	}
+
+	_loggedIn = true;
+	return true;
+}
+
+void OmnetSession::Logout()
+{
+	if (!_loggedIn || !_hSession)
+		return;
+
+	int32 txstatus = 0;
+	int32 status = omniapi_logout_ex(_hSession, &txstatus);
+	if (status != OMNIAPI_SUCCESS)
+	{
+		KT01_LOG_ERROR(__CLASS__, "omniapi_logout_ex failed: " + std::to_string(status));
+	}
+	else
+	{
+		KT01_LOG_INFO(__CLASS__, "Logout successful");
+	}
+
+	omniapi_close_session(_hSession);
+	_hSession = nullptr;
+	_loggedIn = false;
+}
+
+int OmnetSession::SendTransaction(const void* txbuf, size_t len, uint32 facility,
+                                   uint32* txid, uint32* ordid)
+{
+	if (!_loggedIn)
+		return OMNIAPI_NOT_LOGGED_IN;
+
+	// Allocate omni_message + payload (data follows the header at msg+1)
+	omni_message* msg = (omni_message*)malloc(sizeof(omni_message) + len);
+	if (!msg)
+		return OMNIAPI_FAILURE;
+
+	msg->length_u = (uint32)len;
+	memcpy((char*)(msg + 1), txbuf, len);
+
+	// Build pointer vector (single message)
+	omni_message* msgVec[1] = { msg };
+
+	int32 txstatus = 0;
+	uint32 localTxid = 0;
+	uint32 localOrdid = 0;
+
+	int32 status = omniapi_tx_ex(_hSession, &txstatus, facility, msgVec,
+	                             txid ? txid : &localTxid,
+	                             ordid ? ordid : &localOrdid);
+
+	if (status != OMNIAPI_SUCCESS)
+	{
+		std::string errmsg = GetErrorMessage(txstatus);
+		KT01_LOG_ERROR(__CLASS__, "omniapi_tx_ex failed: status=" + std::to_string(status) +
+		               " txstatus=" + std::to_string(txstatus) + " msg=" + errmsg);
+	}
+
+	free(msg);
+	return status;
+}
+
+int OmnetSession::SendQuery(const void* qrybuf, size_t len,
+                             void* rcvbuf, size_t& rcvlen, uint32 facility,
+                             uint32* txid, uint32* ordid)
+{
+	if (!_loggedIn)
+		return OMNIAPI_NOT_LOGGED_IN;
+
+	// Build send message
+	omni_message* sndmsg = (omni_message*)malloc(sizeof(omni_message) + len);
+	if (!sndmsg)
+		return OMNIAPI_FAILURE;
+
+	sndmsg->length_u = (uint32)len;
+	memcpy((char*)(sndmsg + 1), qrybuf, len);
+
+	// Receive buffer (raw int8*)
+	char rcvbuffer[8192];
+	uint32 msglen = sizeof(rcvbuffer);
+
+	int32 txstatus = 0;
+	uint32 localTxid = 0;
+	uint32 localOrdid = 0;
+
+	int32 status = omniapi_query_ex(_hSession, &txstatus, facility, sndmsg, 1,
+	                                (int8*)rcvbuffer, &msglen,
+	                                txid ? txid : &localTxid,
+	                                ordid ? ordid : &localOrdid);
+
+	if (status == OMNIAPI_SUCCESS)
+	{
+		size_t copylen = (size_t)msglen;
+		if (copylen > rcvlen)
+			copylen = rcvlen;
+		memcpy(rcvbuf, rcvbuffer, copylen);
+		rcvlen = copylen;
+	}
+	else
+	{
+		std::string errmsg = GetErrorMessage(txstatus);
+		KT01_LOG_ERROR(__CLASS__, "omniapi_query_ex failed: status=" + std::to_string(status) +
+		               " txstatus=" + std::to_string(txstatus) + " msg=" + errmsg);
+	}
+
+	free(sndmsg);
+	return status;
+}
+
+int OmnetSession::SubscribeAll()
+{
+	if (!_loggedIn)
+		return OMNIAPI_NOT_LOGGED_IN;
+
+	// Subscribe to all authorized broadcasts (NULL buffer = all)
+	int32 status = omniapi_set_event_ex(_hSession, 1, nullptr);
+	if (status != OMNIAPI_SUCCESS && status != OMNIAPI_ALR_SET)
+	{
+		KT01_LOG_ERROR(__CLASS__, "omniapi_set_event_ex failed: " + std::to_string(status));
+	}
+	else
+	{
+		KT01_LOG_INFO(__CLASS__, "Subscribed to all broadcasts");
+	}
+
+	return status;
+}
+
+int OmnetSession::ReadEvent(void* buf, size_t& len, uint32 eventType, int32 flags)
+{
+	if (!_loggedIn)
+		return OMNIAPI_NOT_LOGGED_IN;
+
+	uint32 msglen = (uint32)len;
+	int32 evtmask = 0;
+	int32 status = omniapi_read_event_ext_ex(_hSession, eventType, (int8*)buf, &msglen, &evtmask, flags);
+
+	if (status == OMNIAPI_SUCCESS)
+		len = (size_t)msglen;
+
+	return status;
+}
+
+std::string OmnetSession::GetErrorMessage(int32 status)
+{
+	if (!_hSession)
+		return "no session";
+
+	int8 msgbuf[256];
+	memset(msgbuf, 0, sizeof(msgbuf));
+	uint32 msglen = sizeof(msgbuf);
+
+	int32 rc = omniapi_get_message_ex(_hSession, status, msgbuf, &msglen, 1);
+	if (rc == OMNIAPI_SUCCESS)
+		return std::string((char*)msgbuf, msglen);
+
+	return "unknown error " + std::to_string(status);
+}
+
+} // namespace KTN::OSE

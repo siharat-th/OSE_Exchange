@@ -1,0 +1,32 @@
+Exchanges = config/ose/oseOmnet.conf
+
+Affinity = 4
+AlgoAffinity = 5
+
+ArgoServer = 10.3.71.12
+ArgoPort = 20169
+ArgoPushPort = 21169
+
+Source = BATMAN
+Account = 086Z4
+Key = BATMAN.AKL
+
+Services.Orders = True
+Services.Algos = True
+Services.Exchanges = True
+
+Orders.Topics = ORDERS,ADM,HB
+Orders.ShowMsgs = True
+
+Ose.SecDefDir = data/
+Ose.SecDefFile = ose-secdef.csv
+
+RestApi.Server = http://127.0.0.1:8080
+
+Logger.Type = Console
+
+Slack.BaseUrl = your_slack_url
+Slack.Channel = your_channel
+Slack.Color = your_color
+Slack.Token = your_token
+Slack.Username = your_username
