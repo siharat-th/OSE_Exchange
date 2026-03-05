@@ -156,7 +156,7 @@ void OmnetSession::Logout()
 }
 
 int OmnetSession::SendTransaction(const void* txbuf, size_t len, uint32 facility,
-                                   uint32* txid, uint32* ordid)
+                                   uint32* txid, quad_word* ordid, int32* txstatus_out)
 {
 	if (!_loggedIn)
 		return OMNIAPI_NOT_LOGGED_IN;
@@ -172,19 +172,41 @@ int OmnetSession::SendTransaction(const void* txbuf, size_t len, uint32 facility
 
 	int32 txstatus = 0;
 
-	// Use int[2] (8 bytes) for txid/ordid — example code uses int[2]
-	// API may write quad_word (8 bytes) despite uint32* signature
-	int txidBuf[2] = {0, 0};
-	int ordidBuf[2] = {0, 0};
+	// quad_word for txid/ordid — API writes 8 bytes (quad_word) per apisample.c
+	quad_word txidQw;
+	quad_word ordidQw;
+	memset(&txidQw, 0, sizeof(quad_word));
+	memset(&ordidQw, 0, sizeof(quad_word));
 
 	int32 status = omniapi_tx_ex(_hSession, &txstatus, facility, &msg,
-	                             (uint32*)txidBuf, (uint32*)ordidBuf);
+	                             (uint32*)&txidQw, (uint32*)&ordidQw);
 
-	// Copy back to caller if requested
+	// Copy back to caller
 	if (txid)
-		*txid = (uint32)txidBuf[0];
+		*txid = *(uint32*)&txidQw; // low 32 bits for logging/compat
 	if (ordid)
-		*ordid = (uint32)ordidBuf[0];
+		*ordid = ordidQw; // full 8-byte quad_word
+
+	// Debug: hex dump of ordid quad_word
+	{
+		char hbuf[4];
+		std::string ordHex, txHex;
+		for (int i = 0; i < 8; ++i)
+		{
+			snprintf(hbuf, sizeof(hbuf), "%02X ", (unsigned char)ordidQw.quad_word[i]);
+			ordHex += hbuf;
+			snprintf(hbuf, sizeof(hbuf), "%02X ", (unsigned char)txidQw.quad_word[i]);
+			txHex += hbuf;
+		}
+		KT01_LOG_INFO(__CLASS__, "TX result: status=" + std::to_string(status) +
+		              " txstatus=" + std::to_string(txstatus) +
+		              " txid=" + txHex + " ordid=" + ordHex +
+		              " rsp_len=" + std::to_string(msg ? msg->length_u : 0));
+	}
+
+	// Return txstatus to caller
+	if (txstatus_out)
+		*txstatus_out = txstatus;
 
 	if (status != OMNIAPI_SUCCESS)
 	{
@@ -194,6 +216,10 @@ int OmnetSession::SendTransaction(const void* txbuf, size_t len, uint32 facility
 		               " (" + statusmsg + ")" +
 		               " txstatus=" + std::to_string(txstatus) +
 		               " (" + errmsg + ")");
+
+		// Mark session dead on fatal connection errors
+		if (status == OMNIAPI_INTFAILURE || status == OMNIAPI_NOTCONNECTED)
+			_loggedIn = false;
 	}
 
 	free(msg);

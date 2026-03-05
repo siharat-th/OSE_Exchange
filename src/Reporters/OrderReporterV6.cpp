@@ -284,7 +284,7 @@ std::string OrderReporterV6::FormatOrdersJson(std::vector<KTN::OrderPod> & ords)
 			writer.String(ord.ordernum);
 
 			writer.Key("origclordid");
-			if (KOrderExchange::isEquityVenue(ord.OrdExch) && strlen(ord.origordernum) > 0)
+			if ((KOrderExchange::isEquityVenue(ord.OrdExch) || ord.OrdExch == KOrderExchange::OSE) && strlen(ord.origordernum) > 0)
 				writer.String(ord.origordernum);
 			else
 				writer.String(ord.ordernum);
@@ -321,6 +321,14 @@ std::string OrderReporterV6::FormatOrdersJson(std::vector<KTN::OrderPod> & ords)
 				{
 					EquitySecDef def = EquitySecMaster::instance().getSecDef(ord.secid);
 					product = def.productCode;
+					symbol = def.symbol;
+					prodtype = def.prodtype;
+					break;
+				}
+				case KOrderExchange::OSE:
+				{
+					auto def = KT01::SECDEF::OSE::OseSecMaster::instance().getSecDef(static_cast<uint32_t>(ord.secid));
+					product = def.product;
 					symbol = def.symbol;
 					prodtype = def.prodtype;
 					break;

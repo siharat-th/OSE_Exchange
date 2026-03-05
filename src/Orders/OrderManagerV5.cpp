@@ -438,6 +438,17 @@ void OrderManagerV5::minOrderCancel(KTN::OrderPod& ord)
 }
 void OrderManagerV5::minOrderModify(KTN::OrderPod& ord)
 {
+	// Pre-set origordernum and ordernum on stored order before minOrderUpdate
+	// calls ProcessOrder, so the reporter can see the cancel-replace correlation
+	auto* tgt = _ords.get(ord.orderReqId);
+	if (tgt)
+	{
+		if (strlen(ord.origordernum) > 0)
+			memcpy(tgt->origordernum, ord.origordernum, sizeof(tgt->origordernum));
+		if (strlen(ord.ordernum) > 0)
+			memcpy(tgt->ordernum, ord.ordernum, sizeof(tgt->ordernum));
+	}
+
 	minOrderUpdate(ord, KOrderStatus::MODIFIED, KOrderState::WORKING);
 
 	// Apply modified price (minOrderUpdate only sets price when tgt.price==0,

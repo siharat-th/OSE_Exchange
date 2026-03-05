@@ -121,6 +121,7 @@ private:
 	void Run();
 	void ProcessOrder(KTN::OrderPod& ord);
 	void PopulateSeries(KTN::OrderPod& ord, const series_t* series);
+	bool Reconnect();
 	int BuildMO31(const KTN::OrderPod& ord, void* buf);    // New order
 	int BuildMO33(const KTN::OrderPod& ord, void* buf);    // Alter
 	int BuildMO4(const KTN::OrderPod& ord, void* buf);     // Delete

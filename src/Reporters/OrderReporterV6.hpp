@@ -24,6 +24,7 @@ using namespace KTN::Core;
 #include <KT01/SecDefs/CmeSecMasterV2.hpp>
 #include <KT01/SecDefs/CfeSecMaster.hpp>
 #include <KT01/SecDefs/EquitySecMaster.hpp>
+#include <KT01/SecDefs/OseSecMaster.hpp>
 using namespace KT01::SECDEF::CME;
 using namespace KT01::SECDEF::CFE;
 using namespace KT01::SECDEF::EQT;

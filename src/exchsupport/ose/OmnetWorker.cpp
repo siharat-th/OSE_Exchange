@@ -118,15 +118,46 @@ void OmnetWorker::Run()
 
 	// Phase 2: Order processing loop
 	KTN::OrderPod ord;
+	auto lastKeepalive = std::chrono::steady_clock::now();
+	constexpr auto KEEPALIVE_INTERVAL = std::chrono::seconds(30);
 
 	while (_active.load(std::memory_order_acquire))
 	{
 		if (_orderQueue.dequeue(ord))
 		{
 			ProcessOrder(ord);
+			lastKeepalive = std::chrono::steady_clock::now(); // TX counts as activity
 		}
 		else
 		{
+			// Check session health
+			if (!_session.IsLoggedIn())
+			{
+				KT01_LOG_ERROR(__CLASS__, "Session lost, attempting reconnect...");
+				if (Reconnect())
+					lastKeepalive = std::chrono::steady_clock::now();
+				else
+					std::this_thread::sleep_for(std::chrono::seconds(5));
+				continue;
+			}
+
+			// Periodic keepalive — prevent gateway timeout when idle
+			auto now = std::chrono::steady_clock::now();
+			if (now - lastKeepalive >= KEEPALIVE_INTERVAL)
+			{
+				int32 txstatus = 0;
+				uint32 len = sizeof(int32);
+				int32 dummy = 0;
+				int32 rc = omniapi_get_info_ex(_session.GetHandle(), &txstatus,
+				                               (uint32)OMNI_INFTYP_TXTIMEOUT, &len, (void*)&dummy);
+				if (rc != OMNIAPI_SUCCESS)
+				{
+					KT01_LOG_ERROR(__CLASS__, "Keepalive failed: " + std::to_string(rc) +
+					               " — session may be dead");
+				}
+				lastKeepalive = now;
+			}
+
 			std::this_thread::yield();
 		}
 	}
@@ -223,25 +254,148 @@ void OmnetWorker::ProcessOrder(KTN::OrderPod& ord)
 
 	// Send blocking transaction
 	uint32 txid = 0;
-	uint32 ordid = 0;
+	quad_word ordidQw;
+	memset(&ordidQw, 0, sizeof(quad_word));
+	int32 txstatus = 0;
 
-	int status = _session.SendTransaction(txbuf, txlen, _session.GetFacilityEP0(), &txid, &ordid);
+	int status = _session.SendTransaction(txbuf, txlen, _session.GetFacilityEP0(),
+	                                       &txid, &ordidQw, &txstatus);
 
 	if (status == OMNIAPI_SUCCESS)
 	{
-		if (_sett.DebugAppMsgs)
+		KT01_LOG_INFO(__CLASS__, "TX sent ok: action=" + std::to_string((int)ord.OrdAction) +
+		              " txid=" + std::to_string(txid) +
+		              " ordid=" + HexDump(ordidQw.quad_word, 8, 8) +
+		              " txstatus=" + std::to_string(txstatus));
+
+		// For MO33 (alter): exchange returns a new order_number.
+		// Send CANCEL for old exchordid first so UI removes old entry,
+		// then update exchordid to new value for the MODIFIED response.
+		uint64_t oldExchOrdId = ord.exchordid;
+
+		// Update exchordid with real exchange order_number (for NEW and MOD)
+		if (ord.OrdAction != KOrderAction::ACTION_CXL)
+			memcpy(&ord.exchordid, &ordidQw, sizeof(quad_word));
+
+		// For MOD: send a synthetic CANCEL for old exchordid so UI removes old entry
+		if (ord.OrdAction == KOrderAction::ACTION_MOD && oldExchOrdId != ord.exchordid)
 		{
-			KT01_LOG_INFO(__CLASS__, "TX sent ok: action=" + std::to_string((int)ord.OrdAction) +
-			              " txid=" + std::to_string(txid));
+			KTN::OrderPod cxlPod = ord;
+			cxlPod.exchordid = oldExchOrdId;
+			cxlPod.OrdStatus = KOrderStatus::CANCELED;
+			cxlPod.OrdState = KOrderState::COMPLETE;
+			cxlPod.leavesqty = 0;
+			_responseQueue.enqueue(cxlPod);
 		}
-		// Response will come via BO5 broadcast (handled by BdxThread)
+
+		switch (txstatus)
+		{
+		case 2: // Whole order traded (filled)
+			ord.OrdStatus = KOrderStatus::FILLED;
+			ord.OrdState = KOrderState::COMPLETE;
+			ord.lastqty = ord.quantity;
+			ord.leavesqty = 0;
+			ord.fillqty = ord.quantity;
+			break;
+		case 3: // Partially traded, nothing in book (FAK)
+			ord.OrdStatus = KOrderStatus::PARTIALLY_FILLED;
+			ord.OrdState = KOrderState::COMPLETE;
+			break;
+		case 4: // Whole order placed in orderbook
+			ord.OrdStatus = KOrderStatus::NEW;
+			ord.OrdState = KOrderState::WORKING;
+			ord.leavesqty = ord.quantity;
+			break;
+		case 6: // Partially traded, rest in orderbook
+			ord.OrdStatus = KOrderStatus::PARTIALLY_FILLED;
+			ord.OrdState = KOrderState::WORKING;
+			break;
+		case 1: // FOK rejected (no fill, no book)
+		case 17: // circuit breaker
+		case 19: // circuit breaker partial
+			ord.OrdStatus = KOrderStatus::CANCELED;
+			ord.OrdState = KOrderState::COMPLETE;
+			break;
+		default:
+			// For MO4/MO33, txstatus = number of contracts before change (or 0)
+			if (ord.OrdAction == KOrderAction::ACTION_CXL)
+			{
+				ord.OrdStatus = KOrderStatus::CANCELED;
+				ord.OrdState = KOrderState::COMPLETE;
+			}
+			else if (ord.OrdAction == KOrderAction::ACTION_MOD)
+			{
+				ord.OrdStatus = KOrderStatus::MODIFIED;
+				ord.OrdState = KOrderState::WORKING;
+			}
+			else
+			{
+				ord.OrdStatus = KOrderStatus::NEW;
+				ord.OrdState = KOrderState::WORKING;
+			}
+			break;
+		}
+		_responseQueue.enqueue(ord);
+		// BO5 broadcast will provide additional updates (fills, etc.)
 	}
 	else
 	{
-		KT01_LOG_ERROR(__CLASS__, "TX failed: status=" + std::to_string(status));
+		KT01_LOG_ERROR(__CLASS__, "TX failed: status=" + std::to_string(status) +
+		               " txstatus=" + std::to_string(txstatus));
+
+		// Session dead (-2001 or -2008) — attempt reconnect and retry once
+		if (status == OMNIAPI_INTFAILURE || status == OMNIAPI_NOT_LOGGED_IN || status == OMNIAPI_NOTCONNECTED)
+		{
+			KT01_LOG_INFO(__CLASS__, "Session lost (status=" + std::to_string(status) +
+			              "), attempting reconnect and retry...");
+			if (Reconnect())
+			{
+				// Re-lookup series (cache was rebuilt)
+				series = FindSeries(static_cast<uint32_t>(ord.secid));
+				if (series && ord.OrdAction == KOrderAction::ACTION_NEW)
+				{
+					hv_order_trans_t* trans = (hv_order_trans_t*)txbuf;
+					memcpy(&trans->series, series, sizeof(series_t));
+					PUTSHORT(trans->series.commodity_n, trans->series.commodity_n);
+					PUTSHORT(trans->series.expiration_date_n, trans->series.expiration_date_n);
+					PUTLONG(trans->series.strike_price_i, trans->series.strike_price_i);
+				}
+
+				txstatus = 0;
+				txid = 0;
+				memset(&ordidQw, 0, sizeof(quad_word));
+				int retry = _session.SendTransaction(txbuf, txlen, _session.GetFacilityEP0(),
+				                                      &txid, &ordidQw, &txstatus);
+				if (retry == OMNIAPI_SUCCESS)
+				{
+					KT01_LOG_INFO(__CLASS__, "Retry TX ok: txid=" + std::to_string(txid) +
+					              " ordid=" + HexDump(ordidQw.quad_word, 8, 8) + " txstatus=" + std::to_string(txstatus));
+					if (ord.OrdAction != KOrderAction::ACTION_CXL)
+						memcpy(&ord.exchordid, &ordidQw, sizeof(quad_word));
+					// Same txstatus handling as above
+					switch (txstatus)
+					{
+					case 2: ord.OrdStatus = KOrderStatus::FILLED; ord.OrdState = KOrderState::COMPLETE; break;
+					case 4: ord.OrdStatus = KOrderStatus::NEW; ord.OrdState = KOrderState::WORKING; break;
+					case 6: ord.OrdStatus = KOrderStatus::PARTIALLY_FILLED; ord.OrdState = KOrderState::WORKING; break;
+					case 1: case 17: case 19: ord.OrdStatus = KOrderStatus::CANCELED; ord.OrdState = KOrderState::COMPLETE; break;
+					default:
+						if (ord.OrdAction == KOrderAction::ACTION_CXL) { ord.OrdStatus = KOrderStatus::CANCELED; ord.OrdState = KOrderState::COMPLETE; }
+						else if (ord.OrdAction == KOrderAction::ACTION_MOD) { ord.OrdStatus = KOrderStatus::MODIFIED; ord.OrdState = KOrderState::WORKING; }
+						else { ord.OrdStatus = KOrderStatus::NEW; ord.OrdState = KOrderState::WORKING; }
+						break;
+					}
+					_responseQueue.enqueue(ord);
+					return;
+				}
+				KT01_LOG_ERROR(__CLASS__, "Retry TX also failed: status=" + std::to_string(retry));
+			}
+		}
+
 		ord.OrdStatus = KOrderStatus::REJECTED;
+		ord.OrdState = KOrderState::COMPLETE;
 		memset(ord.text, 0, sizeof(ord.text));
-		snprintf(ord.text, sizeof(ord.text) - 1, "omniapi_tx_ex=%d", status);
+		snprintf(ord.text, sizeof(ord.text) - 1, "omniapi_tx_ex=%d txstatus=%d", status, txstatus);
 		_responseQueue.enqueue(ord);
 	}
 }
@@ -655,6 +809,40 @@ bool OmnetWorker::SendReadyToTrade()
 	return false;
 }
 
+bool OmnetWorker::Reconnect()
+{
+	KT01_LOG_INFO(__CLASS__, "Reconnecting: logout old session...");
+	_readyToTrade.store(false, std::memory_order_release);
+	_session.Logout();
+
+	// Wait before reconnect
+	std::this_thread::sleep_for(std::chrono::seconds(2));
+
+	// Re-login (force login to break any stale session lock)
+	if (!_session.Login(_sett, true))
+	{
+		KT01_LOG_ERROR(__CLASS__, "Reconnect login failed");
+		return false;
+	}
+
+	// Re-query instruments and series
+	QueryInstruments();
+	QueryInstrumentSeries();
+
+	// Re-subscribe
+	_session.SubscribeAll();
+
+	// Re-send ready-to-trade
+	if (!SendReadyToTrade())
+	{
+		KT01_LOG_ERROR(__CLASS__, "Reconnect UI1 failed");
+		return false;
+	}
+
+	KT01_LOG_INFO(__CLASS__, "Reconnect successful");
+	return true;
+}
+
 int OmnetWorker::BuildMO31(const KTN::OrderPod& ord, void* buf)
 {
 	hv_order_trans_t* trans = (hv_order_trans_t*)buf;
@@ -735,50 +923,18 @@ int OmnetWorker::BuildMO33(const KTN::OrderPod& ord, void* buf)
 	// Order number — the exchange order ID to alter
 	memcpy(&trans->order_number_u, &ord.exchordid, sizeof(quad_word));
 
-	// Updated order variable fields
+	// For alter: 0 means "don't change this field". Only set price and quantity.
 	int64_t qty = ord.quantity;
 	PutInt64(trans->order_var.mp_quantity_i, qty);
 
 	int32_t price = static_cast<int32_t>(ord.price.AsShifted() / static_cast<int64_t>(akl::Price::Multiplier));
 	PUTLONG(trans->order_var.premium_i, price);
 
-	// Side
-	trans->order_var.bid_or_ask_c = (ord.OrdSide == KOrderSide::BUY) ? 1 : 2;
+	// All other order_var fields left as 0 = "don't change"
+	// (side, block_n, time_validity, order_type, open_close_req, etc.)
 
-	// Block number
-	uint32_t block = 1;
-	PUTLONG(trans->order_var.block_n, block);
-
-	// Open/close
-	trans->order_var.open_close_req_c = 0;
-
-	// Time validity
-	uint16_t tif = 0x0100;
-	switch (ord.OrdTif)
-	{
-	case KOrderTif::DAY: tif = 0x0100; break;
-	case KOrderTif::GTC: tif = 0x0200; break;
-	case KOrderTif::IOC: tif = 0x0300; break;
-	case KOrderTif::FOK: tif = 0x0400; break;
-	default: tif = 0x0100; break;
-	}
-	PUTSHORT(trans->order_var.time_validity_n, tif);
-
-	// Order type
-	trans->order_var.order_type_c = (ord.OrdType == KOrderType::MARKET) ? 2 : 1;
-
-	// Total volume: 0 = normal order (no hidden volume). Per MessRef p99/p103.
-	trans->total_volume_i = 0;
-
-	// Delta quantity: 1 = absolute, 2 = delta
-	trans->delta_quantity_c = 1; // absolute
-
-	// Balance quantity: 0 for alter (not used with absolute)
-	trans->balance_quantity_i = 0;
-
-	// Customer info
-	snprintf(trans->order_var.ex_client_s, sizeof(trans->order_var.ex_client_s),
-	         "%lu", (unsigned long)ord.orderReqId);
+	// Delta quantity: 1 = absolute quantity (not delta)
+	trans->delta_quantity_c = 1;
 
 	// Exchange info (ose_exchange_info_t overlay)
 	ose_exchange_info_t* exInfo = (ose_exchange_info_t*)trans->exchange_info_s;
@@ -813,6 +969,11 @@ int OmnetWorker::BuildMO4(const KTN::OrderPod& ord, void* buf)
 	// Customer info
 	snprintf(trans->customer_info_s, sizeof(trans->customer_info_s),
 	         "%lu", (unsigned long)ord.orderReqId);
+
+	// Exchange info (ose_exchange_info_t overlay)
+	ose_exchange_info_t* exInfo = (ose_exchange_info_t*)trans->exchange_info_s;
+	exInfo->acc_type_c = '0';          // '0'=Client, '9'=House
+	exInfo->tr_purpose_flag_c = ' ';   // must be space
 
 	if (_sett.DebugAppMsgs)
 	{

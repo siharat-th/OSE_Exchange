@@ -32,8 +32,10 @@ public:
 	bool IsLoggedIn() const { return _loggedIn; }
 
 	// Blocking transaction (MO31, MO33, MO4, UI1, etc.)
+	// ordid is quad_word (8 bytes) — exchange order number
 	int SendTransaction(const void* txbuf, size_t len, uint32 facility,
-	                    uint32* txid = nullptr, uint32* ordid = nullptr);
+	                    uint32* txid = nullptr, quad_word* ordid = nullptr,
+	                    int32* txstatus_out = nullptr);
 
 	// Blocking query (DQ2, DQ3, DQ7, etc.)
 	int SendQuery(const void* qrybuf, size_t len,
