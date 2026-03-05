@@ -11,9 +11,6 @@ cmake-build-*/
 CMakeFiles/
 CMakeCache.txt
 
-# Dependencies (large binaries)
-deps/
-
 # Data files
 data/
 *.csv
@@ -22,10 +19,8 @@ data/
 Logs/
 *.log
 
-# Binaries
+# Build output (not library deps)
 *.o
-*.a
-*.so
 *.exe
 *.out
 
