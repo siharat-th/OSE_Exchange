@@ -923,7 +923,7 @@ int OmnetWorker::BuildMO33(const KTN::OrderPod& ord, void* buf)
 	// Order number — the exchange order ID to alter
 	memcpy(&trans->order_number_u, &ord.exchordid, sizeof(quad_word));
 
-	// For alter: 0 means "don't change this field". Only set price and quantity.
+	// Only set the fields we want to change (0 = don't change)
 	int64_t qty = ord.quantity;
 	PutInt64(trans->order_var.mp_quantity_i, qty);
 
@@ -931,20 +931,19 @@ int OmnetWorker::BuildMO33(const KTN::OrderPod& ord, void* buf)
 	PUTLONG(trans->order_var.premium_i, price);
 
 	// All other order_var fields left as 0 = "don't change"
-	// (side, block_n, time_validity, order_type, open_close_req, etc.)
 
 	// Delta quantity: 1 = absolute quantity (not delta)
 	trans->delta_quantity_c = 1;
 
 	// Exchange info (ose_exchange_info_t overlay)
 	ose_exchange_info_t* exInfo = (ose_exchange_info_t*)trans->exchange_info_s;
-	exInfo->acc_type_c = '0';          // '0'=Client, '9'=House
-	exInfo->tr_purpose_flag_c = ' ';   // must be space for orders
+	exInfo->acc_type_c = '0';
+	exInfo->tr_purpose_flag_c = ' ';
 
 	if (_sett.DebugAppMsgs)
 	{
-		KT01_LOG_INFO(__CLASS__, "MO33: side=" + std::to_string(trans->order_var.bid_or_ask_c) +
-		              " price=" + std::to_string(price) + " qty=" + std::to_string(qty));
+		KT01_LOG_INFO(__CLASS__, "MO33: price=" + std::to_string(price) + " qty=" + std::to_string(qty) +
+		              " ordid=" + HexDump((const char*)&trans->order_number_u, 8, 8));
 	}
 
 	return sizeof(hv_alter_trans_t);
