@@ -1,0 +1,152 @@
+\doxysection{KTN\+::Id\+Gen Class Reference}
+\hypertarget{class_k_t_n_1_1_id_gen}{}\label{class_k_t_n_1_1_id_gen}\index{KTN::IdGen@{KTN::IdGen}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_k_t_n_1_1_id_gen_1_1_decoded_data}{Decoded\+Data}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_id_gen_a5e5a967a959ac2a7287aad7114c20b64}{Seed}} ()
+\item 
+int \mbox{\hyperlink{class_k_t_n_1_1_id_gen_a2d7a73c9bca47a948fbc59d82c194522}{Current}} ()
+\item 
+int \mbox{\hyperlink{class_k_t_n_1_1_id_gen_a3fcb5d6f371dc923c70b58a87a2fcc08}{Next}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{class_k_t_n_1_1_id_gen_aa43360422f200b86fff3317eb5987037}{UUID}} (int len=6)
+\item 
+static void \mbox{\hyperlink{class_k_t_n_1_1_id_gen_a9a166a9594ac595c8cebaff304f2ba69}{Gen\+Cl\+Ord\+Id10}} (char \texorpdfstring{$\ast$}{*}buffer, const std\+::string \&prefix, unsigned int int\+\_\+value)
+\item 
+static void \mbox{\hyperlink{class_k_t_n_1_1_id_gen_a9b518a2ab1e6de7c4850a3c9d784bbdb}{Append}} (char \texorpdfstring{$\ast$}{*}dest, char \texorpdfstring{$\ast$}{*}src, size\+\_\+t num\+Chars)
+\item 
+static void \mbox{\hyperlink{class_k_t_n_1_1_id_gen_ad31930dbf916da1330e728abb994e7b5}{Append\+Quick\+Char}} (char \texorpdfstring{$\ast$}{*}dest, const char \texorpdfstring{$\ast$}{*}src, uint8\+\_\+t fillnbr)
+\item 
+static void \mbox{\hyperlink{class_k_t_n_1_1_id_gen_a16c5f9ec9155801e953b89435f5d242d}{Append}} (const char \texorpdfstring{$\ast$}{*}orig, char \texorpdfstring{$\ast$}{*}dest, char \texorpdfstring{$\ast$}{*}src, size\+\_\+t num\+Chars)
+\item 
+static string \mbox{\hyperlink{class_k_t_n_1_1_id_gen_a30e9b50efbcedd16ca901bc791a42161}{Numeric\+ID}} ()
+\item 
+static uint64\+\_\+t \mbox{\hyperlink{class_k_t_n_1_1_id_gen_ae1f5554bd26a85853c463d62c4d90d11}{Req\+Id}} ()
+\item 
+static uint64\+\_\+t \mbox{\hyperlink{class_k_t_n_1_1_id_gen_a23fc6943725bbc56b8e3c4cd4b381536}{encode\+Request\+ID}} (int algo\+Base\+ID, uint64\+\_\+t unique\+Message\+ID)
+\item 
+static int \mbox{\hyperlink{class_k_t_n_1_1_id_gen_a00ac93adf084c9649e9c790ab25db1a0}{extract\+Algo\+Base\+ID}} (uint64\+\_\+t request\+ID)
+\item 
+static uint32\+\_\+t \mbox{\hyperlink{class_k_t_n_1_1_id_gen_a45cb2ecef2927f07b7d531404364d7c6}{Req\+Id24}} ()
+\item 
+static uint16\+\_\+t \mbox{\hyperlink{class_k_t_n_1_1_id_gen_a939f8d95448875edb6b103e61189fa28}{Req\+Id16}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_k_t_n_1_1_id_gen_a845f66030c35a50d6d4ab4cb382797fe}\index{KTN::IdGen@{KTN::IdGen}!IdGen@{IdGen}}
+\index{IdGen@{IdGen}!KTN::IdGen@{KTN::IdGen}}
+\doxysubsubsection{\texorpdfstring{IdGen()}{IdGen()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_id_gen_a845f66030c35a50d6d4ab4cb382797fe} 
+Id\+Gen\+::\+Id\+Gen (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_k_t_n_1_1_id_gen_af144752654047103fdaf9e50cc44e80c}\index{KTN::IdGen@{KTN::IdGen}!````~IdGen@{\texorpdfstring{$\sim$}{\string~}IdGen}}
+\index{````~IdGen@{\texorpdfstring{$\sim$}{\string~}IdGen}!KTN::IdGen@{KTN::IdGen}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}IdGen()}{\string~IdGen()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_id_gen_af144752654047103fdaf9e50cc44e80c} 
+Id\+Gen\+::\texorpdfstring{$\sim$}{\string~}\+Id\+Gen (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_id_gen_a9b518a2ab1e6de7c4850a3c9d784bbdb}\index{KTN::IdGen@{KTN::IdGen}!Append@{Append}}
+\index{Append@{Append}!KTN::IdGen@{KTN::IdGen}}
+\doxysubsubsection{\texorpdfstring{Append()}{Append()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_id_gen_a9b518a2ab1e6de7c4850a3c9d784bbdb} 
+static void KTN\+::\+Id\+Gen\+::\+Append (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{dest}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{src}{, }\item[{size\+\_\+t}]{num\+Chars}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_id_gen_a16c5f9ec9155801e953b89435f5d242d}\index{KTN::IdGen@{KTN::IdGen}!Append@{Append}}
+\index{Append@{Append}!KTN::IdGen@{KTN::IdGen}}
+\doxysubsubsection{\texorpdfstring{Append()}{Append()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_id_gen_a16c5f9ec9155801e953b89435f5d242d} 
+static void KTN\+::\+Id\+Gen\+::\+Append (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{orig}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{dest}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{src}{, }\item[{size\+\_\+t}]{num\+Chars}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_id_gen_ad31930dbf916da1330e728abb994e7b5}\index{KTN::IdGen@{KTN::IdGen}!AppendQuickChar@{AppendQuickChar}}
+\index{AppendQuickChar@{AppendQuickChar}!KTN::IdGen@{KTN::IdGen}}
+\doxysubsubsection{\texorpdfstring{AppendQuickChar()}{AppendQuickChar()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_id_gen_ad31930dbf916da1330e728abb994e7b5} 
+static void KTN\+::\+Id\+Gen\+::\+Append\+Quick\+Char (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{dest}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{src}{, }\item[{uint8\+\_\+t}]{fillnbr}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_id_gen_a2d7a73c9bca47a948fbc59d82c194522}\index{KTN::IdGen@{KTN::IdGen}!Current@{Current}}
+\index{Current@{Current}!KTN::IdGen@{KTN::IdGen}}
+\doxysubsubsection{\texorpdfstring{Current()}{Current()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_id_gen_a2d7a73c9bca47a948fbc59d82c194522} 
+int Id\+Gen\+::\+Current (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_k_t_n_1_1_id_gen_a23fc6943725bbc56b8e3c4cd4b381536}\index{KTN::IdGen@{KTN::IdGen}!encodeRequestID@{encodeRequestID}}
+\index{encodeRequestID@{encodeRequestID}!KTN::IdGen@{KTN::IdGen}}
+\doxysubsubsection{\texorpdfstring{encodeRequestID()}{encodeRequestID()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_id_gen_a23fc6943725bbc56b8e3c4cd4b381536} 
+static uint64\+\_\+t KTN\+::\+Id\+Gen\+::encode\+Request\+ID (\begin{DoxyParamCaption}\item[{int}]{algo\+Base\+ID}{, }\item[{uint64\+\_\+t}]{unique\+Message\+ID}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_id_gen_a00ac93adf084c9649e9c790ab25db1a0}\index{KTN::IdGen@{KTN::IdGen}!extractAlgoBaseID@{extractAlgoBaseID}}
+\index{extractAlgoBaseID@{extractAlgoBaseID}!KTN::IdGen@{KTN::IdGen}}
+\doxysubsubsection{\texorpdfstring{extractAlgoBaseID()}{extractAlgoBaseID()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_id_gen_a00ac93adf084c9649e9c790ab25db1a0} 
+static int KTN\+::\+Id\+Gen\+::extract\+Algo\+Base\+ID (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{request\+ID}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_id_gen_a9a166a9594ac595c8cebaff304f2ba69}\index{KTN::IdGen@{KTN::IdGen}!GenClOrdID10@{GenClOrdID10}}
+\index{GenClOrdID10@{GenClOrdID10}!KTN::IdGen@{KTN::IdGen}}
+\doxysubsubsection{\texorpdfstring{GenClOrdID10()}{GenClOrdID10()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_id_gen_a9a166a9594ac595c8cebaff304f2ba69} 
+static void KTN\+::\+Id\+Gen\+::\+Gen\+Cl\+Ord\+Id10 (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{buffer}{, }\item[{const std\+::string \&}]{prefix}{, }\item[{unsigned int}]{int\+\_\+value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_id_gen_a3fcb5d6f371dc923c70b58a87a2fcc08}\index{KTN::IdGen@{KTN::IdGen}!Next@{Next}}
+\index{Next@{Next}!KTN::IdGen@{KTN::IdGen}}
+\doxysubsubsection{\texorpdfstring{Next()}{Next()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_id_gen_a3fcb5d6f371dc923c70b58a87a2fcc08} 
+int Id\+Gen\+::\+Next (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_k_t_n_1_1_id_gen_a30e9b50efbcedd16ca901bc791a42161}\index{KTN::IdGen@{KTN::IdGen}!NumericID@{NumericID}}
+\index{NumericID@{NumericID}!KTN::IdGen@{KTN::IdGen}}
+\doxysubsubsection{\texorpdfstring{NumericID()}{NumericID()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_id_gen_a30e9b50efbcedd16ca901bc791a42161} 
+static string KTN\+::\+Id\+Gen\+::\+Numeric\+ID (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_id_gen_ae1f5554bd26a85853c463d62c4d90d11}\index{KTN::IdGen@{KTN::IdGen}!ReqId@{ReqId}}
+\index{ReqId@{ReqId}!KTN::IdGen@{KTN::IdGen}}
+\doxysubsubsection{\texorpdfstring{ReqId()}{ReqId()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_id_gen_ae1f5554bd26a85853c463d62c4d90d11} 
+static uint64\+\_\+t KTN\+::\+Id\+Gen\+::\+Req\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_id_gen_a939f8d95448875edb6b103e61189fa28}\index{KTN::IdGen@{KTN::IdGen}!ReqId16@{ReqId16}}
+\index{ReqId16@{ReqId16}!KTN::IdGen@{KTN::IdGen}}
+\doxysubsubsection{\texorpdfstring{ReqId16()}{ReqId16()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_id_gen_a939f8d95448875edb6b103e61189fa28} 
+static uint16\+\_\+t KTN\+::\+Id\+Gen\+::\+Req\+Id16 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_id_gen_a45cb2ecef2927f07b7d531404364d7c6}\index{KTN::IdGen@{KTN::IdGen}!ReqId24@{ReqId24}}
+\index{ReqId24@{ReqId24}!KTN::IdGen@{KTN::IdGen}}
+\doxysubsubsection{\texorpdfstring{ReqId24()}{ReqId24()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_id_gen_a45cb2ecef2927f07b7d531404364d7c6} 
+static uint32\+\_\+t KTN\+::\+Id\+Gen\+::\+Req\+Id24 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_id_gen_a5e5a967a959ac2a7287aad7114c20b64}\index{KTN::IdGen@{KTN::IdGen}!Seed@{Seed}}
+\index{Seed@{Seed}!KTN::IdGen@{KTN::IdGen}}
+\doxysubsubsection{\texorpdfstring{Seed()}{Seed()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_id_gen_a5e5a967a959ac2a7287aad7114c20b64} 
+void Id\+Gen\+::\+Seed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_k_t_n_1_1_id_gen_aa43360422f200b86fff3317eb5987037}\index{KTN::IdGen@{KTN::IdGen}!UUID@{UUID}}
+\index{UUID@{UUID}!KTN::IdGen@{KTN::IdGen}}
+\doxysubsubsection{\texorpdfstring{UUID()}{UUID()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_id_gen_aa43360422f200b86fff3317eb5987037} 
+static std\+::string KTN\+::\+Id\+Gen\+::\+UUID (\begin{DoxyParamCaption}\item[{int}]{len}{ = {\ttfamily 6}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Orders/Id\+Gen.\+h\item 
+Orders/Id\+Gen.\+cpp\end{DoxyCompactItemize}

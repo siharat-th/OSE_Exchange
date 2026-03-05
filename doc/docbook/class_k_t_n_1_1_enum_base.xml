@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_enum_base" xml:lang="en-US">
+<title>KTN::EnumBase&lt; Enum, Derived &gt; Class Template Reference</title>
+<indexterm><primary>KTN::EnumBase&lt; Enum, Derived &gt;</primary></indexterm>
+<para>
+
+<para>Base class for creating enum classes with string conversion support. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;EnumBase.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static constexpr std::array&lt; const char *, static_cast&lt; size_t &gt;(Derived::COUNT)&gt; <link linkend="_class_k_t_n_1_1_enum_base_1a0c6adb269175f5096fb48a7c8a9ae8d7">GetEnumStrings</link> ()</para>
+
+<para>Get an array of string representations of the enum values. </para>
+</listitem>
+            <listitem><para>static const char * <link linkend="_class_k_t_n_1_1_enum_base_1ade7182f912eb96a3ef32cfdce1425eae">ToString</link> (Enum e)</para>
+
+<para>Convert the enum value to its string representation. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;typename Enum, typename Derived&gt;<?linebreak?>class KTN::EnumBase&lt; Enum, Derived &gt;</title></simplesect>
+
+<para>Base class for creating enum classes with string conversion support. </para>
+
+
+
+<para>
+                <formalpara>
+                    <title>
+Template Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Enum</entry><entry>
+<para>The enum type. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>Derived</entry><entry>
+<para>The derived enum class. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_enum_base_1a0c6adb269175f5096fb48a7c8a9ae8d7"/><section>
+    <title>GetEnumStrings()</title>
+<indexterm><primary>GetEnumStrings</primary><secondary>KTN::EnumBase&lt; Enum, Derived &gt;</secondary></indexterm>
+<indexterm><primary>KTN::EnumBase&lt; Enum, Derived &gt;</primary><secondary>GetEnumStrings</secondary></indexterm>
+<computeroutput>template&lt;typename Enum , typename Derived &gt; </computeroutput><para><computeroutput>static constexpr std::array&lt; const char *, static_cast&lt; size_t &gt;(Derived::COUNT)&gt; <link linkend="_class_k_t_n_1_1_enum_base">KTN::EnumBase</link>&lt; Enum, Derived &gt;::GetEnumStrings ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[constexpr]</computeroutput></computeroutput></para><para>
+
+<para>Get an array of string representations of the enum values. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>constexpr std::array&lt;const char*, static_cast&lt;size_t&gt;(Derived::COUNT)&gt; The array of string representations. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_enum_base_1ade7182f912eb96a3ef32cfdce1425eae"/><section>
+    <title>ToString()</title>
+<indexterm><primary>ToString</primary><secondary>KTN::EnumBase&lt; Enum, Derived &gt;</secondary></indexterm>
+<indexterm><primary>KTN::EnumBase&lt; Enum, Derived &gt;</primary><secondary>ToString</secondary></indexterm>
+<computeroutput>template&lt;typename Enum , typename Derived &gt; </computeroutput><para><computeroutput>static const char * <link linkend="_class_k_t_n_1_1_enum_base">KTN::EnumBase</link>&lt; Enum, Derived &gt;::ToString (Enum e)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Convert the enum value to its string representation. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>e</entry><entry>
+<para>The enum value. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>const char* The string representation of the enum value. </para>
+</formalpara>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Core/EnumBase.hpp</section>
+</section>

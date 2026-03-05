@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_sess_state_msg" xml:lang="en-US">
+<title>SessStateMsg Struct Reference</title>
+<indexterm><primary>SessStateMsg</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_struct_sess_state_msg_1a3a85e6881a0b7286a21b625ec0ce4315">sessid</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_sess_state_msg_1aaeda7d980a8a15a35e38799645996235">firmid</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_sess_state_msg_1ad3ced7b982a4f650adb17fcfe4b9a14c">segid</link></para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_struct_sess_state_msg_1afe8823be862e4d75daadc594c20ea608">seqin</link></para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_struct_sess_state_msg_1a2894cb299bba730dca50352646527a92">seqout</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_sess_state_msg_1ac63d0e3a93a6f2ee482a566ac11811a0">sessioncreated</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_sess_state_msg_1a063f798d635f904632fe0ea4d4cf16a7">updatetime</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_sess_state_msg_1ac025b9d35abff54e84eb5a5e56d461fd">negotiated</link></para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_struct_sess_state_msg_1a8d4b7dce8910a0e93c64ba34e5f1c632">uuid</link></para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_struct_sess_state_msg_1ab1440de1fe88b0d3f70093f3dec099b6">previousuuid</link></para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_struct_sess_state_msg_1a00bd8b9d9edf066d916c6f24aefc3ae2">lastreqid</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_sess_state_msg_1aaeda7d980a8a15a35e38799645996235"/><section>
+    <title>firmid</title>
+<indexterm><primary>firmid</primary><secondary>SessStateMsg</secondary></indexterm>
+<indexterm><primary>SessStateMsg</primary><secondary>firmid</secondary></indexterm>
+<para><computeroutput>string SessStateMsg::firmid</computeroutput></para></section>
+<anchor xml:id="_struct_sess_state_msg_1a00bd8b9d9edf066d916c6f24aefc3ae2"/><section>
+    <title>lastreqid</title>
+<indexterm><primary>lastreqid</primary><secondary>SessStateMsg</secondary></indexterm>
+<indexterm><primary>SessStateMsg</primary><secondary>lastreqid</secondary></indexterm>
+<para><computeroutput>uint64_t SessStateMsg::lastreqid</computeroutput></para></section>
+<anchor xml:id="_struct_sess_state_msg_1ac025b9d35abff54e84eb5a5e56d461fd"/><section>
+    <title>negotiated</title>
+<indexterm><primary>negotiated</primary><secondary>SessStateMsg</secondary></indexterm>
+<indexterm><primary>SessStateMsg</primary><secondary>negotiated</secondary></indexterm>
+<para><computeroutput>bool SessStateMsg::negotiated</computeroutput></para></section>
+<anchor xml:id="_struct_sess_state_msg_1ab1440de1fe88b0d3f70093f3dec099b6"/><section>
+    <title>previousuuid</title>
+<indexterm><primary>previousuuid</primary><secondary>SessStateMsg</secondary></indexterm>
+<indexterm><primary>SessStateMsg</primary><secondary>previousuuid</secondary></indexterm>
+<para><computeroutput>uint64_t SessStateMsg::previousuuid</computeroutput></para></section>
+<anchor xml:id="_struct_sess_state_msg_1ad3ced7b982a4f650adb17fcfe4b9a14c"/><section>
+    <title>segid</title>
+<indexterm><primary>segid</primary><secondary>SessStateMsg</secondary></indexterm>
+<indexterm><primary>SessStateMsg</primary><secondary>segid</secondary></indexterm>
+<para><computeroutput>int SessStateMsg::segid</computeroutput></para></section>
+<anchor xml:id="_struct_sess_state_msg_1afe8823be862e4d75daadc594c20ea608"/><section>
+    <title>seqin</title>
+<indexterm><primary>seqin</primary><secondary>SessStateMsg</secondary></indexterm>
+<indexterm><primary>SessStateMsg</primary><secondary>seqin</secondary></indexterm>
+<para><computeroutput>uint64_t SessStateMsg::seqin</computeroutput></para></section>
+<anchor xml:id="_struct_sess_state_msg_1a2894cb299bba730dca50352646527a92"/><section>
+    <title>seqout</title>
+<indexterm><primary>seqout</primary><secondary>SessStateMsg</secondary></indexterm>
+<indexterm><primary>SessStateMsg</primary><secondary>seqout</secondary></indexterm>
+<para><computeroutput>uint64_t SessStateMsg::seqout</computeroutput></para></section>
+<anchor xml:id="_struct_sess_state_msg_1a3a85e6881a0b7286a21b625ec0ce4315"/><section>
+    <title>sessid</title>
+<indexterm><primary>sessid</primary><secondary>SessStateMsg</secondary></indexterm>
+<indexterm><primary>SessStateMsg</primary><secondary>sessid</secondary></indexterm>
+<para><computeroutput>string SessStateMsg::sessid</computeroutput></para></section>
+<anchor xml:id="_struct_sess_state_msg_1ac63d0e3a93a6f2ee482a566ac11811a0"/><section>
+    <title>sessioncreated</title>
+<indexterm><primary>sessioncreated</primary><secondary>SessStateMsg</secondary></indexterm>
+<indexterm><primary>SessStateMsg</primary><secondary>sessioncreated</secondary></indexterm>
+<para><computeroutput>string SessStateMsg::sessioncreated</computeroutput></para></section>
+<anchor xml:id="_struct_sess_state_msg_1a063f798d635f904632fe0ea4d4cf16a7"/><section>
+    <title>updatetime</title>
+<indexterm><primary>updatetime</primary><secondary>SessStateMsg</secondary></indexterm>
+<indexterm><primary>SessStateMsg</primary><secondary>updatetime</secondary></indexterm>
+<para><computeroutput>string SessStateMsg::updatetime</computeroutput></para></section>
+<anchor xml:id="_struct_sess_state_msg_1a8d4b7dce8910a0e93c64ba34e5f1c632"/><section>
+    <title>uuid</title>
+<indexterm><primary>uuid</primary><secondary>SessStateMsg</secondary></indexterm>
+<indexterm><primary>SessStateMsg</primary><secondary>uuid</secondary></indexterm>
+<para><computeroutput>uint64_t SessStateMsg::uuid</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Loggers/SessSvc.hpp</section>
+</section>

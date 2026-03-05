@@ -1,0 +1,216 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structudp__settings" xml:lang="en-US">
+<title>udp_settings Struct Reference</title>
+<indexterm><primary>udp_settings</primary></indexterm>
+<para>
+
+<para>Struct representing UDP settings. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;NetSettings.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static void <link linkend="_structudp__settings_1a285b2707eb25915a097e9a62bcf89043">Load</link> (<link linkend="_structudp__settings">udp_settings</link> &amp;ef)</para>
+
+<para>Load the UDP settings from the configuration file. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_structudp__settings_1a63e370593bd00175890aa89ed73cbc2b">Affinity</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_structudp__settings_1a6bf357e8f2813c497a6bb11482625396">CalcLatency</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structudp__settings_1a8b1da30f063b5a5affc093ac544c9416">Offset</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structudp__settings_1af1f1fdca7ced28835a4a0d3cf6ee6ed7">RxPollCnt</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structudp__settings_1a33da4e6984ed09313cd7a7c4518b1e68">PollWaitNs</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structudp__settings_1a98b4a9c64d1e5aac037dda493478dafc">RxCapacity</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structudp__settings_1a6c885756ea48ce3fbadfdf580b488146">RxBatchSize</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structudp__settings_1ac1bdb74b5fb35a5030ba215553a794ca">MsgBufSize</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structudp__settings_1ac29f250477f955f1a6458f79ba15fe7f">Timeout</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_structudp__settings_1adc8fce2468ad1a731341bdd7fda0de6b">IntfA</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_structudp__settings_1af56deca7bcc7b2d96759b6c76e843974">IntfB</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_structudp__settings_1a38faba6b9bf06c98fe63261c0a457de6">IntfNameA</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_structudp__settings_1a94fac58fc503f06941df72adbcda266d">IntfNameB</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Struct representing UDP settings. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_structudp__settings_1a285b2707eb25915a097e9a62bcf89043"/><section>
+    <title>Load()</title>
+<indexterm><primary>Load</primary><secondary>udp_settings</secondary></indexterm>
+<indexterm><primary>udp_settings</primary><secondary>Load</secondary></indexterm>
+<para><computeroutput>static void udp_settings::Load (<link linkend="_structudp__settings">udp_settings</link> &amp; ef)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Load the UDP settings from the configuration file. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ef</entry><entry>
+<para>The UDP settings object to load. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00076">Affinity</link>, <link linkend="_l00077">CalcLatency</link>, <link linkend="_l00123">Settings::get()</link>, <link linkend="_l00193">Settings::getBoolean()</link>, <link linkend="_l00133">Settings::getInteger()</link>, <link linkend="_l00087">IntfA</link>, <link linkend="_l00088">IntfB</link>, <link linkend="_l00089">IntfNameA</link>, <link linkend="_l00090">IntfNameB</link>, <link linkend="_l00084">MsgBufSize</link>, <link linkend="_l00079">Offset</link>, <link linkend="_l00081">PollWaitNs</link>, <link linkend="_l00083">RxBatchSize</link>, <link linkend="_l00082">RxCapacity</link>, <link linkend="_l00080">RxPollCnt</link>, and <link linkend="_l00085">Timeout</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structudp__settings_1a63e370593bd00175890aa89ed73cbc2b"/><section>
+    <title>Affinity</title>
+<indexterm><primary>Affinity</primary><secondary>udp_settings</secondary></indexterm>
+<indexterm><primary>udp_settings</primary><secondary>Affinity</secondary></indexterm>
+<para><computeroutput>int udp_settings::Affinity</computeroutput></para>
+<para>The affinity value. </para>
+<para>
+Referenced by <link linkend="_l00096">Load()</link>.</para>
+</section>
+<anchor xml:id="_structudp__settings_1a6bf357e8f2813c497a6bb11482625396"/><section>
+    <title>CalcLatency</title>
+<indexterm><primary>CalcLatency</primary><secondary>udp_settings</secondary></indexterm>
+<indexterm><primary>udp_settings</primary><secondary>CalcLatency</secondary></indexterm>
+<para><computeroutput>bool udp_settings::CalcLatency</computeroutput></para>
+<para>Flag indicating whether to calculate latency. </para>
+<para>
+Referenced by <link linkend="_l00096">Load()</link>.</para>
+</section>
+<anchor xml:id="_structudp__settings_1adc8fce2468ad1a731341bdd7fda0de6b"/><section>
+    <title>IntfA</title>
+<indexterm><primary>IntfA</primary><secondary>udp_settings</secondary></indexterm>
+<indexterm><primary>udp_settings</primary><secondary>IntfA</secondary></indexterm>
+<para><computeroutput>string udp_settings::IntfA</computeroutput></para>
+<para>The interface A. </para>
+<para>
+Referenced by <link linkend="_l00096">Load()</link>.</para>
+</section>
+<anchor xml:id="_structudp__settings_1af56deca7bcc7b2d96759b6c76e843974"/><section>
+    <title>IntfB</title>
+<indexterm><primary>IntfB</primary><secondary>udp_settings</secondary></indexterm>
+<indexterm><primary>udp_settings</primary><secondary>IntfB</secondary></indexterm>
+<para><computeroutput>string udp_settings::IntfB</computeroutput></para>
+<para>The interface B. </para>
+<para>
+Referenced by <link linkend="_l00096">Load()</link>.</para>
+</section>
+<anchor xml:id="_structudp__settings_1a38faba6b9bf06c98fe63261c0a457de6"/><section>
+    <title>IntfNameA</title>
+<indexterm><primary>IntfNameA</primary><secondary>udp_settings</secondary></indexterm>
+<indexterm><primary>udp_settings</primary><secondary>IntfNameA</secondary></indexterm>
+<para><computeroutput>string udp_settings::IntfNameA</computeroutput></para>
+<para>The interface name A. </para>
+<para>
+Referenced by <link linkend="_l00096">Load()</link>.</para>
+</section>
+<anchor xml:id="_structudp__settings_1a94fac58fc503f06941df72adbcda266d"/><section>
+    <title>IntfNameB</title>
+<indexterm><primary>IntfNameB</primary><secondary>udp_settings</secondary></indexterm>
+<indexterm><primary>udp_settings</primary><secondary>IntfNameB</secondary></indexterm>
+<para><computeroutput>string udp_settings::IntfNameB</computeroutput></para>
+<para>The interface name B. </para>
+<para>
+Referenced by <link linkend="_l00096">Load()</link>.</para>
+</section>
+<anchor xml:id="_structudp__settings_1ac1bdb74b5fb35a5030ba215553a794ca"/><section>
+    <title>MsgBufSize</title>
+<indexterm><primary>MsgBufSize</primary><secondary>udp_settings</secondary></indexterm>
+<indexterm><primary>udp_settings</primary><secondary>MsgBufSize</secondary></indexterm>
+<para><computeroutput>int udp_settings::MsgBufSize</computeroutput></para>
+<para>The message buffer size. </para>
+<para>
+Referenced by <link linkend="_l00096">Load()</link>.</para>
+</section>
+<anchor xml:id="_structudp__settings_1a8b1da30f063b5a5affc093ac544c9416"/><section>
+    <title>Offset</title>
+<indexterm><primary>Offset</primary><secondary>udp_settings</secondary></indexterm>
+<indexterm><primary>udp_settings</primary><secondary>Offset</secondary></indexterm>
+<para><computeroutput>int udp_settings::Offset</computeroutput></para>
+<para>The offset value. </para>
+<para>
+Referenced by <link linkend="_l00096">Load()</link>.</para>
+</section>
+<anchor xml:id="_structudp__settings_1a33da4e6984ed09313cd7a7c4518b1e68"/><section>
+    <title>PollWaitNs</title>
+<indexterm><primary>PollWaitNs</primary><secondary>udp_settings</secondary></indexterm>
+<indexterm><primary>udp_settings</primary><secondary>PollWaitNs</secondary></indexterm>
+<para><computeroutput>int udp_settings::PollWaitNs</computeroutput></para>
+<para>The poll wait time in nanoseconds. </para>
+<para>
+Referenced by <link linkend="_l00096">Load()</link>.</para>
+</section>
+<anchor xml:id="_structudp__settings_1a6c885756ea48ce3fbadfdf580b488146"/><section>
+    <title>RxBatchSize</title>
+<indexterm><primary>RxBatchSize</primary><secondary>udp_settings</secondary></indexterm>
+<indexterm><primary>udp_settings</primary><secondary>RxBatchSize</secondary></indexterm>
+<para><computeroutput>int udp_settings::RxBatchSize</computeroutput></para>
+<para>The receive batch size. </para>
+<para>
+Referenced by <link linkend="_l00096">Load()</link>.</para>
+</section>
+<anchor xml:id="_structudp__settings_1a98b4a9c64d1e5aac037dda493478dafc"/><section>
+    <title>RxCapacity</title>
+<indexterm><primary>RxCapacity</primary><secondary>udp_settings</secondary></indexterm>
+<indexterm><primary>udp_settings</primary><secondary>RxCapacity</secondary></indexterm>
+<para><computeroutput>int udp_settings::RxCapacity</computeroutput></para>
+<para>The receive capacity. </para>
+<para>
+Referenced by <link linkend="_l00096">Load()</link>.</para>
+</section>
+<anchor xml:id="_structudp__settings_1af1f1fdca7ced28835a4a0d3cf6ee6ed7"/><section>
+    <title>RxPollCnt</title>
+<indexterm><primary>RxPollCnt</primary><secondary>udp_settings</secondary></indexterm>
+<indexterm><primary>udp_settings</primary><secondary>RxPollCnt</secondary></indexterm>
+<para><computeroutput>int udp_settings::RxPollCnt</computeroutput></para>
+<para>The receive poll count. </para>
+<para>
+Referenced by <link linkend="_l00096">Load()</link>.</para>
+</section>
+<anchor xml:id="_structudp__settings_1ac29f250477f955f1a6458f79ba15fe7f"/><section>
+    <title>Timeout</title>
+<indexterm><primary>Timeout</primary><secondary>udp_settings</secondary></indexterm>
+<indexterm><primary>udp_settings</primary><secondary>Timeout</secondary></indexterm>
+<para><computeroutput>int udp_settings::Timeout</computeroutput></para>
+<para>The timeout value. </para>
+<para>
+Referenced by <link linkend="_l00096">Load()</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+KtnEfvi/NetSettings.hpp</section>
+</section>

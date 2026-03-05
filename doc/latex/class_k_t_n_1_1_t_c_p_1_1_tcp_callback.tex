@@ -1,0 +1,79 @@
+\doxysection{KTN\+::TCP\+::Tcp\+Callback Class Reference}
+\hypertarget{class_k_t_n_1_1_t_c_p_1_1_tcp_callback}{}\label{class_k_t_n_1_1_t_c_p_1_1_tcp_callback}\index{KTN::TCP::TcpCallback@{KTN::TCP::TcpCallback}}
+
+
+The \doxylink{class_k_t_n_1_1_t_c_p_1_1_tcp_callback}{Tcp\+Callback} class is an abstract base class for TCP callbacks.  
+
+
+
+
+{\ttfamily \#include $<$Tcp\+Callback.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_tcp_callback_ad6201b93348c9bacc9080276bf7b3d62}{Tcp\+Callback}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_k_t_n_1_1_t_c_p_1_1_tcp_callback}{Tcp\+Callback} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_tcp_callback_a9c946374fe5dc2db71c55b28dca625cd}{\texorpdfstring{$\sim$}{\string~}\+Tcp\+Callback}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{class_k_t_n_1_1_t_c_p_1_1_tcp_callback}{Tcp\+Callback} object. \end{DoxyCompactList}\item 
+virtual uint16\+\_\+t \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_tcp_callback_af5ffe9c3d0080414fd8c96b1c781fb4f}{on\+Recv}} (char \texorpdfstring{$\ast$}{*}data, int len, int segid, int index)=0
+\begin{DoxyCompactList}\small\item\em This method is called when data is received over TCP. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_k_t_n_1_1_t_c_p_1_1_tcp_callback}{Tcp\+Callback} class is an abstract base class for TCP callbacks. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_tcp_callback_ad6201b93348c9bacc9080276bf7b3d62}\index{KTN::TCP::TcpCallback@{KTN::TCP::TcpCallback}!TcpCallback@{TcpCallback}}
+\index{TcpCallback@{TcpCallback}!KTN::TCP::TcpCallback@{KTN::TCP::TcpCallback}}
+\doxysubsubsection{\texorpdfstring{TcpCallback()}{TcpCallback()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_tcp_callback_ad6201b93348c9bacc9080276bf7b3d62} 
+Tcp\+Callback\+::\+Tcp\+Callback (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_k_t_n_1_1_t_c_p_1_1_tcp_callback}{Tcp\+Callback} object. 
+
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_tcp_callback_a9c946374fe5dc2db71c55b28dca625cd}\index{KTN::TCP::TcpCallback@{KTN::TCP::TcpCallback}!````~TcpCallback@{\texorpdfstring{$\sim$}{\string~}TcpCallback}}
+\index{````~TcpCallback@{\texorpdfstring{$\sim$}{\string~}TcpCallback}!KTN::TCP::TcpCallback@{KTN::TCP::TcpCallback}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}TcpCallback()}{\string~TcpCallback()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_tcp_callback_a9c946374fe5dc2db71c55b28dca625cd} 
+Tcp\+Callback\+::\texorpdfstring{$\sim$}{\string~}\+Tcp\+Callback (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destroys the \doxylink{class_k_t_n_1_1_t_c_p_1_1_tcp_callback}{Tcp\+Callback} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_tcp_callback_af5ffe9c3d0080414fd8c96b1c781fb4f}\index{KTN::TCP::TcpCallback@{KTN::TCP::TcpCallback}!onRecv@{onRecv}}
+\index{onRecv@{onRecv}!KTN::TCP::TcpCallback@{KTN::TCP::TcpCallback}}
+\doxysubsubsection{\texorpdfstring{onRecv()}{onRecv()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_tcp_callback_af5ffe9c3d0080414fd8c96b1c781fb4f} 
+virtual uint16\+\_\+t KTN\+::\+TCP\+::\+Tcp\+Callback\+::on\+Recv (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{int}]{len}{, }\item[{int}]{segid}{, }\item[{int}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This method is called when data is received over TCP. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The received data. \\
+\hline
+{\em len} & The length of the received data. \\
+\hline
+{\em segid} & The segment ID. \\
+\hline
+{\em index} & The index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The response code. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Ktn\+Efvi/Tcp\+Callback.\+hpp\item 
+Ktn\+Efvi/Tcp\+Callback.\+cpp\end{DoxyCompactItemize}

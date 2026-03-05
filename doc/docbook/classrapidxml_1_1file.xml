@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classrapidxml_1_1file" xml:lang="en-US">
+<title>rapidxml::file&lt; Ch &gt; Class Template Reference</title>
+<indexterm><primary>rapidxml::file&lt; Ch &gt;</primary></indexterm>
+<para>
+
+<para>Represents data loaded from a file. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;rapidxml_utils.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classrapidxml_1_1file_1ae881a3cab1fe7152d45c92a8d7606cb3">file</link> (const char *filename)</para>
+</listitem>
+            <listitem><para><link linkend="_classrapidxml_1_1file_1a90707ccd991cc392dcf4bef37eed9d1f">file</link> (std::basic_istream&lt; Ch &gt; &amp;stream)</para>
+</listitem>
+            <listitem><para>Ch * <link linkend="_classrapidxml_1_1file_1ac22c109f867f436ca0107a349d3b49c7">data</link> ()</para>
+</listitem>
+            <listitem><para>const Ch * <link linkend="_classrapidxml_1_1file_1abdde870b80d811e2deb9194d88d12542">data</link> () const</para>
+</listitem>
+            <listitem><para>std::size_t <link linkend="_classrapidxml_1_1file_1aacd451b3def3ad056fe8342dccee35cd">size</link> () const</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;class Ch = char&gt;<?linebreak?>class rapidxml::file&lt; Ch &gt;</title></simplesect>
+
+<para>Represents data loaded from a file. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classrapidxml_1_1file_1ae881a3cab1fe7152d45c92a8d7606cb3"/><section>
+    <title>file()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>file</primary><secondary>rapidxml::file&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::file&lt; Ch &gt;</primary><secondary>file</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput><link linkend="_classrapidxml_1_1file">rapidxml::file</link>&lt; Ch &gt;::file (const char * filename)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Loads file into the memory. Data will be automatically destroyed by the destructor. 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>filename</entry><entry>
+<para>Filename to load. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00087">rapidxml::file&lt; Ch &gt;::size()</link>.</para>
+</section>
+<anchor xml:id="_classrapidxml_1_1file_1a90707ccd991cc392dcf4bef37eed9d1f"/><section>
+    <title>file()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>file</primary><secondary>rapidxml::file&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::file&lt; Ch &gt;</primary><secondary>file</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput><link linkend="_classrapidxml_1_1file">rapidxml::file</link>&lt; Ch &gt;::file (std::basic_istream&lt; Ch &gt; &amp; stream)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Loads file into the memory. Data will be automatically destroyed by the destructor 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>stream</entry><entry>
+<para>Stream to load from </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classrapidxml_1_1file_1ac22c109f867f436ca0107a349d3b49c7"/><section>
+    <title>data()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>data</primary><secondary>rapidxml::file&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::file&lt; Ch &gt;</primary><secondary>data</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput>Ch * <link linkend="_classrapidxml_1_1file">rapidxml::file</link>&lt; Ch &gt;::data ( )<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Gets file data. <formalpara><title>Returns</title>
+
+<para>Pointer to data of file. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classrapidxml_1_1file_1abdde870b80d811e2deb9194d88d12542"/><section>
+    <title>data()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>data</primary><secondary>rapidxml::file&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::file&lt; Ch &gt;</primary><secondary>data</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput>const Ch * <link linkend="_classrapidxml_1_1file">rapidxml::file</link>&lt; Ch &gt;::data ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Gets file data. <formalpara><title>Returns</title>
+
+<para>Pointer to data of file. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classrapidxml_1_1file_1aacd451b3def3ad056fe8342dccee35cd"/><section>
+    <title>size()</title>
+<indexterm><primary>size</primary><secondary>rapidxml::file&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::file&lt; Ch &gt;</primary><secondary>size</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput>std::size_t <link linkend="_classrapidxml_1_1file">rapidxml::file</link>&lt; Ch &gt;::size ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Gets file data size. <formalpara><title>Returns</title>
+
+<para>Size of file data, in characters. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00036">rapidxml::file&lt; Ch &gt;::file()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/external/rapidxml/rapidxml_utils.hpp</section>
+</section>

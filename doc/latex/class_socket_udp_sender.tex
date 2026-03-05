@@ -1,0 +1,73 @@
+\doxysection{Socket\+Udp\+Sender Class Reference}
+\hypertarget{class_socket_udp_sender}{}\label{class_socket_udp_sender}\index{SocketUdpSender@{SocketUdpSender}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_socket_udp_sender_a1e542bdbb5b2218b9084f902f473aeb2}{init}} (const char \texorpdfstring{$\ast$}{*}interface, const char \texorpdfstring{$\ast$}{*}local\+\_\+ip, uint16\+\_\+t local\+\_\+port, const char \texorpdfstring{$\ast$}{*}dest\+\_\+ip, uint16\+\_\+t dest\+\_\+port)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_socket_udp_sender_a3aa9bcd20b07f74934da9126553c81a6}{get\+Local\+Port}} ()
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_socket_udp_sender_abd9a9bcd3f377e37bcf7faf2fba5f072}{get\+Last\+Error}} ()
+\item 
+bool \mbox{\hyperlink{class_socket_udp_sender_afe59ba27dee03f84414b63fa30853cd5}{is\+Closed}} ()
+\item 
+void \mbox{\hyperlink{class_socket_udp_sender_ad04501a6d5a36820ac0203e93b742e90}{close}} (const char \texorpdfstring{$\ast$}{*}reason)
+\item 
+bool \mbox{\hyperlink{class_socket_udp_sender_a13b514b68e3040d0d35f03e7df617dfe}{write}} (const void \texorpdfstring{$\ast$}{*}data, uint32\+\_\+t size)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_socket_udp_sender_ac50ec5c827801f7163789060d4d3d4af}\index{SocketUdpSender@{SocketUdpSender}!````~SocketUdpSender@{\texorpdfstring{$\sim$}{\string~}SocketUdpSender}}
+\index{````~SocketUdpSender@{\texorpdfstring{$\sim$}{\string~}SocketUdpSender}!SocketUdpSender@{SocketUdpSender}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}SocketUdpSender()}{\string~SocketUdpSender()}}
+{\footnotesize\ttfamily \label{class_socket_udp_sender_ac50ec5c827801f7163789060d4d3d4af} 
+Socket\+Udp\+Sender\+::\texorpdfstring{$\sim$}{\string~}\+Socket\+Udp\+Sender (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_socket_udp_sender_ad04501a6d5a36820ac0203e93b742e90}\index{SocketUdpSender@{SocketUdpSender}!close@{close}}
+\index{close@{close}!SocketUdpSender@{SocketUdpSender}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily \label{class_socket_udp_sender_ad04501a6d5a36820ac0203e93b742e90} 
+void Socket\+Udp\+Sender\+::close (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{reason}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_socket_udp_sender_abd9a9bcd3f377e37bcf7faf2fba5f072}\index{SocketUdpSender@{SocketUdpSender}!getLastError@{getLastError}}
+\index{getLastError@{getLastError}!SocketUdpSender@{SocketUdpSender}}
+\doxysubsubsection{\texorpdfstring{getLastError()}{getLastError()}}
+{\footnotesize\ttfamily \label{class_socket_udp_sender_abd9a9bcd3f377e37bcf7faf2fba5f072} 
+const char \texorpdfstring{$\ast$}{*} Socket\+Udp\+Sender\+::get\+Last\+Error (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_socket_udp_sender_a3aa9bcd20b07f74934da9126553c81a6}\index{SocketUdpSender@{SocketUdpSender}!getLocalPort@{getLocalPort}}
+\index{getLocalPort@{getLocalPort}!SocketUdpSender@{SocketUdpSender}}
+\doxysubsubsection{\texorpdfstring{getLocalPort()}{getLocalPort()}}
+{\footnotesize\ttfamily \label{class_socket_udp_sender_a3aa9bcd20b07f74934da9126553c81a6} 
+uint16\+\_\+t Socket\+Udp\+Sender\+::get\+Local\+Port (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_socket_udp_sender_a1e542bdbb5b2218b9084f902f473aeb2}\index{SocketUdpSender@{SocketUdpSender}!init@{init}}
+\index{init@{init}!SocketUdpSender@{SocketUdpSender}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \label{class_socket_udp_sender_a1e542bdbb5b2218b9084f902f473aeb2} 
+bool Socket\+Udp\+Sender\+::init (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{interface}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{local\+\_\+ip}{, }\item[{uint16\+\_\+t}]{local\+\_\+port}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{dest\+\_\+ip}{, }\item[{uint16\+\_\+t}]{dest\+\_\+port}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_socket_udp_sender_afe59ba27dee03f84414b63fa30853cd5}\index{SocketUdpSender@{SocketUdpSender}!isClosed@{isClosed}}
+\index{isClosed@{isClosed}!SocketUdpSender@{SocketUdpSender}}
+\doxysubsubsection{\texorpdfstring{isClosed()}{isClosed()}}
+{\footnotesize\ttfamily \label{class_socket_udp_sender_afe59ba27dee03f84414b63fa30853cd5} 
+bool Socket\+Udp\+Sender\+::is\+Closed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_socket_udp_sender_a13b514b68e3040d0d35f03e7df617dfe}\index{SocketUdpSender@{SocketUdpSender}!write@{write}}
+\index{write@{write}!SocketUdpSender@{SocketUdpSender}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily \label{class_socket_udp_sender_a13b514b68e3040d0d35f03e7df617dfe} 
+bool Socket\+Udp\+Sender\+::write (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{uint32\+\_\+t}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sgaer/source/repos/katanafinancial/\+Occam\+CME4/\+Occam\+CME4/src/external/pollnet/Socket.\+h\end{DoxyCompactItemize}

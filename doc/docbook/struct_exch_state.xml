@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_exch_state" xml:lang="en-US">
+<title>ExchState Struct Reference</title>
+<indexterm><primary>ExchState</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_struct_exch_state_1a7a6038bb0010e8dc1dc6f984dd27ec1f">MEASURE</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_exch_state_1a54d12647ae0ba16a310a4330cd55c50e">ALGO_AFFINITY</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_exch_state_1a22c02ca72c9c29a22bf3d580a3f26201">FILENAME</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_exch_state_1a9db3cd0aca7f637216e96108d5d72a76">SOURCE</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_exch_state_1ac7b7b060835b4d6bd9c5f6d7c6e1e589">EXCHNAME</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_exch_state_1a94d3fc0abb97f1df4c35e7c326d51368">KTNACCT</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_exch_state_1a96c42e746a98385726f3cad29ec0470c">ORG</link></para>
+</listitem>
+            <listitem><para>std::atomic&lt; bool &gt; <link linkend="_struct_exch_state_1a5ad167b03eeb08d74c83492f8c5b0fcd">EVENT_WAITING</link></para>
+</listitem>
+            <listitem><para>std::atomic&lt; bool &gt; <link linkend="_struct_exch_state_1a6d59ef965842124f184d89101cdf945f">ALGO_WAITING</link></para>
+</listitem>
+            <listitem><para>std::atomic&lt; bool &gt; <link linkend="_struct_exch_state_1ae2a65c8cc7f6302b2b2c8df91a68c3d7">ACTIVE</link></para>
+</listitem>
+            <listitem><para>std::atomic&lt; bool &gt; <link linkend="_struct_exch_state_1a903e22c2335449e9df1b9bf0a401756d">ALGOS_IN_USE</link></para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_struct_exch_state_1a7dfebd0e93cb591547454512adedf181">EVENTPOLLMAX</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_exch_state_1aa4bedf35fb2a60d04e30f66899152622">USE_AUDIT</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_exch_state_1ac18193a558241ae1f9bdfb3751943c2f">logToScreen</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_exch_state_1a1a262c8466cec0d536cf183f45918c9a">KEEPALIVE</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_exch_state_1a06d5ce3e0e0bcc004201b4a2c0c7ad2f">KEEPALIVE_BUFFERMS</link></para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_struct_exch_state_1a8530258c232e9cbd206646a1370e4638">CHECK_EVENTS_TRIG</link></para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_struct_exch_state_1a6eb46304efcb185518ae523229ff55ff">CHECK_EVENT_LOOP_COUNT</link></para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_struct_exch_state_1a0f7968d1eef90da5dbde4484f023ce6b">LOOPER</link></para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_struct_exch_state_1ae30d7516fff71516dc8adb977661359a">LOOP_TRIG</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_exch_state_1a70dd16ef7b94d91017664c1896f03696">SEGCNT</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_exch_state_1ae2a65c8cc7f6302b2b2c8df91a68c3d7"/><section>
+    <title>ACTIVE</title>
+<indexterm><primary>ACTIVE</primary><secondary>ExchState</secondary></indexterm>
+<indexterm><primary>ExchState</primary><secondary>ACTIVE</secondary></indexterm>
+<para><computeroutput>std::atomic&lt;bool&gt; ExchState::ACTIVE</computeroutput></para></section>
+<anchor xml:id="_struct_exch_state_1a54d12647ae0ba16a310a4330cd55c50e"/><section>
+    <title>ALGO_AFFINITY</title>
+<indexterm><primary>ALGO_AFFINITY</primary><secondary>ExchState</secondary></indexterm>
+<indexterm><primary>ExchState</primary><secondary>ALGO_AFFINITY</secondary></indexterm>
+<para><computeroutput>int ExchState::ALGO_AFFINITY</computeroutput></para></section>
+<anchor xml:id="_struct_exch_state_1a6d59ef965842124f184d89101cdf945f"/><section>
+    <title>ALGO_WAITING</title>
+<indexterm><primary>ALGO_WAITING</primary><secondary>ExchState</secondary></indexterm>
+<indexterm><primary>ExchState</primary><secondary>ALGO_WAITING</secondary></indexterm>
+<para><computeroutput>std::atomic&lt;bool&gt; ExchState::ALGO_WAITING</computeroutput></para></section>
+<anchor xml:id="_struct_exch_state_1a903e22c2335449e9df1b9bf0a401756d"/><section>
+    <title>ALGOS_IN_USE</title>
+<indexterm><primary>ALGOS_IN_USE</primary><secondary>ExchState</secondary></indexterm>
+<indexterm><primary>ExchState</primary><secondary>ALGOS_IN_USE</secondary></indexterm>
+<para><computeroutput>std::atomic&lt;bool&gt; ExchState::ALGOS_IN_USE</computeroutput></para></section>
+<anchor xml:id="_struct_exch_state_1a6eb46304efcb185518ae523229ff55ff"/><section>
+    <title>CHECK_EVENT_LOOP_COUNT</title>
+<indexterm><primary>CHECK_EVENT_LOOP_COUNT</primary><secondary>ExchState</secondary></indexterm>
+<indexterm><primary>ExchState</primary><secondary>CHECK_EVENT_LOOP_COUNT</secondary></indexterm>
+<para><computeroutput>uint64_t ExchState::CHECK_EVENT_LOOP_COUNT</computeroutput></para></section>
+<anchor xml:id="_struct_exch_state_1a8530258c232e9cbd206646a1370e4638"/><section>
+    <title>CHECK_EVENTS_TRIG</title>
+<indexterm><primary>CHECK_EVENTS_TRIG</primary><secondary>ExchState</secondary></indexterm>
+<indexterm><primary>ExchState</primary><secondary>CHECK_EVENTS_TRIG</secondary></indexterm>
+<para><computeroutput>uint64_t ExchState::CHECK_EVENTS_TRIG</computeroutput></para></section>
+<anchor xml:id="_struct_exch_state_1a5ad167b03eeb08d74c83492f8c5b0fcd"/><section>
+    <title>EVENT_WAITING</title>
+<indexterm><primary>EVENT_WAITING</primary><secondary>ExchState</secondary></indexterm>
+<indexterm><primary>ExchState</primary><secondary>EVENT_WAITING</secondary></indexterm>
+<para><computeroutput>std::atomic&lt;bool&gt; ExchState::EVENT_WAITING</computeroutput></para></section>
+<anchor xml:id="_struct_exch_state_1a7dfebd0e93cb591547454512adedf181"/><section>
+    <title>EVENTPOLLMAX</title>
+<indexterm><primary>EVENTPOLLMAX</primary><secondary>ExchState</secondary></indexterm>
+<indexterm><primary>ExchState</primary><secondary>EVENTPOLLMAX</secondary></indexterm>
+<para><computeroutput>uint64_t ExchState::EVENTPOLLMAX</computeroutput></para></section>
+<anchor xml:id="_struct_exch_state_1ac7b7b060835b4d6bd9c5f6d7c6e1e589"/><section>
+    <title>EXCHNAME</title>
+<indexterm><primary>EXCHNAME</primary><secondary>ExchState</secondary></indexterm>
+<indexterm><primary>ExchState</primary><secondary>EXCHNAME</secondary></indexterm>
+<para><computeroutput>std::string ExchState::EXCHNAME</computeroutput></para></section>
+<anchor xml:id="_struct_exch_state_1a22c02ca72c9c29a22bf3d580a3f26201"/><section>
+    <title>FILENAME</title>
+<indexterm><primary>FILENAME</primary><secondary>ExchState</secondary></indexterm>
+<indexterm><primary>ExchState</primary><secondary>FILENAME</secondary></indexterm>
+<para><computeroutput>std::string ExchState::FILENAME</computeroutput></para></section>
+<anchor xml:id="_struct_exch_state_1a1a262c8466cec0d536cf183f45918c9a"/><section>
+    <title>KEEPALIVE</title>
+<indexterm><primary>KEEPALIVE</primary><secondary>ExchState</secondary></indexterm>
+<indexterm><primary>ExchState</primary><secondary>KEEPALIVE</secondary></indexterm>
+<para><computeroutput>int ExchState::KEEPALIVE</computeroutput></para></section>
+<anchor xml:id="_struct_exch_state_1a06d5ce3e0e0bcc004201b4a2c0c7ad2f"/><section>
+    <title>KEEPALIVE_BUFFERMS</title>
+<indexterm><primary>KEEPALIVE_BUFFERMS</primary><secondary>ExchState</secondary></indexterm>
+<indexterm><primary>ExchState</primary><secondary>KEEPALIVE_BUFFERMS</secondary></indexterm>
+<para><computeroutput>int ExchState::KEEPALIVE_BUFFERMS</computeroutput></para></section>
+<anchor xml:id="_struct_exch_state_1a94d3fc0abb97f1df4c35e7c326d51368"/><section>
+    <title>KTNACCT</title>
+<indexterm><primary>KTNACCT</primary><secondary>ExchState</secondary></indexterm>
+<indexterm><primary>ExchState</primary><secondary>KTNACCT</secondary></indexterm>
+<para><computeroutput>std::string ExchState::KTNACCT</computeroutput></para></section>
+<anchor xml:id="_struct_exch_state_1ac18193a558241ae1f9bdfb3751943c2f"/><section>
+    <title>logToScreen</title>
+<indexterm><primary>logToScreen</primary><secondary>ExchState</secondary></indexterm>
+<indexterm><primary>ExchState</primary><secondary>logToScreen</secondary></indexterm>
+<para><computeroutput>bool ExchState::logToScreen</computeroutput></para></section>
+<anchor xml:id="_struct_exch_state_1ae30d7516fff71516dc8adb977661359a"/><section>
+    <title>LOOP_TRIG</title>
+<indexterm><primary>LOOP_TRIG</primary><secondary>ExchState</secondary></indexterm>
+<indexterm><primary>ExchState</primary><secondary>LOOP_TRIG</secondary></indexterm>
+<para><computeroutput>uint64_t ExchState::LOOP_TRIG</computeroutput></para></section>
+<anchor xml:id="_struct_exch_state_1a0f7968d1eef90da5dbde4484f023ce6b"/><section>
+    <title>LOOPER</title>
+<indexterm><primary>LOOPER</primary><secondary>ExchState</secondary></indexterm>
+<indexterm><primary>ExchState</primary><secondary>LOOPER</secondary></indexterm>
+<para><computeroutput>uint64_t ExchState::LOOPER</computeroutput></para></section>
+<anchor xml:id="_struct_exch_state_1a7a6038bb0010e8dc1dc6f984dd27ec1f"/><section>
+    <title>MEASURE</title>
+<indexterm><primary>MEASURE</primary><secondary>ExchState</secondary></indexterm>
+<indexterm><primary>ExchState</primary><secondary>MEASURE</secondary></indexterm>
+<para><computeroutput>bool ExchState::MEASURE</computeroutput></para></section>
+<anchor xml:id="_struct_exch_state_1a96c42e746a98385726f3cad29ec0470c"/><section>
+    <title>ORG</title>
+<indexterm><primary>ORG</primary><secondary>ExchState</secondary></indexterm>
+<indexterm><primary>ExchState</primary><secondary>ORG</secondary></indexterm>
+<para><computeroutput>std::string ExchState::ORG</computeroutput></para></section>
+<anchor xml:id="_struct_exch_state_1a70dd16ef7b94d91017664c1896f03696"/><section>
+    <title>SEGCNT</title>
+<indexterm><primary>SEGCNT</primary><secondary>ExchState</secondary></indexterm>
+<indexterm><primary>ExchState</primary><secondary>SEGCNT</secondary></indexterm>
+<para><computeroutput>int ExchState::SEGCNT</computeroutput></para></section>
+<anchor xml:id="_struct_exch_state_1a9db3cd0aca7f637216e96108d5d72a76"/><section>
+    <title>SOURCE</title>
+<indexterm><primary>SOURCE</primary><secondary>ExchState</secondary></indexterm>
+<indexterm><primary>ExchState</primary><secondary>SOURCE</secondary></indexterm>
+<para><computeroutput>std::string ExchState::SOURCE</computeroutput></para></section>
+<anchor xml:id="_struct_exch_state_1aa4bedf35fb2a60d04e30f66899152622"/><section>
+    <title>USE_AUDIT</title>
+<indexterm><primary>USE_AUDIT</primary><secondary>ExchState</secondary></indexterm>
+<indexterm><primary>ExchState</primary><secondary>USE_AUDIT</secondary></indexterm>
+<para><computeroutput>bool ExchState::USE_AUDIT</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+ExchangeHandlers2/ExchStructs.hpp</section>
+</section>

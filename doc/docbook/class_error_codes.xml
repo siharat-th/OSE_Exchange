@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_error_codes" xml:lang="en-US">
+<title>ErrorCodes Class Reference</title>
+<indexterm><primary>ErrorCodes</primary></indexterm>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static std::string <link linkend="_class_error_codes_1a30ec358d3fdc1b7b56e8fa712c073181">getSessionErrorMessage</link> (int errorCode)</para>
+</listitem>
+            <listitem><para>static std::string <link linkend="_class_error_codes_1af034ad885bc8b311595f69902f38d902">getBusRejectErrorMessage</link> (int errorCode)</para>
+</listitem>
+            <listitem><para>static std::string <link linkend="_class_error_codes_1ab8be2cd9f4c7c585aa09069a0770123a">getTerminateMessage</link> (int errorCode)</para>
+</listitem>
+            <listitem><para>static std::string <link linkend="_class_error_codes_1a93d6a5a507ea8faac92d452fc11eeaa9">getOrderRejectMessage</link> (int errorCode)</para>
+</listitem>
+            <listitem><para>static std::string <link linkend="_class_error_codes_1a43248b6c8e9e2e0c911f6d200805a31b">getCxlRejectMessage</link> (int errorCode)</para>
+</listitem>
+            <listitem><para>static std::string <link linkend="_class_error_codes_1a52cfd6689e4aadb9ad141b745d18b792">getCxlReplaceRejectMessage</link> (int errorCode)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_error_codes_1af034ad885bc8b311595f69902f38d902"/><section>
+    <title>getBusRejectErrorMessage()</title>
+<indexterm><primary>getBusRejectErrorMessage</primary><secondary>ErrorCodes</secondary></indexterm>
+<indexterm><primary>ErrorCodes</primary><secondary>getBusRejectErrorMessage</secondary></indexterm>
+<para><computeroutput>std::string ErrorCodes::getBusRejectErrorMessage (int errorCode)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_error_codes_1a43248b6c8e9e2e0c911f6d200805a31b"/><section>
+    <title>getCxlRejectMessage()</title>
+<indexterm><primary>getCxlRejectMessage</primary><secondary>ErrorCodes</secondary></indexterm>
+<indexterm><primary>ErrorCodes</primary><secondary>getCxlRejectMessage</secondary></indexterm>
+<para><computeroutput>std::string ErrorCodes::getCxlRejectMessage (int errorCode)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_error_codes_1a52cfd6689e4aadb9ad141b745d18b792"/><section>
+    <title>getCxlReplaceRejectMessage()</title>
+<indexterm><primary>getCxlReplaceRejectMessage</primary><secondary>ErrorCodes</secondary></indexterm>
+<indexterm><primary>ErrorCodes</primary><secondary>getCxlReplaceRejectMessage</secondary></indexterm>
+<para><computeroutput>std::string ErrorCodes::getCxlReplaceRejectMessage (int errorCode)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_error_codes_1a93d6a5a507ea8faac92d452fc11eeaa9"/><section>
+    <title>getOrderRejectMessage()</title>
+<indexterm><primary>getOrderRejectMessage</primary><secondary>ErrorCodes</secondary></indexterm>
+<indexterm><primary>ErrorCodes</primary><secondary>getOrderRejectMessage</secondary></indexterm>
+<para><computeroutput>std::string ErrorCodes::getOrderRejectMessage (int errorCode)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_error_codes_1a30ec358d3fdc1b7b56e8fa712c073181"/><section>
+    <title>getSessionErrorMessage()</title>
+<indexterm><primary>getSessionErrorMessage</primary><secondary>ErrorCodes</secondary></indexterm>
+<indexterm><primary>ErrorCodes</primary><secondary>getSessionErrorMessage</secondary></indexterm>
+<para><computeroutput>std::string ErrorCodes::getSessionErrorMessage (int errorCode)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_error_codes_1ab8be2cd9f4c7c585aa09069a0770123a"/><section>
+    <title>getTerminateMessage()</title>
+<indexterm><primary>getTerminateMessage</primary><secondary>ErrorCodes</secondary></indexterm>
+<indexterm><primary>ErrorCodes</primary><secondary>getTerminateMessage</secondary></indexterm>
+<para><computeroutput>std::string ErrorCodes::getTerminateMessage (int errorCode)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+exchsupport/cme/il3/IL3ErrorCodes.hppexchsupport/cme/il3/IL3ErrorCodes.cpp</section>
+</section>

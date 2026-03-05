@@ -1,0 +1,57 @@
+\doxysection{Menu\+Factory Class Reference}
+\hypertarget{class_menu_factory}{}\label{class_menu_factory}\index{MenuFactory@{MenuFactory}}
+
+
+The \doxylink{class_menu_factory}{Menu\+Factory} class is responsible for creating instances of \doxylink{class_i_menu}{IMenu} based on the logger type.  
+
+
+
+
+{\ttfamily \#include $<$Menu\+Factory.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_menu}{IMenu}} $>$ \mbox{\hyperlink{class_menu_factory_a97d58db772608684071656725a56ee02}{create\+Menu}} (\mbox{\hyperlink{class_menu_callback}{Menu\+Callback}} \&callback, std\+::string file, std\+::string name)
+\begin{DoxyCompactList}\small\item\em create\+Menu creates an instance of \doxylink{class_i_menu}{IMenu} based on the logger type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_menu_factory}{Menu\+Factory} class is responsible for creating instances of \doxylink{class_i_menu}{IMenu} based on the logger type. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_menu_factory_a97d58db772608684071656725a56ee02}\index{MenuFactory@{MenuFactory}!createMenu@{createMenu}}
+\index{createMenu@{createMenu}!MenuFactory@{MenuFactory}}
+\doxysubsubsection{\texorpdfstring{createMenu()}{createMenu()}}
+{\footnotesize\ttfamily \label{class_menu_factory_a97d58db772608684071656725a56ee02} 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_menu}{IMenu}} $>$ Menu\+Factory\+::create\+Menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_menu_callback}{Menu\+Callback}} \&}]{callback}{, }\item[{std\+::string}]{file}{, }\item[{std\+::string}]{name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+create\+Menu creates an instance of \doxylink{class_i_menu}{IMenu} based on the logger type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback} & The callback function for the menu. \\
+\hline
+{\em file} & The file name. \\
+\hline
+{\em name} & The menu name. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A shared pointer to the created \doxylink{class_i_menu}{IMenu} instance. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00123}{Settings\+::get()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00028}{Menu\+::\+Menu()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Menu/Menu\+Factory.\+hpp\end{DoxyCompactItemize}

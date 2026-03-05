@@ -1,0 +1,93 @@
+\doxysection{KTN\+::Core\+::Order\+Pod\+Pool2 Class Reference}
+\hypertarget{class_k_t_n_1_1_core_1_1_order_pod_pool2}{}\label{class_k_t_n_1_1_core_1_1_order_pod_pool2}\index{KTN::Core::OrderPodPool2@{KTN::Core::OrderPodPool2}}
+
+
+A pool of \doxylink{struct_k_t_n_1_1_order_pod}{Order\+Pod} objects for efficient memory management.  
+
+
+
+
+{\ttfamily \#include $<$Order\+Pod\+Pool2.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_core_1_1_order_pod_pool2_ab171eef4f23c2a1699cbd2789bc0eb5e}{Order\+Pod\+Pool2}} (size\+\_\+t pool\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{class_k_t_n_1_1_core_1_1_order_pod_pool2}{Order\+Pod\+Pool2} object with the specified pool size. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_k_t_n_1_1_core_1_1_order_pod_pool2_a762df0e3ee6a6d6746b38d8e760a2ef8}{\texorpdfstring{$\sim$}{\string~}\+Order\+Pod\+Pool2}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{class_k_t_n_1_1_core_1_1_order_pod_pool2}{Order\+Pod\+Pool2} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{Order\+Pod}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_order_pod_pool2_aa27530ef85e95b5ed06ef382087ed1c4}{get}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves an \doxylink{struct_k_t_n_1_1_order_pod}{Order\+Pod} object from the pool. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_order_pod_pool2_aa1a5db9a47a102e0526c3ee57fb93f45}{put}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{Order\+Pod}} \texorpdfstring{$\ast$}{*}buffer)
+\begin{DoxyCompactList}\small\item\em Returns an \doxylink{struct_k_t_n_1_1_order_pod}{Order\+Pod} object to the pool. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A pool of \doxylink{struct_k_t_n_1_1_order_pod}{Order\+Pod} objects for efficient memory management. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_k_t_n_1_1_core_1_1_order_pod_pool2_ab171eef4f23c2a1699cbd2789bc0eb5e}\index{KTN::Core::OrderPodPool2@{KTN::Core::OrderPodPool2}!OrderPodPool2@{OrderPodPool2}}
+\index{OrderPodPool2@{OrderPodPool2}!KTN::Core::OrderPodPool2@{KTN::Core::OrderPodPool2}}
+\doxysubsubsection{\texorpdfstring{OrderPodPool2()}{OrderPodPool2()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_order_pod_pool2_ab171eef4f23c2a1699cbd2789bc0eb5e} 
+Order\+Pod\+Pool2\+::\+Order\+Pod\+Pool2 (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{pool\+\_\+size}{}\end{DoxyParamCaption})}
+
+
+
+Constructs an \doxylink{class_k_t_n_1_1_core_1_1_order_pod_pool2}{Order\+Pod\+Pool2} object with the specified pool size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pool\+\_\+size} & The size of the pool. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_core_1_1_order_pod_pool2_a762df0e3ee6a6d6746b38d8e760a2ef8}\index{KTN::Core::OrderPodPool2@{KTN::Core::OrderPodPool2}!````~OrderPodPool2@{\texorpdfstring{$\sim$}{\string~}OrderPodPool2}}
+\index{````~OrderPodPool2@{\texorpdfstring{$\sim$}{\string~}OrderPodPool2}!KTN::Core::OrderPodPool2@{KTN::Core::OrderPodPool2}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}OrderPodPool2()}{\string~OrderPodPool2()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_order_pod_pool2_a762df0e3ee6a6d6746b38d8e760a2ef8} 
+Order\+Pod\+Pool2\+::\texorpdfstring{$\sim$}{\string~}\+Order\+Pod\+Pool2 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destroys the \doxylink{class_k_t_n_1_1_core_1_1_order_pod_pool2}{Order\+Pod\+Pool2} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_core_1_1_order_pod_pool2_aa27530ef85e95b5ed06ef382087ed1c4}\index{KTN::Core::OrderPodPool2@{KTN::Core::OrderPodPool2}!get@{get}}
+\index{get@{get}!KTN::Core::OrderPodPool2@{KTN::Core::OrderPodPool2}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_order_pod_pool2_aa27530ef85e95b5ed06ef382087ed1c4} 
+\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{Order\+Pod}} \texorpdfstring{$\ast$}{*} Order\+Pod\+Pool2\+::get (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves an \doxylink{struct_k_t_n_1_1_order_pod}{Order\+Pod} object from the pool. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the retrieved \doxylink{struct_k_t_n_1_1_order_pod}{Order\+Pod} object, or nullptr if the pool is empty. 
+\end{DoxyReturn}
+\Hypertarget{class_k_t_n_1_1_core_1_1_order_pod_pool2_aa1a5db9a47a102e0526c3ee57fb93f45}\index{KTN::Core::OrderPodPool2@{KTN::Core::OrderPodPool2}!put@{put}}
+\index{put@{put}!KTN::Core::OrderPodPool2@{KTN::Core::OrderPodPool2}}
+\doxysubsubsection{\texorpdfstring{put()}{put()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_order_pod_pool2_aa1a5db9a47a102e0526c3ee57fb93f45} 
+bool Order\+Pod\+Pool2\+::put (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{Order\+Pod}} \texorpdfstring{$\ast$}{*}}]{buffer}{}\end{DoxyParamCaption})}
+
+
+
+Returns an \doxylink{struct_k_t_n_1_1_order_pod}{Order\+Pod} object to the pool. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & A pointer to the \doxylink{struct_k_t_n_1_1_order_pod}{Order\+Pod} object to be returned. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the \doxylink{struct_k_t_n_1_1_order_pod}{Order\+Pod} object was successfully returned to the pool, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Orders/Order\+Pod\+Pool2.\+hpp\item 
+Orders/Order\+Pod\+Pool2.\+cpp\end{DoxyCompactItemize}

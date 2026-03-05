@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classzmq_1_1error__t" xml:lang="en-US">
+<title>zmq::error_t Class Reference</title>
+<indexterm><primary>zmq::error_t</primary></indexterm>
+<para>Inheritance diagram for zmq::error_t:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classzmq_1_1error__t.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual const char * <link linkend="_classzmq_1_1error__t_1a00db07db3eeb058e9910a9946c7117b9">what</link> () const ZMQ_NOTHROW ZMQ_OVERRIDE</para>
+</listitem>
+            <listitem><para>int <link linkend="_classzmq_1_1error__t_1ae00a46348c472c0d3355e59ab9b6aaf8">num</link> () const</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classzmq_1_1error__t_1a9baffe79d9a187a5bbd2d6c23aceda92"/><section>
+    <title>error_t()</title>
+<indexterm><primary>error_t</primary><secondary>zmq::error_t</secondary></indexterm>
+<indexterm><primary>zmq::error_t</primary><secondary>error_t</secondary></indexterm>
+<para><computeroutput>zmq::error_t::error_t ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classzmq_1_1error__t_1ae00a46348c472c0d3355e59ab9b6aaf8"/><section>
+    <title>num()</title>
+<indexterm><primary>num</primary><secondary>zmq::error_t</secondary></indexterm>
+<indexterm><primary>zmq::error_t</primary><secondary>num</secondary></indexterm>
+<para><computeroutput>int zmq::error_t::num ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1error__t_1a00db07db3eeb058e9910a9946c7117b9"/><section>
+    <title>what()</title>
+<indexterm><primary>what</primary><secondary>zmq::error_t</secondary></indexterm>
+<indexterm><primary>zmq::error_t</primary><secondary>what</secondary></indexterm>
+<para><computeroutput>virtual const char * zmq::error_t::what ( ) const<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+ZMQ/zmq.hpp</section>
+</section>

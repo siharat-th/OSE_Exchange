@@ -1,0 +1,797 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_risk_limits" xml:lang="en-US">
+<title>RiskLimits Class Reference</title>
+<indexterm><primary>RiskLimits</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_risk_limits">RiskLimits</link> class represents the risk limits for a particular trading account. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;RiskLimits.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_risk_limits_1a43c16e1b5a2f7f404ce68ecfe912e7a8">RiskLimits</link> ()</para>
+
+<para>Constructs a new <link linkend="_class_risk_limits">RiskLimits</link> object. </para>
+</listitem>
+            <listitem><para><link linkend="_class_risk_limits_1aedf6973f8efa86ada6bf535a6a067fef">~RiskLimits</link> ()</para>
+
+<para>Destroys the <link linkend="_class_risk_limits">RiskLimits</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_risk_limits_1a219839387e10292ec21d59ca2071bad1">Update</link> (int enable, std::string acro, std::string prod, std::string prodtype, std::string exch, int iMaxOrderSize, int iMaxLong, int iMaxShort, int iMaxBuyOpen, int iMaxSellOpen, int iLogLevel)</para>
+
+<para>Updates the risk limits with the specified parameters. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_risk_limits_1a176bb2a8ea17a977809941508660bb84">LogLevel</link> (int iLogLevel)</para>
+
+<para>Sets the log level. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_risk_limits_1a4a8488c7dd9eb21fc65eb0624ec3e174">SetEnable</link> (bool enable)</para>
+
+<para>Sets the enable flag to enable or disable the risk limits. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_risk_limits_1af5a55526b5ff86ca0ae5d7937c9e11ef"/>void <emphasis role="strong">CreateKey</emphasis> ()</para>
+
+<para>Creates a key for the risk limits. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_risk_limits_1a9fa14da4aaa04ccfb466948c10a9a042">OK</link> ()</para>
+
+<para>Checks if the risk limits are within acceptable limits. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_risk_limits_1a47b2323ecde1255279f5f059b678401c">CheckPos</link> ()</para>
+
+<para>Checks if the current position is within acceptable limits. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_risk_limits_1ab32fde429096fcea47322c8ec33e4b30">CheckOrds</link> (bool bIsBid)</para>
+
+<para>Checks if the order quantity is within acceptable limits. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_risk_limits_1a85f7494f2849aeb1bd4873510acc0de7">Print</link> (bool current_risk_only=false)</para>
+
+<para>Prints the risk limits. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_risk_limits_1a33938776640601f35d99ea8f89fb2db3">LegalSize</link> (int iOrderQty)</para>
+
+<para>Checks if the order size is within legal limits. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_risk_limits_1a424c7fa419867263d96b952c2b237820">GotFill</link> (int iFillSize, bool bIsBuy)</para>
+
+<para>Updates the risk limits based on a fill. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_risk_limits_1a1dc02c7cb2f843737942d75cfdcb6cd8">GotOrder</link> (int iSize, bool bIsBid, bool bIsCxl)</para>
+
+<para>Updates the risk limits based on an order. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_risk_limits_1a16852c624231043c3cd63ce69e4b227e">NetPos</link> ()</para>
+
+<para>Calculates the net position. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_risk_limits_1a6eb82a2ada7c4a0ee2b2da8e3f693273">GetMaxContracts</link> (bool bIsBid)</para>
+
+<para>Gets the maximum number of contracts for the specified bid/ask. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_risk_limits_1aea914526541f958de67470cb1f117638">GetOrderCount</link> (bool bIsBid)</para>
+
+<para>Gets the number of orders for the specified bid/ask. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_risk_limits_1a1c10f7599e9730ea9ba6b6f4a0cbd88d">GetPosition</link> (bool bIsBid)</para>
+
+<para>Gets the position for the specified bid/ask. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_risk_limits_1ab17a9760b4a9da62453a0ffb939c2019">GetMaxOrderSize</link> ()</para>
+
+<para>Gets the maximum order size. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_risk_limits_1ae570a819d0e6b5230de6961f3da056f4">WillMaxOut</link> (bool bIsBid, int iAdd)</para>
+
+<para>Checks if adding the specified quantity to the bid/ask will exceed the maximum limits. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_class_risk_limits_1a10c0c48468439a798f0ff6742ea21cde">acronym</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_class_risk_limits_1a6c987cefdca9df052d7bc4d99a248771">account</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_class_risk_limits_1aecebb71b75756bc29835ddedf13c62f0">product</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_class_risk_limits_1ab9830da07796ed4149aaad7d654bb13f">producttype</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_class_risk_limits_1adf12ddd23e3b434fdcb6d1ab9b362482">exchange</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_risk_limits_1a00565aaff8730004846437e79e2ba2c1">max_order_qty</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_risk_limits_1a757a2064e7487fdb9b324a827021da05">max_open_qty_buy</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_risk_limits_1a792a9c2fcd746d9907927d1e8bf6bf9b">max_open_qty_sell</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_risk_limits_1ae97e69ff5977667a9069c3b5218c958a">max_pos_long</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_risk_limits_1a79ef299e4b7b81c477df0b322272bb1e">max_pos_short</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_risk_limits_1a9e35845ff3447b77beb3f7cea10463b8">curr_open_qty_buy</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_risk_limits_1a70a102f2075f304b935817cb08691cfb">curr_open_qty_sell</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_risk_limits_1abd9e9a221801f21ba44f010528e78a80">curr_pos_long</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_risk_limits_1a09c03f1b9c1816e3e0560915100333b2">curr_pos_short</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_risk_limits_1a14e0c92ef62eec7aa897d155d501bbc7">enabled</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_class_risk_limits_1a37f9f45e526571ca5736718269b566db">keyvalue</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_risk_limits_1a244917f127e6128c734064051eff2c65">hasData</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_risk_limits">RiskLimits</link> class represents the risk limits for a particular trading account. </para>
+
+
+
+<para>The <link linkend="_class_risk_limits">RiskLimits</link> class provides methods to update the risk limits, set the log level, enable/disable the risk limits, check various risk conditions, and perform other operations related to risk management. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_risk_limits_1a43c16e1b5a2f7f404ce68ecfe912e7a8"/><section>
+    <title>RiskLimits()</title>
+<indexterm><primary>RiskLimits</primary><secondary>RiskLimits</secondary></indexterm>
+<indexterm><primary>RiskLimits</primary><secondary>RiskLimits</secondary></indexterm>
+<para><computeroutput>RiskLimits::RiskLimits ( )</computeroutput></para><para>
+
+<para>Constructs a new <link linkend="_class_risk_limits">RiskLimits</link> object. </para>
+</para>
+</section>
+<anchor xml:id="_class_risk_limits_1aedf6973f8efa86ada6bf535a6a067fef"/><section>
+    <title>~RiskLimits()</title>
+<indexterm><primary>~RiskLimits</primary><secondary>RiskLimits</secondary></indexterm>
+<indexterm><primary>RiskLimits</primary><secondary>~RiskLimits</secondary></indexterm>
+<para><computeroutput>RiskLimits::~RiskLimits ( )</computeroutput></para><para>
+
+<para>Destroys the <link linkend="_class_risk_limits">RiskLimits</link> object. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_risk_limits_1ab32fde429096fcea47322c8ec33e4b30"/><section>
+    <title>CheckOrds()</title>
+<indexterm><primary>CheckOrds</primary><secondary>RiskLimits</secondary></indexterm>
+<indexterm><primary>RiskLimits</primary><secondary>CheckOrds</secondary></indexterm>
+<para><computeroutput>bool RiskLimits::CheckOrds (bool bIsBid)</computeroutput></para><para>
+
+<para>Checks if the order quantity is within acceptable limits. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>bIsBid</entry><entry>
+<para>A flag indicating whether the order is a bid or ask. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the order quantity is within acceptable limits, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_risk_limits_1a47b2323ecde1255279f5f059b678401c"/><section>
+    <title>CheckPos()</title>
+<indexterm><primary>CheckPos</primary><secondary>RiskLimits</secondary></indexterm>
+<indexterm><primary>RiskLimits</primary><secondary>CheckPos</secondary></indexterm>
+<para><computeroutput>bool RiskLimits::CheckPos ( )</computeroutput></para><para>
+
+<para>Checks if the current position is within acceptable limits. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>True if the current position is within acceptable limits, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_risk_limits_1a6eb82a2ada7c4a0ee2b2da8e3f693273"/><section>
+    <title>GetMaxContracts()</title>
+<indexterm><primary>GetMaxContracts</primary><secondary>RiskLimits</secondary></indexterm>
+<indexterm><primary>RiskLimits</primary><secondary>GetMaxContracts</secondary></indexterm>
+<para><computeroutput>int RiskLimits::GetMaxContracts (bool bIsBid)</computeroutput></para><para>
+
+<para>Gets the maximum number of contracts for the specified bid/ask. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>bIsBid</entry><entry>
+<para>A flag indicating whether the bid/ask is a bid or ask. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The maximum number of contracts. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_risk_limits_1ab17a9760b4a9da62453a0ffb939c2019"/><section>
+    <title>GetMaxOrderSize()</title>
+<indexterm><primary>GetMaxOrderSize</primary><secondary>RiskLimits</secondary></indexterm>
+<indexterm><primary>RiskLimits</primary><secondary>GetMaxOrderSize</secondary></indexterm>
+<para><computeroutput>int RiskLimits::GetMaxOrderSize ( )</computeroutput></para><para>
+
+<para>Gets the maximum order size. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The maximum order size. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_risk_limits_1aea914526541f958de67470cb1f117638"/><section>
+    <title>GetOrderCount()</title>
+<indexterm><primary>GetOrderCount</primary><secondary>RiskLimits</secondary></indexterm>
+<indexterm><primary>RiskLimits</primary><secondary>GetOrderCount</secondary></indexterm>
+<para><computeroutput>int RiskLimits::GetOrderCount (bool bIsBid)</computeroutput></para><para>
+
+<para>Gets the number of orders for the specified bid/ask. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>bIsBid</entry><entry>
+<para>A flag indicating whether the bid/ask is a bid or ask. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The number of orders. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_risk_limits_1a1c10f7599e9730ea9ba6b6f4a0cbd88d"/><section>
+    <title>GetPosition()</title>
+<indexterm><primary>GetPosition</primary><secondary>RiskLimits</secondary></indexterm>
+<indexterm><primary>RiskLimits</primary><secondary>GetPosition</secondary></indexterm>
+<para><computeroutput>int RiskLimits::GetPosition (bool bIsBid)</computeroutput></para><para>
+
+<para>Gets the position for the specified bid/ask. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>bIsBid</entry><entry>
+<para>A flag indicating whether the bid/ask is a bid or ask. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The position. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_risk_limits_1a424c7fa419867263d96b952c2b237820"/><section>
+    <title>GotFill()</title>
+<indexterm><primary>GotFill</primary><secondary>RiskLimits</secondary></indexterm>
+<indexterm><primary>RiskLimits</primary><secondary>GotFill</secondary></indexterm>
+<para><computeroutput>void RiskLimits::GotFill (int iFillSize, bool bIsBuy)</computeroutput></para><para>
+
+<para>Updates the risk limits based on a fill. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>iFillSize</entry><entry>
+<para>The fill size. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>bIsBuy</entry><entry>
+<para>A flag indicating whether the fill is a buy or sell. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Referenced by <link linkend="_l00401">KTN::RiskManager::UpdateLimitsOnOrder()</link>.</para>
+</section>
+<anchor xml:id="_class_risk_limits_1a1dc02c7cb2f843737942d75cfdcb6cd8"/><section>
+    <title>GotOrder()</title>
+<indexterm><primary>GotOrder</primary><secondary>RiskLimits</secondary></indexterm>
+<indexterm><primary>RiskLimits</primary><secondary>GotOrder</secondary></indexterm>
+<para><computeroutput>void RiskLimits::GotOrder (int iSize, bool bIsBid, bool bIsCxl)</computeroutput></para><para>
+
+<para>Updates the risk limits based on an order. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>iSize</entry><entry>
+<para>The order size. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>bIsBid</entry><entry>
+<para>A flag indicating whether the order is a bid or ask. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>bIsCxl</entry><entry>
+<para>A flag indicating whether the order is a cancellation. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Referenced by <link linkend="_l00401">KTN::RiskManager::UpdateLimitsOnOrder()</link>.</para>
+</section>
+<anchor xml:id="_class_risk_limits_1a33938776640601f35d99ea8f89fb2db3"/><section>
+    <title>LegalSize()</title>
+<indexterm><primary>LegalSize</primary><secondary>RiskLimits</secondary></indexterm>
+<indexterm><primary>RiskLimits</primary><secondary>LegalSize</secondary></indexterm>
+<para><computeroutput>bool RiskLimits::LegalSize (int iOrderQty)</computeroutput></para><para>
+
+<para>Checks if the order size is within legal limits. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>iOrderQty</entry><entry>
+<para>The order quantity. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the order size is within legal limits, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_risk_limits_1a176bb2a8ea17a977809941508660bb84"/><section>
+    <title>LogLevel()</title>
+<indexterm><primary>LogLevel</primary><secondary>RiskLimits</secondary></indexterm>
+<indexterm><primary>RiskLimits</primary><secondary>LogLevel</secondary></indexterm>
+<para><computeroutput>void RiskLimits::LogLevel (int iLogLevel)</computeroutput></para><para>
+
+<para>Sets the log level. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>iLogLevel</entry><entry>
+<para>The log level to set. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_risk_limits_1a16852c624231043c3cd63ce69e4b227e"/><section>
+    <title>NetPos()</title>
+<indexterm><primary>NetPos</primary><secondary>RiskLimits</secondary></indexterm>
+<indexterm><primary>RiskLimits</primary><secondary>NetPos</secondary></indexterm>
+<para><computeroutput>int RiskLimits::NetPos ( )</computeroutput></para><para>
+
+<para>Calculates the net position. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The net position. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00027">Print()</link>.</para>
+</section>
+<anchor xml:id="_class_risk_limits_1a9fa14da4aaa04ccfb466948c10a9a042"/><section>
+    <title>OK()</title>
+<indexterm><primary>OK</primary><secondary>RiskLimits</secondary></indexterm>
+<indexterm><primary>RiskLimits</primary><secondary>OK</secondary></indexterm>
+<para><computeroutput>bool RiskLimits::OK ( )</computeroutput></para><para>
+
+<para>Checks if the risk limits are within acceptable limits. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>True if the risk limits are within acceptable limits, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_risk_limits_1a85f7494f2849aeb1bd4873510acc0de7"/><section>
+    <title>Print()</title>
+<indexterm><primary>Print</primary><secondary>RiskLimits</secondary></indexterm>
+<indexterm><primary>RiskLimits</primary><secondary>Print</secondary></indexterm>
+<para><computeroutput>void RiskLimits::Print (bool current_risk_only = <computeroutput>false</computeroutput>
+)</computeroutput></para><para>
+
+<para>Prints the risk limits. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>current_risk_only</entry><entry>
+<para>A flag indicating whether to print only the current risk limits. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00194">NetPos()</link>.</para>
+<para>
+Referenced by <link linkend="_l00453">KTN::RiskManager::HandleRiskLimitsJSON()</link>, and <link linkend="_l00088">Update()</link>.</para>
+</section>
+<anchor xml:id="_class_risk_limits_1a4a8488c7dd9eb21fc65eb0624ec3e174"/><section>
+    <title>SetEnable()</title>
+<indexterm><primary>SetEnable</primary><secondary>RiskLimits</secondary></indexterm>
+<indexterm><primary>RiskLimits</primary><secondary>SetEnable</secondary></indexterm>
+<para><computeroutput>void RiskLimits::SetEnable (bool enable)</computeroutput></para><para>
+
+<para>Sets the enable flag to enable or disable the risk limits. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>enable</entry><entry>
+<para>The enable flag. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Referenced by <link linkend="_l00595">KTN::RiskManager::setEnable()</link>.</para>
+</section>
+<anchor xml:id="_class_risk_limits_1a219839387e10292ec21d59ca2071bad1"/><section>
+    <title>Update()</title>
+<indexterm><primary>Update</primary><secondary>RiskLimits</secondary></indexterm>
+<indexterm><primary>RiskLimits</primary><secondary>Update</secondary></indexterm>
+<para><computeroutput>void RiskLimits::Update (int enable, std::string acro, std::string prod, std::string prodtype, std::string exch, int iMaxOrderSize, int iMaxLong, int iMaxShort, int iMaxBuyOpen, int iMaxSellOpen, int iLogLevel)</computeroutput></para><para>
+
+<para>Updates the risk limits with the specified parameters. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>enable</entry><entry>
+<para>The enable flag indicating whether the risk limits are enabled or disabled. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>acro</entry><entry>
+<para>The acronym of the trading account. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>prod</entry><entry>
+<para>The product name. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>prodtype</entry><entry>
+<para>The product type. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>exch</entry><entry>
+<para>The exchange name. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>iMaxOrderSize</entry><entry>
+<para>The maximum order size. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>iMaxLong</entry><entry>
+<para>The maximum long position. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>iMaxShort</entry><entry>
+<para>The maximum short position. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>iMaxBuyOpen</entry><entry>
+<para>The maximum buy open quantity. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>iMaxSellOpen</entry><entry>
+<para>The maximum sell open quantity. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>iLogLevel</entry><entry>
+<para>The log level. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00027">Print()</link>.</para>
+</section>
+<anchor xml:id="_class_risk_limits_1ae570a819d0e6b5230de6961f3da056f4"/><section>
+    <title>WillMaxOut()</title>
+<indexterm><primary>WillMaxOut</primary><secondary>RiskLimits</secondary></indexterm>
+<indexterm><primary>RiskLimits</primary><secondary>WillMaxOut</secondary></indexterm>
+<para><computeroutput>bool RiskLimits::WillMaxOut (bool bIsBid, int iAdd)</computeroutput></para><para>
+
+<para>Checks if adding the specified quantity to the bid/ask will exceed the maximum limits. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>bIsBid</entry><entry>
+<para>A flag indicating whether the bid/ask is a bid or ask. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>iAdd</entry><entry>
+<para>The quantity to add. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if adding the quantity will exceed the maximum limits, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_risk_limits_1a6c987cefdca9df052d7bc4d99a248771"/><section>
+    <title>account</title>
+<indexterm><primary>account</primary><secondary>RiskLimits</secondary></indexterm>
+<indexterm><primary>RiskLimits</primary><secondary>account</secondary></indexterm>
+<para><computeroutput>string RiskLimits::account</computeroutput></para></section>
+<anchor xml:id="_class_risk_limits_1a10c0c48468439a798f0ff6742ea21cde"/><section>
+    <title>acronym</title>
+<indexterm><primary>acronym</primary><secondary>RiskLimits</secondary></indexterm>
+<indexterm><primary>RiskLimits</primary><secondary>acronym</secondary></indexterm>
+<para><computeroutput>string RiskLimits::acronym</computeroutput></para></section>
+<anchor xml:id="_class_risk_limits_1a9e35845ff3447b77beb3f7cea10463b8"/><section>
+    <title>curr_open_qty_buy</title>
+<indexterm><primary>curr_open_qty_buy</primary><secondary>RiskLimits</secondary></indexterm>
+<indexterm><primary>RiskLimits</primary><secondary>curr_open_qty_buy</secondary></indexterm>
+<para><computeroutput>int RiskLimits::curr_open_qty_buy</computeroutput></para></section>
+<anchor xml:id="_class_risk_limits_1a70a102f2075f304b935817cb08691cfb"/><section>
+    <title>curr_open_qty_sell</title>
+<indexterm><primary>curr_open_qty_sell</primary><secondary>RiskLimits</secondary></indexterm>
+<indexterm><primary>RiskLimits</primary><secondary>curr_open_qty_sell</secondary></indexterm>
+<para><computeroutput>int RiskLimits::curr_open_qty_sell</computeroutput></para></section>
+<anchor xml:id="_class_risk_limits_1abd9e9a221801f21ba44f010528e78a80"/><section>
+    <title>curr_pos_long</title>
+<indexterm><primary>curr_pos_long</primary><secondary>RiskLimits</secondary></indexterm>
+<indexterm><primary>RiskLimits</primary><secondary>curr_pos_long</secondary></indexterm>
+<para><computeroutput>int RiskLimits::curr_pos_long</computeroutput></para></section>
+<anchor xml:id="_class_risk_limits_1a09c03f1b9c1816e3e0560915100333b2"/><section>
+    <title>curr_pos_short</title>
+<indexterm><primary>curr_pos_short</primary><secondary>RiskLimits</secondary></indexterm>
+<indexterm><primary>RiskLimits</primary><secondary>curr_pos_short</secondary></indexterm>
+<para><computeroutput>int RiskLimits::curr_pos_short</computeroutput></para></section>
+<anchor xml:id="_class_risk_limits_1a14e0c92ef62eec7aa897d155d501bbc7"/><section>
+    <title>enabled</title>
+<indexterm><primary>enabled</primary><secondary>RiskLimits</secondary></indexterm>
+<indexterm><primary>RiskLimits</primary><secondary>enabled</secondary></indexterm>
+<para><computeroutput>int RiskLimits::enabled</computeroutput></para></section>
+<anchor xml:id="_class_risk_limits_1adf12ddd23e3b434fdcb6d1ab9b362482"/><section>
+    <title>exchange</title>
+<indexterm><primary>exchange</primary><secondary>RiskLimits</secondary></indexterm>
+<indexterm><primary>RiskLimits</primary><secondary>exchange</secondary></indexterm>
+<para><computeroutput>string RiskLimits::exchange</computeroutput></para></section>
+<anchor xml:id="_class_risk_limits_1a244917f127e6128c734064051eff2c65"/><section>
+    <title>hasData</title>
+<indexterm><primary>hasData</primary><secondary>RiskLimits</secondary></indexterm>
+<indexterm><primary>RiskLimits</primary><secondary>hasData</secondary></indexterm>
+<para><computeroutput>bool RiskLimits::hasData</computeroutput></para></section>
+<anchor xml:id="_class_risk_limits_1a37f9f45e526571ca5736718269b566db"/><section>
+    <title>keyvalue</title>
+<indexterm><primary>keyvalue</primary><secondary>RiskLimits</secondary></indexterm>
+<indexterm><primary>RiskLimits</primary><secondary>keyvalue</secondary></indexterm>
+<para><computeroutput>string RiskLimits::keyvalue</computeroutput></para></section>
+<anchor xml:id="_class_risk_limits_1a757a2064e7487fdb9b324a827021da05"/><section>
+    <title>max_open_qty_buy</title>
+<indexterm><primary>max_open_qty_buy</primary><secondary>RiskLimits</secondary></indexterm>
+<indexterm><primary>RiskLimits</primary><secondary>max_open_qty_buy</secondary></indexterm>
+<para><computeroutput>int RiskLimits::max_open_qty_buy</computeroutput></para></section>
+<anchor xml:id="_class_risk_limits_1a792a9c2fcd746d9907927d1e8bf6bf9b"/><section>
+    <title>max_open_qty_sell</title>
+<indexterm><primary>max_open_qty_sell</primary><secondary>RiskLimits</secondary></indexterm>
+<indexterm><primary>RiskLimits</primary><secondary>max_open_qty_sell</secondary></indexterm>
+<para><computeroutput>int RiskLimits::max_open_qty_sell</computeroutput></para></section>
+<anchor xml:id="_class_risk_limits_1a00565aaff8730004846437e79e2ba2c1"/><section>
+    <title>max_order_qty</title>
+<indexterm><primary>max_order_qty</primary><secondary>RiskLimits</secondary></indexterm>
+<indexterm><primary>RiskLimits</primary><secondary>max_order_qty</secondary></indexterm>
+<para><computeroutput>int RiskLimits::max_order_qty</computeroutput></para></section>
+<anchor xml:id="_class_risk_limits_1ae97e69ff5977667a9069c3b5218c958a"/><section>
+    <title>max_pos_long</title>
+<indexterm><primary>max_pos_long</primary><secondary>RiskLimits</secondary></indexterm>
+<indexterm><primary>RiskLimits</primary><secondary>max_pos_long</secondary></indexterm>
+<para><computeroutput>int RiskLimits::max_pos_long</computeroutput></para></section>
+<anchor xml:id="_class_risk_limits_1a79ef299e4b7b81c477df0b322272bb1e"/><section>
+    <title>max_pos_short</title>
+<indexterm><primary>max_pos_short</primary><secondary>RiskLimits</secondary></indexterm>
+<indexterm><primary>RiskLimits</primary><secondary>max_pos_short</secondary></indexterm>
+<para><computeroutput>int RiskLimits::max_pos_short</computeroutput></para></section>
+<anchor xml:id="_class_risk_limits_1aecebb71b75756bc29835ddedf13c62f0"/><section>
+    <title>product</title>
+<indexterm><primary>product</primary><secondary>RiskLimits</secondary></indexterm>
+<indexterm><primary>RiskLimits</primary><secondary>product</secondary></indexterm>
+<para><computeroutput>string RiskLimits::product</computeroutput></para></section>
+<anchor xml:id="_class_risk_limits_1ab9830da07796ed4149aaad7d654bb13f"/><section>
+    <title>producttype</title>
+<indexterm><primary>producttype</primary><secondary>RiskLimits</secondary></indexterm>
+<indexterm><primary>RiskLimits</primary><secondary>producttype</secondary></indexterm>
+<para><computeroutput>string RiskLimits::producttype</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Risk/RiskLimits.hRisk/RiskLimits.cpp</section>
+</section>

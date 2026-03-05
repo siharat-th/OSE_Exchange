@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_t_n_1_1_e_f_v_i_1_1pollbase" xml:lang="en-US">
+<title>KTN::EFVI::pollbase Struct Reference</title>
+<indexterm><primary>KTN::EFVI::pollbase</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_e_f_v_i_1_1pollbase_1ac3e75db5442660cee75af302d15554f6">s</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_e_f_v_i_1_1pollbase_1aa7e9b2b826d2a0b9dbead8e5df33acf5">efd</link></para>
+</listitem>
+            <listitem><para>struct epoll_event <link linkend="_struct_k_t_n_1_1_e_f_v_i_1_1pollbase_1a3664b057d2110a55d317c84d1c1f3edf">event</link></para>
+</listitem>
+            <listitem><para>struct epoll_event * <link linkend="_struct_k_t_n_1_1_e_f_v_i_1_1pollbase_1a091edcbd636e45b4605ccfb94d62f7ed">events</link></para>
+</listitem>
+            <listitem><para>pthread_t <link linkend="_struct_k_t_n_1_1_e_f_v_i_1_1pollbase_1a4ebc3e6075f32e37198055c6fd236434">tid</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_e_f_v_i_1_1pollbase_1a975a732f1bbda527d2fcd51d7cfaa24d">affinity</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_e_f_v_i_1_1pollbase_1aa705c3d66f9e29c914049a057f2cfb6d">timeout</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_e_f_v_i_1_1pollbase_1a975a732f1bbda527d2fcd51d7cfaa24d"/><section>
+    <title>affinity</title>
+<indexterm><primary>affinity</primary><secondary>KTN::EFVI::pollbase</secondary></indexterm>
+<indexterm><primary>KTN::EFVI::pollbase</primary><secondary>affinity</secondary></indexterm>
+<para><computeroutput>int KTN::EFVI::pollbase::affinity</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_e_f_v_i_1_1pollbase_1aa7e9b2b826d2a0b9dbead8e5df33acf5"/><section>
+    <title>efd</title>
+<indexterm><primary>efd</primary><secondary>KTN::EFVI::pollbase</secondary></indexterm>
+<indexterm><primary>KTN::EFVI::pollbase</primary><secondary>efd</secondary></indexterm>
+<para><computeroutput>int KTN::EFVI::pollbase::efd</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_e_f_v_i_1_1pollbase_1a3664b057d2110a55d317c84d1c1f3edf"/><section>
+    <title>event</title>
+<indexterm><primary>event</primary><secondary>KTN::EFVI::pollbase</secondary></indexterm>
+<indexterm><primary>KTN::EFVI::pollbase</primary><secondary>event</secondary></indexterm>
+<para><computeroutput>struct epoll_event KTN::EFVI::pollbase::event</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_e_f_v_i_1_1pollbase_1a091edcbd636e45b4605ccfb94d62f7ed"/><section>
+    <title>events</title>
+<indexterm><primary>events</primary><secondary>KTN::EFVI::pollbase</secondary></indexterm>
+<indexterm><primary>KTN::EFVI::pollbase</primary><secondary>events</secondary></indexterm>
+<para><computeroutput>struct epoll_event* KTN::EFVI::pollbase::events</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_e_f_v_i_1_1pollbase_1ac3e75db5442660cee75af302d15554f6"/><section>
+    <title>s</title>
+<indexterm><primary>s</primary><secondary>KTN::EFVI::pollbase</secondary></indexterm>
+<indexterm><primary>KTN::EFVI::pollbase</primary><secondary>s</secondary></indexterm>
+<para><computeroutput>int KTN::EFVI::pollbase::s</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_e_f_v_i_1_1pollbase_1a4ebc3e6075f32e37198055c6fd236434"/><section>
+    <title>tid</title>
+<indexterm><primary>tid</primary><secondary>KTN::EFVI::pollbase</secondary></indexterm>
+<indexterm><primary>KTN::EFVI::pollbase</primary><secondary>tid</secondary></indexterm>
+<para><computeroutput>pthread_t KTN::EFVI::pollbase::tid</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_e_f_v_i_1_1pollbase_1aa705c3d66f9e29c914049a057f2cfb6d"/><section>
+    <title>timeout</title>
+<indexterm><primary>timeout</primary><secondary>KTN::EFVI::pollbase</secondary></indexterm>
+<indexterm><primary>KTN::EFVI::pollbase</primary><secondary>timeout</secondary></indexterm>
+<para><computeroutput>int KTN::EFVI::pollbase::timeout</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+KtnEfvi/feed_structs.hpp</section>
+</section>

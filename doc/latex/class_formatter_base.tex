@@ -1,0 +1,70 @@
+\doxysection{Formatter\+Base Class Reference}
+\hypertarget{class_formatter_base}{}\label{class_formatter_base}\index{FormatterBase@{FormatterBase}}
+
+
+Base class for JSON formatters.  
+
+
+
+
+{\ttfamily \#include $<$Formatter\+Base.\+hpp$>$}
+
+Inheritance diagram for Formatter\+Base\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_formatter_base}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_formatter_base_a46f0eaeede8596813b927751c842e846}{\texorpdfstring{$\sim$}{\string~}\+Formatter\+Base}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{class_formatter_base_a503ea9bae81f69cf83fd2447cbbed66c}{Get\+Json}} (const void \texorpdfstring{$\ast$}{*}data) const =0
+\begin{DoxyCompactList}\small\item\em Get the JSON representation of the given data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for JSON formatters. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_formatter_base_a46f0eaeede8596813b927751c842e846}\index{FormatterBase@{FormatterBase}!````~FormatterBase@{\texorpdfstring{$\sim$}{\string~}FormatterBase}}
+\index{````~FormatterBase@{\texorpdfstring{$\sim$}{\string~}FormatterBase}!FormatterBase@{FormatterBase}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}FormatterBase()}{\string~FormatterBase()}}
+{\footnotesize\ttfamily \label{class_formatter_base_a46f0eaeede8596813b927751c842e846} 
+virtual Formatter\+Base\+::\texorpdfstring{$\sim$}{\string~}\+Formatter\+Base (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_formatter_base_a503ea9bae81f69cf83fd2447cbbed66c}\index{FormatterBase@{FormatterBase}!GetJson@{GetJson}}
+\index{GetJson@{GetJson}!FormatterBase@{FormatterBase}}
+\doxysubsubsection{\texorpdfstring{GetJson()}{GetJson()}}
+{\footnotesize\ttfamily \label{class_formatter_base_a503ea9bae81f69cf83fd2447cbbed66c} 
+virtual std\+::string Formatter\+Base\+::\+Get\+Json (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{data}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the JSON representation of the given data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The data to be converted to JSON. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The JSON representation of the data. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_session_status_json_formatter_a48e935472d7d0238358f4f20f7a31489}{Session\+Status\+Json\+Formatter}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Json/Formatter\+Base.\+hpp\end{DoxyCompactItemize}

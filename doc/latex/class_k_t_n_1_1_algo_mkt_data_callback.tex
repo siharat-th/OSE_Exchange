@@ -1,0 +1,118 @@
+\doxysection{KTN\+::Algo\+Mkt\+Data\+Callback Class Reference}
+\hypertarget{class_k_t_n_1_1_algo_mkt_data_callback}{}\label{class_k_t_n_1_1_algo_mkt_data_callback}\index{KTN::AlgoMktDataCallback@{KTN::AlgoMktDataCallback}}
+
+
+The \doxylink{class_k_t_n_1_1_algo_mkt_data_callback}{Algo\+Mkt\+Data\+Callback} class is an abstract base class that defines the interface for receiving market data updates.  
+
+
+
+
+{\ttfamily \#include $<$Algo\+Mkt\+Data\+Callback.\+hpp$>$}
+
+Inheritance diagram for KTN\+::Algo\+Mkt\+Data\+Callback\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_k_t_n_1_1_algo_mkt_data_callback}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_algo_mkt_data_callback_a758e9e927074286b79fdac74a87376fc}{Algo\+Mkt\+Data\+Callback}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{class_k_t_n_1_1_algo_mkt_data_callback}{Algo\+Mkt\+Data\+Callback}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_k_t_n_1_1_algo_mkt_data_callback_a38a45c5e4e5b4e64e264cbf4d7b21cb8}{\texorpdfstring{$\sim$}{\string~}\+Algo\+Mkt\+Data\+Callback}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{class_k_t_n_1_1_algo_mkt_data_callback}{Algo\+Mkt\+Data\+Callback}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_algo_mkt_data_callback_ab05b9837ca4811ef7abca271aa693218}{on\+State\+Change}} (int state)
+\begin{DoxyCompactList}\small\item\em This method is called when the state of the algorithm changes. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_algo_mkt_data_callback_a48d3990c92f735d6ef6db45c9dc67f39}{on\+Mkt\+Data\+Bid\+Ask}} (const \mbox{\hyperlink{structalgomd}{algomd}} \&md)=0
+\begin{DoxyCompactList}\small\item\em This method is called when a bid/ask market data update is received. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_algo_mkt_data_callback_af1d6f3ae967bd219b7b13ec4b6ec2a77}{on\+Mkt\+Data\+Trade}} (const \mbox{\hyperlink{structalgomd}{algomd}} \&md)=0
+\begin{DoxyCompactList}\small\item\em This method is called when a trade market data update is received. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_k_t_n_1_1_algo_mkt_data_callback}{Algo\+Mkt\+Data\+Callback} class is an abstract base class that defines the interface for receiving market data updates. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_k_t_n_1_1_algo_mkt_data_callback_a758e9e927074286b79fdac74a87376fc}\index{KTN::AlgoMktDataCallback@{KTN::AlgoMktDataCallback}!AlgoMktDataCallback@{AlgoMktDataCallback}}
+\index{AlgoMktDataCallback@{AlgoMktDataCallback}!KTN::AlgoMktDataCallback@{KTN::AlgoMktDataCallback}}
+\doxysubsubsection{\texorpdfstring{AlgoMktDataCallback()}{AlgoMktDataCallback()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_algo_mkt_data_callback_a758e9e927074286b79fdac74a87376fc} 
+KTN\+::\+Algo\+Mkt\+Data\+Callback\+::\+Algo\+Mkt\+Data\+Callback (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor for \doxylink{class_k_t_n_1_1_algo_mkt_data_callback}{Algo\+Mkt\+Data\+Callback}. 
+
+\Hypertarget{class_k_t_n_1_1_algo_mkt_data_callback_a38a45c5e4e5b4e64e264cbf4d7b21cb8}\index{KTN::AlgoMktDataCallback@{KTN::AlgoMktDataCallback}!````~AlgoMktDataCallback@{\texorpdfstring{$\sim$}{\string~}AlgoMktDataCallback}}
+\index{````~AlgoMktDataCallback@{\texorpdfstring{$\sim$}{\string~}AlgoMktDataCallback}!KTN::AlgoMktDataCallback@{KTN::AlgoMktDataCallback}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}AlgoMktDataCallback()}{\string~AlgoMktDataCallback()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_algo_mkt_data_callback_a38a45c5e4e5b4e64e264cbf4d7b21cb8} 
+KTN\+::\+Algo\+Mkt\+Data\+Callback\+::\texorpdfstring{$\sim$}{\string~}\+Algo\+Mkt\+Data\+Callback (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Virtual destructor for \doxylink{class_k_t_n_1_1_algo_mkt_data_callback}{Algo\+Mkt\+Data\+Callback}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_algo_mkt_data_callback_a48d3990c92f735d6ef6db45c9dc67f39}\index{KTN::AlgoMktDataCallback@{KTN::AlgoMktDataCallback}!onMktDataBidAsk@{onMktDataBidAsk}}
+\index{onMktDataBidAsk@{onMktDataBidAsk}!KTN::AlgoMktDataCallback@{KTN::AlgoMktDataCallback}}
+\doxysubsubsection{\texorpdfstring{onMktDataBidAsk()}{onMktDataBidAsk()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_algo_mkt_data_callback_a48d3990c92f735d6ef6db45c9dc67f39} 
+virtual void KTN\+::\+Algo\+Mkt\+Data\+Callback\+::on\+Mkt\+Data\+Bid\+Ask (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structalgomd}{algomd}} \&}]{md}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This method is called when a bid/ask market data update is received. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em md} & The market data update. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a76a59c9484fb7f3638fccd93ad935da1}{KTN\+::\+Algo\+Base\+V3}}.
+
+\Hypertarget{class_k_t_n_1_1_algo_mkt_data_callback_af1d6f3ae967bd219b7b13ec4b6ec2a77}\index{KTN::AlgoMktDataCallback@{KTN::AlgoMktDataCallback}!onMktDataTrade@{onMktDataTrade}}
+\index{onMktDataTrade@{onMktDataTrade}!KTN::AlgoMktDataCallback@{KTN::AlgoMktDataCallback}}
+\doxysubsubsection{\texorpdfstring{onMktDataTrade()}{onMktDataTrade()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_algo_mkt_data_callback_af1d6f3ae967bd219b7b13ec4b6ec2a77} 
+virtual void KTN\+::\+Algo\+Mkt\+Data\+Callback\+::on\+Mkt\+Data\+Trade (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structalgomd}{algomd}} \&}]{md}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This method is called when a trade market data update is received. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em md} & The market data update. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_ac29c33857d9a4cbc28c52c9bef3b2707}{KTN\+::\+Algo\+Base\+V3}}.
+
+\Hypertarget{class_k_t_n_1_1_algo_mkt_data_callback_ab05b9837ca4811ef7abca271aa693218}\index{KTN::AlgoMktDataCallback@{KTN::AlgoMktDataCallback}!onStateChange@{onStateChange}}
+\index{onStateChange@{onStateChange}!KTN::AlgoMktDataCallback@{KTN::AlgoMktDataCallback}}
+\doxysubsubsection{\texorpdfstring{onStateChange()}{onStateChange()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_algo_mkt_data_callback_ab05b9837ca4811ef7abca271aa693218} 
+virtual void KTN\+::\+Algo\+Mkt\+Data\+Callback\+::on\+State\+Change (\begin{DoxyParamCaption}\item[{int}]{state}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+This method is called when the state of the algorithm changes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & The new state of the algorithm. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Algo\+Support/Algo\+Mkt\+Data\+Callback.\+hpp\item 
+Algo\+Support/Algo\+Mkt\+Data\+Callback.\+cpp\end{DoxyCompactItemize}

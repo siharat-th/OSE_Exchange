@@ -1,0 +1,226 @@
+\doxysection{KTN\+::ALGO\+::Interval\+Timer Class Reference}
+\hypertarget{class_k_t_n_1_1_a_l_g_o_1_1_interval_timer}{}\label{class_k_t_n_1_1_a_l_g_o_1_1_interval_timer}\index{KTN::ALGO::IntervalTimer@{KTN::ALGO::IntervalTimer}}
+
+
+The \doxylink{class_k_t_n_1_1_a_l_g_o_1_1_interval_timer}{Interval\+Timer} class represents a timer that triggers at regular intervals.  
+
+
+
+
+{\ttfamily \#include $<$Interval\+Timer.\+hpp$>$}
+
+Inheritance diagram for KTN\+::ALGO\+::Interval\+Timer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_k_t_n_1_1_a_l_g_o_1_1_interval_timer}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_af2d7471eb5381f8726f7aeec55b52179}{Interval\+Timer}} (\mbox{\hyperlink{class_timer_callback}{Timer\+Callback}} \&cb)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{class_k_t_n_1_1_a_l_g_o_1_1_interval_timer}{Interval\+Timer} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_a8a3549c73c7093ee01423ae239af895c}{\texorpdfstring{$\sim$}{\string~}\+Interval\+Timer}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{class_k_t_n_1_1_a_l_g_o_1_1_interval_timer}{Interval\+Timer} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_afec42301f4a33a90c4b2d174083e8e86}{Test}} ()
+\begin{DoxyCompactList}\small\item\em Test function for the \doxylink{class_k_t_n_1_1_a_l_g_o_1_1_interval_timer}{Interval\+Timer}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_a8956c2ba207971d54c3054453e81edc4}{Pause}} (bool paused)
+\begin{DoxyCompactList}\small\item\em Pauses or resumes the timer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_af83afb4dea10d2cb70326165f2bf0521}{Start}} (const std\+::string \&start\+Time, const std\+::string \&end\+Time, int intervalsecs, int maxworksecs)
+\begin{DoxyCompactList}\small\item\em Starts the timer with the specified parameters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_a522419063c1ce6b13bf81b44f0f7973d}{Stop}} ()
+\begin{DoxyCompactList}\small\item\em Stops the timer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_aa9825dbe1f907a249b150f52050ff3ac}{Update\+Interval}} (int intervalsecs)
+\begin{DoxyCompactList}\small\item\em Updates the interval at which the timer triggers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_a7eaeb800339685d1a9bb32e205909aad}{Reset\+Interval}} ()
+\begin{DoxyCompactList}\small\item\em Resets the timer interval. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_ae28997667168f0878d0976ded830ac46}{Triggered}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the timer has been triggered. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_a5c62134eff0f83f4a5e3327903b27341}{Started}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the timer has started. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_named_thread}{Named\+Thread}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_named_thread_a891fabdc2d824048ec05c82e7ef8c69a}{Named\+Thread}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_named_thread_a018dadb59e5af98ee734301a1baa50cb}{\texorpdfstring{$\sim$}{\string~}\+Named\+Thread}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_named_thread_a9fa42542ff43c89fb9bbc33de9c87e34}{Create\+And\+Run}} (string name, int core)
+\begin{DoxyCompactList}\small\item\em Creates and runs the named thread on the specified core. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_named_thread_ad4809c571171be13f0f91f540d5c196f}{Join}} ()
+\begin{DoxyCompactList}\small\item\em Joins the named thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_k_t_n_1_1_a_l_g_o_1_1_interval_timer}{Interval\+Timer} class represents a timer that triggers at regular intervals. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_af2d7471eb5381f8726f7aeec55b52179}\index{KTN::ALGO::IntervalTimer@{KTN::ALGO::IntervalTimer}!IntervalTimer@{IntervalTimer}}
+\index{IntervalTimer@{IntervalTimer}!KTN::ALGO::IntervalTimer@{KTN::ALGO::IntervalTimer}}
+\doxysubsubsection{\texorpdfstring{IntervalTimer()}{IntervalTimer()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_af2d7471eb5381f8726f7aeec55b52179} 
+Interval\+Timer\+::\+Interval\+Timer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_timer_callback}{Timer\+Callback}} \&}]{cb}{}\end{DoxyParamCaption})}
+
+
+
+Constructs an \doxylink{class_k_t_n_1_1_a_l_g_o_1_1_interval_timer}{Interval\+Timer} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cb} & The \doxylink{class_timer_callback}{Timer\+Callback} object to be called when the timer triggers. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_a8a3549c73c7093ee01423ae239af895c}\index{KTN::ALGO::IntervalTimer@{KTN::ALGO::IntervalTimer}!````~IntervalTimer@{\texorpdfstring{$\sim$}{\string~}IntervalTimer}}
+\index{````~IntervalTimer@{\texorpdfstring{$\sim$}{\string~}IntervalTimer}!KTN::ALGO::IntervalTimer@{KTN::ALGO::IntervalTimer}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}IntervalTimer()}{\string~IntervalTimer()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_a8a3549c73c7093ee01423ae239af895c} 
+Interval\+Timer\+::\texorpdfstring{$\sim$}{\string~}\+Interval\+Timer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destroys the \doxylink{class_k_t_n_1_1_a_l_g_o_1_1_interval_timer}{Interval\+Timer} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_a8956c2ba207971d54c3054453e81edc4}\index{KTN::ALGO::IntervalTimer@{KTN::ALGO::IntervalTimer}!Pause@{Pause}}
+\index{Pause@{Pause}!KTN::ALGO::IntervalTimer@{KTN::ALGO::IntervalTimer}}
+\doxysubsubsection{\texorpdfstring{Pause()}{Pause()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_a8956c2ba207971d54c3054453e81edc4} 
+void Interval\+Timer\+::\+Pause (\begin{DoxyParamCaption}\item[{bool}]{paused}{}\end{DoxyParamCaption})}
+
+
+
+Pauses or resumes the timer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em paused} & True to pause the timer, false to resume. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{l00506}{KTN\+::\+Skewer\+::\+Enable()}}, \mbox{\hyperlink{l00511}{KTN\+::\+Skew\+Trader\+::\+Enable()}}, \mbox{\hyperlink{l00426}{KTN\+::\+Twap\+::\+Enable()}}, \mbox{\hyperlink{l00066}{KTN\+::\+Skewer\+::on\+Json()}}, \mbox{\hyperlink{l00071}{KTN\+::\+Skew\+Trader\+::on\+Json()}}, and \mbox{\hyperlink{l00053}{KTN\+::\+Twap\+::on\+Json()}}.
+
+\Hypertarget{class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_a7eaeb800339685d1a9bb32e205909aad}\index{KTN::ALGO::IntervalTimer@{KTN::ALGO::IntervalTimer}!ResetInterval@{ResetInterval}}
+\index{ResetInterval@{ResetInterval}!KTN::ALGO::IntervalTimer@{KTN::ALGO::IntervalTimer}}
+\doxysubsubsection{\texorpdfstring{ResetInterval()}{ResetInterval()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_a7eaeb800339685d1a9bb32e205909aad} 
+void KTN\+::\+ALGO\+::\+Interval\+Timer\+::\+Reset\+Interval (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Resets the timer interval. 
+
+\Hypertarget{class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_af83afb4dea10d2cb70326165f2bf0521}\index{KTN::ALGO::IntervalTimer@{KTN::ALGO::IntervalTimer}!Start@{Start}}
+\index{Start@{Start}!KTN::ALGO::IntervalTimer@{KTN::ALGO::IntervalTimer}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_af83afb4dea10d2cb70326165f2bf0521} 
+void Interval\+Timer\+::\+Start (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{start\+Time}{, }\item[{const std\+::string \&}]{end\+Time}{, }\item[{int}]{intervalsecs}{, }\item[{int}]{maxworksecs}{}\end{DoxyParamCaption})}
+
+
+
+Starts the timer with the specified parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Time} & The start time of the timer in string format. \\
+\hline
+{\em end\+Time} & The end time of the timer in string format. \\
+\hline
+{\em intervalsecs} & The interval in seconds at which the timer triggers. \\
+\hline
+{\em maxworksecs} & The maximum duration in seconds for the timer to perform its work. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00018}{Named\+Thread\+::\+Create\+And\+Run()}}, \mbox{\hyperlink{l00103}{Started()}}, and \mbox{\hyperlink{l00057}{Update\+Interval()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00066}{KTN\+::\+Skewer\+::on\+Json()}}, \mbox{\hyperlink{l00071}{KTN\+::\+Skew\+Trader\+::on\+Json()}}, \mbox{\hyperlink{l00053}{KTN\+::\+Twap\+::on\+Json()}}, and \mbox{\hyperlink{l00297}{Test()}}.
+
+\Hypertarget{class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_a5c62134eff0f83f4a5e3327903b27341}\index{KTN::ALGO::IntervalTimer@{KTN::ALGO::IntervalTimer}!Started@{Started}}
+\index{Started@{Started}!KTN::ALGO::IntervalTimer@{KTN::ALGO::IntervalTimer}}
+\doxysubsubsection{\texorpdfstring{Started()}{Started()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_a5c62134eff0f83f4a5e3327903b27341} 
+bool KTN\+::\+ALGO\+::\+Interval\+Timer\+::\+Started (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the timer has started. 
+
+\begin{DoxyReturn}{Returns}
+True if the timer has started, false otherwise. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00506}{KTN\+::\+Skewer\+::\+Enable()}}, \mbox{\hyperlink{l00511}{KTN\+::\+Skew\+Trader\+::\+Enable()}}, \mbox{\hyperlink{l00426}{KTN\+::\+Twap\+::\+Enable()}}, \mbox{\hyperlink{l01043}{KTN\+::\+Skewer\+::min\+Order\+Execution()}}, \mbox{\hyperlink{l01041}{KTN\+::\+Skew\+Trader\+::min\+Order\+Execution()}}, \mbox{\hyperlink{l00975}{KTN\+::\+Twap\+::min\+Order\+Execution()}}, \mbox{\hyperlink{l00066}{KTN\+::\+Skewer\+::on\+Json()}}, \mbox{\hyperlink{l00071}{KTN\+::\+Skew\+Trader\+::on\+Json()}}, \mbox{\hyperlink{l00053}{KTN\+::\+Twap\+::on\+Json()}}, \mbox{\hyperlink{l00027}{Start()}}, \mbox{\hyperlink{l00041}{KTN\+::\+Skewer\+::\texorpdfstring{$\sim$}{\string~}\+Skewer()}}, \mbox{\hyperlink{l00046}{KTN\+::\+Skew\+Trader\+::\texorpdfstring{$\sim$}{\string~}\+Skew\+Trader()}}, and \mbox{\hyperlink{l00037}{KTN\+::\+Twap\+::\texorpdfstring{$\sim$}{\string~}\+Twap()}}.
+
+\Hypertarget{class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_a522419063c1ce6b13bf81b44f0f7973d}\index{KTN::ALGO::IntervalTimer@{KTN::ALGO::IntervalTimer}!Stop@{Stop}}
+\index{Stop@{Stop}!KTN::ALGO::IntervalTimer@{KTN::ALGO::IntervalTimer}}
+\doxysubsubsection{\texorpdfstring{Stop()}{Stop()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_a522419063c1ce6b13bf81b44f0f7973d} 
+void Interval\+Timer\+::\+Stop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Stops the timer. 
+
+
+
+Referenced by \mbox{\hyperlink{l01043}{KTN\+::\+Skewer\+::min\+Order\+Execution()}}, \mbox{\hyperlink{l01041}{KTN\+::\+Skew\+Trader\+::min\+Order\+Execution()}}, \mbox{\hyperlink{l00975}{KTN\+::\+Twap\+::min\+Order\+Execution()}}, \mbox{\hyperlink{l00471}{KTN\+::\+Skewer\+::\+Reset\+Position()}}, \mbox{\hyperlink{l00470}{KTN\+::\+Skew\+Trader\+::\+Reset\+Position()}}, \mbox{\hyperlink{l00391}{KTN\+::\+Twap\+::\+Reset\+Position()}}, \mbox{\hyperlink{l00041}{KTN\+::\+Skewer\+::\texorpdfstring{$\sim$}{\string~}\+Skewer()}}, \mbox{\hyperlink{l00046}{KTN\+::\+Skew\+Trader\+::\texorpdfstring{$\sim$}{\string~}\+Skew\+Trader()}}, and \mbox{\hyperlink{l00037}{KTN\+::\+Twap\+::\texorpdfstring{$\sim$}{\string~}\+Twap()}}.
+
+\Hypertarget{class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_afec42301f4a33a90c4b2d174083e8e86}\index{KTN::ALGO::IntervalTimer@{KTN::ALGO::IntervalTimer}!Test@{Test}}
+\index{Test@{Test}!KTN::ALGO::IntervalTimer@{KTN::ALGO::IntervalTimer}}
+\doxysubsubsection{\texorpdfstring{Test()}{Test()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_afec42301f4a33a90c4b2d174083e8e86} 
+void Interval\+Timer\+::\+Test (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Test function for the \doxylink{class_k_t_n_1_1_a_l_g_o_1_1_interval_timer}{Interval\+Timer}. 
+
+
+
+References \mbox{\hyperlink{l00027}{Start()}}.
+
+\Hypertarget{class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_ae28997667168f0878d0976ded830ac46}\index{KTN::ALGO::IntervalTimer@{KTN::ALGO::IntervalTimer}!Triggered@{Triggered}}
+\index{Triggered@{Triggered}!KTN::ALGO::IntervalTimer@{KTN::ALGO::IntervalTimer}}
+\doxysubsubsection{\texorpdfstring{Triggered()}{Triggered()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_ae28997667168f0878d0976ded830ac46} 
+bool KTN\+::\+ALGO\+::\+Interval\+Timer\+::\+Triggered (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the timer has been triggered. 
+
+\begin{DoxyReturn}{Returns}
+True if the timer has been triggered, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_aa9825dbe1f907a249b150f52050ff3ac}\index{KTN::ALGO::IntervalTimer@{KTN::ALGO::IntervalTimer}!UpdateInterval@{UpdateInterval}}
+\index{UpdateInterval@{UpdateInterval}!KTN::ALGO::IntervalTimer@{KTN::ALGO::IntervalTimer}}
+\doxysubsubsection{\texorpdfstring{UpdateInterval()}{UpdateInterval()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_aa9825dbe1f907a249b150f52050ff3ac} 
+void Interval\+Timer\+::\+Update\+Interval (\begin{DoxyParamCaption}\item[{int}]{intervalsecs}{}\end{DoxyParamCaption})}
+
+
+
+Updates the interval at which the timer triggers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em intervalsecs} & The new interval in seconds. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{l00066}{KTN\+::\+Skewer\+::on\+Json()}}, and \mbox{\hyperlink{l00027}{Start()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Algo\+Calculators/Interval\+Timer.\+hpp\item 
+Algo\+Calculators/Interval\+Timer.\+cpp\end{DoxyCompactItemize}

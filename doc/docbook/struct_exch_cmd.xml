@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_exch_cmd" xml:lang="en-US">
+<title>ExchCmd Struct Reference</title>
+<indexterm><primary>ExchCmd</primary></indexterm>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <emphasis role="strong">Enum</emphasis> : int { <?linebreak?><emphasis role="strong">MENU_CHOICE</emphasis> = 1
+, <emphasis role="strong">SESS_STATUS</emphasis> = 92
+, <emphasis role="strong">PARTY_DET_REQ</emphasis> = 93
+, <emphasis role="strong">MEASURE</emphasis> = 95
+, <?linebreak?><emphasis role="strong">CXL_ALL_SEGS</emphasis> = 101
+, <emphasis role="strong">PRINT_LATENCIES</emphasis> = 102
+, <emphasis role="strong">PRINT_MSG_RATIOS</emphasis> = 103
+, <emphasis role="strong">CLEAR</emphasis> = 104
+, <?linebreak?><emphasis role="strong">STOP</emphasis> = 105
+, <emphasis role="strong">SEQ_NUM_CHANGE</emphasis> = 200
+, <emphasis role="strong">ORD_SEND</emphasis> = 300
+, <emphasis role="strong">ORD_SEND_WITH_HEDGE</emphasis> = 301
+, <?linebreak?><emphasis role="strong">ORD_SEND_HDG_INSTRUCT</emphasis> = 302
+, <emphasis role="strong">ALGO_LAUNCH</emphasis> = 500
+, <emphasis role="strong">ALGO_PARAMS</emphasis>
+, <emphasis role="strong">ALGO_ORDER</emphasis>
+, <?linebreak?><emphasis role="strong">ALGO_ENGINE</emphasis>
+, <emphasis role="strong">ALGO_RESET_POS</emphasis>
+, <emphasis role="strong">ALGO_CXL_ALL</emphasis>
+, <emphasis role="strong">ALGO_PRINT</emphasis>
+, <?linebreak?><emphasis role="strong">ALGO_STOP</emphasis>
+, <emphasis role="strong">TERMINATE</emphasis> = 999
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static std::string <link linkend="_struct_exch_cmd_1a5d0e3a83de73427eccae79af7fd345b2">toString</link> (ExchCmd::Enum cmd)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_struct_exch_cmd_1a7d237abecc3a1cc366ed3072ba33e12a"/><section>
+    <title>Enum</title>
+<indexterm><primary>Enum</primary><secondary>ExchCmd</secondary></indexterm>
+<indexterm><primary>ExchCmd</primary><secondary>Enum</secondary></indexterm>
+<para><computeroutput>enum ExchCmd::Enum : int</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_exch_cmd_1a5d0e3a83de73427eccae79af7fd345b2"/><section>
+    <title>toString()</title>
+<indexterm><primary>toString</primary><secondary>ExchCmd</secondary></indexterm>
+<indexterm><primary>ExchCmd</primary><secondary>toString</secondary></indexterm>
+<para><computeroutput>static std::string ExchCmd::toString (ExchCmd::Enum cmd)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+ExchangeHandlers2/ExchCmdEnums.hpp</section>
+</section>

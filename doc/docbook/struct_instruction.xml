@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_instruction" xml:lang="en-US">
+<title>Instruction Struct Reference</title>
+<indexterm><primary>Instruction</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>ExchCmd::Enum <link linkend="_struct_instruction_1ab7e3a9dafbcfbcd620d2597948e0b93e">command</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_instruction_1ab7bd960e11990d2f8fe89a24436ca60d">cmd_json</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_instruction_1abaad1138ee98882c099bea7af1d7a786">cmd_value</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_instruction_1aa5724db27e1ea289833f9313c56b0a0d">cmd_symbol</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_instruction_1aa6f2c4240cf56be9956ed9e738a4b0e4">isorder</link></para>
+</listitem>
+            <listitem><para><link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> <link linkend="_struct_instruction_1aaa59bafc786f854360102a27624e6900">ord</link></para>
+</listitem>
+            <listitem><para>vector&lt; SpreadHedgeV3 &gt; <link linkend="_struct_instruction_1a9f10146ddd393f8c5af4c3824a3688e5">hdgs</link></para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_struct_instruction_1a8756e1bb52f6bf392399441eee465672">reqid</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_struct_instruction_1aebd15229c1651af49dcb203707e7a2d5"/><section>
+    <title>Instruction()</title>
+<indexterm><primary>Instruction</primary><secondary>Instruction</secondary></indexterm>
+<indexterm><primary>Instruction</primary><secondary>Instruction</secondary></indexterm>
+<para><computeroutput>Instruction::Instruction ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_instruction_1ab7bd960e11990d2f8fe89a24436ca60d"/><section>
+    <title>cmd_json</title>
+<indexterm><primary>cmd_json</primary><secondary>Instruction</secondary></indexterm>
+<indexterm><primary>Instruction</primary><secondary>cmd_json</secondary></indexterm>
+<para><computeroutput>string Instruction::cmd_json</computeroutput></para></section>
+<anchor xml:id="_struct_instruction_1aa5724db27e1ea289833f9313c56b0a0d"/><section>
+    <title>cmd_symbol</title>
+<indexterm><primary>cmd_symbol</primary><secondary>Instruction</secondary></indexterm>
+<indexterm><primary>Instruction</primary><secondary>cmd_symbol</secondary></indexterm>
+<para><computeroutput>string Instruction::cmd_symbol</computeroutput></para></section>
+<anchor xml:id="_struct_instruction_1abaad1138ee98882c099bea7af1d7a786"/><section>
+    <title>cmd_value</title>
+<indexterm><primary>cmd_value</primary><secondary>Instruction</secondary></indexterm>
+<indexterm><primary>Instruction</primary><secondary>cmd_value</secondary></indexterm>
+<para><computeroutput>int Instruction::cmd_value</computeroutput></para></section>
+<anchor xml:id="_struct_instruction_1ab7e3a9dafbcfbcd620d2597948e0b93e"/><section>
+    <title>command</title>
+<indexterm><primary>command</primary><secondary>Instruction</secondary></indexterm>
+<indexterm><primary>Instruction</primary><secondary>command</secondary></indexterm>
+<para><computeroutput>ExchCmd::Enum Instruction::command</computeroutput></para></section>
+<anchor xml:id="_struct_instruction_1a9f10146ddd393f8c5af4c3824a3688e5"/><section>
+    <title>hdgs</title>
+<indexterm><primary>hdgs</primary><secondary>Instruction</secondary></indexterm>
+<indexterm><primary>Instruction</primary><secondary>hdgs</secondary></indexterm>
+<para><computeroutput>vector&lt;SpreadHedgeV3&gt; Instruction::hdgs</computeroutput></para></section>
+<anchor xml:id="_struct_instruction_1aa6f2c4240cf56be9956ed9e738a4b0e4"/><section>
+    <title>isorder</title>
+<indexterm><primary>isorder</primary><secondary>Instruction</secondary></indexterm>
+<indexterm><primary>Instruction</primary><secondary>isorder</secondary></indexterm>
+<para><computeroutput>bool Instruction::isorder</computeroutput></para></section>
+<anchor xml:id="_struct_instruction_1aaa59bafc786f854360102a27624e6900"/><section>
+    <title>ord</title>
+<indexterm><primary>ord</primary><secondary>Instruction</secondary></indexterm>
+<indexterm><primary>Instruction</primary><secondary>ord</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> Instruction::ord</computeroutput></para></section>
+<anchor xml:id="_struct_instruction_1a8756e1bb52f6bf392399441eee465672"/><section>
+    <title>reqid</title>
+<indexterm><primary>reqid</primary><secondary>Instruction</secondary></indexterm>
+<indexterm><primary>Instruction</primary><secondary>reqid</secondary></indexterm>
+<para><computeroutput>uint64_t Instruction::reqid</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+ExchangeHandlers2/ExchCmdEnums.hpp</section>
+</section>

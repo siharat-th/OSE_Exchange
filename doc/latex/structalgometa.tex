@@ -1,0 +1,177 @@
+\doxysection{algometa Struct Reference}
+\hypertarget{structalgometa}{}\label{structalgometa}\index{algometa@{algometa}}
+
+
+Structure representing algorithm metadata.  
+
+
+
+
+{\ttfamily \#include $<$algo\+\_\+structs.\+hpp$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{structalgometa_a6e952ca2e121b4b4aa934a00fdde3d90}{Strategy}}
+\item 
+int \mbox{\hyperlink{structalgometa_a0a93d2c70632c78c851d53113505192c}{Strat\+Id}}
+\item 
+std\+::string \mbox{\hyperlink{structalgometa_afc6f79dbd9b17a76510ae1a915f57e2e}{Template\+Name}}
+\item 
+int \mbox{\hyperlink{structalgometa_a71aa3c76a331d480388f43e216b86ba1}{Enabled}}
+\item 
+std\+::string \mbox{\hyperlink{structalgometa_aa4eb536c534b39deeacd8a125783aa06}{Unique\+Id}}
+\item 
+std\+::string \mbox{\hyperlink{structalgometa_a274c658db80008354bec46e3ae6c3439}{Source}}
+\item 
+std\+::string \mbox{\hyperlink{structalgometa_a2fd3db49a59da0a714617b887a4e9e4e}{Tag}}
+\item 
+std\+::string \mbox{\hyperlink{structalgometa_a14d4bf441ba211e54559e3139fa5cf7b}{Hedge\+Tag}}
+\item 
+std\+::string \mbox{\hyperlink{structalgometa_a409e57556841767dcdd7b4e5bc6d9057}{Cover\+Tag}}
+\item 
+std\+::string \mbox{\hyperlink{structalgometa_a829f711177bdd6e44ca5e25d1d0da7c7}{Prim\+Hdg\+Tag}}
+\item 
+bool \mbox{\hyperlink{structalgometa_afc0c8beea8b2e08aac8b46f4035f7851}{Can\+Hedge}}
+\item 
+std\+::string \mbox{\hyperlink{structalgometa_a008fb747a64bb101a0e359413480e7ce}{Symbol}}
+\item 
+std\+::string \mbox{\hyperlink{structalgometa_a8ccb0757953bdac38e340d34ec784bdc}{Exch}}
+\item 
+double \mbox{\hyperlink{structalgometa_a3cb6abe7405358924e8955379b66d0f6}{Position}}
+\item 
+\mbox{\hyperlink{struct_user_info}{User\+Info}} \mbox{\hyperlink{structalgometa_aff0f70028d6395d1510fe2983f0ff95f}{userinfo}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure representing algorithm metadata. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structalgometa_afc0c8beea8b2e08aac8b46f4035f7851}\index{algometa@{algometa}!CanHedge@{CanHedge}}
+\index{CanHedge@{CanHedge}!algometa@{algometa}}
+\doxysubsubsection{\texorpdfstring{CanHedge}{CanHedge}}
+{\footnotesize\ttfamily \label{structalgometa_afc0c8beea8b2e08aac8b46f4035f7851} 
+bool algometa\+::\+Can\+Hedge}
+
+Flag indicating if hedging is allowed. \Hypertarget{structalgometa_a409e57556841767dcdd7b4e5bc6d9057}\index{algometa@{algometa}!CoverTag@{CoverTag}}
+\index{CoverTag@{CoverTag}!algometa@{algometa}}
+\doxysubsubsection{\texorpdfstring{CoverTag}{CoverTag}}
+{\footnotesize\ttfamily \label{structalgometa_a409e57556841767dcdd7b4e5bc6d9057} 
+std\+::string algometa\+::\+Cover\+Tag}
+
+The cover tag. \Hypertarget{structalgometa_a71aa3c76a331d480388f43e216b86ba1}\index{algometa@{algometa}!Enabled@{Enabled}}
+\index{Enabled@{Enabled}!algometa@{algometa}}
+\doxysubsubsection{\texorpdfstring{Enabled}{Enabled}}
+{\footnotesize\ttfamily \label{structalgometa_a71aa3c76a331d480388f43e216b86ba1} 
+int algometa\+::\+Enabled}
+
+Flag indicating if the algorithm is enabled. 
+
+Referenced by \mbox{\hyperlink{l00411}{KTN\+::\+Multi\+Spreader\+V3\+::\+Enable()}}, \mbox{\hyperlink{l00506}{KTN\+::\+Skewer\+::\+Enable()}}, \mbox{\hyperlink{l00511}{KTN\+::\+Skew\+Trader\+::\+Enable()}}, \mbox{\hyperlink{l00461}{KTN\+::\+Stacker\+::\+Enable()}}, \mbox{\hyperlink{l00374}{KTN\+::\+Stacker\+Timer\+::\+Enable()}}, \mbox{\hyperlink{l00426}{KTN\+::\+Twap\+::\+Enable()}}, \mbox{\hyperlink{l00343}{KTN\+::\+Waves\+::\+Enable()}}, \mbox{\hyperlink{l00044}{KTN\+::\+Multi\+Spreader\+V3\+::on\+Json()}}, \mbox{\hyperlink{l00066}{KTN\+::\+Skewer\+::on\+Json()}}, \mbox{\hyperlink{l00071}{KTN\+::\+Skew\+Trader\+::on\+Json()}}, \mbox{\hyperlink{l00066}{KTN\+::\+Stacker\+::on\+Json()}}, \mbox{\hyperlink{l00052}{KTN\+::\+Stacker\+Timer\+::on\+Json()}}, \mbox{\hyperlink{l00053}{KTN\+::\+Twap\+::on\+Json()}}, \mbox{\hyperlink{l00130}{KTN\+::\+Waves\+::on\+Json()}}, \mbox{\hyperlink{l00030}{KTN\+::\+Auto\+Hedge\+OB\+::on\+Launch()}}, \mbox{\hyperlink{l00043}{KTN\+::\+PLWatcher\+::on\+Launch()}}, \mbox{\hyperlink{l00030}{KTN\+::\+Squeezer\+OB\+::on\+Launch()}}, \mbox{\hyperlink{l00012}{Auto\+Hedge\+OB2\+Params\+::parse()}}, \mbox{\hyperlink{l00012}{MS2\+Params\+::parse()}}, \mbox{\hyperlink{l00012}{Skewer\+Params\+::parse()}}, \mbox{\hyperlink{l00012}{Skew\+Trader\+Params\+::parse()}}, \mbox{\hyperlink{l00012}{Stacker\+Params\+::parse()}}, \mbox{\hyperlink{l00012}{Stacker\+Timer\+Params\+::parse()}}, \mbox{\hyperlink{l00012}{Timed\+Avg\+Params\+::parse()}}, \mbox{\hyperlink{l00012}{Waves\+Params\+::parse()}}, \mbox{\hyperlink{l00471}{KTN\+::\+Skewer\+::\+Reset\+Position()}}, \mbox{\hyperlink{l00470}{KTN\+::\+Skew\+Trader\+::\+Reset\+Position()}}, \mbox{\hyperlink{l00428}{KTN\+::\+Stacker\+::\+Reset\+Position()}}, \mbox{\hyperlink{l00339}{KTN\+::\+Stacker\+Timer\+::\+Reset\+Position()}}, and \mbox{\hyperlink{l00391}{KTN\+::\+Twap\+::\+Reset\+Position()}}.
+
+\Hypertarget{structalgometa_a8ccb0757953bdac38e340d34ec784bdc}\index{algometa@{algometa}!Exch@{Exch}}
+\index{Exch@{Exch}!algometa@{algometa}}
+\doxysubsubsection{\texorpdfstring{Exch}{Exch}}
+{\footnotesize\ttfamily \label{structalgometa_a8ccb0757953bdac38e340d34ec784bdc} 
+std\+::string algometa\+::\+Exch}
+
+The exchange. \Hypertarget{structalgometa_a14d4bf441ba211e54559e3139fa5cf7b}\index{algometa@{algometa}!HedgeTag@{HedgeTag}}
+\index{HedgeTag@{HedgeTag}!algometa@{algometa}}
+\doxysubsubsection{\texorpdfstring{HedgeTag}{HedgeTag}}
+{\footnotesize\ttfamily \label{structalgometa_a14d4bf441ba211e54559e3139fa5cf7b} 
+std\+::string algometa\+::\+Hedge\+Tag}
+
+The hedge tag. \Hypertarget{structalgometa_a3cb6abe7405358924e8955379b66d0f6}\index{algometa@{algometa}!Position@{Position}}
+\index{Position@{Position}!algometa@{algometa}}
+\doxysubsubsection{\texorpdfstring{Position}{Position}}
+{\footnotesize\ttfamily \label{structalgometa_a3cb6abe7405358924e8955379b66d0f6} 
+double algometa\+::\+Position}
+
+The position. \Hypertarget{structalgometa_a829f711177bdd6e44ca5e25d1d0da7c7}\index{algometa@{algometa}!PrimHdgTag@{PrimHdgTag}}
+\index{PrimHdgTag@{PrimHdgTag}!algometa@{algometa}}
+\doxysubsubsection{\texorpdfstring{PrimHdgTag}{PrimHdgTag}}
+{\footnotesize\ttfamily \label{structalgometa_a829f711177bdd6e44ca5e25d1d0da7c7} 
+std\+::string algometa\+::\+Prim\+Hdg\+Tag}
+
+The primary hedge tag. \Hypertarget{structalgometa_a274c658db80008354bec46e3ae6c3439}\index{algometa@{algometa}!Source@{Source}}
+\index{Source@{Source}!algometa@{algometa}}
+\doxysubsubsection{\texorpdfstring{Source}{Source}}
+{\footnotesize\ttfamily \label{structalgometa_a274c658db80008354bec46e3ae6c3439} 
+std\+::string algometa\+::\+Source}
+
+The source. 
+
+Referenced by \mbox{\hyperlink{l00014}{KTN\+::\+Algo\+Base\+V3\+::\+Algo\+Base\+V3()}}, \mbox{\hyperlink{l00019}{KTN\+::\+CME\+::\+Cme\+Algo\+::\+Cme\+Algo()}}, \mbox{\hyperlink{l00076}{Quoter\+V3\+::\+Construct()}}, \mbox{\hyperlink{l00012}{Auto\+Hedge\+OB2\+Params\+::parse()}}, \mbox{\hyperlink{l00012}{MS2\+Params\+::parse()}}, \mbox{\hyperlink{l00012}{Skewer\+Params\+::parse()}}, \mbox{\hyperlink{l00012}{Skew\+Trader\+Params\+::parse()}}, \mbox{\hyperlink{l00012}{Stacker\+Params\+::parse()}}, \mbox{\hyperlink{l00012}{Stacker\+Timer\+Params\+::parse()}}, \mbox{\hyperlink{l00012}{Timed\+Avg\+Params\+::parse()}}, and \mbox{\hyperlink{l00012}{Waves\+Params\+::parse()}}.
+
+\Hypertarget{structalgometa_a6e952ca2e121b4b4aa934a00fdde3d90}\index{algometa@{algometa}!Strategy@{Strategy}}
+\index{Strategy@{Strategy}!algometa@{algometa}}
+\doxysubsubsection{\texorpdfstring{Strategy}{Strategy}}
+{\footnotesize\ttfamily \label{structalgometa_a6e952ca2e121b4b4aa934a00fdde3d90} 
+std\+::string algometa\+::\+Strategy}
+
+The strategy. 
+
+Referenced by \mbox{\hyperlink{l00076}{Quoter\+V3\+::\+Construct()}}, \mbox{\hyperlink{l00015}{KTN\+::\+ORD\+::\+Order\+Handler\+Zmq\+V6\+::\+Order\+Handler\+Zmq\+V6()}}, \mbox{\hyperlink{l00012}{Auto\+Hedge\+OB2\+Params\+::parse()}}, \mbox{\hyperlink{l00012}{MS2\+Params\+::parse()}}, \mbox{\hyperlink{l00012}{Skewer\+Params\+::parse()}}, \mbox{\hyperlink{l00012}{Skew\+Trader\+Params\+::parse()}}, \mbox{\hyperlink{l00012}{Stacker\+Params\+::parse()}}, \mbox{\hyperlink{l00012}{Stacker\+Timer\+Params\+::parse()}}, \mbox{\hyperlink{l00012}{Timed\+Avg\+Params\+::parse()}}, and \mbox{\hyperlink{l00012}{Waves\+Params\+::parse()}}.
+
+\Hypertarget{structalgometa_a0a93d2c70632c78c851d53113505192c}\index{algometa@{algometa}!StratId@{StratId}}
+\index{StratId@{StratId}!algometa@{algometa}}
+\doxysubsubsection{\texorpdfstring{StratId}{StratId}}
+{\footnotesize\ttfamily \label{structalgometa_a0a93d2c70632c78c851d53113505192c} 
+int algometa\+::\+Strat\+Id}
+
+The strategy ID. 
+
+Referenced by \mbox{\hyperlink{l00076}{Quoter\+V3\+::\+Construct()}}, \mbox{\hyperlink{l00015}{KTN\+::\+ORD\+::\+Order\+Handler\+Zmq\+V6\+::\+Order\+Handler\+Zmq\+V6()}}, \mbox{\hyperlink{l01140}{KTN\+::\+Waves\+::\+Order\+Received()}}, \mbox{\hyperlink{l00012}{MS2\+Params\+::parse()}}, \mbox{\hyperlink{l00012}{Skewer\+Params\+::parse()}}, \mbox{\hyperlink{l00012}{Skew\+Trader\+Params\+::parse()}}, and \mbox{\hyperlink{l00012}{Timed\+Avg\+Params\+::parse()}}.
+
+\Hypertarget{structalgometa_a008fb747a64bb101a0e359413480e7ce}\index{algometa@{algometa}!Symbol@{Symbol}}
+\index{Symbol@{Symbol}!algometa@{algometa}}
+\doxysubsubsection{\texorpdfstring{Symbol}{Symbol}}
+{\footnotesize\ttfamily \label{structalgometa_a008fb747a64bb101a0e359413480e7ce} 
+std\+::string algometa\+::\+Symbol}
+
+The symbol. \Hypertarget{structalgometa_a2fd3db49a59da0a714617b887a4e9e4e}\index{algometa@{algometa}!Tag@{Tag}}
+\index{Tag@{Tag}!algometa@{algometa}}
+\doxysubsubsection{\texorpdfstring{Tag}{Tag}}
+{\footnotesize\ttfamily \label{structalgometa_a2fd3db49a59da0a714617b887a4e9e4e} 
+std\+::string algometa\+::\+Tag}
+
+The tag. 
+
+Referenced by \mbox{\hyperlink{l00076}{Quoter\+V3\+::\+Construct()}}, \mbox{\hyperlink{l00012}{Auto\+Hedge\+OB2\+Params\+::parse()}}, \mbox{\hyperlink{l00012}{MS2\+Params\+::parse()}}, \mbox{\hyperlink{l00012}{Skewer\+Params\+::parse()}}, \mbox{\hyperlink{l00012}{Skew\+Trader\+Params\+::parse()}}, \mbox{\hyperlink{l00012}{Stacker\+Params\+::parse()}}, \mbox{\hyperlink{l00012}{Stacker\+Timer\+Params\+::parse()}}, \mbox{\hyperlink{l00012}{Timed\+Avg\+Params\+::parse()}}, and \mbox{\hyperlink{l00012}{Waves\+Params\+::parse()}}.
+
+\Hypertarget{structalgometa_afc6f79dbd9b17a76510ae1a915f57e2e}\index{algometa@{algometa}!TemplateName@{TemplateName}}
+\index{TemplateName@{TemplateName}!algometa@{algometa}}
+\doxysubsubsection{\texorpdfstring{TemplateName}{TemplateName}}
+{\footnotesize\ttfamily \label{structalgometa_afc6f79dbd9b17a76510ae1a915f57e2e} 
+std\+::string algometa\+::\+Template\+Name}
+
+The template name. 
+
+Referenced by \mbox{\hyperlink{l00012}{Auto\+Hedge\+OB2\+Params\+::parse()}}, \mbox{\hyperlink{l00012}{MS2\+Params\+::parse()}}, \mbox{\hyperlink{l00012}{Skewer\+Params\+::parse()}}, \mbox{\hyperlink{l00012}{Skew\+Trader\+Params\+::parse()}}, \mbox{\hyperlink{l00012}{Stacker\+Params\+::parse()}}, \mbox{\hyperlink{l00012}{Stacker\+Timer\+Params\+::parse()}}, \mbox{\hyperlink{l00012}{Timed\+Avg\+Params\+::parse()}}, and \mbox{\hyperlink{l00012}{Waves\+Params\+::parse()}}.
+
+\Hypertarget{structalgometa_aa4eb536c534b39deeacd8a125783aa06}\index{algometa@{algometa}!UniqueId@{UniqueId}}
+\index{UniqueId@{UniqueId}!algometa@{algometa}}
+\doxysubsubsection{\texorpdfstring{UniqueId}{UniqueId}}
+{\footnotesize\ttfamily \label{structalgometa_aa4eb536c534b39deeacd8a125783aa06} 
+std\+::string algometa\+::\+Unique\+Id}
+
+The unique ID. 
+
+Referenced by \mbox{\hyperlink{l00076}{Quoter\+V3\+::\+Construct()}}, \mbox{\hyperlink{l00015}{KTN\+::\+ORD\+::\+Order\+Handler\+Zmq\+V6\+::\+Order\+Handler\+Zmq\+V6()}}, \mbox{\hyperlink{l00012}{Auto\+Hedge\+OB2\+Params\+::parse()}}, \mbox{\hyperlink{l00012}{MS2\+Params\+::parse()}}, \mbox{\hyperlink{l00012}{Skewer\+Params\+::parse()}}, \mbox{\hyperlink{l00012}{Skew\+Trader\+Params\+::parse()}}, \mbox{\hyperlink{l00012}{Stacker\+Params\+::parse()}}, \mbox{\hyperlink{l00012}{Stacker\+Timer\+Params\+::parse()}}, \mbox{\hyperlink{l00012}{Timed\+Avg\+Params\+::parse()}}, and \mbox{\hyperlink{l00012}{Waves\+Params\+::parse()}}.
+
+\Hypertarget{structalgometa_aff0f70028d6395d1510fe2983f0ff95f}\index{algometa@{algometa}!userinfo@{userinfo}}
+\index{userinfo@{userinfo}!algometa@{algometa}}
+\doxysubsubsection{\texorpdfstring{userinfo}{userinfo}}
+{\footnotesize\ttfamily \label{structalgometa_aff0f70028d6395d1510fe2983f0ff95f} 
+\mbox{\hyperlink{struct_user_info}{User\+Info}} algometa\+::userinfo}
+
+The user information. 
+
+Referenced by \mbox{\hyperlink{l00076}{Quoter\+V3\+::\+Construct()}}, \mbox{\hyperlink{l00012}{Auto\+Hedge\+OB2\+Params\+::parse()}}, \mbox{\hyperlink{l00012}{MS2\+Params\+::parse()}}, \mbox{\hyperlink{l00012}{Skewer\+Params\+::parse()}}, \mbox{\hyperlink{l00012}{Skew\+Trader\+Params\+::parse()}}, \mbox{\hyperlink{l00012}{Stacker\+Params\+::parse()}}, \mbox{\hyperlink{l00012}{Stacker\+Timer\+Params\+::parse()}}, \mbox{\hyperlink{l00012}{Timed\+Avg\+Params\+::parse()}}, and \mbox{\hyperlink{l00012}{Waves\+Params\+::parse()}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Algo\+Support/algo\+\_\+structs.\+hpp\end{DoxyCompactItemize}

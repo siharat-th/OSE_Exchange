@@ -1,0 +1,235 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_hash_map" xml:lang="en-US">
+<title>HashMap&lt; Key, Value, TableSize &gt; Class Template Reference</title>
+<indexterm><primary>HashMap&lt; Key, Value, TableSize &gt;</primary></indexterm>
+<para>
+
+<para>A hash map implementation that maps keys to values. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;HashMap.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_hash_map_1ae4e4ee0b7075004bb85db35bc72a3408">HashMap</link> ()</para>
+
+<para>Constructs an empty hash map. </para>
+</listitem>
+            <listitem><para>size_t <link linkend="_class_hash_map_1a9cb8f461aa7b0606db37505e32c6828b">size</link> () const</para>
+
+<para>Returns the number of key-value pairs in the hash map. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_hash_map_1ad53de12a16d16f99b649cd8a2e828565">clear</link> ()</para>
+
+<para>Removes all key-value pairs from the hash map. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_hash_map_1ad6d65def00859bae80834c39e8165515">insert</link> (const Key &amp;key, const Value &amp;value)</para>
+
+<para>Inserts a key-value pair into the hash map. </para>
+</listitem>
+            <listitem><para>Value &amp; <link linkend="_class_hash_map_1a805b24caa5b67dded42066c15cf2779d">lookup</link> (const Key &amp;key)</para>
+
+<para>Looks up the value associated with the given key in the hash map. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_hash_map_1aa1c5d5999d642e5b5181a01e2dd4ed51">find</link> (const Key &amp;key)</para>
+
+<para>Checks if the given key exists in the hash map. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;typename Key, typename Value, size_t TableSize&gt;<?linebreak?>class HashMap&lt; Key, Value, TableSize &gt;</title></simplesect>
+
+<para>A hash map implementation that maps keys to values. </para>
+
+
+
+<para>
+                <formalpara>
+                    <title>
+Template Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Key</entry><entry>
+<para>The type of the keys in the hash map. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>Value</entry><entry>
+<para>The type of the values in the hash map. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>TableSize</entry><entry>
+<para>The size of the hash map table. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_hash_map_1ae4e4ee0b7075004bb85db35bc72a3408"/><section>
+    <title>HashMap()</title>
+<indexterm><primary>HashMap</primary><secondary>HashMap&lt; Key, Value, TableSize &gt;</secondary></indexterm>
+<indexterm><primary>HashMap&lt; Key, Value, TableSize &gt;</primary><secondary>HashMap</secondary></indexterm>
+<computeroutput>template&lt;typename Key , typename Value , size_t TableSize&gt; </computeroutput><para><computeroutput><link linkend="_class_hash_map">HashMap</link>&lt; Key, Value, TableSize &gt;<link linkend="_class_hash_map">::HashMap</link> ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Constructs an empty hash map. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_hash_map_1ad53de12a16d16f99b649cd8a2e828565"/><section>
+    <title>clear()</title>
+<indexterm><primary>clear</primary><secondary>HashMap&lt; Key, Value, TableSize &gt;</secondary></indexterm>
+<indexterm><primary>HashMap&lt; Key, Value, TableSize &gt;</primary><secondary>clear</secondary></indexterm>
+<computeroutput>template&lt;typename Key , typename Value , size_t TableSize&gt; </computeroutput><para><computeroutput>void <link linkend="_class_hash_map">HashMap</link>&lt; Key, Value, TableSize &gt;::clear ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Removes all key-value pairs from the hash map. </para>
+</para>
+<para>
+Referenced by <link linkend="_l00170">KTN::CME::CmeAlgo::ClearMaps()</link>, and <link linkend="_l00166">KTN::CME::CmeGT5::ClearMaps()</link>.</para>
+</section>
+<anchor xml:id="_class_hash_map_1aa1c5d5999d642e5b5181a01e2dd4ed51"/><section>
+    <title>find()</title>
+<indexterm><primary>find</primary><secondary>HashMap&lt; Key, Value, TableSize &gt;</secondary></indexterm>
+<indexterm><primary>HashMap&lt; Key, Value, TableSize &gt;</primary><secondary>find</secondary></indexterm>
+<computeroutput>template&lt;typename Key , typename Value , size_t TableSize&gt; </computeroutput><para><computeroutput>bool <link linkend="_class_hash_map">HashMap</link>&lt; Key, Value, TableSize &gt;::find (const Key &amp; key)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Checks if the given key exists in the hash map. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>key</entry><entry>
+<para>The key to check. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the key exists, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_hash_map_1ad6d65def00859bae80834c39e8165515"/><section>
+    <title>insert()</title>
+<indexterm><primary>insert</primary><secondary>HashMap&lt; Key, Value, TableSize &gt;</secondary></indexterm>
+<indexterm><primary>HashMap&lt; Key, Value, TableSize &gt;</primary><secondary>insert</secondary></indexterm>
+<computeroutput>template&lt;typename Key , typename Value , size_t TableSize&gt; </computeroutput><para><computeroutput>void <link linkend="_class_hash_map">HashMap</link>&lt; Key, Value, TableSize &gt;::insert (const Key &amp; key, const Value &amp; value)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Inserts a key-value pair into the hash map. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>key</entry><entry>
+<para>The key to insert. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>value</entry><entry>
+<para>The value to insert. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_hash_map_1a805b24caa5b67dded42066c15cf2779d"/><section>
+    <title>lookup()</title>
+<indexterm><primary>lookup</primary><secondary>HashMap&lt; Key, Value, TableSize &gt;</secondary></indexterm>
+<indexterm><primary>HashMap&lt; Key, Value, TableSize &gt;</primary><secondary>lookup</secondary></indexterm>
+<computeroutput>template&lt;typename Key , typename Value , size_t TableSize&gt; </computeroutput><para><computeroutput>Value &amp; <link linkend="_class_hash_map">HashMap</link>&lt; Key, Value, TableSize &gt;::lookup (const Key &amp; key)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Looks up the value associated with the given key in the hash map. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>key</entry><entry>
+<para>The key to look up. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A reference to the value associated with the key. </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>If the key is not found, a default-constructed value is returned. </para>
+</note>
+</para>
+</section>
+<anchor xml:id="_class_hash_map_1a9cb8f461aa7b0606db37505e32c6828b"/><section>
+    <title>size()</title>
+<indexterm><primary>size</primary><secondary>HashMap&lt; Key, Value, TableSize &gt;</secondary></indexterm>
+<indexterm><primary>HashMap&lt; Key, Value, TableSize &gt;</primary><secondary>size</secondary></indexterm>
+<computeroutput>template&lt;typename Key , typename Value , size_t TableSize&gt; </computeroutput><para><computeroutput>size_t <link linkend="_class_hash_map">HashMap</link>&lt; Key, Value, TableSize &gt;::size ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Returns the number of key-value pairs in the hash map. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The number of key-value pairs in the hash map. </para>
+</formalpara>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Maps/HashMap.hpp</section>
+</section>

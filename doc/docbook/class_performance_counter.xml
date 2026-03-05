@@ -1,0 +1,352 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_performance_counter" xml:lang="en-US">
+<title>PerformanceCounter Class Reference</title>
+<indexterm><primary>PerformanceCounter</primary></indexterm>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>typedef timespec <link linkend="_class_performance_counter_1ad4cd866ac6599aefe9d5128bfbcbb7b9">Count</link></para>
+
+<para>Represents a high-resolution performance counter value. </para>
+</listitem>
+            <listitem><para>typedef long long <link linkend="_class_performance_counter_1a535551411cb230fa83f9d3982bebc9ed">Span</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static void <link linkend="_class_performance_counter_1ab731e9c80529b9716d5272222ae1e0e3">setToUndefinedValue</link> (<link linkend="_class_performance_counter_1ad4cd866ac6599aefe9d5128bfbcbb7b9">Count</link> *value)</para>
+
+<para>Sets the given performance counter value to an undefined state. </para>
+</listitem>
+            <listitem><para>static bool <link linkend="_class_performance_counter_1a237590f3779b33379f04fd3a667c946a">isUndefinedValue</link> (<link linkend="_class_performance_counter_1ad4cd866ac6599aefe9d5128bfbcbb7b9">Count</link> &amp;value)</para>
+
+<para>Checks if the given performance counter value is in an undefined state. </para>
+</listitem>
+            <listitem><para>static <link linkend="_class_performance_counter_1ad4cd866ac6599aefe9d5128bfbcbb7b9">Count</link> <link linkend="_class_performance_counter_1a0d8a3ab30904b2d914d17232b3240d11">current</link> ()</para>
+
+<para>Retrieves the current value of the high-resolution performance counter. </para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_performance_counter_1ab7120a4172e66cd37e6bc3d159717196">current</link> (<link linkend="_class_performance_counter_1ad4cd866ac6599aefe9d5128bfbcbb7b9">Count</link> *result)</para>
+
+<para>Retrieves the current value of the high-resolution performance counter. </para>
+</listitem>
+            <listitem><para>static Span <link linkend="_class_performance_counter_1a82f45af03a474858960a02d1609c3bb2">nsSpan</link> (const <link linkend="_class_performance_counter_1ad4cd866ac6599aefe9d5128bfbcbb7b9">PerformanceCounter::Count</link> &amp;stop, const <link linkend="_class_performance_counter_1ad4cd866ac6599aefe9d5128bfbcbb7b9">PerformanceCounter::Count</link> &amp;start)</para>
+
+<para>Calculates the time span in nanoseconds between two performance counter values. </para>
+</listitem>
+            <listitem><para>static Span <link linkend="_class_performance_counter_1a567721a17e05079cb8bdea99d23e18fa">usSpan</link> (const <link linkend="_class_performance_counter_1ad4cd866ac6599aefe9d5128bfbcbb7b9">PerformanceCounter::Count</link> &amp;stop, const <link linkend="_class_performance_counter_1ad4cd866ac6599aefe9d5128bfbcbb7b9">PerformanceCounter::Count</link> &amp;start)</para>
+
+<para>Calculates the time span in microseconds between two performance counter values. </para>
+</listitem>
+            <listitem><para>static Span <link linkend="_class_performance_counter_1aa7d0792009d5c3616af15069c0fcb058">elapsedNanoseconds</link> (const <link linkend="_class_performance_counter_1ad4cd866ac6599aefe9d5128bfbcbb7b9">PerformanceCounter::Count</link> &amp;start)</para>
+
+<para>Calculates the elapsed time in nanoseconds since the given performance counter value. </para>
+</listitem>
+            <listitem><para>static Span <link linkend="_class_performance_counter_1a06ef52f4dec5e4f5ea6029c4677ff70a">elapsedMicroseconds</link> (const <link linkend="_class_performance_counter_1ad4cd866ac6599aefe9d5128bfbcbb7b9">PerformanceCounter::Count</link> &amp;start)</para>
+
+<para>Calculates the elapsed time in microseconds since the given performance counter value. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Typedef Documentation</title>
+<anchor xml:id="_class_performance_counter_1ad4cd866ac6599aefe9d5128bfbcbb7b9"/><section>
+    <title>Count</title>
+<indexterm><primary>Count</primary><secondary>PerformanceCounter</secondary></indexterm>
+<indexterm><primary>PerformanceCounter</primary><secondary>Count</secondary></indexterm>
+<para><computeroutput>timespec <link linkend="_class_performance_counter_1ad4cd866ac6599aefe9d5128bfbcbb7b9">PerformanceCounter::Count</link></computeroutput></para><para>
+
+<para>Represents a high-resolution performance counter value. </para>
+</para>
+</section>
+<anchor xml:id="_class_performance_counter_1a535551411cb230fa83f9d3982bebc9ed"/><section>
+    <title>Span</title>
+<indexterm><primary>Span</primary><secondary>PerformanceCounter</secondary></indexterm>
+<indexterm><primary>PerformanceCounter</primary><secondary>Span</secondary></indexterm>
+<para><computeroutput>long long PerformanceCounter::Span</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_performance_counter_1a0d8a3ab30904b2d914d17232b3240d11"/><section>
+    <title>current()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>current</primary><secondary>PerformanceCounter</secondary></indexterm>
+<indexterm><primary>PerformanceCounter</primary><secondary>current</secondary></indexterm>
+<para><computeroutput><link linkend="_class_performance_counter_1ad4cd866ac6599aefe9d5128bfbcbb7b9">PerformanceCounter::Count</link> PerformanceCounter::current ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Retrieves the current value of the high-resolution performance counter. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The current performance counter value. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00155">current()</link>.</para>
+<para>
+Referenced by <link linkend="_l00155">current()</link>, <link linkend="_l00134">elapsedMicroseconds()</link>, and <link linkend="_l00129">elapsedNanoseconds()</link>.</para>
+</section>
+<anchor xml:id="_class_performance_counter_1ab7120a4172e66cd37e6bc3d159717196"/><section>
+    <title>current()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>current</primary><secondary>PerformanceCounter</secondary></indexterm>
+<indexterm><primary>PerformanceCounter</primary><secondary>current</secondary></indexterm>
+<para><computeroutput>void PerformanceCounter::current (<link linkend="_class_performance_counter_1ad4cd866ac6599aefe9d5128bfbcbb7b9">PerformanceCounter::Count</link> * result)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Retrieves the current value of the high-resolution performance counter. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>result</entry><entry>
+<para>The variable to store the current performance counter value. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_performance_counter_1a06ef52f4dec5e4f5ea6029c4677ff70a"/><section>
+    <title>elapsedMicroseconds()</title>
+<indexterm><primary>elapsedMicroseconds</primary><secondary>PerformanceCounter</secondary></indexterm>
+<indexterm><primary>PerformanceCounter</primary><secondary>elapsedMicroseconds</secondary></indexterm>
+<para><computeroutput>Span PerformanceCounter::elapsedMicroseconds (const <link linkend="_class_performance_counter_1ad4cd866ac6599aefe9d5128bfbcbb7b9">PerformanceCounter::Count</link> &amp; start)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Calculates the elapsed time in microseconds since the given performance counter value. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>start</entry><entry>
+<para>The start performance counter value. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The elapsed time in microseconds. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00155">current()</link>, and <link linkend="_l00124">usSpan()</link>.</para>
+</section>
+<anchor xml:id="_class_performance_counter_1aa7d0792009d5c3616af15069c0fcb058"/><section>
+    <title>elapsedNanoseconds()</title>
+<indexterm><primary>elapsedNanoseconds</primary><secondary>PerformanceCounter</secondary></indexterm>
+<indexterm><primary>PerformanceCounter</primary><secondary>elapsedNanoseconds</secondary></indexterm>
+<para><computeroutput>Span PerformanceCounter::elapsedNanoseconds (const <link linkend="_class_performance_counter_1ad4cd866ac6599aefe9d5128bfbcbb7b9">PerformanceCounter::Count</link> &amp; start)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Calculates the elapsed time in nanoseconds since the given performance counter value. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>start</entry><entry>
+<para>The start performance counter value. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The elapsed time in nanoseconds. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00155">current()</link>, and <link linkend="_l00119">nsSpan()</link>.</para>
+</section>
+<anchor xml:id="_class_performance_counter_1a237590f3779b33379f04fd3a667c946a"/><section>
+    <title>isUndefinedValue()</title>
+<indexterm><primary>isUndefinedValue</primary><secondary>PerformanceCounter</secondary></indexterm>
+<indexterm><primary>PerformanceCounter</primary><secondary>isUndefinedValue</secondary></indexterm>
+<para><computeroutput>bool PerformanceCounter::isUndefinedValue (<link linkend="_class_performance_counter_1ad4cd866ac6599aefe9d5128bfbcbb7b9">Count</link> &amp; value)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Checks if the given performance counter value is in an undefined state. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>value</entry><entry>
+<para>The performance counter value to check. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true if the performance counter value is undefined, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_performance_counter_1a82f45af03a474858960a02d1609c3bb2"/><section>
+    <title>nsSpan()</title>
+<indexterm><primary>nsSpan</primary><secondary>PerformanceCounter</secondary></indexterm>
+<indexterm><primary>PerformanceCounter</primary><secondary>nsSpan</secondary></indexterm>
+<para><computeroutput>Span PerformanceCounter::nsSpan (const <link linkend="_class_performance_counter_1ad4cd866ac6599aefe9d5128bfbcbb7b9">PerformanceCounter::Count</link> &amp; stop, const <link linkend="_class_performance_counter_1ad4cd866ac6599aefe9d5128bfbcbb7b9">PerformanceCounter::Count</link> &amp; start)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Calculates the time span in nanoseconds between two performance counter values. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>stop</entry><entry>
+<para>The stop performance counter value. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>start</entry><entry>
+<para>The start performance counter value. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The time span in nanoseconds. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00129">elapsedNanoseconds()</link>.</para>
+</section>
+<anchor xml:id="_class_performance_counter_1ab731e9c80529b9716d5272222ae1e0e3"/><section>
+    <title>setToUndefinedValue()</title>
+<indexterm><primary>setToUndefinedValue</primary><secondary>PerformanceCounter</secondary></indexterm>
+<indexterm><primary>PerformanceCounter</primary><secondary>setToUndefinedValue</secondary></indexterm>
+<para><computeroutput>void PerformanceCounter::setToUndefinedValue (<link linkend="_class_performance_counter_1ad4cd866ac6599aefe9d5128bfbcbb7b9">Count</link> * value)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Sets the given performance counter value to an undefined state. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>value</entry><entry>
+<para>The performance counter value to set. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_performance_counter_1a567721a17e05079cb8bdea99d23e18fa"/><section>
+    <title>usSpan()</title>
+<indexterm><primary>usSpan</primary><secondary>PerformanceCounter</secondary></indexterm>
+<indexterm><primary>PerformanceCounter</primary><secondary>usSpan</secondary></indexterm>
+<para><computeroutput>Span PerformanceCounter::usSpan (const <link linkend="_class_performance_counter_1ad4cd866ac6599aefe9d5128bfbcbb7b9">PerformanceCounter::Count</link> &amp; stop, const <link linkend="_class_performance_counter_1ad4cd866ac6599aefe9d5128bfbcbb7b9">PerformanceCounter::Count</link> &amp; start)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Calculates the time span in microseconds between two performance counter values. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>stop</entry><entry>
+<para>The stop performance counter value. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>start</entry><entry>
+<para>The start performance counter value. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The time span in microseconds. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00134">elapsedMicroseconds()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Core/PerformanceCounter.h</section>
+</section>

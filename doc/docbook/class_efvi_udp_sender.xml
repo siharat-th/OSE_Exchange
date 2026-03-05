@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_efvi_udp_sender" xml:lang="en-US">
+<title>EfviUdpSender Class Reference</title>
+<indexterm><primary>EfviUdpSender</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_efvi_udp_sender_1a2a1127c1641077af9691e46159b5d3c8">init</link> (const char *interface, const char *local_ip, uint16_t local_port, const char *dest_ip, uint16_t dest_port)</para>
+</listitem>
+            <listitem><para>const char * <link linkend="_class_efvi_udp_sender_1a26bad6c09ea5e2667ec1af2414c6c00a">getLastError</link> ()</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_efvi_udp_sender_1a49ed066660913c042d769743355c8fdb">isClosed</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_efvi_udp_sender_1a40b5294ff4db83cdec9d1031a0dfd2aa">close</link> ()</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_efvi_udp_sender_1a1a66aee671199106ec4fc9b957fc3bbe">write</link> (const void *data, uint32_t size)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_efvi_udp_sender_1a71ef20ed6b23c7f7d4968b5f6837c6cf"/><section>
+    <title>~EfviUdpSender()</title>
+<indexterm><primary>~EfviUdpSender</primary><secondary>EfviUdpSender</secondary></indexterm>
+<indexterm><primary>EfviUdpSender</primary><secondary>~EfviUdpSender</secondary></indexterm>
+<para><computeroutput>EfviUdpSender::~EfviUdpSender ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_efvi_udp_sender_1a40b5294ff4db83cdec9d1031a0dfd2aa"/><section>
+    <title>close()</title>
+<indexterm><primary>close</primary><secondary>EfviUdpSender</secondary></indexterm>
+<indexterm><primary>EfviUdpSender</primary><secondary>close</secondary></indexterm>
+<para><computeroutput>void EfviUdpSender::close ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_efvi_udp_sender_1a26bad6c09ea5e2667ec1af2414c6c00a"/><section>
+    <title>getLastError()</title>
+<indexterm><primary>getLastError</primary><secondary>EfviUdpSender</secondary></indexterm>
+<indexterm><primary>EfviUdpSender</primary><secondary>getLastError</secondary></indexterm>
+<para><computeroutput>const char * EfviUdpSender::getLastError ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_efvi_udp_sender_1a2a1127c1641077af9691e46159b5d3c8"/><section>
+    <title>init()</title>
+<indexterm><primary>init</primary><secondary>EfviUdpSender</secondary></indexterm>
+<indexterm><primary>EfviUdpSender</primary><secondary>init</secondary></indexterm>
+<para><computeroutput>bool EfviUdpSender::init (const char * interface, const char * local_ip, uint16_t local_port, const char * dest_ip, uint16_t dest_port)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_efvi_udp_sender_1a49ed066660913c042d769743355c8fdb"/><section>
+    <title>isClosed()</title>
+<indexterm><primary>isClosed</primary><secondary>EfviUdpSender</secondary></indexterm>
+<indexterm><primary>EfviUdpSender</primary><secondary>isClosed</secondary></indexterm>
+<para><computeroutput>bool EfviUdpSender::isClosed ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_efvi_udp_sender_1a1a66aee671199106ec4fc9b957fc3bbe"/><section>
+    <title>write()</title>
+<indexterm><primary>write</primary><secondary>EfviUdpSender</secondary></indexterm>
+<indexterm><primary>EfviUdpSender</primary><secondary>write</secondary></indexterm>
+<para><computeroutput>bool EfviUdpSender::write (const void * data, uint32_t size)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/external/pollnet/Efvi.h</section>
+</section>

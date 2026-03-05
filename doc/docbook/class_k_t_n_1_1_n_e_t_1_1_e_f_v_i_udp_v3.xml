@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_n_e_t_1_1_e_f_v_i_udp_v3" xml:lang="en-US">
+<title>KTN::NET::EFVIUdpV3 Class Reference</title>
+<indexterm><primary>KTN::NET::EFVIUdpV3</primary></indexterm>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum class <emphasis role="strong">FilterIPProto</emphasis> : int { <emphasis role="strong">UDP</emphasis> = ::IPPROTO_UDP
+, <emphasis role="strong">TCP</emphasis> = ::IPPROTO_TCP
+ }</para>
+</listitem>
+            <listitem><para>typedef i01::core::Timestamp <link linkend="_class_k_t_n_1_1_n_e_t_1_1_e_f_v_i_udp_v3_1a8767a2938810010f02ba3abb32189ca5">Timestamp</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_n_e_t_1_1_e_f_v_i_udp_v3_1a547f7638eda961513e5d39de7ac12fa1">EFVIUdpV3</link> (std::string feed, int affinity, bool hwtimestamping, std::string name, bool useCertNrConfigFile=false)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_n_e_t_1_1_e_f_v_i_udp_v3_1a534dd29f529fdf64e5c04c77c7a3bb31">apply_filter</link> (const string &amp;connid, const string &amp;ipaddr, int port, bool isA)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_n_e_t_1_1_e_f_v_i_udp_v3_1ae267f6c22b95e98995d2b233d2c11268">poll</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_n_e_t_1_1_e_f_v_i_udp_v3_1aa5ae9a63c9632bc98bcb2e5720ee6c96">EfPrintStats</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_n_e_t_1_1_e_f_v_i_udp_v3_1a6315117521e6a4024e40daa8c4cf93fe">RefillRing</link> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_k_t_n_1_1_n_e_t_1_1_e_f_v_i_udp_v3_1a3253cc4765028cba472ad5b565b2cdce"/>void <emphasis role="strong">testticket</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_k_t_n_1_1_n_e_t_1_1_e_f_v_i_udp_v3_1aa7e7030d1ead90896d5a4f6ff5f41a09"/>int <emphasis role="strong">Source</emphasis> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Typedef Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_n_e_t_1_1_e_f_v_i_udp_v3_1a8767a2938810010f02ba3abb32189ca5"/><section>
+    <title>Timestamp</title>
+<indexterm><primary>Timestamp</primary><secondary>KTN::NET::EFVIUdpV3</secondary></indexterm>
+<indexterm><primary>KTN::NET::EFVIUdpV3</primary><secondary>Timestamp</secondary></indexterm>
+<para><computeroutput>i01::core::Timestamp KTN::NET::EFVIUdpV3::Timestamp</computeroutput></para></section>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_n_e_t_1_1_e_f_v_i_udp_v3_1a701c2c0cb550c16fde239f849fcad180"/><section>
+    <title>FilterIPProto</title>
+<indexterm><primary>FilterIPProto</primary><secondary>KTN::NET::EFVIUdpV3</secondary></indexterm>
+<indexterm><primary>KTN::NET::EFVIUdpV3</primary><secondary>FilterIPProto</secondary></indexterm>
+<para><computeroutput>enum class KTN::NET::EFVIUdpV3::FilterIPProto : int<computeroutput>[strong]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_n_e_t_1_1_e_f_v_i_udp_v3_1a547f7638eda961513e5d39de7ac12fa1"/><section>
+    <title>EFVIUdpV3()</title>
+<indexterm><primary>EFVIUdpV3</primary><secondary>KTN::NET::EFVIUdpV3</secondary></indexterm>
+<indexterm><primary>KTN::NET::EFVIUdpV3</primary><secondary>EFVIUdpV3</secondary></indexterm>
+<para><computeroutput>EFVIUdpV3::EFVIUdpV3 (std::string feed, int affinity, bool hwtimestamping, std::string name, bool useCertNrConfigFile = <computeroutput>false</computeroutput>
+)<computeroutput>[explicit]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_n_e_t_1_1_e_f_v_i_udp_v3_1a72b100a9dd63242089f0375d929d047e"/><section>
+    <title>~EFVIUdpV3()</title>
+<indexterm><primary>~EFVIUdpV3</primary><secondary>KTN::NET::EFVIUdpV3</secondary></indexterm>
+<indexterm><primary>KTN::NET::EFVIUdpV3</primary><secondary>~EFVIUdpV3</secondary></indexterm>
+<para><computeroutput>EFVIUdpV3::~EFVIUdpV3 ( )<computeroutput>[virtual]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_n_e_t_1_1_e_f_v_i_udp_v3_1a534dd29f529fdf64e5c04c77c7a3bb31"/><section>
+    <title>apply_filter()</title>
+<indexterm><primary>apply_filter</primary><secondary>KTN::NET::EFVIUdpV3</secondary></indexterm>
+<indexterm><primary>KTN::NET::EFVIUdpV3</primary><secondary>apply_filter</secondary></indexterm>
+<para><computeroutput>bool EFVIUdpV3::apply_filter (const string &amp; connid, const string &amp; ipaddr, int port, bool isA)</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_n_e_t_1_1_e_f_v_i_udp_v3_1aa5ae9a63c9632bc98bcb2e5720ee6c96"/><section>
+    <title>EfPrintStats()</title>
+<indexterm><primary>EfPrintStats</primary><secondary>KTN::NET::EFVIUdpV3</secondary></indexterm>
+<indexterm><primary>KTN::NET::EFVIUdpV3</primary><secondary>EfPrintStats</secondary></indexterm>
+<para><computeroutput>void EFVIUdpV3::EfPrintStats ( )</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_n_e_t_1_1_e_f_v_i_udp_v3_1ae267f6c22b95e98995d2b233d2c11268"/><section>
+    <title>poll()</title>
+<indexterm><primary>poll</primary><secondary>KTN::NET::EFVIUdpV3</secondary></indexterm>
+<indexterm><primary>KTN::NET::EFVIUdpV3</primary><secondary>poll</secondary></indexterm>
+<para><computeroutput>void EFVIUdpV3::poll ( )</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_n_e_t_1_1_e_f_v_i_udp_v3_1a6315117521e6a4024e40daa8c4cf93fe"/><section>
+    <title>RefillRing()</title>
+<indexterm><primary>RefillRing</primary><secondary>KTN::NET::EFVIUdpV3</secondary></indexterm>
+<indexterm><primary>KTN::NET::EFVIUdpV3</primary><secondary>RefillRing</secondary></indexterm>
+<para><computeroutput>void EFVIUdpV3::RefillRing ( )</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+KtnEfvi/EFVIUdpV3.hppKtnEfvi/EFVIUdpV3.cpp</section>
+</section>

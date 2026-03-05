@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classmoodycamel_1_1_blocking_reader_writer_queue" xml:lang="en-US">
+<title>moodycamel::BlockingReaderWriterQueue&lt; T, MAX_BLOCK_SIZE &gt; Class Template Reference</title>
+<indexterm><primary>moodycamel::BlockingReaderWriterQueue&lt; T, MAX_BLOCK_SIZE &gt;</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classmoodycamel_1_1_blocking_reader_writer_queue_1ae9b473c7735992da103506501922adc9">BlockingReaderWriterQueue</link> (size_t size=15) AE_NO_TSAN</para>
+</listitem>
+            <listitem><para><link linkend="_classmoodycamel_1_1_blocking_reader_writer_queue_1a9d9ac85749331b2d56bbeb3a49fdd739">BlockingReaderWriterQueue</link> (<link linkend="_classmoodycamel_1_1_blocking_reader_writer_queue">BlockingReaderWriterQueue</link> &amp;&amp;other) AE_NO_TSAN</para>
+</listitem>
+            <listitem><para><link linkend="_classmoodycamel_1_1_blocking_reader_writer_queue">BlockingReaderWriterQueue</link> &amp; <link linkend="_classmoodycamel_1_1_blocking_reader_writer_queue_1af4c9dbaed80d7ecb3170da628ac4e1da">operator=</link> (<link linkend="_classmoodycamel_1_1_blocking_reader_writer_queue">BlockingReaderWriterQueue</link> &amp;&amp;other) AE_NO_TSAN</para>
+</listitem>
+            <listitem><para>AE_FORCEINLINE bool <link linkend="_classmoodycamel_1_1_blocking_reader_writer_queue_1afb0c99f0f1f292b5e7c3a55c65c114a5">try_enqueue</link> (T const &amp;element) AE_NO_TSAN</para>
+</listitem>
+            <listitem><para>AE_FORCEINLINE bool <link linkend="_classmoodycamel_1_1_blocking_reader_writer_queue_1a05fd9a057646a1354a4ad3362a837058">try_enqueue</link> (T &amp;&amp;element) AE_NO_TSAN</para>
+</listitem>
+            <listitem><para>AE_FORCEINLINE bool <link linkend="_classmoodycamel_1_1_blocking_reader_writer_queue_1a382d8340e6e766d1d0d7573128e45cb3">enqueue</link> (T const &amp;element) AE_NO_TSAN</para>
+</listitem>
+            <listitem><para>AE_FORCEINLINE bool <link linkend="_classmoodycamel_1_1_blocking_reader_writer_queue_1a7703623946b8c089f4ec5776557053cf">enqueue</link> (T &amp;&amp;element) AE_NO_TSAN</para>
+</listitem>
+            <listitem><para>template&lt;typename U &gt; </para><para>bool <link linkend="_classmoodycamel_1_1_blocking_reader_writer_queue_1aa22215269fbe7a8e4dd205775c1eff2c">try_dequeue</link> (U &amp;result) AE_NO_TSAN</para>
+</listitem>
+            <listitem><para>template&lt;typename U &gt; </para><para>void <link linkend="_classmoodycamel_1_1_blocking_reader_writer_queue_1a933ea93957ef45f4a9f175a60f340914">wait_dequeue</link> (U &amp;result) AE_NO_TSAN</para>
+</listitem>
+            <listitem><para>template&lt;typename U &gt; </para><para>bool <link linkend="_classmoodycamel_1_1_blocking_reader_writer_queue_1a38a3ebbed3fdb475d69f83db66ec670a">wait_dequeue_timed</link> (U &amp;result, std::int64_t timeout_usecs) AE_NO_TSAN</para>
+</listitem>
+            <listitem><para>AE_FORCEINLINE T * <link linkend="_classmoodycamel_1_1_blocking_reader_writer_queue_1ae39bc78ff3218e8fb2c1471272bb818e">peek</link> () const AE_NO_TSAN</para>
+</listitem>
+            <listitem><para>AE_FORCEINLINE bool <link linkend="_classmoodycamel_1_1_blocking_reader_writer_queue_1a9bd779b546f5bf9356488abcadd7f699">pop</link> () AE_NO_TSAN</para>
+</listitem>
+            <listitem><para>AE_FORCEINLINE size_t <link linkend="_classmoodycamel_1_1_blocking_reader_writer_queue_1afdb0c491dbf0a48400367954b980d585">size_approx</link> () const AE_NO_TSAN</para>
+</listitem>
+            <listitem><para>AE_FORCEINLINE size_t <link linkend="_classmoodycamel_1_1_blocking_reader_writer_queue_1a497b9b22fa615a73d0231f3b162328f3">max_capacity</link> () const</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;typename T, size_t MAX_BLOCK_SIZE = 512&gt;<?linebreak?>class moodycamel::BlockingReaderWriterQueue&lt; T, MAX_BLOCK_SIZE &gt;</title></simplesect>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classmoodycamel_1_1_blocking_reader_writer_queue_1ae9b473c7735992da103506501922adc9"/><section>
+    <title>BlockingReaderWriterQueue()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>BlockingReaderWriterQueue</primary><secondary>moodycamel::BlockingReaderWriterQueue&lt; T, MAX_BLOCK_SIZE &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::BlockingReaderWriterQueue&lt; T, MAX_BLOCK_SIZE &gt;</primary><secondary>BlockingReaderWriterQueue</secondary></indexterm>
+<computeroutput>template&lt;typename T , size_t MAX_BLOCK_SIZE = 512&gt; </computeroutput><para><computeroutput><link linkend="_classmoodycamel_1_1_blocking_reader_writer_queue">moodycamel::BlockingReaderWriterQueue</link>&lt; T, MAX_BLOCK_SIZE &gt;::BlockingReaderWriterQueue (size_t size = <computeroutput>15</computeroutput>
+)<computeroutput>[inline]</computeroutput>, <computeroutput>[explicit]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_blocking_reader_writer_queue_1a9d9ac85749331b2d56bbeb3a49fdd739"/><section>
+    <title>BlockingReaderWriterQueue()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>BlockingReaderWriterQueue</primary><secondary>moodycamel::BlockingReaderWriterQueue&lt; T, MAX_BLOCK_SIZE &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::BlockingReaderWriterQueue&lt; T, MAX_BLOCK_SIZE &gt;</primary><secondary>BlockingReaderWriterQueue</secondary></indexterm>
+<computeroutput>template&lt;typename T , size_t MAX_BLOCK_SIZE = 512&gt; </computeroutput><para><computeroutput><link linkend="_classmoodycamel_1_1_blocking_reader_writer_queue">moodycamel::BlockingReaderWriterQueue</link>&lt; T, MAX_BLOCK_SIZE &gt;::BlockingReaderWriterQueue (<link linkend="_classmoodycamel_1_1_blocking_reader_writer_queue">BlockingReaderWriterQueue</link>&lt; T, MAX_BLOCK_SIZE &gt; &amp;&amp; other)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classmoodycamel_1_1_blocking_reader_writer_queue_1a7703623946b8c089f4ec5776557053cf"/><section>
+    <title>enqueue()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>enqueue</primary><secondary>moodycamel::BlockingReaderWriterQueue&lt; T, MAX_BLOCK_SIZE &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::BlockingReaderWriterQueue&lt; T, MAX_BLOCK_SIZE &gt;</primary><secondary>enqueue</secondary></indexterm>
+<computeroutput>template&lt;typename T , size_t MAX_BLOCK_SIZE = 512&gt; </computeroutput><para><computeroutput>AE_FORCEINLINE bool <link linkend="_classmoodycamel_1_1_blocking_reader_writer_queue">moodycamel::BlockingReaderWriterQueue</link>&lt; T, MAX_BLOCK_SIZE &gt;::enqueue (T &amp;&amp; element)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_blocking_reader_writer_queue_1a382d8340e6e766d1d0d7573128e45cb3"/><section>
+    <title>enqueue()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>enqueue</primary><secondary>moodycamel::BlockingReaderWriterQueue&lt; T, MAX_BLOCK_SIZE &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::BlockingReaderWriterQueue&lt; T, MAX_BLOCK_SIZE &gt;</primary><secondary>enqueue</secondary></indexterm>
+<computeroutput>template&lt;typename T , size_t MAX_BLOCK_SIZE = 512&gt; </computeroutput><para><computeroutput>AE_FORCEINLINE bool <link linkend="_classmoodycamel_1_1_blocking_reader_writer_queue">moodycamel::BlockingReaderWriterQueue</link>&lt; T, MAX_BLOCK_SIZE &gt;::enqueue (T const &amp; element)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_blocking_reader_writer_queue_1a497b9b22fa615a73d0231f3b162328f3"/><section>
+    <title>max_capacity()</title>
+<indexterm><primary>max_capacity</primary><secondary>moodycamel::BlockingReaderWriterQueue&lt; T, MAX_BLOCK_SIZE &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::BlockingReaderWriterQueue&lt; T, MAX_BLOCK_SIZE &gt;</primary><secondary>max_capacity</secondary></indexterm>
+<computeroutput>template&lt;typename T , size_t MAX_BLOCK_SIZE = 512&gt; </computeroutput><para><computeroutput>AE_FORCEINLINE size_t <link linkend="_classmoodycamel_1_1_blocking_reader_writer_queue">moodycamel::BlockingReaderWriterQueue</link>&lt; T, MAX_BLOCK_SIZE &gt;::max_capacity ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_blocking_reader_writer_queue_1af4c9dbaed80d7ecb3170da628ac4e1da"/><section>
+    <title>operator=()</title>
+<indexterm><primary>operator=</primary><secondary>moodycamel::BlockingReaderWriterQueue&lt; T, MAX_BLOCK_SIZE &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::BlockingReaderWriterQueue&lt; T, MAX_BLOCK_SIZE &gt;</primary><secondary>operator=</secondary></indexterm>
+<computeroutput>template&lt;typename T , size_t MAX_BLOCK_SIZE = 512&gt; </computeroutput><para><computeroutput><link linkend="_classmoodycamel_1_1_blocking_reader_writer_queue">BlockingReaderWriterQueue</link> &amp; <link linkend="_classmoodycamel_1_1_blocking_reader_writer_queue">moodycamel::BlockingReaderWriterQueue</link>&lt; T, MAX_BLOCK_SIZE &gt;::operator= (<link linkend="_classmoodycamel_1_1_blocking_reader_writer_queue">BlockingReaderWriterQueue</link>&lt; T, MAX_BLOCK_SIZE &gt; &amp;&amp; other)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_blocking_reader_writer_queue_1ae39bc78ff3218e8fb2c1471272bb818e"/><section>
+    <title>peek()</title>
+<indexterm><primary>peek</primary><secondary>moodycamel::BlockingReaderWriterQueue&lt; T, MAX_BLOCK_SIZE &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::BlockingReaderWriterQueue&lt; T, MAX_BLOCK_SIZE &gt;</primary><secondary>peek</secondary></indexterm>
+<computeroutput>template&lt;typename T , size_t MAX_BLOCK_SIZE = 512&gt; </computeroutput><para><computeroutput>AE_FORCEINLINE T * <link linkend="_classmoodycamel_1_1_blocking_reader_writer_queue">moodycamel::BlockingReaderWriterQueue</link>&lt; T, MAX_BLOCK_SIZE &gt;::peek ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_blocking_reader_writer_queue_1a9bd779b546f5bf9356488abcadd7f699"/><section>
+    <title>pop()</title>
+<indexterm><primary>pop</primary><secondary>moodycamel::BlockingReaderWriterQueue&lt; T, MAX_BLOCK_SIZE &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::BlockingReaderWriterQueue&lt; T, MAX_BLOCK_SIZE &gt;</primary><secondary>pop</secondary></indexterm>
+<computeroutput>template&lt;typename T , size_t MAX_BLOCK_SIZE = 512&gt; </computeroutput><para><computeroutput>AE_FORCEINLINE bool <link linkend="_classmoodycamel_1_1_blocking_reader_writer_queue">moodycamel::BlockingReaderWriterQueue</link>&lt; T, MAX_BLOCK_SIZE &gt;::pop ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_blocking_reader_writer_queue_1afdb0c491dbf0a48400367954b980d585"/><section>
+    <title>size_approx()</title>
+<indexterm><primary>size_approx</primary><secondary>moodycamel::BlockingReaderWriterQueue&lt; T, MAX_BLOCK_SIZE &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::BlockingReaderWriterQueue&lt; T, MAX_BLOCK_SIZE &gt;</primary><secondary>size_approx</secondary></indexterm>
+<computeroutput>template&lt;typename T , size_t MAX_BLOCK_SIZE = 512&gt; </computeroutput><para><computeroutput>AE_FORCEINLINE size_t <link linkend="_classmoodycamel_1_1_blocking_reader_writer_queue">moodycamel::BlockingReaderWriterQueue</link>&lt; T, MAX_BLOCK_SIZE &gt;::size_approx ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_blocking_reader_writer_queue_1aa22215269fbe7a8e4dd205775c1eff2c"/><section>
+    <title>try_dequeue()</title>
+<indexterm><primary>try_dequeue</primary><secondary>moodycamel::BlockingReaderWriterQueue&lt; T, MAX_BLOCK_SIZE &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::BlockingReaderWriterQueue&lt; T, MAX_BLOCK_SIZE &gt;</primary><secondary>try_dequeue</secondary></indexterm>
+<computeroutput>template&lt;typename T , size_t MAX_BLOCK_SIZE = 512&gt; </computeroutput><computeroutput>template&lt;typename U &gt; </computeroutput><para><computeroutput>bool <link linkend="_classmoodycamel_1_1_blocking_reader_writer_queue">moodycamel::BlockingReaderWriterQueue</link>&lt; T, MAX_BLOCK_SIZE &gt;::try_dequeue (U &amp; result)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_blocking_reader_writer_queue_1a05fd9a057646a1354a4ad3362a837058"/><section>
+    <title>try_enqueue()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>try_enqueue</primary><secondary>moodycamel::BlockingReaderWriterQueue&lt; T, MAX_BLOCK_SIZE &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::BlockingReaderWriterQueue&lt; T, MAX_BLOCK_SIZE &gt;</primary><secondary>try_enqueue</secondary></indexterm>
+<computeroutput>template&lt;typename T , size_t MAX_BLOCK_SIZE = 512&gt; </computeroutput><para><computeroutput>AE_FORCEINLINE bool <link linkend="_classmoodycamel_1_1_blocking_reader_writer_queue">moodycamel::BlockingReaderWriterQueue</link>&lt; T, MAX_BLOCK_SIZE &gt;::try_enqueue (T &amp;&amp; element)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_blocking_reader_writer_queue_1afb0c99f0f1f292b5e7c3a55c65c114a5"/><section>
+    <title>try_enqueue()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>try_enqueue</primary><secondary>moodycamel::BlockingReaderWriterQueue&lt; T, MAX_BLOCK_SIZE &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::BlockingReaderWriterQueue&lt; T, MAX_BLOCK_SIZE &gt;</primary><secondary>try_enqueue</secondary></indexterm>
+<computeroutput>template&lt;typename T , size_t MAX_BLOCK_SIZE = 512&gt; </computeroutput><para><computeroutput>AE_FORCEINLINE bool <link linkend="_classmoodycamel_1_1_blocking_reader_writer_queue">moodycamel::BlockingReaderWriterQueue</link>&lt; T, MAX_BLOCK_SIZE &gt;::try_enqueue (T const &amp; element)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_blocking_reader_writer_queue_1a933ea93957ef45f4a9f175a60f340914"/><section>
+    <title>wait_dequeue()</title>
+<indexterm><primary>wait_dequeue</primary><secondary>moodycamel::BlockingReaderWriterQueue&lt; T, MAX_BLOCK_SIZE &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::BlockingReaderWriterQueue&lt; T, MAX_BLOCK_SIZE &gt;</primary><secondary>wait_dequeue</secondary></indexterm>
+<computeroutput>template&lt;typename T , size_t MAX_BLOCK_SIZE = 512&gt; </computeroutput><computeroutput>template&lt;typename U &gt; </computeroutput><para><computeroutput>void <link linkend="_classmoodycamel_1_1_blocking_reader_writer_queue">moodycamel::BlockingReaderWriterQueue</link>&lt; T, MAX_BLOCK_SIZE &gt;::wait_dequeue (U &amp; result)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_blocking_reader_writer_queue_1a38a3ebbed3fdb475d69f83db66ec670a"/><section>
+    <title>wait_dequeue_timed()</title>
+<indexterm><primary>wait_dequeue_timed</primary><secondary>moodycamel::BlockingReaderWriterQueue&lt; T, MAX_BLOCK_SIZE &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::BlockingReaderWriterQueue&lt; T, MAX_BLOCK_SIZE &gt;</primary><secondary>wait_dequeue_timed</secondary></indexterm>
+<computeroutput>template&lt;typename T , size_t MAX_BLOCK_SIZE = 512&gt; </computeroutput><computeroutput>template&lt;typename U &gt; </computeroutput><para><computeroutput>bool <link linkend="_classmoodycamel_1_1_blocking_reader_writer_queue">moodycamel::BlockingReaderWriterQueue</link>&lt; T, MAX_BLOCK_SIZE &gt;::wait_dequeue_timed (U &amp; result, std::int64_t timeout_usecs)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/external/camel/readerwriterqueue.h</section>
+</section>

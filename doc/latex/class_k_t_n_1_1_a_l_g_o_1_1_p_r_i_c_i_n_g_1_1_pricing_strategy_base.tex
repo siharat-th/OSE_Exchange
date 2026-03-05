@@ -1,0 +1,238 @@
+\doxysection{KTN\+::ALGO\+::PRICING\+::Pricing\+Strategy\+Base Class Reference}
+\hypertarget{class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base}{}\label{class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base}\index{KTN::ALGO::PRICING::PricingStrategyBase@{KTN::ALGO::PRICING::PricingStrategyBase}}
+
+
+The base class for pricing strategies.  
+
+
+
+
+{\ttfamily \#include $<$Pricing\+Strategy\+Base.\+hpp$>$}
+
+Inheritance diagram for KTN\+::ALGO\+::PRICING\+::Pricing\+Strategy\+Base\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_a75beb5ffe6c1c339932e92ff40a433b8}{Pricing\+Strategy\+Base}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_af8b81d0f694cc0f9aff4e1a75e26da8c}{\texorpdfstring{$\sim$}{\string~}\+Pricing\+Strategy\+Base}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_a9a75566b268951957f450d737c9bc4b1}{Load}} (\mbox{\hyperlink{structinstrument}{instrument}} \texorpdfstring{$\ast$}{*}legs, int len, bool certnr)
+\begin{DoxyCompactList}\small\item\em Load the pricing strategy with the given legs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_ae02381733d6a7a895dfd726334504767}{Log\+Me}} (std\+::string sz\+Msg, int i\+Color=LOG\+\_\+\+WHITE)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_log}{Log} a message. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_a56267f60212477d39e50572f71da7f97}{round\+To\+Tick}} (int value, int MINTICK, int side)
+\begin{DoxyCompactList}\small\item\em Round a value to the nearest tick. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_a4201e238efe5497f21322efaea3f98e8}{price\+Round\+Convert}} (float px, int tickprecision, float mintick, bool round\+Up=false)
+\begin{DoxyCompactList}\small\item\em Round and convert a price value. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_a1a534d4a72848f8619b65ffab80749bb}{get\+Cert\+Sec\+Id}} (string symbol)
+\begin{DoxyCompactList}\small\item\em Get the certificate security ID for the given symbol. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structinstrument}{instrument}} \mbox{\hyperlink{class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_a48d69c6918de697bc3959db39a3b81f6}{\+\_\+legs}} \mbox{[}24\mbox{]}
+\item 
+int \mbox{\hyperlink{class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_a694acfb9420d71f08fefa7d3cc7ab48f}{\+\_\+num\+Legs}}
+\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_aed71f8c822de0aa94ffc77d5135d2ac7}{\+\_\+priceround}}
+\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_a745b7cf9b22f4b18bad8ad9e94a32a95}{\+\_\+\+CERTNR}}
+\item 
+tr1\+::unordered\+\_\+map$<$ string, long $>$ \mbox{\hyperlink{class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_ac65f10c4cb81ff771a0164da9fa7a974}{\+\_\+cert\+Id\+Map}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The base class for pricing strategies. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_a75beb5ffe6c1c339932e92ff40a433b8}\index{KTN::ALGO::PRICING::PricingStrategyBase@{KTN::ALGO::PRICING::PricingStrategyBase}!PricingStrategyBase@{PricingStrategyBase}}
+\index{PricingStrategyBase@{PricingStrategyBase}!KTN::ALGO::PRICING::PricingStrategyBase@{KTN::ALGO::PRICING::PricingStrategyBase}}
+\doxysubsubsection{\texorpdfstring{PricingStrategyBase()}{PricingStrategyBase()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_a75beb5ffe6c1c339932e92ff40a433b8} 
+Pricing\+Strategy\+Base\+::\+Pricing\+Strategy\+Base (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+\Hypertarget{class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_af8b81d0f694cc0f9aff4e1a75e26da8c}\index{KTN::ALGO::PRICING::PricingStrategyBase@{KTN::ALGO::PRICING::PricingStrategyBase}!````~PricingStrategyBase@{\texorpdfstring{$\sim$}{\string~}PricingStrategyBase}}
+\index{````~PricingStrategyBase@{\texorpdfstring{$\sim$}{\string~}PricingStrategyBase}!KTN::ALGO::PRICING::PricingStrategyBase@{KTN::ALGO::PRICING::PricingStrategyBase}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}PricingStrategyBase()}{\string~PricingStrategyBase()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_af8b81d0f694cc0f9aff4e1a75e26da8c} 
+Pricing\+Strategy\+Base\+::\texorpdfstring{$\sim$}{\string~}\+Pricing\+Strategy\+Base (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_a1a534d4a72848f8619b65ffab80749bb}\index{KTN::ALGO::PRICING::PricingStrategyBase@{KTN::ALGO::PRICING::PricingStrategyBase}!getCertSecId@{getCertSecId}}
+\index{getCertSecId@{getCertSecId}!KTN::ALGO::PRICING::PricingStrategyBase@{KTN::ALGO::PRICING::PricingStrategyBase}}
+\doxysubsubsection{\texorpdfstring{getCertSecId()}{getCertSecId()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_a1a534d4a72848f8619b65ffab80749bb} 
+int32\+\_\+t KTN\+::\+ALGO\+::\+PRICING\+::\+Pricing\+Strategy\+Base\+::get\+Cert\+Sec\+Id (\begin{DoxyParamCaption}\item[{string}]{symbol}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Get the certificate security ID for the given symbol. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em symbol} & The symbol for which to get the certificate security ID. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The certificate security ID. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00039}{IL3\+Cert\+Helpers\+::\+Cert\+Sec\+Id()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00024}{Load()}}.
+
+\Hypertarget{class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_a9a75566b268951957f450d737c9bc4b1}\index{KTN::ALGO::PRICING::PricingStrategyBase@{KTN::ALGO::PRICING::PricingStrategyBase}!Load@{Load}}
+\index{Load@{Load}!KTN::ALGO::PRICING::PricingStrategyBase@{KTN::ALGO::PRICING::PricingStrategyBase}}
+\doxysubsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_a9a75566b268951957f450d737c9bc4b1} 
+void Pricing\+Strategy\+Base\+::\+Load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structinstrument}{instrument}} \texorpdfstring{$\ast$}{*}}]{legs}{, }\item[{int}]{len}{, }\item[{bool}]{certnr}{}\end{DoxyParamCaption})}
+
+
+
+Load the pricing strategy with the given legs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em legs} & An array of instrument objects representing the legs. \\
+\hline
+{\em len} & The length of the legs array. \\
+\hline
+{\em certnr} & A flag indicating whether to use certificate number. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00146}{get\+Cert\+Sec\+Id()}}, and \mbox{\hyperlink{l00077}{instrument\+::secid}}.
+
+\Hypertarget{class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_ae02381733d6a7a895dfd726334504767}\index{KTN::ALGO::PRICING::PricingStrategyBase@{KTN::ALGO::PRICING::PricingStrategyBase}!LogMe@{LogMe}}
+\index{LogMe@{LogMe}!KTN::ALGO::PRICING::PricingStrategyBase@{KTN::ALGO::PRICING::PricingStrategyBase}}
+\doxysubsubsection{\texorpdfstring{LogMe()}{LogMe()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_ae02381733d6a7a895dfd726334504767} 
+void Pricing\+Strategy\+Base\+::\+Log\+Me (\begin{DoxyParamCaption}\item[{std\+::string}]{sz\+Msg}{, }\item[{int}]{i\+Color}{ = {\ttfamily LOG\+\_\+WHITE}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxylink{class_log}{Log} a message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sz\+Msg} & The message to log. \\
+\hline
+{\em i\+Color} & The color of the log message (optional). \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{l00106}{KTN\+::\+ALGO\+::\+PRICING\+::\+Implied\+Pricer\+::\+Calculate\+Side()}}.
+
+\Hypertarget{class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_a4201e238efe5497f21322efaea3f98e8}\index{KTN::ALGO::PRICING::PricingStrategyBase@{KTN::ALGO::PRICING::PricingStrategyBase}!priceRoundConvert@{priceRoundConvert}}
+\index{priceRoundConvert@{priceRoundConvert}!KTN::ALGO::PRICING::PricingStrategyBase@{KTN::ALGO::PRICING::PricingStrategyBase}}
+\doxysubsubsection{\texorpdfstring{priceRoundConvert()}{priceRoundConvert()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_a4201e238efe5497f21322efaea3f98e8} 
+float KTN\+::\+ALGO\+::\+PRICING\+::\+Pricing\+Strategy\+Base\+::price\+Round\+Convert (\begin{DoxyParamCaption}\item[{float}]{px}{, }\item[{int}]{tickprecision}{, }\item[{float}]{mintick}{, }\item[{bool}]{round\+Up}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Round and convert a price value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em px} & The price value to round and convert. \\
+\hline
+{\em tickprecision} & The precision of the tick size. \\
+\hline
+{\em mintick} & The minimum tick size. \\
+\hline
+{\em round\+Up} & Flag indicating whether to round up or down. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The rounded and converted price value. 
+\end{DoxyReturn}
+\Hypertarget{class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_a56267f60212477d39e50572f71da7f97}\index{KTN::ALGO::PRICING::PricingStrategyBase@{KTN::ALGO::PRICING::PricingStrategyBase}!roundToTick@{roundToTick}}
+\index{roundToTick@{roundToTick}!KTN::ALGO::PRICING::PricingStrategyBase@{KTN::ALGO::PRICING::PricingStrategyBase}}
+\doxysubsubsection{\texorpdfstring{roundToTick()}{roundToTick()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_a56267f60212477d39e50572f71da7f97} 
+int KTN\+::\+ALGO\+::\+PRICING\+::\+Pricing\+Strategy\+Base\+::round\+To\+Tick (\begin{DoxyParamCaption}\item[{int}]{value}{, }\item[{int}]{MINTICK}{, }\item[{int}]{side}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Round a value to the nearest tick. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to round. \\
+\hline
+{\em MINTICK} & The minimum tick size. \\
+\hline
+{\em side} & The rounding side (-\/1 for rounding up, 1 for rounding down). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The rounded value. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00212}{KTN\+::\+ALGO\+::\+PRICING\+::\+Spread\+Pricer\+::\+Calculate\+Side3()}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_ac65f10c4cb81ff771a0164da9fa7a974}\index{KTN::ALGO::PRICING::PricingStrategyBase@{KTN::ALGO::PRICING::PricingStrategyBase}!\_certIdMap@{\_certIdMap}}
+\index{\_certIdMap@{\_certIdMap}!KTN::ALGO::PRICING::PricingStrategyBase@{KTN::ALGO::PRICING::PricingStrategyBase}}
+\doxysubsubsection{\texorpdfstring{\_certIdMap}{\_certIdMap}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_ac65f10c4cb81ff771a0164da9fa7a974} 
+tr1\+::unordered\+\_\+map$<$string, long$>$ KTN\+::\+ALGO\+::\+PRICING\+::\+Pricing\+Strategy\+Base\+::\+\_\+cert\+Id\+Map\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_a745b7cf9b22f4b18bad8ad9e94a32a95}\index{KTN::ALGO::PRICING::PricingStrategyBase@{KTN::ALGO::PRICING::PricingStrategyBase}!\_CERTNR@{\_CERTNR}}
+\index{\_CERTNR@{\_CERTNR}!KTN::ALGO::PRICING::PricingStrategyBase@{KTN::ALGO::PRICING::PricingStrategyBase}}
+\doxysubsubsection{\texorpdfstring{\_CERTNR}{\_CERTNR}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_a745b7cf9b22f4b18bad8ad9e94a32a95} 
+bool KTN\+::\+ALGO\+::\+PRICING\+::\+Pricing\+Strategy\+Base\+::\+\_\+\+CERTNR\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_a48d69c6918de697bc3959db39a3b81f6}\index{KTN::ALGO::PRICING::PricingStrategyBase@{KTN::ALGO::PRICING::PricingStrategyBase}!\_legs@{\_legs}}
+\index{\_legs@{\_legs}!KTN::ALGO::PRICING::PricingStrategyBase@{KTN::ALGO::PRICING::PricingStrategyBase}}
+\doxysubsubsection{\texorpdfstring{\_legs}{\_legs}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_a48d69c6918de697bc3959db39a3b81f6} 
+\mbox{\hyperlink{structinstrument}{instrument}} KTN\+::\+ALGO\+::\+PRICING\+::\+Pricing\+Strategy\+Base\+::\+\_\+legs\mbox{[}24\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_a694acfb9420d71f08fefa7d3cc7ab48f}\index{KTN::ALGO::PRICING::PricingStrategyBase@{KTN::ALGO::PRICING::PricingStrategyBase}!\_numLegs@{\_numLegs}}
+\index{\_numLegs@{\_numLegs}!KTN::ALGO::PRICING::PricingStrategyBase@{KTN::ALGO::PRICING::PricingStrategyBase}}
+\doxysubsubsection{\texorpdfstring{\_numLegs}{\_numLegs}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_a694acfb9420d71f08fefa7d3cc7ab48f} 
+int KTN\+::\+ALGO\+::\+PRICING\+::\+Pricing\+Strategy\+Base\+::\+\_\+num\+Legs\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_aed71f8c822de0aa94ffc77d5135d2ac7}\index{KTN::ALGO::PRICING::PricingStrategyBase@{KTN::ALGO::PRICING::PricingStrategyBase}!\_priceround@{\_priceround}}
+\index{\_priceround@{\_priceround}!KTN::ALGO::PRICING::PricingStrategyBase@{KTN::ALGO::PRICING::PricingStrategyBase}}
+\doxysubsubsection{\texorpdfstring{\_priceround}{\_priceround}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_aed71f8c822de0aa94ffc77d5135d2ac7} 
+bool KTN\+::\+ALGO\+::\+PRICING\+::\+Pricing\+Strategy\+Base\+::\+\_\+priceround\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Algo\+Engines/Pricing\+Strategy\+Base.\+hpp\item 
+Algo\+Engines/Pricing\+Strategy\+Base.\+cpp\end{DoxyCompactItemize}

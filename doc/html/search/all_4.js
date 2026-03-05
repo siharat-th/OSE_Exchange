@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['data_0',['DATA',['../struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_d_a_t_a.html',1,'KTN::CME::IL3']]],
+  ['data_1',['data',['../class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf.html#aaf2fbc8e07eb5fd15e66ca8922a39cae',1,'KTN::NET::KTNPktBuf::data() const'],['../class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf.html#ac0963712e08684cef9a9a4c09c0cd1d2',1,'KTN::NET::KTNPktBuf::data()'],['../class_k_t_n_1_1_n_e_t_1_1_byte_writer.html#a1e7f6520aa7fd235028b936b6d127c8d',1,'KTN::NET::ByteWriter::data()']]],
+  ['data_5ftries_2',['DATA_TRIES',['../struct_algo_state.html#a9d1ac2511d1c339b04328c94ad1f89ef',1,'AlgoState']]],
+  ['deallocate_3',['deallocate',['../class_k_t_n_1_1_core_1_1_mem_pool.html#a00ec3f90ac2458a7590fefc1e5951b95',1,'KTN::Core::MemPool']]],
+  ['debug_4',['DEBUG',['../struct_log_level.html#ae0acc0f6fd65d6700528b1f105a05d0ea08e08c9e3eb556d6bbc9952a95282f9a',1,'LogLevel']]],
+  ['decimal32_5',['Decimal32',['../struct_k_t_n_1_1_mdp3_1_1_decimal32.html',1,'KTN::Mdp3']]],
+  ['decimal32null_6',['Decimal32NULL',['../struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_decimal32_n_u_l_l.html',1,'KTN::CME::IL3']]],
+  ['decimal64_7',['Decimal64',['../struct_k_t_n_1_1_mdp3_1_1_decimal64.html',1,'KTN::Mdp3']]],
+  ['decimal64null_8',['Decimal64NULL',['../struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_decimal64_n_u_l_l.html',1,'KTN::CME::IL3']]],
+  ['decodedata_9',['decodeData',['../class_algo_hdg_encoder.html#a290d5184ac7fd9532fe576c0ad78d454',1,'AlgoHdgEncoder']]],
+  ['decodeddata_10',['DecodedData',['../struct_algo_hdg_encoder_1_1_decoded_data.html',1,'AlgoHdgEncoder::DecodedData'],['../struct_k_t_n_1_1_id_gen_1_1_decoded_data.html',1,'KTN::IdGen::DecodedData']]],
+  ['decodeorder_11',['DecodeOrder',['../class_json_order_decoders.html#afa9d95f32130b89ad17b28f672eb056f',1,'JsonOrderDecoders']]],
+  ['delete_5forder_12',['delete_order',['../class_limit_order_book.html#acb663d556d8a30c4f0996573527cd382',1,'LimitOrderBook']]],
+  ['dequeue_13',['dequeue',['../class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer.html#a6a4493f50f8f4e04cb4c7d653a2dd192',1,'KTN::Core::SPSCRingBuffer']]],
+  ['deregister_14',['DeRegister',['../class_p_l_monitor.html#a505ad21b2200b1a923d37553e4ee6fea',1,'PLMonitor']]],
+  ['desc_15',['desc',['../class_session_status.html#a2c75dbc25966712f2e56bf8a330983dc',1,'SessionStatus']]],
+  ['description_16',['description',['../struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_i_l3_meta_map_1_1_meta_data.html#ae884396607753f81fffd861d015be08e',1,'KTN::CME::IL3::META::IL3MetaMap::MetaData']]],
+  ['disconnected_17',['Disconnected',['../struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_enum_session_state.html#a1a4fdd123ba195de2c11897d7329f645a21efb64214a3afa2213da7282063c6ba',1,'KTN::CME::IL3::EnumSessionState']]],
+  ['displayandwait_18',['DisplayAndWait',['../class_i_menu.html#a20bb56f784595e326d76b2f08612a106',1,'IMenu::DisplayAndWait()'],['../class_menu.html#ab0a5186c5eb791c80a3658148e99a590',1,'Menu::DisplayAndWait()'],['../class_standard_menu.html#a8a183b7bfadff568145c7e7465fa6dea',1,'StandardMenu::DisplayAndWait()'],['../class_zmq_menu.html#a2177af9d4e12928eee5b9e9046645168',1,'ZmqMenu::DisplayAndWait()']]],
+  ['displayqty_19',['displayQty',['../structordlvl.html#ac3dbecd5d408fa9f92928add36fad17b',1,'ordlvl']]],
+  ['dowork_20',['DoWork',['../class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_p_l_reporter.html#a854417d29a5bd36c6bec145e5025a3ef',1,'KTN::REPORTER::AlgoPLReporter::DoWork()'],['../class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter.html#ac380fffde0850e69473fbc6522ef62f4',1,'KTN::REPORTER::AlgoV3Reporter::DoWork()'],['../class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_generic_reporter.html#a236e7f2d4a7e4c49414a0dbe2a7ef105',1,'KTN::REPORTER::GenericReporter::DoWork()'],['../class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5.html#a783cf5dcf27d1b89f63c349dfe7b11b2',1,'KTN::REPORTER::OrderReporterV5::DoWork()'],['../class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base.html#a449d2ccb3be9222bd06fef3b5155e3af',1,'KTN::REPORTER::ReporterBase::DoWork()']]],
+  ['dump_21',['Dump',['../class_settings.html#a8c115f572d11db71822fe7e37a50b13c',1,'Settings']]]
+];

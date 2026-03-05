@@ -1,0 +1,134 @@
+\doxysection{KTN\+::Core\+::Buffer\+Pool\+V2 Class Reference}
+\hypertarget{class_k_t_n_1_1_core_1_1_buffer_pool_v2}{}\label{class_k_t_n_1_1_core_1_1_buffer_pool_v2}\index{KTN::Core::BufferPoolV2@{KTN::Core::BufferPoolV2}}
+
+
+The \doxylink{class_k_t_n_1_1_core_1_1_buffer_pool_v2}{Buffer\+Pool\+V2} class represents a buffer pool for managing KTNPkt\+Buf objects.  
+
+
+
+
+{\ttfamily \#include $<$Buffer\+Pool\+V2.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_core_1_1_buffer_pool_v2_add2801e4bbb11f06d539a19fe1e59102}{Buffer\+Pool\+V2}} (size\+\_\+t buffer\+\_\+size, size\+\_\+t pool\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_k_t_n_1_1_core_1_1_buffer_pool_v2}{Buffer\+Pool\+V2} object with the specified buffer size and pool size. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_k_t_n_1_1_core_1_1_buffer_pool_v2_a438119275c847e4e1673d2059002d787}{\texorpdfstring{$\sim$}{\string~}\+Buffer\+Pool\+V2}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{class_k_t_n_1_1_core_1_1_buffer_pool_v2}{Buffer\+Pool\+V2} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf}{KTNPkt\+Buf}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_buffer_pool_v2_a7fe990f1a7bec75e75a286c41bf4d4f2}{get}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves a buffer from the pool. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_buffer_pool_v2_a0017832c32f249992fdaa9061952c0e7}{put}} (\mbox{\hyperlink{class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf}{KTNPkt\+Buf}} \texorpdfstring{$\ast$}{*}buffer)
+\begin{DoxyCompactList}\small\item\em Returns a buffer to the pool. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_buffer_pool_v2_a6e096e537fb3a3a5c8ac3effaacf1940}{size}} ()
+\begin{DoxyCompactList}\small\item\em Returns the current size of the pool. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_buffer_pool_v2_a65adc3311c3a5e281041317813bad6cf}{Load}} ()
+\begin{DoxyCompactList}\small\item\em Loads the buffer pool. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_k_t_n_1_1_core_1_1_buffer_pool_v2}{Buffer\+Pool\+V2} class represents a buffer pool for managing KTNPkt\+Buf objects. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_k_t_n_1_1_core_1_1_buffer_pool_v2_add2801e4bbb11f06d539a19fe1e59102}\index{KTN::Core::BufferPoolV2@{KTN::Core::BufferPoolV2}!BufferPoolV2@{BufferPoolV2}}
+\index{BufferPoolV2@{BufferPoolV2}!KTN::Core::BufferPoolV2@{KTN::Core::BufferPoolV2}}
+\doxysubsubsection{\texorpdfstring{BufferPoolV2()}{BufferPoolV2()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_buffer_pool_v2_add2801e4bbb11f06d539a19fe1e59102} 
+Buffer\+Pool\+V2\+::\+Buffer\+Pool\+V2 (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{buffer\+\_\+size}{, }\item[{size\+\_\+t}]{pool\+\_\+size}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_k_t_n_1_1_core_1_1_buffer_pool_v2}{Buffer\+Pool\+V2} object with the specified buffer size and pool size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer\+\_\+size} & The size of each buffer in the pool. \\
+\hline
+{\em pool\+\_\+size} & The maximum number of buffers in the pool. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00038}{Load()}}.
+
+\Hypertarget{class_k_t_n_1_1_core_1_1_buffer_pool_v2_a438119275c847e4e1673d2059002d787}\index{KTN::Core::BufferPoolV2@{KTN::Core::BufferPoolV2}!````~BufferPoolV2@{\texorpdfstring{$\sim$}{\string~}BufferPoolV2}}
+\index{````~BufferPoolV2@{\texorpdfstring{$\sim$}{\string~}BufferPoolV2}!KTN::Core::BufferPoolV2@{KTN::Core::BufferPoolV2}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}BufferPoolV2()}{\string~BufferPoolV2()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_buffer_pool_v2_a438119275c847e4e1673d2059002d787} 
+Buffer\+Pool\+V2\+::\texorpdfstring{$\sim$}{\string~}\+Buffer\+Pool\+V2 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destroys the \doxylink{class_k_t_n_1_1_core_1_1_buffer_pool_v2}{Buffer\+Pool\+V2} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_core_1_1_buffer_pool_v2_a7fe990f1a7bec75e75a286c41bf4d4f2}\index{KTN::Core::BufferPoolV2@{KTN::Core::BufferPoolV2}!get@{get}}
+\index{get@{get}!KTN::Core::BufferPoolV2@{KTN::Core::BufferPoolV2}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_buffer_pool_v2_a7fe990f1a7bec75e75a286c41bf4d4f2} 
+\mbox{\hyperlink{class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf}{KTNPkt\+Buf}} \texorpdfstring{$\ast$}{*} Buffer\+Pool\+V2\+::get (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves a buffer from the pool. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the retrieved buffer, or nullptr if the pool is empty. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00038}{Load()}}.
+
+\Hypertarget{class_k_t_n_1_1_core_1_1_buffer_pool_v2_a65adc3311c3a5e281041317813bad6cf}\index{KTN::Core::BufferPoolV2@{KTN::Core::BufferPoolV2}!Load@{Load}}
+\index{Load@{Load}!KTN::Core::BufferPoolV2@{KTN::Core::BufferPoolV2}}
+\doxysubsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_buffer_pool_v2_a65adc3311c3a5e281041317813bad6cf} 
+void Buffer\+Pool\+V2\+::\+Load (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Loads the buffer pool. 
+
+
+
+Referenced by \mbox{\hyperlink{l00013}{Buffer\+Pool\+V2()}}, and \mbox{\hyperlink{l00051}{get()}}.
+
+\Hypertarget{class_k_t_n_1_1_core_1_1_buffer_pool_v2_a0017832c32f249992fdaa9061952c0e7}\index{KTN::Core::BufferPoolV2@{KTN::Core::BufferPoolV2}!put@{put}}
+\index{put@{put}!KTN::Core::BufferPoolV2@{KTN::Core::BufferPoolV2}}
+\doxysubsubsection{\texorpdfstring{put()}{put()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_buffer_pool_v2_a0017832c32f249992fdaa9061952c0e7} 
+bool Buffer\+Pool\+V2\+::put (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf}{KTNPkt\+Buf}} \texorpdfstring{$\ast$}{*}}]{buffer}{}\end{DoxyParamCaption})}
+
+
+
+Returns a buffer to the pool. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & A pointer to the buffer to be returned. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the buffer was successfully returned, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_k_t_n_1_1_core_1_1_buffer_pool_v2_a6e096e537fb3a3a5c8ac3effaacf1940}\index{KTN::Core::BufferPoolV2@{KTN::Core::BufferPoolV2}!size@{size}}
+\index{size@{size}!KTN::Core::BufferPoolV2@{KTN::Core::BufferPoolV2}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_buffer_pool_v2_a6e096e537fb3a3a5c8ac3effaacf1940} 
+size\+\_\+t KTN\+::\+Core\+::\+Buffer\+Pool\+V2\+::size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the current size of the pool. 
+
+\begin{DoxyReturn}{Returns}
+The current size of the pool. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Core/Buffer\+Pool\+V2.\+hpp\item 
+Core/Buffer\+Pool\+V2.\+cpp\end{DoxyCompactItemize}

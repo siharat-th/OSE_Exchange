@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_log_msg" xml:lang="en-US">
+<title>LogMsg Struct Reference</title>
+<indexterm><primary>LogMsg</primary></indexterm>
+<para>
+
+<para>Struct representing a log message. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;LogStructs.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_struct_log_msg_1a526d75941614b5eb29a3bbed98b75a7e">topic</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_log_msg_1ad643fcb9fc44c2ea70d77b3a8257e765">msg</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_log_msg_1a45fcad9ed8e0c77f6cda29aea61e3c7d">color</link></para>
+</listitem>
+            <listitem><para><link linkend="_struct_log_level_1ae0acc0f6fd65d6700528b1f105a05d0e">LogLevel::Enum</link> <link linkend="_struct_log_msg_1a0ce4dfbfe0e417015fe56fec4fd0460f">loglevel</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_log_msg_1af1822c38be7e9e0fabdbd4bd4bbbe412">persist</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Struct representing a log message. </para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_log_msg_1a45fcad9ed8e0c77f6cda29aea61e3c7d"/><section>
+    <title>color</title>
+<indexterm><primary>color</primary><secondary>LogMsg</secondary></indexterm>
+<indexterm><primary>LogMsg</primary><secondary>color</secondary></indexterm>
+<para><computeroutput>int LogMsg::color</computeroutput></para>
+<para>The color associated with the log message. </para>
+<para>
+Referenced by <link linkend="_l00030">ZmqLogger::WriteLine()</link>.</para>
+</section>
+<anchor xml:id="_struct_log_msg_1a0ce4dfbfe0e417015fe56fec4fd0460f"/><section>
+    <title>loglevel</title>
+<indexterm><primary>loglevel</primary><secondary>LogMsg</secondary></indexterm>
+<indexterm><primary>LogMsg</primary><secondary>loglevel</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_log_level_1ae0acc0f6fd65d6700528b1f105a05d0e">LogLevel::Enum</link> LogMsg::loglevel</computeroutput></para>
+<para>The log level of the message. </para>
+<para>
+Referenced by <link linkend="_l00030">ZmqLogger::WriteLine()</link>.</para>
+</section>
+<anchor xml:id="_struct_log_msg_1ad643fcb9fc44c2ea70d77b3a8257e765"/><section>
+    <title>msg</title>
+<indexterm><primary>msg</primary><secondary>LogMsg</secondary></indexterm>
+<indexterm><primary>LogMsg</primary><secondary>msg</secondary></indexterm>
+<para><computeroutput>string LogMsg::msg</computeroutput></para>
+<para>The content of the log message. </para>
+<para>
+Referenced by <link linkend="_l00030">ZmqLogger::WriteLine()</link>.</para>
+</section>
+<anchor xml:id="_struct_log_msg_1af1822c38be7e9e0fabdbd4bd4bbbe412"/><section>
+    <title>persist</title>
+<indexterm><primary>persist</primary><secondary>LogMsg</secondary></indexterm>
+<indexterm><primary>LogMsg</primary><secondary>persist</secondary></indexterm>
+<para><computeroutput>bool LogMsg::persist</computeroutput></para>
+<para>Flag indicating if the log message should be persisted. </para>
+</section>
+<anchor xml:id="_struct_log_msg_1a526d75941614b5eb29a3bbed98b75a7e"/><section>
+    <title>topic</title>
+<indexterm><primary>topic</primary><secondary>LogMsg</secondary></indexterm>
+<indexterm><primary>LogMsg</primary><secondary>topic</secondary></indexterm>
+<para><computeroutput>string LogMsg::topic</computeroutput></para>
+<para>The topic of the log message. </para>
+<para>
+Referenced by <link linkend="_l00030">ZmqLogger::WriteLine()</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Loggers/LogStructs.hpp</section>
+</section>

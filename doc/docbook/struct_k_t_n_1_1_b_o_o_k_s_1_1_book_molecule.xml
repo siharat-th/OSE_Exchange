@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule" xml:lang="en-US">
+<title>KTN::BOOKS::BookMolecule Struct Reference</title>
+<indexterm><primary>KTN::BOOKS::BookMolecule</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule_1a77bd1443098c819299b58b58793ed0d6">operator&lt;</link> (const <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule">BookMolecule</link> &amp;other) const</para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule_1a51094cb761babe69a452abd8fcaeda6f">operator&gt;</link> (const <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule">BookMolecule</link> &amp;other) const</para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule_1a54792832bdfc2afa993f1c407ef953d1">operator==</link> (const <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule">BookMolecule</link> &amp;other) const</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static int <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule_1aa9764afb89bb68ed77829d12df3e0229">PriceConv</link> (uint64_t mantissa, int exponent)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>int32_t <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule_1a048df477199419e07b384314576bd47b">secid</link></para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule_1a626de5cba4a3482a8b76d53bdea68a5a">index</link></para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule_1a1e2a81cc74d256536500a4560c5fb3fe">mantissa</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule_1a4a3c105d0a90a20cd1b8beff19fc0340">level</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule_1afcc6cccdab3cb9d236fc631362ee56c5">lastlevel</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule_1afd1b920ff709f800e7fdf703b108d2ac">price</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule_1a79d63994d2eb59ddc8d37d34cbf00b04">fraction</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule_1ac1cb2baa4e95da11456e3490a6d01858">size</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule_1a11a1e1f742bdfd1e86d258e573319ba1">side</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule_1a2286e2739c1571903c1d6833f34eedc7">iside</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule_1a2946ad83023592457af28c4598fa0c17">implied</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule_1aaf7a4f64a56aa01205c8c47fdb631811">symbol</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule_1ac9a6e7724cc7c48afbb5392949a04b04">product</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule_1ab70ed1a701336bac738ef0a48390d75e">prodtype</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule_1a2de4f7577c2305103925b205129b42d2">updateaction</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule_1a14b18bb685936d6ffafd266f59018e46">nbrorders</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule_1ac711d45fbe9979918763cfb11d640eec">seqnum</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule_1a9493933e30d789883b2141eb83898215">valid</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule_1a77bd1443098c819299b58b58793ed0d6"/><section>
+    <title>operator&lt;()</title>
+<indexterm><primary>operator&lt;</primary><secondary>KTN::BOOKS::BookMolecule</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::BookMolecule</primary><secondary>operator&lt;</secondary></indexterm>
+<para><computeroutput>bool KTN::BOOKS::BookMolecule::operator&lt; (const <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule">BookMolecule</link> &amp; other) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule_1a54792832bdfc2afa993f1c407ef953d1"/><section>
+    <title>operator==()</title>
+<indexterm><primary>operator==</primary><secondary>KTN::BOOKS::BookMolecule</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::BookMolecule</primary><secondary>operator==</secondary></indexterm>
+<para><computeroutput>bool KTN::BOOKS::BookMolecule::operator== (const <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule">BookMolecule</link> &amp; other) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule_1a51094cb761babe69a452abd8fcaeda6f"/><section>
+    <title>operator&gt;()</title>
+<indexterm><primary>operator&gt;</primary><secondary>KTN::BOOKS::BookMolecule</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::BookMolecule</primary><secondary>operator&gt;</secondary></indexterm>
+<para><computeroutput>bool KTN::BOOKS::BookMolecule::operator&gt; (const <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule">BookMolecule</link> &amp; other) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule_1aa9764afb89bb68ed77829d12df3e0229"/><section>
+    <title>PriceConv()</title>
+<indexterm><primary>PriceConv</primary><secondary>KTN::BOOKS::BookMolecule</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::BookMolecule</primary><secondary>PriceConv</secondary></indexterm>
+<para><computeroutput>static int KTN::BOOKS::BookMolecule::PriceConv (uint64_t mantissa, int exponent)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule_1a79d63994d2eb59ddc8d37d34cbf00b04"/><section>
+    <title>fraction</title>
+<indexterm><primary>fraction</primary><secondary>KTN::BOOKS::BookMolecule</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::BookMolecule</primary><secondary>fraction</secondary></indexterm>
+<para><computeroutput>int KTN::BOOKS::BookMolecule::fraction</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule_1a2946ad83023592457af28c4598fa0c17"/><section>
+    <title>implied</title>
+<indexterm><primary>implied</primary><secondary>KTN::BOOKS::BookMolecule</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::BookMolecule</primary><secondary>implied</secondary></indexterm>
+<para><computeroutput>bool KTN::BOOKS::BookMolecule::implied</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule_1a626de5cba4a3482a8b76d53bdea68a5a"/><section>
+    <title>index</title>
+<indexterm><primary>index</primary><secondary>KTN::BOOKS::BookMolecule</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::BookMolecule</primary><secondary>index</secondary></indexterm>
+<para><computeroutput>int32_t KTN::BOOKS::BookMolecule::index</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule_1a2286e2739c1571903c1d6833f34eedc7"/><section>
+    <title>iside</title>
+<indexterm><primary>iside</primary><secondary>KTN::BOOKS::BookMolecule</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::BookMolecule</primary><secondary>iside</secondary></indexterm>
+<para><computeroutput>int KTN::BOOKS::BookMolecule::iside</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule_1afcc6cccdab3cb9d236fc631362ee56c5"/><section>
+    <title>lastlevel</title>
+<indexterm><primary>lastlevel</primary><secondary>KTN::BOOKS::BookMolecule</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::BookMolecule</primary><secondary>lastlevel</secondary></indexterm>
+<para><computeroutput>int KTN::BOOKS::BookMolecule::lastlevel</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule_1a4a3c105d0a90a20cd1b8beff19fc0340"/><section>
+    <title>level</title>
+<indexterm><primary>level</primary><secondary>KTN::BOOKS::BookMolecule</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::BookMolecule</primary><secondary>level</secondary></indexterm>
+<para><computeroutput>int KTN::BOOKS::BookMolecule::level</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule_1a1e2a81cc74d256536500a4560c5fb3fe"/><section>
+    <title>mantissa</title>
+<indexterm><primary>mantissa</primary><secondary>KTN::BOOKS::BookMolecule</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::BookMolecule</primary><secondary>mantissa</secondary></indexterm>
+<para><computeroutput>uint64_t KTN::BOOKS::BookMolecule::mantissa</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule_1a14b18bb685936d6ffafd266f59018e46"/><section>
+    <title>nbrorders</title>
+<indexterm><primary>nbrorders</primary><secondary>KTN::BOOKS::BookMolecule</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::BookMolecule</primary><secondary>nbrorders</secondary></indexterm>
+<para><computeroutput>int KTN::BOOKS::BookMolecule::nbrorders</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule_1afd1b920ff709f800e7fdf703b108d2ac"/><section>
+    <title>price</title>
+<indexterm><primary>price</primary><secondary>KTN::BOOKS::BookMolecule</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::BookMolecule</primary><secondary>price</secondary></indexterm>
+<para><computeroutput>int KTN::BOOKS::BookMolecule::price</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule_1ab70ed1a701336bac738ef0a48390d75e"/><section>
+    <title>prodtype</title>
+<indexterm><primary>prodtype</primary><secondary>KTN::BOOKS::BookMolecule</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::BookMolecule</primary><secondary>prodtype</secondary></indexterm>
+<para><computeroutput>std::string KTN::BOOKS::BookMolecule::prodtype</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule_1ac9a6e7724cc7c48afbb5392949a04b04"/><section>
+    <title>product</title>
+<indexterm><primary>product</primary><secondary>KTN::BOOKS::BookMolecule</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::BookMolecule</primary><secondary>product</secondary></indexterm>
+<para><computeroutput>std::string KTN::BOOKS::BookMolecule::product</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule_1a048df477199419e07b384314576bd47b"/><section>
+    <title>secid</title>
+<indexterm><primary>secid</primary><secondary>KTN::BOOKS::BookMolecule</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::BookMolecule</primary><secondary>secid</secondary></indexterm>
+<para><computeroutput>int32_t KTN::BOOKS::BookMolecule::secid</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule_1ac711d45fbe9979918763cfb11d640eec"/><section>
+    <title>seqnum</title>
+<indexterm><primary>seqnum</primary><secondary>KTN::BOOKS::BookMolecule</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::BookMolecule</primary><secondary>seqnum</secondary></indexterm>
+<para><computeroutput>uint32_t KTN::BOOKS::BookMolecule::seqnum</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule_1a11a1e1f742bdfd1e86d258e573319ba1"/><section>
+    <title>side</title>
+<indexterm><primary>side</primary><secondary>KTN::BOOKS::BookMolecule</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::BookMolecule</primary><secondary>side</secondary></indexterm>
+<para><computeroutput>std::string KTN::BOOKS::BookMolecule::side</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule_1ac1cb2baa4e95da11456e3490a6d01858"/><section>
+    <title>size</title>
+<indexterm><primary>size</primary><secondary>KTN::BOOKS::BookMolecule</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::BookMolecule</primary><secondary>size</secondary></indexterm>
+<para><computeroutput>int KTN::BOOKS::BookMolecule::size</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule_1aaf7a4f64a56aa01205c8c47fdb631811"/><section>
+    <title>symbol</title>
+<indexterm><primary>symbol</primary><secondary>KTN::BOOKS::BookMolecule</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::BookMolecule</primary><secondary>symbol</secondary></indexterm>
+<para><computeroutput>std::string KTN::BOOKS::BookMolecule::symbol</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule_1a2de4f7577c2305103925b205129b42d2"/><section>
+    <title>updateaction</title>
+<indexterm><primary>updateaction</primary><secondary>KTN::BOOKS::BookMolecule</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::BookMolecule</primary><secondary>updateaction</secondary></indexterm>
+<para><computeroutput>int KTN::BOOKS::BookMolecule::updateaction</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule_1a9493933e30d789883b2141eb83898215"/><section>
+    <title>valid</title>
+<indexterm><primary>valid</primary><secondary>KTN::BOOKS::BookMolecule</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::BookMolecule</primary><secondary>valid</secondary></indexterm>
+<para><computeroutput>bool KTN::BOOKS::BookMolecule::valid</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Containers/KatanaBooks.hpp</section>
+</section>

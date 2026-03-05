@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_t_e_m_p_l_a_t_e_1_1_reporter" xml:lang="en-US">
+<title>KTN::TEMPLATE::Reporter&lt; T &gt; Class Template Reference</title>
+<indexterm><primary>KTN::TEMPLATE::Reporter&lt; T &gt;</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_k_t_n_1_1_t_e_m_p_l_a_t_e_1_1_reporter">Reporter</link> class is responsible for reporting data of type T. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;Reporter.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_t_e_m_p_l_a_t_e_1_1_reporter_1ac47d1ea43a15518a43ee6c1ea7d89587">Reporter</link> ()</para>
+
+<para>Constructs a new <link linkend="_class_k_t_n_1_1_t_e_m_p_l_a_t_e_1_1_reporter">Reporter</link> object. </para>
+</listitem>
+            <listitem><para><link linkend="_class_k_t_n_1_1_t_e_m_p_l_a_t_e_1_1_reporter_1acbacf4155d5fe9e4a8e833d785e76880">~Reporter</link> ()</para>
+
+<para>Destroys the <link linkend="_class_k_t_n_1_1_t_e_m_p_l_a_t_e_1_1_reporter">Reporter</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_t_e_m_p_l_a_t_e_1_1_reporter_1af89e0817293cb79ac7796702b222142f">start</link> (std::string ip, int port)</para>
+
+<para>Starts the reporting process. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_t_e_m_p_l_a_t_e_1_1_reporter_1a7cda2de40a5ff0469287cdc929d6989e">stop</link> ()</para>
+
+<para>Stops the reporting process. </para>
+</listitem>
+            <listitem><para>template&lt;typename U &gt; </para><para>void <link linkend="_class_k_t_n_1_1_t_e_m_p_l_a_t_e_1_1_reporter_1a3d07bfd6317c5e523d98babddd66caa2">report</link> (const U &amp;data)</para>
+
+<para>Reports data of type U. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;typename T&gt;<?linebreak?>class KTN::TEMPLATE::Reporter&lt; T &gt;</title></simplesect>
+
+<para>The <link linkend="_class_k_t_n_1_1_t_e_m_p_l_a_t_e_1_1_reporter">Reporter</link> class is responsible for reporting data of type T. </para>
+
+
+
+<para>This class provides functionality to start and stop reporting, as well as reporting data of type U.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Template Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>T</entry><entry>
+<para>The type of data to be reported. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_t_e_m_p_l_a_t_e_1_1_reporter_1ac47d1ea43a15518a43ee6c1ea7d89587"/><section>
+    <title>Reporter()</title>
+<indexterm><primary>Reporter</primary><secondary>KTN::TEMPLATE::Reporter&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>KTN::TEMPLATE::Reporter&lt; T &gt;</primary><secondary>Reporter</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>Reporter::Reporter ( )</computeroutput></para><para>
+
+<para>Constructs a new <link linkend="_class_k_t_n_1_1_t_e_m_p_l_a_t_e_1_1_reporter">Reporter</link> object. </para>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_e_m_p_l_a_t_e_1_1_reporter_1acbacf4155d5fe9e4a8e833d785e76880"/><section>
+    <title>~Reporter()</title>
+<indexterm><primary>~Reporter</primary><secondary>KTN::TEMPLATE::Reporter&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>KTN::TEMPLATE::Reporter&lt; T &gt;</primary><secondary>~Reporter</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>Reporter::~Reporter ( )</computeroutput></para><para>
+
+<para>Destroys the <link linkend="_class_k_t_n_1_1_t_e_m_p_l_a_t_e_1_1_reporter">Reporter</link> object. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_t_e_m_p_l_a_t_e_1_1_reporter_1a3d07bfd6317c5e523d98babddd66caa2"/><section>
+    <title>report()</title>
+<indexterm><primary>report</primary><secondary>KTN::TEMPLATE::Reporter&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>KTN::TEMPLATE::Reporter&lt; T &gt;</primary><secondary>report</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><computeroutput>template&lt;typename U &gt; </computeroutput><para><computeroutput>void Reporter::report (const U &amp; data)</computeroutput></para><para>
+
+<para>Reports data of type U. </para>
+</para>
+
+<para>This function reports data of type U.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Template Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>U</entry><entry>
+<para>The type of data to be reported. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>data</entry><entry>
+<para>The data to be reported. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_e_m_p_l_a_t_e_1_1_reporter_1af89e0817293cb79ac7796702b222142f"/><section>
+    <title>start()</title>
+<indexterm><primary>start</primary><secondary>KTN::TEMPLATE::Reporter&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>KTN::TEMPLATE::Reporter&lt; T &gt;</primary><secondary>start</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>void Reporter::start (std::string ip, int port)</computeroutput></para><para>
+
+<para>Starts the reporting process. </para>
+</para>
+
+<para>This function starts the reporting process by specifying the IP address and port to connect to.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ip</entry><entry>
+<para>The IP address to connect to. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>port</entry><entry>
+<para>The port to connect to. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_e_m_p_l_a_t_e_1_1_reporter_1a7cda2de40a5ff0469287cdc929d6989e"/><section>
+    <title>stop()</title>
+<indexterm><primary>stop</primary><secondary>KTN::TEMPLATE::Reporter&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>KTN::TEMPLATE::Reporter&lt; T &gt;</primary><secondary>stop</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>void Reporter::stop ( )</computeroutput></para><para>
+
+<para>Stops the reporting process. </para>
+</para>
+
+<para>This function stops the reporting process. </para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Reporters/Reporter.hppReporters/Reporter.cpp</section>
+</section>

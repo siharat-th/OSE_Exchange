@@ -1,0 +1,138 @@
+\doxysection{efvitcp\+::Tcp\+Header Struct Reference}
+\hypertarget{structefvitcp_1_1_tcp_header}{}\label{structefvitcp_1_1_tcp_header}\index{efvitcp::TcpHeader@{efvitcp::TcpHeader}}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{structefvitcp_1_1_tcp_header_a731d8ca5ff86635fd645ae14d9758492}{src\+\_\+port}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{structefvitcp_1_1_tcp_header_a832ab6410083dab955aa5144a3297b76}{dst\+\_\+port}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structefvitcp_1_1_tcp_header_afcbd3a7eb1e87e32fea68deb51898969}{seq\+\_\+num}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structefvitcp_1_1_tcp_header_a85f8a74db34542f53597d3f5154a83ef}{ack\+\_\+num}}
+\item 
+\Hypertarget{structefvitcp_1_1_tcp_header_a7e95bfc5bb4c3a4503c639f84c506919}\label{structefvitcp_1_1_tcp_header_a7e95bfc5bb4c3a4503c639f84c506919} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\Hypertarget{unionefvitcp_1_1_tcp_header_1_1_0d18_ae786c7b25357c6baa646527158d37573}\label{unionefvitcp_1_1_tcp_header_1_1_0d18_ae786c7b25357c6baa646527158d37573} 
+\>struct \{\\
+\>\>uint16\_t \mbox{\hyperlink{structefvitcp_1_1_tcp_header_a91ec29cf19f1bb5b9a856e18adec91c7}{reserved}}: 4\\
+\>\>uint16\_t \mbox{\hyperlink{structefvitcp_1_1_tcp_header_ad09e1fe92749e1d31e3cca185068253e}{data\_offset}}: 4\\
+\>\>uint16\_t \mbox{\hyperlink{structefvitcp_1_1_tcp_header_a09e6ed3748e93b1a983999504715eabf}{fin}}: 1\\
+\>\>uint16\_t \mbox{\hyperlink{structefvitcp_1_1_tcp_header_a3dd2b570048fbdfbd4015db3a54ddf9b}{syn}}: 1\\
+\>\>uint16\_t \mbox{\hyperlink{structefvitcp_1_1_tcp_header_a0195f40ba8466746fa6c65d24d0c579c}{rst}}: 1\\
+\>\>uint16\_t \mbox{\hyperlink{structefvitcp_1_1_tcp_header_a7f296d5fc20151e39340964e4cbc8646}{psh}}: 1\\
+\>\>uint16\_t \mbox{\hyperlink{structefvitcp_1_1_tcp_header_adb72746c122c1e5427cb0ae8099f9dae}{ack}}: 1\\
+\>\} \\
+\>uint16\_t \mbox{\hyperlink{structefvitcp_1_1_tcp_header_a22a641ee3ad3cded61f23e073a5b6e9e}{offset\_flags}}\\
+\}; \\
+
+\end{tabbing}\item 
+uint16\+\_\+t \mbox{\hyperlink{structefvitcp_1_1_tcp_header_a6a69e5c0c02522f30629e6a94da96af5}{window\+\_\+size}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{structefvitcp_1_1_tcp_header_a0ffcb1e868e7939b193f929cfe4fc62e}{checksum}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{structefvitcp_1_1_tcp_header_abda0d56519e1a029b14a7226feada28d}{urgent\+\_\+pointer}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structefvitcp_1_1_tcp_header_adb72746c122c1e5427cb0ae8099f9dae}\index{efvitcp::TcpHeader@{efvitcp::TcpHeader}!ack@{ack}}
+\index{ack@{ack}!efvitcp::TcpHeader@{efvitcp::TcpHeader}}
+\doxysubsubsection{\texorpdfstring{ack}{ack}}
+{\footnotesize\ttfamily \label{structefvitcp_1_1_tcp_header_adb72746c122c1e5427cb0ae8099f9dae} 
+uint16\+\_\+t efvitcp\+::\+Tcp\+Header\+::ack}
+
+\Hypertarget{structefvitcp_1_1_tcp_header_a85f8a74db34542f53597d3f5154a83ef}\index{efvitcp::TcpHeader@{efvitcp::TcpHeader}!ack\_num@{ack\_num}}
+\index{ack\_num@{ack\_num}!efvitcp::TcpHeader@{efvitcp::TcpHeader}}
+\doxysubsubsection{\texorpdfstring{ack\_num}{ack\_num}}
+{\footnotesize\ttfamily \label{structefvitcp_1_1_tcp_header_a85f8a74db34542f53597d3f5154a83ef} 
+uint32\+\_\+t efvitcp\+::\+Tcp\+Header\+::ack\+\_\+num}
+
+\Hypertarget{structefvitcp_1_1_tcp_header_a0ffcb1e868e7939b193f929cfe4fc62e}\index{efvitcp::TcpHeader@{efvitcp::TcpHeader}!checksum@{checksum}}
+\index{checksum@{checksum}!efvitcp::TcpHeader@{efvitcp::TcpHeader}}
+\doxysubsubsection{\texorpdfstring{checksum}{checksum}}
+{\footnotesize\ttfamily \label{structefvitcp_1_1_tcp_header_a0ffcb1e868e7939b193f929cfe4fc62e} 
+uint16\+\_\+t efvitcp\+::\+Tcp\+Header\+::checksum}
+
+\Hypertarget{structefvitcp_1_1_tcp_header_ad09e1fe92749e1d31e3cca185068253e}\index{efvitcp::TcpHeader@{efvitcp::TcpHeader}!data\_offset@{data\_offset}}
+\index{data\_offset@{data\_offset}!efvitcp::TcpHeader@{efvitcp::TcpHeader}}
+\doxysubsubsection{\texorpdfstring{data\_offset}{data\_offset}}
+{\footnotesize\ttfamily \label{structefvitcp_1_1_tcp_header_ad09e1fe92749e1d31e3cca185068253e} 
+uint16\+\_\+t efvitcp\+::\+Tcp\+Header\+::data\+\_\+offset}
+
+\Hypertarget{structefvitcp_1_1_tcp_header_a832ab6410083dab955aa5144a3297b76}\index{efvitcp::TcpHeader@{efvitcp::TcpHeader}!dst\_port@{dst\_port}}
+\index{dst\_port@{dst\_port}!efvitcp::TcpHeader@{efvitcp::TcpHeader}}
+\doxysubsubsection{\texorpdfstring{dst\_port}{dst\_port}}
+{\footnotesize\ttfamily \label{structefvitcp_1_1_tcp_header_a832ab6410083dab955aa5144a3297b76} 
+uint16\+\_\+t efvitcp\+::\+Tcp\+Header\+::dst\+\_\+port}
+
+\Hypertarget{structefvitcp_1_1_tcp_header_a09e6ed3748e93b1a983999504715eabf}\index{efvitcp::TcpHeader@{efvitcp::TcpHeader}!fin@{fin}}
+\index{fin@{fin}!efvitcp::TcpHeader@{efvitcp::TcpHeader}}
+\doxysubsubsection{\texorpdfstring{fin}{fin}}
+{\footnotesize\ttfamily \label{structefvitcp_1_1_tcp_header_a09e6ed3748e93b1a983999504715eabf} 
+uint16\+\_\+t efvitcp\+::\+Tcp\+Header\+::fin}
+
+\Hypertarget{structefvitcp_1_1_tcp_header_a22a641ee3ad3cded61f23e073a5b6e9e}\index{efvitcp::TcpHeader@{efvitcp::TcpHeader}!offset\_flags@{offset\_flags}}
+\index{offset\_flags@{offset\_flags}!efvitcp::TcpHeader@{efvitcp::TcpHeader}}
+\doxysubsubsection{\texorpdfstring{offset\_flags}{offset\_flags}}
+{\footnotesize\ttfamily \label{structefvitcp_1_1_tcp_header_a22a641ee3ad3cded61f23e073a5b6e9e} 
+uint16\+\_\+t efvitcp\+::\+Tcp\+Header\+::offset\+\_\+flags}
+
+\Hypertarget{structefvitcp_1_1_tcp_header_a7f296d5fc20151e39340964e4cbc8646}\index{efvitcp::TcpHeader@{efvitcp::TcpHeader}!psh@{psh}}
+\index{psh@{psh}!efvitcp::TcpHeader@{efvitcp::TcpHeader}}
+\doxysubsubsection{\texorpdfstring{psh}{psh}}
+{\footnotesize\ttfamily \label{structefvitcp_1_1_tcp_header_a7f296d5fc20151e39340964e4cbc8646} 
+uint16\+\_\+t efvitcp\+::\+Tcp\+Header\+::psh}
+
+\Hypertarget{structefvitcp_1_1_tcp_header_a91ec29cf19f1bb5b9a856e18adec91c7}\index{efvitcp::TcpHeader@{efvitcp::TcpHeader}!reserved@{reserved}}
+\index{reserved@{reserved}!efvitcp::TcpHeader@{efvitcp::TcpHeader}}
+\doxysubsubsection{\texorpdfstring{reserved}{reserved}}
+{\footnotesize\ttfamily \label{structefvitcp_1_1_tcp_header_a91ec29cf19f1bb5b9a856e18adec91c7} 
+uint16\+\_\+t efvitcp\+::\+Tcp\+Header\+::reserved}
+
+\Hypertarget{structefvitcp_1_1_tcp_header_a0195f40ba8466746fa6c65d24d0c579c}\index{efvitcp::TcpHeader@{efvitcp::TcpHeader}!rst@{rst}}
+\index{rst@{rst}!efvitcp::TcpHeader@{efvitcp::TcpHeader}}
+\doxysubsubsection{\texorpdfstring{rst}{rst}}
+{\footnotesize\ttfamily \label{structefvitcp_1_1_tcp_header_a0195f40ba8466746fa6c65d24d0c579c} 
+uint16\+\_\+t efvitcp\+::\+Tcp\+Header\+::rst}
+
+\Hypertarget{structefvitcp_1_1_tcp_header_afcbd3a7eb1e87e32fea68deb51898969}\index{efvitcp::TcpHeader@{efvitcp::TcpHeader}!seq\_num@{seq\_num}}
+\index{seq\_num@{seq\_num}!efvitcp::TcpHeader@{efvitcp::TcpHeader}}
+\doxysubsubsection{\texorpdfstring{seq\_num}{seq\_num}}
+{\footnotesize\ttfamily \label{structefvitcp_1_1_tcp_header_afcbd3a7eb1e87e32fea68deb51898969} 
+uint32\+\_\+t efvitcp\+::\+Tcp\+Header\+::seq\+\_\+num}
+
+\Hypertarget{structefvitcp_1_1_tcp_header_a731d8ca5ff86635fd645ae14d9758492}\index{efvitcp::TcpHeader@{efvitcp::TcpHeader}!src\_port@{src\_port}}
+\index{src\_port@{src\_port}!efvitcp::TcpHeader@{efvitcp::TcpHeader}}
+\doxysubsubsection{\texorpdfstring{src\_port}{src\_port}}
+{\footnotesize\ttfamily \label{structefvitcp_1_1_tcp_header_a731d8ca5ff86635fd645ae14d9758492} 
+uint16\+\_\+t efvitcp\+::\+Tcp\+Header\+::src\+\_\+port}
+
+\Hypertarget{structefvitcp_1_1_tcp_header_a3dd2b570048fbdfbd4015db3a54ddf9b}\index{efvitcp::TcpHeader@{efvitcp::TcpHeader}!syn@{syn}}
+\index{syn@{syn}!efvitcp::TcpHeader@{efvitcp::TcpHeader}}
+\doxysubsubsection{\texorpdfstring{syn}{syn}}
+{\footnotesize\ttfamily \label{structefvitcp_1_1_tcp_header_a3dd2b570048fbdfbd4015db3a54ddf9b} 
+uint16\+\_\+t efvitcp\+::\+Tcp\+Header\+::syn}
+
+\Hypertarget{structefvitcp_1_1_tcp_header_abda0d56519e1a029b14a7226feada28d}\index{efvitcp::TcpHeader@{efvitcp::TcpHeader}!urgent\_pointer@{urgent\_pointer}}
+\index{urgent\_pointer@{urgent\_pointer}!efvitcp::TcpHeader@{efvitcp::TcpHeader}}
+\doxysubsubsection{\texorpdfstring{urgent\_pointer}{urgent\_pointer}}
+{\footnotesize\ttfamily \label{structefvitcp_1_1_tcp_header_abda0d56519e1a029b14a7226feada28d} 
+uint16\+\_\+t efvitcp\+::\+Tcp\+Header\+::urgent\+\_\+pointer}
+
+\Hypertarget{structefvitcp_1_1_tcp_header_a6a69e5c0c02522f30629e6a94da96af5}\index{efvitcp::TcpHeader@{efvitcp::TcpHeader}!window\_size@{window\_size}}
+\index{window\_size@{window\_size}!efvitcp::TcpHeader@{efvitcp::TcpHeader}}
+\doxysubsubsection{\texorpdfstring{window\_size}{window\_size}}
+{\footnotesize\ttfamily \label{structefvitcp_1_1_tcp_header_a6a69e5c0c02522f30629e6a94da96af5} 
+uint16\+\_\+t efvitcp\+::\+Tcp\+Header\+::window\+\_\+size}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sgaer/source/repos/katanafinancial/\+Occam\+CME4/\+Occam\+CME4/src/external/pollnet/efvitcp/Core.\+h\end{DoxyCompactItemize}

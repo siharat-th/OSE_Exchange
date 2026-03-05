@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_log_level" xml:lang="en-US">
+<title>LogLevel Struct Reference</title>
+<indexterm><primary>LogLevel</primary></indexterm>
+<para>
+
+<para>The <link linkend="_struct_log_level">LogLevel</link> struct represents the different levels of log messages. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;LogEnums.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_struct_log_level_1ae0acc0f6fd65d6700528b1f105a05d0e">Enum</link> : uint8_t { <?linebreak?><link linkend="_struct_log_level_1ae0acc0f6fd65d6700528b1f105a05d0ea947ab21e0c1225f78ca7de508f021f92">TRACE</link> = 0
+, <link linkend="_struct_log_level_1ae0acc0f6fd65d6700528b1f105a05d0ea08e08c9e3eb556d6bbc9952a95282f9a">DEBUG</link> = 1
+, <link linkend="_struct_log_level_1ae0acc0f6fd65d6700528b1f105a05d0eaf251bd279ea5f104225260eab21188d9">INFO</link> = 2
+, <link linkend="_struct_log_level_1ae0acc0f6fd65d6700528b1f105a05d0eab3539f4bea6074d468cd243e1b8e49a8">WARNING</link> = 3
+, <?linebreak?><link linkend="_struct_log_level_1ae0acc0f6fd65d6700528b1f105a05d0ea61b4605a5cd1b00233a4cd8a56c1a79b">ERROR</link> = 4
+, <link linkend="_struct_log_level_1ae0acc0f6fd65d6700528b1f105a05d0eab6a5cc8b286782b815dd2fd152ae0ba3">CRITICAL</link> = 5
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static std::string <link linkend="_struct_log_level_1a33cf6e4ff9755d85e9306bcef4549d42">toString</link> (<link linkend="_struct_log_level_1ae0acc0f6fd65d6700528b1f105a05d0e">Enum</link> level)</para>
+
+<para>Converts the log level enum value to its corresponding string representation. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_struct_log_level">LogLevel</link> struct represents the different levels of log messages. </para>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_struct_log_level_1ae0acc0f6fd65d6700528b1f105a05d0e"/><section>
+    <title>Enum</title>
+<indexterm><primary>Enum</primary><secondary>LogLevel</secondary></indexterm>
+<indexterm><primary>LogLevel</primary><secondary>Enum</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_struct_log_level_1ae0acc0f6fd65d6700528b1f105a05d0e">LogLevel::Enum</link> : uint8_t</computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>TRACE</primary><secondary>LogLevel</secondary></indexterm>
+<indexterm><primary>LogLevel</primary><secondary>TRACE</secondary></indexterm>
+<anchor xml:id="_struct_log_level_1ae0acc0f6fd65d6700528b1f105a05d0ea947ab21e0c1225f78ca7de508f021f92"/>TRACE</entry><entry>
+<para>Trace level log message </para>
+</entry></row><row><entry><indexterm><primary>DEBUG</primary><secondary>LogLevel</secondary></indexterm>
+<indexterm><primary>LogLevel</primary><secondary>DEBUG</secondary></indexterm>
+<anchor xml:id="_struct_log_level_1ae0acc0f6fd65d6700528b1f105a05d0ea08e08c9e3eb556d6bbc9952a95282f9a"/>DEBUG</entry><entry>
+<para>Debug level log message </para>
+</entry></row><row><entry><indexterm><primary>INFO</primary><secondary>LogLevel</secondary></indexterm>
+<indexterm><primary>LogLevel</primary><secondary>INFO</secondary></indexterm>
+<anchor xml:id="_struct_log_level_1ae0acc0f6fd65d6700528b1f105a05d0eaf251bd279ea5f104225260eab21188d9"/>INFO</entry><entry>
+<para>Info level log message </para>
+</entry></row><row><entry><indexterm><primary>WARNING</primary><secondary>LogLevel</secondary></indexterm>
+<indexterm><primary>LogLevel</primary><secondary>WARNING</secondary></indexterm>
+<anchor xml:id="_struct_log_level_1ae0acc0f6fd65d6700528b1f105a05d0eab3539f4bea6074d468cd243e1b8e49a8"/>WARNING</entry><entry>
+<para>Warning level log message </para>
+</entry></row><row><entry><indexterm><primary>ERROR</primary><secondary>LogLevel</secondary></indexterm>
+<indexterm><primary>LogLevel</primary><secondary>ERROR</secondary></indexterm>
+<anchor xml:id="_struct_log_level_1ae0acc0f6fd65d6700528b1f105a05d0ea61b4605a5cd1b00233a4cd8a56c1a79b"/>ERROR</entry><entry>
+<para>Error level log message </para>
+</entry></row><row><entry><indexterm><primary>CRITICAL</primary><secondary>LogLevel</secondary></indexterm>
+<indexterm><primary>LogLevel</primary><secondary>CRITICAL</secondary></indexterm>
+<anchor xml:id="_struct_log_level_1ae0acc0f6fd65d6700528b1f105a05d0eab6a5cc8b286782b815dd2fd152ae0ba3"/>CRITICAL</entry><entry>
+<para>Critical level log message </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_log_level_1a33cf6e4ff9755d85e9306bcef4549d42"/><section>
+    <title>toString()</title>
+<indexterm><primary>toString</primary><secondary>LogLevel</secondary></indexterm>
+<indexterm><primary>LogLevel</primary><secondary>toString</secondary></indexterm>
+<para><computeroutput>static std::string LogLevel::toString (<link linkend="_struct_log_level_1ae0acc0f6fd65d6700528b1f105a05d0e">Enum</link> level)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Converts the log level enum value to its corresponding string representation. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>level</entry><entry>
+<para>The log level enum value. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The string representation of the log level. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00032">CRITICAL</link>, <link linkend="_l00028">DEBUG</link>, <link linkend="_l00031">ERROR</link>, <link linkend="_l00029">INFO</link>, <link linkend="_l00027">TRACE</link>, and <link linkend="_l00030">WARNING</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Loggers/LogEnums.hpp</section>
+</section>

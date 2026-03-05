@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_socket_udp_sender" xml:lang="en-US">
+<title>SocketUdpSender Class Reference</title>
+<indexterm><primary>SocketUdpSender</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_socket_udp_sender_1a1e542bdbb5b2218b9084f902f473aeb2">init</link> (const char *interface, const char *local_ip, uint16_t local_port, const char *dest_ip, uint16_t dest_port)</para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_class_socket_udp_sender_1a3aa9bcd20b07f74934da9126553c81a6">getLocalPort</link> ()</para>
+</listitem>
+            <listitem><para>const char * <link linkend="_class_socket_udp_sender_1abd9a9bcd3f377e37bcf7faf2fba5f072">getLastError</link> ()</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_socket_udp_sender_1afe59ba27dee03f84414b63fa30853cd5">isClosed</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_socket_udp_sender_1ad04501a6d5a36820ac0203e93b742e90">close</link> (const char *reason)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_socket_udp_sender_1a13b514b68e3040d0d35f03e7df617dfe">write</link> (const void *data, uint32_t size)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_socket_udp_sender_1ac50ec5c827801f7163789060d4d3d4af"/><section>
+    <title>~SocketUdpSender()</title>
+<indexterm><primary>~SocketUdpSender</primary><secondary>SocketUdpSender</secondary></indexterm>
+<indexterm><primary>SocketUdpSender</primary><secondary>~SocketUdpSender</secondary></indexterm>
+<para><computeroutput>SocketUdpSender::~SocketUdpSender ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_socket_udp_sender_1ad04501a6d5a36820ac0203e93b742e90"/><section>
+    <title>close()</title>
+<indexterm><primary>close</primary><secondary>SocketUdpSender</secondary></indexterm>
+<indexterm><primary>SocketUdpSender</primary><secondary>close</secondary></indexterm>
+<para><computeroutput>void SocketUdpSender::close (const char * reason)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_socket_udp_sender_1abd9a9bcd3f377e37bcf7faf2fba5f072"/><section>
+    <title>getLastError()</title>
+<indexterm><primary>getLastError</primary><secondary>SocketUdpSender</secondary></indexterm>
+<indexterm><primary>SocketUdpSender</primary><secondary>getLastError</secondary></indexterm>
+<para><computeroutput>const char * SocketUdpSender::getLastError ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_socket_udp_sender_1a3aa9bcd20b07f74934da9126553c81a6"/><section>
+    <title>getLocalPort()</title>
+<indexterm><primary>getLocalPort</primary><secondary>SocketUdpSender</secondary></indexterm>
+<indexterm><primary>SocketUdpSender</primary><secondary>getLocalPort</secondary></indexterm>
+<para><computeroutput>uint16_t SocketUdpSender::getLocalPort ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_socket_udp_sender_1a1e542bdbb5b2218b9084f902f473aeb2"/><section>
+    <title>init()</title>
+<indexterm><primary>init</primary><secondary>SocketUdpSender</secondary></indexterm>
+<indexterm><primary>SocketUdpSender</primary><secondary>init</secondary></indexterm>
+<para><computeroutput>bool SocketUdpSender::init (const char * interface, const char * local_ip, uint16_t local_port, const char * dest_ip, uint16_t dest_port)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_socket_udp_sender_1afe59ba27dee03f84414b63fa30853cd5"/><section>
+    <title>isClosed()</title>
+<indexterm><primary>isClosed</primary><secondary>SocketUdpSender</secondary></indexterm>
+<indexterm><primary>SocketUdpSender</primary><secondary>isClosed</secondary></indexterm>
+<para><computeroutput>bool SocketUdpSender::isClosed ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_socket_udp_sender_1a13b514b68e3040d0d35f03e7df617dfe"/><section>
+    <title>write()</title>
+<indexterm><primary>write</primary><secondary>SocketUdpSender</secondary></indexterm>
+<indexterm><primary>SocketUdpSender</primary><secondary>write</secondary></indexterm>
+<para><computeroutput>bool SocketUdpSender::write (const void * data, uint32_t size)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/external/pollnet/Socket.h</section>
+</section>

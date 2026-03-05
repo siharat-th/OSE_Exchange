@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_order_parser" xml:lang="en-US">
+<title>OrderParser Class Reference</title>
+<indexterm><primary>OrderParser</primary></indexterm>
+<para>
+
+<para>Parses JSON order data and converts it into Order objects. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;OrderParser.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> <link linkend="_class_order_parser_1a59793dc25cc5631de79c4fbbab5dc4e4">parseorder</link> (const rapidjson::Value &amp;json_ord)</para>
+
+<para>Parses a JSON order and returns an Order object. </para>
+</listitem>
+            <listitem><para>static <link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> <link linkend="_class_order_parser_1ae36992123e8ab190c407c4d7d37719e8">parseincoming</link> (const rapidjson::Value &amp;json_ord)</para>
+
+<para>Parses incoming JSON order data and returns an Order object. </para>
+</listitem>
+            <listitem><para>static <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> <link linkend="_class_order_parser_1ac66a0d5d3b2bf29ac65ca13669930257">parsepod</link> (const rapidjson::Value &amp;json_ord)</para>
+
+<para>Parses a JSON order and returns an OrderPod object. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Parses JSON order data and converts it into Order objects. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_order_parser_1ae36992123e8ab190c407c4d7d37719e8"/><section>
+    <title>parseincoming()</title>
+<indexterm><primary>parseincoming</primary><secondary>OrderParser</secondary></indexterm>
+<indexterm><primary>OrderParser</primary><secondary>parseincoming</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> OrderParser::parseincoming (const rapidjson::Value &amp; json_ord)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Parses incoming JSON order data and returns an Order object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>json_ord</entry><entry>
+<para>The incoming JSON order data. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The parsed Order object. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00253">AlgoFactory::ParseAlgoOrder()</link>.</para>
+</section>
+<anchor xml:id="_class_order_parser_1a59793dc25cc5631de79c4fbbab5dc4e4"/><section>
+    <title>parseorder()</title>
+<indexterm><primary>parseorder</primary><secondary>OrderParser</secondary></indexterm>
+<indexterm><primary>OrderParser</primary><secondary>parseorder</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> OrderParser::parseorder (const rapidjson::Value &amp; json_ord)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Parses a JSON order and returns an Order object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>json_ord</entry><entry>
+<para>The JSON order data. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The parsed Order object. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00047">KTN::AutoHedgeOB::onJson()</link>, <link linkend="_l00062">KTN::PLWatcher::onJson()</link>, and <link linkend="_l00045">KTN::SqueezerOB::onJson()</link>.</para>
+</section>
+<anchor xml:id="_class_order_parser_1ac66a0d5d3b2bf29ac65ca13669930257"/><section>
+    <title>parsepod()</title>
+<indexterm><primary>parsepod</primary><secondary>OrderParser</secondary></indexterm>
+<indexterm><primary>OrderParser</primary><secondary>parsepod</secondary></indexterm>
+<para><computeroutput>static <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> OrderParser::parsepod (const rapidjson::Value &amp; json_ord)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Parses a JSON order and returns an OrderPod object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>json_ord</entry><entry>
+<para>The JSON order data. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The parsed OrderPod object. </para>
+</formalpara>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+AlgoParams/OrderParser.hppAlgoParams/OrderParser.cpp</section>
+</section>

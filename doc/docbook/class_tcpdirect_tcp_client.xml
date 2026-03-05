@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_tcpdirect_tcp_client" xml:lang="en-US">
+<title>TcpdirectTcpClient&lt; Conf &gt; Class Template Reference</title>
+<indexterm><primary>TcpdirectTcpClient&lt; Conf &gt;</primary></indexterm>
+<para>Inheritance diagram for TcpdirectTcpClient&lt; Conf &gt;:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_tcpdirect_tcp_client.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>using <link linkend="_class_tcpdirect_tcp_client_1a0f5c9b98e97853c1284ca87e1c6395a1">Conn</link> = <link linkend="_class_tcpdirect_tcp_connection">TcpdirectTcpConnection</link>&lt;Conf&gt;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_tcpdirect_tcp_client_1a866b99225cf13a726317fa116e77c7af">init</link> (const char *interface, const char *server_ip, uint16_t server_port, uint16_t local_port=0)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_tcpdirect_tcp_client_1a598d17ff64e0485a5031f7396a2e9797">allowReconnect</link> ()</para>
+</listitem>
+            <listitem><para>template&lt;typename Handler &gt; </para><para>void <link linkend="_class_tcpdirect_tcp_client_1ab6e1a396bfbcd85f4d224cc6b5fa7d47">poll</link> (Handler &amp;handler)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_class_tcpdirect_tcp_connection">TcpdirectTcpConnection&lt; Conf &gt;</link>        <itemizedlist>
+            <listitem><para>const char * <link linkend="_class_tcpdirect_tcp_connection_1a3b096b8b1e8c3fc1b0a8d5b9f8448f07">getLastError</link> ()</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_tcpdirect_tcp_connection_1a96ef93942303a6e7718e66fa219479a3">isConnected</link> ()</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_tcpdirect_tcp_connection_1a39d3c33915028ba1b51973809555828c">getPeername</link> (struct sockaddr_in &amp;addr)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_tcpdirect_tcp_connection_1a1120ef889c59dde767d9b33c21fbd7e5">close</link> (const char *reason)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_tcpdirect_tcp_connection_1a3ea1a8cfa6a4c61f2f2e0973efb132ef">writeSome</link> (const void *data, uint32_t size, bool more=false)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_tcpdirect_tcp_connection_1abfb5e6190502a507dbb0782893cc9456">write</link> (const void *data_, uint32_t size, bool more=false)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_tcpdirect_tcp_connection_1a00f707b76c22a840e827839543c75922">writeNonblock</link> (const void *data, uint32_t size, bool more=false)</para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+Protected Member Functions inherited from <link linkend="_class_tcpdirect_tcp_connection">TcpdirectTcpConnection&lt; Conf &gt;</link>        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_tcpdirect_tcp_connection_1ad8d8495a1deed451e76e91776516ef64">connect</link> (struct zf_attr *attr, struct sockaddr_in &amp;server_addr, uint16_t local_port_be)</para>
+</listitem>
+            <listitem><para>template&lt;typename Handler &gt; </para><para>void <link linkend="_class_tcpdirect_tcp_connection_1a45e16f204cc018cd8630492118bb81ac">pollConn</link> (int64_t now, Handler &amp;handler)</para>
+</listitem>
+            <listitem><para>template&lt;typename Handler &gt; </para><para>bool <link linkend="_class_tcpdirect_tcp_connection_1a4633b144aeae5bba785d788158e5f1f1">read</link> (Handler handler)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_tcpdirect_tcp_connection_1a0f19a2e03df8d31e7714a7b523da54ff">open</link> (int64_t now, struct zft *zock, struct zf_stack *stack)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_tcpdirect_tcp_connection_1a66a5e6a0763277046cacd4eca0015997">saveError</link> (const char *msg, int rc)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Protected Attributes inherited from <link linkend="_class_tcpdirect_tcp_connection">TcpdirectTcpConnection&lt; Conf &gt;</link>        <itemizedlist>
+            <listitem><para>struct zft * <link linkend="_class_tcpdirect_tcp_connection_1a09f8fe3144ef29c94fc6405d0dc9d333">zock_</link> = nullptr</para>
+</listitem>
+            <listitem><para>struct zf_stack * <link linkend="_class_tcpdirect_tcp_connection_1a458cd2bd3e99b03d01ba96e95d62c523">stack_</link> = nullptr</para>
+</listitem>
+            <listitem><para>int64_t <link linkend="_class_tcpdirect_tcp_connection_1a6007b0dd5801ef67e66492aed1810120">send_ts_</link> = 0</para>
+</listitem>
+            <listitem><para>int64_t <link linkend="_class_tcpdirect_tcp_connection_1a92ca0d1c688946834eb3b759c967db4e">expire_ts_</link> = 0</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_class_tcpdirect_tcp_connection_1ab996c89203d8989d4657b9c602c5c292">head_</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_class_tcpdirect_tcp_connection_1a315aa6e4b555c9538ace77594fa6c5cc">tail_</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_class_tcpdirect_tcp_connection_1af393eeda2aae243ce1f4e0fe1a133799">recvbuf_</link> [Conf::RecvBufSize]</para>
+</listitem>
+            <listitem><para>char <link linkend="_class_tcpdirect_tcp_connection_1a8e2f57c37f9ab3f86aa6e46dded84349">last_error_</link> [64] = &quot;&quot;</para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;typename Conf&gt;<?linebreak?>class TcpdirectTcpClient&lt; Conf &gt;</title></simplesect>
+</section>
+<section>
+<title>Member Typedef Documentation</title>
+<anchor xml:id="_class_tcpdirect_tcp_client_1a0f5c9b98e97853c1284ca87e1c6395a1"/><section>
+    <title>Conn</title>
+<indexterm><primary>Conn</primary><secondary>TcpdirectTcpClient&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>TcpdirectTcpClient&lt; Conf &gt;</primary><secondary>Conn</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>using <link linkend="_class_tcpdirect_tcp_client">TcpdirectTcpClient</link>&lt; Conf &gt;::Conn = <link linkend="_class_tcpdirect_tcp_connection">TcpdirectTcpConnection</link>&lt;Conf&gt;</computeroutput></para></section>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_tcpdirect_tcp_client_1a4b5a1b0dc1052f89a4fb3d574589b41c"/><section>
+    <title>~TcpdirectTcpClient()</title>
+<indexterm><primary>~TcpdirectTcpClient</primary><secondary>TcpdirectTcpClient&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>TcpdirectTcpClient&lt; Conf &gt;</primary><secondary>~TcpdirectTcpClient</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput><link linkend="_class_tcpdirect_tcp_client">TcpdirectTcpClient</link>&lt; Conf &gt;::~<link linkend="_class_tcpdirect_tcp_client">TcpdirectTcpClient</link> ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_tcpdirect_tcp_client_1a598d17ff64e0485a5031f7396a2e9797"/><section>
+    <title>allowReconnect()</title>
+<indexterm><primary>allowReconnect</primary><secondary>TcpdirectTcpClient&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>TcpdirectTcpClient&lt; Conf &gt;</primary><secondary>allowReconnect</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>void <link linkend="_class_tcpdirect_tcp_client">TcpdirectTcpClient</link>&lt; Conf &gt;::allowReconnect ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_tcpdirect_tcp_client_1a866b99225cf13a726317fa116e77c7af"/><section>
+    <title>init()</title>
+<indexterm><primary>init</primary><secondary>TcpdirectTcpClient&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>TcpdirectTcpClient&lt; Conf &gt;</primary><secondary>init</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>bool <link linkend="_class_tcpdirect_tcp_client">TcpdirectTcpClient</link>&lt; Conf &gt;::init (const char * interface, const char * server_ip, uint16_t server_port, uint16_t local_port = <computeroutput>0</computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_tcpdirect_tcp_client_1ab6e1a396bfbcd85f4d224cc6b5fa7d47"/><section>
+    <title>poll()</title>
+<indexterm><primary>poll</primary><secondary>TcpdirectTcpClient&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>TcpdirectTcpClient&lt; Conf &gt;</primary><secondary>poll</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><computeroutput>template&lt;typename Handler &gt; </computeroutput><para><computeroutput>void <link linkend="_class_tcpdirect_tcp_client">TcpdirectTcpClient</link>&lt; Conf &gt;::poll (Handler &amp; handler)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/external/pollnet/Tcpdirect.h</section>
+</section>

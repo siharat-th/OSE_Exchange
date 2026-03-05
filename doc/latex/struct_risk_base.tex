@@ -1,0 +1,165 @@
+\doxysection{Risk\+Base Struct Reference}
+\hypertarget{struct_risk_base}{}\label{struct_risk_base}\index{RiskBase@{RiskBase}}
+
+
+Struct representing the risk parameters for an algorithm.  
+
+
+
+
+{\ttfamily \#include $<$Risk\+Base.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_risk_base}{Risk\+Base}} \mbox{\hyperlink{struct_risk_base_a636857b57a17f022e1c5c3359b12fcb2}{parse}} (const std\+::string \&json\+\_\+str)
+\begin{DoxyCompactList}\small\item\em Parses the JSON string and returns a \doxylink{struct_risk_base}{Risk\+Base} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{struct_risk_base_a577a614a15c8e5336477f4484775fd92}{Valid\+Json}}
+\item 
+bool \mbox{\hyperlink{struct_risk_base_a9120479d0705a55f8ee594a9bb969d58}{Use\+PL}}
+\item 
+int \mbox{\hyperlink{struct_risk_base_a11dc9139a2ef3c7621e4e9e3c79f65d1}{Profit\+Taking}}
+\item 
+int \mbox{\hyperlink{struct_risk_base_aaf14286a08e6c0c902d69370cfb01569}{Stop\+Loss}}
+\item 
+int \mbox{\hyperlink{struct_risk_base_a6c7c80ff560cd3b884a9eb8a701c8df3}{Minutes\+To\+Live}}
+\item 
+double \mbox{\hyperlink{struct_risk_base_a99fc815e31292ca080c1e1f189c2c4a9}{elapsed\+Minutes}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{struct_risk_base_a3068c5d4e54ebfd1234fa78e72c179ee}{entrytime\+\_\+us}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{struct_risk_base_a4b28c8c27e93cd3ec277cc406effacbc}{ttl\+\_\+us}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{struct_risk_base_abfdb96c92778a8f609c6d86d4d74f945}{expiretime\+\_\+us}}
+\item 
+int64\+\_\+t \mbox{\hyperlink{struct_risk_base_af14f9b9d3f94abf3c2c7097c42f50b97}{timeleft\+\_\+us}}
+\item 
+int64\+\_\+t \mbox{\hyperlink{struct_risk_base_a0c2512d0a25aca4232e2a0331ba5fcf5}{seconds\+\_\+left}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Struct representing the risk parameters for an algorithm. 
+
+This struct is used to represent the risk parameters for an algorithm. The model we use here is called a "{}\+Triple Barrier"{} risk model, where we have a profit taking value, a stop loss value, and a time to live value. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_risk_base_a636857b57a17f022e1c5c3359b12fcb2}\index{RiskBase@{RiskBase}!parse@{parse}}
+\index{parse@{parse}!RiskBase@{RiskBase}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily \label{struct_risk_base_a636857b57a17f022e1c5c3359b12fcb2} 
+static \mbox{\hyperlink{struct_risk_base}{Risk\+Base}} Risk\+Base\+::parse (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{json\+\_\+str}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Parses the JSON string and returns a \doxylink{struct_risk_base}{Risk\+Base} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json\+\_\+str} & The JSON string to parse. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The parsed \doxylink{struct_risk_base}{Risk\+Base} object. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00032}{Minutes\+To\+Live}}, \mbox{\hyperlink{l00030}{Profit\+Taking}}, \mbox{\hyperlink{l00031}{Stop\+Loss}}, \mbox{\hyperlink{l00028}{Use\+PL}}, and \mbox{\hyperlink{l00027}{Valid\+Json}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_risk_base_a99fc815e31292ca080c1e1f189c2c4a9}\index{RiskBase@{RiskBase}!elapsedMinutes@{elapsedMinutes}}
+\index{elapsedMinutes@{elapsedMinutes}!RiskBase@{RiskBase}}
+\doxysubsubsection{\texorpdfstring{elapsedMinutes}{elapsedMinutes}}
+{\footnotesize\ttfamily \label{struct_risk_base_a99fc815e31292ca080c1e1f189c2c4a9} 
+double Risk\+Base\+::elapsed\+Minutes}
+
+The elapsed minutes. \Hypertarget{struct_risk_base_a3068c5d4e54ebfd1234fa78e72c179ee}\index{RiskBase@{RiskBase}!entrytime\_us@{entrytime\_us}}
+\index{entrytime\_us@{entrytime\_us}!RiskBase@{RiskBase}}
+\doxysubsubsection{\texorpdfstring{entrytime\_us}{entrytime\_us}}
+{\footnotesize\ttfamily \label{struct_risk_base_a3068c5d4e54ebfd1234fa78e72c179ee} 
+uint64\+\_\+t Risk\+Base\+::entrytime\+\_\+us}
+
+The entry time in microseconds. \Hypertarget{struct_risk_base_abfdb96c92778a8f609c6d86d4d74f945}\index{RiskBase@{RiskBase}!expiretime\_us@{expiretime\_us}}
+\index{expiretime\_us@{expiretime\_us}!RiskBase@{RiskBase}}
+\doxysubsubsection{\texorpdfstring{expiretime\_us}{expiretime\_us}}
+{\footnotesize\ttfamily \label{struct_risk_base_abfdb96c92778a8f609c6d86d4d74f945} 
+uint64\+\_\+t Risk\+Base\+::expiretime\+\_\+us}
+
+The expiration time in microseconds. \Hypertarget{struct_risk_base_a6c7c80ff560cd3b884a9eb8a701c8df3}\index{RiskBase@{RiskBase}!MinutesToLive@{MinutesToLive}}
+\index{MinutesToLive@{MinutesToLive}!RiskBase@{RiskBase}}
+\doxysubsubsection{\texorpdfstring{MinutesToLive}{MinutesToLive}}
+{\footnotesize\ttfamily \label{struct_risk_base_a6c7c80ff560cd3b884a9eb8a701c8df3} 
+int Risk\+Base\+::\+Minutes\+To\+Live}
+
+The time to live in minutes. 
+
+Referenced by \mbox{\hyperlink{l00062}{KTN\+::\+PLWatcher\+::on\+Json()}}, and \mbox{\hyperlink{l00047}{parse()}}.
+
+\Hypertarget{struct_risk_base_a11dc9139a2ef3c7621e4e9e3c79f65d1}\index{RiskBase@{RiskBase}!ProfitTaking@{ProfitTaking}}
+\index{ProfitTaking@{ProfitTaking}!RiskBase@{RiskBase}}
+\doxysubsubsection{\texorpdfstring{ProfitTaking}{ProfitTaking}}
+{\footnotesize\ttfamily \label{struct_risk_base_a11dc9139a2ef3c7621e4e9e3c79f65d1} 
+int Risk\+Base\+::\+Profit\+Taking}
+
+The profit taking value. 
+
+Referenced by \mbox{\hyperlink{l00062}{KTN\+::\+PLWatcher\+::on\+Json()}}, and \mbox{\hyperlink{l00047}{parse()}}.
+
+\Hypertarget{struct_risk_base_a0c2512d0a25aca4232e2a0331ba5fcf5}\index{RiskBase@{RiskBase}!seconds\_left@{seconds\_left}}
+\index{seconds\_left@{seconds\_left}!RiskBase@{RiskBase}}
+\doxysubsubsection{\texorpdfstring{seconds\_left}{seconds\_left}}
+{\footnotesize\ttfamily \label{struct_risk_base_a0c2512d0a25aca4232e2a0331ba5fcf5} 
+int64\+\_\+t Risk\+Base\+::seconds\+\_\+left}
+
+The time left in seconds. \Hypertarget{struct_risk_base_aaf14286a08e6c0c902d69370cfb01569}\index{RiskBase@{RiskBase}!StopLoss@{StopLoss}}
+\index{StopLoss@{StopLoss}!RiskBase@{RiskBase}}
+\doxysubsubsection{\texorpdfstring{StopLoss}{StopLoss}}
+{\footnotesize\ttfamily \label{struct_risk_base_aaf14286a08e6c0c902d69370cfb01569} 
+int Risk\+Base\+::\+Stop\+Loss}
+
+The stop loss value. 
+
+Referenced by \mbox{\hyperlink{l00062}{KTN\+::\+PLWatcher\+::on\+Json()}}, and \mbox{\hyperlink{l00047}{parse()}}.
+
+\Hypertarget{struct_risk_base_af14f9b9d3f94abf3c2c7097c42f50b97}\index{RiskBase@{RiskBase}!timeleft\_us@{timeleft\_us}}
+\index{timeleft\_us@{timeleft\_us}!RiskBase@{RiskBase}}
+\doxysubsubsection{\texorpdfstring{timeleft\_us}{timeleft\_us}}
+{\footnotesize\ttfamily \label{struct_risk_base_af14f9b9d3f94abf3c2c7097c42f50b97} 
+int64\+\_\+t Risk\+Base\+::timeleft\+\_\+us}
+
+The time left in microseconds. \Hypertarget{struct_risk_base_a4b28c8c27e93cd3ec277cc406effacbc}\index{RiskBase@{RiskBase}!ttl\_us@{ttl\_us}}
+\index{ttl\_us@{ttl\_us}!RiskBase@{RiskBase}}
+\doxysubsubsection{\texorpdfstring{ttl\_us}{ttl\_us}}
+{\footnotesize\ttfamily \label{struct_risk_base_a4b28c8c27e93cd3ec277cc406effacbc} 
+uint64\+\_\+t Risk\+Base\+::ttl\+\_\+us}
+
+The time to live in microseconds. \Hypertarget{struct_risk_base_a9120479d0705a55f8ee594a9bb969d58}\index{RiskBase@{RiskBase}!UsePL@{UsePL}}
+\index{UsePL@{UsePL}!RiskBase@{RiskBase}}
+\doxysubsubsection{\texorpdfstring{UsePL}{UsePL}}
+{\footnotesize\ttfamily \label{struct_risk_base_a9120479d0705a55f8ee594a9bb969d58} 
+bool Risk\+Base\+::\+Use\+PL}
+
+Flag indicating if profit taking and stop loss are used. 
+
+Referenced by \mbox{\hyperlink{l00047}{parse()}}.
+
+\Hypertarget{struct_risk_base_a577a614a15c8e5336477f4484775fd92}\index{RiskBase@{RiskBase}!ValidJson@{ValidJson}}
+\index{ValidJson@{ValidJson}!RiskBase@{RiskBase}}
+\doxysubsubsection{\texorpdfstring{ValidJson}{ValidJson}}
+{\footnotesize\ttfamily \label{struct_risk_base_a577a614a15c8e5336477f4484775fd92} 
+bool Risk\+Base\+::\+Valid\+Json}
+
+Flag indicating if the JSON is valid. 
+
+Referenced by \mbox{\hyperlink{l00047}{parse()}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Algo\+Params/Risk\+Base.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_algo_stats" xml:lang="en-US">
+<title>AlgoStats Struct Reference</title>
+<indexterm><primary>AlgoStats</primary></indexterm>
+<para>
+
+<para>Structure representing the types of algorithm statistics. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;algo_structs.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_struct_algo_stats_1aa6ad6c12d8ac79f84e3d98668b9347c6">Enum</link> { <link linkend="_struct_algo_stats_1aa6ad6c12d8ac79f84e3d98668b9347c6aa97e45cc60ab644c0e0c2f9f4bfbc210">GENERIC</link> = 0
+, <link linkend="_struct_algo_stats_1aa6ad6c12d8ac79f84e3d98668b9347c6ac9d9521518d66348b16ce0fce2e70783">MESSAGING</link> = 1
+, <link linkend="_struct_algo_stats_1aa6ad6c12d8ac79f84e3d98668b9347c6a7206a8074913492ee1d1149da5282269">ALERT</link> = 2
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static std::string <link linkend="_struct_algo_stats_1a14d6d045430c4b177d9b39da620f6331">toString</link> (<link linkend="_struct_algo_stats_1aa6ad6c12d8ac79f84e3d98668b9347c6">Enum</link> statstype)</para>
+
+<para>Converts the statistics type to string. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Structure representing the types of algorithm statistics. </para>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_struct_algo_stats_1aa6ad6c12d8ac79f84e3d98668b9347c6"/><section>
+    <title>Enum</title>
+<indexterm><primary>Enum</primary><secondary>AlgoStats</secondary></indexterm>
+<indexterm><primary>AlgoStats</primary><secondary>Enum</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_struct_algo_stats_1aa6ad6c12d8ac79f84e3d98668b9347c6">AlgoStats::Enum</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>GENERIC</primary><secondary>AlgoStats</secondary></indexterm>
+<indexterm><primary>AlgoStats</primary><secondary>GENERIC</secondary></indexterm>
+<anchor xml:id="_struct_algo_stats_1aa6ad6c12d8ac79f84e3d98668b9347c6aa97e45cc60ab644c0e0c2f9f4bfbc210"/>GENERIC</entry><entry>
+<para>Generic statistics. </para>
+</entry></row><row><entry><indexterm><primary>MESSAGING</primary><secondary>AlgoStats</secondary></indexterm>
+<indexterm><primary>AlgoStats</primary><secondary>MESSAGING</secondary></indexterm>
+<anchor xml:id="_struct_algo_stats_1aa6ad6c12d8ac79f84e3d98668b9347c6ac9d9521518d66348b16ce0fce2e70783"/>MESSAGING</entry><entry>
+<para>Messaging statistics. </para>
+</entry></row><row><entry><indexterm><primary>ALERT</primary><secondary>AlgoStats</secondary></indexterm>
+<indexterm><primary>AlgoStats</primary><secondary>ALERT</secondary></indexterm>
+<anchor xml:id="_struct_algo_stats_1aa6ad6c12d8ac79f84e3d98668b9347c6a7206a8074913492ee1d1149da5282269"/>ALERT</entry><entry>
+<para>Alert statistics. </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_algo_stats_1a14d6d045430c4b177d9b39da620f6331"/><section>
+    <title>toString()</title>
+<indexterm><primary>toString</primary><secondary>AlgoStats</secondary></indexterm>
+<indexterm><primary>AlgoStats</primary><secondary>toString</secondary></indexterm>
+<para><computeroutput>static std::string AlgoStats::toString (<link linkend="_struct_algo_stats_1aa6ad6c12d8ac79f84e3d98668b9347c6">Enum</link> statstype)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Converts the statistics type to string. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>statstype</entry><entry>
+<para>The statistics type. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The string representation of the statistics type. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00343">ALERT</link>, <link linkend="_l00341">GENERIC</link>, and <link linkend="_l00342">MESSAGING</link>.</para>
+<para>
+Referenced by <link linkend="_l00379">stats::GetType()</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+AlgoSupport/algo_structs.hpp</section>
+</section>

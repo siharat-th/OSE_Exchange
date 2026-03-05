@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structexchinst" xml:lang="en-US">
+<title>exchinst Struct Reference</title>
+<indexterm><primary>exchinst</primary></indexterm>
+<para>
+
+<para>Structure representing an exchange instrument. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;algo_structs.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_structexchinst_1af2681bd7ddcea2f3f1b7a755659c1243">exch</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_structexchinst_1a643b760dafd8bb516d96693951f1c42a">prodtype</link></para>
+</listitem>
+            <listitem><para><link linkend="_structinstrument">instrument</link> <link linkend="_structexchinst_1ac66f10cf0c057cf75f2bc3adbf12be3f">inst</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Structure representing an exchange instrument. </para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structexchinst_1af2681bd7ddcea2f3f1b7a755659c1243"/><section>
+    <title>exch</title>
+<indexterm><primary>exch</primary><secondary>exchinst</secondary></indexterm>
+<indexterm><primary>exchinst</primary><secondary>exch</secondary></indexterm>
+<para><computeroutput>string exchinst::exch</computeroutput></para>
+<para>The exchange. </para>
+</section>
+<anchor xml:id="_structexchinst_1ac66f10cf0c057cf75f2bc3adbf12be3f"/><section>
+    <title>inst</title>
+<indexterm><primary>inst</primary><secondary>exchinst</secondary></indexterm>
+<indexterm><primary>exchinst</primary><secondary>inst</secondary></indexterm>
+<para><computeroutput><link linkend="_structinstrument">instrument</link> exchinst::inst</computeroutput></para>
+<para>The instrument. </para>
+</section>
+<anchor xml:id="_structexchinst_1a643b760dafd8bb516d96693951f1c42a"/><section>
+    <title>prodtype</title>
+<indexterm><primary>prodtype</primary><secondary>exchinst</secondary></indexterm>
+<indexterm><primary>exchinst</primary><secondary>prodtype</secondary></indexterm>
+<para><computeroutput>string exchinst::prodtype</computeroutput></para>
+<para>The product type. </para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+AlgoSupport/algo_structs.hpp</section>
+</section>

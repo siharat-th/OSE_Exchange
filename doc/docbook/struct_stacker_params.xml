@@ -1,0 +1,338 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_stacker_params" xml:lang="en-US">
+<title>StackerParams Struct Reference</title>
+<indexterm><primary>StackerParams</primary></indexterm>
+<para>
+
+<para>The <link linkend="_struct_stacker_params">StackerParams</link> struct represents the parameters for the Stacker algorithm. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;StackerParams.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_struct_stacker_params">StackerParams</link> <link linkend="_struct_stacker_params_1abb5fa895ed40911b4893b9093d526ca4">parse</link> (const std::string &amp;json_str)</para>
+
+<para>parse the <link linkend="_struct_stacker_params">StackerParams</link> from a JSON string. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_struct_stacker_params_1a9486aaa9f9078dad81214f50035bec7a">ValidJson</link></para>
+</listitem>
+            <listitem><para><link linkend="_structalgometa">algometa</link> <link linkend="_struct_stacker_params_1aab54884a17c9b3f968e9761a88c65958">meta</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_stacker_params_1aac7e58c10b3e0d2e39e2eb7daece79b0">subid</link></para>
+</listitem>
+            <listitem><para>std::unordered_map&lt; int, <link linkend="_structinstrument">instrument</link> &gt; <link linkend="_struct_stacker_params_1adc5d0ed9e96215f6c8ad6493b11afddc">LegSecIdMap</link></para>
+</listitem>
+            <listitem><para><link linkend="_structinstrument">instrument</link> <link linkend="_struct_stacker_params_1a5e1141fd7f88cb786b59d8e9d3111e45">Legs</link> [4]</para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_stacker_params_1ac06b4f6b3cd13dfbae18be7f6403557e">LegCount</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_stacker_params_1a0283e3eaaa30812749d47a0fb065f4bc">OrderQty</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_stacker_params_1a6a623f0fa7db9cd553c78d895ddbdd23">TotalQty</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_stacker_params_1a66f14fc3905a448a3551276fd7baadb1">TotalExec</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_stacker_params_1ad80f951e3aa768ab1e119269e7a350b7">TotalSent</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_stacker_params_1ae272ba94e937a8f3bfba406efbf40969">NetPosition</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_stacker_params_1adf1cd130f589d1b8ba4ae990ed760948">MaxOpenBuys</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_stacker_params_1a4b9513cbd9b10ef26d50cfc61f8ff0c9">MaxOpenSells</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_stacker_params_1a56fcb95142a89c443e8d4fc3985d5f85">CurrOpenBuys</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_stacker_params_1a2772348cbd1430bd7a1b2c84db40e522">CurrOpenSells</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_stacker_params_1ac5678e56c16c227a5505cf9e0ba6c4ed">BidLevels</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_stacker_params_1a5c73c94dd88b005e82fbe4196a7d0672">AskLevels</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_stacker_params_1a489f964ad08d46091473112af486bdab">OffsetLevels</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_stacker_params_1abb6dd686df3aa30fb065e007807a2fe9">SendBids</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_stacker_params_1a5898f069bcbd4abb2ac4d63b4f2b62fc">SendAsks</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_stacker_params_1ac2f3a3facfac8de6f57eb3dd5dee1f53">AutoHedge</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_stacker_params_1a43cda7dd615661c33d24236e9e61ad46">Edge</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_stacker_params_1acde187ab2ce706193622e2eb871f8e86">SqueezeRatio</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_stacker_params_1a56f1a600f5bd9a704f218b2df0ea0209">SqueezeQty</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_stacker_params_1abaa5bc01916edc34c6d81525e132e429">SkewThreshold</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_stacker_params_1a746ef43615eba588a58a23a945d4c37d">SkewLevels</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_stacker_params_1a8536a451a4e0da7767ac0feca71c99f3">PukeRatio</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_stacker_params_1a9e8e9093dc2eac5fa7fcb6458f13987d">PukeQty</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_stacker_params_1aaab02ad9cb70cffd474bfa8faede4e50">PukePctPriority</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_stacker_params_1af98a3b90957fabce045bf7e781ff2efc">EnableRestack</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_stacker_params_1a2a8b2e148c3ff00b223f1e2f248fa4f5">RestackQty</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_stacker_params_1aad0aeee1ef68bc08dd877ed8788659e9">RestackTopLevel</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_stacker_params_1a5c4c173ac08c4fb4485b57eedd12f1b2">PullOnLargeTrade</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_stacker_params_1a1a109f7c2d0a7c3c60a67cfee0753796">LargeTradeQty</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_stacker_params_1ac4b04935477a2a2e83d8bca25ef81cf9">LargeOrdQty</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_stacker_params_1ae63de31681f4bfb4fed8711ed16d9729">TradeOnLargeQty</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_stacker_params_1afe44b12b7f60c89d9d1d8b753a9d9442">Reset</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_struct_stacker_params">StackerParams</link> struct represents the parameters for the Stacker algorithm. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_stacker_params_1abb5fa895ed40911b4893b9093d526ca4"/><section>
+    <title>parse()</title>
+<indexterm><primary>parse</primary><secondary>StackerParams</secondary></indexterm>
+<indexterm><primary>StackerParams</primary><secondary>parse</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_stacker_params">StackerParams</link> StackerParams::parse (const std::string &amp; json_str)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>parse the <link linkend="_struct_stacker_params">StackerParams</link> from a JSON string. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>json_str</entry><entry>
+<para>The JSON string to parse. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The parsed <link linkend="_struct_stacker_params">StackerParams</link> object. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00260">algometa::Enabled</link>, <link linkend="_l00049">UserInfo::groupname</link>, <link linkend="_l00048">UserInfo::org</link>, <link linkend="_l00262">algometa::Source</link>, <link linkend="_l00256">algometa::Strategy</link>, <link linkend="_l00264">algometa::Tag</link>, <link linkend="_l00258">algometa::TemplateName</link>, <link linkend="_l00261">algometa::UniqueId</link>, <link linkend="_l00047">UserInfo::user</link>, and <link linkend="_l00279">algometa::userinfo</link>.</para>
+<para>
+Referenced by <link linkend="_l00050">KTN::Stacker::onLaunch()</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_stacker_params_1a5c73c94dd88b005e82fbe4196a7d0672"/><section>
+    <title>AskLevels</title>
+<indexterm><primary>AskLevels</primary><secondary>StackerParams</secondary></indexterm>
+<indexterm><primary>StackerParams</primary><secondary>AskLevels</secondary></indexterm>
+<para><computeroutput>int StackerParams::AskLevels</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_params_1ac2f3a3facfac8de6f57eb3dd5dee1f53"/><section>
+    <title>AutoHedge</title>
+<indexterm><primary>AutoHedge</primary><secondary>StackerParams</secondary></indexterm>
+<indexterm><primary>StackerParams</primary><secondary>AutoHedge</secondary></indexterm>
+<para><computeroutput>bool StackerParams::AutoHedge</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_params_1ac5678e56c16c227a5505cf9e0ba6c4ed"/><section>
+    <title>BidLevels</title>
+<indexterm><primary>BidLevels</primary><secondary>StackerParams</secondary></indexterm>
+<indexterm><primary>StackerParams</primary><secondary>BidLevels</secondary></indexterm>
+<para><computeroutput>int StackerParams::BidLevels</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_params_1a56fcb95142a89c443e8d4fc3985d5f85"/><section>
+    <title>CurrOpenBuys</title>
+<indexterm><primary>CurrOpenBuys</primary><secondary>StackerParams</secondary></indexterm>
+<indexterm><primary>StackerParams</primary><secondary>CurrOpenBuys</secondary></indexterm>
+<para><computeroutput>int StackerParams::CurrOpenBuys</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_params_1a2772348cbd1430bd7a1b2c84db40e522"/><section>
+    <title>CurrOpenSells</title>
+<indexterm><primary>CurrOpenSells</primary><secondary>StackerParams</secondary></indexterm>
+<indexterm><primary>StackerParams</primary><secondary>CurrOpenSells</secondary></indexterm>
+<para><computeroutput>int StackerParams::CurrOpenSells</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_params_1a43cda7dd615661c33d24236e9e61ad46"/><section>
+    <title>Edge</title>
+<indexterm><primary>Edge</primary><secondary>StackerParams</secondary></indexterm>
+<indexterm><primary>StackerParams</primary><secondary>Edge</secondary></indexterm>
+<para><computeroutput>int StackerParams::Edge</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_params_1af98a3b90957fabce045bf7e781ff2efc"/><section>
+    <title>EnableRestack</title>
+<indexterm><primary>EnableRestack</primary><secondary>StackerParams</secondary></indexterm>
+<indexterm><primary>StackerParams</primary><secondary>EnableRestack</secondary></indexterm>
+<para><computeroutput>bool StackerParams::EnableRestack</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_params_1ac4b04935477a2a2e83d8bca25ef81cf9"/><section>
+    <title>LargeOrdQty</title>
+<indexterm><primary>LargeOrdQty</primary><secondary>StackerParams</secondary></indexterm>
+<indexterm><primary>StackerParams</primary><secondary>LargeOrdQty</secondary></indexterm>
+<para><computeroutput>int StackerParams::LargeOrdQty</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_params_1a1a109f7c2d0a7c3c60a67cfee0753796"/><section>
+    <title>LargeTradeQty</title>
+<indexterm><primary>LargeTradeQty</primary><secondary>StackerParams</secondary></indexterm>
+<indexterm><primary>StackerParams</primary><secondary>LargeTradeQty</secondary></indexterm>
+<para><computeroutput>int StackerParams::LargeTradeQty</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_params_1ac06b4f6b3cd13dfbae18be7f6403557e"/><section>
+    <title>LegCount</title>
+<indexterm><primary>LegCount</primary><secondary>StackerParams</secondary></indexterm>
+<indexterm><primary>StackerParams</primary><secondary>LegCount</secondary></indexterm>
+<para><computeroutput>int StackerParams::LegCount</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_params_1a5e1141fd7f88cb786b59d8e9d3111e45"/><section>
+    <title>Legs</title>
+<indexterm><primary>Legs</primary><secondary>StackerParams</secondary></indexterm>
+<indexterm><primary>StackerParams</primary><secondary>Legs</secondary></indexterm>
+<para><computeroutput><link linkend="_structinstrument">instrument</link> StackerParams::Legs[4]</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_params_1adc5d0ed9e96215f6c8ad6493b11afddc"/><section>
+    <title>LegSecIdMap</title>
+<indexterm><primary>LegSecIdMap</primary><secondary>StackerParams</secondary></indexterm>
+<indexterm><primary>StackerParams</primary><secondary>LegSecIdMap</secondary></indexterm>
+<para><computeroutput>std::unordered_map&lt;int, <link linkend="_structinstrument">instrument</link>&gt; StackerParams::LegSecIdMap</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_params_1adf1cd130f589d1b8ba4ae990ed760948"/><section>
+    <title>MaxOpenBuys</title>
+<indexterm><primary>MaxOpenBuys</primary><secondary>StackerParams</secondary></indexterm>
+<indexterm><primary>StackerParams</primary><secondary>MaxOpenBuys</secondary></indexterm>
+<para><computeroutput>int StackerParams::MaxOpenBuys</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_params_1a4b9513cbd9b10ef26d50cfc61f8ff0c9"/><section>
+    <title>MaxOpenSells</title>
+<indexterm><primary>MaxOpenSells</primary><secondary>StackerParams</secondary></indexterm>
+<indexterm><primary>StackerParams</primary><secondary>MaxOpenSells</secondary></indexterm>
+<para><computeroutput>int StackerParams::MaxOpenSells</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_params_1aab54884a17c9b3f968e9761a88c65958"/><section>
+    <title>meta</title>
+<indexterm><primary>meta</primary><secondary>StackerParams</secondary></indexterm>
+<indexterm><primary>StackerParams</primary><secondary>meta</secondary></indexterm>
+<para><computeroutput><link linkend="_structalgometa">algometa</link> StackerParams::meta</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_params_1ae272ba94e937a8f3bfba406efbf40969"/><section>
+    <title>NetPosition</title>
+<indexterm><primary>NetPosition</primary><secondary>StackerParams</secondary></indexterm>
+<indexterm><primary>StackerParams</primary><secondary>NetPosition</secondary></indexterm>
+<para><computeroutput>double StackerParams::NetPosition</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_params_1a489f964ad08d46091473112af486bdab"/><section>
+    <title>OffsetLevels</title>
+<indexterm><primary>OffsetLevels</primary><secondary>StackerParams</secondary></indexterm>
+<indexterm><primary>StackerParams</primary><secondary>OffsetLevels</secondary></indexterm>
+<para><computeroutput>int StackerParams::OffsetLevels</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_params_1a0283e3eaaa30812749d47a0fb065f4bc"/><section>
+    <title>OrderQty</title>
+<indexterm><primary>OrderQty</primary><secondary>StackerParams</secondary></indexterm>
+<indexterm><primary>StackerParams</primary><secondary>OrderQty</secondary></indexterm>
+<para><computeroutput>double StackerParams::OrderQty</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_params_1aaab02ad9cb70cffd474bfa8faede4e50"/><section>
+    <title>PukePctPriority</title>
+<indexterm><primary>PukePctPriority</primary><secondary>StackerParams</secondary></indexterm>
+<indexterm><primary>StackerParams</primary><secondary>PukePctPriority</secondary></indexterm>
+<para><computeroutput>double StackerParams::PukePctPriority</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_params_1a9e8e9093dc2eac5fa7fcb6458f13987d"/><section>
+    <title>PukeQty</title>
+<indexterm><primary>PukeQty</primary><secondary>StackerParams</secondary></indexterm>
+<indexterm><primary>StackerParams</primary><secondary>PukeQty</secondary></indexterm>
+<para><computeroutput>int StackerParams::PukeQty</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_params_1a8536a451a4e0da7767ac0feca71c99f3"/><section>
+    <title>PukeRatio</title>
+<indexterm><primary>PukeRatio</primary><secondary>StackerParams</secondary></indexterm>
+<indexterm><primary>StackerParams</primary><secondary>PukeRatio</secondary></indexterm>
+<para><computeroutput>double StackerParams::PukeRatio</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_params_1a5c4c173ac08c4fb4485b57eedd12f1b2"/><section>
+    <title>PullOnLargeTrade</title>
+<indexterm><primary>PullOnLargeTrade</primary><secondary>StackerParams</secondary></indexterm>
+<indexterm><primary>StackerParams</primary><secondary>PullOnLargeTrade</secondary></indexterm>
+<para><computeroutput>bool StackerParams::PullOnLargeTrade</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_params_1afe44b12b7f60c89d9d1d8b753a9d9442"/><section>
+    <title>Reset</title>
+<indexterm><primary>Reset</primary><secondary>StackerParams</secondary></indexterm>
+<indexterm><primary>StackerParams</primary><secondary>Reset</secondary></indexterm>
+<para><computeroutput>bool StackerParams::Reset</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_params_1a2a8b2e148c3ff00b223f1e2f248fa4f5"/><section>
+    <title>RestackQty</title>
+<indexterm><primary>RestackQty</primary><secondary>StackerParams</secondary></indexterm>
+<indexterm><primary>StackerParams</primary><secondary>RestackQty</secondary></indexterm>
+<para><computeroutput>int StackerParams::RestackQty</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_params_1aad0aeee1ef68bc08dd877ed8788659e9"/><section>
+    <title>RestackTopLevel</title>
+<indexterm><primary>RestackTopLevel</primary><secondary>StackerParams</secondary></indexterm>
+<indexterm><primary>StackerParams</primary><secondary>RestackTopLevel</secondary></indexterm>
+<para><computeroutput>bool StackerParams::RestackTopLevel</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_params_1a5898f069bcbd4abb2ac4d63b4f2b62fc"/><section>
+    <title>SendAsks</title>
+<indexterm><primary>SendAsks</primary><secondary>StackerParams</secondary></indexterm>
+<indexterm><primary>StackerParams</primary><secondary>SendAsks</secondary></indexterm>
+<para><computeroutput>bool StackerParams::SendAsks</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_params_1abb6dd686df3aa30fb065e007807a2fe9"/><section>
+    <title>SendBids</title>
+<indexterm><primary>SendBids</primary><secondary>StackerParams</secondary></indexterm>
+<indexterm><primary>StackerParams</primary><secondary>SendBids</secondary></indexterm>
+<para><computeroutput>bool StackerParams::SendBids</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_params_1a746ef43615eba588a58a23a945d4c37d"/><section>
+    <title>SkewLevels</title>
+<indexterm><primary>SkewLevels</primary><secondary>StackerParams</secondary></indexterm>
+<indexterm><primary>StackerParams</primary><secondary>SkewLevels</secondary></indexterm>
+<para><computeroutput>int StackerParams::SkewLevels</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_params_1abaa5bc01916edc34c6d81525e132e429"/><section>
+    <title>SkewThreshold</title>
+<indexterm><primary>SkewThreshold</primary><secondary>StackerParams</secondary></indexterm>
+<indexterm><primary>StackerParams</primary><secondary>SkewThreshold</secondary></indexterm>
+<para><computeroutput>double StackerParams::SkewThreshold</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_params_1a56f1a600f5bd9a704f218b2df0ea0209"/><section>
+    <title>SqueezeQty</title>
+<indexterm><primary>SqueezeQty</primary><secondary>StackerParams</secondary></indexterm>
+<indexterm><primary>StackerParams</primary><secondary>SqueezeQty</secondary></indexterm>
+<para><computeroutput>int StackerParams::SqueezeQty</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_params_1acde187ab2ce706193622e2eb871f8e86"/><section>
+    <title>SqueezeRatio</title>
+<indexterm><primary>SqueezeRatio</primary><secondary>StackerParams</secondary></indexterm>
+<indexterm><primary>StackerParams</primary><secondary>SqueezeRatio</secondary></indexterm>
+<para><computeroutput>double StackerParams::SqueezeRatio</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_params_1aac7e58c10b3e0d2e39e2eb7daece79b0"/><section>
+    <title>subid</title>
+<indexterm><primary>subid</primary><secondary>StackerParams</secondary></indexterm>
+<indexterm><primary>StackerParams</primary><secondary>subid</secondary></indexterm>
+<para><computeroutput>string StackerParams::subid</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_params_1a66f14fc3905a448a3551276fd7baadb1"/><section>
+    <title>TotalExec</title>
+<indexterm><primary>TotalExec</primary><secondary>StackerParams</secondary></indexterm>
+<indexterm><primary>StackerParams</primary><secondary>TotalExec</secondary></indexterm>
+<para><computeroutput>double StackerParams::TotalExec</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_params_1a6a623f0fa7db9cd553c78d895ddbdd23"/><section>
+    <title>TotalQty</title>
+<indexterm><primary>TotalQty</primary><secondary>StackerParams</secondary></indexterm>
+<indexterm><primary>StackerParams</primary><secondary>TotalQty</secondary></indexterm>
+<para><computeroutput>double StackerParams::TotalQty</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_params_1ad80f951e3aa768ab1e119269e7a350b7"/><section>
+    <title>TotalSent</title>
+<indexterm><primary>TotalSent</primary><secondary>StackerParams</secondary></indexterm>
+<indexterm><primary>StackerParams</primary><secondary>TotalSent</secondary></indexterm>
+<para><computeroutput>double StackerParams::TotalSent</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_params_1ae63de31681f4bfb4fed8711ed16d9729"/><section>
+    <title>TradeOnLargeQty</title>
+<indexterm><primary>TradeOnLargeQty</primary><secondary>StackerParams</secondary></indexterm>
+<indexterm><primary>StackerParams</primary><secondary>TradeOnLargeQty</secondary></indexterm>
+<para><computeroutput>bool StackerParams::TradeOnLargeQty</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_params_1a9486aaa9f9078dad81214f50035bec7a"/><section>
+    <title>ValidJson</title>
+<indexterm><primary>ValidJson</primary><secondary>StackerParams</secondary></indexterm>
+<indexterm><primary>StackerParams</primary><secondary>ValidJson</secondary></indexterm>
+<para><computeroutput>bool StackerParams::ValidJson</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following files:</para>
+AlgoParams/StackerParams.hppAlgoParams/StackerParams.cpp</section>
+</section>

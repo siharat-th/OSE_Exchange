@@ -1,0 +1,319 @@
+\doxysection{IL3\+App\+Msg\+Callback Class Reference}
+\hypertarget{class_i_l3_app_msg_callback}{}\label{class_i_l3_app_msg_callback}\index{IL3AppMsgCallback@{IL3AppMsgCallback}}
+
+
+The \doxylink{class_i_l3_app_msg_callback}{IL3\+App\+Msg\+Callback} class is an abstract base class that defines the interface for handling various CME i\+Link3 execution report messages and other related application level messages.  
+
+
+
+
+{\ttfamily \#include $<$IL3\+App\+Msg\+Callback.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_i_l3_app_msg_callback_a51f05f6ef0df216cae07ad9573ea3245}{IL3\+App\+Msg\+Callback}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{class_i_l3_app_msg_callback}{IL3\+App\+Msg\+Callback}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_i_l3_app_msg_callback_a800ec6c866f012e1f91e52342508b446}{\texorpdfstring{$\sim$}{\string~}\+IL3\+App\+Msg\+Callback}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{class_i_l3_app_msg_callback}{IL3\+App\+Msg\+Callback}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_i_l3_app_msg_callback_a4db80bca9b797062a25bce47eb183995}{on\+Exec\+Rpt\+New}} (\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_new_msg_1_1_block_data}{Execution\+Report\+New\+Msg\+::\+Block\+Data}} \texorpdfstring{$\ast$}{*}data, int segid)=0
+\begin{DoxyCompactList}\small\item\em This method is called when a new execution report message is received. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_i_l3_app_msg_callback_acf6eef7a79102f333438e10345c8b866}{on\+Exec\+Rpt\+Modify}} (\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_modify_msg_1_1_block_data}{Execution\+Report\+Modify\+Msg\+::\+Block\+Data}} \texorpdfstring{$\ast$}{*}data, int segid)=0
+\begin{DoxyCompactList}\small\item\em This method is called when an execution report modify message is received. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_i_l3_app_msg_callback_aa8f0053a273dd84fa7477b305f1db5b2}{on\+Exec\+Rpt\+Cancel}} (\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_cancel_msg_1_1_block_data}{Execution\+Report\+Cancel\+Msg\+::\+Block\+Data}} \texorpdfstring{$\ast$}{*}data, int segid)=0
+\begin{DoxyCompactList}\small\item\em This method is called when an execution report cancel message is received. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_i_l3_app_msg_callback_a354edcd73f71f0b1f1ab0ebbc3d61d34}{on\+Exec\+Rpt\+Trade\+Outright}} (\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_outright_msg_1_1_block_data}{Execution\+Report\+Trade\+Outright\+Msg\+::\+Block\+Data}} \texorpdfstring{$\ast$}{*}data, int segid)=0
+\begin{DoxyCompactList}\small\item\em This method is called when an execution report trade outright message is received. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_i_l3_app_msg_callback_aee31515a6ca4cc88833c3c0a01fff6e5}{on\+Exec\+Rpt\+Trade\+Spread}} (\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_spread_msg_1_1_block_data}{Execution\+Report\+Trade\+Spread\+Msg\+::\+Block\+Data}} \texorpdfstring{$\ast$}{*}data, int segid)=0
+\begin{DoxyCompactList}\small\item\em This method is called when an execution report trade spread message is received. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_i_l3_app_msg_callback_a64ff7d5b9ad23a7b20612fa4ca858aff}{on\+Exec\+Rpt\+Trade\+Spread\+Leg}} (\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_spread_leg_msg_1_1_block_data}{Execution\+Report\+Trade\+Spread\+Leg\+Msg\+::\+Block\+Data}} \texorpdfstring{$\ast$}{*}data, int segid)=0
+\begin{DoxyCompactList}\small\item\em This method is called when an execution report trade spread leg message is received. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_i_l3_app_msg_callback_a5b9e0518d72108274af542907a2c6213}{on\+Exec\+Rpt\+Reject}} (\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_reject_msg_1_1_block_data}{Execution\+Report\+Reject\+Msg\+::\+Block\+Data}} \texorpdfstring{$\ast$}{*}data, int segid)=0
+\begin{DoxyCompactList}\small\item\em This method is called when an execution report reject message is received. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_i_l3_app_msg_callback_a05603ff69b8203bb58fb8d3a3566550f}{on\+Exec\+Rpt\+Elimination}} (\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_elimination_msg_1_1_block_data}{Execution\+Report\+Elimination\+Msg\+::\+Block\+Data}} \texorpdfstring{$\ast$}{*}data, int segid)=0
+\begin{DoxyCompactList}\small\item\em This method is called when an execution report elimination message is received. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_i_l3_app_msg_callback_acc3417d4ed1a90eb37a3f4a2643ec873}{on\+Order\+Mass\+Action\+Report}} (\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data}{Order\+Mass\+Action\+Report\+Msg\+::\+Block\+Data}} \texorpdfstring{$\ast$}{*}data, int segid)=0
+\begin{DoxyCompactList}\small\item\em This method is called when an order mass action report message is received. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_i_l3_app_msg_callback_addb776333052fe53842859d66755b306}{on\+Order\+Cancel\+Reject}} (\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_reject_msg_1_1_block_data}{Order\+Cancel\+Reject\+Msg\+::\+Block\+Data}} \texorpdfstring{$\ast$}{*}data, int segid)=0
+\begin{DoxyCompactList}\small\item\em This method is called when an order cancel reject message is received. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_i_l3_app_msg_callback_afbcae2f1f18268bb341e523c8ccf4542}{on\+Order\+Cancel\+Replace\+Reject}} (\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data}{Order\+Cancel\+Replace\+Reject\+Msg\+::\+Block\+Data}} \texorpdfstring{$\ast$}{*}data, int segid)=0
+\begin{DoxyCompactList}\small\item\em This method is called when an order cancel replace reject message is received. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_i_l3_app_msg_callback_ac896289d1bb226276c9a9bed05993b42}{on\+Party\+Details\+Definition\+Request\+Ack}} (\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_ack_msg_1_1_block_data}{Party\+Details\+Definition\+Request\+Ack\+Msg\+::\+Block\+Data}} \texorpdfstring{$\ast$}{*}data, int segid)=0
+\begin{DoxyCompactList}\small\item\em This method is called when a party details definition request acknowledgement message is received. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_i_l3_app_msg_callback_acd9fd6ab047eda6ddadef4e28e69ca6b}{on\+Party\+Details\+List\+Report}} (\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data}{Party\+Details\+List\+Report\+Msg\+::\+Block\+Data}} \texorpdfstring{$\ast$}{*}data, int segid)=0
+\begin{DoxyCompactList}\small\item\em This method is called when a party details list report message is received. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_i_l3_app_msg_callback_a58a27c1f2e288ef4f29f249e2179d8c6}{on\+Business\+Reject}} (\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_business_reject_msg_1_1_block_data}{Business\+Reject\+Msg\+::\+Block\+Data}} \texorpdfstring{$\ast$}{*}data, int segid)=0
+\begin{DoxyCompactList}\small\item\em This method is called when a business reject message is received. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_i_l3_app_msg_callback}{IL3\+App\+Msg\+Callback} class is an abstract base class that defines the interface for handling various CME i\+Link3 execution report messages and other related application level messages. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_i_l3_app_msg_callback_a51f05f6ef0df216cae07ad9573ea3245}\index{IL3AppMsgCallback@{IL3AppMsgCallback}!IL3AppMsgCallback@{IL3AppMsgCallback}}
+\index{IL3AppMsgCallback@{IL3AppMsgCallback}!IL3AppMsgCallback@{IL3AppMsgCallback}}
+\doxysubsubsection{\texorpdfstring{IL3AppMsgCallback()}{IL3AppMsgCallback()}}
+{\footnotesize\ttfamily \label{class_i_l3_app_msg_callback_a51f05f6ef0df216cae07ad9573ea3245} 
+IL3\+App\+Msg\+Callback\+::\+IL3\+App\+Msg\+Callback (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor for \doxylink{class_i_l3_app_msg_callback}{IL3\+App\+Msg\+Callback}. 
+
+\Hypertarget{class_i_l3_app_msg_callback_a800ec6c866f012e1f91e52342508b446}\index{IL3AppMsgCallback@{IL3AppMsgCallback}!````~IL3AppMsgCallback@{\texorpdfstring{$\sim$}{\string~}IL3AppMsgCallback}}
+\index{````~IL3AppMsgCallback@{\texorpdfstring{$\sim$}{\string~}IL3AppMsgCallback}!IL3AppMsgCallback@{IL3AppMsgCallback}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}IL3AppMsgCallback()}{\string~IL3AppMsgCallback()}}
+{\footnotesize\ttfamily \label{class_i_l3_app_msg_callback_a800ec6c866f012e1f91e52342508b446} 
+IL3\+App\+Msg\+Callback\+::\texorpdfstring{$\sim$}{\string~}\+IL3\+App\+Msg\+Callback (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Virtual destructor for \doxylink{class_i_l3_app_msg_callback}{IL3\+App\+Msg\+Callback}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_i_l3_app_msg_callback_a58a27c1f2e288ef4f29f249e2179d8c6}\index{IL3AppMsgCallback@{IL3AppMsgCallback}!onBusinessReject@{onBusinessReject}}
+\index{onBusinessReject@{onBusinessReject}!IL3AppMsgCallback@{IL3AppMsgCallback}}
+\doxysubsubsection{\texorpdfstring{onBusinessReject()}{onBusinessReject()}}
+{\footnotesize\ttfamily \label{class_i_l3_app_msg_callback_a58a27c1f2e288ef4f29f249e2179d8c6} 
+virtual void IL3\+App\+Msg\+Callback\+::on\+Business\+Reject (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_business_reject_msg_1_1_block_data}{Business\+Reject\+Msg\+::\+Block\+Data}} \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{int}]{segid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This method is called when a business reject message is received. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The block data of the business reject message. \\
+\hline
+{\em segid} & The segment ID. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_i_l3_app_msg_callback_aa8f0053a273dd84fa7477b305f1db5b2}\index{IL3AppMsgCallback@{IL3AppMsgCallback}!onExecRptCancel@{onExecRptCancel}}
+\index{onExecRptCancel@{onExecRptCancel}!IL3AppMsgCallback@{IL3AppMsgCallback}}
+\doxysubsubsection{\texorpdfstring{onExecRptCancel()}{onExecRptCancel()}}
+{\footnotesize\ttfamily \label{class_i_l3_app_msg_callback_aa8f0053a273dd84fa7477b305f1db5b2} 
+virtual void IL3\+App\+Msg\+Callback\+::on\+Exec\+Rpt\+Cancel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_cancel_msg_1_1_block_data}{Execution\+Report\+Cancel\+Msg\+::\+Block\+Data}} \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{int}]{segid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This method is called when an execution report cancel message is received. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The block data of the execution report cancel message. \\
+\hline
+{\em segid} & The segment ID. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_i_l3_app_msg_callback_a05603ff69b8203bb58fb8d3a3566550f}\index{IL3AppMsgCallback@{IL3AppMsgCallback}!onExecRptElimination@{onExecRptElimination}}
+\index{onExecRptElimination@{onExecRptElimination}!IL3AppMsgCallback@{IL3AppMsgCallback}}
+\doxysubsubsection{\texorpdfstring{onExecRptElimination()}{onExecRptElimination()}}
+{\footnotesize\ttfamily \label{class_i_l3_app_msg_callback_a05603ff69b8203bb58fb8d3a3566550f} 
+virtual void IL3\+App\+Msg\+Callback\+::on\+Exec\+Rpt\+Elimination (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_elimination_msg_1_1_block_data}{Execution\+Report\+Elimination\+Msg\+::\+Block\+Data}} \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{int}]{segid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This method is called when an execution report elimination message is received. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The block data of the execution report elimination message. \\
+\hline
+{\em segid} & The segment ID. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_i_l3_app_msg_callback_acf6eef7a79102f333438e10345c8b866}\index{IL3AppMsgCallback@{IL3AppMsgCallback}!onExecRptModify@{onExecRptModify}}
+\index{onExecRptModify@{onExecRptModify}!IL3AppMsgCallback@{IL3AppMsgCallback}}
+\doxysubsubsection{\texorpdfstring{onExecRptModify()}{onExecRptModify()}}
+{\footnotesize\ttfamily \label{class_i_l3_app_msg_callback_acf6eef7a79102f333438e10345c8b866} 
+virtual void IL3\+App\+Msg\+Callback\+::on\+Exec\+Rpt\+Modify (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_modify_msg_1_1_block_data}{Execution\+Report\+Modify\+Msg\+::\+Block\+Data}} \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{int}]{segid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This method is called when an execution report modify message is received. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The block data of the execution report modify message. \\
+\hline
+{\em segid} & The segment ID. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_i_l3_app_msg_callback_a4db80bca9b797062a25bce47eb183995}\index{IL3AppMsgCallback@{IL3AppMsgCallback}!onExecRptNew@{onExecRptNew}}
+\index{onExecRptNew@{onExecRptNew}!IL3AppMsgCallback@{IL3AppMsgCallback}}
+\doxysubsubsection{\texorpdfstring{onExecRptNew()}{onExecRptNew()}}
+{\footnotesize\ttfamily \label{class_i_l3_app_msg_callback_a4db80bca9b797062a25bce47eb183995} 
+virtual void IL3\+App\+Msg\+Callback\+::on\+Exec\+Rpt\+New (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_new_msg_1_1_block_data}{Execution\+Report\+New\+Msg\+::\+Block\+Data}} \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{int}]{segid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This method is called when a new execution report message is received. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The block data of the execution report new message. \\
+\hline
+{\em segid} & The segment ID. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_i_l3_app_msg_callback_a5b9e0518d72108274af542907a2c6213}\index{IL3AppMsgCallback@{IL3AppMsgCallback}!onExecRptReject@{onExecRptReject}}
+\index{onExecRptReject@{onExecRptReject}!IL3AppMsgCallback@{IL3AppMsgCallback}}
+\doxysubsubsection{\texorpdfstring{onExecRptReject()}{onExecRptReject()}}
+{\footnotesize\ttfamily \label{class_i_l3_app_msg_callback_a5b9e0518d72108274af542907a2c6213} 
+virtual void IL3\+App\+Msg\+Callback\+::on\+Exec\+Rpt\+Reject (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_reject_msg_1_1_block_data}{Execution\+Report\+Reject\+Msg\+::\+Block\+Data}} \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{int}]{segid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This method is called when an execution report reject message is received. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The block data of the execution report reject message. \\
+\hline
+{\em segid} & The segment ID. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_i_l3_app_msg_callback_a354edcd73f71f0b1f1ab0ebbc3d61d34}\index{IL3AppMsgCallback@{IL3AppMsgCallback}!onExecRptTradeOutright@{onExecRptTradeOutright}}
+\index{onExecRptTradeOutright@{onExecRptTradeOutright}!IL3AppMsgCallback@{IL3AppMsgCallback}}
+\doxysubsubsection{\texorpdfstring{onExecRptTradeOutright()}{onExecRptTradeOutright()}}
+{\footnotesize\ttfamily \label{class_i_l3_app_msg_callback_a354edcd73f71f0b1f1ab0ebbc3d61d34} 
+virtual void IL3\+App\+Msg\+Callback\+::on\+Exec\+Rpt\+Trade\+Outright (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_outright_msg_1_1_block_data}{Execution\+Report\+Trade\+Outright\+Msg\+::\+Block\+Data}} \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{int}]{segid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This method is called when an execution report trade outright message is received. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The block data of the execution report trade outright message. \\
+\hline
+{\em segid} & The segment ID. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_i_l3_app_msg_callback_aee31515a6ca4cc88833c3c0a01fff6e5}\index{IL3AppMsgCallback@{IL3AppMsgCallback}!onExecRptTradeSpread@{onExecRptTradeSpread}}
+\index{onExecRptTradeSpread@{onExecRptTradeSpread}!IL3AppMsgCallback@{IL3AppMsgCallback}}
+\doxysubsubsection{\texorpdfstring{onExecRptTradeSpread()}{onExecRptTradeSpread()}}
+{\footnotesize\ttfamily \label{class_i_l3_app_msg_callback_aee31515a6ca4cc88833c3c0a01fff6e5} 
+virtual void IL3\+App\+Msg\+Callback\+::on\+Exec\+Rpt\+Trade\+Spread (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_spread_msg_1_1_block_data}{Execution\+Report\+Trade\+Spread\+Msg\+::\+Block\+Data}} \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{int}]{segid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This method is called when an execution report trade spread message is received. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The block data of the execution report trade spread message. \\
+\hline
+{\em segid} & The segment ID. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_i_l3_app_msg_callback_a64ff7d5b9ad23a7b20612fa4ca858aff}\index{IL3AppMsgCallback@{IL3AppMsgCallback}!onExecRptTradeSpreadLeg@{onExecRptTradeSpreadLeg}}
+\index{onExecRptTradeSpreadLeg@{onExecRptTradeSpreadLeg}!IL3AppMsgCallback@{IL3AppMsgCallback}}
+\doxysubsubsection{\texorpdfstring{onExecRptTradeSpreadLeg()}{onExecRptTradeSpreadLeg()}}
+{\footnotesize\ttfamily \label{class_i_l3_app_msg_callback_a64ff7d5b9ad23a7b20612fa4ca858aff} 
+virtual void IL3\+App\+Msg\+Callback\+::on\+Exec\+Rpt\+Trade\+Spread\+Leg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_spread_leg_msg_1_1_block_data}{Execution\+Report\+Trade\+Spread\+Leg\+Msg\+::\+Block\+Data}} \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{int}]{segid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This method is called when an execution report trade spread leg message is received. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The block data of the execution report trade spread leg message. \\
+\hline
+{\em segid} & The segment ID. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_i_l3_app_msg_callback_addb776333052fe53842859d66755b306}\index{IL3AppMsgCallback@{IL3AppMsgCallback}!onOrderCancelReject@{onOrderCancelReject}}
+\index{onOrderCancelReject@{onOrderCancelReject}!IL3AppMsgCallback@{IL3AppMsgCallback}}
+\doxysubsubsection{\texorpdfstring{onOrderCancelReject()}{onOrderCancelReject()}}
+{\footnotesize\ttfamily \label{class_i_l3_app_msg_callback_addb776333052fe53842859d66755b306} 
+virtual void IL3\+App\+Msg\+Callback\+::on\+Order\+Cancel\+Reject (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_reject_msg_1_1_block_data}{Order\+Cancel\+Reject\+Msg\+::\+Block\+Data}} \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{int}]{segid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This method is called when an order cancel reject message is received. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The block data of the order cancel reject message. \\
+\hline
+{\em segid} & The segment ID. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_i_l3_app_msg_callback_afbcae2f1f18268bb341e523c8ccf4542}\index{IL3AppMsgCallback@{IL3AppMsgCallback}!onOrderCancelReplaceReject@{onOrderCancelReplaceReject}}
+\index{onOrderCancelReplaceReject@{onOrderCancelReplaceReject}!IL3AppMsgCallback@{IL3AppMsgCallback}}
+\doxysubsubsection{\texorpdfstring{onOrderCancelReplaceReject()}{onOrderCancelReplaceReject()}}
+{\footnotesize\ttfamily \label{class_i_l3_app_msg_callback_afbcae2f1f18268bb341e523c8ccf4542} 
+virtual void IL3\+App\+Msg\+Callback\+::on\+Order\+Cancel\+Replace\+Reject (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data}{Order\+Cancel\+Replace\+Reject\+Msg\+::\+Block\+Data}} \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{int}]{segid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This method is called when an order cancel replace reject message is received. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The block data of the order cancel replace reject message. \\
+\hline
+{\em segid} & The segment ID. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_i_l3_app_msg_callback_acc3417d4ed1a90eb37a3f4a2643ec873}\index{IL3AppMsgCallback@{IL3AppMsgCallback}!onOrderMassActionReport@{onOrderMassActionReport}}
+\index{onOrderMassActionReport@{onOrderMassActionReport}!IL3AppMsgCallback@{IL3AppMsgCallback}}
+\doxysubsubsection{\texorpdfstring{onOrderMassActionReport()}{onOrderMassActionReport()}}
+{\footnotesize\ttfamily \label{class_i_l3_app_msg_callback_acc3417d4ed1a90eb37a3f4a2643ec873} 
+virtual void IL3\+App\+Msg\+Callback\+::on\+Order\+Mass\+Action\+Report (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data}{Order\+Mass\+Action\+Report\+Msg\+::\+Block\+Data}} \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{int}]{segid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This method is called when an order mass action report message is received. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The block data of the order mass action report message. \\
+\hline
+{\em segid} & The segment ID. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_i_l3_app_msg_callback_ac896289d1bb226276c9a9bed05993b42}\index{IL3AppMsgCallback@{IL3AppMsgCallback}!onPartyDetailsDefinitionRequestAck@{onPartyDetailsDefinitionRequestAck}}
+\index{onPartyDetailsDefinitionRequestAck@{onPartyDetailsDefinitionRequestAck}!IL3AppMsgCallback@{IL3AppMsgCallback}}
+\doxysubsubsection{\texorpdfstring{onPartyDetailsDefinitionRequestAck()}{onPartyDetailsDefinitionRequestAck()}}
+{\footnotesize\ttfamily \label{class_i_l3_app_msg_callback_ac896289d1bb226276c9a9bed05993b42} 
+virtual void IL3\+App\+Msg\+Callback\+::on\+Party\+Details\+Definition\+Request\+Ack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_ack_msg_1_1_block_data}{Party\+Details\+Definition\+Request\+Ack\+Msg\+::\+Block\+Data}} \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{int}]{segid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This method is called when a party details definition request acknowledgement message is received. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The block data of the party details definition request acknowledgement message. \\
+\hline
+{\em segid} & The segment ID. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_i_l3_app_msg_callback_acd9fd6ab047eda6ddadef4e28e69ca6b}\index{IL3AppMsgCallback@{IL3AppMsgCallback}!onPartyDetailsListReport@{onPartyDetailsListReport}}
+\index{onPartyDetailsListReport@{onPartyDetailsListReport}!IL3AppMsgCallback@{IL3AppMsgCallback}}
+\doxysubsubsection{\texorpdfstring{onPartyDetailsListReport()}{onPartyDetailsListReport()}}
+{\footnotesize\ttfamily \label{class_i_l3_app_msg_callback_acd9fd6ab047eda6ddadef4e28e69ca6b} 
+virtual void IL3\+App\+Msg\+Callback\+::on\+Party\+Details\+List\+Report (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data}{Party\+Details\+List\+Report\+Msg\+::\+Block\+Data}} \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{int}]{segid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This method is called when a party details list report message is received. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The block data of the party details list report message. \\
+\hline
+{\em segid} & The segment ID. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+exchsupport/cme/il3/IL3\+App\+Msg\+Callback.\+hpp\item 
+exchsupport/cme/il3/IL3\+App\+Msg\+Callback.\+cpp\end{DoxyCompactItemize}

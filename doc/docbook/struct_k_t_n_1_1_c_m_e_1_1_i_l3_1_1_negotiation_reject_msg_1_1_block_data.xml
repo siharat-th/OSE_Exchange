@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiation_reject_msg_1_1_block_data" xml:lang="en-US">
+<title>KTN::CME::IL3::NegotiationRejectMsg::BlockData Struct Reference</title>
+<indexterm><primary>KTN::CME::IL3::NegotiationRejectMsg::BlockData</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>String48 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiation_reject_msg_1_1_block_data_1ab8fe2e8f1b9adff5e8929ccb9b759e0c">Reason</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiation_reject_msg_1_1_block_data_1a65e63fc758be1dfe5b72e044a1fb4aa5">UUID</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiation_reject_msg_1_1_block_data_1a53aa7c1ae4e0c0f62d7f8dbcd5728578">RequestTimestamp</link></para>
+</listitem>
+            <listitem><para>uInt16 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiation_reject_msg_1_1_block_data_1af549eeb03fcabd7881d3941a892995c4">ErrorCodes</link></para>
+</listitem>
+            <listitem><para>EnumFTI <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiation_reject_msg_1_1_block_data_1a1ae38fb96c1c488c91b8e2a4cacac476">FaultToleranceIndicator</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiation_reject_msg_1_1_block_data_1afa99fc0ba3767087bab7ff5c06af3376">SplitMsg</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiation_reject_msg_1_1_block_data_1af549eeb03fcabd7881d3941a892995c4"/><section>
+    <title>ErrorCodes</title>
+<indexterm><primary>ErrorCodes</primary><secondary>KTN::CME::IL3::NegotiationRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::NegotiationRejectMsg::BlockData</primary><secondary>ErrorCodes</secondary></indexterm>
+<para><computeroutput>uInt16 KTN::CME::IL3::NegotiationRejectMsg::BlockData::ErrorCodes</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiation_reject_msg_1_1_block_data_1a1ae38fb96c1c488c91b8e2a4cacac476"/><section>
+    <title>FaultToleranceIndicator</title>
+<indexterm><primary>FaultToleranceIndicator</primary><secondary>KTN::CME::IL3::NegotiationRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::NegotiationRejectMsg::BlockData</primary><secondary>FaultToleranceIndicator</secondary></indexterm>
+<para><computeroutput>EnumFTI KTN::CME::IL3::NegotiationRejectMsg::BlockData::FaultToleranceIndicator</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiation_reject_msg_1_1_block_data_1ab8fe2e8f1b9adff5e8929ccb9b759e0c"/><section>
+    <title>Reason</title>
+<indexterm><primary>Reason</primary><secondary>KTN::CME::IL3::NegotiationRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::NegotiationRejectMsg::BlockData</primary><secondary>Reason</secondary></indexterm>
+<para><computeroutput>String48 KTN::CME::IL3::NegotiationRejectMsg::BlockData::Reason</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiation_reject_msg_1_1_block_data_1a53aa7c1ae4e0c0f62d7f8dbcd5728578"/><section>
+    <title>RequestTimestamp</title>
+<indexterm><primary>RequestTimestamp</primary><secondary>KTN::CME::IL3::NegotiationRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::NegotiationRejectMsg::BlockData</primary><secondary>RequestTimestamp</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::NegotiationRejectMsg::BlockData::RequestTimestamp</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiation_reject_msg_1_1_block_data_1afa99fc0ba3767087bab7ff5c06af3376"/><section>
+    <title>SplitMsg</title>
+<indexterm><primary>SplitMsg</primary><secondary>KTN::CME::IL3::NegotiationRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::NegotiationRejectMsg::BlockData</primary><secondary>SplitMsg</secondary></indexterm>
+<para><computeroutput>uint8_t KTN::CME::IL3::NegotiationRejectMsg::BlockData::SplitMsg</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiation_reject_msg_1_1_block_data_1a65e63fc758be1dfe5b72e044a1fb4aa5"/><section>
+    <title>UUID</title>
+<indexterm><primary>UUID</primary><secondary>KTN::CME::IL3::NegotiationRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::NegotiationRejectMsg::BlockData</primary><secondary>UUID</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::NegotiationRejectMsg::BlockData::UUID</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+exchsupport/cme/il3/IL3Messages2.hpp</section>
+</section>

@@ -1,0 +1,169 @@
+\doxysection{Zmq\+Subscriber\+V5 Class Reference}
+\hypertarget{class_zmq_subscriber_v5}{}\label{class_zmq_subscriber_v5}\index{ZmqSubscriberV5@{ZmqSubscriberV5}}
+
+
+A ZMQ subscriber class.  
+
+
+
+
+{\ttfamily \#include $<$Zmq\+Subscriber\+V5.\+hpp$>$}
+
+Inheritance diagram for Zmq\+Subscriber\+V5\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_zmq_subscriber_v5}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_zmq_subscriber_v5_a88923abda981ef5728015222d6507b60}{Zmq\+Subscriber\+V5}} (\mbox{\hyperlink{class_i_zmq_subscriber}{IZmq\+Subscriber}} \texorpdfstring{$\ast$}{*}sub, const string \&server, int port, const string \&name, vector$<$ string $>$ topics)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_zmq_subscriber_v5}{Zmq\+Subscriber\+V5} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_zmq_subscriber_v5_a415da35c7aff2c5b068bef7258f8ccee}{Zmq\+Subscriber\+V5}} (\mbox{\hyperlink{class_i_zmq_subscriber}{IZmq\+Subscriber}} \texorpdfstring{$\ast$}{*}sub, const string \&server, int port, const string \&name, const string \&filename, const string \&key)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_zmq_subscriber_v5}{Zmq\+Subscriber\+V5} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_zmq_subscriber_v5_a02f3a95d575ef5e77983b47a74970b6b}{\texorpdfstring{$\sim$}{\string~}\+Zmq\+Subscriber\+V5}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{class_zmq_subscriber_v5}{Zmq\+Subscriber\+V5} object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_zmq_subscriber_v5_a40fecdb12b1934a1a7aa0c67107ebaba}{Add\+Topic}} (string sz\+Topic)
+\begin{DoxyCompactList}\small\item\em Adds a topic to subscribe to. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_zmq_subscriber_v5_ad3d571a6f24e598fe90db278a9c25b75}{Load\+Topics}} (const string \&filename, const string \&key)
+\begin{DoxyCompactList}\small\item\em Loads topics from a file. \end{DoxyCompactList}\item 
+const vector$<$ string $>$ \mbox{\hyperlink{class_zmq_subscriber_v5_a21399ebb4a26e128ae23610ce13b64aa}{Topics}} () const
+\begin{DoxyCompactList}\small\item\em Gets the list of subscribed topics. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A ZMQ subscriber class. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_zmq_subscriber_v5_a88923abda981ef5728015222d6507b60}\index{ZmqSubscriberV5@{ZmqSubscriberV5}!ZmqSubscriberV5@{ZmqSubscriberV5}}
+\index{ZmqSubscriberV5@{ZmqSubscriberV5}!ZmqSubscriberV5@{ZmqSubscriberV5}}
+\doxysubsubsection{\texorpdfstring{ZmqSubscriberV5()}{ZmqSubscriberV5()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_zmq_subscriber_v5_a88923abda981ef5728015222d6507b60} 
+Zmq\+Subscriber\+V5\+::\+Zmq\+Subscriber\+V5 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_zmq_subscriber}{IZmq\+Subscriber}} \texorpdfstring{$\ast$}{*}}]{sub}{, }\item[{const string \&}]{server}{, }\item[{int}]{port}{, }\item[{const string \&}]{name}{, }\item[{vector$<$ string $>$}]{topics}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructs a \doxylink{class_zmq_subscriber_v5}{Zmq\+Subscriber\+V5} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sub} & The \doxylink{class_i_zmq_subscriber}{IZmq\+Subscriber} object to handle received messages. \\
+\hline
+{\em server} & The ZMQ server address. \\
+\hline
+{\em port} & The ZMQ server port. \\
+\hline
+{\em name} & The name of the subscriber. \\
+\hline
+{\em topics} & The initial topics to subscribe to. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00018}{Named\+Thread\+::\+Create\+And\+Run()}}.
+
+\Hypertarget{class_zmq_subscriber_v5_a415da35c7aff2c5b068bef7258f8ccee}\index{ZmqSubscriberV5@{ZmqSubscriberV5}!ZmqSubscriberV5@{ZmqSubscriberV5}}
+\index{ZmqSubscriberV5@{ZmqSubscriberV5}!ZmqSubscriberV5@{ZmqSubscriberV5}}
+\doxysubsubsection{\texorpdfstring{ZmqSubscriberV5()}{ZmqSubscriberV5()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_zmq_subscriber_v5_a415da35c7aff2c5b068bef7258f8ccee} 
+Zmq\+Subscriber\+V5\+::\+Zmq\+Subscriber\+V5 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_zmq_subscriber}{IZmq\+Subscriber}} \texorpdfstring{$\ast$}{*}}]{sub}{, }\item[{const string \&}]{server}{, }\item[{int}]{port}{, }\item[{const string \&}]{name}{, }\item[{const string \&}]{filename}{, }\item[{const string \&}]{key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructs a \doxylink{class_zmq_subscriber_v5}{Zmq\+Subscriber\+V5} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sub} & The \doxylink{class_i_zmq_subscriber}{IZmq\+Subscriber} object to handle received messages. \\
+\hline
+{\em server} & The ZMQ server address. \\
+\hline
+{\em port} & The ZMQ server port. \\
+\hline
+{\em name} & The name of the subscriber. \\
+\hline
+{\em filename} & The name of the file containing the topics to subscribe to. \\
+\hline
+{\em key} & The key to access the topics in the file. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00018}{Named\+Thread\+::\+Create\+And\+Run()}}, and \mbox{\hyperlink{l00035}{Load\+Topics()}}.
+
+\Hypertarget{class_zmq_subscriber_v5_a02f3a95d575ef5e77983b47a74970b6b}\index{ZmqSubscriberV5@{ZmqSubscriberV5}!````~ZmqSubscriberV5@{\texorpdfstring{$\sim$}{\string~}ZmqSubscriberV5}}
+\index{````~ZmqSubscriberV5@{\texorpdfstring{$\sim$}{\string~}ZmqSubscriberV5}!ZmqSubscriberV5@{ZmqSubscriberV5}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ZmqSubscriberV5()}{\string~ZmqSubscriberV5()}}
+{\footnotesize\ttfamily \label{class_zmq_subscriber_v5_a02f3a95d575ef5e77983b47a74970b6b} 
+Zmq\+Subscriber\+V5\+::\texorpdfstring{$\sim$}{\string~}\+Zmq\+Subscriber\+V5 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destroys the \doxylink{class_zmq_subscriber_v5}{Zmq\+Subscriber\+V5} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_zmq_subscriber_v5_a40fecdb12b1934a1a7aa0c67107ebaba}\index{ZmqSubscriberV5@{ZmqSubscriberV5}!AddTopic@{AddTopic}}
+\index{AddTopic@{AddTopic}!ZmqSubscriberV5@{ZmqSubscriberV5}}
+\doxysubsubsection{\texorpdfstring{AddTopic()}{AddTopic()}}
+{\footnotesize\ttfamily \label{class_zmq_subscriber_v5_a40fecdb12b1934a1a7aa0c67107ebaba} 
+bool Zmq\+Subscriber\+V5\+::\+Add\+Topic (\begin{DoxyParamCaption}\item[{string}]{sz\+Topic}{}\end{DoxyParamCaption})}
+
+
+
+Adds a topic to subscribe to. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sz\+Topic} & The topic to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the topic was added successfully, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_zmq_subscriber_v5_ad3d571a6f24e598fe90db278a9c25b75}\index{ZmqSubscriberV5@{ZmqSubscriberV5}!LoadTopics@{LoadTopics}}
+\index{LoadTopics@{LoadTopics}!ZmqSubscriberV5@{ZmqSubscriberV5}}
+\doxysubsubsection{\texorpdfstring{LoadTopics()}{LoadTopics()}}
+{\footnotesize\ttfamily \label{class_zmq_subscriber_v5_ad3d571a6f24e598fe90db278a9c25b75} 
+void Zmq\+Subscriber\+V5\+::\+Load\+Topics (\begin{DoxyParamCaption}\item[{const string \&}]{filename}{, }\item[{const string \&}]{key}{}\end{DoxyParamCaption})}
+
+
+
+Loads topics from a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file containing the topics. \\
+\hline
+{\em key} & The key to access the topics in the file. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00203}{Settings\+::get\+List\+Csv()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00012}{Zmq\+Subscriber\+V5()}}.
+
+\Hypertarget{class_zmq_subscriber_v5_a21399ebb4a26e128ae23610ce13b64aa}\index{ZmqSubscriberV5@{ZmqSubscriberV5}!Topics@{Topics}}
+\index{Topics@{Topics}!ZmqSubscriberV5@{ZmqSubscriberV5}}
+\doxysubsubsection{\texorpdfstring{Topics()}{Topics()}}
+{\footnotesize\ttfamily \label{class_zmq_subscriber_v5_a21399ebb4a26e128ae23610ce13b64aa} 
+const vector$<$ string $>$ Zmq\+Subscriber\+V5\+::\+Topics (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the list of subscribed topics. 
+
+\begin{DoxyReturn}{Returns}
+The list of subscribed topics. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+ZMQ/Zmq\+Subscriber\+V5.\+hpp\item 
+ZMQ/Zmq\+Subscriber\+V5.\+cpp\end{DoxyCompactItemize}

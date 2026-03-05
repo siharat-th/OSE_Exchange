@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_squeezer_params" xml:lang="en-US">
+<title>SqueezerParams Struct Reference</title>
+<indexterm><primary>SqueezerParams</primary></indexterm>
+<para>
+
+<para>The <link linkend="_struct_squeezer_params">SqueezerParams</link> struct represents the parameters for the Squeezer algorithm. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;SqueezerParams.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_struct_squeezer_params">SqueezerParams</link> <link linkend="_struct_squeezer_params_1a9c0c07577ff58c5b390850a3be695bbe">parse</link> (const std::string &amp;json_str)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_struct_squeezer_params_1ae0237dba11d0093d19580a6645b62fbb">ValidJson</link></para>
+</listitem>
+            <listitem><para><link linkend="_structalgometa">algometa</link> <link linkend="_struct_squeezer_params_1a3a49e3e134ad344fc19f206e957da4f0">meta</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_squeezer_params_1a1f44700431509a10a6570a4d19cb3906">subid</link></para>
+</listitem>
+            <listitem><para>std::unordered_map&lt; int, <link linkend="_structinstrument">instrument</link> &gt; <link linkend="_struct_squeezer_params_1a2459c5d758f5a7217667a2b09b769914">LegSecIdMap</link></para>
+</listitem>
+            <listitem><para><link linkend="_structinstrument">instrument</link> <link linkend="_struct_squeezer_params_1a05efdd1733bdfb3d8ab5c7fc64060b3a">Legs</link> [24]</para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_squeezer_params_1ad2a39d8264aba7587c45247b5b0e71ed">LegCount</link></para>
+</listitem>
+            <listitem><para>std::unordered_map&lt; string, <link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> &gt; <link linkend="_struct_squeezer_params_1a05617cb10133bba9951b6ee959ed77c4">Ords</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_squeezer_params_1afd3ce054a53097b0c48ff996efc8c2b6">OrderQty</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_squeezer_params_1a435a73dcdb8ba6b0e8f543dec02d1e83">TotalQty</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_struct_squeezer_params">SqueezerParams</link> struct represents the parameters for the Squeezer algorithm. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_squeezer_params_1a9c0c07577ff58c5b390850a3be695bbe"/><section>
+    <title>parse()</title>
+<indexterm><primary>parse</primary><secondary>SqueezerParams</secondary></indexterm>
+<indexterm><primary>SqueezerParams</primary><secondary>parse</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_squeezer_params">SqueezerParams</link> SqueezerParams::parse (const std::string &amp; json_str)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_squeezer_params_1ad2a39d8264aba7587c45247b5b0e71ed"/><section>
+    <title>LegCount</title>
+<indexterm><primary>LegCount</primary><secondary>SqueezerParams</secondary></indexterm>
+<indexterm><primary>SqueezerParams</primary><secondary>LegCount</secondary></indexterm>
+<para><computeroutput>int SqueezerParams::LegCount</computeroutput></para></section>
+<anchor xml:id="_struct_squeezer_params_1a05efdd1733bdfb3d8ab5c7fc64060b3a"/><section>
+    <title>Legs</title>
+<indexterm><primary>Legs</primary><secondary>SqueezerParams</secondary></indexterm>
+<indexterm><primary>SqueezerParams</primary><secondary>Legs</secondary></indexterm>
+<para><computeroutput><link linkend="_structinstrument">instrument</link> SqueezerParams::Legs[24]</computeroutput></para></section>
+<anchor xml:id="_struct_squeezer_params_1a2459c5d758f5a7217667a2b09b769914"/><section>
+    <title>LegSecIdMap</title>
+<indexterm><primary>LegSecIdMap</primary><secondary>SqueezerParams</secondary></indexterm>
+<indexterm><primary>SqueezerParams</primary><secondary>LegSecIdMap</secondary></indexterm>
+<para><computeroutput>std::unordered_map&lt;int, <link linkend="_structinstrument">instrument</link>&gt; SqueezerParams::LegSecIdMap</computeroutput></para></section>
+<anchor xml:id="_struct_squeezer_params_1a3a49e3e134ad344fc19f206e957da4f0"/><section>
+    <title>meta</title>
+<indexterm><primary>meta</primary><secondary>SqueezerParams</secondary></indexterm>
+<indexterm><primary>SqueezerParams</primary><secondary>meta</secondary></indexterm>
+<para><computeroutput><link linkend="_structalgometa">algometa</link> SqueezerParams::meta</computeroutput></para></section>
+<anchor xml:id="_struct_squeezer_params_1afd3ce054a53097b0c48ff996efc8c2b6"/><section>
+    <title>OrderQty</title>
+<indexterm><primary>OrderQty</primary><secondary>SqueezerParams</secondary></indexterm>
+<indexterm><primary>SqueezerParams</primary><secondary>OrderQty</secondary></indexterm>
+<para><computeroutput>double SqueezerParams::OrderQty</computeroutput></para></section>
+<anchor xml:id="_struct_squeezer_params_1a05617cb10133bba9951b6ee959ed77c4"/><section>
+    <title>Ords</title>
+<indexterm><primary>Ords</primary><secondary>SqueezerParams</secondary></indexterm>
+<indexterm><primary>SqueezerParams</primary><secondary>Ords</secondary></indexterm>
+<para><computeroutput>std::unordered_map&lt;string, <link linkend="_struct_k_t_n_1_1_order">KTN::Order</link>&gt; SqueezerParams::Ords</computeroutput></para></section>
+<anchor xml:id="_struct_squeezer_params_1a1f44700431509a10a6570a4d19cb3906"/><section>
+    <title>subid</title>
+<indexterm><primary>subid</primary><secondary>SqueezerParams</secondary></indexterm>
+<indexterm><primary>SqueezerParams</primary><secondary>subid</secondary></indexterm>
+<para><computeroutput>string SqueezerParams::subid</computeroutput></para></section>
+<anchor xml:id="_struct_squeezer_params_1a435a73dcdb8ba6b0e8f543dec02d1e83"/><section>
+    <title>TotalQty</title>
+<indexterm><primary>TotalQty</primary><secondary>SqueezerParams</secondary></indexterm>
+<indexterm><primary>SqueezerParams</primary><secondary>TotalQty</secondary></indexterm>
+<para><computeroutput>double SqueezerParams::TotalQty</computeroutput></para></section>
+<anchor xml:id="_struct_squeezer_params_1ae0237dba11d0093d19580a6645b62fbb"/><section>
+    <title>ValidJson</title>
+<indexterm><primary>ValidJson</primary><secondary>SqueezerParams</secondary></indexterm>
+<indexterm><primary>SqueezerParams</primary><secondary>ValidJson</secondary></indexterm>
+<para><computeroutput>bool SqueezerParams::ValidJson</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following files:</para>
+AlgoParams/SqueezerParams.hppAlgoParams/SqueezerParams.cpp</section>
+</section>

@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data" xml:lang="en-US">
+<title>KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData Struct Reference</title>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>uInt32 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data_1adad5de45bc6e2f1bae1d446d8fa65f90">SeqNum</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data_1a6ca97baacdc66280279ee0bd262d51ac">UUID</link></para>
+</listitem>
+            <listitem><para>String256 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data_1a671c2d859067fc43bb2cd06efb9fab1e">Text</link></para>
+</listitem>
+            <listitem><para>String40 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data_1abf2cc041e8a5aa45a2ce4b4048b2d879">ExecID</link></para>
+</listitem>
+            <listitem><para>String20Req <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data_1aff5b347c55f5ba3f4c4c5cdfc89a7a99">SenderID</link></para>
+</listitem>
+            <listitem><para>String20Req <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data_1a8f562e8ce311116730e123118f426689">ClOrdID</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data_1a9369505849db494fa1a664073d4f2829">PartyDetailsListReqID</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data_1a0813aa20b6cee131492343c38c72e172">OrderID</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data_1a61b0f3fe3c36c5fe2727406465112a7c">TransactTime</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data_1a5c55d9b98bc47a9eeb80f2d760a0baa4">SendingTimeEpoch</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data_1acd666237f40b389d5a053f477272a8c7">OrderRequestID</link></para>
+</listitem>
+            <listitem><para>String5Req <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data_1af95795104a4572af28f2a98452483446">Location</link></para>
+</listitem>
+            <listitem><para>uInt16 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data_1a427518793d22fea82d6ecd07cca729e9">CxlRejReason</link></para>
+</listitem>
+            <listitem><para>uInt16NULL <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data_1a60707905def5e15021c7099f5e71afb8">DelayDuration</link></para>
+</listitem>
+            <listitem><para>EnumManualOrdIndReq <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data_1abd45510695062ca0527cec318c9f9c56">ManualOrderIndicator</link></para>
+</listitem>
+            <listitem><para>EnumBooleanFlag <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data_1a803066d443e41ab7860a52f782c03abb">PossRetransFlag</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data_1a9761b1d88b7f7df00ecccaecc7312bff">SplitMsg</link></para>
+</listitem>
+            <listitem><para>EnumBooleanNULL <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data_1a943f8e9beae3a66b6fa69cae5ab51253">LiquidityFlag</link></para>
+</listitem>
+            <listitem><para>uInt64NULL <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data_1af95598ac14f1935b2374ecd3539a0e7e">DelayToTime</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data_1a8f562e8ce311116730e123118f426689"/><section>
+    <title>ClOrdID</title>
+<indexterm><primary>ClOrdID</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData</primary><secondary>ClOrdID</secondary></indexterm>
+<para><computeroutput>String20Req KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData::ClOrdID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data_1a427518793d22fea82d6ecd07cca729e9"/><section>
+    <title>CxlRejReason</title>
+<indexterm><primary>CxlRejReason</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData</primary><secondary>CxlRejReason</secondary></indexterm>
+<para><computeroutput>uInt16 KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData::CxlRejReason</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data_1a60707905def5e15021c7099f5e71afb8"/><section>
+    <title>DelayDuration</title>
+<indexterm><primary>DelayDuration</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData</primary><secondary>DelayDuration</secondary></indexterm>
+<para><computeroutput>uInt16NULL KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData::DelayDuration</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data_1af95598ac14f1935b2374ecd3539a0e7e"/><section>
+    <title>DelayToTime</title>
+<indexterm><primary>DelayToTime</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData</primary><secondary>DelayToTime</secondary></indexterm>
+<para><computeroutput>uInt64NULL KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData::DelayToTime</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data_1abf2cc041e8a5aa45a2ce4b4048b2d879"/><section>
+    <title>ExecID</title>
+<indexterm><primary>ExecID</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData</primary><secondary>ExecID</secondary></indexterm>
+<para><computeroutput>String40 KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData::ExecID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data_1a943f8e9beae3a66b6fa69cae5ab51253"/><section>
+    <title>LiquidityFlag</title>
+<indexterm><primary>LiquidityFlag</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData</primary><secondary>LiquidityFlag</secondary></indexterm>
+<para><computeroutput>EnumBooleanNULL KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData::LiquidityFlag</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data_1af95795104a4572af28f2a98452483446"/><section>
+    <title>Location</title>
+<indexterm><primary>Location</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData</primary><secondary>Location</secondary></indexterm>
+<para><computeroutput>String5Req KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData::Location</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data_1abd45510695062ca0527cec318c9f9c56"/><section>
+    <title>ManualOrderIndicator</title>
+<indexterm><primary>ManualOrderIndicator</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData</primary><secondary>ManualOrderIndicator</secondary></indexterm>
+<para><computeroutput>EnumManualOrdIndReq KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData::ManualOrderIndicator</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data_1a0813aa20b6cee131492343c38c72e172"/><section>
+    <title>OrderID</title>
+<indexterm><primary>OrderID</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData</primary><secondary>OrderID</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData::OrderID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data_1acd666237f40b389d5a053f477272a8c7"/><section>
+    <title>OrderRequestID</title>
+<indexterm><primary>OrderRequestID</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData</primary><secondary>OrderRequestID</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData::OrderRequestID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data_1a9369505849db494fa1a664073d4f2829"/><section>
+    <title>PartyDetailsListReqID</title>
+<indexterm><primary>PartyDetailsListReqID</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData</primary><secondary>PartyDetailsListReqID</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData::PartyDetailsListReqID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data_1a803066d443e41ab7860a52f782c03abb"/><section>
+    <title>PossRetransFlag</title>
+<indexterm><primary>PossRetransFlag</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData</primary><secondary>PossRetransFlag</secondary></indexterm>
+<para><computeroutput>EnumBooleanFlag KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData::PossRetransFlag</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data_1aff5b347c55f5ba3f4c4c5cdfc89a7a99"/><section>
+    <title>SenderID</title>
+<indexterm><primary>SenderID</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData</primary><secondary>SenderID</secondary></indexterm>
+<para><computeroutput>String20Req KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData::SenderID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data_1a5c55d9b98bc47a9eeb80f2d760a0baa4"/><section>
+    <title>SendingTimeEpoch</title>
+<indexterm><primary>SendingTimeEpoch</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData</primary><secondary>SendingTimeEpoch</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData::SendingTimeEpoch</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data_1adad5de45bc6e2f1bae1d446d8fa65f90"/><section>
+    <title>SeqNum</title>
+<indexterm><primary>SeqNum</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData</primary><secondary>SeqNum</secondary></indexterm>
+<para><computeroutput>uInt32 KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData::SeqNum</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data_1a9761b1d88b7f7df00ecccaecc7312bff"/><section>
+    <title>SplitMsg</title>
+<indexterm><primary>SplitMsg</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData</primary><secondary>SplitMsg</secondary></indexterm>
+<para><computeroutput>uint8_t KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData::SplitMsg</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data_1a671c2d859067fc43bb2cd06efb9fab1e"/><section>
+    <title>Text</title>
+<indexterm><primary>Text</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData</primary><secondary>Text</secondary></indexterm>
+<para><computeroutput>String256 KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData::Text</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data_1a61b0f3fe3c36c5fe2727406465112a7c"/><section>
+    <title>TransactTime</title>
+<indexterm><primary>TransactTime</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData</primary><secondary>TransactTime</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData::TransactTime</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data_1a6ca97baacdc66280279ee0bd262d51ac"/><section>
+    <title>UUID</title>
+<indexterm><primary>UUID</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData</primary><secondary>UUID</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData::UUID</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+exchsupport/cme/il3/IL3Messages2.hpp</section>
+</section>

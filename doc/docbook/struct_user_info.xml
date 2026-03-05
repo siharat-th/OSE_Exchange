@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_user_info" xml:lang="en-US">
+<title>UserInfo Struct Reference</title>
+<indexterm><primary>UserInfo</primary></indexterm>
+<para>
+
+<para>Struct representing user information. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;KatanaStructs.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static std::string <link linkend="_struct_user_info_1a681871fe9275416da007c34ed1a1e8bd">Print</link> (<link linkend="_struct_user_info">UserInfo</link> u)</para>
+
+<para>Prints the user information. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>std::string <link linkend="_struct_user_info_1a50550a3472838b54a7055d087ae20e4c">user</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_user_info_1a77e72940b5bbe786a1f9903f97be100c">org</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_user_info_1a152334d7174d1370ff6c4cccd81f03d3">groupname</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Struct representing user information. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_user_info_1a681871fe9275416da007c34ed1a1e8bd"/><section>
+    <title>Print()</title>
+<indexterm><primary>Print</primary><secondary>UserInfo</secondary></indexterm>
+<indexterm><primary>UserInfo</primary><secondary>Print</secondary></indexterm>
+<para><computeroutput>static std::string UserInfo::Print (<link linkend="_struct_user_info">UserInfo</link> u)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Prints the user information. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>u</entry><entry>
+<para>The user information to print. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The formatted string representation of the user information. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00049">groupname</link>, <link linkend="_l00048">org</link>, and <link linkend="_l00047">user</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_user_info_1a152334d7174d1370ff6c4cccd81f03d3"/><section>
+    <title>groupname</title>
+<indexterm><primary>groupname</primary><secondary>UserInfo</secondary></indexterm>
+<indexterm><primary>UserInfo</primary><secondary>groupname</secondary></indexterm>
+<para><computeroutput>std::string UserInfo::groupname</computeroutput></para>
+<para>The group name of the user. </para>
+<para>
+Referenced by <link linkend="_l00550">KTN::ORD::OrderHandlerZmqV6::LoadTasOrders()</link>, <link linkend="_l00175">KTN::ALGO::OrderLoader::NewOrderBuilder()</link>, <link linkend="_l00012">AutoHedgeOB2Params::parse()</link>, <link linkend="_l00012">MS2Params::parse()</link>, <link linkend="_l00012">SkewerParams::parse()</link>, <link linkend="_l00012">SkewTraderParams::parse()</link>, <link linkend="_l00012">StackerParams::parse()</link>, <link linkend="_l00012">StackerTimerParams::parse()</link>, <link linkend="_l00012">TimedAvgParams::parse()</link>, <link linkend="_l00012">WavesParams::parse()</link>, and <link linkend="_l00056">Print()</link>.</para>
+</section>
+<anchor xml:id="_struct_user_info_1a77e72940b5bbe786a1f9903f97be100c"/><section>
+    <title>org</title>
+<indexterm><primary>org</primary><secondary>UserInfo</secondary></indexterm>
+<indexterm><primary>UserInfo</primary><secondary>org</secondary></indexterm>
+<para><computeroutput>std::string UserInfo::org</computeroutput></para>
+<para>The organization of the user. </para>
+<para>
+Referenced by <link linkend="_l00550">KTN::ORD::OrderHandlerZmqV6::LoadTasOrders()</link>, <link linkend="_l00175">KTN::ALGO::OrderLoader::NewOrderBuilder()</link>, <link linkend="_l00012">AutoHedgeOB2Params::parse()</link>, <link linkend="_l00012">MS2Params::parse()</link>, <link linkend="_l00012">SkewerParams::parse()</link>, <link linkend="_l00012">SkewTraderParams::parse()</link>, <link linkend="_l00012">StackerParams::parse()</link>, <link linkend="_l00012">StackerTimerParams::parse()</link>, <link linkend="_l00012">TimedAvgParams::parse()</link>, <link linkend="_l00012">WavesParams::parse()</link>, and <link linkend="_l00056">Print()</link>.</para>
+</section>
+<anchor xml:id="_struct_user_info_1a50550a3472838b54a7055d087ae20e4c"/><section>
+    <title>user</title>
+<indexterm><primary>user</primary><secondary>UserInfo</secondary></indexterm>
+<indexterm><primary>UserInfo</primary><secondary>user</secondary></indexterm>
+<para><computeroutput>std::string UserInfo::user</computeroutput></para>
+<para>The username of the user. </para>
+<para>
+Referenced by <link linkend="_l00550">KTN::ORD::OrderHandlerZmqV6::LoadTasOrders()</link>, <link linkend="_l00175">KTN::ALGO::OrderLoader::NewOrderBuilder()</link>, <link linkend="_l00012">AutoHedgeOB2Params::parse()</link>, <link linkend="_l00012">MS2Params::parse()</link>, <link linkend="_l00012">SkewerParams::parse()</link>, <link linkend="_l00012">SkewTraderParams::parse()</link>, <link linkend="_l00012">StackerParams::parse()</link>, <link linkend="_l00012">StackerTimerParams::parse()</link>, <link linkend="_l00012">TimedAvgParams::parse()</link>, <link linkend="_l00012">WavesParams::parse()</link>, and <link linkend="_l00056">Print()</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Containers/KatanaStructs.hpp</section>
+</section>

@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structefvitcp_1_1_time_wait_conn" xml:lang="en-US">
+<title>efvitcp::TimeWaitConn Struct Reference</title>
+<indexterm><primary>efvitcp::TimeWaitConn</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>uint8_t <link linkend="_structefvitcp_1_1_time_wait_conn_1ab834936bfdac4c3259b48fe7b3c33f48">dst_mac</link> [6]</para>
+</listitem>
+            <listitem><para>bool <link linkend="_structefvitcp_1_1_time_wait_conn_1a497b89d1d5c9e85d8d6f391cacc72145">has_ts</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_structefvitcp_1_1_time_wait_conn_1a4fb506080ddace661826aa57c24bb208">dst_ip</link></para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_structefvitcp_1_1_time_wait_conn_1aabd2214ce47cf55ea26e72d74f5951ab">src_port</link></para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_structefvitcp_1_1_time_wait_conn_1a88ca853543cc6df8e5c6ed265f076633">dst_port</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_structefvitcp_1_1_time_wait_conn_1a643d403946768bf9c1a34c9a7b4eead5">seq_num</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_structefvitcp_1_1_time_wait_conn_1a226acde3998df0fdeac28bfefde1d429">ack_num</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_structefvitcp_1_1_time_wait_conn_1a4092233330cd064fb59f7b5c133871b8">tsecr</link></para>
+</listitem>
+            <listitem><para><link linkend="_structefvitcp_1_1_timer_node">TimerNode</link> <link linkend="_structefvitcp_1_1_time_wait_conn_1ac16b1e643e1acc5374a3476d693714f9">timer</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structefvitcp_1_1_time_wait_conn_1a226acde3998df0fdeac28bfefde1d429"/><section>
+    <title>ack_num</title>
+<indexterm><primary>ack_num</primary><secondary>efvitcp::TimeWaitConn</secondary></indexterm>
+<indexterm><primary>efvitcp::TimeWaitConn</primary><secondary>ack_num</secondary></indexterm>
+<para><computeroutput>uint32_t efvitcp::TimeWaitConn::ack_num</computeroutput></para></section>
+<anchor xml:id="_structefvitcp_1_1_time_wait_conn_1a4fb506080ddace661826aa57c24bb208"/><section>
+    <title>dst_ip</title>
+<indexterm><primary>dst_ip</primary><secondary>efvitcp::TimeWaitConn</secondary></indexterm>
+<indexterm><primary>efvitcp::TimeWaitConn</primary><secondary>dst_ip</secondary></indexterm>
+<para><computeroutput>uint32_t efvitcp::TimeWaitConn::dst_ip</computeroutput></para></section>
+<anchor xml:id="_structefvitcp_1_1_time_wait_conn_1ab834936bfdac4c3259b48fe7b3c33f48"/><section>
+    <title>dst_mac</title>
+<indexterm><primary>dst_mac</primary><secondary>efvitcp::TimeWaitConn</secondary></indexterm>
+<indexterm><primary>efvitcp::TimeWaitConn</primary><secondary>dst_mac</secondary></indexterm>
+<para><computeroutput>uint8_t efvitcp::TimeWaitConn::dst_mac[6]</computeroutput></para></section>
+<anchor xml:id="_structefvitcp_1_1_time_wait_conn_1a88ca853543cc6df8e5c6ed265f076633"/><section>
+    <title>dst_port</title>
+<indexterm><primary>dst_port</primary><secondary>efvitcp::TimeWaitConn</secondary></indexterm>
+<indexterm><primary>efvitcp::TimeWaitConn</primary><secondary>dst_port</secondary></indexterm>
+<para><computeroutput>uint16_t efvitcp::TimeWaitConn::dst_port</computeroutput></para></section>
+<anchor xml:id="_structefvitcp_1_1_time_wait_conn_1a497b89d1d5c9e85d8d6f391cacc72145"/><section>
+    <title>has_ts</title>
+<indexterm><primary>has_ts</primary><secondary>efvitcp::TimeWaitConn</secondary></indexterm>
+<indexterm><primary>efvitcp::TimeWaitConn</primary><secondary>has_ts</secondary></indexterm>
+<para><computeroutput>bool efvitcp::TimeWaitConn::has_ts</computeroutput></para></section>
+<anchor xml:id="_structefvitcp_1_1_time_wait_conn_1a643d403946768bf9c1a34c9a7b4eead5"/><section>
+    <title>seq_num</title>
+<indexterm><primary>seq_num</primary><secondary>efvitcp::TimeWaitConn</secondary></indexterm>
+<indexterm><primary>efvitcp::TimeWaitConn</primary><secondary>seq_num</secondary></indexterm>
+<para><computeroutput>uint32_t efvitcp::TimeWaitConn::seq_num</computeroutput></para></section>
+<anchor xml:id="_structefvitcp_1_1_time_wait_conn_1aabd2214ce47cf55ea26e72d74f5951ab"/><section>
+    <title>src_port</title>
+<indexterm><primary>src_port</primary><secondary>efvitcp::TimeWaitConn</secondary></indexterm>
+<indexterm><primary>efvitcp::TimeWaitConn</primary><secondary>src_port</secondary></indexterm>
+<para><computeroutput>uint16_t efvitcp::TimeWaitConn::src_port</computeroutput></para></section>
+<anchor xml:id="_structefvitcp_1_1_time_wait_conn_1ac16b1e643e1acc5374a3476d693714f9"/><section>
+    <title>timer</title>
+<indexterm><primary>timer</primary><secondary>efvitcp::TimeWaitConn</secondary></indexterm>
+<indexterm><primary>efvitcp::TimeWaitConn</primary><secondary>timer</secondary></indexterm>
+<para><computeroutput><link linkend="_structefvitcp_1_1_timer_node">TimerNode</link> efvitcp::TimeWaitConn::timer</computeroutput></para></section>
+<anchor xml:id="_structefvitcp_1_1_time_wait_conn_1a4092233330cd064fb59f7b5c133871b8"/><section>
+    <title>tsecr</title>
+<indexterm><primary>tsecr</primary><secondary>efvitcp::TimeWaitConn</secondary></indexterm>
+<indexterm><primary>efvitcp::TimeWaitConn</primary><secondary>tsecr</secondary></indexterm>
+<para><computeroutput>uint32_t efvitcp::TimeWaitConn::tsecr</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+C:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/external/pollnet/efvitcp/Core.h</section>
+</section>

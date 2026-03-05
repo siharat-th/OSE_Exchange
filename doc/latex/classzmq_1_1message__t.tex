@@ -1,0 +1,266 @@
+\doxysection{zmq\+::message\+\_\+t Class Reference}
+\hypertarget{classzmq_1_1message__t}{}\label{classzmq_1_1message__t}\index{zmq::message\_t@{zmq::message\_t}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classzmq_1_1message__t_ae1ab1807e7a1c46eb048e94a5ff5a263}{message\+\_\+t}} (size\+\_\+t size\+\_\+)
+\item 
+{\footnotesize template$<$class Forward\+Iter $>$ }\\\mbox{\hyperlink{classzmq_1_1message__t_af7092a211cfa0e4df75a96dcb2c465a1}{message\+\_\+t}} (Forward\+Iter first, Forward\+Iter last)
+\item 
+\mbox{\hyperlink{classzmq_1_1message__t_abcbb3ccfdc0993ce4b6a65c40b49302c}{message\+\_\+t}} (const void \texorpdfstring{$\ast$}{*}data\+\_\+, size\+\_\+t size\+\_\+)
+\item 
+\mbox{\hyperlink{classzmq_1_1message__t_a059f04ec283f46cf2c4c74fd191a7438}{message\+\_\+t}} (void \texorpdfstring{$\ast$}{*}data\+\_\+, size\+\_\+t size\+\_\+, free\+\_\+fn \texorpdfstring{$\ast$}{*}ffn\+\_\+, void \texorpdfstring{$\ast$}{*}hint\+\_\+=ZMQ\+\_\+\+NULLPTR)
+\item 
+void \mbox{\hyperlink{classzmq_1_1message__t_aa84be585b079e958a4b139818ce80bee}{rebuild}} ()
+\item 
+void \mbox{\hyperlink{classzmq_1_1message__t_a034605fec66cc8b2a64dba66c02aed6d}{rebuild}} (size\+\_\+t size\+\_\+)
+\item 
+void \mbox{\hyperlink{classzmq_1_1message__t_a5e2f26889a23be1e7f9f10fea487601e}{rebuild}} (const void \texorpdfstring{$\ast$}{*}data\+\_\+, size\+\_\+t size\+\_\+)
+\item 
+void \mbox{\hyperlink{classzmq_1_1message__t_a61245a9aa4c6399a60a67430cde69f37}{rebuild}} (void \texorpdfstring{$\ast$}{*}data\+\_\+, size\+\_\+t size\+\_\+, free\+\_\+fn \texorpdfstring{$\ast$}{*}ffn\+\_\+, void \texorpdfstring{$\ast$}{*}hint\+\_\+=ZMQ\+\_\+\+NULLPTR)
+\item 
+void \mbox{\hyperlink{classzmq_1_1message__t_aec5dbbaa99bc7ed381254b99025ae8d0}{move}} (\mbox{\hyperlink{classzmq_1_1message__t}{message\+\_\+t}} const \texorpdfstring{$\ast$}{*}msg\+\_\+)
+\item 
+void \mbox{\hyperlink{classzmq_1_1message__t_a140d8b73a3c86ba5a8ac5a4916e59471}{move}} (\mbox{\hyperlink{classzmq_1_1message__t}{message\+\_\+t}} \&msg\+\_\+)
+\item 
+void \mbox{\hyperlink{classzmq_1_1message__t_ae37889f4e45aa5e3d8a84f843037c3c9}{copy}} (\mbox{\hyperlink{classzmq_1_1message__t}{message\+\_\+t}} const \texorpdfstring{$\ast$}{*}msg\+\_\+)
+\item 
+void \mbox{\hyperlink{classzmq_1_1message__t_aac863cc381448f2088d6b8a44bd2aa94}{copy}} (\mbox{\hyperlink{classzmq_1_1message__t}{message\+\_\+t}} \&msg\+\_\+)
+\item 
+bool \mbox{\hyperlink{classzmq_1_1message__t_a0b84ec573d15894e1e31becf9ea42e6c}{more}} () const ZMQ\+\_\+\+NOTHROW
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classzmq_1_1message__t_a8fdcb4bbc356e6e304fcc4686817a285}{data}} () ZMQ\+\_\+\+NOTHROW
+\item 
+const void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classzmq_1_1message__t_acf84f015d845d7dc7651c93815b371a3}{data}} () const ZMQ\+\_\+\+NOTHROW
+\item 
+size\+\_\+t \mbox{\hyperlink{classzmq_1_1message__t_a95bbb9796582768c847c5223ae03f206}{size}} () const ZMQ\+\_\+\+NOTHROW
+\item 
+ZMQ\+\_\+\+NODISCARD bool \mbox{\hyperlink{classzmq_1_1message__t_a4be863bc881d762fdb07b66f520bf2bb}{empty}} () const ZMQ\+\_\+\+NOTHROW
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classzmq_1_1message__t_ab569cba6c80417512076b7a42444de9c}{data}} () ZMQ\+\_\+\+NOTHROW
+\item 
+{\footnotesize template$<$typename T $>$ }\\T const \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classzmq_1_1message__t_af0758f1e57c064f61f11e7b16960e65a}{data}} () const ZMQ\+\_\+\+NOTHROW
+\item 
+bool \mbox{\hyperlink{classzmq_1_1message__t_a901d78ddce5bd77e7421c179b1ef3c3a}{equal}} (const \mbox{\hyperlink{classzmq_1_1message__t}{message\+\_\+t}} \texorpdfstring{$\ast$}{*}other) const ZMQ\+\_\+\+NOTHROW
+\item 
+bool \mbox{\hyperlink{classzmq_1_1message__t_a6e273eca474b63914b6fadad70cc44e9}{operator==}} (const \mbox{\hyperlink{classzmq_1_1message__t}{message\+\_\+t}} \&other) const ZMQ\+\_\+\+NOTHROW
+\item 
+bool \mbox{\hyperlink{classzmq_1_1message__t_aafa6818f64a8cbe5a41bdbecd46593d8}{operator!=}} (const \mbox{\hyperlink{classzmq_1_1message__t}{message\+\_\+t}} \&other) const ZMQ\+\_\+\+NOTHROW
+\item 
+int \mbox{\hyperlink{classzmq_1_1message__t_a3fac1ef69f92445db21a77b87d58af9d}{get}} (int property\+\_\+)
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classzmq_1_1message__t_a3fd3e53d505e618c8cad859f698ab5e1}{gets}} (const char \texorpdfstring{$\ast$}{*}property\+\_\+)
+\item 
+std\+::string \mbox{\hyperlink{classzmq_1_1message__t_ac92cae0e9b979bdb7ebe127d90887a3f}{to\+\_\+string}} () const
+\item 
+std\+::string \mbox{\hyperlink{classzmq_1_1message__t_aed6502a922a73cda7f47d47689617d03}{str}} () const
+\item 
+void \mbox{\hyperlink{classzmq_1_1message__t_a48fa2f9b464a2522d340533a99a36f5f}{swap}} (\mbox{\hyperlink{classzmq_1_1message__t}{message\+\_\+t}} \&other) ZMQ\+\_\+\+NOTHROW
+\item 
+ZMQ\+\_\+\+NODISCARD zmq\+\_\+msg\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classzmq_1_1message__t_afb9889a943d2f8eb1a3ed43d0c8885b3}{handle}} () ZMQ\+\_\+\+NOTHROW
+\item 
+ZMQ\+\_\+\+NODISCARD const zmq\+\_\+msg\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classzmq_1_1message__t_ad8978e409daa4d3055669024e0a20dd6}{handle}} () const ZMQ\+\_\+\+NOTHROW
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classzmq_1_1message__t_aaa75f0668213940e0eb2df2bbaad22fc}\index{zmq::message\_t@{zmq::message\_t}!message\_t@{message\_t}}
+\index{message\_t@{message\_t}!zmq::message\_t@{zmq::message\_t}}
+\doxysubsubsection{\texorpdfstring{message\_t()}{message\_t()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily \label{classzmq_1_1message__t_aaa75f0668213940e0eb2df2bbaad22fc} 
+zmq\+::message\+\_\+t\+::message\+\_\+t (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classzmq_1_1message__t_ae1ab1807e7a1c46eb048e94a5ff5a263}\index{zmq::message\_t@{zmq::message\_t}!message\_t@{message\_t}}
+\index{message\_t@{message\_t}!zmq::message\_t@{zmq::message\_t}}
+\doxysubsubsection{\texorpdfstring{message\_t()}{message\_t()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily \label{classzmq_1_1message__t_ae1ab1807e7a1c46eb048e94a5ff5a263} 
+zmq\+::message\+\_\+t\+::message\+\_\+t (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size\+\_\+}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\Hypertarget{classzmq_1_1message__t_af7092a211cfa0e4df75a96dcb2c465a1}\index{zmq::message\_t@{zmq::message\_t}!message\_t@{message\_t}}
+\index{message\_t@{message\_t}!zmq::message\_t@{zmq::message\_t}}
+\doxysubsubsection{\texorpdfstring{message\_t()}{message\_t()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily \label{classzmq_1_1message__t_af7092a211cfa0e4df75a96dcb2c465a1} 
+template$<$class Forward\+Iter $>$ \\
+zmq\+::message\+\_\+t\+::message\+\_\+t (\begin{DoxyParamCaption}\item[{Forward\+Iter}]{first}{, }\item[{Forward\+Iter}]{last}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classzmq_1_1message__t_abcbb3ccfdc0993ce4b6a65c40b49302c}\index{zmq::message\_t@{zmq::message\_t}!message\_t@{message\_t}}
+\index{message\_t@{message\_t}!zmq::message\_t@{zmq::message\_t}}
+\doxysubsubsection{\texorpdfstring{message\_t()}{message\_t()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily \label{classzmq_1_1message__t_abcbb3ccfdc0993ce4b6a65c40b49302c} 
+zmq\+::message\+\_\+t\+::message\+\_\+t (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{data\+\_\+}{, }\item[{size\+\_\+t}]{size\+\_\+}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classzmq_1_1message__t_a059f04ec283f46cf2c4c74fd191a7438}\index{zmq::message\_t@{zmq::message\_t}!message\_t@{message\_t}}
+\index{message\_t@{message\_t}!zmq::message\_t@{zmq::message\_t}}
+\doxysubsubsection{\texorpdfstring{message\_t()}{message\_t()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily \label{classzmq_1_1message__t_a059f04ec283f46cf2c4c74fd191a7438} 
+zmq\+::message\+\_\+t\+::message\+\_\+t (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{data\+\_\+}{, }\item[{size\+\_\+t}]{size\+\_\+}{, }\item[{free\+\_\+fn \texorpdfstring{$\ast$}{*}}]{ffn\+\_\+}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{hint\+\_\+}{ = {\ttfamily ZMQ\+\_\+NULLPTR}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classzmq_1_1message__t_a8c9f38cf7916d0338ce7769182f0d238}\index{zmq::message\_t@{zmq::message\_t}!````~message\_t@{\texorpdfstring{$\sim$}{\string~}message\_t}}
+\index{````~message\_t@{\texorpdfstring{$\sim$}{\string~}message\_t}!zmq::message\_t@{zmq::message\_t}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}message\_t()}{\string~message\_t()}}
+{\footnotesize\ttfamily \label{classzmq_1_1message__t_a8c9f38cf7916d0338ce7769182f0d238} 
+zmq\+::message\+\_\+t\+::\texorpdfstring{$\sim$}{\string~}message\+\_\+t (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classzmq_1_1message__t_aac863cc381448f2088d6b8a44bd2aa94}\index{zmq::message\_t@{zmq::message\_t}!copy@{copy}}
+\index{copy@{copy}!zmq::message\_t@{zmq::message\_t}}
+\doxysubsubsection{\texorpdfstring{copy()}{copy()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classzmq_1_1message__t_aac863cc381448f2088d6b8a44bd2aa94} 
+void zmq\+::message\+\_\+t\+::copy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classzmq_1_1message__t}{message\+\_\+t}} \&}]{msg\+\_\+}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classzmq_1_1message__t_ae37889f4e45aa5e3d8a84f843037c3c9}\index{zmq::message\_t@{zmq::message\_t}!copy@{copy}}
+\index{copy@{copy}!zmq::message\_t@{zmq::message\_t}}
+\doxysubsubsection{\texorpdfstring{copy()}{copy()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classzmq_1_1message__t_ae37889f4e45aa5e3d8a84f843037c3c9} 
+void zmq\+::message\+\_\+t\+::copy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classzmq_1_1message__t}{message\+\_\+t}} const \texorpdfstring{$\ast$}{*}}]{msg\+\_\+}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classzmq_1_1message__t_acf84f015d845d7dc7651c93815b371a3}\index{zmq::message\_t@{zmq::message\_t}!data@{data}}
+\index{data@{data}!zmq::message\_t@{zmq::message\_t}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{classzmq_1_1message__t_acf84f015d845d7dc7651c93815b371a3} 
+const void \texorpdfstring{$\ast$}{*} zmq\+::message\+\_\+t\+::data (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classzmq_1_1message__t_af0758f1e57c064f61f11e7b16960e65a}\index{zmq::message\_t@{zmq::message\_t}!data@{data}}
+\index{data@{data}!zmq::message\_t@{zmq::message\_t}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{classzmq_1_1message__t_af0758f1e57c064f61f11e7b16960e65a} 
+template$<$typename T $>$ \\
+T const  \texorpdfstring{$\ast$}{*} zmq\+::message\+\_\+t\+::data (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classzmq_1_1message__t_a8fdcb4bbc356e6e304fcc4686817a285}\index{zmq::message\_t@{zmq::message\_t}!data@{data}}
+\index{data@{data}!zmq::message\_t@{zmq::message\_t}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{classzmq_1_1message__t_a8fdcb4bbc356e6e304fcc4686817a285} 
+void \texorpdfstring{$\ast$}{*} zmq\+::message\+\_\+t\+::data (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classzmq_1_1message__t_ab569cba6c80417512076b7a42444de9c}\index{zmq::message\_t@{zmq::message\_t}!data@{data}}
+\index{data@{data}!zmq::message\_t@{zmq::message\_t}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{classzmq_1_1message__t_ab569cba6c80417512076b7a42444de9c} 
+template$<$typename T $>$ \\
+T \texorpdfstring{$\ast$}{*} zmq\+::message\+\_\+t\+::data (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classzmq_1_1message__t_a4be863bc881d762fdb07b66f520bf2bb}\index{zmq::message\_t@{zmq::message\_t}!empty@{empty}}
+\index{empty@{empty}!zmq::message\_t@{zmq::message\_t}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily \label{classzmq_1_1message__t_a4be863bc881d762fdb07b66f520bf2bb} 
+ZMQ\+\_\+\+NODISCARD bool zmq\+::message\+\_\+t\+::empty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classzmq_1_1message__t_a901d78ddce5bd77e7421c179b1ef3c3a}\index{zmq::message\_t@{zmq::message\_t}!equal@{equal}}
+\index{equal@{equal}!zmq::message\_t@{zmq::message\_t}}
+\doxysubsubsection{\texorpdfstring{equal()}{equal()}}
+{\footnotesize\ttfamily \label{classzmq_1_1message__t_a901d78ddce5bd77e7421c179b1ef3c3a} 
+bool zmq\+::message\+\_\+t\+::equal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classzmq_1_1message__t}{message\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{other}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classzmq_1_1message__t_a3fac1ef69f92445db21a77b87d58af9d}\index{zmq::message\_t@{zmq::message\_t}!get@{get}}
+\index{get@{get}!zmq::message\_t@{zmq::message\_t}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \label{classzmq_1_1message__t_a3fac1ef69f92445db21a77b87d58af9d} 
+int zmq\+::message\+\_\+t\+::get (\begin{DoxyParamCaption}\item[{int}]{property\+\_\+}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classzmq_1_1message__t_a3fd3e53d505e618c8cad859f698ab5e1}\index{zmq::message\_t@{zmq::message\_t}!gets@{gets}}
+\index{gets@{gets}!zmq::message\_t@{zmq::message\_t}}
+\doxysubsubsection{\texorpdfstring{gets()}{gets()}}
+{\footnotesize\ttfamily \label{classzmq_1_1message__t_a3fd3e53d505e618c8cad859f698ab5e1} 
+const char \texorpdfstring{$\ast$}{*} zmq\+::message\+\_\+t\+::gets (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{property\+\_\+}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classzmq_1_1message__t_ad8978e409daa4d3055669024e0a20dd6}\index{zmq::message\_t@{zmq::message\_t}!handle@{handle}}
+\index{handle@{handle}!zmq::message\_t@{zmq::message\_t}}
+\doxysubsubsection{\texorpdfstring{handle()}{handle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classzmq_1_1message__t_ad8978e409daa4d3055669024e0a20dd6} 
+ZMQ\+\_\+\+NODISCARD const zmq\+\_\+msg\+\_\+t \texorpdfstring{$\ast$}{*} zmq\+::message\+\_\+t\+::handle (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classzmq_1_1message__t_afb9889a943d2f8eb1a3ed43d0c8885b3}\index{zmq::message\_t@{zmq::message\_t}!handle@{handle}}
+\index{handle@{handle}!zmq::message\_t@{zmq::message\_t}}
+\doxysubsubsection{\texorpdfstring{handle()}{handle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classzmq_1_1message__t_afb9889a943d2f8eb1a3ed43d0c8885b3} 
+ZMQ\+\_\+\+NODISCARD zmq\+\_\+msg\+\_\+t \texorpdfstring{$\ast$}{*} zmq\+::message\+\_\+t\+::handle (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classzmq_1_1message__t_a0b84ec573d15894e1e31becf9ea42e6c}\index{zmq::message\_t@{zmq::message\_t}!more@{more}}
+\index{more@{more}!zmq::message\_t@{zmq::message\_t}}
+\doxysubsubsection{\texorpdfstring{more()}{more()}}
+{\footnotesize\ttfamily \label{classzmq_1_1message__t_a0b84ec573d15894e1e31becf9ea42e6c} 
+bool zmq\+::message\+\_\+t\+::more (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classzmq_1_1message__t_a140d8b73a3c86ba5a8ac5a4916e59471}\index{zmq::message\_t@{zmq::message\_t}!move@{move}}
+\index{move@{move}!zmq::message\_t@{zmq::message\_t}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classzmq_1_1message__t_a140d8b73a3c86ba5a8ac5a4916e59471} 
+void zmq\+::message\+\_\+t\+::move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classzmq_1_1message__t}{message\+\_\+t}} \&}]{msg\+\_\+}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classzmq_1_1message__t_aec5dbbaa99bc7ed381254b99025ae8d0}\index{zmq::message\_t@{zmq::message\_t}!move@{move}}
+\index{move@{move}!zmq::message\_t@{zmq::message\_t}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classzmq_1_1message__t_aec5dbbaa99bc7ed381254b99025ae8d0} 
+void zmq\+::message\+\_\+t\+::move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classzmq_1_1message__t}{message\+\_\+t}} const \texorpdfstring{$\ast$}{*}}]{msg\+\_\+}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classzmq_1_1message__t_aafa6818f64a8cbe5a41bdbecd46593d8}\index{zmq::message\_t@{zmq::message\_t}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!zmq::message\_t@{zmq::message\_t}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily \label{classzmq_1_1message__t_aafa6818f64a8cbe5a41bdbecd46593d8} 
+bool zmq\+::message\+\_\+t\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classzmq_1_1message__t}{message\+\_\+t}} \&}]{other}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classzmq_1_1message__t_a6e273eca474b63914b6fadad70cc44e9}\index{zmq::message\_t@{zmq::message\_t}!operator==@{operator==}}
+\index{operator==@{operator==}!zmq::message\_t@{zmq::message\_t}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{classzmq_1_1message__t_a6e273eca474b63914b6fadad70cc44e9} 
+bool zmq\+::message\+\_\+t\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classzmq_1_1message__t}{message\+\_\+t}} \&}]{other}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classzmq_1_1message__t_aa84be585b079e958a4b139818ce80bee}\index{zmq::message\_t@{zmq::message\_t}!rebuild@{rebuild}}
+\index{rebuild@{rebuild}!zmq::message\_t@{zmq::message\_t}}
+\doxysubsubsection{\texorpdfstring{rebuild()}{rebuild()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{classzmq_1_1message__t_aa84be585b079e958a4b139818ce80bee} 
+void zmq\+::message\+\_\+t\+::rebuild (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classzmq_1_1message__t_a5e2f26889a23be1e7f9f10fea487601e}\index{zmq::message\_t@{zmq::message\_t}!rebuild@{rebuild}}
+\index{rebuild@{rebuild}!zmq::message\_t@{zmq::message\_t}}
+\doxysubsubsection{\texorpdfstring{rebuild()}{rebuild()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{classzmq_1_1message__t_a5e2f26889a23be1e7f9f10fea487601e} 
+void zmq\+::message\+\_\+t\+::rebuild (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{data\+\_\+}{, }\item[{size\+\_\+t}]{size\+\_\+}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classzmq_1_1message__t_a034605fec66cc8b2a64dba66c02aed6d}\index{zmq::message\_t@{zmq::message\_t}!rebuild@{rebuild}}
+\index{rebuild@{rebuild}!zmq::message\_t@{zmq::message\_t}}
+\doxysubsubsection{\texorpdfstring{rebuild()}{rebuild()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{classzmq_1_1message__t_a034605fec66cc8b2a64dba66c02aed6d} 
+void zmq\+::message\+\_\+t\+::rebuild (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size\+\_\+}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classzmq_1_1message__t_a61245a9aa4c6399a60a67430cde69f37}\index{zmq::message\_t@{zmq::message\_t}!rebuild@{rebuild}}
+\index{rebuild@{rebuild}!zmq::message\_t@{zmq::message\_t}}
+\doxysubsubsection{\texorpdfstring{rebuild()}{rebuild()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{classzmq_1_1message__t_a61245a9aa4c6399a60a67430cde69f37} 
+void zmq\+::message\+\_\+t\+::rebuild (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{data\+\_\+}{, }\item[{size\+\_\+t}]{size\+\_\+}{, }\item[{free\+\_\+fn \texorpdfstring{$\ast$}{*}}]{ffn\+\_\+}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{hint\+\_\+}{ = {\ttfamily ZMQ\+\_\+NULLPTR}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classzmq_1_1message__t_a95bbb9796582768c847c5223ae03f206}\index{zmq::message\_t@{zmq::message\_t}!size@{size}}
+\index{size@{size}!zmq::message\_t@{zmq::message\_t}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily \label{classzmq_1_1message__t_a95bbb9796582768c847c5223ae03f206} 
+size\+\_\+t zmq\+::message\+\_\+t\+::size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classzmq_1_1message__t_aed6502a922a73cda7f47d47689617d03}\index{zmq::message\_t@{zmq::message\_t}!str@{str}}
+\index{str@{str}!zmq::message\_t@{zmq::message\_t}}
+\doxysubsubsection{\texorpdfstring{str()}{str()}}
+{\footnotesize\ttfamily \label{classzmq_1_1message__t_aed6502a922a73cda7f47d47689617d03} 
+std\+::string zmq\+::message\+\_\+t\+::str (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Dump content to string for debugging. Ascii chars are readable, the rest is printed as hex. Probably ridiculously slow. Use to\+\_\+string() or to\+\_\+string\+\_\+view() for interpreting the message as a string. \Hypertarget{classzmq_1_1message__t_a48fa2f9b464a2522d340533a99a36f5f}\index{zmq::message\_t@{zmq::message\_t}!swap@{swap}}
+\index{swap@{swap}!zmq::message\_t@{zmq::message\_t}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily \label{classzmq_1_1message__t_a48fa2f9b464a2522d340533a99a36f5f} 
+void zmq\+::message\+\_\+t\+::swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classzmq_1_1message__t}{message\+\_\+t}} \&}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classzmq_1_1message__t_ac92cae0e9b979bdb7ebe127d90887a3f}\index{zmq::message\_t@{zmq::message\_t}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!zmq::message\_t@{zmq::message\_t}}
+\doxysubsubsection{\texorpdfstring{to\_string()}{to\_string()}}
+{\footnotesize\ttfamily \label{classzmq_1_1message__t_ac92cae0e9b979bdb7ebe127d90887a3f} 
+std\+::string zmq\+::message\+\_\+t\+::to\+\_\+string (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+ZMQ/zmq.\+hpp\end{DoxyCompactItemize}

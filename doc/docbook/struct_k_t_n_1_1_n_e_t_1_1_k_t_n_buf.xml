@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf" xml:lang="en-US">
+<title>KTN::NET::KTNBuf Struct Reference</title>
+<indexterm><primary>KTN::NET::KTNBuf</primary></indexterm>
+<para>
+
+<para>Structure representing a KTN buffer. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;netstructs.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>size_t <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf_1a3c02043159f3031102c17c63eb75e510">buffer_length</link></para>
+</listitem>
+            <listitem><para>char * <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf_1ab75b6e6f7bd816a84236b9ce7d9d36b9">buffer</link></para>
+</listitem>
+            <listitem><para>char <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf_1a276ccc9ee471cf6ae8cf38b4f9b3f036">buf</link> [1536]</para>
+</listitem>
+            <listitem><para>size_t <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf_1a13c73f2195500ae2e1e175e3b0b8fadf">num_msgs</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf_1a40113100065a95633e53f1468f21bc40">seqnum</link></para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf_1a07bf619d73e2e465d7867e61947c55e5">msgtype</link></para>
+</listitem>
+            <listitem><para>int16_t <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf_1afdb0666ccdadecd412a8cf0ccd77d4fd">dir</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf_1ad3cb12f8e548bd0965a3797caef3be3a">segid</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf_1ac76105961378c8ce57d63dfa9eb87bcd">index</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf_1ac5028dde16d64745185a4ac9817f2dd3">audit_trail</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Structure representing a KTN buffer. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf_1aa0d19dc1b81acc07c002c76926eea9c4"/><section>
+    <title>KTNBuf()</title>
+<indexterm><primary>KTNBuf</primary><secondary>KTN::NET::KTNBuf</secondary></indexterm>
+<indexterm><primary>KTN::NET::KTNBuf</primary><secondary>KTNBuf</secondary></indexterm>
+<para><computeroutput>KTN::NET::KTNBuf::KTNBuf ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf_1ac5028dde16d64745185a4ac9817f2dd3"/><section>
+    <title>audit_trail</title>
+<indexterm><primary>audit_trail</primary><secondary>KTN::NET::KTNBuf</secondary></indexterm>
+<indexterm><primary>KTN::NET::KTNBuf</primary><secondary>audit_trail</secondary></indexterm>
+<para><computeroutput>bool KTN::NET::KTNBuf::audit_trail</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf_1a276ccc9ee471cf6ae8cf38b4f9b3f036"/><section>
+    <title>buf</title>
+<indexterm><primary>buf</primary><secondary>KTN::NET::KTNBuf</secondary></indexterm>
+<indexterm><primary>KTN::NET::KTNBuf</primary><secondary>buf</secondary></indexterm>
+<para><computeroutput>char KTN::NET::KTNBuf::buf[1536]</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf_1ab75b6e6f7bd816a84236b9ce7d9d36b9"/><section>
+    <title>buffer</title>
+<indexterm><primary>buffer</primary><secondary>KTN::NET::KTNBuf</secondary></indexterm>
+<indexterm><primary>KTN::NET::KTNBuf</primary><secondary>buffer</secondary></indexterm>
+<para><computeroutput>char* KTN::NET::KTNBuf::buffer</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf_1a3c02043159f3031102c17c63eb75e510"/><section>
+    <title>buffer_length</title>
+<indexterm><primary>buffer_length</primary><secondary>KTN::NET::KTNBuf</secondary></indexterm>
+<indexterm><primary>KTN::NET::KTNBuf</primary><secondary>buffer_length</secondary></indexterm>
+<para><computeroutput>size_t KTN::NET::KTNBuf::buffer_length</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf_1afdb0666ccdadecd412a8cf0ccd77d4fd"/><section>
+    <title>dir</title>
+<indexterm><primary>dir</primary><secondary>KTN::NET::KTNBuf</secondary></indexterm>
+<indexterm><primary>KTN::NET::KTNBuf</primary><secondary>dir</secondary></indexterm>
+<para><computeroutput>int16_t KTN::NET::KTNBuf::dir</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf_1ac76105961378c8ce57d63dfa9eb87bcd"/><section>
+    <title>index</title>
+<indexterm><primary>index</primary><secondary>KTN::NET::KTNBuf</secondary></indexterm>
+<indexterm><primary>KTN::NET::KTNBuf</primary><secondary>index</secondary></indexterm>
+<para><computeroutput>uint8_t KTN::NET::KTNBuf::index</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf_1a07bf619d73e2e465d7867e61947c55e5"/><section>
+    <title>msgtype</title>
+<indexterm><primary>msgtype</primary><secondary>KTN::NET::KTNBuf</secondary></indexterm>
+<indexterm><primary>KTN::NET::KTNBuf</primary><secondary>msgtype</secondary></indexterm>
+<para><computeroutput>uint16_t KTN::NET::KTNBuf::msgtype</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf_1a13c73f2195500ae2e1e175e3b0b8fadf"/><section>
+    <title>num_msgs</title>
+<indexterm><primary>num_msgs</primary><secondary>KTN::NET::KTNBuf</secondary></indexterm>
+<indexterm><primary>KTN::NET::KTNBuf</primary><secondary>num_msgs</secondary></indexterm>
+<para><computeroutput>size_t KTN::NET::KTNBuf::num_msgs</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf_1ad3cb12f8e548bd0965a3797caef3be3a"/><section>
+    <title>segid</title>
+<indexterm><primary>segid</primary><secondary>KTN::NET::KTNBuf</secondary></indexterm>
+<indexterm><primary>KTN::NET::KTNBuf</primary><secondary>segid</secondary></indexterm>
+<para><computeroutput>uint8_t KTN::NET::KTNBuf::segid</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf_1a40113100065a95633e53f1468f21bc40"/><section>
+    <title>seqnum</title>
+<indexterm><primary>seqnum</primary><secondary>KTN::NET::KTNBuf</secondary></indexterm>
+<indexterm><primary>KTN::NET::KTNBuf</primary><secondary>seqnum</secondary></indexterm>
+<para><computeroutput>uint32_t KTN::NET::KTNBuf::seqnum</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+exchsupport/cme/net/netstructs.hpp</section>
+</section>

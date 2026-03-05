@@ -1,0 +1,94 @@
+\doxysection{Order\+Parser Class Reference}
+\hypertarget{class_order_parser}{}\label{class_order_parser}\index{OrderParser@{OrderParser}}
+
+
+Parses JSON order data and converts it into Order objects.  
+
+
+
+
+{\ttfamily \#include $<$Order\+Parser.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} \mbox{\hyperlink{class_order_parser_a59793dc25cc5631de79c4fbbab5dc4e4}{parseorder}} (const rapidjson\+::\+Value \&json\+\_\+ord)
+\begin{DoxyCompactList}\small\item\em Parses a JSON order and returns an Order object. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} \mbox{\hyperlink{class_order_parser_ae36992123e8ab190c407c4d7d37719e8}{parseincoming}} (const rapidjson\+::\+Value \&json\+\_\+ord)
+\begin{DoxyCompactList}\small\item\em Parses incoming JSON order data and returns an Order object. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \mbox{\hyperlink{class_order_parser_ac66a0d5d3b2bf29ac65ca13669930257}{parsepod}} (const rapidjson\+::\+Value \&json\+\_\+ord)
+\begin{DoxyCompactList}\small\item\em Parses a JSON order and returns an Order\+Pod object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Parses JSON order data and converts it into Order objects. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_order_parser_ae36992123e8ab190c407c4d7d37719e8}\index{OrderParser@{OrderParser}!parseincoming@{parseincoming}}
+\index{parseincoming@{parseincoming}!OrderParser@{OrderParser}}
+\doxysubsubsection{\texorpdfstring{parseincoming()}{parseincoming()}}
+{\footnotesize\ttfamily \label{class_order_parser_ae36992123e8ab190c407c4d7d37719e8} 
+\mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} Order\+Parser\+::parseincoming (\begin{DoxyParamCaption}\item[{const rapidjson\+::\+Value \&}]{json\+\_\+ord}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Parses incoming JSON order data and returns an Order object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json\+\_\+ord} & The incoming JSON order data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The parsed Order object. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00253}{Algo\+Factory\+::\+Parse\+Algo\+Order()}}.
+
+\Hypertarget{class_order_parser_a59793dc25cc5631de79c4fbbab5dc4e4}\index{OrderParser@{OrderParser}!parseorder@{parseorder}}
+\index{parseorder@{parseorder}!OrderParser@{OrderParser}}
+\doxysubsubsection{\texorpdfstring{parseorder()}{parseorder()}}
+{\footnotesize\ttfamily \label{class_order_parser_a59793dc25cc5631de79c4fbbab5dc4e4} 
+\mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} Order\+Parser\+::parseorder (\begin{DoxyParamCaption}\item[{const rapidjson\+::\+Value \&}]{json\+\_\+ord}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Parses a JSON order and returns an Order object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json\+\_\+ord} & The JSON order data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The parsed Order object. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00047}{KTN\+::\+Auto\+Hedge\+OB\+::on\+Json()}}, \mbox{\hyperlink{l00062}{KTN\+::\+PLWatcher\+::on\+Json()}}, and \mbox{\hyperlink{l00045}{KTN\+::\+Squeezer\+OB\+::on\+Json()}}.
+
+\Hypertarget{class_order_parser_ac66a0d5d3b2bf29ac65ca13669930257}\index{OrderParser@{OrderParser}!parsepod@{parsepod}}
+\index{parsepod@{parsepod}!OrderParser@{OrderParser}}
+\doxysubsubsection{\texorpdfstring{parsepod()}{parsepod()}}
+{\footnotesize\ttfamily \label{class_order_parser_ac66a0d5d3b2bf29ac65ca13669930257} 
+static \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} Order\+Parser\+::parsepod (\begin{DoxyParamCaption}\item[{const rapidjson\+::\+Value \&}]{json\+\_\+ord}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Parses a JSON order and returns an Order\+Pod object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json\+\_\+ord} & The JSON order data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The parsed Order\+Pod object. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Algo\+Params/Order\+Parser.\+hpp\item 
+Algo\+Params/Order\+Parser.\+cpp\end{DoxyCompactItemize}

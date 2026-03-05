@@ -1,0 +1,294 @@
+\doxysection{KTN\+::Session\+Callback Class Reference}
+\hypertarget{class_k_t_n_1_1_session_callback}{}\label{class_k_t_n_1_1_session_callback}\index{KTN::SessionCallback@{KTN::SessionCallback}}
+
+
+The \doxylink{class_k_t_n_1_1_session_callback}{Session\+Callback} class is an abstract base class that defines the interface for session callbacks. Session callbacks are used to handle various events and actions related to a trading session.  
+
+
+
+
+{\ttfamily \#include $<$Session\+Callback.\+hpp$>$}
+
+Inheritance diagram for KTN\+::Session\+Callback\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_k_t_n_1_1_session_callback}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_session_callback_a1857965c8e7a145dc5dfbcc88b233236}{on\+Heartbeat}} (int msgseqnum)=0
+\begin{DoxyCompactList}\small\item\em This method is called when a heartbeat message is received. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_session_callback_a0d9e306c44667fb2e28788c8141416b1}{on\+Session\+Status}} (string exch, int mktsegid, int protocol, string desc, string state)=0
+\begin{DoxyCompactList}\small\item\em This method is called when the session status changes. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_session_callback_a6934834d77aa92b5d009476220335b56}{min\+Order\+Ack}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord)=0
+\begin{DoxyCompactList}\small\item\em This method is called when a minimum order acknowledgement is received. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_session_callback_a9f6d4744cd8df5e9e684d44e2731d685}{min\+Order\+Cancel}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord)=0
+\begin{DoxyCompactList}\small\item\em This method is called when a minimum order cancellation is received. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_session_callback_a6070e1c69dd5c28af4f942ee6f67e959}{min\+Order\+Modify}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord)=0
+\begin{DoxyCompactList}\small\item\em This method is called when a minimum order modification is received. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_session_callback_a007db80ff718824a1279e2e2e00d0067}{min\+Order\+Execution}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord, bool hedge\+Sent)=0
+\begin{DoxyCompactList}\small\item\em This method is called when a minimum order execution is received. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_session_callback_ae6efabe36af252db685a5e397d875f0f}{min\+Order\+Reject}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord, const string \&text)=0
+\begin{DoxyCompactList}\small\item\em This method is called when a minimum order rejection is received. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_session_callback_aaaa0946280382f9b444a639c4ab61a42}{min\+Order\+Cancel\+Reject}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord, const string \&text)=0
+\begin{DoxyCompactList}\small\item\em This method is called when a minimum order cancellation rejection is received. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_session_callback_aee8568b17d2b440518c27f1f24b8022d}{min\+Order\+Cancel\+Replace\+Reject}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord, const string \&text)=0
+\begin{DoxyCompactList}\small\item\em This method is called when a minimum order cancel/replace rejection is received. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_session_callback_a37da3bc0166c00fa4250f36944a2ac25}{on\+Hedge\+Order\+Sent}} (char \texorpdfstring{$\ast$}{*}clordid, uint64\+\_\+t reqid, int32\+\_\+t secid, KOrder\+Side\+::\+Enum side, uint32\+\_\+t qty, int32\+\_\+t price, uint16\+\_\+t instindex)=0
+\begin{DoxyCompactList}\small\item\em This method is called when a hedge order is sent. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_session_callback_a2b4366294c6788975494266eb3d32f08}{on\+Order\+Sent}} (char \texorpdfstring{$\ast$}{*}clordid, uint64\+\_\+t reqid, int32\+\_\+t secid, KOrder\+Side\+::\+Enum side, uint32\+\_\+t qty, int32\+\_\+t price, KOrder\+Algo\+Trigger\+::\+Enum trig)=0
+\begin{DoxyCompactList}\small\item\em This method is called when an order is sent. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_k_t_n_1_1_session_callback}{Session\+Callback} class is an abstract base class that defines the interface for session callbacks. Session callbacks are used to handle various events and actions related to a trading session. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_session_callback_a6934834d77aa92b5d009476220335b56}\index{KTN::SessionCallback@{KTN::SessionCallback}!minOrderAck@{minOrderAck}}
+\index{minOrderAck@{minOrderAck}!KTN::SessionCallback@{KTN::SessionCallback}}
+\doxysubsubsection{\texorpdfstring{minOrderAck()}{minOrderAck()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_session_callback_a6934834d77aa92b5d009476220335b56} 
+virtual void KTN\+::\+Session\+Callback\+::min\+Order\+Ack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&}]{ord}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This method is called when a minimum order acknowledgement is received. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ord} & The order details. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_afe46d7c3b727f40d8298b8009ef6a4f1}{KTN\+::\+Algo\+Base\+V3}}.
+
+\Hypertarget{class_k_t_n_1_1_session_callback_a9f6d4744cd8df5e9e684d44e2731d685}\index{KTN::SessionCallback@{KTN::SessionCallback}!minOrderCancel@{minOrderCancel}}
+\index{minOrderCancel@{minOrderCancel}!KTN::SessionCallback@{KTN::SessionCallback}}
+\doxysubsubsection{\texorpdfstring{minOrderCancel()}{minOrderCancel()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_session_callback_a9f6d4744cd8df5e9e684d44e2731d685} 
+virtual void KTN\+::\+Session\+Callback\+::min\+Order\+Cancel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&}]{ord}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This method is called when a minimum order cancellation is received. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ord} & The order details. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a3ffdc246cd30b2429670bc1a083a7e5d}{KTN\+::\+Algo\+Base\+V3}}, and \mbox{\hyperlink{class_k_t_n_1_1_stacker_a5d4644e8fb55d03a441483ac00f02e72}{KTN\+::\+Stacker}}.
+
+\Hypertarget{class_k_t_n_1_1_session_callback_aaaa0946280382f9b444a639c4ab61a42}\index{KTN::SessionCallback@{KTN::SessionCallback}!minOrderCancelReject@{minOrderCancelReject}}
+\index{minOrderCancelReject@{minOrderCancelReject}!KTN::SessionCallback@{KTN::SessionCallback}}
+\doxysubsubsection{\texorpdfstring{minOrderCancelReject()}{minOrderCancelReject()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_session_callback_aaaa0946280382f9b444a639c4ab61a42} 
+virtual void KTN\+::\+Session\+Callback\+::min\+Order\+Cancel\+Reject (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&}]{ord}{, }\item[{const string \&}]{text}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This method is called when a minimum order cancellation rejection is received. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ord} & The order details. \\
+\hline
+{\em text} & The rejection reason. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_k_t_n_1_1_stacker_a9582f4adfc318d1a271b449ea4dde251}{KTN\+::\+Stacker}}.
+
+\Hypertarget{class_k_t_n_1_1_session_callback_aee8568b17d2b440518c27f1f24b8022d}\index{KTN::SessionCallback@{KTN::SessionCallback}!minOrderCancelReplaceReject@{minOrderCancelReplaceReject}}
+\index{minOrderCancelReplaceReject@{minOrderCancelReplaceReject}!KTN::SessionCallback@{KTN::SessionCallback}}
+\doxysubsubsection{\texorpdfstring{minOrderCancelReplaceReject()}{minOrderCancelReplaceReject()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_session_callback_aee8568b17d2b440518c27f1f24b8022d} 
+virtual void KTN\+::\+Session\+Callback\+::min\+Order\+Cancel\+Replace\+Reject (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&}]{ord}{, }\item[{const string \&}]{text}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This method is called when a minimum order cancel/replace rejection is received. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ord} & The order details. \\
+\hline
+{\em text} & The rejection reason. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_k_t_n_1_1_stacker_ab85205006073296dcb6953caf8326893}{KTN\+::\+Stacker}}.
+
+\Hypertarget{class_k_t_n_1_1_session_callback_a007db80ff718824a1279e2e2e00d0067}\index{KTN::SessionCallback@{KTN::SessionCallback}!minOrderExecution@{minOrderExecution}}
+\index{minOrderExecution@{minOrderExecution}!KTN::SessionCallback@{KTN::SessionCallback}}
+\doxysubsubsection{\texorpdfstring{minOrderExecution()}{minOrderExecution()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_session_callback_a007db80ff718824a1279e2e2e00d0067} 
+virtual void KTN\+::\+Session\+Callback\+::min\+Order\+Execution (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&}]{ord}{, }\item[{bool}]{hedge\+Sent}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This method is called when a minimum order execution is received. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ord} & The order details. \\
+\hline
+{\em hedge\+Sent} & Indicates whether a hedge order was sent. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a461b855181c911e47b3b7096379c3f3d}{KTN\+::\+Algo\+Base\+V3}}, \mbox{\hyperlink{class_k_t_n_1_1_auto_hedge_o_b_a3487184dd189eef29af98d21da0d0afb}{KTN\+::\+Auto\+Hedge\+OB}}, \mbox{\hyperlink{class_k_t_n_1_1_multi_spreader_v3_ae29a2c8aadec02629883b6547ff88e84}{KTN\+::\+Multi\+Spreader\+V3}}, \mbox{\hyperlink{class_k_t_n_1_1_p_l_watcher_a07b56c9833d44be5b2fb32b02aa14758}{KTN\+::\+PLWatcher}}, \mbox{\hyperlink{class_k_t_n_1_1_skewer_a20a7360eced3a075959795792daf4289}{KTN\+::\+Skewer}}, \mbox{\hyperlink{class_k_t_n_1_1_skew_trader_a2857fcd34fec64d781dc2700d93cae7a}{KTN\+::\+Skew\+Trader}}, \mbox{\hyperlink{class_k_t_n_1_1_squeezer_o_b_afb7b42ff75799302ac288bfd1c7aea47}{KTN\+::\+Squeezer\+OB}}, \mbox{\hyperlink{class_k_t_n_1_1_stacker_add71726c413d0327a9e75c978bcec549}{KTN\+::\+Stacker}}, \mbox{\hyperlink{class_k_t_n_1_1_stacker_timer_a9f4014c732923a03440a55a2c2606f87}{KTN\+::\+Stacker\+Timer}}, \mbox{\hyperlink{class_k_t_n_1_1_twap_acba97a1a0479a192bef98354877f720a}{KTN\+::\+Twap}}, and \mbox{\hyperlink{class_k_t_n_1_1_waves_a0df5f7a233474fb4d8ee1f378928c272}{KTN\+::\+Waves}}.
+
+\Hypertarget{class_k_t_n_1_1_session_callback_a6070e1c69dd5c28af4f942ee6f67e959}\index{KTN::SessionCallback@{KTN::SessionCallback}!minOrderModify@{minOrderModify}}
+\index{minOrderModify@{minOrderModify}!KTN::SessionCallback@{KTN::SessionCallback}}
+\doxysubsubsection{\texorpdfstring{minOrderModify()}{minOrderModify()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_session_callback_a6070e1c69dd5c28af4f942ee6f67e959} 
+virtual void KTN\+::\+Session\+Callback\+::min\+Order\+Modify (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&}]{ord}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This method is called when a minimum order modification is received. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ord} & The order details. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a9eb48a787a7992de5e850421c37b010b}{KTN\+::\+Algo\+Base\+V3}}.
+
+\Hypertarget{class_k_t_n_1_1_session_callback_ae6efabe36af252db685a5e397d875f0f}\index{KTN::SessionCallback@{KTN::SessionCallback}!minOrderReject@{minOrderReject}}
+\index{minOrderReject@{minOrderReject}!KTN::SessionCallback@{KTN::SessionCallback}}
+\doxysubsubsection{\texorpdfstring{minOrderReject()}{minOrderReject()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_session_callback_ae6efabe36af252db685a5e397d875f0f} 
+virtual void KTN\+::\+Session\+Callback\+::min\+Order\+Reject (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&}]{ord}{, }\item[{const string \&}]{text}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This method is called when a minimum order rejection is received. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ord} & The order details. \\
+\hline
+{\em text} & The rejection reason. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_session_callback_a1857965c8e7a145dc5dfbcc88b233236}\index{KTN::SessionCallback@{KTN::SessionCallback}!onHeartbeat@{onHeartbeat}}
+\index{onHeartbeat@{onHeartbeat}!KTN::SessionCallback@{KTN::SessionCallback}}
+\doxysubsubsection{\texorpdfstring{onHeartbeat()}{onHeartbeat()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_session_callback_a1857965c8e7a145dc5dfbcc88b233236} 
+virtual void KTN\+::\+Session\+Callback\+::on\+Heartbeat (\begin{DoxyParamCaption}\item[{int}]{msgseqnum}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This method is called when a heartbeat message is received. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msgseqnum} & The sequence number of the heartbeat message. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a8065b608926c8356a505a7a0aaa2e312}{KTN\+::\+Algo\+Base\+V3}}.
+
+\Hypertarget{class_k_t_n_1_1_session_callback_a37da3bc0166c00fa4250f36944a2ac25}\index{KTN::SessionCallback@{KTN::SessionCallback}!onHedgeOrderSent@{onHedgeOrderSent}}
+\index{onHedgeOrderSent@{onHedgeOrderSent}!KTN::SessionCallback@{KTN::SessionCallback}}
+\doxysubsubsection{\texorpdfstring{onHedgeOrderSent()}{onHedgeOrderSent()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_session_callback_a37da3bc0166c00fa4250f36944a2ac25} 
+virtual void KTN\+::\+Session\+Callback\+::on\+Hedge\+Order\+Sent (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{clordid}{, }\item[{uint64\+\_\+t}]{reqid}{, }\item[{int32\+\_\+t}]{secid}{, }\item[{KOrder\+Side\+::\+Enum}]{side}{, }\item[{uint32\+\_\+t}]{qty}{, }\item[{int32\+\_\+t}]{price}{, }\item[{uint16\+\_\+t}]{instindex}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This method is called when a hedge order is sent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clordid} & The client order ID. \\
+\hline
+{\em reqid} & The request ID. \\
+\hline
+{\em secid} & The security ID. \\
+\hline
+{\em side} & The order side. \\
+\hline
+{\em qty} & The order quantity. \\
+\hline
+{\em price} & The order price. \\
+\hline
+{\em instindex} & The instrument index. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a0d3c0ceb84a7b46e838d6e466db8f88b}{KTN\+::\+Algo\+Base\+V3}}, \mbox{\hyperlink{class_k_t_n_1_1_multi_spreader_v3_a302b3c319e14521f4acec056b9431fae}{KTN\+::\+Multi\+Spreader\+V3}}, \mbox{\hyperlink{class_k_t_n_1_1_skew_trader_a5ceef62a57d976bfdff793b05cb6b3b8}{KTN\+::\+Skew\+Trader}}, \mbox{\hyperlink{class_k_t_n_1_1_stacker_a9f5fcdc8ef972a1f75ced0084b5b4743}{KTN\+::\+Stacker}}, and \mbox{\hyperlink{class_k_t_n_1_1_waves_a25d021f9c931ce5173c75e6d48b98f2b}{KTN\+::\+Waves}}.
+
+\Hypertarget{class_k_t_n_1_1_session_callback_a2b4366294c6788975494266eb3d32f08}\index{KTN::SessionCallback@{KTN::SessionCallback}!onOrderSent@{onOrderSent}}
+\index{onOrderSent@{onOrderSent}!KTN::SessionCallback@{KTN::SessionCallback}}
+\doxysubsubsection{\texorpdfstring{onOrderSent()}{onOrderSent()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_session_callback_a2b4366294c6788975494266eb3d32f08} 
+virtual void KTN\+::\+Session\+Callback\+::on\+Order\+Sent (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{clordid}{, }\item[{uint64\+\_\+t}]{reqid}{, }\item[{int32\+\_\+t}]{secid}{, }\item[{KOrder\+Side\+::\+Enum}]{side}{, }\item[{uint32\+\_\+t}]{qty}{, }\item[{int32\+\_\+t}]{price}{, }\item[{KOrder\+Algo\+Trigger\+::\+Enum}]{trig}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This method is called when an order is sent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clordid} & The client order ID. \\
+\hline
+{\em reqid} & The request ID. \\
+\hline
+{\em secid} & The security ID. \\
+\hline
+{\em side} & The order side. \\
+\hline
+{\em qty} & The order quantity. \\
+\hline
+{\em price} & The order price. \\
+\hline
+{\em trig} & The order algorithm trigger. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a813c6fe078d94ed9a5c4c11db6c30f02}{KTN\+::\+Algo\+Base\+V3}}, \mbox{\hyperlink{class_k_t_n_1_1_multi_spreader_v3_a8147040b452a9906a020467843dcf932}{KTN\+::\+Multi\+Spreader\+V3}}, \mbox{\hyperlink{class_k_t_n_1_1_skew_trader_a4c557df579bdb9785706151da0f712a3}{KTN\+::\+Skew\+Trader}}, \mbox{\hyperlink{class_k_t_n_1_1_stacker_a67b98f8671251638f2ecb8c95b332336}{KTN\+::\+Stacker}}, and \mbox{\hyperlink{class_k_t_n_1_1_waves_ae75ebe6be1f954d442595dcfb83c596d}{KTN\+::\+Waves}}.
+
+\Hypertarget{class_k_t_n_1_1_session_callback_a0d9e306c44667fb2e28788c8141416b1}\index{KTN::SessionCallback@{KTN::SessionCallback}!onSessionStatus@{onSessionStatus}}
+\index{onSessionStatus@{onSessionStatus}!KTN::SessionCallback@{KTN::SessionCallback}}
+\doxysubsubsection{\texorpdfstring{onSessionStatus()}{onSessionStatus()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_session_callback_a0d9e306c44667fb2e28788c8141416b1} 
+virtual void KTN\+::\+Session\+Callback\+::on\+Session\+Status (\begin{DoxyParamCaption}\item[{string}]{exch}{, }\item[{int}]{mktsegid}{, }\item[{int}]{protocol}{, }\item[{string}]{desc}{, }\item[{string}]{state}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This method is called when the session status changes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em exch} & The exchange name. \\
+\hline
+{\em mktsegid} & The market segment ID. \\
+\hline
+{\em protocol} & The protocol version. \\
+\hline
+{\em desc} & The description of the session status. \\
+\hline
+{\em state} & The state of the session. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Exchange\+Handlers2/Session\+Callback.\+hpp\end{DoxyCompactItemize}

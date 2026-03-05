@@ -1,0 +1,257 @@
+\doxysection{i01\+::net\+::SFCPkt\+Buf Class Reference}
+\hypertarget{classi01_1_1net_1_1_s_f_c_pkt_buf}{}\label{classi01_1_1net_1_1_s_f_c_pkt_buf}\index{i01::net::SFCPktBuf@{i01::net::SFCPktBuf}}
+
+
+Represents a packet buffer used in the SFC network library.  
+
+
+
+
+{\ttfamily \#include $<$SFCPkt\+Buf.\+hpp$>$}
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structi01_1_1net_1_1_s_f_c_pkt_buf_1_1_s_f_c_pkt_buf_p_o_d}{SFCPkt\+Buf\+POD}}
+\begin{DoxyCompactList}\small\item\em Represents the Packet Buffer POD (Plain Old Data) structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+ef\+\_\+addr \& \mbox{\hyperlink{classi01_1_1net_1_1_s_f_c_pkt_buf_a920eb595de36e50c440d44fd7fcdd606}{addr}} ()
+\begin{DoxyCompactList}\small\item\em Returns the address of the packet buffer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classi01_1_1net_1_1_s_f_c_pkt_buf_a2f10f71fd0547cbe1b27b0bfbf6795bb}{pool\+\_\+id}} ()
+\begin{DoxyCompactList}\small\item\em Returns the pool ID of the packet buffer. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classi01_1_1net_1_1_s_f_c_pkt_buf_ac12087e1cdb438248f2d2d1d202fbaa9}{size}} ()
+\begin{DoxyCompactList}\small\item\em Returns the size of the packet buffer. \end{DoxyCompactList}\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classi01_1_1net_1_1_s_f_c_pkt_buf_ae70d60e59c1f27176b16ce7bde23a549}{data}} () const
+\begin{DoxyCompactList}\small\item\em Returns a constant pointer to the data in the packet buffer. \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classi01_1_1net_1_1_s_f_c_pkt_buf_a62664f755f3c7bdf3bb3138d4f40c40e}{data}} ()
+\begin{DoxyCompactList}\small\item\em Returns a pointer to the data in the packet buffer. \end{DoxyCompactList}\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classi01_1_1net_1_1_s_f_c_pkt_buf_a4a63e53ff8412441039b923822680ba4}{data2}} () const
+\begin{DoxyCompactList}\small\item\em Returns a constant pointer to the secondary data in the packet buffer. \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classi01_1_1net_1_1_s_f_c_pkt_buf_a5db25326d81ff1f28248b20e64486e52}{data2}} ()
+\begin{DoxyCompactList}\small\item\em Returns a pointer to the secondary data in the packet buffer. \end{DoxyCompactList}\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classi01_1_1net_1_1_s_f_c_pkt_buf_a9f5f9c08b474b720359f6032b6c875e4}{operator\mbox{[}$\,$\mbox{]}}} (int n) const
+\begin{DoxyCompactList}\small\item\em Returns a constant pointer to the data at the specified index in the packet buffer. \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classi01_1_1net_1_1_s_f_c_pkt_buf_affcd9c9ca86ded64b5b1d1648e6ebdca}{operator\mbox{[}$\,$\mbox{]}}} (int n)
+\begin{DoxyCompactList}\small\item\em Returns a pointer to the data at the specified index in the packet buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr size\+\_\+t \mbox{\hyperlink{classi01_1_1net_1_1_s_f_c_pkt_buf_a4af5a56b975ee77bbb5ec82c15b7521e}{prefix\+\_\+size}} ()
+\begin{DoxyCompactList}\small\item\em Returns the size of the prefix in the packet buffer. \end{DoxyCompactList}\item 
+static constexpr size\+\_\+t \mbox{\hyperlink{classi01_1_1net_1_1_s_f_c_pkt_buf_a7c739eb9762afb31d5ceaa3285fd21ad}{capacity}} ()
+\begin{DoxyCompactList}\small\item\em Returns the capacity of the packet buffer. \end{DoxyCompactList}\item 
+static constexpr size\+\_\+t \mbox{\hyperlink{classi01_1_1net_1_1_s_f_c_pkt_buf_abde49f4de9be280f8a1a4c0a31e55282}{alloc\+\_\+size}} ()
+\begin{DoxyCompactList}\small\item\em Returns the allocation size of the packet buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classi01_1_1net_1_1_s_f_c_pkt_buf_a4e1345511e978c98d2410dd78812c305}\label{classi01_1_1net_1_1_s_f_c_pkt_buf_a4e1345511e978c98d2410dd78812c305} 
+struct \mbox{\hyperlink{structi01_1_1net_1_1_s_f_c_pkt_buf_1_1_s_f_c_pkt_buf_p_o_d}{i01\+::net\+::\+SFCPkt\+Buf\+::\+SFCPkt\+Buf\+POD}} {\bfseries m\+\_\+pod}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a packet buffer used in the SFC network library. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classi01_1_1net_1_1_s_f_c_pkt_buf_a920eb595de36e50c440d44fd7fcdd606}\index{i01::net::SFCPktBuf@{i01::net::SFCPktBuf}!addr@{addr}}
+\index{addr@{addr}!i01::net::SFCPktBuf@{i01::net::SFCPktBuf}}
+\doxysubsubsection{\texorpdfstring{addr()}{addr()}}
+{\footnotesize\ttfamily \label{classi01_1_1net_1_1_s_f_c_pkt_buf_a920eb595de36e50c440d44fd7fcdd606} 
+ef\+\_\+addr \& i01\+::net\+::\+SFCPkt\+Buf\+::addr (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the address of the packet buffer. 
+
+\begin{DoxyReturn}{Returns}
+The address of the packet buffer. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00100}{i01\+::net\+::\+SFCPkt\+Buf\+::\+SFCPkt\+Buf\+POD\+::m\+\_\+addr}}.
+
+\Hypertarget{classi01_1_1net_1_1_s_f_c_pkt_buf_abde49f4de9be280f8a1a4c0a31e55282}\index{i01::net::SFCPktBuf@{i01::net::SFCPktBuf}!alloc\_size@{alloc\_size}}
+\index{alloc\_size@{alloc\_size}!i01::net::SFCPktBuf@{i01::net::SFCPktBuf}}
+\doxysubsubsection{\texorpdfstring{alloc\_size()}{alloc\_size()}}
+{\footnotesize\ttfamily \label{classi01_1_1net_1_1_s_f_c_pkt_buf_abde49f4de9be280f8a1a4c0a31e55282} 
+static constexpr size\+\_\+t i01\+::net\+::\+SFCPkt\+Buf\+::alloc\+\_\+size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Returns the allocation size of the packet buffer. 
+
+\begin{DoxyReturn}{Returns}
+The allocation size of the packet buffer. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00125}{KTN\+::\+TCP\+::\+EFVITcp\+V2\+::\+EFVI\+\_\+\+TCP\+\_\+\+Start()}}.
+
+\Hypertarget{classi01_1_1net_1_1_s_f_c_pkt_buf_a7c739eb9762afb31d5ceaa3285fd21ad}\index{i01::net::SFCPktBuf@{i01::net::SFCPktBuf}!capacity@{capacity}}
+\index{capacity@{capacity}!i01::net::SFCPktBuf@{i01::net::SFCPktBuf}}
+\doxysubsubsection{\texorpdfstring{capacity()}{capacity()}}
+{\footnotesize\ttfamily \label{classi01_1_1net_1_1_s_f_c_pkt_buf_a7c739eb9762afb31d5ceaa3285fd21ad} 
+static constexpr size\+\_\+t i01\+::net\+::\+SFCPkt\+Buf\+::capacity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Returns the capacity of the packet buffer. 
+
+\begin{DoxyReturn}{Returns}
+The capacity of the packet buffer. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00022}{prefix\+\_\+size()}}.
+
+\Hypertarget{classi01_1_1net_1_1_s_f_c_pkt_buf_a62664f755f3c7bdf3bb3138d4f40c40e}\index{i01::net::SFCPktBuf@{i01::net::SFCPktBuf}!data@{data}}
+\index{data@{data}!i01::net::SFCPktBuf@{i01::net::SFCPktBuf}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classi01_1_1net_1_1_s_f_c_pkt_buf_a62664f755f3c7bdf3bb3138d4f40c40e} 
+char \texorpdfstring{$\ast$}{*} i01\+::net\+::\+SFCPkt\+Buf\+::data (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a pointer to the data in the packet buffer. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the data in the packet buffer. 
+\end{DoxyReturn}
+\Hypertarget{classi01_1_1net_1_1_s_f_c_pkt_buf_ae70d60e59c1f27176b16ce7bde23a549}\index{i01::net::SFCPktBuf@{i01::net::SFCPktBuf}!data@{data}}
+\index{data@{data}!i01::net::SFCPktBuf@{i01::net::SFCPktBuf}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classi01_1_1net_1_1_s_f_c_pkt_buf_ae70d60e59c1f27176b16ce7bde23a549} 
+const char \texorpdfstring{$\ast$}{*} i01\+::net\+::\+SFCPkt\+Buf\+::data (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a constant pointer to the data in the packet buffer. 
+
+\begin{DoxyReturn}{Returns}
+A constant pointer to the data in the packet buffer. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00092}{operator\mbox{[}$\,$\mbox{]}()}}, and \mbox{\hyperlink{l00085}{operator\mbox{[}$\,$\mbox{]}()}}.
+
+\Hypertarget{classi01_1_1net_1_1_s_f_c_pkt_buf_a5db25326d81ff1f28248b20e64486e52}\index{i01::net::SFCPktBuf@{i01::net::SFCPktBuf}!data2@{data2}}
+\index{data2@{data2}!i01::net::SFCPktBuf@{i01::net::SFCPktBuf}}
+\doxysubsubsection{\texorpdfstring{data2()}{data2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classi01_1_1net_1_1_s_f_c_pkt_buf_a5db25326d81ff1f28248b20e64486e52} 
+char \texorpdfstring{$\ast$}{*} i01\+::net\+::\+SFCPkt\+Buf\+::data2 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a pointer to the secondary data in the packet buffer. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the secondary data in the packet buffer. 
+\end{DoxyReturn}
+\Hypertarget{classi01_1_1net_1_1_s_f_c_pkt_buf_a4a63e53ff8412441039b923822680ba4}\index{i01::net::SFCPktBuf@{i01::net::SFCPktBuf}!data2@{data2}}
+\index{data2@{data2}!i01::net::SFCPktBuf@{i01::net::SFCPktBuf}}
+\doxysubsubsection{\texorpdfstring{data2()}{data2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classi01_1_1net_1_1_s_f_c_pkt_buf_a4a63e53ff8412441039b923822680ba4} 
+const char \texorpdfstring{$\ast$}{*} i01\+::net\+::\+SFCPkt\+Buf\+::data2 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a constant pointer to the secondary data in the packet buffer. 
+
+\begin{DoxyReturn}{Returns}
+A constant pointer to the secondary data in the packet buffer. 
+\end{DoxyReturn}
+\Hypertarget{classi01_1_1net_1_1_s_f_c_pkt_buf_affcd9c9ca86ded64b5b1d1648e6ebdca}\index{i01::net::SFCPktBuf@{i01::net::SFCPktBuf}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!i01::net::SFCPktBuf@{i01::net::SFCPktBuf}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classi01_1_1net_1_1_s_f_c_pkt_buf_affcd9c9ca86ded64b5b1d1648e6ebdca} 
+char \texorpdfstring{$\ast$}{*} i01\+::net\+::\+SFCPkt\+Buf\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{n}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a pointer to the data at the specified index in the packet buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The index of the data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the data at the specified index in the packet buffer. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00060}{data()}}.
+
+\Hypertarget{classi01_1_1net_1_1_s_f_c_pkt_buf_a9f5f9c08b474b720359f6032b6c875e4}\index{i01::net::SFCPktBuf@{i01::net::SFCPktBuf}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!i01::net::SFCPktBuf@{i01::net::SFCPktBuf}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classi01_1_1net_1_1_s_f_c_pkt_buf_a9f5f9c08b474b720359f6032b6c875e4} 
+const char \texorpdfstring{$\ast$}{*} i01\+::net\+::\+SFCPkt\+Buf\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{n}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a constant pointer to the data at the specified index in the packet buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The index of the data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A constant pointer to the data at the specified index in the packet buffer. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00060}{data()}}.
+
+\Hypertarget{classi01_1_1net_1_1_s_f_c_pkt_buf_a2f10f71fd0547cbe1b27b0bfbf6795bb}\index{i01::net::SFCPktBuf@{i01::net::SFCPktBuf}!pool\_id@{pool\_id}}
+\index{pool\_id@{pool\_id}!i01::net::SFCPktBuf@{i01::net::SFCPktBuf}}
+\doxysubsubsection{\texorpdfstring{pool\_id()}{pool\_id()}}
+{\footnotesize\ttfamily \label{classi01_1_1net_1_1_s_f_c_pkt_buf_a2f10f71fd0547cbe1b27b0bfbf6795bb} 
+int i01\+::net\+::\+SFCPkt\+Buf\+::pool\+\_\+id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the pool ID of the packet buffer. 
+
+\begin{DoxyReturn}{Returns}
+The pool ID of the packet buffer. 
+\end{DoxyReturn}
+\Hypertarget{classi01_1_1net_1_1_s_f_c_pkt_buf_a4af5a56b975ee77bbb5ec82c15b7521e}\index{i01::net::SFCPktBuf@{i01::net::SFCPktBuf}!prefix\_size@{prefix\_size}}
+\index{prefix\_size@{prefix\_size}!i01::net::SFCPktBuf@{i01::net::SFCPktBuf}}
+\doxysubsubsection{\texorpdfstring{prefix\_size()}{prefix\_size()}}
+{\footnotesize\ttfamily \label{classi01_1_1net_1_1_s_f_c_pkt_buf_a4af5a56b975ee77bbb5ec82c15b7521e} 
+static constexpr size\+\_\+t i01\+::net\+::\+SFCPkt\+Buf\+::prefix\+\_\+size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Returns the size of the prefix in the packet buffer. 
+
+\begin{DoxyReturn}{Returns}
+The size of the prefix. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00028}{capacity()}}.
+
+\Hypertarget{classi01_1_1net_1_1_s_f_c_pkt_buf_ac12087e1cdb438248f2d2d1d202fbaa9}\index{i01::net::SFCPktBuf@{i01::net::SFCPktBuf}!size@{size}}
+\index{size@{size}!i01::net::SFCPktBuf@{i01::net::SFCPktBuf}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily \label{classi01_1_1net_1_1_s_f_c_pkt_buf_ac12087e1cdb438248f2d2d1d202fbaa9} 
+size\+\_\+t i01\+::net\+::\+SFCPkt\+Buf\+::size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the size of the packet buffer. 
+
+\begin{DoxyReturn}{Returns}
+The size of the packet buffer. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sgaer/source/repos/katanafinancial/\+Occam\+CME4/\+Occam\+CME4/src/i01\+\_\+net/SFCPkt\+Buf.\+hpp\end{DoxyCompactItemize}

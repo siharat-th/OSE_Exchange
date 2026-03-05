@@ -1,0 +1,539 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_session_callback" xml:lang="en-US">
+<title>KTN::SessionCallback Class Reference</title>
+<indexterm><primary>KTN::SessionCallback</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_k_t_n_1_1_session_callback">SessionCallback</link> class is an abstract base class that defines the interface for session callbacks. Session callbacks are used to handle various events and actions related to a trading session. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;SessionCallback.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for KTN::SessionCallback:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_k_t_n_1_1_session_callback.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_session_callback_1a1857965c8e7a145dc5dfbcc88b233236">onHeartbeat</link> (int msgseqnum)=0</para>
+
+<para>This method is called when a heartbeat message is received. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_session_callback_1a0d9e306c44667fb2e28788c8141416b1">onSessionStatus</link> (string exch, int mktsegid, int protocol, string desc, string state)=0</para>
+
+<para>This method is called when the session status changes. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_session_callback_1a6934834d77aa92b5d009476220335b56">minOrderAck</link> (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord)=0</para>
+
+<para>This method is called when a minimum order acknowledgement is received. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_session_callback_1a9f6d4744cd8df5e9e684d44e2731d685">minOrderCancel</link> (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord)=0</para>
+
+<para>This method is called when a minimum order cancellation is received. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_session_callback_1a6070e1c69dd5c28af4f942ee6f67e959">minOrderModify</link> (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord)=0</para>
+
+<para>This method is called when a minimum order modification is received. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_session_callback_1a007db80ff718824a1279e2e2e00d0067">minOrderExecution</link> (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord, bool hedgeSent)=0</para>
+
+<para>This method is called when a minimum order execution is received. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_session_callback_1ae6efabe36af252db685a5e397d875f0f">minOrderReject</link> (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord, const string &amp;text)=0</para>
+
+<para>This method is called when a minimum order rejection is received. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_session_callback_1aaaa0946280382f9b444a639c4ab61a42">minOrderCancelReject</link> (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord, const string &amp;text)=0</para>
+
+<para>This method is called when a minimum order cancellation rejection is received. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_session_callback_1aee8568b17d2b440518c27f1f24b8022d">minOrderCancelReplaceReject</link> (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord, const string &amp;text)=0</para>
+
+<para>This method is called when a minimum order cancel/replace rejection is received. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_session_callback_1a37da3bc0166c00fa4250f36944a2ac25">onHedgeOrderSent</link> (char *clordid, uint64_t reqid, int32_t secid, KOrderSide::Enum side, uint32_t qty, int32_t price, uint16_t instindex)=0</para>
+
+<para>This method is called when a hedge order is sent. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_session_callback_1a2b4366294c6788975494266eb3d32f08">onOrderSent</link> (char *clordid, uint64_t reqid, int32_t secid, KOrderSide::Enum side, uint32_t qty, int32_t price, KOrderAlgoTrigger::Enum trig)=0</para>
+
+<para>This method is called when an order is sent. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_k_t_n_1_1_session_callback">SessionCallback</link> class is an abstract base class that defines the interface for session callbacks. Session callbacks are used to handle various events and actions related to a trading session. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_session_callback_1a6934834d77aa92b5d009476220335b56"/><section>
+    <title>minOrderAck()</title>
+<indexterm><primary>minOrderAck</primary><secondary>KTN::SessionCallback</secondary></indexterm>
+<indexterm><primary>KTN::SessionCallback</primary><secondary>minOrderAck</secondary></indexterm>
+<para><computeroutput>virtual void KTN::SessionCallback::minOrderAck (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp; ord)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>This method is called when a minimum order acknowledgement is received. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ord</entry><entry>
+<para>The order details. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implemented in <link linkend="_class_k_t_n_1_1_algo_base_v3_1afe46d7c3b727f40d8298b8009ef6a4f1">KTN::AlgoBaseV3</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_session_callback_1a9f6d4744cd8df5e9e684d44e2731d685"/><section>
+    <title>minOrderCancel()</title>
+<indexterm><primary>minOrderCancel</primary><secondary>KTN::SessionCallback</secondary></indexterm>
+<indexterm><primary>KTN::SessionCallback</primary><secondary>minOrderCancel</secondary></indexterm>
+<para><computeroutput>virtual void KTN::SessionCallback::minOrderCancel (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp; ord)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>This method is called when a minimum order cancellation is received. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ord</entry><entry>
+<para>The order details. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implemented in <link linkend="_class_k_t_n_1_1_algo_base_v3_1a3ffdc246cd30b2429670bc1a083a7e5d">KTN::AlgoBaseV3</link>, and <link linkend="_class_k_t_n_1_1_stacker_1a5d4644e8fb55d03a441483ac00f02e72">KTN::Stacker</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_session_callback_1aaaa0946280382f9b444a639c4ab61a42"/><section>
+    <title>minOrderCancelReject()</title>
+<indexterm><primary>minOrderCancelReject</primary><secondary>KTN::SessionCallback</secondary></indexterm>
+<indexterm><primary>KTN::SessionCallback</primary><secondary>minOrderCancelReject</secondary></indexterm>
+<para><computeroutput>virtual void KTN::SessionCallback::minOrderCancelReject (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp; ord, const string &amp; text)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>This method is called when a minimum order cancellation rejection is received. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ord</entry><entry>
+<para>The order details. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>text</entry><entry>
+<para>The rejection reason. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implemented in <link linkend="_class_k_t_n_1_1_stacker_1a9582f4adfc318d1a271b449ea4dde251">KTN::Stacker</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_session_callback_1aee8568b17d2b440518c27f1f24b8022d"/><section>
+    <title>minOrderCancelReplaceReject()</title>
+<indexterm><primary>minOrderCancelReplaceReject</primary><secondary>KTN::SessionCallback</secondary></indexterm>
+<indexterm><primary>KTN::SessionCallback</primary><secondary>minOrderCancelReplaceReject</secondary></indexterm>
+<para><computeroutput>virtual void KTN::SessionCallback::minOrderCancelReplaceReject (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp; ord, const string &amp; text)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>This method is called when a minimum order cancel/replace rejection is received. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ord</entry><entry>
+<para>The order details. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>text</entry><entry>
+<para>The rejection reason. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implemented in <link linkend="_class_k_t_n_1_1_stacker_1ab85205006073296dcb6953caf8326893">KTN::Stacker</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_session_callback_1a007db80ff718824a1279e2e2e00d0067"/><section>
+    <title>minOrderExecution()</title>
+<indexterm><primary>minOrderExecution</primary><secondary>KTN::SessionCallback</secondary></indexterm>
+<indexterm><primary>KTN::SessionCallback</primary><secondary>minOrderExecution</secondary></indexterm>
+<para><computeroutput>virtual void KTN::SessionCallback::minOrderExecution (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp; ord, bool hedgeSent)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>This method is called when a minimum order execution is received. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ord</entry><entry>
+<para>The order details. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>hedgeSent</entry><entry>
+<para>Indicates whether a hedge order was sent. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implemented in <link linkend="_class_k_t_n_1_1_algo_base_v3_1a461b855181c911e47b3b7096379c3f3d">KTN::AlgoBaseV3</link>, <link linkend="_class_k_t_n_1_1_auto_hedge_o_b_1a3487184dd189eef29af98d21da0d0afb">KTN::AutoHedgeOB</link>, <link linkend="_class_k_t_n_1_1_multi_spreader_v3_1ae29a2c8aadec02629883b6547ff88e84">KTN::MultiSpreaderV3</link>, <link linkend="_class_k_t_n_1_1_p_l_watcher_1a07b56c9833d44be5b2fb32b02aa14758">KTN::PLWatcher</link>, <link linkend="_class_k_t_n_1_1_skewer_1a20a7360eced3a075959795792daf4289">KTN::Skewer</link>, <link linkend="_class_k_t_n_1_1_skew_trader_1a2857fcd34fec64d781dc2700d93cae7a">KTN::SkewTrader</link>, <link linkend="_class_k_t_n_1_1_squeezer_o_b_1afb7b42ff75799302ac288bfd1c7aea47">KTN::SqueezerOB</link>, <link linkend="_class_k_t_n_1_1_stacker_1add71726c413d0327a9e75c978bcec549">KTN::Stacker</link>, <link linkend="_class_k_t_n_1_1_stacker_timer_1a9f4014c732923a03440a55a2c2606f87">KTN::StackerTimer</link>, <link linkend="_class_k_t_n_1_1_twap_1acba97a1a0479a192bef98354877f720a">KTN::Twap</link>, and <link linkend="_class_k_t_n_1_1_waves_1a0df5f7a233474fb4d8ee1f378928c272">KTN::Waves</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_session_callback_1a6070e1c69dd5c28af4f942ee6f67e959"/><section>
+    <title>minOrderModify()</title>
+<indexterm><primary>minOrderModify</primary><secondary>KTN::SessionCallback</secondary></indexterm>
+<indexterm><primary>KTN::SessionCallback</primary><secondary>minOrderModify</secondary></indexterm>
+<para><computeroutput>virtual void KTN::SessionCallback::minOrderModify (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp; ord)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>This method is called when a minimum order modification is received. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ord</entry><entry>
+<para>The order details. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implemented in <link linkend="_class_k_t_n_1_1_algo_base_v3_1a9eb48a787a7992de5e850421c37b010b">KTN::AlgoBaseV3</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_session_callback_1ae6efabe36af252db685a5e397d875f0f"/><section>
+    <title>minOrderReject()</title>
+<indexterm><primary>minOrderReject</primary><secondary>KTN::SessionCallback</secondary></indexterm>
+<indexterm><primary>KTN::SessionCallback</primary><secondary>minOrderReject</secondary></indexterm>
+<para><computeroutput>virtual void KTN::SessionCallback::minOrderReject (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp; ord, const string &amp; text)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>This method is called when a minimum order rejection is received. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ord</entry><entry>
+<para>The order details. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>text</entry><entry>
+<para>The rejection reason. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_session_callback_1a1857965c8e7a145dc5dfbcc88b233236"/><section>
+    <title>onHeartbeat()</title>
+<indexterm><primary>onHeartbeat</primary><secondary>KTN::SessionCallback</secondary></indexterm>
+<indexterm><primary>KTN::SessionCallback</primary><secondary>onHeartbeat</secondary></indexterm>
+<para><computeroutput>virtual void KTN::SessionCallback::onHeartbeat (int msgseqnum)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>This method is called when a heartbeat message is received. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>msgseqnum</entry><entry>
+<para>The sequence number of the heartbeat message. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implemented in <link linkend="_class_k_t_n_1_1_algo_base_v3_1a8065b608926c8356a505a7a0aaa2e312">KTN::AlgoBaseV3</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_session_callback_1a37da3bc0166c00fa4250f36944a2ac25"/><section>
+    <title>onHedgeOrderSent()</title>
+<indexterm><primary>onHedgeOrderSent</primary><secondary>KTN::SessionCallback</secondary></indexterm>
+<indexterm><primary>KTN::SessionCallback</primary><secondary>onHedgeOrderSent</secondary></indexterm>
+<para><computeroutput>virtual void KTN::SessionCallback::onHedgeOrderSent (char * clordid, uint64_t reqid, int32_t secid, KOrderSide::Enum side, uint32_t qty, int32_t price, uint16_t instindex)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>This method is called when a hedge order is sent. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>clordid</entry><entry>
+<para>The client order ID. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>reqid</entry><entry>
+<para>The request ID. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>secid</entry><entry>
+<para>The security ID. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>side</entry><entry>
+<para>The order side. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>qty</entry><entry>
+<para>The order quantity. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>price</entry><entry>
+<para>The order price. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>instindex</entry><entry>
+<para>The instrument index. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implemented in <link linkend="_class_k_t_n_1_1_algo_base_v3_1a0d3c0ceb84a7b46e838d6e466db8f88b">KTN::AlgoBaseV3</link>, <link linkend="_class_k_t_n_1_1_multi_spreader_v3_1a302b3c319e14521f4acec056b9431fae">KTN::MultiSpreaderV3</link>, <link linkend="_class_k_t_n_1_1_skew_trader_1a5ceef62a57d976bfdff793b05cb6b3b8">KTN::SkewTrader</link>, <link linkend="_class_k_t_n_1_1_stacker_1a9f5fcdc8ef972a1f75ced0084b5b4743">KTN::Stacker</link>, and <link linkend="_class_k_t_n_1_1_waves_1a25d021f9c931ce5173c75e6d48b98f2b">KTN::Waves</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_session_callback_1a2b4366294c6788975494266eb3d32f08"/><section>
+    <title>onOrderSent()</title>
+<indexterm><primary>onOrderSent</primary><secondary>KTN::SessionCallback</secondary></indexterm>
+<indexterm><primary>KTN::SessionCallback</primary><secondary>onOrderSent</secondary></indexterm>
+<para><computeroutput>virtual void KTN::SessionCallback::onOrderSent (char * clordid, uint64_t reqid, int32_t secid, KOrderSide::Enum side, uint32_t qty, int32_t price, KOrderAlgoTrigger::Enum trig)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>This method is called when an order is sent. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>clordid</entry><entry>
+<para>The client order ID. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>reqid</entry><entry>
+<para>The request ID. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>secid</entry><entry>
+<para>The security ID. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>side</entry><entry>
+<para>The order side. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>qty</entry><entry>
+<para>The order quantity. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>price</entry><entry>
+<para>The order price. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>trig</entry><entry>
+<para>The order algorithm trigger. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implemented in <link linkend="_class_k_t_n_1_1_algo_base_v3_1a813c6fe078d94ed9a5c4c11db6c30f02">KTN::AlgoBaseV3</link>, <link linkend="_class_k_t_n_1_1_multi_spreader_v3_1a8147040b452a9906a020467843dcf932">KTN::MultiSpreaderV3</link>, <link linkend="_class_k_t_n_1_1_skew_trader_1a4c557df579bdb9785706151da0f712a3">KTN::SkewTrader</link>, <link linkend="_class_k_t_n_1_1_stacker_1a67b98f8671251638f2ecb8c95b332336">KTN::Stacker</link>, and <link linkend="_class_k_t_n_1_1_waves_1ae75ebe6be1f954d442595dcfb83c596d">KTN::Waves</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_session_callback_1a0d9e306c44667fb2e28788c8141416b1"/><section>
+    <title>onSessionStatus()</title>
+<indexterm><primary>onSessionStatus</primary><secondary>KTN::SessionCallback</secondary></indexterm>
+<indexterm><primary>KTN::SessionCallback</primary><secondary>onSessionStatus</secondary></indexterm>
+<para><computeroutput>virtual void KTN::SessionCallback::onSessionStatus (string exch, int mktsegid, int protocol, string desc, string state)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>This method is called when the session status changes. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>exch</entry><entry>
+<para>The exchange name. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>mktsegid</entry><entry>
+<para>The market segment ID. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>protocol</entry><entry>
+<para>The protocol version. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>desc</entry><entry>
+<para>The description of the session status. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>state</entry><entry>
+<para>The state of the session. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+ExchangeHandlers2/SessionCallback.hpp</section>
+</section>

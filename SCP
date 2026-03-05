@@ -1,0 +1,11 @@
+# CFE
+cd /root/.vs/OccamCFE4/out/build/dev-linux-release/
+scp ./ExchangeHandler root@10.3.71.12:/root/akl/cfe/exhandler/ExchangeHandler-new
+
+# EQT
+cd /root/.vs/OccamCFE4/out/build/dev-linux-release/
+scp ./ExchangeHandler root@10.3.71.12:/root/akl/lime/exhandler/ExchangeHandler-new
+
+# OSE
+cd /root/.vs/OSE_Exchange/out/build/dev-linux-release/
+scp ./ExchangeHandler root@10.3.71.12:/root/akl/ose/exhandler/ExchangeHandler-new

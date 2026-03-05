@@ -1,0 +1,214 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_master" xml:lang="en-US">
+<title>KT01::SECDEF::CmeSecMaster Class Reference</title>
+<indexterm><primary>KT01::SECDEF::CmeSecMaster</primary></indexterm>
+<para>
+
+<para>Class that loads and indexes CME Security Definitions. This is a singleton class. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;CmeSecMaster.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for KT01::SECDEF::CmeSecMaster:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_master.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_master_1abe0d7cebcf29164f30b0db5e66146510">IsLoaded</link> ()</para>
+
+<para>Checks if the CME security master is loaded. </para>
+</listitem>
+            <listitem><para>string <link linkend="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_master_1a7f0765efd745b581ba78dd1a6bd0fde4">getSymbol</link> (int secid)</para>
+
+<para>Gets the symbol for the given security ID. </para>
+</listitem>
+            <listitem><para><link linkend="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def">CmeSecDef</link> <link linkend="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_master_1aa3072d02af062e41e2c518d2e6214c47">getSecDef</link> (int secid)</para>
+
+<para>Gets the security definition for the given security ID. </para>
+</listitem>
+            <listitem><para><link linkend="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def">CmeSecDef</link> <link linkend="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_master_1a6039caf396780c068ef9ec203713c17b">getSecDef</link> (string symbol)</para>
+
+<para>Gets the security definition for the given symbol. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_class_named_thread">NamedThread</link>        <itemizedlist>
+            <listitem><para><link linkend="_class_named_thread_1a891fabdc2d824048ec05c82e7ef8c69a">NamedThread</link> ()</para>
+
+<para>Default constructor. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_named_thread_1a018dadb59e5af98ee734301a1baa50cb">~NamedThread</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_named_thread_1a9fa42542ff43c89fb9bbc33de9c87e34">CreateAndRun</link> (string name, int core)</para>
+
+<para>Creates and runs the named thread on the specified core. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_named_thread_1ad4809c571171be13f0f91f540d5c196f">Join</link> ()</para>
+
+<para>Joins the named thread. </para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+Static Public Member Functions inherited from <link linkend="_class_singleton">Singleton&lt; CmeSecMaster &gt;</link>        <itemizedlist>
+            <listitem><para>static KT01_API CmeSecMaster &amp; <link linkend="_class_singleton_1a257c9c4633fa4e06bd93469e379f8eff">instance</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Protected Member Functions inherited from <link linkend="_class_singleton">Singleton&lt; CmeSecMaster &gt;</link>        <itemizedlist>
+            <listitem><para><emphasis role="strong">Singleton</emphasis> (const <link linkend="_class_singleton">Singleton</link> &amp;)=delete</para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+
+<para>Class that loads and indexes CME Security Definitions. This is a singleton class. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_master_1ac179c1723706a075cad60e503290acb6"/><section>
+    <title>CmeSecMaster()</title>
+<indexterm><primary>CmeSecMaster</primary><secondary>KT01::SECDEF::CmeSecMaster</secondary></indexterm>
+<indexterm><primary>KT01::SECDEF::CmeSecMaster</primary><secondary>CmeSecMaster</secondary></indexterm>
+<para><computeroutput>CmeSecMaster::CmeSecMaster ( )</computeroutput></para></section>
+<anchor xml:id="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_master_1a4ca0c22ba5070c86f8f3c6d6a7092835"/><section>
+    <title>~CmeSecMaster()</title>
+<indexterm><primary>~CmeSecMaster</primary><secondary>KT01::SECDEF::CmeSecMaster</secondary></indexterm>
+<indexterm><primary>KT01::SECDEF::CmeSecMaster</primary><secondary>~CmeSecMaster</secondary></indexterm>
+<para><computeroutput>CmeSecMaster::~CmeSecMaster ( )<computeroutput>[virtual]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_master_1aa3072d02af062e41e2c518d2e6214c47"/><section>
+    <title>getSecDef()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>getSecDef</primary><secondary>KT01::SECDEF::CmeSecMaster</secondary></indexterm>
+<indexterm><primary>KT01::SECDEF::CmeSecMaster</primary><secondary>getSecDef</secondary></indexterm>
+<para><computeroutput><link linkend="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def">CmeSecDef</link> KT01::SECDEF::CmeSecMaster::getSecDef (int secid)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Gets the security definition for the given security ID. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>secid</entry><entry>
+<para>The security ID. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The security definition corresponding to the security ID. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_master_1a6039caf396780c068ef9ec203713c17b"/><section>
+    <title>getSecDef()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>getSecDef</primary><secondary>KT01::SECDEF::CmeSecMaster</secondary></indexterm>
+<indexterm><primary>KT01::SECDEF::CmeSecMaster</primary><secondary>getSecDef</secondary></indexterm>
+<para><computeroutput><link linkend="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def">CmeSecDef</link> KT01::SECDEF::CmeSecMaster::getSecDef (string symbol)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Gets the security definition for the given symbol. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>symbol</entry><entry>
+<para>The symbol. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The security definition corresponding to the symbol. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_master_1a7f0765efd745b581ba78dd1a6bd0fde4"/><section>
+    <title>getSymbol()</title>
+<indexterm><primary>getSymbol</primary><secondary>KT01::SECDEF::CmeSecMaster</secondary></indexterm>
+<indexterm><primary>KT01::SECDEF::CmeSecMaster</primary><secondary>getSymbol</secondary></indexterm>
+<para><computeroutput>string KT01::SECDEF::CmeSecMaster::getSymbol (int secid)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Gets the symbol for the given security ID. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>secid</entry><entry>
+<para>The security ID. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The symbol corresponding to the security ID. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_master_1abe0d7cebcf29164f30b0db5e66146510"/><section>
+    <title>IsLoaded()</title>
+<indexterm><primary>IsLoaded</primary><secondary>KT01::SECDEF::CmeSecMaster</secondary></indexterm>
+<indexterm><primary>KT01::SECDEF::CmeSecMaster</primary><secondary>IsLoaded</secondary></indexterm>
+<para><computeroutput>bool KT01::SECDEF::CmeSecMaster::IsLoaded ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Checks if the CME security master is loaded. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>True if the CME security master is loaded, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+exchsupport/cme/CmeSecMaster.hppexchsupport/cme/CmeSecMaster.cpp</section>
+</section>

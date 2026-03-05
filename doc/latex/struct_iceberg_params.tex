@@ -1,0 +1,103 @@
+\doxysection{Iceberg\+Params Struct Reference}
+\hypertarget{struct_iceberg_params}{}\label{struct_iceberg_params}\index{IcebergParams@{IcebergParams}}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_iceberg_params}{Iceberg\+Params}} \mbox{\hyperlink{struct_iceberg_params_a271a23ce841a616c42920522f3db781e}{parse}} (const std\+::string \&json\+\_\+str)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{struct_iceberg_params_af53fa58f15e2bc69c1c15d190a6e475f}{Valid\+Json}}
+\item 
+\mbox{\hyperlink{structalgometa}{algometa}} \mbox{\hyperlink{struct_iceberg_params_aa32c378eba41924e0f36dacc5a8e2720}{meta}}
+\item 
+string \mbox{\hyperlink{struct_iceberg_params_a827dbce9bcc3d5af87f63f12c062ba13}{subid}}
+\item 
+tr1\+::unordered\+\_\+map$<$ int, \mbox{\hyperlink{structinstrument}{instrument}} $>$ \mbox{\hyperlink{struct_iceberg_params_a5bec7bde7bbaac63920f7bbd9e578ec4}{Leg\+Sec\+Id\+Map}}
+\item 
+\mbox{\hyperlink{structinstrument}{instrument}} \mbox{\hyperlink{struct_iceberg_params_a951a424c475d02b2c101d6762fafc12c}{Legs}} \mbox{[}24\mbox{]}
+\item 
+int \mbox{\hyperlink{struct_iceberg_params_acf2133924f383cbbc1237c2ab4d164c5}{Leg\+Count}}
+\item 
+tr1\+::unordered\+\_\+map$<$ string, \mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} $>$ \mbox{\hyperlink{struct_iceberg_params_a6c95f3d6766e39dd08a97175429967b7}{Ords}}
+\item 
+int \mbox{\hyperlink{struct_iceberg_params_ae3292208bbc24eff5cc2c39609de534e}{Min\+Show\+Qty}}
+\item 
+int \mbox{\hyperlink{struct_iceberg_params_a8d34da8b18f690417c18462278f7d035}{Max\+Show\+Qty}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_iceberg_params_a271a23ce841a616c42920522f3db781e}\index{IcebergParams@{IcebergParams}!parse@{parse}}
+\index{parse@{parse}!IcebergParams@{IcebergParams}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily \label{struct_iceberg_params_a271a23ce841a616c42920522f3db781e} 
+\mbox{\hyperlink{struct_iceberg_params}{Iceberg\+Params}} Iceberg\+Params\+::parse (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{json\+\_\+str}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_iceberg_params_acf2133924f383cbbc1237c2ab4d164c5}\index{IcebergParams@{IcebergParams}!LegCount@{LegCount}}
+\index{LegCount@{LegCount}!IcebergParams@{IcebergParams}}
+\doxysubsubsection{\texorpdfstring{LegCount}{LegCount}}
+{\footnotesize\ttfamily \label{struct_iceberg_params_acf2133924f383cbbc1237c2ab4d164c5} 
+int Iceberg\+Params\+::\+Leg\+Count}
+
+\Hypertarget{struct_iceberg_params_a951a424c475d02b2c101d6762fafc12c}\index{IcebergParams@{IcebergParams}!Legs@{Legs}}
+\index{Legs@{Legs}!IcebergParams@{IcebergParams}}
+\doxysubsubsection{\texorpdfstring{Legs}{Legs}}
+{\footnotesize\ttfamily \label{struct_iceberg_params_a951a424c475d02b2c101d6762fafc12c} 
+\mbox{\hyperlink{structinstrument}{instrument}} Iceberg\+Params\+::\+Legs\mbox{[}24\mbox{]}}
+
+\Hypertarget{struct_iceberg_params_a5bec7bde7bbaac63920f7bbd9e578ec4}\index{IcebergParams@{IcebergParams}!LegSecIdMap@{LegSecIdMap}}
+\index{LegSecIdMap@{LegSecIdMap}!IcebergParams@{IcebergParams}}
+\doxysubsubsection{\texorpdfstring{LegSecIdMap}{LegSecIdMap}}
+{\footnotesize\ttfamily \label{struct_iceberg_params_a5bec7bde7bbaac63920f7bbd9e578ec4} 
+tr1\+::unordered\+\_\+map$<$int, \mbox{\hyperlink{structinstrument}{instrument}}$>$ Iceberg\+Params\+::\+Leg\+Sec\+Id\+Map}
+
+\Hypertarget{struct_iceberg_params_a8d34da8b18f690417c18462278f7d035}\index{IcebergParams@{IcebergParams}!MaxShowQty@{MaxShowQty}}
+\index{MaxShowQty@{MaxShowQty}!IcebergParams@{IcebergParams}}
+\doxysubsubsection{\texorpdfstring{MaxShowQty}{MaxShowQty}}
+{\footnotesize\ttfamily \label{struct_iceberg_params_a8d34da8b18f690417c18462278f7d035} 
+int Iceberg\+Params\+::\+Max\+Show\+Qty}
+
+\Hypertarget{struct_iceberg_params_aa32c378eba41924e0f36dacc5a8e2720}\index{IcebergParams@{IcebergParams}!meta@{meta}}
+\index{meta@{meta}!IcebergParams@{IcebergParams}}
+\doxysubsubsection{\texorpdfstring{meta}{meta}}
+{\footnotesize\ttfamily \label{struct_iceberg_params_aa32c378eba41924e0f36dacc5a8e2720} 
+\mbox{\hyperlink{structalgometa}{algometa}} Iceberg\+Params\+::meta}
+
+\Hypertarget{struct_iceberg_params_ae3292208bbc24eff5cc2c39609de534e}\index{IcebergParams@{IcebergParams}!MinShowQty@{MinShowQty}}
+\index{MinShowQty@{MinShowQty}!IcebergParams@{IcebergParams}}
+\doxysubsubsection{\texorpdfstring{MinShowQty}{MinShowQty}}
+{\footnotesize\ttfamily \label{struct_iceberg_params_ae3292208bbc24eff5cc2c39609de534e} 
+int Iceberg\+Params\+::\+Min\+Show\+Qty}
+
+\Hypertarget{struct_iceberg_params_a6c95f3d6766e39dd08a97175429967b7}\index{IcebergParams@{IcebergParams}!Ords@{Ords}}
+\index{Ords@{Ords}!IcebergParams@{IcebergParams}}
+\doxysubsubsection{\texorpdfstring{Ords}{Ords}}
+{\footnotesize\ttfamily \label{struct_iceberg_params_a6c95f3d6766e39dd08a97175429967b7} 
+tr1\+::unordered\+\_\+map$<$string, \mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}}$>$ Iceberg\+Params\+::\+Ords}
+
+\Hypertarget{struct_iceberg_params_a827dbce9bcc3d5af87f63f12c062ba13}\index{IcebergParams@{IcebergParams}!subid@{subid}}
+\index{subid@{subid}!IcebergParams@{IcebergParams}}
+\doxysubsubsection{\texorpdfstring{subid}{subid}}
+{\footnotesize\ttfamily \label{struct_iceberg_params_a827dbce9bcc3d5af87f63f12c062ba13} 
+string Iceberg\+Params\+::subid}
+
+\Hypertarget{struct_iceberg_params_af53fa58f15e2bc69c1c15d190a6e475f}\index{IcebergParams@{IcebergParams}!ValidJson@{ValidJson}}
+\index{ValidJson@{ValidJson}!IcebergParams@{IcebergParams}}
+\doxysubsubsection{\texorpdfstring{ValidJson}{ValidJson}}
+{\footnotesize\ttfamily \label{struct_iceberg_params_af53fa58f15e2bc69c1c15d190a6e475f} 
+bool Iceberg\+Params\+::\+Valid\+Json}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Algo\+Params/Iceberg\+Params.\+hpp\item 
+Algo\+Params/Iceberg\+Params.\+cpp\end{DoxyCompactItemize}

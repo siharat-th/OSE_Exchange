@@ -1,0 +1,122 @@
+\doxysection{Efvi\+Tcp\+Server\texorpdfstring{$<$}{<} Conf \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_efvi_tcp_server}{}\label{class_efvi_tcp_server}\index{EfviTcpServer$<$ Conf $>$@{EfviTcpServer$<$ Conf $>$}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_efvi_tcp_server_1_1_conn}{Conn}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_efvi_tcp_server_a691c08924dc7e01ee32971bbced468c2}{get\+Last\+Error}} ()
+\item 
+bool \mbox{\hyperlink{class_efvi_tcp_server_ad7ec6f43096c97d50c65e663b955cc58}{init}} (const char \texorpdfstring{$\ast$}{*}interface, const char \texorpdfstring{$\ast$}{*}server\+\_\+ip, uint16\+\_\+t server\+\_\+port)
+\item 
+void \mbox{\hyperlink{class_efvi_tcp_server_ac882a583aae5f42dc45d0511be0012ed}{close}} (const char \texorpdfstring{$\ast$}{*}reason)
+\item 
+bool \mbox{\hyperlink{class_efvi_tcp_server_a76d396147e8808c6d4da330fd32bd4a2}{is\+Closed}} ()
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_efvi_tcp_server_aa3b2e34ed3ed9e94f7098f7b356d2235}{get\+Conn\+Cnt}} ()
+\item 
+{\footnotesize template$<$typename Handler $>$ }\\void \mbox{\hyperlink{class_efvi_tcp_server_ad3819b63397702426d946380e7d5c653}{foreach\+Conn}} (Handler handler)
+\item 
+{\footnotesize template$<$typename Handler $>$ }\\void \mbox{\hyperlink{class_efvi_tcp_server_a5e43cf17f2cdb4a2ae3c87127c431d20}{poll}} (Handler \&handler, int64\+\_\+t ns=0)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_efvi_tcp_server_a8eb918f599f0ec1851a5f8dd69eedaaf}{err\+\_\+}} = "{}Closed"{}
+\item 
+\mbox{\hyperlink{classefvitcp_1_1_tcp_server}{Tcp\+Server}} \mbox{\hyperlink{class_efvi_tcp_server_a4a6cc245419c9aa36e4924c33c87461e}{server\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Conf$>$\newline
+class Efvi\+Tcp\+Server$<$ Conf $>$}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_efvi_tcp_server_a9dba37f0dad9b4936d8b69d49330fb30}\index{EfviTcpServer$<$ Conf $>$@{EfviTcpServer$<$ Conf $>$}!EfviTcpServer@{EfviTcpServer}}
+\index{EfviTcpServer@{EfviTcpServer}!EfviTcpServer$<$ Conf $>$@{EfviTcpServer$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{EfviTcpServer()}{EfviTcpServer()}}
+{\footnotesize\ttfamily \label{class_efvi_tcp_server_a9dba37f0dad9b4936d8b69d49330fb30} 
+template$<$typename Conf $>$ \\
+\mbox{\hyperlink{class_efvi_tcp_server}{Efvi\+Tcp\+Server}}$<$ Conf $>$\mbox{\hyperlink{class_efvi_tcp_server}{\+::\+Efvi\+Tcp\+Server}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_efvi_tcp_server_ac882a583aae5f42dc45d0511be0012ed}\index{EfviTcpServer$<$ Conf $>$@{EfviTcpServer$<$ Conf $>$}!close@{close}}
+\index{close@{close}!EfviTcpServer$<$ Conf $>$@{EfviTcpServer$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily \label{class_efvi_tcp_server_ac882a583aae5f42dc45d0511be0012ed} 
+template$<$typename Conf $>$ \\
+void \mbox{\hyperlink{class_efvi_tcp_server}{Efvi\+Tcp\+Server}}$<$ Conf $>$\+::close (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{reason}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_efvi_tcp_server_ad3819b63397702426d946380e7d5c653}\index{EfviTcpServer$<$ Conf $>$@{EfviTcpServer$<$ Conf $>$}!foreachConn@{foreachConn}}
+\index{foreachConn@{foreachConn}!EfviTcpServer$<$ Conf $>$@{EfviTcpServer$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{foreachConn()}{foreachConn()}}
+{\footnotesize\ttfamily \label{class_efvi_tcp_server_ad3819b63397702426d946380e7d5c653} 
+template$<$typename Conf $>$ \\
+template$<$typename Handler $>$ \\
+void \mbox{\hyperlink{class_efvi_tcp_server}{Efvi\+Tcp\+Server}}$<$ Conf $>$\+::foreach\+Conn (\begin{DoxyParamCaption}\item[{Handler}]{handler}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_efvi_tcp_server_aa3b2e34ed3ed9e94f7098f7b356d2235}\index{EfviTcpServer$<$ Conf $>$@{EfviTcpServer$<$ Conf $>$}!getConnCnt@{getConnCnt}}
+\index{getConnCnt@{getConnCnt}!EfviTcpServer$<$ Conf $>$@{EfviTcpServer$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{getConnCnt()}{getConnCnt()}}
+{\footnotesize\ttfamily \label{class_efvi_tcp_server_aa3b2e34ed3ed9e94f7098f7b356d2235} 
+template$<$typename Conf $>$ \\
+uint32\+\_\+t \mbox{\hyperlink{class_efvi_tcp_server}{Efvi\+Tcp\+Server}}$<$ Conf $>$\+::get\+Conn\+Cnt (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_efvi_tcp_server_a691c08924dc7e01ee32971bbced468c2}\index{EfviTcpServer$<$ Conf $>$@{EfviTcpServer$<$ Conf $>$}!getLastError@{getLastError}}
+\index{getLastError@{getLastError}!EfviTcpServer$<$ Conf $>$@{EfviTcpServer$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{getLastError()}{getLastError()}}
+{\footnotesize\ttfamily \label{class_efvi_tcp_server_a691c08924dc7e01ee32971bbced468c2} 
+template$<$typename Conf $>$ \\
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_efvi_tcp_server}{Efvi\+Tcp\+Server}}$<$ Conf $>$\+::get\+Last\+Error (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_efvi_tcp_server_ad7ec6f43096c97d50c65e663b955cc58}\index{EfviTcpServer$<$ Conf $>$@{EfviTcpServer$<$ Conf $>$}!init@{init}}
+\index{init@{init}!EfviTcpServer$<$ Conf $>$@{EfviTcpServer$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \label{class_efvi_tcp_server_ad7ec6f43096c97d50c65e663b955cc58} 
+template$<$typename Conf $>$ \\
+bool \mbox{\hyperlink{class_efvi_tcp_server}{Efvi\+Tcp\+Server}}$<$ Conf $>$\+::init (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{interface}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{server\+\_\+ip}{, }\item[{uint16\+\_\+t}]{server\+\_\+port}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_efvi_tcp_server_a76d396147e8808c6d4da330fd32bd4a2}\index{EfviTcpServer$<$ Conf $>$@{EfviTcpServer$<$ Conf $>$}!isClosed@{isClosed}}
+\index{isClosed@{isClosed}!EfviTcpServer$<$ Conf $>$@{EfviTcpServer$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{isClosed()}{isClosed()}}
+{\footnotesize\ttfamily \label{class_efvi_tcp_server_a76d396147e8808c6d4da330fd32bd4a2} 
+template$<$typename Conf $>$ \\
+bool \mbox{\hyperlink{class_efvi_tcp_server}{Efvi\+Tcp\+Server}}$<$ Conf $>$\+::is\+Closed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_efvi_tcp_server_a5e43cf17f2cdb4a2ae3c87127c431d20}\index{EfviTcpServer$<$ Conf $>$@{EfviTcpServer$<$ Conf $>$}!poll@{poll}}
+\index{poll@{poll}!EfviTcpServer$<$ Conf $>$@{EfviTcpServer$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{poll()}{poll()}}
+{\footnotesize\ttfamily \label{class_efvi_tcp_server_a5e43cf17f2cdb4a2ae3c87127c431d20} 
+template$<$typename Conf $>$ \\
+template$<$typename Handler $>$ \\
+void \mbox{\hyperlink{class_efvi_tcp_server}{Efvi\+Tcp\+Server}}$<$ Conf $>$\+::poll (\begin{DoxyParamCaption}\item[{Handler \&}]{handler}{, }\item[{int64\+\_\+t}]{ns}{ = {\ttfamily 0}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_efvi_tcp_server_a8eb918f599f0ec1851a5f8dd69eedaaf}\index{EfviTcpServer$<$ Conf $>$@{EfviTcpServer$<$ Conf $>$}!err\_@{err\_}}
+\index{err\_@{err\_}!EfviTcpServer$<$ Conf $>$@{EfviTcpServer$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{err\_}{err\_}}
+{\footnotesize\ttfamily \label{class_efvi_tcp_server_a8eb918f599f0ec1851a5f8dd69eedaaf} 
+template$<$typename Conf $>$ \\
+const char\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_efvi_tcp_server}{Efvi\+Tcp\+Server}}$<$ Conf $>$\+::err\+\_\+ = "{}Closed"{}}
+
+\Hypertarget{class_efvi_tcp_server_a4a6cc245419c9aa36e4924c33c87461e}\index{EfviTcpServer$<$ Conf $>$@{EfviTcpServer$<$ Conf $>$}!server\_@{server\_}}
+\index{server\_@{server\_}!EfviTcpServer$<$ Conf $>$@{EfviTcpServer$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{server\_}{server\_}}
+{\footnotesize\ttfamily \label{class_efvi_tcp_server_a4a6cc245419c9aa36e4924c33c87461e} 
+template$<$typename Conf $>$ \\
+\mbox{\hyperlink{classefvitcp_1_1_tcp_server}{Tcp\+Server}} \mbox{\hyperlink{class_efvi_tcp_server}{Efvi\+Tcp\+Server}}$<$ Conf $>$\+::server\+\_\+}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sgaer/source/repos/katanafinancial/\+Occam\+CME4/\+Occam\+CME4/src/external/pollnet/efvitcp/Efvi\+Tcp.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,278 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5" xml:lang="en-US">
+<title>KTN::REPORTER::OrderReporterV5 Class Reference</title>
+<indexterm><primary>KTN::REPORTER::OrderReporterV5</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5">OrderReporterV5</link> class is responsible for reporting orders. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;OrderReporterV5.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for KTN::REPORTER::OrderReporterV5:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5_1ae1e26c2953037d6a0a799ff445fb39cf">OrderReporterV5</link> (string owner)</para>
+
+<para>Constructs an <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5">OrderReporterV5</link> object with the specified owner. </para>
+</listitem>
+            <listitem><para><link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5_1afcd2cd4ab541e0746261053cb91cdf35">~OrderReporterV5</link> ()</para>
+
+<para>Destroys the <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5">OrderReporterV5</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5_1af07abba7131351f5b35831956ab43113">Report</link> (const <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord)</para>
+
+<para>Reports the specified order. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5_1a783cf5dcf27d1b89f63c349dfe7b11b2">DoWork</link> () override</para>
+
+<para>Performs the work of the <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5">OrderReporterV5</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5_1a16c34fbcfef9702db4174e135fb3f8fc">StopWork</link> ()</para>
+
+<para>Stops the work of the <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5">OrderReporterV5</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5_1ae88277914d8ba98e76795aac4379b707">UpdateMetaParams</link> (const <link linkend="_structalgometa">algometa</link> &amp;meta, bool certnr)</para>
+
+<para>Updates the meta parameters with the specified values. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5_1add3b56b8859b39c2257eb4167a1d1802">UpdateUGOMap</link> (uint64_t reqid, <link linkend="_struct_user_info">UserInfo</link> ugo)</para>
+
+<para>Updates the UGO map with the specified request ID and user info. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5_1aacbf63f422baf9f6c511c000edd916c3">UpdateTagMap</link> (uint64_t reqid, string tag)</para>
+
+<para>Updates the tag map with the specified request ID and tag. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5">OrderReporterV5</link> class is responsible for reporting orders. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5_1ae1e26c2953037d6a0a799ff445fb39cf"/><section>
+    <title>OrderReporterV5()</title>
+<indexterm><primary>OrderReporterV5</primary><secondary>KTN::REPORTER::OrderReporterV5</secondary></indexterm>
+<indexterm><primary>KTN::REPORTER::OrderReporterV5</primary><secondary>OrderReporterV5</secondary></indexterm>
+<para><computeroutput>OrderReporterV5::OrderReporterV5 (string owner)</computeroutput></para><para>
+
+<para>Constructs an <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5">OrderReporterV5</link> object with the specified owner. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>owner</entry><entry>
+<para>The owner of the <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5">OrderReporterV5</link> object. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00123">Settings::get()</link>, and <link linkend="_l00027">KTN::REPORTER::ReporterBase::Start()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5_1afcd2cd4ab541e0746261053cb91cdf35"/><section>
+    <title>~OrderReporterV5()</title>
+<indexterm><primary>~OrderReporterV5</primary><secondary>KTN::REPORTER::OrderReporterV5</secondary></indexterm>
+<indexterm><primary>KTN::REPORTER::OrderReporterV5</primary><secondary>~OrderReporterV5</secondary></indexterm>
+<para><computeroutput>OrderReporterV5::~OrderReporterV5 ( )</computeroutput></para><para>
+
+<para>Destroys the <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5">OrderReporterV5</link> object. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5_1a783cf5dcf27d1b89f63c349dfe7b11b2"/><section>
+    <title>DoWork()</title>
+<indexterm><primary>DoWork</primary><secondary>KTN::REPORTER::OrderReporterV5</secondary></indexterm>
+<indexterm><primary>KTN::REPORTER::OrderReporterV5</primary><secondary>DoWork</secondary></indexterm>
+<para><computeroutput>void OrderReporterV5::DoWork ( )<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Performs the work of the <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5">OrderReporterV5</link> object. </para>
+</para>
+<para>
+Implements <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_1a449d2ccb3be9222bd06fef3b5155e3af">KTN::REPORTER::ReporterBase</link>.</para>
+<para>
+References <link linkend="_l00191">KTN::Core::SPSCRingBuffer&lt; T &gt;::empty()</link>, <link linkend="_l00033">KTN::REPORTER::ReporterBase::LogMe()</link>, <link linkend="_l00056">KTN::OrderPod::OrdExch</link>, <link linkend="_l00040">KTN::OrderPod::secid</link>, <link linkend="_l00120">KTN::REPORTER::ReporterBase::SendJson()</link>, <link linkend="_l00036">KTN::OrderPod::timestamp</link>, and <link linkend="_l00141">KTN::Core::SPSCRingBuffer&lt; T &gt;::try_pop()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5_1af07abba7131351f5b35831956ab43113"/><section>
+    <title>Report()</title>
+<indexterm><primary>Report</primary><secondary>KTN::REPORTER::OrderReporterV5</secondary></indexterm>
+<indexterm><primary>KTN::REPORTER::OrderReporterV5</primary><secondary>Report</secondary></indexterm>
+<para><computeroutput>void OrderReporterV5::Report (const <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp; ord)</computeroutput></para><para>
+
+<para>Reports the specified order. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ord</entry><entry>
+<para>The order to be reported. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00084">KTN::Core::SPSCRingBuffer&lt; T &gt;::push()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5_1a16c34fbcfef9702db4174e135fb3f8fc"/><section>
+    <title>StopWork()</title>
+<indexterm><primary>StopWork</primary><secondary>KTN::REPORTER::OrderReporterV5</secondary></indexterm>
+<indexterm><primary>KTN::REPORTER::OrderReporterV5</primary><secondary>StopWork</secondary></indexterm>
+<para><computeroutput>void OrderReporterV5::StopWork ( )</computeroutput></para><para>
+
+<para>Stops the work of the <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5">OrderReporterV5</link> object. </para>
+</para>
+<para>
+References <link linkend="_l00049">KTN::REPORTER::ReporterBase::Stop()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5_1ae88277914d8ba98e76795aac4379b707"/><section>
+    <title>UpdateMetaParams()</title>
+<indexterm><primary>UpdateMetaParams</primary><secondary>KTN::REPORTER::OrderReporterV5</secondary></indexterm>
+<indexterm><primary>KTN::REPORTER::OrderReporterV5</primary><secondary>UpdateMetaParams</secondary></indexterm>
+<para><computeroutput>void OrderReporterV5::UpdateMetaParams (const <link linkend="_structalgometa">algometa</link> &amp; meta, bool certnr)</computeroutput></para><para>
+
+<para>Updates the meta parameters with the specified values. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>meta</entry><entry>
+<para>The meta parameters to be updated. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>certnr</entry><entry>
+<para>A flag indicating whether to update the certificate number. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5_1aacbf63f422baf9f6c511c000edd916c3"/><section>
+    <title>UpdateTagMap()</title>
+<indexterm><primary>UpdateTagMap</primary><secondary>KTN::REPORTER::OrderReporterV5</secondary></indexterm>
+<indexterm><primary>KTN::REPORTER::OrderReporterV5</primary><secondary>UpdateTagMap</secondary></indexterm>
+<para><computeroutput>void OrderReporterV5::UpdateTagMap (uint64_t reqid, string tag)</computeroutput></para><para>
+
+<para>Updates the tag map with the specified request ID and tag. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>reqid</entry><entry>
+<para>The request ID. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>tag</entry><entry>
+<para>The tag. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5_1add3b56b8859b39c2257eb4167a1d1802"/><section>
+    <title>UpdateUGOMap()</title>
+<indexterm><primary>UpdateUGOMap</primary><secondary>KTN::REPORTER::OrderReporterV5</secondary></indexterm>
+<indexterm><primary>KTN::REPORTER::OrderReporterV5</primary><secondary>UpdateUGOMap</secondary></indexterm>
+<para><computeroutput>void OrderReporterV5::UpdateUGOMap (uint64_t reqid, <link linkend="_struct_user_info">UserInfo</link> ugo)</computeroutput></para><para>
+
+<para>Updates the UGO map with the specified request ID and user info. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>reqid</entry><entry>
+<para>The request ID. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>ugo</entry><entry>
+<para>The user info. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Reporters/OrderReporterV5.hppReporters/OrderReporterV5.cpp</section>
+</section>

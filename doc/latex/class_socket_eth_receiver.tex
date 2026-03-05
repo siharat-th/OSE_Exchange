@@ -1,0 +1,65 @@
+\doxysection{Socket\+Eth\+Receiver\texorpdfstring{$<$}{<} Recv\+Buf\+Size \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_socket_eth_receiver}{}\label{class_socket_eth_receiver}\index{SocketEthReceiver$<$ RecvBufSize $>$@{SocketEthReceiver$<$ RecvBufSize $>$}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_socket_eth_receiver_afc4ca3b6a19b283968a866c307a8293c}{init}} (const char \texorpdfstring{$\ast$}{*}interface, bool promiscuous=false)
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_socket_eth_receiver_a4c2b169fd7f5f1934450ee939f6dcd08}{get\+Last\+Error}} ()
+\item 
+void \mbox{\hyperlink{class_socket_eth_receiver_a6269079ab36d51cfa068374b2ba9d7f5}{close}} (const char \texorpdfstring{$\ast$}{*}reason)
+\item 
+{\footnotesize template$<$typename Handler $>$ }\\bool \mbox{\hyperlink{class_socket_eth_receiver_ac125ca24f8cb831dfc69ac9572f1ec49}{read}} (Handler handler)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$uint32\+\_\+t Recv\+Buf\+Size = 1500$>$\newline
+class Socket\+Eth\+Receiver$<$ Recv\+Buf\+Size $>$}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_socket_eth_receiver_a684cb95bf5e06a43314fbe3bc0926a02}\index{SocketEthReceiver$<$ RecvBufSize $>$@{SocketEthReceiver$<$ RecvBufSize $>$}!````~SocketEthReceiver@{\texorpdfstring{$\sim$}{\string~}SocketEthReceiver}}
+\index{````~SocketEthReceiver@{\texorpdfstring{$\sim$}{\string~}SocketEthReceiver}!SocketEthReceiver$<$ RecvBufSize $>$@{SocketEthReceiver$<$ RecvBufSize $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}SocketEthReceiver()}{\string~SocketEthReceiver()}}
+{\footnotesize\ttfamily \label{class_socket_eth_receiver_a684cb95bf5e06a43314fbe3bc0926a02} 
+template$<$uint32\+\_\+t Recv\+Buf\+Size = 1500$>$ \\
+\mbox{\hyperlink{class_socket_eth_receiver}{Socket\+Eth\+Receiver}}$<$ Recv\+Buf\+Size $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{class_socket_eth_receiver}{Socket\+Eth\+Receiver}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_socket_eth_receiver_a6269079ab36d51cfa068374b2ba9d7f5}\index{SocketEthReceiver$<$ RecvBufSize $>$@{SocketEthReceiver$<$ RecvBufSize $>$}!close@{close}}
+\index{close@{close}!SocketEthReceiver$<$ RecvBufSize $>$@{SocketEthReceiver$<$ RecvBufSize $>$}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily \label{class_socket_eth_receiver_a6269079ab36d51cfa068374b2ba9d7f5} 
+template$<$uint32\+\_\+t Recv\+Buf\+Size = 1500$>$ \\
+void \mbox{\hyperlink{class_socket_eth_receiver}{Socket\+Eth\+Receiver}}$<$ Recv\+Buf\+Size $>$\+::close (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{reason}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_socket_eth_receiver_a4c2b169fd7f5f1934450ee939f6dcd08}\index{SocketEthReceiver$<$ RecvBufSize $>$@{SocketEthReceiver$<$ RecvBufSize $>$}!getLastError@{getLastError}}
+\index{getLastError@{getLastError}!SocketEthReceiver$<$ RecvBufSize $>$@{SocketEthReceiver$<$ RecvBufSize $>$}}
+\doxysubsubsection{\texorpdfstring{getLastError()}{getLastError()}}
+{\footnotesize\ttfamily \label{class_socket_eth_receiver_a4c2b169fd7f5f1934450ee939f6dcd08} 
+template$<$uint32\+\_\+t Recv\+Buf\+Size = 1500$>$ \\
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_socket_eth_receiver}{Socket\+Eth\+Receiver}}$<$ Recv\+Buf\+Size $>$\+::get\+Last\+Error (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_socket_eth_receiver_afc4ca3b6a19b283968a866c307a8293c}\index{SocketEthReceiver$<$ RecvBufSize $>$@{SocketEthReceiver$<$ RecvBufSize $>$}!init@{init}}
+\index{init@{init}!SocketEthReceiver$<$ RecvBufSize $>$@{SocketEthReceiver$<$ RecvBufSize $>$}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \label{class_socket_eth_receiver_afc4ca3b6a19b283968a866c307a8293c} 
+template$<$uint32\+\_\+t Recv\+Buf\+Size = 1500$>$ \\
+bool \mbox{\hyperlink{class_socket_eth_receiver}{Socket\+Eth\+Receiver}}$<$ Recv\+Buf\+Size $>$\+::init (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{interface}{, }\item[{bool}]{promiscuous}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_socket_eth_receiver_ac125ca24f8cb831dfc69ac9572f1ec49}\index{SocketEthReceiver$<$ RecvBufSize $>$@{SocketEthReceiver$<$ RecvBufSize $>$}!read@{read}}
+\index{read@{read}!SocketEthReceiver$<$ RecvBufSize $>$@{SocketEthReceiver$<$ RecvBufSize $>$}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily \label{class_socket_eth_receiver_ac125ca24f8cb831dfc69ac9572f1ec49} 
+template$<$uint32\+\_\+t Recv\+Buf\+Size = 1500$>$ \\
+template$<$typename Handler $>$ \\
+bool \mbox{\hyperlink{class_socket_eth_receiver}{Socket\+Eth\+Receiver}}$<$ Recv\+Buf\+Size $>$\+::read (\begin{DoxyParamCaption}\item[{Handler}]{handler}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sgaer/source/repos/katanafinancial/\+Occam\+CME4/\+Occam\+CME4/src/external/pollnet/Socket.\+h\end{DoxyCompactItemize}

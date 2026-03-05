@@ -1,0 +1,499 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_t_n_1_1_order" xml:lang="en-US">
+<title>KTN::Order Struct Reference</title>
+<indexterm><primary>KTN::Order</primary></indexterm>
+<para>
+<computeroutput>#include &lt;Order.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>uint64_t <link linkend="_struct_k_t_n_1_1_order_1af28322e8d9d5f91143e91b13a55603bc">orderReqId</link></para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_struct_k_t_n_1_1_order_1ae8701143728ff6ca4af033933e2d3c37">exchordid</link></para>
+</listitem>
+            <listitem><para>KOrderExchange::Enum <link linkend="_struct_k_t_n_1_1_order_1aea8156ddbf3c95b66ebcd35e8e4701ca">OrdExch</link></para>
+</listitem>
+            <listitem><para>KOrderSide::Enum <link linkend="_struct_k_t_n_1_1_order_1a157a4c6909639edaca71d9cc6657eeba">OrdSide</link></para>
+</listitem>
+            <listitem><para>KOrderProdType::Enum <link linkend="_struct_k_t_n_1_1_order_1a8758842df2ba45ac49414969c7d108f3">OrdProdType</link></para>
+</listitem>
+            <listitem><para>KOrderType::Enum <link linkend="_struct_k_t_n_1_1_order_1a923bc4d5c289d840def3c7d8d2f220c7">OrdType</link></para>
+</listitem>
+            <listitem><para>KOrderFillType::Enum <link linkend="_struct_k_t_n_1_1_order_1a0156ced6fe63fdd4a06136b1eb96ba82">OrdFillType</link></para>
+</listitem>
+            <listitem><para>KOrderStatus::Enum <link linkend="_struct_k_t_n_1_1_order_1a2008e7f17329127c54cfafa56dc66d96">OrdStatus</link></para>
+</listitem>
+            <listitem><para>KOrderTif::Enum <link linkend="_struct_k_t_n_1_1_order_1a99aa0af3dd34e08e7c6218c32e54e176">OrdTif</link></para>
+</listitem>
+            <listitem><para>KOrderPutCall::Enum <link linkend="_struct_k_t_n_1_1_order_1a19e2a26284096bd0b04cf285aa69ff02">OrdPutCall</link></para>
+</listitem>
+            <listitem><para>KOrderAction::Enum <link linkend="_struct_k_t_n_1_1_order_1afc76a73ebe3c1fc5c07a1c50ad31620e">OrdAction</link></para>
+</listitem>
+            <listitem><para>KOrderState::Enum <link linkend="_struct_k_t_n_1_1_order_1a82c3341c5937ee53e169de8ac51897e6">OrdState</link></para>
+</listitem>
+            <listitem><para>KOrderAlgoTrigger::Enum <link linkend="_struct_k_t_n_1_1_order_1a3ee41fffc1855de3e0138f5e81cc380e">OrdAlgoTrig</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_order_1a40544b3d7fc0f8f24700b777dc6e6227">callbackid</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_order_1a486cd48c200f6ccda2205df4b26df904">stratid</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_k_t_n_1_1_order_1ae302b4e5639c75e0aeb9338aaaa730bb">hedgeratio</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_order_1a6f92a0f59c40747fbddb16b39fa62f4e">taketicks</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_k_t_n_1_1_order_1ac5c978a94225e6d3ed0ce760be1dd531">mintick</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_order_1ac8b3e16a3a2c313118b45c8f18389e9f">hedgeparent</link></para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_struct_k_t_n_1_1_order_1a86ccbdc8cc1763593794521aaedbcd90">revision</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_order_1aec601f09e2bd333b2ad3200b96060916">partydetails</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_order_1ac4af81384f745dadd0c1c54f0fbeeba3">mktsegid</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_order_1a1c11e06df28ee513ade94cd2d57e0916">massscope</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_k_t_n_1_1_order_1a96d3148874c4c4f7507dcdb0b9c21777">isManual</link></para>
+</listitem>
+            <listitem><para>char <link linkend="_struct_k_t_n_1_1_order_1acfb7685cffc9438309ed72f00dae877d">symbol</link> [20]</para>
+</listitem>
+            <listitem><para>char <link linkend="_struct_k_t_n_1_1_order_1a98efe580c126cdbdc72fdce2162b747c">secgrp</link> [20]</para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_struct_k_t_n_1_1_order_1a4ceff987fd6e5b00bbc348ade7bf0060">secid</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_k_t_n_1_1_order_1ab1f1dbfe946f1735fa2f4d7b66139457">cert</link></para>
+</listitem>
+            <listitem><para>char <link linkend="_struct_k_t_n_1_1_order_1a71af67129a985aeddecbce1297a783e7">ordernum</link> [20]</para>
+</listitem>
+            <listitem><para>char <link linkend="_struct_k_t_n_1_1_order_1a7c2d2dfdb329c6144a676ccc08891d12">origclordid</link> [20]</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_k_t_n_1_1_order_1a69f3a2876a93976b97470e8cafccfbc6">quantity</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_k_t_n_1_1_order_1ab20e5c6d4794ac64fb986739fd22367a">lastqty</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_k_t_n_1_1_order_1a39e66c2d199964e3ff0ffc53b2d9997b">leavesqty</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_k_t_n_1_1_order_1aa6770c3c9d8a780cb4fa27acb3cefcc4">fillqty</link></para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_struct_k_t_n_1_1_order_1a9f0d2b515bd76f106482dfbe225835eb">price</link></para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_struct_k_t_n_1_1_order_1a9c1e1c4768aa1000e227302b46b55a7a">lastpx</link></para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_struct_k_t_n_1_1_order_1a1273dc9641720d3640d3ea08272cc8b4">stoppx</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_order_1a43178b507672e2f71c8d2bb91aad3372">filltype</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_k_t_n_1_1_order_1a7430335f8a337fafb298b9a4a4f1736d">execid</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_order_1a7710fdcc7c6e89eeb8bc70cc666f68d5">iStatusReason</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_k_t_n_1_1_order_1a3e4d6dd3c7661a6f185c003873dfe9b3">reason</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_k_t_n_1_1_order_1aa9c0b64a20bae21f58aacbbe2ca20ad7">user</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_k_t_n_1_1_order_1a168496885af584fcd83c0579a63acb90">org</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_k_t_n_1_1_order_1ae3e4ee7233cf44a173086a0825e01fa9">groupname</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_k_t_n_1_1_order_1a33b8c47d73522d2b5020e1ad9fd7e87d">algoid</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_k_t_n_1_1_order_1afc24a2dff6875cb0c5b553156dfa380c">guid</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_k_t_n_1_1_order_1ad36f537b42d70071f3f59aae59c6afd5">strategy</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_k_t_n_1_1_order_1a8c7d4f57618b69098d65f013e88ef29c">tag</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_k_t_n_1_1_order_1a2781f206e1c78933e92eacaa76dcc9f9">tag2</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_k_t_n_1_1_order_1a549e44cac487b8ac684a7543633e59bf">source</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_k_t_n_1_1_order_1a9d11ac573ca610db4c316ddb42634f06">text</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_k_t_n_1_1_order_1a680f8dc9b8b56328f7eabaa4aa60205b">state</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_k_t_n_1_1_order_1a767077ce2e6a9a2416c97734cfbfc4b0">action</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_order_1a95e08414ae11c45c8917ca19b1984f24">instindex</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_k_t_n_1_1_order_1a909f3fb9d2a931a45f2b77ebd4248da1">isSpreadLeg</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_k_t_n_1_1_order_1a0669d1298ea67bbd94237a607c8fa835">product</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_k_t_n_1_1_order_1a6e87d43785f22c3788eca3eabd800a9f">exchange</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_k_t_n_1_1_order_1a9ba5378e58ec2097515ba898f5da4d2c">ind</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_k_t_n_1_1_order_1a4e1a6d749f96569a4252a3eb1d55f190">reporttype</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_order_1a1335d43bbed5f91d4e040f19f64cad8e">rpt</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_order_1a31e06ea841fc86c7b3f7a80038fb15b5">maxshow</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_order_1ac3ac72a92e214798704a06678f05dac0">strike</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_k_t_n_1_1_order_1a1266e7e217f0018d35234f5f9addc400">exp</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_order_1a3f334ad47d68d61513bff3f65c0516e8">mdy</link></para>
+</listitem>
+            <listitem><para>long <link linkend="_struct_k_t_n_1_1_order_1ae8d9ca2f286654b8f958dc7a1d8ce23c">timestamp</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_k_t_n_1_1_order_1adc73593748389ca58593d8b6854ecb94">transacttime</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_k_t_n_1_1_order_1a9188411c27f2b18f0f1a58a040766609">reference</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_k_t_n_1_1_order_1ae9eea831c7b34e7132a58877675a64fc">isFound</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Struct representing an order. This is a legacy struct that is still used in some parts of the code. Primarily for database and reporting ops </para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a767077ce2e6a9a2416c97734cfbfc4b0"/><section>
+    <title>action</title>
+<indexterm><primary>action</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>action</secondary></indexterm>
+<para><computeroutput>std::string KTN::Order::action</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a33b8c47d73522d2b5020e1ad9fd7e87d"/><section>
+    <title>algoid</title>
+<indexterm><primary>algoid</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>algoid</secondary></indexterm>
+<para><computeroutput>std::string KTN::Order::algoid</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a40544b3d7fc0f8f24700b777dc6e6227"/><section>
+    <title>callbackid</title>
+<indexterm><primary>callbackid</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>callbackid</secondary></indexterm>
+<para><computeroutput>int KTN::Order::callbackid</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1ab1f1dbfe946f1735fa2f4d7b66139457"/><section>
+    <title>cert</title>
+<indexterm><primary>cert</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>cert</secondary></indexterm>
+<para><computeroutput>bool KTN::Order::cert</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1ae8701143728ff6ca4af033933e2d3c37"/><section>
+    <title>exchordid</title>
+<indexterm><primary>exchordid</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>exchordid</secondary></indexterm>
+<para><computeroutput>uint64_t KTN::Order::exchordid</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a6e87d43785f22c3788eca3eabd800a9f"/><section>
+    <title>exchange</title>
+<indexterm><primary>exchange</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>exchange</secondary></indexterm>
+<para><computeroutput>std::string KTN::Order::exchange</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a7430335f8a337fafb298b9a4a4f1736d"/><section>
+    <title>execid</title>
+<indexterm><primary>execid</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>execid</secondary></indexterm>
+<para><computeroutput>std::string KTN::Order::execid</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a1266e7e217f0018d35234f5f9addc400"/><section>
+    <title>exp</title>
+<indexterm><primary>exp</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>exp</secondary></indexterm>
+<para><computeroutput>string KTN::Order::exp</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1aa6770c3c9d8a780cb4fa27acb3cefcc4"/><section>
+    <title>fillqty</title>
+<indexterm><primary>fillqty</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>fillqty</secondary></indexterm>
+<para><computeroutput>uint32_t KTN::Order::fillqty</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a43178b507672e2f71c8d2bb91aad3372"/><section>
+    <title>filltype</title>
+<indexterm><primary>filltype</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>filltype</secondary></indexterm>
+<para><computeroutput>int KTN::Order::filltype</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1ae3e4ee7233cf44a173086a0825e01fa9"/><section>
+    <title>groupname</title>
+<indexterm><primary>groupname</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>groupname</secondary></indexterm>
+<para><computeroutput>std::string KTN::Order::groupname</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1afc24a2dff6875cb0c5b553156dfa380c"/><section>
+    <title>guid</title>
+<indexterm><primary>guid</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>guid</secondary></indexterm>
+<para><computeroutput>std::string KTN::Order::guid</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1ac8b3e16a3a2c313118b45c8f18389e9f"/><section>
+    <title>hedgeparent</title>
+<indexterm><primary>hedgeparent</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>hedgeparent</secondary></indexterm>
+<para><computeroutput>int KTN::Order::hedgeparent</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1ae302b4e5639c75e0aeb9338aaaa730bb"/><section>
+    <title>hedgeratio</title>
+<indexterm><primary>hedgeratio</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>hedgeratio</secondary></indexterm>
+<para><computeroutput>double KTN::Order::hedgeratio</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a9ba5378e58ec2097515ba898f5da4d2c"/><section>
+    <title>ind</title>
+<indexterm><primary>ind</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>ind</secondary></indexterm>
+<para><computeroutput>std::string KTN::Order::ind</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a95e08414ae11c45c8917ca19b1984f24"/><section>
+    <title>instindex</title>
+<indexterm><primary>instindex</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>instindex</secondary></indexterm>
+<para><computeroutput>int KTN::Order::instindex</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1ae9eea831c7b34e7132a58877675a64fc"/><section>
+    <title>isFound</title>
+<indexterm><primary>isFound</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>isFound</secondary></indexterm>
+<para><computeroutput>bool KTN::Order::isFound</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a96d3148874c4c4f7507dcdb0b9c21777"/><section>
+    <title>isManual</title>
+<indexterm><primary>isManual</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>isManual</secondary></indexterm>
+<para><computeroutput>bool KTN::Order::isManual</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a909f3fb9d2a931a45f2b77ebd4248da1"/><section>
+    <title>isSpreadLeg</title>
+<indexterm><primary>isSpreadLeg</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>isSpreadLeg</secondary></indexterm>
+<para><computeroutput>bool KTN::Order::isSpreadLeg</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a7710fdcc7c6e89eeb8bc70cc666f68d5"/><section>
+    <title>iStatusReason</title>
+<indexterm><primary>iStatusReason</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>iStatusReason</secondary></indexterm>
+<para><computeroutput>int KTN::Order::iStatusReason</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a9c1e1c4768aa1000e227302b46b55a7a"/><section>
+    <title>lastpx</title>
+<indexterm><primary>lastpx</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>lastpx</secondary></indexterm>
+<para><computeroutput>int32_t KTN::Order::lastpx</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1ab20e5c6d4794ac64fb986739fd22367a"/><section>
+    <title>lastqty</title>
+<indexterm><primary>lastqty</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>lastqty</secondary></indexterm>
+<para><computeroutput>uint32_t KTN::Order::lastqty</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a39e66c2d199964e3ff0ffc53b2d9997b"/><section>
+    <title>leavesqty</title>
+<indexterm><primary>leavesqty</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>leavesqty</secondary></indexterm>
+<para><computeroutput>uint32_t KTN::Order::leavesqty</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a1c11e06df28ee513ade94cd2d57e0916"/><section>
+    <title>massscope</title>
+<indexterm><primary>massscope</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>massscope</secondary></indexterm>
+<para><computeroutput>int KTN::Order::massscope</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a31e06ea841fc86c7b3f7a80038fb15b5"/><section>
+    <title>maxshow</title>
+<indexterm><primary>maxshow</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>maxshow</secondary></indexterm>
+<para><computeroutput>int KTN::Order::maxshow</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a3f334ad47d68d61513bff3f65c0516e8"/><section>
+    <title>mdy</title>
+<indexterm><primary>mdy</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>mdy</secondary></indexterm>
+<para><computeroutput>int KTN::Order::mdy</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1ac5c978a94225e6d3ed0ce760be1dd531"/><section>
+    <title>mintick</title>
+<indexterm><primary>mintick</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>mintick</secondary></indexterm>
+<para><computeroutput>double KTN::Order::mintick</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1ac4af81384f745dadd0c1c54f0fbeeba3"/><section>
+    <title>mktsegid</title>
+<indexterm><primary>mktsegid</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>mktsegid</secondary></indexterm>
+<para><computeroutput>int KTN::Order::mktsegid</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1afc76a73ebe3c1fc5c07a1c50ad31620e"/><section>
+    <title>OrdAction</title>
+<indexterm><primary>OrdAction</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>OrdAction</secondary></indexterm>
+<para><computeroutput>KOrderAction::Enum KTN::Order::OrdAction</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a3ee41fffc1855de3e0138f5e81cc380e"/><section>
+    <title>OrdAlgoTrig</title>
+<indexterm><primary>OrdAlgoTrig</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>OrdAlgoTrig</secondary></indexterm>
+<para><computeroutput>KOrderAlgoTrigger::Enum KTN::Order::OrdAlgoTrig</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a71af67129a985aeddecbce1297a783e7"/><section>
+    <title>ordernum</title>
+<indexterm><primary>ordernum</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>ordernum</secondary></indexterm>
+<para><computeroutput>char KTN::Order::ordernum[20]</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1af28322e8d9d5f91143e91b13a55603bc"/><section>
+    <title>orderReqId</title>
+<indexterm><primary>orderReqId</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>orderReqId</secondary></indexterm>
+<para><computeroutput>uint64_t KTN::Order::orderReqId</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1aea8156ddbf3c95b66ebcd35e8e4701ca"/><section>
+    <title>OrdExch</title>
+<indexterm><primary>OrdExch</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>OrdExch</secondary></indexterm>
+<para><computeroutput>KOrderExchange::Enum KTN::Order::OrdExch</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a0156ced6fe63fdd4a06136b1eb96ba82"/><section>
+    <title>OrdFillType</title>
+<indexterm><primary>OrdFillType</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>OrdFillType</secondary></indexterm>
+<para><computeroutput>KOrderFillType::Enum KTN::Order::OrdFillType</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a8758842df2ba45ac49414969c7d108f3"/><section>
+    <title>OrdProdType</title>
+<indexterm><primary>OrdProdType</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>OrdProdType</secondary></indexterm>
+<para><computeroutput>KOrderProdType::Enum KTN::Order::OrdProdType</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a19e2a26284096bd0b04cf285aa69ff02"/><section>
+    <title>OrdPutCall</title>
+<indexterm><primary>OrdPutCall</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>OrdPutCall</secondary></indexterm>
+<para><computeroutput>KOrderPutCall::Enum KTN::Order::OrdPutCall</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a157a4c6909639edaca71d9cc6657eeba"/><section>
+    <title>OrdSide</title>
+<indexterm><primary>OrdSide</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>OrdSide</secondary></indexterm>
+<para><computeroutput>KOrderSide::Enum KTN::Order::OrdSide</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a82c3341c5937ee53e169de8ac51897e6"/><section>
+    <title>OrdState</title>
+<indexterm><primary>OrdState</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>OrdState</secondary></indexterm>
+<para><computeroutput>KOrderState::Enum KTN::Order::OrdState</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a2008e7f17329127c54cfafa56dc66d96"/><section>
+    <title>OrdStatus</title>
+<indexterm><primary>OrdStatus</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>OrdStatus</secondary></indexterm>
+<para><computeroutput>KOrderStatus::Enum KTN::Order::OrdStatus</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a99aa0af3dd34e08e7c6218c32e54e176"/><section>
+    <title>OrdTif</title>
+<indexterm><primary>OrdTif</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>OrdTif</secondary></indexterm>
+<para><computeroutput>KOrderTif::Enum KTN::Order::OrdTif</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a923bc4d5c289d840def3c7d8d2f220c7"/><section>
+    <title>OrdType</title>
+<indexterm><primary>OrdType</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>OrdType</secondary></indexterm>
+<para><computeroutput>KOrderType::Enum KTN::Order::OrdType</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a168496885af584fcd83c0579a63acb90"/><section>
+    <title>org</title>
+<indexterm><primary>org</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>org</secondary></indexterm>
+<para><computeroutput>std::string KTN::Order::org</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a7c2d2dfdb329c6144a676ccc08891d12"/><section>
+    <title>origclordid</title>
+<indexterm><primary>origclordid</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>origclordid</secondary></indexterm>
+<para><computeroutput>char KTN::Order::origclordid[20]</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1aec601f09e2bd333b2ad3200b96060916"/><section>
+    <title>partydetails</title>
+<indexterm><primary>partydetails</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>partydetails</secondary></indexterm>
+<para><computeroutput>int KTN::Order::partydetails</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a9f0d2b515bd76f106482dfbe225835eb"/><section>
+    <title>price</title>
+<indexterm><primary>price</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>price</secondary></indexterm>
+<para><computeroutput>int32_t KTN::Order::price</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a0669d1298ea67bbd94237a607c8fa835"/><section>
+    <title>product</title>
+<indexterm><primary>product</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>product</secondary></indexterm>
+<para><computeroutput>std::string KTN::Order::product</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a69f3a2876a93976b97470e8cafccfbc6"/><section>
+    <title>quantity</title>
+<indexterm><primary>quantity</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>quantity</secondary></indexterm>
+<para><computeroutput>uint32_t KTN::Order::quantity</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a3e4d6dd3c7661a6f185c003873dfe9b3"/><section>
+    <title>reason</title>
+<indexterm><primary>reason</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>reason</secondary></indexterm>
+<para><computeroutput>string KTN::Order::reason</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a9188411c27f2b18f0f1a58a040766609"/><section>
+    <title>reference</title>
+<indexterm><primary>reference</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>reference</secondary></indexterm>
+<para><computeroutput>string KTN::Order::reference</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a4e1a6d749f96569a4252a3eb1d55f190"/><section>
+    <title>reporttype</title>
+<indexterm><primary>reporttype</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>reporttype</secondary></indexterm>
+<para><computeroutput>std::string KTN::Order::reporttype</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a86ccbdc8cc1763593794521aaedbcd90"/><section>
+    <title>revision</title>
+<indexterm><primary>revision</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>revision</secondary></indexterm>
+<para><computeroutput>uint16_t KTN::Order::revision</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a1335d43bbed5f91d4e040f19f64cad8e"/><section>
+    <title>rpt</title>
+<indexterm><primary>rpt</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>rpt</secondary></indexterm>
+<para><computeroutput>int KTN::Order::rpt</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a98efe580c126cdbdc72fdce2162b747c"/><section>
+    <title>secgrp</title>
+<indexterm><primary>secgrp</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>secgrp</secondary></indexterm>
+<para><computeroutput>char KTN::Order::secgrp[20]</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a4ceff987fd6e5b00bbc348ade7bf0060"/><section>
+    <title>secid</title>
+<indexterm><primary>secid</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>secid</secondary></indexterm>
+<para><computeroutput>int32_t KTN::Order::secid</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a549e44cac487b8ac684a7543633e59bf"/><section>
+    <title>source</title>
+<indexterm><primary>source</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>source</secondary></indexterm>
+<para><computeroutput>std::string KTN::Order::source</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a680f8dc9b8b56328f7eabaa4aa60205b"/><section>
+    <title>state</title>
+<indexterm><primary>state</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>state</secondary></indexterm>
+<para><computeroutput>std::string KTN::Order::state</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a1273dc9641720d3640d3ea08272cc8b4"/><section>
+    <title>stoppx</title>
+<indexterm><primary>stoppx</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>stoppx</secondary></indexterm>
+<para><computeroutput>int32_t KTN::Order::stoppx</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1ad36f537b42d70071f3f59aae59c6afd5"/><section>
+    <title>strategy</title>
+<indexterm><primary>strategy</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>strategy</secondary></indexterm>
+<para><computeroutput>std::string KTN::Order::strategy</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a486cd48c200f6ccda2205df4b26df904"/><section>
+    <title>stratid</title>
+<indexterm><primary>stratid</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>stratid</secondary></indexterm>
+<para><computeroutput>int KTN::Order::stratid</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1ac3ac72a92e214798704a06678f05dac0"/><section>
+    <title>strike</title>
+<indexterm><primary>strike</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>strike</secondary></indexterm>
+<para><computeroutput>int KTN::Order::strike</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1acfb7685cffc9438309ed72f00dae877d"/><section>
+    <title>symbol</title>
+<indexterm><primary>symbol</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>symbol</secondary></indexterm>
+<para><computeroutput>char KTN::Order::symbol[20]</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a8c7d4f57618b69098d65f013e88ef29c"/><section>
+    <title>tag</title>
+<indexterm><primary>tag</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>tag</secondary></indexterm>
+<para><computeroutput>std::string KTN::Order::tag</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a2781f206e1c78933e92eacaa76dcc9f9"/><section>
+    <title>tag2</title>
+<indexterm><primary>tag2</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>tag2</secondary></indexterm>
+<para><computeroutput>std::string KTN::Order::tag2</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a6f92a0f59c40747fbddb16b39fa62f4e"/><section>
+    <title>taketicks</title>
+<indexterm><primary>taketicks</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>taketicks</secondary></indexterm>
+<para><computeroutput>int KTN::Order::taketicks</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1a9d11ac573ca610db4c316ddb42634f06"/><section>
+    <title>text</title>
+<indexterm><primary>text</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>text</secondary></indexterm>
+<para><computeroutput>std::string KTN::Order::text</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1ae8d9ca2f286654b8f958dc7a1d8ce23c"/><section>
+    <title>timestamp</title>
+<indexterm><primary>timestamp</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>timestamp</secondary></indexterm>
+<para><computeroutput>long KTN::Order::timestamp</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1adc73593748389ca58593d8b6854ecb94"/><section>
+    <title>transacttime</title>
+<indexterm><primary>transacttime</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>transacttime</secondary></indexterm>
+<para><computeroutput>std::string KTN::Order::transacttime</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_order_1aa9c0b64a20bae21f58aacbbe2ca20ad7"/><section>
+    <title>user</title>
+<indexterm><primary>user</primary><secondary>KTN::Order</secondary></indexterm>
+<indexterm><primary>KTN::Order</primary><secondary>user</secondary></indexterm>
+<para><computeroutput>std::string KTN::Order::user</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Orders/Order.hpp</section>
+</section>

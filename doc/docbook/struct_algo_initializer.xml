@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_algo_initializer" xml:lang="en-US">
+<title>AlgoInitializer Struct Reference</title>
+<indexterm><primary>AlgoInitializer</primary></indexterm>
+<para>
+
+<para>The <link linkend="_struct_algo_initializer">AlgoInitializer</link> struct represents the parameters required to initialize the algorithm. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;AlgoInitializer.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_struct_algo_initializer_1a8149a763099a5e57d5d2bf0f7d9cd65c">name</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_algo_initializer_1ae44e528e03443a0729df2231a285f037">guid</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_algo_initializer_1a3f2356cf846c49037465468b3cd5ba4c">cpu</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_i_exchange_sender">IExchangeSender</link> * <link linkend="_struct_algo_initializer_1a77753a6eedc77580a50fa4c4d1ee7d6c">ordersender</link></para>
+</listitem>
+            <listitem><para>vector&lt; <link linkend="_structinstrument">instrument</link> &gt; <link linkend="_struct_algo_initializer_1a1e043d8c2ac514ff456dc9670ce52874">legs</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_struct_algo_initializer">AlgoInitializer</link> struct represents the parameters required to initialize the algorithm. </para>
+
+
+
+<para>the idea is to create an easy to use all-in-one struct to init the algo with std::string name, std::string guid, int algoid, ExchangeSender&amp; ordsender, vector&lt;int&gt; channels, int cpu, CmeSecMaster &amp; sec </para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_algo_initializer_1a3f2356cf846c49037465468b3cd5ba4c"/><section>
+    <title>cpu</title>
+<indexterm><primary>cpu</primary><secondary>AlgoInitializer</secondary></indexterm>
+<indexterm><primary>AlgoInitializer</primary><secondary>cpu</secondary></indexterm>
+<para><computeroutput>int AlgoInitializer::cpu</computeroutput></para>
+<para>The CPU number to run the algorithm on. </para>
+</section>
+<anchor xml:id="_struct_algo_initializer_1ae44e528e03443a0729df2231a285f037"/><section>
+    <title>guid</title>
+<indexterm><primary>guid</primary><secondary>AlgoInitializer</secondary></indexterm>
+<indexterm><primary>AlgoInitializer</primary><secondary>guid</secondary></indexterm>
+<para><computeroutput>string AlgoInitializer::guid</computeroutput></para>
+<para>The unique identifier of the algorithm. </para>
+<para>
+Referenced by <link linkend="_l00014">KTN::AlgoBaseV3::AlgoBaseV3()</link>.</para>
+</section>
+<anchor xml:id="_struct_algo_initializer_1a1e043d8c2ac514ff456dc9670ce52874"/><section>
+    <title>legs</title>
+<indexterm><primary>legs</primary><secondary>AlgoInitializer</secondary></indexterm>
+<indexterm><primary>AlgoInitializer</primary><secondary>legs</secondary></indexterm>
+<para><computeroutput>vector&lt;<link linkend="_structinstrument">instrument</link>&gt; AlgoInitializer::legs</computeroutput></para>
+<para>The list of instruments for the algorithm. </para>
+</section>
+<anchor xml:id="_struct_algo_initializer_1a8149a763099a5e57d5d2bf0f7d9cd65c"/><section>
+    <title>name</title>
+<indexterm><primary>name</primary><secondary>AlgoInitializer</secondary></indexterm>
+<indexterm><primary>AlgoInitializer</primary><secondary>name</secondary></indexterm>
+<para><computeroutput>string AlgoInitializer::name</computeroutput></para>
+<para>The name of the algorithm. </para>
+</section>
+<anchor xml:id="_struct_algo_initializer_1a77753a6eedc77580a50fa4c4d1ee7d6c"/><section>
+    <title>ordersender</title>
+<indexterm><primary>ordersender</primary><secondary>AlgoInitializer</secondary></indexterm>
+<indexterm><primary>AlgoInitializer</primary><secondary>ordersender</secondary></indexterm>
+<para><computeroutput><link linkend="_class_i_exchange_sender">IExchangeSender</link>* AlgoInitializer::ordersender</computeroutput></para>
+<para>The exchange sender for sending orders. </para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+AlgoParams/AlgoInitializer.hpp</section>
+</section>

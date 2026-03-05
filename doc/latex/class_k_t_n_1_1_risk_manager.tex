@@ -1,0 +1,588 @@
+\doxysection{KTN\+::Risk\+Manager Class Reference}
+\hypertarget{class_k_t_n_1_1_risk_manager}{}\label{class_k_t_n_1_1_risk_manager}\index{KTN::RiskManager@{KTN::RiskManager}}
+
+
+The \doxylink{class_k_t_n_1_1_risk_manager}{Risk\+Manager} class handles risk management operations.  
+
+
+
+
+{\ttfamily \#include $<$Risk\+Manager.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_risk_manager_adf7e1e90a8ae1ab2d4b4e064dce456f7}{Risk\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{class_k_t_n_1_1_risk_manager}{Risk\+Manager} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_k_t_n_1_1_risk_manager_aaa33ab1a40688d1ed021d6a2ca1b7f2a}{\texorpdfstring{$\sim$}{\string~}\+Risk\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{class_k_t_n_1_1_risk_manager}{Risk\+Manager} destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_risk_manager_a1ef6ef6ae59a44f7d16afeecfa0033e5}{Init}} (std\+::string key, std\+::string account, std\+::string source, std\+::string argoserver, int argosubport, int argopushport, int affinity)
+\begin{DoxyCompactList}\small\item\em Initializes the \doxylink{class_k_t_n_1_1_risk_manager}{Risk\+Manager} with the provided parameters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_risk_manager_abbaf306d2d83afad5a554a43b9815a26}{Process\+Limits}} (std\+::string sz\+Xml)
+\begin{DoxyCompactList}\small\item\em Processes the limits using the provided XML string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_risk_manager_a001ddef0cf129f14b3ae94438d0a53fd}{Handle\+Risk\+Limits\+JSON}} (std\+::string sz\+Json)
+\begin{DoxyCompactList}\small\item\em Handles the risk limits using the provided JSON string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_risk_manager_aadb15917e5b3de0cbfd92585b648507d}{Get\+Limits}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the limits. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_risk_manager_ac84c61b165b4b91e92a02179c21668f5}{Send\+To\+RMS}} (\mbox{\hyperlink{struct_k_t_n_1_1_order}{Order}} ord, int i\+Status, int i\+Report\+Type, bool b\+Resend, bool b\+Use\+Json\+Array)
+\begin{DoxyCompactList}\small\item\em Sends the order to the Risk Management System (RMS). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_risk_manager_a374829e8b8d12970bba7ca7ee5c7d932}{Send\+To\+RMS}} (std\+::vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_order}{Order}} $>$ ords)
+\begin{DoxyCompactList}\small\item\em Sends the orders to the Risk Management System (RMS). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_risk_manager_af9a86b933b2abe32013587df430e5841}{Update\+Limits\+On\+Order}} (\mbox{\hyperlink{struct_k_t_n_1_1_order}{Order}} ord)
+\begin{DoxyCompactList}\small\item\em Updates the limits on the given order. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_risk_manager_a52d7c6d8c1b5e221758c45b055d13d35}{Send\+Raw}} (std\+::string sz\+Json)
+\begin{DoxyCompactList}\small\item\em Sends the raw JSON string to the Risk Management System (RMS). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_risk_manager_ab0abf5fb9e1c03e9056826a1528c7763}{OK}} (std\+::string key)
+\begin{DoxyCompactList}\small\item\em Checks if the provided key is valid. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_k_t_n_1_1_risk_manager_ac5938662b6cf58696d63e9b1e34c4590}{Max\+Ord\+Qty}} (std\+::string key)
+\begin{DoxyCompactList}\small\item\em Retrieves the maximum order quantity for the provided key. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_risk_manager_a89636aacfe6ce88b2602d55f6764ba4e}{Order\+Size\+OK}} (std\+::string key, int ordqty, bool b\+Is\+Buy, std\+::string \&reason, int oldqty=0)
+\begin{DoxyCompactList}\small\item\em Checks if the order size is valid for the provided key. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_risk_manager_a8a46e31fba53134b4857203a965ac5fe}{Handle\+Exception}} (const std\+::exception \&e, std\+::string sz)
+\begin{DoxyCompactList}\small\item\em Handles the exception with the provided message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_risk_manager_a5e11887b4630b960a1f112b45545f1d8}{on\+Limits\+Update}} ()
+\begin{DoxyCompactList}\small\item\em Handles the update of the risk limits. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_risk_manager_aa2e02120c5b2034da183053e2c164801}{Got\+Limits}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the risk limits are available. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_risk_manager_a3b5253984d1b1ba2736da4de8ac74ed0}{Print}} ()
+\begin{DoxyCompactList}\small\item\em Prints the \doxylink{class_k_t_n_1_1_risk_manager}{Risk\+Manager} information. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_risk_manager_adc215680886f037797483ae62a01aae7}{on\+Pnl\+Update}} (double sl, double tp)
+\begin{DoxyCompactList}\small\item\em Handles the update of the profit and loss (PnL). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_risk_manager_a31128d6a6cae39d7970a91e12a0e3ffc}{set\+Enable}} (\mbox{\hyperlink{class_risk_limits}{Risk\+Limits}} \&rl)
+\begin{DoxyCompactList}\small\item\em Sets the enable flag for the provided risk limits. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_risk_manager_a7c73918a2c8894b1ea01544b5e080cb0}{panic\+Mode}} (int secs\+To\+Close)
+\begin{DoxyCompactList}\small\item\em Activates the panic mode for the specified number of seconds. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_risk_manager_a743ecbcfbfae97f8d9b93cf2c1718510}{close\+Positions}} ()
+\begin{DoxyCompactList}\small\item\em Closes all positions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_risk_manager_ab64b5748ef4db931b2f9ce208695c823}{close\+Positions\+By\+Group}} (const char \texorpdfstring{$\ast$}{*}const \texorpdfstring{$\ast$}{*}group\+Ids, int group\+Count)
+\begin{DoxyCompactList}\small\item\em Closes positions by the provided group IDs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_risk_manager_ab9af76040494cc23c642965f4e650fc7}{cancel\+Orders}} ()
+\begin{DoxyCompactList}\small\item\em Cancels all orders. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_risk_manager_a0598e1538118640b0fe99e0fa6d5d679}{cancel\+Orders}} (const char \texorpdfstring{$\ast$}{*}const \texorpdfstring{$\ast$}{*}order\+Ids, int order\+Count)
+\begin{DoxyCompactList}\small\item\em Cancels orders by the provided order IDs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_risk_manager_aaba8ab1ce64238c0480d525b12d814d5}{cancel\+Orders\+By\+Group}} (const char \texorpdfstring{$\ast$}{*}const \texorpdfstring{$\ast$}{*}group\+Ids, int group\+Count)
+\begin{DoxyCompactList}\small\item\em Cancels orders by the provided group IDs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_risk_manager_ae42183aecac541761acd015b8fe5cb71}{shutdown}} ()
+\begin{DoxyCompactList}\small\item\em Shuts down the \doxylink{class_k_t_n_1_1_risk_manager}{Risk\+Manager}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_risk_manager_a7976c146725628264c28f1859d5d5d57}{on\+Error}} (const char \texorpdfstring{$\ast$}{*}text)
+\begin{DoxyCompactList}\small\item\em Handles the error with the provided text. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_risk_manager_a1be9af052381795ec0844466d2e9fc77}{on\+Disconnected}} ()
+\begin{DoxyCompactList}\small\item\em Handles the disconnection event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_risk_manager_a96a5ad162cdc6ac2bd84b3a9612ee517}{Reset\+Position}} (std\+::string session\+Id, std\+::string symbol, std\+::string sz\+Bats\+Id)
+\begin{DoxyCompactList}\small\item\em Resets the position for the specified session, symbol, and Bats ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_risk_manager_ae4c4dd7df4215e8679502a36981f08d3}{Position\+Change}} (std\+::string sz\+Bats\+Id, int netchange)
+\begin{DoxyCompactList}\small\item\em Changes the position for the specified Bats ID by the provided net change. \end{DoxyCompactList}\item 
+\Hypertarget{class_k_t_n_1_1_risk_manager_aab2b025cfd31e55eb136318d1f9d0355}\label{class_k_t_n_1_1_risk_manager_aab2b025cfd31e55eb136318d1f9d0355} 
+void {\bfseries Positions} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the positions. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_k_t_n_1_1_risk_manager_aa10653d312ff6efdcc2061decbc5b6ed}{Net\+Position}} (std\+::string sz\+Bats\+Id)
+\begin{DoxyCompactList}\small\item\em Retrieves the net position for the specified Bats ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_k_t_n_1_1_risk_manager}{Risk\+Manager} class handles risk management operations. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_k_t_n_1_1_risk_manager_adf7e1e90a8ae1ab2d4b4e064dce456f7}\index{KTN::RiskManager@{KTN::RiskManager}!RiskManager@{RiskManager}}
+\index{RiskManager@{RiskManager}!KTN::RiskManager@{KTN::RiskManager}}
+\doxysubsubsection{\texorpdfstring{RiskManager()}{RiskManager()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_risk_manager_adf7e1e90a8ae1ab2d4b4e064dce456f7} 
+Risk\+Manager\+::\+Risk\+Manager (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_k_t_n_1_1_risk_manager}{Risk\+Manager} constructor. 
+
+\Hypertarget{class_k_t_n_1_1_risk_manager_aaa33ab1a40688d1ed021d6a2ca1b7f2a}\index{KTN::RiskManager@{KTN::RiskManager}!````~RiskManager@{\texorpdfstring{$\sim$}{\string~}RiskManager}}
+\index{````~RiskManager@{\texorpdfstring{$\sim$}{\string~}RiskManager}!KTN::RiskManager@{KTN::RiskManager}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}RiskManager()}{\string~RiskManager()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_risk_manager_aaa33ab1a40688d1ed021d6a2ca1b7f2a} 
+Risk\+Manager\+::\texorpdfstring{$\sim$}{\string~}\+Risk\+Manager (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_k_t_n_1_1_risk_manager}{Risk\+Manager} destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_risk_manager_ab9af76040494cc23c642965f4e650fc7}\index{KTN::RiskManager@{KTN::RiskManager}!cancelOrders@{cancelOrders}}
+\index{cancelOrders@{cancelOrders}!KTN::RiskManager@{KTN::RiskManager}}
+\doxysubsubsection{\texorpdfstring{cancelOrders()}{cancelOrders()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_risk_manager_ab9af76040494cc23c642965f4e650fc7} 
+void Risk\+Manager\+::cancel\+Orders (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Cancels all orders. 
+
+\Hypertarget{class_k_t_n_1_1_risk_manager_a0598e1538118640b0fe99e0fa6d5d679}\index{KTN::RiskManager@{KTN::RiskManager}!cancelOrders@{cancelOrders}}
+\index{cancelOrders@{cancelOrders}!KTN::RiskManager@{KTN::RiskManager}}
+\doxysubsubsection{\texorpdfstring{cancelOrders()}{cancelOrders()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_risk_manager_a0598e1538118640b0fe99e0fa6d5d679} 
+void Risk\+Manager\+::cancel\+Orders (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}const \texorpdfstring{$\ast$}{*}}]{order\+Ids}{, }\item[{int}]{order\+Count}{}\end{DoxyParamCaption})}
+
+
+
+Cancels orders by the provided order IDs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order\+Ids} & The array of order IDs to cancel. \\
+\hline
+{\em order\+Count} & The number of order IDs in the array. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_risk_manager_aaba8ab1ce64238c0480d525b12d814d5}\index{KTN::RiskManager@{KTN::RiskManager}!cancelOrdersByGroup@{cancelOrdersByGroup}}
+\index{cancelOrdersByGroup@{cancelOrdersByGroup}!KTN::RiskManager@{KTN::RiskManager}}
+\doxysubsubsection{\texorpdfstring{cancelOrdersByGroup()}{cancelOrdersByGroup()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_risk_manager_aaba8ab1ce64238c0480d525b12d814d5} 
+void Risk\+Manager\+::cancel\+Orders\+By\+Group (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}const \texorpdfstring{$\ast$}{*}}]{group\+Ids}{, }\item[{int}]{group\+Count}{}\end{DoxyParamCaption})}
+
+
+
+Cancels orders by the provided group IDs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em group\+Ids} & The array of group IDs to cancel orders for. \\
+\hline
+{\em group\+Count} & The number of group IDs in the array. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_risk_manager_a743ecbcfbfae97f8d9b93cf2c1718510}\index{KTN::RiskManager@{KTN::RiskManager}!closePositions@{closePositions}}
+\index{closePositions@{closePositions}!KTN::RiskManager@{KTN::RiskManager}}
+\doxysubsubsection{\texorpdfstring{closePositions()}{closePositions()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_risk_manager_a743ecbcfbfae97f8d9b93cf2c1718510} 
+void Risk\+Manager\+::close\+Positions (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Closes all positions. 
+
+\Hypertarget{class_k_t_n_1_1_risk_manager_ab64b5748ef4db931b2f9ce208695c823}\index{KTN::RiskManager@{KTN::RiskManager}!closePositionsByGroup@{closePositionsByGroup}}
+\index{closePositionsByGroup@{closePositionsByGroup}!KTN::RiskManager@{KTN::RiskManager}}
+\doxysubsubsection{\texorpdfstring{closePositionsByGroup()}{closePositionsByGroup()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_risk_manager_ab64b5748ef4db931b2f9ce208695c823} 
+void Risk\+Manager\+::close\+Positions\+By\+Group (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}const \texorpdfstring{$\ast$}{*}}]{group\+Ids}{, }\item[{int}]{group\+Count}{}\end{DoxyParamCaption})}
+
+
+
+Closes positions by the provided group IDs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em group\+Ids} & The array of group IDs to close positions for. \\
+\hline
+{\em group\+Count} & The number of group IDs in the array. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_risk_manager_aadb15917e5b3de0cbfd92585b648507d}\index{KTN::RiskManager@{KTN::RiskManager}!GetLimits@{GetLimits}}
+\index{GetLimits@{GetLimits}!KTN::RiskManager@{KTN::RiskManager}}
+\doxysubsubsection{\texorpdfstring{GetLimits()}{GetLimits()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_risk_manager_aadb15917e5b3de0cbfd92585b648507d} 
+void Risk\+Manager\+::\+Get\+Limits (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the limits. 
+
+\Hypertarget{class_k_t_n_1_1_risk_manager_aa2e02120c5b2034da183053e2c164801}\index{KTN::RiskManager@{KTN::RiskManager}!GotLimits@{GotLimits}}
+\index{GotLimits@{GotLimits}!KTN::RiskManager@{KTN::RiskManager}}
+\doxysubsubsection{\texorpdfstring{GotLimits()}{GotLimits()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_risk_manager_aa2e02120c5b2034da183053e2c164801} 
+bool Risk\+Manager\+::\+Got\+Limits (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the risk limits are available. 
+
+\begin{DoxyReturn}{Returns}
+True if the risk limits are available, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_k_t_n_1_1_risk_manager_a8a46e31fba53134b4857203a965ac5fe}\index{KTN::RiskManager@{KTN::RiskManager}!HandleException@{HandleException}}
+\index{HandleException@{HandleException}!KTN::RiskManager@{KTN::RiskManager}}
+\doxysubsubsection{\texorpdfstring{HandleException()}{HandleException()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_risk_manager_a8a46e31fba53134b4857203a965ac5fe} 
+void Risk\+Manager\+::\+Handle\+Exception (\begin{DoxyParamCaption}\item[{const std\+::exception \&}]{e}{, }\item[{std\+::string}]{sz}{}\end{DoxyParamCaption})}
+
+
+
+Handles the exception with the provided message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The exception object. \\
+\hline
+{\em sz} & The exception message. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_risk_manager_a001ddef0cf129f14b3ae94438d0a53fd}\index{KTN::RiskManager@{KTN::RiskManager}!HandleRiskLimitsJSON@{HandleRiskLimitsJSON}}
+\index{HandleRiskLimitsJSON@{HandleRiskLimitsJSON}!KTN::RiskManager@{KTN::RiskManager}}
+\doxysubsubsection{\texorpdfstring{HandleRiskLimitsJSON()}{HandleRiskLimitsJSON()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_risk_manager_a001ddef0cf129f14b3ae94438d0a53fd} 
+void Risk\+Manager\+::\+Handle\+Risk\+Limits\+JSON (\begin{DoxyParamCaption}\item[{std\+::string}]{sz\+Json}{}\end{DoxyParamCaption})}
+
+
+
+Handles the risk limits using the provided JSON string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sz\+Json} & The JSON string. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00027}{Risk\+Limits\+::\+Print()}}, and \mbox{\hyperlink{l00595}{set\+Enable()}}.
+
+\Hypertarget{class_k_t_n_1_1_risk_manager_a1ef6ef6ae59a44f7d16afeecfa0033e5}\index{KTN::RiskManager@{KTN::RiskManager}!Init@{Init}}
+\index{Init@{Init}!KTN::RiskManager@{KTN::RiskManager}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_risk_manager_a1ef6ef6ae59a44f7d16afeecfa0033e5} 
+void Risk\+Manager\+::\+Init (\begin{DoxyParamCaption}\item[{std\+::string}]{key}{, }\item[{std\+::string}]{account}{, }\item[{std\+::string}]{source}{, }\item[{std\+::string}]{argoserver}{, }\item[{int}]{argosubport}{, }\item[{int}]{argopushport}{, }\item[{int}]{affinity}{}\end{DoxyParamCaption})}
+
+
+
+Initializes the \doxylink{class_k_t_n_1_1_risk_manager}{Risk\+Manager} with the provided parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key parameter. \\
+\hline
+{\em account} & The account parameter. \\
+\hline
+{\em source} & The source parameter. \\
+\hline
+{\em argoserver} & The argoserver parameter. \\
+\hline
+{\em argosubport} & The argosubport parameter. \\
+\hline
+{\em argopushport} & The argopushport parameter. \\
+\hline
+{\em affinity} & The affinity parameter. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_risk_manager_ac5938662b6cf58696d63e9b1e34c4590}\index{KTN::RiskManager@{KTN::RiskManager}!MaxOrdQty@{MaxOrdQty}}
+\index{MaxOrdQty@{MaxOrdQty}!KTN::RiskManager@{KTN::RiskManager}}
+\doxysubsubsection{\texorpdfstring{MaxOrdQty()}{MaxOrdQty()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_risk_manager_ac5938662b6cf58696d63e9b1e34c4590} 
+int Risk\+Manager\+::\+Max\+Ord\+Qty (\begin{DoxyParamCaption}\item[{std\+::string}]{key}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the maximum order quantity for the provided key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to retrieve the maximum order quantity for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The maximum order quantity. 
+\end{DoxyReturn}
+\Hypertarget{class_k_t_n_1_1_risk_manager_aa10653d312ff6efdcc2061decbc5b6ed}\index{KTN::RiskManager@{KTN::RiskManager}!NetPosition@{NetPosition}}
+\index{NetPosition@{NetPosition}!KTN::RiskManager@{KTN::RiskManager}}
+\doxysubsubsection{\texorpdfstring{NetPosition()}{NetPosition()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_risk_manager_aa10653d312ff6efdcc2061decbc5b6ed} 
+int KTN\+::\+Risk\+Manager\+::\+Net\+Position (\begin{DoxyParamCaption}\item[{std\+::string}]{sz\+Bats\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the net position for the specified Bats ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sz\+Bats\+Id} & The Bats ID. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The net position. 
+\end{DoxyReturn}
+\Hypertarget{class_k_t_n_1_1_risk_manager_ab0abf5fb9e1c03e9056826a1528c7763}\index{KTN::RiskManager@{KTN::RiskManager}!OK@{OK}}
+\index{OK@{OK}!KTN::RiskManager@{KTN::RiskManager}}
+\doxysubsubsection{\texorpdfstring{OK()}{OK()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_risk_manager_ab0abf5fb9e1c03e9056826a1528c7763} 
+bool Risk\+Manager\+::\+OK (\begin{DoxyParamCaption}\item[{std\+::string}]{key}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the provided key is valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the key is valid, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_k_t_n_1_1_risk_manager_a1be9af052381795ec0844466d2e9fc77}\index{KTN::RiskManager@{KTN::RiskManager}!onDisconnected@{onDisconnected}}
+\index{onDisconnected@{onDisconnected}!KTN::RiskManager@{KTN::RiskManager}}
+\doxysubsubsection{\texorpdfstring{onDisconnected()}{onDisconnected()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_risk_manager_a1be9af052381795ec0844466d2e9fc77} 
+void Risk\+Manager\+::on\+Disconnected (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Handles the disconnection event. 
+
+\Hypertarget{class_k_t_n_1_1_risk_manager_a7976c146725628264c28f1859d5d5d57}\index{KTN::RiskManager@{KTN::RiskManager}!onError@{onError}}
+\index{onError@{onError}!KTN::RiskManager@{KTN::RiskManager}}
+\doxysubsubsection{\texorpdfstring{onError()}{onError()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_risk_manager_a7976c146725628264c28f1859d5d5d57} 
+void Risk\+Manager\+::on\+Error (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{text}{}\end{DoxyParamCaption})}
+
+
+
+Handles the error with the provided text. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & The error text. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_risk_manager_a5e11887b4630b960a1f112b45545f1d8}\index{KTN::RiskManager@{KTN::RiskManager}!onLimitsUpdate@{onLimitsUpdate}}
+\index{onLimitsUpdate@{onLimitsUpdate}!KTN::RiskManager@{KTN::RiskManager}}
+\doxysubsubsection{\texorpdfstring{onLimitsUpdate()}{onLimitsUpdate()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_risk_manager_a5e11887b4630b960a1f112b45545f1d8} 
+void Risk\+Manager\+::on\+Limits\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Handles the update of the risk limits. 
+
+
+
+References \mbox{\hyperlink{l00595}{set\+Enable()}}.
+
+\Hypertarget{class_k_t_n_1_1_risk_manager_adc215680886f037797483ae62a01aae7}\index{KTN::RiskManager@{KTN::RiskManager}!onPnlUpdate@{onPnlUpdate}}
+\index{onPnlUpdate@{onPnlUpdate}!KTN::RiskManager@{KTN::RiskManager}}
+\doxysubsubsection{\texorpdfstring{onPnlUpdate()}{onPnlUpdate()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_risk_manager_adc215680886f037797483ae62a01aae7} 
+void Risk\+Manager\+::on\+Pnl\+Update (\begin{DoxyParamCaption}\item[{double}]{sl}{, }\item[{double}]{tp}{}\end{DoxyParamCaption})}
+
+
+
+Handles the update of the profit and loss (PnL). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sl} & The stop loss value. \\
+\hline
+{\em tp} & The take profit value. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_risk_manager_a89636aacfe6ce88b2602d55f6764ba4e}\index{KTN::RiskManager@{KTN::RiskManager}!OrderSizeOK@{OrderSizeOK}}
+\index{OrderSizeOK@{OrderSizeOK}!KTN::RiskManager@{KTN::RiskManager}}
+\doxysubsubsection{\texorpdfstring{OrderSizeOK()}{OrderSizeOK()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_risk_manager_a89636aacfe6ce88b2602d55f6764ba4e} 
+bool Risk\+Manager\+::\+Order\+Size\+OK (\begin{DoxyParamCaption}\item[{std\+::string}]{key}{, }\item[{int}]{ordqty}{, }\item[{bool}]{b\+Is\+Buy}{, }\item[{std\+::string \&}]{reason}{, }\item[{int}]{oldqty}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+
+
+Checks if the order size is valid for the provided key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to check the order size for. \\
+\hline
+{\em ordqty} & The order quantity. \\
+\hline
+{\em b\+Is\+Buy} & The flag indicating whether the order is a buy order. \\
+\hline
+{\em reason} & The reason for the order size validation result. \\
+\hline
+{\em oldqty} & The old order quantity. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the order size is valid, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_k_t_n_1_1_risk_manager_a7c73918a2c8894b1ea01544b5e080cb0}\index{KTN::RiskManager@{KTN::RiskManager}!panicMode@{panicMode}}
+\index{panicMode@{panicMode}!KTN::RiskManager@{KTN::RiskManager}}
+\doxysubsubsection{\texorpdfstring{panicMode()}{panicMode()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_risk_manager_a7c73918a2c8894b1ea01544b5e080cb0} 
+void Risk\+Manager\+::panic\+Mode (\begin{DoxyParamCaption}\item[{int}]{secs\+To\+Close}{}\end{DoxyParamCaption})}
+
+
+
+Activates the panic mode for the specified number of seconds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em secs\+To\+Close} & The number of seconds to activate the panic mode for. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_risk_manager_ae4c4dd7df4215e8679502a36981f08d3}\index{KTN::RiskManager@{KTN::RiskManager}!PositionChange@{PositionChange}}
+\index{PositionChange@{PositionChange}!KTN::RiskManager@{KTN::RiskManager}}
+\doxysubsubsection{\texorpdfstring{PositionChange()}{PositionChange()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_risk_manager_ae4c4dd7df4215e8679502a36981f08d3} 
+void KTN\+::\+Risk\+Manager\+::\+Position\+Change (\begin{DoxyParamCaption}\item[{std\+::string}]{sz\+Bats\+Id}{, }\item[{int}]{netchange}{}\end{DoxyParamCaption})}
+
+
+
+Changes the position for the specified Bats ID by the provided net change. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sz\+Bats\+Id} & The Bats ID. \\
+\hline
+{\em netchange} & The net change. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_risk_manager_a3b5253984d1b1ba2736da4de8ac74ed0}\index{KTN::RiskManager@{KTN::RiskManager}!Print@{Print}}
+\index{Print@{Print}!KTN::RiskManager@{KTN::RiskManager}}
+\doxysubsubsection{\texorpdfstring{Print()}{Print()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_risk_manager_a3b5253984d1b1ba2736da4de8ac74ed0} 
+void Risk\+Manager\+::\+Print (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Prints the \doxylink{class_k_t_n_1_1_risk_manager}{Risk\+Manager} information. 
+
+\Hypertarget{class_k_t_n_1_1_risk_manager_abbaf306d2d83afad5a554a43b9815a26}\index{KTN::RiskManager@{KTN::RiskManager}!ProcessLimits@{ProcessLimits}}
+\index{ProcessLimits@{ProcessLimits}!KTN::RiskManager@{KTN::RiskManager}}
+\doxysubsubsection{\texorpdfstring{ProcessLimits()}{ProcessLimits()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_risk_manager_abbaf306d2d83afad5a554a43b9815a26} 
+void KTN\+::\+Risk\+Manager\+::\+Process\+Limits (\begin{DoxyParamCaption}\item[{std\+::string}]{sz\+Xml}{}\end{DoxyParamCaption})}
+
+
+
+Processes the limits using the provided XML string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sz\+Xml} & The XML string. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_risk_manager_a96a5ad162cdc6ac2bd84b3a9612ee517}\index{KTN::RiskManager@{KTN::RiskManager}!ResetPosition@{ResetPosition}}
+\index{ResetPosition@{ResetPosition}!KTN::RiskManager@{KTN::RiskManager}}
+\doxysubsubsection{\texorpdfstring{ResetPosition()}{ResetPosition()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_risk_manager_a96a5ad162cdc6ac2bd84b3a9612ee517} 
+void KTN\+::\+Risk\+Manager\+::\+Reset\+Position (\begin{DoxyParamCaption}\item[{std\+::string}]{session\+Id}{, }\item[{std\+::string}]{symbol}{, }\item[{std\+::string}]{sz\+Bats\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Resets the position for the specified session, symbol, and Bats ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em session\+Id} & The session ID. \\
+\hline
+{\em symbol} & The symbol. \\
+\hline
+{\em sz\+Bats\+Id} & The Bats ID. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_risk_manager_a52d7c6d8c1b5e221758c45b055d13d35}\index{KTN::RiskManager@{KTN::RiskManager}!SendRaw@{SendRaw}}
+\index{SendRaw@{SendRaw}!KTN::RiskManager@{KTN::RiskManager}}
+\doxysubsubsection{\texorpdfstring{SendRaw()}{SendRaw()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_risk_manager_a52d7c6d8c1b5e221758c45b055d13d35} 
+void Risk\+Manager\+::\+Send\+Raw (\begin{DoxyParamCaption}\item[{std\+::string}]{sz\+Json}{}\end{DoxyParamCaption})}
+
+
+
+Sends the raw JSON string to the Risk Management System (RMS). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sz\+Json} & The raw JSON string to send. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_risk_manager_ac84c61b165b4b91e92a02179c21668f5}\index{KTN::RiskManager@{KTN::RiskManager}!SendToRMS@{SendToRMS}}
+\index{SendToRMS@{SendToRMS}!KTN::RiskManager@{KTN::RiskManager}}
+\doxysubsubsection{\texorpdfstring{SendToRMS()}{SendToRMS()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_risk_manager_ac84c61b165b4b91e92a02179c21668f5} 
+void Risk\+Manager\+::\+Send\+To\+RMS (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order}{Order}}}]{ord}{, }\item[{int}]{i\+Status}{, }\item[{int}]{i\+Report\+Type}{, }\item[{bool}]{b\+Resend}{, }\item[{bool}]{b\+Use\+Json\+Array}{}\end{DoxyParamCaption})}
+
+
+
+Sends the order to the Risk Management System (RMS). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ord} & The order to send. \\
+\hline
+{\em i\+Status} & The status parameter. \\
+\hline
+{\em i\+Report\+Type} & The report type parameter. \\
+\hline
+{\em b\+Resend} & The resend flag. \\
+\hline
+{\em b\+Use\+Json\+Array} & The flag indicating whether to use JSON array. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_risk_manager_a374829e8b8d12970bba7ca7ee5c7d932}\index{KTN::RiskManager@{KTN::RiskManager}!SendToRMS@{SendToRMS}}
+\index{SendToRMS@{SendToRMS}!KTN::RiskManager@{KTN::RiskManager}}
+\doxysubsubsection{\texorpdfstring{SendToRMS()}{SendToRMS()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_risk_manager_a374829e8b8d12970bba7ca7ee5c7d932} 
+void Risk\+Manager\+::\+Send\+To\+RMS (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_order}{Order}} $>$}]{ords}{}\end{DoxyParamCaption})}
+
+
+
+Sends the orders to the Risk Management System (RMS). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ords} & The vector of orders to send. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_risk_manager_a31128d6a6cae39d7970a91e12a0e3ffc}\index{KTN::RiskManager@{KTN::RiskManager}!setEnable@{setEnable}}
+\index{setEnable@{setEnable}!KTN::RiskManager@{KTN::RiskManager}}
+\doxysubsubsection{\texorpdfstring{setEnable()}{setEnable()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_risk_manager_a31128d6a6cae39d7970a91e12a0e3ffc} 
+void Risk\+Manager\+::set\+Enable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_risk_limits}{Risk\+Limits}} \&}]{rl}{}\end{DoxyParamCaption})}
+
+
+
+Sets the enable flag for the provided risk limits. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rl} & The risk limits to set the enable flag for. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00119}{Risk\+Limits\+::\+Set\+Enable()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00453}{Handle\+Risk\+Limits\+JSON()}}, and \mbox{\hyperlink{l00570}{on\+Limits\+Update()}}.
+
+\Hypertarget{class_k_t_n_1_1_risk_manager_ae42183aecac541761acd015b8fe5cb71}\index{KTN::RiskManager@{KTN::RiskManager}!shutdown@{shutdown}}
+\index{shutdown@{shutdown}!KTN::RiskManager@{KTN::RiskManager}}
+\doxysubsubsection{\texorpdfstring{shutdown()}{shutdown()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_risk_manager_ae42183aecac541761acd015b8fe5cb71} 
+void Risk\+Manager\+::shutdown (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Shuts down the \doxylink{class_k_t_n_1_1_risk_manager}{Risk\+Manager}. 
+
+\Hypertarget{class_k_t_n_1_1_risk_manager_af9a86b933b2abe32013587df430e5841}\index{KTN::RiskManager@{KTN::RiskManager}!UpdateLimitsOnOrder@{UpdateLimitsOnOrder}}
+\index{UpdateLimitsOnOrder@{UpdateLimitsOnOrder}!KTN::RiskManager@{KTN::RiskManager}}
+\doxysubsubsection{\texorpdfstring{UpdateLimitsOnOrder()}{UpdateLimitsOnOrder()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_risk_manager_af9a86b933b2abe32013587df430e5841} 
+void Risk\+Manager\+::\+Update\+Limits\+On\+Order (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order}{Order}}}]{ord}{}\end{DoxyParamCaption})}
+
+
+
+Updates the limits on the given order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ord} & The order to update the limits on. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00179}{Risk\+Limits\+::\+Got\+Fill()}}, and \mbox{\hyperlink{l00156}{Risk\+Limits\+::\+Got\+Order()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Risk/Risk\+Manager.\+h\item 
+Risk/Risk\+Manager.\+cpp\end{DoxyCompactItemize}

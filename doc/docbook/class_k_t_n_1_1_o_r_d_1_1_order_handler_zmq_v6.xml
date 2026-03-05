@@ -1,0 +1,195 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6" xml:lang="en-US">
+<title>KTN::ORD::OrderHandlerZmqV6 Class Reference</title>
+<indexterm><primary>KTN::ORD::OrderHandlerZmqV6</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6">OrderHandlerZmqV6</link> class handles the ZMQ communication for order handling. It implements the <link linkend="_class_k_t_n_1_1_session_callback">SessionCallback</link> and <link linkend="_class_i_zmq_subscriber">IZmqSubscriber</link> interfaces. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;OrderHandlerZmqV6.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for KTN::ORD::OrderHandlerZmqV6:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6_1ad06ef3befdfd94ac6010e9231f6098e0">OrderHandlerZmqV6</link> (<link linkend="_class_i_exchange_sender">IExchangeSender</link> &amp;exch, int cbid)</para>
+
+<para>Constructs an <link linkend="_class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6">OrderHandlerZmqV6</link> object. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6_1a3fd04b33cc11222a397eae74c2a258fe">~OrderHandlerZmqV6</link> ()</para>
+
+<para>Destroys the <link linkend="_class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6">OrderHandlerZmqV6</link> object. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6_1ab29604a9e90d87dba254582f072d4d75">RegisterOrderTemplate</link> (<link linkend="_struct_k_t_n_1_1_order">Order</link> &amp;ord)</para>
+
+<para>Registers an order template. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6_1a436b79f178310a0d5c7dd70cec83fb99">Stop</link> ()</para>
+
+<para>Stops the order handler. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6_1aec23491d7e3e69433dd90d4d98d8918d">Print</link> ()</para>
+
+<para>Prints the order handler. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6_1afa4b3db3eee9678d60843649a0a8b27d">LoadTasOrders</link> ()</para>
+
+<para>Loads TAS orders. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6_1a9d8efe1dd99680394d02840a4bf0fb74">Clear</link> ()</para>
+
+<para>Clears the order handler. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_class_k_t_n_1_1_session_callback">KTN::SessionCallback</link>Public Member Functions inherited from <link linkend="_class_i_zmq_subscriber">IZmqSubscriber</link>        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_i_zmq_subscriber_1af2e2a88cb831d644dd32edc238cce65d">onPubMsg</link> (string topic, string payload)=0</para>
+
+<para>Called when a message is received. </para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6">OrderHandlerZmqV6</link> class handles the ZMQ communication for order handling. It implements the <link linkend="_class_k_t_n_1_1_session_callback">SessionCallback</link> and <link linkend="_class_i_zmq_subscriber">IZmqSubscriber</link> interfaces. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6_1ad06ef3befdfd94ac6010e9231f6098e0"/><section>
+    <title>OrderHandlerZmqV6()</title>
+<indexterm><primary>OrderHandlerZmqV6</primary><secondary>KTN::ORD::OrderHandlerZmqV6</secondary></indexterm>
+<indexterm><primary>KTN::ORD::OrderHandlerZmqV6</primary><secondary>OrderHandlerZmqV6</secondary></indexterm>
+<para><computeroutput>KTN::OrderHandlerZmqV6::OrderHandlerZmqV6 (<link linkend="_class_i_exchange_sender">IExchangeSender</link> &amp; exch, int cbid)</computeroutput></para><para>
+
+<para>Constructs an <link linkend="_class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6">OrderHandlerZmqV6</link> object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>exch</entry><entry>
+<para>The exchange sender object. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>cbid</entry><entry>
+<para>The callback ID. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00123">Settings::get()</link>, <link linkend="_l00029">CmeSettingsHelper::GetBool()</link>, <link linkend="_l00193">Settings::getBoolean()</link>, <link linkend="_l00133">Settings::getInteger()</link>, <link linkend="_l00145">KT01::MSGW::CmeMsgw::LoadProductGatewayFile()</link>, <link linkend="_l00256">algometa::Strategy</link>, <link linkend="_l00257">algometa::StratId</link>, <link linkend="_l00261">algometa::UniqueId</link>, and <link linkend="_l00025">OrderManagerV5::UpdateMetaParams()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6_1a3fd04b33cc11222a397eae74c2a258fe"/><section>
+    <title>~OrderHandlerZmqV6()</title>
+<indexterm><primary>~OrderHandlerZmqV6</primary><secondary>KTN::ORD::OrderHandlerZmqV6</secondary></indexterm>
+<indexterm><primary>KTN::ORD::OrderHandlerZmqV6</primary><secondary>~OrderHandlerZmqV6</secondary></indexterm>
+<para><computeroutput>KTN::OrderHandlerZmqV6::~OrderHandlerZmqV6 ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Destroys the <link linkend="_class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6">OrderHandlerZmqV6</link> object. </para>
+</para>
+<para>
+References <link linkend="_l00044">OrderManagerV5::Stop()</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6_1a9d8efe1dd99680394d02840a4bf0fb74"/><section>
+    <title>Clear()</title>
+<indexterm><primary>Clear</primary><secondary>KTN::ORD::OrderHandlerZmqV6</secondary></indexterm>
+<indexterm><primary>KTN::ORD::OrderHandlerZmqV6</primary><secondary>Clear</secondary></indexterm>
+<para><computeroutput>void KTN::ORD::OrderHandlerZmqV6::Clear ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Clears the order handler. </para>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6_1afa4b3db3eee9678d60843649a0a8b27d"/><section>
+    <title>LoadTasOrders()</title>
+<indexterm><primary>LoadTasOrders</primary><secondary>KTN::ORD::OrderHandlerZmqV6</secondary></indexterm>
+<indexterm><primary>KTN::ORD::OrderHandlerZmqV6</primary><secondary>LoadTasOrders</secondary></indexterm>
+<para><computeroutput>void KTN::OrderHandlerZmqV6::LoadTasOrders ( )</computeroutput></para><para>
+
+<para>Loads TAS orders. </para>
+</para>
+<para>
+References <link linkend="_class_i_exchange_sender_1a4a6ed326c485630d21eebcd1c9ffd0d4">IExchangeSender::BankTas()</link>, <link linkend="_l00049">KTN::OrderPod::callbackid</link>, <link linkend="_l00054">KTN::OrderPod::cert</link>, <link linkend="_l00123">Settings::get()</link>, <link linkend="_l00133">Settings::getInteger()</link>, <link linkend="_l00174">KT01::MSGW::CmeMsgw::getProdSegId()</link>, <link linkend="_l00049">UserInfo::groupname</link>, <link linkend="_l00053">KTN::OrderPod::isManual</link>, <link linkend="_l00042">KTN::OrderPod::leavesqty</link>, <link linkend="_l00050">KTN::OrderPod::mktsegid</link>, <link linkend="_l00366">OrderManagerV5::onSentOrderOrdbook()</link>, <link linkend="_l00059">KTN::OrderPod::OrdAction</link>, <link linkend="_l00064">KTN::OrderPod::OrdAlgoTrig</link>, <link linkend="_l00032">KTN::OrderPod::ordernum</link>, <link linkend="_l00037">KTN::OrderPod::orderReqId</link>, <link linkend="_l00056">KTN::OrderPod::OrdExch</link>, <link linkend="_l00060">KTN::OrderPod::OrdSide</link>, <link linkend="_l00061">KTN::OrderPod::OrdStatus</link>, <link linkend="_l00058">KTN::OrderPod::OrdTif</link>, <link linkend="_l00057">KTN::OrderPod::OrdType</link>, <link linkend="_l00048">UserInfo::org</link>, <link linkend="_l00034">KTN::OrderPod::price</link>, <link linkend="_l00041">KTN::OrderPod::quantity</link>, <link linkend="_l00033">FileOrderLoaderV3::ReadFile()</link>, <link linkend="_l00040">KTN::OrderPod::secid</link>, <link linkend="_l00046">KTN::OrderPod::stratid</link>, and <link linkend="_l00047">UserInfo::user</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6_1aec23491d7e3e69433dd90d4d98d8918d"/><section>
+    <title>Print()</title>
+<indexterm><primary>Print</primary><secondary>KTN::ORD::OrderHandlerZmqV6</secondary></indexterm>
+<indexterm><primary>KTN::ORD::OrderHandlerZmqV6</primary><secondary>Print</secondary></indexterm>
+<para><computeroutput>void KTN::OrderHandlerZmqV6::Print ( )</computeroutput></para><para>
+
+<para>Prints the order handler. </para>
+</para>
+<para>
+References <link linkend="_l00077">OrderManagerV5::Print()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6_1ab29604a9e90d87dba254582f072d4d75"/><section>
+    <title>RegisterOrderTemplate()</title>
+<indexterm><primary>RegisterOrderTemplate</primary><secondary>KTN::ORD::OrderHandlerZmqV6</secondary></indexterm>
+<indexterm><primary>KTN::ORD::OrderHandlerZmqV6</primary><secondary>RegisterOrderTemplate</secondary></indexterm>
+<para><computeroutput>void KTN::OrderHandlerZmqV6::RegisterOrderTemplate (<link linkend="_struct_k_t_n_1_1_order">Order</link> &amp; ord)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Registers an order template. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ord</entry><entry>
+<para>The order template to register. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6_1a436b79f178310a0d5c7dd70cec83fb99"/><section>
+    <title>Stop()</title>
+<indexterm><primary>Stop</primary><secondary>KTN::ORD::OrderHandlerZmqV6</secondary></indexterm>
+<indexterm><primary>KTN::ORD::OrderHandlerZmqV6</primary><secondary>Stop</secondary></indexterm>
+<para><computeroutput>void KTN::OrderHandlerZmqV6::Stop ( )</computeroutput></para><para>
+
+<para>Stops the order handler. </para>
+</para>
+<para>
+Referenced by <link linkend="_l00146">Raptor2::Stop()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Orders/OrderHandlerZmqV6.hppOrders/OrderHandlerZmqV6.cpp</section>
+</section>

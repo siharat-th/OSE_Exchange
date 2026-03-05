@@ -1,0 +1,241 @@
+\doxysection{KTN\+::CME\+::IL3\+::Message\+Printer Class Reference}
+\hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer}{}\label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer}\index{KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}}
+
+
+Audit Trail and Textual Representation of IL3 Messages.  
+
+
+
+
+{\ttfamily \#include $<$IL3\+Message\+Printer.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_a3d7ca81c36770692e1df8948756a72ad}{generate\+Json\+String}} (const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_single_msg}{New\+Order\+Single\+Msg}} \&msg)
+\item 
+static std\+::string \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_ad4e03c88716bde81097c7230111f02e6}{generate\+Json\+String}} (const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg}{Order\+Cancel\+Replace\+Request\+Msg}} \&msg)
+\item 
+static std\+::string \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_ae0059320a78769b135de52c67ab90c80}{generate\+Json\+String}} (const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_request_msg}{Order\+Cancel\+Request\+Msg}} \&msg)
+\item 
+static std\+::string \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_a34f709e2cf95431bd78033894bb38525}{generate\+Json\+String}} (const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg}{Party\+Details\+Definition\+Request\+Msg}} \&msg, const std\+::vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_party_detail}{Grp\+Party\+Detail}} $>$ \&party\+Details)
+\item 
+static std\+::string \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_aa3a5a3c4e27d1c46528ab8f797ec44e2}{generate\+Json\+String}} (const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_ack_msg_1_1_block_data}{Party\+Details\+Definition\+Request\+Ack\+Msg\+::\+Block\+Data}} \&msg)
+\item 
+static std\+::string \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_a2689dd27adc6462c9faa291f415c123e}{generate\+Json\+String}} (const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_business_reject_msg_1_1_block_data}{Business\+Reject\+Msg\+::\+Block\+Data}} \&msg)
+\item 
+static std\+::string \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_a49ac673d9d956c9649afb9fa7d825942}{generate\+Json\+String}} (const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_new_msg_1_1_block_data}{Execution\+Report\+New\+Msg\+::\+Block\+Data}} \&msg)
+\item 
+static std\+::string \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_ae0affd2b267aff166eb409f3498385f7}{generate\+Json\+String}} (const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_reject_msg_1_1_block_data}{Execution\+Report\+Reject\+Msg\+::\+Block\+Data}} \&msg)
+\item 
+static std\+::string \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_aa83219e14a4f6b593ac069be993123b7}{generate\+Json\+String}} (const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_elimination_msg_1_1_block_data}{Execution\+Report\+Elimination\+Msg\+::\+Block\+Data}} \&msg)
+\item 
+static std\+::string \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_a6a075ad65e40c9b3c62f9f4984276d14}{generate\+Json\+String}} (const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_outright_msg_1_1_block_data}{Execution\+Report\+Trade\+Outright\+Msg\+::\+Block\+Data}} \&msg)
+\item 
+static std\+::string \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_ae0cff8f27019ce440c7814ef7260ef84}{generate\+Json\+String}} (const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_spread_msg_1_1_block_data}{Execution\+Report\+Trade\+Spread\+Msg\+::\+Block\+Data}} \&msg)
+\item 
+static std\+::string \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_ae405905804b4119c54665e0af6e58be6}{generate\+Json\+String}} (const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_spread_leg_msg_1_1_block_data}{Execution\+Report\+Trade\+Spread\+Leg\+Msg\+::\+Block\+Data}} \&msg)
+\item 
+static std\+::string \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_a6f5c4416a5d8c7e8bc13f3d6d186439b}{generate\+Json\+String}} (const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_request_msg}{Order\+Mass\+Action\+Request\+Msg}} \&msg)
+\item 
+static std\+::string \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_ac9725ed6b581a895e011146be5f093e0}{generate\+Json\+String}} (const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data}{Order\+Mass\+Action\+Report\+Msg\+::\+Block\+Data}} \&msg, const std\+::vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_affected_orders_mass_action_report_1_1_block_data}{Grp\+Affected\+Orders\+Mass\+Action\+Report\+::\+Block\+Data}} $>$ \&affected\+Orders)
+\item 
+static std\+::string \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_aa727c56490c0f37a573a83606ea2afd6}{generate\+Json\+String}} (const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_modify_msg_1_1_block_data}{Execution\+Report\+Modify\+Msg\+::\+Block\+Data}} \&msg)
+\item 
+static std\+::string \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_a0fb05bbbe23626a37a4d691ee49033c2}{generate\+Json\+String}} (const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_status_msg_1_1_block_data}{Execution\+Report\+Status\+Msg\+::\+Block\+Data}} \&msg)
+\item 
+static std\+::string \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_a61a33c92930f57e3680dc38865753f47}{generate\+Json\+String}} (const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_status_request_msg}{Order\+Status\+Request\+Msg}} \&msg)
+\item 
+static std\+::string \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_a73a405cc5df1ceb000d65fea76b6cc0c}{generate\+Json\+String}} (const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_cancel_msg_1_1_block_data}{Execution\+Report\+Cancel\+Msg\+::\+Block\+Data}} \&msg)
+\item 
+static std\+::string \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_a15f59f1342092e13d21714b83c9cd1d5}{generate\+Json\+String}} (const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_reject_msg_1_1_block_data}{Order\+Cancel\+Reject\+Msg\+::\+Block\+Data}} \&msg)
+\item 
+static std\+::string \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_aaf9e725b73a3a47944407748c424f2f3}{generate\+Json\+String}} (const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data}{Order\+Cancel\+Replace\+Reject\+Msg\+::\+Block\+Data}} \&msg)
+\item 
+static std\+::string \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_a2d550677fa40deb7d467072d0229f0b1}{generate\+Json\+String}} (const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_request_msg}{Party\+Details\+List\+Request\+Msg}} \&msg, const std\+::vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_requesting_party_i_ds_1_1_block_data}{Grp\+Requesting\+Party\+IDs\+::\+Block\+Data}} $>$ \&requesting\+Party\+IDs, const std\+::vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_party_i_ds_1_1_block_data}{Grp\+Party\+IDs\+::\+Block\+Data}} $>$ \&party\+IDs)
+\item 
+static std\+::string \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_a0cd9612d11ef544c95cbffcd12aad1e5}{generate\+Json\+String}} (const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data}{Party\+Details\+List\+Report\+Msg\+::\+Block\+Data}} \&msg)
+\item 
+static std\+::string \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_ab9a65b91bb968e828a2e074b58f6d647}{generate\+Json\+String}} (const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_ack_msg_1_1_block_data}{Execution\+Ack\+Msg\+::\+Block\+Data}} \&msg)
+\item 
+static std\+::string \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_af72e3a63ebee7dd2b47d0a1fb3606243}{generate\+Json\+String}} (const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data}{Execution\+Report\+Trade\+Addendum\+Outright\+Msg\+::\+Block\+Data}} \&msg)
+\item 
+static std\+::string \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_a8cb1da6962b37f88295f83d6c9677a90}{generate\+Json\+String}} (const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_spread_msg_1_1_block_data}{Execution\+Report\+Trade\+Addendum\+Spread\+Msg\+::\+Block\+Data}} \&msg)
+\item 
+static std\+::string \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_ae72be9d9e49fc21e0248fd0e614030aa}{generate\+Json\+String}} (const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_spread_leg_msg_1_1_block_data}{Execution\+Report\+Trade\+Addendum\+Spread\+Leg\+Msg\+::\+Block\+Data}} \&msg)
+\item 
+static std\+::string \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_a67f4c2606487cf83d8dc6d1b118224ed}{generate\+Json\+Error}} (const string \&msg)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Audit Trail and Textual Representation of IL3 Messages. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_a67f4c2606487cf83d8dc6d1b118224ed}\index{KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}!generateJsonError@{generateJsonError}}
+\index{generateJsonError@{generateJsonError}!KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}}
+\doxysubsubsection{\texorpdfstring{generateJsonError()}{generateJsonError()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_a67f4c2606487cf83d8dc6d1b118224ed} 
+static std\+::string KTN\+::\+CME\+::\+IL3\+::\+Message\+Printer\+::generate\+Json\+Error (\begin{DoxyParamCaption}\item[{const string \&}]{msg}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_a2689dd27adc6462c9faa291f415c123e}\index{KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}!generateJsonString@{generateJsonString}}
+\index{generateJsonString@{generateJsonString}!KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}}
+\doxysubsubsection{\texorpdfstring{generateJsonString()}{generateJsonString()}\hspace{0.1cm}{\footnotesize\ttfamily [1/26]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_a2689dd27adc6462c9faa291f415c123e} 
+static std\+::string KTN\+::\+CME\+::\+IL3\+::\+Message\+Printer\+::generate\+Json\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_business_reject_msg_1_1_block_data}{Business\+Reject\+Msg\+::\+Block\+Data}} \&}]{msg}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_ab9a65b91bb968e828a2e074b58f6d647}\index{KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}!generateJsonString@{generateJsonString}}
+\index{generateJsonString@{generateJsonString}!KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}}
+\doxysubsubsection{\texorpdfstring{generateJsonString()}{generateJsonString()}\hspace{0.1cm}{\footnotesize\ttfamily [2/26]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_ab9a65b91bb968e828a2e074b58f6d647} 
+static std\+::string KTN\+::\+CME\+::\+IL3\+::\+Message\+Printer\+::generate\+Json\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_ack_msg_1_1_block_data}{Execution\+Ack\+Msg\+::\+Block\+Data}} \&}]{msg}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_a73a405cc5df1ceb000d65fea76b6cc0c}\index{KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}!generateJsonString@{generateJsonString}}
+\index{generateJsonString@{generateJsonString}!KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}}
+\doxysubsubsection{\texorpdfstring{generateJsonString()}{generateJsonString()}\hspace{0.1cm}{\footnotesize\ttfamily [3/26]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_a73a405cc5df1ceb000d65fea76b6cc0c} 
+static std\+::string KTN\+::\+CME\+::\+IL3\+::\+Message\+Printer\+::generate\+Json\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_cancel_msg_1_1_block_data}{Execution\+Report\+Cancel\+Msg\+::\+Block\+Data}} \&}]{msg}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_aa83219e14a4f6b593ac069be993123b7}\index{KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}!generateJsonString@{generateJsonString}}
+\index{generateJsonString@{generateJsonString}!KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}}
+\doxysubsubsection{\texorpdfstring{generateJsonString()}{generateJsonString()}\hspace{0.1cm}{\footnotesize\ttfamily [4/26]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_aa83219e14a4f6b593ac069be993123b7} 
+static std\+::string KTN\+::\+CME\+::\+IL3\+::\+Message\+Printer\+::generate\+Json\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_elimination_msg_1_1_block_data}{Execution\+Report\+Elimination\+Msg\+::\+Block\+Data}} \&}]{msg}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_aa727c56490c0f37a573a83606ea2afd6}\index{KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}!generateJsonString@{generateJsonString}}
+\index{generateJsonString@{generateJsonString}!KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}}
+\doxysubsubsection{\texorpdfstring{generateJsonString()}{generateJsonString()}\hspace{0.1cm}{\footnotesize\ttfamily [5/26]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_aa727c56490c0f37a573a83606ea2afd6} 
+static std\+::string KTN\+::\+CME\+::\+IL3\+::\+Message\+Printer\+::generate\+Json\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_modify_msg_1_1_block_data}{Execution\+Report\+Modify\+Msg\+::\+Block\+Data}} \&}]{msg}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_a49ac673d9d956c9649afb9fa7d825942}\index{KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}!generateJsonString@{generateJsonString}}
+\index{generateJsonString@{generateJsonString}!KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}}
+\doxysubsubsection{\texorpdfstring{generateJsonString()}{generateJsonString()}\hspace{0.1cm}{\footnotesize\ttfamily [6/26]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_a49ac673d9d956c9649afb9fa7d825942} 
+static std\+::string KTN\+::\+CME\+::\+IL3\+::\+Message\+Printer\+::generate\+Json\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_new_msg_1_1_block_data}{Execution\+Report\+New\+Msg\+::\+Block\+Data}} \&}]{msg}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_ae0affd2b267aff166eb409f3498385f7}\index{KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}!generateJsonString@{generateJsonString}}
+\index{generateJsonString@{generateJsonString}!KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}}
+\doxysubsubsection{\texorpdfstring{generateJsonString()}{generateJsonString()}\hspace{0.1cm}{\footnotesize\ttfamily [7/26]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_ae0affd2b267aff166eb409f3498385f7} 
+static std\+::string KTN\+::\+CME\+::\+IL3\+::\+Message\+Printer\+::generate\+Json\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_reject_msg_1_1_block_data}{Execution\+Report\+Reject\+Msg\+::\+Block\+Data}} \&}]{msg}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_a0fb05bbbe23626a37a4d691ee49033c2}\index{KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}!generateJsonString@{generateJsonString}}
+\index{generateJsonString@{generateJsonString}!KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}}
+\doxysubsubsection{\texorpdfstring{generateJsonString()}{generateJsonString()}\hspace{0.1cm}{\footnotesize\ttfamily [8/26]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_a0fb05bbbe23626a37a4d691ee49033c2} 
+static std\+::string KTN\+::\+CME\+::\+IL3\+::\+Message\+Printer\+::generate\+Json\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_status_msg_1_1_block_data}{Execution\+Report\+Status\+Msg\+::\+Block\+Data}} \&}]{msg}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_af72e3a63ebee7dd2b47d0a1fb3606243}\index{KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}!generateJsonString@{generateJsonString}}
+\index{generateJsonString@{generateJsonString}!KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}}
+\doxysubsubsection{\texorpdfstring{generateJsonString()}{generateJsonString()}\hspace{0.1cm}{\footnotesize\ttfamily [9/26]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_af72e3a63ebee7dd2b47d0a1fb3606243} 
+static std\+::string KTN\+::\+CME\+::\+IL3\+::\+Message\+Printer\+::generate\+Json\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data}{Execution\+Report\+Trade\+Addendum\+Outright\+Msg\+::\+Block\+Data}} \&}]{msg}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_ae72be9d9e49fc21e0248fd0e614030aa}\index{KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}!generateJsonString@{generateJsonString}}
+\index{generateJsonString@{generateJsonString}!KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}}
+\doxysubsubsection{\texorpdfstring{generateJsonString()}{generateJsonString()}\hspace{0.1cm}{\footnotesize\ttfamily [10/26]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_ae72be9d9e49fc21e0248fd0e614030aa} 
+static std\+::string KTN\+::\+CME\+::\+IL3\+::\+Message\+Printer\+::generate\+Json\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_spread_leg_msg_1_1_block_data}{Execution\+Report\+Trade\+Addendum\+Spread\+Leg\+Msg\+::\+Block\+Data}} \&}]{msg}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_a8cb1da6962b37f88295f83d6c9677a90}\index{KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}!generateJsonString@{generateJsonString}}
+\index{generateJsonString@{generateJsonString}!KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}}
+\doxysubsubsection{\texorpdfstring{generateJsonString()}{generateJsonString()}\hspace{0.1cm}{\footnotesize\ttfamily [11/26]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_a8cb1da6962b37f88295f83d6c9677a90} 
+static std\+::string KTN\+::\+CME\+::\+IL3\+::\+Message\+Printer\+::generate\+Json\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_spread_msg_1_1_block_data}{Execution\+Report\+Trade\+Addendum\+Spread\+Msg\+::\+Block\+Data}} \&}]{msg}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_a6a075ad65e40c9b3c62f9f4984276d14}\index{KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}!generateJsonString@{generateJsonString}}
+\index{generateJsonString@{generateJsonString}!KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}}
+\doxysubsubsection{\texorpdfstring{generateJsonString()}{generateJsonString()}\hspace{0.1cm}{\footnotesize\ttfamily [12/26]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_a6a075ad65e40c9b3c62f9f4984276d14} 
+static std\+::string KTN\+::\+CME\+::\+IL3\+::\+Message\+Printer\+::generate\+Json\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_outright_msg_1_1_block_data}{Execution\+Report\+Trade\+Outright\+Msg\+::\+Block\+Data}} \&}]{msg}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_ae405905804b4119c54665e0af6e58be6}\index{KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}!generateJsonString@{generateJsonString}}
+\index{generateJsonString@{generateJsonString}!KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}}
+\doxysubsubsection{\texorpdfstring{generateJsonString()}{generateJsonString()}\hspace{0.1cm}{\footnotesize\ttfamily [13/26]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_ae405905804b4119c54665e0af6e58be6} 
+static std\+::string KTN\+::\+CME\+::\+IL3\+::\+Message\+Printer\+::generate\+Json\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_spread_leg_msg_1_1_block_data}{Execution\+Report\+Trade\+Spread\+Leg\+Msg\+::\+Block\+Data}} \&}]{msg}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_ae0cff8f27019ce440c7814ef7260ef84}\index{KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}!generateJsonString@{generateJsonString}}
+\index{generateJsonString@{generateJsonString}!KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}}
+\doxysubsubsection{\texorpdfstring{generateJsonString()}{generateJsonString()}\hspace{0.1cm}{\footnotesize\ttfamily [14/26]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_ae0cff8f27019ce440c7814ef7260ef84} 
+static std\+::string KTN\+::\+CME\+::\+IL3\+::\+Message\+Printer\+::generate\+Json\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_spread_msg_1_1_block_data}{Execution\+Report\+Trade\+Spread\+Msg\+::\+Block\+Data}} \&}]{msg}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_a3d7ca81c36770692e1df8948756a72ad}\index{KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}!generateJsonString@{generateJsonString}}
+\index{generateJsonString@{generateJsonString}!KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}}
+\doxysubsubsection{\texorpdfstring{generateJsonString()}{generateJsonString()}\hspace{0.1cm}{\footnotesize\ttfamily [15/26]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_a3d7ca81c36770692e1df8948756a72ad} 
+static std\+::string KTN\+::\+CME\+::\+IL3\+::\+Message\+Printer\+::generate\+Json\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_single_msg}{New\+Order\+Single\+Msg}} \&}]{msg}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_a15f59f1342092e13d21714b83c9cd1d5}\index{KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}!generateJsonString@{generateJsonString}}
+\index{generateJsonString@{generateJsonString}!KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}}
+\doxysubsubsection{\texorpdfstring{generateJsonString()}{generateJsonString()}\hspace{0.1cm}{\footnotesize\ttfamily [16/26]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_a15f59f1342092e13d21714b83c9cd1d5} 
+static std\+::string KTN\+::\+CME\+::\+IL3\+::\+Message\+Printer\+::generate\+Json\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_reject_msg_1_1_block_data}{Order\+Cancel\+Reject\+Msg\+::\+Block\+Data}} \&}]{msg}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_aaf9e725b73a3a47944407748c424f2f3}\index{KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}!generateJsonString@{generateJsonString}}
+\index{generateJsonString@{generateJsonString}!KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}}
+\doxysubsubsection{\texorpdfstring{generateJsonString()}{generateJsonString()}\hspace{0.1cm}{\footnotesize\ttfamily [17/26]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_aaf9e725b73a3a47944407748c424f2f3} 
+static std\+::string KTN\+::\+CME\+::\+IL3\+::\+Message\+Printer\+::generate\+Json\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data}{Order\+Cancel\+Replace\+Reject\+Msg\+::\+Block\+Data}} \&}]{msg}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_ad4e03c88716bde81097c7230111f02e6}\index{KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}!generateJsonString@{generateJsonString}}
+\index{generateJsonString@{generateJsonString}!KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}}
+\doxysubsubsection{\texorpdfstring{generateJsonString()}{generateJsonString()}\hspace{0.1cm}{\footnotesize\ttfamily [18/26]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_ad4e03c88716bde81097c7230111f02e6} 
+static std\+::string KTN\+::\+CME\+::\+IL3\+::\+Message\+Printer\+::generate\+Json\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg}{Order\+Cancel\+Replace\+Request\+Msg}} \&}]{msg}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_ae0059320a78769b135de52c67ab90c80}\index{KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}!generateJsonString@{generateJsonString}}
+\index{generateJsonString@{generateJsonString}!KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}}
+\doxysubsubsection{\texorpdfstring{generateJsonString()}{generateJsonString()}\hspace{0.1cm}{\footnotesize\ttfamily [19/26]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_ae0059320a78769b135de52c67ab90c80} 
+static std\+::string KTN\+::\+CME\+::\+IL3\+::\+Message\+Printer\+::generate\+Json\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_request_msg}{Order\+Cancel\+Request\+Msg}} \&}]{msg}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_ac9725ed6b581a895e011146be5f093e0}\index{KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}!generateJsonString@{generateJsonString}}
+\index{generateJsonString@{generateJsonString}!KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}}
+\doxysubsubsection{\texorpdfstring{generateJsonString()}{generateJsonString()}\hspace{0.1cm}{\footnotesize\ttfamily [20/26]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_ac9725ed6b581a895e011146be5f093e0} 
+static std\+::string KTN\+::\+CME\+::\+IL3\+::\+Message\+Printer\+::generate\+Json\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data}{Order\+Mass\+Action\+Report\+Msg\+::\+Block\+Data}} \&}]{msg}{, }\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_affected_orders_mass_action_report_1_1_block_data}{Grp\+Affected\+Orders\+Mass\+Action\+Report\+::\+Block\+Data}} $>$ \&}]{affected\+Orders}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_a6f5c4416a5d8c7e8bc13f3d6d186439b}\index{KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}!generateJsonString@{generateJsonString}}
+\index{generateJsonString@{generateJsonString}!KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}}
+\doxysubsubsection{\texorpdfstring{generateJsonString()}{generateJsonString()}\hspace{0.1cm}{\footnotesize\ttfamily [21/26]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_a6f5c4416a5d8c7e8bc13f3d6d186439b} 
+static std\+::string KTN\+::\+CME\+::\+IL3\+::\+Message\+Printer\+::generate\+Json\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_request_msg}{Order\+Mass\+Action\+Request\+Msg}} \&}]{msg}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_a61a33c92930f57e3680dc38865753f47}\index{KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}!generateJsonString@{generateJsonString}}
+\index{generateJsonString@{generateJsonString}!KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}}
+\doxysubsubsection{\texorpdfstring{generateJsonString()}{generateJsonString()}\hspace{0.1cm}{\footnotesize\ttfamily [22/26]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_a61a33c92930f57e3680dc38865753f47} 
+static std\+::string KTN\+::\+CME\+::\+IL3\+::\+Message\+Printer\+::generate\+Json\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_status_request_msg}{Order\+Status\+Request\+Msg}} \&}]{msg}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_aa3a5a3c4e27d1c46528ab8f797ec44e2}\index{KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}!generateJsonString@{generateJsonString}}
+\index{generateJsonString@{generateJsonString}!KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}}
+\doxysubsubsection{\texorpdfstring{generateJsonString()}{generateJsonString()}\hspace{0.1cm}{\footnotesize\ttfamily [23/26]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_aa3a5a3c4e27d1c46528ab8f797ec44e2} 
+static std\+::string KTN\+::\+CME\+::\+IL3\+::\+Message\+Printer\+::generate\+Json\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_ack_msg_1_1_block_data}{Party\+Details\+Definition\+Request\+Ack\+Msg\+::\+Block\+Data}} \&}]{msg}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_a34f709e2cf95431bd78033894bb38525}\index{KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}!generateJsonString@{generateJsonString}}
+\index{generateJsonString@{generateJsonString}!KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}}
+\doxysubsubsection{\texorpdfstring{generateJsonString()}{generateJsonString()}\hspace{0.1cm}{\footnotesize\ttfamily [24/26]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_a34f709e2cf95431bd78033894bb38525} 
+static std\+::string KTN\+::\+CME\+::\+IL3\+::\+Message\+Printer\+::generate\+Json\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg}{Party\+Details\+Definition\+Request\+Msg}} \&}]{msg}{, }\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_party_detail}{Grp\+Party\+Detail}} $>$ \&}]{party\+Details}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_a0cd9612d11ef544c95cbffcd12aad1e5}\index{KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}!generateJsonString@{generateJsonString}}
+\index{generateJsonString@{generateJsonString}!KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}}
+\doxysubsubsection{\texorpdfstring{generateJsonString()}{generateJsonString()}\hspace{0.1cm}{\footnotesize\ttfamily [25/26]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_a0cd9612d11ef544c95cbffcd12aad1e5} 
+static std\+::string KTN\+::\+CME\+::\+IL3\+::\+Message\+Printer\+::generate\+Json\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data}{Party\+Details\+List\+Report\+Msg\+::\+Block\+Data}} \&}]{msg}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_a2d550677fa40deb7d467072d0229f0b1}\index{KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}!generateJsonString@{generateJsonString}}
+\index{generateJsonString@{generateJsonString}!KTN::CME::IL3::MessagePrinter@{KTN::CME::IL3::MessagePrinter}}
+\doxysubsubsection{\texorpdfstring{generateJsonString()}{generateJsonString()}\hspace{0.1cm}{\footnotesize\ttfamily [26/26]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer_a2d550677fa40deb7d467072d0229f0b1} 
+static std\+::string KTN\+::\+CME\+::\+IL3\+::\+Message\+Printer\+::generate\+Json\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_request_msg}{Party\+Details\+List\+Request\+Msg}} \&}]{msg}{, }\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_requesting_party_i_ds_1_1_block_data}{Grp\+Requesting\+Party\+IDs\+::\+Block\+Data}} $>$ \&}]{requesting\+Party\+IDs}{, }\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_party_i_ds_1_1_block_data}{Grp\+Party\+IDs\+::\+Block\+Data}} $>$ \&}]{party\+IDs}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+exchsupport/cme/il3/IL3\+Message\+Printer.\+hpp\end{DoxyCompactItemize}

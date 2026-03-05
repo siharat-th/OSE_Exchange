@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structmoodycamel_1_1details_1_1thread__id__converter" xml:lang="en-US">
+<title>moodycamel::details::thread_id_converter&lt; thread_id_t &gt; Struct Template Reference</title>
+<indexterm><primary>moodycamel::details::thread_id_converter&lt; thread_id_t &gt;</primary></indexterm>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>typedef thread_id_t <link linkend="_structmoodycamel_1_1details_1_1thread__id__converter_1a0e0a5a09cbd5ea8cbe908ef95d253b15">thread_id_numeric_size_t</link></para>
+</listitem>
+            <listitem><para>typedef thread_id_t <link linkend="_structmoodycamel_1_1details_1_1thread__id__converter_1ab014e046631563b1a8582e01e5970f0f">thread_id_hash_t</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static thread_id_hash_t <link linkend="_structmoodycamel_1_1details_1_1thread__id__converter_1af8454655ba137481bbbdcb6992b1febb">prehash</link> (thread_id_t const &amp;x)</para>
+</listitem>
+            <listitem><para>static thread_id_hash_t <link linkend="_structmoodycamel_1_1details_1_1thread__id__converter_1af8454655ba137481bbbdcb6992b1febb">prehash</link> (thread_id_t const &amp;x)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;typename thread_id_t&gt;<?linebreak?>struct moodycamel::details::thread_id_converter&lt; thread_id_t &gt;</title></simplesect>
+</section>
+<section>
+<title>Member Typedef Documentation</title>
+<anchor xml:id="_structmoodycamel_1_1details_1_1thread__id__converter_1ab014e046631563b1a8582e01e5970f0f"/><section>
+    <title>thread_id_hash_t</title>
+<indexterm><primary>thread_id_hash_t</primary><secondary>moodycamel::details::thread_id_converter&lt; thread_id_t &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::details::thread_id_converter&lt; thread_id_t &gt;</primary><secondary>thread_id_hash_t</secondary></indexterm>
+<computeroutput>template&lt;typename thread_id_t &gt; </computeroutput><para><computeroutput>typedef thread_id_t <link linkend="_structmoodycamel_1_1details_1_1thread__id__converter">moodycamel::details::thread_id_converter</link>&lt; thread_id_t &gt;::thread_id_hash_t</computeroutput></para></section>
+<anchor xml:id="_structmoodycamel_1_1details_1_1thread__id__converter_1a0e0a5a09cbd5ea8cbe908ef95d253b15"/><section>
+    <title>thread_id_numeric_size_t</title>
+<indexterm><primary>thread_id_numeric_size_t</primary><secondary>moodycamel::details::thread_id_converter&lt; thread_id_t &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::details::thread_id_converter&lt; thread_id_t &gt;</primary><secondary>thread_id_numeric_size_t</secondary></indexterm>
+<computeroutput>template&lt;typename thread_id_t &gt; </computeroutput><para><computeroutput>typedef thread_id_t <link linkend="_structmoodycamel_1_1details_1_1thread__id__converter">moodycamel::details::thread_id_converter</link>&lt; thread_id_t &gt;::thread_id_numeric_size_t</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_structmoodycamel_1_1details_1_1thread__id__converter_1af8454655ba137481bbbdcb6992b1febb"/><section>
+    <title>prehash()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>prehash</primary><secondary>moodycamel::details::thread_id_converter&lt; thread_id_t &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::details::thread_id_converter&lt; thread_id_t &gt;</primary><secondary>prehash</secondary></indexterm>
+<computeroutput>template&lt;typename thread_id_t &gt; </computeroutput><para><computeroutput>static thread_id_hash_t <link linkend="_structmoodycamel_1_1details_1_1thread__id__converter">moodycamel::details::thread_id_converter</link>&lt; thread_id_t &gt;::prehash (thread_id_t const &amp; x)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structmoodycamel_1_1details_1_1thread__id__converter_1af8454655ba137481bbbdcb6992b1febb"/><section>
+    <title>prehash()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>prehash</primary><secondary>moodycamel::details::thread_id_converter&lt; thread_id_t &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::details::thread_id_converter&lt; thread_id_t &gt;</primary><secondary>prehash</secondary></indexterm>
+<computeroutput>template&lt;typename thread_id_t &gt; </computeroutput><para><computeroutput>static thread_id_hash_t <link linkend="_structmoodycamel_1_1details_1_1thread__id__converter">moodycamel::details::thread_id_converter</link>&lt; thread_id_t &gt;::prehash (thread_id_t const &amp; x)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following files:</para>
+C:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/external/camel/concurrentqueue.hC:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/external/camel/concurrentqueue2.h</section>
+</section>

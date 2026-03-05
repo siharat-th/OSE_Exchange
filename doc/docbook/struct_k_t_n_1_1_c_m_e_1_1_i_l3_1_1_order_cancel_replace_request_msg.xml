@@ -1,0 +1,257 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg" xml:lang="en-US">
+<title>KTN::CME::IL3::OrderCancelReplaceRequestMsg Struct Reference</title>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a3ce657ad25c902f7f0336933fe10abb8">Construct</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>std::uint16_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a1deaba33a748b19d5e7f73479db9756d">msgSize</link></para>
+</listitem>
+            <listitem><para>std::uint16_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1aa981b8ac6b2cedb0b665a987ebe1fff1">enodingType_</link></para>
+</listitem>
+            <listitem><para>std::uint16_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a68afe70e9d550811bed16bb91dd49d46">blockLength_</link></para>
+</listitem>
+            <listitem><para>std::uint16_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a995c25ffe5f4383762ab02a0820052e8">templateId_</link></para>
+</listitem>
+            <listitem><para>std::uint16_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a43f88cbc85158fb6480dc105075c132d">schemaId_</link></para>
+</listitem>
+            <listitem><para>std::uint16_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1ace1402ded19277fbb172875365031d15">version_</link></para>
+</listitem>
+            <listitem><para>int64_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a266d1ec64ad93c7163ddcf3d94298de7">Price</link></para>
+</listitem>
+            <listitem><para>uInt32 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a35bd3a7aee65a38eb2e7d4c5f5494890">OrderQty</link></para>
+</listitem>
+            <listitem><para>Int32 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a10820944108f871446a6d8dbd936e452">SecurityID</link></para>
+</listitem>
+            <listitem><para>EnumSideReq <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a4174e735562a55e319cc96106a57e8c9">Side</link></para>
+</listitem>
+            <listitem><para>uInt32 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1aec5501b49896c571d19d92486e7ef397">SeqNum</link></para>
+</listitem>
+            <listitem><para>String20Req <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a4f51fd0e27867bc0a6e49defea70ac18">SenderID</link></para>
+</listitem>
+            <listitem><para>String20Req <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a38a7523c996c16b7af3789b74b607226">ClOrdID</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a9b695acecca6d06453f86fd95499e4be">PartyDetailsListReqID</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a77fc24fc0b32912359e219f4d25bddf9">OrderID</link></para>
+</listitem>
+            <listitem><para>int64_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a12aa352ab3b2bb46cbcb3f2b0149e735">StopPx</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a49bfa24a9828e36b5415ef927b7b9117">OrderRequestID</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1ab4b63311ed3ef621df913b8df66e7621">SendingTimeEpoch</link></para>
+</listitem>
+            <listitem><para>String5Req <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a7badaab6fe9413d861a951ea9cac50e5">Location</link></para>
+</listitem>
+            <listitem><para>uInt32NULL <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1ab2236068b8078074dd92583314250793">MinQty</link></para>
+</listitem>
+            <listitem><para>uInt32NULL <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1ac5918f30f3ca22750d42759ea309a262">DisplayQty</link></para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a2deadd8a37d92a19ad4352de4ec7fbab">ExpireDate</link></para>
+</listitem>
+            <listitem><para>EnumOrderTypeReq <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a4ffa0d086c6dec3198cdc59631c0441c">OrdType</link></para>
+</listitem>
+            <listitem><para>EnumTimeInForce <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a3c5446370a7fcc700f9448f8a5390a6f">TimeInForce</link></para>
+</listitem>
+            <listitem><para>EnumManualOrdIndReq <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a98a4f84fcfe4a44d32c7ed2c6b0a0709">ManualOrderIndicator</link></para>
+</listitem>
+            <listitem><para>EnumOFMOverrideReq <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a392128c63ea8b23555df02c85c7c7eb5">OFMOverride</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1aa79a4fe3ce3d2a73bf29484fa63b81a4">ExecInst</link></para>
+</listitem>
+            <listitem><para>char <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1aba90c728c065eeb21784ee954e21af83">ExecutionMode</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a4963a1ff4db3ac7facbddbf91b9649ee">LiquidityFlag</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a61062db902ee6fcf959abe73d208a38b">ManagedOrder</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1ac327175d96982757f9768cd5944cc6ef">ShortSaleType</link></para>
+</listitem>
+            <listitem><para>int64_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1ae0f7cd18f9db7c7303c62f093dbd31e3">DiscretionPrice</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a3ce657ad25c902f7f0336933fe10abb8"/><section>
+    <title>Construct()</title>
+<indexterm><primary>Construct</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</primary><secondary>Construct</secondary></indexterm>
+<para><computeroutput>void KTN::CME::IL3::OrderCancelReplaceRequestMsg::Construct ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a68afe70e9d550811bed16bb91dd49d46"/><section>
+    <title>blockLength_</title>
+<indexterm><primary>blockLength_</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</primary><secondary>blockLength_</secondary></indexterm>
+<para><computeroutput>std::uint16_t KTN::CME::IL3::OrderCancelReplaceRequestMsg::blockLength_</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a38a7523c996c16b7af3789b74b607226"/><section>
+    <title>ClOrdID</title>
+<indexterm><primary>ClOrdID</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</primary><secondary>ClOrdID</secondary></indexterm>
+<para><computeroutput>String20Req KTN::CME::IL3::OrderCancelReplaceRequestMsg::ClOrdID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1ae0f7cd18f9db7c7303c62f093dbd31e3"/><section>
+    <title>DiscretionPrice</title>
+<indexterm><primary>DiscretionPrice</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</primary><secondary>DiscretionPrice</secondary></indexterm>
+<para><computeroutput>int64_t KTN::CME::IL3::OrderCancelReplaceRequestMsg::DiscretionPrice</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1ac5918f30f3ca22750d42759ea309a262"/><section>
+    <title>DisplayQty</title>
+<indexterm><primary>DisplayQty</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</primary><secondary>DisplayQty</secondary></indexterm>
+<para><computeroutput>uInt32NULL KTN::CME::IL3::OrderCancelReplaceRequestMsg::DisplayQty</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1aa981b8ac6b2cedb0b665a987ebe1fff1"/><section>
+    <title>enodingType_</title>
+<indexterm><primary>enodingType_</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</primary><secondary>enodingType_</secondary></indexterm>
+<para><computeroutput>std::uint16_t KTN::CME::IL3::OrderCancelReplaceRequestMsg::enodingType_</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1aa79a4fe3ce3d2a73bf29484fa63b81a4"/><section>
+    <title>ExecInst</title>
+<indexterm><primary>ExecInst</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</primary><secondary>ExecInst</secondary></indexterm>
+<para><computeroutput>uint8_t KTN::CME::IL3::OrderCancelReplaceRequestMsg::ExecInst</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1aba90c728c065eeb21784ee954e21af83"/><section>
+    <title>ExecutionMode</title>
+<indexterm><primary>ExecutionMode</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</primary><secondary>ExecutionMode</secondary></indexterm>
+<para><computeroutput>char KTN::CME::IL3::OrderCancelReplaceRequestMsg::ExecutionMode</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a2deadd8a37d92a19ad4352de4ec7fbab"/><section>
+    <title>ExpireDate</title>
+<indexterm><primary>ExpireDate</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</primary><secondary>ExpireDate</secondary></indexterm>
+<para><computeroutput>uint16_t KTN::CME::IL3::OrderCancelReplaceRequestMsg::ExpireDate</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a4963a1ff4db3ac7facbddbf91b9649ee"/><section>
+    <title>LiquidityFlag</title>
+<indexterm><primary>LiquidityFlag</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</primary><secondary>LiquidityFlag</secondary></indexterm>
+<para><computeroutput>uint8_t KTN::CME::IL3::OrderCancelReplaceRequestMsg::LiquidityFlag</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a7badaab6fe9413d861a951ea9cac50e5"/><section>
+    <title>Location</title>
+<indexterm><primary>Location</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</primary><secondary>Location</secondary></indexterm>
+<para><computeroutput>String5Req KTN::CME::IL3::OrderCancelReplaceRequestMsg::Location</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a61062db902ee6fcf959abe73d208a38b"/><section>
+    <title>ManagedOrder</title>
+<indexterm><primary>ManagedOrder</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</primary><secondary>ManagedOrder</secondary></indexterm>
+<para><computeroutput>uint8_t KTN::CME::IL3::OrderCancelReplaceRequestMsg::ManagedOrder</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a98a4f84fcfe4a44d32c7ed2c6b0a0709"/><section>
+    <title>ManualOrderIndicator</title>
+<indexterm><primary>ManualOrderIndicator</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</primary><secondary>ManualOrderIndicator</secondary></indexterm>
+<para><computeroutput>EnumManualOrdIndReq KTN::CME::IL3::OrderCancelReplaceRequestMsg::ManualOrderIndicator</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1ab2236068b8078074dd92583314250793"/><section>
+    <title>MinQty</title>
+<indexterm><primary>MinQty</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</primary><secondary>MinQty</secondary></indexterm>
+<para><computeroutput>uInt32NULL KTN::CME::IL3::OrderCancelReplaceRequestMsg::MinQty</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a1deaba33a748b19d5e7f73479db9756d"/><section>
+    <title>msgSize</title>
+<indexterm><primary>msgSize</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</primary><secondary>msgSize</secondary></indexterm>
+<para><computeroutput>std::uint16_t KTN::CME::IL3::OrderCancelReplaceRequestMsg::msgSize</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a392128c63ea8b23555df02c85c7c7eb5"/><section>
+    <title>OFMOverride</title>
+<indexterm><primary>OFMOverride</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</primary><secondary>OFMOverride</secondary></indexterm>
+<para><computeroutput>EnumOFMOverrideReq KTN::CME::IL3::OrderCancelReplaceRequestMsg::OFMOverride</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a77fc24fc0b32912359e219f4d25bddf9"/><section>
+    <title>OrderID</title>
+<indexterm><primary>OrderID</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</primary><secondary>OrderID</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::OrderCancelReplaceRequestMsg::OrderID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a35bd3a7aee65a38eb2e7d4c5f5494890"/><section>
+    <title>OrderQty</title>
+<indexterm><primary>OrderQty</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</primary><secondary>OrderQty</secondary></indexterm>
+<para><computeroutput>uInt32 KTN::CME::IL3::OrderCancelReplaceRequestMsg::OrderQty</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a49bfa24a9828e36b5415ef927b7b9117"/><section>
+    <title>OrderRequestID</title>
+<indexterm><primary>OrderRequestID</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</primary><secondary>OrderRequestID</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::OrderCancelReplaceRequestMsg::OrderRequestID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a4ffa0d086c6dec3198cdc59631c0441c"/><section>
+    <title>OrdType</title>
+<indexterm><primary>OrdType</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</primary><secondary>OrdType</secondary></indexterm>
+<para><computeroutput>EnumOrderTypeReq KTN::CME::IL3::OrderCancelReplaceRequestMsg::OrdType</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a9b695acecca6d06453f86fd95499e4be"/><section>
+    <title>PartyDetailsListReqID</title>
+<indexterm><primary>PartyDetailsListReqID</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</primary><secondary>PartyDetailsListReqID</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::OrderCancelReplaceRequestMsg::PartyDetailsListReqID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a266d1ec64ad93c7163ddcf3d94298de7"/><section>
+    <title>Price</title>
+<indexterm><primary>Price</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</primary><secondary>Price</secondary></indexterm>
+<para><computeroutput>int64_t KTN::CME::IL3::OrderCancelReplaceRequestMsg::Price</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a43f88cbc85158fb6480dc105075c132d"/><section>
+    <title>schemaId_</title>
+<indexterm><primary>schemaId_</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</primary><secondary>schemaId_</secondary></indexterm>
+<para><computeroutput>std::uint16_t KTN::CME::IL3::OrderCancelReplaceRequestMsg::schemaId_</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a10820944108f871446a6d8dbd936e452"/><section>
+    <title>SecurityID</title>
+<indexterm><primary>SecurityID</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</primary><secondary>SecurityID</secondary></indexterm>
+<para><computeroutput>Int32 KTN::CME::IL3::OrderCancelReplaceRequestMsg::SecurityID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a4f51fd0e27867bc0a6e49defea70ac18"/><section>
+    <title>SenderID</title>
+<indexterm><primary>SenderID</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</primary><secondary>SenderID</secondary></indexterm>
+<para><computeroutput>String20Req KTN::CME::IL3::OrderCancelReplaceRequestMsg::SenderID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1ab4b63311ed3ef621df913b8df66e7621"/><section>
+    <title>SendingTimeEpoch</title>
+<indexterm><primary>SendingTimeEpoch</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</primary><secondary>SendingTimeEpoch</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::OrderCancelReplaceRequestMsg::SendingTimeEpoch</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1aec5501b49896c571d19d92486e7ef397"/><section>
+    <title>SeqNum</title>
+<indexterm><primary>SeqNum</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</primary><secondary>SeqNum</secondary></indexterm>
+<para><computeroutput>uInt32 KTN::CME::IL3::OrderCancelReplaceRequestMsg::SeqNum</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1ac327175d96982757f9768cd5944cc6ef"/><section>
+    <title>ShortSaleType</title>
+<indexterm><primary>ShortSaleType</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</primary><secondary>ShortSaleType</secondary></indexterm>
+<para><computeroutput>uint8_t KTN::CME::IL3::OrderCancelReplaceRequestMsg::ShortSaleType</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a4174e735562a55e319cc96106a57e8c9"/><section>
+    <title>Side</title>
+<indexterm><primary>Side</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</primary><secondary>Side</secondary></indexterm>
+<para><computeroutput>EnumSideReq KTN::CME::IL3::OrderCancelReplaceRequestMsg::Side</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a12aa352ab3b2bb46cbcb3f2b0149e735"/><section>
+    <title>StopPx</title>
+<indexterm><primary>StopPx</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</primary><secondary>StopPx</secondary></indexterm>
+<para><computeroutput>int64_t KTN::CME::IL3::OrderCancelReplaceRequestMsg::StopPx</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a995c25ffe5f4383762ab02a0820052e8"/><section>
+    <title>templateId_</title>
+<indexterm><primary>templateId_</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</primary><secondary>templateId_</secondary></indexterm>
+<para><computeroutput>std::uint16_t KTN::CME::IL3::OrderCancelReplaceRequestMsg::templateId_</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1a3c5446370a7fcc700f9448f8a5390a6f"/><section>
+    <title>TimeInForce</title>
+<indexterm><primary>TimeInForce</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</primary><secondary>TimeInForce</secondary></indexterm>
+<para><computeroutput>EnumTimeInForce KTN::CME::IL3::OrderCancelReplaceRequestMsg::TimeInForce</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg_1ace1402ded19277fbb172875365031d15"/><section>
+    <title>version_</title>
+<indexterm><primary>version_</primary><secondary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderCancelReplaceRequestMsg</primary><secondary>version_</secondary></indexterm>
+<para><computeroutput>std::uint16_t KTN::CME::IL3::OrderCancelReplaceRequestMsg::version_</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+exchsupport/cme/il3/IL3Messages2.hpp</section>
+</section>

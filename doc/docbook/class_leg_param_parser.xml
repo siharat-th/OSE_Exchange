@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_leg_param_parser" xml:lang="en-US">
+<title>LegParamParser Class Reference</title>
+<indexterm><primary>LegParamParser</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_leg_param_parser">LegParamParser</link> class provides methods to parse and retrieve leg parameters. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;LegParamParser.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static vector&lt; <link linkend="_structinstrument">instrument</link> &gt; <link linkend="_class_leg_param_parser_1ae85753c73c0e5733f03ed24c4328e0b5">ParseSpreadLegs</link> (string json)</para>
+
+<para>Parses the spread legs from the given JSON string. </para>
+</listitem>
+            <listitem><para>static std::unordered_map&lt; string, bool &gt; <link linkend="_class_leg_param_parser_1ab6e9408568f628782773812f86d25271">GetActiveQuoteSetting</link> (Document &amp;d)</para>
+
+<para>Retrieves the active quote settings from the given JSON document. </para>
+</listitem>
+            <listitem><para>static <link linkend="_structinstrument">instrument</link> <link linkend="_class_leg_param_parser_1a297ebf724a2da80b67512a3c3ed4317c">GetCmeLeg</link> (string symbol, KOrderProdType::Enum prodtype, int index)</para>
+
+<para>Retrieves the CME leg for the given symbol, product type, and index. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_leg_param_parser">LegParamParser</link> class provides methods to parse and retrieve leg parameters. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_leg_param_parser_1ab6e9408568f628782773812f86d25271"/><section>
+    <title>GetActiveQuoteSetting()</title>
+<indexterm><primary>GetActiveQuoteSetting</primary><secondary>LegParamParser</secondary></indexterm>
+<indexterm><primary>LegParamParser</primary><secondary>GetActiveQuoteSetting</secondary></indexterm>
+<para><computeroutput>std::unordered_map&lt; string, bool &gt; LegParamParser::GetActiveQuoteSetting (Document &amp; d)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Retrieves the active quote settings from the given JSON document. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>d</entry><entry>
+<para>The JSON document. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>An unordered map with the active quote settings. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_leg_param_parser_1a297ebf724a2da80b67512a3c3ed4317c"/><section>
+    <title>GetCmeLeg()</title>
+<indexterm><primary>GetCmeLeg</primary><secondary>LegParamParser</secondary></indexterm>
+<indexterm><primary>LegParamParser</primary><secondary>GetCmeLeg</secondary></indexterm>
+<para><computeroutput><link linkend="_structinstrument">instrument</link> LegParamParser::GetCmeLeg (string symbol, KOrderProdType::Enum prodtype, int index)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Retrieves the CME leg for the given symbol, product type, and index. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>symbol</entry><entry>
+<para>The symbol of the leg. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>prodtype</entry><entry>
+<para>The product type of the leg. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>index</entry><entry>
+<para>The index of the leg. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The CME leg instrument. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00098">instrument::activeQuoting</link>, <link linkend="_l00111">instrument::exch</link>, <link linkend="_l00075">instrument::index</link>, <link linkend="_l00101">instrument::iscme</link>, <link linkend="_l00079">instrument::iside</link>, <link linkend="_l00083">instrument::lastAsk</link>, <link linkend="_l00082">instrument::lastBid</link>, <link linkend="_l00064">instrument::pricemult</link>, <link linkend="_l00105">instrument::prodtype</link>, <link linkend="_l00065">instrument::spreadmult</link>, <link linkend="_l00113">instrument::symbol</link>, and <link linkend="_l00068">instrument::tickvalue</link>.</para>
+</section>
+<anchor xml:id="_class_leg_param_parser_1ae85753c73c0e5733f03ed24c4328e0b5"/><section>
+    <title>ParseSpreadLegs()</title>
+<indexterm><primary>ParseSpreadLegs</primary><secondary>LegParamParser</secondary></indexterm>
+<indexterm><primary>LegParamParser</primary><secondary>ParseSpreadLegs</secondary></indexterm>
+<para><computeroutput>vector&lt; <link linkend="_structinstrument">instrument</link> &gt; LegParamParser::ParseSpreadLegs (string json)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Parses the spread legs from the given JSON string. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>json</entry><entry>
+<para>The JSON string containing the spread legs. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A vector of instrument objects representing the spread legs. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00098">instrument::activeQuoting</link>, <link linkend="_l00111">instrument::exch</link>, <link linkend="_l00075">instrument::index</link>, <link linkend="_l00101">instrument::iscme</link>, <link linkend="_l00079">instrument::iside</link>, <link linkend="_l00083">instrument::lastAsk</link>, <link linkend="_l00082">instrument::lastBid</link>, <link linkend="_l00064">instrument::pricemult</link>, <link linkend="_l00120">instrument::Print()</link>, <link linkend="_l00105">instrument::prodtype</link>, <link linkend="_l00065">instrument::spreadmult</link>, <link linkend="_l00097">instrument::squeeze</link>, <link linkend="_l00113">instrument::symbol</link>, and <link linkend="_l00068">instrument::tickvalue</link>.</para>
+<para>
+Referenced by <link linkend="_l00068">AlgoFactory::LaunchAlgo()</link>, <link linkend="_l00044">KTN::MultiSpreaderV3::onJson()</link>, and <link linkend="_l00183">AlgoFactory::ParseLegs()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+AlgoParams/LegParamParser.hppAlgoParams/LegParamParser.cpp</section>
+</section>

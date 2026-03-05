@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_engine_command" xml:lang="en-US">
+<title>EngineCommand Struct Reference</title>
+<indexterm><primary>EngineCommand</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_struct_engine_command_1a69ae02f1249cc290fbec266fd0688615">topic</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_engine_command_1a83e64140692268cfe706fe90df4c369b">source</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_engine_command_1a82cb0db898ff2418f56018fdb7a49b7c">guid</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_engine_command_1a7814c2354ea506a322f723e0464b00a7">spreadid</link></para>
+</listitem>
+            <listitem><para>std::unordered_map&lt; <link linkend="_struct_k_engine_item_1a2e3a58da9f141f76749c623fe6b395d7">KEngineItem::Enum</link>, string &gt; <link linkend="_struct_engine_command_1a3aa14ed05e48d6a302a80e9f60e8ac81">items</link></para>
+</listitem>
+            <listitem><para><link linkend="_struct_k_engine_type_1a5ce479e529f2e621a260e88a5309655a">KEngineType::Enum</link> <link linkend="_struct_engine_command_1a36a929993cf826e343461730477bbd5b">Engine</link></para>
+</listitem>
+            <listitem><para><link linkend="_struct_k_engine_command_1a48a31526f0365e35b4c067ae4c30c45b">KEngineCommand::Enum</link> <link linkend="_struct_engine_command_1afa57bb21c2be8e7c1e913c12f6cc0a41">Command</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_engine_command_1afa57bb21c2be8e7c1e913c12f6cc0a41"/><section>
+    <title>Command</title>
+<indexterm><primary>Command</primary><secondary>EngineCommand</secondary></indexterm>
+<indexterm><primary>EngineCommand</primary><secondary>Command</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_k_engine_command_1a48a31526f0365e35b4c067ae4c30c45b">KEngineCommand::Enum</link> EngineCommand::Command</computeroutput></para></section>
+<anchor xml:id="_struct_engine_command_1a36a929993cf826e343461730477bbd5b"/><section>
+    <title>Engine</title>
+<indexterm><primary>Engine</primary><secondary>EngineCommand</secondary></indexterm>
+<indexterm><primary>EngineCommand</primary><secondary>Engine</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_k_engine_type_1a5ce479e529f2e621a260e88a5309655a">KEngineType::Enum</link> EngineCommand::Engine</computeroutput></para></section>
+<anchor xml:id="_struct_engine_command_1a82cb0db898ff2418f56018fdb7a49b7c"/><section>
+    <title>guid</title>
+<indexterm><primary>guid</primary><secondary>EngineCommand</secondary></indexterm>
+<indexterm><primary>EngineCommand</primary><secondary>guid</secondary></indexterm>
+<para><computeroutput>string EngineCommand::guid</computeroutput></para></section>
+<anchor xml:id="_struct_engine_command_1a3aa14ed05e48d6a302a80e9f60e8ac81"/><section>
+    <title>items</title>
+<indexterm><primary>items</primary><secondary>EngineCommand</secondary></indexterm>
+<indexterm><primary>EngineCommand</primary><secondary>items</secondary></indexterm>
+<para><computeroutput>std::unordered_map&lt;<link linkend="_struct_k_engine_item_1a2e3a58da9f141f76749c623fe6b395d7">KEngineItem::Enum</link>, string&gt; EngineCommand::items</computeroutput></para></section>
+<anchor xml:id="_struct_engine_command_1a83e64140692268cfe706fe90df4c369b"/><section>
+    <title>source</title>
+<indexterm><primary>source</primary><secondary>EngineCommand</secondary></indexterm>
+<indexterm><primary>EngineCommand</primary><secondary>source</secondary></indexterm>
+<para><computeroutput>string EngineCommand::source</computeroutput></para></section>
+<anchor xml:id="_struct_engine_command_1a7814c2354ea506a322f723e0464b00a7"/><section>
+    <title>spreadid</title>
+<indexterm><primary>spreadid</primary><secondary>EngineCommand</secondary></indexterm>
+<indexterm><primary>EngineCommand</primary><secondary>spreadid</secondary></indexterm>
+<para><computeroutput>string EngineCommand::spreadid</computeroutput></para></section>
+<anchor xml:id="_struct_engine_command_1a69ae02f1249cc290fbec266fd0688615"/><section>
+    <title>topic</title>
+<indexterm><primary>topic</primary><secondary>EngineCommand</secondary></indexterm>
+<indexterm><primary>EngineCommand</primary><secondary>topic</secondary></indexterm>
+<para><computeroutput>string EngineCommand::topic</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+AlgoEngines/engine_structs.hpp</section>
+</section>

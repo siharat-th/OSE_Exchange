@@ -1,0 +1,207 @@
+\doxysection{genericstats Class Reference}
+\hypertarget{classgenericstats}{}\label{classgenericstats}\index{genericstats@{genericstats}}
+
+
+Class representing generic statistics.  
+
+
+
+
+{\ttfamily \#include $<$algo\+\_\+structs.\+hpp$>$}
+
+Inheritance diagram for genericstats\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classgenericstats}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classgenericstats_a449eeb0df0a188a53da05206b14f5b1c}{enabled}}
+\item 
+std\+::string \mbox{\hyperlink{classgenericstats_a8c7c1db4bda74f44661063d0975e39d6}{name}}
+\item 
+std\+::string \mbox{\hyperlink{classgenericstats_a0febd5053a1a68b2fc4079feb5390e4d}{templatename}}
+\item 
+std\+::string \mbox{\hyperlink{classgenericstats_abd717ba3dc89b35add99f6851444391b}{uniqueid}}
+\item 
+std\+::string \mbox{\hyperlink{classgenericstats_ad1b3b0f1a5d4fc63240930815d4abed8}{source}}
+\item 
+std\+::string \mbox{\hyperlink{classgenericstats_a9a77ba6cca19faad7f13492ad8bfb218}{exch}}
+\item 
+std\+::string \mbox{\hyperlink{classgenericstats_ad20094d31b98b5d6d613aa97e20dbdf8}{symbol}}
+\item 
+std\+::string \mbox{\hyperlink{classgenericstats_a43b9024d60d10f85bd433b3c0a169e73}{msgtype}}
+\item 
+std\+::string \mbox{\hyperlink{classgenericstats_a3b22b41c393f085348aa75cfec0accc9}{text}}
+\item 
+double \mbox{\hyperlink{classgenericstats_ab059427d89ede8fddb529e6c30b983bc}{position}}
+\item 
+double \mbox{\hyperlink{classgenericstats_aaa1ec86e27d2f1b32e9a5b9de81a6c77}{totalexec}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classgenericstats_acbe069b442000520549d2db1728a4d00}{ssboe}}
+\item 
+string \mbox{\hyperlink{classgenericstats_aac106f0927bffcb95c25e975c302c091}{updatetime}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classstats}{stats}}}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classstats_a9aa1d4ceadaad7dbf6359f4b8b7675fe}{Get\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Gets the type of the statistics. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classstats}{stats}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_algo_stats_aa6ad6c12d8ac79f84e3d98668b9347c6}{Algo\+Stats\+::\+Enum}} \mbox{\hyperlink{classstats_a900f893a3794febac7311264ff573c5d}{Stat\+Type}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing generic statistics. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classgenericstats_a909a1033f3797de166c2f96adee771c6}\index{genericstats@{genericstats}!genericstats@{genericstats}}
+\index{genericstats@{genericstats}!genericstats@{genericstats}}
+\doxysubsubsection{\texorpdfstring{genericstats()}{genericstats()}}
+{\footnotesize\ttfamily \label{classgenericstats_a909a1033f3797de166c2f96adee771c6} 
+genericstats\+::genericstats (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classgenericstats_a449eeb0df0a188a53da05206b14f5b1c}\index{genericstats@{genericstats}!enabled@{enabled}}
+\index{enabled@{enabled}!genericstats@{genericstats}}
+\doxysubsubsection{\texorpdfstring{enabled}{enabled}}
+{\footnotesize\ttfamily \label{classgenericstats_a449eeb0df0a188a53da05206b14f5b1c} 
+bool genericstats\+::enabled}
+
+Flag indicating if the statistics is enabled. 
+
+Referenced by \mbox{\hyperlink{l00039}{KTN\+::\+REPORTER\+::\+Algo\+V3\+Reporter\+::\+Do\+Work()}}, and \mbox{\hyperlink{l00087}{KTN\+::\+REPORTER\+::\+Algo\+V3\+Reporter\+::\+Send\+Message()}}.
+
+\Hypertarget{classgenericstats_a9a77ba6cca19faad7f13492ad8bfb218}\index{genericstats@{genericstats}!exch@{exch}}
+\index{exch@{exch}!genericstats@{genericstats}}
+\doxysubsubsection{\texorpdfstring{exch}{exch}}
+{\footnotesize\ttfamily \label{classgenericstats_a9a77ba6cca19faad7f13492ad8bfb218} 
+std\+::string genericstats\+::exch}
+
+The exchange. 
+
+Referenced by \mbox{\hyperlink{l00087}{KTN\+::\+REPORTER\+::\+Algo\+V3\+Reporter\+::\+Send\+Message()}}.
+
+\Hypertarget{classgenericstats_a43b9024d60d10f85bd433b3c0a169e73}\index{genericstats@{genericstats}!msgtype@{msgtype}}
+\index{msgtype@{msgtype}!genericstats@{genericstats}}
+\doxysubsubsection{\texorpdfstring{msgtype}{msgtype}}
+{\footnotesize\ttfamily \label{classgenericstats_a43b9024d60d10f85bd433b3c0a169e73} 
+std\+::string genericstats\+::msgtype}
+
+The message type. 
+
+Referenced by \mbox{\hyperlink{l00039}{KTN\+::\+REPORTER\+::\+Algo\+V3\+Reporter\+::\+Do\+Work()}}, and \mbox{\hyperlink{l00087}{KTN\+::\+REPORTER\+::\+Algo\+V3\+Reporter\+::\+Send\+Message()}}.
+
+\Hypertarget{classgenericstats_a8c7c1db4bda74f44661063d0975e39d6}\index{genericstats@{genericstats}!name@{name}}
+\index{name@{name}!genericstats@{genericstats}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily \label{classgenericstats_a8c7c1db4bda74f44661063d0975e39d6} 
+std\+::string genericstats\+::name}
+
+The name. 
+
+Referenced by \mbox{\hyperlink{l00087}{KTN\+::\+REPORTER\+::\+Algo\+V3\+Reporter\+::\+Send\+Message()}}.
+
+\Hypertarget{classgenericstats_ab059427d89ede8fddb529e6c30b983bc}\index{genericstats@{genericstats}!position@{position}}
+\index{position@{position}!genericstats@{genericstats}}
+\doxysubsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily \label{classgenericstats_ab059427d89ede8fddb529e6c30b983bc} 
+double genericstats\+::position}
+
+The position. 
+
+Referenced by \mbox{\hyperlink{l00087}{KTN\+::\+REPORTER\+::\+Algo\+V3\+Reporter\+::\+Send\+Message()}}.
+
+\Hypertarget{classgenericstats_ad1b3b0f1a5d4fc63240930815d4abed8}\index{genericstats@{genericstats}!source@{source}}
+\index{source@{source}!genericstats@{genericstats}}
+\doxysubsubsection{\texorpdfstring{source}{source}}
+{\footnotesize\ttfamily \label{classgenericstats_ad1b3b0f1a5d4fc63240930815d4abed8} 
+std\+::string genericstats\+::source}
+
+The source. 
+
+Referenced by \mbox{\hyperlink{l00087}{KTN\+::\+REPORTER\+::\+Algo\+V3\+Reporter\+::\+Send\+Message()}}.
+
+\Hypertarget{classgenericstats_acbe069b442000520549d2db1728a4d00}\index{genericstats@{genericstats}!ssboe@{ssboe}}
+\index{ssboe@{ssboe}!genericstats@{genericstats}}
+\doxysubsubsection{\texorpdfstring{ssboe}{ssboe}}
+{\footnotesize\ttfamily \label{classgenericstats_acbe069b442000520549d2db1728a4d00} 
+uint64\+\_\+t genericstats\+::ssboe}
+
+The SSBOE. 
+
+Referenced by \mbox{\hyperlink{l00039}{KTN\+::\+REPORTER\+::\+Algo\+V3\+Reporter\+::\+Do\+Work()}}.
+
+\Hypertarget{classgenericstats_ad20094d31b98b5d6d613aa97e20dbdf8}\index{genericstats@{genericstats}!symbol@{symbol}}
+\index{symbol@{symbol}!genericstats@{genericstats}}
+\doxysubsubsection{\texorpdfstring{symbol}{symbol}}
+{\footnotesize\ttfamily \label{classgenericstats_ad20094d31b98b5d6d613aa97e20dbdf8} 
+std\+::string genericstats\+::symbol}
+
+The symbol. 
+
+Referenced by \mbox{\hyperlink{l00087}{KTN\+::\+REPORTER\+::\+Algo\+V3\+Reporter\+::\+Send\+Message()}}.
+
+\Hypertarget{classgenericstats_a0febd5053a1a68b2fc4079feb5390e4d}\index{genericstats@{genericstats}!templatename@{templatename}}
+\index{templatename@{templatename}!genericstats@{genericstats}}
+\doxysubsubsection{\texorpdfstring{templatename}{templatename}}
+{\footnotesize\ttfamily \label{classgenericstats_a0febd5053a1a68b2fc4079feb5390e4d} 
+std\+::string genericstats\+::templatename}
+
+The template name. 
+
+Referenced by \mbox{\hyperlink{l00087}{KTN\+::\+REPORTER\+::\+Algo\+V3\+Reporter\+::\+Send\+Message()}}.
+
+\Hypertarget{classgenericstats_a3b22b41c393f085348aa75cfec0accc9}\index{genericstats@{genericstats}!text@{text}}
+\index{text@{text}!genericstats@{genericstats}}
+\doxysubsubsection{\texorpdfstring{text}{text}}
+{\footnotesize\ttfamily \label{classgenericstats_a3b22b41c393f085348aa75cfec0accc9} 
+std\+::string genericstats\+::text}
+
+The text. 
+
+Referenced by \mbox{\hyperlink{l00087}{KTN\+::\+REPORTER\+::\+Algo\+V3\+Reporter\+::\+Send\+Message()}}.
+
+\Hypertarget{classgenericstats_aaa1ec86e27d2f1b32e9a5b9de81a6c77}\index{genericstats@{genericstats}!totalexec@{totalexec}}
+\index{totalexec@{totalexec}!genericstats@{genericstats}}
+\doxysubsubsection{\texorpdfstring{totalexec}{totalexec}}
+{\footnotesize\ttfamily \label{classgenericstats_aaa1ec86e27d2f1b32e9a5b9de81a6c77} 
+double genericstats\+::totalexec}
+
+The total executed quantity. 
+
+Referenced by \mbox{\hyperlink{l00087}{KTN\+::\+REPORTER\+::\+Algo\+V3\+Reporter\+::\+Send\+Message()}}.
+
+\Hypertarget{classgenericstats_abd717ba3dc89b35add99f6851444391b}\index{genericstats@{genericstats}!uniqueid@{uniqueid}}
+\index{uniqueid@{uniqueid}!genericstats@{genericstats}}
+\doxysubsubsection{\texorpdfstring{uniqueid}{uniqueid}}
+{\footnotesize\ttfamily \label{classgenericstats_abd717ba3dc89b35add99f6851444391b} 
+std\+::string genericstats\+::uniqueid}
+
+The unique ID. 
+
+Referenced by \mbox{\hyperlink{l00039}{KTN\+::\+REPORTER\+::\+Algo\+V3\+Reporter\+::\+Do\+Work()}}, and \mbox{\hyperlink{l00087}{KTN\+::\+REPORTER\+::\+Algo\+V3\+Reporter\+::\+Send\+Message()}}.
+
+\Hypertarget{classgenericstats_aac106f0927bffcb95c25e975c302c091}\index{genericstats@{genericstats}!updatetime@{updatetime}}
+\index{updatetime@{updatetime}!genericstats@{genericstats}}
+\doxysubsubsection{\texorpdfstring{updatetime}{updatetime}}
+{\footnotesize\ttfamily \label{classgenericstats_aac106f0927bffcb95c25e975c302c091} 
+string genericstats\+::updatetime}
+
+The update time. 
+
+Referenced by \mbox{\hyperlink{l00039}{KTN\+::\+REPORTER\+::\+Algo\+V3\+Reporter\+::\+Do\+Work()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Algo\+Support/algo\+\_\+structs.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_status_request_msg" xml:lang="en-US">
+<title>KTN::CME::IL3::OrderMassStatusRequestMsg Struct Reference</title>
+<indexterm><primary>KTN::CME::IL3::OrderMassStatusRequestMsg</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_status_request_msg_1a45c9ee770662948d8328f18481c2e686">Construct</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>std::uint16_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_status_request_msg_1ab89ac6aecd489d62ca4e91667ff3961c">msgSize</link></para>
+</listitem>
+            <listitem><para>std::uint16_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_status_request_msg_1a6b0ee3ceb09c788f088bb95ec62fcc65">enodingType_</link></para>
+</listitem>
+            <listitem><para>std::uint16_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_status_request_msg_1a299bf0348f9bf7d956ade89e191d3e2a">blockLength_</link></para>
+</listitem>
+            <listitem><para>std::uint16_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_status_request_msg_1a7b2793647c780d5f766a391e60398d41">templateId_</link></para>
+</listitem>
+            <listitem><para>std::uint16_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_status_request_msg_1abc166e0cb74b0af0af30705878374499">schemaId_</link></para>
+</listitem>
+            <listitem><para>std::uint16_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_status_request_msg_1ac79ea5f0ef92454b3cba4999313ff0d5">version_</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_status_request_msg_1ab5e5e74342b6e98592ae813b74ebbfcb">PartyDetailsListReqID</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_status_request_msg_1a51b95bb13ef22756df90e60d1b3ef3f6">MassStatusReqID</link></para>
+</listitem>
+            <listitem><para>EnumManualOrdIndReq <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_status_request_msg_1a88f2f3507f85e72f5ce6c0f5b9838b84">ManualOrderIndicator</link></para>
+</listitem>
+            <listitem><para>uInt32 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_status_request_msg_1a02697dc0df79fc8a8f0906902aef04a4">SeqNum</link></para>
+</listitem>
+            <listitem><para>String20Req <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_status_request_msg_1a23ac466565fce35a93431603fe7ae8a4">SenderID</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_status_request_msg_1a2ffb794981f6ff3c3cffae79101bd19d">SendingTimeEpoch</link></para>
+</listitem>
+            <listitem><para>StringLength6 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_status_request_msg_1a5d0d9d637a2ddf351109eb231069310a">SecurityGroup</link></para>
+</listitem>
+            <listitem><para>String5Req <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_status_request_msg_1aa2dc512a3a0114dae618fbf3891e5acc">Location</link></para>
+</listitem>
+            <listitem><para>Int32NULL <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_status_request_msg_1a46213db6872c8c5b87a4e2ecc2fb28cb">SecurityID</link></para>
+</listitem>
+            <listitem><para>EnumMassStatusReqTyp <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_status_request_msg_1a02c04ff956e150cf955d5b7ad3853932">MassStatusReqType</link></para>
+</listitem>
+            <listitem><para>EnumMassStatusOrdTyp <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_status_request_msg_1ad51f19eb910e5cd49c90698f8641e6f1">OrdStatusReqType</link></para>
+</listitem>
+            <listitem><para>EnumMassStatusTIF <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_status_request_msg_1a682518de986d0d4dca7e452460105a8d">TimeInForce</link></para>
+</listitem>
+            <listitem><para>uInt8NULL <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_status_request_msg_1aeb02346f43048df6dc686df168bfc98b">MarketSegmentID</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_status_request_msg_1a45c9ee770662948d8328f18481c2e686"/><section>
+    <title>Construct()</title>
+<indexterm><primary>Construct</primary><secondary>KTN::CME::IL3::OrderMassStatusRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassStatusRequestMsg</primary><secondary>Construct</secondary></indexterm>
+<para><computeroutput>void KTN::CME::IL3::OrderMassStatusRequestMsg::Construct ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_status_request_msg_1a299bf0348f9bf7d956ade89e191d3e2a"/><section>
+    <title>blockLength_</title>
+<indexterm><primary>blockLength_</primary><secondary>KTN::CME::IL3::OrderMassStatusRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassStatusRequestMsg</primary><secondary>blockLength_</secondary></indexterm>
+<para><computeroutput>std::uint16_t KTN::CME::IL3::OrderMassStatusRequestMsg::blockLength_</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_status_request_msg_1a6b0ee3ceb09c788f088bb95ec62fcc65"/><section>
+    <title>enodingType_</title>
+<indexterm><primary>enodingType_</primary><secondary>KTN::CME::IL3::OrderMassStatusRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassStatusRequestMsg</primary><secondary>enodingType_</secondary></indexterm>
+<para><computeroutput>std::uint16_t KTN::CME::IL3::OrderMassStatusRequestMsg::enodingType_</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_status_request_msg_1aa2dc512a3a0114dae618fbf3891e5acc"/><section>
+    <title>Location</title>
+<indexterm><primary>Location</primary><secondary>KTN::CME::IL3::OrderMassStatusRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassStatusRequestMsg</primary><secondary>Location</secondary></indexterm>
+<para><computeroutput>String5Req KTN::CME::IL3::OrderMassStatusRequestMsg::Location</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_status_request_msg_1a88f2f3507f85e72f5ce6c0f5b9838b84"/><section>
+    <title>ManualOrderIndicator</title>
+<indexterm><primary>ManualOrderIndicator</primary><secondary>KTN::CME::IL3::OrderMassStatusRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassStatusRequestMsg</primary><secondary>ManualOrderIndicator</secondary></indexterm>
+<para><computeroutput>EnumManualOrdIndReq KTN::CME::IL3::OrderMassStatusRequestMsg::ManualOrderIndicator</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_status_request_msg_1aeb02346f43048df6dc686df168bfc98b"/><section>
+    <title>MarketSegmentID</title>
+<indexterm><primary>MarketSegmentID</primary><secondary>KTN::CME::IL3::OrderMassStatusRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassStatusRequestMsg</primary><secondary>MarketSegmentID</secondary></indexterm>
+<para><computeroutput>uInt8NULL KTN::CME::IL3::OrderMassStatusRequestMsg::MarketSegmentID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_status_request_msg_1a51b95bb13ef22756df90e60d1b3ef3f6"/><section>
+    <title>MassStatusReqID</title>
+<indexterm><primary>MassStatusReqID</primary><secondary>KTN::CME::IL3::OrderMassStatusRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassStatusRequestMsg</primary><secondary>MassStatusReqID</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::OrderMassStatusRequestMsg::MassStatusReqID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_status_request_msg_1a02c04ff956e150cf955d5b7ad3853932"/><section>
+    <title>MassStatusReqType</title>
+<indexterm><primary>MassStatusReqType</primary><secondary>KTN::CME::IL3::OrderMassStatusRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassStatusRequestMsg</primary><secondary>MassStatusReqType</secondary></indexterm>
+<para><computeroutput>EnumMassStatusReqTyp KTN::CME::IL3::OrderMassStatusRequestMsg::MassStatusReqType</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_status_request_msg_1ab89ac6aecd489d62ca4e91667ff3961c"/><section>
+    <title>msgSize</title>
+<indexterm><primary>msgSize</primary><secondary>KTN::CME::IL3::OrderMassStatusRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassStatusRequestMsg</primary><secondary>msgSize</secondary></indexterm>
+<para><computeroutput>std::uint16_t KTN::CME::IL3::OrderMassStatusRequestMsg::msgSize</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_status_request_msg_1ad51f19eb910e5cd49c90698f8641e6f1"/><section>
+    <title>OrdStatusReqType</title>
+<indexterm><primary>OrdStatusReqType</primary><secondary>KTN::CME::IL3::OrderMassStatusRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassStatusRequestMsg</primary><secondary>OrdStatusReqType</secondary></indexterm>
+<para><computeroutput>EnumMassStatusOrdTyp KTN::CME::IL3::OrderMassStatusRequestMsg::OrdStatusReqType</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_status_request_msg_1ab5e5e74342b6e98592ae813b74ebbfcb"/><section>
+    <title>PartyDetailsListReqID</title>
+<indexterm><primary>PartyDetailsListReqID</primary><secondary>KTN::CME::IL3::OrderMassStatusRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassStatusRequestMsg</primary><secondary>PartyDetailsListReqID</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::OrderMassStatusRequestMsg::PartyDetailsListReqID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_status_request_msg_1abc166e0cb74b0af0af30705878374499"/><section>
+    <title>schemaId_</title>
+<indexterm><primary>schemaId_</primary><secondary>KTN::CME::IL3::OrderMassStatusRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassStatusRequestMsg</primary><secondary>schemaId_</secondary></indexterm>
+<para><computeroutput>std::uint16_t KTN::CME::IL3::OrderMassStatusRequestMsg::schemaId_</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_status_request_msg_1a5d0d9d637a2ddf351109eb231069310a"/><section>
+    <title>SecurityGroup</title>
+<indexterm><primary>SecurityGroup</primary><secondary>KTN::CME::IL3::OrderMassStatusRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassStatusRequestMsg</primary><secondary>SecurityGroup</secondary></indexterm>
+<para><computeroutput>StringLength6 KTN::CME::IL3::OrderMassStatusRequestMsg::SecurityGroup</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_status_request_msg_1a46213db6872c8c5b87a4e2ecc2fb28cb"/><section>
+    <title>SecurityID</title>
+<indexterm><primary>SecurityID</primary><secondary>KTN::CME::IL3::OrderMassStatusRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassStatusRequestMsg</primary><secondary>SecurityID</secondary></indexterm>
+<para><computeroutput>Int32NULL KTN::CME::IL3::OrderMassStatusRequestMsg::SecurityID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_status_request_msg_1a23ac466565fce35a93431603fe7ae8a4"/><section>
+    <title>SenderID</title>
+<indexterm><primary>SenderID</primary><secondary>KTN::CME::IL3::OrderMassStatusRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassStatusRequestMsg</primary><secondary>SenderID</secondary></indexterm>
+<para><computeroutput>String20Req KTN::CME::IL3::OrderMassStatusRequestMsg::SenderID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_status_request_msg_1a2ffb794981f6ff3c3cffae79101bd19d"/><section>
+    <title>SendingTimeEpoch</title>
+<indexterm><primary>SendingTimeEpoch</primary><secondary>KTN::CME::IL3::OrderMassStatusRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassStatusRequestMsg</primary><secondary>SendingTimeEpoch</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::OrderMassStatusRequestMsg::SendingTimeEpoch</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_status_request_msg_1a02697dc0df79fc8a8f0906902aef04a4"/><section>
+    <title>SeqNum</title>
+<indexterm><primary>SeqNum</primary><secondary>KTN::CME::IL3::OrderMassStatusRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassStatusRequestMsg</primary><secondary>SeqNum</secondary></indexterm>
+<para><computeroutput>uInt32 KTN::CME::IL3::OrderMassStatusRequestMsg::SeqNum</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_status_request_msg_1a7b2793647c780d5f766a391e60398d41"/><section>
+    <title>templateId_</title>
+<indexterm><primary>templateId_</primary><secondary>KTN::CME::IL3::OrderMassStatusRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassStatusRequestMsg</primary><secondary>templateId_</secondary></indexterm>
+<para><computeroutput>std::uint16_t KTN::CME::IL3::OrderMassStatusRequestMsg::templateId_</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_status_request_msg_1a682518de986d0d4dca7e452460105a8d"/><section>
+    <title>TimeInForce</title>
+<indexterm><primary>TimeInForce</primary><secondary>KTN::CME::IL3::OrderMassStatusRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassStatusRequestMsg</primary><secondary>TimeInForce</secondary></indexterm>
+<para><computeroutput>EnumMassStatusTIF KTN::CME::IL3::OrderMassStatusRequestMsg::TimeInForce</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_status_request_msg_1ac79ea5f0ef92454b3cba4999313ff0d5"/><section>
+    <title>version_</title>
+<indexterm><primary>version_</primary><secondary>KTN::CME::IL3::OrderMassStatusRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassStatusRequestMsg</primary><secondary>version_</secondary></indexterm>
+<para><computeroutput>std::uint16_t KTN::CME::IL3::OrderMassStatusRequestMsg::version_</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+exchsupport/cme/il3/IL3Messages2.hpp</section>
+</section>

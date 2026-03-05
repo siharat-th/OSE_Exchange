@@ -1,0 +1,324 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_m_s2_params" xml:lang="en-US">
+<title>MS2Params Struct Reference</title>
+<indexterm><primary>MS2Params</primary></indexterm>
+<para>
+
+<para>The struct representing the parameters for the MultiSpreader2 algorithm. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;MS2Params.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_struct_m_s2_params">MS2Params</link> <link linkend="_struct_m_s2_params_1a771720a6ad58a6b8812e44d56afbc2f5">parse</link> (const std::string &amp;json_str)</para>
+
+<para>Parses the JSON string and returns an instance of <link linkend="_struct_m_s2_params">MS2Params</link>. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_struct_m_s2_params_1acbbdd0c91b5755b5d3f48049bb71d345">ValidJson</link></para>
+</listitem>
+            <listitem><para><link linkend="_structalgometa">algometa</link> <link linkend="_struct_m_s2_params_1afd5d197d3c5f4f870812c6851f2810eb">meta</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_m_s2_params_1a8806ed95bc60ce657143a324767a9d60">subid</link></para>
+</listitem>
+            <listitem><para>std::unordered_map&lt; int, <link linkend="_structinstrument">instrument</link> &gt; <link linkend="_struct_m_s2_params_1ad8d6936215d7ad301ee8c3fd945c5539">LegSecIdMap</link></para>
+</listitem>
+            <listitem><para>std::unordered_map&lt; string, <link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> &gt; <link linkend="_struct_m_s2_params_1a605ffafc462cfa0e79bfc421d04b4571">Ords</link></para>
+</listitem>
+            <listitem><para><link linkend="_structinstrument">instrument</link> <link linkend="_struct_m_s2_params_1a00ded2a40df6f9a96b5941178c540e2b">Legs</link> [24]</para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_m_s2_params_1a636c07f2c4199b96a8d137e21b9d5bab">LegCount</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_m_s2_params_1a8a567c8dc0d384819c10e35152e129cb">TestMode</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_m_s2_params_1a516e211a6e58c5cfb966324131b9f3a0">Reset</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_m_s2_params_1a05c9b1cb821c639b53bc37cde3f9c59e">OrderQty</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_m_s2_params_1a448263b228eed7932a87e990ded16409">TotalQty</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_m_s2_params_1ae4c3981342ea4b3513b1b7ceebb9953c">MaxPosition</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_m_s2_params_1a102f579c1d1ac77489bfe8c4bcbd8fd4">ReloadOnFill</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_m_s2_params_1a7ceef3a90cfb39f87eb73072b3909906">MinLeanQty</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_m_s2_params_1abd64cc78c920115ad6ebee0876d0ac2f">NetPosition</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_m_s2_params_1a33f068004175645956b1a3aa83b7e915">TotalExec</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_m_s2_params_1aeacd9039efaec3bac7e2187bc8c58afd">TotalWorking</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_m_s2_params_1a93b952730e5e490ba718d0a477dff7f1">MsgsSent</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_m_s2_params_1a9f0fb2bc5aab7c0897cd9ef2304c016c">MsgsExec</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_m_s2_params_1a6936350bb8f26b38f09b8cb2fc062780">Slop</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_m_s2_params_1a139a2d77c9f94725b3236c3a34ac966a">SendBids</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_m_s2_params_1ab29794f6661f6301988e76b9205c83d5">SendAsks</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_m_s2_params_1abeb06e45170aadd224fda2589a06a7c9">SpreadBid</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_m_s2_params_1ae15564005e7426e24715d8ab5920ca74">SpreadAsk</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_m_s2_params_1aef392aaa8f55ee3d57b585eac202403e">BuyDisc</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_m_s2_params_1aa6a26a8d8ac39ecd420b692ffeb5684a">SellDisc</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_m_s2_params_1ab3c85f049c6fb36baaf23a719f63108f">HedgeStop</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_m_s2_params_1aaaa0239f51d9f78af60f771bc7d35455">SqueezeRatio</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_m_s2_params_1a5e55444616ec2ddc226a0b1aa1c86fab">SqueezeQty</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_m_s2_params_1a24101b3a009c99e6b2c498b8ba8bfee4">WavgPlus</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_m_s2_params_1ada59fdd6e281d8b4eeabcbcff72898f9">WavgThreshold</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_m_s2_params_1a486bd2ff0cd355c55a2daab7b294bae8">ExchFee</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_m_s2_params_1a427e46eb4a0267e2711c23bf9c77bc01">Generative</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_m_s2_params_1a7e98c0bf58165d1f9662aa74301744cd">Doubles</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_m_s2_params_1acd80988cd1857bbf74ec648076d131f7">Triples</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The struct representing the parameters for the MultiSpreader2 algorithm. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_m_s2_params_1a771720a6ad58a6b8812e44d56afbc2f5"/><section>
+    <title>parse()</title>
+<indexterm><primary>parse</primary><secondary>MS2Params</secondary></indexterm>
+<indexterm><primary>MS2Params</primary><secondary>parse</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_m_s2_params">MS2Params</link> MS2Params::parse (const std::string &amp; json_str)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Parses the JSON string and returns an instance of <link linkend="_struct_m_s2_params">MS2Params</link>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>json_str</entry><entry>
+<para>The JSON string to parse. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>An instance of <link linkend="_struct_m_s2_params">MS2Params</link>. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00260">algometa::Enabled</link>, <link linkend="_l00049">UserInfo::groupname</link>, <link linkend="_l00048">UserInfo::org</link>, <link linkend="_l00262">algometa::Source</link>, <link linkend="_l00256">algometa::Strategy</link>, <link linkend="_l00257">algometa::StratId</link>, <link linkend="_l00264">algometa::Tag</link>, <link linkend="_l00258">algometa::TemplateName</link>, <link linkend="_l00261">algometa::UniqueId</link>, <link linkend="_l00047">UserInfo::user</link>, and <link linkend="_l00279">algometa::userinfo</link>.</para>
+<para>
+Referenced by <link linkend="_l00032">KTN::MultiSpreaderV3::onLaunch()</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_m_s2_params_1aef392aaa8f55ee3d57b585eac202403e"/><section>
+    <title>BuyDisc</title>
+<indexterm><primary>BuyDisc</primary><secondary>MS2Params</secondary></indexterm>
+<indexterm><primary>MS2Params</primary><secondary>BuyDisc</secondary></indexterm>
+<para><computeroutput>double MS2Params::BuyDisc</computeroutput></para></section>
+<anchor xml:id="_struct_m_s2_params_1a7e98c0bf58165d1f9662aa74301744cd"/><section>
+    <title>Doubles</title>
+<indexterm><primary>Doubles</primary><secondary>MS2Params</secondary></indexterm>
+<indexterm><primary>MS2Params</primary><secondary>Doubles</secondary></indexterm>
+<para><computeroutput>bool MS2Params::Doubles</computeroutput></para></section>
+<anchor xml:id="_struct_m_s2_params_1a486bd2ff0cd355c55a2daab7b294bae8"/><section>
+    <title>ExchFee</title>
+<indexterm><primary>ExchFee</primary><secondary>MS2Params</secondary></indexterm>
+<indexterm><primary>MS2Params</primary><secondary>ExchFee</secondary></indexterm>
+<para><computeroutput>double MS2Params::ExchFee</computeroutput></para></section>
+<anchor xml:id="_struct_m_s2_params_1a427e46eb4a0267e2711c23bf9c77bc01"/><section>
+    <title>Generative</title>
+<indexterm><primary>Generative</primary><secondary>MS2Params</secondary></indexterm>
+<indexterm><primary>MS2Params</primary><secondary>Generative</secondary></indexterm>
+<para><computeroutput>bool MS2Params::Generative</computeroutput></para></section>
+<anchor xml:id="_struct_m_s2_params_1ab3c85f049c6fb36baaf23a719f63108f"/><section>
+    <title>HedgeStop</title>
+<indexterm><primary>HedgeStop</primary><secondary>MS2Params</secondary></indexterm>
+<indexterm><primary>MS2Params</primary><secondary>HedgeStop</secondary></indexterm>
+<para><computeroutput>double MS2Params::HedgeStop</computeroutput></para></section>
+<anchor xml:id="_struct_m_s2_params_1a636c07f2c4199b96a8d137e21b9d5bab"/><section>
+    <title>LegCount</title>
+<indexterm><primary>LegCount</primary><secondary>MS2Params</secondary></indexterm>
+<indexterm><primary>MS2Params</primary><secondary>LegCount</secondary></indexterm>
+<para><computeroutput>int MS2Params::LegCount</computeroutput></para></section>
+<anchor xml:id="_struct_m_s2_params_1a00ded2a40df6f9a96b5941178c540e2b"/><section>
+    <title>Legs</title>
+<indexterm><primary>Legs</primary><secondary>MS2Params</secondary></indexterm>
+<indexterm><primary>MS2Params</primary><secondary>Legs</secondary></indexterm>
+<para><computeroutput><link linkend="_structinstrument">instrument</link> MS2Params::Legs[24]</computeroutput></para></section>
+<anchor xml:id="_struct_m_s2_params_1ad8d6936215d7ad301ee8c3fd945c5539"/><section>
+    <title>LegSecIdMap</title>
+<indexterm><primary>LegSecIdMap</primary><secondary>MS2Params</secondary></indexterm>
+<indexterm><primary>MS2Params</primary><secondary>LegSecIdMap</secondary></indexterm>
+<para><computeroutput>std::unordered_map&lt;int, <link linkend="_structinstrument">instrument</link>&gt; MS2Params::LegSecIdMap</computeroutput></para></section>
+<anchor xml:id="_struct_m_s2_params_1ae4c3981342ea4b3513b1b7ceebb9953c"/><section>
+    <title>MaxPosition</title>
+<indexterm><primary>MaxPosition</primary><secondary>MS2Params</secondary></indexterm>
+<indexterm><primary>MS2Params</primary><secondary>MaxPosition</secondary></indexterm>
+<para><computeroutput>double MS2Params::MaxPosition</computeroutput></para></section>
+<anchor xml:id="_struct_m_s2_params_1afd5d197d3c5f4f870812c6851f2810eb"/><section>
+    <title>meta</title>
+<indexterm><primary>meta</primary><secondary>MS2Params</secondary></indexterm>
+<indexterm><primary>MS2Params</primary><secondary>meta</secondary></indexterm>
+<para><computeroutput><link linkend="_structalgometa">algometa</link> MS2Params::meta</computeroutput></para></section>
+<anchor xml:id="_struct_m_s2_params_1a7ceef3a90cfb39f87eb73072b3909906"/><section>
+    <title>MinLeanQty</title>
+<indexterm><primary>MinLeanQty</primary><secondary>MS2Params</secondary></indexterm>
+<indexterm><primary>MS2Params</primary><secondary>MinLeanQty</secondary></indexterm>
+<para><computeroutput>int MS2Params::MinLeanQty</computeroutput></para></section>
+<anchor xml:id="_struct_m_s2_params_1a9f0fb2bc5aab7c0897cd9ef2304c016c"/><section>
+    <title>MsgsExec</title>
+<indexterm><primary>MsgsExec</primary><secondary>MS2Params</secondary></indexterm>
+<indexterm><primary>MS2Params</primary><secondary>MsgsExec</secondary></indexterm>
+<para><computeroutput>int MS2Params::MsgsExec</computeroutput></para></section>
+<anchor xml:id="_struct_m_s2_params_1a93b952730e5e490ba718d0a477dff7f1"/><section>
+    <title>MsgsSent</title>
+<indexterm><primary>MsgsSent</primary><secondary>MS2Params</secondary></indexterm>
+<indexterm><primary>MS2Params</primary><secondary>MsgsSent</secondary></indexterm>
+<para><computeroutput>int MS2Params::MsgsSent</computeroutput></para></section>
+<anchor xml:id="_struct_m_s2_params_1abd64cc78c920115ad6ebee0876d0ac2f"/><section>
+    <title>NetPosition</title>
+<indexterm><primary>NetPosition</primary><secondary>MS2Params</secondary></indexterm>
+<indexterm><primary>MS2Params</primary><secondary>NetPosition</secondary></indexterm>
+<para><computeroutput>double MS2Params::NetPosition</computeroutput></para></section>
+<anchor xml:id="_struct_m_s2_params_1a05c9b1cb821c639b53bc37cde3f9c59e"/><section>
+    <title>OrderQty</title>
+<indexterm><primary>OrderQty</primary><secondary>MS2Params</secondary></indexterm>
+<indexterm><primary>MS2Params</primary><secondary>OrderQty</secondary></indexterm>
+<para><computeroutput>double MS2Params::OrderQty</computeroutput></para></section>
+<anchor xml:id="_struct_m_s2_params_1a605ffafc462cfa0e79bfc421d04b4571"/><section>
+    <title>Ords</title>
+<indexterm><primary>Ords</primary><secondary>MS2Params</secondary></indexterm>
+<indexterm><primary>MS2Params</primary><secondary>Ords</secondary></indexterm>
+<para><computeroutput>std::unordered_map&lt;string, <link linkend="_struct_k_t_n_1_1_order">KTN::Order</link>&gt; MS2Params::Ords</computeroutput></para></section>
+<anchor xml:id="_struct_m_s2_params_1a102f579c1d1ac77489bfe8c4bcbd8fd4"/><section>
+    <title>ReloadOnFill</title>
+<indexterm><primary>ReloadOnFill</primary><secondary>MS2Params</secondary></indexterm>
+<indexterm><primary>MS2Params</primary><secondary>ReloadOnFill</secondary></indexterm>
+<para><computeroutput>bool MS2Params::ReloadOnFill</computeroutput></para></section>
+<anchor xml:id="_struct_m_s2_params_1a516e211a6e58c5cfb966324131b9f3a0"/><section>
+    <title>Reset</title>
+<indexterm><primary>Reset</primary><secondary>MS2Params</secondary></indexterm>
+<indexterm><primary>MS2Params</primary><secondary>Reset</secondary></indexterm>
+<para><computeroutput>bool MS2Params::Reset</computeroutput></para></section>
+<anchor xml:id="_struct_m_s2_params_1aa6a26a8d8ac39ecd420b692ffeb5684a"/><section>
+    <title>SellDisc</title>
+<indexterm><primary>SellDisc</primary><secondary>MS2Params</secondary></indexterm>
+<indexterm><primary>MS2Params</primary><secondary>SellDisc</secondary></indexterm>
+<para><computeroutput>double MS2Params::SellDisc</computeroutput></para></section>
+<anchor xml:id="_struct_m_s2_params_1ab29794f6661f6301988e76b9205c83d5"/><section>
+    <title>SendAsks</title>
+<indexterm><primary>SendAsks</primary><secondary>MS2Params</secondary></indexterm>
+<indexterm><primary>MS2Params</primary><secondary>SendAsks</secondary></indexterm>
+<para><computeroutput>bool MS2Params::SendAsks</computeroutput></para></section>
+<anchor xml:id="_struct_m_s2_params_1a139a2d77c9f94725b3236c3a34ac966a"/><section>
+    <title>SendBids</title>
+<indexterm><primary>SendBids</primary><secondary>MS2Params</secondary></indexterm>
+<indexterm><primary>MS2Params</primary><secondary>SendBids</secondary></indexterm>
+<para><computeroutput>bool MS2Params::SendBids</computeroutput></para></section>
+<anchor xml:id="_struct_m_s2_params_1a6936350bb8f26b38f09b8cb2fc062780"/><section>
+    <title>Slop</title>
+<indexterm><primary>Slop</primary><secondary>MS2Params</secondary></indexterm>
+<indexterm><primary>MS2Params</primary><secondary>Slop</secondary></indexterm>
+<para><computeroutput>double MS2Params::Slop</computeroutput></para></section>
+<anchor xml:id="_struct_m_s2_params_1ae15564005e7426e24715d8ab5920ca74"/><section>
+    <title>SpreadAsk</title>
+<indexterm><primary>SpreadAsk</primary><secondary>MS2Params</secondary></indexterm>
+<indexterm><primary>MS2Params</primary><secondary>SpreadAsk</secondary></indexterm>
+<para><computeroutput>double MS2Params::SpreadAsk</computeroutput></para></section>
+<anchor xml:id="_struct_m_s2_params_1abeb06e45170aadd224fda2589a06a7c9"/><section>
+    <title>SpreadBid</title>
+<indexterm><primary>SpreadBid</primary><secondary>MS2Params</secondary></indexterm>
+<indexterm><primary>MS2Params</primary><secondary>SpreadBid</secondary></indexterm>
+<para><computeroutput>double MS2Params::SpreadBid</computeroutput></para></section>
+<anchor xml:id="_struct_m_s2_params_1a5e55444616ec2ddc226a0b1aa1c86fab"/><section>
+    <title>SqueezeQty</title>
+<indexterm><primary>SqueezeQty</primary><secondary>MS2Params</secondary></indexterm>
+<indexterm><primary>MS2Params</primary><secondary>SqueezeQty</secondary></indexterm>
+<para><computeroutput>int MS2Params::SqueezeQty</computeroutput></para></section>
+<anchor xml:id="_struct_m_s2_params_1aaaa0239f51d9f78af60f771bc7d35455"/><section>
+    <title>SqueezeRatio</title>
+<indexterm><primary>SqueezeRatio</primary><secondary>MS2Params</secondary></indexterm>
+<indexterm><primary>MS2Params</primary><secondary>SqueezeRatio</secondary></indexterm>
+<para><computeroutput>double MS2Params::SqueezeRatio</computeroutput></para></section>
+<anchor xml:id="_struct_m_s2_params_1a8806ed95bc60ce657143a324767a9d60"/><section>
+    <title>subid</title>
+<indexterm><primary>subid</primary><secondary>MS2Params</secondary></indexterm>
+<indexterm><primary>MS2Params</primary><secondary>subid</secondary></indexterm>
+<para><computeroutput>string MS2Params::subid</computeroutput></para></section>
+<anchor xml:id="_struct_m_s2_params_1a8a567c8dc0d384819c10e35152e129cb"/><section>
+    <title>TestMode</title>
+<indexterm><primary>TestMode</primary><secondary>MS2Params</secondary></indexterm>
+<indexterm><primary>MS2Params</primary><secondary>TestMode</secondary></indexterm>
+<para><computeroutput>bool MS2Params::TestMode</computeroutput></para></section>
+<anchor xml:id="_struct_m_s2_params_1a33f068004175645956b1a3aa83b7e915"/><section>
+    <title>TotalExec</title>
+<indexterm><primary>TotalExec</primary><secondary>MS2Params</secondary></indexterm>
+<indexterm><primary>MS2Params</primary><secondary>TotalExec</secondary></indexterm>
+<para><computeroutput>double MS2Params::TotalExec</computeroutput></para></section>
+<anchor xml:id="_struct_m_s2_params_1a448263b228eed7932a87e990ded16409"/><section>
+    <title>TotalQty</title>
+<indexterm><primary>TotalQty</primary><secondary>MS2Params</secondary></indexterm>
+<indexterm><primary>MS2Params</primary><secondary>TotalQty</secondary></indexterm>
+<para><computeroutput>double MS2Params::TotalQty</computeroutput></para></section>
+<anchor xml:id="_struct_m_s2_params_1aeacd9039efaec3bac7e2187bc8c58afd"/><section>
+    <title>TotalWorking</title>
+<indexterm><primary>TotalWorking</primary><secondary>MS2Params</secondary></indexterm>
+<indexterm><primary>MS2Params</primary><secondary>TotalWorking</secondary></indexterm>
+<para><computeroutput>double MS2Params::TotalWorking</computeroutput></para></section>
+<anchor xml:id="_struct_m_s2_params_1acd80988cd1857bbf74ec648076d131f7"/><section>
+    <title>Triples</title>
+<indexterm><primary>Triples</primary><secondary>MS2Params</secondary></indexterm>
+<indexterm><primary>MS2Params</primary><secondary>Triples</secondary></indexterm>
+<para><computeroutput>bool MS2Params::Triples</computeroutput></para></section>
+<anchor xml:id="_struct_m_s2_params_1acbbdd0c91b5755b5d3f48049bb71d345"/><section>
+    <title>ValidJson</title>
+<indexterm><primary>ValidJson</primary><secondary>MS2Params</secondary></indexterm>
+<indexterm><primary>MS2Params</primary><secondary>ValidJson</secondary></indexterm>
+<para><computeroutput>bool MS2Params::ValidJson</computeroutput></para></section>
+<anchor xml:id="_struct_m_s2_params_1a24101b3a009c99e6b2c498b8ba8bfee4"/><section>
+    <title>WavgPlus</title>
+<indexterm><primary>WavgPlus</primary><secondary>MS2Params</secondary></indexterm>
+<indexterm><primary>MS2Params</primary><secondary>WavgPlus</secondary></indexterm>
+<para><computeroutput>bool MS2Params::WavgPlus</computeroutput></para></section>
+<anchor xml:id="_struct_m_s2_params_1ada59fdd6e281d8b4eeabcbcff72898f9"/><section>
+    <title>WavgThreshold</title>
+<indexterm><primary>WavgThreshold</primary><secondary>MS2Params</secondary></indexterm>
+<indexterm><primary>MS2Params</primary><secondary>WavgThreshold</secondary></indexterm>
+<para><computeroutput>double MS2Params::WavgThreshold</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following files:</para>
+AlgoParams/MS2Params.hppAlgoParams/MS2Params.cpp</section>
+</section>

@@ -1,0 +1,142 @@
+\doxysection{msgstats Struct Reference}
+\hypertarget{structmsgstats}{}\label{structmsgstats}\index{msgstats@{msgstats}}
+
+
+Structure representing messaging statistics.  
+
+
+
+
+{\ttfamily \#include $<$algo\+\_\+structs.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{structmsgstats_a40582e178616d5cd43c414fcf2368936}{ratio}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the volume ratio. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{structmsgstats_a3b93f96e22a7a7adab62474abec85146}{to\+String}} ()
+\begin{DoxyCompactList}\small\item\em Converts the messaging statistics to string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{structmsgstats_ab33ffe53cf086f183b941a6240bc89ff}{product}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structmsgstats_a02dccb108c8800d597451b7f6999cb84}{sent}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structmsgstats_a1e5fbad2e5de3d3f78024f2a67a19af7}{news}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structmsgstats_af6e90b34768c3a10e3eb87677824f976}{mods}}
+\item 
+int \mbox{\hyperlink{structmsgstats_a9f22ce13de6651bca7aad4c2802f747d}{volume}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure representing messaging statistics. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structmsgstats_a79c39068d99f01ae9c961f50906bb865}\index{msgstats@{msgstats}!msgstats@{msgstats}}
+\index{msgstats@{msgstats}!msgstats@{msgstats}}
+\doxysubsubsection{\texorpdfstring{msgstats()}{msgstats()}}
+{\footnotesize\ttfamily \label{structmsgstats_a79c39068d99f01ae9c961f50906bb865} 
+msgstats\+::msgstats (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structmsgstats_a40582e178616d5cd43c414fcf2368936}\index{msgstats@{msgstats}!ratio@{ratio}}
+\index{ratio@{ratio}!msgstats@{msgstats}}
+\doxysubsubsection{\texorpdfstring{ratio()}{ratio()}}
+{\footnotesize\ttfamily \label{structmsgstats_a40582e178616d5cd43c414fcf2368936} 
+double msgstats\+::ratio (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calculates the volume ratio. 
+
+\begin{DoxyReturn}{Returns}
+The volume ratio. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00397}{sent}}, and \mbox{\hyperlink{l00400}{volume}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00418}{to\+String()}}.
+
+\Hypertarget{structmsgstats_a3b93f96e22a7a7adab62474abec85146}\index{msgstats@{msgstats}!toString@{toString}}
+\index{toString@{toString}!msgstats@{msgstats}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily \label{structmsgstats_a3b93f96e22a7a7adab62474abec85146} 
+string msgstats\+::to\+String (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Converts the messaging statistics to string. 
+
+\begin{DoxyReturn}{Returns}
+The string representation of the messaging statistics. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00396}{product}}, \mbox{\hyperlink{l00406}{ratio()}}, \mbox{\hyperlink{l00397}{sent}}, and \mbox{\hyperlink{l00400}{volume}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structmsgstats_af6e90b34768c3a10e3eb87677824f976}\index{msgstats@{msgstats}!mods@{mods}}
+\index{mods@{mods}!msgstats@{msgstats}}
+\doxysubsubsection{\texorpdfstring{mods}{mods}}
+{\footnotesize\ttfamily \label{structmsgstats_af6e90b34768c3a10e3eb87677824f976} 
+uint64\+\_\+t msgstats\+::mods}
+
+The number of modified messages. 
+
+Referenced by \mbox{\hyperlink{l00299}{KTN\+::\+Multi\+Spreader\+V3\+::\+Print()}}, \mbox{\hyperlink{l00328}{KTN\+::\+Skewer\+::\+Print()}}, \mbox{\hyperlink{l00331}{KTN\+::\+Skew\+Trader\+::\+Print()}}, and \mbox{\hyperlink{l00307}{KTN\+::\+Twap\+::\+Print()}}.
+
+\Hypertarget{structmsgstats_a1e5fbad2e5de3d3f78024f2a67a19af7}\index{msgstats@{msgstats}!news@{news}}
+\index{news@{news}!msgstats@{msgstats}}
+\doxysubsubsection{\texorpdfstring{news}{news}}
+{\footnotesize\ttfamily \label{structmsgstats_a1e5fbad2e5de3d3f78024f2a67a19af7} 
+uint64\+\_\+t msgstats\+::news}
+
+The number of news messages. 
+
+Referenced by \mbox{\hyperlink{l00299}{KTN\+::\+Multi\+Spreader\+V3\+::\+Print()}}, \mbox{\hyperlink{l00328}{KTN\+::\+Skewer\+::\+Print()}}, \mbox{\hyperlink{l00331}{KTN\+::\+Skew\+Trader\+::\+Print()}}, and \mbox{\hyperlink{l00307}{KTN\+::\+Twap\+::\+Print()}}.
+
+\Hypertarget{structmsgstats_ab33ffe53cf086f183b941a6240bc89ff}\index{msgstats@{msgstats}!product@{product}}
+\index{product@{product}!msgstats@{msgstats}}
+\doxysubsubsection{\texorpdfstring{product}{product}}
+{\footnotesize\ttfamily \label{structmsgstats_ab33ffe53cf086f183b941a6240bc89ff} 
+string msgstats\+::product}
+
+The product. 
+
+Referenced by \mbox{\hyperlink{l00418}{to\+String()}}.
+
+\Hypertarget{structmsgstats_a02dccb108c8800d597451b7f6999cb84}\index{msgstats@{msgstats}!sent@{sent}}
+\index{sent@{sent}!msgstats@{msgstats}}
+\doxysubsubsection{\texorpdfstring{sent}{sent}}
+{\footnotesize\ttfamily \label{structmsgstats_a02dccb108c8800d597451b7f6999cb84} 
+uint64\+\_\+t msgstats\+::sent}
+
+The number of messages sent. 
+
+Referenced by \mbox{\hyperlink{l00406}{ratio()}}, and \mbox{\hyperlink{l00418}{to\+String()}}.
+
+\Hypertarget{structmsgstats_a9f22ce13de6651bca7aad4c2802f747d}\index{msgstats@{msgstats}!volume@{volume}}
+\index{volume@{volume}!msgstats@{msgstats}}
+\doxysubsubsection{\texorpdfstring{volume}{volume}}
+{\footnotesize\ttfamily \label{structmsgstats_a9f22ce13de6651bca7aad4c2802f747d} 
+int msgstats\+::volume}
+
+The volume. 
+
+Referenced by \mbox{\hyperlink{l00406}{ratio()}}, and \mbox{\hyperlink{l00418}{to\+String()}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Algo\+Support/algo\+\_\+structs.\+hpp\end{DoxyCompactItemize}

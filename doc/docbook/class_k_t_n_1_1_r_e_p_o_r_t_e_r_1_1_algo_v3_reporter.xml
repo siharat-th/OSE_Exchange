@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter" xml:lang="en-US">
+<title>KTN::REPORTER::AlgoV3Reporter Class Reference</title>
+<indexterm><primary>KTN::REPORTER::AlgoV3Reporter</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter">AlgoV3Reporter</link> class is responsible for reporting generic statistics. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;AlgoV3Reporter.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for KTN::REPORTER::AlgoV3Reporter:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter_1a512bd082c03deb77f5f282af8fc4dd2b">AlgoV3Reporter</link> ()</para>
+
+<para>Constructs an instance of <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter">AlgoV3Reporter</link>. </para>
+</listitem>
+            <listitem><para><link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter_1a149bba5212e3a2e3e6cd5b96de9be2e3">~AlgoV3Reporter</link> ()</para>
+
+<para>Destroys the <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter">AlgoV3Reporter</link> instance. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter_1ad74d49f61f6d2b95d25bc0e00634db2e">Report</link> (const <link linkend="_classgenericstats">genericstats</link> &amp;msg)</para>
+
+<para>Reports the generic statistics. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter_1ac380fffde0850e69473fbc6522ef62f4">DoWork</link> () override</para>
+
+<para>Performs the work of the reporter. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter_1a4e454fafdccf321a457638d77fb121f9">StopWork</link> ()</para>
+
+<para>Stops the work of the reporter. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter_1a278768f4bc663ba82d49aea3ce109605">SendMessage</link> (const <link linkend="_classgenericstats">genericstats</link> &amp;gmsg, uint64_t ssboe, const string &amp;updtime)</para>
+
+<para>Sends a message with generic statistics, ssboe, and updtime. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter">AlgoV3Reporter</link> class is responsible for reporting generic statistics. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter_1a512bd082c03deb77f5f282af8fc4dd2b"/><section>
+    <title>AlgoV3Reporter()</title>
+<indexterm><primary>AlgoV3Reporter</primary><secondary>KTN::REPORTER::AlgoV3Reporter</secondary></indexterm>
+<indexterm><primary>KTN::REPORTER::AlgoV3Reporter</primary><secondary>AlgoV3Reporter</secondary></indexterm>
+<para><computeroutput>AlgoV3Reporter::AlgoV3Reporter ( )</computeroutput></para><para>
+
+<para>Constructs an instance of <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter">AlgoV3Reporter</link>. </para>
+</para>
+<para>
+References <link linkend="_l00123">Settings::get()</link>, and <link linkend="_l00027">KTN::REPORTER::ReporterBase::Start()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter_1a149bba5212e3a2e3e6cd5b96de9be2e3"/><section>
+    <title>~AlgoV3Reporter()</title>
+<indexterm><primary>~AlgoV3Reporter</primary><secondary>KTN::REPORTER::AlgoV3Reporter</secondary></indexterm>
+<indexterm><primary>KTN::REPORTER::AlgoV3Reporter</primary><secondary>~AlgoV3Reporter</secondary></indexterm>
+<para><computeroutput>AlgoV3Reporter::~AlgoV3Reporter ( )</computeroutput></para><para>
+
+<para>Destroys the <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter">AlgoV3Reporter</link> instance. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter_1ac380fffde0850e69473fbc6522ef62f4"/><section>
+    <title>DoWork()</title>
+<indexterm><primary>DoWork</primary><secondary>KTN::REPORTER::AlgoV3Reporter</secondary></indexterm>
+<indexterm><primary>KTN::REPORTER::AlgoV3Reporter</primary><secondary>DoWork</secondary></indexterm>
+<para><computeroutput>void AlgoV3Reporter::DoWork ( )<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Performs the work of the reporter. </para>
+</para>
+<para>
+Implements <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_1a449d2ccb3be9222bd06fef3b5155e3af">KTN::REPORTER::ReporterBase</link>.</para>
+<para>
+References <link linkend="_l00191">KTN::Core::SPSCRingBuffer&lt; T &gt;::empty()</link>, <link linkend="_l00436">genericstats::enabled</link>, <link linkend="_l00108">KTN::REPORTER::ReporterBase::getSsboeUs()</link>, <link linkend="_l00089">KTN::REPORTER::ReporterBase::getTimeString()</link>, <link linkend="_l00445">genericstats::msgtype</link>, <link linkend="_l00087">SendMessage()</link>, <link linkend="_l00451">genericstats::ssboe</link>, <link linkend="_l00141">KTN::Core::SPSCRingBuffer&lt; T &gt;::try_pop()</link>, <link linkend="_l00439">genericstats::uniqueid</link>, and <link linkend="_l00452">genericstats::updatetime</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter_1ad74d49f61f6d2b95d25bc0e00634db2e"/><section>
+    <title>Report()</title>
+<indexterm><primary>Report</primary><secondary>KTN::REPORTER::AlgoV3Reporter</secondary></indexterm>
+<indexterm><primary>KTN::REPORTER::AlgoV3Reporter</primary><secondary>Report</secondary></indexterm>
+<para><computeroutput>void AlgoV3Reporter::Report (const <link linkend="_classgenericstats">genericstats</link> &amp; msg)</computeroutput></para><para>
+
+<para>Reports the generic statistics. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>msg</entry><entry>
+<para>The generic statistics to report. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00084">KTN::Core::SPSCRingBuffer&lt; T &gt;::push()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter_1a278768f4bc663ba82d49aea3ce109605"/><section>
+    <title>SendMessage()</title>
+<indexterm><primary>SendMessage</primary><secondary>KTN::REPORTER::AlgoV3Reporter</secondary></indexterm>
+<indexterm><primary>KTN::REPORTER::AlgoV3Reporter</primary><secondary>SendMessage</secondary></indexterm>
+<para><computeroutput>void AlgoV3Reporter::SendMessage (const <link linkend="_classgenericstats">genericstats</link> &amp; gmsg, uint64_t ssboe, const string &amp; updtime)</computeroutput></para><para>
+
+<para>Sends a message with generic statistics, ssboe, and updtime. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>gmsg</entry><entry>
+<para>The generic statistics to send. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>ssboe</entry><entry>
+<para>The ssboe value. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>updtime</entry><entry>
+<para>The updtime value. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00436">genericstats::enabled</link>, <link linkend="_l00442">genericstats::exch</link>, <link linkend="_l00044">AlgoJson::FormatAlgoStats()</link>, <link linkend="_l00445">genericstats::msgtype</link>, <link linkend="_l00437">genericstats::name</link>, <link linkend="_l00448">genericstats::position</link>, <link linkend="_l00120">KTN::REPORTER::ReporterBase::SendJson()</link>, <link linkend="_l00441">genericstats::source</link>, <link linkend="_l00443">genericstats::symbol</link>, <link linkend="_l00438">genericstats::templatename</link>, <link linkend="_l00446">genericstats::text</link>, <link linkend="_l00449">genericstats::totalexec</link>, and <link linkend="_l00439">genericstats::uniqueid</link>.</para>
+<para>
+Referenced by <link linkend="_l00039">DoWork()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter_1a4e454fafdccf321a457638d77fb121f9"/><section>
+    <title>StopWork()</title>
+<indexterm><primary>StopWork</primary><secondary>KTN::REPORTER::AlgoV3Reporter</secondary></indexterm>
+<indexterm><primary>KTN::REPORTER::AlgoV3Reporter</primary><secondary>StopWork</secondary></indexterm>
+<para><computeroutput>void AlgoV3Reporter::StopWork ( )</computeroutput></para><para>
+
+<para>Stops the work of the reporter. </para>
+</para>
+<para>
+References <link linkend="_l00049">KTN::REPORTER::ReporterBase::Stop()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Reporters/AlgoV3Reporter.hppReporters/AlgoV3Reporter.cpp</section>
+</section>

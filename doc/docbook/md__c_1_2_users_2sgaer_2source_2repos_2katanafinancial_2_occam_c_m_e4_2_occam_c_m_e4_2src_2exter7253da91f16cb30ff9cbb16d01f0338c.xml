@@ -1,0 +1,255 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_md__c_1_2_users_2sgaer_2source_2repos_2katanafinancial_2_occam_c_m_e4_2_occam_c_m_e4_2src_2exter7253da91f16cb30ff9cbb16d01f0338c" xml:lang="en-US">
+<title>Efvitcp</title>
+<indexterm><primary>Efvitcp</primary></indexterm>
+
+<para><anchor xml:id="_md__c_1_2_users_2sgaer_2source_2repos_2katanafinancial_2_occam_c_m_e4_2_occam_c_m_e4_2src_2exter7253da91f16cb30ff9cbb16d01f0338c_1autotoc_md0"/></para>
+
+<para>Efvitcp is a tcp library using Solarflare ef_vi interface on linux, and also a tcp multiplexing framework for both C++ client and server program.</para>
+
+<para>As ef_vi is a low-level interface passing Ethernet frames between applications and the network, efvitcp implements full tcp/ip stack on its own in user space while also taking advantage of ef_vi&apos;s zero-copy buffer delivering feature.</para>
+
+<para>On the user interface, efvitcp is a header-only C++ template for tcp client and server, using reactor model(like select/poll/epoll) and handling events for multiple connections in a single call.</para>
+
+<para>It opens a fast path directly between the user and the NIC, providing extremely efficient data processing performance. For example, on frame arrives the tcp payload memory could be directly handed over to the user which is written by the NIC on a DMA buffer.</para>
+<section xml:id="_md__c_1_2_users_2sgaer_2source_2repos_2katanafinancial_2_occam_c_m_e4_2_occam_c_m_e4_2src_2exter7253da91f16cb30ff9cbb16d01f0338c_1autotoc_md1">
+<title>Why not use Tcpdirect?</title>
+<para>While tcpdirect also provides a tcp implementation based on ef_vi, it suffers from the maximum PIO number limitation the solarflare NIC provides: there can be no more than 12 instances on a host(onload is sharing the same PIO resource which makes it worse). And tcpdirect performs poorly in performance when onload is also in use, which I don&apos;t know why. These problems make tcpdirect hard to use in practice, so an alternative approach is needed to make full use of solarflare NIC&apos;s low-latency capacity for tcp applications.</para>
+</section>
+<section xml:id="_md__c_1_2_users_2sgaer_2source_2repos_2katanafinancial_2_occam_c_m_e4_2_occam_c_m_e4_2src_2exter7253da91f16cb30ff9cbb16d01f0338c_1autotoc_md2">
+<title>Features</title>
+<para><itemizedlist>
+<listitem>
+<para>Fast - it makes good use of solarflare&apos;s low-latency features including CTPIO, it&apos;s even faster than tcpdirect especially for large segments.</para>
+</listitem><listitem>
+<para>Headers only and no third-party dependences(except for ef_vi).</para>
+</listitem><listitem>
+<para>Reactor model with rich network and time events, giving finer control over a tcp connection.</para>
+</listitem><listitem>
+<para>Highly configurable in compile-time.</para>
+</listitem><listitem>
+<para>Non-blocking - none of the apis blocks.</para>
+</listitem><listitem>
+<para>No thread created internally.</para>
+</listitem><listitem>
+<para>Supports user timers on each connection.</para>
+</listitem><listitem>
+<para>Provides the same interface as other pollnet tcp libs, such as Socket and Tcpdirect.</para>
+</listitem></itemizedlist>
+</para>
+</section>
+<section xml:id="_md__c_1_2_users_2sgaer_2source_2repos_2katanafinancial_2_occam_c_m_e4_2_occam_c_m_e4_2src_2exter7253da91f16cb30ff9cbb16d01f0338c_1autotoc_md3">
+<title>Platform</title>
+<para>Linux and C++11 is required.</para>
+</section>
+<section xml:id="_md__c_1_2_users_2sgaer_2source_2repos_2katanafinancial_2_occam_c_m_e4_2_occam_c_m_e4_2src_2exter7253da91f16cb30ff9cbb16d01f0338c_1autotoc_md4">
+<title>Usage</title>
+<para>efvitcp provides two class templates for tcp client and server: <computeroutput><link linkend="_classefvitcp_1_1_tcp_client">efvitcp::TcpClient</link>&lt;Conf&gt;</computeroutput> and <computeroutput><link linkend="_classefvitcp_1_1_tcp_server">efvitcp::TcpServer</link>&lt;Conf&gt;</computeroutput>, both taking a template argument used for configuration in compile time(we&apos;ll cover it later).</para>
+
+<para>Take client for example, an instance can be declared as below: <literallayout><computeroutput>&#32;++
+struct&#32;Conf&#32;{
+...
+};
+using&#32;TcpClient&#32;=&#32;efvitcp::TcpClient&lt;Conf&gt;;
+using&#32;TcpConn&#32;=&#32;TcpClient::Conn;
+
+TcpClient&#32;client;
+</computeroutput></literallayout> At first we need to call <computeroutput>init(interface)</computeroutput> for initialization: <literallayout><computeroutput>&#32;++
+const&#32;char*&#32;err&#32;=&#32;client.init(&quot;p1p1&quot;);
+if&#32;(err)&#32;{
+&#32;&#32;cout&#32;&lt;&lt;&#32;&quot;init&#32;failed:&#32;&quot;&#32;&lt;&lt;&#32;err&#32;&lt;&lt;&#32;endl;
+}
+else&#32;{
+&#32;&#32;cout&#32;&lt;&lt;&#32;&quot;init&#32;ok&quot;&#32;&lt;&lt;&#32;endl;
+}
+</computeroutput></literallayout> To create a tcp connection we call <computeroutput>connect(server_ip, server_ip[, local_port=0])</computeroutput>: <literallayout><computeroutput>&#32;++
+if((err&#32;=&#32;client.connect(&quot;192.168.20.15&quot;,&#32;1234))&#32;{
+&#32;&#32;cout&#32;&lt;&lt;&#32;&quot;connect&#32;failed:&#32;&quot;&#32;&lt;&lt;&#32;err&#32;&lt;&lt;&#32;endl;
+}
+else&#32;{
+&#32;&#32;cout&#32;&lt;&lt;&#32;&quot;connect&#32;ok&quot;&#32;&lt;&lt;&#32;endl;
+}
+</computeroutput></literallayout> Note that <computeroutput>connect()</computeroutput> not returning an error doesn&apos;t mean the connection is established: it just indicate that a Syn is sent out without error(as it&apos;s non-blocking), we still need to wait for the 3-way handshake to complete. As efvitcp won&apos;t create a thread internally, we need to <computeroutput>poll()</computeroutput> it in the user thread, and as <computeroutput>poll()</computeroutput> is also non-blocking, we need to call it <emphasis role="bold">repetitively</emphasis>.</para>
+
+<para><computeroutput>poll()</computeroutput> is the core of muliplexing in the lib, all sorts of events will be triggered by this single call including whether or not the <computeroutput>connect()</computeroutput> is successful. How can user retrieve the events from <computeroutput>poll()</computeroutput>? A class with event handler functions(non-virtual) need to be defined and an instance be provided as the argument of <computeroutput>poll()</computeroutput>, and it&apos;ll call those user defined callback functions when events occur. For completing a connection establishment, three events could be triggered:</para>
+
+<para><literallayout><computeroutput>&#32;++
+struct&#32;MyClient&#32;{
+&#32;&#32;void&#32;onConnectionRefused()&#32;{&#32;
+&#32;&#32;&#32;&#32;err&#32;=&#32;&quot;onConnectionRefused&quot;;&#32;
+&#32;&#32;}
+&#32;&#32;void&#32;onConnectionTimeout(TcpConn&amp;&#32;conn)&#32;{&#32;
+&#32;&#32;&#32;&#32;err&#32;=&#32;&quot;onConnectionTimeout&quot;;&#32;
+&#32;&#32;}
+&#32;&#32;void&#32;onConnectionEstablished(TcpConn&amp;&#32;conn)&#32;{&#32;
+&#32;&#32;&#32;&#32;pc&#32;=&#32;&amp;conn;
+&#32;&#32;}
+&#32;&#32;...
+&#32;&#32;
+&#32;&#32;const&#32;char*&#32;err&#32;=&#32;nullptr;
+&#32;&#32;TcpConn*&#32;pc&#32;=&#32;nullptr;
+}&#32;my_client;
+
+while(!my_client.err&#32;&amp;&amp;&#32;!my_client.pc){
+&#32;&#32;client.poll(my_client);
+}
+if(my_client.err)&#32;{
+&#32;&#32;cout&#32;&lt;&lt;&#32;my_client.err&#32;&lt;&lt;&#32;endl;
+}
+else&#32;{
+&#32;&#32;cout&#32;&lt;&lt;&#32;&quot;connection&#32;established&quot;&#32;&lt;&lt;&#32;endl;
+}
+</computeroutput></literallayout> <computeroutput>poll()</computeroutput> also take an optional parameter <computeroutput>int64_t ns</computeroutput> which is nanosecond timestamp of current time. If user maintains the timestamp in his application, it can be used by efvitcp so the latency of <computeroutput>poll()</computeroutput> can be reduced by a half(when idle). The nanosecond timestamp can be read by <computeroutput>clock_gettime()</computeroutput> in below <computeroutput>getns()</computeroutput>, or by <computeroutput>tscns.rdns()</computeroutput>(<link xlink:href="https://github.com/MengRao/tscns">tscns</link>): <literallayout><computeroutput>&#32;++
+int64_t&#32;getns()&#32;{
+&#32;&#32;timespec&#32;ts;
+&#32;&#32;::clock_gettime(CLOCK_REALTIME,&#32;&amp;ts);
+&#32;&#32;return&#32;ts.tv_sec&#32;*&#32;1000000000&#32;+&#32;ts.tv_nsec;
+}
+</computeroutput></literallayout></para>
+
+<para>Once connection is established on the callback <computeroutput>onConnectionEstablished</computeroutput>, we can save the reference to the <computeroutput>TcpConn</computeroutput> parameter, because all operations on an established connection will be called on this object.</para>
+
+<para>For sending data, two functions of <computeroutput>TcpConn</computeroutput> can be used: <literallayout><computeroutput>&#32;++
+//&#32;more&#32;is&#32;like&#32;MSG_MORE&#32;flag&#32;in&#32;socket,&#32;indicating&#32;there&apos;re&#32;pending&#32;sends
+uint32_t&#32;send(const&#32;void*&#32;data,&#32;uint32_t&#32;size,&#32;bool&#32;more&#32;=&#32;false);
+uint32_t&#32;sendv(const&#32;iovec*&#32;iov,&#32;int&#32;iovcnt);
+</computeroutput></literallayout> Both calls return the number of bytes accepted(like socket send/writev call). User can also know previously the maxmium bytes the next send/sendv can accept by <computeroutput>getSendable()</computeroutput>. Note that data being accepted doesn&apos;t mean it has been sent out, it(or part of it) may be buffered to be sent later due to tcp flow control or congestion control limitations. Actually we can get the immediately sendable bytes in the next send/sendv by <computeroutput>getImmediatelySendable()</computeroutput>.</para>
+
+<para>When connection send buffer is full of unacked data, no more data will be sendable, user has to wait for new data to be acked for more sendable, there is a specific event assiciated with this need: <literallayout><computeroutput>&#32;++
+void&#32;onMoreSendable(TcpConn&amp;&#32;conn)&#32;{
+&#32;&#32;cout&#32;&lt;&lt;&#32;&quot;senable:&#32;&quot;&lt;&lt;&#32;conn.getSendable()&#32;&lt;&lt;&#32;endl;
+}
+</computeroutput></literallayout></para>
+
+<para>On the receiver side, when new data is received below event will occur: <literallayout><computeroutput>&#32;++
+uint32_t&#32;onData(TcpConn&amp;&#32;conn,&#32;uint8_t*&#32;data,&#32;uint32_t&#32;size)&#32;{
+&#32;&#32;while&#32;(size&#32;&gt;=&#32;sizeof(Packet))&#32;{
+&#32;&#32;&#32;&#32;//&#32;handle&#32;Packet...
+&#32;&#32;&#32;&#32;
+&#32;&#32;&#32;&#32;data&#32;+=&#32;sizeof(Packet);
+&#32;&#32;&#32;&#32;size&#32;-=&#32;sizeof(Packet);
+&#32;&#32;}
+&#32;&#32;return&#32;size;
+}
+</computeroutput></literallayout> <computeroutput>onData()</computeroutput> callback returns the remaining size not consumed by the user, probably because only a part of application packet has been recevied and more data is needed to proceed. In this case user don&apos;t need to buffer the partial data himself but just return the remaining size. When new data is avaialble, it will be appended to the old data and handed together to the user in the next <computeroutput>onData()</computeroutput>, this allows for elegant data processing code just as above.</para>
+
+<para>If user is done with sending and want to start or continue with the 4-way handshake closure, <computeroutput>sendFin()</computeroutput> can be called, this is analogous to <computeroutput>shutdown(fd, SHUT_WR)</computeroutput>. On the other hand, when a connection received a Fin(the remote side is done sending), below event will trigger: <literallayout><computeroutput>&#32;++
+void&#32;onFin(TcpConn&amp;&#32;conn,&#32;uint8_t*&#32;data,&#32;uint32_t&#32;size)&#32;{}
+</computeroutput></literallayout> where <computeroutput>data</computeroutput> and <computeroutput>size</computeroutput> are the last unconsumed data and <computeroutput>size</computeroutput> could be 0.</para>
+
+<para>When the 4-way handshake is complete and the connection enters into either CLOSED or TIME_WAIT state, below event will trigger: <literallayout><computeroutput>&#32;++
+void&#32;onConnectionClosed(TcpConn&amp;&#32;conn){}
+</computeroutput></literallayout></para>
+
+<para>If user doesn&apos;t want to go through the elegant tcp closure procedure and wish to close the connection immediately, he can call <computeroutput>close()</computeroutput> on the <computeroutput>TcpConn</computeroutput> and a Rst will be sent out and the connection goes into CLOSED status. On receiving a Rst, below event will trigger: <literallayout><computeroutput>&#32;++
+void&#32;onConnectionReset(TcpConn&amp;&#32;conn)&#32;{}
+</computeroutput></literallayout> and the connection is closed. In addition, the <computeroutput>onConnectionTimeout(TcpConn&amp; conn)</computeroutput> event can also occur on an established connection, indicating data retransmission time has exceeded some limit and the connection is automatically closed.</para>
+
+<para>Note that after a connection is closed(either by active <computeroutput>close()</computeroutput> or on events <computeroutput>onConnectionClosed</computeroutput>/<computeroutput>onConnectionReset</computeroutput>/<computeroutput>onConnectionTimeout</computeroutput>) the connection reference should not be used because it could be reused for a new connection.</para>
+
+<para>Lastly, efvitcp allows for user timers on a connection basis, and each connection can have multiple user timers concurrently. This is done by <computeroutput>void setUserTimer(uint32_t timer_id, uint32_t duration)</computeroutput> function on <computeroutput>TcpConn</computeroutput>, where <computeroutput>timer_id</computeroutput> is the timer type starting from 0, with different timers having different <computeroutput>timer_id</computeroutput>. <computeroutput>duration</computeroutput> is the timeout in milliseconds, currently the maximum possible duration is 65000(65 seconds). Setting a duration of 0 will delete a specific timer. When the connection is closed all users timers are deleted as well. When user timer expires below event will trigger: <literallayout><computeroutput>&#32;++
+void&#32;onUserTimeout(TcpConn&amp;&#32;conn,&#32;uint32_t&#32;timer_id)&#32;{}
+</computeroutput></literallayout></para>
+
+<para>Some other information user can get from a TcpConn what may be helpful:<itemizedlist>
+<listitem>
+<para>A variable <computeroutput>user_data</computeroutput> of user defined type. It can be any user data attached to a connection.</para>
+</listitem><listitem>
+<para><computeroutput>uint32_t getConnId()</computeroutput>: Get connection ID starting from 0, the ID is auto assigned by the lib like fd in linux, it can be reused after the connection is closed.</para>
+</listitem><listitem>
+<para><computeroutput>void getPeername(struct sockaddr_in&amp; addr)</computeroutput>: get network address of the remote peer.</para>
+</listitem><listitem>
+<para><computeroutput>bool isEstablished()</computeroutput>: Check if the connection is established, it may be useful in <computeroutput>onConnectionTimeout()</computeroutput> callback because it can ocurr in both unestablished and established connection.</para>
+</listitem><listitem>
+<para><computeroutput>bool isClosed()</computeroutput>: Check if the connection is closed, if so the connection should not be used.</para>
+</listitem></itemizedlist>
+</para>
+
+<para>The interfaces of TcpServer template is very similar to that of TcpClient, with below differeces:<itemizedlist>
+<listitem>
+<para>The <computeroutput>connect()</computeroutput> function is replaced by <computeroutput>const char* listen(uint16_t server_port)</computeroutput>.</para>
+</listitem><listitem>
+<para>TcpServer has two additionl functions: <computeroutput>getConnCnt()</computeroutput> and <computeroutput>foreachConn(Handler handler)</computeroutput>.</para>
+</listitem><listitem>
+<para>The <computeroutput>onConnectionRefused()</computeroutput> event is replaced by <computeroutput>bool allowNewConnection(uint32_t ip, uint16_t port_be)</computeroutput>, this new event occurs when a new connection is being established(in Syn-Received state) and the user can decide whether to accept it or not according to its remote ip and port.</para>
+</listitem></itemizedlist>
+</para>
+</section>
+<section xml:id="_md__c_1_2_users_2sgaer_2source_2repos_2katanafinancial_2_occam_c_m_e4_2_occam_c_m_e4_2src_2exter7253da91f16cb30ff9cbb16d01f0338c_1autotoc_md5">
+<title>Configurations</title>
+<para>Below is an example of configuration struct of TcpServer, and TcpClient uses almost the same config, we&apos;ll go through them one by one. <literallayout><computeroutput>&#32;++
+struct&#32;Conf
+{
+&#32;&#32;static&#32;const&#32;uint32_t&#32;ConnSendBufCnt&#32;=&#32;512;
+&#32;&#32;static&#32;const&#32;bool&#32;SendBuf1K&#32;=&#32;true;
+&#32;&#32;static&#32;const&#32;uint32_t&#32;ConnRecvBufSize&#32;=&#32;40960;
+&#32;&#32;static&#32;const&#32;uint32_t&#32;MaxConnCnt&#32;=&#32;200;
+&#32;&#32;static&#32;const&#32;uint32_t&#32;MaxTimeWaitConnCnt&#32;=&#32;100;
+&#32;&#32;static&#32;const&#32;uint32_t&#32;RecvBufCnt&#32;=&#32;512;
+&#32;&#32;static&#32;const&#32;uint32_t&#32;SynRetries&#32;=&#32;3;
+&#32;&#32;static&#32;const&#32;uint32_t&#32;TcpRetries&#32;=&#32;10;
+&#32;&#32;static&#32;const&#32;uint32_t&#32;DelayedAckMS&#32;=&#32;10;
+&#32;&#32;static&#32;const&#32;uint32_t&#32;MinRtoMS&#32;=&#32;100;
+&#32;&#32;static&#32;const&#32;uint32_t&#32;MaxRtoMS&#32;=&#32;30&#32;*&#32;1000;
+&#32;&#32;static&#32;const&#32;bool&#32;WindowScaleOption&#32;=&#32;false;
+&#32;&#32;static&#32;const&#32;bool&#32;TimestampOption&#32;=&#32;false;
+&#32;&#32;static&#32;const&#32;int&#32;CongestionControlAlgo&#32;=&#32;0;&#32;//&#32;0:&#32;no&#32;cwnd,&#32;1:&#32;new&#32;reno,&#32;2:&#32;cubic
+&#32;&#32;static&#32;const&#32;uint32_t&#32;UserTimerCnt&#32;=&#32;1;
+&#32;&#32;struct&#32;UserData{};
+};
+</computeroutput></literallayout><itemizedlist>
+<listitem>
+<para><computeroutput>uint32_t ConnSendBufCnt</computeroutput>: The number of DMA send buffers in one connection. Send buffer is used to hold unacked data in case it need to be resent, if the buffer is full no more data can be sendable.</para>
+</listitem><listitem>
+<para><computeroutput>bool SendBuf1K</computeroutput>: Whether to use 1024 bytes for a DMA send buffer. If set to false, 2048 bytes is used. ef_vi requires that a DMA buffer be in a 4096 aligned block, and as typical MTU is 1500 bytes, using 2048 sized buffer will have 25% memeory wasted. So setting <computeroutput>SendBuf1K</computeroutput> to true will maximize memory unilization but reducing the max SMSS to 960 bytes.</para>
+</listitem><listitem>
+<para><computeroutput>uint32_t ConnRecvBufSize</computeroutput>: Receving buffer size in bytes for each connection. It determines the maximum receive window advertised to the remote peer, and also used to hold unconsumed data(by remaining size returned by onData) and out of sequence data received.</para>
+</listitem><listitem>
+<para><computeroutput>uint32_t MaxConnCnt</computeroutput>: Max number of connections supported. This is used only by TcpServer.</para>
+</listitem><listitem>
+<para><computeroutput>uint32_t MaxTimeWaitConnCnt</computeroutput>: Max number of TIME_WAIT connections supported. Note that TIME_WAIT connection is not included in <computeroutput>MaxConnCnt</computeroutput>. A TIME_WAIT connection uses much less memory than a normal connection. Also note that efvitcp doesn&apos;t distinguish between active and passive closing, and all connections completing the 4-way handshake will enter into TIME_WAIT.</para>
+</listitem><listitem>
+<para><computeroutput>uint32_t RecvBufCnt</computeroutput>: The number of DMA receive buffers(one is 2048 bytes) shared by all connections. These DMA buffers are used to transfer network frames received by the NIC to the application, once efvitcp got a filled buffer it can be reused again immediately, so this config don&apos;t need to be large, typically 512 is a good default value, the maxmium number ef_vi can support is 4095.</para>
+</listitem><listitem>
+<para><computeroutput>uint32_t SynRetries</computeroutput>: Max number of SYN resents for an unestablished connection. When breached, onConnectionTimeout will be triggered.</para>
+</listitem><listitem>
+<para><computeroutput>uint32_t TcpRetries</computeroutput>: Max number of data segment resents for an established connection. When breached, onConnectionTimeout will be triggered.</para>
+</listitem><listitem>
+<para><computeroutput>uint32_t DelayedAckMS</computeroutput>: Timeout of delayed ack. Setting to 0 will disable delayed ack.</para>
+</listitem><listitem>
+<para><computeroutput>uint32_t MinRtoMS</computeroutput>: Mininum retransmission timeout.</para>
+</listitem><listitem>
+<para><computeroutput>uint32_t MaxRtoMS</computeroutput>: Maximum retransmission timeout.</para>
+</listitem><listitem>
+<para><computeroutput>bool WindowScaleOption</computeroutput>: Whether or not to enable tcp window scale option. This option is useful if window size could be larger than 65535 in either peer.</para>
+</listitem><listitem>
+<para><computeroutput>bool TimestampOption</computeroutput>: Whether or not to enable tcp timestamp option. This option can be used to update rtt more precisely, recognize old duplicate packets more accurately and PAWS(Protection Against Wrapped Sequences). if <computeroutput>WindowScaleOption</computeroutput> is used, <computeroutput>TimestampOption</computeroutput> should also be enabled.</para>
+</listitem><listitem>
+<para><computeroutput>int CongestionControlAlgo</computeroutput>: The congestion control algorithm to use. There&apos;re three options available: &quot;0&quot;: no cwnd; &quot;1&quot;: new reno; &quot;2&quot;: cubic. The &quot;no cwnd&quot; option is almost equal to no congestion control, but fast retransmission is still used: the first unacked segment will be resent immediately on 3 duplicate acks or a partial ack in recover.</para>
+</listitem><listitem>
+<para><computeroutput>uint32_t UserTimerCnt</computeroutput>: The number of user timers per connection. The timer_id must be less than this value.</para>
+</listitem><listitem>
+<para><computeroutput>struct UserData {int XXX;};</computeroutput>: User defined type attached to each connection, which can be accessed directly by conn.XXX.</para>
+</listitem></itemizedlist>
+</para>
+</section>
+<section xml:id="_md__c_1_2_users_2sgaer_2source_2repos_2katanafinancial_2_occam_c_m_e4_2_occam_c_m_e4_2src_2exter7253da91f16cb30ff9cbb16d01f0338c_1autotoc_md6">
+<title>Memory Overhead</title>
+<para>Efvitcp won&apos;t dynamically allocate memory, all memoery it uses is in the object user defines, so it&apos;s pretty easy to check the memory overhead of efvitcp: <literallayout><computeroutput>&#32;++
+//&#32;using&#32;the&#32;Conf&#32;defined&#32;in&#32;the&#32;above&#32;example
+using&#32;TcpServer&#32;=&#32;efvitcp::TcpServer&lt;Conf&gt;;
+
+cout&#32;&lt;&lt;&#32;sizeof(TcpServer)&#32;&lt;&lt;&#32;endl;
+
+//&#32;output:&#32;114192400
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_md__c_1_2_users_2sgaer_2source_2repos_2katanafinancial_2_occam_c_m_e4_2_occam_c_m_e4_2src_2exter7253da91f16cb30ff9cbb16d01f0338c_1autotoc_md7">
+<title>Thread Safety</title>
+<para>Efvitcp is not thread safe, user should have the same thread polling TcpClient/TcpServer and operating on TcpConns. Multi-threading communication techniques can be used to pass data among the network thread and data processing threads.</para>
+</section>
+<section xml:id="_md__c_1_2_users_2sgaer_2source_2repos_2katanafinancial_2_occam_c_m_e4_2_occam_c_m_e4_2src_2exter7253da91f16cb30ff9cbb16d01f0338c_1autotoc_md8">
+<title>Pollnet Interface</title>
+<para>Efvitcp also provides two wrapper classes <computeroutput><link linkend="_class_efvi_tcp_client">EfviTcpClient</link></computeroutput> and <computeroutput><link linkend="_class_efvi_tcp_server">EfviTcpServer</link></computeroutput> in <computeroutput><link linkend="_">EfviTcp.h</link></computeroutput> using the same interface as pollnet tcp client/server, except for the optional parameter <computeroutput>ns</computeroutput> in <computeroutput>poll()</computeroutput>. </para>
+</section>
+</section>

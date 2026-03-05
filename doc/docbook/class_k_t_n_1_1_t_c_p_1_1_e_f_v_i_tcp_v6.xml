@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6" xml:lang="en-US">
+<title>KTN::TCP::EFVITcpV6 Class Reference</title>
+<indexterm><primary>KTN::TCP::EFVITcpV6</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_1a02ef009f3aca8db044088a220eeb886b"/>void <emphasis role="strong">EFVI_TCP_Start</emphasis> (int fd)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_1a8379e746a9554114dff9d4817b46d9b5"/>void <emphasis role="strong">createEfviTcpFeedFilter</emphasis> (<link linkend="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor">ServiceDescriptor</link> &amp;feed)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_1a5c6f6d7f905742675d55b30dc40011a3">Init</link> (<link linkend="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor">ServiceDescriptor</link> &amp;desc, bool isA)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_1ad0b37b10f454b0537150302eac4da029">Subscribe</link> (<link linkend="_class_k_t_n_1_1_t_c_p_1_1_tcp_callback">TcpCallback</link> *callback)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_1abdc9c1497ec4a4cf7f46cacd7f1c810b">Stop</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_1ab21fecd7ed3ecc748d6980b7681c7bce">Poll</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_1a91acf32f2f3fbd84477597d055b0514d">SendMaster</link> (char *buffer, size_t buffer_length, bool send_delegated)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_1ac0510e41fe4f3e6b4833e5217d370ec6">SendEFVI_Delegated</link> (char *buffer, size_t buffer_length)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_1a4706c635df547e0ae4b7265001bcdf79">SendTCP_Direct</link> (char *buffer, size_t buffer_length)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_1aa71eeecd20db6c77f6c83b9af0da36dd">SendNormal</link> (char *buffer, size_t buffer_length)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_1a6f8d5ae2c5fdca8d0722e235c9a9b1a5">SendWarmup</link> (char *buffer, size_t buffer_length)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_1aa14bd4cb7ffcac3b6dd62c64b2e34241">tas_send</link> ()</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_1a9cca5b147976771693dffb8b574aff9d">tas_prepare</link> (const <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g">KTN_MSG</link> &amp;msg)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_1afa55926ea49ec2ec5d87b615c7aa24f1">Fd</link> ()</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_1a2ab576633955430571c9e8ec1deac7be">SegId</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_1a20586fe251db8ffd74dc0120d19a18bb"/><section>
+    <title>EFVITcpV6()</title>
+<indexterm><primary>EFVITcpV6</primary><secondary>KTN::TCP::EFVITcpV6</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV6</primary><secondary>EFVITcpV6</secondary></indexterm>
+<para><computeroutput>EFVITcpV6::EFVITcpV6 ( )</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_1abf15cfa798605425f8f9fae38e38e243"/><section>
+    <title>~EFVITcpV6()</title>
+<indexterm><primary>~EFVITcpV6</primary><secondary>KTN::TCP::EFVITcpV6</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV6</primary><secondary>~EFVITcpV6</secondary></indexterm>
+<para><computeroutput>EFVITcpV6::~EFVITcpV6 ( )<computeroutput>[virtual]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_1afa55926ea49ec2ec5d87b615c7aa24f1"/><section>
+    <title>Fd()</title>
+<indexterm><primary>Fd</primary><secondary>KTN::TCP::EFVITcpV6</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV6</primary><secondary>Fd</secondary></indexterm>
+<para><computeroutput>int KTN::TCP::EFVITcpV6::Fd ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_1a5c6f6d7f905742675d55b30dc40011a3"/><section>
+    <title>Init()</title>
+<indexterm><primary>Init</primary><secondary>KTN::TCP::EFVITcpV6</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV6</primary><secondary>Init</secondary></indexterm>
+<para><computeroutput>bool EFVITcpV6::Init (<link linkend="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor">ServiceDescriptor</link> &amp; desc, bool isA = <computeroutput>true</computeroutput>
+)</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_1ab21fecd7ed3ecc748d6980b7681c7bce"/><section>
+    <title>Poll()</title>
+<indexterm><primary>Poll</primary><secondary>KTN::TCP::EFVITcpV6</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV6</primary><secondary>Poll</secondary></indexterm>
+<para><computeroutput>void EFVITcpV6::Poll ( )</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_1a2ab576633955430571c9e8ec1deac7be"/><section>
+    <title>SegId()</title>
+<indexterm><primary>SegId</primary><secondary>KTN::TCP::EFVITcpV6</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV6</primary><secondary>SegId</secondary></indexterm>
+<para><computeroutput>int KTN::TCP::EFVITcpV6::SegId ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_1ac0510e41fe4f3e6b4833e5217d370ec6"/><section>
+    <title>SendEFVI_Delegated()</title>
+<indexterm><primary>SendEFVI_Delegated</primary><secondary>KTN::TCP::EFVITcpV6</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV6</primary><secondary>SendEFVI_Delegated</secondary></indexterm>
+<para><computeroutput>int EFVITcpV6::SendEFVI_Delegated (char * buffer, size_t buffer_length)</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_1a91acf32f2f3fbd84477597d055b0514d"/><section>
+    <title>SendMaster()</title>
+<indexterm><primary>SendMaster</primary><secondary>KTN::TCP::EFVITcpV6</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV6</primary><secondary>SendMaster</secondary></indexterm>
+<para><computeroutput>void EFVITcpV6::SendMaster (char * buffer, size_t buffer_length, bool send_delegated)</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_1aa71eeecd20db6c77f6c83b9af0da36dd"/><section>
+    <title>SendNormal()</title>
+<indexterm><primary>SendNormal</primary><secondary>KTN::TCP::EFVITcpV6</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV6</primary><secondary>SendNormal</secondary></indexterm>
+<para><computeroutput>int EFVITcpV6::SendNormal (char * buffer, size_t buffer_length)</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_1a4706c635df547e0ae4b7265001bcdf79"/><section>
+    <title>SendTCP_Direct()</title>
+<indexterm><primary>SendTCP_Direct</primary><secondary>KTN::TCP::EFVITcpV6</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV6</primary><secondary>SendTCP_Direct</secondary></indexterm>
+<para><computeroutput>int EFVITcpV6::SendTCP_Direct (char * buffer, size_t buffer_length)</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_1a6f8d5ae2c5fdca8d0722e235c9a9b1a5"/><section>
+    <title>SendWarmup()</title>
+<indexterm><primary>SendWarmup</primary><secondary>KTN::TCP::EFVITcpV6</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV6</primary><secondary>SendWarmup</secondary></indexterm>
+<para><computeroutput>void EFVITcpV6::SendWarmup (char * buffer, size_t buffer_length)</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_1abdc9c1497ec4a4cf7f46cacd7f1c810b"/><section>
+    <title>Stop()</title>
+<indexterm><primary>Stop</primary><secondary>KTN::TCP::EFVITcpV6</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV6</primary><secondary>Stop</secondary></indexterm>
+<para><computeroutput>void EFVITcpV6::Stop ( )</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_1ad0b37b10f454b0537150302eac4da029"/><section>
+    <title>Subscribe()</title>
+<indexterm><primary>Subscribe</primary><secondary>KTN::TCP::EFVITcpV6</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV6</primary><secondary>Subscribe</secondary></indexterm>
+<para><computeroutput>void EFVITcpV6::Subscribe (<link linkend="_class_k_t_n_1_1_t_c_p_1_1_tcp_callback">TcpCallback</link> * callback)</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_1a9cca5b147976771693dffb8b574aff9d"/><section>
+    <title>tas_prepare()</title>
+<indexterm><primary>tas_prepare</primary><secondary>KTN::TCP::EFVITcpV6</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV6</primary><secondary>tas_prepare</secondary></indexterm>
+<para><computeroutput>bool EFVITcpV6::tas_prepare (const <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g">KTN_MSG</link> &amp; msg)</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_1aa14bd4cb7ffcac3b6dd62c64b2e34241"/><section>
+    <title>tas_send()</title>
+<indexterm><primary>tas_send</primary><secondary>KTN::TCP::EFVITcpV6</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV6</primary><secondary>tas_send</secondary></indexterm>
+<para><computeroutput>bool EFVITcpV6::tas_send ( )</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+KtnEfvi/EFVITcpV6.hppKtnEfvi/EFVITcpV6.cpp</section>
+</section>

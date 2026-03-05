@@ -1,0 +1,551 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classmoodycamel_1_1_concurrent_queue" xml:lang="en-US">
+<title>moodycamel::ConcurrentQueue&lt; T, Traits &gt; Class Template Reference</title>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary></indexterm>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>typedef <link linkend="_structmoodycamel_1_1_producer_token">::moodycamel::ProducerToken</link> <link linkend="_classmoodycamel_1_1_concurrent_queue_1aef55f8a4f40df32a7975fc41f91792fe">producer_token_t</link></para>
+</listitem>
+            <listitem><para>typedef <link linkend="_structmoodycamel_1_1_consumer_token">::moodycamel::ConsumerToken</link> <link linkend="_classmoodycamel_1_1_concurrent_queue_1a54772b1b423aaf79c925bb8e5609fc98">consumer_token_t</link></para>
+</listitem>
+            <listitem><para>typedef Traits::index_t <link linkend="_classmoodycamel_1_1_concurrent_queue_1ad68d536c896de4e839dd95225e7deea3">index_t</link></para>
+</listitem>
+            <listitem><para>typedef Traits::size_t <link linkend="_classmoodycamel_1_1_concurrent_queue_1ac0b73313ed107d313b55c8a77be19b28">size_t</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classmoodycamel_1_1_concurrent_queue_1a8dd7a33cf3174548a2b5f758331c5e48">ConcurrentQueue</link> (size_t capacity=32 *BLOCK_SIZE)</para>
+</listitem>
+            <listitem><para><link linkend="_classmoodycamel_1_1_concurrent_queue_1ad327feb7a7e861051d1dfd61e2ffa1df">ConcurrentQueue</link> (size_t minCapacity, size_t maxExplicitProducers, size_t maxImplicitProducers)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1a1b4b08c6b6db7bf0df041619d133171c"/><emphasis role="strong">ConcurrentQueue</emphasis> (<link linkend="_classmoodycamel_1_1_concurrent_queue">ConcurrentQueue</link> const &amp;) MOODYCAMEL_DELETE_FUNCTION</para>
+</listitem>
+            <listitem><para><anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1a378eb0bbe9ed755db54f93bd316d6c51"/><link linkend="_classmoodycamel_1_1_concurrent_queue">ConcurrentQueue</link> &amp; <emphasis role="strong">operator=</emphasis> (<link linkend="_classmoodycamel_1_1_concurrent_queue">ConcurrentQueue</link> const &amp;) MOODYCAMEL_DELETE_FUNCTION</para>
+</listitem>
+            <listitem><para><link linkend="_classmoodycamel_1_1_concurrent_queue_1ae908c026d0eb0591ca6f8f5518f7ffdf">ConcurrentQueue</link> (<link linkend="_classmoodycamel_1_1_concurrent_queue">ConcurrentQueue</link> &amp;&amp;other) MOODYCAMEL_NOEXCEPT</para>
+</listitem>
+            <listitem><para><link linkend="_classmoodycamel_1_1_concurrent_queue">ConcurrentQueue</link> &amp; <link linkend="_classmoodycamel_1_1_concurrent_queue_1abce8e204950aa2f7668c0cb4af2cdfd8">operator=</link> (<link linkend="_classmoodycamel_1_1_concurrent_queue">ConcurrentQueue</link> &amp;&amp;other) MOODYCAMEL_NOEXCEPT</para>
+</listitem>
+            <listitem><para>void <link linkend="_classmoodycamel_1_1_concurrent_queue_1a7c1c42c76a8218896a4d76efed142b2c">swap</link> (<link linkend="_classmoodycamel_1_1_concurrent_queue">ConcurrentQueue</link> &amp;other) MOODYCAMEL_NOEXCEPT</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classmoodycamel_1_1_concurrent_queue_1aceaa7271014aa901829e3ed1b1005d65">enqueue</link> (T const &amp;item)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classmoodycamel_1_1_concurrent_queue_1a4a36bd689aeaffd635416a4279566198">enqueue</link> (T &amp;&amp;item)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classmoodycamel_1_1_concurrent_queue_1a0b5882e6e7a053e27427709f11094dae">enqueue</link> (<link linkend="_structmoodycamel_1_1_producer_token">producer_token_t</link> const &amp;token, T const &amp;item)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classmoodycamel_1_1_concurrent_queue_1a0e27b67c2aa7b4fc2eb0777fa6bd7cbc">enqueue</link> (<link linkend="_structmoodycamel_1_1_producer_token">producer_token_t</link> const &amp;token, T &amp;&amp;item)</para>
+</listitem>
+            <listitem><para>template&lt;typename It &gt; </para><para>bool <link linkend="_classmoodycamel_1_1_concurrent_queue_1a57b0aa33a19538a7c97d839fbf0d8459">enqueue_bulk</link> (It itemFirst, size_t count)</para>
+</listitem>
+            <listitem><para>template&lt;typename It &gt; </para><para>bool <link linkend="_classmoodycamel_1_1_concurrent_queue_1a61a4b16a77535cc57fa3c76fb5ee3fba">enqueue_bulk</link> (<link linkend="_structmoodycamel_1_1_producer_token">producer_token_t</link> const &amp;token, It itemFirst, size_t count)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classmoodycamel_1_1_concurrent_queue_1aaab76643a98e1094cecdd213fbb6e75d">try_enqueue</link> (T const &amp;item)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classmoodycamel_1_1_concurrent_queue_1af63a4f51a8b8b6c59ea883ed97fff7a2">try_enqueue</link> (T &amp;&amp;item)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classmoodycamel_1_1_concurrent_queue_1ad04237577ca981e18e23190773cf1644">try_enqueue</link> (<link linkend="_structmoodycamel_1_1_producer_token">producer_token_t</link> const &amp;token, T const &amp;item)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classmoodycamel_1_1_concurrent_queue_1a049a33d4127c66a614b717cf20bba330">try_enqueue</link> (<link linkend="_structmoodycamel_1_1_producer_token">producer_token_t</link> const &amp;token, T &amp;&amp;item)</para>
+</listitem>
+            <listitem><para>template&lt;typename It &gt; </para><para>bool <link linkend="_classmoodycamel_1_1_concurrent_queue_1aecbe38c03c23ea980d1bc1f9445d26c2">try_enqueue_bulk</link> (It itemFirst, size_t count)</para>
+</listitem>
+            <listitem><para>template&lt;typename It &gt; </para><para>bool <link linkend="_classmoodycamel_1_1_concurrent_queue_1a359380c0d6952e61f3ef4811808eb573">try_enqueue_bulk</link> (<link linkend="_structmoodycamel_1_1_producer_token">producer_token_t</link> const &amp;token, It itemFirst, size_t count)</para>
+</listitem>
+            <listitem><para>template&lt;typename U &gt; </para><para>bool <link linkend="_classmoodycamel_1_1_concurrent_queue_1a1895c8a6120aef578fe01db53879517b">try_dequeue</link> (U &amp;item)</para>
+</listitem>
+            <listitem><para>template&lt;typename U &gt; </para><para>bool <link linkend="_classmoodycamel_1_1_concurrent_queue_1ad9f25d247543755bdc1b477f2678455f">try_dequeue_non_interleaved</link> (U &amp;item)</para>
+</listitem>
+            <listitem><para>template&lt;typename U &gt; </para><para>bool <link linkend="_classmoodycamel_1_1_concurrent_queue_1a67d5a2377539808015044acbb34216d1">try_dequeue</link> (<link linkend="_structmoodycamel_1_1_consumer_token">consumer_token_t</link> &amp;token, U &amp;item)</para>
+</listitem>
+            <listitem><para>template&lt;typename It &gt; </para><para>size_t <link linkend="_classmoodycamel_1_1_concurrent_queue_1a816450a4b774c374ef8ee0234e7c4518">try_dequeue_bulk</link> (It itemFirst, size_t max)</para>
+</listitem>
+            <listitem><para>template&lt;typename It &gt; </para><para>size_t <link linkend="_classmoodycamel_1_1_concurrent_queue_1a57e6b02051baed9cc1b3fb5e46743c03">try_dequeue_bulk</link> (<link linkend="_structmoodycamel_1_1_consumer_token">consumer_token_t</link> &amp;token, It itemFirst, size_t max)</para>
+</listitem>
+            <listitem><para>template&lt;typename U &gt; </para><para>bool <link linkend="_classmoodycamel_1_1_concurrent_queue_1a609358c281fb44c88088f229c47e424d">try_dequeue_from_producer</link> (<link linkend="_structmoodycamel_1_1_producer_token">producer_token_t</link> const &amp;producer, U &amp;item)</para>
+</listitem>
+            <listitem><para>template&lt;typename It &gt; </para><para>size_t <link linkend="_classmoodycamel_1_1_concurrent_queue_1a1cfc50210d50dba266431ff82b908da7">try_dequeue_bulk_from_producer</link> (<link linkend="_structmoodycamel_1_1_producer_token">producer_token_t</link> const &amp;producer, It itemFirst, size_t max)</para>
+</listitem>
+            <listitem><para>size_t <link linkend="_classmoodycamel_1_1_concurrent_queue_1aecab179b995f119c89da71f62b2d21a5">size_approx</link> () const</para>
+</listitem>
+            <listitem><para><link linkend="_classmoodycamel_1_1_concurrent_queue_1a2c07fb51a9cd1baaec9d0f1a079d83cd">ConcurrentQueue</link> (size_t capacity=6 *BLOCK_SIZE)</para>
+</listitem>
+            <listitem><para><link linkend="_classmoodycamel_1_1_concurrent_queue_1ad327feb7a7e861051d1dfd61e2ffa1df">ConcurrentQueue</link> (size_t minCapacity, size_t maxExplicitProducers, size_t maxImplicitProducers)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1a1b4b08c6b6db7bf0df041619d133171c"/><emphasis role="strong">ConcurrentQueue</emphasis> (<link linkend="_classmoodycamel_1_1_concurrent_queue">ConcurrentQueue</link> const &amp;) MOODYCAMEL_DELETE_FUNCTION</para>
+</listitem>
+            <listitem><para><anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1a378eb0bbe9ed755db54f93bd316d6c51"/><link linkend="_classmoodycamel_1_1_concurrent_queue">ConcurrentQueue</link> &amp; <emphasis role="strong">operator=</emphasis> (<link linkend="_classmoodycamel_1_1_concurrent_queue">ConcurrentQueue</link> const &amp;) MOODYCAMEL_DELETE_FUNCTION</para>
+</listitem>
+            <listitem><para><link linkend="_classmoodycamel_1_1_concurrent_queue_1ae908c026d0eb0591ca6f8f5518f7ffdf">ConcurrentQueue</link> (<link linkend="_classmoodycamel_1_1_concurrent_queue">ConcurrentQueue</link> &amp;&amp;other) MOODYCAMEL_NOEXCEPT</para>
+</listitem>
+            <listitem><para><link linkend="_classmoodycamel_1_1_concurrent_queue">ConcurrentQueue</link> &amp; <link linkend="_classmoodycamel_1_1_concurrent_queue_1abce8e204950aa2f7668c0cb4af2cdfd8">operator=</link> (<link linkend="_classmoodycamel_1_1_concurrent_queue">ConcurrentQueue</link> &amp;&amp;other) MOODYCAMEL_NOEXCEPT</para>
+</listitem>
+            <listitem><para>void <link linkend="_classmoodycamel_1_1_concurrent_queue_1a7c1c42c76a8218896a4d76efed142b2c">swap</link> (<link linkend="_classmoodycamel_1_1_concurrent_queue">ConcurrentQueue</link> &amp;other) MOODYCAMEL_NOEXCEPT</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classmoodycamel_1_1_concurrent_queue_1aceaa7271014aa901829e3ed1b1005d65">enqueue</link> (T const &amp;item)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classmoodycamel_1_1_concurrent_queue_1a4a36bd689aeaffd635416a4279566198">enqueue</link> (T &amp;&amp;item)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classmoodycamel_1_1_concurrent_queue_1a0b5882e6e7a053e27427709f11094dae">enqueue</link> (<link linkend="_structmoodycamel_1_1_producer_token">producer_token_t</link> const &amp;token, T const &amp;item)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classmoodycamel_1_1_concurrent_queue_1a0e27b67c2aa7b4fc2eb0777fa6bd7cbc">enqueue</link> (<link linkend="_structmoodycamel_1_1_producer_token">producer_token_t</link> const &amp;token, T &amp;&amp;item)</para>
+</listitem>
+            <listitem><para>template&lt;typename It &gt; </para><para>bool <link linkend="_classmoodycamel_1_1_concurrent_queue_1a57b0aa33a19538a7c97d839fbf0d8459">enqueue_bulk</link> (It itemFirst, size_t count)</para>
+</listitem>
+            <listitem><para>template&lt;typename It &gt; </para><para>bool <link linkend="_classmoodycamel_1_1_concurrent_queue_1a61a4b16a77535cc57fa3c76fb5ee3fba">enqueue_bulk</link> (<link linkend="_structmoodycamel_1_1_producer_token">producer_token_t</link> const &amp;token, It itemFirst, size_t count)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classmoodycamel_1_1_concurrent_queue_1aaab76643a98e1094cecdd213fbb6e75d">try_enqueue</link> (T const &amp;item)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classmoodycamel_1_1_concurrent_queue_1af63a4f51a8b8b6c59ea883ed97fff7a2">try_enqueue</link> (T &amp;&amp;item)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classmoodycamel_1_1_concurrent_queue_1ad04237577ca981e18e23190773cf1644">try_enqueue</link> (<link linkend="_structmoodycamel_1_1_producer_token">producer_token_t</link> const &amp;token, T const &amp;item)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classmoodycamel_1_1_concurrent_queue_1a049a33d4127c66a614b717cf20bba330">try_enqueue</link> (<link linkend="_structmoodycamel_1_1_producer_token">producer_token_t</link> const &amp;token, T &amp;&amp;item)</para>
+</listitem>
+            <listitem><para>template&lt;typename It &gt; </para><para>bool <link linkend="_classmoodycamel_1_1_concurrent_queue_1aecbe38c03c23ea980d1bc1f9445d26c2">try_enqueue_bulk</link> (It itemFirst, size_t count)</para>
+</listitem>
+            <listitem><para>template&lt;typename It &gt; </para><para>bool <link linkend="_classmoodycamel_1_1_concurrent_queue_1a359380c0d6952e61f3ef4811808eb573">try_enqueue_bulk</link> (<link linkend="_structmoodycamel_1_1_producer_token">producer_token_t</link> const &amp;token, It itemFirst, size_t count)</para>
+</listitem>
+            <listitem><para>template&lt;typename U &gt; </para><para>bool <link linkend="_classmoodycamel_1_1_concurrent_queue_1a1895c8a6120aef578fe01db53879517b">try_dequeue</link> (U &amp;item)</para>
+</listitem>
+            <listitem><para>template&lt;typename U &gt; </para><para>bool <link linkend="_classmoodycamel_1_1_concurrent_queue_1ad9f25d247543755bdc1b477f2678455f">try_dequeue_non_interleaved</link> (U &amp;item)</para>
+</listitem>
+            <listitem><para>template&lt;typename U &gt; </para><para>bool <link linkend="_classmoodycamel_1_1_concurrent_queue_1a67d5a2377539808015044acbb34216d1">try_dequeue</link> (<link linkend="_structmoodycamel_1_1_consumer_token">consumer_token_t</link> &amp;token, U &amp;item)</para>
+</listitem>
+            <listitem><para>template&lt;typename It &gt; </para><para>size_t <link linkend="_classmoodycamel_1_1_concurrent_queue_1a816450a4b774c374ef8ee0234e7c4518">try_dequeue_bulk</link> (It itemFirst, size_t max)</para>
+</listitem>
+            <listitem><para>template&lt;typename It &gt; </para><para>size_t <link linkend="_classmoodycamel_1_1_concurrent_queue_1a57e6b02051baed9cc1b3fb5e46743c03">try_dequeue_bulk</link> (<link linkend="_structmoodycamel_1_1_consumer_token">consumer_token_t</link> &amp;token, It itemFirst, size_t max)</para>
+</listitem>
+            <listitem><para>template&lt;typename U &gt; </para><para>bool <link linkend="_classmoodycamel_1_1_concurrent_queue_1a609358c281fb44c88088f229c47e424d">try_dequeue_from_producer</link> (<link linkend="_structmoodycamel_1_1_producer_token">producer_token_t</link> const &amp;producer, U &amp;item)</para>
+</listitem>
+            <listitem><para>template&lt;typename It &gt; </para><para>size_t <link linkend="_classmoodycamel_1_1_concurrent_queue_1a1cfc50210d50dba266431ff82b908da7">try_dequeue_bulk_from_producer</link> (<link linkend="_structmoodycamel_1_1_producer_token">producer_token_t</link> const &amp;producer, It itemFirst, size_t max)</para>
+</listitem>
+            <listitem><para>size_t <link linkend="_classmoodycamel_1_1_concurrent_queue_1aecab179b995f119c89da71f62b2d21a5">size_approx</link> () const</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static constexpr bool <link linkend="_classmoodycamel_1_1_concurrent_queue_1a926d7d31e785e36c61810d066ba4fba3">is_lock_free</link> ()</para>
+</listitem>
+            <listitem><para>static bool <link linkend="_classmoodycamel_1_1_concurrent_queue_1acf52b5f16906d4bd1d2cfee05dd0b517">is_lock_free</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>static const size_t <link linkend="_classmoodycamel_1_1_concurrent_queue_1ad5dbdb9e79fa171f83bf598e5a0ae6ee">BLOCK_SIZE</link> = static_cast&lt;size_t&gt;(Traits::BLOCK_SIZE)</para>
+</listitem>
+            <listitem><para>static const size_t <link linkend="_classmoodycamel_1_1_concurrent_queue_1a62395a235acef1310eade752cd7b4202">EXPLICIT_BLOCK_EMPTY_COUNTER_THRESHOLD</link> = static_cast&lt;size_t&gt;(Traits::EXPLICIT_BLOCK_EMPTY_COUNTER_THRESHOLD)</para>
+</listitem>
+            <listitem><para>static const size_t <link linkend="_classmoodycamel_1_1_concurrent_queue_1a14b748827c74f78ed1849e8943499840">EXPLICIT_INITIAL_INDEX_SIZE</link> = static_cast&lt;size_t&gt;(Traits::EXPLICIT_INITIAL_INDEX_SIZE)</para>
+</listitem>
+            <listitem><para>static const size_t <link linkend="_classmoodycamel_1_1_concurrent_queue_1a905d573fc84b96705a26548ad0d60896">IMPLICIT_INITIAL_INDEX_SIZE</link> = static_cast&lt;size_t&gt;(Traits::IMPLICIT_INITIAL_INDEX_SIZE)</para>
+</listitem>
+            <listitem><para>static const size_t <link linkend="_classmoodycamel_1_1_concurrent_queue_1a6cd15a304107f907e4304935ea9058ae">INITIAL_IMPLICIT_PRODUCER_HASH_SIZE</link> = static_cast&lt;size_t&gt;(Traits::INITIAL_IMPLICIT_PRODUCER_HASH_SIZE)</para>
+</listitem>
+            <listitem><para>static const std::uint32_t <link linkend="_classmoodycamel_1_1_concurrent_queue_1a9b0b153d8d01bd356e01cbe212895213">EXPLICIT_CONSUMER_CONSUMPTION_QUOTA_BEFORE_ROTATE</link> = static_cast&lt;std::uint32_t&gt;(Traits::EXPLICIT_CONSUMER_CONSUMPTION_QUOTA_BEFORE_ROTATE)</para>
+</listitem>
+            <listitem><para>static const size_t <link linkend="_classmoodycamel_1_1_concurrent_queue_1afc457d111d100977f80e6e4e2650e9ae">MAX_SUBQUEUE_SIZE</link> = (<link linkend="_structmoodycamel_1_1details_1_1const__numeric__max">details::const_numeric_max</link>&lt;size_t&gt;::value - static_cast&lt;size_t&gt;(Traits::MAX_SUBQUEUE_SIZE) &lt; BLOCK_SIZE) ? <link linkend="_structmoodycamel_1_1details_1_1const__numeric__max">details::const_numeric_max</link>&lt;size_t&gt;::value : ((static_cast&lt;size_t&gt;(Traits::MAX_SUBQUEUE_SIZE) + (BLOCK_SIZE - 1)) / BLOCK_SIZE * BLOCK_SIZE)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Friends    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_classmoodycamel_1_1_concurrent_queue_1a9ab163b49fd7151c8e67200709375c55">ProducerToken</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_classmoodycamel_1_1_concurrent_queue_1ad89a846fefec2b3c6dfdd85f89184f0e">ConsumerToken</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_classmoodycamel_1_1_concurrent_queue_1aebff8165e0e4f701b6b92f6717a202b7">ExplicitProducer</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_classmoodycamel_1_1_concurrent_queue_1ab79e82aa1a04eb71ff8297700ff94d58">ImplicitProducer</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classmoodycamel_1_1_concurrent_queue_1affb081dec2a93f53a23878412f69c469">ConcurrentQueueTests</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1ad65cc3887b8b356dff18ac235c21d6fa"/>template&lt;typename XT , typename XTraits &gt; </para><para>void <emphasis role="strong">moodycamel::swap</emphasis> (typename <link linkend="_classmoodycamel_1_1_concurrent_queue">ConcurrentQueue</link>&lt; XT, XTraits &gt;::ImplicitProducerKVP &amp;, typename <link linkend="_classmoodycamel_1_1_concurrent_queue">ConcurrentQueue</link>&lt; XT, XTraits &gt;::ImplicitProducerKVP &amp;) MOODYCAMEL_NOEXCEPT</para>
+</listitem>
+            <listitem><para><anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1ad65cc3887b8b356dff18ac235c21d6fa"/>template&lt;typename XT , typename XTraits &gt; </para><para>void <emphasis role="strong">moodycamel::swap</emphasis> (typename <link linkend="_classmoodycamel_1_1_concurrent_queue">ConcurrentQueue</link>&lt; XT, XTraits &gt;::ImplicitProducerKVP &amp;, typename <link linkend="_classmoodycamel_1_1_concurrent_queue">ConcurrentQueue</link>&lt; XT, XTraits &gt;::ImplicitProducerKVP &amp;) MOODYCAMEL_NOEXCEPT</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;typename T, typename Traits = ConcurrentQueueDefaultTraits&gt;<?linebreak?>class moodycamel::ConcurrentQueue&lt; T, Traits &gt;</title></simplesect>
+</section>
+<section>
+<title>Member Typedef Documentation</title>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1a54772b1b423aaf79c925bb8e5609fc98"/><section>
+    <title>consumer_token_t</title>
+<indexterm><primary>consumer_token_t</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>consumer_token_t</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput>typedef::moodycamel::ConsumerToken <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::consumer_token_t</computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1ad68d536c896de4e839dd95225e7deea3"/><section>
+    <title>index_t</title>
+<indexterm><primary>index_t</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>index_t</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput>typedef Traits::index_t <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::index_t</computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1aef55f8a4f40df32a7975fc41f91792fe"/><section>
+    <title>producer_token_t</title>
+<indexterm><primary>producer_token_t</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>producer_token_t</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput>typedef::moodycamel::ProducerToken <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::producer_token_t</computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1ac0b73313ed107d313b55c8a77be19b28"/><section>
+    <title>size_t</title>
+<indexterm><primary>size_t</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>size_t</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput>typedef Traits::size_t <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::size_t</computeroutput></para></section>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1a8dd7a33cf3174548a2b5f758331c5e48"/><section>
+    <title>ConcurrentQueue()<computeroutput>[1/6]</computeroutput></title>
+<indexterm><primary>ConcurrentQueue</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>ConcurrentQueue</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput><link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::ConcurrentQueue (size_t capacity = <computeroutput>32&#160;*&#160;BLOCK_SIZE</computeroutput>
+)<computeroutput>[inline]</computeroutput>, <computeroutput>[explicit]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1ad327feb7a7e861051d1dfd61e2ffa1df"/><section>
+    <title>ConcurrentQueue()<computeroutput>[2/6]</computeroutput></title>
+<indexterm><primary>ConcurrentQueue</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>ConcurrentQueue</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput><link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::ConcurrentQueue (size_t minCapacity, size_t maxExplicitProducers, size_t maxImplicitProducers)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1add203e2137970f317f16cf347471b2f7"/><section>
+    <title>~ConcurrentQueue()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>~ConcurrentQueue</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>~ConcurrentQueue</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput><link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::~<link linkend="_classmoodycamel_1_1_concurrent_queue">ConcurrentQueue</link> ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1ae908c026d0eb0591ca6f8f5518f7ffdf"/><section>
+    <title>ConcurrentQueue()<computeroutput>[3/6]</computeroutput></title>
+<indexterm><primary>ConcurrentQueue</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>ConcurrentQueue</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput><link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::ConcurrentQueue (<link linkend="_classmoodycamel_1_1_concurrent_queue">ConcurrentQueue</link>&lt; T, Traits &gt; &amp;&amp; other)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1a2c07fb51a9cd1baaec9d0f1a079d83cd"/><section>
+    <title>ConcurrentQueue()<computeroutput>[4/6]</computeroutput></title>
+<indexterm><primary>ConcurrentQueue</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>ConcurrentQueue</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput><link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::ConcurrentQueue (size_t capacity = <computeroutput>6&#160;*&#160;BLOCK_SIZE</computeroutput>
+)<computeroutput>[inline]</computeroutput>, <computeroutput>[explicit]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1ad327feb7a7e861051d1dfd61e2ffa1df"/><section>
+    <title>ConcurrentQueue()<computeroutput>[5/6]</computeroutput></title>
+<indexterm><primary>ConcurrentQueue</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>ConcurrentQueue</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput><link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::ConcurrentQueue (size_t minCapacity, size_t maxExplicitProducers, size_t maxImplicitProducers)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1add203e2137970f317f16cf347471b2f7"/><section>
+    <title>~ConcurrentQueue()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>~ConcurrentQueue</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>~ConcurrentQueue</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput><link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::~<link linkend="_classmoodycamel_1_1_concurrent_queue">ConcurrentQueue</link> ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1ae908c026d0eb0591ca6f8f5518f7ffdf"/><section>
+    <title>ConcurrentQueue()<computeroutput>[6/6]</computeroutput></title>
+<indexterm><primary>ConcurrentQueue</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>ConcurrentQueue</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput><link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::ConcurrentQueue (<link linkend="_classmoodycamel_1_1_concurrent_queue">ConcurrentQueue</link>&lt; T, Traits &gt; &amp;&amp; other)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1a0e27b67c2aa7b4fc2eb0777fa6bd7cbc"/><section>
+    <title>enqueue()<computeroutput>[1/8]</computeroutput></title>
+<indexterm><primary>enqueue</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>enqueue</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput>bool <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::enqueue (<link linkend="_structmoodycamel_1_1_producer_token">producer_token_t</link> const &amp; token, T &amp;&amp; item)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1a0e27b67c2aa7b4fc2eb0777fa6bd7cbc"/><section>
+    <title>enqueue()<computeroutput>[2/8]</computeroutput></title>
+<indexterm><primary>enqueue</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>enqueue</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput>bool <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::enqueue (<link linkend="_structmoodycamel_1_1_producer_token">producer_token_t</link> const &amp; token, T &amp;&amp; item)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1a0b5882e6e7a053e27427709f11094dae"/><section>
+    <title>enqueue()<computeroutput>[3/8]</computeroutput></title>
+<indexterm><primary>enqueue</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>enqueue</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput>bool <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::enqueue (<link linkend="_structmoodycamel_1_1_producer_token">producer_token_t</link> const &amp; token, T const &amp; item)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1a0b5882e6e7a053e27427709f11094dae"/><section>
+    <title>enqueue()<computeroutput>[4/8]</computeroutput></title>
+<indexterm><primary>enqueue</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>enqueue</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput>bool <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::enqueue (<link linkend="_structmoodycamel_1_1_producer_token">producer_token_t</link> const &amp; token, T const &amp; item)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1a4a36bd689aeaffd635416a4279566198"/><section>
+    <title>enqueue()<computeroutput>[5/8]</computeroutput></title>
+<indexterm><primary>enqueue</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>enqueue</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput>bool <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::enqueue (T &amp;&amp; item)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1a4a36bd689aeaffd635416a4279566198"/><section>
+    <title>enqueue()<computeroutput>[6/8]</computeroutput></title>
+<indexterm><primary>enqueue</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>enqueue</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput>bool <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::enqueue (T &amp;&amp; item)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1aceaa7271014aa901829e3ed1b1005d65"/><section>
+    <title>enqueue()<computeroutput>[7/8]</computeroutput></title>
+<indexterm><primary>enqueue</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>enqueue</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput>bool <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::enqueue (T const &amp; item)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1aceaa7271014aa901829e3ed1b1005d65"/><section>
+    <title>enqueue()<computeroutput>[8/8]</computeroutput></title>
+<indexterm><primary>enqueue</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>enqueue</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput>bool <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::enqueue (T const &amp; item)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1a57b0aa33a19538a7c97d839fbf0d8459"/><section>
+    <title>enqueue_bulk()<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>enqueue_bulk</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>enqueue_bulk</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><computeroutput>template&lt;typename It &gt; </computeroutput><para><computeroutput>bool <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::enqueue_bulk (It itemFirst, size_t count)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1a57b0aa33a19538a7c97d839fbf0d8459"/><section>
+    <title>enqueue_bulk()<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>enqueue_bulk</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>enqueue_bulk</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><computeroutput>template&lt;typename It &gt; </computeroutput><para><computeroutput>bool <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::enqueue_bulk (It itemFirst, size_t count)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1a61a4b16a77535cc57fa3c76fb5ee3fba"/><section>
+    <title>enqueue_bulk()<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>enqueue_bulk</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>enqueue_bulk</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><computeroutput>template&lt;typename It &gt; </computeroutput><para><computeroutput>bool <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::enqueue_bulk (<link linkend="_structmoodycamel_1_1_producer_token">producer_token_t</link> const &amp; token, It itemFirst, size_t count)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1a61a4b16a77535cc57fa3c76fb5ee3fba"/><section>
+    <title>enqueue_bulk()<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>enqueue_bulk</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>enqueue_bulk</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><computeroutput>template&lt;typename It &gt; </computeroutput><para><computeroutput>bool <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::enqueue_bulk (<link linkend="_structmoodycamel_1_1_producer_token">producer_token_t</link> const &amp; token, It itemFirst, size_t count)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1a926d7d31e785e36c61810d066ba4fba3"/><section>
+    <title>is_lock_free()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>is_lock_free</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>is_lock_free</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput>static constexpr bool <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::is_lock_free ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[constexpr]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1acf52b5f16906d4bd1d2cfee05dd0b517"/><section>
+    <title>is_lock_free()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>is_lock_free</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>is_lock_free</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput>static bool <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::is_lock_free ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1abce8e204950aa2f7668c0cb4af2cdfd8"/><section>
+    <title>operator=()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>operator=</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>operator=</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput><link linkend="_classmoodycamel_1_1_concurrent_queue">ConcurrentQueue</link> &amp; <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::operator= (<link linkend="_classmoodycamel_1_1_concurrent_queue">ConcurrentQueue</link>&lt; T, Traits &gt; &amp;&amp; other)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1abce8e204950aa2f7668c0cb4af2cdfd8"/><section>
+    <title>operator=()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>operator=</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>operator=</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput><link linkend="_classmoodycamel_1_1_concurrent_queue">ConcurrentQueue</link> &amp; <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::operator= (<link linkend="_classmoodycamel_1_1_concurrent_queue">ConcurrentQueue</link>&lt; T, Traits &gt; &amp;&amp; other)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1aecab179b995f119c89da71f62b2d21a5"/><section>
+    <title>size_approx()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>size_approx</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>size_approx</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput>size_t <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::size_approx ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1aecab179b995f119c89da71f62b2d21a5"/><section>
+    <title>size_approx()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>size_approx</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>size_approx</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput>size_t <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::size_approx ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1a7c1c42c76a8218896a4d76efed142b2c"/><section>
+    <title>swap()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>swap</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>swap</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput>void <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::swap (<link linkend="_classmoodycamel_1_1_concurrent_queue">ConcurrentQueue</link>&lt; T, Traits &gt; &amp; other)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1a7c1c42c76a8218896a4d76efed142b2c"/><section>
+    <title>swap()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>swap</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>swap</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput>void <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::swap (<link linkend="_classmoodycamel_1_1_concurrent_queue">ConcurrentQueue</link>&lt; T, Traits &gt; &amp; other)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1a67d5a2377539808015044acbb34216d1"/><section>
+    <title>try_dequeue()<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>try_dequeue</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>try_dequeue</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><computeroutput>template&lt;typename U &gt; </computeroutput><para><computeroutput>bool <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::try_dequeue (<link linkend="_structmoodycamel_1_1_consumer_token">consumer_token_t</link> &amp; token, U &amp; item)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1a67d5a2377539808015044acbb34216d1"/><section>
+    <title>try_dequeue()<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>try_dequeue</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>try_dequeue</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><computeroutput>template&lt;typename U &gt; </computeroutput><para><computeroutput>bool <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::try_dequeue (<link linkend="_structmoodycamel_1_1_consumer_token">consumer_token_t</link> &amp; token, U &amp; item)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1a1895c8a6120aef578fe01db53879517b"/><section>
+    <title>try_dequeue()<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>try_dequeue</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>try_dequeue</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><computeroutput>template&lt;typename U &gt; </computeroutput><para><computeroutput>bool <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::try_dequeue (U &amp; item)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1a1895c8a6120aef578fe01db53879517b"/><section>
+    <title>try_dequeue()<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>try_dequeue</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>try_dequeue</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><computeroutput>template&lt;typename U &gt; </computeroutput><para><computeroutput>bool <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::try_dequeue (U &amp; item)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1a57e6b02051baed9cc1b3fb5e46743c03"/><section>
+    <title>try_dequeue_bulk()<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>try_dequeue_bulk</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>try_dequeue_bulk</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><computeroutput>template&lt;typename It &gt; </computeroutput><para><computeroutput>size_t <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::try_dequeue_bulk (<link linkend="_structmoodycamel_1_1_consumer_token">consumer_token_t</link> &amp; token, It itemFirst, size_t max)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1a57e6b02051baed9cc1b3fb5e46743c03"/><section>
+    <title>try_dequeue_bulk()<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>try_dequeue_bulk</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>try_dequeue_bulk</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><computeroutput>template&lt;typename It &gt; </computeroutput><para><computeroutput>size_t <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::try_dequeue_bulk (<link linkend="_structmoodycamel_1_1_consumer_token">consumer_token_t</link> &amp; token, It itemFirst, size_t max)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1a816450a4b774c374ef8ee0234e7c4518"/><section>
+    <title>try_dequeue_bulk()<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>try_dequeue_bulk</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>try_dequeue_bulk</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><computeroutput>template&lt;typename It &gt; </computeroutput><para><computeroutput>size_t <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::try_dequeue_bulk (It itemFirst, size_t max)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1a816450a4b774c374ef8ee0234e7c4518"/><section>
+    <title>try_dequeue_bulk()<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>try_dequeue_bulk</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>try_dequeue_bulk</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><computeroutput>template&lt;typename It &gt; </computeroutput><para><computeroutput>size_t <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::try_dequeue_bulk (It itemFirst, size_t max)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1a1cfc50210d50dba266431ff82b908da7"/><section>
+    <title>try_dequeue_bulk_from_producer()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>try_dequeue_bulk_from_producer</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>try_dequeue_bulk_from_producer</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><computeroutput>template&lt;typename It &gt; </computeroutput><para><computeroutput>size_t <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::try_dequeue_bulk_from_producer (<link linkend="_structmoodycamel_1_1_producer_token">producer_token_t</link> const &amp; producer, It itemFirst, size_t max)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1a1cfc50210d50dba266431ff82b908da7"/><section>
+    <title>try_dequeue_bulk_from_producer()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>try_dequeue_bulk_from_producer</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>try_dequeue_bulk_from_producer</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><computeroutput>template&lt;typename It &gt; </computeroutput><para><computeroutput>size_t <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::try_dequeue_bulk_from_producer (<link linkend="_structmoodycamel_1_1_producer_token">producer_token_t</link> const &amp; producer, It itemFirst, size_t max)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1a609358c281fb44c88088f229c47e424d"/><section>
+    <title>try_dequeue_from_producer()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>try_dequeue_from_producer</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>try_dequeue_from_producer</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><computeroutput>template&lt;typename U &gt; </computeroutput><para><computeroutput>bool <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::try_dequeue_from_producer (<link linkend="_structmoodycamel_1_1_producer_token">producer_token_t</link> const &amp; producer, U &amp; item)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1a609358c281fb44c88088f229c47e424d"/><section>
+    <title>try_dequeue_from_producer()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>try_dequeue_from_producer</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>try_dequeue_from_producer</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><computeroutput>template&lt;typename U &gt; </computeroutput><para><computeroutput>bool <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::try_dequeue_from_producer (<link linkend="_structmoodycamel_1_1_producer_token">producer_token_t</link> const &amp; producer, U &amp; item)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1ad9f25d247543755bdc1b477f2678455f"/><section>
+    <title>try_dequeue_non_interleaved()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>try_dequeue_non_interleaved</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>try_dequeue_non_interleaved</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><computeroutput>template&lt;typename U &gt; </computeroutput><para><computeroutput>bool <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::try_dequeue_non_interleaved (U &amp; item)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1ad9f25d247543755bdc1b477f2678455f"/><section>
+    <title>try_dequeue_non_interleaved()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>try_dequeue_non_interleaved</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>try_dequeue_non_interleaved</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><computeroutput>template&lt;typename U &gt; </computeroutput><para><computeroutput>bool <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::try_dequeue_non_interleaved (U &amp; item)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1a049a33d4127c66a614b717cf20bba330"/><section>
+    <title>try_enqueue()<computeroutput>[1/8]</computeroutput></title>
+<indexterm><primary>try_enqueue</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>try_enqueue</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput>bool <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::try_enqueue (<link linkend="_structmoodycamel_1_1_producer_token">producer_token_t</link> const &amp; token, T &amp;&amp; item)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1a049a33d4127c66a614b717cf20bba330"/><section>
+    <title>try_enqueue()<computeroutput>[2/8]</computeroutput></title>
+<indexterm><primary>try_enqueue</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>try_enqueue</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput>bool <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::try_enqueue (<link linkend="_structmoodycamel_1_1_producer_token">producer_token_t</link> const &amp; token, T &amp;&amp; item)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1ad04237577ca981e18e23190773cf1644"/><section>
+    <title>try_enqueue()<computeroutput>[3/8]</computeroutput></title>
+<indexterm><primary>try_enqueue</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>try_enqueue</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput>bool <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::try_enqueue (<link linkend="_structmoodycamel_1_1_producer_token">producer_token_t</link> const &amp; token, T const &amp; item)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1ad04237577ca981e18e23190773cf1644"/><section>
+    <title>try_enqueue()<computeroutput>[4/8]</computeroutput></title>
+<indexterm><primary>try_enqueue</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>try_enqueue</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput>bool <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::try_enqueue (<link linkend="_structmoodycamel_1_1_producer_token">producer_token_t</link> const &amp; token, T const &amp; item)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1af63a4f51a8b8b6c59ea883ed97fff7a2"/><section>
+    <title>try_enqueue()<computeroutput>[5/8]</computeroutput></title>
+<indexterm><primary>try_enqueue</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>try_enqueue</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput>bool <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::try_enqueue (T &amp;&amp; item)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1af63a4f51a8b8b6c59ea883ed97fff7a2"/><section>
+    <title>try_enqueue()<computeroutput>[6/8]</computeroutput></title>
+<indexterm><primary>try_enqueue</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>try_enqueue</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput>bool <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::try_enqueue (T &amp;&amp; item)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1aaab76643a98e1094cecdd213fbb6e75d"/><section>
+    <title>try_enqueue()<computeroutput>[7/8]</computeroutput></title>
+<indexterm><primary>try_enqueue</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>try_enqueue</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput>bool <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::try_enqueue (T const &amp; item)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1aaab76643a98e1094cecdd213fbb6e75d"/><section>
+    <title>try_enqueue()<computeroutput>[8/8]</computeroutput></title>
+<indexterm><primary>try_enqueue</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>try_enqueue</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput>bool <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::try_enqueue (T const &amp; item)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1aecbe38c03c23ea980d1bc1f9445d26c2"/><section>
+    <title>try_enqueue_bulk()<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>try_enqueue_bulk</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>try_enqueue_bulk</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><computeroutput>template&lt;typename It &gt; </computeroutput><para><computeroutput>bool <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::try_enqueue_bulk (It itemFirst, size_t count)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1aecbe38c03c23ea980d1bc1f9445d26c2"/><section>
+    <title>try_enqueue_bulk()<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>try_enqueue_bulk</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>try_enqueue_bulk</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><computeroutput>template&lt;typename It &gt; </computeroutput><para><computeroutput>bool <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::try_enqueue_bulk (It itemFirst, size_t count)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1a359380c0d6952e61f3ef4811808eb573"/><section>
+    <title>try_enqueue_bulk()<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>try_enqueue_bulk</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>try_enqueue_bulk</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><computeroutput>template&lt;typename It &gt; </computeroutput><para><computeroutput>bool <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::try_enqueue_bulk (<link linkend="_structmoodycamel_1_1_producer_token">producer_token_t</link> const &amp; token, It itemFirst, size_t count)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1a359380c0d6952e61f3ef4811808eb573"/><section>
+    <title>try_enqueue_bulk()<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>try_enqueue_bulk</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>try_enqueue_bulk</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><computeroutput>template&lt;typename It &gt; </computeroutput><para><computeroutput>bool <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::try_enqueue_bulk (<link linkend="_structmoodycamel_1_1_producer_token">producer_token_t</link> const &amp; token, It itemFirst, size_t count)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Friends And Related Symbol Documentation</title>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1affb081dec2a93f53a23878412f69c469"/><section>
+    <title>ConcurrentQueueTests</title>
+<indexterm><primary>ConcurrentQueueTests</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>ConcurrentQueueTests</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput>ConcurrentQueueTests<computeroutput>[friend]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1ad89a846fefec2b3c6dfdd85f89184f0e"/><section>
+    <title>ConsumerToken</title>
+<indexterm><primary>ConsumerToken</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>ConsumerToken</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput><link linkend="_structmoodycamel_1_1_consumer_token">ConsumerToken</link><computeroutput>[friend]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1aebff8165e0e4f701b6b92f6717a202b7"/><section>
+    <title>ExplicitProducer</title>
+<indexterm><primary>ExplicitProducer</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>ExplicitProducer</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput>ExplicitProducer<computeroutput>[friend]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1ab79e82aa1a04eb71ff8297700ff94d58"/><section>
+    <title>ImplicitProducer</title>
+<indexterm><primary>ImplicitProducer</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>ImplicitProducer</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput>friend struct ImplicitProducer<computeroutput>[friend]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1a9ab163b49fd7151c8e67200709375c55"/><section>
+    <title>ProducerToken</title>
+<indexterm><primary>ProducerToken</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>ProducerToken</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput><link linkend="_structmoodycamel_1_1_producer_token">ProducerToken</link><computeroutput>[friend]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1ad5dbdb9e79fa171f83bf598e5a0ae6ee"/><section>
+    <title>BLOCK_SIZE</title>
+<indexterm><primary>BLOCK_SIZE</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>BLOCK_SIZE</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput>static const size_t <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::BLOCK_SIZE = static_cast&lt;size_t&gt;(Traits::BLOCK_SIZE)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1a62395a235acef1310eade752cd7b4202"/><section>
+    <title>EXPLICIT_BLOCK_EMPTY_COUNTER_THRESHOLD</title>
+<indexterm><primary>EXPLICIT_BLOCK_EMPTY_COUNTER_THRESHOLD</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>EXPLICIT_BLOCK_EMPTY_COUNTER_THRESHOLD</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput>static const size_t <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::EXPLICIT_BLOCK_EMPTY_COUNTER_THRESHOLD = static_cast&lt;size_t&gt;(Traits::EXPLICIT_BLOCK_EMPTY_COUNTER_THRESHOLD)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1a9b0b153d8d01bd356e01cbe212895213"/><section>
+    <title>EXPLICIT_CONSUMER_CONSUMPTION_QUOTA_BEFORE_ROTATE</title>
+<indexterm><primary>EXPLICIT_CONSUMER_CONSUMPTION_QUOTA_BEFORE_ROTATE</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>EXPLICIT_CONSUMER_CONSUMPTION_QUOTA_BEFORE_ROTATE</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput>static const std::uint32_t <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::EXPLICIT_CONSUMER_CONSUMPTION_QUOTA_BEFORE_ROTATE = static_cast&lt;std::uint32_t&gt;(Traits::EXPLICIT_CONSUMER_CONSUMPTION_QUOTA_BEFORE_ROTATE)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1a14b748827c74f78ed1849e8943499840"/><section>
+    <title>EXPLICIT_INITIAL_INDEX_SIZE</title>
+<indexterm><primary>EXPLICIT_INITIAL_INDEX_SIZE</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>EXPLICIT_INITIAL_INDEX_SIZE</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput>static const size_t <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::EXPLICIT_INITIAL_INDEX_SIZE = static_cast&lt;size_t&gt;(Traits::EXPLICIT_INITIAL_INDEX_SIZE)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1a905d573fc84b96705a26548ad0d60896"/><section>
+    <title>IMPLICIT_INITIAL_INDEX_SIZE</title>
+<indexterm><primary>IMPLICIT_INITIAL_INDEX_SIZE</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>IMPLICIT_INITIAL_INDEX_SIZE</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput>static const size_t <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::IMPLICIT_INITIAL_INDEX_SIZE = static_cast&lt;size_t&gt;(Traits::IMPLICIT_INITIAL_INDEX_SIZE)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1a6cd15a304107f907e4304935ea9058ae"/><section>
+    <title>INITIAL_IMPLICIT_PRODUCER_HASH_SIZE</title>
+<indexterm><primary>INITIAL_IMPLICIT_PRODUCER_HASH_SIZE</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>INITIAL_IMPLICIT_PRODUCER_HASH_SIZE</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput>static const size_t <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::INITIAL_IMPLICIT_PRODUCER_HASH_SIZE = static_cast&lt;size_t&gt;(Traits::INITIAL_IMPLICIT_PRODUCER_HASH_SIZE)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1_concurrent_queue_1afc457d111d100977f80e6e4e2650e9ae"/><section>
+    <title>MAX_SUBQUEUE_SIZE</title>
+<indexterm><primary>MAX_SUBQUEUE_SIZE</primary><secondary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueue&lt; T, Traits &gt;</primary><secondary>MAX_SUBQUEUE_SIZE</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </computeroutput><para><computeroutput>static const size_t <link linkend="_classmoodycamel_1_1_concurrent_queue">moodycamel::ConcurrentQueue</link>&lt; T, Traits &gt;::MAX_SUBQUEUE_SIZE = (<link linkend="_structmoodycamel_1_1details_1_1const__numeric__max">details::const_numeric_max</link>&lt;size_t&gt;::value - static_cast&lt;size_t&gt;(Traits::MAX_SUBQUEUE_SIZE) &lt; BLOCK_SIZE) ? <link linkend="_structmoodycamel_1_1details_1_1const__numeric__max">details::const_numeric_max</link>&lt;size_t&gt;::value : ((static_cast&lt;size_t&gt;(Traits::MAX_SUBQUEUE_SIZE) + (BLOCK_SIZE - 1)) / BLOCK_SIZE * BLOCK_SIZE)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+C:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/external/camel/concurrentqueue.hC:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/external/camel/concurrentqueue2.h</section>
+</section>

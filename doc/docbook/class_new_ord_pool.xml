@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_new_ord_pool" xml:lang="en-US">
+<title>NewOrdPool Class Reference</title>
+<indexterm><primary>NewOrdPool</primary></indexterm>
+<para>
+
+<para>ILink3 New Order Pool pre-allocates a pool of NewOrderSingleMsg objects to be used by the ILink3 handler. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;IL3Pool.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_new_ord_pool_1a47da88e06f1127be234b2b516a6cb227">add</link> (<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_single_msg">NewOrderSingleMsg</link> *msg)</para>
+
+<para>Add a NewOrderSingleMsg object to the pool. </para>
+</listitem>
+            <listitem><para><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_single_msg">NewOrderSingleMsg</link> * <link linkend="_class_new_ord_pool_1a04bb7f903a2115fca967b287b4f2575a">get</link> ()</para>
+
+<para>Get a NewOrderSingleMsg object from the pool. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>ILink3 New Order Pool pre-allocates a pool of NewOrderSingleMsg objects to be used by the ILink3 handler. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_new_ord_pool_1a4b76a832eb3b92748d1f12c3a3628bf3"/><section>
+    <title>NewOrdPool()</title>
+<indexterm><primary>NewOrdPool</primary><secondary>NewOrdPool</secondary></indexterm>
+<indexterm><primary>NewOrdPool</primary><secondary>NewOrdPool</secondary></indexterm>
+<para><computeroutput>NewOrdPool::NewOrdPool ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_new_ord_pool_1a47da88e06f1127be234b2b516a6cb227"/><section>
+    <title>add()</title>
+<indexterm><primary>add</primary><secondary>NewOrdPool</secondary></indexterm>
+<indexterm><primary>NewOrdPool</primary><secondary>add</secondary></indexterm>
+<para><computeroutput>void NewOrdPool::add (<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_single_msg">NewOrderSingleMsg</link> * msg)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Add a NewOrderSingleMsg object to the pool. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>msg</entry><entry>
+<para>The NewOrderSingleMsg object to add. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_new_ord_pool_1a04bb7f903a2115fca967b287b4f2575a"/><section>
+    <title>get()</title>
+<indexterm><primary>get</primary><secondary>NewOrdPool</secondary></indexterm>
+<indexterm><primary>NewOrdPool</primary><secondary>get</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_single_msg">NewOrderSingleMsg</link> * NewOrdPool::get ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Get a NewOrderSingleMsg object from the pool. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>A pointer to the NewOrderSingleMsg object. </para>
+</formalpara>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+exchsupport/cme/il3/IL3Pool.hpp</section>
+</section>

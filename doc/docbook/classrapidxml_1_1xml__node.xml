@@ -1,0 +1,812 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classrapidxml_1_1xml__node" xml:lang="en-US">
+<title>rapidxml::xml_node&lt; Ch &gt; Class Template Reference</title>
+<indexterm><primary>rapidxml::xml_node&lt; Ch &gt;</primary></indexterm>
+<para>
+<computeroutput>#include &lt;rapidxml.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for rapidxml::xml_node&lt; Ch &gt;:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classrapidxml_1_1xml__node.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classrapidxml_1_1xml__node_1a8bd9019960b90605a45998b661fb1b0e">xml_node</link> (node_type <link linkend="_classrapidxml_1_1xml__node_1a5f91729128856b0aaab598d4364ace60">type</link>)</para>
+</listitem>
+            <listitem><para>node_type <link linkend="_classrapidxml_1_1xml__node_1a5f91729128856b0aaab598d4364ace60">type</link> () const</para>
+</listitem>
+            <listitem><para><link linkend="_classrapidxml_1_1xml__document">xml_document</link>&lt; Ch &gt; * <link linkend="_classrapidxml_1_1xml__node_1aa43c16f2669b337e01f4633450d74b67">document</link> () const</para>
+</listitem>
+            <listitem><para><link linkend="_classrapidxml_1_1xml__node">xml_node</link>&lt; Ch &gt; * <link linkend="_classrapidxml_1_1xml__node_1aee9b7ecb01034f1857a5387af7e50e23">first_node</link> (const Ch *<link linkend="_classrapidxml_1_1xml__base_1a72e6615cd5b3133ab6c8df72c2fdcd20">name</link>=0, std::size_t <link linkend="_classrapidxml_1_1xml__base_1a20c8ffbe0c7a0b4231681ab8b99330a4">name_size</link>=0, bool case_sensitive=true) const</para>
+</listitem>
+            <listitem><para><link linkend="_classrapidxml_1_1xml__node">xml_node</link>&lt; Ch &gt; * <link linkend="_classrapidxml_1_1xml__node_1af73b006b66a4206732b78561a97700d0">last_node</link> (const Ch *<link linkend="_classrapidxml_1_1xml__base_1a72e6615cd5b3133ab6c8df72c2fdcd20">name</link>=0, std::size_t <link linkend="_classrapidxml_1_1xml__base_1a20c8ffbe0c7a0b4231681ab8b99330a4">name_size</link>=0, bool case_sensitive=true) const</para>
+</listitem>
+            <listitem><para><link linkend="_classrapidxml_1_1xml__node">xml_node</link>&lt; Ch &gt; * <link linkend="_classrapidxml_1_1xml__node_1ac43f8250dddecbe40e068ec69fa5acc5">previous_sibling</link> (const Ch *<link linkend="_classrapidxml_1_1xml__base_1a72e6615cd5b3133ab6c8df72c2fdcd20">name</link>=0, std::size_t <link linkend="_classrapidxml_1_1xml__base_1a20c8ffbe0c7a0b4231681ab8b99330a4">name_size</link>=0, bool case_sensitive=true) const</para>
+</listitem>
+            <listitem><para><link linkend="_classrapidxml_1_1xml__node">xml_node</link>&lt; Ch &gt; * <link linkend="_classrapidxml_1_1xml__node_1ab7e5fd4052e4151757895c9914f5f320">next_sibling</link> (const Ch *<link linkend="_classrapidxml_1_1xml__base_1a72e6615cd5b3133ab6c8df72c2fdcd20">name</link>=0, std::size_t <link linkend="_classrapidxml_1_1xml__base_1a20c8ffbe0c7a0b4231681ab8b99330a4">name_size</link>=0, bool case_sensitive=true) const</para>
+</listitem>
+            <listitem><para><link linkend="_classrapidxml_1_1xml__attribute">xml_attribute</link>&lt; Ch &gt; * <link linkend="_classrapidxml_1_1xml__node_1a9a2e633c7717a4426612e236c627b908">first_attribute</link> (const Ch *<link linkend="_classrapidxml_1_1xml__base_1a72e6615cd5b3133ab6c8df72c2fdcd20">name</link>=0, std::size_t <link linkend="_classrapidxml_1_1xml__base_1a20c8ffbe0c7a0b4231681ab8b99330a4">name_size</link>=0, bool case_sensitive=true) const</para>
+</listitem>
+            <listitem><para><link linkend="_classrapidxml_1_1xml__attribute">xml_attribute</link>&lt; Ch &gt; * <link linkend="_classrapidxml_1_1xml__node_1a8d6e6161cb2e51283a05e5c6a91b14a6">last_attribute</link> (const Ch *<link linkend="_classrapidxml_1_1xml__base_1a72e6615cd5b3133ab6c8df72c2fdcd20">name</link>=0, std::size_t <link linkend="_classrapidxml_1_1xml__base_1a20c8ffbe0c7a0b4231681ab8b99330a4">name_size</link>=0, bool case_sensitive=true) const</para>
+</listitem>
+            <listitem><para>void <link linkend="_classrapidxml_1_1xml__node_1a499bbc9300c1b06821d5c08b24164c68">type</link> (node_type type)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classrapidxml_1_1xml__node_1ae86e92908c3eab40bbed8216e4f3f3cb">prepend_node</link> (<link linkend="_classrapidxml_1_1xml__node">xml_node</link>&lt; Ch &gt; *child)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classrapidxml_1_1xml__node_1a8696d098ecc9c4d2a646b43e91d58e31">append_node</link> (<link linkend="_classrapidxml_1_1xml__node">xml_node</link>&lt; Ch &gt; *child)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classrapidxml_1_1xml__node_1a666880f42a7e486d78cc45ed51c7c46d">insert_node</link> (<link linkend="_classrapidxml_1_1xml__node">xml_node</link>&lt; Ch &gt; *where, <link linkend="_classrapidxml_1_1xml__node">xml_node</link>&lt; Ch &gt; *child)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classrapidxml_1_1xml__node_1a62bf7b276cf7a651a3337f5e0a0ef6ac">remove_first_node</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classrapidxml_1_1xml__node_1a9182512e948ec451a83f116cce7c7674">remove_last_node</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classrapidxml_1_1xml__node_1a98289923eb9e8889418a9eb0207ea35c">remove_node</link> (<link linkend="_classrapidxml_1_1xml__node">xml_node</link>&lt; Ch &gt; *where)</para>
+
+<para>Removes specified child from the node. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classrapidxml_1_1xml__node_1a95735358b079ae0adcfbbac69aa1fbc3">remove_all_nodes</link> ()</para>
+
+<para>Removes all child nodes (but not attributes). </para>
+</listitem>
+            <listitem><para>void <link linkend="_classrapidxml_1_1xml__node_1a8b62ee76489faf8e2d1210869d547684">prepend_attribute</link> (<link linkend="_classrapidxml_1_1xml__attribute">xml_attribute</link>&lt; Ch &gt; *attribute)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classrapidxml_1_1xml__node_1a33ce3386f8c42dd4db658b75cbb6e6c4">append_attribute</link> (<link linkend="_classrapidxml_1_1xml__attribute">xml_attribute</link>&lt; Ch &gt; *attribute)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classrapidxml_1_1xml__node_1a9fe659cdf4a5b3bbf5e8ffc98db5a84f">insert_attribute</link> (<link linkend="_classrapidxml_1_1xml__attribute">xml_attribute</link>&lt; Ch &gt; *where, <link linkend="_classrapidxml_1_1xml__attribute">xml_attribute</link>&lt; Ch &gt; *attribute)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classrapidxml_1_1xml__node_1aa95192d2a165cca16c551ed2a2a06aec">remove_first_attribute</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classrapidxml_1_1xml__node_1a1781a2cbedc9a51d609ad5b528125635">remove_last_attribute</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classrapidxml_1_1xml__node_1a6f97b1b4f46a94a4587915df3c0c6b57">remove_attribute</link> (<link linkend="_classrapidxml_1_1xml__attribute">xml_attribute</link>&lt; Ch &gt; *where)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classrapidxml_1_1xml__node_1aa8d5d9484aa1eb5ff1841a073c84c1aa">remove_all_attributes</link> ()</para>
+
+<para>Removes all attributes of node. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_classrapidxml_1_1xml__base">rapidxml::xml_base&lt; char &gt;</link>        <itemizedlist>
+            <listitem><para>char * <link linkend="_classrapidxml_1_1xml__base_1a72e6615cd5b3133ab6c8df72c2fdcd20">name</link> () const</para>
+</listitem>
+            <listitem><para>void <link linkend="_classrapidxml_1_1xml__base_1ae55060ae958c6e6465d6c8db852ec6ce">name</link> (const char *name, std::size_t size)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classrapidxml_1_1xml__base_1a4611ddc82ac83a527c65606600eb2a0d">name</link> (const char *name)</para>
+</listitem>
+            <listitem><para>std::size_t <link linkend="_classrapidxml_1_1xml__base_1a20c8ffbe0c7a0b4231681ab8b99330a4">name_size</link> () const</para>
+</listitem>
+            <listitem><para>char * <link linkend="_classrapidxml_1_1xml__base_1af3a3d4534f4c88f151e0f063aef1c6de">value</link> () const</para>
+</listitem>
+            <listitem><para>void <link linkend="_classrapidxml_1_1xml__base_1a3b183c2db7022a6d30494dd2f0ac11e9">value</link> (const char *value, std::size_t size)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classrapidxml_1_1xml__base_1a81e63ec4bfd2d7ef0a6c2ed49be6e623">value</link> (const char *value)</para>
+</listitem>
+            <listitem><para>std::size_t <link linkend="_classrapidxml_1_1xml__base_1a2eb123d471b1567fa4832b6ee2b75493">value_size</link> () const</para>
+</listitem>
+            <listitem><para><link linkend="_classrapidxml_1_1xml__node">xml_node</link>&lt; char &gt; * <link linkend="_classrapidxml_1_1xml__base_1ad4b15506bec856966318905d5e854a14">parent</link> () const</para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+Static Protected Member Functions inherited from <link linkend="_classrapidxml_1_1xml__base">rapidxml::xml_base&lt; char &gt;</link>        <itemizedlist>
+            <listitem><para>static char * <link linkend="_classrapidxml_1_1xml__base_1acfb4a8438a4334c9fc16b70533720f22">nullstr</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Protected Attributes inherited from <link linkend="_classrapidxml_1_1xml__base">rapidxml::xml_base&lt; char &gt;</link>        <itemizedlist>
+            <listitem><para>char * <link linkend="_classrapidxml_1_1xml__base_1afd9851ed43e14619db0d7075ef8e9e8a">m_name</link></para>
+</listitem>
+            <listitem><para>char * <link linkend="_classrapidxml_1_1xml__base_1a278a1ea63b0b70219b946cec47fa00ea">m_value</link></para>
+</listitem>
+            <listitem><para>std::size_t <link linkend="_classrapidxml_1_1xml__base_1a5a8c76a7274b4180213796422c4df76f">m_name_size</link></para>
+</listitem>
+            <listitem><para>std::size_t <link linkend="_classrapidxml_1_1xml__base_1aa3a49d8ceddb8a8d7edb773a2226b89c">m_value_size</link></para>
+</listitem>
+            <listitem><para><link linkend="_classrapidxml_1_1xml__node">xml_node</link>&lt; char &gt; * <link linkend="_classrapidxml_1_1xml__base_1a90d5f660f078f66563fd7b2d8387ccb0">m_parent</link></para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;class Ch = char&gt;<?linebreak?>class rapidxml::xml_node&lt; Ch &gt;</title></simplesect>
+
+<para>Class representing a node of XML document. Each node may have associated name and value strings, which are available through <link linkend="_classrapidxml_1_1xml__base_1a72e6615cd5b3133ab6c8df72c2fdcd20">name()</link> and <link linkend="_classrapidxml_1_1xml__base_1af3a3d4534f4c88f151e0f063aef1c6de">value()</link> functions. Interpretation of name and value depends on type of the node. Type of node can be determined by using <link linkend="_classrapidxml_1_1xml__node_1a5f91729128856b0aaab598d4364ace60">type()</link> function. <?linebreak?><?linebreak?> Note that after parse, both name and value of node, if any, will point interior of source text used for parsing. Thus, this text must persist in the memory for the lifetime of node. 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Ch</entry><entry>
+<para>Character type to use. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classrapidxml_1_1xml__node_1a8bd9019960b90605a45998b661fb1b0e"/><section>
+    <title>xml_node()</title>
+<indexterm><primary>xml_node</primary><secondary>rapidxml::xml_node&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::xml_node&lt; Ch &gt;</primary><secondary>xml_node</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput><link linkend="_classrapidxml_1_1xml__node">rapidxml::xml_node</link>&lt; Ch &gt;::xml_node (node_type type)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Constructs an empty node with the specified type. Consider using <link linkend="_classrapidxml_1_1memory__pool">memory_pool</link> of appropriate document to allocate nodes manually. 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>type</entry><entry>
+<para>Type of node to construct. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classrapidxml_1_1xml__node_1a33ce3386f8c42dd4db658b75cbb6e6c4"/><section>
+    <title>append_attribute()</title>
+<indexterm><primary>append_attribute</primary><secondary>rapidxml::xml_node&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::xml_node&lt; Ch &gt;</primary><secondary>append_attribute</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput>void <link linkend="_classrapidxml_1_1xml__node">rapidxml::xml_node</link>&lt; Ch &gt;::append_attribute (<link linkend="_classrapidxml_1_1xml__attribute">xml_attribute</link>&lt; Ch &gt; * attribute)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Appends a new attribute to the node. 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>attribute</entry><entry>
+<para>Attribute to append. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l01032">rapidxml::xml_node&lt; Ch &gt;::first_attribute()</link>, and <link linkend="_l00777">rapidxml::xml_base&lt; Ch &gt;::parent()</link>.</para>
+<para>
+Referenced by <link linkend="_l01246">rapidxml::xml_node&lt; Ch &gt;::insert_attribute()</link>.</para>
+</section>
+<anchor xml:id="_classrapidxml_1_1xml__node_1a8696d098ecc9c4d2a646b43e91d58e31"/><section>
+    <title>append_node()</title>
+<indexterm><primary>append_node</primary><secondary>rapidxml::xml_node&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::xml_node&lt; Ch &gt;</primary><secondary>append_node</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput>void <link linkend="_classrapidxml_1_1xml__node">rapidxml::xml_node</link>&lt; Ch &gt;::append_node (<link linkend="_classrapidxml_1_1xml__node">xml_node</link>&lt; Ch &gt; * child)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Appends a new child node. The appended child becomes the last child. 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>child</entry><entry>
+<para>Node to append. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00943">rapidxml::xml_node&lt; Ch &gt;::first_node()</link>, <link linkend="_l00777">rapidxml::xml_base&lt; Ch &gt;::parent()</link>, and <link linkend="_l00920">rapidxml::xml_node&lt; Ch &gt;::type()</link>.</para>
+<para>
+Referenced by <link linkend="_l01126">rapidxml::xml_node&lt; Ch &gt;::insert_node()</link>.</para>
+</section>
+<anchor xml:id="_classrapidxml_1_1xml__node_1aa43c16f2669b337e01f4633450d74b67"/><section>
+    <title>document()</title>
+<indexterm><primary>document</primary><secondary>rapidxml::xml_node&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::xml_node&lt; Ch &gt;</primary><secondary>document</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput><link linkend="_classrapidxml_1_1xml__document">xml_document</link>&lt; Ch &gt; * <link linkend="_classrapidxml_1_1xml__node">rapidxml::xml_node</link>&lt; Ch &gt;::document ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Gets document of which node is a child. <formalpara><title>Returns</title>
+
+<para>Pointer to document that contains this node, or 0 if there is no parent document. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00777">rapidxml::xml_base&lt; Ch &gt;::parent()</link>, and <link linkend="_l00920">rapidxml::xml_node&lt; Ch &gt;::type()</link>.</para>
+</section>
+<anchor xml:id="_classrapidxml_1_1xml__node_1a9a2e633c7717a4426612e236c627b908"/><section>
+    <title>first_attribute()</title>
+<indexterm><primary>first_attribute</primary><secondary>rapidxml::xml_node&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::xml_node&lt; Ch &gt;</primary><secondary>first_attribute</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput><link linkend="_classrapidxml_1_1xml__attribute">xml_attribute</link>&lt; Ch &gt; * <link linkend="_classrapidxml_1_1xml__node">rapidxml::xml_node</link>&lt; Ch &gt;::first_attribute (const Ch * name = <computeroutput>0</computeroutput>
+, std::size_t name_size = <computeroutput>0</computeroutput>
+, bool case_sensitive = <computeroutput>true</computeroutput>
+) const<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Gets first attribute of node, optionally matching attribute name. 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>name</entry><entry>
+<para>Name of attribute to find, or 0 to return first attribute regardless of its name; this string doesn&apos;t have to be zero-terminated if name_size is non-zero </para>
+</entry>
+                            </row>
+                            <row>
+<entry>name_size</entry><entry>
+<para>Size of name, in characters, or 0 to have size calculated automatically from string </para>
+</entry>
+                            </row>
+                            <row>
+<entry>case_sensitive</entry><entry>
+<para>Should name comparison be case-sensitive; non case-sensitive comparison works properly only for ASCII characters </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to found attribute, or 0 if not found. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00680">rapidxml::xml_base&lt; char &gt;::name()</link>, and <link linkend="_l00688">rapidxml::xml_base&lt; char &gt;::name_size()</link>.</para>
+<para>
+Referenced by <link linkend="_l01224">rapidxml::xml_node&lt; Ch &gt;::append_attribute()</link>, <link linkend="_l00504">rapidxml::memory_pool&lt; Ch &gt;::clone_node()</link>, <link linkend="_l01204">rapidxml::xml_node&lt; Ch &gt;::prepend_attribute()</link>, <link linkend="_l01316">rapidxml::xml_node&lt; Ch &gt;::remove_all_attributes()</link>, <link linkend="_l01300">rapidxml::xml_node&lt; Ch &gt;::remove_attribute()</link>, <link linkend="_l01267">rapidxml::xml_node&lt; Ch &gt;::remove_first_attribute()</link>, and <link linkend="_l01284">rapidxml::xml_node&lt; Ch &gt;::remove_last_attribute()</link>.</para>
+</section>
+<anchor xml:id="_classrapidxml_1_1xml__node_1aee9b7ecb01034f1857a5387af7e50e23"/><section>
+    <title>first_node()</title>
+<indexterm><primary>first_node</primary><secondary>rapidxml::xml_node&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::xml_node&lt; Ch &gt;</primary><secondary>first_node</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput><link linkend="_classrapidxml_1_1xml__node">xml_node</link>&lt; Ch &gt; * <link linkend="_classrapidxml_1_1xml__node">rapidxml::xml_node</link>&lt; Ch &gt;::first_node (const Ch * name = <computeroutput>0</computeroutput>
+, std::size_t name_size = <computeroutput>0</computeroutput>
+, bool case_sensitive = <computeroutput>true</computeroutput>
+) const<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Gets first child node, optionally matching node name. 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>name</entry><entry>
+<para>Name of child to find, or 0 to return first child regardless of its name; this string doesn&apos;t have to be zero-terminated if name_size is non-zero </para>
+</entry>
+                            </row>
+                            <row>
+<entry>name_size</entry><entry>
+<para>Size of name, in characters, or 0 to have size calculated automatically from string </para>
+</entry>
+                            </row>
+                            <row>
+<entry>case_sensitive</entry><entry>
+<para>Should name comparison be case-sensitive; non case-sensitive comparison works properly only for ASCII characters </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to found child, or 0 if not found. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00680">rapidxml::xml_base&lt; char &gt;::name()</link>, <link linkend="_l00688">rapidxml::xml_base&lt; char &gt;::name_size()</link>, and <link linkend="_l01011">rapidxml::xml_node&lt; Ch &gt;::next_sibling()</link>.</para>
+<para>
+Referenced by <link linkend="_l01104">rapidxml::xml_node&lt; Ch &gt;::append_node()</link>, <link linkend="_l00504">rapidxml::memory_pool&lt; Ch &gt;::clone_node()</link>, <link linkend="_l01083">rapidxml::xml_node&lt; Ch &gt;::prepend_node()</link>, <link linkend="_l01195">rapidxml::xml_node&lt; Ch &gt;::remove_all_nodes()</link>, <link linkend="_l01147">rapidxml::xml_node&lt; Ch &gt;::remove_first_node()</link>, <link linkend="_l01162">rapidxml::xml_node&lt; Ch &gt;::remove_last_node()</link>, and <link linkend="_l01178">rapidxml::xml_node&lt; Ch &gt;::remove_node()</link>.</para>
+</section>
+<anchor xml:id="_classrapidxml_1_1xml__node_1a9fe659cdf4a5b3bbf5e8ffc98db5a84f"/><section>
+    <title>insert_attribute()</title>
+<indexterm><primary>insert_attribute</primary><secondary>rapidxml::xml_node&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::xml_node&lt; Ch &gt;</primary><secondary>insert_attribute</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput>void <link linkend="_classrapidxml_1_1xml__node">rapidxml::xml_node</link>&lt; Ch &gt;::insert_attribute (<link linkend="_classrapidxml_1_1xml__attribute">xml_attribute</link>&lt; Ch &gt; * where, <link linkend="_classrapidxml_1_1xml__attribute">xml_attribute</link>&lt; Ch &gt; * attribute)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Inserts a new attribute at specified place inside the node. All attributes after and including the specified attribute are moved one position back. 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>where</entry><entry>
+<para>Place where to insert the attribute, or 0 to insert at the back. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>attribute</entry><entry>
+<para>Attribute to insert. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l01224">rapidxml::xml_node&lt; Ch &gt;::append_attribute()</link>, <link linkend="_l00777">rapidxml::xml_base&lt; Ch &gt;::parent()</link>, and <link linkend="_l01204">rapidxml::xml_node&lt; Ch &gt;::prepend_attribute()</link>.</para>
+</section>
+<anchor xml:id="_classrapidxml_1_1xml__node_1a666880f42a7e486d78cc45ed51c7c46d"/><section>
+    <title>insert_node()</title>
+<indexterm><primary>insert_node</primary><secondary>rapidxml::xml_node&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::xml_node&lt; Ch &gt;</primary><secondary>insert_node</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput>void <link linkend="_classrapidxml_1_1xml__node">rapidxml::xml_node</link>&lt; Ch &gt;::insert_node (<link linkend="_classrapidxml_1_1xml__node">xml_node</link>&lt; Ch &gt; * where, <link linkend="_classrapidxml_1_1xml__node">xml_node</link>&lt; Ch &gt; * child)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Inserts a new child node at specified place inside the node. All children after and including the specified node are moved one position back. 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>where</entry><entry>
+<para>Place where to insert the child, or 0 to insert at the back. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>child</entry><entry>
+<para>Node to insert. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l01104">rapidxml::xml_node&lt; Ch &gt;::append_node()</link>, <link linkend="_l00777">rapidxml::xml_base&lt; Ch &gt;::parent()</link>, <link linkend="_l01083">rapidxml::xml_node&lt; Ch &gt;::prepend_node()</link>, and <link linkend="_l00920">rapidxml::xml_node&lt; Ch &gt;::type()</link>.</para>
+</section>
+<anchor xml:id="_classrapidxml_1_1xml__node_1a8d6e6161cb2e51283a05e5c6a91b14a6"/><section>
+    <title>last_attribute()</title>
+<indexterm><primary>last_attribute</primary><secondary>rapidxml::xml_node&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::xml_node&lt; Ch &gt;</primary><secondary>last_attribute</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput><link linkend="_classrapidxml_1_1xml__attribute">xml_attribute</link>&lt; Ch &gt; * <link linkend="_classrapidxml_1_1xml__node">rapidxml::xml_node</link>&lt; Ch &gt;::last_attribute (const Ch * name = <computeroutput>0</computeroutput>
+, std::size_t name_size = <computeroutput>0</computeroutput>
+, bool case_sensitive = <computeroutput>true</computeroutput>
+) const<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Gets last attribute of node, optionally matching attribute name. 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>name</entry><entry>
+<para>Name of attribute to find, or 0 to return last attribute regardless of its name; this string doesn&apos;t have to be zero-terminated if name_size is non-zero </para>
+</entry>
+                            </row>
+                            <row>
+<entry>name_size</entry><entry>
+<para>Size of name, in characters, or 0 to have size calculated automatically from string </para>
+</entry>
+                            </row>
+                            <row>
+<entry>case_sensitive</entry><entry>
+<para>Should name comparison be case-sensitive; non case-sensitive comparison works properly only for ASCII characters </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to found attribute, or 0 if not found. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00680">rapidxml::xml_base&lt; char &gt;::name()</link>, and <link linkend="_l00688">rapidxml::xml_base&lt; char &gt;::name_size()</link>.</para>
+</section>
+<anchor xml:id="_classrapidxml_1_1xml__node_1af73b006b66a4206732b78561a97700d0"/><section>
+    <title>last_node()</title>
+<indexterm><primary>last_node</primary><secondary>rapidxml::xml_node&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::xml_node&lt; Ch &gt;</primary><secondary>last_node</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput><link linkend="_classrapidxml_1_1xml__node">xml_node</link>&lt; Ch &gt; * <link linkend="_classrapidxml_1_1xml__node">rapidxml::xml_node</link>&lt; Ch &gt;::last_node (const Ch * name = <computeroutput>0</computeroutput>
+, std::size_t name_size = <computeroutput>0</computeroutput>
+, bool case_sensitive = <computeroutput>true</computeroutput>
+) const<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Gets last child node, optionally matching node name. Behaviour is undefined if node has no children. Use <link linkend="_classrapidxml_1_1xml__node_1aee9b7ecb01034f1857a5387af7e50e23">first_node()</link> to test if node has children. 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>name</entry><entry>
+<para>Name of child to find, or 0 to return last child regardless of its name; this string doesn&apos;t have to be zero-terminated if name_size is non-zero </para>
+</entry>
+                            </row>
+                            <row>
+<entry>name_size</entry><entry>
+<para>Size of name, in characters, or 0 to have size calculated automatically from string </para>
+</entry>
+                            </row>
+                            <row>
+<entry>case_sensitive</entry><entry>
+<para>Should name comparison be case-sensitive; non case-sensitive comparison works properly only for ASCII characters </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to found child, or 0 if not found. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00680">rapidxml::xml_base&lt; char &gt;::name()</link>, <link linkend="_l00688">rapidxml::xml_base&lt; char &gt;::name_size()</link>, and <link linkend="_l00988">rapidxml::xml_node&lt; Ch &gt;::previous_sibling()</link>.</para>
+</section>
+<anchor xml:id="_classrapidxml_1_1xml__node_1ab7e5fd4052e4151757895c9914f5f320"/><section>
+    <title>next_sibling()</title>
+<indexterm><primary>next_sibling</primary><secondary>rapidxml::xml_node&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::xml_node&lt; Ch &gt;</primary><secondary>next_sibling</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput><link linkend="_classrapidxml_1_1xml__node">xml_node</link>&lt; Ch &gt; * <link linkend="_classrapidxml_1_1xml__node">rapidxml::xml_node</link>&lt; Ch &gt;::next_sibling (const Ch * name = <computeroutput>0</computeroutput>
+, std::size_t name_size = <computeroutput>0</computeroutput>
+, bool case_sensitive = <computeroutput>true</computeroutput>
+) const<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Gets next sibling node, optionally matching node name. Behaviour is undefined if node has no parent. Use <link linkend="_classrapidxml_1_1xml__base_1ad4b15506bec856966318905d5e854a14">parent()</link> to test if node has a parent. 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>name</entry><entry>
+<para>Name of sibling to find, or 0 to return next sibling regardless of its name; this string doesn&apos;t have to be zero-terminated if name_size is non-zero </para>
+</entry>
+                            </row>
+                            <row>
+<entry>name_size</entry><entry>
+<para>Size of name, in characters, or 0 to have size calculated automatically from string </para>
+</entry>
+                            </row>
+                            <row>
+<entry>case_sensitive</entry><entry>
+<para>Should name comparison be case-sensitive; non case-sensitive comparison works properly only for ASCII characters </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to found sibling, or 0 if not found. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00680">rapidxml::xml_base&lt; char &gt;::name()</link>, and <link linkend="_l00688">rapidxml::xml_base&lt; char &gt;::name_size()</link>.</para>
+<para>
+Referenced by <link linkend="_l00504">rapidxml::memory_pool&lt; Ch &gt;::clone_node()</link>, and <link linkend="_l00943">rapidxml::xml_node&lt; Ch &gt;::first_node()</link>.</para>
+</section>
+<anchor xml:id="_classrapidxml_1_1xml__node_1a8b62ee76489faf8e2d1210869d547684"/><section>
+    <title>prepend_attribute()</title>
+<indexterm><primary>prepend_attribute</primary><secondary>rapidxml::xml_node&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::xml_node&lt; Ch &gt;</primary><secondary>prepend_attribute</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput>void <link linkend="_classrapidxml_1_1xml__node">rapidxml::xml_node</link>&lt; Ch &gt;::prepend_attribute (<link linkend="_classrapidxml_1_1xml__attribute">xml_attribute</link>&lt; Ch &gt; * attribute)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Prepends a new attribute to the node. 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>attribute</entry><entry>
+<para>Attribute to prepend. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l01032">rapidxml::xml_node&lt; Ch &gt;::first_attribute()</link>, and <link linkend="_l00777">rapidxml::xml_base&lt; Ch &gt;::parent()</link>.</para>
+<para>
+Referenced by <link linkend="_l01246">rapidxml::xml_node&lt; Ch &gt;::insert_attribute()</link>.</para>
+</section>
+<anchor xml:id="_classrapidxml_1_1xml__node_1ae86e92908c3eab40bbed8216e4f3f3cb"/><section>
+    <title>prepend_node()</title>
+<indexterm><primary>prepend_node</primary><secondary>rapidxml::xml_node&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::xml_node&lt; Ch &gt;</primary><secondary>prepend_node</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput>void <link linkend="_classrapidxml_1_1xml__node">rapidxml::xml_node</link>&lt; Ch &gt;::prepend_node (<link linkend="_classrapidxml_1_1xml__node">xml_node</link>&lt; Ch &gt; * child)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Prepends a new child node. The prepended child becomes the first child, and all existing children are moved one position back. 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>child</entry><entry>
+<para>Node to prepend. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00943">rapidxml::xml_node&lt; Ch &gt;::first_node()</link>, <link linkend="_l00777">rapidxml::xml_base&lt; Ch &gt;::parent()</link>, and <link linkend="_l00920">rapidxml::xml_node&lt; Ch &gt;::type()</link>.</para>
+<para>
+Referenced by <link linkend="_l01126">rapidxml::xml_node&lt; Ch &gt;::insert_node()</link>.</para>
+</section>
+<anchor xml:id="_classrapidxml_1_1xml__node_1ac43f8250dddecbe40e068ec69fa5acc5"/><section>
+    <title>previous_sibling()</title>
+<indexterm><primary>previous_sibling</primary><secondary>rapidxml::xml_node&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::xml_node&lt; Ch &gt;</primary><secondary>previous_sibling</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput><link linkend="_classrapidxml_1_1xml__node">xml_node</link>&lt; Ch &gt; * <link linkend="_classrapidxml_1_1xml__node">rapidxml::xml_node</link>&lt; Ch &gt;::previous_sibling (const Ch * name = <computeroutput>0</computeroutput>
+, std::size_t name_size = <computeroutput>0</computeroutput>
+, bool case_sensitive = <computeroutput>true</computeroutput>
+) const<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Gets previous sibling node, optionally matching node name. Behaviour is undefined if node has no parent. Use <link linkend="_classrapidxml_1_1xml__base_1ad4b15506bec856966318905d5e854a14">parent()</link> to test if node has a parent. 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>name</entry><entry>
+<para>Name of sibling to find, or 0 to return previous sibling regardless of its name; this string doesn&apos;t have to be zero-terminated if name_size is non-zero </para>
+</entry>
+                            </row>
+                            <row>
+<entry>name_size</entry><entry>
+<para>Size of name, in characters, or 0 to have size calculated automatically from string </para>
+</entry>
+                            </row>
+                            <row>
+<entry>case_sensitive</entry><entry>
+<para>Should name comparison be case-sensitive; non case-sensitive comparison works properly only for ASCII characters </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to found sibling, or 0 if not found. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00680">rapidxml::xml_base&lt; char &gt;::name()</link>, and <link linkend="_l00688">rapidxml::xml_base&lt; char &gt;::name_size()</link>.</para>
+<para>
+Referenced by <link linkend="_l00965">rapidxml::xml_node&lt; Ch &gt;::last_node()</link>.</para>
+</section>
+<anchor xml:id="_classrapidxml_1_1xml__node_1aa8d5d9484aa1eb5ff1841a073c84c1aa"/><section>
+    <title>remove_all_attributes()</title>
+<indexterm><primary>remove_all_attributes</primary><secondary>rapidxml::xml_node&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::xml_node&lt; Ch &gt;</primary><secondary>remove_all_attributes</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput>void <link linkend="_classrapidxml_1_1xml__node">rapidxml::xml_node</link>&lt; Ch &gt;::remove_all_attributes ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Removes all attributes of node. </para>
+</para>
+<para>
+References <link linkend="_l01032">rapidxml::xml_node&lt; Ch &gt;::first_attribute()</link>.</para>
+</section>
+<anchor xml:id="_classrapidxml_1_1xml__node_1a95735358b079ae0adcfbbac69aa1fbc3"/><section>
+    <title>remove_all_nodes()</title>
+<indexterm><primary>remove_all_nodes</primary><secondary>rapidxml::xml_node&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::xml_node&lt; Ch &gt;</primary><secondary>remove_all_nodes</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput>void <link linkend="_classrapidxml_1_1xml__node">rapidxml::xml_node</link>&lt; Ch &gt;::remove_all_nodes ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Removes all child nodes (but not attributes). </para>
+</para>
+<para>
+References <link linkend="_l00943">rapidxml::xml_node&lt; Ch &gt;::first_node()</link>.</para>
+</section>
+<anchor xml:id="_classrapidxml_1_1xml__node_1a6f97b1b4f46a94a4587915df3c0c6b57"/><section>
+    <title>remove_attribute()</title>
+<indexterm><primary>remove_attribute</primary><secondary>rapidxml::xml_node&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::xml_node&lt; Ch &gt;</primary><secondary>remove_attribute</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput>void <link linkend="_classrapidxml_1_1xml__node">rapidxml::xml_node</link>&lt; Ch &gt;::remove_attribute (<link linkend="_classrapidxml_1_1xml__attribute">xml_attribute</link>&lt; Ch &gt; * where)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Removes specified attribute from node. 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>where</entry><entry>
+<para>Pointer to attribute to be removed. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l01032">rapidxml::xml_node&lt; Ch &gt;::first_attribute()</link>, <link linkend="_l00777">rapidxml::xml_base&lt; Ch &gt;::parent()</link>, <link linkend="_l01267">rapidxml::xml_node&lt; Ch &gt;::remove_first_attribute()</link>, and <link linkend="_l01284">rapidxml::xml_node&lt; Ch &gt;::remove_last_attribute()</link>.</para>
+</section>
+<anchor xml:id="_classrapidxml_1_1xml__node_1aa95192d2a165cca16c551ed2a2a06aec"/><section>
+    <title>remove_first_attribute()</title>
+<indexterm><primary>remove_first_attribute</primary><secondary>rapidxml::xml_node&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::xml_node&lt; Ch &gt;</primary><secondary>remove_first_attribute</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput>void <link linkend="_classrapidxml_1_1xml__node">rapidxml::xml_node</link>&lt; Ch &gt;::remove_first_attribute ( )<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Removes first attribute of the node. If node has no attributes, behaviour is undefined. Use <link linkend="_classrapidxml_1_1xml__node_1a9a2e633c7717a4426612e236c627b908">first_attribute()</link> to test if node has attributes. </para>
+<para>
+References <link linkend="_l01032">rapidxml::xml_node&lt; Ch &gt;::first_attribute()</link>.</para>
+<para>
+Referenced by <link linkend="_l01300">rapidxml::xml_node&lt; Ch &gt;::remove_attribute()</link>.</para>
+</section>
+<anchor xml:id="_classrapidxml_1_1xml__node_1a62bf7b276cf7a651a3337f5e0a0ef6ac"/><section>
+    <title>remove_first_node()</title>
+<indexterm><primary>remove_first_node</primary><secondary>rapidxml::xml_node&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::xml_node&lt; Ch &gt;</primary><secondary>remove_first_node</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput>void <link linkend="_classrapidxml_1_1xml__node">rapidxml::xml_node</link>&lt; Ch &gt;::remove_first_node ( )<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Removes first child node. If node has no children, behaviour is undefined. Use <link linkend="_classrapidxml_1_1xml__node_1aee9b7ecb01034f1857a5387af7e50e23">first_node()</link> to test if node has children. </para>
+<para>
+References <link linkend="_l00943">rapidxml::xml_node&lt; Ch &gt;::first_node()</link>.</para>
+<para>
+Referenced by <link linkend="_l01178">rapidxml::xml_node&lt; Ch &gt;::remove_node()</link>.</para>
+</section>
+<anchor xml:id="_classrapidxml_1_1xml__node_1a1781a2cbedc9a51d609ad5b528125635"/><section>
+    <title>remove_last_attribute()</title>
+<indexterm><primary>remove_last_attribute</primary><secondary>rapidxml::xml_node&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::xml_node&lt; Ch &gt;</primary><secondary>remove_last_attribute</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput>void <link linkend="_classrapidxml_1_1xml__node">rapidxml::xml_node</link>&lt; Ch &gt;::remove_last_attribute ( )<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Removes last attribute of the node. If node has no attributes, behaviour is undefined. Use <link linkend="_classrapidxml_1_1xml__node_1a9a2e633c7717a4426612e236c627b908">first_attribute()</link> to test if node has attributes. </para>
+<para>
+References <link linkend="_l01032">rapidxml::xml_node&lt; Ch &gt;::first_attribute()</link>.</para>
+<para>
+Referenced by <link linkend="_l01300">rapidxml::xml_node&lt; Ch &gt;::remove_attribute()</link>.</para>
+</section>
+<anchor xml:id="_classrapidxml_1_1xml__node_1a9182512e948ec451a83f116cce7c7674"/><section>
+    <title>remove_last_node()</title>
+<indexterm><primary>remove_last_node</primary><secondary>rapidxml::xml_node&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::xml_node&lt; Ch &gt;</primary><secondary>remove_last_node</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput>void <link linkend="_classrapidxml_1_1xml__node">rapidxml::xml_node</link>&lt; Ch &gt;::remove_last_node ( )<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Removes last child of the node. If node has no children, behaviour is undefined. Use <link linkend="_classrapidxml_1_1xml__node_1aee9b7ecb01034f1857a5387af7e50e23">first_node()</link> to test if node has children. </para>
+<para>
+References <link linkend="_l00943">rapidxml::xml_node&lt; Ch &gt;::first_node()</link>.</para>
+<para>
+Referenced by <link linkend="_l01178">rapidxml::xml_node&lt; Ch &gt;::remove_node()</link>.</para>
+</section>
+<anchor xml:id="_classrapidxml_1_1xml__node_1a98289923eb9e8889418a9eb0207ea35c"/><section>
+    <title>remove_node()</title>
+<indexterm><primary>remove_node</primary><secondary>rapidxml::xml_node&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::xml_node&lt; Ch &gt;</primary><secondary>remove_node</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput>void <link linkend="_classrapidxml_1_1xml__node">rapidxml::xml_node</link>&lt; Ch &gt;::remove_node (<link linkend="_classrapidxml_1_1xml__node">xml_node</link>&lt; Ch &gt; * where)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Removes specified child from the node. </para>
+</para>
+<para>
+References <link linkend="_l00943">rapidxml::xml_node&lt; Ch &gt;::first_node()</link>, <link linkend="_l00777">rapidxml::xml_base&lt; Ch &gt;::parent()</link>, <link linkend="_l01147">rapidxml::xml_node&lt; Ch &gt;::remove_first_node()</link>, and <link linkend="_l01162">rapidxml::xml_node&lt; Ch &gt;::remove_last_node()</link>.</para>
+</section>
+<anchor xml:id="_classrapidxml_1_1xml__node_1a5f91729128856b0aaab598d4364ace60"/><section>
+    <title>type()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>type</primary><secondary>rapidxml::xml_node&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::xml_node&lt; Ch &gt;</primary><secondary>type</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput>node_type <link linkend="_classrapidxml_1_1xml__node">rapidxml::xml_node</link>&lt; Ch &gt;::type ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Gets type of node. <formalpara><title>Returns</title>
+
+<para>Type of node. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l01104">rapidxml::xml_node&lt; Ch &gt;::append_node()</link>, <link linkend="_l00504">rapidxml::memory_pool&lt; Ch &gt;::clone_node()</link>, <link linkend="_l00930">rapidxml::xml_node&lt; Ch &gt;::document()</link>, <link linkend="_l01126">rapidxml::xml_node&lt; Ch &gt;::insert_node()</link>, <link linkend="_l01083">rapidxml::xml_node&lt; Ch &gt;::prepend_node()</link>, and <link linkend="_l01072">rapidxml::xml_node&lt; Ch &gt;::type()</link>.</para>
+</section>
+<anchor xml:id="_classrapidxml_1_1xml__node_1a499bbc9300c1b06821d5c08b24164c68"/><section>
+    <title>type()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>type</primary><secondary>rapidxml::xml_node&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::xml_node&lt; Ch &gt;</primary><secondary>type</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput>void <link linkend="_classrapidxml_1_1xml__node">rapidxml::xml_node</link>&lt; Ch &gt;::type (node_type type)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Sets type of node. 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>type</entry><entry>
+<para>Type of node to set. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00920">rapidxml::xml_node&lt; Ch &gt;::type()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/external/rapidxml/rapidxml.hpp</section>
+</section>

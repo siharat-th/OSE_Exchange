@@ -1,0 +1,80 @@
+\doxysection{Menu\+Callback Class Reference}
+\hypertarget{class_menu_callback}{}\label{class_menu_callback}\index{MenuCallback@{MenuCallback}}
+
+
+The \doxylink{class_menu_callback}{Menu\+Callback} class is an abstract base class that defines the interface for menu callbacks.  
+
+
+
+
+{\ttfamily \#include $<$Menu\+Callback.\+h$>$}
+
+Inheritance diagram for Menu\+Callback\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_menu_callback}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_menu_callback_a7499f93b958439d57e7992315fd1b64a}{Menu\+Callback}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_menu_callback}{Menu\+Callback} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_menu_callback_ac71ee2700dd7191eab65b00344d18865}{\texorpdfstring{$\sim$}{\string~}\+Menu\+Callback}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{class_menu_callback}{Menu\+Callback} object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_menu_callback_a987f7022ef9680ecff369ed1f77b62ea}{on\+Menu\+Choice}} (int i\+Key)=0
+\begin{DoxyCompactList}\small\item\em This method is called when a menu choice is made. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_menu_callback}{Menu\+Callback} class is an abstract base class that defines the interface for menu callbacks. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_menu_callback_a7499f93b958439d57e7992315fd1b64a}\index{MenuCallback@{MenuCallback}!MenuCallback@{MenuCallback}}
+\index{MenuCallback@{MenuCallback}!MenuCallback@{MenuCallback}}
+\doxysubsubsection{\texorpdfstring{MenuCallback()}{MenuCallback()}}
+{\footnotesize\ttfamily \label{class_menu_callback_a7499f93b958439d57e7992315fd1b64a} 
+Menu\+Callback\+::\+Menu\+Callback (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_menu_callback}{Menu\+Callback} object. 
+
+\Hypertarget{class_menu_callback_ac71ee2700dd7191eab65b00344d18865}\index{MenuCallback@{MenuCallback}!````~MenuCallback@{\texorpdfstring{$\sim$}{\string~}MenuCallback}}
+\index{````~MenuCallback@{\texorpdfstring{$\sim$}{\string~}MenuCallback}!MenuCallback@{MenuCallback}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}MenuCallback()}{\string~MenuCallback()}}
+{\footnotesize\ttfamily \label{class_menu_callback_ac71ee2700dd7191eab65b00344d18865} 
+Menu\+Callback\+::\texorpdfstring{$\sim$}{\string~}\+Menu\+Callback (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destroys the \doxylink{class_menu_callback}{Menu\+Callback} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_menu_callback_a987f7022ef9680ecff369ed1f77b62ea}\index{MenuCallback@{MenuCallback}!onMenuChoice@{onMenuChoice}}
+\index{onMenuChoice@{onMenuChoice}!MenuCallback@{MenuCallback}}
+\doxysubsubsection{\texorpdfstring{onMenuChoice()}{onMenuChoice()}}
+{\footnotesize\ttfamily \label{class_menu_callback_a987f7022ef9680ecff369ed1f77b62ea} 
+virtual void Menu\+Callback\+::on\+Menu\+Choice (\begin{DoxyParamCaption}\item[{int}]{i\+Key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This method is called when a menu choice is made. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i\+Key} & The key representing the selected menu choice. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{l00031}{Standard\+Menu\+::\+Run()}}, and \mbox{\hyperlink{l00031}{Zmq\+Menu\+::\+Run()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Menu/Menu\+Callback.\+h\item 
+Menu/Menu\+Callback.\+cpp\end{DoxyCompactItemize}

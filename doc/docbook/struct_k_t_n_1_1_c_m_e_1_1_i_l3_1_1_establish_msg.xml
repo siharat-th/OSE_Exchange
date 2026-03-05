@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establish_msg" xml:lang="en-US">
+<title>KTN::CME::IL3::EstablishMsg Struct Reference</title>
+<indexterm><primary>KTN::CME::IL3::EstablishMsg</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establish_msg_1ac8e280a7118c4d62dec68ce692ee2e5a">Construct</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>std::uint16_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establish_msg_1a963afe7fe5474040dfae61e636e423fc">msgSize</link></para>
+</listitem>
+            <listitem><para>std::uint16_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establish_msg_1a5909b52f45ad67814bd06dcfc8a3a4c0">enodingType_</link></para>
+</listitem>
+            <listitem><para>std::uint16_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establish_msg_1a90ee71154d73c07bd718e75ed2db6c0a">blockLength_</link></para>
+</listitem>
+            <listitem><para>std::uint16_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establish_msg_1aa1ec2f9549848718d02e474f0bf57e35">templateId_</link></para>
+</listitem>
+            <listitem><para>std::uint16_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establish_msg_1a2613f3dd91c81c4da0b508b79249d18b">schemaId_</link></para>
+</listitem>
+            <listitem><para>std::uint16_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establish_msg_1a0d4d832d99d629eeb1f8786e4ac37785">version_</link></para>
+</listitem>
+            <listitem><para>String32Req <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establish_msg_1ab0907ffee4721277bf40a178aee7c8a9">HMACSignature</link></para>
+</listitem>
+            <listitem><para>String20Req <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establish_msg_1a7d515b28be53d02825413483da7f01e1">AccessKeyID</link></para>
+</listitem>
+            <listitem><para>String30Req <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establish_msg_1ad22a543f5dcc43d1e4644e95436c38d8">TradingSystemName</link></para>
+</listitem>
+            <listitem><para>String10Req <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establish_msg_1ae0326b006b4eded83c3cdca6cf26b3f4">TradingSystemVersion</link></para>
+</listitem>
+            <listitem><para>String10Req <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establish_msg_1a6cfc0efb1edfa0fa39be43041110e93f">TradingSystemVendor</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establish_msg_1a8461dd90494548515ecc675a39c9676b">UUID</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establish_msg_1a482201fa5ce00fe3b806a55e87d7f831">RequestTimestamp</link></para>
+</listitem>
+            <listitem><para>uInt32 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establish_msg_1a955a848604caf09abb67df0d75cc3450">NextSeqNo</link></para>
+</listitem>
+            <listitem><para>String3Req <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establish_msg_1aaf46305d0dc0b88609d5a72b65fbcdf0">Session</link></para>
+</listitem>
+            <listitem><para>String5Req <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establish_msg_1a3903bf5f11441726c862cbcd0bbb5104">Firm</link></para>
+</listitem>
+            <listitem><para>uInt16 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establish_msg_1a7ac8e967a725d7585877809f4c87e153">KeepAliveInterval</link></para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establish_msg_1a867a78944490109239258ddece272763">Credentials</link> = 0</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establish_msg_1ac8e280a7118c4d62dec68ce692ee2e5a"/><section>
+    <title>Construct()</title>
+<indexterm><primary>Construct</primary><secondary>KTN::CME::IL3::EstablishMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::EstablishMsg</primary><secondary>Construct</secondary></indexterm>
+<para><computeroutput>void KTN::CME::IL3::EstablishMsg::Construct ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establish_msg_1a7d515b28be53d02825413483da7f01e1"/><section>
+    <title>AccessKeyID</title>
+<indexterm><primary>AccessKeyID</primary><secondary>KTN::CME::IL3::EstablishMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::EstablishMsg</primary><secondary>AccessKeyID</secondary></indexterm>
+<para><computeroutput>String20Req KTN::CME::IL3::EstablishMsg::AccessKeyID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establish_msg_1a90ee71154d73c07bd718e75ed2db6c0a"/><section>
+    <title>blockLength_</title>
+<indexterm><primary>blockLength_</primary><secondary>KTN::CME::IL3::EstablishMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::EstablishMsg</primary><secondary>blockLength_</secondary></indexterm>
+<para><computeroutput>std::uint16_t KTN::CME::IL3::EstablishMsg::blockLength_</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establish_msg_1a867a78944490109239258ddece272763"/><section>
+    <title>Credentials</title>
+<indexterm><primary>Credentials</primary><secondary>KTN::CME::IL3::EstablishMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::EstablishMsg</primary><secondary>Credentials</secondary></indexterm>
+<para><computeroutput>uint16_t KTN::CME::IL3::EstablishMsg::Credentials = 0</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establish_msg_1a5909b52f45ad67814bd06dcfc8a3a4c0"/><section>
+    <title>enodingType_</title>
+<indexterm><primary>enodingType_</primary><secondary>KTN::CME::IL3::EstablishMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::EstablishMsg</primary><secondary>enodingType_</secondary></indexterm>
+<para><computeroutput>std::uint16_t KTN::CME::IL3::EstablishMsg::enodingType_</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establish_msg_1a3903bf5f11441726c862cbcd0bbb5104"/><section>
+    <title>Firm</title>
+<indexterm><primary>Firm</primary><secondary>KTN::CME::IL3::EstablishMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::EstablishMsg</primary><secondary>Firm</secondary></indexterm>
+<para><computeroutput>String5Req KTN::CME::IL3::EstablishMsg::Firm</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establish_msg_1ab0907ffee4721277bf40a178aee7c8a9"/><section>
+    <title>HMACSignature</title>
+<indexterm><primary>HMACSignature</primary><secondary>KTN::CME::IL3::EstablishMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::EstablishMsg</primary><secondary>HMACSignature</secondary></indexterm>
+<para><computeroutput>String32Req KTN::CME::IL3::EstablishMsg::HMACSignature</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establish_msg_1a7ac8e967a725d7585877809f4c87e153"/><section>
+    <title>KeepAliveInterval</title>
+<indexterm><primary>KeepAliveInterval</primary><secondary>KTN::CME::IL3::EstablishMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::EstablishMsg</primary><secondary>KeepAliveInterval</secondary></indexterm>
+<para><computeroutput>uInt16 KTN::CME::IL3::EstablishMsg::KeepAliveInterval</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establish_msg_1a963afe7fe5474040dfae61e636e423fc"/><section>
+    <title>msgSize</title>
+<indexterm><primary>msgSize</primary><secondary>KTN::CME::IL3::EstablishMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::EstablishMsg</primary><secondary>msgSize</secondary></indexterm>
+<para><computeroutput>std::uint16_t KTN::CME::IL3::EstablishMsg::msgSize</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establish_msg_1a955a848604caf09abb67df0d75cc3450"/><section>
+    <title>NextSeqNo</title>
+<indexterm><primary>NextSeqNo</primary><secondary>KTN::CME::IL3::EstablishMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::EstablishMsg</primary><secondary>NextSeqNo</secondary></indexterm>
+<para><computeroutput>uInt32 KTN::CME::IL3::EstablishMsg::NextSeqNo</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establish_msg_1a482201fa5ce00fe3b806a55e87d7f831"/><section>
+    <title>RequestTimestamp</title>
+<indexterm><primary>RequestTimestamp</primary><secondary>KTN::CME::IL3::EstablishMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::EstablishMsg</primary><secondary>RequestTimestamp</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::EstablishMsg::RequestTimestamp</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establish_msg_1a2613f3dd91c81c4da0b508b79249d18b"/><section>
+    <title>schemaId_</title>
+<indexterm><primary>schemaId_</primary><secondary>KTN::CME::IL3::EstablishMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::EstablishMsg</primary><secondary>schemaId_</secondary></indexterm>
+<para><computeroutput>std::uint16_t KTN::CME::IL3::EstablishMsg::schemaId_</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establish_msg_1aaf46305d0dc0b88609d5a72b65fbcdf0"/><section>
+    <title>Session</title>
+<indexterm><primary>Session</primary><secondary>KTN::CME::IL3::EstablishMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::EstablishMsg</primary><secondary>Session</secondary></indexterm>
+<para><computeroutput>String3Req KTN::CME::IL3::EstablishMsg::Session</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establish_msg_1aa1ec2f9549848718d02e474f0bf57e35"/><section>
+    <title>templateId_</title>
+<indexterm><primary>templateId_</primary><secondary>KTN::CME::IL3::EstablishMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::EstablishMsg</primary><secondary>templateId_</secondary></indexterm>
+<para><computeroutput>std::uint16_t KTN::CME::IL3::EstablishMsg::templateId_</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establish_msg_1ad22a543f5dcc43d1e4644e95436c38d8"/><section>
+    <title>TradingSystemName</title>
+<indexterm><primary>TradingSystemName</primary><secondary>KTN::CME::IL3::EstablishMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::EstablishMsg</primary><secondary>TradingSystemName</secondary></indexterm>
+<para><computeroutput>String30Req KTN::CME::IL3::EstablishMsg::TradingSystemName</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establish_msg_1a6cfc0efb1edfa0fa39be43041110e93f"/><section>
+    <title>TradingSystemVendor</title>
+<indexterm><primary>TradingSystemVendor</primary><secondary>KTN::CME::IL3::EstablishMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::EstablishMsg</primary><secondary>TradingSystemVendor</secondary></indexterm>
+<para><computeroutput>String10Req KTN::CME::IL3::EstablishMsg::TradingSystemVendor</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establish_msg_1ae0326b006b4eded83c3cdca6cf26b3f4"/><section>
+    <title>TradingSystemVersion</title>
+<indexterm><primary>TradingSystemVersion</primary><secondary>KTN::CME::IL3::EstablishMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::EstablishMsg</primary><secondary>TradingSystemVersion</secondary></indexterm>
+<para><computeroutput>String10Req KTN::CME::IL3::EstablishMsg::TradingSystemVersion</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establish_msg_1a8461dd90494548515ecc675a39c9676b"/><section>
+    <title>UUID</title>
+<indexterm><primary>UUID</primary><secondary>KTN::CME::IL3::EstablishMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::EstablishMsg</primary><secondary>UUID</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::EstablishMsg::UUID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establish_msg_1a0d4d832d99d629eeb1f8786e4ac37785"/><section>
+    <title>version_</title>
+<indexterm><primary>version_</primary><secondary>KTN::CME::IL3::EstablishMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::EstablishMsg</primary><secondary>version_</secondary></indexterm>
+<para><computeroutput>std::uint16_t KTN::CME::IL3::EstablishMsg::version_</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+exchsupport/cme/il3/IL3Messages2.hpp</section>
+</section>

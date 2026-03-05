@@ -1,0 +1,76 @@
+\doxysection{Console\+Logger Class Reference}
+\hypertarget{class_console_logger}{}\label{class_console_logger}\index{ConsoleLogger@{ConsoleLogger}}
+
+
+The \doxylink{class_console_logger}{Console\+Logger} class is responsible for logging messages to the console.  
+
+
+
+
+{\ttfamily \#include $<$Console\+Logger.\+hpp$>$}
+
+Inheritance diagram for Console\+Logger\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_console_logger}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_console_logger_a5dc25889c50a89a91bce5b1d4f3dd46a}{Console\+Logger}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{class_console_logger}{Console\+Logger} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_console_logger_a6785e7847dd004a6c30574c2485648c0}{Write\+Line}} (const std\+::string \&msg, const std\+::string \&topic, int color)
+\begin{DoxyCompactList}\small\item\em Writes a line to the console with the specified message, topic, and color. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_i_logger}{ILogger}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+ILogger} ()=default
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{class_i_logger}{ILogger} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_console_logger}{Console\+Logger} class is responsible for logging messages to the console. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_console_logger_a5dc25889c50a89a91bce5b1d4f3dd46a}\index{ConsoleLogger@{ConsoleLogger}!ConsoleLogger@{ConsoleLogger}}
+\index{ConsoleLogger@{ConsoleLogger}!ConsoleLogger@{ConsoleLogger}}
+\doxysubsubsection{\texorpdfstring{ConsoleLogger()}{ConsoleLogger()}}
+{\footnotesize\ttfamily \label{class_console_logger_a5dc25889c50a89a91bce5b1d4f3dd46a} 
+Console\+Logger\+::\+Console\+Logger (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a new \doxylink{class_console_logger}{Console\+Logger} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_console_logger_a6785e7847dd004a6c30574c2485648c0}\index{ConsoleLogger@{ConsoleLogger}!WriteLine@{WriteLine}}
+\index{WriteLine@{WriteLine}!ConsoleLogger@{ConsoleLogger}}
+\doxysubsubsection{\texorpdfstring{WriteLine()}{WriteLine()}}
+{\footnotesize\ttfamily \label{class_console_logger_a6785e7847dd004a6c30574c2485648c0} 
+void Console\+Logger\+::\+Write\+Line (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{msg}{, }\item[{const std\+::string \&}]{topic}{, }\item[{int}]{color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Writes a line to the console with the specified message, topic, and color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The message to be logged. \\
+\hline
+{\em topic} & The topic of the log message. \\
+\hline
+{\em color} & The color of the log message. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_logger_aad7dd43147c64f86da71bf6bfb488b36}{ILogger}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Loggers/Console\+Logger.\+hpp\end{DoxyCompactItemize}

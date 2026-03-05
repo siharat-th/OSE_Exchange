@@ -1,0 +1,212 @@
+\doxysection{Auto\+Hedge\+OB2\+Params Struct Reference}
+\hypertarget{struct_auto_hedge_o_b2_params}{}\label{struct_auto_hedge_o_b2_params}\index{AutoHedgeOB2Params@{AutoHedgeOB2Params}}
+
+
+Struct representing the parameters for Auto\+Hedge\+OB2 algorithm.  
+
+
+
+
+{\ttfamily \#include $<$Auto\+Hedge\+OB2\+Params.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_auto_hedge_o_b2_params}{Auto\+Hedge\+OB2\+Params}} \mbox{\hyperlink{struct_auto_hedge_o_b2_params_a62637c18d2c66d589ff07e45469b9374}{parse}} (const std\+::string \&json\+\_\+str)
+\begin{DoxyCompactList}\small\item\em Parses the JSON string and returns an instance of \doxylink{struct_auto_hedge_o_b2_params}{Auto\+Hedge\+OB2\+Params}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{struct_auto_hedge_o_b2_params_abdaca75ff0a86c230365af868fff1c30}{Valid\+Json}}
+\item 
+\mbox{\hyperlink{structalgometa}{algometa}} \mbox{\hyperlink{struct_auto_hedge_o_b2_params_ad53a24f7f95552588e165411e36aa078}{meta}}
+\item 
+string \mbox{\hyperlink{struct_auto_hedge_o_b2_params_aaac64d01a6e7b369a700d782e56054fb}{subid}}
+\item 
+tr1\+::unordered\+\_\+map$<$ int, \mbox{\hyperlink{structinstrument}{instrument}} $>$ \mbox{\hyperlink{struct_auto_hedge_o_b2_params_a97acdf373d065b77fb955751ad692542}{Leg\+Sec\+Id\+Map}}
+\item 
+\mbox{\hyperlink{structinstrument}{instrument}} \mbox{\hyperlink{struct_auto_hedge_o_b2_params_a7cb6703583730dd08faf2d15bb20d655}{Legs}} \mbox{[}4\mbox{]}
+\item 
+int \mbox{\hyperlink{struct_auto_hedge_o_b2_params_a3cc96f2ebfa1399a42bbdb47832dc861}{Leg\+Count}}
+\item 
+tr1\+::unordered\+\_\+map$<$ string, \mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} $>$ \mbox{\hyperlink{struct_auto_hedge_o_b2_params_aee4de84cf1024e6e5d247e01d521db16}{Ords}}
+\item 
+\mbox{\hyperlink{structinstrument}{instrument}} \mbox{\hyperlink{struct_auto_hedge_o_b2_params_a4aec6b21c9f71170a5c8211a4b4c57b0}{Hedge\+Leg}}
+\item 
+string \mbox{\hyperlink{struct_auto_hedge_o_b2_params_af0b9ab8a3968c64c87d882f9fd3830d3}{Hdg\+Symbol}}
+\item 
+double \mbox{\hyperlink{struct_auto_hedge_o_b2_params_a0843ddb3dd9cbfccdffa29db0bc196ee}{Hdg\+Ratio}}
+\item 
+int \mbox{\hyperlink{struct_auto_hedge_o_b2_params_a91f542b0807f1259ece8ff31ea4fc15e}{Hdg\+Secid}}
+\item 
+int \mbox{\hyperlink{struct_auto_hedge_o_b2_params_a4f525ecf6a2db1b0c1cc060d43404a9a}{Hdg\+Index}}
+\item 
+int \mbox{\hyperlink{struct_auto_hedge_o_b2_params_a69242ad37eb9f3d9b921aef418466d96}{Take\+Ticks}}
+\item 
+KOrder\+Side\+::\+Enum \mbox{\hyperlink{struct_auto_hedge_o_b2_params_a888cddb1356e9ac82ec43aaf499876bf}{Hdg\+Side}}
+\item 
+int \mbox{\hyperlink{struct_auto_hedge_o_b2_params_a491464750ee4ac2cc1163361ddfc673e}{Hdg\+Sent}}
+\item 
+double \mbox{\hyperlink{struct_auto_hedge_o_b2_params_a7a4c63182e03f7279df6625fbee89a28}{Hdg\+Remainder}}
+\item 
+int \mbox{\hyperlink{struct_auto_hedge_o_b2_params_a1a07943a6d7df0c70247ecc9d37b32d1}{Profit\+Taking}}
+\item 
+int \mbox{\hyperlink{struct_auto_hedge_o_b2_params_adb580e5eb1c7871c1403f26a0129f8c4}{Stop\+Loss}}
+\item 
+int \mbox{\hyperlink{struct_auto_hedge_o_b2_params_a0efe1e7a7720ceb221be15cde06445c3}{Minutes\+To\+Live}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Struct representing the parameters for Auto\+Hedge\+OB2 algorithm. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_auto_hedge_o_b2_params_a62637c18d2c66d589ff07e45469b9374}\index{AutoHedgeOB2Params@{AutoHedgeOB2Params}!parse@{parse}}
+\index{parse@{parse}!AutoHedgeOB2Params@{AutoHedgeOB2Params}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily \label{struct_auto_hedge_o_b2_params_a62637c18d2c66d589ff07e45469b9374} 
+\mbox{\hyperlink{struct_auto_hedge_o_b2_params}{Auto\+Hedge\+OB2\+Params}} Auto\+Hedge\+OB2\+Params\+::parse (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{json\+\_\+str}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Parses the JSON string and returns an instance of \doxylink{struct_auto_hedge_o_b2_params}{Auto\+Hedge\+OB2\+Params}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json\+\_\+str} & The JSON string to parse. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An instance of \doxylink{struct_auto_hedge_o_b2_params}{Auto\+Hedge\+OB2\+Params}. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00260}{algometa\+::\+Enabled}}, \mbox{\hyperlink{l00049}{User\+Info\+::groupname}}, \mbox{\hyperlink{l00048}{User\+Info\+::org}}, \mbox{\hyperlink{l00262}{algometa\+::\+Source}}, \mbox{\hyperlink{l00256}{algometa\+::\+Strategy}}, \mbox{\hyperlink{l00264}{algometa\+::\+Tag}}, \mbox{\hyperlink{l00258}{algometa\+::\+Template\+Name}}, \mbox{\hyperlink{l00261}{algometa\+::\+Unique\+Id}}, \mbox{\hyperlink{l00047}{User\+Info\+::user}}, and \mbox{\hyperlink{l00279}{algometa\+::userinfo}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00030}{KTN\+::\+Auto\+Hedge\+OB\+::on\+Launch()}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_auto_hedge_o_b2_params_a4f525ecf6a2db1b0c1cc060d43404a9a}\index{AutoHedgeOB2Params@{AutoHedgeOB2Params}!HdgIndex@{HdgIndex}}
+\index{HdgIndex@{HdgIndex}!AutoHedgeOB2Params@{AutoHedgeOB2Params}}
+\doxysubsubsection{\texorpdfstring{HdgIndex}{HdgIndex}}
+{\footnotesize\ttfamily \label{struct_auto_hedge_o_b2_params_a4f525ecf6a2db1b0c1cc060d43404a9a} 
+int Auto\+Hedge\+OB2\+Params\+::\+Hdg\+Index}
+
+\Hypertarget{struct_auto_hedge_o_b2_params_a0843ddb3dd9cbfccdffa29db0bc196ee}\index{AutoHedgeOB2Params@{AutoHedgeOB2Params}!HdgRatio@{HdgRatio}}
+\index{HdgRatio@{HdgRatio}!AutoHedgeOB2Params@{AutoHedgeOB2Params}}
+\doxysubsubsection{\texorpdfstring{HdgRatio}{HdgRatio}}
+{\footnotesize\ttfamily \label{struct_auto_hedge_o_b2_params_a0843ddb3dd9cbfccdffa29db0bc196ee} 
+double Auto\+Hedge\+OB2\+Params\+::\+Hdg\+Ratio}
+
+\Hypertarget{struct_auto_hedge_o_b2_params_a7a4c63182e03f7279df6625fbee89a28}\index{AutoHedgeOB2Params@{AutoHedgeOB2Params}!HdgRemainder@{HdgRemainder}}
+\index{HdgRemainder@{HdgRemainder}!AutoHedgeOB2Params@{AutoHedgeOB2Params}}
+\doxysubsubsection{\texorpdfstring{HdgRemainder}{HdgRemainder}}
+{\footnotesize\ttfamily \label{struct_auto_hedge_o_b2_params_a7a4c63182e03f7279df6625fbee89a28} 
+double Auto\+Hedge\+OB2\+Params\+::\+Hdg\+Remainder}
+
+\Hypertarget{struct_auto_hedge_o_b2_params_a91f542b0807f1259ece8ff31ea4fc15e}\index{AutoHedgeOB2Params@{AutoHedgeOB2Params}!HdgSecid@{HdgSecid}}
+\index{HdgSecid@{HdgSecid}!AutoHedgeOB2Params@{AutoHedgeOB2Params}}
+\doxysubsubsection{\texorpdfstring{HdgSecid}{HdgSecid}}
+{\footnotesize\ttfamily \label{struct_auto_hedge_o_b2_params_a91f542b0807f1259ece8ff31ea4fc15e} 
+int Auto\+Hedge\+OB2\+Params\+::\+Hdg\+Secid}
+
+\Hypertarget{struct_auto_hedge_o_b2_params_a491464750ee4ac2cc1163361ddfc673e}\index{AutoHedgeOB2Params@{AutoHedgeOB2Params}!HdgSent@{HdgSent}}
+\index{HdgSent@{HdgSent}!AutoHedgeOB2Params@{AutoHedgeOB2Params}}
+\doxysubsubsection{\texorpdfstring{HdgSent}{HdgSent}}
+{\footnotesize\ttfamily \label{struct_auto_hedge_o_b2_params_a491464750ee4ac2cc1163361ddfc673e} 
+int Auto\+Hedge\+OB2\+Params\+::\+Hdg\+Sent}
+
+\Hypertarget{struct_auto_hedge_o_b2_params_a888cddb1356e9ac82ec43aaf499876bf}\index{AutoHedgeOB2Params@{AutoHedgeOB2Params}!HdgSide@{HdgSide}}
+\index{HdgSide@{HdgSide}!AutoHedgeOB2Params@{AutoHedgeOB2Params}}
+\doxysubsubsection{\texorpdfstring{HdgSide}{HdgSide}}
+{\footnotesize\ttfamily \label{struct_auto_hedge_o_b2_params_a888cddb1356e9ac82ec43aaf499876bf} 
+KOrder\+Side\+::\+Enum Auto\+Hedge\+OB2\+Params\+::\+Hdg\+Side}
+
+\Hypertarget{struct_auto_hedge_o_b2_params_af0b9ab8a3968c64c87d882f9fd3830d3}\index{AutoHedgeOB2Params@{AutoHedgeOB2Params}!HdgSymbol@{HdgSymbol}}
+\index{HdgSymbol@{HdgSymbol}!AutoHedgeOB2Params@{AutoHedgeOB2Params}}
+\doxysubsubsection{\texorpdfstring{HdgSymbol}{HdgSymbol}}
+{\footnotesize\ttfamily \label{struct_auto_hedge_o_b2_params_af0b9ab8a3968c64c87d882f9fd3830d3} 
+string Auto\+Hedge\+OB2\+Params\+::\+Hdg\+Symbol}
+
+\Hypertarget{struct_auto_hedge_o_b2_params_a4aec6b21c9f71170a5c8211a4b4c57b0}\index{AutoHedgeOB2Params@{AutoHedgeOB2Params}!HedgeLeg@{HedgeLeg}}
+\index{HedgeLeg@{HedgeLeg}!AutoHedgeOB2Params@{AutoHedgeOB2Params}}
+\doxysubsubsection{\texorpdfstring{HedgeLeg}{HedgeLeg}}
+{\footnotesize\ttfamily \label{struct_auto_hedge_o_b2_params_a4aec6b21c9f71170a5c8211a4b4c57b0} 
+\mbox{\hyperlink{structinstrument}{instrument}} Auto\+Hedge\+OB2\+Params\+::\+Hedge\+Leg}
+
+\Hypertarget{struct_auto_hedge_o_b2_params_a3cc96f2ebfa1399a42bbdb47832dc861}\index{AutoHedgeOB2Params@{AutoHedgeOB2Params}!LegCount@{LegCount}}
+\index{LegCount@{LegCount}!AutoHedgeOB2Params@{AutoHedgeOB2Params}}
+\doxysubsubsection{\texorpdfstring{LegCount}{LegCount}}
+{\footnotesize\ttfamily \label{struct_auto_hedge_o_b2_params_a3cc96f2ebfa1399a42bbdb47832dc861} 
+int Auto\+Hedge\+OB2\+Params\+::\+Leg\+Count}
+
+\Hypertarget{struct_auto_hedge_o_b2_params_a7cb6703583730dd08faf2d15bb20d655}\index{AutoHedgeOB2Params@{AutoHedgeOB2Params}!Legs@{Legs}}
+\index{Legs@{Legs}!AutoHedgeOB2Params@{AutoHedgeOB2Params}}
+\doxysubsubsection{\texorpdfstring{Legs}{Legs}}
+{\footnotesize\ttfamily \label{struct_auto_hedge_o_b2_params_a7cb6703583730dd08faf2d15bb20d655} 
+\mbox{\hyperlink{structinstrument}{instrument}} Auto\+Hedge\+OB2\+Params\+::\+Legs\mbox{[}4\mbox{]}}
+
+\Hypertarget{struct_auto_hedge_o_b2_params_a97acdf373d065b77fb955751ad692542}\index{AutoHedgeOB2Params@{AutoHedgeOB2Params}!LegSecIdMap@{LegSecIdMap}}
+\index{LegSecIdMap@{LegSecIdMap}!AutoHedgeOB2Params@{AutoHedgeOB2Params}}
+\doxysubsubsection{\texorpdfstring{LegSecIdMap}{LegSecIdMap}}
+{\footnotesize\ttfamily \label{struct_auto_hedge_o_b2_params_a97acdf373d065b77fb955751ad692542} 
+tr1\+::unordered\+\_\+map$<$int, \mbox{\hyperlink{structinstrument}{instrument}}$>$ Auto\+Hedge\+OB2\+Params\+::\+Leg\+Sec\+Id\+Map}
+
+\Hypertarget{struct_auto_hedge_o_b2_params_ad53a24f7f95552588e165411e36aa078}\index{AutoHedgeOB2Params@{AutoHedgeOB2Params}!meta@{meta}}
+\index{meta@{meta}!AutoHedgeOB2Params@{AutoHedgeOB2Params}}
+\doxysubsubsection{\texorpdfstring{meta}{meta}}
+{\footnotesize\ttfamily \label{struct_auto_hedge_o_b2_params_ad53a24f7f95552588e165411e36aa078} 
+\mbox{\hyperlink{structalgometa}{algometa}} Auto\+Hedge\+OB2\+Params\+::meta}
+
+\Hypertarget{struct_auto_hedge_o_b2_params_a0efe1e7a7720ceb221be15cde06445c3}\index{AutoHedgeOB2Params@{AutoHedgeOB2Params}!MinutesToLive@{MinutesToLive}}
+\index{MinutesToLive@{MinutesToLive}!AutoHedgeOB2Params@{AutoHedgeOB2Params}}
+\doxysubsubsection{\texorpdfstring{MinutesToLive}{MinutesToLive}}
+{\footnotesize\ttfamily \label{struct_auto_hedge_o_b2_params_a0efe1e7a7720ceb221be15cde06445c3} 
+int Auto\+Hedge\+OB2\+Params\+::\+Minutes\+To\+Live}
+
+\Hypertarget{struct_auto_hedge_o_b2_params_aee4de84cf1024e6e5d247e01d521db16}\index{AutoHedgeOB2Params@{AutoHedgeOB2Params}!Ords@{Ords}}
+\index{Ords@{Ords}!AutoHedgeOB2Params@{AutoHedgeOB2Params}}
+\doxysubsubsection{\texorpdfstring{Ords}{Ords}}
+{\footnotesize\ttfamily \label{struct_auto_hedge_o_b2_params_aee4de84cf1024e6e5d247e01d521db16} 
+tr1\+::unordered\+\_\+map$<$string, \mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}}$>$ Auto\+Hedge\+OB2\+Params\+::\+Ords}
+
+\Hypertarget{struct_auto_hedge_o_b2_params_a1a07943a6d7df0c70247ecc9d37b32d1}\index{AutoHedgeOB2Params@{AutoHedgeOB2Params}!ProfitTaking@{ProfitTaking}}
+\index{ProfitTaking@{ProfitTaking}!AutoHedgeOB2Params@{AutoHedgeOB2Params}}
+\doxysubsubsection{\texorpdfstring{ProfitTaking}{ProfitTaking}}
+{\footnotesize\ttfamily \label{struct_auto_hedge_o_b2_params_a1a07943a6d7df0c70247ecc9d37b32d1} 
+int Auto\+Hedge\+OB2\+Params\+::\+Profit\+Taking}
+
+\Hypertarget{struct_auto_hedge_o_b2_params_adb580e5eb1c7871c1403f26a0129f8c4}\index{AutoHedgeOB2Params@{AutoHedgeOB2Params}!StopLoss@{StopLoss}}
+\index{StopLoss@{StopLoss}!AutoHedgeOB2Params@{AutoHedgeOB2Params}}
+\doxysubsubsection{\texorpdfstring{StopLoss}{StopLoss}}
+{\footnotesize\ttfamily \label{struct_auto_hedge_o_b2_params_adb580e5eb1c7871c1403f26a0129f8c4} 
+int Auto\+Hedge\+OB2\+Params\+::\+Stop\+Loss}
+
+\Hypertarget{struct_auto_hedge_o_b2_params_aaac64d01a6e7b369a700d782e56054fb}\index{AutoHedgeOB2Params@{AutoHedgeOB2Params}!subid@{subid}}
+\index{subid@{subid}!AutoHedgeOB2Params@{AutoHedgeOB2Params}}
+\doxysubsubsection{\texorpdfstring{subid}{subid}}
+{\footnotesize\ttfamily \label{struct_auto_hedge_o_b2_params_aaac64d01a6e7b369a700d782e56054fb} 
+string Auto\+Hedge\+OB2\+Params\+::subid}
+
+\Hypertarget{struct_auto_hedge_o_b2_params_a69242ad37eb9f3d9b921aef418466d96}\index{AutoHedgeOB2Params@{AutoHedgeOB2Params}!TakeTicks@{TakeTicks}}
+\index{TakeTicks@{TakeTicks}!AutoHedgeOB2Params@{AutoHedgeOB2Params}}
+\doxysubsubsection{\texorpdfstring{TakeTicks}{TakeTicks}}
+{\footnotesize\ttfamily \label{struct_auto_hedge_o_b2_params_a69242ad37eb9f3d9b921aef418466d96} 
+int Auto\+Hedge\+OB2\+Params\+::\+Take\+Ticks}
+
+\Hypertarget{struct_auto_hedge_o_b2_params_abdaca75ff0a86c230365af868fff1c30}\index{AutoHedgeOB2Params@{AutoHedgeOB2Params}!ValidJson@{ValidJson}}
+\index{ValidJson@{ValidJson}!AutoHedgeOB2Params@{AutoHedgeOB2Params}}
+\doxysubsubsection{\texorpdfstring{ValidJson}{ValidJson}}
+{\footnotesize\ttfamily \label{struct_auto_hedge_o_b2_params_abdaca75ff0a86c230365af868fff1c30} 
+bool Auto\+Hedge\+OB2\+Params\+::\+Valid\+Json}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Algo\+Params/Auto\+Hedge\+OB2\+Params.\+hpp\item 
+Algo\+Params/Auto\+Hedge\+OB2\+Params.\+cpp\end{DoxyCompactItemize}

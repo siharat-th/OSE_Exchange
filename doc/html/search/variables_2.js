@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['calc_0',['calc',['../struct_wavg_edge_struct.html#a2fd6fe733527eb19a262621cebbbbdf6',1,'WavgEdgeStruct']]],
+  ['calclatency_1',['CalcLatency',['../structtcp__settings.html#af11aa16e354091106601fd39f16807b6',1,'tcp_settings::CalcLatency'],['../structudp__settings.html#a6bf357e8f2813c497a6bb11482625396',1,'udp_settings::CalcLatency']]],
+  ['callbackid_2',['callbackid',['../structinstrument.html#a274ebe416049ebbb47ff6d6c4fa7093d',1,'instrument::callbackid'],['../struct_k_t_n_1_1_order_pod.html#a438499f4619852b6df015ea920775b15',1,'KTN::OrderPod::callbackid'],['../struct_k_t_n_1_1_order_exception.html#a4cb70c5217f4fb77806c3e041bab532a',1,'KTN::OrderException::callbackid']]],
+  ['canhedge_3',['CanHedge',['../structalgometa.html#afc0c8beea8b2e08aac8b46f4035f7851',1,'algometa']]],
+  ['cert_4',['cert',['../struct_k_t_n_1_1_order_pod.html#a5461c440e2cac5531e9577759f429046',1,'KTN::OrderPod']]],
+  ['certnr_5',['CERTNR',['../struct_algo_state.html#a662be09f1b662e08671ece46759ce859',1,'AlgoState']]],
+  ['channel_6',['Channel',['../structalgoinstr.html#a3565726e81a3a08a2d6d150124ab9cb0',1,'algoinstr']]],
+  ['channel_7',['channel',['../struct_k_t_n_1_1notify_1_1slackbot.html#a54a873fe5cbc6abfe707e626bfc7c603',1,'KTN::notify::slackbot']]],
+  ['exchordid_8',['exchordid',['../struct_k_t_n_1_1_order_pod.html#aaebd67bcffdddb92e1d16dd0ce29f214',1,'KTN::OrderPod::exchordid'],['../struct_k_t_n_1_1_order_exception.html#a2d7dd72c35b76ab8a9a6c975b7b136e0',1,'KTN::OrderException::exchordid']]],
+  ['col_9',['col',['../structinstrument.html#a587166c4faab0b45ed8b7005d8a1175a',1,'instrument::col'],['../struct_wavg_calc.html#a953e0d55f73de9a8d03c617c5bf917f9',1,'WavgCalc::col']]],
+  ['color_10',['color',['../struct_log_msg.html#a45fcad9ed8e0c77f6cda29aea61e3c7d',1,'LogMsg::color'],['../struct_k_t_n_1_1notify_1_1slackmsg.html#ab1383f5ca42e67fb4dc96df50b369fa7',1,'KTN::notify::slackmsg::color'],['../struct_k_t_n_1_1notify_1_1slackbot.html#a9ad3b96d8813d67fc9363892ab52e837',1,'KTN::notify::slackbot::color']]],
+  ['combo_11',['combo',['../structcombopath.html#a1b9462ff96c30b224fbfd1c782841385',1,'combopath']]],
+  ['connectionstate_12',['connectionState',['../struct_k_t_n_1_1_conn_state.html#a6ed5e9d6bb40aa76d6142bdda3753e9d',1,'KTN::ConnState']]],
+  ['connindex_13',['connindex',['../structinstrument.html#a92ffd5fe8b9ba9cadedcd753a6d3f377',1,'instrument']]],
+  ['count_14',['count',['../structpxlvl.html#afdd3866588c122045ce66b22c2b581ff',1,'pxlvl::count'],['../struct_wavg_calc.html#a661328af6aaa74eec97d5a249ee7976e',1,'WavgCalc::count']]],
+  ['covertag_15',['CoverTag',['../structalgometa.html#a409e57556841767dcdd7b4e5bc6d9057',1,'algometa']]],
+  ['cpu_16',['cpu',['../struct_algo_initializer.html#a3f2356cf846c49037465468b3cd5ba4c',1,'AlgoInitializer']]]
+];

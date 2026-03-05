@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_socket_udp_receiver" xml:lang="en-US">
+<title>SocketUdpReceiver&lt; RecvBufSize &gt; Class Template Reference</title>
+<indexterm><primary>SocketUdpReceiver&lt; RecvBufSize &gt;</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_socket_udp_receiver_1a691dfabc01750158593bcef4694ac3f0">init</link> (const char *interface, const char *dest_ip, uint16_t dest_port, const char *subscribe_ip=&quot;&quot;)</para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_class_socket_udp_receiver_1aa62fb475a251b73f94e2f4072877cbc4">getLocalPort</link> ()</para>
+</listitem>
+            <listitem><para>const char * <link linkend="_class_socket_udp_receiver_1a218b2c9b76950dbded9ce6e04c4f68f7">getLastError</link> ()</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_socket_udp_receiver_1a06557c52af166a0ea2556ad64a4bf7b3">isClosed</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_socket_udp_receiver_1ace5791529aedce3698c60363d462a90f">close</link> (const char *reason)</para>
+</listitem>
+            <listitem><para>template&lt;typename Handler &gt; </para><para>bool <link linkend="_class_socket_udp_receiver_1af65a159abfe2702a3e6376b4f8cf098a">read</link> (Handler handler)</para>
+</listitem>
+            <listitem><para>template&lt;typename Handler &gt; </para><para>bool <link linkend="_class_socket_udp_receiver_1aaad072668d3eb2872620b136748f12a6">recvfrom</link> (Handler handler)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_socket_udp_receiver_1a320997c083458b42682609eb2404aaa7">sendto</link> (const void *data, uint32_t size, const sockaddr_in &amp;dst_addr)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;uint32_t RecvBufSize = 1500&gt;<?linebreak?>class SocketUdpReceiver&lt; RecvBufSize &gt;</title></simplesect>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_socket_udp_receiver_1a470b78e45f9707d108184fe278690e3c"/><section>
+    <title>~SocketUdpReceiver()</title>
+<indexterm><primary>~SocketUdpReceiver</primary><secondary>SocketUdpReceiver&lt; RecvBufSize &gt;</secondary></indexterm>
+<indexterm><primary>SocketUdpReceiver&lt; RecvBufSize &gt;</primary><secondary>~SocketUdpReceiver</secondary></indexterm>
+<computeroutput>template&lt;uint32_t RecvBufSize = 1500&gt; </computeroutput><para><computeroutput><link linkend="_class_socket_udp_receiver">SocketUdpReceiver</link>&lt; RecvBufSize &gt;::~<link linkend="_class_socket_udp_receiver">SocketUdpReceiver</link> ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_socket_udp_receiver_1ace5791529aedce3698c60363d462a90f"/><section>
+    <title>close()</title>
+<indexterm><primary>close</primary><secondary>SocketUdpReceiver&lt; RecvBufSize &gt;</secondary></indexterm>
+<indexterm><primary>SocketUdpReceiver&lt; RecvBufSize &gt;</primary><secondary>close</secondary></indexterm>
+<computeroutput>template&lt;uint32_t RecvBufSize = 1500&gt; </computeroutput><para><computeroutput>void <link linkend="_class_socket_udp_receiver">SocketUdpReceiver</link>&lt; RecvBufSize &gt;::close (const char * reason)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_socket_udp_receiver_1a218b2c9b76950dbded9ce6e04c4f68f7"/><section>
+    <title>getLastError()</title>
+<indexterm><primary>getLastError</primary><secondary>SocketUdpReceiver&lt; RecvBufSize &gt;</secondary></indexterm>
+<indexterm><primary>SocketUdpReceiver&lt; RecvBufSize &gt;</primary><secondary>getLastError</secondary></indexterm>
+<computeroutput>template&lt;uint32_t RecvBufSize = 1500&gt; </computeroutput><para><computeroutput>const char * <link linkend="_class_socket_udp_receiver">SocketUdpReceiver</link>&lt; RecvBufSize &gt;::getLastError ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_socket_udp_receiver_1aa62fb475a251b73f94e2f4072877cbc4"/><section>
+    <title>getLocalPort()</title>
+<indexterm><primary>getLocalPort</primary><secondary>SocketUdpReceiver&lt; RecvBufSize &gt;</secondary></indexterm>
+<indexterm><primary>SocketUdpReceiver&lt; RecvBufSize &gt;</primary><secondary>getLocalPort</secondary></indexterm>
+<computeroutput>template&lt;uint32_t RecvBufSize = 1500&gt; </computeroutput><para><computeroutput>uint16_t <link linkend="_class_socket_udp_receiver">SocketUdpReceiver</link>&lt; RecvBufSize &gt;::getLocalPort ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_socket_udp_receiver_1a691dfabc01750158593bcef4694ac3f0"/><section>
+    <title>init()</title>
+<indexterm><primary>init</primary><secondary>SocketUdpReceiver&lt; RecvBufSize &gt;</secondary></indexterm>
+<indexterm><primary>SocketUdpReceiver&lt; RecvBufSize &gt;</primary><secondary>init</secondary></indexterm>
+<computeroutput>template&lt;uint32_t RecvBufSize = 1500&gt; </computeroutput><para><computeroutput>bool <link linkend="_class_socket_udp_receiver">SocketUdpReceiver</link>&lt; RecvBufSize &gt;::init (const char * interface, const char * dest_ip, uint16_t dest_port, const char * subscribe_ip = <computeroutput>&quot;&quot;</computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_socket_udp_receiver_1a06557c52af166a0ea2556ad64a4bf7b3"/><section>
+    <title>isClosed()</title>
+<indexterm><primary>isClosed</primary><secondary>SocketUdpReceiver&lt; RecvBufSize &gt;</secondary></indexterm>
+<indexterm><primary>SocketUdpReceiver&lt; RecvBufSize &gt;</primary><secondary>isClosed</secondary></indexterm>
+<computeroutput>template&lt;uint32_t RecvBufSize = 1500&gt; </computeroutput><para><computeroutput>bool <link linkend="_class_socket_udp_receiver">SocketUdpReceiver</link>&lt; RecvBufSize &gt;::isClosed ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_socket_udp_receiver_1af65a159abfe2702a3e6376b4f8cf098a"/><section>
+    <title>read()</title>
+<indexterm><primary>read</primary><secondary>SocketUdpReceiver&lt; RecvBufSize &gt;</secondary></indexterm>
+<indexterm><primary>SocketUdpReceiver&lt; RecvBufSize &gt;</primary><secondary>read</secondary></indexterm>
+<computeroutput>template&lt;uint32_t RecvBufSize = 1500&gt; </computeroutput><computeroutput>template&lt;typename Handler &gt; </computeroutput><para><computeroutput>bool <link linkend="_class_socket_udp_receiver">SocketUdpReceiver</link>&lt; RecvBufSize &gt;::read (Handler handler)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_socket_udp_receiver_1aaad072668d3eb2872620b136748f12a6"/><section>
+    <title>recvfrom()</title>
+<indexterm><primary>recvfrom</primary><secondary>SocketUdpReceiver&lt; RecvBufSize &gt;</secondary></indexterm>
+<indexterm><primary>SocketUdpReceiver&lt; RecvBufSize &gt;</primary><secondary>recvfrom</secondary></indexterm>
+<computeroutput>template&lt;uint32_t RecvBufSize = 1500&gt; </computeroutput><computeroutput>template&lt;typename Handler &gt; </computeroutput><para><computeroutput>bool <link linkend="_class_socket_udp_receiver">SocketUdpReceiver</link>&lt; RecvBufSize &gt;::recvfrom (Handler handler)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_socket_udp_receiver_1a320997c083458b42682609eb2404aaa7"/><section>
+    <title>sendto()</title>
+<indexterm><primary>sendto</primary><secondary>SocketUdpReceiver&lt; RecvBufSize &gt;</secondary></indexterm>
+<indexterm><primary>SocketUdpReceiver&lt; RecvBufSize &gt;</primary><secondary>sendto</secondary></indexterm>
+<computeroutput>template&lt;uint32_t RecvBufSize = 1500&gt; </computeroutput><para><computeroutput>bool <link linkend="_class_socket_udp_receiver">SocketUdpReceiver</link>&lt; RecvBufSize &gt;::sendto (const void * data, uint32_t size, const sockaddr_in &amp; dst_addr)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/external/pollnet/Socket.h</section>
+</section>

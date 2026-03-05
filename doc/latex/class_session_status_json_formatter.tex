@@ -1,0 +1,64 @@
+\doxysection{Session\+Status\+Json\+Formatter Class Reference}
+\hypertarget{class_session_status_json_formatter}{}\label{class_session_status_json_formatter}\index{SessionStatusJsonFormatter@{SessionStatusJsonFormatter}}
+
+
+Formatter class for converting \doxylink{class_session_status}{Session\+Status} objects to JSON format.  
+
+
+
+
+{\ttfamily \#include $<$Session\+Status\+Formatter\+V2.\+hpp$>$}
+
+Inheritance diagram for Session\+Status\+Json\+Formatter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_session_status_json_formatter}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_session_status_json_formatter_a48e935472d7d0238358f4f20f7a31489}{Get\+Json}} (const void \texorpdfstring{$\ast$}{*}data) const override
+\begin{DoxyCompactList}\small\item\em Converts a \doxylink{class_session_status}{Session\+Status} object to JSON format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_formatter_base}{Formatter\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_formatter_base_a46f0eaeede8596813b927751c842e846}{\texorpdfstring{$\sim$}{\string~}\+Formatter\+Base}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Formatter class for converting \doxylink{class_session_status}{Session\+Status} objects to JSON format. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_session_status_json_formatter_a48e935472d7d0238358f4f20f7a31489}\index{SessionStatusJsonFormatter@{SessionStatusJsonFormatter}!GetJson@{GetJson}}
+\index{GetJson@{GetJson}!SessionStatusJsonFormatter@{SessionStatusJsonFormatter}}
+\doxysubsubsection{\texorpdfstring{GetJson()}{GetJson()}}
+{\footnotesize\ttfamily \label{class_session_status_json_formatter_a48e935472d7d0238358f4f20f7a31489} 
+std\+::string Session\+Status\+Json\+Formatter\+::\+Get\+Json (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{data}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Converts a \doxylink{class_session_status}{Session\+Status} object to JSON format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & A pointer to the \doxylink{class_session_status}{Session\+Status} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The JSON representation of the \doxylink{class_session_status}{Session\+Status} object. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_formatter_base_a503ea9bae81f69cf83fd2447cbbed66c}{Formatter\+Base}}.
+
+
+
+References \mbox{\hyperlink{l00033}{Session\+Status\+::desc}}, \mbox{\hyperlink{l00036}{Session\+Status\+::exch}}, \mbox{\hyperlink{l00027}{Session\+Status\+::ipaddress}}, \mbox{\hyperlink{l00032}{Session\+Status\+::mktsegid}}, \mbox{\hyperlink{l00026}{Session\+Status\+::msgseqnum}}, \mbox{\hyperlink{l00024}{Session\+Status\+::ok}}, \mbox{\hyperlink{l00028}{Session\+Status\+::port}}, \mbox{\hyperlink{l00034}{Session\+Status\+::protocol}}, \mbox{\hyperlink{l00025}{Session\+Status\+::sessionstatus}}, \mbox{\hyperlink{l00022}{Session\+Status\+::source}}, \mbox{\hyperlink{l00035}{Session\+Status\+::state}}, and \mbox{\hyperlink{l00023}{Session\+Status\+::subid}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Session/Session\+Status\+Formatter\+V2.\+hpp\end{DoxyCompactItemize}

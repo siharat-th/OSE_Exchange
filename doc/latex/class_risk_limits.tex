@@ -1,0 +1,538 @@
+\doxysection{Risk\+Limits Class Reference}
+\hypertarget{class_risk_limits}{}\label{class_risk_limits}\index{RiskLimits@{RiskLimits}}
+
+
+The \doxylink{class_risk_limits}{Risk\+Limits} class represents the risk limits for a particular trading account.  
+
+
+
+
+{\ttfamily \#include $<$Risk\+Limits.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_risk_limits_a43c16e1b5a2f7f404ce68ecfe912e7a8}{Risk\+Limits}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{class_risk_limits}{Risk\+Limits} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_risk_limits_aedf6973f8efa86ada6bf535a6a067fef}{\texorpdfstring{$\sim$}{\string~}\+Risk\+Limits}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{class_risk_limits}{Risk\+Limits} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_risk_limits_a219839387e10292ec21d59ca2071bad1}{Update}} (int enable, std\+::string acro, std\+::string prod, std\+::string prodtype, std\+::string exch, int i\+Max\+Order\+Size, int i\+Max\+Long, int i\+Max\+Short, int i\+Max\+Buy\+Open, int i\+Max\+Sell\+Open, int i\+Log\+Level)
+\begin{DoxyCompactList}\small\item\em Updates the risk limits with the specified parameters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_risk_limits_a176bb2a8ea17a977809941508660bb84}{Log\+Level}} (int i\+Log\+Level)
+\begin{DoxyCompactList}\small\item\em Sets the log level. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_risk_limits_a4a8488c7dd9eb21fc65eb0624ec3e174}{Set\+Enable}} (bool enable)
+\begin{DoxyCompactList}\small\item\em Sets the enable flag to enable or disable the risk limits. \end{DoxyCompactList}\item 
+\Hypertarget{class_risk_limits_af5a55526b5ff86ca0ae5d7937c9e11ef}\label{class_risk_limits_af5a55526b5ff86ca0ae5d7937c9e11ef} 
+void {\bfseries Create\+Key} ()
+\begin{DoxyCompactList}\small\item\em Creates a key for the risk limits. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_risk_limits_a9fa14da4aaa04ccfb466948c10a9a042}{OK}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the risk limits are within acceptable limits. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_risk_limits_a47b2323ecde1255279f5f059b678401c}{Check\+Pos}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the current position is within acceptable limits. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_risk_limits_ab32fde429096fcea47322c8ec33e4b30}{Check\+Ords}} (bool b\+Is\+Bid)
+\begin{DoxyCompactList}\small\item\em Checks if the order quantity is within acceptable limits. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_risk_limits_a85f7494f2849aeb1bd4873510acc0de7}{Print}} (bool current\+\_\+risk\+\_\+only=false)
+\begin{DoxyCompactList}\small\item\em Prints the risk limits. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_risk_limits_a33938776640601f35d99ea8f89fb2db3}{Legal\+Size}} (int i\+Order\+Qty)
+\begin{DoxyCompactList}\small\item\em Checks if the order size is within legal limits. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_risk_limits_a424c7fa419867263d96b952c2b237820}{Got\+Fill}} (int i\+Fill\+Size, bool b\+Is\+Buy)
+\begin{DoxyCompactList}\small\item\em Updates the risk limits based on a fill. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_risk_limits_a1dc02c7cb2f843737942d75cfdcb6cd8}{Got\+Order}} (int i\+Size, bool b\+Is\+Bid, bool b\+Is\+Cxl)
+\begin{DoxyCompactList}\small\item\em Updates the risk limits based on an order. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_risk_limits_a16852c624231043c3cd63ce69e4b227e}{Net\+Pos}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the net position. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_risk_limits_a6eb82a2ada7c4a0ee2b2da8e3f693273}{Get\+Max\+Contracts}} (bool b\+Is\+Bid)
+\begin{DoxyCompactList}\small\item\em Gets the maximum number of contracts for the specified bid/ask. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_risk_limits_aea914526541f958de67470cb1f117638}{Get\+Order\+Count}} (bool b\+Is\+Bid)
+\begin{DoxyCompactList}\small\item\em Gets the number of orders for the specified bid/ask. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_risk_limits_a1c10f7599e9730ea9ba6b6f4a0cbd88d}{Get\+Position}} (bool b\+Is\+Bid)
+\begin{DoxyCompactList}\small\item\em Gets the position for the specified bid/ask. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_risk_limits_ab17a9760b4a9da62453a0ffb939c2019}{Get\+Max\+Order\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Gets the maximum order size. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_risk_limits_ae570a819d0e6b5230de6961f3da056f4}{Will\+Max\+Out}} (bool b\+Is\+Bid, int i\+Add)
+\begin{DoxyCompactList}\small\item\em Checks if adding the specified quantity to the bid/ask will exceed the maximum limits. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_risk_limits_a10c0c48468439a798f0ff6742ea21cde}{acronym}}
+\item 
+string \mbox{\hyperlink{class_risk_limits_a6c987cefdca9df052d7bc4d99a248771}{account}}
+\item 
+string \mbox{\hyperlink{class_risk_limits_aecebb71b75756bc29835ddedf13c62f0}{product}}
+\item 
+string \mbox{\hyperlink{class_risk_limits_ab9830da07796ed4149aaad7d654bb13f}{producttype}}
+\item 
+string \mbox{\hyperlink{class_risk_limits_adf12ddd23e3b434fdcb6d1ab9b362482}{exchange}}
+\item 
+int \mbox{\hyperlink{class_risk_limits_a00565aaff8730004846437e79e2ba2c1}{max\+\_\+order\+\_\+qty}}
+\item 
+int \mbox{\hyperlink{class_risk_limits_a757a2064e7487fdb9b324a827021da05}{max\+\_\+open\+\_\+qty\+\_\+buy}}
+\item 
+int \mbox{\hyperlink{class_risk_limits_a792a9c2fcd746d9907927d1e8bf6bf9b}{max\+\_\+open\+\_\+qty\+\_\+sell}}
+\item 
+int \mbox{\hyperlink{class_risk_limits_ae97e69ff5977667a9069c3b5218c958a}{max\+\_\+pos\+\_\+long}}
+\item 
+int \mbox{\hyperlink{class_risk_limits_a79ef299e4b7b81c477df0b322272bb1e}{max\+\_\+pos\+\_\+short}}
+\item 
+int \mbox{\hyperlink{class_risk_limits_a9e35845ff3447b77beb3f7cea10463b8}{curr\+\_\+open\+\_\+qty\+\_\+buy}}
+\item 
+int \mbox{\hyperlink{class_risk_limits_a70a102f2075f304b935817cb08691cfb}{curr\+\_\+open\+\_\+qty\+\_\+sell}}
+\item 
+int \mbox{\hyperlink{class_risk_limits_abd9e9a221801f21ba44f010528e78a80}{curr\+\_\+pos\+\_\+long}}
+\item 
+int \mbox{\hyperlink{class_risk_limits_a09c03f1b9c1816e3e0560915100333b2}{curr\+\_\+pos\+\_\+short}}
+\item 
+int \mbox{\hyperlink{class_risk_limits_a14e0c92ef62eec7aa897d155d501bbc7}{enabled}}
+\item 
+string \mbox{\hyperlink{class_risk_limits_a37f9f45e526571ca5736718269b566db}{keyvalue}}
+\item 
+bool \mbox{\hyperlink{class_risk_limits_a244917f127e6128c734064051eff2c65}{has\+Data}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_risk_limits}{Risk\+Limits} class represents the risk limits for a particular trading account. 
+
+The \doxylink{class_risk_limits}{Risk\+Limits} class provides methods to update the risk limits, set the log level, enable/disable the risk limits, check various risk conditions, and perform other operations related to risk management. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_risk_limits_a43c16e1b5a2f7f404ce68ecfe912e7a8}\index{RiskLimits@{RiskLimits}!RiskLimits@{RiskLimits}}
+\index{RiskLimits@{RiskLimits}!RiskLimits@{RiskLimits}}
+\doxysubsubsection{\texorpdfstring{RiskLimits()}{RiskLimits()}}
+{\footnotesize\ttfamily \label{class_risk_limits_a43c16e1b5a2f7f404ce68ecfe912e7a8} 
+Risk\+Limits\+::\+Risk\+Limits (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a new \doxylink{class_risk_limits}{Risk\+Limits} object. 
+
+\Hypertarget{class_risk_limits_aedf6973f8efa86ada6bf535a6a067fef}\index{RiskLimits@{RiskLimits}!````~RiskLimits@{\texorpdfstring{$\sim$}{\string~}RiskLimits}}
+\index{````~RiskLimits@{\texorpdfstring{$\sim$}{\string~}RiskLimits}!RiskLimits@{RiskLimits}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}RiskLimits()}{\string~RiskLimits()}}
+{\footnotesize\ttfamily \label{class_risk_limits_aedf6973f8efa86ada6bf535a6a067fef} 
+Risk\+Limits\+::\texorpdfstring{$\sim$}{\string~}\+Risk\+Limits (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destroys the \doxylink{class_risk_limits}{Risk\+Limits} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_risk_limits_ab32fde429096fcea47322c8ec33e4b30}\index{RiskLimits@{RiskLimits}!CheckOrds@{CheckOrds}}
+\index{CheckOrds@{CheckOrds}!RiskLimits@{RiskLimits}}
+\doxysubsubsection{\texorpdfstring{CheckOrds()}{CheckOrds()}}
+{\footnotesize\ttfamily \label{class_risk_limits_ab32fde429096fcea47322c8ec33e4b30} 
+bool Risk\+Limits\+::\+Check\+Ords (\begin{DoxyParamCaption}\item[{bool}]{b\+Is\+Bid}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the order quantity is within acceptable limits. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b\+Is\+Bid} & A flag indicating whether the order is a bid or ask. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the order quantity is within acceptable limits, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_risk_limits_a47b2323ecde1255279f5f059b678401c}\index{RiskLimits@{RiskLimits}!CheckPos@{CheckPos}}
+\index{CheckPos@{CheckPos}!RiskLimits@{RiskLimits}}
+\doxysubsubsection{\texorpdfstring{CheckPos()}{CheckPos()}}
+{\footnotesize\ttfamily \label{class_risk_limits_a47b2323ecde1255279f5f059b678401c} 
+bool Risk\+Limits\+::\+Check\+Pos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the current position is within acceptable limits. 
+
+\begin{DoxyReturn}{Returns}
+True if the current position is within acceptable limits, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_risk_limits_a6eb82a2ada7c4a0ee2b2da8e3f693273}\index{RiskLimits@{RiskLimits}!GetMaxContracts@{GetMaxContracts}}
+\index{GetMaxContracts@{GetMaxContracts}!RiskLimits@{RiskLimits}}
+\doxysubsubsection{\texorpdfstring{GetMaxContracts()}{GetMaxContracts()}}
+{\footnotesize\ttfamily \label{class_risk_limits_a6eb82a2ada7c4a0ee2b2da8e3f693273} 
+int Risk\+Limits\+::\+Get\+Max\+Contracts (\begin{DoxyParamCaption}\item[{bool}]{b\+Is\+Bid}{}\end{DoxyParamCaption})}
+
+
+
+Gets the maximum number of contracts for the specified bid/ask. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b\+Is\+Bid} & A flag indicating whether the bid/ask is a bid or ask. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The maximum number of contracts. 
+\end{DoxyReturn}
+\Hypertarget{class_risk_limits_ab17a9760b4a9da62453a0ffb939c2019}\index{RiskLimits@{RiskLimits}!GetMaxOrderSize@{GetMaxOrderSize}}
+\index{GetMaxOrderSize@{GetMaxOrderSize}!RiskLimits@{RiskLimits}}
+\doxysubsubsection{\texorpdfstring{GetMaxOrderSize()}{GetMaxOrderSize()}}
+{\footnotesize\ttfamily \label{class_risk_limits_ab17a9760b4a9da62453a0ffb939c2019} 
+int Risk\+Limits\+::\+Get\+Max\+Order\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the maximum order size. 
+
+\begin{DoxyReturn}{Returns}
+The maximum order size. 
+\end{DoxyReturn}
+\Hypertarget{class_risk_limits_aea914526541f958de67470cb1f117638}\index{RiskLimits@{RiskLimits}!GetOrderCount@{GetOrderCount}}
+\index{GetOrderCount@{GetOrderCount}!RiskLimits@{RiskLimits}}
+\doxysubsubsection{\texorpdfstring{GetOrderCount()}{GetOrderCount()}}
+{\footnotesize\ttfamily \label{class_risk_limits_aea914526541f958de67470cb1f117638} 
+int Risk\+Limits\+::\+Get\+Order\+Count (\begin{DoxyParamCaption}\item[{bool}]{b\+Is\+Bid}{}\end{DoxyParamCaption})}
+
+
+
+Gets the number of orders for the specified bid/ask. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b\+Is\+Bid} & A flag indicating whether the bid/ask is a bid or ask. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of orders. 
+\end{DoxyReturn}
+\Hypertarget{class_risk_limits_a1c10f7599e9730ea9ba6b6f4a0cbd88d}\index{RiskLimits@{RiskLimits}!GetPosition@{GetPosition}}
+\index{GetPosition@{GetPosition}!RiskLimits@{RiskLimits}}
+\doxysubsubsection{\texorpdfstring{GetPosition()}{GetPosition()}}
+{\footnotesize\ttfamily \label{class_risk_limits_a1c10f7599e9730ea9ba6b6f4a0cbd88d} 
+int Risk\+Limits\+::\+Get\+Position (\begin{DoxyParamCaption}\item[{bool}]{b\+Is\+Bid}{}\end{DoxyParamCaption})}
+
+
+
+Gets the position for the specified bid/ask. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b\+Is\+Bid} & A flag indicating whether the bid/ask is a bid or ask. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The position. 
+\end{DoxyReturn}
+\Hypertarget{class_risk_limits_a424c7fa419867263d96b952c2b237820}\index{RiskLimits@{RiskLimits}!GotFill@{GotFill}}
+\index{GotFill@{GotFill}!RiskLimits@{RiskLimits}}
+\doxysubsubsection{\texorpdfstring{GotFill()}{GotFill()}}
+{\footnotesize\ttfamily \label{class_risk_limits_a424c7fa419867263d96b952c2b237820} 
+void Risk\+Limits\+::\+Got\+Fill (\begin{DoxyParamCaption}\item[{int}]{i\+Fill\+Size}{, }\item[{bool}]{b\+Is\+Buy}{}\end{DoxyParamCaption})}
+
+
+
+Updates the risk limits based on a fill. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i\+Fill\+Size} & The fill size. \\
+\hline
+{\em b\+Is\+Buy} & A flag indicating whether the fill is a buy or sell. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{l00401}{KTN\+::\+Risk\+Manager\+::\+Update\+Limits\+On\+Order()}}.
+
+\Hypertarget{class_risk_limits_a1dc02c7cb2f843737942d75cfdcb6cd8}\index{RiskLimits@{RiskLimits}!GotOrder@{GotOrder}}
+\index{GotOrder@{GotOrder}!RiskLimits@{RiskLimits}}
+\doxysubsubsection{\texorpdfstring{GotOrder()}{GotOrder()}}
+{\footnotesize\ttfamily \label{class_risk_limits_a1dc02c7cb2f843737942d75cfdcb6cd8} 
+void Risk\+Limits\+::\+Got\+Order (\begin{DoxyParamCaption}\item[{int}]{i\+Size}{, }\item[{bool}]{b\+Is\+Bid}{, }\item[{bool}]{b\+Is\+Cxl}{}\end{DoxyParamCaption})}
+
+
+
+Updates the risk limits based on an order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i\+Size} & The order size. \\
+\hline
+{\em b\+Is\+Bid} & A flag indicating whether the order is a bid or ask. \\
+\hline
+{\em b\+Is\+Cxl} & A flag indicating whether the order is a cancellation. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{l00401}{KTN\+::\+Risk\+Manager\+::\+Update\+Limits\+On\+Order()}}.
+
+\Hypertarget{class_risk_limits_a33938776640601f35d99ea8f89fb2db3}\index{RiskLimits@{RiskLimits}!LegalSize@{LegalSize}}
+\index{LegalSize@{LegalSize}!RiskLimits@{RiskLimits}}
+\doxysubsubsection{\texorpdfstring{LegalSize()}{LegalSize()}}
+{\footnotesize\ttfamily \label{class_risk_limits_a33938776640601f35d99ea8f89fb2db3} 
+bool Risk\+Limits\+::\+Legal\+Size (\begin{DoxyParamCaption}\item[{int}]{i\+Order\+Qty}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the order size is within legal limits. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i\+Order\+Qty} & The order quantity. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the order size is within legal limits, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_risk_limits_a176bb2a8ea17a977809941508660bb84}\index{RiskLimits@{RiskLimits}!LogLevel@{LogLevel}}
+\index{LogLevel@{LogLevel}!RiskLimits@{RiskLimits}}
+\doxysubsubsection{\texorpdfstring{LogLevel()}{LogLevel()}}
+{\footnotesize\ttfamily \label{class_risk_limits_a176bb2a8ea17a977809941508660bb84} 
+void Risk\+Limits\+::\+Log\+Level (\begin{DoxyParamCaption}\item[{int}]{i\+Log\+Level}{}\end{DoxyParamCaption})}
+
+
+
+Sets the log level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i\+Log\+Level} & The log level to set. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_risk_limits_a16852c624231043c3cd63ce69e4b227e}\index{RiskLimits@{RiskLimits}!NetPos@{NetPos}}
+\index{NetPos@{NetPos}!RiskLimits@{RiskLimits}}
+\doxysubsubsection{\texorpdfstring{NetPos()}{NetPos()}}
+{\footnotesize\ttfamily \label{class_risk_limits_a16852c624231043c3cd63ce69e4b227e} 
+int Risk\+Limits\+::\+Net\+Pos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Calculates the net position. 
+
+\begin{DoxyReturn}{Returns}
+The net position. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00027}{Print()}}.
+
+\Hypertarget{class_risk_limits_a9fa14da4aaa04ccfb466948c10a9a042}\index{RiskLimits@{RiskLimits}!OK@{OK}}
+\index{OK@{OK}!RiskLimits@{RiskLimits}}
+\doxysubsubsection{\texorpdfstring{OK()}{OK()}}
+{\footnotesize\ttfamily \label{class_risk_limits_a9fa14da4aaa04ccfb466948c10a9a042} 
+bool Risk\+Limits\+::\+OK (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the risk limits are within acceptable limits. 
+
+\begin{DoxyReturn}{Returns}
+True if the risk limits are within acceptable limits, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_risk_limits_a85f7494f2849aeb1bd4873510acc0de7}\index{RiskLimits@{RiskLimits}!Print@{Print}}
+\index{Print@{Print}!RiskLimits@{RiskLimits}}
+\doxysubsubsection{\texorpdfstring{Print()}{Print()}}
+{\footnotesize\ttfamily \label{class_risk_limits_a85f7494f2849aeb1bd4873510acc0de7} 
+void Risk\+Limits\+::\+Print (\begin{DoxyParamCaption}\item[{bool}]{current\+\_\+risk\+\_\+only}{ = {\ttfamily false}}\end{DoxyParamCaption})}
+
+
+
+Prints the risk limits. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+\_\+risk\+\_\+only} & A flag indicating whether to print only the current risk limits. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00194}{Net\+Pos()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00453}{KTN\+::\+Risk\+Manager\+::\+Handle\+Risk\+Limits\+JSON()}}, and \mbox{\hyperlink{l00088}{Update()}}.
+
+\Hypertarget{class_risk_limits_a4a8488c7dd9eb21fc65eb0624ec3e174}\index{RiskLimits@{RiskLimits}!SetEnable@{SetEnable}}
+\index{SetEnable@{SetEnable}!RiskLimits@{RiskLimits}}
+\doxysubsubsection{\texorpdfstring{SetEnable()}{SetEnable()}}
+{\footnotesize\ttfamily \label{class_risk_limits_a4a8488c7dd9eb21fc65eb0624ec3e174} 
+void Risk\+Limits\+::\+Set\+Enable (\begin{DoxyParamCaption}\item[{bool}]{enable}{}\end{DoxyParamCaption})}
+
+
+
+Sets the enable flag to enable or disable the risk limits. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enable} & The enable flag. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{l00595}{KTN\+::\+Risk\+Manager\+::set\+Enable()}}.
+
+\Hypertarget{class_risk_limits_a219839387e10292ec21d59ca2071bad1}\index{RiskLimits@{RiskLimits}!Update@{Update}}
+\index{Update@{Update}!RiskLimits@{RiskLimits}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_risk_limits_a219839387e10292ec21d59ca2071bad1} 
+void Risk\+Limits\+::\+Update (\begin{DoxyParamCaption}\item[{int}]{enable}{, }\item[{std\+::string}]{acro}{, }\item[{std\+::string}]{prod}{, }\item[{std\+::string}]{prodtype}{, }\item[{std\+::string}]{exch}{, }\item[{int}]{i\+Max\+Order\+Size}{, }\item[{int}]{i\+Max\+Long}{, }\item[{int}]{i\+Max\+Short}{, }\item[{int}]{i\+Max\+Buy\+Open}{, }\item[{int}]{i\+Max\+Sell\+Open}{, }\item[{int}]{i\+Log\+Level}{}\end{DoxyParamCaption})}
+
+
+
+Updates the risk limits with the specified parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enable} & The enable flag indicating whether the risk limits are enabled or disabled. \\
+\hline
+{\em acro} & The acronym of the trading account. \\
+\hline
+{\em prod} & The product name. \\
+\hline
+{\em prodtype} & The product type. \\
+\hline
+{\em exch} & The exchange name. \\
+\hline
+{\em i\+Max\+Order\+Size} & The maximum order size. \\
+\hline
+{\em i\+Max\+Long} & The maximum long position. \\
+\hline
+{\em i\+Max\+Short} & The maximum short position. \\
+\hline
+{\em i\+Max\+Buy\+Open} & The maximum buy open quantity. \\
+\hline
+{\em i\+Max\+Sell\+Open} & The maximum sell open quantity. \\
+\hline
+{\em i\+Log\+Level} & The log level. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00027}{Print()}}.
+
+\Hypertarget{class_risk_limits_ae570a819d0e6b5230de6961f3da056f4}\index{RiskLimits@{RiskLimits}!WillMaxOut@{WillMaxOut}}
+\index{WillMaxOut@{WillMaxOut}!RiskLimits@{RiskLimits}}
+\doxysubsubsection{\texorpdfstring{WillMaxOut()}{WillMaxOut()}}
+{\footnotesize\ttfamily \label{class_risk_limits_ae570a819d0e6b5230de6961f3da056f4} 
+bool Risk\+Limits\+::\+Will\+Max\+Out (\begin{DoxyParamCaption}\item[{bool}]{b\+Is\+Bid}{, }\item[{int}]{i\+Add}{}\end{DoxyParamCaption})}
+
+
+
+Checks if adding the specified quantity to the bid/ask will exceed the maximum limits. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b\+Is\+Bid} & A flag indicating whether the bid/ask is a bid or ask. \\
+\hline
+{\em i\+Add} & The quantity to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if adding the quantity will exceed the maximum limits, false otherwise. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_risk_limits_a6c987cefdca9df052d7bc4d99a248771}\index{RiskLimits@{RiskLimits}!account@{account}}
+\index{account@{account}!RiskLimits@{RiskLimits}}
+\doxysubsubsection{\texorpdfstring{account}{account}}
+{\footnotesize\ttfamily \label{class_risk_limits_a6c987cefdca9df052d7bc4d99a248771} 
+string Risk\+Limits\+::account}
+
+\Hypertarget{class_risk_limits_a10c0c48468439a798f0ff6742ea21cde}\index{RiskLimits@{RiskLimits}!acronym@{acronym}}
+\index{acronym@{acronym}!RiskLimits@{RiskLimits}}
+\doxysubsubsection{\texorpdfstring{acronym}{acronym}}
+{\footnotesize\ttfamily \label{class_risk_limits_a10c0c48468439a798f0ff6742ea21cde} 
+string Risk\+Limits\+::acronym}
+
+\Hypertarget{class_risk_limits_a9e35845ff3447b77beb3f7cea10463b8}\index{RiskLimits@{RiskLimits}!curr\_open\_qty\_buy@{curr\_open\_qty\_buy}}
+\index{curr\_open\_qty\_buy@{curr\_open\_qty\_buy}!RiskLimits@{RiskLimits}}
+\doxysubsubsection{\texorpdfstring{curr\_open\_qty\_buy}{curr\_open\_qty\_buy}}
+{\footnotesize\ttfamily \label{class_risk_limits_a9e35845ff3447b77beb3f7cea10463b8} 
+int Risk\+Limits\+::curr\+\_\+open\+\_\+qty\+\_\+buy}
+
+\Hypertarget{class_risk_limits_a70a102f2075f304b935817cb08691cfb}\index{RiskLimits@{RiskLimits}!curr\_open\_qty\_sell@{curr\_open\_qty\_sell}}
+\index{curr\_open\_qty\_sell@{curr\_open\_qty\_sell}!RiskLimits@{RiskLimits}}
+\doxysubsubsection{\texorpdfstring{curr\_open\_qty\_sell}{curr\_open\_qty\_sell}}
+{\footnotesize\ttfamily \label{class_risk_limits_a70a102f2075f304b935817cb08691cfb} 
+int Risk\+Limits\+::curr\+\_\+open\+\_\+qty\+\_\+sell}
+
+\Hypertarget{class_risk_limits_abd9e9a221801f21ba44f010528e78a80}\index{RiskLimits@{RiskLimits}!curr\_pos\_long@{curr\_pos\_long}}
+\index{curr\_pos\_long@{curr\_pos\_long}!RiskLimits@{RiskLimits}}
+\doxysubsubsection{\texorpdfstring{curr\_pos\_long}{curr\_pos\_long}}
+{\footnotesize\ttfamily \label{class_risk_limits_abd9e9a221801f21ba44f010528e78a80} 
+int Risk\+Limits\+::curr\+\_\+pos\+\_\+long}
+
+\Hypertarget{class_risk_limits_a09c03f1b9c1816e3e0560915100333b2}\index{RiskLimits@{RiskLimits}!curr\_pos\_short@{curr\_pos\_short}}
+\index{curr\_pos\_short@{curr\_pos\_short}!RiskLimits@{RiskLimits}}
+\doxysubsubsection{\texorpdfstring{curr\_pos\_short}{curr\_pos\_short}}
+{\footnotesize\ttfamily \label{class_risk_limits_a09c03f1b9c1816e3e0560915100333b2} 
+int Risk\+Limits\+::curr\+\_\+pos\+\_\+short}
+
+\Hypertarget{class_risk_limits_a14e0c92ef62eec7aa897d155d501bbc7}\index{RiskLimits@{RiskLimits}!enabled@{enabled}}
+\index{enabled@{enabled}!RiskLimits@{RiskLimits}}
+\doxysubsubsection{\texorpdfstring{enabled}{enabled}}
+{\footnotesize\ttfamily \label{class_risk_limits_a14e0c92ef62eec7aa897d155d501bbc7} 
+int Risk\+Limits\+::enabled}
+
+\Hypertarget{class_risk_limits_adf12ddd23e3b434fdcb6d1ab9b362482}\index{RiskLimits@{RiskLimits}!exchange@{exchange}}
+\index{exchange@{exchange}!RiskLimits@{RiskLimits}}
+\doxysubsubsection{\texorpdfstring{exchange}{exchange}}
+{\footnotesize\ttfamily \label{class_risk_limits_adf12ddd23e3b434fdcb6d1ab9b362482} 
+string Risk\+Limits\+::exchange}
+
+\Hypertarget{class_risk_limits_a244917f127e6128c734064051eff2c65}\index{RiskLimits@{RiskLimits}!hasData@{hasData}}
+\index{hasData@{hasData}!RiskLimits@{RiskLimits}}
+\doxysubsubsection{\texorpdfstring{hasData}{hasData}}
+{\footnotesize\ttfamily \label{class_risk_limits_a244917f127e6128c734064051eff2c65} 
+bool Risk\+Limits\+::has\+Data}
+
+\Hypertarget{class_risk_limits_a37f9f45e526571ca5736718269b566db}\index{RiskLimits@{RiskLimits}!keyvalue@{keyvalue}}
+\index{keyvalue@{keyvalue}!RiskLimits@{RiskLimits}}
+\doxysubsubsection{\texorpdfstring{keyvalue}{keyvalue}}
+{\footnotesize\ttfamily \label{class_risk_limits_a37f9f45e526571ca5736718269b566db} 
+string Risk\+Limits\+::keyvalue}
+
+\Hypertarget{class_risk_limits_a757a2064e7487fdb9b324a827021da05}\index{RiskLimits@{RiskLimits}!max\_open\_qty\_buy@{max\_open\_qty\_buy}}
+\index{max\_open\_qty\_buy@{max\_open\_qty\_buy}!RiskLimits@{RiskLimits}}
+\doxysubsubsection{\texorpdfstring{max\_open\_qty\_buy}{max\_open\_qty\_buy}}
+{\footnotesize\ttfamily \label{class_risk_limits_a757a2064e7487fdb9b324a827021da05} 
+int Risk\+Limits\+::max\+\_\+open\+\_\+qty\+\_\+buy}
+
+\Hypertarget{class_risk_limits_a792a9c2fcd746d9907927d1e8bf6bf9b}\index{RiskLimits@{RiskLimits}!max\_open\_qty\_sell@{max\_open\_qty\_sell}}
+\index{max\_open\_qty\_sell@{max\_open\_qty\_sell}!RiskLimits@{RiskLimits}}
+\doxysubsubsection{\texorpdfstring{max\_open\_qty\_sell}{max\_open\_qty\_sell}}
+{\footnotesize\ttfamily \label{class_risk_limits_a792a9c2fcd746d9907927d1e8bf6bf9b} 
+int Risk\+Limits\+::max\+\_\+open\+\_\+qty\+\_\+sell}
+
+\Hypertarget{class_risk_limits_a00565aaff8730004846437e79e2ba2c1}\index{RiskLimits@{RiskLimits}!max\_order\_qty@{max\_order\_qty}}
+\index{max\_order\_qty@{max\_order\_qty}!RiskLimits@{RiskLimits}}
+\doxysubsubsection{\texorpdfstring{max\_order\_qty}{max\_order\_qty}}
+{\footnotesize\ttfamily \label{class_risk_limits_a00565aaff8730004846437e79e2ba2c1} 
+int Risk\+Limits\+::max\+\_\+order\+\_\+qty}
+
+\Hypertarget{class_risk_limits_ae97e69ff5977667a9069c3b5218c958a}\index{RiskLimits@{RiskLimits}!max\_pos\_long@{max\_pos\_long}}
+\index{max\_pos\_long@{max\_pos\_long}!RiskLimits@{RiskLimits}}
+\doxysubsubsection{\texorpdfstring{max\_pos\_long}{max\_pos\_long}}
+{\footnotesize\ttfamily \label{class_risk_limits_ae97e69ff5977667a9069c3b5218c958a} 
+int Risk\+Limits\+::max\+\_\+pos\+\_\+long}
+
+\Hypertarget{class_risk_limits_a79ef299e4b7b81c477df0b322272bb1e}\index{RiskLimits@{RiskLimits}!max\_pos\_short@{max\_pos\_short}}
+\index{max\_pos\_short@{max\_pos\_short}!RiskLimits@{RiskLimits}}
+\doxysubsubsection{\texorpdfstring{max\_pos\_short}{max\_pos\_short}}
+{\footnotesize\ttfamily \label{class_risk_limits_a79ef299e4b7b81c477df0b322272bb1e} 
+int Risk\+Limits\+::max\+\_\+pos\+\_\+short}
+
+\Hypertarget{class_risk_limits_aecebb71b75756bc29835ddedf13c62f0}\index{RiskLimits@{RiskLimits}!product@{product}}
+\index{product@{product}!RiskLimits@{RiskLimits}}
+\doxysubsubsection{\texorpdfstring{product}{product}}
+{\footnotesize\ttfamily \label{class_risk_limits_aecebb71b75756bc29835ddedf13c62f0} 
+string Risk\+Limits\+::product}
+
+\Hypertarget{class_risk_limits_ab9830da07796ed4149aaad7d654bb13f}\index{RiskLimits@{RiskLimits}!producttype@{producttype}}
+\index{producttype@{producttype}!RiskLimits@{RiskLimits}}
+\doxysubsubsection{\texorpdfstring{producttype}{producttype}}
+{\footnotesize\ttfamily \label{class_risk_limits_ab9830da07796ed4149aaad7d654bb13f} 
+string Risk\+Limits\+::producttype}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Risk/Risk\+Limits.\+h\item 
+Risk/Risk\+Limits.\+cpp\end{DoxyCompactItemize}

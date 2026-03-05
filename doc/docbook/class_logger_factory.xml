@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_logger_factory" xml:lang="en-US">
+<title>LoggerFactory Class Reference</title>
+<indexterm><primary>LoggerFactory</primary></indexterm>
+<para>
+
+<para>Factory class for creating loggers based on the configuration settings. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;LoggerFactory.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static std::shared_ptr&lt; <link linkend="_class_i_logger">ILogger</link> &gt; <link linkend="_class_logger_factory_1a3e9b5cbd61024a40fad3f51a27096d8f">createLogger</link> ()</para>
+
+<para>Creates a logger based on the configuration settings. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Factory class for creating loggers based on the configuration settings. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_logger_factory_1a3e9b5cbd61024a40fad3f51a27096d8f"/><section>
+    <title>createLogger()</title>
+<indexterm><primary>createLogger</primary><secondary>LoggerFactory</secondary></indexterm>
+<indexterm><primary>LoggerFactory</primary><secondary>createLogger</secondary></indexterm>
+<para><computeroutput>static std::shared_ptr&lt; <link linkend="_class_i_logger">ILogger</link> &gt; LoggerFactory::createLogger ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Creates a logger based on the configuration settings. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>A shared pointer to the created logger. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00123">Settings::get()</link>.</para>
+<para>
+Referenced by <link linkend="_l00068">Log::Log()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Loggers/LoggerFactory.hpp</section>
+</section>

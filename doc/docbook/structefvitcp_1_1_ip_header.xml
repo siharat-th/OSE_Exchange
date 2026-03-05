@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structefvitcp_1_1_ip_header" xml:lang="en-US">
+<title>efvitcp::IpHeader Struct Reference</title>
+<indexterm><primary>efvitcp::IpHeader</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>uint8_t <link linkend="_structefvitcp_1_1_ip_header_1a206f4bbbd03c6fdda706f8af3cdeb69b">header_len</link>: 4</para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_structefvitcp_1_1_ip_header_1a4fdb99809067bee52ff39a17cd08f010">ip_ver</link>: 4</para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_structefvitcp_1_1_ip_header_1a1ca92bfb8b7c5cf0aa9098d7e3a87516">tos</link></para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_structefvitcp_1_1_ip_header_1ae07120de4c42d0e9431a92aec5ef802e">tot_len</link></para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_structefvitcp_1_1_ip_header_1aaea0dece9968ef808027cdb9fe8f6e8a">id</link></para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_structefvitcp_1_1_ip_header_1a15d5e48e58c6c834b79782171d170f73">frag_offset_flags</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_structefvitcp_1_1_ip_header_1a8590145eb08d8ea6a5eeed096886722b">ttl</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_structefvitcp_1_1_ip_header_1a379fee7a2d9049ac61baf978c26bf82a">protocol</link></para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_structefvitcp_1_1_ip_header_1a3a3fce7ca62a3f3e2371c20c025c5f37">checksum</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_structefvitcp_1_1_ip_header_1a7f0fa4e415f280d51efb7aae13a501df">src_ip</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_structefvitcp_1_1_ip_header_1a7bdfa9e635e1d393250ab93150134ade">dst_ip</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structefvitcp_1_1_ip_header_1a3a3fce7ca62a3f3e2371c20c025c5f37"/><section>
+    <title>checksum</title>
+<indexterm><primary>checksum</primary><secondary>efvitcp::IpHeader</secondary></indexterm>
+<indexterm><primary>efvitcp::IpHeader</primary><secondary>checksum</secondary></indexterm>
+<para><computeroutput>uint16_t efvitcp::IpHeader::checksum</computeroutput></para></section>
+<anchor xml:id="_structefvitcp_1_1_ip_header_1a7bdfa9e635e1d393250ab93150134ade"/><section>
+    <title>dst_ip</title>
+<indexterm><primary>dst_ip</primary><secondary>efvitcp::IpHeader</secondary></indexterm>
+<indexterm><primary>efvitcp::IpHeader</primary><secondary>dst_ip</secondary></indexterm>
+<para><computeroutput>uint32_t efvitcp::IpHeader::dst_ip</computeroutput></para></section>
+<anchor xml:id="_structefvitcp_1_1_ip_header_1a15d5e48e58c6c834b79782171d170f73"/><section>
+    <title>frag_offset_flags</title>
+<indexterm><primary>frag_offset_flags</primary><secondary>efvitcp::IpHeader</secondary></indexterm>
+<indexterm><primary>efvitcp::IpHeader</primary><secondary>frag_offset_flags</secondary></indexterm>
+<para><computeroutput>uint16_t efvitcp::IpHeader::frag_offset_flags</computeroutput></para></section>
+<anchor xml:id="_structefvitcp_1_1_ip_header_1a206f4bbbd03c6fdda706f8af3cdeb69b"/><section>
+    <title>header_len</title>
+<indexterm><primary>header_len</primary><secondary>efvitcp::IpHeader</secondary></indexterm>
+<indexterm><primary>efvitcp::IpHeader</primary><secondary>header_len</secondary></indexterm>
+<para><computeroutput>uint8_t efvitcp::IpHeader::header_len</computeroutput></para></section>
+<anchor xml:id="_structefvitcp_1_1_ip_header_1aaea0dece9968ef808027cdb9fe8f6e8a"/><section>
+    <title>id</title>
+<indexterm><primary>id</primary><secondary>efvitcp::IpHeader</secondary></indexterm>
+<indexterm><primary>efvitcp::IpHeader</primary><secondary>id</secondary></indexterm>
+<para><computeroutput>uint16_t efvitcp::IpHeader::id</computeroutput></para></section>
+<anchor xml:id="_structefvitcp_1_1_ip_header_1a4fdb99809067bee52ff39a17cd08f010"/><section>
+    <title>ip_ver</title>
+<indexterm><primary>ip_ver</primary><secondary>efvitcp::IpHeader</secondary></indexterm>
+<indexterm><primary>efvitcp::IpHeader</primary><secondary>ip_ver</secondary></indexterm>
+<para><computeroutput>uint8_t efvitcp::IpHeader::ip_ver</computeroutput></para></section>
+<anchor xml:id="_structefvitcp_1_1_ip_header_1a379fee7a2d9049ac61baf978c26bf82a"/><section>
+    <title>protocol</title>
+<indexterm><primary>protocol</primary><secondary>efvitcp::IpHeader</secondary></indexterm>
+<indexterm><primary>efvitcp::IpHeader</primary><secondary>protocol</secondary></indexterm>
+<para><computeroutput>uint8_t efvitcp::IpHeader::protocol</computeroutput></para></section>
+<anchor xml:id="_structefvitcp_1_1_ip_header_1a7f0fa4e415f280d51efb7aae13a501df"/><section>
+    <title>src_ip</title>
+<indexterm><primary>src_ip</primary><secondary>efvitcp::IpHeader</secondary></indexterm>
+<indexterm><primary>efvitcp::IpHeader</primary><secondary>src_ip</secondary></indexterm>
+<para><computeroutput>uint32_t efvitcp::IpHeader::src_ip</computeroutput></para></section>
+<anchor xml:id="_structefvitcp_1_1_ip_header_1a1ca92bfb8b7c5cf0aa9098d7e3a87516"/><section>
+    <title>tos</title>
+<indexterm><primary>tos</primary><secondary>efvitcp::IpHeader</secondary></indexterm>
+<indexterm><primary>efvitcp::IpHeader</primary><secondary>tos</secondary></indexterm>
+<para><computeroutput>uint8_t efvitcp::IpHeader::tos</computeroutput></para></section>
+<anchor xml:id="_structefvitcp_1_1_ip_header_1ae07120de4c42d0e9431a92aec5ef802e"/><section>
+    <title>tot_len</title>
+<indexterm><primary>tot_len</primary><secondary>efvitcp::IpHeader</secondary></indexterm>
+<indexterm><primary>efvitcp::IpHeader</primary><secondary>tot_len</secondary></indexterm>
+<para><computeroutput>uint16_t efvitcp::IpHeader::tot_len</computeroutput></para></section>
+<anchor xml:id="_structefvitcp_1_1_ip_header_1a8590145eb08d8ea6a5eeed096886722b"/><section>
+    <title>ttl</title>
+<indexterm><primary>ttl</primary><secondary>efvitcp::IpHeader</secondary></indexterm>
+<indexterm><primary>efvitcp::IpHeader</primary><secondary>ttl</secondary></indexterm>
+<para><computeroutput>uint8_t efvitcp::IpHeader::ttl</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+C:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/external/pollnet/efvitcp/Core.h</section>
+</section>

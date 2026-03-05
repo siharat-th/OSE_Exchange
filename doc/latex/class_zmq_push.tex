@@ -1,0 +1,92 @@
+\doxysection{Zmq\+Push Class Reference}
+\hypertarget{class_zmq_push}{}\label{class_zmq_push}\index{ZmqPush@{ZmqPush}}
+
+
+Represents a ZMQ push socket for sending messages to a ZMQ pull socket.  
+
+
+
+
+{\ttfamily \#include $<$Zmq\+Push.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_zmq_push_a674ebef7499faff6820de5b823f7797f}{Zmq\+Push}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{class_zmq_push}{Zmq\+Push}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_zmq_push_ae9974bc3dc8815705f18b6d735a338df}{\texorpdfstring{$\sim$}{\string~}\+Zmq\+Push}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{class_zmq_push}{Zmq\+Push}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_zmq_push_a37c12a5b442d0595bfeab97d534302f7}{Init}} (char \texorpdfstring{$\ast$}{*}sz\+Server\+Address\+Port)
+\begin{DoxyCompactList}\small\item\em Initializes the \doxylink{class_zmq_push}{Zmq\+Push} object with the specified server address and port. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_zmq_push_a97a167b550d19d30786567c3e40583a4}{Push}} (char \texorpdfstring{$\ast$}{*}msg, int len)
+\begin{DoxyCompactList}\small\item\em Pushes a message to the ZMQ pull socket. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a ZMQ push socket for sending messages to a ZMQ pull socket. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_zmq_push_a674ebef7499faff6820de5b823f7797f}\index{ZmqPush@{ZmqPush}!ZmqPush@{ZmqPush}}
+\index{ZmqPush@{ZmqPush}!ZmqPush@{ZmqPush}}
+\doxysubsubsection{\texorpdfstring{ZmqPush()}{ZmqPush()}}
+{\footnotesize\ttfamily \label{class_zmq_push_a674ebef7499faff6820de5b823f7797f} 
+Zmq\+Push\+::\+Zmq\+Push (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor for \doxylink{class_zmq_push}{Zmq\+Push}. 
+
+\Hypertarget{class_zmq_push_ae9974bc3dc8815705f18b6d735a338df}\index{ZmqPush@{ZmqPush}!````~ZmqPush@{\texorpdfstring{$\sim$}{\string~}ZmqPush}}
+\index{````~ZmqPush@{\texorpdfstring{$\sim$}{\string~}ZmqPush}!ZmqPush@{ZmqPush}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ZmqPush()}{\string~ZmqPush()}}
+{\footnotesize\ttfamily \label{class_zmq_push_ae9974bc3dc8815705f18b6d735a338df} 
+Zmq\+Push\+::\texorpdfstring{$\sim$}{\string~}\+Zmq\+Push (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor for \doxylink{class_zmq_push}{Zmq\+Push}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_zmq_push_a37c12a5b442d0595bfeab97d534302f7}\index{ZmqPush@{ZmqPush}!Init@{Init}}
+\index{Init@{Init}!ZmqPush@{ZmqPush}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_zmq_push_a37c12a5b442d0595bfeab97d534302f7} 
+bool Zmq\+Push\+::\+Init (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{sz\+Server\+Address\+Port}{}\end{DoxyParamCaption})}
+
+
+
+Initializes the \doxylink{class_zmq_push}{Zmq\+Push} object with the specified server address and port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sz\+Server\+Address\+Port} & The server address and port in the format "{}address\+:port"{}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if initialization is successful, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_zmq_push_a97a167b550d19d30786567c3e40583a4}\index{ZmqPush@{ZmqPush}!Push@{Push}}
+\index{Push@{Push}!ZmqPush@{ZmqPush}}
+\doxysubsubsection{\texorpdfstring{Push()}{Push()}}
+{\footnotesize\ttfamily \label{class_zmq_push_a97a167b550d19d30786567c3e40583a4} 
+void Zmq\+Push\+::\+Push (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{msg}{, }\item[{int}]{len}{}\end{DoxyParamCaption})}
+
+
+
+Pushes a message to the ZMQ pull socket. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The message to push. \\
+\hline
+{\em len} & The length of the message. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+ZMQ/Zmq\+Push.\+h\item 
+ZMQ/Zmq\+Push.\+cpp\end{DoxyCompactItemize}

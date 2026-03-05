@@ -1,0 +1,93 @@
+\doxysection{KTN\+::Core\+::Batch\+Pool Class Reference}
+\hypertarget{class_k_t_n_1_1_core_1_1_batch_pool}{}\label{class_k_t_n_1_1_core_1_1_batch_pool}\index{KTN::Core::BatchPool@{KTN::Core::BatchPool}}
+
+
+A class that represents a pool of message batches.  
+
+
+
+
+{\ttfamily \#include $<$Batch\+Pool.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_core_1_1_batch_pool_ab399fac402c0d073fd7bf5c8c8632958}{Batch\+Pool}} (size\+\_\+t pool\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_k_t_n_1_1_core_1_1_batch_pool}{Batch\+Pool} object with the specified pool size. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_k_t_n_1_1_core_1_1_batch_pool_a2223396a121e415cf13f5419d0984640}{\texorpdfstring{$\sim$}{\string~}\+Batch\+Pool}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{class_k_t_n_1_1_core_1_1_batch_pool}{Batch\+Pool} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_msg_batch}{Msg\+Batch}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_batch_pool_a8f4b309b331691843ee71e5a5aedd60a}{get}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves a message batch from the pool. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_batch_pool_a1b2ded96ca81ba09c83578ff48376a6d}{put}} (\mbox{\hyperlink{struct_msg_batch}{Msg\+Batch}} \texorpdfstring{$\ast$}{*}buffer)
+\begin{DoxyCompactList}\small\item\em Puts a message batch back into the pool. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class that represents a pool of message batches. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_k_t_n_1_1_core_1_1_batch_pool_ab399fac402c0d073fd7bf5c8c8632958}\index{KTN::Core::BatchPool@{KTN::Core::BatchPool}!BatchPool@{BatchPool}}
+\index{BatchPool@{BatchPool}!KTN::Core::BatchPool@{KTN::Core::BatchPool}}
+\doxysubsubsection{\texorpdfstring{BatchPool()}{BatchPool()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_batch_pool_ab399fac402c0d073fd7bf5c8c8632958} 
+Batch\+Pool\+::\+Batch\+Pool (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{pool\+\_\+size}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_k_t_n_1_1_core_1_1_batch_pool}{Batch\+Pool} object with the specified pool size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pool\+\_\+size} & The size of the pool. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_core_1_1_batch_pool_a2223396a121e415cf13f5419d0984640}\index{KTN::Core::BatchPool@{KTN::Core::BatchPool}!````~BatchPool@{\texorpdfstring{$\sim$}{\string~}BatchPool}}
+\index{````~BatchPool@{\texorpdfstring{$\sim$}{\string~}BatchPool}!KTN::Core::BatchPool@{KTN::Core::BatchPool}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}BatchPool()}{\string~BatchPool()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_batch_pool_a2223396a121e415cf13f5419d0984640} 
+Batch\+Pool\+::\texorpdfstring{$\sim$}{\string~}\+Batch\+Pool (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destructor for the \doxylink{class_k_t_n_1_1_core_1_1_batch_pool}{Batch\+Pool} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_core_1_1_batch_pool_a8f4b309b331691843ee71e5a5aedd60a}\index{KTN::Core::BatchPool@{KTN::Core::BatchPool}!get@{get}}
+\index{get@{get}!KTN::Core::BatchPool@{KTN::Core::BatchPool}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_batch_pool_a8f4b309b331691843ee71e5a5aedd60a} 
+\mbox{\hyperlink{struct_msg_batch}{Msg\+Batch}} \texorpdfstring{$\ast$}{*} Batch\+Pool\+::get (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves a message batch from the pool. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the retrieved message batch. 
+\end{DoxyReturn}
+\Hypertarget{class_k_t_n_1_1_core_1_1_batch_pool_a1b2ded96ca81ba09c83578ff48376a6d}\index{KTN::Core::BatchPool@{KTN::Core::BatchPool}!put@{put}}
+\index{put@{put}!KTN::Core::BatchPool@{KTN::Core::BatchPool}}
+\doxysubsubsection{\texorpdfstring{put()}{put()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_batch_pool_a1b2ded96ca81ba09c83578ff48376a6d} 
+bool Batch\+Pool\+::put (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_msg_batch}{Msg\+Batch}} \texorpdfstring{$\ast$}{*}}]{buffer}{}\end{DoxyParamCaption})}
+
+
+
+Puts a message batch back into the pool. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & A pointer to the message batch to be put back into the pool. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the message batch was successfully put back into the pool, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Core/Batch\+Pool.\+hpp\item 
+Core/Batch\+Pool.\+cpp\end{DoxyCompactItemize}

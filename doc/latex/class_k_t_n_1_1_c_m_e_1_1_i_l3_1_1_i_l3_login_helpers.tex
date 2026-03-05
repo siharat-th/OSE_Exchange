@@ -1,0 +1,150 @@
+\doxysection{KTN\+::CME\+::IL3\+::IL3\+Login\+Helpers Class Reference}
+\hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers}{}\label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers}\index{KTN::CME::IL3::IL3LoginHelpers@{KTN::CME::IL3::IL3LoginHelpers}}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::vector$<$ unsigned char $>$ \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_a65719cb84f0da96c71e92533555a9627}{Byte\+Array}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static uint64\+\_\+t \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_a37fbaf15d9c11ca6a3686f64505f072d}{Generate\+Request\+Timestamp}} ()
+\item 
+static uint64\+\_\+t \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_a29329862c3cf24618f96fef8ad81ce2e}{Gen\+Fast\+Timestamp}} ()
+\item 
+static uint64\+\_\+t \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_a1c646075dfa9a3b6bfffdca65646ea31}{Generate\+UUID}} ()
+\item 
+static std\+::string \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_a5bf68e0c5f492fe68d507012dc7da22c}{Generate\+Canonical\+Message\+For\+Negotiate}} (string session, string firm\+ID, long request\+Timestamp, long u\+UID)
+\item 
+static std\+::string \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_a00eb1372a1861de099b197ef98431afa}{Generate\+Canonical\+Message\+For\+Establish}} (string session, string firm\+ID, long request\+Timestamp, long u\+UID, string trading\+System\+Name, string trading\+System\+Version\+Id, string trading\+System\+Vendor\+Id, long next\+Seq\+No=1, long keep\+Alive\+Interval=30)
+\item 
+static void \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_ab6d98383a56374337305b6c97fc3dc7b}{calculate\+HMAC}} (const std\+::string \&canonical\+Request, const std\+::string \&user\+Key, char result\mbox{[}32\mbox{]})
+\item 
+static std\+::string \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_a3f2984aa054feb1d11960617a7826652}{calculate\+HMAC3}} (const std\+::string \&canonical\+Request, const std\+::string \&user\+Key)
+\item 
+static std\+::string \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_a4cb86edc2cbe81bba0066dd433963e7e}{calculate\+HMAC3\+Mtx}} (const std\+::string \&canonical\+Request, const std\+::string \&user\+Key)
+\item 
+static std\+::string \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_aa283e44e6a13a2741b281bfd42bb3a0c}{Hmac\+Encode2}} (const char \texorpdfstring{$\ast$}{*}key, const char \texorpdfstring{$\ast$}{*}input)
+\item 
+static void \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_a593c8af7aa153116c04d4e1f5c879c6a}{base64url\+\_\+decode}} (Byte\+Array \&output, const std\+::string \&input)
+\item 
+static void \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_ac9f736112017db80bbbc1ce164e5d1af}{calculate\+Hmac\+Sha256}} (const Byte\+Array \&key, const std\+::string \&data, Byte\+Array \&result)
+\item 
+static std\+::string \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_a8aa101d9bcc15431d00ef86414cf3a0a}{encode\+Url}} (const void \texorpdfstring{$\ast$}{*}data, const size\+\_\+t data\+Size)
+\item 
+static std\+::string \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_aa5af01c7677c4d585b0539928cbb746a}{calculate\+Hmac\+OG}} (const std\+::string \&data, const std\+::string \&secret\+Key)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_a65719cb84f0da96c71e92533555a9627}\index{KTN::CME::IL3::IL3LoginHelpers@{KTN::CME::IL3::IL3LoginHelpers}!ByteArray@{ByteArray}}
+\index{ByteArray@{ByteArray}!KTN::CME::IL3::IL3LoginHelpers@{KTN::CME::IL3::IL3LoginHelpers}}
+\doxysubsubsection{\texorpdfstring{ByteArray}{ByteArray}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_a65719cb84f0da96c71e92533555a9627} 
+std\+::vector$<$unsigned char$>$ KTN\+::\+CME\+::\+IL3\+::\+IL3\+Login\+Helpers\+::\+Byte\+Array}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_a8747f4abeb6d98b2cde345aea11ff434}\index{KTN::CME::IL3::IL3LoginHelpers@{KTN::CME::IL3::IL3LoginHelpers}!IL3LoginHelpers@{IL3LoginHelpers}}
+\index{IL3LoginHelpers@{IL3LoginHelpers}!KTN::CME::IL3::IL3LoginHelpers@{KTN::CME::IL3::IL3LoginHelpers}}
+\doxysubsubsection{\texorpdfstring{IL3LoginHelpers()}{IL3LoginHelpers()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_a8747f4abeb6d98b2cde345aea11ff434} 
+IL3\+Login\+Helpers\+::\+IL3\+Login\+Helpers (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_aeb83fbd44f8b18da5db81d08ba9fc5eb}\index{KTN::CME::IL3::IL3LoginHelpers@{KTN::CME::IL3::IL3LoginHelpers}!````~IL3LoginHelpers@{\texorpdfstring{$\sim$}{\string~}IL3LoginHelpers}}
+\index{````~IL3LoginHelpers@{\texorpdfstring{$\sim$}{\string~}IL3LoginHelpers}!KTN::CME::IL3::IL3LoginHelpers@{KTN::CME::IL3::IL3LoginHelpers}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}IL3LoginHelpers()}{\string~IL3LoginHelpers()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_aeb83fbd44f8b18da5db81d08ba9fc5eb} 
+IL3\+Login\+Helpers\+::\texorpdfstring{$\sim$}{\string~}\+IL3\+Login\+Helpers (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_a593c8af7aa153116c04d4e1f5c879c6a}\index{KTN::CME::IL3::IL3LoginHelpers@{KTN::CME::IL3::IL3LoginHelpers}!base64url\_decode@{base64url\_decode}}
+\index{base64url\_decode@{base64url\_decode}!KTN::CME::IL3::IL3LoginHelpers@{KTN::CME::IL3::IL3LoginHelpers}}
+\doxysubsubsection{\texorpdfstring{base64url\_decode()}{base64url\_decode()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_a593c8af7aa153116c04d4e1f5c879c6a} 
+static void KTN\+::\+CME\+::\+IL3\+::\+IL3\+Login\+Helpers\+::base64url\+\_\+decode (\begin{DoxyParamCaption}\item[{Byte\+Array \&}]{output}{, }\item[{const std\+::string \&}]{input}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_ab6d98383a56374337305b6c97fc3dc7b}\index{KTN::CME::IL3::IL3LoginHelpers@{KTN::CME::IL3::IL3LoginHelpers}!calculateHMAC@{calculateHMAC}}
+\index{calculateHMAC@{calculateHMAC}!KTN::CME::IL3::IL3LoginHelpers@{KTN::CME::IL3::IL3LoginHelpers}}
+\doxysubsubsection{\texorpdfstring{calculateHMAC()}{calculateHMAC()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_ab6d98383a56374337305b6c97fc3dc7b} 
+static void KTN\+::\+CME\+::\+IL3\+::\+IL3\+Login\+Helpers\+::calculate\+HMAC (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{canonical\+Request}{, }\item[{const std\+::string \&}]{user\+Key}{, }\item[{char}]{result}{\mbox{[}32\mbox{]}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_a3f2984aa054feb1d11960617a7826652}\index{KTN::CME::IL3::IL3LoginHelpers@{KTN::CME::IL3::IL3LoginHelpers}!calculateHMAC3@{calculateHMAC3}}
+\index{calculateHMAC3@{calculateHMAC3}!KTN::CME::IL3::IL3LoginHelpers@{KTN::CME::IL3::IL3LoginHelpers}}
+\doxysubsubsection{\texorpdfstring{calculateHMAC3()}{calculateHMAC3()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_a3f2984aa054feb1d11960617a7826652} 
+static std\+::string KTN\+::\+CME\+::\+IL3\+::\+IL3\+Login\+Helpers\+::calculate\+HMAC3 (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{canonical\+Request}{, }\item[{const std\+::string \&}]{user\+Key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_a4cb86edc2cbe81bba0066dd433963e7e}\index{KTN::CME::IL3::IL3LoginHelpers@{KTN::CME::IL3::IL3LoginHelpers}!calculateHMAC3Mtx@{calculateHMAC3Mtx}}
+\index{calculateHMAC3Mtx@{calculateHMAC3Mtx}!KTN::CME::IL3::IL3LoginHelpers@{KTN::CME::IL3::IL3LoginHelpers}}
+\doxysubsubsection{\texorpdfstring{calculateHMAC3Mtx()}{calculateHMAC3Mtx()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_a4cb86edc2cbe81bba0066dd433963e7e} 
+static std\+::string KTN\+::\+CME\+::\+IL3\+::\+IL3\+Login\+Helpers\+::calculate\+HMAC3\+Mtx (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{canonical\+Request}{, }\item[{const std\+::string \&}]{user\+Key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_aa5af01c7677c4d585b0539928cbb746a}\index{KTN::CME::IL3::IL3LoginHelpers@{KTN::CME::IL3::IL3LoginHelpers}!calculateHmacOG@{calculateHmacOG}}
+\index{calculateHmacOG@{calculateHmacOG}!KTN::CME::IL3::IL3LoginHelpers@{KTN::CME::IL3::IL3LoginHelpers}}
+\doxysubsubsection{\texorpdfstring{calculateHmacOG()}{calculateHmacOG()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_aa5af01c7677c4d585b0539928cbb746a} 
+static std\+::string KTN\+::\+CME\+::\+IL3\+::\+IL3\+Login\+Helpers\+::calculate\+Hmac\+OG (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{data}{, }\item[{const std\+::string \&}]{secret\+Key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_ac9f736112017db80bbbc1ce164e5d1af}\index{KTN::CME::IL3::IL3LoginHelpers@{KTN::CME::IL3::IL3LoginHelpers}!calculateHmacSha256@{calculateHmacSha256}}
+\index{calculateHmacSha256@{calculateHmacSha256}!KTN::CME::IL3::IL3LoginHelpers@{KTN::CME::IL3::IL3LoginHelpers}}
+\doxysubsubsection{\texorpdfstring{calculateHmacSha256()}{calculateHmacSha256()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_ac9f736112017db80bbbc1ce164e5d1af} 
+static void KTN\+::\+CME\+::\+IL3\+::\+IL3\+Login\+Helpers\+::calculate\+Hmac\+Sha256 (\begin{DoxyParamCaption}\item[{const Byte\+Array \&}]{key}{, }\item[{const std\+::string \&}]{data}{, }\item[{Byte\+Array \&}]{result}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_a8aa101d9bcc15431d00ef86414cf3a0a}\index{KTN::CME::IL3::IL3LoginHelpers@{KTN::CME::IL3::IL3LoginHelpers}!encodeUrl@{encodeUrl}}
+\index{encodeUrl@{encodeUrl}!KTN::CME::IL3::IL3LoginHelpers@{KTN::CME::IL3::IL3LoginHelpers}}
+\doxysubsubsection{\texorpdfstring{encodeUrl()}{encodeUrl()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_a8aa101d9bcc15431d00ef86414cf3a0a} 
+static std\+::string KTN\+::\+CME\+::\+IL3\+::\+IL3\+Login\+Helpers\+::encode\+Url (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{const size\+\_\+t}]{data\+Size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_a00eb1372a1861de099b197ef98431afa}\index{KTN::CME::IL3::IL3LoginHelpers@{KTN::CME::IL3::IL3LoginHelpers}!GenerateCanonicalMessageForEstablish@{GenerateCanonicalMessageForEstablish}}
+\index{GenerateCanonicalMessageForEstablish@{GenerateCanonicalMessageForEstablish}!KTN::CME::IL3::IL3LoginHelpers@{KTN::CME::IL3::IL3LoginHelpers}}
+\doxysubsubsection{\texorpdfstring{GenerateCanonicalMessageForEstablish()}{GenerateCanonicalMessageForEstablish()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_a00eb1372a1861de099b197ef98431afa} 
+static std\+::string KTN\+::\+CME\+::\+IL3\+::\+IL3\+Login\+Helpers\+::\+Generate\+Canonical\+Message\+For\+Establish (\begin{DoxyParamCaption}\item[{string}]{session}{, }\item[{string}]{firm\+ID}{, }\item[{long}]{request\+Timestamp}{, }\item[{long}]{u\+UID}{, }\item[{string}]{trading\+System\+Name}{, }\item[{string}]{trading\+System\+Version\+Id}{, }\item[{string}]{trading\+System\+Vendor\+Id}{, }\item[{long}]{next\+Seq\+No}{ = {\ttfamily 1}, }\item[{long}]{keep\+Alive\+Interval}{ = {\ttfamily 30}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_a5bf68e0c5f492fe68d507012dc7da22c}\index{KTN::CME::IL3::IL3LoginHelpers@{KTN::CME::IL3::IL3LoginHelpers}!GenerateCanonicalMessageForNegotiate@{GenerateCanonicalMessageForNegotiate}}
+\index{GenerateCanonicalMessageForNegotiate@{GenerateCanonicalMessageForNegotiate}!KTN::CME::IL3::IL3LoginHelpers@{KTN::CME::IL3::IL3LoginHelpers}}
+\doxysubsubsection{\texorpdfstring{GenerateCanonicalMessageForNegotiate()}{GenerateCanonicalMessageForNegotiate()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_a5bf68e0c5f492fe68d507012dc7da22c} 
+static std\+::string KTN\+::\+CME\+::\+IL3\+::\+IL3\+Login\+Helpers\+::\+Generate\+Canonical\+Message\+For\+Negotiate (\begin{DoxyParamCaption}\item[{string}]{session}{, }\item[{string}]{firm\+ID}{, }\item[{long}]{request\+Timestamp}{, }\item[{long}]{u\+UID}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_a37fbaf15d9c11ca6a3686f64505f072d}\index{KTN::CME::IL3::IL3LoginHelpers@{KTN::CME::IL3::IL3LoginHelpers}!GenerateRequestTimestamp@{GenerateRequestTimestamp}}
+\index{GenerateRequestTimestamp@{GenerateRequestTimestamp}!KTN::CME::IL3::IL3LoginHelpers@{KTN::CME::IL3::IL3LoginHelpers}}
+\doxysubsubsection{\texorpdfstring{GenerateRequestTimestamp()}{GenerateRequestTimestamp()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_a37fbaf15d9c11ca6a3686f64505f072d} 
+static uint64\+\_\+t KTN\+::\+CME\+::\+IL3\+::\+IL3\+Login\+Helpers\+::\+Generate\+Request\+Timestamp (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_a1c646075dfa9a3b6bfffdca65646ea31}\index{KTN::CME::IL3::IL3LoginHelpers@{KTN::CME::IL3::IL3LoginHelpers}!GenerateUUID@{GenerateUUID}}
+\index{GenerateUUID@{GenerateUUID}!KTN::CME::IL3::IL3LoginHelpers@{KTN::CME::IL3::IL3LoginHelpers}}
+\doxysubsubsection{\texorpdfstring{GenerateUUID()}{GenerateUUID()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_a1c646075dfa9a3b6bfffdca65646ea31} 
+static uint64\+\_\+t KTN\+::\+CME\+::\+IL3\+::\+IL3\+Login\+Helpers\+::\+Generate\+UUID (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_a29329862c3cf24618f96fef8ad81ce2e}\index{KTN::CME::IL3::IL3LoginHelpers@{KTN::CME::IL3::IL3LoginHelpers}!GenFastTimestamp@{GenFastTimestamp}}
+\index{GenFastTimestamp@{GenFastTimestamp}!KTN::CME::IL3::IL3LoginHelpers@{KTN::CME::IL3::IL3LoginHelpers}}
+\doxysubsubsection{\texorpdfstring{GenFastTimestamp()}{GenFastTimestamp()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_a29329862c3cf24618f96fef8ad81ce2e} 
+static uint64\+\_\+t KTN\+::\+CME\+::\+IL3\+::\+IL3\+Login\+Helpers\+::\+Gen\+Fast\+Timestamp (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_aa283e44e6a13a2741b281bfd42bb3a0c}\index{KTN::CME::IL3::IL3LoginHelpers@{KTN::CME::IL3::IL3LoginHelpers}!HmacEncode2@{HmacEncode2}}
+\index{HmacEncode2@{HmacEncode2}!KTN::CME::IL3::IL3LoginHelpers@{KTN::CME::IL3::IL3LoginHelpers}}
+\doxysubsubsection{\texorpdfstring{HmacEncode2()}{HmacEncode2()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_aa283e44e6a13a2741b281bfd42bb3a0c} 
+static std\+::string KTN\+::\+CME\+::\+IL3\+::\+IL3\+Login\+Helpers\+::\+Hmac\+Encode2 (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{key}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{input}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+exchsupport/cme/il3/IL3\+Login\+Helpers.\+hpp\item 
+exchsupport/cme/il3/IL3\+Login\+Helpers.\+cpp\end{DoxyCompactItemize}

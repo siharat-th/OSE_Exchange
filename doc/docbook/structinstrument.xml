@@ -1,0 +1,486 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structinstrument" xml:lang="en-US">
+<title>instrument Struct Reference</title>
+<indexterm><primary>instrument</primary></indexterm>
+<para>
+
+<para>Structure representing an instrument. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;algo_structs.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_structinstrument_1ada5fdf547794159e51af99df80e15dd6">Print</link> ()</para>
+
+<para>Prints the instrument information. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>double <link linkend="_structinstrument_1a06aed3ed474bfe49aec391df2140d18d">totalexec</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_structinstrument_1a6aceff97bf9d668b6e9053d1a4f29fa2">position</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_structinstrument_1ac5b5db602036708c5ee5d24e39a21743">effective</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_structinstrument_1a7c58a29d197ee2095ddb5805b40e29c1">pricemult</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_structinstrument_1a49df4af30e40e9fea592dcea28ed2851">spreadmult</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_structinstrument_1ab39cc9cfa3d3aae7015008f494dcf3c5">minsize</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_structinstrument_1a5fdc5b37dd7093c85d58215fa16ae606">mintick</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_structinstrument_1a476b10bddcb9b6150d8c6b171e3cafe7">tickvalue</link></para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_structinstrument_1a795bf78d1b3312620f4a7eb34b6ee1d5">lastBuyId</link></para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_structinstrument_1aa0bd64ba11d2bf9ef9193d2c863f47b8">lastSellId</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structinstrument_1a274ebe416049ebbb47ff6d6c4fa7093d">callbackid</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structinstrument_1ac6805605a091de0b703b03c886b63912">index</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structinstrument_1a40bf21232ee478a6e4441e59d1716dba">mdindex</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structinstrument_1ad2d748e211820c79627a04eb1f7c5fab">secid</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structinstrument_1aa21c85702791ce35fea3b863ae1d7cf1">mktsegid</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structinstrument_1ac9fc4a319a8fea73fd6bbf188f072e90">iside</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structinstrument_1a6cc66f347b520485bb3fe2c1049feb1d">id</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structinstrument_1afef79d97afd9b0c596c0f6bf72243fd3">tickprecision</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structinstrument_1a95ff8e0b792d301e070528788562da99">lastBid</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structinstrument_1ac0d8ac2100701f13b2bcd5007eeb92a8">lastAsk</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structinstrument_1a949dbdba9bc80a877ed2e8220941bc25">lastSentBuyPrice</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structinstrument_1aaaf56c87d3d9346abadce7e97bfc84a3">lastSentSellPrice</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structinstrument_1a780460a77118b57a9c9773f89a93bc34">row</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structinstrument_1a587166c4faab0b45ed8b7005d8a1175a">col</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_structinstrument_1a92ffd5fe8b9ba9cadedcd753a6d3f377">connindex</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_structinstrument_1a212cb7e6aff36b7b4ba51cc4997eee7d">gotdata</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_structinstrument_1a8645dde1d69dd445a2a1dac6dd16aba5">ishedge</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_structinstrument_1af86b440ac92dd7c67ad0cb2381788f75">isquote</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_structinstrument_1a52f871da9ff0c234c89a5f15a5af0526">squeeze</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_structinstrument_1a2d41daee97a89cb075dee3df2e2a74c6">activeQuoting</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_structinstrument_1a23dec69da9ba9e25117af497e1cc5350">bidChanged</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_structinstrument_1a1429f85f05b6f13991a48aa3c00b7991">askChanged</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_structinstrument_1a02323bc17ca05577f26782ee63afa107">iscme</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_structinstrument_1a2f9e12a3f27ac155e6664d67a974ac65">istas</link></para>
+</listitem>
+            <listitem><para>KOrderProdType::Enum <link linkend="_structinstrument_1a26984a94d9b508b6e50079700cfef5cb">prodtype</link></para>
+</listitem>
+            <listitem><para>KOrderState::Enum <link linkend="_structinstrument_1aca290d43e56faae355bcac429f48596a">buyState</link></para>
+</listitem>
+            <listitem><para>KOrderState::Enum <link linkend="_structinstrument_1a312feb0583fdbe181a12ae2161b04995">sellState</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_structinstrument_1ab966bb92dfcca559d9a1640ee27e2f1f">label</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_structinstrument_1a991b6a3dc6c37b2b22fc7cc1928a67b5">exch</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_structinstrument_1ad36118311780c814c4c25ecea9949c12">product</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_structinstrument_1a308e7211097fc848fa81e9120dc61cc5">symbol</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Structure representing an instrument. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_structinstrument_1ada5fdf547794159e51af99df80e15dd6"/><section>
+    <title>Print()</title>
+<indexterm><primary>Print</primary><secondary>instrument</secondary></indexterm>
+<indexterm><primary>instrument</primary><secondary>Print</secondary></indexterm>
+<para><computeroutput>string instrument::Print ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Prints the instrument information. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The string representation of the instrument. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00098">activeQuoting</link>, <link linkend="_l00111">exch</link>, <link linkend="_l00064">pricemult</link>, <link linkend="_l00105">prodtype</link>, <link linkend="_l00065">spreadmult</link>, and <link linkend="_l00113">symbol</link>.</para>
+<para>
+Referenced by <link linkend="_l00012">LegParamParser::ParseSpreadLegs()</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structinstrument_1a2d41daee97a89cb075dee3df2e2a74c6"/><section>
+    <title>activeQuoting</title>
+<indexterm><primary>activeQuoting</primary><secondary>instrument</secondary></indexterm>
+<indexterm><primary>instrument</primary><secondary>activeQuoting</secondary></indexterm>
+<para><computeroutput>bool instrument::activeQuoting</computeroutput></para>
+<para>Flag indicating if quoting is active. </para>
+<para>
+Referenced by <link linkend="_l00130">LegParamParser::GetCmeLeg()</link>, <link linkend="_l00501">KTN::MultiSpreaderV3::onCalculate()</link>, <link linkend="_l00044">KTN::MultiSpreaderV3::onJson()</link>, <link linkend="_l00066">KTN::Skewer::onJson()</link>, <link linkend="_l00071">KTN::SkewTrader::onJson()</link>, <link linkend="_l00066">KTN::Stacker::onJson()</link>, <link linkend="_l00052">KTN::StackerTimer::onJson()</link>, <link linkend="_l00053">KTN::Twap::onJson()</link>, <link linkend="_l00012">LegParamParser::ParseSpreadLegs()</link>, and <link linkend="_l00120">Print()</link>.</para>
+</section>
+<anchor xml:id="_structinstrument_1a1429f85f05b6f13991a48aa3c00b7991"/><section>
+    <title>askChanged</title>
+<indexterm><primary>askChanged</primary><secondary>instrument</secondary></indexterm>
+<indexterm><primary>instrument</primary><secondary>askChanged</secondary></indexterm>
+<para><computeroutput>bool instrument::askChanged</computeroutput></para>
+<para>Flag indicating if the ask has changed. </para>
+<para>
+Referenced by <link linkend="_l00501">KTN::MultiSpreaderV3::onCalculate()</link>.</para>
+</section>
+<anchor xml:id="_structinstrument_1a23dec69da9ba9e25117af497e1cc5350"/><section>
+    <title>bidChanged</title>
+<indexterm><primary>bidChanged</primary><secondary>instrument</secondary></indexterm>
+<indexterm><primary>instrument</primary><secondary>bidChanged</secondary></indexterm>
+<para><computeroutput>bool instrument::bidChanged</computeroutput></para>
+<para>Flag indicating if the bid has changed. </para>
+<para>
+Referenced by <link linkend="_l00501">KTN::MultiSpreaderV3::onCalculate()</link>.</para>
+</section>
+<anchor xml:id="_structinstrument_1aca290d43e56faae355bcac429f48596a"/><section>
+    <title>buyState</title>
+<indexterm><primary>buyState</primary><secondary>instrument</secondary></indexterm>
+<indexterm><primary>instrument</primary><secondary>buyState</secondary></indexterm>
+<para><computeroutput>KOrderState::Enum instrument::buyState</computeroutput></para>
+<para>The buy order state. </para>
+<para>
+Referenced by <link linkend="_l00312">KTN::Waves::ResetPosition()</link>.</para>
+</section>
+<anchor xml:id="_structinstrument_1a274ebe416049ebbb47ff6d6c4fa7093d"/><section>
+    <title>callbackid</title>
+<indexterm><primary>callbackid</primary><secondary>instrument</secondary></indexterm>
+<indexterm><primary>instrument</primary><secondary>callbackid</secondary></indexterm>
+<para><computeroutput>int instrument::callbackid</computeroutput></para>
+<para>The callback ID. </para>
+</section>
+<anchor xml:id="_structinstrument_1a587166c4faab0b45ed8b7005d8a1175a"/><section>
+    <title>col</title>
+<indexterm><primary>col</primary><secondary>instrument</secondary></indexterm>
+<indexterm><primary>instrument</primary><secondary>col</secondary></indexterm>
+<para><computeroutput>int instrument::col</computeroutput></para>
+<para>The column. </para>
+<para>
+Referenced by <link linkend="_l00224">KTN::Waves::Print()</link>.</para>
+</section>
+<anchor xml:id="_structinstrument_1a92ffd5fe8b9ba9cadedcd753a6d3f377"/><section>
+    <title>connindex</title>
+<indexterm><primary>connindex</primary><secondary>instrument</secondary></indexterm>
+<indexterm><primary>instrument</primary><secondary>connindex</secondary></indexterm>
+<para><computeroutput>uint8_t instrument::connindex</computeroutput></para>
+<para>The connection index. </para>
+</section>
+<anchor xml:id="_structinstrument_1ac5b5db602036708c5ee5d24e39a21743"/><section>
+    <title>effective</title>
+<indexterm><primary>effective</primary><secondary>instrument</secondary></indexterm>
+<indexterm><primary>instrument</primary><secondary>effective</secondary></indexterm>
+<para><computeroutput>double instrument::effective</computeroutput></para>
+<para>The effective price. </para>
+<para>
+Referenced by <link linkend="_l00383">KTN::MultiSpreaderV3::ResetPosition()</link>, <link linkend="_l00471">KTN::Skewer::ResetPosition()</link>, <link linkend="_l00470">KTN::SkewTrader::ResetPosition()</link>, <link linkend="_l00428">KTN::Stacker::ResetPosition()</link>, <link linkend="_l00339">KTN::StackerTimer::ResetPosition()</link>, and <link linkend="_l00391">KTN::Twap::ResetPosition()</link>.</para>
+</section>
+<anchor xml:id="_structinstrument_1a991b6a3dc6c37b2b22fc7cc1928a67b5"/><section>
+    <title>exch</title>
+<indexterm><primary>exch</primary><secondary>instrument</secondary></indexterm>
+<indexterm><primary>instrument</primary><secondary>exch</secondary></indexterm>
+<para><computeroutput>std::string instrument::exch</computeroutput></para>
+<para>The exchange. </para>
+<para>
+Referenced by <link linkend="_l00076">QuoterV3::Construct()</link>, <link linkend="_l00130">LegParamParser::GetCmeLeg()</link>, <link linkend="_l00068">AlgoFactory::LaunchAlgo()</link>, <link linkend="_l00183">AlgoFactory::ParseLegs()</link>, <link linkend="_l00012">LegParamParser::ParseSpreadLegs()</link>, and <link linkend="_l00120">Print()</link>.</para>
+</section>
+<anchor xml:id="_structinstrument_1a212cb7e6aff36b7b4ba51cc4997eee7d"/><section>
+    <title>gotdata</title>
+<indexterm><primary>gotdata</primary><secondary>instrument</secondary></indexterm>
+<indexterm><primary>instrument</primary><secondary>gotdata</secondary></indexterm>
+<para><computeroutput>bool instrument::gotdata</computeroutput></para>
+<para>Flag indicating if data is available. </para>
+</section>
+<anchor xml:id="_structinstrument_1a6cc66f347b520485bb3fe2c1049feb1d"/><section>
+    <title>id</title>
+<indexterm><primary>id</primary><secondary>instrument</secondary></indexterm>
+<indexterm><primary>instrument</primary><secondary>id</secondary></indexterm>
+<para><computeroutput>int instrument::id</computeroutput></para>
+<para>The ID. </para>
+</section>
+<anchor xml:id="_structinstrument_1ac6805605a091de0b703b03c886b63912"/><section>
+    <title>index</title>
+<indexterm><primary>index</primary><secondary>instrument</secondary></indexterm>
+<indexterm><primary>instrument</primary><secondary>index</secondary></indexterm>
+<para><computeroutput>int instrument::index</computeroutput></para>
+<para>The index. </para>
+<para>
+Referenced by <link linkend="_l00106">KTN::ALGO::PRICING::ImpliedPricer::CalculateSide()</link>, <link linkend="_l00048">KTN::ALGO::PRICING::SpreadPricer::CalculateSide2()</link>, <link linkend="_l00212">KTN::ALGO::PRICING::SpreadPricer::CalculateSide3()</link>, <link linkend="_l00076">QuoterV3::Construct()</link>, <link linkend="_l00130">LegParamParser::GetCmeLeg()</link>, <link linkend="_l01041">KTN::SkewTrader::minOrderExecution()</link>, <link linkend="_l00501">KTN::MultiSpreaderV3::onCalculate()</link>, <link linkend="_l00047">KTN::AutoHedgeOB::onJson()</link>, <link linkend="_l00062">KTN::PLWatcher::onJson()</link>, <link linkend="_l00045">KTN::SqueezerOB::onJson()</link>, and <link linkend="_l00012">LegParamParser::ParseSpreadLegs()</link>.</para>
+</section>
+<anchor xml:id="_structinstrument_1a02323bc17ca05577f26782ee63afa107"/><section>
+    <title>iscme</title>
+<indexterm><primary>iscme</primary><secondary>instrument</secondary></indexterm>
+<indexterm><primary>instrument</primary><secondary>iscme</secondary></indexterm>
+<para><computeroutput>bool instrument::iscme</computeroutput></para>
+<para>Flag indicating if it is a CME instrument. </para>
+<para>
+Referenced by <link linkend="_l00130">LegParamParser::GetCmeLeg()</link>, and <link linkend="_l00012">LegParamParser::ParseSpreadLegs()</link>.</para>
+</section>
+<anchor xml:id="_structinstrument_1a8645dde1d69dd445a2a1dac6dd16aba5"/><section>
+    <title>ishedge</title>
+<indexterm><primary>ishedge</primary><secondary>instrument</secondary></indexterm>
+<indexterm><primary>instrument</primary><secondary>ishedge</secondary></indexterm>
+<para><computeroutput>bool instrument::ishedge</computeroutput></para>
+<para>Flag indicating if it is a hedge. </para>
+</section>
+<anchor xml:id="_structinstrument_1ac9fc4a319a8fea73fd6bbf188f072e90"/><section>
+    <title>iside</title>
+<indexterm><primary>iside</primary><secondary>instrument</secondary></indexterm>
+<indexterm><primary>instrument</primary><secondary>iside</secondary></indexterm>
+<para><computeroutput>int instrument::iside</computeroutput></para>
+<para>The side. </para>
+<para>
+Referenced by <link linkend="_l00130">LegParamParser::GetCmeLeg()</link>, and <link linkend="_l00012">LegParamParser::ParseSpreadLegs()</link>.</para>
+</section>
+<anchor xml:id="_structinstrument_1af86b440ac92dd7c67ad0cb2381788f75"/><section>
+    <title>isquote</title>
+<indexterm><primary>isquote</primary><secondary>instrument</secondary></indexterm>
+<indexterm><primary>instrument</primary><secondary>isquote</secondary></indexterm>
+<para><computeroutput>bool instrument::isquote</computeroutput></para>
+<para>Flag indicating if it is a quote. </para>
+</section>
+<anchor xml:id="_structinstrument_1a2f9e12a3f27ac155e6664d67a974ac65"/><section>
+    <title>istas</title>
+<indexterm><primary>istas</primary><secondary>instrument</secondary></indexterm>
+<indexterm><primary>instrument</primary><secondary>istas</secondary></indexterm>
+<para><computeroutput>bool instrument::istas</computeroutput></para>
+<para>Flag indicating if it is a TAS instrument. </para>
+<para>
+Referenced by <link linkend="_l00224">KTN::Waves::Print()</link>.</para>
+</section>
+<anchor xml:id="_structinstrument_1ab966bb92dfcca559d9a1640ee27e2f1f"/><section>
+    <title>label</title>
+<indexterm><primary>label</primary><secondary>instrument</secondary></indexterm>
+<indexterm><primary>instrument</primary><secondary>label</secondary></indexterm>
+<para><computeroutput>std::string instrument::label</computeroutput></para>
+<para>The label. </para>
+</section>
+<anchor xml:id="_structinstrument_1ac0d8ac2100701f13b2bcd5007eeb92a8"/><section>
+    <title>lastAsk</title>
+<indexterm><primary>lastAsk</primary><secondary>instrument</secondary></indexterm>
+<indexterm><primary>instrument</primary><secondary>lastAsk</secondary></indexterm>
+<para><computeroutput>int instrument::lastAsk</computeroutput></para>
+<para>The last ask price. </para>
+<para>
+Referenced by <link linkend="_l00411">KTN::MultiSpreaderV3::Enable()</link>, <link linkend="_l00506">KTN::Skewer::Enable()</link>, <link linkend="_l00511">KTN::SkewTrader::Enable()</link>, <link linkend="_l00461">KTN::Stacker::Enable()</link>, <link linkend="_l00374">KTN::StackerTimer::Enable()</link>, <link linkend="_l00426">KTN::Twap::Enable()</link>, <link linkend="_l00343">KTN::Waves::Enable()</link>, <link linkend="_l00130">LegParamParser::GetCmeLeg()</link>, <link linkend="_l00501">KTN::MultiSpreaderV3::onCalculate()</link>, <link linkend="_l00724">KTN::Twap::onCalculate()</link>, <link linkend="_l00066">KTN::Skewer::onJson()</link>, <link linkend="_l00071">KTN::SkewTrader::onJson()</link>, <link linkend="_l00066">KTN::Stacker::onJson()</link>, <link linkend="_l00052">KTN::StackerTimer::onJson()</link>, <link linkend="_l00053">KTN::Twap::onJson()</link>, <link linkend="_l00012">LegParamParser::ParseSpreadLegs()</link>, <link linkend="_l00383">KTN::MultiSpreaderV3::ResetPosition()</link>, <link linkend="_l00471">KTN::Skewer::ResetPosition()</link>, <link linkend="_l00470">KTN::SkewTrader::ResetPosition()</link>, <link linkend="_l00428">KTN::Stacker::ResetPosition()</link>, <link linkend="_l00339">KTN::StackerTimer::ResetPosition()</link>, and <link linkend="_l00391">KTN::Twap::ResetPosition()</link>.</para>
+</section>
+<anchor xml:id="_structinstrument_1a95ff8e0b792d301e070528788562da99"/><section>
+    <title>lastBid</title>
+<indexterm><primary>lastBid</primary><secondary>instrument</secondary></indexterm>
+<indexterm><primary>instrument</primary><secondary>lastBid</secondary></indexterm>
+<para><computeroutput>int instrument::lastBid</computeroutput></para>
+<para>The last bid price. </para>
+<para>
+Referenced by <link linkend="_l00411">KTN::MultiSpreaderV3::Enable()</link>, <link linkend="_l00506">KTN::Skewer::Enable()</link>, <link linkend="_l00511">KTN::SkewTrader::Enable()</link>, <link linkend="_l00461">KTN::Stacker::Enable()</link>, <link linkend="_l00374">KTN::StackerTimer::Enable()</link>, <link linkend="_l00426">KTN::Twap::Enable()</link>, <link linkend="_l00343">KTN::Waves::Enable()</link>, <link linkend="_l00130">LegParamParser::GetCmeLeg()</link>, <link linkend="_l00501">KTN::MultiSpreaderV3::onCalculate()</link>, <link linkend="_l00724">KTN::Twap::onCalculate()</link>, <link linkend="_l00066">KTN::Skewer::onJson()</link>, <link linkend="_l00071">KTN::SkewTrader::onJson()</link>, <link linkend="_l00066">KTN::Stacker::onJson()</link>, <link linkend="_l00052">KTN::StackerTimer::onJson()</link>, <link linkend="_l00053">KTN::Twap::onJson()</link>, <link linkend="_l00012">LegParamParser::ParseSpreadLegs()</link>, <link linkend="_l00383">KTN::MultiSpreaderV3::ResetPosition()</link>, <link linkend="_l00471">KTN::Skewer::ResetPosition()</link>, <link linkend="_l00470">KTN::SkewTrader::ResetPosition()</link>, <link linkend="_l00428">KTN::Stacker::ResetPosition()</link>, <link linkend="_l00339">KTN::StackerTimer::ResetPosition()</link>, and <link linkend="_l00391">KTN::Twap::ResetPosition()</link>.</para>
+</section>
+<anchor xml:id="_structinstrument_1a795bf78d1b3312620f4a7eb34b6ee1d5"/><section>
+    <title>lastBuyId</title>
+<indexterm><primary>lastBuyId</primary><secondary>instrument</secondary></indexterm>
+<indexterm><primary>instrument</primary><secondary>lastBuyId</secondary></indexterm>
+<para><computeroutput>uint64_t instrument::lastBuyId</computeroutput></para>
+<para>The ID of the last buy order. </para>
+<para>
+Referenced by <link linkend="_l00312">KTN::Waves::ResetPosition()</link>.</para>
+</section>
+<anchor xml:id="_structinstrument_1aa0bd64ba11d2bf9ef9193d2c863f47b8"/><section>
+    <title>lastSellId</title>
+<indexterm><primary>lastSellId</primary><secondary>instrument</secondary></indexterm>
+<indexterm><primary>instrument</primary><secondary>lastSellId</secondary></indexterm>
+<para><computeroutput>uint64_t instrument::lastSellId</computeroutput></para>
+<para>The ID of the last sell order. </para>
+</section>
+<anchor xml:id="_structinstrument_1a949dbdba9bc80a877ed2e8220941bc25"/><section>
+    <title>lastSentBuyPrice</title>
+<indexterm><primary>lastSentBuyPrice</primary><secondary>instrument</secondary></indexterm>
+<indexterm><primary>instrument</primary><secondary>lastSentBuyPrice</secondary></indexterm>
+<para><computeroutput>int instrument::lastSentBuyPrice</computeroutput></para>
+<para>The last sent buy price. </para>
+<para>
+Referenced by <link linkend="_l00411">KTN::MultiSpreaderV3::Enable()</link>, <link linkend="_l00506">KTN::Skewer::Enable()</link>, <link linkend="_l00511">KTN::SkewTrader::Enable()</link>, <link linkend="_l00461">KTN::Stacker::Enable()</link>, <link linkend="_l00374">KTN::StackerTimer::Enable()</link>, <link linkend="_l00426">KTN::Twap::Enable()</link>, <link linkend="_l00343">KTN::Waves::Enable()</link>, <link linkend="_l00066">KTN::Skewer::onJson()</link>, <link linkend="_l00071">KTN::SkewTrader::onJson()</link>, <link linkend="_l00066">KTN::Stacker::onJson()</link>, <link linkend="_l00052">KTN::StackerTimer::onJson()</link>, <link linkend="_l00053">KTN::Twap::onJson()</link>, <link linkend="_l00383">KTN::MultiSpreaderV3::ResetPosition()</link>, <link linkend="_l00471">KTN::Skewer::ResetPosition()</link>, <link linkend="_l00470">KTN::SkewTrader::ResetPosition()</link>, <link linkend="_l00428">KTN::Stacker::ResetPosition()</link>, <link linkend="_l00339">KTN::StackerTimer::ResetPosition()</link>, <link linkend="_l00391">KTN::Twap::ResetPosition()</link>, and <link linkend="_l00312">KTN::Waves::ResetPosition()</link>.</para>
+</section>
+<anchor xml:id="_structinstrument_1aaaf56c87d3d9346abadce7e97bfc84a3"/><section>
+    <title>lastSentSellPrice</title>
+<indexterm><primary>lastSentSellPrice</primary><secondary>instrument</secondary></indexterm>
+<indexterm><primary>instrument</primary><secondary>lastSentSellPrice</secondary></indexterm>
+<para><computeroutput>int instrument::lastSentSellPrice</computeroutput></para>
+<para>The last sent sell price. </para>
+<para>
+Referenced by <link linkend="_l00411">KTN::MultiSpreaderV3::Enable()</link>, <link linkend="_l00506">KTN::Skewer::Enable()</link>, <link linkend="_l00511">KTN::SkewTrader::Enable()</link>, <link linkend="_l00461">KTN::Stacker::Enable()</link>, <link linkend="_l00374">KTN::StackerTimer::Enable()</link>, <link linkend="_l00426">KTN::Twap::Enable()</link>, <link linkend="_l00343">KTN::Waves::Enable()</link>, <link linkend="_l00066">KTN::Skewer::onJson()</link>, <link linkend="_l00071">KTN::SkewTrader::onJson()</link>, <link linkend="_l00066">KTN::Stacker::onJson()</link>, <link linkend="_l00052">KTN::StackerTimer::onJson()</link>, <link linkend="_l00053">KTN::Twap::onJson()</link>, <link linkend="_l00383">KTN::MultiSpreaderV3::ResetPosition()</link>, <link linkend="_l00471">KTN::Skewer::ResetPosition()</link>, <link linkend="_l00470">KTN::SkewTrader::ResetPosition()</link>, <link linkend="_l00428">KTN::Stacker::ResetPosition()</link>, <link linkend="_l00339">KTN::StackerTimer::ResetPosition()</link>, and <link linkend="_l00391">KTN::Twap::ResetPosition()</link>.</para>
+</section>
+<anchor xml:id="_structinstrument_1a40bf21232ee478a6e4441e59d1716dba"/><section>
+    <title>mdindex</title>
+<indexterm><primary>mdindex</primary><secondary>instrument</secondary></indexterm>
+<indexterm><primary>instrument</primary><secondary>mdindex</secondary></indexterm>
+<para><computeroutput>int instrument::mdindex</computeroutput></para>
+<para>The market data index. </para>
+</section>
+<anchor xml:id="_structinstrument_1ab39cc9cfa3d3aae7015008f494dcf3c5"/><section>
+    <title>minsize</title>
+<indexterm><primary>minsize</primary><secondary>instrument</secondary></indexterm>
+<indexterm><primary>instrument</primary><secondary>minsize</secondary></indexterm>
+<para><computeroutput>double instrument::minsize</computeroutput></para>
+<para>The minimum size. </para>
+</section>
+<anchor xml:id="_structinstrument_1a5fdc5b37dd7093c85d58215fa16ae606"/><section>
+    <title>mintick</title>
+<indexterm><primary>mintick</primary><secondary>instrument</secondary></indexterm>
+<indexterm><primary>instrument</primary><secondary>mintick</secondary></indexterm>
+<para><computeroutput>double instrument::mintick</computeroutput></para>
+<para>The minimum tick. </para>
+<para>
+Referenced by <link linkend="_l00106">KTN::ALGO::PRICING::ImpliedPricer::CalculateSide()</link>, <link linkend="_l00212">KTN::ALGO::PRICING::SpreadPricer::CalculateSide3()</link>, <link linkend="_l00076">QuoterV3::Construct()</link>, <link linkend="_l00501">KTN::MultiSpreaderV3::onCalculate()</link>, and <link linkend="_l00629">KTN::StackerTimer::onCalculate()</link>.</para>
+</section>
+<anchor xml:id="_structinstrument_1aa21c85702791ce35fea3b863ae1d7cf1"/><section>
+    <title>mktsegid</title>
+<indexterm><primary>mktsegid</primary><secondary>instrument</secondary></indexterm>
+<indexterm><primary>instrument</primary><secondary>mktsegid</secondary></indexterm>
+<para><computeroutput>int instrument::mktsegid</computeroutput></para>
+<para>The market segment ID. </para>
+<para>
+Referenced by <link linkend="_l00048">KTN::ALGO::PRICING::SpreadPricer::CalculateSide2()</link>, <link linkend="_l00212">KTN::ALGO::PRICING::SpreadPricer::CalculateSide3()</link>, <link linkend="_l00076">QuoterV3::Construct()</link>, <link linkend="_l00047">KTN::AutoHedgeOB::onJson()</link>, <link linkend="_l00062">KTN::PLWatcher::onJson()</link>, and <link linkend="_l00045">KTN::SqueezerOB::onJson()</link>.</para>
+</section>
+<anchor xml:id="_structinstrument_1a6aceff97bf9d668b6e9053d1a4f29fa2"/><section>
+    <title>position</title>
+<indexterm><primary>position</primary><secondary>instrument</secondary></indexterm>
+<indexterm><primary>instrument</primary><secondary>position</secondary></indexterm>
+<para><computeroutput>double instrument::position</computeroutput></para>
+<para>The current position. </para>
+<para>
+Referenced by <link linkend="_l00383">KTN::MultiSpreaderV3::ResetPosition()</link>, <link linkend="_l00471">KTN::Skewer::ResetPosition()</link>, <link linkend="_l00470">KTN::SkewTrader::ResetPosition()</link>, <link linkend="_l00428">KTN::Stacker::ResetPosition()</link>, <link linkend="_l00339">KTN::StackerTimer::ResetPosition()</link>, and <link linkend="_l00391">KTN::Twap::ResetPosition()</link>.</para>
+</section>
+<anchor xml:id="_structinstrument_1a7c58a29d197ee2095ddb5805b40e29c1"/><section>
+    <title>pricemult</title>
+<indexterm><primary>pricemult</primary><secondary>instrument</secondary></indexterm>
+<indexterm><primary>instrument</primary><secondary>pricemult</secondary></indexterm>
+<para><computeroutput>double instrument::pricemult</computeroutput></para>
+<para>The price multiplier. </para>
+<para>
+Referenced by <link linkend="_l00106">KTN::ALGO::PRICING::ImpliedPricer::CalculateSide()</link>, <link linkend="_l00048">KTN::ALGO::PRICING::SpreadPricer::CalculateSide2()</link>, <link linkend="_l00212">KTN::ALGO::PRICING::SpreadPricer::CalculateSide3()</link>, <link linkend="_l00369">KTN::ALGO::PRICING::SpreadPricer::CalculateSimple()</link>, <link linkend="_l00130">LegParamParser::GetCmeLeg()</link>, <link linkend="_l00062">KTN::PLWatcher::onJson()</link>, <link linkend="_l00012">LegParamParser::ParseSpreadLegs()</link>, and <link linkend="_l00120">Print()</link>.</para>
+</section>
+<anchor xml:id="_structinstrument_1a26984a94d9b508b6e50079700cfef5cb"/><section>
+    <title>prodtype</title>
+<indexterm><primary>prodtype</primary><secondary>instrument</secondary></indexterm>
+<indexterm><primary>instrument</primary><secondary>prodtype</secondary></indexterm>
+<para><computeroutput>KOrderProdType::Enum instrument::prodtype</computeroutput></para>
+<para>The product type. </para>
+<para>
+Referenced by <link linkend="_l00076">QuoterV3::Construct()</link>, <link linkend="_l00130">LegParamParser::GetCmeLeg()</link>, <link linkend="_l00012">LegParamParser::ParseSpreadLegs()</link>, and <link linkend="_l00120">Print()</link>.</para>
+</section>
+<anchor xml:id="_structinstrument_1ad36118311780c814c4c25ecea9949c12"/><section>
+    <title>product</title>
+<indexterm><primary>product</primary><secondary>instrument</secondary></indexterm>
+<indexterm><primary>instrument</primary><secondary>product</secondary></indexterm>
+<para><computeroutput>std::string instrument::product</computeroutput></para>
+<para>The product. </para>
+<para>
+Referenced by <link linkend="_l00076">QuoterV3::Construct()</link>.</para>
+</section>
+<anchor xml:id="_structinstrument_1a780460a77118b57a9c9773f89a93bc34"/><section>
+    <title>row</title>
+<indexterm><primary>row</primary><secondary>instrument</secondary></indexterm>
+<indexterm><primary>instrument</primary><secondary>row</secondary></indexterm>
+<para><computeroutput>int instrument::row</computeroutput></para>
+<para>The row. </para>
+<para>
+Referenced by <link linkend="_l00224">KTN::Waves::Print()</link>.</para>
+</section>
+<anchor xml:id="_structinstrument_1ad2d748e211820c79627a04eb1f7c5fab"/><section>
+    <title>secid</title>
+<indexterm><primary>secid</primary><secondary>instrument</secondary></indexterm>
+<indexterm><primary>instrument</primary><secondary>secid</secondary></indexterm>
+<para><computeroutput>int instrument::secid</computeroutput></para>
+<para>The security ID. </para>
+<para>
+Referenced by <link linkend="_l00048">KTN::ALGO::PRICING::SpreadPricer::CalculateSide2()</link>, <link linkend="_l00212">KTN::ALGO::PRICING::SpreadPricer::CalculateSide3()</link>, <link linkend="_l00076">QuoterV3::Construct()</link>, <link linkend="_l00024">KTN::ALGO::PRICING::PricingStrategyBase::Load()</link>, <link linkend="_l00629">KTN::StackerTimer::onCalculate()</link>, <link linkend="_l00378">KTN::Waves::onHedgeOrderSent()</link>, <link linkend="_l00045">KTN::SqueezerOB::onJson()</link>, <link linkend="_l00686">KTN::Stacker::onTrade()</link>, <link linkend="_l00697">KTN::StackerTimer::onTrade()</link>, and <link linkend="_l00341">KTN::Stacker::Print()</link>.</para>
+</section>
+<anchor xml:id="_structinstrument_1a312feb0583fdbe181a12ae2161b04995"/><section>
+    <title>sellState</title>
+<indexterm><primary>sellState</primary><secondary>instrument</secondary></indexterm>
+<indexterm><primary>instrument</primary><secondary>sellState</secondary></indexterm>
+<para><computeroutput>KOrderState::Enum instrument::sellState</computeroutput></para>
+<para>The sell order state. </para>
+</section>
+<anchor xml:id="_structinstrument_1a49df4af30e40e9fea592dcea28ed2851"/><section>
+    <title>spreadmult</title>
+<indexterm><primary>spreadmult</primary><secondary>instrument</secondary></indexterm>
+<indexterm><primary>instrument</primary><secondary>spreadmult</secondary></indexterm>
+<para><computeroutput>double instrument::spreadmult</computeroutput></para>
+<para>The spread multiplier. </para>
+<para>
+Referenced by <link linkend="_l00106">KTN::ALGO::PRICING::ImpliedPricer::CalculateSide()</link>, <link linkend="_l00048">KTN::ALGO::PRICING::SpreadPricer::CalculateSide2()</link>, <link linkend="_l00212">KTN::ALGO::PRICING::SpreadPricer::CalculateSide3()</link>, <link linkend="_l00369">KTN::ALGO::PRICING::SpreadPricer::CalculateSimple()</link>, <link linkend="_l00130">LegParamParser::GetCmeLeg()</link>, <link linkend="_l01041">KTN::SkewTrader::minOrderExecution()</link>, <link linkend="_l00724">KTN::Twap::onCalculate()</link>, <link linkend="_l00062">KTN::PLWatcher::onJson()</link>, <link linkend="_l00012">LegParamParser::ParseSpreadLegs()</link>, and <link linkend="_l00120">Print()</link>.</para>
+</section>
+<anchor xml:id="_structinstrument_1a52f871da9ff0c234c89a5f15a5af0526"/><section>
+    <title>squeeze</title>
+<indexterm><primary>squeeze</primary><secondary>instrument</secondary></indexterm>
+<indexterm><primary>instrument</primary><secondary>squeeze</secondary></indexterm>
+<para><computeroutput>bool instrument::squeeze</computeroutput></para>
+<para>Flag indicating if it is a squeeze. </para>
+<para>
+Referenced by <link linkend="_l00212">KTN::ALGO::PRICING::SpreadPricer::CalculateSide3()</link>, and <link linkend="_l00012">LegParamParser::ParseSpreadLegs()</link>.</para>
+</section>
+<anchor xml:id="_structinstrument_1a308e7211097fc848fa81e9120dc61cc5"/><section>
+    <title>symbol</title>
+<indexterm><primary>symbol</primary><secondary>instrument</secondary></indexterm>
+<indexterm><primary>instrument</primary><secondary>symbol</secondary></indexterm>
+<para><computeroutput>std::string instrument::symbol</computeroutput></para>
+<para>The symbol. </para>
+<para>
+Referenced by <link linkend="_l00106">KTN::ALGO::PRICING::ImpliedPricer::CalculateSide()</link>, <link linkend="_l00076">QuoterV3::Construct()</link>, <link linkend="_l00130">LegParamParser::GetCmeLeg()</link>, <link linkend="_l00629">KTN::StackerTimer::onCalculate()</link>, <link linkend="_l00044">KTN::MultiSpreaderV3::onJson()</link>, <link linkend="_l00062">KTN::PLWatcher::onJson()</link>, <link linkend="_l00045">KTN::SqueezerOB::onJson()</link>, <link linkend="_l00838">KTN::MultiSpreaderV3::onOrderSent()</link>, <link linkend="_l01205">KTN::SkewTrader::onOrderSent()</link>, <link linkend="_l01215">KTN::Stacker::onOrderSent()</link>, <link linkend="_l00451">KTN::Waves::onOrderSent()</link>, <link linkend="_l00198">KTN::PLWatcher::OrderReceived()</link>, <link linkend="_l01140">KTN::Waves::OrderReceived()</link>, <link linkend="_l00012">LegParamParser::ParseSpreadLegs()</link>, <link linkend="_l00120">Print()</link>, <link linkend="_l00299">KTN::MultiSpreaderV3::Print()</link>, <link linkend="_l00328">KTN::Skewer::Print()</link>, <link linkend="_l00331">KTN::SkewTrader::Print()</link>, <link linkend="_l00341">KTN::Stacker::Print()</link>, <link linkend="_l00307">KTN::Twap::Print()</link>, <link linkend="_l00224">KTN::Waves::Print()</link>, <link linkend="_l00286">KTN::MultiSpreaderV3::Symbols()</link>, <link linkend="_l00315">KTN::Skewer::Symbols()</link>, <link linkend="_l00318">KTN::SkewTrader::Symbols()</link>, <link linkend="_l00328">KTN::Stacker::Symbols()</link>, <link linkend="_l00307">KTN::StackerTimer::Symbols()</link>, and <link linkend="_l00294">KTN::Twap::Symbols()</link>.</para>
+</section>
+<anchor xml:id="_structinstrument_1afef79d97afd9b0c596c0f6bf72243fd3"/><section>
+    <title>tickprecision</title>
+<indexterm><primary>tickprecision</primary><secondary>instrument</secondary></indexterm>
+<indexterm><primary>instrument</primary><secondary>tickprecision</secondary></indexterm>
+<para><computeroutput>int instrument::tickprecision</computeroutput></para>
+<para>The tick precision. </para>
+</section>
+<anchor xml:id="_structinstrument_1a476b10bddcb9b6150d8c6b171e3cafe7"/><section>
+    <title>tickvalue</title>
+<indexterm><primary>tickvalue</primary><secondary>instrument</secondary></indexterm>
+<indexterm><primary>instrument</primary><secondary>tickvalue</secondary></indexterm>
+<para><computeroutput>double instrument::tickvalue</computeroutput></para>
+<para>The tick value. </para>
+<para>
+Referenced by <link linkend="_l00130">LegParamParser::GetCmeLeg()</link>, and <link linkend="_l00012">LegParamParser::ParseSpreadLegs()</link>.</para>
+</section>
+<anchor xml:id="_structinstrument_1a06aed3ed474bfe49aec391df2140d18d"/><section>
+    <title>totalexec</title>
+<indexterm><primary>totalexec</primary><secondary>instrument</secondary></indexterm>
+<indexterm><primary>instrument</primary><secondary>totalexec</secondary></indexterm>
+<para><computeroutput>double instrument::totalexec</computeroutput></para>
+<para>The total executed quantity. </para>
+<para>
+Referenced by <link linkend="_l00299">KTN::MultiSpreaderV3::Print()</link>, <link linkend="_l00328">KTN::Skewer::Print()</link>, <link linkend="_l00331">KTN::SkewTrader::Print()</link>, <link linkend="_l00307">KTN::Twap::Print()</link>, <link linkend="_l00383">KTN::MultiSpreaderV3::ResetPosition()</link>, <link linkend="_l00471">KTN::Skewer::ResetPosition()</link>, <link linkend="_l00470">KTN::SkewTrader::ResetPosition()</link>, <link linkend="_l00428">KTN::Stacker::ResetPosition()</link>, <link linkend="_l00339">KTN::StackerTimer::ResetPosition()</link>, and <link linkend="_l00391">KTN::Twap::ResetPosition()</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+AlgoSupport/algo_structs.hpp</section>
+</section>

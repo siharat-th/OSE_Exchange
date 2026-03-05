@@ -1,0 +1,961 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_waves" xml:lang="en-US">
+<title>KTN::Waves Class Reference</title>
+<indexterm><primary>KTN::Waves</primary></indexterm>
+<para>
+
+<para>Weighted Average algorithm class derived from <link linkend="_class_k_t_n_1_1_algo_base_v3">AlgoBaseV3</link>. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;Waves.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for KTN::Waves:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_k_t_n_1_1_waves.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_waves_1acc4d1686f35a18998f2a9aa1e34ad08b">Waves</link> (<link linkend="_struct_algo_initializer">AlgoInitializer</link> p)</para>
+
+<para>Constructor for Weighted Average algorithm. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_k_t_n_1_1_waves_1a921fff3d2efd96cf9b6873b915d563ce">~Waves</link> ()</para>
+
+<para>Destructor for <link linkend="_class_k_t_n_1_1_waves">Waves</link> algorithm. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_waves_1aefca06b4b841bcde756fd8f3028bee22">onJson</link> (std::string json)</para>
+
+<para>Processes a JSON-formatted string. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_waves_1ac20ca6465021af8255596538b79f0b46">onEngineJson</link> (<link linkend="_struct_engine_command">EngineCommand</link> &amp;cmd)</para>
+
+<para>Processes algo engine-specific commands. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_waves_1adf63793af62e98f08cb30d0cfd958a66">onLaunch</link> (std::string json)</para>
+
+<para>Triggered when the algorithm is launched. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_waves_1a6d0e75299213b88709596584de15562c">onCalculate</link> ()</para>
+
+<para>Performs calculation logic for the algorithm. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_waves_1a5d9e62333b750b0a8f80e8aaacc9f67e">onMktData</link> (int index) override</para>
+
+<para>Handles market data updates. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_waves_1ae9b6d67f93d8a79cb675b005647a6d2c">onTrade</link> (int index, double price, double size, int aggressor) override</para>
+
+<para>Handles a trade event. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_waves_1a0df5f7a233474fb4d8ee1f378928c272">minOrderExecution</link> (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord, bool hedgeSent) override</para>
+
+<para>This method is called when a minimum order execution is received. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_waves_1a25d021f9c931ce5173c75e6d48b98f2b">onHedgeOrderSent</link> (char *clordid, uint64_t reqid, int32_t secid, KOrderSide::Enum side, uint32_t qty, int32_t price, uint16_t stratid) override</para>
+
+<para>Handles hedge order sent events. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_waves_1ae75ebe6be1f954d442595dcfb83c596d">onOrderSent</link> (char *clordid, uint64_t reqid, int32_t secid, KOrderSide::Enum side, uint32_t qty, int32_t price, KOrderAlgoTrigger::Enum trig) override</para>
+
+<para>Handles order sent events. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_waves_1ace216ed67b5804b6decdc8ac8529529b">OrderReceived</link> (<link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> &amp;incoming, int idx) override</para>
+
+<para>Processes received order events. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_waves_1a731f8f142aa375bd17887845ca8efd84">Enable</link> (bool bEnable)</para>
+
+<para>Enables or disables the algorithm. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_waves_1aba75d8c1e2b8703e89c464a319f7f3c4">ResetPosition</link> () override</para>
+
+<para>Resets the algorithm&apos;s position. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_waves_1ac7c3b14cf6d0ebdc6c9b14657f5bf2f3">Print</link> () override</para>
+
+<para>Prints information about the algorithm instance. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_waves_1afea565aca8af65268bf6400dd54b784f">DoublePrint</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_waves_1a712b708f5a424a283cc55a165f21a727">ToggleCommand</link> (int id) override</para>
+
+<para>Toggles a specific command by ID. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_waves_1af69d0728d7994959a33c12376eb4987a">Restart</link> () override</para>
+
+<para>Restarts the algorithm. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_class_k_t_n_1_1_algo_base_v3">KTN::AlgoBaseV3</link>        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_algo_base_v3_1aa84e3a731dd27f3388fa377f7681d750">AlgoBaseV3</link> (<link linkend="_struct_algo_initializer">AlgoInitializer</link> params)</para>
+
+<para>Constructs a new <link linkend="_class_k_t_n_1_1_algo_base_v3">AlgoBaseV3</link> object. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_k_t_n_1_1_algo_base_v3_1a0c267b1a15439b0a1ddeb01cecfc56bb">~AlgoBaseV3</link> ()</para>
+
+<para>Destructor for <link linkend="_class_k_t_n_1_1_algo_base_v3">AlgoBaseV3</link>. </para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_k_t_n_1_1_algo_base_v3_1abe50ec326db3767c94cd72fe835dc701">GUID</link> ()</para>
+
+<para>Returns the globally unique identifier (GUID) of the algorithm. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_algo_base_v3_1a589e249d7ff79c65e040555041bcdc1c">Poll</link> ()</para>
+
+<para>Polls the system for events. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_algo_base_v3_1a8065b608926c8356a505a7a0aaa2e312">onHeartbeat</link> (int msgseqnum)</para>
+
+<para>Handles session heartbeat events. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_algo_base_v3_1aa605b30edbe772e6fec73a60f46997d9">onSessionStatus</link> (std::string exch, int mktsegid, int protocol, std::string desc, std::string state)</para>
+
+<para>Handles session status updates. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_algo_base_v3_1a6ca56111952acf91d9a1dcc250ae4ba6">onSpreadLegOrderExecution</link> (<link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> &amp;ord)</para>
+
+<para>Executes spread leg orders. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_algo_base_v3_1afe46d7c3b727f40d8298b8009ef6a4f1">minOrderAck</link> (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord) override</para>
+
+<para>This method is called when a minimum order acknowledgement is received. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_algo_base_v3_1a3ffdc246cd30b2429670bc1a083a7e5d">minOrderCancel</link> (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord) override</para>
+
+<para>This method is called when a minimum order cancellation is received. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_algo_base_v3_1a9eb48a787a7992de5e850421c37b010b">minOrderModify</link> (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord) override</para>
+
+<para>This method is called when a minimum order modification is received. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_algo_base_v3_1a143281eb198c3682d54c91bf812f2d2f">minOrderReject</link> (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord, const std::string &amp;text)</para>
+
+<para>Handles order rejection events. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_algo_base_v3_1a8dd989bacc92082a8087ec03af874af1">minOrderCancelReject</link> (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord, const std::string &amp;text)</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_algo_base_v3_1af5e473737ae68f0343bb0374dcac2c0e">minOrderCancelReplaceReject</link> (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord, const std::string &amp;text)</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_algo_base_v3_1a53e56ae819cd84801cd33ac4c3be1be8">Shutdown</link> ()</para>
+
+<para>Shuts down the algorithm. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_algo_base_v3_1a7f1791448e96444fdca741c87e7f16cb">OrderMinUpdate</link> (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord)</para>
+
+<para>Processes updates for an order. OrderMin is a minimal order object. </para>
+</listitem>
+            <listitem><para>void <emphasis role="strong">shutdownHandler</emphasis> ()</para>
+
+<para>Shuts down the algorithm handler. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_algo_base_v3_1a76a59c9484fb7f3638fccd93ad935da1">onMktDataBidAsk</link> (const <link linkend="_structalgomd">algomd</link> &amp;md)</para>
+
+<para>Handles bid-ask market data updates. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_algo_base_v3_1ac29c33857d9a4cbc28c52c9bef3b2707">onMktDataTrade</link> (const <link linkend="_structalgomd">algomd</link> &amp;md)</para>
+
+<para>Handles trade market data updates. </para>
+</listitem>
+        </itemizedlist>
+Public Member Functions inherited from <link linkend="_class_k_t_n_1_1_algo_mkt_data_callback">KTN::AlgoMktDataCallback</link>        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_algo_mkt_data_callback_1a758e9e927074286b79fdac74a87376fc">AlgoMktDataCallback</link> ()</para>
+
+<para>Default constructor for <link linkend="_class_k_t_n_1_1_algo_mkt_data_callback">AlgoMktDataCallback</link>. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_k_t_n_1_1_algo_mkt_data_callback_1a38a45c5e4e5b4e64e264cbf4d7b21cb8">~AlgoMktDataCallback</link> ()</para>
+
+<para>Virtual destructor for <link linkend="_class_k_t_n_1_1_algo_mkt_data_callback">AlgoMktDataCallback</link>. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_algo_mkt_data_callback_1ab05b9837ca4811ef7abca271aa693218">onStateChange</link> (int state)</para>
+
+<para>This method is called when the state of the algorithm changes. </para>
+</listitem>
+        </itemizedlist>
+Public Member Functions inherited from <link linkend="_class_k_t_n_1_1_session_callback">KTN::SessionCallback</link>        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_session_callback_1a0d9e306c44667fb2e28788c8141416b1">onSessionStatus</link> (string exch, int mktsegid, int protocol, string desc, string state)=0</para>
+
+<para>This method is called when the session status changes. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_session_callback_1ae6efabe36af252db685a5e397d875f0f">minOrderReject</link> (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord, const string &amp;text)=0</para>
+
+<para>This method is called when a minimum order rejection is received. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_session_callback_1aaaa0946280382f9b444a639c4ab61a42">minOrderCancelReject</link> (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord, const string &amp;text)=0</para>
+
+<para>This method is called when a minimum order cancellation rejection is received. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_session_callback_1aee8568b17d2b440518c27f1f24b8022d">minOrderCancelReplaceReject</link> (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord, const string &amp;text)=0</para>
+
+<para>This method is called when a minimum order cancel/replace rejection is received. </para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+Public Attributes inherited from <link linkend="_class_k_t_n_1_1_algo_base_v3">KTN::AlgoBaseV3</link>        <itemizedlist>
+            <listitem><para>std::vector&lt; <link linkend="_structinstrument">instrument</link> &gt; <link linkend="_class_k_t_n_1_1_algo_base_v3_1a966bcf61a6f11e60e1c4c57f763bac9f">_LEGS</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Protected Member Functions inherited from <link linkend="_class_k_t_n_1_1_algo_base_v3">KTN::AlgoBaseV3</link>        <itemizedlist>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_algo_base_v3_1af754365117e4020619e46a406cb0a570">LogMe</link> (std::string szMsg, int iColor=LOG_WHITE)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_algo_base_v3_1a768aa4b64b526b5f2cf30d7e09d0c905">Notify</link> (std::string msg, MsgLevel::Enum level, MsgType::Enum msgtype)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_algo_base_v3_1aad5ea283f908dea36cbf276dca36a8e8">PrintMdMap</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_algo_base_v3_1afc26768577728c52362643733cd04f91">PrintBookMap</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_algo_base_v3_1a1395ee7d0cefd09a658a4cea980f4d61">PrintBook</link> (<link linkend="_structinstrument">instrument</link> inst)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_algo_base_v3_1ac2232a403037ec457751f90a93b98e63">UpdateMetaParams</link> (<link linkend="_structalgometa">algometa</link> meta)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_algo_base_v3_1a4b80cca84992d7cb24ee41864775f821">ChangeQuoteState</link> (const QuoteState::Enum &amp;newstate)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_algo_base_v3_1ac9b82a09f91527882ee7f5fc918e468a">ChangeHedgeState</link> (const HedgeState::Enum &amp;newstate)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_algo_base_v3_1aa5d0d12e8178b6adaed259e248739d0a">RegisterCallbackId</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_algo_base_v3_1abcc7cbba1e96b579d93ebf44959cd06a">RegisterParams</link> (std::string json)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_algo_base_v3_1a4c11d263d9db92868468faaea2241ba6">RegisterCmeSecId</link> (<link linkend="_structinstrument">instrument</link> &amp;inst)</para>
+</listitem>
+            <listitem><para><link linkend="_structalgomd">algomd</link> &amp; <link linkend="_class_k_t_n_1_1_algo_base_v3_1a8f4f8a0f02f954ed882c8cdb0c47ce17">GetQuote</link> (const <link linkend="_structinstrument">instrument</link> &amp;inst)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_algo_base_v3_1ad77091e4d6893805ddd71576ece325fb">GetQuote</link> (const <link linkend="_structinstrument">instrument</link> &amp;inst, <link linkend="_structalgomd">algomd</link> &amp;md)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_algo_base_v3_1af351ae135bad426bc9c22522aa726c9a">GetQuoteByIndex</link> (int index, <link linkend="_structalgomd">algomd</link> &amp;md)</para>
+</listitem>
+            <listitem><para><link linkend="_structbookmd">bookmd</link> &amp; <link linkend="_class_k_t_n_1_1_algo_base_v3_1a5014b7fc359fecb6d937a105aa64b4e7">GetBook</link> (const <link linkend="_structinstrument">instrument</link> &amp;inst)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_algo_base_v3_1a501536096e71969794f93f566b4a7007">GetBook</link> (const <link linkend="_structinstrument">instrument</link> &amp;inst, <link linkend="_structbookmd">bookmd</link> &amp;book)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_algo_base_v3_1a06d010b3cbf541488f9849842e0aa78b">RiskCheckQty</link> (int qty, int totalqty, int execqty, KOrderSide::Enum side)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_algo_base_v3_1a8785c2b4e8498e65fe98844889328e59">SendOrder</link> (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord, <link linkend="_structinstrument">instrument</link> &amp;inst)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_algo_base_v3_1a56f099ef60d4831abe45fa7dfb699b4b">SendOrderWithHedge</link> (<link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_order_with_hedge">OrderWithHedge</link> &amp;oh, <link linkend="_structinstrument">instrument</link> &amp;inst)</para>
+</listitem>
+            <listitem><para>int <emphasis role="strong">GetBid</emphasis> (int index)</para>
+</listitem>
+            <listitem><para>int <emphasis role="strong">GetAsk</emphasis> (int index)</para>
+</listitem>
+            <listitem><para>void <emphasis role="strong">GetBid</emphasis> (int index, <link linkend="_structatomicquote">atomicquote</link> &amp;qt)</para>
+</listitem>
+            <listitem><para>void <emphasis role="strong">GetAsk</emphasis> (int index, <link linkend="_structatomicquote">atomicquote</link> &amp;qt)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_algo_base_v3_1a7d5a8e7b26d1e6684451723a8a23a282">isValidSecId</link> (uint32_t secid)</para>
+</listitem>
+            <listitem><para>const <link linkend="_structalgomd">algomd</link> &amp; <link linkend="_class_k_t_n_1_1_algo_base_v3_1a88f20b9f48e390c5c9edbfc6d3895b3f">findBySecId</link> (int id) const</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t_n_1_1_algo_base_v3_1ac7fe7e56d73b0e4e42e4b03e44c95736">indexBySecId</link> (int id)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_algo_base_v3_1aa00863dc89beef679746f91ddcba788c">GenIds</link> (std::string prefix)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_algo_base_v3_1a96b4be5f32acac196f8d9878b19646f0">AddReportingMsg</link> (std::string msg, std::string msgtype)</para>
+</listitem>
+            <listitem><para>void <emphasis role="strong">AddCmeSymbol</emphasis> (std::string symbol)</para>
+</listitem>
+            <listitem><para>std::string <emphasis role="strong">getCertSymbol</emphasis> (long secid)</para>
+</listitem>
+            <listitem><para>int32_t <emphasis role="strong">getCertSecId</emphasis> (std::string symbol)</para>
+</listitem>
+            <listitem><para>int32_t <emphasis role="strong">getProdSecIdFromCert</emphasis> (long secid)</para>
+</listitem>
+        </itemizedlist>
+Protected Attributes inherited from <link linkend="_class_k_t_n_1_1_algo_base_v3">KTN::AlgoBaseV3</link>        <itemizedlist>
+            <listitem><para>std::atomic&lt; bool &gt; <link linkend="_class_k_t_n_1_1_algo_base_v3_1ab9a34128d8b3aeeb09959b15c7b5ff72">_ACTIVE</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_i_exchange_sender">IExchangeSender</link> * <link linkend="_class_k_t_n_1_1_algo_base_v3_1add06140811bdf5b96cd79f4a1534c672">_ordersender</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_ktn_cme_mdp_v4">KtnCmeMdpV4</link> * <link linkend="_class_k_t_n_1_1_algo_base_v3_1ab2305e6e5fcc2626a3dd57a0588fe6c8">_mdh</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_k_t01_1_1_m_s_g_w_1_1_cme_msgw">CmeMsgw</link> <link linkend="_class_k_t_n_1_1_algo_base_v3_1a5d2f60a85210ce4692e247314a5b4a41">_msgw</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_order_manager_v5">OrderManagerV5</link> <link linkend="_class_k_t_n_1_1_algo_base_v3_1ab3e66b66ae8858b4e4807b9c269744ed">_Ords</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_performance_tracker">PerformanceTracker</link> <link linkend="_class_k_t_n_1_1_algo_base_v3_1a1c83cb0bfc9f4a2fdb6dba7db13650f6">_trk</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_algo_helpers">AlgoHelpers</link> <link linkend="_class_k_t_n_1_1_algo_base_v3_1a33e25c7650a50ef096842e8394354cb8">helpers</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_k_t_n_1_1notify_1_1_slacker">Slacker</link> <link linkend="_class_k_t_n_1_1_algo_base_v3_1aeddc3ae7c163538d51183b894dc7b386">_SLACK</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter">AlgoV3Reporter</link> * <link linkend="_class_k_t_n_1_1_algo_base_v3_1ab974a614ba683835ebdbe282b0496875">_algorpt</link></para>
+</listitem>
+            <listitem><para><link linkend="_classgenericstats">genericstats</link> <link linkend="_class_k_t_n_1_1_algo_base_v3_1a7c45c8e5722e65b9724efc32502a8118">_mystats</link></para>
+</listitem>
+            <listitem><para><link linkend="_struct_log_msg">LogMsg</link> <link linkend="_class_k_t_n_1_1_algo_base_v3_1a67c3c9ffd68d36c81efd64f4b568b9ad">_LOG</link></para>
+</listitem>
+            <listitem><para><link linkend="_structalgometa">algometa</link> <link linkend="_class_k_t_n_1_1_algo_base_v3_1acca251481d32f164433d1cc4ddfd49b5">_PARAMS</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t_n_1_1_algo_base_v3_1acd68213430e95983d5955c83f834c821">_NUMLEGS</link></para>
+</listitem>
+            <listitem><para><link linkend="_structalgomd">algomd</link> <link linkend="_class_k_t_n_1_1_algo_base_v3_1a90cfa2ebb0bb5c7d9a77d32f4a1f04d4">_MD</link> [8]</para>
+</listitem>
+            <listitem><para>std::unordered_map&lt; std::string, <link linkend="_structinstrument">instrument</link> &gt; <link linkend="_class_k_t_n_1_1_algo_base_v3_1a30713405c9ca581f24e73c077e22aace">_LEGMAP</link></para>
+</listitem>
+            <listitem><para>std::unordered_map&lt; int, <link linkend="_structinstrument">instrument</link> &gt; <link linkend="_class_k_t_n_1_1_algo_base_v3_1a799241356579cb3ee2d9fdf80df7fdd3">_SECIDMAP</link></para>
+</listitem>
+            <listitem><para>std::unordered_map&lt; long, std::string &gt; <link linkend="_class_k_t_n_1_1_algo_base_v3_1a4b831638e78a687e6c2c7022ba36782d">_certIdMap</link></para>
+</listitem>
+            <listitem><para>std::unordered_map&lt; std::string, long &gt; <link linkend="_class_k_t_n_1_1_algo_base_v3_1ac241287a78c4f775307ace882afa34ad">_certIdSymbolMap</link></para>
+</listitem>
+            <listitem><para>QuoteState::Enum <link linkend="_class_k_t_n_1_1_algo_base_v3_1af5bb24c444c8824fcdd9fef89faf78a4">_QuotingState</link></para>
+</listitem>
+            <listitem><para>HedgeState::Enum <link linkend="_class_k_t_n_1_1_algo_base_v3_1aec66462926eb7181c16da4d6b922a57d">_HedgingState</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_settings">Settings</link> <link linkend="_class_k_t_n_1_1_algo_base_v3_1a556ac4cb554e7be794524342e2aa94a6">settings_</link></para>
+</listitem>
+            <listitem><para>volatile bool <link linkend="_class_k_t_n_1_1_algo_base_v3_1aab3dd4a33a9180c0bd98066a2ac22412">stopped_</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t_n_1_1_algo_base_v3_1a49b8ccaebf6e50554468bbba4b0fcb6c">_EXCH_CALLBACK_ID</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_algo_base_v3_1ac8f4cfb47349b5137787658bcd3449f9">_CME_BY_SECID</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_algo_base_v3_1a9d7a1ff56e7881de9d04ad7432de19a7">_bQuoteInFlight</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_k_t_n_1_1_algo_base_v3_1aa2694c4e45dce7d9ddcfcb28666bf0c1">_GUID</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_k_t_n_1_1_algo_base_v3_1aa1cd61a7a64843c75c94186b0b6533dd">_ORG</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_algo_base_v3_1a9ea574d11ea872b31f169b700635b3e9">_MEASURE</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_algo_base_v3_1a93e981a64f666a723867d35c79d99cf8">_CERTNR</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t_n_1_1_algo_base_v3_1af393edf33b660b0c82ac9882ca97d0f6">_MKT_DATA_CPU</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_algo_base_v3_1a3bb93cd1daf47c268d873836b6f41aa2">_MKT_DATA_OK</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_algo_base_v3_1a728ab307e35b8eff9fc92983e1d1e895">_GOT_DATA</link></para>
+</listitem>
+            <listitem><para>long <link linkend="_class_k_t_n_1_1_algo_base_v3_1a9d8c3622072260b6ab4512e8d7102e50">_DATA_TRIES</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_algo_base_v3_1a52f58e54acd68a4cd64a32ed676a4814">_WATCH_TRADES</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_algo_base_v3_1a42983b18504632cd847b72175a38c0e2">_WATCH_VOLUME</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_algo_base_v3_1a9abdef275285d926aab0655234d37387">_USEAUDIT</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_algo_base_v3_1aa57c79654a5a7b64f277f9079a08d1c4">_ENABLED</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_algo_base_v3_1a92780888cf697c50098c58f94e86b2e2">_CAN_TRADE</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_algo_base_v3_1a8669362a97ac32894ae53006e1000f17">_HANDLER_STARTED</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_class_k_t_n_1_1_algo_base_v3_1a132b82efbc59bed31683f35aa2e9a61b">_NETPOS</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_class_k_t_n_1_1_algo_base_v3_1a4e9f629294473e1d87583f703a1bcb85">_TOTALEXEC</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_algo_base_v3_1a50d8054e6b76a7d6eccc4de76bb5f85f">_USE_REPORTING_MSGS</link></para>
+</listitem>
+            <listitem><para>volatile bool <link linkend="_class_k_t_n_1_1_algo_base_v3_1a9e9d644ca21f00ed354e4ac078a56f13">_RPT_ACTIVE</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_algo_base_v3_1a31b05e978db923360b47221645162cf4">_USE_STOPS</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_algo_base_v3_1a9c2bc36166378b9dee8a9f34a9fc9751">_CME_MKT_DATA_STARTED</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_algo_base_v3_1a3248fdaa352f1a57f043c3a74489b840">_ALLSYMBOLS</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_k_t_n_1_1_algo_base_v3_1a1a28244e6ec621384d2b470ee4b2195c">_BASE</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t_n_1_1_algo_base_v3_1a9ec3c14036eef7e827276a2c321b8521">_CNT</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t_n_1_1_algo_base_v3_1a7c25d52afaa6bab46e5a50b5ef77b051">_TESTID</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t_n_1_1_algo_base_v3_1a4e05c983237fb49f01bb17106289bef4">_GROUPCNT</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_k_t_n_1_1_algo_base_v3_1a5caaa01aeb0d7d1f881f4777cafb560c">_SPRDID</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t_n_1_1_algo_base_v3_1ae267196619512a8e639202240d4e0256">_CORE</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_algo_base_v3_1a905f360dbfb556d4e66b358743bf8ca4">_VERBOSE</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_k_t_n_1_1_algo_base_v3_1a306b8a5f734edd4f5c05706b901143a6">m_Name</link></para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+
+<para>Weighted Average algorithm class derived from <link linkend="_class_k_t_n_1_1_algo_base_v3">AlgoBaseV3</link>. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_waves_1acc4d1686f35a18998f2a9aa1e34ad08b"/><section>
+    <title>Waves()</title>
+<indexterm><primary>Waves</primary><secondary>KTN::Waves</secondary></indexterm>
+<indexterm><primary>KTN::Waves</primary><secondary>Waves</secondary></indexterm>
+<para><computeroutput>KTN::Waves::Waves (<link linkend="_struct_algo_initializer">AlgoInitializer</link> p)</computeroutput></para><para>
+
+<para>Constructor for Weighted Average algorithm. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>p</entry><entry>
+<para><link linkend="_struct_algo_initializer">AlgoInitializer</link> object. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_waves_1a921fff3d2efd96cf9b6873b915d563ce"/><section>
+    <title>~Waves()</title>
+<indexterm><primary>~Waves</primary><secondary>KTN::Waves</secondary></indexterm>
+<indexterm><primary>KTN::Waves</primary><secondary>~Waves</secondary></indexterm>
+<para><computeroutput>KTN::Waves::~Waves ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Destructor for <link linkend="_class_k_t_n_1_1_waves">Waves</link> algorithm. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_waves_1afea565aca8af65268bf6400dd54b784f"/><section>
+    <title>DoublePrint()</title>
+<indexterm><primary>DoublePrint</primary><secondary>KTN::Waves</secondary></indexterm>
+<indexterm><primary>KTN::Waves</primary><secondary>DoublePrint</secondary></indexterm>
+<para><computeroutput>void KTN::Waves::DoublePrint ( )</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_waves_1a731f8f142aa375bd17887845ca8efd84"/><section>
+    <title>Enable()</title>
+<indexterm><primary>Enable</primary><secondary>KTN::Waves</secondary></indexterm>
+<indexterm><primary>KTN::Waves</primary><secondary>Enable</secondary></indexterm>
+<para><computeroutput>void KTN::Waves::Enable (bool bEnable)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Enables or disables the algorithm. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>bEnable</entry><entry>
+<para>A boolean indicating whether to enable or disable. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implements <link linkend="_class_k_t_n_1_1_algo_base_v3_1a9b82e6434bd4e990661b735106090aa0">KTN::AlgoBaseV3</link>.</para>
+<para>
+References <link linkend="_l00260">algometa::Enabled</link>, <link linkend="_l00083">instrument::lastAsk</link>, <link linkend="_l00082">instrument::lastBid</link>, <link linkend="_l00084">instrument::lastSentBuyPrice</link>, and <link linkend="_l00085">instrument::lastSentSellPrice</link>.</para>
+<para>
+Referenced by <link linkend="_l00130">onJson()</link>, and <link linkend="_l00312">ResetPosition()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_waves_1a0df5f7a233474fb4d8ee1f378928c272"/><section>
+    <title>minOrderExecution()</title>
+<indexterm><primary>minOrderExecution</primary><secondary>KTN::Waves</secondary></indexterm>
+<indexterm><primary>KTN::Waves</primary><secondary>minOrderExecution</secondary></indexterm>
+<para><computeroutput>void KTN::Waves::minOrderExecution (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp; ord, bool hedgeSent)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>This method is called when a minimum order execution is received. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ord</entry><entry>
+<para>The order details. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>hedgeSent</entry><entry>
+<para>Indicates whether a hedge order was sent. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Reimplemented from <link linkend="_class_k_t_n_1_1_algo_base_v3_1a461b855181c911e47b3b7096379c3f3d">KTN::AlgoBaseV3</link>.</para>
+<para>
+References <link linkend="_l00038">KTN::OrderPod::exchordid</link>, <link linkend="_l00035">KTN::OrderPod::lastpx</link>, <link linkend="_l00044">KTN::OrderPod::lastqty</link>, <link linkend="_l00460">OrderManagerV5::minOrderExecution()</link>, <link linkend="_l00064">KTN::OrderPod::OrdAlgoTrig</link>, <link linkend="_l00063">KTN::OrderPod::OrdFillType</link>, <link linkend="_l00060">KTN::OrderPod::OrdSide</link>, <link linkend="_l00061">KTN::OrderPod::OrdStatus</link>, and <link linkend="_l00040">KTN::OrderPod::secid</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_waves_1a6d0e75299213b88709596584de15562c"/><section>
+    <title>onCalculate()</title>
+<indexterm><primary>onCalculate</primary><secondary>KTN::Waves</secondary></indexterm>
+<indexterm><primary>KTN::Waves</primary><secondary>onCalculate</secondary></indexterm>
+<para><computeroutput>void KTN::Waves::onCalculate ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Performs calculation logic for the algorithm. </para>
+</para>
+<para>
+Implements <link linkend="_class_k_t_n_1_1_algo_base_v3_1ab585b47daf40a15aa424c7566bee7e05">KTN::AlgoBaseV3</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_waves_1ac20ca6465021af8255596538b79f0b46"/><section>
+    <title>onEngineJson()</title>
+<indexterm><primary>onEngineJson</primary><secondary>KTN::Waves</secondary></indexterm>
+<indexterm><primary>KTN::Waves</primary><secondary>onEngineJson</secondary></indexterm>
+<para><computeroutput>void KTN::Waves::onEngineJson (<link linkend="_struct_engine_command">EngineCommand</link> &amp; cmd)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Processes algo engine-specific commands. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>cmd</entry><entry>
+<para>The engine command to process. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Reimplemented from <link linkend="_class_k_t_n_1_1_algo_base_v3_1acc49921eaed80056b85f122b05db4281">KTN::AlgoBaseV3</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_waves_1a25d021f9c931ce5173c75e6d48b98f2b"/><section>
+    <title>onHedgeOrderSent()</title>
+<indexterm><primary>onHedgeOrderSent</primary><secondary>KTN::Waves</secondary></indexterm>
+<indexterm><primary>KTN::Waves</primary><secondary>onHedgeOrderSent</secondary></indexterm>
+<para><computeroutput>void KTN::Waves::onHedgeOrderSent (char * clordid, uint64_t reqid, int32_t secid, KOrderSide::Enum side, uint32_t qty, int32_t price9, uint16_t instindex)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Handles hedge order sent events. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>clordid</entry><entry>
+<para>Client order ID. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>reqid</entry><entry>
+<para>Request ID. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>secid</entry><entry>
+<para>Security ID. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>side</entry><entry>
+<para><link linkend="_struct_k_t_n_1_1_order">Order</link> side. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>qty</entry><entry>
+<para>Quantity. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>price9</entry><entry>
+<para>Price. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>instindex</entry><entry>
+<para>Instrument index. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Reimplemented from <link linkend="_class_k_t_n_1_1_algo_base_v3_1a0d3c0ceb84a7b46e838d6e466db8f88b">KTN::AlgoBaseV3</link>.</para>
+<para>
+References <link linkend="_l00033">QuoterV3::NextNew()</link>, <link linkend="_l00357">OrderManagerV5::onSentOrderFast()</link>, <link linkend="_l00064">KTN::OrderPod::OrdAlgoTrig</link>, <link linkend="_l00032">KTN::OrderPod::ordernum</link>, <link linkend="_l00037">KTN::OrderPod::orderReqId</link>, and <link linkend="_l00077">instrument::secid</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_waves_1aefca06b4b841bcde756fd8f3028bee22"/><section>
+    <title>onJson()</title>
+<indexterm><primary>onJson</primary><secondary>KTN::Waves</secondary></indexterm>
+<indexterm><primary>KTN::Waves</primary><secondary>onJson</secondary></indexterm>
+<para><computeroutput>void KTN::Waves::onJson (std::string json)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Processes a JSON-formatted string. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>json</entry><entry>
+<para>A JSON-formatted string representing algo parameters. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Note</title>
+
+<para>This is a pure virtual function that must be implemented by derived classes. </para>
+</note>
+</para>
+<para>
+Implements <link linkend="_class_k_t_n_1_1_algo_base_v3_1aa92f8eb8209076ad95d6fa70814bfa80">KTN::AlgoBaseV3</link>.</para>
+<para>
+References <link linkend="_l00343">Enable()</link>, <link linkend="_l00260">algometa::Enabled</link>, and <link linkend="_l00312">ResetPosition()</link>.</para>
+<para>
+Referenced by <link linkend="_l00039">onLaunch()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_waves_1adf63793af62e98f08cb30d0cfd958a66"/><section>
+    <title>onLaunch()</title>
+<indexterm><primary>onLaunch</primary><secondary>KTN::Waves</secondary></indexterm>
+<indexterm><primary>KTN::Waves</primary><secondary>onLaunch</secondary></indexterm>
+<para><computeroutput>void KTN::Waves::onLaunch (std::string json)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Triggered when the algorithm is launched. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>json</entry><entry>
+<para>A JSON-formatted string representing launch data. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implements <link linkend="_class_k_t_n_1_1_algo_base_v3_1a34bec80956d511dbf840927e5a530cae">KTN::AlgoBaseV3</link>.</para>
+<para>
+References <link linkend="_l00130">onJson()</link>, and <link linkend="_l00012">WavesParams::parse()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_waves_1a5d9e62333b750b0a8f80e8aaacc9f67e"/><section>
+    <title>onMktData()</title>
+<indexterm><primary>onMktData</primary><secondary>KTN::Waves</secondary></indexterm>
+<indexterm><primary>KTN::Waves</primary><secondary>onMktData</secondary></indexterm>
+<para><computeroutput>void KTN::Waves::onMktData (int index)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Handles market data updates. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>index</entry><entry>
+<para>Market data index. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Reimplemented from <link linkend="_class_k_t_n_1_1_algo_base_v3_1ae7d8beff667ecdcb9360a35f484b5f58">KTN::AlgoBaseV3</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_waves_1ae75ebe6be1f954d442595dcfb83c596d"/><section>
+    <title>onOrderSent()</title>
+<indexterm><primary>onOrderSent</primary><secondary>KTN::Waves</secondary></indexterm>
+<indexterm><primary>KTN::Waves</primary><secondary>onOrderSent</secondary></indexterm>
+<para><computeroutput>void KTN::Waves::onOrderSent (char * clordid, uint64_t reqid, int32_t secid, KOrderSide::Enum side, uint32_t qty, int32_t price, KOrderAlgoTrigger::Enum trig)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Handles order sent events. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>clordid</entry><entry>
+<para>Client order ID. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>reqid</entry><entry>
+<para>Request ID. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>secid</entry><entry>
+<para>Security ID. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>side</entry><entry>
+<para><link linkend="_struct_k_t_n_1_1_order">Order</link> side. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>qty</entry><entry>
+<para>Quantity. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>price</entry><entry>
+<para>Price. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>trig</entry><entry>
+<para><link linkend="_struct_k_t_n_1_1_order">Order</link> trigger. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Reimplemented from <link linkend="_class_k_t_n_1_1_algo_base_v3_1a813c6fe078d94ed9a5c4c11db6c30f02">KTN::AlgoBaseV3</link>.</para>
+<para>
+References <link linkend="_l00033">QuoterV3::NextNew()</link>, <link linkend="_l00357">OrderManagerV5::onSentOrderFast()</link>, <link linkend="_l00064">KTN::OrderPod::OrdAlgoTrig</link>, <link linkend="_l00032">KTN::OrderPod::ordernum</link>, <link linkend="_l00037">KTN::OrderPod::orderReqId</link>, and <link linkend="_l00113">instrument::symbol</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_waves_1ae9b6d67f93d8a79cb675b005647a6d2c"/><section>
+    <title>onTrade()</title>
+<indexterm><primary>onTrade</primary><secondary>KTN::Waves</secondary></indexterm>
+<indexterm><primary>KTN::Waves</primary><secondary>onTrade</secondary></indexterm>
+<para><computeroutput>void KTN::Waves::onTrade (int index, double price, double size, int aggressor)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Handles a trade event. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>index</entry><entry>
+<para>Trade index. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>price</entry><entry>
+<para>Trade price. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>size</entry><entry>
+<para>Trade size. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>aggressor</entry><entry>
+<para>Trade aggressor indicator. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Reimplemented from <link linkend="_class_k_t_n_1_1_algo_base_v3_1a814203709c21a30df1fa0835d277fc2e">KTN::AlgoBaseV3</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_waves_1ace216ed67b5804b6decdc8ac8529529b"/><section>
+    <title>OrderReceived()</title>
+<indexterm><primary>OrderReceived</primary><secondary>KTN::Waves</secondary></indexterm>
+<indexterm><primary>KTN::Waves</primary><secondary>OrderReceived</secondary></indexterm>
+<para><computeroutput>void KTN::Waves::OrderReceived (<link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> &amp; ord, int index)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Processes received order events. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ord</entry><entry>
+<para>The received order. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>index</entry><entry>
+<para><link linkend="_struct_k_t_n_1_1_order">Order</link> index. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Reimplemented from <link linkend="_class_k_t_n_1_1_algo_base_v3_1ad8c78569808102e9fa78dc1fbdbe06c9">KTN::AlgoBaseV3</link>.</para>
+<para>
+References <link linkend="_l00049">KTN::OrderPod::callbackid</link>, <link linkend="_l00051">KTN::OrderPod::instindex</link>, <link linkend="_l00152">QuoterV3::NextId()</link>, <link linkend="_l00385">OrderManagerV5::onSentOrderCxl()</link>, <link linkend="_l00379">OrderManagerV5::onSentOrderMod()</link>, <link linkend="_l00059">KTN::OrderPod::OrdAction</link>, <link linkend="_l00032">KTN::OrderPod::ordernum</link>, <link linkend="_l00056">KTN::OrderPod::OrdExch</link>, <link linkend="_l00062">KTN::OrderPod::OrdState</link>, <link linkend="_l00061">KTN::OrderPod::OrdStatus</link>, <link linkend="_l00034">KTN::OrderPod::price</link>, <link linkend="_l00041">KTN::OrderPod::quantity</link>, <link linkend="_class_i_exchange_sender_1a069aede863c0d954221120082a8d2e00">IExchangeSender::Send()</link>, <link linkend="_l00257">algometa::StratId</link>, <link linkend="_l00046">KTN::OrderPod::stratid</link>, and <link linkend="_l00113">instrument::symbol</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_waves_1ac7c3b14cf6d0ebdc6c9b14657f5bf2f3"/><section>
+    <title>Print()</title>
+<indexterm><primary>Print</primary><secondary>KTN::Waves</secondary></indexterm>
+<indexterm><primary>KTN::Waves</primary><secondary>Print</secondary></indexterm>
+<para><computeroutput>void KTN::Waves::Print ( )<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Prints information about the algorithm instance. </para>
+</para>
+<para>
+Reimplemented from <link linkend="_class_k_t_n_1_1_algo_base_v3_1a2bf71f5b2363a299e36e5b0bbe981575">KTN::AlgoBaseV3</link>.</para>
+<para>
+References <link linkend="_l00087">instrument::col</link>, <link linkend="_l00500">EdgeStruct::exists</link>, <link linkend="_l00501">EdgeStruct::index</link>, <link linkend="_l00102">instrument::istas</link>, <link linkend="_l00339">KTN::AlgoBaseV3::Print()</link>, <link linkend="_l00086">instrument::row</link>, and <link linkend="_l00113">instrument::symbol</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_waves_1aba75d8c1e2b8703e89c464a319f7f3c4"/><section>
+    <title>ResetPosition()</title>
+<indexterm><primary>ResetPosition</primary><secondary>KTN::Waves</secondary></indexterm>
+<indexterm><primary>KTN::Waves</primary><secondary>ResetPosition</secondary></indexterm>
+<para><computeroutput>void KTN::Waves::ResetPosition ( )<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Resets the algorithm&apos;s position. </para>
+</para>
+<para>
+Reimplemented from <link linkend="_class_k_t_n_1_1_algo_base_v3_1a7ae2f0dd0510cc9a0baef39fd40272d9">KTN::AlgoBaseV3</link>.</para>
+<para>
+References <link linkend="_l00106">instrument::buyState</link>, <link linkend="_l00343">Enable()</link>, <link linkend="_l00070">instrument::lastBuyId</link>, and <link linkend="_l00084">instrument::lastSentBuyPrice</link>.</para>
+<para>
+Referenced by <link linkend="_l00130">onJson()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_waves_1af69d0728d7994959a33c12376eb4987a"/><section>
+    <title>Restart()</title>
+<indexterm><primary>Restart</primary><secondary>KTN::Waves</secondary></indexterm>
+<indexterm><primary>KTN::Waves</primary><secondary>Restart</secondary></indexterm>
+<para><computeroutput>void KTN::Waves::Restart ( )<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Restarts the algorithm. </para>
+</para>
+<para>
+Reimplemented from <link linkend="_class_k_t_n_1_1_algo_base_v3_1a5c67b73c17d673193c7c54560e0e8f3e">KTN::AlgoBaseV3</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_waves_1a712b708f5a424a283cc55a165f21a727"/><section>
+    <title>ToggleCommand()</title>
+<indexterm><primary>ToggleCommand</primary><secondary>KTN::Waves</secondary></indexterm>
+<indexterm><primary>KTN::Waves</primary><secondary>ToggleCommand</secondary></indexterm>
+<para><computeroutput>void KTN::Waves::ToggleCommand (int id)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Toggles a specific command by ID. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>id</entry><entry>
+<para>Command ID to toggle. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Reimplemented from <link linkend="_class_k_t_n_1_1_algo_base_v3_1a96cc734b074166749c1749353bd5c3b7">KTN::AlgoBaseV3</link>.</para>
+<para>
+References <link linkend="_l00077">OrderManagerV5::Print()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Algos/Waves.hppAlgos/Waves.cpp</section>
+</section>

@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_md_order" xml:lang="en-US">
+<title>MdOrder Class Reference</title>
+<indexterm><primary>MdOrder</primary></indexterm>
+<para>
+
+<para>Represents a market data order. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;circular_book_array.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_md_order_1a6ba8f5e8174880bcc360ec31ef52e4cb">MdOrder</link> ()</para>
+
+<para>Default constructor for <link linkend="_class_md_order">MdOrder</link>. </para>
+</listitem>
+            <listitem><para><link linkend="_class_md_order_1ad66299b1fa7ee10d22962e0734f64901">MdOrder</link> (int <link linkend="_class_md_order_1a192ae57a3cb9fec09c7c6afde585d7fe">id</link>, double <link linkend="_class_md_order_1a45670d935a109647d8991a9aadf3c366">price</link>, int <link linkend="_class_md_order_1a3aa1695e2e543f32f384715b02b78915">quantity</link>, int <link linkend="_class_md_order_1af279758f4a509f39467f9d6053c3b2c6">priority</link>)</para>
+
+<para>Constructor for <link linkend="_class_md_order">MdOrder</link>. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_md_order_1ad189b09a0745384990ce53c28d89dcd5">reset</link> ()</para>
+
+<para>Resets the order values to their default. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_class_md_order_1a192ae57a3cb9fec09c7c6afde585d7fe">id</link></para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_class_md_order_1a45670d935a109647d8991a9aadf3c366">price</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_md_order_1a3aa1695e2e543f32f384715b02b78915">quantity</link></para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_class_md_order_1af279758f4a509f39467f9d6053c3b2c6">priority</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Represents a market data order. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_md_order_1a6ba8f5e8174880bcc360ec31ef52e4cb"/><section>
+    <title>MdOrder()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>MdOrder</primary><secondary>MdOrder</secondary></indexterm>
+<indexterm><primary>MdOrder</primary><secondary>MdOrder</secondary></indexterm>
+<para><computeroutput>MdOrder::MdOrder ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Default constructor for <link linkend="_class_md_order">MdOrder</link>. </para>
+</para>
+</section>
+<anchor xml:id="_class_md_order_1ad66299b1fa7ee10d22962e0734f64901"/><section>
+    <title>MdOrder()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>MdOrder</primary><secondary>MdOrder</secondary></indexterm>
+<indexterm><primary>MdOrder</primary><secondary>MdOrder</secondary></indexterm>
+<para><computeroutput>MdOrder::MdOrder (int id, double price, int quantity, int priority)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Constructor for <link linkend="_class_md_order">MdOrder</link>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>id</entry><entry>
+<para>The order ID. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>price</entry><entry>
+<para>The order price. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>quantity</entry><entry>
+<para>The order quantity. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>priority</entry><entry>
+<para>The order priority. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_md_order_1ad189b09a0745384990ce53c28d89dcd5"/><section>
+    <title>reset()</title>
+<indexterm><primary>reset</primary><secondary>MdOrder</secondary></indexterm>
+<indexterm><primary>MdOrder</primary><secondary>reset</secondary></indexterm>
+<para><computeroutput>void MdOrder::reset ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Resets the order values to their default. </para>
+</para>
+<para>
+References <link linkend="_l00023">price</link>, <link linkend="_l00025">priority</link>, and <link linkend="_l00024">quantity</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_md_order_1a192ae57a3cb9fec09c7c6afde585d7fe"/><section>
+    <title>id</title>
+<indexterm><primary>id</primary><secondary>MdOrder</secondary></indexterm>
+<indexterm><primary>MdOrder</primary><secondary>id</secondary></indexterm>
+<para><computeroutput>int MdOrder::id</computeroutput></para>
+<para>The order ID. </para>
+</section>
+<anchor xml:id="_class_md_order_1a45670d935a109647d8991a9aadf3c366"/><section>
+    <title>price</title>
+<indexterm><primary>price</primary><secondary>MdOrder</secondary></indexterm>
+<indexterm><primary>MdOrder</primary><secondary>price</secondary></indexterm>
+<para><computeroutput>int32_t MdOrder::price</computeroutput></para>
+<para>The order price. </para>
+<para>
+Referenced by <link linkend="_l00119">LimitOrderBook::add_order()</link>, <link linkend="_l00152">LimitOrderBook::delete_order()</link>, <link linkend="_l00216">LimitOrderBook::print_bids()</link>, <link linkend="_l00229">LimitOrderBook::print_offers()</link>, <link linkend="_l00045">reset()</link>, and <link linkend="_l00136">LimitOrderBook::update_order()</link>.</para>
+</section>
+<anchor xml:id="_class_md_order_1af279758f4a509f39467f9d6053c3b2c6"/><section>
+    <title>priority</title>
+<indexterm><primary>priority</primary><secondary>MdOrder</secondary></indexterm>
+<indexterm><primary>MdOrder</primary><secondary>priority</secondary></indexterm>
+<para><computeroutput>uint64_t MdOrder::priority</computeroutput></para>
+<para>The order priority. </para>
+<para>
+Referenced by <link linkend="_l00045">reset()</link>.</para>
+</section>
+<anchor xml:id="_class_md_order_1a3aa1695e2e543f32f384715b02b78915"/><section>
+    <title>quantity</title>
+<indexterm><primary>quantity</primary><secondary>MdOrder</secondary></indexterm>
+<indexterm><primary>MdOrder</primary><secondary>quantity</secondary></indexterm>
+<para><computeroutput>int MdOrder::quantity</computeroutput></para>
+<para>The order quantity. </para>
+<para>
+Referenced by <link linkend="_l00045">reset()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Core/circular_book_array.hpp</section>
+</section>

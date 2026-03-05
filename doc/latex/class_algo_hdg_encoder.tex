@@ -1,0 +1,69 @@
+\doxysection{Algo\+Hdg\+Encoder Class Reference}
+\hypertarget{class_algo_hdg_encoder}{}\label{class_algo_hdg_encoder}\index{AlgoHdgEncoder@{AlgoHdgEncoder}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_algo_hdg_encoder_1_1_decoded_data}{Decoded\+Data}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static uint64\+\_\+t \mbox{\hyperlink{class_algo_hdg_encoder_a3eb420be553d6d3b4d19c9bb8e128da0}{encode\+Data}} (uint8\+\_\+t callbackid, int32\+\_\+t secid, int16\+\_\+t differential, uint8\+\_\+t multiplier, uint32\+\_\+t sequencing)
+\item 
+static \mbox{\hyperlink{struct_algo_hdg_encoder_1_1_decoded_data}{Decoded\+Data}} \mbox{\hyperlink{class_algo_hdg_encoder_a290d5184ac7fd9532fe576c0ad78d454}{decode\+Data}} (uint64\+\_\+t encoded\+Value)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_algo_hdg_encoder_a290d5184ac7fd9532fe576c0ad78d454}\index{AlgoHdgEncoder@{AlgoHdgEncoder}!decodeData@{decodeData}}
+\index{decodeData@{decodeData}!AlgoHdgEncoder@{AlgoHdgEncoder}}
+\doxysubsubsection{\texorpdfstring{decodeData()}{decodeData()}}
+{\footnotesize\ttfamily \label{class_algo_hdg_encoder_a290d5184ac7fd9532fe576c0ad78d454} 
+static \mbox{\hyperlink{struct_algo_hdg_encoder_1_1_decoded_data}{Decoded\+Data}} Algo\+Hdg\+Encoder\+::decode\+Data (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{encoded\+Value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Decodes the given 64-\/bit value into its individual data components.
+
+
+\begin{DoxyParams}{Parameters}
+{\em encoded\+Value} & The encoded 64-\/bit value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The decoded data structure. 
+\end{DoxyReturn}
+\Hypertarget{class_algo_hdg_encoder_a3eb420be553d6d3b4d19c9bb8e128da0}\index{AlgoHdgEncoder@{AlgoHdgEncoder}!encodeData@{encodeData}}
+\index{encodeData@{encodeData}!AlgoHdgEncoder@{AlgoHdgEncoder}}
+\doxysubsubsection{\texorpdfstring{encodeData()}{encodeData()}}
+{\footnotesize\ttfamily \label{class_algo_hdg_encoder_a3eb420be553d6d3b4d19c9bb8e128da0} 
+static uint64\+\_\+t Algo\+Hdg\+Encoder\+::encode\+Data (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{callbackid}{, }\item[{int32\+\_\+t}]{secid}{, }\item[{int16\+\_\+t}]{differential}{, }\item[{uint8\+\_\+t}]{multiplier}{, }\item[{uint32\+\_\+t}]{sequencing}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Encodes the given data into a 64-\/bit value. This is a super important concept-\/ we encode some of our callback and hedge data into a 64-\/bit value and pass it as part of the order to the exchange. This is a way to pass data to the exchange, have the exchange persist it, and then have it sent back to us in the execution report. We can encode various data into this 64-\/bit value and then decode it when we get it back in the execution report. We like this because we use a 64-\/bit integer rather than a string, which is orders of magnitude slower to decode/decipher and make quick decisions on. So, in CME, we use the Order\+Request\+Id field to pass this data back and forth, which is a 64-\/bit integer that we assign and it "{}lives"{} with the order throughout its order cycle, enabling us to efficiently pass data back and forth.
+
+
+\begin{DoxyParams}{Parameters}
+{\em callbackid} & The callback ID (8 bits). \\
+\hline
+{\em secid} & The security ID (12 bits). \\
+\hline
+{\em differential} & The differential value (16 bits). \\
+\hline
+{\em multiplier} & The multiplier value (8 bits). \\
+\hline
+{\em sequencing} & The sequencing value (20 bits). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The encoded 64-\/bit value. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00051}{Quoter\+V3\+::\+Hedge\+Req\+Id()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Algo\+Support/Algo\+Hdg\+Encoder.\+hpp\end{DoxyCompactItemize}

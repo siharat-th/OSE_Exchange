@@ -1,0 +1,187 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg" xml:lang="en-US">
+<title>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg Struct Reference</title>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1af1a4ea5406229e3cbd9511eee3b025b1">Construct</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>std::uint16_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1abc878d818dee9bd7376a00ffe3bad3bc">msgSize</link></para>
+</listitem>
+            <listitem><para>std::uint16_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1afa8d455ac93a4362b96b23dac71c96af">enodingType_</link></para>
+</listitem>
+            <listitem><para>std::uint16_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1a017197952a09deb270b496dcb2465d69">blockLength_</link></para>
+</listitem>
+            <listitem><para>std::uint16_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1ab3c4ccfba872e638b830df7b1a31bab8">templateId_</link></para>
+</listitem>
+            <listitem><para>std::uint16_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1aff9f3b425e51afc17d90c5397f4d7d23">schemaId_</link></para>
+</listitem>
+            <listitem><para>std::uint16_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1a85ed730528c4c624eff0deb29c50068f">version_</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1ad0339bbde8903d52b8e4b1ae369b0e03">PartyDetailsListReqID</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1a6ffdd34edbaa1808be625b3b9f8eb93b">SendingTimeEpoch</link></para>
+</listitem>
+            <listitem><para>char <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1a9969b1b02492bbc5f5177d6e3de2745e">ListUpdateAction</link></para>
+</listitem>
+            <listitem><para>uInt32 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1add83ca0b3845c2d588637bcd04f3206a">SeqNum</link></para>
+</listitem>
+            <listitem><para>char <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1a4977cc0dd6fa58fe5c5a2113f2a0d883">Memo</link> [75]</para>
+</listitem>
+            <listitem><para>char <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1a6db1880dbd2b22fd43e2a752a9a77c08">AvgPxGroupID</link> [20]</para>
+</listitem>
+            <listitem><para>uInt64NULL <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1ab42e326ff8169e9539db22952f6c42f0">SelfMatchPreventionID</link></para>
+</listitem>
+            <listitem><para>char <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1a898fb6cc91a13ddc67a1cdeeffd2626b">CmtaGiveupCD</link></para>
+</listitem>
+            <listitem><para>EnumCustOrderCapacity <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1aa2e8c798622474aafdc7ed4b61ea1d88">CustOrderCapacity</link></para>
+</listitem>
+            <listitem><para>EnumClearingAcctType <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1a31498b6bcc1a02309e5a8700f0961bb4">ClearingAccountType</link></para>
+</listitem>
+            <listitem><para>char <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1ac42fa471685b2b9740d4e038d2d81aab">SelfMatchPreventionInstruction</link></para>
+</listitem>
+            <listitem><para>EnumAvgPxInd <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1a6f4caa59688924d1fbf157e8b280409d">AvgPxIndicator</link></para>
+</listitem>
+            <listitem><para>EnumSLEDS <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1ac63a8dfd344e1c44c3e684e7b8a556ce">ClearingTradePriceType</link></para>
+</listitem>
+            <listitem><para>char <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1a98ea19a1b38f825cc6bcb1d43da466dd">CustOrderHandlingInst</link></para>
+</listitem>
+            <listitem><para>uInt64NULL <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1aeed9bd5452968ebe0c0e5c1af3553e91">Executor</link></para>
+</listitem>
+            <listitem><para>uInt64NULL <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1a75ce9b58f51e2dcfaed883ceb6e0c0a2">IDMShortCode</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1af1a4ea5406229e3cbd9511eee3b025b1"/><section>
+    <title>Construct()</title>
+<indexterm><primary>Construct</primary><secondary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</primary><secondary>Construct</secondary></indexterm>
+<para><computeroutput>void KTN::CME::IL3::PartyDetailsDefinitionRequestMsg::Construct ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1a6db1880dbd2b22fd43e2a752a9a77c08"/><section>
+    <title>AvgPxGroupID</title>
+<indexterm><primary>AvgPxGroupID</primary><secondary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</primary><secondary>AvgPxGroupID</secondary></indexterm>
+<para><computeroutput>char KTN::CME::IL3::PartyDetailsDefinitionRequestMsg::AvgPxGroupID[20]</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1a6f4caa59688924d1fbf157e8b280409d"/><section>
+    <title>AvgPxIndicator</title>
+<indexterm><primary>AvgPxIndicator</primary><secondary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</primary><secondary>AvgPxIndicator</secondary></indexterm>
+<para><computeroutput>EnumAvgPxInd KTN::CME::IL3::PartyDetailsDefinitionRequestMsg::AvgPxIndicator</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1a017197952a09deb270b496dcb2465d69"/><section>
+    <title>blockLength_</title>
+<indexterm><primary>blockLength_</primary><secondary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</primary><secondary>blockLength_</secondary></indexterm>
+<para><computeroutput>std::uint16_t KTN::CME::IL3::PartyDetailsDefinitionRequestMsg::blockLength_</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1a31498b6bcc1a02309e5a8700f0961bb4"/><section>
+    <title>ClearingAccountType</title>
+<indexterm><primary>ClearingAccountType</primary><secondary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</primary><secondary>ClearingAccountType</secondary></indexterm>
+<para><computeroutput>EnumClearingAcctType KTN::CME::IL3::PartyDetailsDefinitionRequestMsg::ClearingAccountType</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1ac63a8dfd344e1c44c3e684e7b8a556ce"/><section>
+    <title>ClearingTradePriceType</title>
+<indexterm><primary>ClearingTradePriceType</primary><secondary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</primary><secondary>ClearingTradePriceType</secondary></indexterm>
+<para><computeroutput>EnumSLEDS KTN::CME::IL3::PartyDetailsDefinitionRequestMsg::ClearingTradePriceType</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1a898fb6cc91a13ddc67a1cdeeffd2626b"/><section>
+    <title>CmtaGiveupCD</title>
+<indexterm><primary>CmtaGiveupCD</primary><secondary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</primary><secondary>CmtaGiveupCD</secondary></indexterm>
+<para><computeroutput>char KTN::CME::IL3::PartyDetailsDefinitionRequestMsg::CmtaGiveupCD</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1aa2e8c798622474aafdc7ed4b61ea1d88"/><section>
+    <title>CustOrderCapacity</title>
+<indexterm><primary>CustOrderCapacity</primary><secondary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</primary><secondary>CustOrderCapacity</secondary></indexterm>
+<para><computeroutput>EnumCustOrderCapacity KTN::CME::IL3::PartyDetailsDefinitionRequestMsg::CustOrderCapacity</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1a98ea19a1b38f825cc6bcb1d43da466dd"/><section>
+    <title>CustOrderHandlingInst</title>
+<indexterm><primary>CustOrderHandlingInst</primary><secondary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</primary><secondary>CustOrderHandlingInst</secondary></indexterm>
+<para><computeroutput>char KTN::CME::IL3::PartyDetailsDefinitionRequestMsg::CustOrderHandlingInst</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1afa8d455ac93a4362b96b23dac71c96af"/><section>
+    <title>enodingType_</title>
+<indexterm><primary>enodingType_</primary><secondary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</primary><secondary>enodingType_</secondary></indexterm>
+<para><computeroutput>std::uint16_t KTN::CME::IL3::PartyDetailsDefinitionRequestMsg::enodingType_</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1aeed9bd5452968ebe0c0e5c1af3553e91"/><section>
+    <title>Executor</title>
+<indexterm><primary>Executor</primary><secondary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</primary><secondary>Executor</secondary></indexterm>
+<para><computeroutput>uInt64NULL KTN::CME::IL3::PartyDetailsDefinitionRequestMsg::Executor</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1a75ce9b58f51e2dcfaed883ceb6e0c0a2"/><section>
+    <title>IDMShortCode</title>
+<indexterm><primary>IDMShortCode</primary><secondary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</primary><secondary>IDMShortCode</secondary></indexterm>
+<para><computeroutput>uInt64NULL KTN::CME::IL3::PartyDetailsDefinitionRequestMsg::IDMShortCode</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1a9969b1b02492bbc5f5177d6e3de2745e"/><section>
+    <title>ListUpdateAction</title>
+<indexterm><primary>ListUpdateAction</primary><secondary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</primary><secondary>ListUpdateAction</secondary></indexterm>
+<para><computeroutput>char KTN::CME::IL3::PartyDetailsDefinitionRequestMsg::ListUpdateAction</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1a4977cc0dd6fa58fe5c5a2113f2a0d883"/><section>
+    <title>Memo</title>
+<indexterm><primary>Memo</primary><secondary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</primary><secondary>Memo</secondary></indexterm>
+<para><computeroutput>char KTN::CME::IL3::PartyDetailsDefinitionRequestMsg::Memo[75]</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1abc878d818dee9bd7376a00ffe3bad3bc"/><section>
+    <title>msgSize</title>
+<indexterm><primary>msgSize</primary><secondary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</primary><secondary>msgSize</secondary></indexterm>
+<para><computeroutput>std::uint16_t KTN::CME::IL3::PartyDetailsDefinitionRequestMsg::msgSize</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1ad0339bbde8903d52b8e4b1ae369b0e03"/><section>
+    <title>PartyDetailsListReqID</title>
+<indexterm><primary>PartyDetailsListReqID</primary><secondary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</primary><secondary>PartyDetailsListReqID</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::PartyDetailsDefinitionRequestMsg::PartyDetailsListReqID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1aff9f3b425e51afc17d90c5397f4d7d23"/><section>
+    <title>schemaId_</title>
+<indexterm><primary>schemaId_</primary><secondary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</primary><secondary>schemaId_</secondary></indexterm>
+<para><computeroutput>std::uint16_t KTN::CME::IL3::PartyDetailsDefinitionRequestMsg::schemaId_</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1ab42e326ff8169e9539db22952f6c42f0"/><section>
+    <title>SelfMatchPreventionID</title>
+<indexterm><primary>SelfMatchPreventionID</primary><secondary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</primary><secondary>SelfMatchPreventionID</secondary></indexterm>
+<para><computeroutput>uInt64NULL KTN::CME::IL3::PartyDetailsDefinitionRequestMsg::SelfMatchPreventionID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1ac42fa471685b2b9740d4e038d2d81aab"/><section>
+    <title>SelfMatchPreventionInstruction</title>
+<indexterm><primary>SelfMatchPreventionInstruction</primary><secondary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</primary><secondary>SelfMatchPreventionInstruction</secondary></indexterm>
+<para><computeroutput>char KTN::CME::IL3::PartyDetailsDefinitionRequestMsg::SelfMatchPreventionInstruction</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1a6ffdd34edbaa1808be625b3b9f8eb93b"/><section>
+    <title>SendingTimeEpoch</title>
+<indexterm><primary>SendingTimeEpoch</primary><secondary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</primary><secondary>SendingTimeEpoch</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::PartyDetailsDefinitionRequestMsg::SendingTimeEpoch</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1add83ca0b3845c2d588637bcd04f3206a"/><section>
+    <title>SeqNum</title>
+<indexterm><primary>SeqNum</primary><secondary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</primary><secondary>SeqNum</secondary></indexterm>
+<para><computeroutput>uInt32 KTN::CME::IL3::PartyDetailsDefinitionRequestMsg::SeqNum</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1ab3c4ccfba872e638b830df7b1a31bab8"/><section>
+    <title>templateId_</title>
+<indexterm><primary>templateId_</primary><secondary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</primary><secondary>templateId_</secondary></indexterm>
+<para><computeroutput>std::uint16_t KTN::CME::IL3::PartyDetailsDefinitionRequestMsg::templateId_</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg_1a85ed730528c4c624eff0deb29c50068f"/><section>
+    <title>version_</title>
+<indexterm><primary>version_</primary><secondary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</primary><secondary>version_</secondary></indexterm>
+<para><computeroutput>std::uint16_t KTN::CME::IL3::PartyDetailsDefinitionRequestMsg::version_</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+exchsupport/cme/il3/IL3Messages2.hpp</section>
+</section>

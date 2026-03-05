@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['offset_0',['Offset',['../structtcp__settings.html#a6fc380a80a8a864c3ee37e4e96cb2381',1,'tcp_settings::Offset'],['../structudp__settings.html#a8b1da30f063b5a5affc093ac544c9416',1,'udp_settings::Offset']]],
+  ['ok_1',['ok',['../class_session_status.html#aedf8c178eb89a97d3f248cf0b45ae110',1,'SessionStatus']]],
+  ['ordaction_2',['OrdAction',['../struct_k_t_n_1_1_order_pod.html#ae8c476c03e60ed1383756fc5167fa15e',1,'KTN::OrderPod']]],
+  ['ordalgotrig_3',['OrdAlgoTrig',['../struct_k_t_n_1_1_order_pod.html#aa69b766d33a35e21668fc89aa82781f5',1,'KTN::OrderPod']]],
+  ['orderid_4',['orderID',['../structordlvl.html#ada6ab7bee0b8d7aff92a4a028b142c46',1,'ordlvl']]],
+  ['ordernum_5',['ordernum',['../struct_k_t_n_1_1_order_pod.html#a0f96ad0b2dc5108481a266b572a24636',1,'KTN::OrderPod']]],
+  ['orderpriority_6',['orderPriority',['../structordlvl.html#a0ec198a80e45ee2dc3ee4481ba6a1116',1,'ordlvl']]],
+  ['orderreqid_7',['orderReqId',['../struct_k_t_n_1_1_order_pod.html#ae26bb863a16b33faae5a7e9f0b69334a',1,'KTN::OrderPod']]],
+  ['ordersender_8',['ordersender',['../struct_algo_initializer.html#a77753a6eedc77580a50fa4c4d1ee7d6c',1,'AlgoInitializer']]],
+  ['ordexch_9',['OrdExch',['../struct_k_t_n_1_1_order_pod.html#a03bee215925d8af1a3544f91d284af03',1,'KTN::OrderPod']]],
+  ['ordfilltype_10',['OrdFillType',['../struct_k_t_n_1_1_order_pod.html#a63b9f5f063f422e11cb8a530c13e24f4',1,'KTN::OrderPod']]],
+  ['ordside_11',['OrdSide',['../struct_k_t_n_1_1_order_pod.html#a8bb9d6a5042378c0babba6f0c6ffc2d2',1,'KTN::OrderPod']]],
+  ['ordstate_12',['OrdState',['../struct_k_t_n_1_1_order_pod.html#aca8dd025ef374f5018b729f1f5ad2924',1,'KTN::OrderPod']]],
+  ['ordstatus_13',['OrdStatus',['../struct_k_t_n_1_1_order_pod.html#a7a4587fc1f3bfb4b54cafec605ea7402',1,'KTN::OrderPod']]],
+  ['ordtif_14',['OrdTif',['../struct_k_t_n_1_1_order_pod.html#a50ccb8663cdc2c18b0121dedfbbb82d6',1,'KTN::OrderPod']]],
+  ['ordtype_15',['OrdType',['../struct_k_t_n_1_1_order_pod.html#a5dcc1ecc3a84e808aaa7e1d3c3d2796c',1,'KTN::OrderPod']]],
+  ['org_16',['org',['../struct_user_info.html#a77e72940b5bbe786a1f9903f97be100c',1,'UserInfo::org'],['../class_session_status.html#a6356be3126665d26d58856932863997e',1,'SessionStatus::org']]]
+];

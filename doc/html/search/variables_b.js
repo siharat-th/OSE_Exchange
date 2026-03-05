@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['m_5fbhbstarted_0',['m_bHbStarted',['../class_session_status.html#ada951a66f70ddc02a42589dc9ec4c33d',1,'SessionStatus']]],
+  ['m_5fbisloggedin_1',['m_bIsLoggedIn',['../class_session_status.html#a13bb412e5191ff23d8c59b560424facb',1,'SessionStatus']]],
+  ['m_5flastseqnum_2',['m_LastSeqNum',['../class_session_status.html#aef733a47123105f2224b4f23805303b9',1,'SessionStatus']]],
+  ['m_5floginresponsestatus_3',['m_LoginResponseStatus',['../class_session_status.html#adb549dd02e7b2601d575db0e12fd60b7',1,'SessionStatus']]],
+  ['m_5floginresponsetext_4',['m_LoginResponseText',['../class_session_status.html#a4d8130b4b730771b7ba550eab911c216',1,'SessionStatus']]],
+  ['max_5ford_5fnotional_5',['max_ord_notional',['../struct_risk_limit.html#a12a43f2150485c8d9593c0d3a0190c3e',1,'RiskLimit']]],
+  ['mdindex_6',['mdindex',['../structinstrument.html#a40bf21232ee478a6e4441e59d1716dba',1,'instrument']]],
+  ['minsize_7',['minsize',['../structinstrument.html#ab39cc9cfa3d3aae7015008f494dcf3c5',1,'instrument']]],
+  ['mintick_8',['mintick',['../structinstrument.html#a5fdc5b37dd7093c85d58215fa16ae606',1,'instrument']]],
+  ['minutestolive_9',['MinutesToLive',['../struct_risk_base.html#a6c7c80ff560cd3b884a9eb8a701c8df3',1,'RiskBase']]],
+  ['mktsegid_10',['mktsegid',['../structinstrument.html#aa21c85702791ce35fea3b863ae1d7cf1',1,'instrument::mktsegid'],['../struct_k_t_n_1_1_order_pod.html#a41d88d0e243ca2d72358195aa04a5f8e',1,'KTN::OrderPod::mktsegid'],['../struct_k_t_n_1_1_order_exception.html#a0d236ae903b13c64514e758ae2018ea2',1,'KTN::OrderException::mktsegid'],['../class_session_status.html#afcf1ea3c85ed1a00819747b79522e685',1,'SessionStatus::mktsegid']]],
+  ['mod_5fords_5fbuy_11',['mod_ords_BUY',['../struct_algo_state.html#af664fa27cfe6bfbab3640d3bf282f02e',1,'AlgoState']]],
+  ['mod_5fords_5fsell_12',['mod_ords_SELL',['../struct_algo_state.html#a6cc07e6f05967b0db984466b3b56d325',1,'AlgoState']]],
+  ['mods_13',['mods',['../structmsgstats.html#af6e90b34768c3a10e3eb87677824f976',1,'msgstats']]],
+  ['msg_14',['msg',['../struct_log_msg.html#ad643fcb9fc44c2ea70d77b3a8257e765',1,'LogMsg']]],
+  ['msg_5fseq_5fout_5f_15',['MSG_SEQ_OUT_',['../class_session_status.html#a30f1f09a5c73378db5cc2de1d3c2d643',1,'SessionStatus']]],
+  ['msgbufsize_16',['MsgBufSize',['../structtcp__settings.html#a16ac029998e7deaa6b0f181ab153529f',1,'tcp_settings::MsgBufSize'],['../structudp__settings.html#ac1bdb74b5fb35a5030ba215553a794ca',1,'udp_settings::MsgBufSize']]],
+  ['msgseqnum_17',['msgseqnum',['../class_session_status.html#a75fccfd416c579b8555268c80d44e5c1',1,'SessionStatus']]],
+  ['msgtype_18',['msgtype',['../classgenericstats.html#a43b9024d60d10f85bd433b3c0a169e73',1,'genericstats']]]
+];

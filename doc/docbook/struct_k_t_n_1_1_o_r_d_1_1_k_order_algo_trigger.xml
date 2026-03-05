@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_t_n_1_1_o_r_d_1_1_k_order_algo_trigger" xml:lang="en-US">
+<title>KTN::ORD::KOrderAlgoTrigger Struct Reference</title>
+<indexterm><primary>KTN::ORD::KOrderAlgoTrigger</primary></indexterm>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <emphasis role="strong">Enum</emphasis> : uint8_t { <?linebreak?><emphasis role="strong">UNKNOWN</emphasis> = 0
+, <emphasis role="strong">ALGO_LEG</emphasis>
+, <emphasis role="strong">ALGO_HEDGE</emphasis>
+, <emphasis role="strong">ALGO_CXL</emphasis>
+, <?linebreak?><emphasis role="strong">ALGO_PROFIT</emphasis>
+, <emphasis role="strong">ALGO_STOPLOSS</emphasis>
+, <emphasis role="strong">ALGO_TIMEREXP</emphasis>
+, <emphasis role="strong">ALGO_GOTO_MKT</emphasis>
+, <?linebreak?><emphasis role="strong">ALGO_SQZ</emphasis>
+, <emphasis role="strong">ALGO_PASSOUT</emphasis>
+, <emphasis role="strong">ALGO_PUKE</emphasis>
+, <emphasis role="strong">ALGO_LARGE_TRADE_KILL</emphasis>
+, <?linebreak?><emphasis role="strong">ALGO_SQZ_RATIO</emphasis>
+, <emphasis role="strong">ALGO_SQZ_QTY</emphasis>
+, <emphasis role="strong">ALGO_SQZ_LARGETRD</emphasis>
+, <emphasis role="strong">ALGO_SQZ_PRICEJUMP</emphasis>
+, <?linebreak?><emphasis role="strong">ORDERBOOK</emphasis>
+, <emphasis role="strong">STOP_ELECTED</emphasis>
+, <emphasis role="strong">TASBOOK</emphasis>
+, <emphasis role="strong">ORPHAN</emphasis>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static std::string <link linkend="_struct_k_t_n_1_1_o_r_d_1_1_k_order_algo_trigger_1a8053d16c63da79d6bd923a6b330809da">toString</link> (Enum trigger)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_o_r_d_1_1_k_order_algo_trigger_1aaa3c850a079505c73cc032e568b66ddc"/><section>
+    <title>Enum</title>
+<indexterm><primary>Enum</primary><secondary>KTN::ORD::KOrderAlgoTrigger</secondary></indexterm>
+<indexterm><primary>KTN::ORD::KOrderAlgoTrigger</primary><secondary>Enum</secondary></indexterm>
+<para><computeroutput>enum KTN::ORD::KOrderAlgoTrigger::Enum : uint8_t</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_o_r_d_1_1_k_order_algo_trigger_1a8053d16c63da79d6bd923a6b330809da"/><section>
+    <title>toString()</title>
+<indexterm><primary>toString</primary><secondary>KTN::ORD::KOrderAlgoTrigger</secondary></indexterm>
+<indexterm><primary>KTN::ORD::KOrderAlgoTrigger</primary><secondary>toString</secondary></indexterm>
+<para><computeroutput>static std::string KTN::ORD::KOrderAlgoTrigger::toString (Enum trigger)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Orders/OrderEnumsV2.hpp</section>
+</section>

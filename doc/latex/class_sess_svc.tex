@@ -1,0 +1,97 @@
+\doxysection{Sess\+Svc Class Reference}
+\hypertarget{class_sess_svc}{}\label{class_sess_svc}\index{SessSvc@{SessSvc}}
+
+
+The \doxylink{class_sess_svc}{Sess\+Svc} class represents a CME session service.\+We use this service for persisting session state.  
+
+
+
+
+{\ttfamily \#include $<$Sess\+Svc.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sess_svc_a5e815fef2bc4f61b0709426e95e0deb9}{Sess\+Svc}} (string sesid, string firmid, int segid, int keepalive)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_sess_svc}{Sess\+Svc} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_sess_svc_afe4a9eda2bc258bae97fc76623a3268f}{\texorpdfstring{$\sim$}{\string~}\+Sess\+Svc}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{class_sess_svc}{Sess\+Svc} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sess_svc_a5a7548926702238b1bea5a3d176a5ef1}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Starts the session service. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sess_svc_a5270a51c5ea059127b0ad315f2811cc6}{Persist}} (const \mbox{\hyperlink{struct_sess_state_msg}{Sess\+State\+Msg}} \&msg)
+\begin{DoxyCompactList}\small\item\em Persists the session state message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_sess_svc}{Sess\+Svc} class represents a CME session service.\+We use this service for persisting session state. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_sess_svc_a5e815fef2bc4f61b0709426e95e0deb9}\index{SessSvc@{SessSvc}!SessSvc@{SessSvc}}
+\index{SessSvc@{SessSvc}!SessSvc@{SessSvc}}
+\doxysubsubsection{\texorpdfstring{SessSvc()}{SessSvc()}}
+{\footnotesize\ttfamily \label{class_sess_svc_a5e815fef2bc4f61b0709426e95e0deb9} 
+Sess\+Svc\+::\+Sess\+Svc (\begin{DoxyParamCaption}\item[{string}]{sesid}{, }\item[{string}]{firmid}{, }\item[{int}]{segid}{, }\item[{int}]{keepalive}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_sess_svc}{Sess\+Svc} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sesid} & The session ID. \\
+\hline
+{\em firmid} & The firm ID. \\
+\hline
+{\em segid} & The segment ID. \\
+\hline
+{\em keepalive} & The keep-\/alive value. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_sess_svc_afe4a9eda2bc258bae97fc76623a3268f}\index{SessSvc@{SessSvc}!````~SessSvc@{\texorpdfstring{$\sim$}{\string~}SessSvc}}
+\index{````~SessSvc@{\texorpdfstring{$\sim$}{\string~}SessSvc}!SessSvc@{SessSvc}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}SessSvc()}{\string~SessSvc()}}
+{\footnotesize\ttfamily \label{class_sess_svc_afe4a9eda2bc258bae97fc76623a3268f} 
+Sess\+Svc\+::\texorpdfstring{$\sim$}{\string~}\+Sess\+Svc (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destroys the \doxylink{class_sess_svc}{Sess\+Svc} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_sess_svc_a5270a51c5ea059127b0ad315f2811cc6}\index{SessSvc@{SessSvc}!Persist@{Persist}}
+\index{Persist@{Persist}!SessSvc@{SessSvc}}
+\doxysubsubsection{\texorpdfstring{Persist()}{Persist()}}
+{\footnotesize\ttfamily \label{class_sess_svc_a5270a51c5ea059127b0ad315f2811cc6} 
+void Sess\+Svc\+::\+Persist (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_sess_state_msg}{Sess\+State\+Msg}} \&}]{msg}{}\end{DoxyParamCaption})}
+
+
+
+Persists the session state message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The session state message to persist. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{l00132}{Session\+State\+Manager\+::\+Update()}}.
+
+\Hypertarget{class_sess_svc_a5a7548926702238b1bea5a3d176a5ef1}\index{SessSvc@{SessSvc}!Start@{Start}}
+\index{Start@{Start}!SessSvc@{SessSvc}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily \label{class_sess_svc_a5a7548926702238b1bea5a3d176a5ef1} 
+void Sess\+Svc\+::\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Starts the session service. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Loggers/Sess\+Svc.\+hpp\item 
+Loggers/Sess\+Svc.\+cpp\end{DoxyCompactItemize}

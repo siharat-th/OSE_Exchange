@@ -1,0 +1,112 @@
+\doxysection{KTN\+::Core\+::Mem\+Pool\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_k_t_n_1_1_core_1_1_mem_pool}{}\label{class_k_t_n_1_1_core_1_1_mem_pool}\index{KTN::Core::MemPool$<$ T $>$@{KTN::Core::MemPool$<$ T $>$}}
+
+
+A memory pool implementation for efficient object allocation and deallocation.  
+
+
+
+
+{\ttfamily \#include $<$Mem\+Pool.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_core_1_1_mem_pool_a8d593761605251508450bb1a3a3225ff}{Mem\+Pool}} (std\+::size\+\_\+t num\+\_\+elems)
+\begin{DoxyCompactList}\small\item\em Constructs a memory pool with a specified number of elements. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Args$>$ }\\T \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_mem_pool_ae0bda57059d8e1fcbded5b9ff1c4e595}{allocate}} (Args... args) noexcept
+\begin{DoxyCompactList}\small\item\em Allocates an object from the memory pool. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_mem_pool_a00ec3f90ac2458a7590fefc1e5951b95}{deallocate}} (const T \texorpdfstring{$\ast$}{*}elem) noexcept
+\begin{DoxyCompactList}\small\item\em Deallocates an object from the memory pool. \end{DoxyCompactList}\item 
+\Hypertarget{class_k_t_n_1_1_core_1_1_mem_pool_a39a981b4c234392c830633b21640847f}\label{class_k_t_n_1_1_core_1_1_mem_pool_a39a981b4c234392c830633b21640847f} 
+{\bfseries Mem\+Pool} (const \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_mem_pool}{Mem\+Pool}} \&)=delete
+\item 
+\Hypertarget{class_k_t_n_1_1_core_1_1_mem_pool_a258e3fd357de9830caf363e4c82f2ca4}\label{class_k_t_n_1_1_core_1_1_mem_pool_a258e3fd357de9830caf363e4c82f2ca4} 
+{\bfseries Mem\+Pool} (const \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_mem_pool}{Mem\+Pool}} \&\&)=delete
+\item 
+\Hypertarget{class_k_t_n_1_1_core_1_1_mem_pool_a32be344f86f5f03d20303a77aad9a4a9}\label{class_k_t_n_1_1_core_1_1_mem_pool_a32be344f86f5f03d20303a77aad9a4a9} 
+\mbox{\hyperlink{class_k_t_n_1_1_core_1_1_mem_pool}{Mem\+Pool}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_mem_pool}{Mem\+Pool}} \&)=delete
+\item 
+\Hypertarget{class_k_t_n_1_1_core_1_1_mem_pool_a99bf05b8de0e5d5a577b848d37a47035}\label{class_k_t_n_1_1_core_1_1_mem_pool_a99bf05b8de0e5d5a577b848d37a47035} 
+\mbox{\hyperlink{class_k_t_n_1_1_core_1_1_mem_pool}{Mem\+Pool}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_mem_pool}{Mem\+Pool}} \&\&)=delete
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class KTN\+::\+Core\+::\+Mem\+Pool$<$ T $>$}
+A memory pool implementation for efficient object allocation and deallocation. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of objects to be stored in the memory pool. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_k_t_n_1_1_core_1_1_mem_pool_a8d593761605251508450bb1a3a3225ff}\index{KTN::Core::MemPool$<$ T $>$@{KTN::Core::MemPool$<$ T $>$}!MemPool@{MemPool}}
+\index{MemPool@{MemPool}!KTN::Core::MemPool$<$ T $>$@{KTN::Core::MemPool$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{MemPool()}{MemPool()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_mem_pool_a8d593761605251508450bb1a3a3225ff} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{class_k_t_n_1_1_core_1_1_mem_pool}{KTN\+::\+Core\+::\+Mem\+Pool}}$<$ T $>$\+::\+Mem\+Pool (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{num\+\_\+elems}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Constructs a memory pool with a specified number of elements. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+\_\+elems} & The number of elements to pre-\/allocate in the memory pool. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_core_1_1_mem_pool_ae0bda57059d8e1fcbded5b9ff1c4e595}\index{KTN::Core::MemPool$<$ T $>$@{KTN::Core::MemPool$<$ T $>$}!allocate@{allocate}}
+\index{allocate@{allocate}!KTN::Core::MemPool$<$ T $>$@{KTN::Core::MemPool$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{allocate()}{allocate()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_mem_pool_ae0bda57059d8e1fcbded5b9ff1c4e595} 
+template$<$typename T $>$ \\
+template$<$typename... Args$>$ \\
+T \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_mem_pool}{KTN\+::\+Core\+::\+Mem\+Pool}}$<$ T $>$\+::allocate (\begin{DoxyParamCaption}\item[{Args...}]{args}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Allocates an object from the memory pool. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Args} & The types of arguments to be passed to the object\textquotesingle{}s constructor. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em args} & The arguments to be passed to the object\textquotesingle{}s constructor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\texorpdfstring{$\ast$}{*} A pointer to the allocated object. 
+\end{DoxyReturn}
+\Hypertarget{class_k_t_n_1_1_core_1_1_mem_pool_a00ec3f90ac2458a7590fefc1e5951b95}\index{KTN::Core::MemPool$<$ T $>$@{KTN::Core::MemPool$<$ T $>$}!deallocate@{deallocate}}
+\index{deallocate@{deallocate}!KTN::Core::MemPool$<$ T $>$@{KTN::Core::MemPool$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{deallocate()}{deallocate()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_mem_pool_a00ec3f90ac2458a7590fefc1e5951b95} 
+template$<$typename T $>$ \\
+auto \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_mem_pool}{KTN\+::\+Core\+::\+Mem\+Pool}}$<$ T $>$\+::deallocate (\begin{DoxyParamCaption}\item[{const T \texorpdfstring{$\ast$}{*}}]{elem}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Deallocates an object from the memory pool. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elem} & A pointer to the object to be deallocated. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Core/Mem\+Pool.\+hpp\end{DoxyCompactItemize}

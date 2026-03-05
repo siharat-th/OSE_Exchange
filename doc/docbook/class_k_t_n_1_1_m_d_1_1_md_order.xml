@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_m_d_1_1_md_order" xml:lang="en-US">
+<title>KTN::MD::MdOrder Class Reference</title>
+<indexterm><primary>KTN::MD::MdOrder</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_m_d_1_1_md_order_1a94e87105b258a8ec67c10fcbb1a4bc00">MdOrder</link> ()</para>
+
+<para>Default constructor for <link linkend="_class_k_t_n_1_1_m_d_1_1_md_order">MdOrder</link>. </para>
+</listitem>
+            <listitem><para><link linkend="_class_k_t_n_1_1_m_d_1_1_md_order_1a674cb9bd05dde9a9cbfa3eb4f0adc0f0">MdOrder</link> (int <link linkend="_class_k_t_n_1_1_m_d_1_1_md_order_1ab108982d5d644274e3ae0c07873f5a2d">id</link>, double <link linkend="_class_k_t_n_1_1_m_d_1_1_md_order_1a7554db237739b8dd217973bf56fa5e6c">price</link>, int <link linkend="_class_k_t_n_1_1_m_d_1_1_md_order_1a7f7d654ae48ed149bec538a759e17c80">quantity</link>, int <link linkend="_class_k_t_n_1_1_m_d_1_1_md_order_1a2fa0f49609f230dc55d58b7c7b23c8ef">priority</link>)</para>
+
+<para>Constructor for <link linkend="_class_k_t_n_1_1_m_d_1_1_md_order">MdOrder</link>. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_m_d_1_1_md_order_1a987c21909b5e38520301a4e9528e80a0">reset</link> ()</para>
+
+<para>Resets the values of the <link linkend="_class_k_t_n_1_1_m_d_1_1_md_order">MdOrder</link> to their default values. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_class_k_t_n_1_1_m_d_1_1_md_order_1ab108982d5d644274e3ae0c07873f5a2d">id</link></para>
+
+<para>Represents a market data order for MBO purposes. </para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_class_k_t_n_1_1_m_d_1_1_md_order_1a7554db237739b8dd217973bf56fa5e6c">price</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t_n_1_1_m_d_1_1_md_order_1a7f7d654ae48ed149bec538a759e17c80">quantity</link></para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_class_k_t_n_1_1_m_d_1_1_md_order_1a2fa0f49609f230dc55d58b7c7b23c8ef">priority</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_m_d_1_1_md_order_1a94e87105b258a8ec67c10fcbb1a4bc00"/><section>
+    <title>MdOrder()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>MdOrder</primary><secondary>KTN::MD::MdOrder</secondary></indexterm>
+<indexterm><primary>KTN::MD::MdOrder</primary><secondary>MdOrder</secondary></indexterm>
+<para><computeroutput>KTN::MD::MdOrder::MdOrder ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Default constructor for <link linkend="_class_k_t_n_1_1_m_d_1_1_md_order">MdOrder</link>. </para>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_m_d_1_1_md_order_1a674cb9bd05dde9a9cbfa3eb4f0adc0f0"/><section>
+    <title>MdOrder()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>MdOrder</primary><secondary>KTN::MD::MdOrder</secondary></indexterm>
+<indexterm><primary>KTN::MD::MdOrder</primary><secondary>MdOrder</secondary></indexterm>
+<para><computeroutput>KTN::MD::MdOrder::MdOrder (int id, double price, int quantity, int priority)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Constructor for <link linkend="_class_k_t_n_1_1_m_d_1_1_md_order">MdOrder</link>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>id</entry><entry>
+<para>The ID of the order. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>price</entry><entry>
+<para>The price of the order. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>quantity</entry><entry>
+<para>The quantity of the order. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>priority</entry><entry>
+<para>The priority of the order. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_m_d_1_1_md_order_1a987c21909b5e38520301a4e9528e80a0"/><section>
+    <title>reset()</title>
+<indexterm><primary>reset</primary><secondary>KTN::MD::MdOrder</secondary></indexterm>
+<indexterm><primary>KTN::MD::MdOrder</primary><secondary>reset</secondary></indexterm>
+<para><computeroutput>void KTN::MD::MdOrder::reset ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Resets the values of the <link linkend="_class_k_t_n_1_1_m_d_1_1_md_order">MdOrder</link> to their default values. </para>
+</para>
+<para>
+References <link linkend="_l00027">price</link>, <link linkend="_l00029">priority</link>, and <link linkend="_l00028">quantity</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_m_d_1_1_md_order_1ab108982d5d644274e3ae0c07873f5a2d"/><section>
+    <title>id</title>
+<indexterm><primary>id</primary><secondary>KTN::MD::MdOrder</secondary></indexterm>
+<indexterm><primary>KTN::MD::MdOrder</primary><secondary>id</secondary></indexterm>
+<para><computeroutput>int KTN::MD::MdOrder::id</computeroutput></para><para>
+
+<para>Represents a market data order for MBO purposes. </para>
+</para>
+
+<para>The ID of the order. </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_m_d_1_1_md_order_1a7554db237739b8dd217973bf56fa5e6c"/><section>
+    <title>price</title>
+<indexterm><primary>price</primary><secondary>KTN::MD::MdOrder</secondary></indexterm>
+<indexterm><primary>KTN::MD::MdOrder</primary><secondary>price</secondary></indexterm>
+<para><computeroutput>int32_t KTN::MD::MdOrder::price</computeroutput></para>
+<para>The price of the order. </para>
+<para>
+Referenced by <link linkend="_l00044">KTN::MD::LockFreeLimitOrderBook::add_order()</link>, and <link linkend="_l00049">reset()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_m_d_1_1_md_order_1a2fa0f49609f230dc55d58b7c7b23c8ef"/><section>
+    <title>priority</title>
+<indexterm><primary>priority</primary><secondary>KTN::MD::MdOrder</secondary></indexterm>
+<indexterm><primary>KTN::MD::MdOrder</primary><secondary>priority</secondary></indexterm>
+<para><computeroutput>uint64_t KTN::MD::MdOrder::priority</computeroutput></para>
+<para>The priority of the order. </para>
+<para>
+Referenced by <link linkend="_l00049">reset()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_m_d_1_1_md_order_1a7f7d654ae48ed149bec538a759e17c80"/><section>
+    <title>quantity</title>
+<indexterm><primary>quantity</primary><secondary>KTN::MD::MdOrder</secondary></indexterm>
+<indexterm><primary>KTN::MD::MdOrder</primary><secondary>quantity</secondary></indexterm>
+<para><computeroutput>int KTN::MD::MdOrder::quantity</computeroutput></para>
+<para>The quantity of the order. </para>
+<para>
+Referenced by <link linkend="_l00049">reset()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+OrderBook/circular_array.hpp</section>
+</section>

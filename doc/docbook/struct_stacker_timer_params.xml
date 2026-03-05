@@ -1,0 +1,247 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_stacker_timer_params" xml:lang="en-US">
+<title>StackerTimerParams Struct Reference</title>
+<indexterm><primary>StackerTimerParams</primary></indexterm>
+<para>
+
+<para>The <link linkend="_struct_stacker_timer_params">StackerTimerParams</link> struct represents the parameters for the StackerTimer algorithm. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;StackerTimerParams.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_struct_stacker_timer_params">StackerTimerParams</link> <link linkend="_struct_stacker_timer_params_1adaf1734022848b5318ca9e03ec7cbcd1">parse</link> (const std::string &amp;json_str)</para>
+
+<para>parse the JSON string and create a <link linkend="_struct_stacker_timer_params">StackerTimerParams</link> object. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_struct_stacker_timer_params_1aa555a06450537c79823677ecdd5129b1">ValidJson</link></para>
+</listitem>
+            <listitem><para><link linkend="_structalgometa">algometa</link> <link linkend="_struct_stacker_timer_params_1a96a1696242505eceb72abc211b1f5388">meta</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_stacker_timer_params_1aec88bb5a53281f8c9dcf278a36021591">subid</link></para>
+</listitem>
+            <listitem><para>std::unordered_map&lt; int, <link linkend="_structinstrument">instrument</link> &gt; <link linkend="_struct_stacker_timer_params_1a989a69766c9b2b15a06455b57952c2b2">LegSecIdMap</link></para>
+</listitem>
+            <listitem><para><link linkend="_structinstrument">instrument</link> <link linkend="_struct_stacker_timer_params_1a6f86327d299612ee4e474b0952f239bc">Legs</link> [4]</para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_stacker_timer_params_1ae39c5f4ceb1a54bfc9a12ab864c2fea9">LegCount</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_stacker_timer_params_1ac6e84595d2a3c8fcac53aa99933d8bdc">OrderQty</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_stacker_timer_params_1a3b865d5327361c80ee7df89369ce485d">TotalQty</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_stacker_timer_params_1a968bcf6049c1c3ce1431a18a745c5d1b">TotalExec</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_stacker_timer_params_1ac9db0f1812078870341a27a7a2ee29c4">NetPosition</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_stacker_timer_params_1a2caa0a2dd5de81f7ccd4b6b8b88b8e52">Reset</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_stacker_timer_params_1a12eda5eb85a2ccdb4e2f1da0fc878259">StackLevels</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_stacker_timer_params_1a16320a24b0665c1305e6cc3fc8f0a397">StackOffsetTicks</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_stacker_timer_params_1a6243e581f135bf5c0990c9260b04da2f">StackSide</link></para>
+</listitem>
+            <listitem><para>KOrderSide::Enum <link linkend="_struct_stacker_timer_params_1a5fee3d108143006b1e50f5ca7962c35b">OrdSide</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_stacker_timer_params_1a8a58d41d9ccf1b9d91c26735a6f818a8">EnablePuke</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_stacker_timer_params_1a1edcee37e79b97a8fe45e2cc479ceed8">PukeRatio</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_stacker_timer_params_1a83535bd541fe5dc793b07788a0c79b47">SqueezeRatio</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_stacker_timer_params_1ae9a82cfa2feef74812d0384230bd1f4b">PukeQty</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_stacker_timer_params_1a59e97cfc58b6779b62d35a172e113d67">PullOnLargeTrade</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_stacker_timer_params_1a936ddd2e14624ddc4db132c07a68e682">LargeTradeQty</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_stacker_timer_params_1ab557555857c43dcd3f792c82db4e4b3b">CoverAtClose</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_stacker_timer_params_1ad7da196ec1cea95550ad77ef4a500380">CloseStartTime</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_stacker_timer_params_1acd1dee5c16633ef8e0c8376ac2d20b86">CloseEndTime</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_struct_stacker_timer_params">StackerTimerParams</link> struct represents the parameters for the StackerTimer algorithm. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_stacker_timer_params_1adaf1734022848b5318ca9e03ec7cbcd1"/><section>
+    <title>parse()</title>
+<indexterm><primary>parse</primary><secondary>StackerTimerParams</secondary></indexterm>
+<indexterm><primary>StackerTimerParams</primary><secondary>parse</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_stacker_timer_params">StackerTimerParams</link> StackerTimerParams::parse (const std::string &amp; json_str)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>parse the JSON string and create a <link linkend="_struct_stacker_timer_params">StackerTimerParams</link> object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>json_str</entry><entry>
+<para>The JSON string to parse. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The parsed <link linkend="_struct_stacker_timer_params">StackerTimerParams</link> object. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00260">algometa::Enabled</link>, <link linkend="_l00049">UserInfo::groupname</link>, <link linkend="_l00048">UserInfo::org</link>, <link linkend="_l00262">algometa::Source</link>, <link linkend="_l00256">algometa::Strategy</link>, <link linkend="_l00264">algometa::Tag</link>, <link linkend="_l00258">algometa::TemplateName</link>, <link linkend="_l00261">algometa::UniqueId</link>, <link linkend="_l00047">UserInfo::user</link>, and <link linkend="_l00279">algometa::userinfo</link>.</para>
+<para>
+Referenced by <link linkend="_l00042">KTN::StackerTimer::onLaunch()</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_stacker_timer_params_1acd1dee5c16633ef8e0c8376ac2d20b86"/><section>
+    <title>CloseEndTime</title>
+<indexterm><primary>CloseEndTime</primary><secondary>StackerTimerParams</secondary></indexterm>
+<indexterm><primary>StackerTimerParams</primary><secondary>CloseEndTime</secondary></indexterm>
+<para><computeroutput>string StackerTimerParams::CloseEndTime</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_timer_params_1ad7da196ec1cea95550ad77ef4a500380"/><section>
+    <title>CloseStartTime</title>
+<indexterm><primary>CloseStartTime</primary><secondary>StackerTimerParams</secondary></indexterm>
+<indexterm><primary>StackerTimerParams</primary><secondary>CloseStartTime</secondary></indexterm>
+<para><computeroutput>string StackerTimerParams::CloseStartTime</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_timer_params_1ab557555857c43dcd3f792c82db4e4b3b"/><section>
+    <title>CoverAtClose</title>
+<indexterm><primary>CoverAtClose</primary><secondary>StackerTimerParams</secondary></indexterm>
+<indexterm><primary>StackerTimerParams</primary><secondary>CoverAtClose</secondary></indexterm>
+<para><computeroutput>bool StackerTimerParams::CoverAtClose</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_timer_params_1a8a58d41d9ccf1b9d91c26735a6f818a8"/><section>
+    <title>EnablePuke</title>
+<indexterm><primary>EnablePuke</primary><secondary>StackerTimerParams</secondary></indexterm>
+<indexterm><primary>StackerTimerParams</primary><secondary>EnablePuke</secondary></indexterm>
+<para><computeroutput>bool StackerTimerParams::EnablePuke</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_timer_params_1a936ddd2e14624ddc4db132c07a68e682"/><section>
+    <title>LargeTradeQty</title>
+<indexterm><primary>LargeTradeQty</primary><secondary>StackerTimerParams</secondary></indexterm>
+<indexterm><primary>StackerTimerParams</primary><secondary>LargeTradeQty</secondary></indexterm>
+<para><computeroutput>int StackerTimerParams::LargeTradeQty</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_timer_params_1ae39c5f4ceb1a54bfc9a12ab864c2fea9"/><section>
+    <title>LegCount</title>
+<indexterm><primary>LegCount</primary><secondary>StackerTimerParams</secondary></indexterm>
+<indexterm><primary>StackerTimerParams</primary><secondary>LegCount</secondary></indexterm>
+<para><computeroutput>int StackerTimerParams::LegCount</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_timer_params_1a6f86327d299612ee4e474b0952f239bc"/><section>
+    <title>Legs</title>
+<indexterm><primary>Legs</primary><secondary>StackerTimerParams</secondary></indexterm>
+<indexterm><primary>StackerTimerParams</primary><secondary>Legs</secondary></indexterm>
+<para><computeroutput><link linkend="_structinstrument">instrument</link> StackerTimerParams::Legs[4]</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_timer_params_1a989a69766c9b2b15a06455b57952c2b2"/><section>
+    <title>LegSecIdMap</title>
+<indexterm><primary>LegSecIdMap</primary><secondary>StackerTimerParams</secondary></indexterm>
+<indexterm><primary>StackerTimerParams</primary><secondary>LegSecIdMap</secondary></indexterm>
+<para><computeroutput>std::unordered_map&lt;int, <link linkend="_structinstrument">instrument</link>&gt; StackerTimerParams::LegSecIdMap</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_timer_params_1a96a1696242505eceb72abc211b1f5388"/><section>
+    <title>meta</title>
+<indexterm><primary>meta</primary><secondary>StackerTimerParams</secondary></indexterm>
+<indexterm><primary>StackerTimerParams</primary><secondary>meta</secondary></indexterm>
+<para><computeroutput><link linkend="_structalgometa">algometa</link> StackerTimerParams::meta</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_timer_params_1ac9db0f1812078870341a27a7a2ee29c4"/><section>
+    <title>NetPosition</title>
+<indexterm><primary>NetPosition</primary><secondary>StackerTimerParams</secondary></indexterm>
+<indexterm><primary>StackerTimerParams</primary><secondary>NetPosition</secondary></indexterm>
+<para><computeroutput>int StackerTimerParams::NetPosition</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_timer_params_1ac6e84595d2a3c8fcac53aa99933d8bdc"/><section>
+    <title>OrderQty</title>
+<indexterm><primary>OrderQty</primary><secondary>StackerTimerParams</secondary></indexterm>
+<indexterm><primary>StackerTimerParams</primary><secondary>OrderQty</secondary></indexterm>
+<para><computeroutput>int StackerTimerParams::OrderQty</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_timer_params_1a5fee3d108143006b1e50f5ca7962c35b"/><section>
+    <title>OrdSide</title>
+<indexterm><primary>OrdSide</primary><secondary>StackerTimerParams</secondary></indexterm>
+<indexterm><primary>StackerTimerParams</primary><secondary>OrdSide</secondary></indexterm>
+<para><computeroutput>KOrderSide::Enum StackerTimerParams::OrdSide</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_timer_params_1ae9a82cfa2feef74812d0384230bd1f4b"/><section>
+    <title>PukeQty</title>
+<indexterm><primary>PukeQty</primary><secondary>StackerTimerParams</secondary></indexterm>
+<indexterm><primary>StackerTimerParams</primary><secondary>PukeQty</secondary></indexterm>
+<para><computeroutput>int StackerTimerParams::PukeQty</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_timer_params_1a1edcee37e79b97a8fe45e2cc479ceed8"/><section>
+    <title>PukeRatio</title>
+<indexterm><primary>PukeRatio</primary><secondary>StackerTimerParams</secondary></indexterm>
+<indexterm><primary>StackerTimerParams</primary><secondary>PukeRatio</secondary></indexterm>
+<para><computeroutput>double StackerTimerParams::PukeRatio</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_timer_params_1a59e97cfc58b6779b62d35a172e113d67"/><section>
+    <title>PullOnLargeTrade</title>
+<indexterm><primary>PullOnLargeTrade</primary><secondary>StackerTimerParams</secondary></indexterm>
+<indexterm><primary>StackerTimerParams</primary><secondary>PullOnLargeTrade</secondary></indexterm>
+<para><computeroutput>bool StackerTimerParams::PullOnLargeTrade</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_timer_params_1a2caa0a2dd5de81f7ccd4b6b8b88b8e52"/><section>
+    <title>Reset</title>
+<indexterm><primary>Reset</primary><secondary>StackerTimerParams</secondary></indexterm>
+<indexterm><primary>StackerTimerParams</primary><secondary>Reset</secondary></indexterm>
+<para><computeroutput>bool StackerTimerParams::Reset</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_timer_params_1a83535bd541fe5dc793b07788a0c79b47"/><section>
+    <title>SqueezeRatio</title>
+<indexterm><primary>SqueezeRatio</primary><secondary>StackerTimerParams</secondary></indexterm>
+<indexterm><primary>StackerTimerParams</primary><secondary>SqueezeRatio</secondary></indexterm>
+<para><computeroutput>double StackerTimerParams::SqueezeRatio</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_timer_params_1a12eda5eb85a2ccdb4e2f1da0fc878259"/><section>
+    <title>StackLevels</title>
+<indexterm><primary>StackLevels</primary><secondary>StackerTimerParams</secondary></indexterm>
+<indexterm><primary>StackerTimerParams</primary><secondary>StackLevels</secondary></indexterm>
+<para><computeroutput>int StackerTimerParams::StackLevels</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_timer_params_1a16320a24b0665c1305e6cc3fc8f0a397"/><section>
+    <title>StackOffsetTicks</title>
+<indexterm><primary>StackOffsetTicks</primary><secondary>StackerTimerParams</secondary></indexterm>
+<indexterm><primary>StackerTimerParams</primary><secondary>StackOffsetTicks</secondary></indexterm>
+<para><computeroutput>int StackerTimerParams::StackOffsetTicks</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_timer_params_1a6243e581f135bf5c0990c9260b04da2f"/><section>
+    <title>StackSide</title>
+<indexterm><primary>StackSide</primary><secondary>StackerTimerParams</secondary></indexterm>
+<indexterm><primary>StackerTimerParams</primary><secondary>StackSide</secondary></indexterm>
+<para><computeroutput>string StackerTimerParams::StackSide</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_timer_params_1aec88bb5a53281f8c9dcf278a36021591"/><section>
+    <title>subid</title>
+<indexterm><primary>subid</primary><secondary>StackerTimerParams</secondary></indexterm>
+<indexterm><primary>StackerTimerParams</primary><secondary>subid</secondary></indexterm>
+<para><computeroutput>string StackerTimerParams::subid</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_timer_params_1a968bcf6049c1c3ce1431a18a745c5d1b"/><section>
+    <title>TotalExec</title>
+<indexterm><primary>TotalExec</primary><secondary>StackerTimerParams</secondary></indexterm>
+<indexterm><primary>StackerTimerParams</primary><secondary>TotalExec</secondary></indexterm>
+<para><computeroutput>int StackerTimerParams::TotalExec</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_timer_params_1a3b865d5327361c80ee7df89369ce485d"/><section>
+    <title>TotalQty</title>
+<indexterm><primary>TotalQty</primary><secondary>StackerTimerParams</secondary></indexterm>
+<indexterm><primary>StackerTimerParams</primary><secondary>TotalQty</secondary></indexterm>
+<para><computeroutput>int StackerTimerParams::TotalQty</computeroutput></para></section>
+<anchor xml:id="_struct_stacker_timer_params_1aa555a06450537c79823677ecdd5129b1"/><section>
+    <title>ValidJson</title>
+<indexterm><primary>ValidJson</primary><secondary>StackerTimerParams</secondary></indexterm>
+<indexterm><primary>StackerTimerParams</primary><secondary>ValidJson</secondary></indexterm>
+<para><computeroutput>bool StackerTimerParams::ValidJson</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following files:</para>
+AlgoParams/StackerTimerParams.hppAlgoParams/StackerTimerParams.cpp</section>
+</section>

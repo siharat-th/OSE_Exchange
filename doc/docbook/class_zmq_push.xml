@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_zmq_push" xml:lang="en-US">
+<title>ZmqPush Class Reference</title>
+<indexterm><primary>ZmqPush</primary></indexterm>
+<para>
+
+<para>Represents a ZMQ push socket for sending messages to a ZMQ pull socket. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;ZmqPush.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_zmq_push_1a674ebef7499faff6820de5b823f7797f">ZmqPush</link> ()</para>
+
+<para>Default constructor for <link linkend="_class_zmq_push">ZmqPush</link>. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_zmq_push_1ae9974bc3dc8815705f18b6d735a338df">~ZmqPush</link> ()</para>
+
+<para>Destructor for <link linkend="_class_zmq_push">ZmqPush</link>. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_zmq_push_1a37c12a5b442d0595bfeab97d534302f7">Init</link> (char *szServerAddressPort)</para>
+
+<para>Initializes the <link linkend="_class_zmq_push">ZmqPush</link> object with the specified server address and port. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_zmq_push_1a97a167b550d19d30786567c3e40583a4">Push</link> (char *msg, int len)</para>
+
+<para>Pushes a message to the ZMQ pull socket. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Represents a ZMQ push socket for sending messages to a ZMQ pull socket. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_zmq_push_1a674ebef7499faff6820de5b823f7797f"/><section>
+    <title>ZmqPush()</title>
+<indexterm><primary>ZmqPush</primary><secondary>ZmqPush</secondary></indexterm>
+<indexterm><primary>ZmqPush</primary><secondary>ZmqPush</secondary></indexterm>
+<para><computeroutput>ZmqPush::ZmqPush ( )</computeroutput></para><para>
+
+<para>Default constructor for <link linkend="_class_zmq_push">ZmqPush</link>. </para>
+</para>
+</section>
+<anchor xml:id="_class_zmq_push_1ae9974bc3dc8815705f18b6d735a338df"/><section>
+    <title>~ZmqPush()</title>
+<indexterm><primary>~ZmqPush</primary><secondary>ZmqPush</secondary></indexterm>
+<indexterm><primary>ZmqPush</primary><secondary>~ZmqPush</secondary></indexterm>
+<para><computeroutput>ZmqPush::~ZmqPush ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Destructor for <link linkend="_class_zmq_push">ZmqPush</link>. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_zmq_push_1a37c12a5b442d0595bfeab97d534302f7"/><section>
+    <title>Init()</title>
+<indexterm><primary>Init</primary><secondary>ZmqPush</secondary></indexterm>
+<indexterm><primary>ZmqPush</primary><secondary>Init</secondary></indexterm>
+<para><computeroutput>bool ZmqPush::Init (char * szServerAddressPort)</computeroutput></para><para>
+
+<para>Initializes the <link linkend="_class_zmq_push">ZmqPush</link> object with the specified server address and port. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>szServerAddressPort</entry><entry>
+<para>The server address and port in the format &quot;address:port&quot;. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if initialization is successful, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_zmq_push_1a97a167b550d19d30786567c3e40583a4"/><section>
+    <title>Push()</title>
+<indexterm><primary>Push</primary><secondary>ZmqPush</secondary></indexterm>
+<indexterm><primary>ZmqPush</primary><secondary>Push</secondary></indexterm>
+<para><computeroutput>void ZmqPush::Push (char * msg, int len)</computeroutput></para><para>
+
+<para>Pushes a message to the ZMQ pull socket. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>msg</entry><entry>
+<para>The message to push. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>len</entry><entry>
+<para>The length of the message. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+ZMQ/ZmqPush.hZMQ/ZmqPush.cpp</section>
+</section>

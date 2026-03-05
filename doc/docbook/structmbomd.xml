@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structmbomd" xml:lang="en-US">
+<title>mbomd Struct Reference</title>
+<indexterm><primary>mbomd</primary></indexterm>
+<para>
+
+<para>Structure representing market-by-order market data. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;algo_structs.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>uint16_t <link linkend="_structmbomd_1ac29f8721e0f9cb51ae9730e7c43923c6">index</link></para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_structmbomd_1a85cffa1350afeec111a584bf8b9fa3ff">secid</link></para>
+</listitem>
+            <listitem><para><link linkend="_structpxlvl">pxlvl</link> <link linkend="_structmbomd_1a445de9e39be9c6d7039a98cb0c411b24">bids</link> [10]</para>
+</listitem>
+            <listitem><para><link linkend="_structpxlvl">pxlvl</link> <link linkend="_structmbomd_1a5aaf546c88fa97a0065caafc4ae8d1c6">asks</link> [10]</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Structure representing market-by-order market data. </para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structmbomd_1a5aaf546c88fa97a0065caafc4ae8d1c6"/><section>
+    <title>asks</title>
+<indexterm><primary>asks</primary><secondary>mbomd</secondary></indexterm>
+<indexterm><primary>mbomd</primary><secondary>asks</secondary></indexterm>
+<para><computeroutput><link linkend="_structpxlvl">pxlvl</link> mbomd::asks[10]</computeroutput></para>
+<para>The array of ask price levels. </para>
+</section>
+<anchor xml:id="_structmbomd_1a445de9e39be9c6d7039a98cb0c411b24"/><section>
+    <title>bids</title>
+<indexterm><primary>bids</primary><secondary>mbomd</secondary></indexterm>
+<indexterm><primary>mbomd</primary><secondary>bids</secondary></indexterm>
+<para><computeroutput><link linkend="_structpxlvl">pxlvl</link> mbomd::bids[10]</computeroutput></para>
+<para>The array of bid price levels. </para>
+</section>
+<anchor xml:id="_structmbomd_1ac29f8721e0f9cb51ae9730e7c43923c6"/><section>
+    <title>index</title>
+<indexterm><primary>index</primary><secondary>mbomd</secondary></indexterm>
+<indexterm><primary>mbomd</primary><secondary>index</secondary></indexterm>
+<para><computeroutput>uint16_t mbomd::index</computeroutput></para>
+<para>The index. </para>
+</section>
+<anchor xml:id="_structmbomd_1a85cffa1350afeec111a584bf8b9fa3ff"/><section>
+    <title>secid</title>
+<indexterm><primary>secid</primary><secondary>mbomd</secondary></indexterm>
+<indexterm><primary>mbomd</primary><secondary>secid</secondary></indexterm>
+<para><computeroutput>int32_t mbomd::secid</computeroutput></para>
+<para>The security ID. </para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+AlgoSupport/algo_structs.hpp</section>
+</section>

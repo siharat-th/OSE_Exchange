@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_core_1_1_buffer_pool" xml:lang="en-US">
+<title>KTN::Core::BufferPool Class Reference</title>
+<indexterm><primary>KTN::Core::BufferPool</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_k_t_n_1_1_core_1_1_buffer_pool">BufferPool</link> class represents a pool of buffers. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;BufferPool.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_core_1_1_buffer_pool_1a75b048f3e543de0a6ad8b4be437f064c">BufferPool</link> (size_t buffer_size, size_t pool_size)</para>
+
+<para>Constructs a <link linkend="_class_k_t_n_1_1_core_1_1_buffer_pool">BufferPool</link> object with the specified buffer size and pool size. </para>
+</listitem>
+            <listitem><para><link linkend="_class_k_t_n_1_1_core_1_1_buffer_pool_1a02fbab800dd7fee5585770f47bf617c7">~BufferPool</link> ()</para>
+
+<para>Destructor for the <link linkend="_class_k_t_n_1_1_core_1_1_buffer_pool">BufferPool</link> object. </para>
+</listitem>
+            <listitem><para><link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf">KTNBuf</link> * <link linkend="_class_k_t_n_1_1_core_1_1_buffer_pool_1a7fd368fc60a45ff02e6ffea11e98708d">get</link> ()</para>
+
+<para>Retrieves a buffer from the pool. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_core_1_1_buffer_pool_1ad17e2b74633489065a37852608c5e3d5">put</link> (<link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf">KTNBuf</link> *buffer)</para>
+
+<para>Puts a buffer back into the pool. </para>
+</listitem>
+            <listitem><para>size_t <link linkend="_class_k_t_n_1_1_core_1_1_buffer_pool_1ad8e7fba9c7447ed4aba2ee6790bd04d3">size</link> ()</para>
+
+<para>Gets the current size of the buffer pool. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_core_1_1_buffer_pool_1accad99003fabecb777723a477a080ee2">Load</link> ()</para>
+
+<para>Loads the buffer pool. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_k_t_n_1_1_core_1_1_buffer_pool">BufferPool</link> class represents a pool of buffers. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_buffer_pool_1a75b048f3e543de0a6ad8b4be437f064c"/><section>
+    <title>BufferPool()</title>
+<indexterm><primary>BufferPool</primary><secondary>KTN::Core::BufferPool</secondary></indexterm>
+<indexterm><primary>KTN::Core::BufferPool</primary><secondary>BufferPool</secondary></indexterm>
+<para><computeroutput>BufferPool::BufferPool (size_t buffer_size, size_t pool_size)</computeroutput></para><para>
+
+<para>Constructs a <link linkend="_class_k_t_n_1_1_core_1_1_buffer_pool">BufferPool</link> object with the specified buffer size and pool size. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>buffer_size</entry><entry>
+<para>The size of each buffer in bytes. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>pool_size</entry><entry>
+<para>The maximum number of buffers in the pool. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00038">Load()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_buffer_pool_1a02fbab800dd7fee5585770f47bf617c7"/><section>
+    <title>~BufferPool()</title>
+<indexterm><primary>~BufferPool</primary><secondary>KTN::Core::BufferPool</secondary></indexterm>
+<indexterm><primary>KTN::Core::BufferPool</primary><secondary>~BufferPool</secondary></indexterm>
+<para><computeroutput>BufferPool::~BufferPool ( )</computeroutput></para><para>
+
+<para>Destructor for the <link linkend="_class_k_t_n_1_1_core_1_1_buffer_pool">BufferPool</link> object. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_buffer_pool_1a7fd368fc60a45ff02e6ffea11e98708d"/><section>
+    <title>get()</title>
+<indexterm><primary>get</primary><secondary>KTN::Core::BufferPool</secondary></indexterm>
+<indexterm><primary>KTN::Core::BufferPool</primary><secondary>get</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf">KTNBuf</link> * BufferPool::get ( )</computeroutput></para><para>
+
+<para>Retrieves a buffer from the pool. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>A pointer to the retrieved buffer. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00038">Load()</link>.</para>
+<para>
+Referenced by <link linkend="_l01104">KTN::CME::CmeAlgo::Send()</link>, and <link linkend="_l00889">KTN::CME::CmeGT5::Send()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_buffer_pool_1accad99003fabecb777723a477a080ee2"/><section>
+    <title>Load()</title>
+<indexterm><primary>Load</primary><secondary>KTN::Core::BufferPool</secondary></indexterm>
+<indexterm><primary>KTN::Core::BufferPool</primary><secondary>Load</secondary></indexterm>
+<para><computeroutput>void BufferPool::Load ( )</computeroutput></para><para>
+
+<para>Loads the buffer pool. </para>
+</para>
+<para>
+Referenced by <link linkend="_l00013">BufferPool()</link>, and <link linkend="_l00052">get()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_buffer_pool_1ad17e2b74633489065a37852608c5e3d5"/><section>
+    <title>put()</title>
+<indexterm><primary>put</primary><secondary>KTN::Core::BufferPool</secondary></indexterm>
+<indexterm><primary>KTN::Core::BufferPool</primary><secondary>put</secondary></indexterm>
+<para><computeroutput>bool BufferPool::put (<link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf">KTNBuf</link> * buffer)</computeroutput></para><para>
+
+<para>Puts a buffer back into the pool. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>buffer</entry><entry>
+<para>A pointer to the buffer to be put back. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the buffer was successfully put back, false otherwise. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l01104">KTN::CME::CmeAlgo::Send()</link>, and <link linkend="_l00889">KTN::CME::CmeGT5::Send()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_buffer_pool_1ad8e7fba9c7447ed4aba2ee6790bd04d3"/><section>
+    <title>size()</title>
+<indexterm><primary>size</primary><secondary>KTN::Core::BufferPool</secondary></indexterm>
+<indexterm><primary>KTN::Core::BufferPool</primary><secondary>size</secondary></indexterm>
+<para><computeroutput>size_t KTN::Core::BufferPool::size ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Gets the current size of the buffer pool. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The current size of the buffer pool. </para>
+</formalpara>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Core/BufferPool.hppCore/BufferPool.cpp</section>
+</section>

@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classzmq_1_1monitor__t" xml:lang="en-US">
+<title>zmq::monitor_t Class Reference</title>
+<indexterm><primary>zmq::monitor_t</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_classzmq_1_1monitor__t_1acbdb681dd8ff28fb02f77d309cfaf3fa">monitor</link> (<link linkend="_classzmq_1_1socket__t">socket_t</link> &amp;socket, std::string const &amp;addr, int events=ZMQ_EVENT_ALL)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classzmq_1_1monitor__t_1a1a4ef654948954440313fca07d12c2d7">monitor</link> (<link linkend="_classzmq_1_1socket__t">socket_t</link> &amp;socket, const char *addr_, int events=ZMQ_EVENT_ALL)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classzmq_1_1monitor__t_1a8f2ec16879d565b50a52d0b4fd943e6d">init</link> (<link linkend="_classzmq_1_1socket__t">socket_t</link> &amp;socket, std::string const &amp;addr, int events=ZMQ_EVENT_ALL)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classzmq_1_1monitor__t_1a359890c7a37565f581adef8e20f571fd">init</link> (<link linkend="_classzmq_1_1socket__t">socket_t</link> &amp;socket, const char *addr_, int events=ZMQ_EVENT_ALL)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classzmq_1_1monitor__t_1a5dba87c6645536ff6dc245f48db16b39">check_event</link> (int timeout=0)</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_classzmq_1_1monitor__t_1aa1d8e99de259708c0cb489b199405648">on_monitor_started</link> ()</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_classzmq_1_1monitor__t_1a386a369b907c577e37718880d3f9fa64">on_event_connected</link> (const <link linkend="_structzmq__event__t">zmq_event_t</link> &amp;event_, const char *addr_)</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_classzmq_1_1monitor__t_1a70438a7986e72d98024997f4f2573047">on_event_connect_delayed</link> (const <link linkend="_structzmq__event__t">zmq_event_t</link> &amp;event_, const char *addr_)</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_classzmq_1_1monitor__t_1ac865cafcd211cf70da6134de7ccd4057">on_event_connect_retried</link> (const <link linkend="_structzmq__event__t">zmq_event_t</link> &amp;event_, const char *addr_)</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_classzmq_1_1monitor__t_1a1461e4d075e9edf590a62adb311f5cc2">on_event_listening</link> (const <link linkend="_structzmq__event__t">zmq_event_t</link> &amp;event_, const char *addr_)</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_classzmq_1_1monitor__t_1a644f4dcc164c4320b20b59174cda6e29">on_event_bind_failed</link> (const <link linkend="_structzmq__event__t">zmq_event_t</link> &amp;event_, const char *addr_)</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_classzmq_1_1monitor__t_1af33e9e7a47623c8414422ab9789b52a9">on_event_accepted</link> (const <link linkend="_structzmq__event__t">zmq_event_t</link> &amp;event_, const char *addr_)</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_classzmq_1_1monitor__t_1a542b526887b641a421cbdd5d9a80acb9">on_event_accept_failed</link> (const <link linkend="_structzmq__event__t">zmq_event_t</link> &amp;event_, const char *addr_)</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_classzmq_1_1monitor__t_1aaab9ff58fcdd4c65b2134a98a18e8f2b">on_event_closed</link> (const <link linkend="_structzmq__event__t">zmq_event_t</link> &amp;event_, const char *addr_)</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_classzmq_1_1monitor__t_1a8be94a20f50536dca6d6414b33136c89">on_event_close_failed</link> (const <link linkend="_structzmq__event__t">zmq_event_t</link> &amp;event_, const char *addr_)</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_classzmq_1_1monitor__t_1ad959d1cc557290a6984fde2e7ae8f3a6">on_event_disconnected</link> (const <link linkend="_structzmq__event__t">zmq_event_t</link> &amp;event_, const char *addr_)</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_classzmq_1_1monitor__t_1a4ea841ca3b449718020a2e627abb608c">on_event_handshake_failed_no_detail</link> (const <link linkend="_structzmq__event__t">zmq_event_t</link> &amp;event_, const char *addr_)</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_classzmq_1_1monitor__t_1a276b1ffb031e186e121babbefe088bfb">on_event_handshake_failed_protocol</link> (const <link linkend="_structzmq__event__t">zmq_event_t</link> &amp;event_, const char *addr_)</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_classzmq_1_1monitor__t_1a1c49afab3b76b94c8f707f1e1afaf945">on_event_handshake_failed_auth</link> (const <link linkend="_structzmq__event__t">zmq_event_t</link> &amp;event_, const char *addr_)</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_classzmq_1_1monitor__t_1a14b9b522ea4542e27084b7edd76a907a">on_event_handshake_succeeded</link> (const <link linkend="_structzmq__event__t">zmq_event_t</link> &amp;event_, const char *addr_)</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_classzmq_1_1monitor__t_1ac03905bb3a84d2f0f07861e1cc81f482">on_event_unknown</link> (const <link linkend="_structzmq__event__t">zmq_event_t</link> &amp;event_, const char *addr_)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classzmq_1_1monitor__t_1a95d361f58af33e00c19168a1670b7e90"/><section>
+    <title>monitor_t()</title>
+<indexterm><primary>monitor_t</primary><secondary>zmq::monitor_t</secondary></indexterm>
+<indexterm><primary>zmq::monitor_t</primary><secondary>monitor_t</secondary></indexterm>
+<para><computeroutput>zmq::monitor_t::monitor_t ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1monitor__t_1a51f636aa1e80e6e29f3cd623169c7acb"/><section>
+    <title>~monitor_t()</title>
+<indexterm><primary>~monitor_t</primary><secondary>zmq::monitor_t</secondary></indexterm>
+<indexterm><primary>zmq::monitor_t</primary><secondary>~monitor_t</secondary></indexterm>
+<para><computeroutput>virtual zmq::monitor_t::~monitor_t ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classzmq_1_1monitor__t_1a5dba87c6645536ff6dc245f48db16b39"/><section>
+    <title>check_event()</title>
+<indexterm><primary>check_event</primary><secondary>zmq::monitor_t</secondary></indexterm>
+<indexterm><primary>zmq::monitor_t</primary><secondary>check_event</secondary></indexterm>
+<para><computeroutput>bool zmq::monitor_t::check_event (int timeout = <computeroutput>0</computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1monitor__t_1a359890c7a37565f581adef8e20f571fd"/><section>
+    <title>init()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>init</primary><secondary>zmq::monitor_t</secondary></indexterm>
+<indexterm><primary>zmq::monitor_t</primary><secondary>init</secondary></indexterm>
+<para><computeroutput>void zmq::monitor_t::init (<link linkend="_classzmq_1_1socket__t">socket_t</link> &amp; socket, const char * addr_, int events = <computeroutput>ZMQ_EVENT_ALL</computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1monitor__t_1a8f2ec16879d565b50a52d0b4fd943e6d"/><section>
+    <title>init()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>init</primary><secondary>zmq::monitor_t</secondary></indexterm>
+<indexterm><primary>zmq::monitor_t</primary><secondary>init</secondary></indexterm>
+<para><computeroutput>void zmq::monitor_t::init (<link linkend="_classzmq_1_1socket__t">socket_t</link> &amp; socket, std::string const &amp; addr, int events = <computeroutput>ZMQ_EVENT_ALL</computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1monitor__t_1a1a4ef654948954440313fca07d12c2d7"/><section>
+    <title>monitor()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>monitor</primary><secondary>zmq::monitor_t</secondary></indexterm>
+<indexterm><primary>zmq::monitor_t</primary><secondary>monitor</secondary></indexterm>
+<para><computeroutput>void zmq::monitor_t::monitor (<link linkend="_classzmq_1_1socket__t">socket_t</link> &amp; socket, const char * addr_, int events = <computeroutput>ZMQ_EVENT_ALL</computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1monitor__t_1acbdb681dd8ff28fb02f77d309cfaf3fa"/><section>
+    <title>monitor()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>monitor</primary><secondary>zmq::monitor_t</secondary></indexterm>
+<indexterm><primary>zmq::monitor_t</primary><secondary>monitor</secondary></indexterm>
+<para><computeroutput>void zmq::monitor_t::monitor (<link linkend="_classzmq_1_1socket__t">socket_t</link> &amp; socket, std::string const &amp; addr, int events = <computeroutput>ZMQ_EVENT_ALL</computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1monitor__t_1a542b526887b641a421cbdd5d9a80acb9"/><section>
+    <title>on_event_accept_failed()</title>
+<indexterm><primary>on_event_accept_failed</primary><secondary>zmq::monitor_t</secondary></indexterm>
+<indexterm><primary>zmq::monitor_t</primary><secondary>on_event_accept_failed</secondary></indexterm>
+<para><computeroutput>virtual void zmq::monitor_t::on_event_accept_failed (const <link linkend="_structzmq__event__t">zmq_event_t</link> &amp; event_, const char * addr_)<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1monitor__t_1af33e9e7a47623c8414422ab9789b52a9"/><section>
+    <title>on_event_accepted()</title>
+<indexterm><primary>on_event_accepted</primary><secondary>zmq::monitor_t</secondary></indexterm>
+<indexterm><primary>zmq::monitor_t</primary><secondary>on_event_accepted</secondary></indexterm>
+<para><computeroutput>virtual void zmq::monitor_t::on_event_accepted (const <link linkend="_structzmq__event__t">zmq_event_t</link> &amp; event_, const char * addr_)<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1monitor__t_1a644f4dcc164c4320b20b59174cda6e29"/><section>
+    <title>on_event_bind_failed()</title>
+<indexterm><primary>on_event_bind_failed</primary><secondary>zmq::monitor_t</secondary></indexterm>
+<indexterm><primary>zmq::monitor_t</primary><secondary>on_event_bind_failed</secondary></indexterm>
+<para><computeroutput>virtual void zmq::monitor_t::on_event_bind_failed (const <link linkend="_structzmq__event__t">zmq_event_t</link> &amp; event_, const char * addr_)<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1monitor__t_1a8be94a20f50536dca6d6414b33136c89"/><section>
+    <title>on_event_close_failed()</title>
+<indexterm><primary>on_event_close_failed</primary><secondary>zmq::monitor_t</secondary></indexterm>
+<indexterm><primary>zmq::monitor_t</primary><secondary>on_event_close_failed</secondary></indexterm>
+<para><computeroutput>virtual void zmq::monitor_t::on_event_close_failed (const <link linkend="_structzmq__event__t">zmq_event_t</link> &amp; event_, const char * addr_)<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1monitor__t_1aaab9ff58fcdd4c65b2134a98a18e8f2b"/><section>
+    <title>on_event_closed()</title>
+<indexterm><primary>on_event_closed</primary><secondary>zmq::monitor_t</secondary></indexterm>
+<indexterm><primary>zmq::monitor_t</primary><secondary>on_event_closed</secondary></indexterm>
+<para><computeroutput>virtual void zmq::monitor_t::on_event_closed (const <link linkend="_structzmq__event__t">zmq_event_t</link> &amp; event_, const char * addr_)<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1monitor__t_1a70438a7986e72d98024997f4f2573047"/><section>
+    <title>on_event_connect_delayed()</title>
+<indexterm><primary>on_event_connect_delayed</primary><secondary>zmq::monitor_t</secondary></indexterm>
+<indexterm><primary>zmq::monitor_t</primary><secondary>on_event_connect_delayed</secondary></indexterm>
+<para><computeroutput>virtual void zmq::monitor_t::on_event_connect_delayed (const <link linkend="_structzmq__event__t">zmq_event_t</link> &amp; event_, const char * addr_)<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1monitor__t_1ac865cafcd211cf70da6134de7ccd4057"/><section>
+    <title>on_event_connect_retried()</title>
+<indexterm><primary>on_event_connect_retried</primary><secondary>zmq::monitor_t</secondary></indexterm>
+<indexterm><primary>zmq::monitor_t</primary><secondary>on_event_connect_retried</secondary></indexterm>
+<para><computeroutput>virtual void zmq::monitor_t::on_event_connect_retried (const <link linkend="_structzmq__event__t">zmq_event_t</link> &amp; event_, const char * addr_)<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1monitor__t_1a386a369b907c577e37718880d3f9fa64"/><section>
+    <title>on_event_connected()</title>
+<indexterm><primary>on_event_connected</primary><secondary>zmq::monitor_t</secondary></indexterm>
+<indexterm><primary>zmq::monitor_t</primary><secondary>on_event_connected</secondary></indexterm>
+<para><computeroutput>virtual void zmq::monitor_t::on_event_connected (const <link linkend="_structzmq__event__t">zmq_event_t</link> &amp; event_, const char * addr_)<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1monitor__t_1ad959d1cc557290a6984fde2e7ae8f3a6"/><section>
+    <title>on_event_disconnected()</title>
+<indexterm><primary>on_event_disconnected</primary><secondary>zmq::monitor_t</secondary></indexterm>
+<indexterm><primary>zmq::monitor_t</primary><secondary>on_event_disconnected</secondary></indexterm>
+<para><computeroutput>virtual void zmq::monitor_t::on_event_disconnected (const <link linkend="_structzmq__event__t">zmq_event_t</link> &amp; event_, const char * addr_)<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1monitor__t_1a1c49afab3b76b94c8f707f1e1afaf945"/><section>
+    <title>on_event_handshake_failed_auth()</title>
+<indexterm><primary>on_event_handshake_failed_auth</primary><secondary>zmq::monitor_t</secondary></indexterm>
+<indexterm><primary>zmq::monitor_t</primary><secondary>on_event_handshake_failed_auth</secondary></indexterm>
+<para><computeroutput>virtual void zmq::monitor_t::on_event_handshake_failed_auth (const <link linkend="_structzmq__event__t">zmq_event_t</link> &amp; event_, const char * addr_)<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1monitor__t_1a4ea841ca3b449718020a2e627abb608c"/><section>
+    <title>on_event_handshake_failed_no_detail()</title>
+<indexterm><primary>on_event_handshake_failed_no_detail</primary><secondary>zmq::monitor_t</secondary></indexterm>
+<indexterm><primary>zmq::monitor_t</primary><secondary>on_event_handshake_failed_no_detail</secondary></indexterm>
+<para><computeroutput>virtual void zmq::monitor_t::on_event_handshake_failed_no_detail (const <link linkend="_structzmq__event__t">zmq_event_t</link> &amp; event_, const char * addr_)<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1monitor__t_1a276b1ffb031e186e121babbefe088bfb"/><section>
+    <title>on_event_handshake_failed_protocol()</title>
+<indexterm><primary>on_event_handshake_failed_protocol</primary><secondary>zmq::monitor_t</secondary></indexterm>
+<indexterm><primary>zmq::monitor_t</primary><secondary>on_event_handshake_failed_protocol</secondary></indexterm>
+<para><computeroutput>virtual void zmq::monitor_t::on_event_handshake_failed_protocol (const <link linkend="_structzmq__event__t">zmq_event_t</link> &amp; event_, const char * addr_)<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1monitor__t_1a14b9b522ea4542e27084b7edd76a907a"/><section>
+    <title>on_event_handshake_succeeded()</title>
+<indexterm><primary>on_event_handshake_succeeded</primary><secondary>zmq::monitor_t</secondary></indexterm>
+<indexterm><primary>zmq::monitor_t</primary><secondary>on_event_handshake_succeeded</secondary></indexterm>
+<para><computeroutput>virtual void zmq::monitor_t::on_event_handshake_succeeded (const <link linkend="_structzmq__event__t">zmq_event_t</link> &amp; event_, const char * addr_)<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1monitor__t_1a1461e4d075e9edf590a62adb311f5cc2"/><section>
+    <title>on_event_listening()</title>
+<indexterm><primary>on_event_listening</primary><secondary>zmq::monitor_t</secondary></indexterm>
+<indexterm><primary>zmq::monitor_t</primary><secondary>on_event_listening</secondary></indexterm>
+<para><computeroutput>virtual void zmq::monitor_t::on_event_listening (const <link linkend="_structzmq__event__t">zmq_event_t</link> &amp; event_, const char * addr_)<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1monitor__t_1ac03905bb3a84d2f0f07861e1cc81f482"/><section>
+    <title>on_event_unknown()</title>
+<indexterm><primary>on_event_unknown</primary><secondary>zmq::monitor_t</secondary></indexterm>
+<indexterm><primary>zmq::monitor_t</primary><secondary>on_event_unknown</secondary></indexterm>
+<para><computeroutput>virtual void zmq::monitor_t::on_event_unknown (const <link linkend="_structzmq__event__t">zmq_event_t</link> &amp; event_, const char * addr_)<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1monitor__t_1aa1d8e99de259708c0cb489b199405648"/><section>
+    <title>on_monitor_started()</title>
+<indexterm><primary>on_monitor_started</primary><secondary>zmq::monitor_t</secondary></indexterm>
+<indexterm><primary>zmq::monitor_t</primary><secondary>on_monitor_started</secondary></indexterm>
+<para><computeroutput>virtual void zmq::monitor_t::on_monitor_started ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+ZMQ/zmq.hpp</section>
+</section>

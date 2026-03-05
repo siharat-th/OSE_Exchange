@@ -1,0 +1,208 @@
+\doxysection{udp\+\_\+settings Struct Reference}
+\hypertarget{structudp__settings}{}\label{structudp__settings}\index{udp\_settings@{udp\_settings}}
+
+
+Struct representing UDP settings.  
+
+
+
+
+{\ttfamily \#include $<$Net\+Settings.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{structudp__settings_a285b2707eb25915a097e9a62bcf89043}{Load}} (\mbox{\hyperlink{structudp__settings}{udp\+\_\+settings}} \&ef)
+\begin{DoxyCompactList}\small\item\em Load the UDP settings from the configuration file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structudp__settings_a63e370593bd00175890aa89ed73cbc2b}{Affinity}}
+\item 
+bool \mbox{\hyperlink{structudp__settings_a6bf357e8f2813c497a6bb11482625396}{Calc\+Latency}}
+\item 
+int \mbox{\hyperlink{structudp__settings_a8b1da30f063b5a5affc093ac544c9416}{Offset}}
+\item 
+int \mbox{\hyperlink{structudp__settings_af1f1fdca7ced28835a4a0d3cf6ee6ed7}{Rx\+Poll\+Cnt}}
+\item 
+int \mbox{\hyperlink{structudp__settings_a33da4e6984ed09313cd7a7c4518b1e68}{Poll\+Wait\+Ns}}
+\item 
+int \mbox{\hyperlink{structudp__settings_a98b4a9c64d1e5aac037dda493478dafc}{Rx\+Capacity}}
+\item 
+int \mbox{\hyperlink{structudp__settings_a6c885756ea48ce3fbadfdf580b488146}{Rx\+Batch\+Size}}
+\item 
+int \mbox{\hyperlink{structudp__settings_ac1bdb74b5fb35a5030ba215553a794ca}{Msg\+Buf\+Size}}
+\item 
+int \mbox{\hyperlink{structudp__settings_ac29f250477f955f1a6458f79ba15fe7f}{Timeout}}
+\item 
+string \mbox{\hyperlink{structudp__settings_adc8fce2468ad1a731341bdd7fda0de6b}{IntfA}}
+\item 
+string \mbox{\hyperlink{structudp__settings_af56deca7bcc7b2d96759b6c76e843974}{IntfB}}
+\item 
+string \mbox{\hyperlink{structudp__settings_a38faba6b9bf06c98fe63261c0a457de6}{Intf\+NameA}}
+\item 
+string \mbox{\hyperlink{structudp__settings_a94fac58fc503f06941df72adbcda266d}{Intf\+NameB}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Struct representing UDP settings. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structudp__settings_a285b2707eb25915a097e9a62bcf89043}\index{udp\_settings@{udp\_settings}!Load@{Load}}
+\index{Load@{Load}!udp\_settings@{udp\_settings}}
+\doxysubsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily \label{structudp__settings_a285b2707eb25915a097e9a62bcf89043} 
+static void udp\+\_\+settings\+::\+Load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structudp__settings}{udp\+\_\+settings}} \&}]{ef}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Load the UDP settings from the configuration file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ef} & The UDP settings object to load. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00076}{Affinity}}, \mbox{\hyperlink{l00077}{Calc\+Latency}}, \mbox{\hyperlink{l00123}{Settings\+::get()}}, \mbox{\hyperlink{l00193}{Settings\+::get\+Boolean()}}, \mbox{\hyperlink{l00133}{Settings\+::get\+Integer()}}, \mbox{\hyperlink{l00087}{IntfA}}, \mbox{\hyperlink{l00088}{IntfB}}, \mbox{\hyperlink{l00089}{Intf\+NameA}}, \mbox{\hyperlink{l00090}{Intf\+NameB}}, \mbox{\hyperlink{l00084}{Msg\+Buf\+Size}}, \mbox{\hyperlink{l00079}{Offset}}, \mbox{\hyperlink{l00081}{Poll\+Wait\+Ns}}, \mbox{\hyperlink{l00083}{Rx\+Batch\+Size}}, \mbox{\hyperlink{l00082}{Rx\+Capacity}}, \mbox{\hyperlink{l00080}{Rx\+Poll\+Cnt}}, and \mbox{\hyperlink{l00085}{Timeout}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structudp__settings_a63e370593bd00175890aa89ed73cbc2b}\index{udp\_settings@{udp\_settings}!Affinity@{Affinity}}
+\index{Affinity@{Affinity}!udp\_settings@{udp\_settings}}
+\doxysubsubsection{\texorpdfstring{Affinity}{Affinity}}
+{\footnotesize\ttfamily \label{structudp__settings_a63e370593bd00175890aa89ed73cbc2b} 
+int udp\+\_\+settings\+::\+Affinity}
+
+The affinity value. 
+
+Referenced by \mbox{\hyperlink{l00096}{Load()}}.
+
+\Hypertarget{structudp__settings_a6bf357e8f2813c497a6bb11482625396}\index{udp\_settings@{udp\_settings}!CalcLatency@{CalcLatency}}
+\index{CalcLatency@{CalcLatency}!udp\_settings@{udp\_settings}}
+\doxysubsubsection{\texorpdfstring{CalcLatency}{CalcLatency}}
+{\footnotesize\ttfamily \label{structudp__settings_a6bf357e8f2813c497a6bb11482625396} 
+bool udp\+\_\+settings\+::\+Calc\+Latency}
+
+Flag indicating whether to calculate latency. 
+
+Referenced by \mbox{\hyperlink{l00096}{Load()}}.
+
+\Hypertarget{structudp__settings_adc8fce2468ad1a731341bdd7fda0de6b}\index{udp\_settings@{udp\_settings}!IntfA@{IntfA}}
+\index{IntfA@{IntfA}!udp\_settings@{udp\_settings}}
+\doxysubsubsection{\texorpdfstring{IntfA}{IntfA}}
+{\footnotesize\ttfamily \label{structudp__settings_adc8fce2468ad1a731341bdd7fda0de6b} 
+string udp\+\_\+settings\+::\+IntfA}
+
+The interface A. 
+
+Referenced by \mbox{\hyperlink{l00096}{Load()}}.
+
+\Hypertarget{structudp__settings_af56deca7bcc7b2d96759b6c76e843974}\index{udp\_settings@{udp\_settings}!IntfB@{IntfB}}
+\index{IntfB@{IntfB}!udp\_settings@{udp\_settings}}
+\doxysubsubsection{\texorpdfstring{IntfB}{IntfB}}
+{\footnotesize\ttfamily \label{structudp__settings_af56deca7bcc7b2d96759b6c76e843974} 
+string udp\+\_\+settings\+::\+IntfB}
+
+The interface B. 
+
+Referenced by \mbox{\hyperlink{l00096}{Load()}}.
+
+\Hypertarget{structudp__settings_a38faba6b9bf06c98fe63261c0a457de6}\index{udp\_settings@{udp\_settings}!IntfNameA@{IntfNameA}}
+\index{IntfNameA@{IntfNameA}!udp\_settings@{udp\_settings}}
+\doxysubsubsection{\texorpdfstring{IntfNameA}{IntfNameA}}
+{\footnotesize\ttfamily \label{structudp__settings_a38faba6b9bf06c98fe63261c0a457de6} 
+string udp\+\_\+settings\+::\+Intf\+NameA}
+
+The interface name A. 
+
+Referenced by \mbox{\hyperlink{l00096}{Load()}}.
+
+\Hypertarget{structudp__settings_a94fac58fc503f06941df72adbcda266d}\index{udp\_settings@{udp\_settings}!IntfNameB@{IntfNameB}}
+\index{IntfNameB@{IntfNameB}!udp\_settings@{udp\_settings}}
+\doxysubsubsection{\texorpdfstring{IntfNameB}{IntfNameB}}
+{\footnotesize\ttfamily \label{structudp__settings_a94fac58fc503f06941df72adbcda266d} 
+string udp\+\_\+settings\+::\+Intf\+NameB}
+
+The interface name B. 
+
+Referenced by \mbox{\hyperlink{l00096}{Load()}}.
+
+\Hypertarget{structudp__settings_ac1bdb74b5fb35a5030ba215553a794ca}\index{udp\_settings@{udp\_settings}!MsgBufSize@{MsgBufSize}}
+\index{MsgBufSize@{MsgBufSize}!udp\_settings@{udp\_settings}}
+\doxysubsubsection{\texorpdfstring{MsgBufSize}{MsgBufSize}}
+{\footnotesize\ttfamily \label{structudp__settings_ac1bdb74b5fb35a5030ba215553a794ca} 
+int udp\+\_\+settings\+::\+Msg\+Buf\+Size}
+
+The message buffer size. 
+
+Referenced by \mbox{\hyperlink{l00096}{Load()}}.
+
+\Hypertarget{structudp__settings_a8b1da30f063b5a5affc093ac544c9416}\index{udp\_settings@{udp\_settings}!Offset@{Offset}}
+\index{Offset@{Offset}!udp\_settings@{udp\_settings}}
+\doxysubsubsection{\texorpdfstring{Offset}{Offset}}
+{\footnotesize\ttfamily \label{structudp__settings_a8b1da30f063b5a5affc093ac544c9416} 
+int udp\+\_\+settings\+::\+Offset}
+
+The offset value. 
+
+Referenced by \mbox{\hyperlink{l00096}{Load()}}.
+
+\Hypertarget{structudp__settings_a33da4e6984ed09313cd7a7c4518b1e68}\index{udp\_settings@{udp\_settings}!PollWaitNs@{PollWaitNs}}
+\index{PollWaitNs@{PollWaitNs}!udp\_settings@{udp\_settings}}
+\doxysubsubsection{\texorpdfstring{PollWaitNs}{PollWaitNs}}
+{\footnotesize\ttfamily \label{structudp__settings_a33da4e6984ed09313cd7a7c4518b1e68} 
+int udp\+\_\+settings\+::\+Poll\+Wait\+Ns}
+
+The poll wait time in nanoseconds. 
+
+Referenced by \mbox{\hyperlink{l00096}{Load()}}.
+
+\Hypertarget{structudp__settings_a6c885756ea48ce3fbadfdf580b488146}\index{udp\_settings@{udp\_settings}!RxBatchSize@{RxBatchSize}}
+\index{RxBatchSize@{RxBatchSize}!udp\_settings@{udp\_settings}}
+\doxysubsubsection{\texorpdfstring{RxBatchSize}{RxBatchSize}}
+{\footnotesize\ttfamily \label{structudp__settings_a6c885756ea48ce3fbadfdf580b488146} 
+int udp\+\_\+settings\+::\+Rx\+Batch\+Size}
+
+The receive batch size. 
+
+Referenced by \mbox{\hyperlink{l00096}{Load()}}.
+
+\Hypertarget{structudp__settings_a98b4a9c64d1e5aac037dda493478dafc}\index{udp\_settings@{udp\_settings}!RxCapacity@{RxCapacity}}
+\index{RxCapacity@{RxCapacity}!udp\_settings@{udp\_settings}}
+\doxysubsubsection{\texorpdfstring{RxCapacity}{RxCapacity}}
+{\footnotesize\ttfamily \label{structudp__settings_a98b4a9c64d1e5aac037dda493478dafc} 
+int udp\+\_\+settings\+::\+Rx\+Capacity}
+
+The receive capacity. 
+
+Referenced by \mbox{\hyperlink{l00096}{Load()}}.
+
+\Hypertarget{structudp__settings_af1f1fdca7ced28835a4a0d3cf6ee6ed7}\index{udp\_settings@{udp\_settings}!RxPollCnt@{RxPollCnt}}
+\index{RxPollCnt@{RxPollCnt}!udp\_settings@{udp\_settings}}
+\doxysubsubsection{\texorpdfstring{RxPollCnt}{RxPollCnt}}
+{\footnotesize\ttfamily \label{structudp__settings_af1f1fdca7ced28835a4a0d3cf6ee6ed7} 
+int udp\+\_\+settings\+::\+Rx\+Poll\+Cnt}
+
+The receive poll count. 
+
+Referenced by \mbox{\hyperlink{l00096}{Load()}}.
+
+\Hypertarget{structudp__settings_ac29f250477f955f1a6458f79ba15fe7f}\index{udp\_settings@{udp\_settings}!Timeout@{Timeout}}
+\index{Timeout@{Timeout}!udp\_settings@{udp\_settings}}
+\doxysubsubsection{\texorpdfstring{Timeout}{Timeout}}
+{\footnotesize\ttfamily \label{structudp__settings_ac29f250477f955f1a6458f79ba15fe7f} 
+int udp\+\_\+settings\+::\+Timeout}
+
+The timeout value. 
+
+Referenced by \mbox{\hyperlink{l00096}{Load()}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ktn\+Efvi/Net\+Settings.\+hpp\end{DoxyCompactItemize}

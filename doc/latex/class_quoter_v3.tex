@@ -1,0 +1,281 @@
+\doxysection{Quoter\+V3 Class Reference}
+\hypertarget{class_quoter_v3}{}\label{class_quoter_v3}\index{QuoterV3@{QuoterV3}}
+
+
+Represents a \doxylink{class_quoter_v3}{Quoter\+V3} class that manages quoting orders and functions.  
+
+
+
+
+{\ttfamily \#include $<$Quoter\+V3.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_quoter_v3_a8c84543f5827deb91ed412253bd6db02}{Quoter\+V3}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{class_quoter_v3}{Quoter\+V3}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_quoter_v3_ade7535112737d50fa8918a41460bf476}{\texorpdfstring{$\sim$}{\string~}\+Quoter\+V3}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{class_quoter_v3}{Quoter\+V3}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_quoter_v3_a51225c4f207f6ab4301edf58fae3bfcc}{Construct}} (int cbid, \mbox{\hyperlink{structinstrument}{instrument}} inst, \mbox{\hyperlink{structalgometa}{algometa}} meta, bool cert)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_quoter_v3}{Quoter\+V3} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_quoter_v3_a78d550993280d2fe66c00078db75a465}{Get}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord)
+\begin{DoxyCompactList}\small\item\em Gets the Order\+Pod object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_quoter_v3_aabcbbbe6526033e37265460cb070d481}{Next\+New}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord, KOrder\+Side\+::\+Enum side, uint64\+\_\+t exchordid, uint32\+\_\+t qty, int price)
+\begin{DoxyCompactList}\small\item\em Retrieve a new Order\+Pod object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_quoter_v3_aff46be83858c472055de88fcee890254}{Next\+Mod}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord, KOrder\+Side\+::\+Enum side, uint64\+\_\+t reqid, uint64\+\_\+t exchordid, uint32\+\_\+t qty, int price)
+\begin{DoxyCompactList}\small\item\em Modifies an existing Order\+Pod object. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{class_quoter_v3_a44b5bdec37c57f27336d275663d05cc3}{Hedge\+Req\+Id}} (int32\+\_\+t secid, int16\+\_\+t differential, uint8\+\_\+t multiplier)
+\begin{DoxyCompactList}\small\item\em Generates a Hedge\+Req\+Id. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} \mbox{\hyperlink{class_quoter_v3_a46d061f2659ed8ee90e57a675b026a6a}{New\+Blank}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new blank Order object. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{class_quoter_v3_a2269ac1f163a6fb785dc4036f8d0fe80}{Cert\+Sec\+Id}} (string symbol)
+\begin{DoxyCompactList}\small\item\em Gets the Cert\+Sec\+Id. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} \mbox{\hyperlink{class_quoter_v3_a481649217edab30ef3d0a2587ddc20b7}{Get\+Template}} ()
+\begin{DoxyCompactList}\small\item\em Gets the template Order object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_quoter_v3_a7f5e3e3d3302da1b7dd9032940ae02aa}{Total}} ()
+\begin{DoxyCompactList}\small\item\em Gets the total count. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_quoter_v3_a2764f36f3aac020112637a0de0d9b8c8}{Next\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Generates the next ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a \doxylink{class_quoter_v3}{Quoter\+V3} class that manages quoting orders and functions. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_quoter_v3_a8c84543f5827deb91ed412253bd6db02}\index{QuoterV3@{QuoterV3}!QuoterV3@{QuoterV3}}
+\index{QuoterV3@{QuoterV3}!QuoterV3@{QuoterV3}}
+\doxysubsubsection{\texorpdfstring{QuoterV3()}{QuoterV3()}}
+{\footnotesize\ttfamily \label{class_quoter_v3_a8c84543f5827deb91ed412253bd6db02} 
+Quoter\+V3\+::\+Quoter\+V3 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor for \doxylink{class_quoter_v3}{Quoter\+V3}. 
+
+\Hypertarget{class_quoter_v3_ade7535112737d50fa8918a41460bf476}\index{QuoterV3@{QuoterV3}!````~QuoterV3@{\texorpdfstring{$\sim$}{\string~}QuoterV3}}
+\index{````~QuoterV3@{\texorpdfstring{$\sim$}{\string~}QuoterV3}!QuoterV3@{QuoterV3}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}QuoterV3()}{\string~QuoterV3()}}
+{\footnotesize\ttfamily \label{class_quoter_v3_ade7535112737d50fa8918a41460bf476} 
+Quoter\+V3\+::\texorpdfstring{$\sim$}{\string~}\+Quoter\+V3 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor for \doxylink{class_quoter_v3}{Quoter\+V3}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_quoter_v3_a2269ac1f163a6fb785dc4036f8d0fe80}\index{QuoterV3@{QuoterV3}!CertSecId@{CertSecId}}
+\index{CertSecId@{CertSecId}!QuoterV3@{QuoterV3}}
+\doxysubsubsection{\texorpdfstring{CertSecId()}{CertSecId()}}
+{\footnotesize\ttfamily \label{class_quoter_v3_a2269ac1f163a6fb785dc4036f8d0fe80} 
+int32\+\_\+t Quoter\+V3\+::\+Cert\+Sec\+Id (\begin{DoxyParamCaption}\item[{string}]{symbol}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the Cert\+Sec\+Id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em symbol} & The symbol value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Cert\+Sec\+Id. 
+\end{DoxyReturn}
+\Hypertarget{class_quoter_v3_a51225c4f207f6ab4301edf58fae3bfcc}\index{QuoterV3@{QuoterV3}!Construct@{Construct}}
+\index{Construct@{Construct}!QuoterV3@{QuoterV3}}
+\doxysubsubsection{\texorpdfstring{Construct()}{Construct()}}
+{\footnotesize\ttfamily \label{class_quoter_v3_a51225c4f207f6ab4301edf58fae3bfcc} 
+void Quoter\+V3\+::\+Construct (\begin{DoxyParamCaption}\item[{int}]{cbid}{, }\item[{\mbox{\hyperlink{structinstrument}{instrument}}}]{inst}{, }\item[{\mbox{\hyperlink{structalgometa}{algometa}}}]{meta}{, }\item[{bool}]{cert}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_quoter_v3}{Quoter\+V3} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cbid} & The cbid value. \\
+\hline
+{\em inst} & The instrument value. \\
+\hline
+{\em meta} & The algometa value. \\
+\hline
+{\em cert} & The cert value. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00111}{instrument\+::exch}}, \mbox{\hyperlink{l00075}{instrument\+::index}}, \mbox{\hyperlink{l00067}{instrument\+::mintick}}, \mbox{\hyperlink{l00078}{instrument\+::mktsegid}}, \mbox{\hyperlink{l00105}{instrument\+::prodtype}}, \mbox{\hyperlink{l00112}{instrument\+::product}}, \mbox{\hyperlink{l00077}{instrument\+::secid}}, \mbox{\hyperlink{l00262}{algometa\+::\+Source}}, \mbox{\hyperlink{l00256}{algometa\+::\+Strategy}}, \mbox{\hyperlink{l00257}{algometa\+::\+Strat\+Id}}, \mbox{\hyperlink{l00113}{instrument\+::symbol}}, \mbox{\hyperlink{l00264}{algometa\+::\+Tag}}, \mbox{\hyperlink{l00261}{algometa\+::\+Unique\+Id}}, and \mbox{\hyperlink{l00279}{algometa\+::userinfo}}.
+
+\Hypertarget{class_quoter_v3_a78d550993280d2fe66c00078db75a465}\index{QuoterV3@{QuoterV3}!Get@{Get}}
+\index{Get@{Get}!QuoterV3@{QuoterV3}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily \label{class_quoter_v3_a78d550993280d2fe66c00078db75a465} 
+void Quoter\+V3\+::\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&}]{ord}{}\end{DoxyParamCaption})}
+
+
+
+Gets the Order\+Pod object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ord} & The Order\+Pod object to get. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00141}{KTN\+::\+Core\+::\+SPSCRing\+Buffer$<$ T $>$\+::try\+\_\+pop()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00198}{KTN\+::\+PLWatcher\+::\+Order\+Received()}}.
+
+\Hypertarget{class_quoter_v3_a481649217edab30ef3d0a2587ddc20b7}\index{QuoterV3@{QuoterV3}!GetTemplate@{GetTemplate}}
+\index{GetTemplate@{GetTemplate}!QuoterV3@{QuoterV3}}
+\doxysubsubsection{\texorpdfstring{GetTemplate()}{GetTemplate()}}
+{\footnotesize\ttfamily \label{class_quoter_v3_a481649217edab30ef3d0a2587ddc20b7} 
+\mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} Quoter\+V3\+::\+Get\+Template (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the template Order object. 
+
+\begin{DoxyReturn}{Returns}
+The template Order object. 
+\end{DoxyReturn}
+\Hypertarget{class_quoter_v3_a44b5bdec37c57f27336d275663d05cc3}\index{QuoterV3@{QuoterV3}!HedgeReqId@{HedgeReqId}}
+\index{HedgeReqId@{HedgeReqId}!QuoterV3@{QuoterV3}}
+\doxysubsubsection{\texorpdfstring{HedgeReqId()}{HedgeReqId()}}
+{\footnotesize\ttfamily \label{class_quoter_v3_a44b5bdec37c57f27336d275663d05cc3} 
+uint64\+\_\+t Quoter\+V3\+::\+Hedge\+Req\+Id (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{secid}{, }\item[{int16\+\_\+t}]{differential}{, }\item[{uint8\+\_\+t}]{multiplier}{}\end{DoxyParamCaption})}
+
+
+
+Generates a Hedge\+Req\+Id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em secid} & The secid value. \\
+\hline
+{\em differential} & The differential value. \\
+\hline
+{\em multiplier} & The multiplier value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The generated Hedge\+Req\+Id. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00046}{Algo\+Hdg\+Encoder\+::encode\+Data()}}.
+
+\Hypertarget{class_quoter_v3_a46d061f2659ed8ee90e57a675b026a6a}\index{QuoterV3@{QuoterV3}!NewBlank@{NewBlank}}
+\index{NewBlank@{NewBlank}!QuoterV3@{QuoterV3}}
+\doxysubsubsection{\texorpdfstring{NewBlank()}{NewBlank()}}
+{\footnotesize\ttfamily \label{class_quoter_v3_a46d061f2659ed8ee90e57a675b026a6a} 
+\mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} Quoter\+V3\+::\+New\+Blank (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a new blank Order object. 
+
+\begin{DoxyReturn}{Returns}
+The new blank Order object. 
+\end{DoxyReturn}
+\Hypertarget{class_quoter_v3_a2764f36f3aac020112637a0de0d9b8c8}\index{QuoterV3@{QuoterV3}!NextId@{NextId}}
+\index{NextId@{NextId}!QuoterV3@{QuoterV3}}
+\doxysubsubsection{\texorpdfstring{NextId()}{NextId()}}
+{\footnotesize\ttfamily \label{class_quoter_v3_a2764f36f3aac020112637a0de0d9b8c8} 
+string Quoter\+V3\+::\+Next\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Generates the next ID. 
+
+\begin{DoxyReturn}{Returns}
+The next ID. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l01140}{KTN\+::\+Waves\+::\+Order\+Received()}}.
+
+\Hypertarget{class_quoter_v3_aff46be83858c472055de88fcee890254}\index{QuoterV3@{QuoterV3}!NextMod@{NextMod}}
+\index{NextMod@{NextMod}!QuoterV3@{QuoterV3}}
+\doxysubsubsection{\texorpdfstring{NextMod()}{NextMod()}}
+{\footnotesize\ttfamily \label{class_quoter_v3_aff46be83858c472055de88fcee890254} 
+void Quoter\+V3\+::\+Next\+Mod (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&}]{ord}{, }\item[{KOrder\+Side\+::\+Enum}]{side}{, }\item[{uint64\+\_\+t}]{reqid}{, }\item[{uint64\+\_\+t}]{exchordid}{, }\item[{uint32\+\_\+t}]{qty}{, }\item[{int}]{price}{}\end{DoxyParamCaption})}
+
+
+
+Modifies an existing Order\+Pod object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ord} & The Order\+Pod object to modify. \\
+\hline
+{\em side} & The KOrder\+Side value. \\
+\hline
+{\em reqid} & The reqid value. \\
+\hline
+{\em exchordid} & The exchordid value. \\
+\hline
+{\em qty} & The quantity value. \\
+\hline
+{\em price} & The price value. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00038}{KTN\+::\+Order\+Pod\+::exchordid}}, \mbox{\hyperlink{l00059}{KTN\+::\+Order\+Pod\+::\+Ord\+Action}}, \mbox{\hyperlink{l00037}{KTN\+::\+Order\+Pod\+::order\+Req\+Id}}, \mbox{\hyperlink{l00060}{KTN\+::\+Order\+Pod\+::\+Ord\+Side}}, \mbox{\hyperlink{l00061}{KTN\+::\+Order\+Pod\+::\+Ord\+Status}}, \mbox{\hyperlink{l00034}{KTN\+::\+Order\+Pod\+::price}}, \mbox{\hyperlink{l00041}{KTN\+::\+Order\+Pod\+::quantity}}, and \mbox{\hyperlink{l00141}{KTN\+::\+Core\+::\+SPSCRing\+Buffer$<$ T $>$\+::try\+\_\+pop()}}.
+
+\Hypertarget{class_quoter_v3_aabcbbbe6526033e37265460cb070d481}\index{QuoterV3@{QuoterV3}!NextNew@{NextNew}}
+\index{NextNew@{NextNew}!QuoterV3@{QuoterV3}}
+\doxysubsubsection{\texorpdfstring{NextNew()}{NextNew()}}
+{\footnotesize\ttfamily \label{class_quoter_v3_aabcbbbe6526033e37265460cb070d481} 
+void Quoter\+V3\+::\+Next\+New (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&}]{ord}{, }\item[{KOrder\+Side\+::\+Enum}]{side}{, }\item[{uint64\+\_\+t}]{exchordid}{, }\item[{uint32\+\_\+t}]{qty}{, }\item[{int}]{price}{}\end{DoxyParamCaption})}
+
+
+
+Retrieve a new Order\+Pod object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ord} & The Order\+Pod object to create. \\
+\hline
+{\em side} & The KOrder\+Side value. \\
+\hline
+{\em exchordid} & The exchordid value. \\
+\hline
+{\em qty} & The quantity value. \\
+\hline
+{\em price} & The price value. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00059}{KTN\+::\+Order\+Pod\+::\+Ord\+Action}}, \mbox{\hyperlink{l00060}{KTN\+::\+Order\+Pod\+::\+Ord\+Side}}, \mbox{\hyperlink{l00061}{KTN\+::\+Order\+Pod\+::\+Ord\+Status}}, \mbox{\hyperlink{l00034}{KTN\+::\+Order\+Pod\+::price}}, \mbox{\hyperlink{l00041}{KTN\+::\+Order\+Pod\+::quantity}}, and \mbox{\hyperlink{l00141}{KTN\+::\+Core\+::\+SPSCRing\+Buffer$<$ T $>$\+::try\+\_\+pop()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00803}{KTN\+::\+Multi\+Spreader\+V3\+::on\+Hedge\+Order\+Sent()}}, \mbox{\hyperlink{l01169}{KTN\+::\+Skew\+Trader\+::on\+Hedge\+Order\+Sent()}}, \mbox{\hyperlink{l01180}{KTN\+::\+Stacker\+::on\+Hedge\+Order\+Sent()}}, \mbox{\hyperlink{l00378}{KTN\+::\+Waves\+::on\+Hedge\+Order\+Sent()}}, \mbox{\hyperlink{l00047}{KTN\+::\+Auto\+Hedge\+OB\+::on\+Json()}}, \mbox{\hyperlink{l00045}{KTN\+::\+Squeezer\+OB\+::on\+Json()}}, \mbox{\hyperlink{l00838}{KTN\+::\+Multi\+Spreader\+V3\+::on\+Order\+Sent()}}, \mbox{\hyperlink{l01205}{KTN\+::\+Skew\+Trader\+::on\+Order\+Sent()}}, \mbox{\hyperlink{l01215}{KTN\+::\+Stacker\+::on\+Order\+Sent()}}, \mbox{\hyperlink{l00451}{KTN\+::\+Waves\+::on\+Order\+Sent()}}, and \mbox{\hyperlink{l00379}{KTN\+::\+PLWatcher\+::on\+PL()}}.
+
+\Hypertarget{class_quoter_v3_a7f5e3e3d3302da1b7dd9032940ae02aa}\index{QuoterV3@{QuoterV3}!Total@{Total}}
+\index{Total@{Total}!QuoterV3@{QuoterV3}}
+\doxysubsubsection{\texorpdfstring{Total()}{Total()}}
+{\footnotesize\ttfamily \label{class_quoter_v3_a7f5e3e3d3302da1b7dd9032940ae02aa} 
+int Quoter\+V3\+::\+Total (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the total count. 
+
+\begin{DoxyReturn}{Returns}
+The total count. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Algo\+Engines/Quoter\+V3.\+hpp\item 
+Algo\+Engines/Quoter\+V3.\+cpp\end{DoxyCompactItemize}

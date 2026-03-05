@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_formatter_base" xml:lang="en-US">
+<title>FormatterBase Class Reference</title>
+<indexterm><primary>FormatterBase</primary></indexterm>
+<para>
+
+<para>Base class for JSON formatters. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;FormatterBase.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for FormatterBase:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_formatter_base.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual <link linkend="_class_formatter_base_1a46f0eaeede8596813b927751c842e846">~FormatterBase</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para>virtual std::string <link linkend="_class_formatter_base_1a503ea9bae81f69cf83fd2447cbbed66c">GetJson</link> (const void *data) const =0</para>
+
+<para>Get the JSON representation of the given data. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Base class for JSON formatters. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_formatter_base_1a46f0eaeede8596813b927751c842e846"/><section>
+    <title>~FormatterBase()</title>
+<indexterm><primary>~FormatterBase</primary><secondary>FormatterBase</secondary></indexterm>
+<indexterm><primary>FormatterBase</primary><secondary>~FormatterBase</secondary></indexterm>
+<para><computeroutput>virtual FormatterBase::~FormatterBase ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Destructor. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_formatter_base_1a503ea9bae81f69cf83fd2447cbbed66c"/><section>
+    <title>GetJson()</title>
+<indexterm><primary>GetJson</primary><secondary>FormatterBase</secondary></indexterm>
+<indexterm><primary>FormatterBase</primary><secondary>GetJson</secondary></indexterm>
+<para><computeroutput>virtual std::string FormatterBase::GetJson (const void * data) const<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>Get the JSON representation of the given data. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>data</entry><entry>
+<para>The data to be converted to JSON. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The JSON representation of the data. </para>
+</formalpara>
+</para>
+<para>
+Implemented in <link linkend="_class_session_status_json_formatter_1a48e935472d7d0238358f4f20f7a31489">SessionStatusJsonFormatter</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Json/FormatterBase.hpp</section>
+</section>

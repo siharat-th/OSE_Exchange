@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_p_l_reporter" xml:lang="en-US">
+<title>KTN::REPORTER::AlgoPLReporter Class Reference</title>
+<indexterm><primary>KTN::REPORTER::AlgoPLReporter</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_p_l_reporter">AlgoPLReporter</link> class is responsible for reporting the position data. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;AlgoPLReporter.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for KTN::REPORTER::AlgoPLReporter:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_p_l_reporter.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_p_l_reporter_1ae9b82132fe6c6c487c69164e5396c5b3">AlgoPLReporter</link> (string guid)</para>
+
+<para>Constructs an <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_p_l_reporter">AlgoPLReporter</link> object with the specified GUID. </para>
+</listitem>
+            <listitem><para><link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_p_l_reporter_1ab7676ead97da580120afbc172f0f40fb">~AlgoPLReporter</link> ()</para>
+
+<para>Destroys the <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_p_l_reporter">AlgoPLReporter</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_p_l_reporter_1afa12f2e4097bc7f62d1639d8c00edbc6">Report</link> (<link linkend="_struct_position">Position</link> &amp;data)</para>
+
+<para>Reports the position data. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_p_l_reporter_1a854417d29a5bd36c6bec145e5025a3ef">DoWork</link> () override</para>
+
+<para>Performs the work of the reporter. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_p_l_reporter_1a8843bcb72530f68c0fd9b8f112bd566b">StopWork</link> ()</para>
+
+<para>Stops the work of the reporter. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_p_l_reporter">AlgoPLReporter</link> class is responsible for reporting the position data. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_p_l_reporter_1ae9b82132fe6c6c487c69164e5396c5b3"/><section>
+    <title>AlgoPLReporter()</title>
+<indexterm><primary>AlgoPLReporter</primary><secondary>KTN::REPORTER::AlgoPLReporter</secondary></indexterm>
+<indexterm><primary>KTN::REPORTER::AlgoPLReporter</primary><secondary>AlgoPLReporter</secondary></indexterm>
+<para><computeroutput>AlgoPLReporter::AlgoPLReporter (string guid)</computeroutput></para><para>
+
+<para>Constructs an <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_p_l_reporter">AlgoPLReporter</link> object with the specified GUID. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>guid</entry><entry>
+<para>The GUID of the reporter. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00027">KTN::REPORTER::ReporterBase::Start()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_p_l_reporter_1ab7676ead97da580120afbc172f0f40fb"/><section>
+    <title>~AlgoPLReporter()</title>
+<indexterm><primary>~AlgoPLReporter</primary><secondary>KTN::REPORTER::AlgoPLReporter</secondary></indexterm>
+<indexterm><primary>KTN::REPORTER::AlgoPLReporter</primary><secondary>~AlgoPLReporter</secondary></indexterm>
+<para><computeroutput>AlgoPLReporter::~AlgoPLReporter ( )</computeroutput></para><para>
+
+<para>Destroys the <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_p_l_reporter">AlgoPLReporter</link> object. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_p_l_reporter_1a854417d29a5bd36c6bec145e5025a3ef"/><section>
+    <title>DoWork()</title>
+<indexterm><primary>DoWork</primary><secondary>KTN::REPORTER::AlgoPLReporter</secondary></indexterm>
+<indexterm><primary>KTN::REPORTER::AlgoPLReporter</primary><secondary>DoWork</secondary></indexterm>
+<para><computeroutput>void AlgoPLReporter::DoWork ( )<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Performs the work of the reporter. </para>
+</para>
+<para>
+Implements <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_1a449d2ccb3be9222bd06fef3b5155e3af">KTN::REPORTER::ReporterBase</link>.</para>
+<para>
+References <link linkend="_l00191">KTN::Core::SPSCRingBuffer&lt; T &gt;::empty()</link>, <link linkend="_l00108">KTN::REPORTER::ReporterBase::getSsboeUs()</link>, <link linkend="_l00089">KTN::REPORTER::ReporterBase::getTimeString()</link>, <link linkend="_l00120">KTN::REPORTER::ReporterBase::SendJson()</link>, and <link linkend="_l00141">KTN::Core::SPSCRingBuffer&lt; T &gt;::try_pop()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_p_l_reporter_1afa12f2e4097bc7f62d1639d8c00edbc6"/><section>
+    <title>Report()</title>
+<indexterm><primary>Report</primary><secondary>KTN::REPORTER::AlgoPLReporter</secondary></indexterm>
+<indexterm><primary>KTN::REPORTER::AlgoPLReporter</primary><secondary>Report</secondary></indexterm>
+<para><computeroutput>void AlgoPLReporter::Report (<link linkend="_struct_position">Position</link> &amp; data)</computeroutput></para><para>
+
+<para>Reports the position data. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>data</entry><entry>
+<para>The position data to be reported. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00084">KTN::Core::SPSCRingBuffer&lt; T &gt;::push()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_p_l_reporter_1a8843bcb72530f68c0fd9b8f112bd566b"/><section>
+    <title>StopWork()</title>
+<indexterm><primary>StopWork</primary><secondary>KTN::REPORTER::AlgoPLReporter</secondary></indexterm>
+<indexterm><primary>KTN::REPORTER::AlgoPLReporter</primary><secondary>StopWork</secondary></indexterm>
+<para><computeroutput>void AlgoPLReporter::StopWork ( )</computeroutput></para><para>
+
+<para>Stops the work of the reporter. </para>
+</para>
+<para>
+References <link linkend="_l00049">KTN::REPORTER::ReporterBase::Stop()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Reporters/AlgoPLReporter.hppReporters/AlgoPLReporter.cpp</section>
+</section>

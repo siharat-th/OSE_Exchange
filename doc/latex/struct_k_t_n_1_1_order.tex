@@ -1,0 +1,564 @@
+\doxysection{KTN\+::Order Struct Reference}
+\hypertarget{struct_k_t_n_1_1_order}{}\label{struct_k_t_n_1_1_order}\index{KTN::Order@{KTN::Order}}
+
+
+{\ttfamily \#include $<$Order.\+hpp$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{struct_k_t_n_1_1_order_af28322e8d9d5f91143e91b13a55603bc}{order\+Req\+Id}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{struct_k_t_n_1_1_order_ae8701143728ff6ca4af033933e2d3c37}{exchordid}}
+\item 
+KOrder\+Exchange\+::\+Enum \mbox{\hyperlink{struct_k_t_n_1_1_order_aea8156ddbf3c95b66ebcd35e8e4701ca}{Ord\+Exch}}
+\item 
+KOrder\+Side\+::\+Enum \mbox{\hyperlink{struct_k_t_n_1_1_order_a157a4c6909639edaca71d9cc6657eeba}{Ord\+Side}}
+\item 
+KOrder\+Prod\+Type\+::\+Enum \mbox{\hyperlink{struct_k_t_n_1_1_order_a8758842df2ba45ac49414969c7d108f3}{Ord\+Prod\+Type}}
+\item 
+KOrder\+Type\+::\+Enum \mbox{\hyperlink{struct_k_t_n_1_1_order_a923bc4d5c289d840def3c7d8d2f220c7}{Ord\+Type}}
+\item 
+KOrder\+Fill\+Type\+::\+Enum \mbox{\hyperlink{struct_k_t_n_1_1_order_a0156ced6fe63fdd4a06136b1eb96ba82}{Ord\+Fill\+Type}}
+\item 
+KOrder\+Status\+::\+Enum \mbox{\hyperlink{struct_k_t_n_1_1_order_a2008e7f17329127c54cfafa56dc66d96}{Ord\+Status}}
+\item 
+KOrder\+Tif\+::\+Enum \mbox{\hyperlink{struct_k_t_n_1_1_order_a99aa0af3dd34e08e7c6218c32e54e176}{Ord\+Tif}}
+\item 
+KOrder\+Put\+Call\+::\+Enum \mbox{\hyperlink{struct_k_t_n_1_1_order_a19e2a26284096bd0b04cf285aa69ff02}{Ord\+Put\+Call}}
+\item 
+KOrder\+Action\+::\+Enum \mbox{\hyperlink{struct_k_t_n_1_1_order_afc76a73ebe3c1fc5c07a1c50ad31620e}{Ord\+Action}}
+\item 
+KOrder\+State\+::\+Enum \mbox{\hyperlink{struct_k_t_n_1_1_order_a82c3341c5937ee53e169de8ac51897e6}{Ord\+State}}
+\item 
+KOrder\+Algo\+Trigger\+::\+Enum \mbox{\hyperlink{struct_k_t_n_1_1_order_a3ee41fffc1855de3e0138f5e81cc380e}{Ord\+Algo\+Trig}}
+\item 
+int \mbox{\hyperlink{struct_k_t_n_1_1_order_a40544b3d7fc0f8f24700b777dc6e6227}{callbackid}}
+\item 
+int \mbox{\hyperlink{struct_k_t_n_1_1_order_a486cd48c200f6ccda2205df4b26df904}{stratid}}
+\item 
+double \mbox{\hyperlink{struct_k_t_n_1_1_order_ae302b4e5639c75e0aeb9338aaaa730bb}{hedgeratio}}
+\item 
+int \mbox{\hyperlink{struct_k_t_n_1_1_order_a6f92a0f59c40747fbddb16b39fa62f4e}{taketicks}}
+\item 
+double \mbox{\hyperlink{struct_k_t_n_1_1_order_ac5c978a94225e6d3ed0ce760be1dd531}{mintick}}
+\item 
+int \mbox{\hyperlink{struct_k_t_n_1_1_order_ac8b3e16a3a2c313118b45c8f18389e9f}{hedgeparent}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{struct_k_t_n_1_1_order_a86ccbdc8cc1763593794521aaedbcd90}{revision}}
+\item 
+int \mbox{\hyperlink{struct_k_t_n_1_1_order_aec601f09e2bd333b2ad3200b96060916}{partydetails}}
+\item 
+int \mbox{\hyperlink{struct_k_t_n_1_1_order_ac4af81384f745dadd0c1c54f0fbeeba3}{mktsegid}}
+\item 
+int \mbox{\hyperlink{struct_k_t_n_1_1_order_a1c11e06df28ee513ade94cd2d57e0916}{massscope}}
+\item 
+bool \mbox{\hyperlink{struct_k_t_n_1_1_order_a96d3148874c4c4f7507dcdb0b9c21777}{is\+Manual}}
+\item 
+char \mbox{\hyperlink{struct_k_t_n_1_1_order_acfb7685cffc9438309ed72f00dae877d}{symbol}} \mbox{[}20\mbox{]}
+\item 
+char \mbox{\hyperlink{struct_k_t_n_1_1_order_a98efe580c126cdbdc72fdce2162b747c}{secgrp}} \mbox{[}20\mbox{]}
+\item 
+int32\+\_\+t \mbox{\hyperlink{struct_k_t_n_1_1_order_a4ceff987fd6e5b00bbc348ade7bf0060}{secid}}
+\item 
+bool \mbox{\hyperlink{struct_k_t_n_1_1_order_ab1f1dbfe946f1735fa2f4d7b66139457}{cert}}
+\item 
+char \mbox{\hyperlink{struct_k_t_n_1_1_order_a71af67129a985aeddecbce1297a783e7}{ordernum}} \mbox{[}20\mbox{]}
+\item 
+char \mbox{\hyperlink{struct_k_t_n_1_1_order_a7c2d2dfdb329c6144a676ccc08891d12}{origclordid}} \mbox{[}20\mbox{]}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_k_t_n_1_1_order_a69f3a2876a93976b97470e8cafccfbc6}{quantity}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_k_t_n_1_1_order_ab20e5c6d4794ac64fb986739fd22367a}{lastqty}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_k_t_n_1_1_order_a39e66c2d199964e3ff0ffc53b2d9997b}{leavesqty}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_k_t_n_1_1_order_aa6770c3c9d8a780cb4fa27acb3cefcc4}{fillqty}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{struct_k_t_n_1_1_order_a9f0d2b515bd76f106482dfbe225835eb}{price}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{struct_k_t_n_1_1_order_a9c1e1c4768aa1000e227302b46b55a7a}{lastpx}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{struct_k_t_n_1_1_order_a1273dc9641720d3640d3ea08272cc8b4}{stoppx}}
+\item 
+int \mbox{\hyperlink{struct_k_t_n_1_1_order_a43178b507672e2f71c8d2bb91aad3372}{filltype}}
+\item 
+std\+::string \mbox{\hyperlink{struct_k_t_n_1_1_order_a7430335f8a337fafb298b9a4a4f1736d}{execid}}
+\item 
+int \mbox{\hyperlink{struct_k_t_n_1_1_order_a7710fdcc7c6e89eeb8bc70cc666f68d5}{i\+Status\+Reason}}
+\item 
+string \mbox{\hyperlink{struct_k_t_n_1_1_order_a3e4d6dd3c7661a6f185c003873dfe9b3}{reason}}
+\item 
+std\+::string \mbox{\hyperlink{struct_k_t_n_1_1_order_aa9c0b64a20bae21f58aacbbe2ca20ad7}{user}}
+\item 
+std\+::string \mbox{\hyperlink{struct_k_t_n_1_1_order_a168496885af584fcd83c0579a63acb90}{org}}
+\item 
+std\+::string \mbox{\hyperlink{struct_k_t_n_1_1_order_ae3e4ee7233cf44a173086a0825e01fa9}{groupname}}
+\item 
+std\+::string \mbox{\hyperlink{struct_k_t_n_1_1_order_a33b8c47d73522d2b5020e1ad9fd7e87d}{algoid}}
+\item 
+std\+::string \mbox{\hyperlink{struct_k_t_n_1_1_order_afc24a2dff6875cb0c5b553156dfa380c}{guid}}
+\item 
+std\+::string \mbox{\hyperlink{struct_k_t_n_1_1_order_ad36f537b42d70071f3f59aae59c6afd5}{strategy}}
+\item 
+std\+::string \mbox{\hyperlink{struct_k_t_n_1_1_order_a8c7d4f57618b69098d65f013e88ef29c}{tag}}
+\item 
+std\+::string \mbox{\hyperlink{struct_k_t_n_1_1_order_a2781f206e1c78933e92eacaa76dcc9f9}{tag2}}
+\item 
+std\+::string \mbox{\hyperlink{struct_k_t_n_1_1_order_a549e44cac487b8ac684a7543633e59bf}{source}}
+\item 
+std\+::string \mbox{\hyperlink{struct_k_t_n_1_1_order_a9d11ac573ca610db4c316ddb42634f06}{text}}
+\item 
+std\+::string \mbox{\hyperlink{struct_k_t_n_1_1_order_a680f8dc9b8b56328f7eabaa4aa60205b}{state}}
+\item 
+std\+::string \mbox{\hyperlink{struct_k_t_n_1_1_order_a767077ce2e6a9a2416c97734cfbfc4b0}{action}}
+\item 
+int \mbox{\hyperlink{struct_k_t_n_1_1_order_a95e08414ae11c45c8917ca19b1984f24}{instindex}}
+\item 
+bool \mbox{\hyperlink{struct_k_t_n_1_1_order_a909f3fb9d2a931a45f2b77ebd4248da1}{is\+Spread\+Leg}}
+\item 
+std\+::string \mbox{\hyperlink{struct_k_t_n_1_1_order_a0669d1298ea67bbd94237a607c8fa835}{product}}
+\item 
+std\+::string \mbox{\hyperlink{struct_k_t_n_1_1_order_a6e87d43785f22c3788eca3eabd800a9f}{exchange}}
+\item 
+std\+::string \mbox{\hyperlink{struct_k_t_n_1_1_order_a9ba5378e58ec2097515ba898f5da4d2c}{ind}}
+\item 
+std\+::string \mbox{\hyperlink{struct_k_t_n_1_1_order_a4e1a6d749f96569a4252a3eb1d55f190}{reporttype}}
+\item 
+int \mbox{\hyperlink{struct_k_t_n_1_1_order_a1335d43bbed5f91d4e040f19f64cad8e}{rpt}}
+\item 
+int \mbox{\hyperlink{struct_k_t_n_1_1_order_a31e06ea841fc86c7b3f7a80038fb15b5}{maxshow}}
+\item 
+int \mbox{\hyperlink{struct_k_t_n_1_1_order_ac3ac72a92e214798704a06678f05dac0}{strike}}
+\item 
+string \mbox{\hyperlink{struct_k_t_n_1_1_order_a1266e7e217f0018d35234f5f9addc400}{exp}}
+\item 
+int \mbox{\hyperlink{struct_k_t_n_1_1_order_a3f334ad47d68d61513bff3f65c0516e8}{mdy}}
+\item 
+long \mbox{\hyperlink{struct_k_t_n_1_1_order_ae8d9ca2f286654b8f958dc7a1d8ce23c}{timestamp}}
+\item 
+std\+::string \mbox{\hyperlink{struct_k_t_n_1_1_order_adc73593748389ca58593d8b6854ecb94}{transacttime}}
+\item 
+string \mbox{\hyperlink{struct_k_t_n_1_1_order_a9188411c27f2b18f0f1a58a040766609}{reference}}
+\item 
+bool \mbox{\hyperlink{struct_k_t_n_1_1_order_ae9eea831c7b34e7132a58877675a64fc}{is\+Found}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Struct representing an order. This is a legacy struct that is still used in some parts of the code. Primarily for database and reporting ops 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_k_t_n_1_1_order_a767077ce2e6a9a2416c97734cfbfc4b0}\index{KTN::Order@{KTN::Order}!action@{action}}
+\index{action@{action}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{action}{action}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a767077ce2e6a9a2416c97734cfbfc4b0} 
+std\+::string KTN\+::\+Order\+::action}
+
+\Hypertarget{struct_k_t_n_1_1_order_a33b8c47d73522d2b5020e1ad9fd7e87d}\index{KTN::Order@{KTN::Order}!algoid@{algoid}}
+\index{algoid@{algoid}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{algoid}{algoid}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a33b8c47d73522d2b5020e1ad9fd7e87d} 
+std\+::string KTN\+::\+Order\+::algoid}
+
+\Hypertarget{struct_k_t_n_1_1_order_a40544b3d7fc0f8f24700b777dc6e6227}\index{KTN::Order@{KTN::Order}!callbackid@{callbackid}}
+\index{callbackid@{callbackid}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{callbackid}{callbackid}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a40544b3d7fc0f8f24700b777dc6e6227} 
+int KTN\+::\+Order\+::callbackid}
+
+\Hypertarget{struct_k_t_n_1_1_order_ab1f1dbfe946f1735fa2f4d7b66139457}\index{KTN::Order@{KTN::Order}!cert@{cert}}
+\index{cert@{cert}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{cert}{cert}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_ab1f1dbfe946f1735fa2f4d7b66139457} 
+bool KTN\+::\+Order\+::cert}
+
+\Hypertarget{struct_k_t_n_1_1_order_ae8701143728ff6ca4af033933e2d3c37}\index{KTN::Order@{KTN::Order}!exchordid@{exchordid}}
+\index{exchordid@{exchordid}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{exchordid}{exchordid}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_ae8701143728ff6ca4af033933e2d3c37} 
+uint64\+\_\+t KTN\+::\+Order\+::exchordid}
+
+\Hypertarget{struct_k_t_n_1_1_order_a6e87d43785f22c3788eca3eabd800a9f}\index{KTN::Order@{KTN::Order}!exchange@{exchange}}
+\index{exchange@{exchange}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{exchange}{exchange}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a6e87d43785f22c3788eca3eabd800a9f} 
+std\+::string KTN\+::\+Order\+::exchange}
+
+\Hypertarget{struct_k_t_n_1_1_order_a7430335f8a337fafb298b9a4a4f1736d}\index{KTN::Order@{KTN::Order}!execid@{execid}}
+\index{execid@{execid}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{execid}{execid}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a7430335f8a337fafb298b9a4a4f1736d} 
+std\+::string KTN\+::\+Order\+::execid}
+
+\Hypertarget{struct_k_t_n_1_1_order_a1266e7e217f0018d35234f5f9addc400}\index{KTN::Order@{KTN::Order}!exp@{exp}}
+\index{exp@{exp}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{exp}{exp}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a1266e7e217f0018d35234f5f9addc400} 
+string KTN\+::\+Order\+::exp}
+
+\Hypertarget{struct_k_t_n_1_1_order_aa6770c3c9d8a780cb4fa27acb3cefcc4}\index{KTN::Order@{KTN::Order}!fillqty@{fillqty}}
+\index{fillqty@{fillqty}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{fillqty}{fillqty}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_aa6770c3c9d8a780cb4fa27acb3cefcc4} 
+uint32\+\_\+t KTN\+::\+Order\+::fillqty}
+
+\Hypertarget{struct_k_t_n_1_1_order_a43178b507672e2f71c8d2bb91aad3372}\index{KTN::Order@{KTN::Order}!filltype@{filltype}}
+\index{filltype@{filltype}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{filltype}{filltype}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a43178b507672e2f71c8d2bb91aad3372} 
+int KTN\+::\+Order\+::filltype}
+
+\Hypertarget{struct_k_t_n_1_1_order_ae3e4ee7233cf44a173086a0825e01fa9}\index{KTN::Order@{KTN::Order}!groupname@{groupname}}
+\index{groupname@{groupname}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{groupname}{groupname}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_ae3e4ee7233cf44a173086a0825e01fa9} 
+std\+::string KTN\+::\+Order\+::groupname}
+
+\Hypertarget{struct_k_t_n_1_1_order_afc24a2dff6875cb0c5b553156dfa380c}\index{KTN::Order@{KTN::Order}!guid@{guid}}
+\index{guid@{guid}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{guid}{guid}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_afc24a2dff6875cb0c5b553156dfa380c} 
+std\+::string KTN\+::\+Order\+::guid}
+
+\Hypertarget{struct_k_t_n_1_1_order_ac8b3e16a3a2c313118b45c8f18389e9f}\index{KTN::Order@{KTN::Order}!hedgeparent@{hedgeparent}}
+\index{hedgeparent@{hedgeparent}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{hedgeparent}{hedgeparent}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_ac8b3e16a3a2c313118b45c8f18389e9f} 
+int KTN\+::\+Order\+::hedgeparent}
+
+\Hypertarget{struct_k_t_n_1_1_order_ae302b4e5639c75e0aeb9338aaaa730bb}\index{KTN::Order@{KTN::Order}!hedgeratio@{hedgeratio}}
+\index{hedgeratio@{hedgeratio}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{hedgeratio}{hedgeratio}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_ae302b4e5639c75e0aeb9338aaaa730bb} 
+double KTN\+::\+Order\+::hedgeratio}
+
+\Hypertarget{struct_k_t_n_1_1_order_a9ba5378e58ec2097515ba898f5da4d2c}\index{KTN::Order@{KTN::Order}!ind@{ind}}
+\index{ind@{ind}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{ind}{ind}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a9ba5378e58ec2097515ba898f5da4d2c} 
+std\+::string KTN\+::\+Order\+::ind}
+
+\Hypertarget{struct_k_t_n_1_1_order_a95e08414ae11c45c8917ca19b1984f24}\index{KTN::Order@{KTN::Order}!instindex@{instindex}}
+\index{instindex@{instindex}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{instindex}{instindex}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a95e08414ae11c45c8917ca19b1984f24} 
+int KTN\+::\+Order\+::instindex}
+
+\Hypertarget{struct_k_t_n_1_1_order_ae9eea831c7b34e7132a58877675a64fc}\index{KTN::Order@{KTN::Order}!isFound@{isFound}}
+\index{isFound@{isFound}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{isFound}{isFound}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_ae9eea831c7b34e7132a58877675a64fc} 
+bool KTN\+::\+Order\+::is\+Found}
+
+\Hypertarget{struct_k_t_n_1_1_order_a96d3148874c4c4f7507dcdb0b9c21777}\index{KTN::Order@{KTN::Order}!isManual@{isManual}}
+\index{isManual@{isManual}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{isManual}{isManual}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a96d3148874c4c4f7507dcdb0b9c21777} 
+bool KTN\+::\+Order\+::is\+Manual}
+
+\Hypertarget{struct_k_t_n_1_1_order_a909f3fb9d2a931a45f2b77ebd4248da1}\index{KTN::Order@{KTN::Order}!isSpreadLeg@{isSpreadLeg}}
+\index{isSpreadLeg@{isSpreadLeg}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{isSpreadLeg}{isSpreadLeg}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a909f3fb9d2a931a45f2b77ebd4248da1} 
+bool KTN\+::\+Order\+::is\+Spread\+Leg}
+
+\Hypertarget{struct_k_t_n_1_1_order_a7710fdcc7c6e89eeb8bc70cc666f68d5}\index{KTN::Order@{KTN::Order}!iStatusReason@{iStatusReason}}
+\index{iStatusReason@{iStatusReason}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{iStatusReason}{iStatusReason}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a7710fdcc7c6e89eeb8bc70cc666f68d5} 
+int KTN\+::\+Order\+::i\+Status\+Reason}
+
+\Hypertarget{struct_k_t_n_1_1_order_a9c1e1c4768aa1000e227302b46b55a7a}\index{KTN::Order@{KTN::Order}!lastpx@{lastpx}}
+\index{lastpx@{lastpx}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{lastpx}{lastpx}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a9c1e1c4768aa1000e227302b46b55a7a} 
+int32\+\_\+t KTN\+::\+Order\+::lastpx}
+
+\Hypertarget{struct_k_t_n_1_1_order_ab20e5c6d4794ac64fb986739fd22367a}\index{KTN::Order@{KTN::Order}!lastqty@{lastqty}}
+\index{lastqty@{lastqty}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{lastqty}{lastqty}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_ab20e5c6d4794ac64fb986739fd22367a} 
+uint32\+\_\+t KTN\+::\+Order\+::lastqty}
+
+\Hypertarget{struct_k_t_n_1_1_order_a39e66c2d199964e3ff0ffc53b2d9997b}\index{KTN::Order@{KTN::Order}!leavesqty@{leavesqty}}
+\index{leavesqty@{leavesqty}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{leavesqty}{leavesqty}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a39e66c2d199964e3ff0ffc53b2d9997b} 
+uint32\+\_\+t KTN\+::\+Order\+::leavesqty}
+
+\Hypertarget{struct_k_t_n_1_1_order_a1c11e06df28ee513ade94cd2d57e0916}\index{KTN::Order@{KTN::Order}!massscope@{massscope}}
+\index{massscope@{massscope}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{massscope}{massscope}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a1c11e06df28ee513ade94cd2d57e0916} 
+int KTN\+::\+Order\+::massscope}
+
+\Hypertarget{struct_k_t_n_1_1_order_a31e06ea841fc86c7b3f7a80038fb15b5}\index{KTN::Order@{KTN::Order}!maxshow@{maxshow}}
+\index{maxshow@{maxshow}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{maxshow}{maxshow}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a31e06ea841fc86c7b3f7a80038fb15b5} 
+int KTN\+::\+Order\+::maxshow}
+
+\Hypertarget{struct_k_t_n_1_1_order_a3f334ad47d68d61513bff3f65c0516e8}\index{KTN::Order@{KTN::Order}!mdy@{mdy}}
+\index{mdy@{mdy}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{mdy}{mdy}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a3f334ad47d68d61513bff3f65c0516e8} 
+int KTN\+::\+Order\+::mdy}
+
+\Hypertarget{struct_k_t_n_1_1_order_ac5c978a94225e6d3ed0ce760be1dd531}\index{KTN::Order@{KTN::Order}!mintick@{mintick}}
+\index{mintick@{mintick}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{mintick}{mintick}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_ac5c978a94225e6d3ed0ce760be1dd531} 
+double KTN\+::\+Order\+::mintick}
+
+\Hypertarget{struct_k_t_n_1_1_order_ac4af81384f745dadd0c1c54f0fbeeba3}\index{KTN::Order@{KTN::Order}!mktsegid@{mktsegid}}
+\index{mktsegid@{mktsegid}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{mktsegid}{mktsegid}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_ac4af81384f745dadd0c1c54f0fbeeba3} 
+int KTN\+::\+Order\+::mktsegid}
+
+\Hypertarget{struct_k_t_n_1_1_order_afc76a73ebe3c1fc5c07a1c50ad31620e}\index{KTN::Order@{KTN::Order}!OrdAction@{OrdAction}}
+\index{OrdAction@{OrdAction}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{OrdAction}{OrdAction}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_afc76a73ebe3c1fc5c07a1c50ad31620e} 
+KOrder\+Action\+::\+Enum KTN\+::\+Order\+::\+Ord\+Action}
+
+\Hypertarget{struct_k_t_n_1_1_order_a3ee41fffc1855de3e0138f5e81cc380e}\index{KTN::Order@{KTN::Order}!OrdAlgoTrig@{OrdAlgoTrig}}
+\index{OrdAlgoTrig@{OrdAlgoTrig}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{OrdAlgoTrig}{OrdAlgoTrig}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a3ee41fffc1855de3e0138f5e81cc380e} 
+KOrder\+Algo\+Trigger\+::\+Enum KTN\+::\+Order\+::\+Ord\+Algo\+Trig}
+
+\Hypertarget{struct_k_t_n_1_1_order_a71af67129a985aeddecbce1297a783e7}\index{KTN::Order@{KTN::Order}!ordernum@{ordernum}}
+\index{ordernum@{ordernum}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{ordernum}{ordernum}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a71af67129a985aeddecbce1297a783e7} 
+char KTN\+::\+Order\+::ordernum\mbox{[}20\mbox{]}}
+
+\Hypertarget{struct_k_t_n_1_1_order_af28322e8d9d5f91143e91b13a55603bc}\index{KTN::Order@{KTN::Order}!orderReqId@{orderReqId}}
+\index{orderReqId@{orderReqId}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{orderReqId}{orderReqId}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_af28322e8d9d5f91143e91b13a55603bc} 
+uint64\+\_\+t KTN\+::\+Order\+::order\+Req\+Id}
+
+\Hypertarget{struct_k_t_n_1_1_order_aea8156ddbf3c95b66ebcd35e8e4701ca}\index{KTN::Order@{KTN::Order}!OrdExch@{OrdExch}}
+\index{OrdExch@{OrdExch}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{OrdExch}{OrdExch}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_aea8156ddbf3c95b66ebcd35e8e4701ca} 
+KOrder\+Exchange\+::\+Enum KTN\+::\+Order\+::\+Ord\+Exch}
+
+\Hypertarget{struct_k_t_n_1_1_order_a0156ced6fe63fdd4a06136b1eb96ba82}\index{KTN::Order@{KTN::Order}!OrdFillType@{OrdFillType}}
+\index{OrdFillType@{OrdFillType}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{OrdFillType}{OrdFillType}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a0156ced6fe63fdd4a06136b1eb96ba82} 
+KOrder\+Fill\+Type\+::\+Enum KTN\+::\+Order\+::\+Ord\+Fill\+Type}
+
+\Hypertarget{struct_k_t_n_1_1_order_a8758842df2ba45ac49414969c7d108f3}\index{KTN::Order@{KTN::Order}!OrdProdType@{OrdProdType}}
+\index{OrdProdType@{OrdProdType}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{OrdProdType}{OrdProdType}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a8758842df2ba45ac49414969c7d108f3} 
+KOrder\+Prod\+Type\+::\+Enum KTN\+::\+Order\+::\+Ord\+Prod\+Type}
+
+\Hypertarget{struct_k_t_n_1_1_order_a19e2a26284096bd0b04cf285aa69ff02}\index{KTN::Order@{KTN::Order}!OrdPutCall@{OrdPutCall}}
+\index{OrdPutCall@{OrdPutCall}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{OrdPutCall}{OrdPutCall}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a19e2a26284096bd0b04cf285aa69ff02} 
+KOrder\+Put\+Call\+::\+Enum KTN\+::\+Order\+::\+Ord\+Put\+Call}
+
+\Hypertarget{struct_k_t_n_1_1_order_a157a4c6909639edaca71d9cc6657eeba}\index{KTN::Order@{KTN::Order}!OrdSide@{OrdSide}}
+\index{OrdSide@{OrdSide}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{OrdSide}{OrdSide}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a157a4c6909639edaca71d9cc6657eeba} 
+KOrder\+Side\+::\+Enum KTN\+::\+Order\+::\+Ord\+Side}
+
+\Hypertarget{struct_k_t_n_1_1_order_a82c3341c5937ee53e169de8ac51897e6}\index{KTN::Order@{KTN::Order}!OrdState@{OrdState}}
+\index{OrdState@{OrdState}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{OrdState}{OrdState}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a82c3341c5937ee53e169de8ac51897e6} 
+KOrder\+State\+::\+Enum KTN\+::\+Order\+::\+Ord\+State}
+
+\Hypertarget{struct_k_t_n_1_1_order_a2008e7f17329127c54cfafa56dc66d96}\index{KTN::Order@{KTN::Order}!OrdStatus@{OrdStatus}}
+\index{OrdStatus@{OrdStatus}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{OrdStatus}{OrdStatus}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a2008e7f17329127c54cfafa56dc66d96} 
+KOrder\+Status\+::\+Enum KTN\+::\+Order\+::\+Ord\+Status}
+
+\Hypertarget{struct_k_t_n_1_1_order_a99aa0af3dd34e08e7c6218c32e54e176}\index{KTN::Order@{KTN::Order}!OrdTif@{OrdTif}}
+\index{OrdTif@{OrdTif}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{OrdTif}{OrdTif}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a99aa0af3dd34e08e7c6218c32e54e176} 
+KOrder\+Tif\+::\+Enum KTN\+::\+Order\+::\+Ord\+Tif}
+
+\Hypertarget{struct_k_t_n_1_1_order_a923bc4d5c289d840def3c7d8d2f220c7}\index{KTN::Order@{KTN::Order}!OrdType@{OrdType}}
+\index{OrdType@{OrdType}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{OrdType}{OrdType}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a923bc4d5c289d840def3c7d8d2f220c7} 
+KOrder\+Type\+::\+Enum KTN\+::\+Order\+::\+Ord\+Type}
+
+\Hypertarget{struct_k_t_n_1_1_order_a168496885af584fcd83c0579a63acb90}\index{KTN::Order@{KTN::Order}!org@{org}}
+\index{org@{org}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{org}{org}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a168496885af584fcd83c0579a63acb90} 
+std\+::string KTN\+::\+Order\+::org}
+
+\Hypertarget{struct_k_t_n_1_1_order_a7c2d2dfdb329c6144a676ccc08891d12}\index{KTN::Order@{KTN::Order}!origclordid@{origclordid}}
+\index{origclordid@{origclordid}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{origclordid}{origclordid}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a7c2d2dfdb329c6144a676ccc08891d12} 
+char KTN\+::\+Order\+::origclordid\mbox{[}20\mbox{]}}
+
+\Hypertarget{struct_k_t_n_1_1_order_aec601f09e2bd333b2ad3200b96060916}\index{KTN::Order@{KTN::Order}!partydetails@{partydetails}}
+\index{partydetails@{partydetails}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{partydetails}{partydetails}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_aec601f09e2bd333b2ad3200b96060916} 
+int KTN\+::\+Order\+::partydetails}
+
+\Hypertarget{struct_k_t_n_1_1_order_a9f0d2b515bd76f106482dfbe225835eb}\index{KTN::Order@{KTN::Order}!price@{price}}
+\index{price@{price}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{price}{price}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a9f0d2b515bd76f106482dfbe225835eb} 
+int32\+\_\+t KTN\+::\+Order\+::price}
+
+\Hypertarget{struct_k_t_n_1_1_order_a0669d1298ea67bbd94237a607c8fa835}\index{KTN::Order@{KTN::Order}!product@{product}}
+\index{product@{product}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{product}{product}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a0669d1298ea67bbd94237a607c8fa835} 
+std\+::string KTN\+::\+Order\+::product}
+
+\Hypertarget{struct_k_t_n_1_1_order_a69f3a2876a93976b97470e8cafccfbc6}\index{KTN::Order@{KTN::Order}!quantity@{quantity}}
+\index{quantity@{quantity}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{quantity}{quantity}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a69f3a2876a93976b97470e8cafccfbc6} 
+uint32\+\_\+t KTN\+::\+Order\+::quantity}
+
+\Hypertarget{struct_k_t_n_1_1_order_a3e4d6dd3c7661a6f185c003873dfe9b3}\index{KTN::Order@{KTN::Order}!reason@{reason}}
+\index{reason@{reason}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{reason}{reason}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a3e4d6dd3c7661a6f185c003873dfe9b3} 
+string KTN\+::\+Order\+::reason}
+
+\Hypertarget{struct_k_t_n_1_1_order_a9188411c27f2b18f0f1a58a040766609}\index{KTN::Order@{KTN::Order}!reference@{reference}}
+\index{reference@{reference}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{reference}{reference}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a9188411c27f2b18f0f1a58a040766609} 
+string KTN\+::\+Order\+::reference}
+
+\Hypertarget{struct_k_t_n_1_1_order_a4e1a6d749f96569a4252a3eb1d55f190}\index{KTN::Order@{KTN::Order}!reporttype@{reporttype}}
+\index{reporttype@{reporttype}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{reporttype}{reporttype}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a4e1a6d749f96569a4252a3eb1d55f190} 
+std\+::string KTN\+::\+Order\+::reporttype}
+
+\Hypertarget{struct_k_t_n_1_1_order_a86ccbdc8cc1763593794521aaedbcd90}\index{KTN::Order@{KTN::Order}!revision@{revision}}
+\index{revision@{revision}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{revision}{revision}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a86ccbdc8cc1763593794521aaedbcd90} 
+uint16\+\_\+t KTN\+::\+Order\+::revision}
+
+\Hypertarget{struct_k_t_n_1_1_order_a1335d43bbed5f91d4e040f19f64cad8e}\index{KTN::Order@{KTN::Order}!rpt@{rpt}}
+\index{rpt@{rpt}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{rpt}{rpt}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a1335d43bbed5f91d4e040f19f64cad8e} 
+int KTN\+::\+Order\+::rpt}
+
+\Hypertarget{struct_k_t_n_1_1_order_a98efe580c126cdbdc72fdce2162b747c}\index{KTN::Order@{KTN::Order}!secgrp@{secgrp}}
+\index{secgrp@{secgrp}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{secgrp}{secgrp}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a98efe580c126cdbdc72fdce2162b747c} 
+char KTN\+::\+Order\+::secgrp\mbox{[}20\mbox{]}}
+
+\Hypertarget{struct_k_t_n_1_1_order_a4ceff987fd6e5b00bbc348ade7bf0060}\index{KTN::Order@{KTN::Order}!secid@{secid}}
+\index{secid@{secid}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{secid}{secid}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a4ceff987fd6e5b00bbc348ade7bf0060} 
+int32\+\_\+t KTN\+::\+Order\+::secid}
+
+\Hypertarget{struct_k_t_n_1_1_order_a549e44cac487b8ac684a7543633e59bf}\index{KTN::Order@{KTN::Order}!source@{source}}
+\index{source@{source}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{source}{source}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a549e44cac487b8ac684a7543633e59bf} 
+std\+::string KTN\+::\+Order\+::source}
+
+\Hypertarget{struct_k_t_n_1_1_order_a680f8dc9b8b56328f7eabaa4aa60205b}\index{KTN::Order@{KTN::Order}!state@{state}}
+\index{state@{state}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a680f8dc9b8b56328f7eabaa4aa60205b} 
+std\+::string KTN\+::\+Order\+::state}
+
+\Hypertarget{struct_k_t_n_1_1_order_a1273dc9641720d3640d3ea08272cc8b4}\index{KTN::Order@{KTN::Order}!stoppx@{stoppx}}
+\index{stoppx@{stoppx}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{stoppx}{stoppx}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a1273dc9641720d3640d3ea08272cc8b4} 
+int32\+\_\+t KTN\+::\+Order\+::stoppx}
+
+\Hypertarget{struct_k_t_n_1_1_order_ad36f537b42d70071f3f59aae59c6afd5}\index{KTN::Order@{KTN::Order}!strategy@{strategy}}
+\index{strategy@{strategy}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{strategy}{strategy}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_ad36f537b42d70071f3f59aae59c6afd5} 
+std\+::string KTN\+::\+Order\+::strategy}
+
+\Hypertarget{struct_k_t_n_1_1_order_a486cd48c200f6ccda2205df4b26df904}\index{KTN::Order@{KTN::Order}!stratid@{stratid}}
+\index{stratid@{stratid}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{stratid}{stratid}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a486cd48c200f6ccda2205df4b26df904} 
+int KTN\+::\+Order\+::stratid}
+
+\Hypertarget{struct_k_t_n_1_1_order_ac3ac72a92e214798704a06678f05dac0}\index{KTN::Order@{KTN::Order}!strike@{strike}}
+\index{strike@{strike}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{strike}{strike}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_ac3ac72a92e214798704a06678f05dac0} 
+int KTN\+::\+Order\+::strike}
+
+\Hypertarget{struct_k_t_n_1_1_order_acfb7685cffc9438309ed72f00dae877d}\index{KTN::Order@{KTN::Order}!symbol@{symbol}}
+\index{symbol@{symbol}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{symbol}{symbol}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_acfb7685cffc9438309ed72f00dae877d} 
+char KTN\+::\+Order\+::symbol\mbox{[}20\mbox{]}}
+
+\Hypertarget{struct_k_t_n_1_1_order_a8c7d4f57618b69098d65f013e88ef29c}\index{KTN::Order@{KTN::Order}!tag@{tag}}
+\index{tag@{tag}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{tag}{tag}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a8c7d4f57618b69098d65f013e88ef29c} 
+std\+::string KTN\+::\+Order\+::tag}
+
+\Hypertarget{struct_k_t_n_1_1_order_a2781f206e1c78933e92eacaa76dcc9f9}\index{KTN::Order@{KTN::Order}!tag2@{tag2}}
+\index{tag2@{tag2}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{tag2}{tag2}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a2781f206e1c78933e92eacaa76dcc9f9} 
+std\+::string KTN\+::\+Order\+::tag2}
+
+\Hypertarget{struct_k_t_n_1_1_order_a6f92a0f59c40747fbddb16b39fa62f4e}\index{KTN::Order@{KTN::Order}!taketicks@{taketicks}}
+\index{taketicks@{taketicks}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{taketicks}{taketicks}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a6f92a0f59c40747fbddb16b39fa62f4e} 
+int KTN\+::\+Order\+::taketicks}
+
+\Hypertarget{struct_k_t_n_1_1_order_a9d11ac573ca610db4c316ddb42634f06}\index{KTN::Order@{KTN::Order}!text@{text}}
+\index{text@{text}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{text}{text}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_a9d11ac573ca610db4c316ddb42634f06} 
+std\+::string KTN\+::\+Order\+::text}
+
+\Hypertarget{struct_k_t_n_1_1_order_ae8d9ca2f286654b8f958dc7a1d8ce23c}\index{KTN::Order@{KTN::Order}!timestamp@{timestamp}}
+\index{timestamp@{timestamp}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{timestamp}{timestamp}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_ae8d9ca2f286654b8f958dc7a1d8ce23c} 
+long KTN\+::\+Order\+::timestamp}
+
+\Hypertarget{struct_k_t_n_1_1_order_adc73593748389ca58593d8b6854ecb94}\index{KTN::Order@{KTN::Order}!transacttime@{transacttime}}
+\index{transacttime@{transacttime}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{transacttime}{transacttime}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_adc73593748389ca58593d8b6854ecb94} 
+std\+::string KTN\+::\+Order\+::transacttime}
+
+\Hypertarget{struct_k_t_n_1_1_order_aa9c0b64a20bae21f58aacbbe2ca20ad7}\index{KTN::Order@{KTN::Order}!user@{user}}
+\index{user@{user}!KTN::Order@{KTN::Order}}
+\doxysubsubsection{\texorpdfstring{user}{user}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_order_aa9c0b64a20bae21f58aacbbe2ca20ad7} 
+std\+::string KTN\+::\+Order\+::user}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Orders/Order.\+hpp\end{DoxyCompactItemize}

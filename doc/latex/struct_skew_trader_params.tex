@@ -1,0 +1,316 @@
+\doxysection{Skew\+Trader\+Params Struct Reference}
+\hypertarget{struct_skew_trader_params}{}\label{struct_skew_trader_params}\index{SkewTraderParams@{SkewTraderParams}}
+
+
+The \doxylink{struct_skew_trader_params}{Skew\+Trader\+Params} struct represents the parameters for the Skew\+Trader algorithm.  
+
+
+
+
+{\ttfamily \#include $<$Skew\+Trader\+Params.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_skew_trader_params}{Skew\+Trader\+Params}} \mbox{\hyperlink{struct_skew_trader_params_a8fbd8067ff74c6532b3e48cbd99825a1}{parse}} (const std\+::string \&json\+\_\+str)
+\begin{DoxyCompactList}\small\item\em parse the JSON string and create a \doxylink{struct_skew_trader_params}{Skew\+Trader\+Params} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{struct_skew_trader_params_afae18c3c272a1c03e6400d6f36affbbf}{Valid\+Json}}
+\item 
+\mbox{\hyperlink{structalgometa}{algometa}} \mbox{\hyperlink{struct_skew_trader_params_a6a50f8e2f355db21f9b3a6a5f4ba035c}{meta}}
+\item 
+string \mbox{\hyperlink{struct_skew_trader_params_a6e131bdf3d26af94e4f2504324098190}{subid}}
+\item 
+tr1\+::unordered\+\_\+map$<$ int, \mbox{\hyperlink{structinstrument}{instrument}} $>$ \mbox{\hyperlink{struct_skew_trader_params_a8df722df962dcfa6a630a4dba8d6515b}{Leg\+Sec\+Id\+Map}}
+\item 
+\mbox{\hyperlink{structinstrument}{instrument}} \mbox{\hyperlink{struct_skew_trader_params_a775f0f7e5cb54b1ea9e715772c5a04e3}{Legs}} \mbox{[}4\mbox{]}
+\item 
+int \mbox{\hyperlink{struct_skew_trader_params_a6e045b891ca26fd2f49b0541ed44315e}{Leg\+Count}}
+\item 
+string \mbox{\hyperlink{struct_skew_trader_params_ae768902a68655f7151fc47b139b6da6f}{Start\+Time}}
+\item 
+string \mbox{\hyperlink{struct_skew_trader_params_a591583556ca7ed8d73869ba9a6e57227}{End\+Time}}
+\item 
+double \mbox{\hyperlink{struct_skew_trader_params_ad0424fa3ad85a7ec5e29c9327455a210}{Order\+Qty}}
+\item 
+double \mbox{\hyperlink{struct_skew_trader_params_addb337ec62cd8d2729d7c3584cf551ce}{Total\+Qty}}
+\item 
+int \mbox{\hyperlink{struct_skew_trader_params_a2e45710e5e28a77c52b7177b7b54fb7f}{Interval\+Secs}}
+\item 
+bool \mbox{\hyperlink{struct_skew_trader_params_a50f043dc042df65de57ab710b4316ad0}{Send\+Bids}}
+\item 
+bool \mbox{\hyperlink{struct_skew_trader_params_a9d3971be5a20d77837ec9e9e4cdfc5a8}{Send\+Asks}}
+\item 
+double \mbox{\hyperlink{struct_skew_trader_params_acc6bcabd284cc6d60964fe85e4e2c305}{Skew\+Threshold}}
+\item 
+double \mbox{\hyperlink{struct_skew_trader_params_ad252c4d247eba17437ec834a408e0468}{Skew\+Max}}
+\item 
+int \mbox{\hyperlink{struct_skew_trader_params_ac25310fa596d4946839dce70cba85e77}{Skew\+Max\+Qty}}
+\item 
+int \mbox{\hyperlink{struct_skew_trader_params_a4f218ac30567eff3ccd3472f0169e08e}{Skew\+Levels}}
+\item 
+bool \mbox{\hyperlink{struct_skew_trader_params_a7f3640d60c11b3cc4ad0144327075b68}{Flip\+Skew}}
+\item 
+bool \mbox{\hyperlink{struct_skew_trader_params_adc0ba3b3aaf2ec368caf469da83c953a}{Use\+Total\+PL}}
+\item 
+int \mbox{\hyperlink{struct_skew_trader_params_acbde6d193dea0b4bfddc83f67c88729d}{Profit\+Ticks}}
+\item 
+int \mbox{\hyperlink{struct_skew_trader_params_a5f3238e2f91c96cad8f2dca0305d2675}{Stop\+Ticks}}
+\item 
+int \mbox{\hyperlink{struct_skew_trader_params_a208ee98d590001b0d6ef30cd38de1f6c}{Timeout\+MS}}
+\item 
+int \mbox{\hyperlink{struct_skew_trader_params_a7e50968d8add12e38d94dfd3d4b3bed8}{Net\+Position}}
+\item 
+int \mbox{\hyperlink{struct_skew_trader_params_a3d1f43305755b839eabd1a0414b1387a}{Total\+Exec}}
+\item 
+int \mbox{\hyperlink{struct_skew_trader_params_ad490e51fbfacc117927a917d17a35eff}{Total\+Buys}}
+\item 
+int \mbox{\hyperlink{struct_skew_trader_params_ad4a39a703509a9ee6d0a7458e4e28cb8}{Total\+Sells}}
+\item 
+double \mbox{\hyperlink{struct_skew_trader_params_a65f75205e7c50bfdeaec4b1e59681394}{Total\+Buy\+Price}}
+\item 
+double \mbox{\hyperlink{struct_skew_trader_params_af1ce6d1d3e0d7753d8912677038ff0b3}{Total\+Sell\+Price}}
+\item 
+double \mbox{\hyperlink{struct_skew_trader_params_aadda447491fa7ff4a0d60bef558971f1}{Avg\+Buy\+Price}}
+\item 
+double \mbox{\hyperlink{struct_skew_trader_params_a748589d62c294aa4c3a9915c152f3b5f}{Avg\+Sell\+Price}}
+\item 
+double \mbox{\hyperlink{struct_skew_trader_params_a82b62df0bc4fd19aa9ba1d578088166b}{Squeeze\+Ratio}}
+\item 
+bool \mbox{\hyperlink{struct_skew_trader_params_a30cbc91b1a2c4957a04f526556950b73}{Reset}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{struct_skew_trader_params}{Skew\+Trader\+Params} struct represents the parameters for the Skew\+Trader algorithm. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_skew_trader_params_a8fbd8067ff74c6532b3e48cbd99825a1}\index{SkewTraderParams@{SkewTraderParams}!parse@{parse}}
+\index{parse@{parse}!SkewTraderParams@{SkewTraderParams}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily \label{struct_skew_trader_params_a8fbd8067ff74c6532b3e48cbd99825a1} 
+\mbox{\hyperlink{struct_skew_trader_params}{Skew\+Trader\+Params}} Skew\+Trader\+Params\+::parse (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{json\+\_\+str}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+parse the JSON string and create a \doxylink{struct_skew_trader_params}{Skew\+Trader\+Params} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json\+\_\+str} & the JSON string to parse. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the parsed \doxylink{struct_skew_trader_params}{Skew\+Trader\+Params} object. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00260}{algometa\+::\+Enabled}}, \mbox{\hyperlink{l00049}{User\+Info\+::groupname}}, \mbox{\hyperlink{l00048}{User\+Info\+::org}}, \mbox{\hyperlink{l00262}{algometa\+::\+Source}}, \mbox{\hyperlink{l00256}{algometa\+::\+Strategy}}, \mbox{\hyperlink{l00257}{algometa\+::\+Strat\+Id}}, \mbox{\hyperlink{l00264}{algometa\+::\+Tag}}, \mbox{\hyperlink{l00258}{algometa\+::\+Template\+Name}}, \mbox{\hyperlink{l00261}{algometa\+::\+Unique\+Id}}, \mbox{\hyperlink{l00047}{User\+Info\+::user}}, and \mbox{\hyperlink{l00279}{algometa\+::userinfo}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00057}{KTN\+::\+Skew\+Trader\+::on\+Launch()}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_skew_trader_params_aadda447491fa7ff4a0d60bef558971f1}\index{SkewTraderParams@{SkewTraderParams}!AvgBuyPrice@{AvgBuyPrice}}
+\index{AvgBuyPrice@{AvgBuyPrice}!SkewTraderParams@{SkewTraderParams}}
+\doxysubsubsection{\texorpdfstring{AvgBuyPrice}{AvgBuyPrice}}
+{\footnotesize\ttfamily \label{struct_skew_trader_params_aadda447491fa7ff4a0d60bef558971f1} 
+double Skew\+Trader\+Params\+::\+Avg\+Buy\+Price}
+
+\Hypertarget{struct_skew_trader_params_a748589d62c294aa4c3a9915c152f3b5f}\index{SkewTraderParams@{SkewTraderParams}!AvgSellPrice@{AvgSellPrice}}
+\index{AvgSellPrice@{AvgSellPrice}!SkewTraderParams@{SkewTraderParams}}
+\doxysubsubsection{\texorpdfstring{AvgSellPrice}{AvgSellPrice}}
+{\footnotesize\ttfamily \label{struct_skew_trader_params_a748589d62c294aa4c3a9915c152f3b5f} 
+double Skew\+Trader\+Params\+::\+Avg\+Sell\+Price}
+
+\Hypertarget{struct_skew_trader_params_a591583556ca7ed8d73869ba9a6e57227}\index{SkewTraderParams@{SkewTraderParams}!EndTime@{EndTime}}
+\index{EndTime@{EndTime}!SkewTraderParams@{SkewTraderParams}}
+\doxysubsubsection{\texorpdfstring{EndTime}{EndTime}}
+{\footnotesize\ttfamily \label{struct_skew_trader_params_a591583556ca7ed8d73869ba9a6e57227} 
+string Skew\+Trader\+Params\+::\+End\+Time}
+
+\Hypertarget{struct_skew_trader_params_a7f3640d60c11b3cc4ad0144327075b68}\index{SkewTraderParams@{SkewTraderParams}!FlipSkew@{FlipSkew}}
+\index{FlipSkew@{FlipSkew}!SkewTraderParams@{SkewTraderParams}}
+\doxysubsubsection{\texorpdfstring{FlipSkew}{FlipSkew}}
+{\footnotesize\ttfamily \label{struct_skew_trader_params_a7f3640d60c11b3cc4ad0144327075b68} 
+bool Skew\+Trader\+Params\+::\+Flip\+Skew}
+
+\Hypertarget{struct_skew_trader_params_a2e45710e5e28a77c52b7177b7b54fb7f}\index{SkewTraderParams@{SkewTraderParams}!IntervalSecs@{IntervalSecs}}
+\index{IntervalSecs@{IntervalSecs}!SkewTraderParams@{SkewTraderParams}}
+\doxysubsubsection{\texorpdfstring{IntervalSecs}{IntervalSecs}}
+{\footnotesize\ttfamily \label{struct_skew_trader_params_a2e45710e5e28a77c52b7177b7b54fb7f} 
+int Skew\+Trader\+Params\+::\+Interval\+Secs}
+
+\Hypertarget{struct_skew_trader_params_a6e045b891ca26fd2f49b0541ed44315e}\index{SkewTraderParams@{SkewTraderParams}!LegCount@{LegCount}}
+\index{LegCount@{LegCount}!SkewTraderParams@{SkewTraderParams}}
+\doxysubsubsection{\texorpdfstring{LegCount}{LegCount}}
+{\footnotesize\ttfamily \label{struct_skew_trader_params_a6e045b891ca26fd2f49b0541ed44315e} 
+int Skew\+Trader\+Params\+::\+Leg\+Count}
+
+\Hypertarget{struct_skew_trader_params_a775f0f7e5cb54b1ea9e715772c5a04e3}\index{SkewTraderParams@{SkewTraderParams}!Legs@{Legs}}
+\index{Legs@{Legs}!SkewTraderParams@{SkewTraderParams}}
+\doxysubsubsection{\texorpdfstring{Legs}{Legs}}
+{\footnotesize\ttfamily \label{struct_skew_trader_params_a775f0f7e5cb54b1ea9e715772c5a04e3} 
+\mbox{\hyperlink{structinstrument}{instrument}} Skew\+Trader\+Params\+::\+Legs\mbox{[}4\mbox{]}}
+
+\Hypertarget{struct_skew_trader_params_a8df722df962dcfa6a630a4dba8d6515b}\index{SkewTraderParams@{SkewTraderParams}!LegSecIdMap@{LegSecIdMap}}
+\index{LegSecIdMap@{LegSecIdMap}!SkewTraderParams@{SkewTraderParams}}
+\doxysubsubsection{\texorpdfstring{LegSecIdMap}{LegSecIdMap}}
+{\footnotesize\ttfamily \label{struct_skew_trader_params_a8df722df962dcfa6a630a4dba8d6515b} 
+tr1\+::unordered\+\_\+map$<$int, \mbox{\hyperlink{structinstrument}{instrument}}$>$ Skew\+Trader\+Params\+::\+Leg\+Sec\+Id\+Map}
+
+\Hypertarget{struct_skew_trader_params_a6a50f8e2f355db21f9b3a6a5f4ba035c}\index{SkewTraderParams@{SkewTraderParams}!meta@{meta}}
+\index{meta@{meta}!SkewTraderParams@{SkewTraderParams}}
+\doxysubsubsection{\texorpdfstring{meta}{meta}}
+{\footnotesize\ttfamily \label{struct_skew_trader_params_a6a50f8e2f355db21f9b3a6a5f4ba035c} 
+\mbox{\hyperlink{structalgometa}{algometa}} Skew\+Trader\+Params\+::meta}
+
+\Hypertarget{struct_skew_trader_params_a7e50968d8add12e38d94dfd3d4b3bed8}\index{SkewTraderParams@{SkewTraderParams}!NetPosition@{NetPosition}}
+\index{NetPosition@{NetPosition}!SkewTraderParams@{SkewTraderParams}}
+\doxysubsubsection{\texorpdfstring{NetPosition}{NetPosition}}
+{\footnotesize\ttfamily \label{struct_skew_trader_params_a7e50968d8add12e38d94dfd3d4b3bed8} 
+int Skew\+Trader\+Params\+::\+Net\+Position}
+
+\Hypertarget{struct_skew_trader_params_ad0424fa3ad85a7ec5e29c9327455a210}\index{SkewTraderParams@{SkewTraderParams}!OrderQty@{OrderQty}}
+\index{OrderQty@{OrderQty}!SkewTraderParams@{SkewTraderParams}}
+\doxysubsubsection{\texorpdfstring{OrderQty}{OrderQty}}
+{\footnotesize\ttfamily \label{struct_skew_trader_params_ad0424fa3ad85a7ec5e29c9327455a210} 
+double Skew\+Trader\+Params\+::\+Order\+Qty}
+
+\Hypertarget{struct_skew_trader_params_acbde6d193dea0b4bfddc83f67c88729d}\index{SkewTraderParams@{SkewTraderParams}!ProfitTicks@{ProfitTicks}}
+\index{ProfitTicks@{ProfitTicks}!SkewTraderParams@{SkewTraderParams}}
+\doxysubsubsection{\texorpdfstring{ProfitTicks}{ProfitTicks}}
+{\footnotesize\ttfamily \label{struct_skew_trader_params_acbde6d193dea0b4bfddc83f67c88729d} 
+int Skew\+Trader\+Params\+::\+Profit\+Ticks}
+
+\Hypertarget{struct_skew_trader_params_a30cbc91b1a2c4957a04f526556950b73}\index{SkewTraderParams@{SkewTraderParams}!Reset@{Reset}}
+\index{Reset@{Reset}!SkewTraderParams@{SkewTraderParams}}
+\doxysubsubsection{\texorpdfstring{Reset}{Reset}}
+{\footnotesize\ttfamily \label{struct_skew_trader_params_a30cbc91b1a2c4957a04f526556950b73} 
+bool Skew\+Trader\+Params\+::\+Reset}
+
+\Hypertarget{struct_skew_trader_params_a9d3971be5a20d77837ec9e9e4cdfc5a8}\index{SkewTraderParams@{SkewTraderParams}!SendAsks@{SendAsks}}
+\index{SendAsks@{SendAsks}!SkewTraderParams@{SkewTraderParams}}
+\doxysubsubsection{\texorpdfstring{SendAsks}{SendAsks}}
+{\footnotesize\ttfamily \label{struct_skew_trader_params_a9d3971be5a20d77837ec9e9e4cdfc5a8} 
+bool Skew\+Trader\+Params\+::\+Send\+Asks}
+
+\Hypertarget{struct_skew_trader_params_a50f043dc042df65de57ab710b4316ad0}\index{SkewTraderParams@{SkewTraderParams}!SendBids@{SendBids}}
+\index{SendBids@{SendBids}!SkewTraderParams@{SkewTraderParams}}
+\doxysubsubsection{\texorpdfstring{SendBids}{SendBids}}
+{\footnotesize\ttfamily \label{struct_skew_trader_params_a50f043dc042df65de57ab710b4316ad0} 
+bool Skew\+Trader\+Params\+::\+Send\+Bids}
+
+\Hypertarget{struct_skew_trader_params_a4f218ac30567eff3ccd3472f0169e08e}\index{SkewTraderParams@{SkewTraderParams}!SkewLevels@{SkewLevels}}
+\index{SkewLevels@{SkewLevels}!SkewTraderParams@{SkewTraderParams}}
+\doxysubsubsection{\texorpdfstring{SkewLevels}{SkewLevels}}
+{\footnotesize\ttfamily \label{struct_skew_trader_params_a4f218ac30567eff3ccd3472f0169e08e} 
+int Skew\+Trader\+Params\+::\+Skew\+Levels}
+
+\Hypertarget{struct_skew_trader_params_ad252c4d247eba17437ec834a408e0468}\index{SkewTraderParams@{SkewTraderParams}!SkewMax@{SkewMax}}
+\index{SkewMax@{SkewMax}!SkewTraderParams@{SkewTraderParams}}
+\doxysubsubsection{\texorpdfstring{SkewMax}{SkewMax}}
+{\footnotesize\ttfamily \label{struct_skew_trader_params_ad252c4d247eba17437ec834a408e0468} 
+double Skew\+Trader\+Params\+::\+Skew\+Max}
+
+\Hypertarget{struct_skew_trader_params_ac25310fa596d4946839dce70cba85e77}\index{SkewTraderParams@{SkewTraderParams}!SkewMaxQty@{SkewMaxQty}}
+\index{SkewMaxQty@{SkewMaxQty}!SkewTraderParams@{SkewTraderParams}}
+\doxysubsubsection{\texorpdfstring{SkewMaxQty}{SkewMaxQty}}
+{\footnotesize\ttfamily \label{struct_skew_trader_params_ac25310fa596d4946839dce70cba85e77} 
+int Skew\+Trader\+Params\+::\+Skew\+Max\+Qty}
+
+\Hypertarget{struct_skew_trader_params_acc6bcabd284cc6d60964fe85e4e2c305}\index{SkewTraderParams@{SkewTraderParams}!SkewThreshold@{SkewThreshold}}
+\index{SkewThreshold@{SkewThreshold}!SkewTraderParams@{SkewTraderParams}}
+\doxysubsubsection{\texorpdfstring{SkewThreshold}{SkewThreshold}}
+{\footnotesize\ttfamily \label{struct_skew_trader_params_acc6bcabd284cc6d60964fe85e4e2c305} 
+double Skew\+Trader\+Params\+::\+Skew\+Threshold}
+
+\Hypertarget{struct_skew_trader_params_a82b62df0bc4fd19aa9ba1d578088166b}\index{SkewTraderParams@{SkewTraderParams}!SqueezeRatio@{SqueezeRatio}}
+\index{SqueezeRatio@{SqueezeRatio}!SkewTraderParams@{SkewTraderParams}}
+\doxysubsubsection{\texorpdfstring{SqueezeRatio}{SqueezeRatio}}
+{\footnotesize\ttfamily \label{struct_skew_trader_params_a82b62df0bc4fd19aa9ba1d578088166b} 
+double Skew\+Trader\+Params\+::\+Squeeze\+Ratio}
+
+\Hypertarget{struct_skew_trader_params_ae768902a68655f7151fc47b139b6da6f}\index{SkewTraderParams@{SkewTraderParams}!StartTime@{StartTime}}
+\index{StartTime@{StartTime}!SkewTraderParams@{SkewTraderParams}}
+\doxysubsubsection{\texorpdfstring{StartTime}{StartTime}}
+{\footnotesize\ttfamily \label{struct_skew_trader_params_ae768902a68655f7151fc47b139b6da6f} 
+string Skew\+Trader\+Params\+::\+Start\+Time}
+
+\Hypertarget{struct_skew_trader_params_a5f3238e2f91c96cad8f2dca0305d2675}\index{SkewTraderParams@{SkewTraderParams}!StopTicks@{StopTicks}}
+\index{StopTicks@{StopTicks}!SkewTraderParams@{SkewTraderParams}}
+\doxysubsubsection{\texorpdfstring{StopTicks}{StopTicks}}
+{\footnotesize\ttfamily \label{struct_skew_trader_params_a5f3238e2f91c96cad8f2dca0305d2675} 
+int Skew\+Trader\+Params\+::\+Stop\+Ticks}
+
+\Hypertarget{struct_skew_trader_params_a6e131bdf3d26af94e4f2504324098190}\index{SkewTraderParams@{SkewTraderParams}!subid@{subid}}
+\index{subid@{subid}!SkewTraderParams@{SkewTraderParams}}
+\doxysubsubsection{\texorpdfstring{subid}{subid}}
+{\footnotesize\ttfamily \label{struct_skew_trader_params_a6e131bdf3d26af94e4f2504324098190} 
+string Skew\+Trader\+Params\+::subid}
+
+\Hypertarget{struct_skew_trader_params_a208ee98d590001b0d6ef30cd38de1f6c}\index{SkewTraderParams@{SkewTraderParams}!TimeoutMS@{TimeoutMS}}
+\index{TimeoutMS@{TimeoutMS}!SkewTraderParams@{SkewTraderParams}}
+\doxysubsubsection{\texorpdfstring{TimeoutMS}{TimeoutMS}}
+{\footnotesize\ttfamily \label{struct_skew_trader_params_a208ee98d590001b0d6ef30cd38de1f6c} 
+int Skew\+Trader\+Params\+::\+Timeout\+MS}
+
+\Hypertarget{struct_skew_trader_params_a65f75205e7c50bfdeaec4b1e59681394}\index{SkewTraderParams@{SkewTraderParams}!TotalBuyPrice@{TotalBuyPrice}}
+\index{TotalBuyPrice@{TotalBuyPrice}!SkewTraderParams@{SkewTraderParams}}
+\doxysubsubsection{\texorpdfstring{TotalBuyPrice}{TotalBuyPrice}}
+{\footnotesize\ttfamily \label{struct_skew_trader_params_a65f75205e7c50bfdeaec4b1e59681394} 
+double Skew\+Trader\+Params\+::\+Total\+Buy\+Price}
+
+\Hypertarget{struct_skew_trader_params_ad490e51fbfacc117927a917d17a35eff}\index{SkewTraderParams@{SkewTraderParams}!TotalBuys@{TotalBuys}}
+\index{TotalBuys@{TotalBuys}!SkewTraderParams@{SkewTraderParams}}
+\doxysubsubsection{\texorpdfstring{TotalBuys}{TotalBuys}}
+{\footnotesize\ttfamily \label{struct_skew_trader_params_ad490e51fbfacc117927a917d17a35eff} 
+int Skew\+Trader\+Params\+::\+Total\+Buys}
+
+\Hypertarget{struct_skew_trader_params_a3d1f43305755b839eabd1a0414b1387a}\index{SkewTraderParams@{SkewTraderParams}!TotalExec@{TotalExec}}
+\index{TotalExec@{TotalExec}!SkewTraderParams@{SkewTraderParams}}
+\doxysubsubsection{\texorpdfstring{TotalExec}{TotalExec}}
+{\footnotesize\ttfamily \label{struct_skew_trader_params_a3d1f43305755b839eabd1a0414b1387a} 
+int Skew\+Trader\+Params\+::\+Total\+Exec}
+
+\Hypertarget{struct_skew_trader_params_addb337ec62cd8d2729d7c3584cf551ce}\index{SkewTraderParams@{SkewTraderParams}!TotalQty@{TotalQty}}
+\index{TotalQty@{TotalQty}!SkewTraderParams@{SkewTraderParams}}
+\doxysubsubsection{\texorpdfstring{TotalQty}{TotalQty}}
+{\footnotesize\ttfamily \label{struct_skew_trader_params_addb337ec62cd8d2729d7c3584cf551ce} 
+double Skew\+Trader\+Params\+::\+Total\+Qty}
+
+\Hypertarget{struct_skew_trader_params_af1ce6d1d3e0d7753d8912677038ff0b3}\index{SkewTraderParams@{SkewTraderParams}!TotalSellPrice@{TotalSellPrice}}
+\index{TotalSellPrice@{TotalSellPrice}!SkewTraderParams@{SkewTraderParams}}
+\doxysubsubsection{\texorpdfstring{TotalSellPrice}{TotalSellPrice}}
+{\footnotesize\ttfamily \label{struct_skew_trader_params_af1ce6d1d3e0d7753d8912677038ff0b3} 
+double Skew\+Trader\+Params\+::\+Total\+Sell\+Price}
+
+\Hypertarget{struct_skew_trader_params_ad4a39a703509a9ee6d0a7458e4e28cb8}\index{SkewTraderParams@{SkewTraderParams}!TotalSells@{TotalSells}}
+\index{TotalSells@{TotalSells}!SkewTraderParams@{SkewTraderParams}}
+\doxysubsubsection{\texorpdfstring{TotalSells}{TotalSells}}
+{\footnotesize\ttfamily \label{struct_skew_trader_params_ad4a39a703509a9ee6d0a7458e4e28cb8} 
+int Skew\+Trader\+Params\+::\+Total\+Sells}
+
+\Hypertarget{struct_skew_trader_params_adc0ba3b3aaf2ec368caf469da83c953a}\index{SkewTraderParams@{SkewTraderParams}!UseTotalPL@{UseTotalPL}}
+\index{UseTotalPL@{UseTotalPL}!SkewTraderParams@{SkewTraderParams}}
+\doxysubsubsection{\texorpdfstring{UseTotalPL}{UseTotalPL}}
+{\footnotesize\ttfamily \label{struct_skew_trader_params_adc0ba3b3aaf2ec368caf469da83c953a} 
+bool Skew\+Trader\+Params\+::\+Use\+Total\+PL}
+
+\Hypertarget{struct_skew_trader_params_afae18c3c272a1c03e6400d6f36affbbf}\index{SkewTraderParams@{SkewTraderParams}!ValidJson@{ValidJson}}
+\index{ValidJson@{ValidJson}!SkewTraderParams@{SkewTraderParams}}
+\doxysubsubsection{\texorpdfstring{ValidJson}{ValidJson}}
+{\footnotesize\ttfamily \label{struct_skew_trader_params_afae18c3c272a1c03e6400d6f36affbbf} 
+bool Skew\+Trader\+Params\+::\+Valid\+Json}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Algo\+Params/Skew\+Trader\+Params.\+hpp\item 
+Algo\+Params/Skew\+Trader\+Params.\+cpp\end{DoxyCompactItemize}

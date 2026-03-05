@@ -1,0 +1,27 @@
+var struct_algo_state =
+[
+    [ "CERTNR", "struct_algo_state.html#a662be09f1b662e08671ece46759ce859", null ],
+    [ "DATA_TRIES", "struct_algo_state.html#a9d1ac2511d1c339b04328c94ad1f89ef", null ],
+    [ "ENABLED", "struct_algo_state.html#a04d17f2cd953c9979ee71082d7ae8f5d", null ],
+    [ "EXCH_CALLBACK_ID", "struct_algo_state.html#a2f2be01f89c07cc499cd788d5066d1fb", null ],
+    [ "GOT_DATA", "struct_algo_state.html#acb2ba3ed7a314c22678f2244586b2568", null ],
+    [ "GUID", "struct_algo_state.html#af27a9f77aa293d5e59abeaed88bbcf97", null ],
+    [ "hdg_ords_BUY", "struct_algo_state.html#a2e5b3b5524309a60b78fbe9a319c4342", null ],
+    [ "hdg_ords_SELL", "struct_algo_state.html#ab54606261be4fb97bd8a7535ea2f869c", null ],
+    [ "HDGTYPE", "struct_algo_state.html#a6119222e6c45d45f5477d3e1438a995d", null ],
+    [ "HedgingState", "struct_algo_state.html#a22f6399f9584497dd50b2236798259a8", null ],
+    [ "inflight", "struct_algo_state.html#aaa52fb3c78d8fa76f221325d39d1fdee", null ],
+    [ "mod_ords_BUY", "struct_algo_state.html#af664fa27cfe6bfbab3640d3bf282f02e", null ],
+    [ "mod_ords_SELL", "struct_algo_state.html#a6cc07e6f05967b0db984466b3b56d325", null ],
+    [ "Name", "struct_algo_state.html#adc8cd1f3f906df1dbb0b66bfcaa9b249", null ],
+    [ "NETPOS", "struct_algo_state.html#a9a5495f8d8e54eebb1129db6bd701f51", null ],
+    [ "QuotingState", "struct_algo_state.html#a1d4b9b02aeabb2d5825137882b5cfaeb", null ],
+    [ "RPT_ACTIVE", "struct_algo_state.html#a8d790bf2dd80a0a4ae757ab9ed36f3e8", null ],
+    [ "stopped", "struct_algo_state.html#af175612d0f6c4fabff63b2a9140e2757", null ],
+    [ "TOTALEXEC", "struct_algo_state.html#ad1c912bf2d197ee88f7bd908f8bbd725", null ],
+    [ "USE_REPORTING_MSGS", "struct_algo_state.html#aa6aa22024900dada8196df74053d2230", null ],
+    [ "USE_STOPS", "struct_algo_state.html#a1f095f41cb4f9f9f4e7068641988b8e6", null ],
+    [ "VERBOSE", "struct_algo_state.html#afa078c48452bf73a3248e1da9540a435", null ],
+    [ "WATCH_TRADES", "struct_algo_state.html#aee04897b9c0fffcc4a67c718abe1892b", null ],
+    [ "WATCH_VOLUME", "struct_algo_state.html#a7b85c13ba360eadf17812e69752588bd", null ]
+];

@@ -1,0 +1,238 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classzmq_1_1message__t" xml:lang="en-US">
+<title>zmq::message_t Class Reference</title>
+<indexterm><primary>zmq::message_t</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classzmq_1_1message__t_1ae1ab1807e7a1c46eb048e94a5ff5a263">message_t</link> (size_t size_)</para>
+</listitem>
+            <listitem><para>template&lt;class ForwardIter &gt; </para><para><link linkend="_classzmq_1_1message__t_1af7092a211cfa0e4df75a96dcb2c465a1">message_t</link> (ForwardIter first, ForwardIter last)</para>
+</listitem>
+            <listitem><para><link linkend="_classzmq_1_1message__t_1abcbb3ccfdc0993ce4b6a65c40b49302c">message_t</link> (const void *data_, size_t size_)</para>
+</listitem>
+            <listitem><para><link linkend="_classzmq_1_1message__t_1a059f04ec283f46cf2c4c74fd191a7438">message_t</link> (void *data_, size_t size_, free_fn *ffn_, void *hint_=ZMQ_NULLPTR)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classzmq_1_1message__t_1aa84be585b079e958a4b139818ce80bee">rebuild</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classzmq_1_1message__t_1a034605fec66cc8b2a64dba66c02aed6d">rebuild</link> (size_t size_)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classzmq_1_1message__t_1a5e2f26889a23be1e7f9f10fea487601e">rebuild</link> (const void *data_, size_t size_)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classzmq_1_1message__t_1a61245a9aa4c6399a60a67430cde69f37">rebuild</link> (void *data_, size_t size_, free_fn *ffn_, void *hint_=ZMQ_NULLPTR)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classzmq_1_1message__t_1aec5dbbaa99bc7ed381254b99025ae8d0">move</link> (<link linkend="_classzmq_1_1message__t">message_t</link> const *msg_)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classzmq_1_1message__t_1a140d8b73a3c86ba5a8ac5a4916e59471">move</link> (<link linkend="_classzmq_1_1message__t">message_t</link> &amp;msg_)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classzmq_1_1message__t_1ae37889f4e45aa5e3d8a84f843037c3c9">copy</link> (<link linkend="_classzmq_1_1message__t">message_t</link> const *msg_)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classzmq_1_1message__t_1aac863cc381448f2088d6b8a44bd2aa94">copy</link> (<link linkend="_classzmq_1_1message__t">message_t</link> &amp;msg_)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classzmq_1_1message__t_1a0b84ec573d15894e1e31becf9ea42e6c">more</link> () const ZMQ_NOTHROW</para>
+</listitem>
+            <listitem><para>void * <link linkend="_classzmq_1_1message__t_1a8fdcb4bbc356e6e304fcc4686817a285">data</link> () ZMQ_NOTHROW</para>
+</listitem>
+            <listitem><para>const void * <link linkend="_classzmq_1_1message__t_1acf84f015d845d7dc7651c93815b371a3">data</link> () const ZMQ_NOTHROW</para>
+</listitem>
+            <listitem><para>size_t <link linkend="_classzmq_1_1message__t_1a95bbb9796582768c847c5223ae03f206">size</link> () const ZMQ_NOTHROW</para>
+</listitem>
+            <listitem><para>ZMQ_NODISCARD bool <link linkend="_classzmq_1_1message__t_1a4be863bc881d762fdb07b66f520bf2bb">empty</link> () const ZMQ_NOTHROW</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>T * <link linkend="_classzmq_1_1message__t_1ab569cba6c80417512076b7a42444de9c">data</link> () ZMQ_NOTHROW</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>T const * <link linkend="_classzmq_1_1message__t_1af0758f1e57c064f61f11e7b16960e65a">data</link> () const ZMQ_NOTHROW</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classzmq_1_1message__t_1a901d78ddce5bd77e7421c179b1ef3c3a">equal</link> (const <link linkend="_classzmq_1_1message__t">message_t</link> *other) const ZMQ_NOTHROW</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classzmq_1_1message__t_1a6e273eca474b63914b6fadad70cc44e9">operator==</link> (const <link linkend="_classzmq_1_1message__t">message_t</link> &amp;other) const ZMQ_NOTHROW</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classzmq_1_1message__t_1aafa6818f64a8cbe5a41bdbecd46593d8">operator!=</link> (const <link linkend="_classzmq_1_1message__t">message_t</link> &amp;other) const ZMQ_NOTHROW</para>
+</listitem>
+            <listitem><para>int <link linkend="_classzmq_1_1message__t_1a3fac1ef69f92445db21a77b87d58af9d">get</link> (int property_)</para>
+</listitem>
+            <listitem><para>const char * <link linkend="_classzmq_1_1message__t_1a3fd3e53d505e618c8cad859f698ab5e1">gets</link> (const char *property_)</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classzmq_1_1message__t_1ac92cae0e9b979bdb7ebe127d90887a3f">to_string</link> () const</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classzmq_1_1message__t_1aed6502a922a73cda7f47d47689617d03">str</link> () const</para>
+</listitem>
+            <listitem><para>void <link linkend="_classzmq_1_1message__t_1a48fa2f9b464a2522d340533a99a36f5f">swap</link> (<link linkend="_classzmq_1_1message__t">message_t</link> &amp;other) ZMQ_NOTHROW</para>
+</listitem>
+            <listitem><para>ZMQ_NODISCARD zmq_msg_t * <link linkend="_classzmq_1_1message__t_1afb9889a943d2f8eb1a3ed43d0c8885b3">handle</link> () ZMQ_NOTHROW</para>
+</listitem>
+            <listitem><para>ZMQ_NODISCARD const zmq_msg_t * <link linkend="_classzmq_1_1message__t_1ad8978e409daa4d3055669024e0a20dd6">handle</link> () const ZMQ_NOTHROW</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classzmq_1_1message__t_1aaa75f0668213940e0eb2df2bbaad22fc"/><section>
+    <title>message_t()<computeroutput>[1/5]</computeroutput></title>
+<indexterm><primary>message_t</primary><secondary>zmq::message_t</secondary></indexterm>
+<indexterm><primary>zmq::message_t</primary><secondary>message_t</secondary></indexterm>
+<para><computeroutput>zmq::message_t::message_t ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1message__t_1ae1ab1807e7a1c46eb048e94a5ff5a263"/><section>
+    <title>message_t()<computeroutput>[2/5]</computeroutput></title>
+<indexterm><primary>message_t</primary><secondary>zmq::message_t</secondary></indexterm>
+<indexterm><primary>zmq::message_t</primary><secondary>message_t</secondary></indexterm>
+<para><computeroutput>zmq::message_t::message_t (size_t size_)<computeroutput>[inline]</computeroutput>, <computeroutput>[explicit]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1message__t_1af7092a211cfa0e4df75a96dcb2c465a1"/><section>
+    <title>message_t()<computeroutput>[3/5]</computeroutput></title>
+<indexterm><primary>message_t</primary><secondary>zmq::message_t</secondary></indexterm>
+<indexterm><primary>zmq::message_t</primary><secondary>message_t</secondary></indexterm>
+<computeroutput>template&lt;class ForwardIter &gt; </computeroutput><para><computeroutput>zmq::message_t::message_t (ForwardIter first, ForwardIter last)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1message__t_1abcbb3ccfdc0993ce4b6a65c40b49302c"/><section>
+    <title>message_t()<computeroutput>[4/5]</computeroutput></title>
+<indexterm><primary>message_t</primary><secondary>zmq::message_t</secondary></indexterm>
+<indexterm><primary>zmq::message_t</primary><secondary>message_t</secondary></indexterm>
+<para><computeroutput>zmq::message_t::message_t (const void * data_, size_t size_)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1message__t_1a059f04ec283f46cf2c4c74fd191a7438"/><section>
+    <title>message_t()<computeroutput>[5/5]</computeroutput></title>
+<indexterm><primary>message_t</primary><secondary>zmq::message_t</secondary></indexterm>
+<indexterm><primary>zmq::message_t</primary><secondary>message_t</secondary></indexterm>
+<para><computeroutput>zmq::message_t::message_t (void * data_, size_t size_, free_fn * ffn_, void * hint_ = <computeroutput>ZMQ_NULLPTR</computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1message__t_1a8c9f38cf7916d0338ce7769182f0d238"/><section>
+    <title>~message_t()</title>
+<indexterm><primary>~message_t</primary><secondary>zmq::message_t</secondary></indexterm>
+<indexterm><primary>zmq::message_t</primary><secondary>~message_t</secondary></indexterm>
+<para><computeroutput>zmq::message_t::~message_t ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classzmq_1_1message__t_1aac863cc381448f2088d6b8a44bd2aa94"/><section>
+    <title>copy()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>copy</primary><secondary>zmq::message_t</secondary></indexterm>
+<indexterm><primary>zmq::message_t</primary><secondary>copy</secondary></indexterm>
+<para><computeroutput>void zmq::message_t::copy (<link linkend="_classzmq_1_1message__t">message_t</link> &amp; msg_)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1message__t_1ae37889f4e45aa5e3d8a84f843037c3c9"/><section>
+    <title>copy()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>copy</primary><secondary>zmq::message_t</secondary></indexterm>
+<indexterm><primary>zmq::message_t</primary><secondary>copy</secondary></indexterm>
+<para><computeroutput>void zmq::message_t::copy (<link linkend="_classzmq_1_1message__t">message_t</link> const * msg_)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1message__t_1acf84f015d845d7dc7651c93815b371a3"/><section>
+    <title>data()<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>data</primary><secondary>zmq::message_t</secondary></indexterm>
+<indexterm><primary>zmq::message_t</primary><secondary>data</secondary></indexterm>
+<para><computeroutput>const void * zmq::message_t::data ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1message__t_1af0758f1e57c064f61f11e7b16960e65a"/><section>
+    <title>data()<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>data</primary><secondary>zmq::message_t</secondary></indexterm>
+<indexterm><primary>zmq::message_t</primary><secondary>data</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>T const  * zmq::message_t::data ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1message__t_1a8fdcb4bbc356e6e304fcc4686817a285"/><section>
+    <title>data()<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>data</primary><secondary>zmq::message_t</secondary></indexterm>
+<indexterm><primary>zmq::message_t</primary><secondary>data</secondary></indexterm>
+<para><computeroutput>void * zmq::message_t::data ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1message__t_1ab569cba6c80417512076b7a42444de9c"/><section>
+    <title>data()<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>data</primary><secondary>zmq::message_t</secondary></indexterm>
+<indexterm><primary>zmq::message_t</primary><secondary>data</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>T * zmq::message_t::data ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1message__t_1a4be863bc881d762fdb07b66f520bf2bb"/><section>
+    <title>empty()</title>
+<indexterm><primary>empty</primary><secondary>zmq::message_t</secondary></indexterm>
+<indexterm><primary>zmq::message_t</primary><secondary>empty</secondary></indexterm>
+<para><computeroutput>ZMQ_NODISCARD bool zmq::message_t::empty ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1message__t_1a901d78ddce5bd77e7421c179b1ef3c3a"/><section>
+    <title>equal()</title>
+<indexterm><primary>equal</primary><secondary>zmq::message_t</secondary></indexterm>
+<indexterm><primary>zmq::message_t</primary><secondary>equal</secondary></indexterm>
+<para><computeroutput>bool zmq::message_t::equal (const <link linkend="_classzmq_1_1message__t">message_t</link> * other) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1message__t_1a3fac1ef69f92445db21a77b87d58af9d"/><section>
+    <title>get()</title>
+<indexterm><primary>get</primary><secondary>zmq::message_t</secondary></indexterm>
+<indexterm><primary>zmq::message_t</primary><secondary>get</secondary></indexterm>
+<para><computeroutput>int zmq::message_t::get (int property_)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1message__t_1a3fd3e53d505e618c8cad859f698ab5e1"/><section>
+    <title>gets()</title>
+<indexterm><primary>gets</primary><secondary>zmq::message_t</secondary></indexterm>
+<indexterm><primary>zmq::message_t</primary><secondary>gets</secondary></indexterm>
+<para><computeroutput>const char * zmq::message_t::gets (const char * property_)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1message__t_1ad8978e409daa4d3055669024e0a20dd6"/><section>
+    <title>handle()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>handle</primary><secondary>zmq::message_t</secondary></indexterm>
+<indexterm><primary>zmq::message_t</primary><secondary>handle</secondary></indexterm>
+<para><computeroutput>ZMQ_NODISCARD const zmq_msg_t * zmq::message_t::handle ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1message__t_1afb9889a943d2f8eb1a3ed43d0c8885b3"/><section>
+    <title>handle()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>handle</primary><secondary>zmq::message_t</secondary></indexterm>
+<indexterm><primary>zmq::message_t</primary><secondary>handle</secondary></indexterm>
+<para><computeroutput>ZMQ_NODISCARD zmq_msg_t * zmq::message_t::handle ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1message__t_1a0b84ec573d15894e1e31becf9ea42e6c"/><section>
+    <title>more()</title>
+<indexterm><primary>more</primary><secondary>zmq::message_t</secondary></indexterm>
+<indexterm><primary>zmq::message_t</primary><secondary>more</secondary></indexterm>
+<para><computeroutput>bool zmq::message_t::more ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1message__t_1a140d8b73a3c86ba5a8ac5a4916e59471"/><section>
+    <title>move()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>move</primary><secondary>zmq::message_t</secondary></indexterm>
+<indexterm><primary>zmq::message_t</primary><secondary>move</secondary></indexterm>
+<para><computeroutput>void zmq::message_t::move (<link linkend="_classzmq_1_1message__t">message_t</link> &amp; msg_)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1message__t_1aec5dbbaa99bc7ed381254b99025ae8d0"/><section>
+    <title>move()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>move</primary><secondary>zmq::message_t</secondary></indexterm>
+<indexterm><primary>zmq::message_t</primary><secondary>move</secondary></indexterm>
+<para><computeroutput>void zmq::message_t::move (<link linkend="_classzmq_1_1message__t">message_t</link> const * msg_)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1message__t_1aafa6818f64a8cbe5a41bdbecd46593d8"/><section>
+    <title>operator!=()</title>
+<indexterm><primary>operator!=</primary><secondary>zmq::message_t</secondary></indexterm>
+<indexterm><primary>zmq::message_t</primary><secondary>operator!=</secondary></indexterm>
+<para><computeroutput>bool zmq::message_t::operator!= (const <link linkend="_classzmq_1_1message__t">message_t</link> &amp; other) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1message__t_1a6e273eca474b63914b6fadad70cc44e9"/><section>
+    <title>operator==()</title>
+<indexterm><primary>operator==</primary><secondary>zmq::message_t</secondary></indexterm>
+<indexterm><primary>zmq::message_t</primary><secondary>operator==</secondary></indexterm>
+<para><computeroutput>bool zmq::message_t::operator== (const <link linkend="_classzmq_1_1message__t">message_t</link> &amp; other) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1message__t_1aa84be585b079e958a4b139818ce80bee"/><section>
+    <title>rebuild()<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>rebuild</primary><secondary>zmq::message_t</secondary></indexterm>
+<indexterm><primary>zmq::message_t</primary><secondary>rebuild</secondary></indexterm>
+<para><computeroutput>void zmq::message_t::rebuild ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1message__t_1a5e2f26889a23be1e7f9f10fea487601e"/><section>
+    <title>rebuild()<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>rebuild</primary><secondary>zmq::message_t</secondary></indexterm>
+<indexterm><primary>zmq::message_t</primary><secondary>rebuild</secondary></indexterm>
+<para><computeroutput>void zmq::message_t::rebuild (const void * data_, size_t size_)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1message__t_1a034605fec66cc8b2a64dba66c02aed6d"/><section>
+    <title>rebuild()<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>rebuild</primary><secondary>zmq::message_t</secondary></indexterm>
+<indexterm><primary>zmq::message_t</primary><secondary>rebuild</secondary></indexterm>
+<para><computeroutput>void zmq::message_t::rebuild (size_t size_)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1message__t_1a61245a9aa4c6399a60a67430cde69f37"/><section>
+    <title>rebuild()<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>rebuild</primary><secondary>zmq::message_t</secondary></indexterm>
+<indexterm><primary>zmq::message_t</primary><secondary>rebuild</secondary></indexterm>
+<para><computeroutput>void zmq::message_t::rebuild (void * data_, size_t size_, free_fn * ffn_, void * hint_ = <computeroutput>ZMQ_NULLPTR</computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1message__t_1a95bbb9796582768c847c5223ae03f206"/><section>
+    <title>size()</title>
+<indexterm><primary>size</primary><secondary>zmq::message_t</secondary></indexterm>
+<indexterm><primary>zmq::message_t</primary><secondary>size</secondary></indexterm>
+<para><computeroutput>size_t zmq::message_t::size ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1message__t_1aed6502a922a73cda7f47d47689617d03"/><section>
+    <title>str()</title>
+<indexterm><primary>str</primary><secondary>zmq::message_t</secondary></indexterm>
+<indexterm><primary>zmq::message_t</primary><secondary>str</secondary></indexterm>
+<para><computeroutput>std::string zmq::message_t::str ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Dump content to string for debugging. Ascii chars are readable, the rest is printed as hex. Probably ridiculously slow. Use to_string() or to_string_view() for interpreting the message as a string. </para>
+</section>
+<anchor xml:id="_classzmq_1_1message__t_1a48fa2f9b464a2522d340533a99a36f5f"/><section>
+    <title>swap()</title>
+<indexterm><primary>swap</primary><secondary>zmq::message_t</secondary></indexterm>
+<indexterm><primary>zmq::message_t</primary><secondary>swap</secondary></indexterm>
+<para><computeroutput>void zmq::message_t::swap (<link linkend="_classzmq_1_1message__t">message_t</link> &amp; other)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1message__t_1ac92cae0e9b979bdb7ebe127d90887a3f"/><section>
+    <title>to_string()</title>
+<indexterm><primary>to_string</primary><secondary>zmq::message_t</secondary></indexterm>
+<indexterm><primary>zmq::message_t</primary><secondary>to_string</secondary></indexterm>
+<para><computeroutput>std::string zmq::message_t::to_string ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+ZMQ/zmq.hpp</section>
+</section>

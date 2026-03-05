@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_risk_limit" xml:lang="en-US">
+<title>RiskLimit Struct Reference</title>
+<indexterm><primary>RiskLimit</primary></indexterm>
+<para>
+
+<para>Struct representing a risk limit. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;KatanaStructs.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_struct_risk_limit_1aa68b939ac82be5e93ed9f436aa017d44">account</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_risk_limit_1afbd6008cedd1d1a49f039a68e40dca2c">key</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_risk_limit_1a12a43f2150485c8d9593c0d3a0190c3e">max_ord_notional</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Struct representing a risk limit. </para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_risk_limit_1aa68b939ac82be5e93ed9f436aa017d44"/><section>
+    <title>account</title>
+<indexterm><primary>account</primary><secondary>RiskLimit</secondary></indexterm>
+<indexterm><primary>RiskLimit</primary><secondary>account</secondary></indexterm>
+<para><computeroutput>string RiskLimit::account</computeroutput></para>
+<para>The account associated with the risk limit. </para>
+</section>
+<anchor xml:id="_struct_risk_limit_1afbd6008cedd1d1a49f039a68e40dca2c"/><section>
+    <title>key</title>
+<indexterm><primary>key</primary><secondary>RiskLimit</secondary></indexterm>
+<indexterm><primary>RiskLimit</primary><secondary>key</secondary></indexterm>
+<para><computeroutput>string RiskLimit::key</computeroutput></para>
+<para>The key of the risk limit. </para>
+</section>
+<anchor xml:id="_struct_risk_limit_1a12a43f2150485c8d9593c0d3a0190c3e"/><section>
+    <title>max_ord_notional</title>
+<indexterm><primary>max_ord_notional</primary><secondary>RiskLimit</secondary></indexterm>
+<indexterm><primary>RiskLimit</primary><secondary>max_ord_notional</secondary></indexterm>
+<para><computeroutput>double RiskLimit::max_ord_notional</computeroutput></para>
+<para>The maximum order notional of the risk limit. </para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Containers/KatanaStructs.hpp</section>
+</section>

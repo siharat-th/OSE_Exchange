@@ -1,0 +1,410 @@
+\doxysection{Settings Class Reference}
+\hypertarget{class_settings}{}\label{class_settings}\index{Settings@{Settings}}
+
+
+\doxylink{class_settings}{Settings} collection.  
+
+
+
+
+{\ttfamily \#include $<$Settings.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_settings_ab7169a6eefce79566dd07db3b1e5e967}{Settings}} ()
+\item 
+\mbox{\hyperlink{class_settings_a0babc4f5985803a94f9c6b34b168d4a3}{Settings}} (const std\+::string filename)
+\item 
+\mbox{\hyperlink{class_settings_ae79d9331e3fa87d009ef089b8dade21c}{\texorpdfstring{$\sim$}{\string~}\+Settings}} (void)
+\item 
+void \mbox{\hyperlink{class_settings_ab49d0d124e6b9667c9739469906a99cf}{Get}} (const std\+::string \&file\+Path, std\+::string sz\+Me)
+\item 
+void \mbox{\hyperlink{class_settings_a8c115f572d11db71822fe7e37a50b13c}{Dump}} ()
+\item 
+vector$<$ string $>$ \mbox{\hyperlink{class_settings_a95abeba6ae3224a3a43ed2e326644e4e}{Log\+Dump}} (int indent)
+\item 
+std\+::string \mbox{\hyperlink{class_settings_a14cdbd2a8fa11593a025b1e75e6d9524}{get}} (const std\+::string \&key) const
+\item 
+bool \mbox{\hyperlink{class_settings_a5219a28535d0f8e7de4058bbb228dae8}{get\+Integer}} (const std\+::string \&key, int \texorpdfstring{$\ast$}{*}value) const
+\item 
+int \mbox{\hyperlink{class_settings_adbf2f32523e015277df9b3559d174346}{get\+Integer}} (const std\+::string \&key) const
+\item 
+bool \mbox{\hyperlink{class_settings_ae7c7a50ebf35427b9e352a44d22e1227}{get\+Long}} (const std\+::string \&key, long \texorpdfstring{$\ast$}{*}value) const
+\item 
+long \mbox{\hyperlink{class_settings_a3329d282f3ae14acfb54d73ab7348aff}{get\+Long}} (const std\+::string \&key) const
+\item 
+bool \mbox{\hyperlink{class_settings_a28f959bd2849f62ffb6fde239fbedad2}{get\+Boolean}} (const std\+::string \&key) const
+\item 
+bool \mbox{\hyperlink{class_settings_a209d20c28ea8dfb9e6ef4b5e7634e5f4}{get\+Double}} (const\+::std\+::string \&key, double \texorpdfstring{$\ast$}{*}value) const
+\item 
+double \mbox{\hyperlink{class_settings_a050673799770ad22fd1849dfe62a45eb}{get\+Double}} (const std\+::string \&key) const
+\item 
+vector$<$ string $>$ \mbox{\hyperlink{class_settings_ac5abe4d9868f61c1fb68fbe2e07f1c47}{get\+List\+Csv}} (const std\+::string \&key) const
+\item 
+map$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{class_settings_a6d2b778732a348400bd188e3b122838e}{Get\+Map}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_settings_aaec4a6da3a7677d7dbd80f285e104469}{trim\+Spaces}} (std\+::string \texorpdfstring{$\ast$}{*}str)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{class_settings_ae050e2bcef67052a77f3177604c2106e}{Key2\+Value\+Map}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Key2\+Value\+Map \mbox{\hyperlink{class_settings_a8a37979f05a537428b5ba64ce52a7c4b}{map\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{class_settings_a69645eccc1ef87ae5e99ba762a526ef0}{m\+\_\+\+Me}}
+\item 
+std\+::string \mbox{\hyperlink{class_settings_a584ba608c0d2fbf2b1d0683590b01db1}{m\+\_\+\+File\+Path}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_settings}{Settings} collection. 
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{class_settings_ae050e2bcef67052a77f3177604c2106e}\index{Settings@{Settings}!Key2ValueMap@{Key2ValueMap}}
+\index{Key2ValueMap@{Key2ValueMap}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{Key2ValueMap}{Key2ValueMap}}
+{\footnotesize\ttfamily \label{class_settings_ae050e2bcef67052a77f3177604c2106e} 
+std\+::map$<$std\+::string , std\+::string $>$ Settings\+::\+Key2\+Value\+Map\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_settings_ab7169a6eefce79566dd07db3b1e5e967}\index{Settings@{Settings}!Settings@{Settings}}
+\index{Settings@{Settings}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{Settings()}{Settings()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_settings_ab7169a6eefce79566dd07db3b1e5e967} 
+Settings\+::\+Settings (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Default constructor for the \doxylink{class_settings}{Settings} class. \Hypertarget{class_settings_a0babc4f5985803a94f9c6b34b168d4a3}\index{Settings@{Settings}!Settings@{Settings}}
+\index{Settings@{Settings}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{Settings()}{Settings()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_settings_a0babc4f5985803a94f9c6b34b168d4a3} 
+Settings\+::\+Settings (\begin{DoxyParamCaption}\item[{const std\+::string}]{filename}{}\end{DoxyParamCaption})}
+
+Constructor for the \doxylink{class_settings}{Settings} class that takes a filename.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file to load settings from. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00038}{trim\+Spaces()}}.
+
+\Hypertarget{class_settings_ae79d9331e3fa87d009ef089b8dade21c}\index{Settings@{Settings}!````~Settings@{\texorpdfstring{$\sim$}{\string~}Settings}}
+\index{````~Settings@{\texorpdfstring{$\sim$}{\string~}Settings}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Settings()}{\string~Settings()}}
+{\footnotesize\ttfamily \label{class_settings_ae79d9331e3fa87d009ef089b8dade21c} 
+Settings\+::\texorpdfstring{$\sim$}{\string~}\+Settings (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Destructor for the \doxylink{class_settings}{Settings} class. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_settings_a8c115f572d11db71822fe7e37a50b13c}\index{Settings@{Settings}!Dump@{Dump}}
+\index{Dump@{Dump}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{Dump()}{Dump()}}
+{\footnotesize\ttfamily \label{class_settings_a8c115f572d11db71822fe7e37a50b13c} 
+void Settings\+::\+Dump (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Dump all the settings to the console. \Hypertarget{class_settings_ab49d0d124e6b9667c9739469906a99cf}\index{Settings@{Settings}!Get@{Get}}
+\index{Get@{Get}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily \label{class_settings_ab49d0d124e6b9667c9739469906a99cf} 
+void Settings\+::\+Get (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Path}{, }\item[{std\+::string}]{sz\+Me}{}\end{DoxyParamCaption})}
+
+Get the value associated with the given key from the specified file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & The path of the file to read settings from. \\
+\hline
+{\em sz\+Me} & The key to retrieve the value for. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00038}{trim\+Spaces()}}.
+
+\Hypertarget{class_settings_a14cdbd2a8fa11593a025b1e75e6d9524}\index{Settings@{Settings}!get@{get}}
+\index{get@{get}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \label{class_settings_a14cdbd2a8fa11593a025b1e75e6d9524} 
+std\+::string Settings\+::get (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key}{}\end{DoxyParamCaption}) const}
+
+Get the value associated with the given key.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to retrieve the value for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value associated with the key. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00014}{KTN\+::\+Algo\+Base\+V3\+::\+Algo\+Base\+V3()}}, \mbox{\hyperlink{l00023}{KTN\+::\+Algo\+Service\+Broker\+V3\+::\+Algo\+Service\+Broker\+V3()}}, \mbox{\hyperlink{l00014}{KTN\+::\+REPORTER\+::\+Algo\+V3\+Reporter\+::\+Algo\+V3\+Reporter()}}, \mbox{\hyperlink{l00019}{KTN\+::\+CME\+::\+Cme\+Algo\+::\+Cme\+Algo()}}, \mbox{\hyperlink{l00019}{KTN\+::\+CME\+::\+Cme\+GT5\+::\+Cme\+GT5()}}, \mbox{\hyperlink{l00027}{Logger\+Factory\+::create\+Logger()}}, \mbox{\hyperlink{l00030}{Menu\+Factory\+::create\+Menu()}}, \mbox{\hyperlink{l00011}{KTN\+::\+Exchange\+Manager\+::\+Exchange\+Manager()}}, \mbox{\hyperlink{l00193}{get\+Boolean()}}, \mbox{\hyperlink{l00133}{get\+Integer()}}, \mbox{\hyperlink{l00203}{get\+List\+Csv()}}, \mbox{\hyperlink{l00153}{get\+Long()}}, \mbox{\hyperlink{l00055}{Cme\+Settings\+Helper\+::\+Get\+String()}}, \mbox{\hyperlink{l00029}{Session\+State\+Manager\+::\+Init()}}, \mbox{\hyperlink{l00016}{KTN\+::notify\+::\+Slacker\+::\+Init\+And\+Run()}}, \mbox{\hyperlink{l00065}{Cme\+Session\+Settings\+::\+Load()}}, \mbox{\hyperlink{l00042}{tcp\+\_\+settings\+::\+Load()}}, \mbox{\hyperlink{l00096}{udp\+\_\+settings\+::\+Load()}}, \mbox{\hyperlink{l00550}{KTN\+::\+ORD\+::\+Order\+Handler\+Zmq\+V6\+::\+Load\+Tas\+Orders()}}, \mbox{\hyperlink{l00015}{KTN\+::\+ORD\+::\+Order\+Handler\+Zmq\+V6\+::\+Order\+Handler\+Zmq\+V6()}}, \mbox{\hyperlink{l00014}{KTN\+::\+REPORTER\+::\+Order\+Reporter\+V5\+::\+Order\+Reporter\+V5()}}, \mbox{\hyperlink{l00041}{Zmq\+Logger\+::\+Run()}}, \mbox{\hyperlink{l00027}{KTN\+::\+REPORTER\+::\+Reporter\+Base\+::\+Start()}}, \mbox{\hyperlink{l00014}{KTN\+::\+REPORTER\+::\+Status\+Reporter\+::\+Status\+Reporter()}}, and \mbox{\hyperlink{l00011}{Zmq\+Logger\+::\+Zmq\+Logger()}}.
+
+\Hypertarget{class_settings_a28f959bd2849f62ffb6fde239fbedad2}\index{Settings@{Settings}!getBoolean@{getBoolean}}
+\index{getBoolean@{getBoolean}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{getBoolean()}{getBoolean()}}
+{\footnotesize\ttfamily \label{class_settings_a28f959bd2849f62ffb6fde239fbedad2} 
+bool Settings\+::get\+Boolean (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key}{}\end{DoxyParamCaption}) const}
+
+Get the boolean value associated with the given key.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to retrieve the value for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The boolean value associated with the key. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00123}{get()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00019}{KTN\+::\+CME\+::\+Cme\+Algo\+::\+Cme\+Algo()}}, \mbox{\hyperlink{l00019}{KTN\+::\+CME\+::\+Cme\+GT5\+::\+Cme\+GT5()}}, \mbox{\hyperlink{l00029}{Cme\+Settings\+Helper\+::\+Get\+Bool()}}, \mbox{\hyperlink{l00029}{Session\+State\+Manager\+::\+Init()}}, \mbox{\hyperlink{l00065}{Cme\+Session\+Settings\+::\+Load()}}, \mbox{\hyperlink{l00042}{tcp\+\_\+settings\+::\+Load()}}, \mbox{\hyperlink{l00096}{udp\+\_\+settings\+::\+Load()}}, and \mbox{\hyperlink{l00015}{KTN\+::\+ORD\+::\+Order\+Handler\+Zmq\+V6\+::\+Order\+Handler\+Zmq\+V6()}}.
+
+\Hypertarget{class_settings_a050673799770ad22fd1849dfe62a45eb}\index{Settings@{Settings}!getDouble@{getDouble}}
+\index{getDouble@{getDouble}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{getDouble()}{getDouble()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_settings_a050673799770ad22fd1849dfe62a45eb} 
+double Settings\+::get\+Double (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key}{}\end{DoxyParamCaption}) const}
+
+Get the double value associated with the given key.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to retrieve the value for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The double value associated with the key. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{class_settings_a209d20c28ea8dfb9e6ef4b5e7634e5f4}{get\+Double()}}.
+
+\Hypertarget{class_settings_a209d20c28ea8dfb9e6ef4b5e7634e5f4}\index{Settings@{Settings}!getDouble@{getDouble}}
+\index{getDouble@{getDouble}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{getDouble()}{getDouble()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_settings_a209d20c28ea8dfb9e6ef4b5e7634e5f4} 
+bool Settings\+::get\+Double (\begin{DoxyParamCaption}\item[{const\+::std\+::string \&}]{key}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{value}{}\end{DoxyParamCaption}) const}
+
+Get the double value associated with the given key.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to retrieve the value for. \\
+\hline
+{\em value} & A pointer to store the retrieved double value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the value was successfully retrieved, false otherwise. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00183}{get\+Double()}}.
+
+\Hypertarget{class_settings_adbf2f32523e015277df9b3559d174346}\index{Settings@{Settings}!getInteger@{getInteger}}
+\index{getInteger@{getInteger}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{getInteger()}{getInteger()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_settings_adbf2f32523e015277df9b3559d174346} 
+int Settings\+::get\+Integer (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key}{}\end{DoxyParamCaption}) const}
+
+Get the integer value associated with the given key.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to retrieve the value for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The integer value associated with the key. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00133}{get\+Integer()}}.
+
+\Hypertarget{class_settings_a5219a28535d0f8e7de4058bbb228dae8}\index{Settings@{Settings}!getInteger@{getInteger}}
+\index{getInteger@{getInteger}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{getInteger()}{getInteger()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_settings_a5219a28535d0f8e7de4058bbb228dae8} 
+bool Settings\+::get\+Integer (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{value}{}\end{DoxyParamCaption}) const}
+
+Get the integer value associated with the given key.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to retrieve the value for. \\
+\hline
+{\em value} & A pointer to store the retrieved integer value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the value was successfully retrieved, false otherwise. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00123}{get()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00014}{KTN\+::\+Algo\+Base\+V3\+::\+Algo\+Base\+V3()}}, \mbox{\hyperlink{l00023}{KTN\+::\+Algo\+Service\+Broker\+V3\+::\+Algo\+Service\+Broker\+V3()}}, \mbox{\hyperlink{l00019}{KTN\+::\+CME\+::\+Cme\+Algo\+::\+Cme\+Algo()}}, \mbox{\hyperlink{l00019}{KTN\+::\+CME\+::\+Cme\+GT5\+::\+Cme\+GT5()}}, \mbox{\hyperlink{l00011}{KTN\+::\+Exchange\+Manager\+::\+Exchange\+Manager()}}, \mbox{\hyperlink{l00042}{Cme\+Settings\+Helper\+::\+Get\+Int()}}, \mbox{\hyperlink{l00144}{get\+Integer()}}, \mbox{\hyperlink{l00029}{Session\+State\+Manager\+::\+Init()}}, \mbox{\hyperlink{l00065}{Cme\+Session\+Settings\+::\+Load()}}, \mbox{\hyperlink{l00042}{tcp\+\_\+settings\+::\+Load()}}, \mbox{\hyperlink{l00096}{udp\+\_\+settings\+::\+Load()}}, \mbox{\hyperlink{l00550}{KTN\+::\+ORD\+::\+Order\+Handler\+Zmq\+V6\+::\+Load\+Tas\+Orders()}}, \mbox{\hyperlink{l00015}{KTN\+::\+ORD\+::\+Order\+Handler\+Zmq\+V6\+::\+Order\+Handler\+Zmq\+V6()}}, \mbox{\hyperlink{l00041}{Zmq\+Logger\+::\+Run()}}, \mbox{\hyperlink{l00027}{KTN\+::\+REPORTER\+::\+Reporter\+Base\+::\+Start()}}, and \mbox{\hyperlink{l00014}{KTN\+::\+REPORTER\+::\+Status\+Reporter\+::\+Status\+Reporter()}}.
+
+\Hypertarget{class_settings_ac5abe4d9868f61c1fb68fbe2e07f1c47}\index{Settings@{Settings}!getListCsv@{getListCsv}}
+\index{getListCsv@{getListCsv}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{getListCsv()}{getListCsv()}}
+{\footnotesize\ttfamily \label{class_settings_ac5abe4d9868f61c1fb68fbe2e07f1c47} 
+vector$<$ string $>$ Settings\+::get\+List\+Csv (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key}{}\end{DoxyParamCaption}) const}
+
+Get the list of values associated with the given key, separated by commas.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to retrieve the list for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of strings containing the values in the list. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00123}{get()}}, and \mbox{\hyperlink{l00019}{String\+Splitter\+::\+Split()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00027}{Zmq\+Subscriber\+::\+Init()}}, \mbox{\hyperlink{l00012}{Zmq\+Subscriber\+::\+Load\+Topics()}}, and \mbox{\hyperlink{l00035}{Zmq\+Subscriber\+V5\+::\+Load\+Topics()}}.
+
+\Hypertarget{class_settings_a3329d282f3ae14acfb54d73ab7348aff}\index{Settings@{Settings}!getLong@{getLong}}
+\index{getLong@{getLong}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{getLong()}{getLong()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_settings_a3329d282f3ae14acfb54d73ab7348aff} 
+long Settings\+::get\+Long (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key}{}\end{DoxyParamCaption}) const}
+
+Get the long value associated with the given key.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to retrieve the value for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The long value associated with the key. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00153}{get\+Long()}}.
+
+\Hypertarget{class_settings_ae7c7a50ebf35427b9e352a44d22e1227}\index{Settings@{Settings}!getLong@{getLong}}
+\index{getLong@{getLong}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{getLong()}{getLong()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_settings_ae7c7a50ebf35427b9e352a44d22e1227} 
+bool Settings\+::get\+Long (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key}{, }\item[{long \texorpdfstring{$\ast$}{*}}]{value}{}\end{DoxyParamCaption}) const}
+
+Get the long value associated with the given key.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to retrieve the value for. \\
+\hline
+{\em value} & A pointer to store the retrieved long value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the value was successfully retrieved, false otherwise. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00123}{get()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00019}{KTN\+::\+CME\+::\+Cme\+Algo\+::\+Cme\+Algo()}}, \mbox{\hyperlink{l00019}{KTN\+::\+CME\+::\+Cme\+GT5\+::\+Cme\+GT5()}}, \mbox{\hyperlink{l00068}{Cme\+Settings\+Helper\+::\+Get\+Long()}}, \mbox{\hyperlink{l00164}{get\+Long()}}, \mbox{\hyperlink{l00029}{Session\+State\+Manager\+::\+Init()}}, and \mbox{\hyperlink{l00065}{Cme\+Session\+Settings\+::\+Load()}}.
+
+\Hypertarget{class_settings_a6d2b778732a348400bd188e3b122838e}\index{Settings@{Settings}!GetMap@{GetMap}}
+\index{GetMap@{GetMap}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{GetMap()}{GetMap()}}
+{\footnotesize\ttfamily \label{class_settings_a6d2b778732a348400bd188e3b122838e} 
+map$<$ std\+::string, std\+::string $>$ Settings\+::\+Get\+Map (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the map of all settings.
+
+\begin{DoxyReturn}{Returns}
+A map containing all the settings. 
+\end{DoxyReturn}
+\Hypertarget{class_settings_a95abeba6ae3224a3a43ed2e326644e4e}\index{Settings@{Settings}!LogDump@{LogDump}}
+\index{LogDump@{LogDump}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{LogDump()}{LogDump()}}
+{\footnotesize\ttfamily \label{class_settings_a95abeba6ae3224a3a43ed2e326644e4e} 
+vector$<$ string $>$ Settings\+::\+Log\+Dump (\begin{DoxyParamCaption}\item[{int}]{indent}{}\end{DoxyParamCaption})}
+
+Dump all the settings to a vector of strings with indentation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em indent} & The number of spaces to indent each setting. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of strings containing the dumped settings. 
+\end{DoxyReturn}
+\Hypertarget{class_settings_aaec4a6da3a7677d7dbd80f285e104469}\index{Settings@{Settings}!trimSpaces@{trimSpaces}}
+\index{trimSpaces@{trimSpaces}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{trimSpaces()}{trimSpaces()}}
+{\footnotesize\ttfamily \label{class_settings_aaec4a6da3a7677d7dbd80f285e104469} 
+void Settings\+::trim\+Spaces (\begin{DoxyParamCaption}\item[{std\+::string \texorpdfstring{$\ast$}{*}}]{str}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Trim leading and trailing spaces from the given string.
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The string to trim. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{l00058}{Get()}}, and \mbox{\hyperlink{l00007}{Settings()}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_settings_a584ba608c0d2fbf2b1d0683590b01db1}\index{Settings@{Settings}!m\_FilePath@{m\_FilePath}}
+\index{m\_FilePath@{m\_FilePath}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{m\_FilePath}{m\_FilePath}}
+{\footnotesize\ttfamily \label{class_settings_a584ba608c0d2fbf2b1d0683590b01db1} 
+std\+::string Settings\+::m\+\_\+\+File\+Path\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_settings_a69645eccc1ef87ae5e99ba762a526ef0}\index{Settings@{Settings}!m\_Me@{m\_Me}}
+\index{m\_Me@{m\_Me}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{m\_Me}{m\_Me}}
+{\footnotesize\ttfamily \label{class_settings_a69645eccc1ef87ae5e99ba762a526ef0} 
+std\+::string Settings\+::m\+\_\+\+Me\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_settings_a8a37979f05a537428b5ba64ce52a7c4b}\index{Settings@{Settings}!map\_@{map\_}}
+\index{map\_@{map\_}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{map\_}{map\_}}
+{\footnotesize\ttfamily \label{class_settings_a8a37979f05a537428b5ba64ce52a7c4b} 
+Key2\+Value\+Map Settings\+::map\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Settings/Settings.\+h\item 
+Settings/Settings.\+cpp\end{DoxyCompactItemize}

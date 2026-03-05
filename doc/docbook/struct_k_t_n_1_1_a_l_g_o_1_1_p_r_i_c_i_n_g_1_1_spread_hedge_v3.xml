@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3" xml:lang="en-US">
+<title>KTN::ALGO::PRICING::SpreadHedgeV3 Struct Reference</title>
+<indexterm><primary>KTN::ALGO::PRICING::SpreadHedgeV3</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>float <link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3_1a59a6b9bd277c525f585852bdf8331d38">ratio</link></para>
+</listitem>
+            <listitem><para>float <link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3_1a548e800866728cc3a1a5bed9530cd4e5">spreadmult</link></para>
+</listitem>
+            <listitem><para>char <link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3_1a6477e8d55200c6f702136bc343854f3d">ordernum</link> [20]</para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3_1ae0fbd550363cc1201f8d01503e639483">reqid</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3_1ac7216d001411ce9d997982eb41bf8043">qty</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3_1abc09d394b0d352398380bc91b396dc66">edge</link></para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3_1acd956db12b0843b29407712cc6237f3b">price</link></para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3_1ae936ca30058826831623b055c25f4b6f">primarypx</link></para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3_1aef3b60fe77aaa7e886b70fa3455dc963">secid</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3_1ac103f1e1ccaa7d248821e47e68489016">instindex</link></para>
+</listitem>
+            <listitem><para>int8_t <link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3_1a05c0b7d7be82b2d0efe03b627bd4cec0">iside</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3_1a581b34f71bd6ac77c5c08f732df97c41">tickprecision</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3_1a595e7c824a881f0b248097b79c124d91">mktsegid</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3_1af09350252c8e31455fe6a2ba12288710">connindex</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3_1a272aeb3d86c63d7774a0526f6b9ac97e">cbid</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3_1a478d2d4e2cfb5f402b3a04e3dfc107df">index</link></para>
+</listitem>
+            <listitem><para>HedgeType::Enum <link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3_1a02690035334633e650821e7990627618">hdgtype</link></para>
+</listitem>
+            <listitem><para>KOrderSide::Enum <link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3_1a17a465cd21d4f700fcb9296aa3188041">OrdSide</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3_1af314b1a6bd3d93aa47d7c0cea74991fe">sqz</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3_1a272aeb3d86c63d7774a0526f6b9ac97e"/><section>
+    <title>cbid</title>
+<indexterm><primary>cbid</primary><secondary>KTN::ALGO::PRICING::SpreadHedgeV3</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::PRICING::SpreadHedgeV3</primary><secondary>cbid</secondary></indexterm>
+<para><computeroutput>uint8_t KTN::ALGO::PRICING::SpreadHedgeV3::cbid</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3_1af09350252c8e31455fe6a2ba12288710"/><section>
+    <title>connindex</title>
+<indexterm><primary>connindex</primary><secondary>KTN::ALGO::PRICING::SpreadHedgeV3</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::PRICING::SpreadHedgeV3</primary><secondary>connindex</secondary></indexterm>
+<para><computeroutput>uint8_t KTN::ALGO::PRICING::SpreadHedgeV3::connindex</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3_1abc09d394b0d352398380bc91b396dc66"/><section>
+    <title>edge</title>
+<indexterm><primary>edge</primary><secondary>KTN::ALGO::PRICING::SpreadHedgeV3</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::PRICING::SpreadHedgeV3</primary><secondary>edge</secondary></indexterm>
+<para><computeroutput>int KTN::ALGO::PRICING::SpreadHedgeV3::edge</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3_1a02690035334633e650821e7990627618"/><section>
+    <title>hdgtype</title>
+<indexterm><primary>hdgtype</primary><secondary>KTN::ALGO::PRICING::SpreadHedgeV3</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::PRICING::SpreadHedgeV3</primary><secondary>hdgtype</secondary></indexterm>
+<para><computeroutput>HedgeType::Enum KTN::ALGO::PRICING::SpreadHedgeV3::hdgtype</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3_1a478d2d4e2cfb5f402b3a04e3dfc107df"/><section>
+    <title>index</title>
+<indexterm><primary>index</primary><secondary>KTN::ALGO::PRICING::SpreadHedgeV3</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::PRICING::SpreadHedgeV3</primary><secondary>index</secondary></indexterm>
+<para><computeroutput>uint8_t KTN::ALGO::PRICING::SpreadHedgeV3::index</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3_1ac103f1e1ccaa7d248821e47e68489016"/><section>
+    <title>instindex</title>
+<indexterm><primary>instindex</primary><secondary>KTN::ALGO::PRICING::SpreadHedgeV3</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::PRICING::SpreadHedgeV3</primary><secondary>instindex</secondary></indexterm>
+<para><computeroutput>uint8_t KTN::ALGO::PRICING::SpreadHedgeV3::instindex</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3_1a05c0b7d7be82b2d0efe03b627bd4cec0"/><section>
+    <title>iside</title>
+<indexterm><primary>iside</primary><secondary>KTN::ALGO::PRICING::SpreadHedgeV3</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::PRICING::SpreadHedgeV3</primary><secondary>iside</secondary></indexterm>
+<para><computeroutput>int8_t KTN::ALGO::PRICING::SpreadHedgeV3::iside</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3_1a595e7c824a881f0b248097b79c124d91"/><section>
+    <title>mktsegid</title>
+<indexterm><primary>mktsegid</primary><secondary>KTN::ALGO::PRICING::SpreadHedgeV3</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::PRICING::SpreadHedgeV3</primary><secondary>mktsegid</secondary></indexterm>
+<para><computeroutput>uint8_t KTN::ALGO::PRICING::SpreadHedgeV3::mktsegid</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3_1a6477e8d55200c6f702136bc343854f3d"/><section>
+    <title>ordernum</title>
+<indexterm><primary>ordernum</primary><secondary>KTN::ALGO::PRICING::SpreadHedgeV3</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::PRICING::SpreadHedgeV3</primary><secondary>ordernum</secondary></indexterm>
+<para><computeroutput>char KTN::ALGO::PRICING::SpreadHedgeV3::ordernum[20]</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3_1a17a465cd21d4f700fcb9296aa3188041"/><section>
+    <title>OrdSide</title>
+<indexterm><primary>OrdSide</primary><secondary>KTN::ALGO::PRICING::SpreadHedgeV3</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::PRICING::SpreadHedgeV3</primary><secondary>OrdSide</secondary></indexterm>
+<para><computeroutput>KOrderSide::Enum KTN::ALGO::PRICING::SpreadHedgeV3::OrdSide</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3_1acd956db12b0843b29407712cc6237f3b"/><section>
+    <title>price</title>
+<indexterm><primary>price</primary><secondary>KTN::ALGO::PRICING::SpreadHedgeV3</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::PRICING::SpreadHedgeV3</primary><secondary>price</secondary></indexterm>
+<para><computeroutput>int32_t KTN::ALGO::PRICING::SpreadHedgeV3::price</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3_1ae936ca30058826831623b055c25f4b6f"/><section>
+    <title>primarypx</title>
+<indexterm><primary>primarypx</primary><secondary>KTN::ALGO::PRICING::SpreadHedgeV3</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::PRICING::SpreadHedgeV3</primary><secondary>primarypx</secondary></indexterm>
+<para><computeroutput>int32_t KTN::ALGO::PRICING::SpreadHedgeV3::primarypx</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3_1ac7216d001411ce9d997982eb41bf8043"/><section>
+    <title>qty</title>
+<indexterm><primary>qty</primary><secondary>KTN::ALGO::PRICING::SpreadHedgeV3</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::PRICING::SpreadHedgeV3</primary><secondary>qty</secondary></indexterm>
+<para><computeroutput>uint32_t KTN::ALGO::PRICING::SpreadHedgeV3::qty</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3_1a59a6b9bd277c525f585852bdf8331d38"/><section>
+    <title>ratio</title>
+<indexterm><primary>ratio</primary><secondary>KTN::ALGO::PRICING::SpreadHedgeV3</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::PRICING::SpreadHedgeV3</primary><secondary>ratio</secondary></indexterm>
+<para><computeroutput>float KTN::ALGO::PRICING::SpreadHedgeV3::ratio</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3_1ae0fbd550363cc1201f8d01503e639483"/><section>
+    <title>reqid</title>
+<indexterm><primary>reqid</primary><secondary>KTN::ALGO::PRICING::SpreadHedgeV3</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::PRICING::SpreadHedgeV3</primary><secondary>reqid</secondary></indexterm>
+<para><computeroutput>uint64_t KTN::ALGO::PRICING::SpreadHedgeV3::reqid</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3_1aef3b60fe77aaa7e886b70fa3455dc963"/><section>
+    <title>secid</title>
+<indexterm><primary>secid</primary><secondary>KTN::ALGO::PRICING::SpreadHedgeV3</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::PRICING::SpreadHedgeV3</primary><secondary>secid</secondary></indexterm>
+<para><computeroutput>int32_t KTN::ALGO::PRICING::SpreadHedgeV3::secid</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3_1a548e800866728cc3a1a5bed9530cd4e5"/><section>
+    <title>spreadmult</title>
+<indexterm><primary>spreadmult</primary><secondary>KTN::ALGO::PRICING::SpreadHedgeV3</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::PRICING::SpreadHedgeV3</primary><secondary>spreadmult</secondary></indexterm>
+<para><computeroutput>float KTN::ALGO::PRICING::SpreadHedgeV3::spreadmult</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3_1af314b1a6bd3d93aa47d7c0cea74991fe"/><section>
+    <title>sqz</title>
+<indexterm><primary>sqz</primary><secondary>KTN::ALGO::PRICING::SpreadHedgeV3</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::PRICING::SpreadHedgeV3</primary><secondary>sqz</secondary></indexterm>
+<para><computeroutput>bool KTN::ALGO::PRICING::SpreadHedgeV3::sqz</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3_1a581b34f71bd6ac77c5c08f732df97c41"/><section>
+    <title>tickprecision</title>
+<indexterm><primary>tickprecision</primary><secondary>KTN::ALGO::PRICING::SpreadHedgeV3</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::PRICING::SpreadHedgeV3</primary><secondary>tickprecision</secondary></indexterm>
+<para><computeroutput>uint8_t KTN::ALGO::PRICING::SpreadHedgeV3::tickprecision</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+AlgoEngines/pricing_structs.hpp</section>
+</section>

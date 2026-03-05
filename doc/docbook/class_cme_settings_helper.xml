@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_cme_settings_helper" xml:lang="en-US">
+<title>CmeSettingsHelper Class Reference</title>
+<indexterm><primary>CmeSettingsHelper</primary></indexterm>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static bool <link linkend="_class_cme_settings_helper_1abe4aae24fdd9ddcdf5db59700bede3fc">GetBool</link> (const string &amp;key)</para>
+</listitem>
+            <listitem><para>static int <link linkend="_class_cme_settings_helper_1acfddbbf99006f802db7a55a83895026c">GetInt</link> (const string &amp;key)</para>
+</listitem>
+            <listitem><para>static string <link linkend="_class_cme_settings_helper_1a36a199f12cef31933cb096332849ca05">GetString</link> (const string &amp;key)</para>
+</listitem>
+            <listitem><para>static long <link linkend="_class_cme_settings_helper_1a14e42c5dda10b36a51395a443b7f2cc0">GetLong</link> (const string &amp;key)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_cme_settings_helper_1abe4aae24fdd9ddcdf5db59700bede3fc"/><section>
+    <title>GetBool()</title>
+<indexterm><primary>GetBool</primary><secondary>CmeSettingsHelper</secondary></indexterm>
+<indexterm><primary>CmeSettingsHelper</primary><secondary>GetBool</secondary></indexterm>
+<para><computeroutput>static bool CmeSettingsHelper::GetBool (const string &amp; key)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para>
+<para>Retrieves a boolean setting value from the Cme File. 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>key</entry><entry>
+<para>The key of the setting. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The boolean value of the setting. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00193">Settings::getBoolean()</link>.</para>
+<para>
+Referenced by <link linkend="_l00014">KTN::AlgoBaseV3::AlgoBaseV3()</link>, and <link linkend="_l00015">KTN::ORD::OrderHandlerZmqV6::OrderHandlerZmqV6()</link>.</para>
+</section>
+<anchor xml:id="_class_cme_settings_helper_1acfddbbf99006f802db7a55a83895026c"/><section>
+    <title>GetInt()</title>
+<indexterm><primary>GetInt</primary><secondary>CmeSettingsHelper</secondary></indexterm>
+<indexterm><primary>CmeSettingsHelper</primary><secondary>GetInt</secondary></indexterm>
+<para><computeroutput>static int CmeSettingsHelper::GetInt (const string &amp; key)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para>
+<para>Retrieves an integer setting value from the Cme File. 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>key</entry><entry>
+<para>The key of the setting. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The integer value of the setting. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00133">Settings::getInteger()</link>.</para>
+</section>
+<anchor xml:id="_class_cme_settings_helper_1a14e42c5dda10b36a51395a443b7f2cc0"/><section>
+    <title>GetLong()</title>
+<indexterm><primary>GetLong</primary><secondary>CmeSettingsHelper</secondary></indexterm>
+<indexterm><primary>CmeSettingsHelper</primary><secondary>GetLong</secondary></indexterm>
+<para><computeroutput>static long CmeSettingsHelper::GetLong (const string &amp; key)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para>
+<para>Retrieves a long setting value from the Cme File. 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>key</entry><entry>
+<para>The key of the setting. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The long value of the setting. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00153">Settings::getLong()</link>.</para>
+</section>
+<anchor xml:id="_class_cme_settings_helper_1a36a199f12cef31933cb096332849ca05"/><section>
+    <title>GetString()</title>
+<indexterm><primary>GetString</primary><secondary>CmeSettingsHelper</secondary></indexterm>
+<indexterm><primary>CmeSettingsHelper</primary><secondary>GetString</secondary></indexterm>
+<para><computeroutput>static string CmeSettingsHelper::GetString (const string &amp; key)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para>
+<para>Retrieves a string setting value from the Cme File. 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>key</entry><entry>
+<para>The key of the setting. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The string value of the setting. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00123">Settings::get()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+exchsupport/cme/CmeSettingsHelper.hpp</section>
+</section>

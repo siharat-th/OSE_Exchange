@@ -1,0 +1,154 @@
+\doxysection{zmq\+::socket\+\_\+t Class Reference}
+\hypertarget{classzmq_1_1socket__t}{}\label{classzmq_1_1socket__t}\index{zmq::socket\_t@{zmq::socket\_t}}
+Inheritance diagram for zmq\+::socket\+\_\+t\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classzmq_1_1socket__t}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classzmq_1_1socket__t_a40e7d9f2ab962d051b4fe6831d923a58}{socket\+\_\+t}} (\mbox{\hyperlink{classzmq_1_1context__t}{context\+\_\+t}} \&context\+\_\+, int type\+\_\+)
+\item 
+\mbox{\hyperlink{classzmq_1_1socket__t_abc436818ec431b2f18fcb6c26e70688e}{operator void \texorpdfstring{$\ast$}{*}}} () ZMQ\+\_\+\+NOTHROW
+\item 
+\mbox{\hyperlink{classzmq_1_1socket__t_a9994d49066c2075baf2b4e31dfe605f2}{operator void const \texorpdfstring{$\ast$}{*}}} () const ZMQ\+\_\+\+NOTHROW
+\item 
+void \mbox{\hyperlink{classzmq_1_1socket__t_a6bf8de8f979ffd95544aae028b6aa7d3}{close}} () ZMQ\+\_\+\+NOTHROW
+\item 
+void \mbox{\hyperlink{classzmq_1_1socket__t_a08f5da517679e373ce945e2a8c0af3ac}{swap}} (\mbox{\hyperlink{classzmq_1_1socket__t}{socket\+\_\+t}} \&other) ZMQ\+\_\+\+NOTHROW
+\item 
+\mbox{\hyperlink{classzmq_1_1socket__t_adae0e9ceb4a1f6247890e22a77e91ed5}{operator socket\+\_\+ref}} () ZMQ\+\_\+\+NOTHROW
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classzmq_1_1detail_1_1socket__base}{zmq\+::detail\+::socket\+\_\+base}}}
+\begin{DoxyCompactItemize}
+\item 
+ZMQ\+\_\+\+EXPLICIT \mbox{\hyperlink{classzmq_1_1detail_1_1socket__base_a482d492460ad5d9030181211fe3f77d9}{socket\+\_\+base}} (void \texorpdfstring{$\ast$}{*}handle) ZMQ\+\_\+\+NOTHROW
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classzmq_1_1detail_1_1socket__base_a9a5fec44878fbae7f19432c23d103778}{setsockopt}} (int option\+\_\+, T const \&optval)
+\item 
+void \mbox{\hyperlink{classzmq_1_1detail_1_1socket__base_ae8b25975545d24389d597f22416d3128}{setsockopt}} (int option\+\_\+, const void \texorpdfstring{$\ast$}{*}optval\+\_\+, size\+\_\+t optvallen\+\_\+)
+\item 
+void \mbox{\hyperlink{classzmq_1_1detail_1_1socket__base_ae1ba7ffc7cbb86191fb224d572a3d871}{getsockopt}} (int option\+\_\+, void \texorpdfstring{$\ast$}{*}optval\+\_\+, size\+\_\+t \texorpdfstring{$\ast$}{*}optvallen\+\_\+) const
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classzmq_1_1detail_1_1socket__base_a763b3fa30215174e4e013c696008a56b}{getsockopt}} (int option\+\_\+) const
+\item 
+void \mbox{\hyperlink{classzmq_1_1detail_1_1socket__base_a628dccb2728cb2023674e40b61cf162e}{bind}} (std\+::string const \&addr)
+\item 
+void \mbox{\hyperlink{classzmq_1_1detail_1_1socket__base_ab2c7a5b316d1a01b308c67e09329d1b9}{bind}} (const char \texorpdfstring{$\ast$}{*}addr\+\_\+)
+\item 
+void \mbox{\hyperlink{classzmq_1_1detail_1_1socket__base_a1fd02cd14a084aa43172cecb31bf2283}{unbind}} (std\+::string const \&addr)
+\item 
+void \mbox{\hyperlink{classzmq_1_1detail_1_1socket__base_abcbafe7ea943efce7f495893d45c0217}{unbind}} (const char \texorpdfstring{$\ast$}{*}addr\+\_\+)
+\item 
+void \mbox{\hyperlink{classzmq_1_1detail_1_1socket__base_a086993903f2780ab07d86dd25621ba45}{connect}} (std\+::string const \&addr)
+\item 
+void \mbox{\hyperlink{classzmq_1_1detail_1_1socket__base_ac67aa317f184a19b5680b0749e3ded44}{connect}} (const char \texorpdfstring{$\ast$}{*}addr\+\_\+)
+\item 
+void \mbox{\hyperlink{classzmq_1_1detail_1_1socket__base_a01f21e0aab723a2f1eae23c732a2b0b8}{disconnect}} (std\+::string const \&addr)
+\item 
+void \mbox{\hyperlink{classzmq_1_1detail_1_1socket__base_aea931e2b556381ec5ee9a5e15b3d6c66}{disconnect}} (const char \texorpdfstring{$\ast$}{*}addr\+\_\+)
+\item 
+bool \mbox{\hyperlink{classzmq_1_1detail_1_1socket__base_ad0d40c27911c67d71602c3b1ab06331f}{connected}} () const ZMQ\+\_\+\+NOTHROW
+\item 
+size\+\_\+t \mbox{\hyperlink{classzmq_1_1detail_1_1socket__base_a2d723ddb789deed1e56a662b2ae7d296}{send}} (const void \texorpdfstring{$\ast$}{*}buf\+\_\+, size\+\_\+t len\+\_\+, int flags\+\_\+=0)
+\item 
+bool \mbox{\hyperlink{classzmq_1_1detail_1_1socket__base_acbe2664870fd1d0584789e6848be546c}{send}} (\mbox{\hyperlink{classzmq_1_1message__t}{message\+\_\+t}} \&msg\+\_\+, int flags\+\_\+=0)
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \mbox{\hyperlink{classzmq_1_1detail_1_1socket__base_ae2fc0a7fd811ecb9e125c06dd1023906}{send}} (T first, T last, int flags\+\_\+=0)
+\item 
+size\+\_\+t \mbox{\hyperlink{classzmq_1_1detail_1_1socket__base_a6ec3c910060124c12aaca86e4ac684f0}{recv}} (void \texorpdfstring{$\ast$}{*}buf\+\_\+, size\+\_\+t len\+\_\+, int flags\+\_\+=0)
+\item 
+bool \mbox{\hyperlink{classzmq_1_1detail_1_1socket__base_a569f111034e696188df635d428bbcb2f}{recv}} (\mbox{\hyperlink{classzmq_1_1message__t}{message\+\_\+t}} \texorpdfstring{$\ast$}{*}msg\+\_\+, int flags\+\_\+=0)
+\item 
+ZMQ\+\_\+\+NODISCARD void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classzmq_1_1detail_1_1socket__base_a951d47913055ae4da376bffe5f83127e}{handle}} () ZMQ\+\_\+\+NOTHROW
+\item 
+ZMQ\+\_\+\+NODISCARD const void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classzmq_1_1detail_1_1socket__base_af16156aaeb7961340b44bfa23828f80f}{handle}} () const ZMQ\+\_\+\+NOTHROW
+\item 
+ZMQ\+\_\+\+EXPLICIT \mbox{\hyperlink{classzmq_1_1detail_1_1socket__base_ab3143ebc18e274d9783c87dadf71262a}{operator bool}} () const ZMQ\+\_\+\+NOTHROW
+\item 
+ZMQ\+\_\+\+EXPLICIT \mbox{\hyperlink{classzmq_1_1detail_1_1socket__base_a1eed50cf58d014bf27e3f53bdbd85356}{operator bool}} () ZMQ\+\_\+\+NOTHROW
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classzmq_1_1socket__t_a8bc52b396b759f9800e085db0109b589}{monitor\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classzmq_1_1detail_1_1socket__base}{zmq\+::detail\+::socket\+\_\+base}}}
+\begin{DoxyCompactItemize}
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classzmq_1_1detail_1_1socket__base_a69da2b4caf46c0e316c9c121298c827f}{\+\_\+handle}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classzmq_1_1socket__t_ab2757b65ca7f4aeabd8d9e7545ed1567}\index{zmq::socket\_t@{zmq::socket\_t}!socket\_t@{socket\_t}}
+\index{socket\_t@{socket\_t}!zmq::socket\_t@{zmq::socket\_t}}
+\doxysubsubsection{\texorpdfstring{socket\_t()}{socket\_t()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classzmq_1_1socket__t_ab2757b65ca7f4aeabd8d9e7545ed1567} 
+zmq\+::socket\+\_\+t\+::socket\+\_\+t (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classzmq_1_1socket__t_a40e7d9f2ab962d051b4fe6831d923a58}\index{zmq::socket\_t@{zmq::socket\_t}!socket\_t@{socket\_t}}
+\index{socket\_t@{socket\_t}!zmq::socket\_t@{zmq::socket\_t}}
+\doxysubsubsection{\texorpdfstring{socket\_t()}{socket\_t()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classzmq_1_1socket__t_a40e7d9f2ab962d051b4fe6831d923a58} 
+zmq\+::socket\+\_\+t\+::socket\+\_\+t (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classzmq_1_1context__t}{context\+\_\+t}} \&}]{context\+\_\+}{, }\item[{int}]{type\+\_\+}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classzmq_1_1socket__t_ac03df2363c79a092c5ad15c5077a8566}\index{zmq::socket\_t@{zmq::socket\_t}!````~socket\_t@{\texorpdfstring{$\sim$}{\string~}socket\_t}}
+\index{````~socket\_t@{\texorpdfstring{$\sim$}{\string~}socket\_t}!zmq::socket\_t@{zmq::socket\_t}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}socket\_t()}{\string~socket\_t()}}
+{\footnotesize\ttfamily \label{classzmq_1_1socket__t_ac03df2363c79a092c5ad15c5077a8566} 
+zmq\+::socket\+\_\+t\+::\texorpdfstring{$\sim$}{\string~}socket\+\_\+t (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classzmq_1_1socket__t_a6bf8de8f979ffd95544aae028b6aa7d3}\index{zmq::socket\_t@{zmq::socket\_t}!close@{close}}
+\index{close@{close}!zmq::socket\_t@{zmq::socket\_t}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily \label{classzmq_1_1socket__t_a6bf8de8f979ffd95544aae028b6aa7d3} 
+void zmq\+::socket\+\_\+t\+::close (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classzmq_1_1socket__t_adae0e9ceb4a1f6247890e22a77e91ed5}\index{zmq::socket\_t@{zmq::socket\_t}!operator socket\_ref@{operator socket\_ref}}
+\index{operator socket\_ref@{operator socket\_ref}!zmq::socket\_t@{zmq::socket\_t}}
+\doxysubsubsection{\texorpdfstring{operator socket\_ref()}{operator socket\_ref()}}
+{\footnotesize\ttfamily \label{classzmq_1_1socket__t_adae0e9ceb4a1f6247890e22a77e91ed5} 
+zmq\+::socket\+\_\+t\+::operator \mbox{\hyperlink{classzmq_1_1socket__ref}{socket\+\_\+ref}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classzmq_1_1socket__t_abc436818ec431b2f18fcb6c26e70688e}\index{zmq::socket\_t@{zmq::socket\_t}!operator void \texorpdfstring{$\ast$}{*}@{operator void \texorpdfstring{$\ast$}{*}}}
+\index{operator void \texorpdfstring{$\ast$}{*}@{operator void \texorpdfstring{$\ast$}{*}}!zmq::socket\_t@{zmq::socket\_t}}
+\doxysubsubsection{\texorpdfstring{operator void \texorpdfstring{$\ast$}{*}()}{operator void *()}}
+{\footnotesize\ttfamily \label{classzmq_1_1socket__t_abc436818ec431b2f18fcb6c26e70688e} 
+zmq\+::socket\+\_\+t\+::operator void \texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classzmq_1_1socket__t_a9994d49066c2075baf2b4e31dfe605f2}\index{zmq::socket\_t@{zmq::socket\_t}!operator void const \texorpdfstring{$\ast$}{*}@{operator void const \texorpdfstring{$\ast$}{*}}}
+\index{operator void const \texorpdfstring{$\ast$}{*}@{operator void const \texorpdfstring{$\ast$}{*}}!zmq::socket\_t@{zmq::socket\_t}}
+\doxysubsubsection{\texorpdfstring{operator void const \texorpdfstring{$\ast$}{*}()}{operator void const *()}}
+{\footnotesize\ttfamily \label{classzmq_1_1socket__t_a9994d49066c2075baf2b4e31dfe605f2} 
+zmq\+::socket\+\_\+t\+::operator void const \texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classzmq_1_1socket__t_a08f5da517679e373ce945e2a8c0af3ac}\index{zmq::socket\_t@{zmq::socket\_t}!swap@{swap}}
+\index{swap@{swap}!zmq::socket\_t@{zmq::socket\_t}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily \label{classzmq_1_1socket__t_a08f5da517679e373ce945e2a8c0af3ac} 
+void zmq\+::socket\+\_\+t\+::swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classzmq_1_1socket__t}{socket\+\_\+t}} \&}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{classzmq_1_1socket__t_a8bc52b396b759f9800e085db0109b589}\index{zmq::socket\_t@{zmq::socket\_t}!monitor\_t@{monitor\_t}}
+\index{monitor\_t@{monitor\_t}!zmq::socket\_t@{zmq::socket\_t}}
+\doxysubsubsection{\texorpdfstring{monitor\_t}{monitor\_t}}
+{\footnotesize\ttfamily \label{classzmq_1_1socket__t_a8bc52b396b759f9800e085db0109b589} 
+friend class \mbox{\hyperlink{classzmq_1_1monitor__t}{monitor\+\_\+t}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+ZMQ/zmq.\+hpp\end{DoxyCompactItemize}

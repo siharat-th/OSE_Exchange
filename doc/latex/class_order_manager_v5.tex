@@ -1,0 +1,1032 @@
+\doxysection{Order\+Manager\+V5 Class Reference}
+\hypertarget{class_order_manager_v5}{}\label{class_order_manager_v5}\index{OrderManagerV5@{OrderManagerV5}}
+
+
+The \doxylink{class_order_manager_v5}{Order\+Manager\+V5} class is responsible for managing orders and their execution. It implements the IOrder\+Handler interface and inherits from the \doxylink{class_named_thread}{Named\+Thread} class.  
+
+
+
+
+{\ttfamily \#include $<$Order\+Manager\+V5.\+hpp$>$}
+
+Inheritance diagram for Order\+Manager\+V5\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_order_manager_v5}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_order_manager_v5_a161442e0a07f65a25a46849f89a01e5d}{Order\+Manager\+V5}} (int core, string owner)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{class_order_manager_v5}{Order\+Manager\+V5} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_order_manager_v5_aaed32ead22f67a16a291064553557169}{\texorpdfstring{$\sim$}{\string~}\+Order\+Manager\+V5}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{class_order_manager_v5}{Order\+Manager\+V5} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_order_manager_v5_a912ac95209615aec8d920bd04b889019}{Stop}} ()
+\begin{DoxyCompactList}\small\item\em Stops the order manager. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_order_manager_v5_a229be736c037f9e11069dce5adba966e}{Load\+Template}} (const \mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} \&ord)
+\begin{DoxyCompactList}\small\item\em Loads a template order. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_order_manager_v5_a2af638875e63cc0e22b8322e5d020331}{New\+Id}} (const string \&prefix)
+\begin{DoxyCompactList}\small\item\em Generates a new order ID with the given prefix. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \mbox{\hyperlink{class_order_manager_v5_a2c667d57687009396c40d89f20dc21ac}{Get\+Order}} (uint64\+\_\+t reqid)
+\begin{DoxyCompactList}\small\item\em Gets the order with the specified request ID. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_order_manager_v5_a4f39113f56d62e73b85e63a101ab0663}{Exists}} (uint64\+\_\+t reqid)
+\begin{DoxyCompactList}\small\item\em Checks if an order with the specified request ID exists. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_order_manager_v5_a8a9f55c42486467ffa17fbe4116a4dad}{Clear}} ()
+\begin{DoxyCompactList}\small\item\em Clears all orders. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_order_manager_v5_ad41f90cc9aabf22f3c24f26e4991d0e8}{Clear\+Dead\+Orders}} ()
+\begin{DoxyCompactList}\small\item\em Clears all dead orders. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_order_manager_v5_ab593941e8bc1d249d8fdbb35820a5424}{Count}} ()
+\begin{DoxyCompactList}\small\item\em Gets the count of orders. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_order_manager_v5_ab81ade820db4150c599dd7459eecb2d3}{Print}} ()
+\begin{DoxyCompactList}\small\item\em Prints the orders. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_order_manager_v5_a4daacf157cb30b0bba100558e91dbab2}{Update\+Meta\+Params}} (const \mbox{\hyperlink{structalgometa}{algometa}} \&meta, bool certnr)
+\begin{DoxyCompactList}\small\item\em Updates the meta parameters with the given algorithm metadata. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_order_manager_v5_ac3aff31c02a41a96aa83da07dc63773a}{Enable\+Order\+Reporter}} (bool value)
+\begin{DoxyCompactList}\small\item\em Enables or disables the order reporter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_order_manager_v5_a2cd5e8d7c0fd3d0c44cb4a022258658f}{Process\+Spread\+Legs}} (bool value)
+\begin{DoxyCompactList}\small\item\em Sets whether to process spread legs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_order_manager_v5_a5ecce4a76ee814136ea22ce02f7fdd00}{on\+Banked\+Order}} (\mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} \&ord)
+\begin{DoxyCompactList}\small\item\em Handles a banked order. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_order_manager_v5_ad66c1fb8a86fa2252e4d404ae16e6079}{on\+Sent\+Order\+New}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord)
+\begin{DoxyCompactList}\small\item\em Handles a new sent order. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_order_manager_v5_ad10084bd7047b5074ef71d0dd11b412a}{on\+Sent\+Order\+Mod}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord)
+\begin{DoxyCompactList}\small\item\em Handles a modified sent order. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_order_manager_v5_afb78110182a4d7e61da791e26dee4804}{on\+Sent\+Order\+Cxl}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord)
+\begin{DoxyCompactList}\small\item\em Handles a canceled sent order. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_order_manager_v5_a39625b942a94f1c95584dda6cd61ec12}{on\+Sent\+Order\+Fast}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord)
+\begin{DoxyCompactList}\small\item\em Handles a fast sent order. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_order_manager_v5_aba0b61a527510b3efd8b8ec9b7323d38}{on\+Sent\+Order\+Ordbook}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord, \mbox{\hyperlink{struct_user_info}{User\+Info}} \&info)
+\begin{DoxyCompactList}\small\item\em Handles an order book sent order. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_order_manager_v5_a6d03ba0ff3bc0d552d891caeabc7aeb5}{Update\+Order}} (uint64\+\_\+t reqid, uint64\+\_\+t exchordid, KOrder\+Status\+::\+Enum status, KOrder\+State\+::\+Enum state, uint32\+\_\+t qty, uint64\+\_\+t timestamp)
+\begin{DoxyCompactList}\small\item\em Updates an order with the specified request ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_order_manager_v5_a8d4c7976403acb8a9e108a81ce480b78}{min\+Order\+Ack}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord)
+\begin{DoxyCompactList}\small\item\em Handles a minimum order acknowledgment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_order_manager_v5_a3ef0e3e520af9287a228138e3dbecc0d}{min\+Order\+Cancel}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord)
+\begin{DoxyCompactList}\small\item\em Handles a minimum order cancellation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_order_manager_v5_a1822e620817b1316377c2453c9851c94}{min\+Order\+Modify}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord)
+\begin{DoxyCompactList}\small\item\em Handles a minimum order modification. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_order_manager_v5_a1d72effb40164d3f2ddaec91ddb926bd}{Update\+Execution}} (uint64\+\_\+t reqid, uint64\+\_\+t exchordid, KOrder\+Status\+::\+Enum status, KOrder\+State\+::\+Enum state, KOrder\+Fill\+Type\+::\+Enum filltype, int64\+\_\+t lastpx, uint32\+\_\+t lastqty, uint32\+\_\+t lvs, uint64\+\_\+t timestamp, string execid)
+\begin{DoxyCompactList}\small\item\em Updates the execution of an order with the specified request ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_order_manager_v5_a6ba7a58b65651a659bcbf29c725b92c8}{Update\+Spread\+Leg\+Execution}} (uint64\+\_\+t exchordid, KOrder\+Side\+::\+Enum side, int32\+\_\+t secid, int64\+\_\+t lastpx, uint32\+\_\+t lastqty, uint64\+\_\+t timestamp, string execid)
+\begin{DoxyCompactList}\small\item\em Updates the execution of a spread leg order with the specified CME ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_order_manager_v5_a9a1823f61e2770beb11526d9004eb736}{min\+Order\+Execution}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord, bool hedge\+Sent)
+\begin{DoxyCompactList}\small\item\em Handles the execution of a minimum order. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_order_manager_v5_af6aaed4be937adb109d4deefb78085cd}{min\+Order\+Exec\+Spread\+Leg}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord)
+\begin{DoxyCompactList}\small\item\em Handles the execution of a minimum order spread leg. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_order_manager_v5_af10d06b20720405530e8d3ecde614bca}{min\+Order\+Reject}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord, const string \&text)
+\begin{DoxyCompactList}\small\item\em Handles the rejection of a minimum order. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_order_manager_v5_a7813dd64999ebdec3c8294a8d105f76a}{min\+Order\+Cancel\+Reject}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord, const string \&text)
+\begin{DoxyCompactList}\small\item\em Handles the rejection of a minimum order cancellation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_order_manager_v5_a293ca659c8ec0459bf315c8991b12c47}{min\+Order\+Cancel\+Replace\+Reject}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord, const string \&text)
+\begin{DoxyCompactList}\small\item\em Handles the rejection of a minimum order cancel/replace. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_order_manager_v5_a3c2efb71d798d9d6da7e26c6033348f5}{Process\+Order\+Id}} (uint64\+\_\+t ordid)
+\begin{DoxyCompactList}\small\item\em Process the order ID. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_order_manager_v5_a645bc9bb5d6724ff14073b03948a0fa8}{Process\+Order}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{Order\+Pod}} \&ord)
+\begin{DoxyCompactList}\small\item\em Process the order. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_order_manager_v5_a88cb299300df75f849674f6aa5f1e296}{Process\+Fill}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{Order\+Pod}} \&ord)
+\begin{DoxyCompactList}\small\item\em Process the fill. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_order_manager_v5_a43512c55a3fe9472d66401f0fadf22ca}{Process\+Sent\+Order}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{Order\+Pod}} \&ord)
+\begin{DoxyCompactList}\small\item\em Process the sent order. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_order_manager_v5_a7427c8594b22f65d05a86a007e53aaa2}{Process\+Rejected\+Order}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{Order\+Pod}} \&ord, const string \&text)
+\begin{DoxyCompactList}\small\item\em Process the rejected order. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_order_manager_v5_a435d221b404b1a9238d1ffaf634f429e}{Register\+Order\+Template}} (\mbox{\hyperlink{struct_k_t_n_1_1_order}{Order}} \&ord)
+\item 
+bool \mbox{\hyperlink{class_order_manager_v5_aaba686d7f3a7c5d20a92cdf7da3cc5a9}{Get\+By\+Ordernum}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord, const string \&ordernum)
+\item 
+bool \mbox{\hyperlink{class_order_manager_v5_ac1e7d893ed46126e667217d64bb627f3}{Get\+By\+Exch\+Id}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord, uint64\+\_\+t exchordid)
+\item 
+void \mbox{\hyperlink{class_order_manager_v5_af8c317ab99fadbe7fd355153f3dcf067}{Get}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord, uint64\+\_\+t reqid)
+\item 
+vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} $>$ \mbox{\hyperlink{class_order_manager_v5_ac54d398606773431c29d62cc127ebda4}{Get\+All}} ()
+\item 
+vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} $>$ \mbox{\hyperlink{class_order_manager_v5_a1ced22cc4ffec89f0a82cc7a1b670271}{Get\+Working}} ()
+\item 
+void \mbox{\hyperlink{class_order_manager_v5_a971c39c59abdd2a3b85c4a19adcd9b22}{Get\+By\+Sec\+Id\+Side\+Strat}} (vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} $>$ \&ords, int32\+\_\+t secid, const KOrder\+Side\+::\+Enum side, int stratid)
+\item 
+bool \mbox{\hyperlink{class_order_manager_v5_a2bceb69c55aec8f1da14ec8dc383c710}{Get\+By\+Sec\+Id\+Side\+Strat}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord, int32\+\_\+t secid, const KOrder\+Side\+::\+Enum side, int stratid)
+\item 
+void \mbox{\hyperlink{class_order_manager_v5_a4727429517c138f008b4bea75e3d9031}{Get\+By\+Strat\+Id}} (vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} $>$ \&ords, int stratid)
+\item 
+void \mbox{\hyperlink{class_order_manager_v5_af4730a8bd80ebbfc2ea56e823572a8cb}{Get\+By\+Algo\+Trigger}} (vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} $>$ \&ords, const KOrder\+Algo\+Trigger\+::\+Enum trig)
+\item 
+void \mbox{\hyperlink{class_order_manager_v5_a479c910477ae3f46521e393521dc71b5}{Get\+By\+Algo\+Trigger\+Sec\+Id}} (vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} $>$ \&ords, const KOrder\+Algo\+Trigger\+::\+Enum trig, int32\+\_\+t secid)
+\item 
+void \mbox{\hyperlink{class_order_manager_v5_aeb51e68d3d0b307151aeeb952afe250e}{Get\+By\+Algo\+Trigger\+Price}} (vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} $>$ \&ords, const KOrder\+Algo\+Trigger\+::\+Enum trig, int32\+\_\+t secid, int32\+\_\+t price)
+\item 
+bool \mbox{\hyperlink{class_order_manager_v5_a47bbfc7f5f53352722a2750cfbf1a0e8}{Get\+At\+Price}} (vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} $>$ \&orders, int32\+\_\+t secid, KOrder\+Side\+::\+Enum side, int32\+\_\+t price, KOrder\+Algo\+Trigger\+::\+Enum trig)
+\item 
+int \mbox{\hyperlink{class_order_manager_v5_a4ecd3f8782be2292645c832634c8244e}{Get\+Side\+Exposure}} (int32\+\_\+t secid, KOrder\+Side\+::\+Enum side, KOrder\+Algo\+Trigger\+::\+Enum trig)
+\item 
+bool \mbox{\hyperlink{class_order_manager_v5_a8d3785e68b41805f527e83de8bc05095}{Has\+Inflight}} (const string \&tag)
+\item 
+bool \mbox{\hyperlink{class_order_manager_v5_a9a55b3c9933e6e897ea8568c1950da60}{Has\+Inflight}} ()
+\item 
+void \mbox{\hyperlink{class_order_manager_v5_a1d564b7022e7c830faeb647c447ea77f}{Clear\+Inflight}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_k_t_n_1_1_o_r_d_1_1_i_order_handler}{KTN\+::\+ORD\+::\+IOrder\+Handler}}}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_named_thread}{Named\+Thread}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_named_thread_a891fabdc2d824048ec05c82e7ef8c69a}{Named\+Thread}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_named_thread_a018dadb59e5af98ee734301a1baa50cb}{\texorpdfstring{$\sim$}{\string~}\+Named\+Thread}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_named_thread_a9fa42542ff43c89fb9bbc33de9c87e34}{Create\+And\+Run}} (string name, int core)
+\begin{DoxyCompactList}\small\item\em Creates and runs the named thread on the specified core. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_named_thread_ad4809c571171be13f0f91f540d5c196f}{Join}} ()
+\begin{DoxyCompactList}\small\item\em Joins the named thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_order_manager_v5}{Order\+Manager\+V5} class is responsible for managing orders and their execution. It implements the IOrder\+Handler interface and inherits from the \doxylink{class_named_thread}{Named\+Thread} class. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_order_manager_v5_a161442e0a07f65a25a46849f89a01e5d}\index{OrderManagerV5@{OrderManagerV5}!OrderManagerV5@{OrderManagerV5}}
+\index{OrderManagerV5@{OrderManagerV5}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{OrderManagerV5()}{OrderManagerV5()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_a161442e0a07f65a25a46849f89a01e5d} 
+Order\+Manager\+V5\+::\+Order\+Manager\+V5 (\begin{DoxyParamCaption}\item[{int}]{core}{, }\item[{string}]{owner}{}\end{DoxyParamCaption})}
+
+
+
+Constructs an \doxylink{class_order_manager_v5}{Order\+Manager\+V5} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em core} & The core number. \\
+\hline
+{\em owner} & The owner of the order manager. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_order_manager_v5_aaed32ead22f67a16a291064553557169}\index{OrderManagerV5@{OrderManagerV5}!````~OrderManagerV5@{\texorpdfstring{$\sim$}{\string~}OrderManagerV5}}
+\index{````~OrderManagerV5@{\texorpdfstring{$\sim$}{\string~}OrderManagerV5}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}OrderManagerV5()}{\string~OrderManagerV5()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_aaed32ead22f67a16a291064553557169} 
+Order\+Manager\+V5\+::\texorpdfstring{$\sim$}{\string~}\+Order\+Manager\+V5 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destroys the \doxylink{class_order_manager_v5}{Order\+Manager\+V5} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_order_manager_v5_a8a9f55c42486467ffa17fbe4116a4dad}\index{OrderManagerV5@{OrderManagerV5}!Clear@{Clear}}
+\index{Clear@{Clear}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_a8a9f55c42486467ffa17fbe4116a4dad} 
+void Order\+Manager\+V5\+::\+Clear (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Clears all orders. 
+
+
+
+References \mbox{\hyperlink{l00040}{Custom\+HFTMap\+::clear()}}.
+
+\Hypertarget{class_order_manager_v5_ad41f90cc9aabf22f3c24f26e4991d0e8}\index{OrderManagerV5@{OrderManagerV5}!ClearDeadOrders@{ClearDeadOrders}}
+\index{ClearDeadOrders@{ClearDeadOrders}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{ClearDeadOrders()}{ClearDeadOrders()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_ad41f90cc9aabf22f3c24f26e4991d0e8} 
+void Order\+Manager\+V5\+::\+Clear\+Dead\+Orders (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Clears all dead orders. 
+
+
+
+References \mbox{\hyperlink{l00050}{Custom\+HFTMap\+::cleardead()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00411}{KTN\+::\+Multi\+Spreader\+V3\+::\+Enable()}}, \mbox{\hyperlink{l00506}{KTN\+::\+Skewer\+::\+Enable()}}, \mbox{\hyperlink{l00511}{KTN\+::\+Skew\+Trader\+::\+Enable()}}, \mbox{\hyperlink{l00461}{KTN\+::\+Stacker\+::\+Enable()}}, \mbox{\hyperlink{l00374}{KTN\+::\+Stacker\+Timer\+::\+Enable()}}, and \mbox{\hyperlink{l00426}{KTN\+::\+Twap\+::\+Enable()}}.
+
+\Hypertarget{class_order_manager_v5_a1d564b7022e7c830faeb647c447ea77f}\index{OrderManagerV5@{OrderManagerV5}!ClearInflight@{ClearInflight}}
+\index{ClearInflight@{ClearInflight}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{ClearInflight()}{ClearInflight()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_a1d564b7022e7c830faeb647c447ea77f} 
+void Order\+Manager\+V5\+::\+Clear\+Inflight (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_order_manager_v5_ab593941e8bc1d249d8fdbb35820a5424}\index{OrderManagerV5@{OrderManagerV5}!Count@{Count}}
+\index{Count@{Count}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{Count()}{Count()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_ab593941e8bc1d249d8fdbb35820a5424} 
+int Order\+Manager\+V5\+::\+Count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the count of orders. 
+
+\begin{DoxyReturn}{Returns}
+The count of orders. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00052}{Custom\+HFTMap\+::size()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00077}{Print()}}.
+
+\Hypertarget{class_order_manager_v5_ac3aff31c02a41a96aa83da07dc63773a}\index{OrderManagerV5@{OrderManagerV5}!EnableOrderReporter@{EnableOrderReporter}}
+\index{EnableOrderReporter@{EnableOrderReporter}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{EnableOrderReporter()}{EnableOrderReporter()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_ac3aff31c02a41a96aa83da07dc63773a} 
+void Order\+Manager\+V5\+::\+Enable\+Order\+Reporter (\begin{DoxyParamCaption}\item[{bool}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Enables or disables the order reporter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & True to enable the order reporter, false to disable it. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_order_manager_v5_a4f39113f56d62e73b85e63a101ab0663}\index{OrderManagerV5@{OrderManagerV5}!Exists@{Exists}}
+\index{Exists@{Exists}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{Exists()}{Exists()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_a4f39113f56d62e73b85e63a101ab0663} 
+bool Order\+Manager\+V5\+::\+Exists (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{reqid}{}\end{DoxyParamCaption})}
+
+
+
+Checks if an order with the specified request ID exists. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reqid} & The request ID of the order. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if an order with the specified request ID exists, false otherwise. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00075}{Custom\+HFTMap\+::find()}}.
+
+\Hypertarget{class_order_manager_v5_af8c317ab99fadbe7fd355153f3dcf067}\index{OrderManagerV5@{OrderManagerV5}!Get@{Get}}
+\index{Get@{Get}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_af8c317ab99fadbe7fd355153f3dcf067} 
+void Order\+Manager\+V5\+::\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&}]{ord}{, }\item[{uint64\+\_\+t}]{reqid}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_order_manager_v5_ac54d398606773431c29d62cc127ebda4}\index{OrderManagerV5@{OrderManagerV5}!GetAll@{GetAll}}
+\index{GetAll@{GetAll}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{GetAll()}{GetAll()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_ac54d398606773431c29d62cc127ebda4} 
+vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} $>$ Order\+Manager\+V5\+::\+Get\+All (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_order_manager_v5_a47bbfc7f5f53352722a2750cfbf1a0e8}\index{OrderManagerV5@{OrderManagerV5}!GetAtPrice@{GetAtPrice}}
+\index{GetAtPrice@{GetAtPrice}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{GetAtPrice()}{GetAtPrice()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_a47bbfc7f5f53352722a2750cfbf1a0e8} 
+bool Order\+Manager\+V5\+::\+Get\+At\+Price (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} $>$ \&}]{orders}{, }\item[{int32\+\_\+t}]{secid}{, }\item[{KOrder\+Side\+::\+Enum}]{side}{, }\item[{int32\+\_\+t}]{price}{, }\item[{KOrder\+Algo\+Trigger\+::\+Enum}]{trig}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_order_manager_v5_af4730a8bd80ebbfc2ea56e823572a8cb}\index{OrderManagerV5@{OrderManagerV5}!GetByAlgoTrigger@{GetByAlgoTrigger}}
+\index{GetByAlgoTrigger@{GetByAlgoTrigger}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{GetByAlgoTrigger()}{GetByAlgoTrigger()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_af4730a8bd80ebbfc2ea56e823572a8cb} 
+void Order\+Manager\+V5\+::\+Get\+By\+Algo\+Trigger (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} $>$ \&}]{ords}{, }\item[{const KOrder\+Algo\+Trigger\+::\+Enum}]{trig}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_order_manager_v5_aeb51e68d3d0b307151aeeb952afe250e}\index{OrderManagerV5@{OrderManagerV5}!GetByAlgoTriggerPrice@{GetByAlgoTriggerPrice}}
+\index{GetByAlgoTriggerPrice@{GetByAlgoTriggerPrice}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{GetByAlgoTriggerPrice()}{GetByAlgoTriggerPrice()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_aeb51e68d3d0b307151aeeb952afe250e} 
+void Order\+Manager\+V5\+::\+Get\+By\+Algo\+Trigger\+Price (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} $>$ \&}]{ords}{, }\item[{const KOrder\+Algo\+Trigger\+::\+Enum}]{trig}{, }\item[{int32\+\_\+t}]{secid}{, }\item[{int32\+\_\+t}]{price}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_order_manager_v5_a479c910477ae3f46521e393521dc71b5}\index{OrderManagerV5@{OrderManagerV5}!GetByAlgoTriggerSecId@{GetByAlgoTriggerSecId}}
+\index{GetByAlgoTriggerSecId@{GetByAlgoTriggerSecId}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{GetByAlgoTriggerSecId()}{GetByAlgoTriggerSecId()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_a479c910477ae3f46521e393521dc71b5} 
+void Order\+Manager\+V5\+::\+Get\+By\+Algo\+Trigger\+Sec\+Id (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} $>$ \&}]{ords}{, }\item[{const KOrder\+Algo\+Trigger\+::\+Enum}]{trig}{, }\item[{int32\+\_\+t}]{secid}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_order_manager_v5_ac1e7d893ed46126e667217d64bb627f3}\index{OrderManagerV5@{OrderManagerV5}!GetByExchId@{GetByExchId}}
+\index{GetByExchId@{GetByExchId}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{GetByExchId()}{GetByExchId()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_ac1e7d893ed46126e667217d64bb627f3} 
+bool Order\+Manager\+V5\+::\+Get\+By\+Exch\+Id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&}]{ord}{, }\item[{uint64\+\_\+t}]{exchordid}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_order_manager_v5_aaba686d7f3a7c5d20a92cdf7da3cc5a9}\index{OrderManagerV5@{OrderManagerV5}!GetByOrdernum@{GetByOrdernum}}
+\index{GetByOrdernum@{GetByOrdernum}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{GetByOrdernum()}{GetByOrdernum()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_aaba686d7f3a7c5d20a92cdf7da3cc5a9} 
+bool Order\+Manager\+V5\+::\+Get\+By\+Ordernum (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&}]{ord}{, }\item[{const string \&}]{ordernum}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_order_manager_v5_a2bceb69c55aec8f1da14ec8dc383c710}\index{OrderManagerV5@{OrderManagerV5}!GetBySecIdSideStrat@{GetBySecIdSideStrat}}
+\index{GetBySecIdSideStrat@{GetBySecIdSideStrat}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{GetBySecIdSideStrat()}{GetBySecIdSideStrat()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_a2bceb69c55aec8f1da14ec8dc383c710} 
+bool Order\+Manager\+V5\+::\+Get\+By\+Sec\+Id\+Side\+Strat (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&}]{ord}{, }\item[{int32\+\_\+t}]{secid}{, }\item[{const KOrder\+Side\+::\+Enum}]{side}{, }\item[{int}]{stratid}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_order_manager_v5_a971c39c59abdd2a3b85c4a19adcd9b22}\index{OrderManagerV5@{OrderManagerV5}!GetBySecIdSideStrat@{GetBySecIdSideStrat}}
+\index{GetBySecIdSideStrat@{GetBySecIdSideStrat}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{GetBySecIdSideStrat()}{GetBySecIdSideStrat()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_a971c39c59abdd2a3b85c4a19adcd9b22} 
+void Order\+Manager\+V5\+::\+Get\+By\+Sec\+Id\+Side\+Strat (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} $>$ \&}]{ords}{, }\item[{int32\+\_\+t}]{secid}{, }\item[{const KOrder\+Side\+::\+Enum}]{side}{, }\item[{int}]{stratid}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_order_manager_v5_a4727429517c138f008b4bea75e3d9031}\index{OrderManagerV5@{OrderManagerV5}!GetByStratId@{GetByStratId}}
+\index{GetByStratId@{GetByStratId}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{GetByStratId()}{GetByStratId()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_a4727429517c138f008b4bea75e3d9031} 
+void Order\+Manager\+V5\+::\+Get\+By\+Strat\+Id (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} $>$ \&}]{ords}{, }\item[{int}]{stratid}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_order_manager_v5_a2c667d57687009396c40d89f20dc21ac}\index{OrderManagerV5@{OrderManagerV5}!GetOrder@{GetOrder}}
+\index{GetOrder@{GetOrder}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{GetOrder()}{GetOrder()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_a2c667d57687009396c40d89f20dc21ac} 
+\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} Order\+Manager\+V5\+::\+Get\+Order (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{reqid}{}\end{DoxyParamCaption})}
+
+
+
+Gets the order with the specified request ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reqid} & The request ID of the order. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The order with the specified request ID. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00105}{Custom\+HFTMap\+::get()}}.
+
+\Hypertarget{class_order_manager_v5_a4ecd3f8782be2292645c832634c8244e}\index{OrderManagerV5@{OrderManagerV5}!GetSideExposure@{GetSideExposure}}
+\index{GetSideExposure@{GetSideExposure}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{GetSideExposure()}{GetSideExposure()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_a4ecd3f8782be2292645c832634c8244e} 
+int Order\+Manager\+V5\+::\+Get\+Side\+Exposure (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{secid}{, }\item[{KOrder\+Side\+::\+Enum}]{side}{, }\item[{KOrder\+Algo\+Trigger\+::\+Enum}]{trig}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_order_manager_v5_a1ced22cc4ffec89f0a82cc7a1b670271}\index{OrderManagerV5@{OrderManagerV5}!GetWorking@{GetWorking}}
+\index{GetWorking@{GetWorking}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{GetWorking()}{GetWorking()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_a1ced22cc4ffec89f0a82cc7a1b670271} 
+vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} $>$ Order\+Manager\+V5\+::\+Get\+Working (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_order_manager_v5_a9a55b3c9933e6e897ea8568c1950da60}\index{OrderManagerV5@{OrderManagerV5}!HasInflight@{HasInflight}}
+\index{HasInflight@{HasInflight}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{HasInflight()}{HasInflight()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_a9a55b3c9933e6e897ea8568c1950da60} 
+bool Order\+Manager\+V5\+::\+Has\+Inflight (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_order_manager_v5_a8d3785e68b41805f527e83de8bc05095}\index{OrderManagerV5@{OrderManagerV5}!HasInflight@{HasInflight}}
+\index{HasInflight@{HasInflight}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{HasInflight()}{HasInflight()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_a8d3785e68b41805f527e83de8bc05095} 
+bool Order\+Manager\+V5\+::\+Has\+Inflight (\begin{DoxyParamCaption}\item[{const string \&}]{tag}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_order_manager_v5_a229be736c037f9e11069dce5adba966e}\index{OrderManagerV5@{OrderManagerV5}!LoadTemplate@{LoadTemplate}}
+\index{LoadTemplate@{LoadTemplate}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{LoadTemplate()}{LoadTemplate()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_a229be736c037f9e11069dce5adba966e} 
+void Order\+Manager\+V5\+::\+Load\+Template (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} \&}]{ord}{}\end{DoxyParamCaption})}
+
+
+
+Loads a template order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ord} & The template order to load. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_order_manager_v5_a8d4c7976403acb8a9e108a81ce480b78}\index{OrderManagerV5@{OrderManagerV5}!minOrderAck@{minOrderAck}}
+\index{minOrderAck@{minOrderAck}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{minOrderAck()}{minOrderAck()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_a8d4c7976403acb8a9e108a81ce480b78} 
+void Order\+Manager\+V5\+::min\+Order\+Ack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&}]{ord}{}\end{DoxyParamCaption})}
+
+
+
+Handles a minimum order acknowledgment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ord} & The minimum order to acknowledge. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00038}{KTN\+::\+Order\+Pod\+::exchordid}}, \mbox{\hyperlink{l00042}{KTN\+::\+Order\+Pod\+::leavesqty}}, \mbox{\hyperlink{l00037}{KTN\+::\+Order\+Pod\+::order\+Req\+Id}}, \mbox{\hyperlink{l00619}{Process\+Order()}}, and \mbox{\hyperlink{l00036}{KTN\+::\+Order\+Pod\+::timestamp}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00635}{KTN\+::\+Algo\+Base\+V3\+::min\+Order\+Ack()}}.
+
+\Hypertarget{class_order_manager_v5_a3ef0e3e520af9287a228138e3dbecc0d}\index{OrderManagerV5@{OrderManagerV5}!minOrderCancel@{minOrderCancel}}
+\index{minOrderCancel@{minOrderCancel}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{minOrderCancel()}{minOrderCancel()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_a3ef0e3e520af9287a228138e3dbecc0d} 
+void Order\+Manager\+V5\+::min\+Order\+Cancel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&}]{ord}{}\end{DoxyParamCaption})}
+
+
+
+Handles a minimum order cancellation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ord} & The minimum order to cancel. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00037}{KTN\+::\+Order\+Pod\+::order\+Req\+Id}}, \mbox{\hyperlink{l00619}{Process\+Order()}}, and \mbox{\hyperlink{l00036}{KTN\+::\+Order\+Pod\+::timestamp}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00644}{KTN\+::\+Algo\+Base\+V3\+::min\+Order\+Cancel()}}, and \mbox{\hyperlink{l01136}{KTN\+::\+Stacker\+::min\+Order\+Cancel()}}.
+
+\Hypertarget{class_order_manager_v5_a7813dd64999ebdec3c8294a8d105f76a}\index{OrderManagerV5@{OrderManagerV5}!minOrderCancelReject@{minOrderCancelReject}}
+\index{minOrderCancelReject@{minOrderCancelReject}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{minOrderCancelReject()}{minOrderCancelReject()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_a7813dd64999ebdec3c8294a8d105f76a} 
+void Order\+Manager\+V5\+::min\+Order\+Cancel\+Reject (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&}]{ord}{, }\item[{const string \&}]{text}{}\end{DoxyParamCaption})}
+
+
+
+Handles the rejection of a minimum order cancellation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ord} & The minimum order cancellation to reject. \\
+\hline
+{\em text} & The rejection text. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00635}{Process\+Rejected\+Order()}}.
+
+\Hypertarget{class_order_manager_v5_a293ca659c8ec0459bf315c8991b12c47}\index{OrderManagerV5@{OrderManagerV5}!minOrderCancelReplaceReject@{minOrderCancelReplaceReject}}
+\index{minOrderCancelReplaceReject@{minOrderCancelReplaceReject}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{minOrderCancelReplaceReject()}{minOrderCancelReplaceReject()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_a293ca659c8ec0459bf315c8991b12c47} 
+void Order\+Manager\+V5\+::min\+Order\+Cancel\+Replace\+Reject (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&}]{ord}{, }\item[{const string \&}]{text}{}\end{DoxyParamCaption})}
+
+
+
+Handles the rejection of a minimum order cancel/replace. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ord} & The minimum order cancel/replace to reject. \\
+\hline
+{\em text} & The rejection text. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00635}{Process\+Rejected\+Order()}}.
+
+\Hypertarget{class_order_manager_v5_af6aaed4be937adb109d4deefb78085cd}\index{OrderManagerV5@{OrderManagerV5}!minOrderExecSpreadLeg@{minOrderExecSpreadLeg}}
+\index{minOrderExecSpreadLeg@{minOrderExecSpreadLeg}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{minOrderExecSpreadLeg()}{minOrderExecSpreadLeg()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_af6aaed4be937adb109d4deefb78085cd} 
+void Order\+Manager\+V5\+::min\+Order\+Exec\+Spread\+Leg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&}]{ord}{}\end{DoxyParamCaption})}
+
+
+
+Handles the execution of a minimum order spread leg. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ord} & The minimum order spread leg to execute. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00038}{KTN\+::\+Order\+Pod\+::exchordid}}, \mbox{\hyperlink{l00031}{KTN\+::\+Order\+Pod\+::execid}}, \mbox{\hyperlink{l00105}{Custom\+HFTMap\+::get()}}, \mbox{\hyperlink{l00035}{KTN\+::\+Order\+Pod\+::lastpx}}, \mbox{\hyperlink{l00044}{KTN\+::\+Order\+Pod\+::lastqty}}, \mbox{\hyperlink{l00064}{KTN\+::\+Order\+Pod\+::\+Ord\+Algo\+Trig}}, \mbox{\hyperlink{l00032}{KTN\+::\+Order\+Pod\+::ordernum}}, \mbox{\hyperlink{l00037}{KTN\+::\+Order\+Pod\+::order\+Req\+Id}}, \mbox{\hyperlink{l00063}{KTN\+::\+Order\+Pod\+::\+Ord\+Fill\+Type}}, \mbox{\hyperlink{l00060}{KTN\+::\+Order\+Pod\+::\+Ord\+Side}}, \mbox{\hyperlink{l00062}{KTN\+::\+Order\+Pod\+::\+Ord\+State}}, \mbox{\hyperlink{l00058}{KTN\+::\+Order\+Pod\+::\+Ord\+Tif}}, \mbox{\hyperlink{l00057}{KTN\+::\+Order\+Pod\+::\+Ord\+Type}}, \mbox{\hyperlink{l00034}{KTN\+::\+Order\+Pod\+::price}}, \mbox{\hyperlink{l00624}{Process\+Fill()}}, \mbox{\hyperlink{l00041}{KTN\+::\+Order\+Pod\+::quantity}}, \mbox{\hyperlink{l00040}{KTN\+::\+Order\+Pod\+::secid}}, and \mbox{\hyperlink{l00046}{KTN\+::\+Order\+Pod\+::stratid}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00759}{KTN\+::\+Multi\+Spreader\+V3\+::min\+Order\+Execution()}}, \mbox{\hyperlink{l01043}{KTN\+::\+Skewer\+::min\+Order\+Execution()}}, \mbox{\hyperlink{l01041}{KTN\+::\+Skew\+Trader\+::min\+Order\+Execution()}}, \mbox{\hyperlink{l01098}{KTN\+::\+Stacker\+::min\+Order\+Execution()}}, \mbox{\hyperlink{l00885}{KTN\+::\+Stacker\+Timer\+::min\+Order\+Execution()}}, and \mbox{\hyperlink{l00975}{KTN\+::\+Twap\+::min\+Order\+Execution()}}.
+
+\Hypertarget{class_order_manager_v5_a9a1823f61e2770beb11526d9004eb736}\index{OrderManagerV5@{OrderManagerV5}!minOrderExecution@{minOrderExecution}}
+\index{minOrderExecution@{minOrderExecution}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{minOrderExecution()}{minOrderExecution()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_a9a1823f61e2770beb11526d9004eb736} 
+void Order\+Manager\+V5\+::min\+Order\+Execution (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&}]{ord}{, }\item[{bool}]{hedge\+Sent}{}\end{DoxyParamCaption})}
+
+
+
+Handles the execution of a minimum order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ord} & The minimum order to execute. \\
+\hline
+{\em hedge\+Sent} & The flag indicating whether the hedge order was sent. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00038}{KTN\+::\+Order\+Pod\+::exchordid}}, \mbox{\hyperlink{l00105}{Custom\+HFTMap\+::get()}}, \mbox{\hyperlink{l00035}{KTN\+::\+Order\+Pod\+::lastpx}}, \mbox{\hyperlink{l00044}{KTN\+::\+Order\+Pod\+::lastqty}}, \mbox{\hyperlink{l00042}{KTN\+::\+Order\+Pod\+::leavesqty}}, \mbox{\hyperlink{l00064}{KTN\+::\+Order\+Pod\+::\+Ord\+Algo\+Trig}}, \mbox{\hyperlink{l00037}{KTN\+::\+Order\+Pod\+::order\+Req\+Id}}, \mbox{\hyperlink{l00063}{KTN\+::\+Order\+Pod\+::\+Ord\+Fill\+Type}}, \mbox{\hyperlink{l00062}{KTN\+::\+Order\+Pod\+::\+Ord\+State}}, \mbox{\hyperlink{l00061}{KTN\+::\+Order\+Pod\+::\+Ord\+Status}}, \mbox{\hyperlink{l00034}{KTN\+::\+Order\+Pod\+::price}}, \mbox{\hyperlink{l00624}{Process\+Fill()}}, \mbox{\hyperlink{l00040}{KTN\+::\+Order\+Pod\+::secid}}, \mbox{\hyperlink{l00046}{KTN\+::\+Order\+Pod\+::stratid}}, and \mbox{\hyperlink{l00036}{KTN\+::\+Order\+Pod\+::timestamp}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00360}{KTN\+::\+Auto\+Hedge\+OB\+::min\+Order\+Execution()}}, \mbox{\hyperlink{l00759}{KTN\+::\+Multi\+Spreader\+V3\+::min\+Order\+Execution()}}, \mbox{\hyperlink{l00419}{KTN\+::\+PLWatcher\+::min\+Order\+Execution()}}, \mbox{\hyperlink{l01043}{KTN\+::\+Skewer\+::min\+Order\+Execution()}}, \mbox{\hyperlink{l01041}{KTN\+::\+Skew\+Trader\+::min\+Order\+Execution()}}, \mbox{\hyperlink{l00504}{KTN\+::\+Squeezer\+OB\+::min\+Order\+Execution()}}, \mbox{\hyperlink{l01098}{KTN\+::\+Stacker\+::min\+Order\+Execution()}}, \mbox{\hyperlink{l00885}{KTN\+::\+Stacker\+Timer\+::min\+Order\+Execution()}}, \mbox{\hyperlink{l00975}{KTN\+::\+Twap\+::min\+Order\+Execution()}}, and \mbox{\hyperlink{l00902}{KTN\+::\+Waves\+::min\+Order\+Execution()}}.
+
+\Hypertarget{class_order_manager_v5_a1822e620817b1316377c2453c9851c94}\index{OrderManagerV5@{OrderManagerV5}!minOrderModify@{minOrderModify}}
+\index{minOrderModify@{minOrderModify}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{minOrderModify()}{minOrderModify()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_a1822e620817b1316377c2453c9851c94} 
+void Order\+Manager\+V5\+::min\+Order\+Modify (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&}]{ord}{}\end{DoxyParamCaption})}
+
+
+
+Handles a minimum order modification. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ord} & The minimum order to modify. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00042}{KTN\+::\+Order\+Pod\+::leavesqty}}, \mbox{\hyperlink{l00037}{KTN\+::\+Order\+Pod\+::order\+Req\+Id}}, \mbox{\hyperlink{l00619}{Process\+Order()}}, and \mbox{\hyperlink{l00036}{KTN\+::\+Order\+Pod\+::timestamp}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00653}{KTN\+::\+Algo\+Base\+V3\+::min\+Order\+Modify()}}.
+
+\Hypertarget{class_order_manager_v5_af10d06b20720405530e8d3ecde614bca}\index{OrderManagerV5@{OrderManagerV5}!minOrderReject@{minOrderReject}}
+\index{minOrderReject@{minOrderReject}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{minOrderReject()}{minOrderReject()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_af10d06b20720405530e8d3ecde614bca} 
+void Order\+Manager\+V5\+::min\+Order\+Reject (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&}]{ord}{, }\item[{const string \&}]{text}{}\end{DoxyParamCaption})}
+
+
+
+Handles the rejection of a minimum order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ord} & The minimum order to reject. \\
+\hline
+{\em text} & The rejection text. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00635}{Process\+Rejected\+Order()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l01154}{KTN\+::\+Stacker\+::min\+Order\+Cancel\+Reject()}}, \mbox{\hyperlink{l01171}{KTN\+::\+Stacker\+::min\+Order\+Cancel\+Replace\+Reject()}}, and \mbox{\hyperlink{l00667}{KTN\+::\+Algo\+Base\+V3\+::min\+Order\+Reject()}}.
+
+\Hypertarget{class_order_manager_v5_a2af638875e63cc0e22b8322e5d020331}\index{OrderManagerV5@{OrderManagerV5}!NewId@{NewId}}
+\index{NewId@{NewId}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{NewId()}{NewId()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_a2af638875e63cc0e22b8322e5d020331} 
+std\+::string Order\+Manager\+V5\+::\+New\+Id (\begin{DoxyParamCaption}\item[{const string \&}]{prefix}{}\end{DoxyParamCaption})}
+
+
+
+Generates a new order ID with the given prefix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prefix} & The prefix for the new order ID. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new order ID. 
+\end{DoxyReturn}
+\Hypertarget{class_order_manager_v5_a5ecce4a76ee814136ea22ce02f7fdd00}\index{OrderManagerV5@{OrderManagerV5}!onBankedOrder@{onBankedOrder}}
+\index{onBankedOrder@{onBankedOrder}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{onBankedOrder()}{onBankedOrder()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_a5ecce4a76ee814136ea22ce02f7fdd00} 
+void Order\+Manager\+V5\+::on\+Banked\+Order (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} \&}]{ord}{}\end{DoxyParamCaption})}
+
+
+
+Handles a banked order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ord} & The banked order to handle. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_order_manager_v5_afb78110182a4d7e61da791e26dee4804}\index{OrderManagerV5@{OrderManagerV5}!onSentOrderCxl@{onSentOrderCxl}}
+\index{onSentOrderCxl@{onSentOrderCxl}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{onSentOrderCxl()}{onSentOrderCxl()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_afb78110182a4d7e61da791e26dee4804} 
+void Order\+Manager\+V5\+::on\+Sent\+Order\+Cxl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&}]{ord}{}\end{DoxyParamCaption})}
+
+
+
+Handles a canceled sent order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ord} & The canceled sent order to handle. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00037}{KTN\+::\+Order\+Pod\+::order\+Req\+Id}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00198}{KTN\+::\+PLWatcher\+::\+Order\+Received()}}, and \mbox{\hyperlink{l01140}{KTN\+::\+Waves\+::\+Order\+Received()}}.
+
+\Hypertarget{class_order_manager_v5_a39625b942a94f1c95584dda6cd61ec12}\index{OrderManagerV5@{OrderManagerV5}!onSentOrderFast@{onSentOrderFast}}
+\index{onSentOrderFast@{onSentOrderFast}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{onSentOrderFast()}{onSentOrderFast()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_a39625b942a94f1c95584dda6cd61ec12} 
+void Order\+Manager\+V5\+::on\+Sent\+Order\+Fast (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&}]{ord}{}\end{DoxyParamCaption})}
+
+
+
+Handles a fast sent order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ord} & The fast sent order to handle. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00037}{KTN\+::\+Order\+Pod\+::order\+Req\+Id}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00803}{KTN\+::\+Multi\+Spreader\+V3\+::on\+Hedge\+Order\+Sent()}}, \mbox{\hyperlink{l01169}{KTN\+::\+Skew\+Trader\+::on\+Hedge\+Order\+Sent()}}, \mbox{\hyperlink{l01180}{KTN\+::\+Stacker\+::on\+Hedge\+Order\+Sent()}}, \mbox{\hyperlink{l00378}{KTN\+::\+Waves\+::on\+Hedge\+Order\+Sent()}}, \mbox{\hyperlink{l00045}{KTN\+::\+Squeezer\+OB\+::on\+Json()}}, \mbox{\hyperlink{l00838}{KTN\+::\+Multi\+Spreader\+V3\+::on\+Order\+Sent()}}, \mbox{\hyperlink{l01205}{KTN\+::\+Skew\+Trader\+::on\+Order\+Sent()}}, \mbox{\hyperlink{l01215}{KTN\+::\+Stacker\+::on\+Order\+Sent()}}, \mbox{\hyperlink{l00451}{KTN\+::\+Waves\+::on\+Order\+Sent()}}, \mbox{\hyperlink{l00379}{KTN\+::\+PLWatcher\+::on\+PL()}}, and \mbox{\hyperlink{l00198}{KTN\+::\+PLWatcher\+::\+Order\+Received()}}.
+
+\Hypertarget{class_order_manager_v5_ad10084bd7047b5074ef71d0dd11b412a}\index{OrderManagerV5@{OrderManagerV5}!onSentOrderMod@{onSentOrderMod}}
+\index{onSentOrderMod@{onSentOrderMod}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{onSentOrderMod()}{onSentOrderMod()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_ad10084bd7047b5074ef71d0dd11b412a} 
+void Order\+Manager\+V5\+::on\+Sent\+Order\+Mod (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&}]{ord}{}\end{DoxyParamCaption})}
+
+
+
+Handles a modified sent order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ord} & The modified sent order to handle. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00037}{KTN\+::\+Order\+Pod\+::order\+Req\+Id}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00198}{KTN\+::\+PLWatcher\+::\+Order\+Received()}}, and \mbox{\hyperlink{l01140}{KTN\+::\+Waves\+::\+Order\+Received()}}.
+
+\Hypertarget{class_order_manager_v5_ad66c1fb8a86fa2252e4d404ae16e6079}\index{OrderManagerV5@{OrderManagerV5}!onSentOrderNew@{onSentOrderNew}}
+\index{onSentOrderNew@{onSentOrderNew}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{onSentOrderNew()}{onSentOrderNew()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_ad66c1fb8a86fa2252e4d404ae16e6079} 
+void Order\+Manager\+V5\+::on\+Sent\+Order\+New (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&}]{ord}{}\end{DoxyParamCaption})}
+
+
+
+Handles a new sent order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ord} & The new sent order to handle. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00037}{KTN\+::\+Order\+Pod\+::order\+Req\+Id}}.
+
+\Hypertarget{class_order_manager_v5_aba0b61a527510b3efd8b8ec9b7323d38}\index{OrderManagerV5@{OrderManagerV5}!onSentOrderOrdbook@{onSentOrderOrdbook}}
+\index{onSentOrderOrdbook@{onSentOrderOrdbook}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{onSentOrderOrdbook()}{onSentOrderOrdbook()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_aba0b61a527510b3efd8b8ec9b7323d38} 
+void Order\+Manager\+V5\+::on\+Sent\+Order\+Ordbook (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&}]{ord}{, }\item[{\mbox{\hyperlink{struct_user_info}{User\+Info}} \&}]{info}{}\end{DoxyParamCaption})}
+
+
+
+Handles an order book sent order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ord} & The order book sent order to handle. \\
+\hline
+{\em info} & The user info associated with the order. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00037}{KTN\+::\+Order\+Pod\+::order\+Req\+Id}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00550}{KTN\+::\+ORD\+::\+Order\+Handler\+Zmq\+V6\+::\+Load\+Tas\+Orders()}}.
+
+\Hypertarget{class_order_manager_v5_ab81ade820db4150c599dd7459eecb2d3}\index{OrderManagerV5@{OrderManagerV5}!Print@{Print}}
+\index{Print@{Print}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{Print()}{Print()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_ab81ade820db4150c599dd7459eecb2d3} 
+void Order\+Manager\+V5\+::\+Print (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Prints the orders. 
+
+
+
+References \mbox{\hyperlink{l00049}{Count()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00339}{KTN\+::\+Algo\+Base\+V3\+::\+Print()}}, \mbox{\hyperlink{l00299}{KTN\+::\+Multi\+Spreader\+V3\+::\+Print()}}, \mbox{\hyperlink{l00259}{KTN\+::\+ORD\+::\+Order\+Handler\+Zmq\+V6\+::\+Print()}}, \mbox{\hyperlink{l00328}{KTN\+::\+Skewer\+::\+Print()}}, \mbox{\hyperlink{l00331}{KTN\+::\+Skew\+Trader\+::\+Print()}}, \mbox{\hyperlink{l00341}{KTN\+::\+Stacker\+::\+Print()}}, \mbox{\hyperlink{l00320}{KTN\+::\+Stacker\+Timer\+::\+Print()}}, \mbox{\hyperlink{l00307}{KTN\+::\+Twap\+::\+Print()}}, \mbox{\hyperlink{l00826}{KTN\+::\+CME\+::\+Cme\+Algo\+::\+Print\+Latencies()}}, \mbox{\hyperlink{l00192}{KTN\+::\+Algo\+Base\+V3\+::\+Toggle\+Command()}}, and \mbox{\hyperlink{l00892}{KTN\+::\+Waves\+::\+Toggle\+Command()}}.
+
+\Hypertarget{class_order_manager_v5_a88cb299300df75f849674f6aa5f1e296}\index{OrderManagerV5@{OrderManagerV5}!ProcessFill@{ProcessFill}}
+\index{ProcessFill@{ProcessFill}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{ProcessFill()}{ProcessFill()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_a88cb299300df75f849674f6aa5f1e296} 
+void Order\+Manager\+V5\+::\+Process\+Fill (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{Order\+Pod}} \&}]{ord}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Process the fill. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ord} & The fill to process. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_k_t_n_1_1_o_r_d_1_1_i_order_handler_a141f40ff19ff873f9d4ffeddb30d9717}{KTN\+::\+ORD\+::\+IOrder\+Handler}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00557}{min\+Order\+Exec\+Spread\+Leg()}}, \mbox{\hyperlink{l00460}{min\+Order\+Execution()}}, \mbox{\hyperlink{l00494}{Update\+Execution()}}, and \mbox{\hyperlink{l00523}{Update\+Spread\+Leg\+Execution()}}.
+
+\Hypertarget{class_order_manager_v5_a645bc9bb5d6724ff14073b03948a0fa8}\index{OrderManagerV5@{OrderManagerV5}!ProcessOrder@{ProcessOrder}}
+\index{ProcessOrder@{ProcessOrder}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{ProcessOrder()}{ProcessOrder()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_a645bc9bb5d6724ff14073b03948a0fa8} 
+void Order\+Manager\+V5\+::\+Process\+Order (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{Order\+Pod}} \&}]{ord}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Process the order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ord} & The order to process. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_k_t_n_1_1_o_r_d_1_1_i_order_handler_a9ccd75ac68157508d9c5d360692b6d63}{KTN\+::\+ORD\+::\+IOrder\+Handler}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00392}{min\+Order\+Ack()}}, \mbox{\hyperlink{l00408}{min\+Order\+Cancel()}}, and \mbox{\hyperlink{l00430}{min\+Order\+Modify()}}.
+
+\Hypertarget{class_order_manager_v5_a3c2efb71d798d9d6da7e26c6033348f5}\index{OrderManagerV5@{OrderManagerV5}!ProcessOrderID@{ProcessOrderID}}
+\index{ProcessOrderID@{ProcessOrderID}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{ProcessOrderID()}{ProcessOrderID()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_a3c2efb71d798d9d6da7e26c6033348f5} 
+void Order\+Manager\+V5\+::\+Process\+Order\+Id (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{ordid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Process the order ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ordid} & The order ID to process. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_k_t_n_1_1_o_r_d_1_1_i_order_handler_a6f79de7ce6abebc6e9c55aef7b948d45}{KTN\+::\+ORD\+::\+IOrder\+Handler}}.
+
+
+
+References \mbox{\hyperlink{l00062}{KTN\+::\+Core\+::\+SPSCRing\+Buffer$<$ T $>$\+::enqueue()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00440}{Update\+Order()}}.
+
+\Hypertarget{class_order_manager_v5_a7427c8594b22f65d05a86a007e53aaa2}\index{OrderManagerV5@{OrderManagerV5}!ProcessRejectedOrder@{ProcessRejectedOrder}}
+\index{ProcessRejectedOrder@{ProcessRejectedOrder}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{ProcessRejectedOrder()}{ProcessRejectedOrder()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_a7427c8594b22f65d05a86a007e53aaa2} 
+void Order\+Manager\+V5\+::\+Process\+Rejected\+Order (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{Order\+Pod}} \&}]{ord}{, }\item[{const string \&}]{text}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Process the rejected order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ord} & The rejected order to process. \\
+\hline
+{\em text} & The rejection text. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_k_t_n_1_1_o_r_d_1_1_i_order_handler_a2cff128da83c1cc54c7c8dd8b7ff8f74}{KTN\+::\+ORD\+::\+IOrder\+Handler}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00604}{min\+Order\+Cancel\+Reject()}}, \mbox{\hyperlink{l00609}{min\+Order\+Cancel\+Replace\+Reject()}}, and \mbox{\hyperlink{l00599}{min\+Order\+Reject()}}.
+
+\Hypertarget{class_order_manager_v5_a43512c55a3fe9472d66401f0fadf22ca}\index{OrderManagerV5@{OrderManagerV5}!ProcessSentOrder@{ProcessSentOrder}}
+\index{ProcessSentOrder@{ProcessSentOrder}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{ProcessSentOrder()}{ProcessSentOrder()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_a43512c55a3fe9472d66401f0fadf22ca} 
+void Order\+Manager\+V5\+::\+Process\+Sent\+Order (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{Order\+Pod}} \&}]{ord}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Process the sent order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ord} & The sent order to process. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_k_t_n_1_1_o_r_d_1_1_i_order_handler_a06dee577b900a917b66e60af98fa9251}{KTN\+::\+ORD\+::\+IOrder\+Handler}}.
+
+\Hypertarget{class_order_manager_v5_a2cd5e8d7c0fd3d0c44cb4a022258658f}\index{OrderManagerV5@{OrderManagerV5}!ProcessSpreadLegs@{ProcessSpreadLegs}}
+\index{ProcessSpreadLegs@{ProcessSpreadLegs}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{ProcessSpreadLegs()}{ProcessSpreadLegs()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_a2cd5e8d7c0fd3d0c44cb4a022258658f} 
+void Order\+Manager\+V5\+::\+Process\+Spread\+Legs (\begin{DoxyParamCaption}\item[{bool}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets whether to process spread legs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & True to process spread legs, false otherwise. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_order_manager_v5_a435d221b404b1a9238d1ffaf634f429e}\index{OrderManagerV5@{OrderManagerV5}!RegisterOrderTemplate@{RegisterOrderTemplate}}
+\index{RegisterOrderTemplate@{RegisterOrderTemplate}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{RegisterOrderTemplate()}{RegisterOrderTemplate()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_a435d221b404b1a9238d1ffaf634f429e} 
+void Order\+Manager\+V5\+::\+Register\+Order\+Template (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order}{Order}} \&}]{ord}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This function is new in V5 to handle Order\+Pod conversion. Going forward we will only use the large format order for reporting back to database/monitoring systems that are not critical path 
+
+Implements \mbox{\hyperlink{class_k_t_n_1_1_o_r_d_1_1_i_order_handler_aefdbb0a1ca024675cc9ed52842cd1bad}{KTN\+::\+ORD\+::\+IOrder\+Handler}}.
+
+\Hypertarget{class_order_manager_v5_a912ac95209615aec8d920bd04b889019}\index{OrderManagerV5@{OrderManagerV5}!Stop@{Stop}}
+\index{Stop@{Stop}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{Stop()}{Stop()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_a912ac95209615aec8d920bd04b889019} 
+void Order\+Manager\+V5\+::\+Stop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Stops the order manager. 
+
+
+
+Referenced by \mbox{\hyperlink{l00096}{KTN\+::\+Algo\+Base\+V3\+::\+Shutdown()}}, and \mbox{\hyperlink{l00043}{KTN\+::\+ORD\+::\+Order\+Handler\+Zmq\+V6\+::\texorpdfstring{$\sim$}{\string~}\+Order\+Handler\+Zmq\+V6()}}.
+
+\Hypertarget{class_order_manager_v5_a1d72effb40164d3f2ddaec91ddb926bd}\index{OrderManagerV5@{OrderManagerV5}!UpdateExecution@{UpdateExecution}}
+\index{UpdateExecution@{UpdateExecution}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{UpdateExecution()}{UpdateExecution()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_a1d72effb40164d3f2ddaec91ddb926bd} 
+void Order\+Manager\+V5\+::\+Update\+Execution (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{reqid}{, }\item[{uint64\+\_\+t}]{exchordid}{, }\item[{KOrder\+Status\+::\+Enum}]{status}{, }\item[{KOrder\+State\+::\+Enum}]{state}{, }\item[{KOrder\+Fill\+Type\+::\+Enum}]{filltype}{, }\item[{int64\+\_\+t}]{lastpx}{, }\item[{uint32\+\_\+t}]{lastqty}{, }\item[{uint32\+\_\+t}]{lvs}{, }\item[{uint64\+\_\+t}]{timestamp}{, }\item[{string}]{execid}{}\end{DoxyParamCaption})}
+
+
+
+Updates the execution of an order with the specified request ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reqid} & The request ID of the order. \\
+\hline
+{\em exchordid} & The CME ID of the order. \\
+\hline
+{\em status} & The status of the order. \\
+\hline
+{\em state} & The state of the order. \\
+\hline
+{\em filltype} & The fill type of the order. \\
+\hline
+{\em lastpx} & The last price of the order. \\
+\hline
+{\em lastqty} & The last quantity of the order. \\
+\hline
+{\em lvs} & The leaves quantity of the order. \\
+\hline
+{\em timestamp} & The timestamp of the execution update. \\
+\hline
+{\em execid} & The execution ID of the order. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00105}{Custom\+HFTMap\+::get()}}, and \mbox{\hyperlink{l00624}{Process\+Fill()}}.
+
+\Hypertarget{class_order_manager_v5_a4daacf157cb30b0bba100558e91dbab2}\index{OrderManagerV5@{OrderManagerV5}!UpdateMetaParams@{UpdateMetaParams}}
+\index{UpdateMetaParams@{UpdateMetaParams}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{UpdateMetaParams()}{UpdateMetaParams()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_a4daacf157cb30b0bba100558e91dbab2} 
+void Order\+Manager\+V5\+::\+Update\+Meta\+Params (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structalgometa}{algometa}} \&}]{meta}{, }\item[{bool}]{certnr}{}\end{DoxyParamCaption})}
+
+
+
+Updates the meta parameters with the given algorithm metadata. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em meta} & The algorithm metadata. \\
+\hline
+{\em certnr} & The flag indicating whether the algorithm is certified. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00018}{Named\+Thread\+::\+Create\+And\+Run()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00015}{KTN\+::\+ORD\+::\+Order\+Handler\+Zmq\+V6\+::\+Order\+Handler\+Zmq\+V6()}}.
+
+\Hypertarget{class_order_manager_v5_a6d03ba0ff3bc0d552d891caeabc7aeb5}\index{OrderManagerV5@{OrderManagerV5}!UpdateOrder@{UpdateOrder}}
+\index{UpdateOrder@{UpdateOrder}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{UpdateOrder()}{UpdateOrder()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_a6d03ba0ff3bc0d552d891caeabc7aeb5} 
+int Order\+Manager\+V5\+::\+Update\+Order (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{reqid}{, }\item[{uint64\+\_\+t}]{exchordid}{, }\item[{KOrder\+Status\+::\+Enum}]{status}{, }\item[{KOrder\+State\+::\+Enum}]{state}{, }\item[{uint32\+\_\+t}]{qty}{, }\item[{uint64\+\_\+t}]{timestamp}{}\end{DoxyParamCaption})}
+
+
+
+Updates an order with the specified request ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reqid} & The request ID of the order. \\
+\hline
+{\em exchordid} & The CME ID of the order. \\
+\hline
+{\em status} & The status of the order. \\
+\hline
+{\em state} & The state of the order. \\
+\hline
+{\em qty} & The quantity of the order. \\
+\hline
+{\em timestamp} & The timestamp of the order update. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of orders updated. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00614}{Process\+Order\+Id()}}.
+
+\Hypertarget{class_order_manager_v5_a6ba7a58b65651a659bcbf29c725b92c8}\index{OrderManagerV5@{OrderManagerV5}!UpdateSpreadLegExecution@{UpdateSpreadLegExecution}}
+\index{UpdateSpreadLegExecution@{UpdateSpreadLegExecution}!OrderManagerV5@{OrderManagerV5}}
+\doxysubsubsection{\texorpdfstring{UpdateSpreadLegExecution()}{UpdateSpreadLegExecution()}}
+{\footnotesize\ttfamily \label{class_order_manager_v5_a6ba7a58b65651a659bcbf29c725b92c8} 
+void Order\+Manager\+V5\+::\+Update\+Spread\+Leg\+Execution (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{exchordid}{, }\item[{KOrder\+Side\+::\+Enum}]{side}{, }\item[{int32\+\_\+t}]{secid}{, }\item[{int64\+\_\+t}]{lastpx}{, }\item[{uint32\+\_\+t}]{lastqty}{, }\item[{uint64\+\_\+t}]{timestamp}{, }\item[{string}]{execid}{}\end{DoxyParamCaption})}
+
+
+
+Updates the execution of a spread leg order with the specified CME ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em exchordid} & The CME ID of the order. \\
+\hline
+{\em side} & The side of the order. \\
+\hline
+{\em secid} & The security ID of the order. \\
+\hline
+{\em lastpx} & The last price of the order. \\
+\hline
+{\em lastqty} & The last quantity of the order. \\
+\hline
+{\em timestamp} & The timestamp of the execution update. \\
+\hline
+{\em execid} & The execution ID of the order. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00031}{KTN\+::\+Order\+Pod\+::execid}}, \mbox{\hyperlink{l00043}{KTN\+::\+Order\+Pod\+::fillqty}}, \mbox{\hyperlink{l00105}{Custom\+HFTMap\+::get()}}, \mbox{\hyperlink{l00035}{KTN\+::\+Order\+Pod\+::lastpx}}, \mbox{\hyperlink{l00044}{KTN\+::\+Order\+Pod\+::lastqty}}, \mbox{\hyperlink{l00042}{KTN\+::\+Order\+Pod\+::leavesqty}}, \mbox{\hyperlink{l00063}{KTN\+::\+Order\+Pod\+::\+Ord\+Fill\+Type}}, \mbox{\hyperlink{l00060}{KTN\+::\+Order\+Pod\+::\+Ord\+Side}}, \mbox{\hyperlink{l00062}{KTN\+::\+Order\+Pod\+::\+Ord\+State}}, \mbox{\hyperlink{l00061}{KTN\+::\+Order\+Pod\+::\+Ord\+Status}}, \mbox{\hyperlink{l00624}{Process\+Fill()}}, \mbox{\hyperlink{l00040}{KTN\+::\+Order\+Pod\+::secid}}, and \mbox{\hyperlink{l00036}{KTN\+::\+Order\+Pod\+::timestamp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Orders/Order\+Manager\+V5.\+hpp\item 
+Orders/Order\+Manager\+V5.\+cpp\end{DoxyCompactItemize}

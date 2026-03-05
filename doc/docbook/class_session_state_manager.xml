@@ -1,0 +1,901 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_session_state_manager" xml:lang="en-US">
+<title>SessionStateManager Class Reference</title>
+<indexterm><primary>SessionStateManager</primary></indexterm>
+<para>
+
+<para>Manages the state of a session. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;SessionStateManager.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_session_state_manager_1ab6908c0942d180b932642db9b41c7eb7">SessionStateManager</link> ()</para>
+
+<para>Default constructor. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_session_state_manager_1ab730c0fc16174fc252bd1f55080aeb75">~SessionStateManager</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_session_state_manager_1afdd7610f2a138fa5b69bf48d7837a2ed">Init</link> (string sessionid, string firmid, int segid, int hbsecs, int hbbuffms)</para>
+
+<para>Initializes the session state manager. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_session_state_manager_1a4d256d9b2e4ddea0b71393976ff754b3">Stop</link> ()</para>
+
+<para>Stops the session state manager. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_session_state_manager_1a17085e14d61ad39378381e0c901ddc51">Update</link> ()</para>
+
+<para>Updates the session state manager. </para>
+</listitem>
+            <listitem><para>const bool <link linkend="_class_session_state_manager_1a4d0f76806736bbc593bf57fcfcc2860b">Connected</link> () const</para>
+
+<para>Checks if the session is connected. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_session_state_manager_1a12d14525768a656f58fddcc2c22a94f8">onStateChange</link> (<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_enum_session_state_1a1a4fdd123ba195de2c11897d7329f645">EnumSessionState::Enum</link> newState)</para>
+
+<para>Handles the state change of the session. </para>
+</listitem>
+            <listitem><para>const string &amp; <link linkend="_class_session_state_manager_1a5ee16179811204c35932bc17b46723e7">Firmid</link> () const</para>
+
+<para>Gets the firm ID. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_session_state_manager_1a2a20b733e4101b41a00fd744d2573682">SetFirmid</link> (const string &amp;firmid)</para>
+
+<para>Sets the firm ID. </para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_class_session_state_manager_1aa86a9b1446901c9e660b609bd7a4b93d">Prevuuid</link> () const</para>
+
+<para>Gets the previous UUID. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_session_state_manager_1a4db72eb3c88fd2e817934005a60bc5ac">SetPrevuuid</link> (uint64_t prevuuid)</para>
+
+<para>Sets the previous UUID. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_session_state_manager_1a0ffe1b4e2f93637d108e753a879f5b7a">Segid</link> () const</para>
+
+<para>Gets the segment ID. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_session_state_manager_1ad078d664d8a8af2162a188d185c4dc0d">SetSegid</link> (int segid)</para>
+
+<para>Sets the segment ID. </para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_class_session_state_manager_1a48aa568dfd683b7eddc77478a5a7930d">SeqIn</link> () const</para>
+
+<para>Gets the incoming sequence number. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_session_state_manager_1a1e7761bc13940162a72692d68e7d9ff0">SetSeqIn</link> (uint64_t seqIn)</para>
+
+<para>Sets the incoming sequence number. </para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_class_session_state_manager_1a0b1da71a2bf731a3ccf630885bb3e4fe">IncSeqIn</link> (int numseqs)</para>
+
+<para>Increments the incoming sequence number by a specified number of sequences. </para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_class_session_state_manager_1ab73c070a262e6061008d4067b68836ed">SeqOut</link> () const</para>
+
+<para>Gets the outgoing sequence number. </para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_class_session_state_manager_1a6ed584e34be024568c5674a65ddca399">SeqOutAndAdvance</link> ()</para>
+
+<para>Advances the outgoing sequence number and returns the previous value. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_session_state_manager_1aeb4486e832fe4c1c88b53bdc4adc2950">SetSeqOut</link> (uint64_t seqOut, bool persist)</para>
+
+<para>Sets the outgoing sequence number. </para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_class_session_state_manager_1a670774b1d7b737842ddbd3c66c0dc10a">IncSeqOut</link> (int numSeqs)</para>
+
+<para>Increments the outgoing sequence number by a specified number of sequences. </para>
+</listitem>
+            <listitem><para>const string &amp; <link linkend="_class_session_state_manager_1a19de96fac58be7f6fe78ea2ecc3e5730">Sessid</link> () const</para>
+
+<para>Gets the session ID. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_session_state_manager_1a021411060eb1bde86fa63182ddcea410">SetSessid</link> (const string &amp;sessid)</para>
+
+<para>Sets the session ID. </para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_class_session_state_manager_1a55c0af0d0bb8a9f389bcfa9f230e9d6a">Uuid</link> () const</para>
+
+<para>Gets the UUID. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_session_state_manager_1adc1e6caca2cf1f86210010866491e94d">SetUuid</link> (uint64_t uuid)</para>
+
+<para>Sets the UUID. </para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_class_session_state_manager_1a81259c19042e8a7be5976e7f508b03eb">NewReqId</link> ()</para>
+
+<para>Generates a new request ID. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_session_state_manager_1ac468c5be957c75843f5a1a178e962c81">SetReqId</link> (uint64_t id)</para>
+
+<para>Sets the request ID. </para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_class_session_state_manager_1a4db80b354d5984f74e0c1c8e35fccb7c">LastReqId</link> ()</para>
+
+<para>Gets the last request ID. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_session_state_manager_1adfdd199318a8ba2d1beb27bbf26c3c31">HbTriggered</link> ()</para>
+
+<para>Checks if a heartbeat has been triggered. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_session_state_manager_1a6ddbf763d3d2de772bf0a85c03ca25ca">HbSent</link> ()</para>
+
+<para>Marks a heartbeat as sent. </para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_class_session_state_manager_1ab765aeab168e86c52fdcad728e685c42">LastHb</link> () const</para>
+
+<para>Gets the timestamp of the last heartbeat. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_session_state_manager_1a6fd3b746ce959a77fa132bb453e2ac17">SetLastHb</link> (uint64_t hb)</para>
+
+<para>Sets the timestamp of the last heartbeat. </para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_class_session_state_manager_1a3654b680045bad81925249269a201b8a">HbCount</link> () const</para>
+
+<para>Gets the heartbeat count. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_enum_session_state_1a1a4fdd123ba195de2c11897d7329f645">EnumSessionState::Enum</link> <link linkend="_class_session_state_manager_1a8c152ca3470f3862496152e419f15971">CurrentState</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Manages the state of a session. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_session_state_manager_1ab6908c0942d180b932642db9b41c7eb7"/><section>
+    <title>SessionStateManager()</title>
+<indexterm><primary>SessionStateManager</primary><secondary>SessionStateManager</secondary></indexterm>
+<indexterm><primary>SessionStateManager</primary><secondary>SessionStateManager</secondary></indexterm>
+<para><computeroutput>SessionStateManager::SessionStateManager ( )</computeroutput></para><para>
+
+<para>Default constructor. </para>
+</para>
+</section>
+<anchor xml:id="_class_session_state_manager_1ab730c0fc16174fc252bd1f55080aeb75"/><section>
+    <title>~SessionStateManager()</title>
+<indexterm><primary>~SessionStateManager</primary><secondary>SessionStateManager</secondary></indexterm>
+<indexterm><primary>SessionStateManager</primary><secondary>~SessionStateManager</secondary></indexterm>
+<para><computeroutput>SessionStateManager::~SessionStateManager ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Destructor. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_session_state_manager_1a4d0f76806736bbc593bf57fcfcc2860b"/><section>
+    <title>Connected()</title>
+<indexterm><primary>Connected</primary><secondary>SessionStateManager</secondary></indexterm>
+<indexterm><primary>SessionStateManager</primary><secondary>Connected</secondary></indexterm>
+<para><computeroutput>const bool SessionStateManager::Connected ( ) const</computeroutput></para><para>
+
+<para>Checks if the session is connected. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>True if connected, false otherwise </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_session_state_manager_1a5ee16179811204c35932bc17b46723e7"/><section>
+    <title>Firmid()</title>
+<indexterm><primary>Firmid</primary><secondary>SessionStateManager</secondary></indexterm>
+<indexterm><primary>SessionStateManager</primary><secondary>Firmid</secondary></indexterm>
+<para><computeroutput>const string &amp; SessionStateManager::Firmid ( ) const</computeroutput></para><para>
+
+<para>Gets the firm ID. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The firm ID </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_session_state_manager_1a3654b680045bad81925249269a201b8a"/><section>
+    <title>HbCount()</title>
+<indexterm><primary>HbCount</primary><secondary>SessionStateManager</secondary></indexterm>
+<indexterm><primary>SessionStateManager</primary><secondary>HbCount</secondary></indexterm>
+<para><computeroutput>uint64_t SessionStateManager::HbCount ( ) const</computeroutput></para><para>
+
+<para>Gets the heartbeat count. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The heartbeat count </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_session_state_manager_1a6ddbf763d3d2de772bf0a85c03ca25ca"/><section>
+    <title>HbSent()</title>
+<indexterm><primary>HbSent</primary><secondary>SessionStateManager</secondary></indexterm>
+<indexterm><primary>SessionStateManager</primary><secondary>HbSent</secondary></indexterm>
+<para><computeroutput>void SessionStateManager::HbSent ( )</computeroutput></para><para>
+
+<para>Marks a heartbeat as sent. </para>
+</para>
+<para>
+References <link linkend="_l00045">KTN::Core::HeartbeatMonitor::Reset()</link>.</para>
+</section>
+<anchor xml:id="_class_session_state_manager_1adfdd199318a8ba2d1beb27bbf26c3c31"/><section>
+    <title>HbTriggered()</title>
+<indexterm><primary>HbTriggered</primary><secondary>SessionStateManager</secondary></indexterm>
+<indexterm><primary>SessionStateManager</primary><secondary>HbTriggered</secondary></indexterm>
+<para><computeroutput>bool SessionStateManager::HbTriggered ( )</computeroutput></para><para>
+
+<para>Checks if a heartbeat has been triggered. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>True if a heartbeat has been triggered, false otherwise </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00063">KTN::Core::HeartbeatMonitor::IsFlagSet()</link>.</para>
+</section>
+<anchor xml:id="_class_session_state_manager_1a0b1da71a2bf731a3ccf630885bb3e4fe"/><section>
+    <title>IncSeqIn()</title>
+<indexterm><primary>IncSeqIn</primary><secondary>SessionStateManager</secondary></indexterm>
+<indexterm><primary>SessionStateManager</primary><secondary>IncSeqIn</secondary></indexterm>
+<para><computeroutput>uint64_t SessionStateManager::IncSeqIn (int numseqs = <computeroutput>1</computeroutput>
+)</computeroutput></para><para>
+
+<para>Increments the incoming sequence number by a specified number of sequences. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>numseqs</entry><entry>
+<para>The number of sequences to increment by </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The new incoming sequence number </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_session_state_manager_1a670774b1d7b737842ddbd3c66c0dc10a"/><section>
+    <title>IncSeqOut()</title>
+<indexterm><primary>IncSeqOut</primary><secondary>SessionStateManager</secondary></indexterm>
+<indexterm><primary>SessionStateManager</primary><secondary>IncSeqOut</secondary></indexterm>
+<para><computeroutput>uint64_t SessionStateManager::IncSeqOut (int numSeqs = <computeroutput>1</computeroutput>
+)</computeroutput></para><para>
+
+<para>Increments the outgoing sequence number by a specified number of sequences. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>numSeqs</entry><entry>
+<para>The number of sequences to increment by </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The new outgoing sequence number </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_session_state_manager_1afdd7610f2a138fa5b69bf48d7837a2ed"/><section>
+    <title>Init()</title>
+<indexterm><primary>Init</primary><secondary>SessionStateManager</secondary></indexterm>
+<indexterm><primary>SessionStateManager</primary><secondary>Init</secondary></indexterm>
+<para><computeroutput>void SessionStateManager::Init (string sessionid, string firmid, int segid, int hbsecs, int hbbuffms)</computeroutput></para><para>
+
+<para>Initializes the session state manager. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>sessionid</entry><entry>
+<para>The session ID </para>
+</entry>
+                            </row>
+                            <row>
+<entry>firmid</entry><entry>
+<para>The firm ID </para>
+</entry>
+                            </row>
+                            <row>
+<entry>segid</entry><entry>
+<para>The segment ID </para>
+</entry>
+                            </row>
+                            <row>
+<entry>hbsecs</entry><entry>
+<para>The heartbeat interval in seconds </para>
+</entry>
+                            </row>
+                            <row>
+<entry>hbbuffms</entry><entry>
+<para>The heartbeat buffer in milliseconds </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00123">Settings::get()</link>, <link linkend="_l00193">Settings::getBoolean()</link>, <link linkend="_l00133">Settings::getInteger()</link>, <link linkend="_l00153">Settings::getLong()</link>, <link linkend="_l00023">KTN::Core::HeartbeatMonitor::Start()</link>, and <link linkend="_l00132">Update()</link>.</para>
+</section>
+<anchor xml:id="_class_session_state_manager_1ab765aeab168e86c52fdcad728e685c42"/><section>
+    <title>LastHb()</title>
+<indexterm><primary>LastHb</primary><secondary>SessionStateManager</secondary></indexterm>
+<indexterm><primary>SessionStateManager</primary><secondary>LastHb</secondary></indexterm>
+<para><computeroutput>uint64_t SessionStateManager::LastHb ( ) const</computeroutput></para><para>
+
+<para>Gets the timestamp of the last heartbeat. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The timestamp of the last heartbeat </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_session_state_manager_1a4db80b354d5984f74e0c1c8e35fccb7c"/><section>
+    <title>LastReqId()</title>
+<indexterm><primary>LastReqId</primary><secondary>SessionStateManager</secondary></indexterm>
+<indexterm><primary>SessionStateManager</primary><secondary>LastReqId</secondary></indexterm>
+<para><computeroutput>uint64_t SessionStateManager::LastReqId ( )</computeroutput></para><para>
+
+<para>Gets the last request ID. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The last request ID </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_session_state_manager_1a81259c19042e8a7be5976e7f508b03eb"/><section>
+    <title>NewReqId()</title>
+<indexterm><primary>NewReqId</primary><secondary>SessionStateManager</secondary></indexterm>
+<indexterm><primary>SessionStateManager</primary><secondary>NewReqId</secondary></indexterm>
+<para><computeroutput>uint64_t SessionStateManager::NewReqId ( )</computeroutput></para><para>
+
+<para>Generates a new request ID. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The new request ID </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_session_state_manager_1a12d14525768a656f58fddcc2c22a94f8"/><section>
+    <title>onStateChange()</title>
+<indexterm><primary>onStateChange</primary><secondary>SessionStateManager</secondary></indexterm>
+<indexterm><primary>SessionStateManager</primary><secondary>onStateChange</secondary></indexterm>
+<para><computeroutput>void SessionStateManager::onStateChange (<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_enum_session_state_1a1a4fdd123ba195de2c11897d7329f645">EnumSessionState::Enum</link> newState)</computeroutput></para><para>
+
+<para>Handles the state change of the session. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>newState</entry><entry>
+<para>The new state of the session </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00023">KTN::CME::IL3::EnumSessionState::Disconnected</link>, <link linkend="_l00039">KTN::CME::IL3::EnumSessionState::Established</link>, and <link linkend="_l00178">Segid()</link>.</para>
+<para>
+Referenced by <link linkend="_l00126">Stop()</link>.</para>
+</section>
+<anchor xml:id="_class_session_state_manager_1aa86a9b1446901c9e660b609bd7a4b93d"/><section>
+    <title>Prevuuid()</title>
+<indexterm><primary>Prevuuid</primary><secondary>SessionStateManager</secondary></indexterm>
+<indexterm><primary>SessionStateManager</primary><secondary>Prevuuid</secondary></indexterm>
+<para><computeroutput>uint64_t SessionStateManager::Prevuuid ( ) const</computeroutput></para><para>
+
+<para>Gets the previous UUID. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The previous UUID </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_session_state_manager_1a0ffe1b4e2f93637d108e753a879f5b7a"/><section>
+    <title>Segid()</title>
+<indexterm><primary>Segid</primary><secondary>SessionStateManager</secondary></indexterm>
+<indexterm><primary>SessionStateManager</primary><secondary>Segid</secondary></indexterm>
+<para><computeroutput>int SessionStateManager::Segid ( ) const</computeroutput></para><para>
+
+<para>Gets the segment ID. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The segment ID </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00263">onStateChange()</link>.</para>
+</section>
+<anchor xml:id="_class_session_state_manager_1a48aa568dfd683b7eddc77478a5a7930d"/><section>
+    <title>SeqIn()</title>
+<indexterm><primary>SeqIn</primary><secondary>SessionStateManager</secondary></indexterm>
+<indexterm><primary>SessionStateManager</primary><secondary>SeqIn</secondary></indexterm>
+<para><computeroutput>uint64_t SessionStateManager::SeqIn ( ) const</computeroutput></para><para>
+
+<para>Gets the incoming sequence number. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The incoming sequence number </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_session_state_manager_1ab73c070a262e6061008d4067b68836ed"/><section>
+    <title>SeqOut()</title>
+<indexterm><primary>SeqOut</primary><secondary>SessionStateManager</secondary></indexterm>
+<indexterm><primary>SessionStateManager</primary><secondary>SeqOut</secondary></indexterm>
+<para><computeroutput>uint64_t SessionStateManager::SeqOut ( ) const</computeroutput></para><para>
+
+<para>Gets the outgoing sequence number. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The outgoing sequence number </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_session_state_manager_1a6ed584e34be024568c5674a65ddca399"/><section>
+    <title>SeqOutAndAdvance()</title>
+<indexterm><primary>SeqOutAndAdvance</primary><secondary>SessionStateManager</secondary></indexterm>
+<indexterm><primary>SessionStateManager</primary><secondary>SeqOutAndAdvance</secondary></indexterm>
+<para><computeroutput>uint64_t SessionStateManager::SeqOutAndAdvance ( )</computeroutput></para><para>
+
+<para>Advances the outgoing sequence number and returns the previous value. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The previous outgoing sequence number </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l01104">KTN::CME::CmeAlgo::Send()</link>, and <link linkend="_l00889">KTN::CME::CmeGT5::Send()</link>.</para>
+</section>
+<anchor xml:id="_class_session_state_manager_1a19de96fac58be7f6fe78ea2ecc3e5730"/><section>
+    <title>Sessid()</title>
+<indexterm><primary>Sessid</primary><secondary>SessionStateManager</secondary></indexterm>
+<indexterm><primary>SessionStateManager</primary><secondary>Sessid</secondary></indexterm>
+<para><computeroutput>const string &amp; SessionStateManager::Sessid ( ) const</computeroutput></para><para>
+
+<para>Gets the session ID. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The session ID </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_session_state_manager_1a2a20b733e4101b41a00fd744d2573682"/><section>
+    <title>SetFirmid()</title>
+<indexterm><primary>SetFirmid</primary><secondary>SessionStateManager</secondary></indexterm>
+<indexterm><primary>SessionStateManager</primary><secondary>SetFirmid</secondary></indexterm>
+<para><computeroutput>void SessionStateManager::SetFirmid (const string &amp; firmid)</computeroutput></para><para>
+
+<para>Sets the firm ID. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>firmid</entry><entry>
+<para>The firm ID </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00132">Update()</link>.</para>
+</section>
+<anchor xml:id="_class_session_state_manager_1a6fd3b746ce959a77fa132bb453e2ac17"/><section>
+    <title>SetLastHb()</title>
+<indexterm><primary>SetLastHb</primary><secondary>SessionStateManager</secondary></indexterm>
+<indexterm><primary>SessionStateManager</primary><secondary>SetLastHb</secondary></indexterm>
+<para><computeroutput>void SessionStateManager::SetLastHb (uint64_t hb)</computeroutput></para><para>
+
+<para>Sets the timestamp of the last heartbeat. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>hb</entry><entry>
+<para>The timestamp of the last heartbeat </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_session_state_manager_1a4db72eb3c88fd2e817934005a60bc5ac"/><section>
+    <title>SetPrevuuid()</title>
+<indexterm><primary>SetPrevuuid</primary><secondary>SessionStateManager</secondary></indexterm>
+<indexterm><primary>SessionStateManager</primary><secondary>SetPrevuuid</secondary></indexterm>
+<para><computeroutput>void SessionStateManager::SetPrevuuid (uint64_t prevuuid)</computeroutput></para><para>
+
+<para>Sets the previous UUID. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>prevuuid</entry><entry>
+<para>The previous UUID </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00132">Update()</link>.</para>
+</section>
+<anchor xml:id="_class_session_state_manager_1ac468c5be957c75843f5a1a178e962c81"/><section>
+    <title>SetReqId()</title>
+<indexterm><primary>SetReqId</primary><secondary>SessionStateManager</secondary></indexterm>
+<indexterm><primary>SessionStateManager</primary><secondary>SetReqId</secondary></indexterm>
+<para><computeroutput>void SessionStateManager::SetReqId (uint64_t id)</computeroutput></para><para>
+
+<para>Sets the request ID. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>id</entry><entry>
+<para>The request ID </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_session_state_manager_1ad078d664d8a8af2162a188d185c4dc0d"/><section>
+    <title>SetSegid()</title>
+<indexterm><primary>SetSegid</primary><secondary>SessionStateManager</secondary></indexterm>
+<indexterm><primary>SessionStateManager</primary><secondary>SetSegid</secondary></indexterm>
+<para><computeroutput>void SessionStateManager::SetSegid (int segid)</computeroutput></para><para>
+
+<para>Sets the segment ID. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>segid</entry><entry>
+<para>The segment ID </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00132">Update()</link>.</para>
+</section>
+<anchor xml:id="_class_session_state_manager_1a1e7761bc13940162a72692d68e7d9ff0"/><section>
+    <title>SetSeqIn()</title>
+<indexterm><primary>SetSeqIn</primary><secondary>SessionStateManager</secondary></indexterm>
+<indexterm><primary>SessionStateManager</primary><secondary>SetSeqIn</secondary></indexterm>
+<para><computeroutput>void SessionStateManager::SetSeqIn (uint64_t seqIn)</computeroutput></para><para>
+
+<para>Sets the incoming sequence number. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>seqIn</entry><entry>
+<para>The incoming sequence number </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00132">Update()</link>.</para>
+</section>
+<anchor xml:id="_class_session_state_manager_1aeb4486e832fe4c1c88b53bdc4adc2950"/><section>
+    <title>SetSeqOut()</title>
+<indexterm><primary>SetSeqOut</primary><secondary>SessionStateManager</secondary></indexterm>
+<indexterm><primary>SessionStateManager</primary><secondary>SetSeqOut</secondary></indexterm>
+<para><computeroutput>void SessionStateManager::SetSeqOut (uint64_t seqOut, bool persist)</computeroutput></para><para>
+
+<para>Sets the outgoing sequence number. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>seqOut</entry><entry>
+<para>The outgoing sequence number </para>
+</entry>
+                            </row>
+                            <row>
+<entry>persist</entry><entry>
+<para>Flag indicating whether to persist the sequence number </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00132">Update()</link>.</para>
+</section>
+<anchor xml:id="_class_session_state_manager_1a021411060eb1bde86fa63182ddcea410"/><section>
+    <title>SetSessid()</title>
+<indexterm><primary>SetSessid</primary><secondary>SessionStateManager</secondary></indexterm>
+<indexterm><primary>SessionStateManager</primary><secondary>SetSessid</secondary></indexterm>
+<para><computeroutput>void SessionStateManager::SetSessid (const string &amp; sessid)</computeroutput></para><para>
+
+<para>Sets the session ID. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>sessid</entry><entry>
+<para>The session ID </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00132">Update()</link>.</para>
+</section>
+<anchor xml:id="_class_session_state_manager_1adc1e6caca2cf1f86210010866491e94d"/><section>
+    <title>SetUuid()</title>
+<indexterm><primary>SetUuid</primary><secondary>SessionStateManager</secondary></indexterm>
+<indexterm><primary>SessionStateManager</primary><secondary>SetUuid</secondary></indexterm>
+<para><computeroutput>void SessionStateManager::SetUuid (uint64_t uuid)</computeroutput></para><para>
+
+<para>Sets the UUID. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>uuid</entry><entry>
+<para>The UUID </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00132">Update()</link>.</para>
+</section>
+<anchor xml:id="_class_session_state_manager_1a4d256d9b2e4ddea0b71393976ff754b3"/><section>
+    <title>Stop()</title>
+<indexterm><primary>Stop</primary><secondary>SessionStateManager</secondary></indexterm>
+<indexterm><primary>SessionStateManager</primary><secondary>Stop</secondary></indexterm>
+<para><computeroutput>void SessionStateManager::Stop ( )</computeroutput></para><para>
+
+<para>Stops the session state manager. </para>
+</para>
+<para>
+References <link linkend="_l00023">KTN::CME::IL3::EnumSessionState::Disconnected</link>, <link linkend="_l00263">onStateChange()</link>, and <link linkend="_l00037">KTN::Core::HeartbeatMonitor::Stop()</link>.</para>
+</section>
+<anchor xml:id="_class_session_state_manager_1a17085e14d61ad39378381e0c901ddc51"/><section>
+    <title>Update()</title>
+<indexterm><primary>Update</primary><secondary>SessionStateManager</secondary></indexterm>
+<indexterm><primary>SessionStateManager</primary><secondary>Update</secondary></indexterm>
+<para><computeroutput>void SessionStateManager::Update ( )</computeroutput></para><para>
+
+<para>Updates the session state manager. </para>
+</para>
+<para>
+References <link linkend="_l00036">SessSvc::Persist()</link>.</para>
+<para>
+Referenced by <link linkend="_l00029">Init()</link>, <link linkend="_l00164">SetFirmid()</link>, <link linkend="_l00173">SetPrevuuid()</link>, <link linkend="_l00182">SetSegid()</link>, <link linkend="_l00192">SetSeqIn()</link>, <link linkend="_l00207">SetSeqOut()</link>, <link linkend="_l00217">SetSessid()</link>, and <link linkend="_l00226">SetUuid()</link>.</para>
+</section>
+<anchor xml:id="_class_session_state_manager_1a55c0af0d0bb8a9f389bcfa9f230e9d6a"/><section>
+    <title>Uuid()</title>
+<indexterm><primary>Uuid</primary><secondary>SessionStateManager</secondary></indexterm>
+<indexterm><primary>SessionStateManager</primary><secondary>Uuid</secondary></indexterm>
+<para><computeroutput>uint64_t SessionStateManager::Uuid ( ) const</computeroutput></para><para>
+
+<para>Gets the UUID. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The UUID </para>
+</formalpara>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_session_state_manager_1a8c152ca3470f3862496152e419f15971"/><section>
+    <title>CurrentState</title>
+<indexterm><primary>CurrentState</primary><secondary>SessionStateManager</secondary></indexterm>
+<indexterm><primary>SessionStateManager</primary><secondary>CurrentState</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_enum_session_state_1a1a4fdd123ba195de2c11897d7329f645">EnumSessionState::Enum</link> SessionStateManager::CurrentState</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+exchsupport/cme/il3/SessionStateManager.hppexchsupport/cme/il3/SessionStateManager.cpp</section>
+</section>

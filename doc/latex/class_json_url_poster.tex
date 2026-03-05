@@ -1,0 +1,103 @@
+\doxysection{Json\+Url\+Poster Class Reference}
+\hypertarget{class_json_url_poster}{}\label{class_json_url_poster}\index{JsonUrlPoster@{JsonUrlPoster}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_json_url_poster_ab6504e450fbc37ce659c03760c9dd5ee}{Json\+Url\+Poster}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{class_json_url_poster}{Json\+Url\+Poster} class. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_json_url_poster_a006e65d01a2e62b56fae49d3a2b59860}{\texorpdfstring{$\sim$}{\string~}\+Json\+Url\+Poster}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{class_json_url_poster}{Json\+Url\+Poster} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{class_json_url_poster_ac7f3bcb6661686120c4515757216a8fe}{Write\+Callback}} (void \texorpdfstring{$\ast$}{*}contents, size\+\_\+t size, size\+\_\+t nmemb, void \texorpdfstring{$\ast$}{*}userp)
+\begin{DoxyCompactList}\small\item\em Callback function for writing response data. \end{DoxyCompactList}\item 
+static std\+::string \mbox{\hyperlink{class_json_url_poster_a4e773945c46de2c9be9534923844e3bf}{Post}} (const std\+::string \&url, const tr1\+::unordered\+\_\+map$<$ std\+::string, std\+::string $>$ \&postfields)
+\begin{DoxyCompactList}\small\item\em Sends a POST request to the specified URL with the given postfields. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_json_url_poster_ab6504e450fbc37ce659c03760c9dd5ee}\index{JsonUrlPoster@{JsonUrlPoster}!JsonUrlPoster@{JsonUrlPoster}}
+\index{JsonUrlPoster@{JsonUrlPoster}!JsonUrlPoster@{JsonUrlPoster}}
+\doxysubsubsection{\texorpdfstring{JsonUrlPoster()}{JsonUrlPoster()}}
+{\footnotesize\ttfamily \label{class_json_url_poster_ab6504e450fbc37ce659c03760c9dd5ee} 
+Json\+Url\+Poster\+::\+Json\+Url\+Poster (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor for \doxylink{class_json_url_poster}{Json\+Url\+Poster} class. 
+
+\Hypertarget{class_json_url_poster_a006e65d01a2e62b56fae49d3a2b59860}\index{JsonUrlPoster@{JsonUrlPoster}!````~JsonUrlPoster@{\texorpdfstring{$\sim$}{\string~}JsonUrlPoster}}
+\index{````~JsonUrlPoster@{\texorpdfstring{$\sim$}{\string~}JsonUrlPoster}!JsonUrlPoster@{JsonUrlPoster}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}JsonUrlPoster()}{\string~JsonUrlPoster()}}
+{\footnotesize\ttfamily \label{class_json_url_poster_a006e65d01a2e62b56fae49d3a2b59860} 
+Json\+Url\+Poster\+::\texorpdfstring{$\sim$}{\string~}\+Json\+Url\+Poster (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor for \doxylink{class_json_url_poster}{Json\+Url\+Poster} class. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_json_url_poster_a4e773945c46de2c9be9534923844e3bf}\index{JsonUrlPoster@{JsonUrlPoster}!Post@{Post}}
+\index{Post@{Post}!JsonUrlPoster@{JsonUrlPoster}}
+\doxysubsubsection{\texorpdfstring{Post()}{Post()}}
+{\footnotesize\ttfamily \label{class_json_url_poster_a4e773945c46de2c9be9534923844e3bf} 
+static std\+::string Json\+Url\+Poster\+::\+Post (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{url}{, }\item[{const tr1\+::unordered\+\_\+map$<$ std\+::string, std\+::string $>$ \&}]{postfields}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Sends a POST request to the specified URL with the given postfields. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em url} & The URL to send the POST request to. \\
+\hline
+{\em postfields} & The key-\/value pairs of the postfields to include in the request. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The response received from the server. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00043}{Write\+Callback()}}.
+
+\Hypertarget{class_json_url_poster_ac7f3bcb6661686120c4515757216a8fe}\index{JsonUrlPoster@{JsonUrlPoster}!WriteCallback@{WriteCallback}}
+\index{WriteCallback@{WriteCallback}!JsonUrlPoster@{JsonUrlPoster}}
+\doxysubsubsection{\texorpdfstring{WriteCallback()}{WriteCallback()}}
+{\footnotesize\ttfamily \label{class_json_url_poster_ac7f3bcb6661686120c4515757216a8fe} 
+static size\+\_\+t Json\+Url\+Poster\+::\+Write\+Callback (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{contents}{, }\item[{size\+\_\+t}]{size}{, }\item[{size\+\_\+t}]{nmemb}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{userp}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Callback function for writing response data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em contents} & Pointer to the response data. \\
+\hline
+{\em size} & Size of each element in the response data. \\
+\hline
+{\em nmemb} & Number of elements in the response data. \\
+\hline
+{\em userp} & Pointer to the user data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The total size of the response data. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00057}{Post()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Rest/Json\+Url\+Poster.\+hpp\item 
+Rest/Json\+Url\+Poster.\+cpp\end{DoxyCompactItemize}

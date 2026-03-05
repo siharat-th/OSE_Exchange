@@ -1,0 +1,182 @@
+\doxysection{KTN\+::REPORTER\+::Order\+Reporter\+V5 Class Reference}
+\hypertarget{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5}{}\label{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5}\index{KTN::REPORTER::OrderReporterV5@{KTN::REPORTER::OrderReporterV5}}
+
+
+The \doxylink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5}{Order\+Reporter\+V5} class is responsible for reporting orders.  
+
+
+
+
+{\ttfamily \#include $<$Order\+Reporter\+V5.\+hpp$>$}
+
+Inheritance diagram for KTN\+::REPORTER\+::Order\+Reporter\+V5\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5_ae1e26c2953037d6a0a799ff445fb39cf}{Order\+Reporter\+V5}} (string owner)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5}{Order\+Reporter\+V5} object with the specified owner. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5_afcd2cd4ab541e0746261053cb91cdf35}{\texorpdfstring{$\sim$}{\string~}\+Order\+Reporter\+V5}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5}{Order\+Reporter\+V5} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5_af07abba7131351f5b35831956ab43113}{Report}} (const \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord)
+\begin{DoxyCompactList}\small\item\em Reports the specified order. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5_a783cf5dcf27d1b89f63c349dfe7b11b2}{Do\+Work}} () override
+\begin{DoxyCompactList}\small\item\em Performs the work of the \doxylink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5}{Order\+Reporter\+V5} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5_a16c34fbcfef9702db4174e135fb3f8fc}{Stop\+Work}} ()
+\begin{DoxyCompactList}\small\item\em Stops the work of the \doxylink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5}{Order\+Reporter\+V5} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5_ae88277914d8ba98e76795aac4379b707}{Update\+Meta\+Params}} (const \mbox{\hyperlink{structalgometa}{algometa}} \&meta, bool certnr)
+\begin{DoxyCompactList}\small\item\em Updates the meta parameters with the specified values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5_add3b56b8859b39c2257eb4167a1d1802}{Update\+UGOMap}} (uint64\+\_\+t reqid, \mbox{\hyperlink{struct_user_info}{User\+Info}} ugo)
+\begin{DoxyCompactList}\small\item\em Updates the UGO map with the specified request ID and user info. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5_aacbf63f422baf9f6c511c000edd916c3}{Update\+Tag\+Map}} (uint64\+\_\+t reqid, string tag)
+\begin{DoxyCompactList}\small\item\em Updates the tag map with the specified request ID and tag. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5}{Order\+Reporter\+V5} class is responsible for reporting orders. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5_ae1e26c2953037d6a0a799ff445fb39cf}\index{KTN::REPORTER::OrderReporterV5@{KTN::REPORTER::OrderReporterV5}!OrderReporterV5@{OrderReporterV5}}
+\index{OrderReporterV5@{OrderReporterV5}!KTN::REPORTER::OrderReporterV5@{KTN::REPORTER::OrderReporterV5}}
+\doxysubsubsection{\texorpdfstring{OrderReporterV5()}{OrderReporterV5()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5_ae1e26c2953037d6a0a799ff445fb39cf} 
+Order\+Reporter\+V5\+::\+Order\+Reporter\+V5 (\begin{DoxyParamCaption}\item[{string}]{owner}{}\end{DoxyParamCaption})}
+
+
+
+Constructs an \doxylink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5}{Order\+Reporter\+V5} object with the specified owner. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & The owner of the \doxylink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5}{Order\+Reporter\+V5} object. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00123}{Settings\+::get()}}, and \mbox{\hyperlink{l00027}{KTN\+::\+REPORTER\+::\+Reporter\+Base\+::\+Start()}}.
+
+\Hypertarget{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5_afcd2cd4ab541e0746261053cb91cdf35}\index{KTN::REPORTER::OrderReporterV5@{KTN::REPORTER::OrderReporterV5}!````~OrderReporterV5@{\texorpdfstring{$\sim$}{\string~}OrderReporterV5}}
+\index{````~OrderReporterV5@{\texorpdfstring{$\sim$}{\string~}OrderReporterV5}!KTN::REPORTER::OrderReporterV5@{KTN::REPORTER::OrderReporterV5}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}OrderReporterV5()}{\string~OrderReporterV5()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5_afcd2cd4ab541e0746261053cb91cdf35} 
+Order\+Reporter\+V5\+::\texorpdfstring{$\sim$}{\string~}\+Order\+Reporter\+V5 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destroys the \doxylink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5}{Order\+Reporter\+V5} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5_a783cf5dcf27d1b89f63c349dfe7b11b2}\index{KTN::REPORTER::OrderReporterV5@{KTN::REPORTER::OrderReporterV5}!DoWork@{DoWork}}
+\index{DoWork@{DoWork}!KTN::REPORTER::OrderReporterV5@{KTN::REPORTER::OrderReporterV5}}
+\doxysubsubsection{\texorpdfstring{DoWork()}{DoWork()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5_a783cf5dcf27d1b89f63c349dfe7b11b2} 
+void Order\+Reporter\+V5\+::\+Do\+Work (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Performs the work of the \doxylink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5}{Order\+Reporter\+V5} object. 
+
+
+
+Implements \mbox{\hyperlink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_a449d2ccb3be9222bd06fef3b5155e3af}{KTN\+::\+REPORTER\+::\+Reporter\+Base}}.
+
+
+
+References \mbox{\hyperlink{l00191}{KTN\+::\+Core\+::\+SPSCRing\+Buffer$<$ T $>$\+::empty()}}, \mbox{\hyperlink{l00033}{KTN\+::\+REPORTER\+::\+Reporter\+Base\+::\+Log\+Me()}}, \mbox{\hyperlink{l00056}{KTN\+::\+Order\+Pod\+::\+Ord\+Exch}}, \mbox{\hyperlink{l00040}{KTN\+::\+Order\+Pod\+::secid}}, \mbox{\hyperlink{l00120}{KTN\+::\+REPORTER\+::\+Reporter\+Base\+::\+Send\+Json()}}, \mbox{\hyperlink{l00036}{KTN\+::\+Order\+Pod\+::timestamp}}, and \mbox{\hyperlink{l00141}{KTN\+::\+Core\+::\+SPSCRing\+Buffer$<$ T $>$\+::try\+\_\+pop()}}.
+
+\Hypertarget{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5_af07abba7131351f5b35831956ab43113}\index{KTN::REPORTER::OrderReporterV5@{KTN::REPORTER::OrderReporterV5}!Report@{Report}}
+\index{Report@{Report}!KTN::REPORTER::OrderReporterV5@{KTN::REPORTER::OrderReporterV5}}
+\doxysubsubsection{\texorpdfstring{Report()}{Report()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5_af07abba7131351f5b35831956ab43113} 
+void Order\+Reporter\+V5\+::\+Report (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&}]{ord}{}\end{DoxyParamCaption})}
+
+
+
+Reports the specified order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ord} & The order to be reported. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00084}{KTN\+::\+Core\+::\+SPSCRing\+Buffer$<$ T $>$\+::push()}}.
+
+\Hypertarget{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5_a16c34fbcfef9702db4174e135fb3f8fc}\index{KTN::REPORTER::OrderReporterV5@{KTN::REPORTER::OrderReporterV5}!StopWork@{StopWork}}
+\index{StopWork@{StopWork}!KTN::REPORTER::OrderReporterV5@{KTN::REPORTER::OrderReporterV5}}
+\doxysubsubsection{\texorpdfstring{StopWork()}{StopWork()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5_a16c34fbcfef9702db4174e135fb3f8fc} 
+void Order\+Reporter\+V5\+::\+Stop\+Work (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Stops the work of the \doxylink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5}{Order\+Reporter\+V5} object. 
+
+
+
+References \mbox{\hyperlink{l00049}{KTN\+::\+REPORTER\+::\+Reporter\+Base\+::\+Stop()}}.
+
+\Hypertarget{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5_ae88277914d8ba98e76795aac4379b707}\index{KTN::REPORTER::OrderReporterV5@{KTN::REPORTER::OrderReporterV5}!UpdateMetaParams@{UpdateMetaParams}}
+\index{UpdateMetaParams@{UpdateMetaParams}!KTN::REPORTER::OrderReporterV5@{KTN::REPORTER::OrderReporterV5}}
+\doxysubsubsection{\texorpdfstring{UpdateMetaParams()}{UpdateMetaParams()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5_ae88277914d8ba98e76795aac4379b707} 
+void Order\+Reporter\+V5\+::\+Update\+Meta\+Params (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structalgometa}{algometa}} \&}]{meta}{, }\item[{bool}]{certnr}{}\end{DoxyParamCaption})}
+
+
+
+Updates the meta parameters with the specified values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em meta} & The meta parameters to be updated. \\
+\hline
+{\em certnr} & A flag indicating whether to update the certificate number. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5_aacbf63f422baf9f6c511c000edd916c3}\index{KTN::REPORTER::OrderReporterV5@{KTN::REPORTER::OrderReporterV5}!UpdateTagMap@{UpdateTagMap}}
+\index{UpdateTagMap@{UpdateTagMap}!KTN::REPORTER::OrderReporterV5@{KTN::REPORTER::OrderReporterV5}}
+\doxysubsubsection{\texorpdfstring{UpdateTagMap()}{UpdateTagMap()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5_aacbf63f422baf9f6c511c000edd916c3} 
+void Order\+Reporter\+V5\+::\+Update\+Tag\+Map (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{reqid}{, }\item[{string}]{tag}{}\end{DoxyParamCaption})}
+
+
+
+Updates the tag map with the specified request ID and tag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reqid} & The request ID. \\
+\hline
+{\em tag} & The tag. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5_add3b56b8859b39c2257eb4167a1d1802}\index{KTN::REPORTER::OrderReporterV5@{KTN::REPORTER::OrderReporterV5}!UpdateUGOMap@{UpdateUGOMap}}
+\index{UpdateUGOMap@{UpdateUGOMap}!KTN::REPORTER::OrderReporterV5@{KTN::REPORTER::OrderReporterV5}}
+\doxysubsubsection{\texorpdfstring{UpdateUGOMap()}{UpdateUGOMap()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5_add3b56b8859b39c2257eb4167a1d1802} 
+void Order\+Reporter\+V5\+::\+Update\+UGOMap (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{reqid}{, }\item[{\mbox{\hyperlink{struct_user_info}{User\+Info}}}]{ugo}{}\end{DoxyParamCaption})}
+
+
+
+Updates the UGO map with the specified request ID and user info. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reqid} & The request ID. \\
+\hline
+{\em ugo} & The user info. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Reporters/Order\+Reporter\+V5.\+hpp\item 
+Reporters/Order\+Reporter\+V5.\+cpp\end{DoxyCompactItemize}

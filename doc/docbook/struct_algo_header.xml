@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_algo_header" xml:lang="en-US">
+<title>AlgoHeader Struct Reference</title>
+<indexterm><primary>AlgoHeader</primary></indexterm>
+<para>
+
+<para>Structure representing the header of an algorithm. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;algo_structs.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_struct_algo_header_1aabeb813d570b7cb4868d37befd69eb39">archetype</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_algo_header_1a533fbdd487d66358e72f353975253559">guid</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_algo_header_1a93c12a6de3416abf1a94997645af12d0">enabled</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_algo_header_1a78fd3c2d42b162b27ca5eb601a91ca92">reset_pos</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Structure representing the header of an algorithm. </para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_algo_header_1aabeb813d570b7cb4868d37befd69eb39"/><section>
+    <title>archetype</title>
+<indexterm><primary>archetype</primary><secondary>AlgoHeader</secondary></indexterm>
+<indexterm><primary>AlgoHeader</primary><secondary>archetype</secondary></indexterm>
+<para><computeroutput>string AlgoHeader::archetype</computeroutput></para>
+<para>The archetype of the algorithm. </para>
+</section>
+<anchor xml:id="_struct_algo_header_1a93c12a6de3416abf1a94997645af12d0"/><section>
+    <title>enabled</title>
+<indexterm><primary>enabled</primary><secondary>AlgoHeader</secondary></indexterm>
+<indexterm><primary>AlgoHeader</primary><secondary>enabled</secondary></indexterm>
+<para><computeroutput>int AlgoHeader::enabled</computeroutput></para>
+<para>Flag indicating if the algorithm is enabled. </para>
+</section>
+<anchor xml:id="_struct_algo_header_1a533fbdd487d66358e72f353975253559"/><section>
+    <title>guid</title>
+<indexterm><primary>guid</primary><secondary>AlgoHeader</secondary></indexterm>
+<indexterm><primary>AlgoHeader</primary><secondary>guid</secondary></indexterm>
+<para><computeroutput>string AlgoHeader::guid</computeroutput></para>
+<para>The GUID of the algorithm. </para>
+</section>
+<anchor xml:id="_struct_algo_header_1a78fd3c2d42b162b27ca5eb601a91ca92"/><section>
+    <title>reset_pos</title>
+<indexterm><primary>reset_pos</primary><secondary>AlgoHeader</secondary></indexterm>
+<indexterm><primary>AlgoHeader</primary><secondary>reset_pos</secondary></indexterm>
+<para><computeroutput>bool AlgoHeader::reset_pos</computeroutput></para>
+<para>Flag indicating if the position should be reset. </para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+AlgoSupport/algo_structs.hpp</section>
+</section>

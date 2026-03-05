@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structsidestate" xml:lang="en-US">
+<title>sidestate Struct Reference</title>
+<indexterm><primary>sidestate</primary></indexterm>
+<para>
+
+<para>Structure representing the state of a side. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;algo_structs.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_structsidestate_1a29902a7e17f0f73d8763852484507f82">lastPrice</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structsidestate_1a4c9994530d37f528b622656894dd4628">lastSize</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_structsidestate_1a8f82ba33bca1304a6c0533fbcbdcb164">inFlight</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_structsidestate_1a62144ac69e26ead27cb4a21ac84b329a">lastOrdernumSent</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_structsidestate_1a1a9a42133ee9ec66069eff194cb64eda">lastOrdernumRecd</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Structure representing the state of a side. </para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structsidestate_1a8f82ba33bca1304a6c0533fbcbdcb164"/><section>
+    <title>inFlight</title>
+<indexterm><primary>inFlight</primary><secondary>sidestate</secondary></indexterm>
+<indexterm><primary>sidestate</primary><secondary>inFlight</secondary></indexterm>
+<para><computeroutput>bool sidestate::inFlight</computeroutput></para>
+<para>Flag indicating if it is in flight. </para>
+</section>
+<anchor xml:id="_structsidestate_1a1a9a42133ee9ec66069eff194cb64eda"/><section>
+    <title>lastOrdernumRecd</title>
+<indexterm><primary>lastOrdernumRecd</primary><secondary>sidestate</secondary></indexterm>
+<indexterm><primary>sidestate</primary><secondary>lastOrdernumRecd</secondary></indexterm>
+<para><computeroutput>std::string sidestate::lastOrdernumRecd</computeroutput></para>
+<para>The last order number received. </para>
+</section>
+<anchor xml:id="_structsidestate_1a62144ac69e26ead27cb4a21ac84b329a"/><section>
+    <title>lastOrdernumSent</title>
+<indexterm><primary>lastOrdernumSent</primary><secondary>sidestate</secondary></indexterm>
+<indexterm><primary>sidestate</primary><secondary>lastOrdernumSent</secondary></indexterm>
+<para><computeroutput>std::string sidestate::lastOrdernumSent</computeroutput></para>
+<para>The last order number sent. </para>
+</section>
+<anchor xml:id="_structsidestate_1a29902a7e17f0f73d8763852484507f82"/><section>
+    <title>lastPrice</title>
+<indexterm><primary>lastPrice</primary><secondary>sidestate</secondary></indexterm>
+<indexterm><primary>sidestate</primary><secondary>lastPrice</secondary></indexterm>
+<para><computeroutput>int sidestate::lastPrice</computeroutput></para>
+<para>The last price. </para>
+</section>
+<anchor xml:id="_structsidestate_1a4c9994530d37f528b622656894dd4628"/><section>
+    <title>lastSize</title>
+<indexterm><primary>lastSize</primary><secondary>sidestate</secondary></indexterm>
+<indexterm><primary>sidestate</primary><secondary>lastSize</secondary></indexterm>
+<para><computeroutput>int sidestate::lastSize</computeroutput></para>
+<para>The last size. </para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+AlgoSupport/algo_structs.hpp</section>
+</section>

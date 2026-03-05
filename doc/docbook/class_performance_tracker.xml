@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_performance_tracker" xml:lang="en-US">
+<title>PerformanceTracker Class Reference</title>
+<indexterm><primary>PerformanceTracker</primary></indexterm>
+<para>
+
+<para>Class for tracking performance measurements. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;PerformanceTracker.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_performance_tracker_1acd1f98d080bf8c2278ea55e3b4e3c93b">startMeasurement</link> (const std::string &amp;name)</para>
+
+<para>Start a new performance measurement with the given name. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_performance_tracker_1a1706d7a094345aa09be06d525e1d2de3">stopMeasurement</link> (const std::string &amp;name)</para>
+
+<para>Stop the performance measurement with the given name. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_performance_tracker_1a26e7c423c28107c2046fdea0a5bbf38d">printMeasurements</link> ()</para>
+
+<para>Print the stats for all measurements. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_performance_tracker_1a8657fa4a126d0f6b47ce200af0485b75">clear</link> ()</para>
+
+<para>Clear all performance measurements. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Class for tracking performance measurements. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_performance_tracker_1a8657fa4a126d0f6b47ce200af0485b75"/><section>
+    <title>clear()</title>
+<indexterm><primary>clear</primary><secondary>PerformanceTracker</secondary></indexterm>
+<indexterm><primary>PerformanceTracker</primary><secondary>clear</secondary></indexterm>
+<para><computeroutput>void PerformanceTracker::clear ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Clear all performance measurements. </para>
+</para>
+<para>
+Referenced by <link linkend="_l00299">KTN::MultiSpreaderV3::Print()</link>, <link linkend="_l00328">KTN::Skewer::Print()</link>, <link linkend="_l00331">KTN::SkewTrader::Print()</link>, <link linkend="_l00307">KTN::Twap::Print()</link>, <link linkend="_l00826">KTN::CME::CmeAlgo::PrintLatencies()</link>, <link linkend="_l00805">KTN::CME::CmeGT5::PrintLatencies()</link>, <link linkend="_l00111">KTN::ExchangeBase2::PrintLatencies()</link>, and <link linkend="_l00614">KTN::TCP::EFVITcpV2::SendEFVI_Delegated()</link>.</para>
+</section>
+<anchor xml:id="_class_performance_tracker_1a26e7c423c28107c2046fdea0a5bbf38d"/><section>
+    <title>printMeasurements()</title>
+<indexterm><primary>printMeasurements</primary><secondary>PerformanceTracker</secondary></indexterm>
+<indexterm><primary>PerformanceTracker</primary><secondary>printMeasurements</secondary></indexterm>
+<para><computeroutput>void PerformanceTracker::printMeasurements ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Print the stats for all measurements. </para>
+</para>
+<para>
+Referenced by <link linkend="_l00108">KTN::AutoHedgeOB::Print()</link>, <link linkend="_l00299">KTN::MultiSpreaderV3::Print()</link>, <link linkend="_l00328">KTN::Skewer::Print()</link>, <link linkend="_l00331">KTN::SkewTrader::Print()</link>, <link linkend="_l00147">KTN::SqueezerOB::Print()</link>, <link linkend="_l00307">KTN::Twap::Print()</link>, <link linkend="_l00826">KTN::CME::CmeAlgo::PrintLatencies()</link>, <link linkend="_l00805">KTN::CME::CmeGT5::PrintLatencies()</link>, <link linkend="_l00111">KTN::ExchangeBase2::PrintLatencies()</link>, <link linkend="_l00618">KtnCmeMbo::PrintStats()</link>, <link linkend="_l00642">KtnCmeMdpV4::PrintStats()</link>, and <link linkend="_l00614">KTN::TCP::EFVITcpV2::SendEFVI_Delegated()</link>.</para>
+</section>
+<anchor xml:id="_class_performance_tracker_1acd1f98d080bf8c2278ea55e3b4e3c93b"/><section>
+    <title>startMeasurement()</title>
+<indexterm><primary>startMeasurement</primary><secondary>PerformanceTracker</secondary></indexterm>
+<indexterm><primary>PerformanceTracker</primary><secondary>startMeasurement</secondary></indexterm>
+<para><computeroutput>void PerformanceTracker::startMeasurement (const std::string &amp; name)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Start a new performance measurement with the given name. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>name</entry><entry>
+<para>The name of the performance measurement. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Referenced by <link linkend="_l00369">KTN::CME::CmeAlgo::onRecv()</link>, <link linkend="_l00365">KTN::CME::CmeGT5::onRecv()</link>, <link linkend="_l01104">KTN::CME::CmeAlgo::Send()</link>, <link linkend="_l00889">KTN::CME::CmeGT5::Send()</link>, <link linkend="_l00614">KTN::TCP::EFVITcpV2::SendEFVI_Delegated()</link>, and <link linkend="_l00987">KTN::CME::CmeGT5::SendHedgeInstruction()</link>.</para>
+</section>
+<anchor xml:id="_class_performance_tracker_1a1706d7a094345aa09be06d525e1d2de3"/><section>
+    <title>stopMeasurement()</title>
+<indexterm><primary>stopMeasurement</primary><secondary>PerformanceTracker</secondary></indexterm>
+<indexterm><primary>PerformanceTracker</primary><secondary>stopMeasurement</secondary></indexterm>
+<para><computeroutput>void PerformanceTracker::stopMeasurement (const std::string &amp; name)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Stop the performance measurement with the given name. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>name</entry><entry>
+<para>The name of the performance measurement. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Referenced by <link linkend="_l00369">KTN::CME::CmeAlgo::onRecv()</link>, <link linkend="_l00365">KTN::CME::CmeGT5::onRecv()</link>, <link linkend="_l01104">KTN::CME::CmeAlgo::Send()</link>, <link linkend="_l00889">KTN::CME::CmeGT5::Send()</link>, <link linkend="_l00614">KTN::TCP::EFVITcpV2::SendEFVI_Delegated()</link>, and <link linkend="_l00987">KTN::CME::CmeGT5::SendHedgeInstruction()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Core/PerformanceTracker.hpp</section>
+</section>

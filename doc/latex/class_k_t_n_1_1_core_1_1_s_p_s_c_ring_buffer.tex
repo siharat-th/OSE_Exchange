@@ -1,0 +1,259 @@
+\doxysection{KTN\+::Core\+::SPSCRing\+Buffer\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer}{}\label{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer}\index{KTN::Core::SPSCRingBuffer$<$ T $>$@{KTN::Core::SPSCRingBuffer$<$ T $>$}}
+
+
+A single-\/producer, single-\/consumer ring buffer implementation.  
+
+
+
+
+{\ttfamily \#include $<$SPSCRing\+Buffer.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_ac66ca66f76bdc4a4a3681527d1a13089}{SPSCRing\+Buffer}} (size\+\_\+t capacity)
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer}{SPSCRing\+Buffer} object with the specified capacity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_a4f971a6f8b0cba8749b1964a02888a17}{\texorpdfstring{$\sim$}{\string~}\+SPSCRing\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer}{SPSCRing\+Buffer} object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_a0dcec128a7780e98fd185bc73fac68e0}{enqueue}} (const T \&item, bool warmup=false)
+\begin{DoxyCompactList}\small\item\em Enqueues an item into the ring buffer. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_a801366abd6452d993f73064155c13d5e}{push}} (const T \&item, bool warmup=false)
+\begin{DoxyCompactList}\small\item\em Pushes an item into the ring buffer. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_a6a4493f50f8f4e04cb4c7d653a2dd192}{dequeue}} (T \&item)
+\begin{DoxyCompactList}\small\item\em Dequeues an item from the ring buffer. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_acf9bab28c1756271c56e838e5b3f51df}{try\+\_\+dequeue}} (T \&item)
+\begin{DoxyCompactList}\small\item\em Tries to dequeue an item from the ring buffer. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_afefdac61be09922cd73901c161a98f35}{try\+\_\+pop}} (T \&item)
+\begin{DoxyCompactList}\small\item\em Tries to pop an item from the ring buffer. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_aaaf03ff80c2aa18bf6fa8b6b2ded656d}{size}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current size of the ring buffer. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_ab7b603a4a71eb5d5570ee5cd4e69663f}{size\+\_\+approx}} () const
+\begin{DoxyCompactList}\small\item\em Gets an approximate size of the ring buffer. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_a5ce5dd8d884e84142abdcf16b18969bc}{empty}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the ring buffer is empty. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class KTN\+::\+Core\+::\+SPSCRing\+Buffer$<$ T $>$}
+A single-\/producer, single-\/consumer ring buffer implementation. 
+
+This class provides a thread-\/safe ring buffer that can be used in a single-\/producer, single-\/consumer scenario. It supports enqueueing and dequeueing elements, as well as checking the size and emptiness of the buffer.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of elements stored in the ring buffer. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_ac66ca66f76bdc4a4a3681527d1a13089}\index{KTN::Core::SPSCRingBuffer$<$ T $>$@{KTN::Core::SPSCRingBuffer$<$ T $>$}!SPSCRingBuffer@{SPSCRingBuffer}}
+\index{SPSCRingBuffer@{SPSCRingBuffer}!KTN::Core::SPSCRingBuffer$<$ T $>$@{KTN::Core::SPSCRingBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SPSCRingBuffer()}{SPSCRingBuffer()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_ac66ca66f76bdc4a4a3681527d1a13089} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer}{KTN\+::\+Core\+::\+SPSCRing\+Buffer}}$<$ T $>$\+::\+SPSCRing\+Buffer (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{capacity}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a new \doxylink{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer}{SPSCRing\+Buffer} object with the specified capacity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em capacity} & The capacity of the ring buffer. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_a4f971a6f8b0cba8749b1964a02888a17}\index{KTN::Core::SPSCRingBuffer$<$ T $>$@{KTN::Core::SPSCRingBuffer$<$ T $>$}!````~SPSCRingBuffer@{\texorpdfstring{$\sim$}{\string~}SPSCRingBuffer}}
+\index{````~SPSCRingBuffer@{\texorpdfstring{$\sim$}{\string~}SPSCRingBuffer}!KTN::Core::SPSCRingBuffer$<$ T $>$@{KTN::Core::SPSCRingBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}SPSCRingBuffer()}{\string~SPSCRingBuffer()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_a4f971a6f8b0cba8749b1964a02888a17} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer}{KTN\+::\+Core\+::\+SPSCRing\+Buffer}}$<$ T $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer}{SPSCRing\+Buffer}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destroys the \doxylink{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer}{SPSCRing\+Buffer} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_a6a4493f50f8f4e04cb4c7d653a2dd192}\index{KTN::Core::SPSCRingBuffer$<$ T $>$@{KTN::Core::SPSCRingBuffer$<$ T $>$}!dequeue@{dequeue}}
+\index{dequeue@{dequeue}!KTN::Core::SPSCRingBuffer$<$ T $>$@{KTN::Core::SPSCRingBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{dequeue()}{dequeue()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_a6a4493f50f8f4e04cb4c7d653a2dd192} 
+template$<$typename T $>$ \\
+bool \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer}{KTN\+::\+Core\+::\+SPSCRing\+Buffer}}$<$ T $>$\+::dequeue (\begin{DoxyParamCaption}\item[{T \&}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Dequeues an item from the ring buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & The dequeued item. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if an item was successfully dequeued, false otherwise. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00050}{Order\+Nums\+::\+Next\+Order\+Id()}}, \mbox{\hyperlink{l00062}{Order\+Nums\+::\+Next\+Order\+Id()}}, \mbox{\hyperlink{l00074}{Order\+Nums\+::\+Next\+Order\+Id2()}}, \mbox{\hyperlink{l00098}{Order\+Nums\+::\+Next\+Req\+Id()}}, and \mbox{\hyperlink{l00086}{Order\+Nums\+::\+Next\+Req\+Id\+Encoded()}}.
+
+\Hypertarget{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_a5ce5dd8d884e84142abdcf16b18969bc}\index{KTN::Core::SPSCRingBuffer$<$ T $>$@{KTN::Core::SPSCRingBuffer$<$ T $>$}!empty@{empty}}
+\index{empty@{empty}!KTN::Core::SPSCRingBuffer$<$ T $>$@{KTN::Core::SPSCRingBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_a5ce5dd8d884e84142abdcf16b18969bc} 
+template$<$typename T $>$ \\
+bool \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer}{KTN\+::\+Core\+::\+SPSCRing\+Buffer}}$<$ T $>$\+::empty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the ring buffer is empty. 
+
+\begin{DoxyReturn}{Returns}
+true if the ring buffer is empty, false otherwise. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00036}{KTN\+::\+REPORTER\+::\+Algo\+PLReporter\+::\+Do\+Work()}}, \mbox{\hyperlink{l00039}{KTN\+::\+REPORTER\+::\+Algo\+V3\+Reporter\+::\+Do\+Work()}}, \mbox{\hyperlink{l00056}{KTN\+::\+REPORTER\+::\+Order\+Reporter\+V5\+::\+Do\+Work()}}, and \mbox{\hyperlink{l00100}{Audit\+Trail\+Writer\+V3\+::\+Size()}}.
+
+\Hypertarget{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_a0dcec128a7780e98fd185bc73fac68e0}\index{KTN::Core::SPSCRingBuffer$<$ T $>$@{KTN::Core::SPSCRingBuffer$<$ T $>$}!enqueue@{enqueue}}
+\index{enqueue@{enqueue}!KTN::Core::SPSCRingBuffer$<$ T $>$@{KTN::Core::SPSCRingBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{enqueue()}{enqueue()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_a0dcec128a7780e98fd185bc73fac68e0} 
+template$<$typename T $>$ \\
+bool \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer}{KTN\+::\+Core\+::\+SPSCRing\+Buffer}}$<$ T $>$\+::enqueue (\begin{DoxyParamCaption}\item[{const T \&}]{item}{, }\item[{bool}]{warmup}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Enqueues an item into the ring buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & The item to enqueue. \\
+\hline
+{\em warmup} & Flag indicating whether this is a warmup enqueue. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the item was successfully enqueued, false otherwise. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00019}{KTN\+::\+CME\+::\+Cme\+Algo\+::\+Cme\+Algo()}}, \mbox{\hyperlink{l00019}{KTN\+::\+CME\+::\+Cme\+GT5\+::\+Cme\+GT5()}}, \mbox{\hyperlink{l00027}{Log\+Svc\+::\+Log\+Me()}}, \mbox{\hyperlink{l00614}{Order\+Manager\+V5\+::\+Process\+Order\+Id()}}, and \mbox{\hyperlink{l00030}{Zmq\+Logger\+::\+Write\+Line()}}.
+
+\Hypertarget{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_a801366abd6452d993f73064155c13d5e}\index{KTN::Core::SPSCRingBuffer$<$ T $>$@{KTN::Core::SPSCRingBuffer$<$ T $>$}!push@{push}}
+\index{push@{push}!KTN::Core::SPSCRingBuffer$<$ T $>$@{KTN::Core::SPSCRingBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_a801366abd6452d993f73064155c13d5e} 
+template$<$typename T $>$ \\
+bool \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer}{KTN\+::\+Core\+::\+SPSCRing\+Buffer}}$<$ T $>$\+::push (\begin{DoxyParamCaption}\item[{const T \&}]{item}{, }\item[{bool}]{warmup}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Pushes an item into the ring buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & The item to push. \\
+\hline
+{\em warmup} & Flag indicating whether this is a warmup push. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the item was successfully pushed, false otherwise. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00874}{KTN\+::\+CME\+::\+Cme\+Algo\+::\+Command()}}, \mbox{\hyperlink{l00822}{KTN\+::\+CME\+::\+Cme\+GT5\+::\+Command()}}, \mbox{\hyperlink{l00031}{KTN\+::\+REPORTER\+::\+Algo\+PLReporter\+::\+Report()}}, \mbox{\hyperlink{l00028}{KTN\+::\+REPORTER\+::\+Algo\+V3\+Reporter\+::\+Report()}}, \mbox{\hyperlink{l00046}{KTN\+::\+REPORTER\+::\+Order\+Reporter\+V5\+::\+Report()}}, \mbox{\hyperlink{l01066}{KTN\+::\+CME\+::\+Cme\+Algo\+::\+Send\+Mass\+Action()}}, \mbox{\hyperlink{l00870}{KTN\+::\+CME\+::\+Cme\+GT5\+::\+Send\+Mass\+Action()}}, \mbox{\hyperlink{l00151}{KTN\+::\+CME\+::\+Cme\+Algo\+::\+Stop()}}, \mbox{\hyperlink{l00147}{KTN\+::\+CME\+::\+Cme\+GT5\+::\+Stop()}}, and \mbox{\hyperlink{l00117}{Audit\+Trail\+Writer\+V3\+::\+Write()}}.
+
+\Hypertarget{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_aaaf03ff80c2aa18bf6fa8b6b2ded656d}\index{KTN::Core::SPSCRingBuffer$<$ T $>$@{KTN::Core::SPSCRingBuffer$<$ T $>$}!size@{size}}
+\index{size@{size}!KTN::Core::SPSCRingBuffer$<$ T $>$@{KTN::Core::SPSCRingBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_aaaf03ff80c2aa18bf6fa8b6b2ded656d} 
+template$<$typename T $>$ \\
+size\+\_\+t \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer}{KTN\+::\+Core\+::\+SPSCRing\+Buffer}}$<$ T $>$\+::size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the current size of the ring buffer. 
+
+\begin{DoxyReturn}{Returns}
+The current size of the ring buffer. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00118}{Order\+Nums\+::\+Ord\+Id\+Size()}}, and \mbox{\hyperlink{l00127}{Order\+Nums\+::\+Req\+Id\+Size()}}.
+
+\Hypertarget{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_ab7b603a4a71eb5d5570ee5cd4e69663f}\index{KTN::Core::SPSCRingBuffer$<$ T $>$@{KTN::Core::SPSCRingBuffer$<$ T $>$}!size\_approx@{size\_approx}}
+\index{size\_approx@{size\_approx}!KTN::Core::SPSCRingBuffer$<$ T $>$@{KTN::Core::SPSCRingBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size\_approx()}{size\_approx()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_ab7b603a4a71eb5d5570ee5cd4e69663f} 
+template$<$typename T $>$ \\
+size\+\_\+t \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer}{KTN\+::\+Core\+::\+SPSCRing\+Buffer}}$<$ T $>$\+::size\+\_\+approx (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets an approximate size of the ring buffer. 
+
+\begin{DoxyReturn}{Returns}
+An approximate size of the ring buffer. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00041}{Zmq\+Logger\+::\+Run()}}.
+
+\Hypertarget{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_acf9bab28c1756271c56e838e5b3f51df}\index{KTN::Core::SPSCRingBuffer$<$ T $>$@{KTN::Core::SPSCRingBuffer$<$ T $>$}!try\_dequeue@{try\_dequeue}}
+\index{try\_dequeue@{try\_dequeue}!KTN::Core::SPSCRingBuffer$<$ T $>$@{KTN::Core::SPSCRingBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{try\_dequeue()}{try\_dequeue()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_acf9bab28c1756271c56e838e5b3f51df} 
+template$<$typename T $>$ \\
+bool \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer}{KTN\+::\+Core\+::\+SPSCRing\+Buffer}}$<$ T $>$\+::try\+\_\+dequeue (\begin{DoxyParamCaption}\item[{T \&}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Tries to dequeue an item from the ring buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & The dequeued item. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if an item was successfully dequeued, false otherwise. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00041}{Zmq\+Logger\+::\+Run()}}.
+
+\Hypertarget{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_afefdac61be09922cd73901c161a98f35}\index{KTN::Core::SPSCRingBuffer$<$ T $>$@{KTN::Core::SPSCRingBuffer$<$ T $>$}!try\_pop@{try\_pop}}
+\index{try\_pop@{try\_pop}!KTN::Core::SPSCRingBuffer$<$ T $>$@{KTN::Core::SPSCRingBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{try\_pop()}{try\_pop()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_afefdac61be09922cd73901c161a98f35} 
+template$<$typename T $>$ \\
+bool \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer}{KTN\+::\+Core\+::\+SPSCRing\+Buffer}}$<$ T $>$\+::try\+\_\+pop (\begin{DoxyParamCaption}\item[{T \&}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Tries to pop an item from the ring buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & The popped item. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if an item was successfully popped, false otherwise. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00036}{KTN\+::\+REPORTER\+::\+Algo\+PLReporter\+::\+Do\+Work()}}, \mbox{\hyperlink{l00039}{KTN\+::\+REPORTER\+::\+Algo\+V3\+Reporter\+::\+Do\+Work()}}, \mbox{\hyperlink{l00056}{KTN\+::\+REPORTER\+::\+Order\+Reporter\+V5\+::\+Do\+Work()}}, \mbox{\hyperlink{l00026}{Quoter\+V3\+::\+Get()}}, \mbox{\hyperlink{l00058}{Quoter\+V3\+::\+Next\+Mod()}}, and \mbox{\hyperlink{l00033}{Quoter\+V3\+::\+Next\+New()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Maps/SPSCRing\+Buffer.\+hpp\end{DoxyCompactItemize}

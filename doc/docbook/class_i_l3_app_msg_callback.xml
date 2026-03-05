@@ -1,0 +1,617 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_i_l3_app_msg_callback" xml:lang="en-US">
+<title>IL3AppMsgCallback Class Reference</title>
+<indexterm><primary>IL3AppMsgCallback</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_i_l3_app_msg_callback">IL3AppMsgCallback</link> class is an abstract base class that defines the interface for handling various CME iLink3 execution report messages and other related application level messages. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;IL3AppMsgCallback.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_i_l3_app_msg_callback_1a51f05f6ef0df216cae07ad9573ea3245">IL3AppMsgCallback</link> ()</para>
+
+<para>Default constructor for <link linkend="_class_i_l3_app_msg_callback">IL3AppMsgCallback</link>. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_i_l3_app_msg_callback_1a800ec6c866f012e1f91e52342508b446">~IL3AppMsgCallback</link> ()</para>
+
+<para>Virtual destructor for <link linkend="_class_i_l3_app_msg_callback">IL3AppMsgCallback</link>. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_i_l3_app_msg_callback_1a4db80bca9b797062a25bce47eb183995">onExecRptNew</link> (<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_new_msg_1_1_block_data">ExecutionReportNewMsg::BlockData</link> *data, int segid)=0</para>
+
+<para>This method is called when a new execution report message is received. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_i_l3_app_msg_callback_1acf6eef7a79102f333438e10345c8b866">onExecRptModify</link> (<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_modify_msg_1_1_block_data">ExecutionReportModifyMsg::BlockData</link> *data, int segid)=0</para>
+
+<para>This method is called when an execution report modify message is received. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_i_l3_app_msg_callback_1aa8f0053a273dd84fa7477b305f1db5b2">onExecRptCancel</link> (<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_cancel_msg_1_1_block_data">ExecutionReportCancelMsg::BlockData</link> *data, int segid)=0</para>
+
+<para>This method is called when an execution report cancel message is received. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_i_l3_app_msg_callback_1a354edcd73f71f0b1f1ab0ebbc3d61d34">onExecRptTradeOutright</link> (<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_outright_msg_1_1_block_data">ExecutionReportTradeOutrightMsg::BlockData</link> *data, int segid)=0</para>
+
+<para>This method is called when an execution report trade outright message is received. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_i_l3_app_msg_callback_1aee31515a6ca4cc88833c3c0a01fff6e5">onExecRptTradeSpread</link> (<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_spread_msg_1_1_block_data">ExecutionReportTradeSpreadMsg::BlockData</link> *data, int segid)=0</para>
+
+<para>This method is called when an execution report trade spread message is received. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_i_l3_app_msg_callback_1a64ff7d5b9ad23a7b20612fa4ca858aff">onExecRptTradeSpreadLeg</link> (<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_spread_leg_msg_1_1_block_data">ExecutionReportTradeSpreadLegMsg::BlockData</link> *data, int segid)=0</para>
+
+<para>This method is called when an execution report trade spread leg message is received. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_i_l3_app_msg_callback_1a5b9e0518d72108274af542907a2c6213">onExecRptReject</link> (<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_reject_msg_1_1_block_data">ExecutionReportRejectMsg::BlockData</link> *data, int segid)=0</para>
+
+<para>This method is called when an execution report reject message is received. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_i_l3_app_msg_callback_1a05603ff69b8203bb58fb8d3a3566550f">onExecRptElimination</link> (<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_elimination_msg_1_1_block_data">ExecutionReportEliminationMsg::BlockData</link> *data, int segid)=0</para>
+
+<para>This method is called when an execution report elimination message is received. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_i_l3_app_msg_callback_1acc3417d4ed1a90eb37a3f4a2643ec873">onOrderMassActionReport</link> (<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data">OrderMassActionReportMsg::BlockData</link> *data, int segid)=0</para>
+
+<para>This method is called when an order mass action report message is received. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_i_l3_app_msg_callback_1addb776333052fe53842859d66755b306">onOrderCancelReject</link> (<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_reject_msg_1_1_block_data">OrderCancelRejectMsg::BlockData</link> *data, int segid)=0</para>
+
+<para>This method is called when an order cancel reject message is received. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_i_l3_app_msg_callback_1afbcae2f1f18268bb341e523c8ccf4542">onOrderCancelReplaceReject</link> (<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data">OrderCancelReplaceRejectMsg::BlockData</link> *data, int segid)=0</para>
+
+<para>This method is called when an order cancel replace reject message is received. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_i_l3_app_msg_callback_1ac896289d1bb226276c9a9bed05993b42">onPartyDetailsDefinitionRequestAck</link> (<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_ack_msg_1_1_block_data">PartyDetailsDefinitionRequestAckMsg::BlockData</link> *data, int segid)=0</para>
+
+<para>This method is called when a party details definition request acknowledgement message is received. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_i_l3_app_msg_callback_1acd9fd6ab047eda6ddadef4e28e69ca6b">onPartyDetailsListReport</link> (<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data">PartyDetailsListReportMsg::BlockData</link> *data, int segid)=0</para>
+
+<para>This method is called when a party details list report message is received. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_i_l3_app_msg_callback_1a58a27c1f2e288ef4f29f249e2179d8c6">onBusinessReject</link> (<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_business_reject_msg_1_1_block_data">BusinessRejectMsg::BlockData</link> *data, int segid)=0</para>
+
+<para>This method is called when a business reject message is received. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_i_l3_app_msg_callback">IL3AppMsgCallback</link> class is an abstract base class that defines the interface for handling various CME iLink3 execution report messages and other related application level messages. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_i_l3_app_msg_callback_1a51f05f6ef0df216cae07ad9573ea3245"/><section>
+    <title>IL3AppMsgCallback()</title>
+<indexterm><primary>IL3AppMsgCallback</primary><secondary>IL3AppMsgCallback</secondary></indexterm>
+<indexterm><primary>IL3AppMsgCallback</primary><secondary>IL3AppMsgCallback</secondary></indexterm>
+<para><computeroutput>IL3AppMsgCallback::IL3AppMsgCallback ( )</computeroutput></para><para>
+
+<para>Default constructor for <link linkend="_class_i_l3_app_msg_callback">IL3AppMsgCallback</link>. </para>
+</para>
+</section>
+<anchor xml:id="_class_i_l3_app_msg_callback_1a800ec6c866f012e1f91e52342508b446"/><section>
+    <title>~IL3AppMsgCallback()</title>
+<indexterm><primary>~IL3AppMsgCallback</primary><secondary>IL3AppMsgCallback</secondary></indexterm>
+<indexterm><primary>IL3AppMsgCallback</primary><secondary>~IL3AppMsgCallback</secondary></indexterm>
+<para><computeroutput>IL3AppMsgCallback::~IL3AppMsgCallback ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Virtual destructor for <link linkend="_class_i_l3_app_msg_callback">IL3AppMsgCallback</link>. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_i_l3_app_msg_callback_1a58a27c1f2e288ef4f29f249e2179d8c6"/><section>
+    <title>onBusinessReject()</title>
+<indexterm><primary>onBusinessReject</primary><secondary>IL3AppMsgCallback</secondary></indexterm>
+<indexterm><primary>IL3AppMsgCallback</primary><secondary>onBusinessReject</secondary></indexterm>
+<para><computeroutput>virtual void IL3AppMsgCallback::onBusinessReject (<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_business_reject_msg_1_1_block_data">BusinessRejectMsg::BlockData</link> * data, int segid)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>This method is called when a business reject message is received. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>data</entry><entry>
+<para>The block data of the business reject message. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>segid</entry><entry>
+<para>The segment ID. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_i_l3_app_msg_callback_1aa8f0053a273dd84fa7477b305f1db5b2"/><section>
+    <title>onExecRptCancel()</title>
+<indexterm><primary>onExecRptCancel</primary><secondary>IL3AppMsgCallback</secondary></indexterm>
+<indexterm><primary>IL3AppMsgCallback</primary><secondary>onExecRptCancel</secondary></indexterm>
+<para><computeroutput>virtual void IL3AppMsgCallback::onExecRptCancel (<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_cancel_msg_1_1_block_data">ExecutionReportCancelMsg::BlockData</link> * data, int segid)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>This method is called when an execution report cancel message is received. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>data</entry><entry>
+<para>The block data of the execution report cancel message. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>segid</entry><entry>
+<para>The segment ID. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_i_l3_app_msg_callback_1a05603ff69b8203bb58fb8d3a3566550f"/><section>
+    <title>onExecRptElimination()</title>
+<indexterm><primary>onExecRptElimination</primary><secondary>IL3AppMsgCallback</secondary></indexterm>
+<indexterm><primary>IL3AppMsgCallback</primary><secondary>onExecRptElimination</secondary></indexterm>
+<para><computeroutput>virtual void IL3AppMsgCallback::onExecRptElimination (<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_elimination_msg_1_1_block_data">ExecutionReportEliminationMsg::BlockData</link> * data, int segid)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>This method is called when an execution report elimination message is received. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>data</entry><entry>
+<para>The block data of the execution report elimination message. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>segid</entry><entry>
+<para>The segment ID. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_i_l3_app_msg_callback_1acf6eef7a79102f333438e10345c8b866"/><section>
+    <title>onExecRptModify()</title>
+<indexterm><primary>onExecRptModify</primary><secondary>IL3AppMsgCallback</secondary></indexterm>
+<indexterm><primary>IL3AppMsgCallback</primary><secondary>onExecRptModify</secondary></indexterm>
+<para><computeroutput>virtual void IL3AppMsgCallback::onExecRptModify (<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_modify_msg_1_1_block_data">ExecutionReportModifyMsg::BlockData</link> * data, int segid)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>This method is called when an execution report modify message is received. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>data</entry><entry>
+<para>The block data of the execution report modify message. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>segid</entry><entry>
+<para>The segment ID. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_i_l3_app_msg_callback_1a4db80bca9b797062a25bce47eb183995"/><section>
+    <title>onExecRptNew()</title>
+<indexterm><primary>onExecRptNew</primary><secondary>IL3AppMsgCallback</secondary></indexterm>
+<indexterm><primary>IL3AppMsgCallback</primary><secondary>onExecRptNew</secondary></indexterm>
+<para><computeroutput>virtual void IL3AppMsgCallback::onExecRptNew (<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_new_msg_1_1_block_data">ExecutionReportNewMsg::BlockData</link> * data, int segid)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>This method is called when a new execution report message is received. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>data</entry><entry>
+<para>The block data of the execution report new message. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>segid</entry><entry>
+<para>The segment ID. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_i_l3_app_msg_callback_1a5b9e0518d72108274af542907a2c6213"/><section>
+    <title>onExecRptReject()</title>
+<indexterm><primary>onExecRptReject</primary><secondary>IL3AppMsgCallback</secondary></indexterm>
+<indexterm><primary>IL3AppMsgCallback</primary><secondary>onExecRptReject</secondary></indexterm>
+<para><computeroutput>virtual void IL3AppMsgCallback::onExecRptReject (<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_reject_msg_1_1_block_data">ExecutionReportRejectMsg::BlockData</link> * data, int segid)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>This method is called when an execution report reject message is received. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>data</entry><entry>
+<para>The block data of the execution report reject message. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>segid</entry><entry>
+<para>The segment ID. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_i_l3_app_msg_callback_1a354edcd73f71f0b1f1ab0ebbc3d61d34"/><section>
+    <title>onExecRptTradeOutright()</title>
+<indexterm><primary>onExecRptTradeOutright</primary><secondary>IL3AppMsgCallback</secondary></indexterm>
+<indexterm><primary>IL3AppMsgCallback</primary><secondary>onExecRptTradeOutright</secondary></indexterm>
+<para><computeroutput>virtual void IL3AppMsgCallback::onExecRptTradeOutright (<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_outright_msg_1_1_block_data">ExecutionReportTradeOutrightMsg::BlockData</link> * data, int segid)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>This method is called when an execution report trade outright message is received. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>data</entry><entry>
+<para>The block data of the execution report trade outright message. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>segid</entry><entry>
+<para>The segment ID. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_i_l3_app_msg_callback_1aee31515a6ca4cc88833c3c0a01fff6e5"/><section>
+    <title>onExecRptTradeSpread()</title>
+<indexterm><primary>onExecRptTradeSpread</primary><secondary>IL3AppMsgCallback</secondary></indexterm>
+<indexterm><primary>IL3AppMsgCallback</primary><secondary>onExecRptTradeSpread</secondary></indexterm>
+<para><computeroutput>virtual void IL3AppMsgCallback::onExecRptTradeSpread (<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_spread_msg_1_1_block_data">ExecutionReportTradeSpreadMsg::BlockData</link> * data, int segid)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>This method is called when an execution report trade spread message is received. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>data</entry><entry>
+<para>The block data of the execution report trade spread message. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>segid</entry><entry>
+<para>The segment ID. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_i_l3_app_msg_callback_1a64ff7d5b9ad23a7b20612fa4ca858aff"/><section>
+    <title>onExecRptTradeSpreadLeg()</title>
+<indexterm><primary>onExecRptTradeSpreadLeg</primary><secondary>IL3AppMsgCallback</secondary></indexterm>
+<indexterm><primary>IL3AppMsgCallback</primary><secondary>onExecRptTradeSpreadLeg</secondary></indexterm>
+<para><computeroutput>virtual void IL3AppMsgCallback::onExecRptTradeSpreadLeg (<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_spread_leg_msg_1_1_block_data">ExecutionReportTradeSpreadLegMsg::BlockData</link> * data, int segid)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>This method is called when an execution report trade spread leg message is received. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>data</entry><entry>
+<para>The block data of the execution report trade spread leg message. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>segid</entry><entry>
+<para>The segment ID. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_i_l3_app_msg_callback_1addb776333052fe53842859d66755b306"/><section>
+    <title>onOrderCancelReject()</title>
+<indexterm><primary>onOrderCancelReject</primary><secondary>IL3AppMsgCallback</secondary></indexterm>
+<indexterm><primary>IL3AppMsgCallback</primary><secondary>onOrderCancelReject</secondary></indexterm>
+<para><computeroutput>virtual void IL3AppMsgCallback::onOrderCancelReject (<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_reject_msg_1_1_block_data">OrderCancelRejectMsg::BlockData</link> * data, int segid)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>This method is called when an order cancel reject message is received. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>data</entry><entry>
+<para>The block data of the order cancel reject message. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>segid</entry><entry>
+<para>The segment ID. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_i_l3_app_msg_callback_1afbcae2f1f18268bb341e523c8ccf4542"/><section>
+    <title>onOrderCancelReplaceReject()</title>
+<indexterm><primary>onOrderCancelReplaceReject</primary><secondary>IL3AppMsgCallback</secondary></indexterm>
+<indexterm><primary>IL3AppMsgCallback</primary><secondary>onOrderCancelReplaceReject</secondary></indexterm>
+<para><computeroutput>virtual void IL3AppMsgCallback::onOrderCancelReplaceReject (<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data">OrderCancelReplaceRejectMsg::BlockData</link> * data, int segid)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>This method is called when an order cancel replace reject message is received. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>data</entry><entry>
+<para>The block data of the order cancel replace reject message. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>segid</entry><entry>
+<para>The segment ID. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_i_l3_app_msg_callback_1acc3417d4ed1a90eb37a3f4a2643ec873"/><section>
+    <title>onOrderMassActionReport()</title>
+<indexterm><primary>onOrderMassActionReport</primary><secondary>IL3AppMsgCallback</secondary></indexterm>
+<indexterm><primary>IL3AppMsgCallback</primary><secondary>onOrderMassActionReport</secondary></indexterm>
+<para><computeroutput>virtual void IL3AppMsgCallback::onOrderMassActionReport (<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data">OrderMassActionReportMsg::BlockData</link> * data, int segid)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>This method is called when an order mass action report message is received. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>data</entry><entry>
+<para>The block data of the order mass action report message. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>segid</entry><entry>
+<para>The segment ID. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_i_l3_app_msg_callback_1ac896289d1bb226276c9a9bed05993b42"/><section>
+    <title>onPartyDetailsDefinitionRequestAck()</title>
+<indexterm><primary>onPartyDetailsDefinitionRequestAck</primary><secondary>IL3AppMsgCallback</secondary></indexterm>
+<indexterm><primary>IL3AppMsgCallback</primary><secondary>onPartyDetailsDefinitionRequestAck</secondary></indexterm>
+<para><computeroutput>virtual void IL3AppMsgCallback::onPartyDetailsDefinitionRequestAck (<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_ack_msg_1_1_block_data">PartyDetailsDefinitionRequestAckMsg::BlockData</link> * data, int segid)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>This method is called when a party details definition request acknowledgement message is received. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>data</entry><entry>
+<para>The block data of the party details definition request acknowledgement message. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>segid</entry><entry>
+<para>The segment ID. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_i_l3_app_msg_callback_1acd9fd6ab047eda6ddadef4e28e69ca6b"/><section>
+    <title>onPartyDetailsListReport()</title>
+<indexterm><primary>onPartyDetailsListReport</primary><secondary>IL3AppMsgCallback</secondary></indexterm>
+<indexterm><primary>IL3AppMsgCallback</primary><secondary>onPartyDetailsListReport</secondary></indexterm>
+<para><computeroutput>virtual void IL3AppMsgCallback::onPartyDetailsListReport (<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data">PartyDetailsListReportMsg::BlockData</link> * data, int segid)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>This method is called when a party details list report message is received. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>data</entry><entry>
+<para>The block data of the party details list report message. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>segid</entry><entry>
+<para>The segment ID. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+exchsupport/cme/il3/IL3AppMsgCallback.hppexchsupport/cme/il3/IL3AppMsgCallback.cpp</section>
+</section>

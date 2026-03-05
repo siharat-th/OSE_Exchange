@@ -1,0 +1,386 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer" xml:lang="en-US">
+<title>KTN::Core::SPSCRingBuffer&lt; T &gt; Class Template Reference</title>
+<indexterm><primary>KTN::Core::SPSCRingBuffer&lt; T &gt;</primary></indexterm>
+<para>
+
+<para>A single-producer, single-consumer ring buffer implementation. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;SPSCRingBuffer.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_1ac66ca66f76bdc4a4a3681527d1a13089">SPSCRingBuffer</link> (size_t capacity)</para>
+
+<para>Constructs a new <link linkend="_class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer">SPSCRingBuffer</link> object with the specified capacity. </para>
+</listitem>
+            <listitem><para><link linkend="_class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_1a4f971a6f8b0cba8749b1964a02888a17">~SPSCRingBuffer</link> ()</para>
+
+<para>Destroys the <link linkend="_class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer">SPSCRingBuffer</link> object. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_1a0dcec128a7780e98fd185bc73fac68e0">enqueue</link> (const T &amp;item, bool warmup=false)</para>
+
+<para>Enqueues an item into the ring buffer. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_1a801366abd6452d993f73064155c13d5e">push</link> (const T &amp;item, bool warmup=false)</para>
+
+<para>Pushes an item into the ring buffer. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_1a6a4493f50f8f4e04cb4c7d653a2dd192">dequeue</link> (T &amp;item)</para>
+
+<para>Dequeues an item from the ring buffer. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_1acf9bab28c1756271c56e838e5b3f51df">try_dequeue</link> (T &amp;item)</para>
+
+<para>Tries to dequeue an item from the ring buffer. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_1afefdac61be09922cd73901c161a98f35">try_pop</link> (T &amp;item)</para>
+
+<para>Tries to pop an item from the ring buffer. </para>
+</listitem>
+            <listitem><para>size_t <link linkend="_class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_1aaaf03ff80c2aa18bf6fa8b6b2ded656d">size</link> () const</para>
+
+<para>Gets the current size of the ring buffer. </para>
+</listitem>
+            <listitem><para>size_t <link linkend="_class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_1ab7b603a4a71eb5d5570ee5cd4e69663f">size_approx</link> () const</para>
+
+<para>Gets an approximate size of the ring buffer. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_1a5ce5dd8d884e84142abdcf16b18969bc">empty</link> () const</para>
+
+<para>Checks if the ring buffer is empty. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;typename T&gt;<?linebreak?>class KTN::Core::SPSCRingBuffer&lt; T &gt;</title></simplesect>
+
+<para>A single-producer, single-consumer ring buffer implementation. </para>
+
+
+
+<para>This class provides a thread-safe ring buffer that can be used in a single-producer, single-consumer scenario. It supports enqueueing and dequeueing elements, as well as checking the size and emptiness of the buffer.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Template Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>T</entry><entry>
+<para>The type of elements stored in the ring buffer. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_1ac66ca66f76bdc4a4a3681527d1a13089"/><section>
+    <title>SPSCRingBuffer()</title>
+<indexterm><primary>SPSCRingBuffer</primary><secondary>KTN::Core::SPSCRingBuffer&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>KTN::Core::SPSCRingBuffer&lt; T &gt;</primary><secondary>SPSCRingBuffer</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput><link linkend="_class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer">KTN::Core::SPSCRingBuffer</link>&lt; T &gt;::SPSCRingBuffer (size_t capacity)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Constructs a new <link linkend="_class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer">SPSCRingBuffer</link> object with the specified capacity. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>capacity</entry><entry>
+<para>The capacity of the ring buffer. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_1a4f971a6f8b0cba8749b1964a02888a17"/><section>
+    <title>~SPSCRingBuffer()</title>
+<indexterm><primary>~SPSCRingBuffer</primary><secondary>KTN::Core::SPSCRingBuffer&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>KTN::Core::SPSCRingBuffer&lt; T &gt;</primary><secondary>~SPSCRingBuffer</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput><link linkend="_class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer">KTN::Core::SPSCRingBuffer</link>&lt; T &gt;::~<link linkend="_class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer">SPSCRingBuffer</link> ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Destroys the <link linkend="_class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer">SPSCRingBuffer</link> object. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_1a6a4493f50f8f4e04cb4c7d653a2dd192"/><section>
+    <title>dequeue()</title>
+<indexterm><primary>dequeue</primary><secondary>KTN::Core::SPSCRingBuffer&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>KTN::Core::SPSCRingBuffer&lt; T &gt;</primary><secondary>dequeue</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>bool <link linkend="_class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer">KTN::Core::SPSCRingBuffer</link>&lt; T &gt;::dequeue (T &amp; item)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Dequeues an item from the ring buffer. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>item</entry><entry>
+<para>The dequeued item. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true if an item was successfully dequeued, false otherwise. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00050">OrderNums::NextOrderID()</link>, <link linkend="_l00062">OrderNums::NextOrderID()</link>, <link linkend="_l00074">OrderNums::NextOrderID2()</link>, <link linkend="_l00098">OrderNums::NextReqId()</link>, and <link linkend="_l00086">OrderNums::NextReqIdEncoded()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_1a5ce5dd8d884e84142abdcf16b18969bc"/><section>
+    <title>empty()</title>
+<indexterm><primary>empty</primary><secondary>KTN::Core::SPSCRingBuffer&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>KTN::Core::SPSCRingBuffer&lt; T &gt;</primary><secondary>empty</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>bool <link linkend="_class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer">KTN::Core::SPSCRingBuffer</link>&lt; T &gt;::empty ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Checks if the ring buffer is empty. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>true if the ring buffer is empty, false otherwise. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00036">KTN::REPORTER::AlgoPLReporter::DoWork()</link>, <link linkend="_l00039">KTN::REPORTER::AlgoV3Reporter::DoWork()</link>, <link linkend="_l00056">KTN::REPORTER::OrderReporterV5::DoWork()</link>, and <link linkend="_l00100">AuditTrailWriterV3::Size()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_1a0dcec128a7780e98fd185bc73fac68e0"/><section>
+    <title>enqueue()</title>
+<indexterm><primary>enqueue</primary><secondary>KTN::Core::SPSCRingBuffer&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>KTN::Core::SPSCRingBuffer&lt; T &gt;</primary><secondary>enqueue</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>bool <link linkend="_class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer">KTN::Core::SPSCRingBuffer</link>&lt; T &gt;::enqueue (const T &amp; item, bool warmup = <computeroutput>false</computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Enqueues an item into the ring buffer. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>item</entry><entry>
+<para>The item to enqueue. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>warmup</entry><entry>
+<para>Flag indicating whether this is a warmup enqueue. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true if the item was successfully enqueued, false otherwise. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00019">KTN::CME::CmeAlgo::CmeAlgo()</link>, <link linkend="_l00019">KTN::CME::CmeGT5::CmeGT5()</link>, <link linkend="_l00027">LogSvc::LogMe()</link>, <link linkend="_l00614">OrderManagerV5::ProcessOrderID()</link>, and <link linkend="_l00030">ZmqLogger::WriteLine()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_1a801366abd6452d993f73064155c13d5e"/><section>
+    <title>push()</title>
+<indexterm><primary>push</primary><secondary>KTN::Core::SPSCRingBuffer&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>KTN::Core::SPSCRingBuffer&lt; T &gt;</primary><secondary>push</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>bool <link linkend="_class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer">KTN::Core::SPSCRingBuffer</link>&lt; T &gt;::push (const T &amp; item, bool warmup = <computeroutput>false</computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Pushes an item into the ring buffer. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>item</entry><entry>
+<para>The item to push. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>warmup</entry><entry>
+<para>Flag indicating whether this is a warmup push. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true if the item was successfully pushed, false otherwise. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00874">KTN::CME::CmeAlgo::Command()</link>, <link linkend="_l00822">KTN::CME::CmeGT5::Command()</link>, <link linkend="_l00031">KTN::REPORTER::AlgoPLReporter::Report()</link>, <link linkend="_l00028">KTN::REPORTER::AlgoV3Reporter::Report()</link>, <link linkend="_l00046">KTN::REPORTER::OrderReporterV5::Report()</link>, <link linkend="_l01066">KTN::CME::CmeAlgo::SendMassAction()</link>, <link linkend="_l00870">KTN::CME::CmeGT5::SendMassAction()</link>, <link linkend="_l00151">KTN::CME::CmeAlgo::Stop()</link>, <link linkend="_l00147">KTN::CME::CmeGT5::Stop()</link>, and <link linkend="_l00117">AuditTrailWriterV3::Write()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_1aaaf03ff80c2aa18bf6fa8b6b2ded656d"/><section>
+    <title>size()</title>
+<indexterm><primary>size</primary><secondary>KTN::Core::SPSCRingBuffer&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>KTN::Core::SPSCRingBuffer&lt; T &gt;</primary><secondary>size</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>size_t <link linkend="_class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer">KTN::Core::SPSCRingBuffer</link>&lt; T &gt;::size ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Gets the current size of the ring buffer. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The current size of the ring buffer. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00118">OrderNums::OrdIdSize()</link>, and <link linkend="_l00127">OrderNums::ReqIdSize()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_1ab7b603a4a71eb5d5570ee5cd4e69663f"/><section>
+    <title>size_approx()</title>
+<indexterm><primary>size_approx</primary><secondary>KTN::Core::SPSCRingBuffer&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>KTN::Core::SPSCRingBuffer&lt; T &gt;</primary><secondary>size_approx</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>size_t <link linkend="_class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer">KTN::Core::SPSCRingBuffer</link>&lt; T &gt;::size_approx ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Gets an approximate size of the ring buffer. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>An approximate size of the ring buffer. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00041">ZmqLogger::Run()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_1acf9bab28c1756271c56e838e5b3f51df"/><section>
+    <title>try_dequeue()</title>
+<indexterm><primary>try_dequeue</primary><secondary>KTN::Core::SPSCRingBuffer&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>KTN::Core::SPSCRingBuffer&lt; T &gt;</primary><secondary>try_dequeue</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>bool <link linkend="_class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer">KTN::Core::SPSCRingBuffer</link>&lt; T &gt;::try_dequeue (T &amp; item)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Tries to dequeue an item from the ring buffer. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>item</entry><entry>
+<para>The dequeued item. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true if an item was successfully dequeued, false otherwise. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00041">ZmqLogger::Run()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer_1afefdac61be09922cd73901c161a98f35"/><section>
+    <title>try_pop()</title>
+<indexterm><primary>try_pop</primary><secondary>KTN::Core::SPSCRingBuffer&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>KTN::Core::SPSCRingBuffer&lt; T &gt;</primary><secondary>try_pop</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>bool <link linkend="_class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer">KTN::Core::SPSCRingBuffer</link>&lt; T &gt;::try_pop (T &amp; item)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Tries to pop an item from the ring buffer. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>item</entry><entry>
+<para>The popped item. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true if an item was successfully popped, false otherwise. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00036">KTN::REPORTER::AlgoPLReporter::DoWork()</link>, <link linkend="_l00039">KTN::REPORTER::AlgoV3Reporter::DoWork()</link>, <link linkend="_l00056">KTN::REPORTER::OrderReporterV5::DoWork()</link>, <link linkend="_l00026">QuoterV3::Get()</link>, <link linkend="_l00058">QuoterV3::NextMod()</link>, and <link linkend="_l00033">QuoterV3::NextNew()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Maps/SPSCRingBuffer.hpp</section>
+</section>

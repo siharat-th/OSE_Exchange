@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_exch_handler_log_svc" xml:lang="en-US">
+<title>ExchHandlerLogSvc Class Reference</title>
+<indexterm><primary>ExchHandlerLogSvc</primary></indexterm>
+<para>
+
+<para>This class handles logging for the exchange handler. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;ExchHandlerLogSvc.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_exch_handler_log_svc_1ab19025238d37a39dcd148d78b7ccdc8d">ExchHandlerLogSvc</link> ()</para>
+
+<para>Default constructor for <link linkend="_class_exch_handler_log_svc">ExchHandlerLogSvc</link>. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_exch_handler_log_svc_1aa5dcfa4143af6f315216b845d17626e0">~ExchHandlerLogSvc</link> ()</para>
+
+<para>Destructor for <link linkend="_class_exch_handler_log_svc">ExchHandlerLogSvc</link>. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_exch_handler_log_svc_1a48d1030074234ecb333421c82c9a2038">Start</link> ()</para>
+
+<para>Starts the logging service. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_exch_handler_log_svc_1a6399d0424c2f3b1a6491b8d017a7e96c">Persist</link> (std::string msg)</para>
+
+<para>Persists the given message to the log. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>This class handles logging for the exchange handler. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_exch_handler_log_svc_1ab19025238d37a39dcd148d78b7ccdc8d"/><section>
+    <title>ExchHandlerLogSvc()</title>
+<indexterm><primary>ExchHandlerLogSvc</primary><secondary>ExchHandlerLogSvc</secondary></indexterm>
+<indexterm><primary>ExchHandlerLogSvc</primary><secondary>ExchHandlerLogSvc</secondary></indexterm>
+<para><computeroutput>ExchHandlerLogSvc::ExchHandlerLogSvc ( )</computeroutput></para><para>
+
+<para>Default constructor for <link linkend="_class_exch_handler_log_svc">ExchHandlerLogSvc</link>. </para>
+</para>
+</section>
+<anchor xml:id="_class_exch_handler_log_svc_1aa5dcfa4143af6f315216b845d17626e0"/><section>
+    <title>~ExchHandlerLogSvc()</title>
+<indexterm><primary>~ExchHandlerLogSvc</primary><secondary>ExchHandlerLogSvc</secondary></indexterm>
+<indexterm><primary>ExchHandlerLogSvc</primary><secondary>~ExchHandlerLogSvc</secondary></indexterm>
+<para><computeroutput>ExchHandlerLogSvc::~ExchHandlerLogSvc ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Destructor for <link linkend="_class_exch_handler_log_svc">ExchHandlerLogSvc</link>. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_exch_handler_log_svc_1a6399d0424c2f3b1a6491b8d017a7e96c"/><section>
+    <title>Persist()</title>
+<indexterm><primary>Persist</primary><secondary>ExchHandlerLogSvc</secondary></indexterm>
+<indexterm><primary>ExchHandlerLogSvc</primary><secondary>Persist</secondary></indexterm>
+<para><computeroutput>void ExchHandlerLogSvc::Persist (std::string msg)</computeroutput></para><para>
+
+<para>Persists the given message to the log. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>msg</entry><entry>
+<para>The message to be persisted. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_exch_handler_log_svc_1a48d1030074234ecb333421c82c9a2038"/><section>
+    <title>Start()</title>
+<indexterm><primary>Start</primary><secondary>ExchHandlerLogSvc</secondary></indexterm>
+<indexterm><primary>ExchHandlerLogSvc</primary><secondary>Start</secondary></indexterm>
+<para><computeroutput>void ExchHandlerLogSvc::Start ( )</computeroutput></para><para>
+
+<para>Starts the logging service. </para>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Loggers/ExchHandlerLogSvc.hppLoggers/ExchHandlerLogSvc.cpp</section>
+</section>

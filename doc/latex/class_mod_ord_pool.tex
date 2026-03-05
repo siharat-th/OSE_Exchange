@@ -1,0 +1,72 @@
+\doxysection{Mod\+Ord\+Pool Class Reference}
+\hypertarget{class_mod_ord_pool}{}\label{class_mod_ord_pool}\index{ModOrdPool@{ModOrdPool}}
+
+
+ILink3 Modify Order Pool pre-\/allocates a pool of Order\+Cancel\+Replace\+Request\+Msg objects to be used by the ILink3 handler.  
+
+
+
+
+{\ttfamily \#include $<$IL3\+Pool.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mod_ord_pool_ae982a0ff621e8dd8b041211d60457159}{Mod\+Ord\+Pool}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{class_mod_ord_pool}{Mod\+Ord\+Pool} class. Initializes the \doxylink{class_mod_ord_pool}{Mod\+Ord\+Pool} object and reserves memory for the pool. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mod_ord_pool_ac57bb0e13a207ce7e0110d3176c5fcdc}{add}} (\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg}{Order\+Cancel\+Replace\+Request\+Msg}} \texorpdfstring{$\ast$}{*}msg)
+\begin{DoxyCompactList}\small\item\em Add an Order\+Cancel\+Replace\+Request\+Msg object to the pool. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg}{Order\+Cancel\+Replace\+Request\+Msg}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_mod_ord_pool_af5c5f1b8911e155cd7492cc1f0869caa}{get}} ()
+\begin{DoxyCompactList}\small\item\em Get an Order\+Cancel\+Replace\+Request\+Msg object from the pool. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+ILink3 Modify Order Pool pre-\/allocates a pool of Order\+Cancel\+Replace\+Request\+Msg objects to be used by the ILink3 handler. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_mod_ord_pool_ae982a0ff621e8dd8b041211d60457159}\index{ModOrdPool@{ModOrdPool}!ModOrdPool@{ModOrdPool}}
+\index{ModOrdPool@{ModOrdPool}!ModOrdPool@{ModOrdPool}}
+\doxysubsubsection{\texorpdfstring{ModOrdPool()}{ModOrdPool()}}
+{\footnotesize\ttfamily \label{class_mod_ord_pool_ae982a0ff621e8dd8b041211d60457159} 
+Mod\+Ord\+Pool\+::\+Mod\+Ord\+Pool (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor for \doxylink{class_mod_ord_pool}{Mod\+Ord\+Pool} class. Initializes the \doxylink{class_mod_ord_pool}{Mod\+Ord\+Pool} object and reserves memory for the pool. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_mod_ord_pool_ac57bb0e13a207ce7e0110d3176c5fcdc}\index{ModOrdPool@{ModOrdPool}!add@{add}}
+\index{add@{add}!ModOrdPool@{ModOrdPool}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily \label{class_mod_ord_pool_ac57bb0e13a207ce7e0110d3176c5fcdc} 
+void Mod\+Ord\+Pool\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg}{Order\+Cancel\+Replace\+Request\+Msg}} \texorpdfstring{$\ast$}{*}}]{msg}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add an Order\+Cancel\+Replace\+Request\+Msg object to the pool. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The Order\+Cancel\+Replace\+Request\+Msg object to add. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_mod_ord_pool_af5c5f1b8911e155cd7492cc1f0869caa}\index{ModOrdPool@{ModOrdPool}!get@{get}}
+\index{get@{get}!ModOrdPool@{ModOrdPool}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \label{class_mod_ord_pool_af5c5f1b8911e155cd7492cc1f0869caa} 
+\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg}{Order\+Cancel\+Replace\+Request\+Msg}} \texorpdfstring{$\ast$}{*} Mod\+Ord\+Pool\+::get (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get an Order\+Cancel\+Replace\+Request\+Msg object from the pool. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the Order\+Cancel\+Replace\+Request\+Msg object. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+exchsupport/cme/il3/IL3\+Pool.\+hpp\end{DoxyCompactItemize}

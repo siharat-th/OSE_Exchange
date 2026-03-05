@@ -1,0 +1,216 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def" xml:lang="en-US">
+<title>KT01::SECDEF::CmeSecDef Class Reference</title>
+<indexterm><primary>KT01::SECDEF::CmeSecDef</primary></indexterm>
+<para>
+
+<para>Class representing the CME security definition. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;CmeSecMaster.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1a1b529118fcebb2e195894c9f3d094b9c">Print</link> ()</para>
+
+<para>Generates a string representation of the CME security definition. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>long <link linkend="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1aa663cb1b0a28030e2dfb3ea246e09871">secid</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1a0956efcc07853cf4d1c383f3c0d0fdd7">product</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1a9c4c06c8d5210aef7d1c001486aa9432">exch</link></para>
+</listitem>
+            <listitem><para>KOrderProdType::Enum <link linkend="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1a6b6facea1e6b842c894ae09b04bf9c48">prodtype</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1a077acf24332e1323e977c680c5e6104c">subtype</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1a57f6fcf200603bbe72e892425200f34a">symbol</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1ac5252d7708fa22a4dc877f7bab1d4bdb">katana_symbol</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1a74a63ee5d1bcea0b201ad195d2d6d7a3">desc</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1a4e81f4934ce6b05f97dce480655b0975">subexch</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1ad9b27f74358790724a60c42d004c6d0b">prodcomplex</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1a3e3316b076ead665c6d3324a710bd34f">msgw</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1a01c9a38f12365bdce71e325ddcdea132">fractional</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1a62a3d93c97d253cfb974bdd661de2e6f">mintick</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1af2c0910f791865307e0e85ae888b4c47">mult</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1a36e438bf1d66ad88789e9091c40f4393">mmy</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1aaa46dedd0b6e4ecda3fa1c611d492474">mmy2</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1a398003390897b3e458be394d8c85c766">strike</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1ad7c621d0bca4a2473733f8cbe5031b3b">putcall</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1a3f19755c20f81cc8ad7c4fb7a3bbd59f">underlying</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1aaaef82945bab06f70597faa6ec5d03e2">series</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1a5fa1066725f92657a562f449e92811a8">expdate</link></para>
+</listitem>
+            <listitem><para>KOrderProdType::Enum <link linkend="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1a4e9dec1542e1e3df7ff95d3c3ce6ed22">OrdProdType</link></para>
+</listitem>
+            <listitem><para>KOrderPutCall::Enum <link linkend="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1a9d8937af672a937a19fb1972dafd5bcd">OrdPutCall</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Class representing the CME security definition. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1a1b529118fcebb2e195894c9f3d094b9c"/><section>
+    <title>Print()</title>
+<indexterm><primary>Print</primary><secondary>KT01::SECDEF::CmeSecDef</secondary></indexterm>
+<indexterm><primary>KT01::SECDEF::CmeSecDef</primary><secondary>Print</secondary></indexterm>
+<para><computeroutput>string KT01::SECDEF::CmeSecDef::Print ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Generates a string representation of the CME security definition. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The string representation of the CME security definition. </para>
+</formalpara>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1a74a63ee5d1bcea0b201ad195d2d6d7a3"/><section>
+    <title>desc</title>
+<indexterm><primary>desc</primary><secondary>KT01::SECDEF::CmeSecDef</secondary></indexterm>
+<indexterm><primary>KT01::SECDEF::CmeSecDef</primary><secondary>desc</secondary></indexterm>
+<para><computeroutput>string KT01::SECDEF::CmeSecDef::desc</computeroutput></para></section>
+<anchor xml:id="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1a9c4c06c8d5210aef7d1c001486aa9432"/><section>
+    <title>exch</title>
+<indexterm><primary>exch</primary><secondary>KT01::SECDEF::CmeSecDef</secondary></indexterm>
+<indexterm><primary>KT01::SECDEF::CmeSecDef</primary><secondary>exch</secondary></indexterm>
+<para><computeroutput>string KT01::SECDEF::CmeSecDef::exch</computeroutput></para></section>
+<anchor xml:id="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1a5fa1066725f92657a562f449e92811a8"/><section>
+    <title>expdate</title>
+<indexterm><primary>expdate</primary><secondary>KT01::SECDEF::CmeSecDef</secondary></indexterm>
+<indexterm><primary>KT01::SECDEF::CmeSecDef</primary><secondary>expdate</secondary></indexterm>
+<para><computeroutput>string KT01::SECDEF::CmeSecDef::expdate</computeroutput></para></section>
+<anchor xml:id="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1a01c9a38f12365bdce71e325ddcdea132"/><section>
+    <title>fractional</title>
+<indexterm><primary>fractional</primary><secondary>KT01::SECDEF::CmeSecDef</secondary></indexterm>
+<indexterm><primary>KT01::SECDEF::CmeSecDef</primary><secondary>fractional</secondary></indexterm>
+<para><computeroutput>bool KT01::SECDEF::CmeSecDef::fractional</computeroutput></para></section>
+<anchor xml:id="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1ac5252d7708fa22a4dc877f7bab1d4bdb"/><section>
+    <title>katana_symbol</title>
+<indexterm><primary>katana_symbol</primary><secondary>KT01::SECDEF::CmeSecDef</secondary></indexterm>
+<indexterm><primary>KT01::SECDEF::CmeSecDef</primary><secondary>katana_symbol</secondary></indexterm>
+<para><computeroutput>string KT01::SECDEF::CmeSecDef::katana_symbol</computeroutput></para></section>
+<anchor xml:id="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1a62a3d93c97d253cfb974bdd661de2e6f"/><section>
+    <title>mintick</title>
+<indexterm><primary>mintick</primary><secondary>KT01::SECDEF::CmeSecDef</secondary></indexterm>
+<indexterm><primary>KT01::SECDEF::CmeSecDef</primary><secondary>mintick</secondary></indexterm>
+<para><computeroutput>double KT01::SECDEF::CmeSecDef::mintick</computeroutput></para></section>
+<anchor xml:id="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1a36e438bf1d66ad88789e9091c40f4393"/><section>
+    <title>mmy</title>
+<indexterm><primary>mmy</primary><secondary>KT01::SECDEF::CmeSecDef</secondary></indexterm>
+<indexterm><primary>KT01::SECDEF::CmeSecDef</primary><secondary>mmy</secondary></indexterm>
+<para><computeroutput>int KT01::SECDEF::CmeSecDef::mmy</computeroutput></para></section>
+<anchor xml:id="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1aaa46dedd0b6e4ecda3fa1c611d492474"/><section>
+    <title>mmy2</title>
+<indexterm><primary>mmy2</primary><secondary>KT01::SECDEF::CmeSecDef</secondary></indexterm>
+<indexterm><primary>KT01::SECDEF::CmeSecDef</primary><secondary>mmy2</secondary></indexterm>
+<para><computeroutput>int KT01::SECDEF::CmeSecDef::mmy2</computeroutput></para></section>
+<anchor xml:id="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1a3e3316b076ead665c6d3324a710bd34f"/><section>
+    <title>msgw</title>
+<indexterm><primary>msgw</primary><secondary>KT01::SECDEF::CmeSecDef</secondary></indexterm>
+<indexterm><primary>KT01::SECDEF::CmeSecDef</primary><secondary>msgw</secondary></indexterm>
+<para><computeroutput>int KT01::SECDEF::CmeSecDef::msgw</computeroutput></para></section>
+<anchor xml:id="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1af2c0910f791865307e0e85ae888b4c47"/><section>
+    <title>mult</title>
+<indexterm><primary>mult</primary><secondary>KT01::SECDEF::CmeSecDef</secondary></indexterm>
+<indexterm><primary>KT01::SECDEF::CmeSecDef</primary><secondary>mult</secondary></indexterm>
+<para><computeroutput>double KT01::SECDEF::CmeSecDef::mult</computeroutput></para></section>
+<anchor xml:id="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1a4e9dec1542e1e3df7ff95d3c3ce6ed22"/><section>
+    <title>OrdProdType</title>
+<indexterm><primary>OrdProdType</primary><secondary>KT01::SECDEF::CmeSecDef</secondary></indexterm>
+<indexterm><primary>KT01::SECDEF::CmeSecDef</primary><secondary>OrdProdType</secondary></indexterm>
+<para><computeroutput>KOrderProdType::Enum KT01::SECDEF::CmeSecDef::OrdProdType</computeroutput></para></section>
+<anchor xml:id="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1a9d8937af672a937a19fb1972dafd5bcd"/><section>
+    <title>OrdPutCall</title>
+<indexterm><primary>OrdPutCall</primary><secondary>KT01::SECDEF::CmeSecDef</secondary></indexterm>
+<indexterm><primary>KT01::SECDEF::CmeSecDef</primary><secondary>OrdPutCall</secondary></indexterm>
+<para><computeroutput>KOrderPutCall::Enum KT01::SECDEF::CmeSecDef::OrdPutCall</computeroutput></para></section>
+<anchor xml:id="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1ad9b27f74358790724a60c42d004c6d0b"/><section>
+    <title>prodcomplex</title>
+<indexterm><primary>prodcomplex</primary><secondary>KT01::SECDEF::CmeSecDef</secondary></indexterm>
+<indexterm><primary>KT01::SECDEF::CmeSecDef</primary><secondary>prodcomplex</secondary></indexterm>
+<para><computeroutput>string KT01::SECDEF::CmeSecDef::prodcomplex</computeroutput></para></section>
+<anchor xml:id="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1a6b6facea1e6b842c894ae09b04bf9c48"/><section>
+    <title>prodtype</title>
+<indexterm><primary>prodtype</primary><secondary>KT01::SECDEF::CmeSecDef</secondary></indexterm>
+<indexterm><primary>KT01::SECDEF::CmeSecDef</primary><secondary>prodtype</secondary></indexterm>
+<para><computeroutput>KOrderProdType::Enum KT01::SECDEF::CmeSecDef::prodtype</computeroutput></para></section>
+<anchor xml:id="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1a0956efcc07853cf4d1c383f3c0d0fdd7"/><section>
+    <title>product</title>
+<indexterm><primary>product</primary><secondary>KT01::SECDEF::CmeSecDef</secondary></indexterm>
+<indexterm><primary>KT01::SECDEF::CmeSecDef</primary><secondary>product</secondary></indexterm>
+<para><computeroutput>string KT01::SECDEF::CmeSecDef::product</computeroutput></para></section>
+<anchor xml:id="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1ad7c621d0bca4a2473733f8cbe5031b3b"/><section>
+    <title>putcall</title>
+<indexterm><primary>putcall</primary><secondary>KT01::SECDEF::CmeSecDef</secondary></indexterm>
+<indexterm><primary>KT01::SECDEF::CmeSecDef</primary><secondary>putcall</secondary></indexterm>
+<para><computeroutput>int KT01::SECDEF::CmeSecDef::putcall</computeroutput></para></section>
+<anchor xml:id="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1aa663cb1b0a28030e2dfb3ea246e09871"/><section>
+    <title>secid</title>
+<indexterm><primary>secid</primary><secondary>KT01::SECDEF::CmeSecDef</secondary></indexterm>
+<indexterm><primary>KT01::SECDEF::CmeSecDef</primary><secondary>secid</secondary></indexterm>
+<para><computeroutput>long KT01::SECDEF::CmeSecDef::secid</computeroutput></para></section>
+<anchor xml:id="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1aaaef82945bab06f70597faa6ec5d03e2"/><section>
+    <title>series</title>
+<indexterm><primary>series</primary><secondary>KT01::SECDEF::CmeSecDef</secondary></indexterm>
+<indexterm><primary>KT01::SECDEF::CmeSecDef</primary><secondary>series</secondary></indexterm>
+<para><computeroutput>string KT01::SECDEF::CmeSecDef::series</computeroutput></para></section>
+<anchor xml:id="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1a398003390897b3e458be394d8c85c766"/><section>
+    <title>strike</title>
+<indexterm><primary>strike</primary><secondary>KT01::SECDEF::CmeSecDef</secondary></indexterm>
+<indexterm><primary>KT01::SECDEF::CmeSecDef</primary><secondary>strike</secondary></indexterm>
+<para><computeroutput>double KT01::SECDEF::CmeSecDef::strike</computeroutput></para></section>
+<anchor xml:id="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1a4e81f4934ce6b05f97dce480655b0975"/><section>
+    <title>subexch</title>
+<indexterm><primary>subexch</primary><secondary>KT01::SECDEF::CmeSecDef</secondary></indexterm>
+<indexterm><primary>KT01::SECDEF::CmeSecDef</primary><secondary>subexch</secondary></indexterm>
+<para><computeroutput>string KT01::SECDEF::CmeSecDef::subexch</computeroutput></para></section>
+<anchor xml:id="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1a077acf24332e1323e977c680c5e6104c"/><section>
+    <title>subtype</title>
+<indexterm><primary>subtype</primary><secondary>KT01::SECDEF::CmeSecDef</secondary></indexterm>
+<indexterm><primary>KT01::SECDEF::CmeSecDef</primary><secondary>subtype</secondary></indexterm>
+<para><computeroutput>string KT01::SECDEF::CmeSecDef::subtype</computeroutput></para></section>
+<anchor xml:id="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1a57f6fcf200603bbe72e892425200f34a"/><section>
+    <title>symbol</title>
+<indexterm><primary>symbol</primary><secondary>KT01::SECDEF::CmeSecDef</secondary></indexterm>
+<indexterm><primary>KT01::SECDEF::CmeSecDef</primary><secondary>symbol</secondary></indexterm>
+<para><computeroutput>string KT01::SECDEF::CmeSecDef::symbol</computeroutput></para></section>
+<anchor xml:id="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def_1a3f19755c20f81cc8ad7c4fb7a3bbd59f"/><section>
+    <title>underlying</title>
+<indexterm><primary>underlying</primary><secondary>KT01::SECDEF::CmeSecDef</secondary></indexterm>
+<indexterm><primary>KT01::SECDEF::CmeSecDef</primary><secondary>underlying</secondary></indexterm>
+<para><computeroutput>string KT01::SECDEF::CmeSecDef::underlying</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+exchsupport/cme/CmeSecMaster.hpp</section>
+</section>

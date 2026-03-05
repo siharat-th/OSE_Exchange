@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structcombopath" xml:lang="en-US">
+<title>combopath Struct Reference</title>
+<indexterm><primary>combopath</primary></indexterm>
+<para>
+
+<para>Structure representing a combination path. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;algo_structs.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_structinstrument">instrument</link> <link linkend="_structcombopath_1a1b9462ff96c30b224fbfd1c782841385">combo</link></para>
+</listitem>
+            <listitem><para>vector&lt; <link linkend="_structinstrument">instrument</link> &gt; <link linkend="_structcombopath_1a81d5e75537d95b0cc3a041783e4f1f34">legs</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Structure representing a combination path. </para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structcombopath_1a1b9462ff96c30b224fbfd1c782841385"/><section>
+    <title>combo</title>
+<indexterm><primary>combo</primary><secondary>combopath</secondary></indexterm>
+<indexterm><primary>combopath</primary><secondary>combo</secondary></indexterm>
+<para><computeroutput><link linkend="_structinstrument">instrument</link> combopath::combo</computeroutput></para>
+<para>The combination instrument. </para>
+</section>
+<anchor xml:id="_structcombopath_1a81d5e75537d95b0cc3a041783e4f1f34"/><section>
+    <title>legs</title>
+<indexterm><primary>legs</primary><secondary>combopath</secondary></indexterm>
+<indexterm><primary>combopath</primary><secondary>legs</secondary></indexterm>
+<para><computeroutput>vector&lt;<link linkend="_structinstrument">instrument</link>&gt; combopath::legs</computeroutput></para>
+<para>The vector of leg instruments. </para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+AlgoSupport/algo_structs.hpp</section>
+</section>

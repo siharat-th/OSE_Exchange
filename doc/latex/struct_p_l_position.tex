@@ -1,0 +1,150 @@
+\doxysection{PLPosition Struct Reference}
+\hypertarget{struct_p_l_position}{}\label{struct_p_l_position}\index{PLPosition@{PLPosition}}
+
+
+The \doxylink{struct_p_l_position}{PLPosition} struct represents the position parameters for the PLWatcher algorithm.  
+
+
+
+
+{\ttfamily \#include $<$PLWatcher\+Params.\+hpp$>$}
+
+Inheritance diagram for PLPosition\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{struct_p_l_position}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{struct_p_l_position_a766373846e151ec122cfb5c3a0eec620}{Calculate}} (int newbid, int newask)
+\begin{DoxyCompactList}\small\item\em Calculate the PL (Profit/\+Loss) for the position based on the new bid and ask prices. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{struct_i_o_b_params}{IOBParams}}}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{struct_p_l_position_a420c7140638cfd902687cf5911d1a47d}{index}}
+\item 
+KOrder\+Side\+::\+Enum \mbox{\hyperlink{struct_p_l_position_aacd86f02e0528bb30763ae7857cb22db}{side}}
+\item 
+KOrder\+Algo\+Trigger\+::\+Enum \mbox{\hyperlink{struct_p_l_position_a3045fc2dc2c8a452ee1774077e8133c6}{trig}}
+\item 
+string \mbox{\hyperlink{struct_p_l_position_ababb3a0f0fb62c086862b9e6c7bcc474}{symbol}}
+\item 
+int \mbox{\hyperlink{struct_p_l_position_ae1ca814f7d7a9879e698513ac3332827}{secid}}
+\item 
+int \mbox{\hyperlink{struct_p_l_position_a1ac6d35c3212babc8706c60a0631d561}{qty}}
+\item 
+double \mbox{\hyperlink{struct_p_l_position_adb5bedfb1aefb6c72419f5595feb84bb}{price}}
+\item 
+double \mbox{\hyperlink{struct_p_l_position_af211a9bc2abb44333b5028560161ae36}{mintick}}
+\item 
+int \mbox{\hyperlink{struct_p_l_position_ad9c35356ef57690d64caeb3250d1b901}{bid}}
+\item 
+int \mbox{\hyperlink{struct_p_l_position_aaf6b5e3bed07d4010a40395b2e06aace}{ask}}
+\item 
+double \mbox{\hyperlink{struct_p_l_position_a704daa6319b17cc0e5e891458faaa3c3}{pl}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{struct_i_o_b_params}{IOBParams}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{struct_i_o_b_params_a0b97f2aceef8480a988508e811ca12b6}{paramindex}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{struct_p_l_position}{PLPosition} struct represents the position parameters for the PLWatcher algorithm. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_p_l_position_a766373846e151ec122cfb5c3a0eec620}\index{PLPosition@{PLPosition}!Calculate@{Calculate}}
+\index{Calculate@{Calculate}!PLPosition@{PLPosition}}
+\doxysubsubsection{\texorpdfstring{Calculate()}{Calculate()}}
+{\footnotesize\ttfamily \label{struct_p_l_position_a766373846e151ec122cfb5c3a0eec620} 
+void PLPosition\+::\+Calculate (\begin{DoxyParamCaption}\item[{int}]{newbid}{, }\item[{int}]{newask}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calculate the PL (Profit/\+Loss) for the position based on the new bid and ask prices. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newbid} & The new bid price. \\
+\hline
+{\em newask} & The new ask price. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_p_l_position_aaf6b5e3bed07d4010a40395b2e06aace}\index{PLPosition@{PLPosition}!ask@{ask}}
+\index{ask@{ask}!PLPosition@{PLPosition}}
+\doxysubsubsection{\texorpdfstring{ask}{ask}}
+{\footnotesize\ttfamily \label{struct_p_l_position_aaf6b5e3bed07d4010a40395b2e06aace} 
+int PLPosition\+::ask}
+
+\Hypertarget{struct_p_l_position_ad9c35356ef57690d64caeb3250d1b901}\index{PLPosition@{PLPosition}!bid@{bid}}
+\index{bid@{bid}!PLPosition@{PLPosition}}
+\doxysubsubsection{\texorpdfstring{bid}{bid}}
+{\footnotesize\ttfamily \label{struct_p_l_position_ad9c35356ef57690d64caeb3250d1b901} 
+int PLPosition\+::bid}
+
+\Hypertarget{struct_p_l_position_a420c7140638cfd902687cf5911d1a47d}\index{PLPosition@{PLPosition}!index@{index}}
+\index{index@{index}!PLPosition@{PLPosition}}
+\doxysubsubsection{\texorpdfstring{index}{index}}
+{\footnotesize\ttfamily \label{struct_p_l_position_a420c7140638cfd902687cf5911d1a47d} 
+int PLPosition\+::index}
+
+\Hypertarget{struct_p_l_position_af211a9bc2abb44333b5028560161ae36}\index{PLPosition@{PLPosition}!mintick@{mintick}}
+\index{mintick@{mintick}!PLPosition@{PLPosition}}
+\doxysubsubsection{\texorpdfstring{mintick}{mintick}}
+{\footnotesize\ttfamily \label{struct_p_l_position_af211a9bc2abb44333b5028560161ae36} 
+double PLPosition\+::mintick}
+
+\Hypertarget{struct_p_l_position_a704daa6319b17cc0e5e891458faaa3c3}\index{PLPosition@{PLPosition}!pl@{pl}}
+\index{pl@{pl}!PLPosition@{PLPosition}}
+\doxysubsubsection{\texorpdfstring{pl}{pl}}
+{\footnotesize\ttfamily \label{struct_p_l_position_a704daa6319b17cc0e5e891458faaa3c3} 
+double PLPosition\+::pl}
+
+\Hypertarget{struct_p_l_position_adb5bedfb1aefb6c72419f5595feb84bb}\index{PLPosition@{PLPosition}!price@{price}}
+\index{price@{price}!PLPosition@{PLPosition}}
+\doxysubsubsection{\texorpdfstring{price}{price}}
+{\footnotesize\ttfamily \label{struct_p_l_position_adb5bedfb1aefb6c72419f5595feb84bb} 
+double PLPosition\+::price}
+
+\Hypertarget{struct_p_l_position_a1ac6d35c3212babc8706c60a0631d561}\index{PLPosition@{PLPosition}!qty@{qty}}
+\index{qty@{qty}!PLPosition@{PLPosition}}
+\doxysubsubsection{\texorpdfstring{qty}{qty}}
+{\footnotesize\ttfamily \label{struct_p_l_position_a1ac6d35c3212babc8706c60a0631d561} 
+int PLPosition\+::qty}
+
+\Hypertarget{struct_p_l_position_ae1ca814f7d7a9879e698513ac3332827}\index{PLPosition@{PLPosition}!secid@{secid}}
+\index{secid@{secid}!PLPosition@{PLPosition}}
+\doxysubsubsection{\texorpdfstring{secid}{secid}}
+{\footnotesize\ttfamily \label{struct_p_l_position_ae1ca814f7d7a9879e698513ac3332827} 
+int PLPosition\+::secid}
+
+\Hypertarget{struct_p_l_position_aacd86f02e0528bb30763ae7857cb22db}\index{PLPosition@{PLPosition}!side@{side}}
+\index{side@{side}!PLPosition@{PLPosition}}
+\doxysubsubsection{\texorpdfstring{side}{side}}
+{\footnotesize\ttfamily \label{struct_p_l_position_aacd86f02e0528bb30763ae7857cb22db} 
+KOrder\+Side\+::\+Enum PLPosition\+::side}
+
+\Hypertarget{struct_p_l_position_ababb3a0f0fb62c086862b9e6c7bcc474}\index{PLPosition@{PLPosition}!symbol@{symbol}}
+\index{symbol@{symbol}!PLPosition@{PLPosition}}
+\doxysubsubsection{\texorpdfstring{symbol}{symbol}}
+{\footnotesize\ttfamily \label{struct_p_l_position_ababb3a0f0fb62c086862b9e6c7bcc474} 
+string PLPosition\+::symbol}
+
+\Hypertarget{struct_p_l_position_a3045fc2dc2c8a452ee1774077e8133c6}\index{PLPosition@{PLPosition}!trig@{trig}}
+\index{trig@{trig}!PLPosition@{PLPosition}}
+\doxysubsubsection{\texorpdfstring{trig}{trig}}
+{\footnotesize\ttfamily \label{struct_p_l_position_a3045fc2dc2c8a452ee1774077e8133c6} 
+KOrder\+Algo\+Trigger\+::\+Enum PLPosition\+::trig}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Algo\+Params/PLWatcher\+Params.\+hpp\end{DoxyCompactItemize}

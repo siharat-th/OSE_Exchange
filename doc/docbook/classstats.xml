@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classstats" xml:lang="en-US">
+<title>stats Class Reference</title>
+<indexterm><primary>stats</primary></indexterm>
+<para>
+
+<para>Class representing algorithm statistics. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;algo_structs.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for stats:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classstats.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_classstats_1a9aa1d4ceadaad7dbf6359f4b8b7675fe">GetType</link> ()</para>
+
+<para>Gets the type of the statistics. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_struct_algo_stats_1aa6ad6c12d8ac79f84e3d98668b9347c6">AlgoStats::Enum</link> <link linkend="_classstats_1a900f893a3794febac7311264ff573c5d">StatType</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Class representing algorithm statistics. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classstats_1a9aa1d4ceadaad7dbf6359f4b8b7675fe"/><section>
+    <title>GetType()</title>
+<indexterm><primary>GetType</primary><secondary>stats</secondary></indexterm>
+<indexterm><primary>stats</primary><secondary>GetType</secondary></indexterm>
+<para><computeroutput>string stats::GetType ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Gets the type of the statistics. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The type of the statistics. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00373">StatType</link>, and <link linkend="_l00351">AlgoStats::toString()</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classstats_1a900f893a3794febac7311264ff573c5d"/><section>
+    <title>StatType</title>
+<indexterm><primary>StatType</primary><secondary>stats</secondary></indexterm>
+<indexterm><primary>stats</primary><secondary>StatType</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_algo_stats_1aa6ad6c12d8ac79f84e3d98668b9347c6">AlgoStats::Enum</link> stats::StatType<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>The statistics type. </para>
+<para>
+Referenced by <link linkend="_l00379">GetType()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+AlgoSupport/algo_structs.hpp</section>
+</section>

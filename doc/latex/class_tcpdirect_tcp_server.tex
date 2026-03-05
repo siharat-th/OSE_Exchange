@@ -1,0 +1,108 @@
+\doxysection{Tcpdirect\+Tcp\+Server\texorpdfstring{$<$}{<} Conf \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_tcpdirect_tcp_server}{}\label{class_tcpdirect_tcp_server}\index{TcpdirectTcpServer$<$ Conf $>$@{TcpdirectTcpServer$<$ Conf $>$}}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{class_tcpdirect_tcp_server_affba9e990dd028d27b02ee8bd49e860f}{Conn}} = \mbox{\hyperlink{class_tcpdirect_tcp_connection}{Tcpdirect\+Tcp\+Connection}}$<$Conf$>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_tcpdirect_tcp_server_a9b1c3d787c028e6dbc03bf88a242a819}{init}} (const char \texorpdfstring{$\ast$}{*}interface, const char \texorpdfstring{$\ast$}{*}server\+\_\+ip, uint16\+\_\+t server\+\_\+port)
+\item 
+void \mbox{\hyperlink{class_tcpdirect_tcp_server_aa4caf6c20f235b06fd4b04f6a2dbe997}{close}} (const char \texorpdfstring{$\ast$}{*}reason)
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_tcpdirect_tcp_server_ab42040e23c68ef5f5af10ae306fc1621}{get\+Last\+Error}} ()
+\item 
+bool \mbox{\hyperlink{class_tcpdirect_tcp_server_a40c60bb2bf56af4488e7e7db211f3b91}{is\+Closed}} ()
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_tcpdirect_tcp_server_a952e1ae1db371ea16c2adfb3e7446150}{get\+Conn\+Cnt}} ()
+\item 
+{\footnotesize template$<$typename Handler $>$ }\\void \mbox{\hyperlink{class_tcpdirect_tcp_server_a814ebe1cd5419a77ccc639e43e9b48ff}{foreach\+Conn}} (Handler handler)
+\item 
+{\footnotesize template$<$typename Handler $>$ }\\void \mbox{\hyperlink{class_tcpdirect_tcp_server_a10a19865a3746c157138d96fc616b640}{poll}} (Handler \&handler)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Conf$>$\newline
+class Tcpdirect\+Tcp\+Server$<$ Conf $>$}
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{class_tcpdirect_tcp_server_affba9e990dd028d27b02ee8bd49e860f}\index{TcpdirectTcpServer$<$ Conf $>$@{TcpdirectTcpServer$<$ Conf $>$}!Conn@{Conn}}
+\index{Conn@{Conn}!TcpdirectTcpServer$<$ Conf $>$@{TcpdirectTcpServer$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{Conn}{Conn}}
+{\footnotesize\ttfamily \label{class_tcpdirect_tcp_server_affba9e990dd028d27b02ee8bd49e860f} 
+template$<$typename Conf $>$ \\
+using \mbox{\hyperlink{class_tcpdirect_tcp_server}{Tcpdirect\+Tcp\+Server}}$<$ Conf $>$\+::\+Conn = \mbox{\hyperlink{class_tcpdirect_tcp_connection}{Tcpdirect\+Tcp\+Connection}}$<$Conf$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_tcpdirect_tcp_server_a6f6b404626346b093cd246a6d93f5ae7}\index{TcpdirectTcpServer$<$ Conf $>$@{TcpdirectTcpServer$<$ Conf $>$}!````~TcpdirectTcpServer@{\texorpdfstring{$\sim$}{\string~}TcpdirectTcpServer}}
+\index{````~TcpdirectTcpServer@{\texorpdfstring{$\sim$}{\string~}TcpdirectTcpServer}!TcpdirectTcpServer$<$ Conf $>$@{TcpdirectTcpServer$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}TcpdirectTcpServer()}{\string~TcpdirectTcpServer()}}
+{\footnotesize\ttfamily \label{class_tcpdirect_tcp_server_a6f6b404626346b093cd246a6d93f5ae7} 
+template$<$typename Conf $>$ \\
+\mbox{\hyperlink{class_tcpdirect_tcp_server}{Tcpdirect\+Tcp\+Server}}$<$ Conf $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{class_tcpdirect_tcp_server}{Tcpdirect\+Tcp\+Server}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_tcpdirect_tcp_server_aa4caf6c20f235b06fd4b04f6a2dbe997}\index{TcpdirectTcpServer$<$ Conf $>$@{TcpdirectTcpServer$<$ Conf $>$}!close@{close}}
+\index{close@{close}!TcpdirectTcpServer$<$ Conf $>$@{TcpdirectTcpServer$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily \label{class_tcpdirect_tcp_server_aa4caf6c20f235b06fd4b04f6a2dbe997} 
+template$<$typename Conf $>$ \\
+void \mbox{\hyperlink{class_tcpdirect_tcp_server}{Tcpdirect\+Tcp\+Server}}$<$ Conf $>$\+::close (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{reason}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_tcpdirect_tcp_server_a814ebe1cd5419a77ccc639e43e9b48ff}\index{TcpdirectTcpServer$<$ Conf $>$@{TcpdirectTcpServer$<$ Conf $>$}!foreachConn@{foreachConn}}
+\index{foreachConn@{foreachConn}!TcpdirectTcpServer$<$ Conf $>$@{TcpdirectTcpServer$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{foreachConn()}{foreachConn()}}
+{\footnotesize\ttfamily \label{class_tcpdirect_tcp_server_a814ebe1cd5419a77ccc639e43e9b48ff} 
+template$<$typename Conf $>$ \\
+template$<$typename Handler $>$ \\
+void \mbox{\hyperlink{class_tcpdirect_tcp_server}{Tcpdirect\+Tcp\+Server}}$<$ Conf $>$\+::foreach\+Conn (\begin{DoxyParamCaption}\item[{Handler}]{handler}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_tcpdirect_tcp_server_a952e1ae1db371ea16c2adfb3e7446150}\index{TcpdirectTcpServer$<$ Conf $>$@{TcpdirectTcpServer$<$ Conf $>$}!getConnCnt@{getConnCnt}}
+\index{getConnCnt@{getConnCnt}!TcpdirectTcpServer$<$ Conf $>$@{TcpdirectTcpServer$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{getConnCnt()}{getConnCnt()}}
+{\footnotesize\ttfamily \label{class_tcpdirect_tcp_server_a952e1ae1db371ea16c2adfb3e7446150} 
+template$<$typename Conf $>$ \\
+uint32\+\_\+t \mbox{\hyperlink{class_tcpdirect_tcp_server}{Tcpdirect\+Tcp\+Server}}$<$ Conf $>$\+::get\+Conn\+Cnt (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_tcpdirect_tcp_server_ab42040e23c68ef5f5af10ae306fc1621}\index{TcpdirectTcpServer$<$ Conf $>$@{TcpdirectTcpServer$<$ Conf $>$}!getLastError@{getLastError}}
+\index{getLastError@{getLastError}!TcpdirectTcpServer$<$ Conf $>$@{TcpdirectTcpServer$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{getLastError()}{getLastError()}}
+{\footnotesize\ttfamily \label{class_tcpdirect_tcp_server_ab42040e23c68ef5f5af10ae306fc1621} 
+template$<$typename Conf $>$ \\
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_tcpdirect_tcp_server}{Tcpdirect\+Tcp\+Server}}$<$ Conf $>$\+::get\+Last\+Error (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_tcpdirect_tcp_server_a9b1c3d787c028e6dbc03bf88a242a819}\index{TcpdirectTcpServer$<$ Conf $>$@{TcpdirectTcpServer$<$ Conf $>$}!init@{init}}
+\index{init@{init}!TcpdirectTcpServer$<$ Conf $>$@{TcpdirectTcpServer$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \label{class_tcpdirect_tcp_server_a9b1c3d787c028e6dbc03bf88a242a819} 
+template$<$typename Conf $>$ \\
+bool \mbox{\hyperlink{class_tcpdirect_tcp_server}{Tcpdirect\+Tcp\+Server}}$<$ Conf $>$\+::init (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{interface}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{server\+\_\+ip}{, }\item[{uint16\+\_\+t}]{server\+\_\+port}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_tcpdirect_tcp_server_a40c60bb2bf56af4488e7e7db211f3b91}\index{TcpdirectTcpServer$<$ Conf $>$@{TcpdirectTcpServer$<$ Conf $>$}!isClosed@{isClosed}}
+\index{isClosed@{isClosed}!TcpdirectTcpServer$<$ Conf $>$@{TcpdirectTcpServer$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{isClosed()}{isClosed()}}
+{\footnotesize\ttfamily \label{class_tcpdirect_tcp_server_a40c60bb2bf56af4488e7e7db211f3b91} 
+template$<$typename Conf $>$ \\
+bool \mbox{\hyperlink{class_tcpdirect_tcp_server}{Tcpdirect\+Tcp\+Server}}$<$ Conf $>$\+::is\+Closed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_tcpdirect_tcp_server_a10a19865a3746c157138d96fc616b640}\index{TcpdirectTcpServer$<$ Conf $>$@{TcpdirectTcpServer$<$ Conf $>$}!poll@{poll}}
+\index{poll@{poll}!TcpdirectTcpServer$<$ Conf $>$@{TcpdirectTcpServer$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{poll()}{poll()}}
+{\footnotesize\ttfamily \label{class_tcpdirect_tcp_server_a10a19865a3746c157138d96fc616b640} 
+template$<$typename Conf $>$ \\
+template$<$typename Handler $>$ \\
+void \mbox{\hyperlink{class_tcpdirect_tcp_server}{Tcpdirect\+Tcp\+Server}}$<$ Conf $>$\+::poll (\begin{DoxyParamCaption}\item[{Handler \&}]{handler}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sgaer/source/repos/katanafinancial/\+Occam\+CME4/\+Occam\+CME4/src/external/pollnet/Tcpdirect.\+h\end{DoxyCompactItemize}

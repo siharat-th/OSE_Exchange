@@ -1,0 +1,135 @@
+\doxysection{Audit\+Trail\+Writer Class Reference}
+\hypertarget{class_audit_trail_writer}{}\label{class_audit_trail_writer}\index{AuditTrailWriter@{AuditTrailWriter}}
+
+
+This class is responsible for writing audit trail logs.  
+
+
+
+
+{\ttfamily \#include $<$Audit\+Trail\+Writer\+V2.\+hpp$>$}
+
+Inheritance diagram for Audit\+Trail\+Writer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_audit_trail_writer}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_audit_trail_writer_af3aceb8cb02c94124034cd099f24bc1c}{Audit\+Trail\+Writer}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{class_audit_trail_writer}{Audit\+Trail\+Writer}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_audit_trail_writer_a8fff2321c689d1f8a7578d2d2ac68306}{\texorpdfstring{$\sim$}{\string~}\+Audit\+Trail\+Writer}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{class_audit_trail_writer}{Audit\+Trail\+Writer}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_audit_trail_writer_a8ec0e3fc08354656c1c0e9596ffe9f71}{Start}} (string dir, string sessid, string firmid, int core)
+\begin{DoxyCompactList}\small\item\em Starts the \doxylink{class_audit_trail_writer}{Audit\+Trail\+Writer} with the specified parameters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_audit_trail_writer_adb63d01b6064c4e298d7ce14c4e3f281}{Create\+Audit\+File}} (string sessid, string firmid, int segid)
+\begin{DoxyCompactList}\small\item\em Creates an audit file with the specified session ID, firm ID, and segment ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_audit_trail_writer_a605ca9e257d4c48bfadeeef1a6353ed7}{Write}} (\mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf}{KTNBuf}} \texorpdfstring{$\ast$}{*}msg)
+\begin{DoxyCompactList}\small\item\em Writes the specified message to the audit file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_named_thread}{Named\+Thread}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_named_thread_a891fabdc2d824048ec05c82e7ef8c69a}{Named\+Thread}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_named_thread_a018dadb59e5af98ee734301a1baa50cb}{\texorpdfstring{$\sim$}{\string~}\+Named\+Thread}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_named_thread_a9fa42542ff43c89fb9bbc33de9c87e34}{Create\+And\+Run}} (string name, int core)
+\begin{DoxyCompactList}\small\item\em Creates and runs the named thread on the specified core. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_named_thread_ad4809c571171be13f0f91f540d5c196f}{Join}} ()
+\begin{DoxyCompactList}\small\item\em Joins the named thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is responsible for writing audit trail logs. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_audit_trail_writer_af3aceb8cb02c94124034cd099f24bc1c}\index{AuditTrailWriter@{AuditTrailWriter}!AuditTrailWriter@{AuditTrailWriter}}
+\index{AuditTrailWriter@{AuditTrailWriter}!AuditTrailWriter@{AuditTrailWriter}}
+\doxysubsubsection{\texorpdfstring{AuditTrailWriter()}{AuditTrailWriter()}}
+{\footnotesize\ttfamily \label{class_audit_trail_writer_af3aceb8cb02c94124034cd099f24bc1c} 
+Audit\+Trail\+Writer\+::\+Audit\+Trail\+Writer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor for \doxylink{class_audit_trail_writer}{Audit\+Trail\+Writer}. 
+
+\Hypertarget{class_audit_trail_writer_a8fff2321c689d1f8a7578d2d2ac68306}\index{AuditTrailWriter@{AuditTrailWriter}!````~AuditTrailWriter@{\texorpdfstring{$\sim$}{\string~}AuditTrailWriter}}
+\index{````~AuditTrailWriter@{\texorpdfstring{$\sim$}{\string~}AuditTrailWriter}!AuditTrailWriter@{AuditTrailWriter}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}AuditTrailWriter()}{\string~AuditTrailWriter()}}
+{\footnotesize\ttfamily \label{class_audit_trail_writer_a8fff2321c689d1f8a7578d2d2ac68306} 
+Audit\+Trail\+Writer\+::\texorpdfstring{$\sim$}{\string~}\+Audit\+Trail\+Writer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor for \doxylink{class_audit_trail_writer}{Audit\+Trail\+Writer}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_audit_trail_writer_adb63d01b6064c4e298d7ce14c4e3f281}\index{AuditTrailWriter@{AuditTrailWriter}!CreateAuditFile@{CreateAuditFile}}
+\index{CreateAuditFile@{CreateAuditFile}!AuditTrailWriter@{AuditTrailWriter}}
+\doxysubsubsection{\texorpdfstring{CreateAuditFile()}{CreateAuditFile()}}
+{\footnotesize\ttfamily \label{class_audit_trail_writer_adb63d01b6064c4e298d7ce14c4e3f281} 
+void Audit\+Trail\+Writer\+::\+Create\+Audit\+File (\begin{DoxyParamCaption}\item[{string}]{sessid}{, }\item[{string}]{firmid}{, }\item[{int}]{segid}{}\end{DoxyParamCaption})}
+
+
+
+Creates an audit file with the specified session ID, firm ID, and segment ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sessid} & The session ID. \\
+\hline
+{\em firmid} & The firm ID. \\
+\hline
+{\em segid} & The segment ID. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_audit_trail_writer_a8ec0e3fc08354656c1c0e9596ffe9f71}\index{AuditTrailWriter@{AuditTrailWriter}!Start@{Start}}
+\index{Start@{Start}!AuditTrailWriter@{AuditTrailWriter}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily \label{class_audit_trail_writer_a8ec0e3fc08354656c1c0e9596ffe9f71} 
+void Audit\+Trail\+Writer\+::\+Start (\begin{DoxyParamCaption}\item[{string}]{dir}{, }\item[{string}]{sessid}{, }\item[{string}]{firmid}{, }\item[{int}]{core}{}\end{DoxyParamCaption})}
+
+
+
+Starts the \doxylink{class_audit_trail_writer}{Audit\+Trail\+Writer} with the specified parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & The directory where the audit files will be created. \\
+\hline
+{\em sessid} & The session ID. \\
+\hline
+{\em firmid} & The firm ID. \\
+\hline
+{\em core} & The core number. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00018}{Named\+Thread\+::\+Create\+And\+Run()}}, and \mbox{\hyperlink{l00021}{KTN\+::\+CME\+::\+IL3\+::\+META\+::\+IL3\+Meta\+Map\+::init()}}.
+
+\Hypertarget{class_audit_trail_writer_a605ca9e257d4c48bfadeeef1a6353ed7}\index{AuditTrailWriter@{AuditTrailWriter}!Write@{Write}}
+\index{Write@{Write}!AuditTrailWriter@{AuditTrailWriter}}
+\doxysubsubsection{\texorpdfstring{Write()}{Write()}}
+{\footnotesize\ttfamily \label{class_audit_trail_writer_a605ca9e257d4c48bfadeeef1a6353ed7} 
+void Audit\+Trail\+Writer\+::\+Write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf}{KTNBuf}} \texorpdfstring{$\ast$}{*}}]{msg}{}\end{DoxyParamCaption})}
+
+
+
+Writes the specified message to the audit file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The message to write. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Loggers/Audit\+Trail\+Writer\+V2.\+hpp\item 
+Loggers/Audit\+Trail\+Writer\+V2.\+cpp\end{DoxyCompactItemize}

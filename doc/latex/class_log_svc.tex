@@ -1,0 +1,156 @@
+\doxysection{Log\+Svc Class Reference}
+\hypertarget{class_log_svc}{}\label{class_log_svc}\index{LogSvc@{LogSvc}}
+
+
+The \doxylink{class_log_svc}{Log\+Svc} class is responsible for logging messages. This is a thread-\/safe class that offloads messages to a ring buffer and then logs them to the console or another dstination.  
+
+
+
+
+{\ttfamily \#include $<$Log\+Svc.\+hpp$>$}
+
+Inheritance diagram for Log\+Svc\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_log_svc}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_log_svc_a9482a08736c74f300562356f6e267b07}{Log\+Svc}} (const string \&owner, const string \&source)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_log_svc}{Log\+Svc} object with the specified owner and source. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_log_svc_a372afa3890a336a06852ec57e78ed745}{\texorpdfstring{$\sim$}{\string~}\+Log\+Svc}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{class_log_svc}{Log\+Svc} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_log_svc_ac6af8498311999f4ecb338e7eb354c43}{Change\+Name}} (const string \&newname, const string \&source)
+\begin{DoxyCompactList}\small\item\em Changes the name and source of the \doxylink{class_log_svc}{Log\+Svc} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_log_svc_a52b147fa0611e161dc25d18ebe21c2ea}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Starts the logging service. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_log_svc_a213a4063c1cc8ae7152defed76024038}{Log\+Me}} (const \mbox{\hyperlink{struct_log_msg}{Log\+Msg}} \&msg)
+\begin{DoxyCompactList}\small\item\em Logs the specified \doxylink{struct_log_msg}{Log\+Msg} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_log_svc_a1139d259697faf833c161410dd7ef02b}{Log\+Me}} (const string \&msg, int icolor)
+\begin{DoxyCompactList}\small\item\em Logs the specified message with the specified color. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_named_thread}{Named\+Thread}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_named_thread_a891fabdc2d824048ec05c82e7ef8c69a}{Named\+Thread}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_named_thread_a018dadb59e5af98ee734301a1baa50cb}{\texorpdfstring{$\sim$}{\string~}\+Named\+Thread}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_named_thread_a9fa42542ff43c89fb9bbc33de9c87e34}{Create\+And\+Run}} (string name, int core)
+\begin{DoxyCompactList}\small\item\em Creates and runs the named thread on the specified core. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_named_thread_ad4809c571171be13f0f91f540d5c196f}{Join}} ()
+\begin{DoxyCompactList}\small\item\em Joins the named thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_log_svc}{Log\+Svc} class is responsible for logging messages. This is a thread-\/safe class that offloads messages to a ring buffer and then logs them to the console or another dstination. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_log_svc_a9482a08736c74f300562356f6e267b07}\index{LogSvc@{LogSvc}!LogSvc@{LogSvc}}
+\index{LogSvc@{LogSvc}!LogSvc@{LogSvc}}
+\doxysubsubsection{\texorpdfstring{LogSvc()}{LogSvc()}}
+{\footnotesize\ttfamily \label{class_log_svc_a9482a08736c74f300562356f6e267b07} 
+Log\+Svc\+::\+Log\+Svc (\begin{DoxyParamCaption}\item[{const string \&}]{owner}{, }\item[{const string \&}]{source}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_log_svc}{Log\+Svc} object with the specified owner and source. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & The owner of the \doxylink{class_log_svc}{Log\+Svc} object. \\
+\hline
+{\em source} & The source of the \doxylink{class_log_svc}{Log\+Svc} object. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_log_svc_a372afa3890a336a06852ec57e78ed745}\index{LogSvc@{LogSvc}!````~LogSvc@{\texorpdfstring{$\sim$}{\string~}LogSvc}}
+\index{````~LogSvc@{\texorpdfstring{$\sim$}{\string~}LogSvc}!LogSvc@{LogSvc}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}LogSvc()}{\string~LogSvc()}}
+{\footnotesize\ttfamily \label{class_log_svc_a372afa3890a336a06852ec57e78ed745} 
+Log\+Svc\+::\texorpdfstring{$\sim$}{\string~}\+Log\+Svc (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destroys the \doxylink{class_log_svc}{Log\+Svc} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_log_svc_ac6af8498311999f4ecb338e7eb354c43}\index{LogSvc@{LogSvc}!ChangeName@{ChangeName}}
+\index{ChangeName@{ChangeName}!LogSvc@{LogSvc}}
+\doxysubsubsection{\texorpdfstring{ChangeName()}{ChangeName()}}
+{\footnotesize\ttfamily \label{class_log_svc_ac6af8498311999f4ecb338e7eb354c43} 
+void Log\+Svc\+::\+Change\+Name (\begin{DoxyParamCaption}\item[{const string \&}]{newname}{, }\item[{const string \&}]{source}{}\end{DoxyParamCaption})}
+
+
+
+Changes the name and source of the \doxylink{class_log_svc}{Log\+Svc} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newname} & The new name of the \doxylink{class_log_svc}{Log\+Svc} object. \\
+\hline
+{\em source} & The new source of the \doxylink{class_log_svc}{Log\+Svc} object. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{l00019}{KTN\+::\+CME\+::\+Cme\+Algo\+::\+Cme\+Algo()}}, and \mbox{\hyperlink{l00019}{KTN\+::\+CME\+::\+Cme\+GT5\+::\+Cme\+GT5()}}.
+
+\Hypertarget{class_log_svc_a213a4063c1cc8ae7152defed76024038}\index{LogSvc@{LogSvc}!LogMe@{LogMe}}
+\index{LogMe@{LogMe}!LogSvc@{LogSvc}}
+\doxysubsubsection{\texorpdfstring{LogMe()}{LogMe()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_log_svc_a213a4063c1cc8ae7152defed76024038} 
+void Log\+Svc\+::\+Log\+Me (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_log_msg}{Log\+Msg}} \&}]{msg}{}\end{DoxyParamCaption})}
+
+
+
+Logs the specified \doxylink{struct_log_msg}{Log\+Msg} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The \doxylink{struct_log_msg}{Log\+Msg} object to be logged. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00062}{KTN\+::\+Core\+::\+SPSCRing\+Buffer$<$ T $>$\+::enqueue()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00050}{KTN\+::\+Exchange\+Base2\+::\+Log\+Me()}}.
+
+\Hypertarget{class_log_svc_a1139d259697faf833c161410dd7ef02b}\index{LogSvc@{LogSvc}!LogMe@{LogMe}}
+\index{LogMe@{LogMe}!LogSvc@{LogSvc}}
+\doxysubsubsection{\texorpdfstring{LogMe()}{LogMe()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_log_svc_a1139d259697faf833c161410dd7ef02b} 
+void Log\+Svc\+::\+Log\+Me (\begin{DoxyParamCaption}\item[{const string \&}]{msg}{, }\item[{int}]{icolor}{}\end{DoxyParamCaption})}
+
+
+
+Logs the specified message with the specified color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The message to be logged. \\
+\hline
+{\em icolor} & The color of the log message. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_log_svc_a52b147fa0611e161dc25d18ebe21c2ea}\index{LogSvc@{LogSvc}!Start@{Start}}
+\index{Start@{Start}!LogSvc@{LogSvc}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily \label{class_log_svc_a52b147fa0611e161dc25d18ebe21c2ea} 
+void Log\+Svc\+::\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Starts the logging service. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Loggers/Log\+Svc.\+hpp\item 
+Loggers/Log\+Svc.\+cpp\end{DoxyCompactItemize}

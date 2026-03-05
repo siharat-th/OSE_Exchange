@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_ack_msg_1_1_block_data" xml:lang="en-US">
+<title>KTN::CME::IL3::ExecutionAckMsg::BlockData Struct Reference</title>
+<indexterm><primary>KTN::CME::IL3::ExecutionAckMsg::BlockData</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_ack_msg_1_1_block_data_1aa0f8d20607af4d29fa703d3eddcbd2de">PartyDetailsListReqID</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_ack_msg_1_1_block_data_1a6b8f2093378c28bba70648e6b725cf82">OrderID</link></para>
+</listitem>
+            <listitem><para>EnumExecAckStatus <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_ack_msg_1_1_block_data_1ab459dee60648a564d54b70d7a49f57ea">ExecAckStatus</link></para>
+</listitem>
+            <listitem><para>uInt32 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_ack_msg_1_1_block_data_1abf5f5590dc24c9b0a8301fe5f75d9487">SeqNum</link></para>
+</listitem>
+            <listitem><para>String20Req <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_ack_msg_1_1_block_data_1a305d678af27e2a5c053554d96da17629">ClOrdID</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_ack_msg_1_1_block_data_1a0aceda26949683a572dd1f020174104f">SecExecID</link></para>
+</listitem>
+            <listitem><para><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_p_r_i_c_e9">PRICE9</link> <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_ack_msg_1_1_block_data_1adfbd28eff5b3ad6395da4be95bd1616d">LastPx</link></para>
+</listitem>
+            <listitem><para>Int32 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_ack_msg_1_1_block_data_1a378976565ba4f761e3b557851894c2d4">SecurityID</link></para>
+</listitem>
+            <listitem><para>uInt32 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_ack_msg_1_1_block_data_1a0051875f2d0c603bb69eafa85155dcb4">LastQty</link></para>
+</listitem>
+            <listitem><para>EnumDKReason <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_ack_msg_1_1_block_data_1a5f436dd372f6106a3b3c8f83ad96cd14">DKReason</link></para>
+</listitem>
+            <listitem><para>EnumSideReq <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_ack_msg_1_1_block_data_1a6209350a22ef4617128b74ef79692779">Side</link></para>
+</listitem>
+            <listitem><para>String20Req <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_ack_msg_1_1_block_data_1a542c81ea5cb2d2e4098ecc6a2be764a2">SenderID</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_ack_msg_1_1_block_data_1a0ee8b38d1041cd297f971aed8fcb9e1a">SendingTimeEpoch</link></para>
+</listitem>
+            <listitem><para>String5Req <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_ack_msg_1_1_block_data_1ab7fbe461280111887658cba232da955e">Location</link></para>
+</listitem>
+            <listitem><para>EnumManualOrdIndReq <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_ack_msg_1_1_block_data_1a2f66c9b27878b3536dac3445d8d6025c">ManualOrderIndicator</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_ack_msg_1_1_block_data_1a305d678af27e2a5c053554d96da17629"/><section>
+    <title>ClOrdID</title>
+<indexterm><primary>ClOrdID</primary><secondary>KTN::CME::IL3::ExecutionAckMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::ExecutionAckMsg::BlockData</primary><secondary>ClOrdID</secondary></indexterm>
+<para><computeroutput>String20Req KTN::CME::IL3::ExecutionAckMsg::BlockData::ClOrdID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_ack_msg_1_1_block_data_1a5f436dd372f6106a3b3c8f83ad96cd14"/><section>
+    <title>DKReason</title>
+<indexterm><primary>DKReason</primary><secondary>KTN::CME::IL3::ExecutionAckMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::ExecutionAckMsg::BlockData</primary><secondary>DKReason</secondary></indexterm>
+<para><computeroutput>EnumDKReason KTN::CME::IL3::ExecutionAckMsg::BlockData::DKReason</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_ack_msg_1_1_block_data_1ab459dee60648a564d54b70d7a49f57ea"/><section>
+    <title>ExecAckStatus</title>
+<indexterm><primary>ExecAckStatus</primary><secondary>KTN::CME::IL3::ExecutionAckMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::ExecutionAckMsg::BlockData</primary><secondary>ExecAckStatus</secondary></indexterm>
+<para><computeroutput>EnumExecAckStatus KTN::CME::IL3::ExecutionAckMsg::BlockData::ExecAckStatus</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_ack_msg_1_1_block_data_1adfbd28eff5b3ad6395da4be95bd1616d"/><section>
+    <title>LastPx</title>
+<indexterm><primary>LastPx</primary><secondary>KTN::CME::IL3::ExecutionAckMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::ExecutionAckMsg::BlockData</primary><secondary>LastPx</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_p_r_i_c_e9">PRICE9</link> KTN::CME::IL3::ExecutionAckMsg::BlockData::LastPx</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_ack_msg_1_1_block_data_1a0051875f2d0c603bb69eafa85155dcb4"/><section>
+    <title>LastQty</title>
+<indexterm><primary>LastQty</primary><secondary>KTN::CME::IL3::ExecutionAckMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::ExecutionAckMsg::BlockData</primary><secondary>LastQty</secondary></indexterm>
+<para><computeroutput>uInt32 KTN::CME::IL3::ExecutionAckMsg::BlockData::LastQty</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_ack_msg_1_1_block_data_1ab7fbe461280111887658cba232da955e"/><section>
+    <title>Location</title>
+<indexterm><primary>Location</primary><secondary>KTN::CME::IL3::ExecutionAckMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::ExecutionAckMsg::BlockData</primary><secondary>Location</secondary></indexterm>
+<para><computeroutput>String5Req KTN::CME::IL3::ExecutionAckMsg::BlockData::Location</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_ack_msg_1_1_block_data_1a2f66c9b27878b3536dac3445d8d6025c"/><section>
+    <title>ManualOrderIndicator</title>
+<indexterm><primary>ManualOrderIndicator</primary><secondary>KTN::CME::IL3::ExecutionAckMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::ExecutionAckMsg::BlockData</primary><secondary>ManualOrderIndicator</secondary></indexterm>
+<para><computeroutput>EnumManualOrdIndReq KTN::CME::IL3::ExecutionAckMsg::BlockData::ManualOrderIndicator</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_ack_msg_1_1_block_data_1a6b8f2093378c28bba70648e6b725cf82"/><section>
+    <title>OrderID</title>
+<indexterm><primary>OrderID</primary><secondary>KTN::CME::IL3::ExecutionAckMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::ExecutionAckMsg::BlockData</primary><secondary>OrderID</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::ExecutionAckMsg::BlockData::OrderID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_ack_msg_1_1_block_data_1aa0f8d20607af4d29fa703d3eddcbd2de"/><section>
+    <title>PartyDetailsListReqID</title>
+<indexterm><primary>PartyDetailsListReqID</primary><secondary>KTN::CME::IL3::ExecutionAckMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::ExecutionAckMsg::BlockData</primary><secondary>PartyDetailsListReqID</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::ExecutionAckMsg::BlockData::PartyDetailsListReqID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_ack_msg_1_1_block_data_1a0aceda26949683a572dd1f020174104f"/><section>
+    <title>SecExecID</title>
+<indexterm><primary>SecExecID</primary><secondary>KTN::CME::IL3::ExecutionAckMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::ExecutionAckMsg::BlockData</primary><secondary>SecExecID</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::ExecutionAckMsg::BlockData::SecExecID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_ack_msg_1_1_block_data_1a378976565ba4f761e3b557851894c2d4"/><section>
+    <title>SecurityID</title>
+<indexterm><primary>SecurityID</primary><secondary>KTN::CME::IL3::ExecutionAckMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::ExecutionAckMsg::BlockData</primary><secondary>SecurityID</secondary></indexterm>
+<para><computeroutput>Int32 KTN::CME::IL3::ExecutionAckMsg::BlockData::SecurityID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_ack_msg_1_1_block_data_1a542c81ea5cb2d2e4098ecc6a2be764a2"/><section>
+    <title>SenderID</title>
+<indexterm><primary>SenderID</primary><secondary>KTN::CME::IL3::ExecutionAckMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::ExecutionAckMsg::BlockData</primary><secondary>SenderID</secondary></indexterm>
+<para><computeroutput>String20Req KTN::CME::IL3::ExecutionAckMsg::BlockData::SenderID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_ack_msg_1_1_block_data_1a0ee8b38d1041cd297f971aed8fcb9e1a"/><section>
+    <title>SendingTimeEpoch</title>
+<indexterm><primary>SendingTimeEpoch</primary><secondary>KTN::CME::IL3::ExecutionAckMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::ExecutionAckMsg::BlockData</primary><secondary>SendingTimeEpoch</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::ExecutionAckMsg::BlockData::SendingTimeEpoch</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_ack_msg_1_1_block_data_1abf5f5590dc24c9b0a8301fe5f75d9487"/><section>
+    <title>SeqNum</title>
+<indexterm><primary>SeqNum</primary><secondary>KTN::CME::IL3::ExecutionAckMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::ExecutionAckMsg::BlockData</primary><secondary>SeqNum</secondary></indexterm>
+<para><computeroutput>uInt32 KTN::CME::IL3::ExecutionAckMsg::BlockData::SeqNum</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_ack_msg_1_1_block_data_1a6209350a22ef4617128b74ef79692779"/><section>
+    <title>Side</title>
+<indexterm><primary>Side</primary><secondary>KTN::CME::IL3::ExecutionAckMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::ExecutionAckMsg::BlockData</primary><secondary>Side</secondary></indexterm>
+<para><computeroutput>EnumSideReq KTN::CME::IL3::ExecutionAckMsg::BlockData::Side</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+exchsupport/cme/il3/IL3Messages2.hpp</section>
+</section>

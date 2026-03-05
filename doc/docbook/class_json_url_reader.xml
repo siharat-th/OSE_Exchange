@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_json_url_reader" xml:lang="en-US">
+<title>JsonUrlReader Class Reference</title>
+<indexterm><primary>JsonUrlReader</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_json_url_reader">JsonUrlReader</link> class is responsible for reading JSON data from a URL. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;JsonUrlReader.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_json_url_reader_1a589c4b2f79c33642ee6dd761c3ac0873">JsonUrlReader</link> ()</para>
+
+<para>Default constructor for <link linkend="_class_json_url_reader">JsonUrlReader</link>. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_json_url_reader_1a94d31b5c867485fd8d1607580f2ea577">~JsonUrlReader</link> ()</para>
+
+<para>Destructor for <link linkend="_class_json_url_reader">JsonUrlReader</link>. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static size_t <link linkend="_class_json_url_reader_1a5c7afaff9b7e34f700a64497e6d31adf">WriteCallback</link> (void *contents, size_t size, size_t nmemb, void *userp)</para>
+
+<para>Callback function used by libcurl to write received data to a string buffer. </para>
+</listitem>
+            <listitem><para>static std::string <link linkend="_class_json_url_reader_1a06e5a6fef9f4160c3979960550dcff76">Get</link> (std::string url)</para>
+
+<para>Sends an HTTP GET request to the specified URL and returns the response as a string. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_json_url_reader">JsonUrlReader</link> class is responsible for reading JSON data from a URL. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_json_url_reader_1a589c4b2f79c33642ee6dd761c3ac0873"/><section>
+    <title>JsonUrlReader()</title>
+<indexterm><primary>JsonUrlReader</primary><secondary>JsonUrlReader</secondary></indexterm>
+<indexterm><primary>JsonUrlReader</primary><secondary>JsonUrlReader</secondary></indexterm>
+<para><computeroutput>JsonUrlReader::JsonUrlReader ( )</computeroutput></para><para>
+
+<para>Default constructor for <link linkend="_class_json_url_reader">JsonUrlReader</link>. </para>
+</para>
+</section>
+<anchor xml:id="_class_json_url_reader_1a94d31b5c867485fd8d1607580f2ea577"/><section>
+    <title>~JsonUrlReader()</title>
+<indexterm><primary>~JsonUrlReader</primary><secondary>JsonUrlReader</secondary></indexterm>
+<indexterm><primary>JsonUrlReader</primary><secondary>~JsonUrlReader</secondary></indexterm>
+<para><computeroutput>JsonUrlReader::~JsonUrlReader ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Destructor for <link linkend="_class_json_url_reader">JsonUrlReader</link>. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_json_url_reader_1a06e5a6fef9f4160c3979960550dcff76"/><section>
+    <title>Get()</title>
+<indexterm><primary>Get</primary><secondary>JsonUrlReader</secondary></indexterm>
+<indexterm><primary>JsonUrlReader</primary><secondary>Get</secondary></indexterm>
+<para><computeroutput>static std::string JsonUrlReader::Get (std::string url)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Sends an HTTP GET request to the specified URL and returns the response as a string. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>url</entry><entry>
+<para>The URL to send the GET request to. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The response received from the URL as a string. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00041">WriteCallback()</link>.</para>
+<para>
+Referenced by <link linkend="_l00039">IL3CertHelpers::CertSecId()</link>, and <link linkend="_l00063">IL3CertHelpers::CertSymbol()</link>.</para>
+</section>
+<anchor xml:id="_class_json_url_reader_1a5c7afaff9b7e34f700a64497e6d31adf"/><section>
+    <title>WriteCallback()</title>
+<indexterm><primary>WriteCallback</primary><secondary>JsonUrlReader</secondary></indexterm>
+<indexterm><primary>JsonUrlReader</primary><secondary>WriteCallback</secondary></indexterm>
+<para><computeroutput>static size_t JsonUrlReader::WriteCallback (void * contents, size_t size, size_t nmemb, void * userp)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Callback function used by libcurl to write received data to a string buffer. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>contents</entry><entry>
+<para>Pointer to the received data. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>size</entry><entry>
+<para>Size of each element in the received data. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>nmemb</entry><entry>
+<para>Number of elements in the received data. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>userp</entry><entry>
+<para>Pointer to the string buffer where the received data is stored. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The total number of bytes written to the string buffer. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00052">Get()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Rest/JsonUrlReader.hppRest/JsonUrlReader.cpp</section>
+</section>

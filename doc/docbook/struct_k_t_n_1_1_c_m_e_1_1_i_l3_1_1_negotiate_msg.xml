@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiate_msg" xml:lang="en-US">
+<title>KTN::CME::IL3::NegotiateMsg Struct Reference</title>
+<indexterm><primary>KTN::CME::IL3::NegotiateMsg</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiate_msg_1a07494248e523f10c470ee14ad2cf9c71">Construct</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>std::uint16_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiate_msg_1a8b1493fed661d9ab77442d265569263a">msgSize</link></para>
+</listitem>
+            <listitem><para>std::uint16_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiate_msg_1a03929c885dee6fc22fb46ee922be12ed">enodingType_</link> = IL3::ENCODING_TYPE</para>
+</listitem>
+            <listitem><para>std::uint16_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiate_msg_1a2a252d77d293033da288bf4412d1a6d2">blockLength_</link> = 76</para>
+</listitem>
+            <listitem><para>std::uint16_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiate_msg_1ac196365ee9375a616c15f7f0e991e289">templateId_</link> = 500</para>
+</listitem>
+            <listitem><para>std::uint16_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiate_msg_1aa8608f9eb37bb15022d18acc09626d8e">schemaId_</link> = IL3::SCHEMA_ID</para>
+</listitem>
+            <listitem><para>std::uint16_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiate_msg_1add4c7f4e5842eb699e2f43170c21d09f">version_</link> =IL3::VERSION</para>
+</listitem>
+            <listitem><para>String32Req <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiate_msg_1ac01d39764e5aceef9fed085923fe1bf6">HMACSignature</link></para>
+</listitem>
+            <listitem><para>String20Req <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiate_msg_1acb656a604fc2d95824a4b4b7ba9f7993">AccessKeyID</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiate_msg_1a838740d400bc35864d5c6037f7bfc651">UUID</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiate_msg_1ad58acaede95d94de93b4da1655a32cdc">RequestTimestamp</link></para>
+</listitem>
+            <listitem><para>String3Req <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiate_msg_1a864364ce15e43b095198f908f03e81ef">Session</link></para>
+</listitem>
+            <listitem><para>String5Req <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiate_msg_1a0dc2a631a037259578b07d51d0f9e41d">Firm</link></para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiate_msg_1a2ed7dbd86a2830816e3e0d75a25d250e">Credentials</link> = 0</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiate_msg_1a07494248e523f10c470ee14ad2cf9c71"/><section>
+    <title>Construct()</title>
+<indexterm><primary>Construct</primary><secondary>KTN::CME::IL3::NegotiateMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::NegotiateMsg</primary><secondary>Construct</secondary></indexterm>
+<para><computeroutput>void KTN::CME::IL3::NegotiateMsg::Construct ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiate_msg_1acb656a604fc2d95824a4b4b7ba9f7993"/><section>
+    <title>AccessKeyID</title>
+<indexterm><primary>AccessKeyID</primary><secondary>KTN::CME::IL3::NegotiateMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::NegotiateMsg</primary><secondary>AccessKeyID</secondary></indexterm>
+<para><computeroutput>String20Req KTN::CME::IL3::NegotiateMsg::AccessKeyID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiate_msg_1a2a252d77d293033da288bf4412d1a6d2"/><section>
+    <title>blockLength_</title>
+<indexterm><primary>blockLength_</primary><secondary>KTN::CME::IL3::NegotiateMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::NegotiateMsg</primary><secondary>blockLength_</secondary></indexterm>
+<para><computeroutput>std::uint16_t KTN::CME::IL3::NegotiateMsg::blockLength_ = 76</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiate_msg_1a2ed7dbd86a2830816e3e0d75a25d250e"/><section>
+    <title>Credentials</title>
+<indexterm><primary>Credentials</primary><secondary>KTN::CME::IL3::NegotiateMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::NegotiateMsg</primary><secondary>Credentials</secondary></indexterm>
+<para><computeroutput>uint16_t KTN::CME::IL3::NegotiateMsg::Credentials = 0</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiate_msg_1a03929c885dee6fc22fb46ee922be12ed"/><section>
+    <title>enodingType_</title>
+<indexterm><primary>enodingType_</primary><secondary>KTN::CME::IL3::NegotiateMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::NegotiateMsg</primary><secondary>enodingType_</secondary></indexterm>
+<para><computeroutput>std::uint16_t KTN::CME::IL3::NegotiateMsg::enodingType_ = IL3::ENCODING_TYPE</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiate_msg_1a0dc2a631a037259578b07d51d0f9e41d"/><section>
+    <title>Firm</title>
+<indexterm><primary>Firm</primary><secondary>KTN::CME::IL3::NegotiateMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::NegotiateMsg</primary><secondary>Firm</secondary></indexterm>
+<para><computeroutput>String5Req KTN::CME::IL3::NegotiateMsg::Firm</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiate_msg_1ac01d39764e5aceef9fed085923fe1bf6"/><section>
+    <title>HMACSignature</title>
+<indexterm><primary>HMACSignature</primary><secondary>KTN::CME::IL3::NegotiateMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::NegotiateMsg</primary><secondary>HMACSignature</secondary></indexterm>
+<para><computeroutput>String32Req KTN::CME::IL3::NegotiateMsg::HMACSignature</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiate_msg_1a8b1493fed661d9ab77442d265569263a"/><section>
+    <title>msgSize</title>
+<indexterm><primary>msgSize</primary><secondary>KTN::CME::IL3::NegotiateMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::NegotiateMsg</primary><secondary>msgSize</secondary></indexterm>
+<para><computeroutput>std::uint16_t KTN::CME::IL3::NegotiateMsg::msgSize</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiate_msg_1ad58acaede95d94de93b4da1655a32cdc"/><section>
+    <title>RequestTimestamp</title>
+<indexterm><primary>RequestTimestamp</primary><secondary>KTN::CME::IL3::NegotiateMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::NegotiateMsg</primary><secondary>RequestTimestamp</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::NegotiateMsg::RequestTimestamp</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiate_msg_1aa8608f9eb37bb15022d18acc09626d8e"/><section>
+    <title>schemaId_</title>
+<indexterm><primary>schemaId_</primary><secondary>KTN::CME::IL3::NegotiateMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::NegotiateMsg</primary><secondary>schemaId_</secondary></indexterm>
+<para><computeroutput>std::uint16_t KTN::CME::IL3::NegotiateMsg::schemaId_ = IL3::SCHEMA_ID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiate_msg_1a864364ce15e43b095198f908f03e81ef"/><section>
+    <title>Session</title>
+<indexterm><primary>Session</primary><secondary>KTN::CME::IL3::NegotiateMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::NegotiateMsg</primary><secondary>Session</secondary></indexterm>
+<para><computeroutput>String3Req KTN::CME::IL3::NegotiateMsg::Session</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiate_msg_1ac196365ee9375a616c15f7f0e991e289"/><section>
+    <title>templateId_</title>
+<indexterm><primary>templateId_</primary><secondary>KTN::CME::IL3::NegotiateMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::NegotiateMsg</primary><secondary>templateId_</secondary></indexterm>
+<para><computeroutput>std::uint16_t KTN::CME::IL3::NegotiateMsg::templateId_ = 500</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiate_msg_1a838740d400bc35864d5c6037f7bfc651"/><section>
+    <title>UUID</title>
+<indexterm><primary>UUID</primary><secondary>KTN::CME::IL3::NegotiateMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::NegotiateMsg</primary><secondary>UUID</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::NegotiateMsg::UUID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiate_msg_1add4c7f4e5842eb699e2f43170c21d09f"/><section>
+    <title>version_</title>
+<indexterm><primary>version_</primary><secondary>KTN::CME::IL3::NegotiateMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::NegotiateMsg</primary><secondary>version_</secondary></indexterm>
+<para><computeroutput>std::uint16_t KTN::CME::IL3::NegotiateMsg::version_ =IL3::VERSION</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+exchsupport/cme/il3/IL3Messages2.hpp</section>
+</section>

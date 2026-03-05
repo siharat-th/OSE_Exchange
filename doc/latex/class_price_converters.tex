@@ -1,0 +1,103 @@
+\doxysection{Price\+Converters Class Reference}
+\hypertarget{class_price_converters}{}\label{class_price_converters}\index{PriceConverters@{PriceConverters}}
+
+
+The \doxylink{class_price_converters}{Price\+Converters} class provides utility functions for converting prices.  
+
+
+
+
+{\ttfamily \#include $<$Price\+Converters.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int32\+\_\+t \mbox{\hyperlink{class_price_converters_ad297b0e0e7aa63c33f715d4da0041074}{From\+Mantissa9}} (int64\+\_\+t mantissa)
+\begin{DoxyCompactList}\small\item\em Converts a mantissa value to an integer price. \end{DoxyCompactList}\item 
+static int64\+\_\+t \mbox{\hyperlink{class_price_converters_ad98e8875e6619d705d62bb5b4185abf3}{To\+Mantissa}} (int32\+\_\+t price)
+\begin{DoxyCompactList}\small\item\em Converts an integer price to a mantissa value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr int64\+\_\+t \mbox{\hyperlink{class_price_converters_aa41186b120a5a12b85399d90737ae7d2}{ten\+\_\+to\+\_\+the\+\_\+nine}} = 1000000000
+\item 
+static constexpr double \mbox{\hyperlink{class_price_converters_a2cd9b60fbc302b6f44960c2898137853}{reciprocal}} = 1.\+0 / ten\+\_\+to\+\_\+the\+\_\+nine
+\item 
+static constexpr int64\+\_\+t \mbox{\hyperlink{class_price_converters_aca4fed0fbfdd813373bceae6275b4d62}{MAGIC\+\_\+\+NUMBER}} = 2305843009LL
+\item 
+static constexpr int32\+\_\+t \mbox{\hyperlink{class_price_converters_a6350e5469a7fe98a35d28eb22e08c563}{SHIFT}} = 30
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_price_converters}{Price\+Converters} class provides utility functions for converting prices. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_price_converters_ad297b0e0e7aa63c33f715d4da0041074}\index{PriceConverters@{PriceConverters}!FromMantissa9@{FromMantissa9}}
+\index{FromMantissa9@{FromMantissa9}!PriceConverters@{PriceConverters}}
+\doxysubsubsection{\texorpdfstring{FromMantissa9()}{FromMantissa9()}}
+{\footnotesize\ttfamily \label{class_price_converters_ad297b0e0e7aa63c33f715d4da0041074} 
+static int32\+\_\+t Price\+Converters\+::\+From\+Mantissa9 (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{mantissa}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Converts a mantissa value to an integer price. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mantissa} & The mantissa value to convert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The converted integer price. 
+\end{DoxyReturn}
+\Hypertarget{class_price_converters_ad98e8875e6619d705d62bb5b4185abf3}\index{PriceConverters@{PriceConverters}!ToMantissa@{ToMantissa}}
+\index{ToMantissa@{ToMantissa}!PriceConverters@{PriceConverters}}
+\doxysubsubsection{\texorpdfstring{ToMantissa()}{ToMantissa()}}
+{\footnotesize\ttfamily \label{class_price_converters_ad98e8875e6619d705d62bb5b4185abf3} 
+static int64\+\_\+t Price\+Converters\+::\+To\+Mantissa (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{price}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Converts an integer price to a mantissa value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em price} & The integer price to convert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The converted mantissa value. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_price_converters_aca4fed0fbfdd813373bceae6275b4d62}\index{PriceConverters@{PriceConverters}!MAGIC\_NUMBER@{MAGIC\_NUMBER}}
+\index{MAGIC\_NUMBER@{MAGIC\_NUMBER}!PriceConverters@{PriceConverters}}
+\doxysubsubsection{\texorpdfstring{MAGIC\_NUMBER}{MAGIC\_NUMBER}}
+{\footnotesize\ttfamily \label{class_price_converters_aca4fed0fbfdd813373bceae6275b4d62} 
+int64\+\_\+t Price\+Converters\+::\+MAGIC\+\_\+\+NUMBER = 2305843009LL\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\Hypertarget{class_price_converters_a2cd9b60fbc302b6f44960c2898137853}\index{PriceConverters@{PriceConverters}!reciprocal@{reciprocal}}
+\index{reciprocal@{reciprocal}!PriceConverters@{PriceConverters}}
+\doxysubsubsection{\texorpdfstring{reciprocal}{reciprocal}}
+{\footnotesize\ttfamily \label{class_price_converters_a2cd9b60fbc302b6f44960c2898137853} 
+double Price\+Converters\+::reciprocal = 1.\+0 / ten\+\_\+to\+\_\+the\+\_\+nine\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\Hypertarget{class_price_converters_a6350e5469a7fe98a35d28eb22e08c563}\index{PriceConverters@{PriceConverters}!SHIFT@{SHIFT}}
+\index{SHIFT@{SHIFT}!PriceConverters@{PriceConverters}}
+\doxysubsubsection{\texorpdfstring{SHIFT}{SHIFT}}
+{\footnotesize\ttfamily \label{class_price_converters_a6350e5469a7fe98a35d28eb22e08c563} 
+int32\+\_\+t Price\+Converters\+::\+SHIFT = 30\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\Hypertarget{class_price_converters_aa41186b120a5a12b85399d90737ae7d2}\index{PriceConverters@{PriceConverters}!ten\_to\_the\_nine@{ten\_to\_the\_nine}}
+\index{ten\_to\_the\_nine@{ten\_to\_the\_nine}!PriceConverters@{PriceConverters}}
+\doxysubsubsection{\texorpdfstring{ten\_to\_the\_nine}{ten\_to\_the\_nine}}
+{\footnotesize\ttfamily \label{class_price_converters_aa41186b120a5a12b85399d90737ae7d2} 
+int64\+\_\+t Price\+Converters\+::ten\+\_\+to\+\_\+the\+\_\+nine = 1000000000\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+exchsupport/cme/Price\+Converters.\+hpp\end{DoxyCompactItemize}

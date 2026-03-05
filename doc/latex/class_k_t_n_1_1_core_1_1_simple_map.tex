@@ -1,0 +1,251 @@
+\doxysection{KTN\+::Core\+::Simple\+Map\texorpdfstring{$<$}{<} K, T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_k_t_n_1_1_core_1_1_simple_map}{}\label{class_k_t_n_1_1_core_1_1_simple_map}\index{KTN::Core::SimpleMap$<$ K, T $>$@{KTN::Core::SimpleMap$<$ K, T $>$}}
+
+
+A simple map implementation that associates keys with values.  
+
+
+
+
+{\ttfamily \#include $<$Simple\+Map.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_core_1_1_simple_map_a6573b13c88be54ff6ae7d8442056a43a}{Simple\+Map}} (size\+\_\+t capacity)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_k_t_n_1_1_core_1_1_simple_map}{Simple\+Map} object with the specified capacity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_simple_map_a58320d78c9b126ddf37e65859111503a}{insert}} (K key, T \texorpdfstring{$\ast$}{*}value)
+\begin{DoxyCompactList}\small\item\em Inserts a key-\/value pair into the map. \end{DoxyCompactList}\item 
+T \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_simple_map_ab779f0a5c0875d6d4794d948b2dea681}{get}} (K key)
+\begin{DoxyCompactList}\small\item\em Retrieves the value associated with the specified key. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_simple_map_a9f31c2bb619ea65488cf76a97e29d00d}{find}} (K key)
+\begin{DoxyCompactList}\small\item\em Checks if the map contains the specified key. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_simple_map_a057842bf233420071e147a365afe9ef5}{size}} () const
+\begin{DoxyCompactList}\small\item\em Gets the number of elements in the map. \end{DoxyCompactList}\item 
+T \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_simple_map_a377e7bf2679f87ff3987f25793c3e119}{at}} (int index) const
+\begin{DoxyCompactList}\small\item\em Retrieves the value at the specified index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_simple_map_ac5a3732b49f06e54b80ab7dc08aaba5f}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Clears the map, removing all elements. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_simple_map_a68464368af2fc9425f4ec774a6eca415}{cleardead}} ()
+\begin{DoxyCompactList}\small\item\em Clears any dead elements from the map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_simple_map_a09efd1669972d525c8c497cbac1ecc43}{erase}} (K key)
+\begin{DoxyCompactList}\small\item\em Removes the element with the specified key from the map. \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_simple_map_ae522b87900afc1f38c1b2ae79030c761}{operator\mbox{[}$\,$\mbox{]}}} (K key)
+\begin{DoxyCompactList}\small\item\em Retrieves the value associated with the specified key. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename K, typename T$>$\newline
+class KTN\+::\+Core\+::\+Simple\+Map$<$ K, T $>$}
+A simple map implementation that associates keys with values. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em K} & The type of the keys. \\
+\hline
+{\em T} & The type of the values. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_k_t_n_1_1_core_1_1_simple_map_a6573b13c88be54ff6ae7d8442056a43a}\index{KTN::Core::SimpleMap$<$ K, T $>$@{KTN::Core::SimpleMap$<$ K, T $>$}!SimpleMap@{SimpleMap}}
+\index{SimpleMap@{SimpleMap}!KTN::Core::SimpleMap$<$ K, T $>$@{KTN::Core::SimpleMap$<$ K, T $>$}}
+\doxysubsubsection{\texorpdfstring{SimpleMap()}{SimpleMap()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_simple_map_a6573b13c88be54ff6ae7d8442056a43a} 
+template$<$typename K , typename T $>$ \\
+\mbox{\hyperlink{class_k_t_n_1_1_core_1_1_simple_map}{KTN\+::\+Core\+::\+Simple\+Map}}$<$ K, T $>$\+::\+Simple\+Map (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{capacity}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a \doxylink{class_k_t_n_1_1_core_1_1_simple_map}{Simple\+Map} object with the specified capacity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em capacity} & The maximum number of elements the map can hold. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_core_1_1_simple_map_a377e7bf2679f87ff3987f25793c3e119}\index{KTN::Core::SimpleMap$<$ K, T $>$@{KTN::Core::SimpleMap$<$ K, T $>$}!at@{at}}
+\index{at@{at}!KTN::Core::SimpleMap$<$ K, T $>$@{KTN::Core::SimpleMap$<$ K, T $>$}}
+\doxysubsubsection{\texorpdfstring{at()}{at()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_simple_map_a377e7bf2679f87ff3987f25793c3e119} 
+template$<$typename K , typename T $>$ \\
+T \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_simple_map}{KTN\+::\+Core\+::\+Simple\+Map}}$<$ K, T $>$\+::at (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves the value at the specified index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the value to retrieve. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the value at the specified index, or nullptr if the index is out of bounds. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00075}{KTN\+::\+Core\+::\+Allocator\+Base$<$ T $>$\+::get()}}.
+
+\Hypertarget{class_k_t_n_1_1_core_1_1_simple_map_ac5a3732b49f06e54b80ab7dc08aaba5f}\index{KTN::Core::SimpleMap$<$ K, T $>$@{KTN::Core::SimpleMap$<$ K, T $>$}!clear@{clear}}
+\index{clear@{clear}!KTN::Core::SimpleMap$<$ K, T $>$@{KTN::Core::SimpleMap$<$ K, T $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_simple_map_ac5a3732b49f06e54b80ab7dc08aaba5f} 
+template$<$typename K , typename T $>$ \\
+void \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_simple_map}{KTN\+::\+Core\+::\+Simple\+Map}}$<$ K, T $>$\+::clear (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Clears the map, removing all elements. 
+
+\Hypertarget{class_k_t_n_1_1_core_1_1_simple_map_a68464368af2fc9425f4ec774a6eca415}\index{KTN::Core::SimpleMap$<$ K, T $>$@{KTN::Core::SimpleMap$<$ K, T $>$}!cleardead@{cleardead}}
+\index{cleardead@{cleardead}!KTN::Core::SimpleMap$<$ K, T $>$@{KTN::Core::SimpleMap$<$ K, T $>$}}
+\doxysubsubsection{\texorpdfstring{cleardead()}{cleardead()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_simple_map_a68464368af2fc9425f4ec774a6eca415} 
+template$<$typename K , typename T $>$ \\
+void \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_simple_map}{KTN\+::\+Core\+::\+Simple\+Map}}$<$ K, T $>$\+::cleardead (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Clears any dead elements from the map. 
+
+Implement logic to clear dead elements if needed. \Hypertarget{class_k_t_n_1_1_core_1_1_simple_map_a09efd1669972d525c8c497cbac1ecc43}\index{KTN::Core::SimpleMap$<$ K, T $>$@{KTN::Core::SimpleMap$<$ K, T $>$}!erase@{erase}}
+\index{erase@{erase}!KTN::Core::SimpleMap$<$ K, T $>$@{KTN::Core::SimpleMap$<$ K, T $>$}}
+\doxysubsubsection{\texorpdfstring{erase()}{erase()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_simple_map_a09efd1669972d525c8c497cbac1ecc43} 
+template$<$typename K , typename T $>$ \\
+void \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_simple_map}{KTN\+::\+Core\+::\+Simple\+Map}}$<$ K, T $>$\+::erase (\begin{DoxyParamCaption}\item[{K}]{key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes the element with the specified key from the map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key of the element to remove. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00075}{KTN\+::\+Core\+::\+Allocator\+Base$<$ T $>$\+::get()}}.
+
+\Hypertarget{class_k_t_n_1_1_core_1_1_simple_map_a9f31c2bb619ea65488cf76a97e29d00d}\index{KTN::Core::SimpleMap$<$ K, T $>$@{KTN::Core::SimpleMap$<$ K, T $>$}!find@{find}}
+\index{find@{find}!KTN::Core::SimpleMap$<$ K, T $>$@{KTN::Core::SimpleMap$<$ K, T $>$}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_simple_map_a9f31c2bb619ea65488cf76a97e29d00d} 
+template$<$typename K , typename T $>$ \\
+bool \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_simple_map}{KTN\+::\+Core\+::\+Simple\+Map}}$<$ K, T $>$\+::find (\begin{DoxyParamCaption}\item[{K}]{key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the map contains the specified key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to search for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the key is found, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_k_t_n_1_1_core_1_1_simple_map_ab779f0a5c0875d6d4794d948b2dea681}\index{KTN::Core::SimpleMap$<$ K, T $>$@{KTN::Core::SimpleMap$<$ K, T $>$}!get@{get}}
+\index{get@{get}!KTN::Core::SimpleMap$<$ K, T $>$@{KTN::Core::SimpleMap$<$ K, T $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_simple_map_ab779f0a5c0875d6d4794d948b2dea681} 
+template$<$typename K , typename T $>$ \\
+T \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_simple_map}{KTN\+::\+Core\+::\+Simple\+Map}}$<$ K, T $>$\+::get (\begin{DoxyParamCaption}\item[{K}]{key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves the value associated with the specified key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to search for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the value associated with the key, or nullptr if the key is not found. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00075}{KTN\+::\+Core\+::\+Allocator\+Base$<$ T $>$\+::get()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00146}{KTN\+::\+Core\+::\+Simple\+Map$<$ K, T $>$\+::operator\mbox{[}$\,$\mbox{]}()}}.
+
+\Hypertarget{class_k_t_n_1_1_core_1_1_simple_map_a58320d78c9b126ddf37e65859111503a}\index{KTN::Core::SimpleMap$<$ K, T $>$@{KTN::Core::SimpleMap$<$ K, T $>$}!insert@{insert}}
+\index{insert@{insert}!KTN::Core::SimpleMap$<$ K, T $>$@{KTN::Core::SimpleMap$<$ K, T $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_simple_map_a58320d78c9b126ddf37e65859111503a} 
+template$<$typename K , typename T $>$ \\
+void \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_simple_map}{KTN\+::\+Core\+::\+Simple\+Map}}$<$ K, T $>$\+::insert (\begin{DoxyParamCaption}\item[{K}]{key}{, }\item[{T \texorpdfstring{$\ast$}{*}}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inserts a key-\/value pair into the map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to insert. \\
+\hline
+{\em value} & A pointer to the value to insert. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00075}{KTN\+::\+Core\+::\+Allocator\+Base$<$ T $>$\+::get()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00146}{KTN\+::\+Core\+::\+Simple\+Map$<$ K, T $>$\+::operator\mbox{[}$\,$\mbox{]}()}}.
+
+\Hypertarget{class_k_t_n_1_1_core_1_1_simple_map_ae522b87900afc1f38c1b2ae79030c761}\index{KTN::Core::SimpleMap$<$ K, T $>$@{KTN::Core::SimpleMap$<$ K, T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!KTN::Core::SimpleMap$<$ K, T $>$@{KTN::Core::SimpleMap$<$ K, T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_simple_map_ae522b87900afc1f38c1b2ae79030c761} 
+template$<$typename K , typename T $>$ \\
+T \& \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_simple_map}{KTN\+::\+Core\+::\+Simple\+Map}}$<$ K, T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{K}]{key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves the value associated with the specified key. 
+
+If the key is not found, a new value is created and associated with the key.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to search for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the value associated with the key. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00056}{KTN\+::\+Core\+::\+Simple\+Map$<$ K, T $>$\+::get()}}, and \mbox{\hyperlink{l00041}{KTN\+::\+Core\+::\+Simple\+Map$<$ K, T $>$\+::insert()}}.
+
+\Hypertarget{class_k_t_n_1_1_core_1_1_simple_map_a057842bf233420071e147a365afe9ef5}\index{KTN::Core::SimpleMap$<$ K, T $>$@{KTN::Core::SimpleMap$<$ K, T $>$}!size@{size}}
+\index{size@{size}!KTN::Core::SimpleMap$<$ K, T $>$@{KTN::Core::SimpleMap$<$ K, T $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_simple_map_a057842bf233420071e147a365afe9ef5} 
+template$<$typename K , typename T $>$ \\
+int \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_simple_map}{KTN\+::\+Core\+::\+Simple\+Map}}$<$ K, T $>$\+::size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the number of elements in the map. 
+
+\begin{DoxyReturn}{Returns}
+The number of elements in the map. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Maps/Simple\+Map.\+hpp\end{DoxyCompactItemize}

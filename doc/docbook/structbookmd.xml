@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structbookmd" xml:lang="en-US">
+<title>bookmd Struct Reference</title>
+<indexterm><primary>bookmd</primary></indexterm>
+<para>
+
+<para>Structure representing book market data. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;algo_structs.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>uint16_t <link linkend="_structbookmd_1ae321ed7c8e187f65044f11552c913460">index</link></para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_structbookmd_1a78b2593a62fd39b424145103cdb5c8e8">secid</link></para>
+</listitem>
+            <listitem><para><link linkend="_structpxlvl">pxlvl</link> <link linkend="_structbookmd_1a3860dd60ed582047c4421a5530c45831">bids</link> [10]</para>
+</listitem>
+            <listitem><para><link linkend="_structpxlvl">pxlvl</link> <link linkend="_structbookmd_1a4a64961c154dae4420f072cc00722f98">asks</link> [10]</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Structure representing book market data. </para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structbookmd_1a4a64961c154dae4420f072cc00722f98"/><section>
+    <title>asks</title>
+<indexterm><primary>asks</primary><secondary>bookmd</secondary></indexterm>
+<indexterm><primary>bookmd</primary><secondary>asks</secondary></indexterm>
+<para><computeroutput><link linkend="_structpxlvl">pxlvl</link> bookmd::asks[10]</computeroutput></para>
+<para>The array of ask price levels. </para>
+</section>
+<anchor xml:id="_structbookmd_1a3860dd60ed582047c4421a5530c45831"/><section>
+    <title>bids</title>
+<indexterm><primary>bids</primary><secondary>bookmd</secondary></indexterm>
+<indexterm><primary>bookmd</primary><secondary>bids</secondary></indexterm>
+<para><computeroutput><link linkend="_structpxlvl">pxlvl</link> bookmd::bids[10]</computeroutput></para>
+<para>The array of bid price levels. </para>
+</section>
+<anchor xml:id="_structbookmd_1ae321ed7c8e187f65044f11552c913460"/><section>
+    <title>index</title>
+<indexterm><primary>index</primary><secondary>bookmd</secondary></indexterm>
+<indexterm><primary>bookmd</primary><secondary>index</secondary></indexterm>
+<para><computeroutput>uint16_t bookmd::index</computeroutput></para>
+<para>The index. </para>
+<para>
+Referenced by <link linkend="_l00707">KtnCmeMbo::AddBookDepth()</link>, and <link linkend="_l00731">KtnCmeMdpV4::AddBookDepth()</link>.</para>
+</section>
+<anchor xml:id="_structbookmd_1a78b2593a62fd39b424145103cdb5c8e8"/><section>
+    <title>secid</title>
+<indexterm><primary>secid</primary><secondary>bookmd</secondary></indexterm>
+<indexterm><primary>bookmd</primary><secondary>secid</secondary></indexterm>
+<para><computeroutput>int32_t bookmd::secid</computeroutput></para>
+<para>The security ID. </para>
+<para>
+Referenced by <link linkend="_l00707">KtnCmeMbo::AddBookDepth()</link>, and <link linkend="_l00731">KtnCmeMdpV4::AddBookDepth()</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+AlgoSupport/algo_structs.hpp</section>
+</section>

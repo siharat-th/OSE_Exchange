@@ -1,0 +1,71 @@
+\doxysection{Algo\+Initializer Struct Reference}
+\hypertarget{struct_algo_initializer}{}\label{struct_algo_initializer}\index{AlgoInitializer@{AlgoInitializer}}
+
+
+The \doxylink{struct_algo_initializer}{Algo\+Initializer} struct represents the parameters required to initialize the algorithm.  
+
+
+
+
+{\ttfamily \#include $<$Algo\+Initializer.\+hpp$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{struct_algo_initializer_a8149a763099a5e57d5d2bf0f7d9cd65c}{name}}
+\item 
+string \mbox{\hyperlink{struct_algo_initializer_ae44e528e03443a0729df2231a285f037}{guid}}
+\item 
+int \mbox{\hyperlink{struct_algo_initializer_a3f2356cf846c49037465468b3cd5ba4c}{cpu}}
+\item 
+\mbox{\hyperlink{class_i_exchange_sender}{IExchange\+Sender}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_algo_initializer_a77753a6eedc77580a50fa4c4d1ee7d6c}{ordersender}}
+\item 
+vector$<$ \mbox{\hyperlink{structinstrument}{instrument}} $>$ \mbox{\hyperlink{struct_algo_initializer_a1e043d8c2ac514ff456dc9670ce52874}{legs}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{struct_algo_initializer}{Algo\+Initializer} struct represents the parameters required to initialize the algorithm. 
+
+the idea is to create an easy to use all-\/in-\/one struct to init the algo with std\+::string name, std\+::string guid, int algoid, Exchange\+Sender\& ordsender, vector$<$int$>$ channels, int cpu, Cme\+Sec\+Master \& sec 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_algo_initializer_a3f2356cf846c49037465468b3cd5ba4c}\index{AlgoInitializer@{AlgoInitializer}!cpu@{cpu}}
+\index{cpu@{cpu}!AlgoInitializer@{AlgoInitializer}}
+\doxysubsubsection{\texorpdfstring{cpu}{cpu}}
+{\footnotesize\ttfamily \label{struct_algo_initializer_a3f2356cf846c49037465468b3cd5ba4c} 
+int Algo\+Initializer\+::cpu}
+
+The CPU number to run the algorithm on. \Hypertarget{struct_algo_initializer_ae44e528e03443a0729df2231a285f037}\index{AlgoInitializer@{AlgoInitializer}!guid@{guid}}
+\index{guid@{guid}!AlgoInitializer@{AlgoInitializer}}
+\doxysubsubsection{\texorpdfstring{guid}{guid}}
+{\footnotesize\ttfamily \label{struct_algo_initializer_ae44e528e03443a0729df2231a285f037} 
+string Algo\+Initializer\+::guid}
+
+The unique identifier of the algorithm. 
+
+Referenced by \mbox{\hyperlink{l00014}{KTN\+::\+Algo\+Base\+V3\+::\+Algo\+Base\+V3()}}.
+
+\Hypertarget{struct_algo_initializer_a1e043d8c2ac514ff456dc9670ce52874}\index{AlgoInitializer@{AlgoInitializer}!legs@{legs}}
+\index{legs@{legs}!AlgoInitializer@{AlgoInitializer}}
+\doxysubsubsection{\texorpdfstring{legs}{legs}}
+{\footnotesize\ttfamily \label{struct_algo_initializer_a1e043d8c2ac514ff456dc9670ce52874} 
+vector$<$\mbox{\hyperlink{structinstrument}{instrument}}$>$ Algo\+Initializer\+::legs}
+
+The list of instruments for the algorithm. \Hypertarget{struct_algo_initializer_a8149a763099a5e57d5d2bf0f7d9cd65c}\index{AlgoInitializer@{AlgoInitializer}!name@{name}}
+\index{name@{name}!AlgoInitializer@{AlgoInitializer}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily \label{struct_algo_initializer_a8149a763099a5e57d5d2bf0f7d9cd65c} 
+string Algo\+Initializer\+::name}
+
+The name of the algorithm. \Hypertarget{struct_algo_initializer_a77753a6eedc77580a50fa4c4d1ee7d6c}\index{AlgoInitializer@{AlgoInitializer}!ordersender@{ordersender}}
+\index{ordersender@{ordersender}!AlgoInitializer@{AlgoInitializer}}
+\doxysubsubsection{\texorpdfstring{ordersender}{ordersender}}
+{\footnotesize\ttfamily \label{struct_algo_initializer_a77753a6eedc77580a50fa4c4d1ee7d6c} 
+\mbox{\hyperlink{class_i_exchange_sender}{IExchange\+Sender}}\texorpdfstring{$\ast$}{*} Algo\+Initializer\+::ordersender}
+
+The exchange sender for sending orders. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Algo\+Params/Algo\+Initializer.\+hpp\end{DoxyCompactItemize}

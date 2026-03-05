@@ -1,0 +1,129 @@
+\doxysection{Matrix\+Gen Class Reference}
+\hypertarget{class_matrix_gen}{}\label{class_matrix_gen}\index{MatrixGen@{MatrixGen}}
+
+
+The \doxylink{class_matrix_gen}{Matrix\+Gen} class is responsible for generating spread and outright matrices from the input data.  
+
+
+
+
+{\ttfamily \#include $<$Matrix\+Gen.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_matrix_gen_afcb529caaaa0e992a06c70df40db45c8}{Gen\+Spread\+Matrix}} (string Product, string Start\+Month, int Start\+Year, int Num\+Months)
+\begin{DoxyCompactList}\small\item\em Generates the spread matrix. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_gen_a74ed0da4eb357edf390a6060fea315b2}{Gen\+Outright\+Matrix}} (string product, string Start\+Mont, int Start\+Year, int Num\+Months)
+\begin{DoxyCompactList}\small\item\em Generates the outright matrix. \end{DoxyCompactList}\item 
+const map$<$ pair$<$ int, int $>$, std\+::string $>$ \& \mbox{\hyperlink{class_matrix_gen_ae36ebcbbd8e3d0870adf9254a4453e86}{Get\+Graph\+Map}} () const
+\begin{DoxyCompactList}\small\item\em Gets the graph map. \end{DoxyCompactList}\item 
+const std\+::tr1\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{struct_r_c}{RC}} $>$ \& \mbox{\hyperlink{class_matrix_gen_a2552d2e2ec7b5f6fe3b3bd886080eb81}{Get\+Rc\+Map}} () const
+\begin{DoxyCompactList}\small\item\em Gets the row-\/column map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_matrix_gen}{Matrix\+Gen} class is responsible for generating spread and outright matrices from the input data. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_matrix_gen_a9affe2558b69f0161b0676519709d910}\index{MatrixGen@{MatrixGen}!MatrixGen@{MatrixGen}}
+\index{MatrixGen@{MatrixGen}!MatrixGen@{MatrixGen}}
+\doxysubsubsection{\texorpdfstring{MatrixGen()}{MatrixGen()}}
+{\footnotesize\ttfamily \label{class_matrix_gen_a9affe2558b69f0161b0676519709d910} 
+Matrix\+Gen\+::\+Matrix\+Gen (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_matrix_gen_aaf4669c1aca53bca76fadffd47f63a11}\index{MatrixGen@{MatrixGen}!````~MatrixGen@{\texorpdfstring{$\sim$}{\string~}MatrixGen}}
+\index{````~MatrixGen@{\texorpdfstring{$\sim$}{\string~}MatrixGen}!MatrixGen@{MatrixGen}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}MatrixGen()}{\string~MatrixGen()}}
+{\footnotesize\ttfamily \label{class_matrix_gen_aaf4669c1aca53bca76fadffd47f63a11} 
+Matrix\+Gen\+::\texorpdfstring{$\sim$}{\string~}\+Matrix\+Gen (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_matrix_gen_a74ed0da4eb357edf390a6060fea315b2}\index{MatrixGen@{MatrixGen}!GenOutrightMatrix@{GenOutrightMatrix}}
+\index{GenOutrightMatrix@{GenOutrightMatrix}!MatrixGen@{MatrixGen}}
+\doxysubsubsection{\texorpdfstring{GenOutrightMatrix()}{GenOutrightMatrix()}}
+{\footnotesize\ttfamily \label{class_matrix_gen_a74ed0da4eb357edf390a6060fea315b2} 
+void Matrix\+Gen\+::\+Gen\+Outright\+Matrix (\begin{DoxyParamCaption}\item[{string}]{product}{, }\item[{string}]{Start\+Mont}{, }\item[{int}]{Start\+Year}{, }\item[{int}]{Num\+Months}{}\end{DoxyParamCaption})}
+
+
+
+Generates the outright matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em product} & The product name. \\
+\hline
+{\em Start\+Mont} & The starting month. \\
+\hline
+{\em Start\+Year} & The starting year. \\
+\hline
+{\em Num\+Months} & The number of months. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{l00016}{Wavg\+Calc\+Multi\+::\+Init()}}.
+
+\Hypertarget{class_matrix_gen_afcb529caaaa0e992a06c70df40db45c8}\index{MatrixGen@{MatrixGen}!GenSpreadMatrix@{GenSpreadMatrix}}
+\index{GenSpreadMatrix@{GenSpreadMatrix}!MatrixGen@{MatrixGen}}
+\doxysubsubsection{\texorpdfstring{GenSpreadMatrix()}{GenSpreadMatrix()}}
+{\footnotesize\ttfamily \label{class_matrix_gen_afcb529caaaa0e992a06c70df40db45c8} 
+void Matrix\+Gen\+::\+Gen\+Spread\+Matrix (\begin{DoxyParamCaption}\item[{string}]{Product}{, }\item[{string}]{Start\+Month}{, }\item[{int}]{Start\+Year}{, }\item[{int}]{Num\+Months}{}\end{DoxyParamCaption})}
+
+
+
+Generates the spread matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Product} & The product name. \\
+\hline
+{\em Start\+Month} & The starting month. \\
+\hline
+{\em Start\+Year} & The starting year. \\
+\hline
+{\em Num\+Months} & The number of months. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{l00016}{Wavg\+Calc\+Multi\+::\+Init()}}.
+
+\Hypertarget{class_matrix_gen_ae36ebcbbd8e3d0870adf9254a4453e86}\index{MatrixGen@{MatrixGen}!GetGraphMap@{GetGraphMap}}
+\index{GetGraphMap@{GetGraphMap}!MatrixGen@{MatrixGen}}
+\doxysubsubsection{\texorpdfstring{GetGraphMap()}{GetGraphMap()}}
+{\footnotesize\ttfamily \label{class_matrix_gen_ae36ebcbbd8e3d0870adf9254a4453e86} 
+const map$<$ pair$<$ int, int $>$, std\+::string $>$ \& Matrix\+Gen\+::\+Get\+Graph\+Map (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the graph map. 
+
+\begin{DoxyReturn}{Returns}
+The graph map. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00016}{Wavg\+Calc\+Multi\+::\+Init()}}.
+
+\Hypertarget{class_matrix_gen_a2552d2e2ec7b5f6fe3b3bd886080eb81}\index{MatrixGen@{MatrixGen}!GetRcMap@{GetRcMap}}
+\index{GetRcMap@{GetRcMap}!MatrixGen@{MatrixGen}}
+\doxysubsubsection{\texorpdfstring{GetRcMap()}{GetRcMap()}}
+{\footnotesize\ttfamily \label{class_matrix_gen_a2552d2e2ec7b5f6fe3b3bd886080eb81} 
+const std\+::tr1\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{struct_r_c}{RC}} $>$ \& Matrix\+Gen\+::\+Get\+Rc\+Map (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the row-\/column map. 
+
+\begin{DoxyReturn}{Returns}
+The row-\/column map. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Algo\+Engines/Matrix\+Gen.\+hpp\item 
+Algo\+Engines/Matrix\+Gen.\+cpp\end{DoxyCompactItemize}

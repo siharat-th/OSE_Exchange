@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_t_n_1_1_mdp3_1_1_security_status30" xml:lang="en-US">
+<title>KTN::Mdp3::SecurityStatus30 Struct Reference</title>
+<indexterm><primary>KTN::Mdp3::SecurityStatus30</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>uint64_t <link linkend="_struct_k_t_n_1_1_mdp3_1_1_security_status30_1aaa23447df6c892b69b5116f507b3c992">TransactTime</link></para>
+</listitem>
+            <listitem><para>char <link linkend="_struct_k_t_n_1_1_mdp3_1_1_security_status30_1ad818c1ad61bdce67a392939286c3b7b9">SecurityGroup</link> [6]</para>
+</listitem>
+            <listitem><para>char <link linkend="_struct_k_t_n_1_1_mdp3_1_1_security_status30_1a0f118ab699baf42a02042d6fe22c624f">Asset</link> [6]</para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_struct_k_t_n_1_1_mdp3_1_1_security_status30_1a0da45b61124f322ef469693be60716bc">SecurityID</link></para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_struct_k_t_n_1_1_mdp3_1_1_security_status30_1a471bd9a57b5d5f4927b8c5de99cd8e93">LocalMktDate</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_struct_k_t_n_1_1_mdp3_1_1_security_status30_1a34f83321ce8ce09c4548b97a0698bbbf">MatchEventIndicator</link></para>
+</listitem>
+            <listitem><para>EnumSecurityTradingStatus <link linkend="_struct_k_t_n_1_1_mdp3_1_1_security_status30_1aa37a7300f88f26bdc9fafbf90f1e78bf">SecurityTradingStatus</link></para>
+</listitem>
+            <listitem><para>EnumHaltReason <link linkend="_struct_k_t_n_1_1_mdp3_1_1_security_status30_1a29e89d7313ff043f61294489a89d84a3">HaltReason</link></para>
+</listitem>
+            <listitem><para>EnumSecurityTradingEvent <link linkend="_struct_k_t_n_1_1_mdp3_1_1_security_status30_1aca3af80111611f09129798f65be933f3">SecurityTradingEvent</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_mdp3_1_1_security_status30_1a0f118ab699baf42a02042d6fe22c624f"/><section>
+    <title>Asset</title>
+<indexterm><primary>Asset</primary><secondary>KTN::Mdp3::SecurityStatus30</secondary></indexterm>
+<indexterm><primary>KTN::Mdp3::SecurityStatus30</primary><secondary>Asset</secondary></indexterm>
+<para><computeroutput>char KTN::Mdp3::SecurityStatus30::Asset[6]</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_mdp3_1_1_security_status30_1a29e89d7313ff043f61294489a89d84a3"/><section>
+    <title>HaltReason</title>
+<indexterm><primary>HaltReason</primary><secondary>KTN::Mdp3::SecurityStatus30</secondary></indexterm>
+<indexterm><primary>KTN::Mdp3::SecurityStatus30</primary><secondary>HaltReason</secondary></indexterm>
+<para><computeroutput>EnumHaltReason KTN::Mdp3::SecurityStatus30::HaltReason</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_mdp3_1_1_security_status30_1a471bd9a57b5d5f4927b8c5de99cd8e93"/><section>
+    <title>LocalMktDate</title>
+<indexterm><primary>LocalMktDate</primary><secondary>KTN::Mdp3::SecurityStatus30</secondary></indexterm>
+<indexterm><primary>KTN::Mdp3::SecurityStatus30</primary><secondary>LocalMktDate</secondary></indexterm>
+<para><computeroutput>uint16_t KTN::Mdp3::SecurityStatus30::LocalMktDate</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_mdp3_1_1_security_status30_1a34f83321ce8ce09c4548b97a0698bbbf"/><section>
+    <title>MatchEventIndicator</title>
+<indexterm><primary>MatchEventIndicator</primary><secondary>KTN::Mdp3::SecurityStatus30</secondary></indexterm>
+<indexterm><primary>KTN::Mdp3::SecurityStatus30</primary><secondary>MatchEventIndicator</secondary></indexterm>
+<para><computeroutput>uint8_t KTN::Mdp3::SecurityStatus30::MatchEventIndicator</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_mdp3_1_1_security_status30_1ad818c1ad61bdce67a392939286c3b7b9"/><section>
+    <title>SecurityGroup</title>
+<indexterm><primary>SecurityGroup</primary><secondary>KTN::Mdp3::SecurityStatus30</secondary></indexterm>
+<indexterm><primary>KTN::Mdp3::SecurityStatus30</primary><secondary>SecurityGroup</secondary></indexterm>
+<para><computeroutput>char KTN::Mdp3::SecurityStatus30::SecurityGroup[6]</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_mdp3_1_1_security_status30_1a0da45b61124f322ef469693be60716bc"/><section>
+    <title>SecurityID</title>
+<indexterm><primary>SecurityID</primary><secondary>KTN::Mdp3::SecurityStatus30</secondary></indexterm>
+<indexterm><primary>KTN::Mdp3::SecurityStatus30</primary><secondary>SecurityID</secondary></indexterm>
+<para><computeroutput>int32_t KTN::Mdp3::SecurityStatus30::SecurityID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_mdp3_1_1_security_status30_1aca3af80111611f09129798f65be933f3"/><section>
+    <title>SecurityTradingEvent</title>
+<indexterm><primary>SecurityTradingEvent</primary><secondary>KTN::Mdp3::SecurityStatus30</secondary></indexterm>
+<indexterm><primary>KTN::Mdp3::SecurityStatus30</primary><secondary>SecurityTradingEvent</secondary></indexterm>
+<para><computeroutput>EnumSecurityTradingEvent KTN::Mdp3::SecurityStatus30::SecurityTradingEvent</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_mdp3_1_1_security_status30_1aa37a7300f88f26bdc9fafbf90f1e78bf"/><section>
+    <title>SecurityTradingStatus</title>
+<indexterm><primary>SecurityTradingStatus</primary><secondary>KTN::Mdp3::SecurityStatus30</secondary></indexterm>
+<indexterm><primary>KTN::Mdp3::SecurityStatus30</primary><secondary>SecurityTradingStatus</secondary></indexterm>
+<para><computeroutput>EnumSecurityTradingStatus KTN::Mdp3::SecurityStatus30::SecurityTradingStatus</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_mdp3_1_1_security_status30_1aaa23447df6c892b69b5116f507b3c992"/><section>
+    <title>TransactTime</title>
+<indexterm><primary>TransactTime</primary><secondary>KTN::Mdp3::SecurityStatus30</secondary></indexterm>
+<indexterm><primary>KTN::Mdp3::SecurityStatus30</primary><secondary>TransactTime</secondary></indexterm>
+<para><computeroutput>uint64_t KTN::Mdp3::SecurityStatus30::TransactTime</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+exchsupport/cme/Mdp3Messages.hpp</section>
+</section>

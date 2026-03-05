@@ -1,0 +1,214 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_order_loader" xml:lang="en-US">
+<title>KTN::ALGO::OrderLoader Class Reference</title>
+<indexterm><primary>KTN::ALGO::OrderLoader</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_order_loader">OrderLoader</link> class is responsible for loading orders from a file and providing various order-related functionalities. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;OrderLoader.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>vector&lt; <link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> &gt; <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_order_loader_1a924b7018d4956ec36d7f6f17a91bc98f">GetOrders</link> (string filename, string tag, string strat, string source, string guid, <link linkend="_struct_user_info">UserInfo</link> info)</para>
+
+<para>GetOrders loads orders from a file based on the provided parameters. </para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_order_loader_1a196f49a6a8eeaa32ae161bbcf6035093">NextId</link> ()</para>
+
+<para>NextId generates the next ID for an order. </para>
+</listitem>
+            <listitem><para>vector&lt; <link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> &gt; <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_order_loader_1a3120c6cd6ddcb85558c8f61cde3a44a5">LoadFile</link> (string filename)</para>
+
+<para>LoadFile loads orders from a file. </para>
+</listitem>
+            <listitem><para><link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_order_loader_1a53220eb868117f7de249e4248ffe9df5">NewOrderBuilder</link> (<link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> orig)</para>
+
+<para>NewOrderBuilder builds a new order based on the provided original order. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_order_loader">OrderLoader</link> class is responsible for loading orders from a file and providing various order-related functionalities. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_order_loader_1a981fc8e7512e86aba7dae530ac48c91e"/><section>
+    <title>OrderLoader()</title>
+<indexterm><primary>OrderLoader</primary><secondary>KTN::ALGO::OrderLoader</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::OrderLoader</primary><secondary>OrderLoader</secondary></indexterm>
+<para><computeroutput>OrderLoader::OrderLoader ( )</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_order_loader_1a20838ed47fbae975ac9c7b9f6d7872be"/><section>
+    <title>~OrderLoader()</title>
+<indexterm><primary>~OrderLoader</primary><secondary>KTN::ALGO::OrderLoader</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::OrderLoader</primary><secondary>~OrderLoader</secondary></indexterm>
+<para><computeroutput>OrderLoader::~OrderLoader ( )<computeroutput>[virtual]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_order_loader_1a924b7018d4956ec36d7f6f17a91bc98f"/><section>
+    <title>GetOrders()</title>
+<indexterm><primary>GetOrders</primary><secondary>KTN::ALGO::OrderLoader</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::OrderLoader</primary><secondary>GetOrders</secondary></indexterm>
+<para><computeroutput>vector&lt; <link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> &gt; OrderLoader::GetOrders (string filename, string tag, string strat, string source, string guid, <link linkend="_struct_user_info">UserInfo</link> info)</computeroutput></para><para>
+
+<para>GetOrders loads orders from a file based on the provided parameters. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>filename</entry><entry>
+<para>The name of the file to load orders from. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>tag</entry><entry>
+<para>The tag associated with the orders. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>strat</entry><entry>
+<para>The strategy associated with the orders. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>source</entry><entry>
+<para>The source of the orders. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>guid</entry><entry>
+<para>The GUID associated with the orders. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>info</entry><entry>
+<para>The user information associated with the orders. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A vector of orders loaded from the file. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00075">LoadFile()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_order_loader_1a3120c6cd6ddcb85558c8f61cde3a44a5"/><section>
+    <title>LoadFile()</title>
+<indexterm><primary>LoadFile</primary><secondary>KTN::ALGO::OrderLoader</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::OrderLoader</primary><secondary>LoadFile</secondary></indexterm>
+<para><computeroutput>vector&lt; <link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> &gt; OrderLoader::LoadFile (string filename)</computeroutput></para><para>
+
+<para>LoadFile loads orders from a file. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>filename</entry><entry>
+<para>The name of the file to load orders from. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A vector of orders loaded from the file. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00175">NewOrderBuilder()</link>, and <link linkend="_l00019">StringSplitter::Split()</link>.</para>
+<para>
+Referenced by <link linkend="_l00017">GetOrders()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_order_loader_1a53220eb868117f7de249e4248ffe9df5"/><section>
+    <title>NewOrderBuilder()</title>
+<indexterm><primary>NewOrderBuilder</primary><secondary>KTN::ALGO::OrderLoader</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::OrderLoader</primary><secondary>NewOrderBuilder</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> OrderLoader::NewOrderBuilder (<link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> orig)</computeroutput></para><para>
+
+<para>NewOrderBuilder builds a new order based on the provided original order. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>orig</entry><entry>
+<para>The original order. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The new order built based on the original order. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00049">UserInfo::groupname</link>, <link linkend="_l00063">NextId()</link>, <link linkend="_l00048">UserInfo::org</link>, and <link linkend="_l00047">UserInfo::user</link>.</para>
+<para>
+Referenced by <link linkend="_l00075">LoadFile()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_order_loader_1a196f49a6a8eeaa32ae161bbcf6035093"/><section>
+    <title>NextId()</title>
+<indexterm><primary>NextId</primary><secondary>KTN::ALGO::OrderLoader</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::OrderLoader</primary><secondary>NextId</secondary></indexterm>
+<para><computeroutput>std::string OrderLoader::NextId ( )</computeroutput></para><para>
+
+<para>NextId generates the next ID for an order. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The next ID for an order. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00175">NewOrderBuilder()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+AlgoEngines/OrderLoader.hppAlgoEngines/OrderLoader.cpp</section>
+</section>

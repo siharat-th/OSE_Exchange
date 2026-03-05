@@ -1,0 +1,316 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_waves_params" xml:lang="en-US">
+<title>WavesParams Struct Reference</title>
+<indexterm><primary>WavesParams</primary></indexterm>
+<para>
+
+<para>Struct representing the parameters for the Waves algorithm. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;WavesParams.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_struct_waves_params_1aca727c049b8e7fd4a0139762e2ad9f69">init</link> ()</para>
+
+<para>Initializes the curveMatrix with default values. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_struct_waves_params">WavesParams</link> <link linkend="_struct_waves_params_1a47ecd81979737506cd8d68f5cbd42b6c">parse</link> (const std::string &amp;json_str)</para>
+
+<para>Parses the <link linkend="_struct_waves_params">WavesParams</link> from a JSON string. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_struct_edge_struct">EdgeStruct</link> <link linkend="_struct_waves_params_1a266f9a280129a3f3522a0120360148e4">curveMatrix</link> [MAX_SIZE][MAX_SIZE]</para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_waves_params_1ab8207ccd95dc8b1db0fcd11473489df9">ValidJson</link></para>
+</listitem>
+            <listitem><para><link linkend="_structalgometa">algometa</link> <link linkend="_struct_waves_params_1a1ab60a27d466b7b7ce3732caf6f70e6a">meta</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_waves_params_1a9b3653280a44bf1ff8c493e220e21ca7">subid</link></para>
+</listitem>
+            <listitem><para>std::unordered_map&lt; int, <link linkend="_structinstrument">instrument</link> &gt; <link linkend="_struct_waves_params_1a24198b6abedc964e15c6dcaf3d3f03c6">LegSecIdMap</link></para>
+</listitem>
+            <listitem><para><link linkend="_structinstrument">instrument</link> <link linkend="_struct_waves_params_1ad50717931795fd280eb880bb3cf9e5e0">Legs</link> [32]</para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_waves_params_1ae3136f7981d1f6aca8b1c9fc4ada5181">LegCount</link></para>
+</listitem>
+            <listitem><para><link linkend="_structcombopath">combopath</link> <link linkend="_struct_waves_params_1a6077157f0e17e2a0e609f4826aae9cb1">paths</link> [MAX_SIZE][MAX_SIZE]</para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_waves_params_1a35666e8692148757e481473b651768a4">TestMode</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_waves_params_1a99f5ccc232eb251322f8e7d329831993">Reset</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_waves_params_1a9bba2c9bf2779c13f52e63cf436bccb9">Product</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_waves_params_1affea24ef66c62a8dfc4191d6e0e93758">StartMonth</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_waves_params_1ab04e478f2b3230209589cd9ec5c1ee21">StartYear</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_waves_params_1aa804f56d43dff1905db5dc412048a8ae">NumMonths</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_waves_params_1a49171ef2e3342ee8595deb4f4c0f4f25">MinWidth</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_waves_params_1a8afcd72cf653c59e700c55ca38966009">MaxWidth</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_waves_params_1aa94db07b329d27a10dc87f6a559273e0">OrderQty</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_waves_params_1a5261d908a2126c9cdd54ad567a60c82c">TotalQty</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_waves_params_1a5eb86537db7e74df09945632c4ba9f5c">TotalExec</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_waves_params_1a6ac9048ded33cf4c720876a89b359582">BidEdge</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_waves_params_1adde5afe39cc27eb8c7dfb8663790d609">AskEdge</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_waves_params_1a60154a36a72ada4da9fd55a29109cba9">SendBids</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_waves_params_1a88d051314ca024b813ab4863c6711062">SendAsks</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_waves_params_1a27363b58e7f1871d6c425df455761e78">Doubles</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_waves_params_1afa870404d4b412bb5da0caea24b3d80a">Triples</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_waves_params_1acf24a3ad49654851eb35d0cbd2717d3e">Quads</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_waves_params_1af2a90eead684275a3a2f9bfda3e7eea6">WavgThreshold</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_waves_params_1a6344346fc76e4242bcfea39a1ebfa64f">SqueezeRatio</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_waves_params_1aed747312f151343f42801f913e81af31">SqueezeQty</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>static const int <link linkend="_struct_waves_params_1a209466bda2e1ca28caf6dc652b6477a9">MAX_SIZE</link> = 24</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Struct representing the parameters for the Waves algorithm. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_waves_params_1aca727c049b8e7fd4a0139762e2ad9f69"/><section>
+    <title>init()</title>
+<indexterm><primary>init</primary><secondary>WavesParams</secondary></indexterm>
+<indexterm><primary>WavesParams</primary><secondary>init</secondary></indexterm>
+<para><computeroutput>void WavesParams::init ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Initializes the curveMatrix with default values. </para>
+</para>
+<para>
+References <link linkend="_l00463">LegPrices::ask</link>, <link linkend="_l00462">LegPrices::bid</link>, <link linkend="_l00500">EdgeStruct::exists</link>, <link linkend="_l00501">EdgeStruct::index</link>, <link linkend="_l00499">EdgeStruct::istas</link>, and <link linkend="_l00504">EdgeStruct::prices</link>.</para>
+<para>
+Referenced by <link linkend="_l00012">parse()</link>.</para>
+</section>
+<anchor xml:id="_struct_waves_params_1a47ecd81979737506cd8d68f5cbd42b6c"/><section>
+    <title>parse()</title>
+<indexterm><primary>parse</primary><secondary>WavesParams</secondary></indexterm>
+<indexterm><primary>WavesParams</primary><secondary>parse</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_waves_params">WavesParams</link> WavesParams::parse (const std::string &amp; json_str)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Parses the <link linkend="_struct_waves_params">WavesParams</link> from a JSON string. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>json_str</entry><entry>
+<para>The JSON string to parse. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The parsed <link linkend="_struct_waves_params">WavesParams</link> object. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00260">algometa::Enabled</link>, <link linkend="_l00049">UserInfo::groupname</link>, <link linkend="_l00037">init()</link>, <link linkend="_l00048">UserInfo::org</link>, <link linkend="_l00262">algometa::Source</link>, <link linkend="_l00256">algometa::Strategy</link>, <link linkend="_l00264">algometa::Tag</link>, <link linkend="_l00258">algometa::TemplateName</link>, <link linkend="_l00261">algometa::UniqueId</link>, <link linkend="_l00047">UserInfo::user</link>, and <link linkend="_l00279">algometa::userinfo</link>.</para>
+<para>
+Referenced by <link linkend="_l00039">KTN::Waves::onLaunch()</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_waves_params_1adde5afe39cc27eb8c7dfb8663790d609"/><section>
+    <title>AskEdge</title>
+<indexterm><primary>AskEdge</primary><secondary>WavesParams</secondary></indexterm>
+<indexterm><primary>WavesParams</primary><secondary>AskEdge</secondary></indexterm>
+<para><computeroutput>int WavesParams::AskEdge</computeroutput></para></section>
+<anchor xml:id="_struct_waves_params_1a6ac9048ded33cf4c720876a89b359582"/><section>
+    <title>BidEdge</title>
+<indexterm><primary>BidEdge</primary><secondary>WavesParams</secondary></indexterm>
+<indexterm><primary>WavesParams</primary><secondary>BidEdge</secondary></indexterm>
+<para><computeroutput>int WavesParams::BidEdge</computeroutput></para></section>
+<anchor xml:id="_struct_waves_params_1a266f9a280129a3f3522a0120360148e4"/><section>
+    <title>curveMatrix</title>
+<indexterm><primary>curveMatrix</primary><secondary>WavesParams</secondary></indexterm>
+<indexterm><primary>WavesParams</primary><secondary>curveMatrix</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_edge_struct">EdgeStruct</link> WavesParams::curveMatrix[MAX_SIZE][MAX_SIZE]</computeroutput></para></section>
+<anchor xml:id="_struct_waves_params_1a27363b58e7f1871d6c425df455761e78"/><section>
+    <title>Doubles</title>
+<indexterm><primary>Doubles</primary><secondary>WavesParams</secondary></indexterm>
+<indexterm><primary>WavesParams</primary><secondary>Doubles</secondary></indexterm>
+<para><computeroutput>bool WavesParams::Doubles</computeroutput></para></section>
+<anchor xml:id="_struct_waves_params_1ae3136f7981d1f6aca8b1c9fc4ada5181"/><section>
+    <title>LegCount</title>
+<indexterm><primary>LegCount</primary><secondary>WavesParams</secondary></indexterm>
+<indexterm><primary>WavesParams</primary><secondary>LegCount</secondary></indexterm>
+<para><computeroutput>int WavesParams::LegCount</computeroutput></para></section>
+<anchor xml:id="_struct_waves_params_1ad50717931795fd280eb880bb3cf9e5e0"/><section>
+    <title>Legs</title>
+<indexterm><primary>Legs</primary><secondary>WavesParams</secondary></indexterm>
+<indexterm><primary>WavesParams</primary><secondary>Legs</secondary></indexterm>
+<para><computeroutput><link linkend="_structinstrument">instrument</link> WavesParams::Legs[32]</computeroutput></para></section>
+<anchor xml:id="_struct_waves_params_1a24198b6abedc964e15c6dcaf3d3f03c6"/><section>
+    <title>LegSecIdMap</title>
+<indexterm><primary>LegSecIdMap</primary><secondary>WavesParams</secondary></indexterm>
+<indexterm><primary>WavesParams</primary><secondary>LegSecIdMap</secondary></indexterm>
+<para><computeroutput>std::unordered_map&lt;int, <link linkend="_structinstrument">instrument</link>&gt; WavesParams::LegSecIdMap</computeroutput></para></section>
+<anchor xml:id="_struct_waves_params_1a209466bda2e1ca28caf6dc652b6477a9"/><section>
+    <title>MAX_SIZE</title>
+<indexterm><primary>MAX_SIZE</primary><secondary>WavesParams</secondary></indexterm>
+<indexterm><primary>WavesParams</primary><secondary>MAX_SIZE</secondary></indexterm>
+<para><computeroutput>const int WavesParams::MAX_SIZE = 24<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_waves_params_1a8afcd72cf653c59e700c55ca38966009"/><section>
+    <title>MaxWidth</title>
+<indexterm><primary>MaxWidth</primary><secondary>WavesParams</secondary></indexterm>
+<indexterm><primary>WavesParams</primary><secondary>MaxWidth</secondary></indexterm>
+<para><computeroutput>int WavesParams::MaxWidth</computeroutput></para></section>
+<anchor xml:id="_struct_waves_params_1a1ab60a27d466b7b7ce3732caf6f70e6a"/><section>
+    <title>meta</title>
+<indexterm><primary>meta</primary><secondary>WavesParams</secondary></indexterm>
+<indexterm><primary>WavesParams</primary><secondary>meta</secondary></indexterm>
+<para><computeroutput><link linkend="_structalgometa">algometa</link> WavesParams::meta</computeroutput></para></section>
+<anchor xml:id="_struct_waves_params_1a49171ef2e3342ee8595deb4f4c0f4f25"/><section>
+    <title>MinWidth</title>
+<indexterm><primary>MinWidth</primary><secondary>WavesParams</secondary></indexterm>
+<indexterm><primary>WavesParams</primary><secondary>MinWidth</secondary></indexterm>
+<para><computeroutput>int WavesParams::MinWidth</computeroutput></para></section>
+<anchor xml:id="_struct_waves_params_1aa804f56d43dff1905db5dc412048a8ae"/><section>
+    <title>NumMonths</title>
+<indexterm><primary>NumMonths</primary><secondary>WavesParams</secondary></indexterm>
+<indexterm><primary>WavesParams</primary><secondary>NumMonths</secondary></indexterm>
+<para><computeroutput>int WavesParams::NumMonths</computeroutput></para></section>
+<anchor xml:id="_struct_waves_params_1aa94db07b329d27a10dc87f6a559273e0"/><section>
+    <title>OrderQty</title>
+<indexterm><primary>OrderQty</primary><secondary>WavesParams</secondary></indexterm>
+<indexterm><primary>WavesParams</primary><secondary>OrderQty</secondary></indexterm>
+<para><computeroutput>int WavesParams::OrderQty</computeroutput></para></section>
+<anchor xml:id="_struct_waves_params_1a6077157f0e17e2a0e609f4826aae9cb1"/><section>
+    <title>paths</title>
+<indexterm><primary>paths</primary><secondary>WavesParams</secondary></indexterm>
+<indexterm><primary>WavesParams</primary><secondary>paths</secondary></indexterm>
+<para><computeroutput><link linkend="_structcombopath">combopath</link> WavesParams::paths[MAX_SIZE][MAX_SIZE]</computeroutput></para></section>
+<anchor xml:id="_struct_waves_params_1a9bba2c9bf2779c13f52e63cf436bccb9"/><section>
+    <title>Product</title>
+<indexterm><primary>Product</primary><secondary>WavesParams</secondary></indexterm>
+<indexterm><primary>WavesParams</primary><secondary>Product</secondary></indexterm>
+<para><computeroutput>string WavesParams::Product</computeroutput></para></section>
+<anchor xml:id="_struct_waves_params_1acf24a3ad49654851eb35d0cbd2717d3e"/><section>
+    <title>Quads</title>
+<indexterm><primary>Quads</primary><secondary>WavesParams</secondary></indexterm>
+<indexterm><primary>WavesParams</primary><secondary>Quads</secondary></indexterm>
+<para><computeroutput>bool WavesParams::Quads</computeroutput></para></section>
+<anchor xml:id="_struct_waves_params_1a99f5ccc232eb251322f8e7d329831993"/><section>
+    <title>Reset</title>
+<indexterm><primary>Reset</primary><secondary>WavesParams</secondary></indexterm>
+<indexterm><primary>WavesParams</primary><secondary>Reset</secondary></indexterm>
+<para><computeroutput>bool WavesParams::Reset</computeroutput></para></section>
+<anchor xml:id="_struct_waves_params_1a88d051314ca024b813ab4863c6711062"/><section>
+    <title>SendAsks</title>
+<indexterm><primary>SendAsks</primary><secondary>WavesParams</secondary></indexterm>
+<indexterm><primary>WavesParams</primary><secondary>SendAsks</secondary></indexterm>
+<para><computeroutput>bool WavesParams::SendAsks</computeroutput></para></section>
+<anchor xml:id="_struct_waves_params_1a60154a36a72ada4da9fd55a29109cba9"/><section>
+    <title>SendBids</title>
+<indexterm><primary>SendBids</primary><secondary>WavesParams</secondary></indexterm>
+<indexterm><primary>WavesParams</primary><secondary>SendBids</secondary></indexterm>
+<para><computeroutput>bool WavesParams::SendBids</computeroutput></para></section>
+<anchor xml:id="_struct_waves_params_1aed747312f151343f42801f913e81af31"/><section>
+    <title>SqueezeQty</title>
+<indexterm><primary>SqueezeQty</primary><secondary>WavesParams</secondary></indexterm>
+<indexterm><primary>WavesParams</primary><secondary>SqueezeQty</secondary></indexterm>
+<para><computeroutput>int WavesParams::SqueezeQty</computeroutput></para></section>
+<anchor xml:id="_struct_waves_params_1a6344346fc76e4242bcfea39a1ebfa64f"/><section>
+    <title>SqueezeRatio</title>
+<indexterm><primary>SqueezeRatio</primary><secondary>WavesParams</secondary></indexterm>
+<indexterm><primary>WavesParams</primary><secondary>SqueezeRatio</secondary></indexterm>
+<para><computeroutput>double WavesParams::SqueezeRatio</computeroutput></para></section>
+<anchor xml:id="_struct_waves_params_1affea24ef66c62a8dfc4191d6e0e93758"/><section>
+    <title>StartMonth</title>
+<indexterm><primary>StartMonth</primary><secondary>WavesParams</secondary></indexterm>
+<indexterm><primary>WavesParams</primary><secondary>StartMonth</secondary></indexterm>
+<para><computeroutput>string WavesParams::StartMonth</computeroutput></para></section>
+<anchor xml:id="_struct_waves_params_1ab04e478f2b3230209589cd9ec5c1ee21"/><section>
+    <title>StartYear</title>
+<indexterm><primary>StartYear</primary><secondary>WavesParams</secondary></indexterm>
+<indexterm><primary>WavesParams</primary><secondary>StartYear</secondary></indexterm>
+<para><computeroutput>int WavesParams::StartYear</computeroutput></para></section>
+<anchor xml:id="_struct_waves_params_1a9b3653280a44bf1ff8c493e220e21ca7"/><section>
+    <title>subid</title>
+<indexterm><primary>subid</primary><secondary>WavesParams</secondary></indexterm>
+<indexterm><primary>WavesParams</primary><secondary>subid</secondary></indexterm>
+<para><computeroutput>string WavesParams::subid</computeroutput></para></section>
+<anchor xml:id="_struct_waves_params_1a35666e8692148757e481473b651768a4"/><section>
+    <title>TestMode</title>
+<indexterm><primary>TestMode</primary><secondary>WavesParams</secondary></indexterm>
+<indexterm><primary>WavesParams</primary><secondary>TestMode</secondary></indexterm>
+<para><computeroutput>bool WavesParams::TestMode</computeroutput></para></section>
+<anchor xml:id="_struct_waves_params_1a5eb86537db7e74df09945632c4ba9f5c"/><section>
+    <title>TotalExec</title>
+<indexterm><primary>TotalExec</primary><secondary>WavesParams</secondary></indexterm>
+<indexterm><primary>WavesParams</primary><secondary>TotalExec</secondary></indexterm>
+<para><computeroutput>int WavesParams::TotalExec</computeroutput></para></section>
+<anchor xml:id="_struct_waves_params_1a5261d908a2126c9cdd54ad567a60c82c"/><section>
+    <title>TotalQty</title>
+<indexterm><primary>TotalQty</primary><secondary>WavesParams</secondary></indexterm>
+<indexterm><primary>WavesParams</primary><secondary>TotalQty</secondary></indexterm>
+<para><computeroutput>int WavesParams::TotalQty</computeroutput></para></section>
+<anchor xml:id="_struct_waves_params_1afa870404d4b412bb5da0caea24b3d80a"/><section>
+    <title>Triples</title>
+<indexterm><primary>Triples</primary><secondary>WavesParams</secondary></indexterm>
+<indexterm><primary>WavesParams</primary><secondary>Triples</secondary></indexterm>
+<para><computeroutput>bool WavesParams::Triples</computeroutput></para></section>
+<anchor xml:id="_struct_waves_params_1ab8207ccd95dc8b1db0fcd11473489df9"/><section>
+    <title>ValidJson</title>
+<indexterm><primary>ValidJson</primary><secondary>WavesParams</secondary></indexterm>
+<indexterm><primary>WavesParams</primary><secondary>ValidJson</secondary></indexterm>
+<para><computeroutput>bool WavesParams::ValidJson</computeroutput></para></section>
+<anchor xml:id="_struct_waves_params_1af2a90eead684275a3a2f9bfda3e7eea6"/><section>
+    <title>WavgThreshold</title>
+<indexterm><primary>WavgThreshold</primary><secondary>WavesParams</secondary></indexterm>
+<indexterm><primary>WavesParams</primary><secondary>WavgThreshold</secondary></indexterm>
+<para><computeroutput>double WavesParams::WavgThreshold</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following files:</para>
+AlgoParams/WavesParams.hppAlgoParams/WavesParams.cpp</section>
+</section>

@@ -1,0 +1,380 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_weighted_average_calculator" xml:lang="en-US">
+<title>WeightedAverageCalculator Class Reference</title>
+<indexterm><primary>WeightedAverageCalculator</primary></indexterm>
+<para>
+
+<para>Calculates the weighted average based on price and size. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;WeightedAverageCalculator.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_weighted_average_calculator_1a424a6bae9daf62719e799c868e9438e9">WeightedAverageCalculator</link> (<link linkend="_class_timer_callback">TimerCallback</link> &amp;cb)</para>
+
+<para>Constructs a <link linkend="_class_weighted_average_calculator">WeightedAverageCalculator</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_weighted_average_calculator_1ad8b21ffd868ad102fc7ccc367ed414ba">Test</link> ()</para>
+
+<para>Performs a test. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_weighted_average_calculator_1a38f60ae98da35a24c88b2798b3a5146b">Start</link> ()</para>
+
+<para>Starts the calculation. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_weighted_average_calculator_1a69785baebc911328af5c84370032dd9c">Stop</link> ()</para>
+
+<para>Stops the calculation. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_weighted_average_calculator_1aa757a6b542fc2c9199596df3d87eea4f">setStartEndTime</link> (const std::string &amp;startTime, const std::string &amp;endTime)</para>
+
+<para>Sets the start and end time for the calculation. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_weighted_average_calculator_1acb7a5389bc8fb7427db59b2a77b66884">calculate</link> (int index, int64_t price, int32_t size)</para>
+
+<para>Calculates the weighted average based on the given index, price, and size. </para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_weighted_average_calculator_1a0f6986b5ee827238253161ba16d3c5a5">getCurrentTime</link> ()</para>
+
+<para>Gets the current time. </para>
+</listitem>
+            <listitem><para>double <link linkend="_class_weighted_average_calculator_1aacafb7f210698abf2a73eac92b945c59">getWavg</link> (int index)</para>
+
+<para>Gets the weighted average based on the given index. </para>
+</listitem>
+            <listitem><para>double <link linkend="_class_weighted_average_calculator_1a47af7f3996dc9337d4abde35fde3a399">getVolume</link> (int index)</para>
+
+<para>Gets the volume based on the given index. </para>
+</listitem>
+            <listitem><para>double <link linkend="_class_weighted_average_calculator_1aa77008ab8cbe3dbed58638494420cc14">getCount</link> (int index)</para>
+
+<para>Gets the count based on the given index. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_weighted_average_calculator_1a70e017eb4671f007d3970f1cd44ea483">Triggered</link> ()</para>
+
+<para>Checks if the timer is triggered. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_weighted_average_calculator_1aa1bbb115eb6e2e67a5e85fb8733f38bf">Started</link> ()</para>
+
+<para>Checks if the calculation is started. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Calculates the weighted average based on price and size. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_weighted_average_calculator_1a424a6bae9daf62719e799c868e9438e9"/><section>
+    <title>WeightedAverageCalculator()</title>
+<indexterm><primary>WeightedAverageCalculator</primary><secondary>WeightedAverageCalculator</secondary></indexterm>
+<indexterm><primary>WeightedAverageCalculator</primary><secondary>WeightedAverageCalculator</secondary></indexterm>
+<para><computeroutput>WeightedAverageCalculator::WeightedAverageCalculator (<link linkend="_class_timer_callback">TimerCallback</link> &amp; cb)</computeroutput></para><para>
+
+<para>Constructs a <link linkend="_class_weighted_average_calculator">WeightedAverageCalculator</link> object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>cb</entry><entry>
+<para>The <link linkend="_class_timer_callback">TimerCallback</link> object. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_weighted_average_calculator_1acb7a5389bc8fb7427db59b2a77b66884"/><section>
+    <title>calculate()</title>
+<indexterm><primary>calculate</primary><secondary>WeightedAverageCalculator</secondary></indexterm>
+<indexterm><primary>WeightedAverageCalculator</primary><secondary>calculate</secondary></indexterm>
+<para><computeroutput>void WeightedAverageCalculator::calculate (int index, int64_t price, int32_t size)</computeroutput></para><para>
+
+<para>Calculates the weighted average based on the given index, price, and size. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>index</entry><entry>
+<para>The index. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>price</entry><entry>
+<para>The price. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>size</entry><entry>
+<para>The size. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_weighted_average_calculator_1aa77008ab8cbe3dbed58638494420cc14"/><section>
+    <title>getCount()</title>
+<indexterm><primary>getCount</primary><secondary>WeightedAverageCalculator</secondary></indexterm>
+<indexterm><primary>WeightedAverageCalculator</primary><secondary>getCount</secondary></indexterm>
+<para><computeroutput>double WeightedAverageCalculator::getCount (int index)</computeroutput></para><para>
+
+<para>Gets the count based on the given index. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>index</entry><entry>
+<para>The index. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The count. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_weighted_average_calculator_1a0f6986b5ee827238253161ba16d3c5a5"/><section>
+    <title>getCurrentTime()</title>
+<indexterm><primary>getCurrentTime</primary><secondary>WeightedAverageCalculator</secondary></indexterm>
+<indexterm><primary>WeightedAverageCalculator</primary><secondary>getCurrentTime</secondary></indexterm>
+<para><computeroutput>std::string WeightedAverageCalculator::getCurrentTime ( )</computeroutput></para><para>
+
+<para>Gets the current time. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The current time in string format. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_weighted_average_calculator_1a47af7f3996dc9337d4abde35fde3a399"/><section>
+    <title>getVolume()</title>
+<indexterm><primary>getVolume</primary><secondary>WeightedAverageCalculator</secondary></indexterm>
+<indexterm><primary>WeightedAverageCalculator</primary><secondary>getVolume</secondary></indexterm>
+<para><computeroutput>double WeightedAverageCalculator::getVolume (int index)</computeroutput></para><para>
+
+<para>Gets the volume based on the given index. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>index</entry><entry>
+<para>The index. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The volume. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_weighted_average_calculator_1aacafb7f210698abf2a73eac92b945c59"/><section>
+    <title>getWavg()</title>
+<indexterm><primary>getWavg</primary><secondary>WeightedAverageCalculator</secondary></indexterm>
+<indexterm><primary>WeightedAverageCalculator</primary><secondary>getWavg</secondary></indexterm>
+<para><computeroutput>double WeightedAverageCalculator::getWavg (int index)</computeroutput></para><para>
+
+<para>Gets the weighted average based on the given index. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>index</entry><entry>
+<para>The index. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The weighted average. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_weighted_average_calculator_1aa757a6b542fc2c9199596df3d87eea4f"/><section>
+    <title>setStartEndTime()</title>
+<indexterm><primary>setStartEndTime</primary><secondary>WeightedAverageCalculator</secondary></indexterm>
+<indexterm><primary>WeightedAverageCalculator</primary><secondary>setStartEndTime</secondary></indexterm>
+<para><computeroutput>bool WeightedAverageCalculator::setStartEndTime (const std::string &amp; startTime, const std::string &amp; endTime)</computeroutput></para><para>
+
+<para>Sets the start and end time for the calculation. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>startTime</entry><entry>
+<para>The start time in string format. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>endTime</entry><entry>
+<para>The end time in string format. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the start and end time are successfully set, false otherwise. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00107">Start()</link>.</para>
+<para>
+Referenced by <link linkend="_l00083">Test()</link>.</para>
+</section>
+<anchor xml:id="_class_weighted_average_calculator_1a38f60ae98da35a24c88b2798b3a5146b"/><section>
+    <title>Start()</title>
+<indexterm><primary>Start</primary><secondary>WeightedAverageCalculator</secondary></indexterm>
+<indexterm><primary>WeightedAverageCalculator</primary><secondary>Start</secondary></indexterm>
+<para><computeroutput>void WeightedAverageCalculator::Start ( )</computeroutput></para><para>
+
+<para>Starts the calculation. </para>
+</para>
+<para>
+References <link linkend="_l00280">Started()</link>.</para>
+<para>
+Referenced by <link linkend="_l00017">setStartEndTime()</link>, and <link linkend="_l00083">Test()</link>.</para>
+</section>
+<anchor xml:id="_class_weighted_average_calculator_1aa1bbb115eb6e2e67a5e85fb8733f38bf"/><section>
+    <title>Started()</title>
+<indexterm><primary>Started</primary><secondary>WeightedAverageCalculator</secondary></indexterm>
+<indexterm><primary>WeightedAverageCalculator</primary><secondary>Started</secondary></indexterm>
+<para><computeroutput>bool WeightedAverageCalculator::Started ( )</computeroutput></para><para>
+
+<para>Checks if the calculation is started. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>True if the calculation is started, false otherwise. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00107">Start()</link>.</para>
+</section>
+<anchor xml:id="_class_weighted_average_calculator_1a69785baebc911328af5c84370032dd9c"/><section>
+    <title>Stop()</title>
+<indexterm><primary>Stop</primary><secondary>WeightedAverageCalculator</secondary></indexterm>
+<indexterm><primary>WeightedAverageCalculator</primary><secondary>Stop</secondary></indexterm>
+<para><computeroutput>void WeightedAverageCalculator::Stop ( )</computeroutput></para><para>
+
+<para>Stops the calculation. </para>
+</para>
+</section>
+<anchor xml:id="_class_weighted_average_calculator_1ad8b21ffd868ad102fc7ccc367ed414ba"/><section>
+    <title>Test()</title>
+<indexterm><primary>Test</primary><secondary>WeightedAverageCalculator</secondary></indexterm>
+<indexterm><primary>WeightedAverageCalculator</primary><secondary>Test</secondary></indexterm>
+<para><computeroutput>void WeightedAverageCalculator::Test ( )</computeroutput></para><para>
+
+<para>Performs a test. </para>
+</para>
+<para>
+References <link linkend="_l00017">setStartEndTime()</link>, and <link linkend="_l00107">Start()</link>.</para>
+</section>
+<anchor xml:id="_class_weighted_average_calculator_1a70e017eb4671f007d3970f1cd44ea483"/><section>
+    <title>Triggered()</title>
+<indexterm><primary>Triggered</primary><secondary>WeightedAverageCalculator</secondary></indexterm>
+<indexterm><primary>WeightedAverageCalculator</primary><secondary>Triggered</secondary></indexterm>
+<para><computeroutput>bool WeightedAverageCalculator::Triggered ( )</computeroutput></para><para>
+
+<para>Checks if the timer is triggered. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>True if the timer is triggered, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+AlgoCalculators/WeightedAverageCalculator.hppAlgoCalculators/WeightedAverageCalculator.cpp</section>
+</section>

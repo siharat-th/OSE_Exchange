@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_trade_molecule" xml:lang="en-US">
+<title>KTN::BOOKS::TradeMolecule Struct Reference</title>
+<indexterm><primary>KTN::BOOKS::TradeMolecule</primary></indexterm>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static int <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_trade_molecule_1a70f957b2abc3c0375a253c9d529d8450">PriceConv</link> (uint64_t mantissa, int exponent)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>int32_t <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_trade_molecule_1a15f92bbdd040ef94c85344e84c11420e">secid</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_trade_molecule_1aec88659dbba03835ec2dd8619aed5811">symbol</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_trade_molecule_1ac168cad663c3d61d9078b06b045cdf35">product</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_trade_molecule_1ad3f54aa60204a31499e4ec5d2ff9cdda">prodtype</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_trade_molecule_1afaba472c49962b22504cab42bbc22549">size</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_trade_molecule_1a19203197733184acdacebc8737ad6fd4">price</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_trade_molecule_1a60352c3d3e3aafab4315e026b06475a3">tradetime</link></para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_trade_molecule_1a547647fa18f2eca87b49de6e335d23d9">transacttime</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_trade_molecule_1aeb6a9dc0930779c25d829bb3acb9d292">aggressor</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_trade_molecule_1a375853af3fb83e4e26c05b826d3ab1be">tradeid</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_trade_molecule_1ad16768e5196b155c8d84645039a4b252">nbrorders</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_trade_molecule_1a77f761ad241a5859d2a62e2930de13cc">seqnum</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_trade_molecule_1a8a76539cebca02c63d3638bcab9652d6">valid</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_trade_molecule_1a70f957b2abc3c0375a253c9d529d8450"/><section>
+    <title>PriceConv()</title>
+<indexterm><primary>PriceConv</primary><secondary>KTN::BOOKS::TradeMolecule</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::TradeMolecule</primary><secondary>PriceConv</secondary></indexterm>
+<para><computeroutput>static int KTN::BOOKS::TradeMolecule::PriceConv (uint64_t mantissa, int exponent)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_trade_molecule_1aeb6a9dc0930779c25d829bb3acb9d292"/><section>
+    <title>aggressor</title>
+<indexterm><primary>aggressor</primary><secondary>KTN::BOOKS::TradeMolecule</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::TradeMolecule</primary><secondary>aggressor</secondary></indexterm>
+<para><computeroutput>int KTN::BOOKS::TradeMolecule::aggressor</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_trade_molecule_1ad16768e5196b155c8d84645039a4b252"/><section>
+    <title>nbrorders</title>
+<indexterm><primary>nbrorders</primary><secondary>KTN::BOOKS::TradeMolecule</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::TradeMolecule</primary><secondary>nbrorders</secondary></indexterm>
+<para><computeroutput>int KTN::BOOKS::TradeMolecule::nbrorders</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_trade_molecule_1a19203197733184acdacebc8737ad6fd4"/><section>
+    <title>price</title>
+<indexterm><primary>price</primary><secondary>KTN::BOOKS::TradeMolecule</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::TradeMolecule</primary><secondary>price</secondary></indexterm>
+<para><computeroutput>double KTN::BOOKS::TradeMolecule::price</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_trade_molecule_1ad3f54aa60204a31499e4ec5d2ff9cdda"/><section>
+    <title>prodtype</title>
+<indexterm><primary>prodtype</primary><secondary>KTN::BOOKS::TradeMolecule</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::TradeMolecule</primary><secondary>prodtype</secondary></indexterm>
+<para><computeroutput>std::string KTN::BOOKS::TradeMolecule::prodtype</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_trade_molecule_1ac168cad663c3d61d9078b06b045cdf35"/><section>
+    <title>product</title>
+<indexterm><primary>product</primary><secondary>KTN::BOOKS::TradeMolecule</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::TradeMolecule</primary><secondary>product</secondary></indexterm>
+<para><computeroutput>std::string KTN::BOOKS::TradeMolecule::product</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_trade_molecule_1a15f92bbdd040ef94c85344e84c11420e"/><section>
+    <title>secid</title>
+<indexterm><primary>secid</primary><secondary>KTN::BOOKS::TradeMolecule</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::TradeMolecule</primary><secondary>secid</secondary></indexterm>
+<para><computeroutput>int32_t KTN::BOOKS::TradeMolecule::secid</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_trade_molecule_1a77f761ad241a5859d2a62e2930de13cc"/><section>
+    <title>seqnum</title>
+<indexterm><primary>seqnum</primary><secondary>KTN::BOOKS::TradeMolecule</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::TradeMolecule</primary><secondary>seqnum</secondary></indexterm>
+<para><computeroutput>uint32_t KTN::BOOKS::TradeMolecule::seqnum</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_trade_molecule_1afaba472c49962b22504cab42bbc22549"/><section>
+    <title>size</title>
+<indexterm><primary>size</primary><secondary>KTN::BOOKS::TradeMolecule</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::TradeMolecule</primary><secondary>size</secondary></indexterm>
+<para><computeroutput>double KTN::BOOKS::TradeMolecule::size</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_trade_molecule_1aec88659dbba03835ec2dd8619aed5811"/><section>
+    <title>symbol</title>
+<indexterm><primary>symbol</primary><secondary>KTN::BOOKS::TradeMolecule</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::TradeMolecule</primary><secondary>symbol</secondary></indexterm>
+<para><computeroutput>std::string KTN::BOOKS::TradeMolecule::symbol</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_trade_molecule_1a375853af3fb83e4e26c05b826d3ab1be"/><section>
+    <title>tradeid</title>
+<indexterm><primary>tradeid</primary><secondary>KTN::BOOKS::TradeMolecule</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::TradeMolecule</primary><secondary>tradeid</secondary></indexterm>
+<para><computeroutput>int KTN::BOOKS::TradeMolecule::tradeid</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_trade_molecule_1a60352c3d3e3aafab4315e026b06475a3"/><section>
+    <title>tradetime</title>
+<indexterm><primary>tradetime</primary><secondary>KTN::BOOKS::TradeMolecule</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::TradeMolecule</primary><secondary>tradetime</secondary></indexterm>
+<para><computeroutput>std::string KTN::BOOKS::TradeMolecule::tradetime</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_trade_molecule_1a547647fa18f2eca87b49de6e335d23d9"/><section>
+    <title>transacttime</title>
+<indexterm><primary>transacttime</primary><secondary>KTN::BOOKS::TradeMolecule</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::TradeMolecule</primary><secondary>transacttime</secondary></indexterm>
+<para><computeroutput>uint64_t KTN::BOOKS::TradeMolecule::transacttime</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_trade_molecule_1a8a76539cebca02c63d3638bcab9652d6"/><section>
+    <title>valid</title>
+<indexterm><primary>valid</primary><secondary>KTN::BOOKS::TradeMolecule</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::TradeMolecule</primary><secondary>valid</secondary></indexterm>
+<para><computeroutput>bool KTN::BOOKS::TradeMolecule::valid</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Containers/KatanaBooks.hpp</section>
+</section>

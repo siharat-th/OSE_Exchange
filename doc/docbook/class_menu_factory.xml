@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_menu_factory" xml:lang="en-US">
+<title>MenuFactory Class Reference</title>
+<indexterm><primary>MenuFactory</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_menu_factory">MenuFactory</link> class is responsible for creating instances of <link linkend="_class_i_menu">IMenu</link> based on the logger type. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;MenuFactory.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static std::shared_ptr&lt; <link linkend="_class_i_menu">IMenu</link> &gt; <link linkend="_class_menu_factory_1a97d58db772608684071656725a56ee02">createMenu</link> (<link linkend="_class_menu_callback">MenuCallback</link> &amp;callback, std::string file, std::string name)</para>
+
+<para>createMenu creates an instance of <link linkend="_class_i_menu">IMenu</link> based on the logger type. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_menu_factory">MenuFactory</link> class is responsible for creating instances of <link linkend="_class_i_menu">IMenu</link> based on the logger type. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_menu_factory_1a97d58db772608684071656725a56ee02"/><section>
+    <title>createMenu()</title>
+<indexterm><primary>createMenu</primary><secondary>MenuFactory</secondary></indexterm>
+<indexterm><primary>MenuFactory</primary><secondary>createMenu</secondary></indexterm>
+<para><computeroutput>static std::shared_ptr&lt; <link linkend="_class_i_menu">IMenu</link> &gt; MenuFactory::createMenu (<link linkend="_class_menu_callback">MenuCallback</link> &amp; callback, std::string file, std::string name)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>createMenu creates an instance of <link linkend="_class_i_menu">IMenu</link> based on the logger type. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>callback</entry><entry>
+<para>The callback function for the menu. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>file</entry><entry>
+<para>The file name. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>name</entry><entry>
+<para>The menu name. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A shared pointer to the created <link linkend="_class_i_menu">IMenu</link> instance. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00123">Settings::get()</link>.</para>
+<para>
+Referenced by <link linkend="_l00028">Menu::Menu()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Menu/MenuFactory.hpp</section>
+</section>

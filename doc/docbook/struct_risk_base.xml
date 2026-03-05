@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_risk_base" xml:lang="en-US">
+<title>RiskBase Struct Reference</title>
+<indexterm><primary>RiskBase</primary></indexterm>
+<para>
+
+<para>Struct representing the risk parameters for an algorithm. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;RiskBase.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_struct_risk_base">RiskBase</link> <link linkend="_struct_risk_base_1a636857b57a17f022e1c5c3359b12fcb2">parse</link> (const std::string &amp;json_str)</para>
+
+<para>Parses the JSON string and returns a <link linkend="_struct_risk_base">RiskBase</link> object. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_struct_risk_base_1a577a614a15c8e5336477f4484775fd92">ValidJson</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_risk_base_1a9120479d0705a55f8ee594a9bb969d58">UsePL</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_risk_base_1a11dc9139a2ef3c7621e4e9e3c79f65d1">ProfitTaking</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_risk_base_1aaf14286a08e6c0c902d69370cfb01569">StopLoss</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_risk_base_1a6c7c80ff560cd3b884a9eb8a701c8df3">MinutesToLive</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_risk_base_1a99fc815e31292ca080c1e1f189c2c4a9">elapsedMinutes</link></para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_struct_risk_base_1a3068c5d4e54ebfd1234fa78e72c179ee">entrytime_us</link></para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_struct_risk_base_1a4b28c8c27e93cd3ec277cc406effacbc">ttl_us</link></para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_struct_risk_base_1abfdb96c92778a8f609c6d86d4d74f945">expiretime_us</link></para>
+</listitem>
+            <listitem><para>int64_t <link linkend="_struct_risk_base_1af14f9b9d3f94abf3c2c7097c42f50b97">timeleft_us</link></para>
+</listitem>
+            <listitem><para>int64_t <link linkend="_struct_risk_base_1a0c2512d0a25aca4232e2a0331ba5fcf5">seconds_left</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Struct representing the risk parameters for an algorithm. </para>
+
+
+
+<para>This struct is used to represent the risk parameters for an algorithm. The model we use here is called a &quot;Triple Barrier&quot; risk model, where we have a profit taking value, a stop loss value, and a time to live value. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_risk_base_1a636857b57a17f022e1c5c3359b12fcb2"/><section>
+    <title>parse()</title>
+<indexterm><primary>parse</primary><secondary>RiskBase</secondary></indexterm>
+<indexterm><primary>RiskBase</primary><secondary>parse</secondary></indexterm>
+<para><computeroutput>static <link linkend="_struct_risk_base">RiskBase</link> RiskBase::parse (const std::string &amp; json_str)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Parses the JSON string and returns a <link linkend="_struct_risk_base">RiskBase</link> object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>json_str</entry><entry>
+<para>The JSON string to parse. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The parsed <link linkend="_struct_risk_base">RiskBase</link> object. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00032">MinutesToLive</link>, <link linkend="_l00030">ProfitTaking</link>, <link linkend="_l00031">StopLoss</link>, <link linkend="_l00028">UsePL</link>, and <link linkend="_l00027">ValidJson</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_risk_base_1a99fc815e31292ca080c1e1f189c2c4a9"/><section>
+    <title>elapsedMinutes</title>
+<indexterm><primary>elapsedMinutes</primary><secondary>RiskBase</secondary></indexterm>
+<indexterm><primary>RiskBase</primary><secondary>elapsedMinutes</secondary></indexterm>
+<para><computeroutput>double RiskBase::elapsedMinutes</computeroutput></para>
+<para>The elapsed minutes. </para>
+</section>
+<anchor xml:id="_struct_risk_base_1a3068c5d4e54ebfd1234fa78e72c179ee"/><section>
+    <title>entrytime_us</title>
+<indexterm><primary>entrytime_us</primary><secondary>RiskBase</secondary></indexterm>
+<indexterm><primary>RiskBase</primary><secondary>entrytime_us</secondary></indexterm>
+<para><computeroutput>uint64_t RiskBase::entrytime_us</computeroutput></para>
+<para>The entry time in microseconds. </para>
+</section>
+<anchor xml:id="_struct_risk_base_1abfdb96c92778a8f609c6d86d4d74f945"/><section>
+    <title>expiretime_us</title>
+<indexterm><primary>expiretime_us</primary><secondary>RiskBase</secondary></indexterm>
+<indexterm><primary>RiskBase</primary><secondary>expiretime_us</secondary></indexterm>
+<para><computeroutput>uint64_t RiskBase::expiretime_us</computeroutput></para>
+<para>The expiration time in microseconds. </para>
+</section>
+<anchor xml:id="_struct_risk_base_1a6c7c80ff560cd3b884a9eb8a701c8df3"/><section>
+    <title>MinutesToLive</title>
+<indexterm><primary>MinutesToLive</primary><secondary>RiskBase</secondary></indexterm>
+<indexterm><primary>RiskBase</primary><secondary>MinutesToLive</secondary></indexterm>
+<para><computeroutput>int RiskBase::MinutesToLive</computeroutput></para>
+<para>The time to live in minutes. </para>
+<para>
+Referenced by <link linkend="_l00062">KTN::PLWatcher::onJson()</link>, and <link linkend="_l00047">parse()</link>.</para>
+</section>
+<anchor xml:id="_struct_risk_base_1a11dc9139a2ef3c7621e4e9e3c79f65d1"/><section>
+    <title>ProfitTaking</title>
+<indexterm><primary>ProfitTaking</primary><secondary>RiskBase</secondary></indexterm>
+<indexterm><primary>RiskBase</primary><secondary>ProfitTaking</secondary></indexterm>
+<para><computeroutput>int RiskBase::ProfitTaking</computeroutput></para>
+<para>The profit taking value. </para>
+<para>
+Referenced by <link linkend="_l00062">KTN::PLWatcher::onJson()</link>, and <link linkend="_l00047">parse()</link>.</para>
+</section>
+<anchor xml:id="_struct_risk_base_1a0c2512d0a25aca4232e2a0331ba5fcf5"/><section>
+    <title>seconds_left</title>
+<indexterm><primary>seconds_left</primary><secondary>RiskBase</secondary></indexterm>
+<indexterm><primary>RiskBase</primary><secondary>seconds_left</secondary></indexterm>
+<para><computeroutput>int64_t RiskBase::seconds_left</computeroutput></para>
+<para>The time left in seconds. </para>
+</section>
+<anchor xml:id="_struct_risk_base_1aaf14286a08e6c0c902d69370cfb01569"/><section>
+    <title>StopLoss</title>
+<indexterm><primary>StopLoss</primary><secondary>RiskBase</secondary></indexterm>
+<indexterm><primary>RiskBase</primary><secondary>StopLoss</secondary></indexterm>
+<para><computeroutput>int RiskBase::StopLoss</computeroutput></para>
+<para>The stop loss value. </para>
+<para>
+Referenced by <link linkend="_l00062">KTN::PLWatcher::onJson()</link>, and <link linkend="_l00047">parse()</link>.</para>
+</section>
+<anchor xml:id="_struct_risk_base_1af14f9b9d3f94abf3c2c7097c42f50b97"/><section>
+    <title>timeleft_us</title>
+<indexterm><primary>timeleft_us</primary><secondary>RiskBase</secondary></indexterm>
+<indexterm><primary>RiskBase</primary><secondary>timeleft_us</secondary></indexterm>
+<para><computeroutput>int64_t RiskBase::timeleft_us</computeroutput></para>
+<para>The time left in microseconds. </para>
+</section>
+<anchor xml:id="_struct_risk_base_1a4b28c8c27e93cd3ec277cc406effacbc"/><section>
+    <title>ttl_us</title>
+<indexterm><primary>ttl_us</primary><secondary>RiskBase</secondary></indexterm>
+<indexterm><primary>RiskBase</primary><secondary>ttl_us</secondary></indexterm>
+<para><computeroutput>uint64_t RiskBase::ttl_us</computeroutput></para>
+<para>The time to live in microseconds. </para>
+</section>
+<anchor xml:id="_struct_risk_base_1a9120479d0705a55f8ee594a9bb969d58"/><section>
+    <title>UsePL</title>
+<indexterm><primary>UsePL</primary><secondary>RiskBase</secondary></indexterm>
+<indexterm><primary>RiskBase</primary><secondary>UsePL</secondary></indexterm>
+<para><computeroutput>bool RiskBase::UsePL</computeroutput></para>
+<para>Flag indicating if profit taking and stop loss are used. </para>
+<para>
+Referenced by <link linkend="_l00047">parse()</link>.</para>
+</section>
+<anchor xml:id="_struct_risk_base_1a577a614a15c8e5336477f4484775fd92"/><section>
+    <title>ValidJson</title>
+<indexterm><primary>ValidJson</primary><secondary>RiskBase</secondary></indexterm>
+<indexterm><primary>RiskBase</primary><secondary>ValidJson</secondary></indexterm>
+<para><computeroutput>bool RiskBase::ValidJson</computeroutput></para>
+<para>Flag indicating if the JSON is valid. </para>
+<para>
+Referenced by <link linkend="_l00047">parse()</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+AlgoParams/RiskBase.hpp</section>
+</section>

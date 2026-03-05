@@ -1,0 +1,244 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_log_svc" xml:lang="en-US">
+<title>LogSvc Class Reference</title>
+<indexterm><primary>LogSvc</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_log_svc">LogSvc</link> class is responsible for logging messages. This is a thread-safe class that offloads messages to a ring buffer and then logs them to the console or another dstination. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;LogSvc.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for LogSvc:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_log_svc.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_log_svc_1a9482a08736c74f300562356f6e267b07">LogSvc</link> (const string &amp;owner, const string &amp;source)</para>
+
+<para>Constructs a <link linkend="_class_log_svc">LogSvc</link> object with the specified owner and source. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_log_svc_1a372afa3890a336a06852ec57e78ed745">~LogSvc</link> ()</para>
+
+<para>Destroys the <link linkend="_class_log_svc">LogSvc</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_log_svc_1ac6af8498311999f4ecb338e7eb354c43">ChangeName</link> (const string &amp;newname, const string &amp;source)</para>
+
+<para>Changes the name and source of the <link linkend="_class_log_svc">LogSvc</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_log_svc_1a52b147fa0611e161dc25d18ebe21c2ea">Start</link> ()</para>
+
+<para>Starts the logging service. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_log_svc_1a213a4063c1cc8ae7152defed76024038">LogMe</link> (const <link linkend="_struct_log_msg">LogMsg</link> &amp;msg)</para>
+
+<para>Logs the specified <link linkend="_struct_log_msg">LogMsg</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_log_svc_1a1139d259697faf833c161410dd7ef02b">LogMe</link> (const string &amp;msg, int icolor)</para>
+
+<para>Logs the specified message with the specified color. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_class_named_thread">NamedThread</link>        <itemizedlist>
+            <listitem><para><link linkend="_class_named_thread_1a891fabdc2d824048ec05c82e7ef8c69a">NamedThread</link> ()</para>
+
+<para>Default constructor. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_named_thread_1a018dadb59e5af98ee734301a1baa50cb">~NamedThread</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_named_thread_1a9fa42542ff43c89fb9bbc33de9c87e34">CreateAndRun</link> (string name, int core)</para>
+
+<para>Creates and runs the named thread on the specified core. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_named_thread_1ad4809c571171be13f0f91f540d5c196f">Join</link> ()</para>
+
+<para>Joins the named thread. </para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_log_svc">LogSvc</link> class is responsible for logging messages. This is a thread-safe class that offloads messages to a ring buffer and then logs them to the console or another dstination. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_log_svc_1a9482a08736c74f300562356f6e267b07"/><section>
+    <title>LogSvc()</title>
+<indexterm><primary>LogSvc</primary><secondary>LogSvc</secondary></indexterm>
+<indexterm><primary>LogSvc</primary><secondary>LogSvc</secondary></indexterm>
+<para><computeroutput>LogSvc::LogSvc (const string &amp; owner, const string &amp; source)</computeroutput></para><para>
+
+<para>Constructs a <link linkend="_class_log_svc">LogSvc</link> object with the specified owner and source. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>owner</entry><entry>
+<para>The owner of the <link linkend="_class_log_svc">LogSvc</link> object. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>source</entry><entry>
+<para>The source of the <link linkend="_class_log_svc">LogSvc</link> object. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_log_svc_1a372afa3890a336a06852ec57e78ed745"/><section>
+    <title>~LogSvc()</title>
+<indexterm><primary>~LogSvc</primary><secondary>LogSvc</secondary></indexterm>
+<indexterm><primary>LogSvc</primary><secondary>~LogSvc</secondary></indexterm>
+<para><computeroutput>LogSvc::~LogSvc ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Destroys the <link linkend="_class_log_svc">LogSvc</link> object. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_log_svc_1ac6af8498311999f4ecb338e7eb354c43"/><section>
+    <title>ChangeName()</title>
+<indexterm><primary>ChangeName</primary><secondary>LogSvc</secondary></indexterm>
+<indexterm><primary>LogSvc</primary><secondary>ChangeName</secondary></indexterm>
+<para><computeroutput>void LogSvc::ChangeName (const string &amp; newname, const string &amp; source)</computeroutput></para><para>
+
+<para>Changes the name and source of the <link linkend="_class_log_svc">LogSvc</link> object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>newname</entry><entry>
+<para>The new name of the <link linkend="_class_log_svc">LogSvc</link> object. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>source</entry><entry>
+<para>The new source of the <link linkend="_class_log_svc">LogSvc</link> object. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Referenced by <link linkend="_l00019">KTN::CME::CmeAlgo::CmeAlgo()</link>, and <link linkend="_l00019">KTN::CME::CmeGT5::CmeGT5()</link>.</para>
+</section>
+<anchor xml:id="_class_log_svc_1a213a4063c1cc8ae7152defed76024038"/><section>
+    <title>LogMe()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>LogMe</primary><secondary>LogSvc</secondary></indexterm>
+<indexterm><primary>LogSvc</primary><secondary>LogMe</secondary></indexterm>
+<para><computeroutput>void LogSvc::LogMe (const <link linkend="_struct_log_msg">LogMsg</link> &amp; msg)</computeroutput></para><para>
+
+<para>Logs the specified <link linkend="_struct_log_msg">LogMsg</link> object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>msg</entry><entry>
+<para>The <link linkend="_struct_log_msg">LogMsg</link> object to be logged. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00062">KTN::Core::SPSCRingBuffer&lt; T &gt;::enqueue()</link>.</para>
+<para>
+Referenced by <link linkend="_l00050">KTN::ExchangeBase2::LogMe()</link>.</para>
+</section>
+<anchor xml:id="_class_log_svc_1a1139d259697faf833c161410dd7ef02b"/><section>
+    <title>LogMe()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>LogMe</primary><secondary>LogSvc</secondary></indexterm>
+<indexterm><primary>LogSvc</primary><secondary>LogMe</secondary></indexterm>
+<para><computeroutput>void LogSvc::LogMe (const string &amp; msg, int icolor)</computeroutput></para><para>
+
+<para>Logs the specified message with the specified color. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>msg</entry><entry>
+<para>The message to be logged. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>icolor</entry><entry>
+<para>The color of the log message. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_log_svc_1a52b147fa0611e161dc25d18ebe21c2ea"/><section>
+    <title>Start()</title>
+<indexterm><primary>Start</primary><secondary>LogSvc</secondary></indexterm>
+<indexterm><primary>LogSvc</primary><secondary>Start</secondary></indexterm>
+<para><computeroutput>void LogSvc::Start ( )</computeroutput></para><para>
+
+<para>Starts the logging service. </para>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Loggers/LogSvc.hppLoggers/LogSvc.cpp</section>
+</section>

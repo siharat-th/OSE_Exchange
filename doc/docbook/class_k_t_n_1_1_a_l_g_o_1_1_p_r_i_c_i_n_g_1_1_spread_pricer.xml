@@ -1,0 +1,410 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_pricer" xml:lang="en-US">
+<title>KTN::ALGO::PRICING::SpreadPricer Class Reference</title>
+<indexterm><primary>KTN::ALGO::PRICING::SpreadPricer</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_pricer">SpreadPricer</link> class is a pricing strategy for calculating spread prices. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;SpreadPricer.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for KTN::ALGO::PRICING::SpreadPricer:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_pricer.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_pricer_1a48276946bb3c11112fdab4a8a83b0f1a">SpreadPricer</link> ()</para>
+
+<para>Constructs a new <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_pricer">SpreadPricer</link> object. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_pricer_1a3785ffd3dbe387fb54e9449382c3acca">~SpreadPricer</link> ()</para>
+
+<para>Destroys the <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_pricer">SpreadPricer</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_pricer_1a76a34f6a7ba03213ab82be637f1e604f">LoadOrders</link> (int cbid, <link linkend="_structalgometa">algometa</link> meta)</para>
+
+<para>Loads orders for the <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_pricer">SpreadPricer</link>. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_pricer_1a785c38eebc4893ce7fbda157d4fc6dfd">CalculateSide2</link> (<link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_little_imp_side">LittleImpSide</link> &amp;imp, int index, int spmult, bool isBid, double edge, int ticks, const <link linkend="_structalgomd">algomd</link> *prices, bool testmode)</para>
+
+<para>Calculates the side 2 for the <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_pricer">SpreadPricer</link>. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_pricer_1a0807b60bac0e3a7b0c093f3068007ba2">CalculateSide3</link> (<link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_little_imp_side">LittleImpSide</link> &amp;imp, int index, int spmult, bool isBid, double edge, int ticks, const <link linkend="_structalgomd">algomd</link> *prices, bool testmode)</para>
+
+<para>Calculates the side 3 for the <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_pricer">SpreadPricer</link>. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_pricer_1aed59bba5f4957e936f30a573b596c3b4">CalculateSimple</link> (<link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_little_imp_side">LittleImpSide</link> &amp;imp, int index, int spmult, bool isBid, double edge, int ticks, const <link linkend="_structalgomd">algomd</link> *prices, bool testmode)</para>
+
+<para>Calculates the simple spread for the <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_pricer">SpreadPricer</link>. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base">KTN::ALGO::PRICING::PricingStrategyBase</link>        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1a75beb5ffe6c1c339932e92ff40a433b8">PricingStrategyBase</link> ()</para>
+
+<para>Default constructor. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1af8b81d0f694cc0f9aff4e1a75e26da8c">~PricingStrategyBase</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1a9a75566b268951957f450d737c9bc4b1">Load</link> (<link linkend="_structinstrument">instrument</link> *legs, int len, bool certnr)</para>
+
+<para>Load the pricing strategy with the given legs. </para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+Protected Member Functions inherited from <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base">KTN::ALGO::PRICING::PricingStrategyBase</link>        <itemizedlist>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1ae02381733d6a7a895dfd726334504767">LogMe</link> (std::string szMsg, int iColor=LOG_WHITE)</para>
+
+<para><link linkend="_class_log">Log</link> a message. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1a56267f60212477d39e50572f71da7f97">roundToTick</link> (int value, int MINTICK, int side)</para>
+
+<para>Round a value to the nearest tick. </para>
+</listitem>
+            <listitem><para>float <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1a4201e238efe5497f21322efaea3f98e8">priceRoundConvert</link> (float px, int tickprecision, float mintick, bool roundUp=false)</para>
+
+<para>Round and convert a price value. </para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1a1a534d4a72848f8619b65ffab80749bb">getCertSecId</link> (string symbol)</para>
+
+<para>Get the certificate security ID for the given symbol. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Protected Attributes inherited from <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base">KTN::ALGO::PRICING::PricingStrategyBase</link>        <itemizedlist>
+            <listitem><para><link linkend="_structinstrument">instrument</link> <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1a48d69c6918de697bc3959db39a3b81f6">_legs</link> [24]</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1a694acfb9420d71f08fefa7d3cc7ab48f">_numLegs</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1aed71f8c822de0aa94ffc77d5135d2ac7">_priceround</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1a745b7cf9b22f4b18bad8ad9e94a32a95">_CERTNR</link></para>
+</listitem>
+            <listitem><para>std::unordered_map&lt; string, long &gt; <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1ac65f10c4cb81ff771a0164da9fa7a974">_certIdMap</link></para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_pricer">SpreadPricer</link> class is a pricing strategy for calculating spread prices. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_pricer_1a48276946bb3c11112fdab4a8a83b0f1a"/><section>
+    <title>SpreadPricer()</title>
+<indexterm><primary>SpreadPricer</primary><secondary>KTN::ALGO::PRICING::SpreadPricer</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::PRICING::SpreadPricer</primary><secondary>SpreadPricer</secondary></indexterm>
+<para><computeroutput>SpreadPricer::SpreadPricer ( )</computeroutput></para><para>
+
+<para>Constructs a new <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_pricer">SpreadPricer</link> object. </para>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_pricer_1a3785ffd3dbe387fb54e9449382c3acca"/><section>
+    <title>~SpreadPricer()</title>
+<indexterm><primary>~SpreadPricer</primary><secondary>KTN::ALGO::PRICING::SpreadPricer</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::PRICING::SpreadPricer</primary><secondary>~SpreadPricer</secondary></indexterm>
+<para><computeroutput>SpreadPricer::~SpreadPricer ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Destroys the <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_pricer">SpreadPricer</link> object. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_pricer_1a785c38eebc4893ce7fbda157d4fc6dfd"/><section>
+    <title>CalculateSide2()</title>
+<indexterm><primary>CalculateSide2</primary><secondary>KTN::ALGO::PRICING::SpreadPricer</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::PRICING::SpreadPricer</primary><secondary>CalculateSide2</secondary></indexterm>
+<para><computeroutput>void SpreadPricer::CalculateSide2 (<link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_little_imp_side">LittleImpSide</link> &amp; imp, int index, int spmult, bool isBid, double edge, int ticks, const <link linkend="_structalgomd">algomd</link> * prices, bool testmode)</computeroutput></para><para>
+
+<para>Calculates the side 2 for the <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_pricer">SpreadPricer</link>. </para>
+</para>
+
+<para>Calculate the quote for a given side as well as all leg prices for hedges, taking into account the current market pricing for each leg and the respective multipliers. See comments inline for more info.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>imp</entry><entry>
+<para>The <link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_little_imp_side">LittleImpSide</link> object. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>index</entry><entry>
+<para>The index value. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>spmult</entry><entry>
+<para>The spmult value. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>isBid</entry><entry>
+<para>The isBid flag. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>edge</entry><entry>
+<para>The edge value. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>ticks</entry><entry>
+<para>The ticks value. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>prices</entry><entry>
+<para>The array of algomd objects. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>testmode</entry><entry>
+<para>The testmode flag.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>imp</entry><entry>
+<para>Hedging Instructions struct to pass to handler/hedger </para>
+</entry>
+                            </row>
+                            <row>
+<entry>index</entry><entry>
+<para>Inst index in the prices array index of leg to be quoted </para>
+</entry>
+                            </row>
+                            <row>
+<entry>spmult</entry><entry>
+<para>Spread Multiplier for leg to be quoted. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>isBid</entry><entry>
+<para>Quick boolean value if this spread is a bid or ask </para>
+</entry>
+                            </row>
+                            <row>
+<entry>edge</entry><entry>
+<para>Spread edge </para>
+</entry>
+                            </row>
+                            <row>
+<entry>ticks</entry><entry>
+<para>Discretionary ticks for hedge prices - see note inline </para>
+</entry>
+                            </row>
+                            <row>
+<entry>prices</entry><entry>
+<para>array of most current prices from MD Handler </para>
+</entry>
+                            </row>
+                            <row>
+<entry>testmode</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00159">algomd::ask</link>, <link linkend="_l00158">algomd::bid</link>, <link linkend="_l00059">KTN::Core::ObjectPool&lt; T &gt;::get()</link>, <link linkend="_l00075">instrument::index</link>, <link linkend="_l00078">instrument::mktsegid</link>, <link linkend="_l00064">instrument::pricemult</link>, <link linkend="_l00077">instrument::secid</link>, and <link linkend="_l00065">instrument::spreadmult</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_pricer_1a0807b60bac0e3a7b0c093f3068007ba2"/><section>
+    <title>CalculateSide3()</title>
+<indexterm><primary>CalculateSide3</primary><secondary>KTN::ALGO::PRICING::SpreadPricer</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::PRICING::SpreadPricer</primary><secondary>CalculateSide3</secondary></indexterm>
+<para><computeroutput>void SpreadPricer::CalculateSide3 (<link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_little_imp_side">LittleImpSide</link> &amp; imp, int index, int spmult, bool isBid, double edge, int ticks, const <link linkend="_structalgomd">algomd</link> * prices, bool testmode)</computeroutput></para><para>
+
+<para>Calculates the side 3 for the <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_pricer">SpreadPricer</link>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>imp</entry><entry>
+<para>The <link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_little_imp_side">LittleImpSide</link> object. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>index</entry><entry>
+<para>The index value. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>spmult</entry><entry>
+<para>The spmult value. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>isBid</entry><entry>
+<para>The isBid flag. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>edge</entry><entry>
+<para>The edge value. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>ticks</entry><entry>
+<para>The ticks value. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>prices</entry><entry>
+<para>The array of algomd objects. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>testmode</entry><entry>
+<para>The testmode flag. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00159">algomd::ask</link>, <link linkend="_l00158">algomd::bid</link>, <link linkend="_l00059">KTN::Core::ObjectPool&lt; T &gt;::get()</link>, <link linkend="_l00075">instrument::index</link>, <link linkend="_l00067">instrument::mintick</link>, <link linkend="_l00078">instrument::mktsegid</link>, <link linkend="_l00064">instrument::pricemult</link>, <link linkend="_l00063">KTN::ALGO::PRICING::PricingStrategyBase::roundToTick()</link>, <link linkend="_l00077">instrument::secid</link>, <link linkend="_l00065">instrument::spreadmult</link>, and <link linkend="_l00097">instrument::squeeze</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_pricer_1aed59bba5f4957e936f30a573b596c3b4"/><section>
+    <title>CalculateSimple()</title>
+<indexterm><primary>CalculateSimple</primary><secondary>KTN::ALGO::PRICING::SpreadPricer</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::PRICING::SpreadPricer</primary><secondary>CalculateSimple</secondary></indexterm>
+<para><computeroutput>void SpreadPricer::CalculateSimple (<link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_little_imp_side">LittleImpSide</link> &amp; imp, int index, int spmult, bool isBid, double edge, int ticks, const <link linkend="_structalgomd">algomd</link> * prices, bool testmode)</computeroutput></para><para>
+
+<para>Calculates the simple spread for the <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_pricer">SpreadPricer</link>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>imp</entry><entry>
+<para>The <link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_little_imp_side">LittleImpSide</link> object. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>index</entry><entry>
+<para>The index value. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>spmult</entry><entry>
+<para>The spmult value. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>isBid</entry><entry>
+<para>The isBid flag. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>edge</entry><entry>
+<para>The edge value. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>ticks</entry><entry>
+<para>The ticks value. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>prices</entry><entry>
+<para>The array of algomd objects. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>testmode</entry><entry>
+<para>The testmode flag. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00159">algomd::ask</link>, <link linkend="_l00158">algomd::bid</link>, <link linkend="_l00064">instrument::pricemult</link>, and <link linkend="_l00065">instrument::spreadmult</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_pricer_1a76a34f6a7ba03213ab82be637f1e604f"/><section>
+    <title>LoadOrders()</title>
+<indexterm><primary>LoadOrders</primary><secondary>KTN::ALGO::PRICING::SpreadPricer</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::PRICING::SpreadPricer</primary><secondary>LoadOrders</secondary></indexterm>
+<para><computeroutput>void SpreadPricer::LoadOrders (int cbid, <link linkend="_structalgometa">algometa</link> meta)</computeroutput></para><para>
+
+<para>Loads orders for the <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_pricer">SpreadPricer</link>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>cbid</entry><entry>
+<para>The cbid value. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>meta</entry><entry>
+<para>The algometa object. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+AlgoEngines/SpreadPricer.hppAlgoEngines/SpreadPricer.cpp</section>
+</section>

@@ -1,0 +1,280 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_algo_factory" xml:lang="en-US">
+<title>AlgoFactory Class Reference</title>
+<indexterm><primary>AlgoFactory</primary></indexterm>
+<para>
+
+<para>Factory class responsible for launching various algorithms. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;AlgoFactory.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for AlgoFactory:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_algo_factory.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_class_k_t_n_1_1_algo_base_v3">AlgoBaseV3</link> * <link linkend="_class_algo_factory_1ab536aa9376ccb4f0727956e964a9a8d3">LaunchAlgo</link> (const std::string &amp;json, int cpu, <link linkend="_class_i_exchange_sender">IExchangeSender</link> *exch)</para>
+
+<para>Launches an algorithm based on the provided JSON configuration. </para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_algo_factory_1ad1eddb711e96a7e53e7d222eb00f264d">ParseLegs</link> (string archetype, string json, vector&lt; <link linkend="_structinstrument">instrument</link> &gt; &amp;legs)</para>
+
+<para>Parses the legs for the specified algorithm. </para>
+</listitem>
+            <listitem><para>static <link linkend="_struct_algo_header">AlgoHeader</link> <link linkend="_class_algo_factory_1a1fd482dca0c3bbb3381e260b3811a86e">ParseAlgoHeader</link> (string json)</para>
+
+<para>Parses the header section of the JSON string and extracts algorithm metadata. </para>
+</listitem>
+            <listitem><para>static <link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> <link linkend="_class_algo_factory_1a2d6f5a12b298ac92a686f8be8ba53ab0">ParseAlgoOrder</link> (const std::string &amp;json)</para>
+
+<para>Parses an order from a JSON string and returns a <link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> object. </para>
+</listitem>
+            <listitem><para>static <link linkend="_struct_engine_command">EngineCommand</link> <link linkend="_class_algo_factory_1a46575d0510922def5608619ac1284972">ParseEngineCommand</link> (string json)</para>
+
+<para>Parses an engine command from the given JSON string. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Static Public Member Functions inherited from <link linkend="_class_singleton">Singleton&lt; AlgoFactory &gt;</link>        <itemizedlist>
+            <listitem><para>static KT01_API <link linkend="_class_algo_factory">AlgoFactory</link> &amp; <link linkend="_class_singleton_1a257c9c4633fa4e06bd93469e379f8eff">instance</link> ()</para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+Protected Member Functions inherited from <link linkend="_class_singleton">Singleton&lt; AlgoFactory &gt;</link>        <itemizedlist>
+            <listitem><para><emphasis role="strong">Singleton</emphasis> (const <link linkend="_class_singleton">Singleton</link> &amp;)=delete</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Factory class responsible for launching various algorithms. </para>
+
+
+
+<para>This class parses the input JSON, extracts algorithm parameters and legs, and returns an instance of the appropriate algorithm. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_algo_factory_1ab536aa9376ccb4f0727956e964a9a8d3"/><section>
+    <title>LaunchAlgo()</title>
+<indexterm><primary>LaunchAlgo</primary><secondary>AlgoFactory</secondary></indexterm>
+<indexterm><primary>AlgoFactory</primary><secondary>LaunchAlgo</secondary></indexterm>
+<para><computeroutput>static <link linkend="_class_k_t_n_1_1_algo_base_v3">AlgoBaseV3</link> * AlgoFactory::LaunchAlgo (const std::string &amp; json, int cpu, <link linkend="_class_i_exchange_sender">IExchangeSender</link> * exch)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Launches an algorithm based on the provided JSON configuration. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>json</entry><entry>
+<para>JSON string containing algorithm configuration. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>cpu</entry><entry>
+<para>CPU affinity for the algorithm. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>exch</entry><entry>
+<para>Exchange sender interface for sending orders. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A pointer to the created AlgoBaseV3 object, or nullptr if the algorithm could not be created. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00111">instrument::exch</link>, <link linkend="_l00209">ParseAlgoHeader()</link>, <link linkend="_l00183">ParseLegs()</link>, and <link linkend="_l00012">LegParamParser::ParseSpreadLegs()</link>.</para>
+<para>
+Referenced by <link linkend="_l00196">KTN::AlgoServiceBrokerV3::onAlgoCommand()</link>.</para>
+</section>
+<anchor xml:id="_class_algo_factory_1a1fd482dca0c3bbb3381e260b3811a86e"/><section>
+    <title>ParseAlgoHeader()</title>
+<indexterm><primary>ParseAlgoHeader</primary><secondary>AlgoFactory</secondary></indexterm>
+<indexterm><primary>AlgoFactory</primary><secondary>ParseAlgoHeader</secondary></indexterm>
+<para><computeroutput>static <link linkend="_struct_algo_header">AlgoHeader</link> AlgoFactory::ParseAlgoHeader (string json)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Parses the header section of the JSON string and extracts algorithm metadata. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>json</entry><entry>
+<para>JSON string containing the header information. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>An <link linkend="_struct_algo_header">AlgoHeader</link> structure containing parsed metadata. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00068">LaunchAlgo()</link>, and <link linkend="_l00196">KTN::AlgoServiceBrokerV3::onAlgoCommand()</link>.</para>
+</section>
+<anchor xml:id="_class_algo_factory_1a2d6f5a12b298ac92a686f8be8ba53ab0"/><section>
+    <title>ParseAlgoOrder()</title>
+<indexterm><primary>ParseAlgoOrder</primary><secondary>AlgoFactory</secondary></indexterm>
+<indexterm><primary>AlgoFactory</primary><secondary>ParseAlgoOrder</secondary></indexterm>
+<para><computeroutput>static <link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> AlgoFactory::ParseAlgoOrder (const std::string &amp; json)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Parses an order from a JSON string and returns a <link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>json</entry><entry>
+<para>JSON string containing the order. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A <link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> object representing the parsed order. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00062">OrderParser::parseincoming()</link>.</para>
+<para>
+Referenced by <link linkend="_l00196">KTN::AlgoServiceBrokerV3::onAlgoCommand()</link>.</para>
+</section>
+<anchor xml:id="_class_algo_factory_1a46575d0510922def5608619ac1284972"/><section>
+    <title>ParseEngineCommand()</title>
+<indexterm><primary>ParseEngineCommand</primary><secondary>AlgoFactory</secondary></indexterm>
+<indexterm><primary>AlgoFactory</primary><secondary>ParseEngineCommand</secondary></indexterm>
+<para><computeroutput>static <link linkend="_struct_engine_command">EngineCommand</link> AlgoFactory::ParseEngineCommand (string json)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Parses an engine command from the given JSON string. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>json</entry><entry>
+<para>JSON string containing the engine command. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>An <link linkend="_struct_engine_command">EngineCommand</link> object containing parsed engine command details. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00023">KEngineCommand::NONE</link>, <link linkend="_l00149">KEngineType::NONE</link>, <link linkend="_l00034">KEngineCommand::Value()</link>, <link linkend="_l00104">KEngineItem::Value()</link>, and <link linkend="_l00159">KEngineType::Value()</link>.</para>
+<para>
+Referenced by <link linkend="_l00196">KTN::AlgoServiceBrokerV3::onAlgoCommand()</link>.</para>
+</section>
+<anchor xml:id="_class_algo_factory_1ad1eddb711e96a7e53e7d222eb00f264d"/><section>
+    <title>ParseLegs()</title>
+<indexterm><primary>ParseLegs</primary><secondary>AlgoFactory</secondary></indexterm>
+<indexterm><primary>AlgoFactory</primary><secondary>ParseLegs</secondary></indexterm>
+<para><computeroutput>static void AlgoFactory::ParseLegs (string archetype, string json, vector&lt; <link linkend="_structinstrument">instrument</link> &gt; &amp; legs)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Parses the legs for the specified algorithm. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>archetype</entry><entry>
+<para>The type of algorithm. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>json</entry><entry>
+<para>JSON string containing leg configurations. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>legs</entry><entry>
+<para>Vector where the parsed legs will be stored. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00111">instrument::exch</link>, and <link linkend="_l00012">LegParamParser::ParseSpreadLegs()</link>.</para>
+<para>
+Referenced by <link linkend="_l00068">LaunchAlgo()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Algos/AlgoFactory.hpp</section>
+</section>

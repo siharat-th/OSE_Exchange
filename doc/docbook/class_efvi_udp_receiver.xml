@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_efvi_udp_receiver" xml:lang="en-US">
+<title>EfviUdpReceiver Class Reference</title>
+<indexterm><primary>EfviUdpReceiver</primary></indexterm>
+<para>Inheritance diagram for EfviUdpReceiver:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_efvi_udp_receiver.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_efvi_udp_receiver_1a43a0b59da8d1bb31a1bbeb660cd1c9b9">init</link> (const char *interface, const char *dest_ip, uint16_t dest_port, const char *subscribe_ip=&quot;&quot;)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_efvi_udp_receiver_1ab9f78c26444484de8a103c6faf12b5dd">close</link> (const char *reason)</para>
+</listitem>
+            <listitem><para>template&lt;typename Handler &gt; </para><para>bool <link linkend="_class_efvi_udp_receiver_1a74920799e10ca02151b2d359ee005ef7">read</link> (Handler handler)</para>
+</listitem>
+            <listitem><para>template&lt;typename Handler &gt; </para><para>bool <link linkend="_class_efvi_udp_receiver_1aced29dd4a2d76a531a92a28e2e65c7b8">recvfrom</link> (Handler handler)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_class_efvi_receiver">EfviReceiver</link>        <itemizedlist>
+            <listitem><para>const char * <link linkend="_class_efvi_receiver_1af086c0e915299f09f4b92ada27a284a3">getLastError</link> ()</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_efvi_receiver_1a912f9e6fb7838632efb9dc6fdf36fb5b">isClosed</link> ()</para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+Protected Member Functions inherited from <link linkend="_class_efvi_receiver">EfviReceiver</link>        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_efvi_receiver_1ac99bf881e4d378a710f6686d4326db3b">init</link> (const char *interface)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_efvi_receiver_1ac1f92ad68888a8bd571fc9924a434ad2">saveError</link> (const char *msg, int rc)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_efvi_receiver_1ac24bc9736e80a09e1dc9898f87e1ec63">close</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Protected Attributes inherited from <link linkend="_class_efvi_receiver">EfviReceiver</link>        <itemizedlist>
+            <listitem><para>struct ef_vi <link linkend="_class_efvi_receiver_1a92eaf0fa1ea08848cab801cb1cbdfe95">vi</link></para>
+</listitem>
+            <listitem><para>uint8_t * <link linkend="_class_efvi_receiver_1a09d294d1e2a054a931b071fd2d9c8456">pkt_bufs</link> = nullptr</para>
+</listitem>
+            <listitem><para>ef_driver_handle <link linkend="_class_efvi_receiver_1ad7f010bb9f34f9f7c7d4013c401fb8ed">dh</link> = -1</para>
+</listitem>
+            <listitem><para>struct ef_pd <link linkend="_class_efvi_receiver_1a88f48f658ee8c728fbec32badee77f15">pd</link></para>
+</listitem>
+            <listitem><para>struct ef_memreg <link linkend="_class_efvi_receiver_1a3bb80dc2020d2b746904ef4b64d6e3a2">memreg</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_efvi_receiver_1a3b83c202c592a6b65c3db8d03be4e8a4">buf_mmapped</link></para>
+</listitem>
+            <listitem><para>char <link linkend="_class_efvi_receiver_1a6109ab17510347c1d40094c643ba70d9">last_error_</link> [64] = &quot;&quot;</para>
+</listitem>
+        </itemizedlist>
+Static Protected Attributes inherited from <link linkend="_class_efvi_receiver">EfviReceiver</link>        <itemizedlist>
+            <listitem><para>static const int <link linkend="_class_efvi_receiver_1a51e5dd458507323d361668eb5e78a225">N_BUF</link> = 512</para>
+</listitem>
+            <listitem><para>static const int <link linkend="_class_efvi_receiver_1ac7f0c514a454c7d12856b405ad451331">PKT_BUF_SIZE</link> = 2048</para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_efvi_udp_receiver_1af7114e7a1b09153e8a196c54ed23b603"/><section>
+    <title>~EfviUdpReceiver()</title>
+<indexterm><primary>~EfviUdpReceiver</primary><secondary>EfviUdpReceiver</secondary></indexterm>
+<indexterm><primary>EfviUdpReceiver</primary><secondary>~EfviUdpReceiver</secondary></indexterm>
+<para><computeroutput>EfviUdpReceiver::~EfviUdpReceiver ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_efvi_udp_receiver_1ab9f78c26444484de8a103c6faf12b5dd"/><section>
+    <title>close()</title>
+<indexterm><primary>close</primary><secondary>EfviUdpReceiver</secondary></indexterm>
+<indexterm><primary>EfviUdpReceiver</primary><secondary>close</secondary></indexterm>
+<para><computeroutput>void EfviUdpReceiver::close (const char * reason)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_efvi_udp_receiver_1a43a0b59da8d1bb31a1bbeb660cd1c9b9"/><section>
+    <title>init()</title>
+<indexterm><primary>init</primary><secondary>EfviUdpReceiver</secondary></indexterm>
+<indexterm><primary>EfviUdpReceiver</primary><secondary>init</secondary></indexterm>
+<para><computeroutput>bool EfviUdpReceiver::init (const char * interface, const char * dest_ip, uint16_t dest_port, const char * subscribe_ip = <computeroutput>&quot;&quot;</computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_efvi_udp_receiver_1a74920799e10ca02151b2d359ee005ef7"/><section>
+    <title>read()</title>
+<indexterm><primary>read</primary><secondary>EfviUdpReceiver</secondary></indexterm>
+<indexterm><primary>EfviUdpReceiver</primary><secondary>read</secondary></indexterm>
+<computeroutput>template&lt;typename Handler &gt; </computeroutput><para><computeroutput>bool EfviUdpReceiver::read (Handler handler)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_efvi_udp_receiver_1aced29dd4a2d76a531a92a28e2e65c7b8"/><section>
+    <title>recvfrom()</title>
+<indexterm><primary>recvfrom</primary><secondary>EfviUdpReceiver</secondary></indexterm>
+<indexterm><primary>EfviUdpReceiver</primary><secondary>recvfrom</secondary></indexterm>
+<computeroutput>template&lt;typename Handler &gt; </computeroutput><para><computeroutput>bool EfviUdpReceiver::recvfrom (Handler handler)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/external/pollnet/Efvi.h</section>
+</section>

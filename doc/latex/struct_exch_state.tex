@@ -1,0 +1,184 @@
+\doxysection{Exch\+State Struct Reference}
+\hypertarget{struct_exch_state}{}\label{struct_exch_state}\index{ExchState@{ExchState}}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{struct_exch_state_a7a6038bb0010e8dc1dc6f984dd27ec1f}{MEASURE}}
+\item 
+int \mbox{\hyperlink{struct_exch_state_a54d12647ae0ba16a310a4330cd55c50e}{ALGO\+\_\+\+AFFINITY}}
+\item 
+std\+::string \mbox{\hyperlink{struct_exch_state_a22c02ca72c9c29a22bf3d580a3f26201}{FILENAME}}
+\item 
+std\+::string \mbox{\hyperlink{struct_exch_state_a9db3cd0aca7f637216e96108d5d72a76}{SOURCE}}
+\item 
+std\+::string \mbox{\hyperlink{struct_exch_state_ac7b7b060835b4d6bd9c5f6d7c6e1e589}{EXCHNAME}}
+\item 
+std\+::string \mbox{\hyperlink{struct_exch_state_a94d3fc0abb97f1df4c35e7c326d51368}{KTNACCT}}
+\item 
+std\+::string \mbox{\hyperlink{struct_exch_state_a96c42e746a98385726f3cad29ec0470c}{ORG}}
+\item 
+std\+::atomic$<$ bool $>$ \mbox{\hyperlink{struct_exch_state_a5ad167b03eeb08d74c83492f8c5b0fcd}{EVENT\+\_\+\+WAITING}}
+\item 
+std\+::atomic$<$ bool $>$ \mbox{\hyperlink{struct_exch_state_a6d59ef965842124f184d89101cdf945f}{ALGO\+\_\+\+WAITING}}
+\item 
+std\+::atomic$<$ bool $>$ \mbox{\hyperlink{struct_exch_state_ae2a65c8cc7f6302b2b2c8df91a68c3d7}{ACTIVE}}
+\item 
+std\+::atomic$<$ bool $>$ \mbox{\hyperlink{struct_exch_state_a903e22c2335449e9df1b9bf0a401756d}{ALGOS\+\_\+\+IN\+\_\+\+USE}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{struct_exch_state_a7dfebd0e93cb591547454512adedf181}{EVENTPOLLMAX}}
+\item 
+bool \mbox{\hyperlink{struct_exch_state_aa4bedf35fb2a60d04e30f66899152622}{USE\+\_\+\+AUDIT}}
+\item 
+bool \mbox{\hyperlink{struct_exch_state_ac18193a558241ae1f9bdfb3751943c2f}{log\+To\+Screen}}
+\item 
+int \mbox{\hyperlink{struct_exch_state_a1a262c8466cec0d536cf183f45918c9a}{KEEPALIVE}}
+\item 
+int \mbox{\hyperlink{struct_exch_state_a06d5ce3e0e0bcc004201b4a2c0c7ad2f}{KEEPALIVE\+\_\+\+BUFFERMS}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{struct_exch_state_a8530258c232e9cbd206646a1370e4638}{CHECK\+\_\+\+EVENTS\+\_\+\+TRIG}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{struct_exch_state_a6eb46304efcb185518ae523229ff55ff}{CHECK\+\_\+\+EVENT\+\_\+\+LOOP\+\_\+\+COUNT}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{struct_exch_state_a0f7968d1eef90da5dbde4484f023ce6b}{LOOPER}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{struct_exch_state_ae30d7516fff71516dc8adb977661359a}{LOOP\+\_\+\+TRIG}}
+\item 
+int \mbox{\hyperlink{struct_exch_state_a70dd16ef7b94d91017664c1896f03696}{SEGCNT}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_exch_state_ae2a65c8cc7f6302b2b2c8df91a68c3d7}\index{ExchState@{ExchState}!ACTIVE@{ACTIVE}}
+\index{ACTIVE@{ACTIVE}!ExchState@{ExchState}}
+\doxysubsubsection{\texorpdfstring{ACTIVE}{ACTIVE}}
+{\footnotesize\ttfamily \label{struct_exch_state_ae2a65c8cc7f6302b2b2c8df91a68c3d7} 
+std\+::atomic$<$bool$>$ Exch\+State\+::\+ACTIVE}
+
+\Hypertarget{struct_exch_state_a54d12647ae0ba16a310a4330cd55c50e}\index{ExchState@{ExchState}!ALGO\_AFFINITY@{ALGO\_AFFINITY}}
+\index{ALGO\_AFFINITY@{ALGO\_AFFINITY}!ExchState@{ExchState}}
+\doxysubsubsection{\texorpdfstring{ALGO\_AFFINITY}{ALGO\_AFFINITY}}
+{\footnotesize\ttfamily \label{struct_exch_state_a54d12647ae0ba16a310a4330cd55c50e} 
+int Exch\+State\+::\+ALGO\+\_\+\+AFFINITY}
+
+\Hypertarget{struct_exch_state_a6d59ef965842124f184d89101cdf945f}\index{ExchState@{ExchState}!ALGO\_WAITING@{ALGO\_WAITING}}
+\index{ALGO\_WAITING@{ALGO\_WAITING}!ExchState@{ExchState}}
+\doxysubsubsection{\texorpdfstring{ALGO\_WAITING}{ALGO\_WAITING}}
+{\footnotesize\ttfamily \label{struct_exch_state_a6d59ef965842124f184d89101cdf945f} 
+std\+::atomic$<$bool$>$ Exch\+State\+::\+ALGO\+\_\+\+WAITING}
+
+\Hypertarget{struct_exch_state_a903e22c2335449e9df1b9bf0a401756d}\index{ExchState@{ExchState}!ALGOS\_IN\_USE@{ALGOS\_IN\_USE}}
+\index{ALGOS\_IN\_USE@{ALGOS\_IN\_USE}!ExchState@{ExchState}}
+\doxysubsubsection{\texorpdfstring{ALGOS\_IN\_USE}{ALGOS\_IN\_USE}}
+{\footnotesize\ttfamily \label{struct_exch_state_a903e22c2335449e9df1b9bf0a401756d} 
+std\+::atomic$<$bool$>$ Exch\+State\+::\+ALGOS\+\_\+\+IN\+\_\+\+USE}
+
+\Hypertarget{struct_exch_state_a6eb46304efcb185518ae523229ff55ff}\index{ExchState@{ExchState}!CHECK\_EVENT\_LOOP\_COUNT@{CHECK\_EVENT\_LOOP\_COUNT}}
+\index{CHECK\_EVENT\_LOOP\_COUNT@{CHECK\_EVENT\_LOOP\_COUNT}!ExchState@{ExchState}}
+\doxysubsubsection{\texorpdfstring{CHECK\_EVENT\_LOOP\_COUNT}{CHECK\_EVENT\_LOOP\_COUNT}}
+{\footnotesize\ttfamily \label{struct_exch_state_a6eb46304efcb185518ae523229ff55ff} 
+uint64\+\_\+t Exch\+State\+::\+CHECK\+\_\+\+EVENT\+\_\+\+LOOP\+\_\+\+COUNT}
+
+\Hypertarget{struct_exch_state_a8530258c232e9cbd206646a1370e4638}\index{ExchState@{ExchState}!CHECK\_EVENTS\_TRIG@{CHECK\_EVENTS\_TRIG}}
+\index{CHECK\_EVENTS\_TRIG@{CHECK\_EVENTS\_TRIG}!ExchState@{ExchState}}
+\doxysubsubsection{\texorpdfstring{CHECK\_EVENTS\_TRIG}{CHECK\_EVENTS\_TRIG}}
+{\footnotesize\ttfamily \label{struct_exch_state_a8530258c232e9cbd206646a1370e4638} 
+uint64\+\_\+t Exch\+State\+::\+CHECK\+\_\+\+EVENTS\+\_\+\+TRIG}
+
+\Hypertarget{struct_exch_state_a5ad167b03eeb08d74c83492f8c5b0fcd}\index{ExchState@{ExchState}!EVENT\_WAITING@{EVENT\_WAITING}}
+\index{EVENT\_WAITING@{EVENT\_WAITING}!ExchState@{ExchState}}
+\doxysubsubsection{\texorpdfstring{EVENT\_WAITING}{EVENT\_WAITING}}
+{\footnotesize\ttfamily \label{struct_exch_state_a5ad167b03eeb08d74c83492f8c5b0fcd} 
+std\+::atomic$<$bool$>$ Exch\+State\+::\+EVENT\+\_\+\+WAITING}
+
+\Hypertarget{struct_exch_state_a7dfebd0e93cb591547454512adedf181}\index{ExchState@{ExchState}!EVENTPOLLMAX@{EVENTPOLLMAX}}
+\index{EVENTPOLLMAX@{EVENTPOLLMAX}!ExchState@{ExchState}}
+\doxysubsubsection{\texorpdfstring{EVENTPOLLMAX}{EVENTPOLLMAX}}
+{\footnotesize\ttfamily \label{struct_exch_state_a7dfebd0e93cb591547454512adedf181} 
+uint64\+\_\+t Exch\+State\+::\+EVENTPOLLMAX}
+
+\Hypertarget{struct_exch_state_ac7b7b060835b4d6bd9c5f6d7c6e1e589}\index{ExchState@{ExchState}!EXCHNAME@{EXCHNAME}}
+\index{EXCHNAME@{EXCHNAME}!ExchState@{ExchState}}
+\doxysubsubsection{\texorpdfstring{EXCHNAME}{EXCHNAME}}
+{\footnotesize\ttfamily \label{struct_exch_state_ac7b7b060835b4d6bd9c5f6d7c6e1e589} 
+std\+::string Exch\+State\+::\+EXCHNAME}
+
+\Hypertarget{struct_exch_state_a22c02ca72c9c29a22bf3d580a3f26201}\index{ExchState@{ExchState}!FILENAME@{FILENAME}}
+\index{FILENAME@{FILENAME}!ExchState@{ExchState}}
+\doxysubsubsection{\texorpdfstring{FILENAME}{FILENAME}}
+{\footnotesize\ttfamily \label{struct_exch_state_a22c02ca72c9c29a22bf3d580a3f26201} 
+std\+::string Exch\+State\+::\+FILENAME}
+
+\Hypertarget{struct_exch_state_a1a262c8466cec0d536cf183f45918c9a}\index{ExchState@{ExchState}!KEEPALIVE@{KEEPALIVE}}
+\index{KEEPALIVE@{KEEPALIVE}!ExchState@{ExchState}}
+\doxysubsubsection{\texorpdfstring{KEEPALIVE}{KEEPALIVE}}
+{\footnotesize\ttfamily \label{struct_exch_state_a1a262c8466cec0d536cf183f45918c9a} 
+int Exch\+State\+::\+KEEPALIVE}
+
+\Hypertarget{struct_exch_state_a06d5ce3e0e0bcc004201b4a2c0c7ad2f}\index{ExchState@{ExchState}!KEEPALIVE\_BUFFERMS@{KEEPALIVE\_BUFFERMS}}
+\index{KEEPALIVE\_BUFFERMS@{KEEPALIVE\_BUFFERMS}!ExchState@{ExchState}}
+\doxysubsubsection{\texorpdfstring{KEEPALIVE\_BUFFERMS}{KEEPALIVE\_BUFFERMS}}
+{\footnotesize\ttfamily \label{struct_exch_state_a06d5ce3e0e0bcc004201b4a2c0c7ad2f} 
+int Exch\+State\+::\+KEEPALIVE\+\_\+\+BUFFERMS}
+
+\Hypertarget{struct_exch_state_a94d3fc0abb97f1df4c35e7c326d51368}\index{ExchState@{ExchState}!KTNACCT@{KTNACCT}}
+\index{KTNACCT@{KTNACCT}!ExchState@{ExchState}}
+\doxysubsubsection{\texorpdfstring{KTNACCT}{KTNACCT}}
+{\footnotesize\ttfamily \label{struct_exch_state_a94d3fc0abb97f1df4c35e7c326d51368} 
+std\+::string Exch\+State\+::\+KTNACCT}
+
+\Hypertarget{struct_exch_state_ac18193a558241ae1f9bdfb3751943c2f}\index{ExchState@{ExchState}!logToScreen@{logToScreen}}
+\index{logToScreen@{logToScreen}!ExchState@{ExchState}}
+\doxysubsubsection{\texorpdfstring{logToScreen}{logToScreen}}
+{\footnotesize\ttfamily \label{struct_exch_state_ac18193a558241ae1f9bdfb3751943c2f} 
+bool Exch\+State\+::log\+To\+Screen}
+
+\Hypertarget{struct_exch_state_ae30d7516fff71516dc8adb977661359a}\index{ExchState@{ExchState}!LOOP\_TRIG@{LOOP\_TRIG}}
+\index{LOOP\_TRIG@{LOOP\_TRIG}!ExchState@{ExchState}}
+\doxysubsubsection{\texorpdfstring{LOOP\_TRIG}{LOOP\_TRIG}}
+{\footnotesize\ttfamily \label{struct_exch_state_ae30d7516fff71516dc8adb977661359a} 
+uint64\+\_\+t Exch\+State\+::\+LOOP\+\_\+\+TRIG}
+
+\Hypertarget{struct_exch_state_a0f7968d1eef90da5dbde4484f023ce6b}\index{ExchState@{ExchState}!LOOPER@{LOOPER}}
+\index{LOOPER@{LOOPER}!ExchState@{ExchState}}
+\doxysubsubsection{\texorpdfstring{LOOPER}{LOOPER}}
+{\footnotesize\ttfamily \label{struct_exch_state_a0f7968d1eef90da5dbde4484f023ce6b} 
+uint64\+\_\+t Exch\+State\+::\+LOOPER}
+
+\Hypertarget{struct_exch_state_a7a6038bb0010e8dc1dc6f984dd27ec1f}\index{ExchState@{ExchState}!MEASURE@{MEASURE}}
+\index{MEASURE@{MEASURE}!ExchState@{ExchState}}
+\doxysubsubsection{\texorpdfstring{MEASURE}{MEASURE}}
+{\footnotesize\ttfamily \label{struct_exch_state_a7a6038bb0010e8dc1dc6f984dd27ec1f} 
+bool Exch\+State\+::\+MEASURE}
+
+\Hypertarget{struct_exch_state_a96c42e746a98385726f3cad29ec0470c}\index{ExchState@{ExchState}!ORG@{ORG}}
+\index{ORG@{ORG}!ExchState@{ExchState}}
+\doxysubsubsection{\texorpdfstring{ORG}{ORG}}
+{\footnotesize\ttfamily \label{struct_exch_state_a96c42e746a98385726f3cad29ec0470c} 
+std\+::string Exch\+State\+::\+ORG}
+
+\Hypertarget{struct_exch_state_a70dd16ef7b94d91017664c1896f03696}\index{ExchState@{ExchState}!SEGCNT@{SEGCNT}}
+\index{SEGCNT@{SEGCNT}!ExchState@{ExchState}}
+\doxysubsubsection{\texorpdfstring{SEGCNT}{SEGCNT}}
+{\footnotesize\ttfamily \label{struct_exch_state_a70dd16ef7b94d91017664c1896f03696} 
+int Exch\+State\+::\+SEGCNT}
+
+\Hypertarget{struct_exch_state_a9db3cd0aca7f637216e96108d5d72a76}\index{ExchState@{ExchState}!SOURCE@{SOURCE}}
+\index{SOURCE@{SOURCE}!ExchState@{ExchState}}
+\doxysubsubsection{\texorpdfstring{SOURCE}{SOURCE}}
+{\footnotesize\ttfamily \label{struct_exch_state_a9db3cd0aca7f637216e96108d5d72a76} 
+std\+::string Exch\+State\+::\+SOURCE}
+
+\Hypertarget{struct_exch_state_aa4bedf35fb2a60d04e30f66899152622}\index{ExchState@{ExchState}!USE\_AUDIT@{USE\_AUDIT}}
+\index{USE\_AUDIT@{USE\_AUDIT}!ExchState@{ExchState}}
+\doxysubsubsection{\texorpdfstring{USE\_AUDIT}{USE\_AUDIT}}
+{\footnotesize\ttfamily \label{struct_exch_state_aa4bedf35fb2a60d04e30f66899152622} 
+bool Exch\+State\+::\+USE\+\_\+\+AUDIT}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Exchange\+Handlers2/Exch\+Structs.\+hpp\end{DoxyCompactItemize}

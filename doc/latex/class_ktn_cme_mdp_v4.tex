@@ -1,0 +1,570 @@
+\doxysection{Ktn\+Cme\+Mdp\+V4 Class Reference}
+\hypertarget{class_ktn_cme_mdp_v4}{}\label{class_ktn_cme_mdp_v4}\index{KtnCmeMdpV4@{KtnCmeMdpV4}}
+
+
+Represents a class that handles CME MDP3 market data.  
+
+
+
+
+{\ttfamily \#include $<$Ktn\+Cme\+Mdp\+V4.\+hpp$>$}
+
+Inheritance diagram for Ktn\+Cme\+Mdp\+V4\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_ktn_cme_mdp_v4}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{class_ktn_cme_mdp_v4_adfb1a3d61b1633bf93d15efc9f9fa422}{Update\+Algo\+Callback}} = void (\texorpdfstring{$\ast$}{*})(const \mbox{\hyperlink{structalgomd}{algomd}}\&)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{class_k_t_n_1_1_n_e_t_1_1_e_f_v_i_udp_v4}{KTN\+::\+NET\+::\+EFVIUdp\+V4}}}
+\begin{DoxyCompactItemize}
+\item 
+enum class {\bfseries Filter\+IPProto} \+: int \{ {\bfseries UDP} = \+::IPPROTO\+\_\+\+UDP
+, {\bfseries TCP} = \+::IPPROTO\+\_\+\+TCP
+ \}
+\item 
+typedef i01\+::core\+::\+Timestamp \mbox{\hyperlink{class_k_t_n_1_1_n_e_t_1_1_e_f_v_i_udp_v4_af3fff59f5d869b122aa5394cee758084}{Timestamp}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ktn_cme_mdp_v4_aa2d39ed887683970ab85fa4d8ee1740c}{Ktn\+Cme\+Mdp\+V4}} (string name, int core, bool handletrades)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_ktn_cme_mdp_v4}{Ktn\+Cme\+Mdp\+V4} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_ktn_cme_mdp_v4_abdd1aa14ec87df50b17e1c3a4e336270}{\texorpdfstring{$\sim$}{\string~}\+Ktn\+Cme\+Mdp\+V4}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{class_ktn_cme_mdp_v4}{Ktn\+Cme\+Mdp\+V4} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ktn_cme_mdp_v4_a29d967691334d47d41cc6466604d010b}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Starts the \doxylink{class_ktn_cme_mdp_v4}{Ktn\+Cme\+Mdp\+V4} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ktn_cme_mdp_v4_affff409ad11de367b8560e9c295016d0}{Stop}} ()
+\begin{DoxyCompactList}\small\item\em Stops the \doxylink{class_ktn_cme_mdp_v4}{Ktn\+Cme\+Mdp\+V4} object. \end{DoxyCompactList}\item 
+\Hypertarget{class_ktn_cme_mdp_v4_a3702e90d113cd9fccf47409f4e2adc66}\label{class_ktn_cme_mdp_v4_a3702e90d113cd9fccf47409f4e2adc66} 
+void {\bfseries Reset} ()
+\begin{DoxyCompactList}\small\item\em Resets the \doxylink{class_ktn_cme_mdp_v4}{Ktn\+Cme\+Mdp\+V4} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ktn_cme_mdp_v4_ad262266411967b5f1f38351d6b1e801c}{Print\+Stats}} ()
+\begin{DoxyCompactList}\small\item\em Prints the statistics of the \doxylink{class_ktn_cme_mdp_v4}{Ktn\+Cme\+Mdp\+V4} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ktn_cme_mdp_v4_a984b0d8e6144012b25b4d3b4ed88140a}{Add\+Symbols}} (vector$<$ string $>$ symbols)
+\begin{DoxyCompactList}\small\item\em Adds a list of symbols to the \doxylink{class_ktn_cme_mdp_v4}{Ktn\+Cme\+Mdp\+V4} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ktn_cme_mdp_v4_a2910b70929fd9a0cf94519795c64ef62}{Add\+Symbols}} (vector$<$ \mbox{\hyperlink{structinstrument}{instrument}} $>$ legs)
+\begin{DoxyCompactList}\small\item\em Adds a list of instruments to the \doxylink{class_ktn_cme_mdp_v4}{Ktn\+Cme\+Mdp\+V4} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ktn_cme_mdp_v4_a33947b77f17733deaa37c48f6f5098da}{Add\+Symbol}} (string symb)
+\begin{DoxyCompactList}\small\item\em Adds a symbol to the \doxylink{class_ktn_cme_mdp_v4}{Ktn\+Cme\+Mdp\+V4} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ktn_cme_mdp_v4_a06d5c97aa57edeabf317cd00081c152f}{Add\+Book\+Depth}} (string symb)
+\begin{DoxyCompactList}\small\item\em Adds book depth for a symbol to the \doxylink{class_ktn_cme_mdp_v4}{Ktn\+Cme\+Mdp\+V4} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ktn_cme_mdp_v4_a27a8915422bb54b61fd6883332f82bfe}{Add\+Mbo}} (string symb)
+\begin{DoxyCompactList}\small\item\em Adds MBO (Market By Order) for a symbol to the \doxylink{class_ktn_cme_mdp_v4}{Ktn\+Cme\+Mdp\+V4} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ktn_cme_mdp_v4_a39f971ae08eb582bfb08a8d4129d0473}{Add\+Channel\+Filter}} (const \mbox{\hyperlink{class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def}{Cme\+Sec\+Def}} \&secdef, const string \&feedtype)
+\begin{DoxyCompactList}\small\item\em Adds a channel filter to the \doxylink{class_ktn_cme_mdp_v4}{Ktn\+Cme\+Mdp\+V4} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ktn_cme_mdp_v4_a77224a2de203ae6cdf540ff1114c11fa}{Subscribe}} (\mbox{\hyperlink{class_k_t_n_1_1_algo_mkt_data_callback}{Algo\+Mkt\+Data\+Callback}} \texorpdfstring{$\ast$}{*}subscriber)
+\begin{DoxyCompactList}\small\item\em Subscribes to the market data callback. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ktn_cme_mdp_v4_a163c8367b06c29d807bf12b9d6a6e79d}{Print}} (bool verbose)
+\begin{DoxyCompactList}\small\item\em Prints the \doxylink{class_ktn_cme_mdp_v4}{Ktn\+Cme\+Mdp\+V4} object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ktn_cme_mdp_v4_a9b5d9b7a893df49b801dfc8b9e833a2c}{Handle\+Mbo}} () const
+\begin{DoxyCompactList}\small\item\em Gets the flag indicating whether to handle MBO (Market By Order). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ktn_cme_mdp_v4_a2e73f4aeaea0bb99188ba283c55f5c09}{Set\+Handle\+Mbo}} (bool handle\+Mbo)
+\begin{DoxyCompactList}\small\item\em Sets the flag indicating whether to handle MBO (Market By Order). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ktn_cme_mdp_v4_a3d0a78ba7df7919f314e76e5dc3ad02c}{Handle\+Depth}} () const
+\begin{DoxyCompactList}\small\item\em Gets the flag indicating whether to handle depth. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ktn_cme_mdp_v4_a4b8e06328fe7f02d7bae8f730440d82d}{Set\+Handle\+Depth}} (bool handle\+Snap)
+\begin{DoxyCompactList}\small\item\em Sets the flag indicating whether to handle depth. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ktn_cme_mdp_v4_aa9402e6d4b68f6d2109315f9f12bf804}{Handle\+Stats}} () const
+\begin{DoxyCompactList}\small\item\em Gets the flag indicating whether to handle statistics. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ktn_cme_mdp_v4_abdc6fe1f3d1d05c82746efb5f8f6b753}{Set\+Handle\+Stats}} (bool handle\+Stats)
+\begin{DoxyCompactList}\small\item\em Sets the flag indicating whether to handle statistics. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ktn_cme_mdp_v4_ae5cf760b9304cda2a4727124620f0e3b}{Handle\+Trades}} () const
+\begin{DoxyCompactList}\small\item\em Gets the flag indicating whether to handle trades. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ktn_cme_mdp_v4_a868802bf58f269f86e0e27d08f927e8c}{Set\+Handle\+Trades}} (bool handle\+Trades)
+\begin{DoxyCompactList}\small\item\em Sets the flag indicating whether to handle trades. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ktn_cme_mdp_v4_a63a793c919c1cbccde0ff94c91005d62}{Handle\+Volume}} () const
+\begin{DoxyCompactList}\small\item\em Gets the flag indicating whether to handle volume. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ktn_cme_mdp_v4_a27f79331a22e5804009f486bfe865457}{Set\+Handle\+Volume}} (bool handle\+Volume)
+\begin{DoxyCompactList}\small\item\em Sets the flag indicating whether to handle volume. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_named_thread}{Named\+Thread}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_named_thread_a891fabdc2d824048ec05c82e7ef8c69a}{Named\+Thread}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_named_thread_a018dadb59e5af98ee734301a1baa50cb}{\texorpdfstring{$\sim$}{\string~}\+Named\+Thread}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_named_thread_a9fa42542ff43c89fb9bbc33de9c87e34}{Create\+And\+Run}} (string name, int core)
+\begin{DoxyCompactList}\small\item\em Creates and runs the named thread on the specified core. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_named_thread_ad4809c571171be13f0f91f540d5c196f}{Join}} ()
+\begin{DoxyCompactList}\small\item\em Joins the named thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_k_t_n_1_1_n_e_t_1_1_e_f_v_i_udp_v4}{KTN\+::\+NET\+::\+EFVIUdp\+V4}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_n_e_t_1_1_e_f_v_i_udp_v4_a9f730e4019f1af105fd676d9387761b1}{EFVIUdp\+V4}} (std\+::string feed, bool hwtimestamping, std\+::string name, bool use\+Cert\+Nr\+Config\+File=false)
+\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_n_e_t_1_1_e_f_v_i_udp_v4_a74bd7d0f286ee158010c001284e800dd}{apply\+\_\+filter}} (const string \&connid, const string \&ipaddr, int port, bool isA)
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_n_e_t_1_1_e_f_v_i_udp_v4_a2fdd6e1009f5757cf747849cbd378173}{poll}} ()
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_n_e_t_1_1_e_f_v_i_udp_v4_aaed8ad15510f7d769d1d8cfa087717e0}{Ef\+Print\+Stats}} ()
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_n_e_t_1_1_e_f_v_i_udp_v4_a89b48869b44e139429398523bb8f9565}{Refill\+Ring}} ()
+\item 
+void {\bfseries testticket} ()
+\item 
+int {\bfseries Source} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structalgomd}{algomd}} \mbox{\hyperlink{class_ktn_cme_mdp_v4_afcc88974e3ff767a3a0ef48373aaf571}{\+\_\+algomds}} \mbox{[}16\mbox{]}
+\item 
+\mbox{\hyperlink{structbookmd}{bookmd}} \mbox{\hyperlink{class_ktn_cme_mdp_v4_a84266be7f915cc3ffc8ab818d7ead81c}{\+\_\+bookmds}} \mbox{[}16\mbox{]}
+\item 
+std\+::vector$<$ string $>$ \mbox{\hyperlink{class_ktn_cme_mdp_v4_a93e04f04d6caec4afba4bd6af55b1b32}{\+\_\+\+FILTERS}}
+\item 
+int \mbox{\hyperlink{class_ktn_cme_mdp_v4_af84e13078888ad152824126367a100dd}{\+\_\+\+SECIDS}} \mbox{[}16\mbox{]}
+\item 
+int \mbox{\hyperlink{class_ktn_cme_mdp_v4_aaedd36ab3abb387f1325a0a7388c0fdb}{\+\_\+\+NUMSECS}}
+\item 
+vector$<$ \mbox{\hyperlink{class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def}{Cme\+Sec\+Def}} $>$ \mbox{\hyperlink{class_ktn_cme_mdp_v4_a123cec99bff0bad3666782a6ac7e2fc6}{\+\_\+\+DEFS}}
+\item 
+tr1\+::unordered\+\_\+map$<$ int, string $>$ \mbox{\hyperlink{class_ktn_cme_mdp_v4_ac99c8749c633cb5e71e1032aeee1332d}{\+\_\+\+SYMBMAP}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a class that handles CME MDP3 market data. 
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{class_ktn_cme_mdp_v4_adfb1a3d61b1633bf93d15efc9f9fa422}\index{KtnCmeMdpV4@{KtnCmeMdpV4}!UpdateAlgoCallback@{UpdateAlgoCallback}}
+\index{UpdateAlgoCallback@{UpdateAlgoCallback}!KtnCmeMdpV4@{KtnCmeMdpV4}}
+\doxysubsubsection{\texorpdfstring{UpdateAlgoCallback}{UpdateAlgoCallback}}
+{\footnotesize\ttfamily \label{class_ktn_cme_mdp_v4_adfb1a3d61b1633bf93d15efc9f9fa422} 
+using Ktn\+Cme\+Mdp\+V4\+::\+Update\+Algo\+Callback = void (\texorpdfstring{$\ast$}{*})(const \mbox{\hyperlink{structalgomd}{algomd}}\&)}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_ktn_cme_mdp_v4_aa2d39ed887683970ab85fa4d8ee1740c}\index{KtnCmeMdpV4@{KtnCmeMdpV4}!KtnCmeMdpV4@{KtnCmeMdpV4}}
+\index{KtnCmeMdpV4@{KtnCmeMdpV4}!KtnCmeMdpV4@{KtnCmeMdpV4}}
+\doxysubsubsection{\texorpdfstring{KtnCmeMdpV4()}{KtnCmeMdpV4()}}
+{\footnotesize\ttfamily \label{class_ktn_cme_mdp_v4_aa2d39ed887683970ab85fa4d8ee1740c} 
+Ktn\+Cme\+Mdp\+V4\+::\+Ktn\+Cme\+Mdp\+V4 (\begin{DoxyParamCaption}\item[{string}]{name}{, }\item[{int}]{core}{, }\item[{bool}]{handletrades}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructs a \doxylink{class_ktn_cme_mdp_v4}{Ktn\+Cme\+Mdp\+V4} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the object. \\
+\hline
+{\em core} & The core number. \\
+\hline
+{\em handletrades} & Flag indicating whether to handle trades. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_ktn_cme_mdp_v4_abdd1aa14ec87df50b17e1c3a4e336270}\index{KtnCmeMdpV4@{KtnCmeMdpV4}!````~KtnCmeMdpV4@{\texorpdfstring{$\sim$}{\string~}KtnCmeMdpV4}}
+\index{````~KtnCmeMdpV4@{\texorpdfstring{$\sim$}{\string~}KtnCmeMdpV4}!KtnCmeMdpV4@{KtnCmeMdpV4}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}KtnCmeMdpV4()}{\string~KtnCmeMdpV4()}}
+{\footnotesize\ttfamily \label{class_ktn_cme_mdp_v4_abdd1aa14ec87df50b17e1c3a4e336270} 
+Ktn\+Cme\+Mdp\+V4\+::\texorpdfstring{$\sim$}{\string~}\+Ktn\+Cme\+Mdp\+V4 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destroys the \doxylink{class_ktn_cme_mdp_v4}{Ktn\+Cme\+Mdp\+V4} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_ktn_cme_mdp_v4_a06d5c97aa57edeabf317cd00081c152f}\index{KtnCmeMdpV4@{KtnCmeMdpV4}!AddBookDepth@{AddBookDepth}}
+\index{AddBookDepth@{AddBookDepth}!KtnCmeMdpV4@{KtnCmeMdpV4}}
+\doxysubsubsection{\texorpdfstring{AddBookDepth()}{AddBookDepth()}}
+{\footnotesize\ttfamily \label{class_ktn_cme_mdp_v4_a06d5c97aa57edeabf317cd00081c152f} 
+void Ktn\+Cme\+Mdp\+V4\+::\+Add\+Book\+Depth (\begin{DoxyParamCaption}\item[{string}]{symb}{}\end{DoxyParamCaption})}
+
+
+
+Adds book depth for a symbol to the \doxylink{class_ktn_cme_mdp_v4}{Ktn\+Cme\+Mdp\+V4} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em symb} & The symbol to add book depth for. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00777}{Add\+Channel\+Filter()}}, \mbox{\hyperlink{l00209}{bookmd\+::index}}, and \mbox{\hyperlink{l00210}{bookmd\+::secid}}.
+
+\Hypertarget{class_ktn_cme_mdp_v4_a39f971ae08eb582bfb08a8d4129d0473}\index{KtnCmeMdpV4@{KtnCmeMdpV4}!AddChannelFilter@{AddChannelFilter}}
+\index{AddChannelFilter@{AddChannelFilter}!KtnCmeMdpV4@{KtnCmeMdpV4}}
+\doxysubsubsection{\texorpdfstring{AddChannelFilter()}{AddChannelFilter()}}
+{\footnotesize\ttfamily \label{class_ktn_cme_mdp_v4_a39f971ae08eb582bfb08a8d4129d0473} 
+void Ktn\+Cme\+Mdp\+V4\+::\+Add\+Channel\+Filter (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def}{Cme\+Sec\+Def}} \&}]{secdef}{, }\item[{const string \&}]{feedtype}{}\end{DoxyParamCaption})}
+
+
+
+Adds a channel filter to the \doxylink{class_ktn_cme_mdp_v4}{Ktn\+Cme\+Mdp\+V4} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em secdef} & The CME security definition. \\
+\hline
+{\em feedtype} & The feed type. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{l00731}{Add\+Book\+Depth()}}, and \mbox{\hyperlink{l00671}{Add\+Symbol()}}.
+
+\Hypertarget{class_ktn_cme_mdp_v4_a27a8915422bb54b61fd6883332f82bfe}\index{KtnCmeMdpV4@{KtnCmeMdpV4}!AddMbo@{AddMbo}}
+\index{AddMbo@{AddMbo}!KtnCmeMdpV4@{KtnCmeMdpV4}}
+\doxysubsubsection{\texorpdfstring{AddMbo()}{AddMbo()}}
+{\footnotesize\ttfamily \label{class_ktn_cme_mdp_v4_a27a8915422bb54b61fd6883332f82bfe} 
+void Ktn\+Cme\+Mdp\+V4\+::\+Add\+Mbo (\begin{DoxyParamCaption}\item[{string}]{symb}{}\end{DoxyParamCaption})}
+
+
+
+Adds MBO (Market By Order) for a symbol to the \doxylink{class_ktn_cme_mdp_v4}{Ktn\+Cme\+Mdp\+V4} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em symb} & The symbol to add MBO for. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_ktn_cme_mdp_v4_a33947b77f17733deaa37c48f6f5098da}\index{KtnCmeMdpV4@{KtnCmeMdpV4}!AddSymbol@{AddSymbol}}
+\index{AddSymbol@{AddSymbol}!KtnCmeMdpV4@{KtnCmeMdpV4}}
+\doxysubsubsection{\texorpdfstring{AddSymbol()}{AddSymbol()}}
+{\footnotesize\ttfamily \label{class_ktn_cme_mdp_v4_a33947b77f17733deaa37c48f6f5098da} 
+void Ktn\+Cme\+Mdp\+V4\+::\+Add\+Symbol (\begin{DoxyParamCaption}\item[{string}]{symb}{}\end{DoxyParamCaption})}
+
+
+
+Adds a symbol to the \doxylink{class_ktn_cme_mdp_v4}{Ktn\+Cme\+Mdp\+V4} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em symb} & The symbol to add. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00777}{Add\+Channel\+Filter()}}, \mbox{\hyperlink{l00178}{algomd\+::has\+Implied\+Enabled}}, \mbox{\hyperlink{l00156}{algomd\+::index}}, and \mbox{\hyperlink{l00176}{algomd\+::secid}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00663}{Add\+Symbols()}}, and \mbox{\hyperlink{l00655}{Add\+Symbols()}}.
+
+\Hypertarget{class_ktn_cme_mdp_v4_a2910b70929fd9a0cf94519795c64ef62}\index{KtnCmeMdpV4@{KtnCmeMdpV4}!AddSymbols@{AddSymbols}}
+\index{AddSymbols@{AddSymbols}!KtnCmeMdpV4@{KtnCmeMdpV4}}
+\doxysubsubsection{\texorpdfstring{AddSymbols()}{AddSymbols()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_ktn_cme_mdp_v4_a2910b70929fd9a0cf94519795c64ef62} 
+void Ktn\+Cme\+Mdp\+V4\+::\+Add\+Symbols (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{structinstrument}{instrument}} $>$}]{legs}{}\end{DoxyParamCaption})}
+
+
+
+Adds a list of instruments to the \doxylink{class_ktn_cme_mdp_v4}{Ktn\+Cme\+Mdp\+V4} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em legs} & The list of instruments to add. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00671}{Add\+Symbol()}}.
+
+\Hypertarget{class_ktn_cme_mdp_v4_a984b0d8e6144012b25b4d3b4ed88140a}\index{KtnCmeMdpV4@{KtnCmeMdpV4}!AddSymbols@{AddSymbols}}
+\index{AddSymbols@{AddSymbols}!KtnCmeMdpV4@{KtnCmeMdpV4}}
+\doxysubsubsection{\texorpdfstring{AddSymbols()}{AddSymbols()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_ktn_cme_mdp_v4_a984b0d8e6144012b25b4d3b4ed88140a} 
+void Ktn\+Cme\+Mdp\+V4\+::\+Add\+Symbols (\begin{DoxyParamCaption}\item[{vector$<$ string $>$}]{symbols}{}\end{DoxyParamCaption})}
+
+
+
+Adds a list of symbols to the \doxylink{class_ktn_cme_mdp_v4}{Ktn\+Cme\+Mdp\+V4} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em symbols} & The list of symbols to add. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00671}{Add\+Symbol()}}.
+
+\Hypertarget{class_ktn_cme_mdp_v4_a3d0a78ba7df7919f314e76e5dc3ad02c}\index{KtnCmeMdpV4@{KtnCmeMdpV4}!HandleDepth@{HandleDepth}}
+\index{HandleDepth@{HandleDepth}!KtnCmeMdpV4@{KtnCmeMdpV4}}
+\doxysubsubsection{\texorpdfstring{HandleDepth()}{HandleDepth()}}
+{\footnotesize\ttfamily \label{class_ktn_cme_mdp_v4_a3d0a78ba7df7919f314e76e5dc3ad02c} 
+bool Ktn\+Cme\+Mdp\+V4\+::\+Handle\+Depth (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the flag indicating whether to handle depth. 
+
+\begin{DoxyReturn}{Returns}
+True if depth should be handled, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_ktn_cme_mdp_v4_a9b5d9b7a893df49b801dfc8b9e833a2c}\index{KtnCmeMdpV4@{KtnCmeMdpV4}!HandleMbo@{HandleMbo}}
+\index{HandleMbo@{HandleMbo}!KtnCmeMdpV4@{KtnCmeMdpV4}}
+\doxysubsubsection{\texorpdfstring{HandleMbo()}{HandleMbo()}}
+{\footnotesize\ttfamily \label{class_ktn_cme_mdp_v4_a9b5d9b7a893df49b801dfc8b9e833a2c} 
+bool Ktn\+Cme\+Mdp\+V4\+::\+Handle\+Mbo (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the flag indicating whether to handle MBO (Market By Order). 
+
+\begin{DoxyReturn}{Returns}
+True if MBO should be handled, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_ktn_cme_mdp_v4_aa9402e6d4b68f6d2109315f9f12bf804}\index{KtnCmeMdpV4@{KtnCmeMdpV4}!HandleStats@{HandleStats}}
+\index{HandleStats@{HandleStats}!KtnCmeMdpV4@{KtnCmeMdpV4}}
+\doxysubsubsection{\texorpdfstring{HandleStats()}{HandleStats()}}
+{\footnotesize\ttfamily \label{class_ktn_cme_mdp_v4_aa9402e6d4b68f6d2109315f9f12bf804} 
+bool Ktn\+Cme\+Mdp\+V4\+::\+Handle\+Stats (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the flag indicating whether to handle statistics. 
+
+\begin{DoxyReturn}{Returns}
+True if statistics should be handled, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_ktn_cme_mdp_v4_ae5cf760b9304cda2a4727124620f0e3b}\index{KtnCmeMdpV4@{KtnCmeMdpV4}!HandleTrades@{HandleTrades}}
+\index{HandleTrades@{HandleTrades}!KtnCmeMdpV4@{KtnCmeMdpV4}}
+\doxysubsubsection{\texorpdfstring{HandleTrades()}{HandleTrades()}}
+{\footnotesize\ttfamily \label{class_ktn_cme_mdp_v4_ae5cf760b9304cda2a4727124620f0e3b} 
+bool Ktn\+Cme\+Mdp\+V4\+::\+Handle\+Trades (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the flag indicating whether to handle trades. 
+
+\begin{DoxyReturn}{Returns}
+True if trades should be handled, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_ktn_cme_mdp_v4_a63a793c919c1cbccde0ff94c91005d62}\index{KtnCmeMdpV4@{KtnCmeMdpV4}!HandleVolume@{HandleVolume}}
+\index{HandleVolume@{HandleVolume}!KtnCmeMdpV4@{KtnCmeMdpV4}}
+\doxysubsubsection{\texorpdfstring{HandleVolume()}{HandleVolume()}}
+{\footnotesize\ttfamily \label{class_ktn_cme_mdp_v4_a63a793c919c1cbccde0ff94c91005d62} 
+bool Ktn\+Cme\+Mdp\+V4\+::\+Handle\+Volume (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the flag indicating whether to handle volume. 
+
+\begin{DoxyReturn}{Returns}
+True if volume should be handled, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_ktn_cme_mdp_v4_a163c8367b06c29d807bf12b9d6a6e79d}\index{KtnCmeMdpV4@{KtnCmeMdpV4}!Print@{Print}}
+\index{Print@{Print}!KtnCmeMdpV4@{KtnCmeMdpV4}}
+\doxysubsubsection{\texorpdfstring{Print()}{Print()}}
+{\footnotesize\ttfamily \label{class_ktn_cme_mdp_v4_a163c8367b06c29d807bf12b9d6a6e79d} 
+void Ktn\+Cme\+Mdp\+V4\+::\+Print (\begin{DoxyParamCaption}\item[{bool}]{verbose}{}\end{DoxyParamCaption})}
+
+
+
+Prints the \doxylink{class_ktn_cme_mdp_v4}{Ktn\+Cme\+Mdp\+V4} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em verbose} & Flag indicating whether to print verbose information. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_ktn_cme_mdp_v4_ad262266411967b5f1f38351d6b1e801c}\index{KtnCmeMdpV4@{KtnCmeMdpV4}!PrintStats@{PrintStats}}
+\index{PrintStats@{PrintStats}!KtnCmeMdpV4@{KtnCmeMdpV4}}
+\doxysubsubsection{\texorpdfstring{PrintStats()}{PrintStats()}}
+{\footnotesize\ttfamily \label{class_ktn_cme_mdp_v4_ad262266411967b5f1f38351d6b1e801c} 
+void Ktn\+Cme\+Mdp\+V4\+::\+Print\+Stats (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Prints the statistics of the \doxylink{class_ktn_cme_mdp_v4}{Ktn\+Cme\+Mdp\+V4} object. 
+
+
+
+References \mbox{\hyperlink{l00052}{Performance\+Tracker\+::print\+Measurements()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00339}{KTN\+::\+Algo\+Base\+V3\+::\+Print()}}.
+
+\Hypertarget{class_ktn_cme_mdp_v4_a4b8e06328fe7f02d7bae8f730440d82d}\index{KtnCmeMdpV4@{KtnCmeMdpV4}!SetHandleDepth@{SetHandleDepth}}
+\index{SetHandleDepth@{SetHandleDepth}!KtnCmeMdpV4@{KtnCmeMdpV4}}
+\doxysubsubsection{\texorpdfstring{SetHandleDepth()}{SetHandleDepth()}}
+{\footnotesize\ttfamily \label{class_ktn_cme_mdp_v4_a4b8e06328fe7f02d7bae8f730440d82d} 
+void Ktn\+Cme\+Mdp\+V4\+::\+Set\+Handle\+Depth (\begin{DoxyParamCaption}\item[{bool}]{handle\+Snap}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the flag indicating whether to handle depth. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle\+Snap} & The flag value to set. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{l00050}{KTN\+::\+Stacker\+::on\+Launch()}}, \mbox{\hyperlink{l00013}{KTN\+::\+Skewer\+::\+Skewer()}}, and \mbox{\hyperlink{l00013}{KTN\+::\+Skew\+Trader\+::\+Skew\+Trader()}}.
+
+\Hypertarget{class_ktn_cme_mdp_v4_a2e73f4aeaea0bb99188ba283c55f5c09}\index{KtnCmeMdpV4@{KtnCmeMdpV4}!SetHandleMbo@{SetHandleMbo}}
+\index{SetHandleMbo@{SetHandleMbo}!KtnCmeMdpV4@{KtnCmeMdpV4}}
+\doxysubsubsection{\texorpdfstring{SetHandleMbo()}{SetHandleMbo()}}
+{\footnotesize\ttfamily \label{class_ktn_cme_mdp_v4_a2e73f4aeaea0bb99188ba283c55f5c09} 
+void Ktn\+Cme\+Mdp\+V4\+::\+Set\+Handle\+Mbo (\begin{DoxyParamCaption}\item[{bool}]{handle\+Mbo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the flag indicating whether to handle MBO (Market By Order). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle\+Mbo} & The flag value to set. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_ktn_cme_mdp_v4_abdc6fe1f3d1d05c82746efb5f8f6b753}\index{KtnCmeMdpV4@{KtnCmeMdpV4}!SetHandleStats@{SetHandleStats}}
+\index{SetHandleStats@{SetHandleStats}!KtnCmeMdpV4@{KtnCmeMdpV4}}
+\doxysubsubsection{\texorpdfstring{SetHandleStats()}{SetHandleStats()}}
+{\footnotesize\ttfamily \label{class_ktn_cme_mdp_v4_abdc6fe1f3d1d05c82746efb5f8f6b753} 
+void Ktn\+Cme\+Mdp\+V4\+::\+Set\+Handle\+Stats (\begin{DoxyParamCaption}\item[{bool}]{handle\+Stats}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the flag indicating whether to handle statistics. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle\+Stats} & The flag value to set. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_ktn_cme_mdp_v4_a868802bf58f269f86e0e27d08f927e8c}\index{KtnCmeMdpV4@{KtnCmeMdpV4}!SetHandleTrades@{SetHandleTrades}}
+\index{SetHandleTrades@{SetHandleTrades}!KtnCmeMdpV4@{KtnCmeMdpV4}}
+\doxysubsubsection{\texorpdfstring{SetHandleTrades()}{SetHandleTrades()}}
+{\footnotesize\ttfamily \label{class_ktn_cme_mdp_v4_a868802bf58f269f86e0e27d08f927e8c} 
+void Ktn\+Cme\+Mdp\+V4\+::\+Set\+Handle\+Trades (\begin{DoxyParamCaption}\item[{bool}]{handle\+Trades}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the flag indicating whether to handle trades. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle\+Trades} & The flag value to set. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{l00012}{KTN\+::\+Auto\+Hedge\+OB\+::\+Auto\+Hedge\+OB()}}, \mbox{\hyperlink{l00045}{KTN\+::\+Squeezer\+OB\+::on\+Json()}}, \mbox{\hyperlink{l00030}{KTN\+::\+Auto\+Hedge\+OB\+::on\+Launch()}}, \mbox{\hyperlink{l00043}{KTN\+::\+PLWatcher\+::on\+Launch()}}, \mbox{\hyperlink{l00030}{KTN\+::\+Squeezer\+OB\+::on\+Launch()}}, \mbox{\hyperlink{l00050}{KTN\+::\+Stacker\+::on\+Launch()}}, \mbox{\hyperlink{l00012}{KTN\+::\+Squeezer\+OB\+::\+Squeezer\+OB()}}, and \mbox{\hyperlink{l00013}{KTN\+::\+Stacker\+Timer\+::\+Stacker\+Timer()}}.
+
+\Hypertarget{class_ktn_cme_mdp_v4_a27f79331a22e5804009f486bfe865457}\index{KtnCmeMdpV4@{KtnCmeMdpV4}!SetHandleVolume@{SetHandleVolume}}
+\index{SetHandleVolume@{SetHandleVolume}!KtnCmeMdpV4@{KtnCmeMdpV4}}
+\doxysubsubsection{\texorpdfstring{SetHandleVolume()}{SetHandleVolume()}}
+{\footnotesize\ttfamily \label{class_ktn_cme_mdp_v4_a27f79331a22e5804009f486bfe865457} 
+void Ktn\+Cme\+Mdp\+V4\+::\+Set\+Handle\+Volume (\begin{DoxyParamCaption}\item[{bool}]{handle\+Volume}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the flag indicating whether to handle volume. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle\+Volume} & The flag value to set. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_ktn_cme_mdp_v4_a29d967691334d47d41cc6466604d010b}\index{KtnCmeMdpV4@{KtnCmeMdpV4}!Start@{Start}}
+\index{Start@{Start}!KtnCmeMdpV4@{KtnCmeMdpV4}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily \label{class_ktn_cme_mdp_v4_a29d967691334d47d41cc6466604d010b} 
+void Ktn\+Cme\+Mdp\+V4\+::\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Starts the \doxylink{class_ktn_cme_mdp_v4}{Ktn\+Cme\+Mdp\+V4} object. 
+
+
+
+References \mbox{\hyperlink{l00018}{Named\+Thread\+::\+Create\+And\+Run()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00014}{KTN\+::\+Algo\+Base\+V3\+::\+Algo\+Base\+V3()}}.
+
+\Hypertarget{class_ktn_cme_mdp_v4_affff409ad11de367b8560e9c295016d0}\index{KtnCmeMdpV4@{KtnCmeMdpV4}!Stop@{Stop}}
+\index{Stop@{Stop}!KtnCmeMdpV4@{KtnCmeMdpV4}}
+\doxysubsubsection{\texorpdfstring{Stop()}{Stop()}}
+{\footnotesize\ttfamily \label{class_ktn_cme_mdp_v4_affff409ad11de367b8560e9c295016d0} 
+void Ktn\+Cme\+Mdp\+V4\+::\+Stop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Stops the \doxylink{class_ktn_cme_mdp_v4}{Ktn\+Cme\+Mdp\+V4} object. 
+
+\Hypertarget{class_ktn_cme_mdp_v4_a77224a2de203ae6cdf540ff1114c11fa}\index{KtnCmeMdpV4@{KtnCmeMdpV4}!Subscribe@{Subscribe}}
+\index{Subscribe@{Subscribe}!KtnCmeMdpV4@{KtnCmeMdpV4}}
+\doxysubsubsection{\texorpdfstring{Subscribe()}{Subscribe()}}
+{\footnotesize\ttfamily \label{class_ktn_cme_mdp_v4_a77224a2de203ae6cdf540ff1114c11fa} 
+void Ktn\+Cme\+Mdp\+V4\+::\+Subscribe (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_k_t_n_1_1_algo_mkt_data_callback}{Algo\+Mkt\+Data\+Callback}} \texorpdfstring{$\ast$}{*}}]{subscriber}{}\end{DoxyParamCaption})}
+
+
+
+Subscribes to the market data callback. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em subscriber} & The market data callback subscriber. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{l00014}{KTN\+::\+Algo\+Base\+V3\+::\+Algo\+Base\+V3()}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_ktn_cme_mdp_v4_afcc88974e3ff767a3a0ef48373aaf571}\index{KtnCmeMdpV4@{KtnCmeMdpV4}!\_algomds@{\_algomds}}
+\index{\_algomds@{\_algomds}!KtnCmeMdpV4@{KtnCmeMdpV4}}
+\doxysubsubsection{\texorpdfstring{\_algomds}{\_algomds}}
+{\footnotesize\ttfamily \label{class_ktn_cme_mdp_v4_afcc88974e3ff767a3a0ef48373aaf571} 
+\mbox{\hyperlink{structalgomd}{algomd}} Ktn\+Cme\+Mdp\+V4\+::\+\_\+algomds\mbox{[}16\mbox{]}}
+
+\Hypertarget{class_ktn_cme_mdp_v4_a84266be7f915cc3ffc8ab818d7ead81c}\index{KtnCmeMdpV4@{KtnCmeMdpV4}!\_bookmds@{\_bookmds}}
+\index{\_bookmds@{\_bookmds}!KtnCmeMdpV4@{KtnCmeMdpV4}}
+\doxysubsubsection{\texorpdfstring{\_bookmds}{\_bookmds}}
+{\footnotesize\ttfamily \label{class_ktn_cme_mdp_v4_a84266be7f915cc3ffc8ab818d7ead81c} 
+\mbox{\hyperlink{structbookmd}{bookmd}} Ktn\+Cme\+Mdp\+V4\+::\+\_\+bookmds\mbox{[}16\mbox{]}}
+
+\Hypertarget{class_ktn_cme_mdp_v4_a123cec99bff0bad3666782a6ac7e2fc6}\index{KtnCmeMdpV4@{KtnCmeMdpV4}!\_DEFS@{\_DEFS}}
+\index{\_DEFS@{\_DEFS}!KtnCmeMdpV4@{KtnCmeMdpV4}}
+\doxysubsubsection{\texorpdfstring{\_DEFS}{\_DEFS}}
+{\footnotesize\ttfamily \label{class_ktn_cme_mdp_v4_a123cec99bff0bad3666782a6ac7e2fc6} 
+vector$<$\mbox{\hyperlink{class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def}{Cme\+Sec\+Def}}$>$ Ktn\+Cme\+Mdp\+V4\+::\+\_\+\+DEFS}
+
+\Hypertarget{class_ktn_cme_mdp_v4_a93e04f04d6caec4afba4bd6af55b1b32}\index{KtnCmeMdpV4@{KtnCmeMdpV4}!\_FILTERS@{\_FILTERS}}
+\index{\_FILTERS@{\_FILTERS}!KtnCmeMdpV4@{KtnCmeMdpV4}}
+\doxysubsubsection{\texorpdfstring{\_FILTERS}{\_FILTERS}}
+{\footnotesize\ttfamily \label{class_ktn_cme_mdp_v4_a93e04f04d6caec4afba4bd6af55b1b32} 
+std\+::vector$<$string$>$ Ktn\+Cme\+Mdp\+V4\+::\+\_\+\+FILTERS}
+
+\Hypertarget{class_ktn_cme_mdp_v4_aaedd36ab3abb387f1325a0a7388c0fdb}\index{KtnCmeMdpV4@{KtnCmeMdpV4}!\_NUMSECS@{\_NUMSECS}}
+\index{\_NUMSECS@{\_NUMSECS}!KtnCmeMdpV4@{KtnCmeMdpV4}}
+\doxysubsubsection{\texorpdfstring{\_NUMSECS}{\_NUMSECS}}
+{\footnotesize\ttfamily \label{class_ktn_cme_mdp_v4_aaedd36ab3abb387f1325a0a7388c0fdb} 
+int Ktn\+Cme\+Mdp\+V4\+::\+\_\+\+NUMSECS}
+
+\Hypertarget{class_ktn_cme_mdp_v4_af84e13078888ad152824126367a100dd}\index{KtnCmeMdpV4@{KtnCmeMdpV4}!\_SECIDS@{\_SECIDS}}
+\index{\_SECIDS@{\_SECIDS}!KtnCmeMdpV4@{KtnCmeMdpV4}}
+\doxysubsubsection{\texorpdfstring{\_SECIDS}{\_SECIDS}}
+{\footnotesize\ttfamily \label{class_ktn_cme_mdp_v4_af84e13078888ad152824126367a100dd} 
+int Ktn\+Cme\+Mdp\+V4\+::\+\_\+\+SECIDS\mbox{[}16\mbox{]}}
+
+\Hypertarget{class_ktn_cme_mdp_v4_ac99c8749c633cb5e71e1032aeee1332d}\index{KtnCmeMdpV4@{KtnCmeMdpV4}!\_SYMBMAP@{\_SYMBMAP}}
+\index{\_SYMBMAP@{\_SYMBMAP}!KtnCmeMdpV4@{KtnCmeMdpV4}}
+\doxysubsubsection{\texorpdfstring{\_SYMBMAP}{\_SYMBMAP}}
+{\footnotesize\ttfamily \label{class_ktn_cme_mdp_v4_ac99c8749c633cb5e71e1032aeee1332d} 
+tr1\+::unordered\+\_\+map$<$int, string$>$ Ktn\+Cme\+Mdp\+V4\+::\+\_\+\+SYMBMAP}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+exchsupport/cme/Ktn\+Cme\+Mdp\+V4.\+hpp\item 
+exchsupport/cme/Ktn\+Cme\+Mdp\+V4.\+cpp\end{DoxyCompactItemize}

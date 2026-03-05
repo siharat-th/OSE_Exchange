@@ -1,0 +1,73 @@
+\doxysection{KTN\+::Enum\+Base\texorpdfstring{$<$}{<} Enum, Derived \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_k_t_n_1_1_enum_base}{}\label{class_k_t_n_1_1_enum_base}\index{KTN::EnumBase$<$ Enum, Derived $>$@{KTN::EnumBase$<$ Enum, Derived $>$}}
+
+
+Base class for creating enum classes with string conversion support.  
+
+
+
+
+{\ttfamily \#include $<$Enum\+Base.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr std\+::array$<$ const char \texorpdfstring{$\ast$}{*}, static\+\_\+cast$<$ size\+\_\+t $>$(Derived\+::\+COUNT)$>$ \mbox{\hyperlink{class_k_t_n_1_1_enum_base_a0c6adb269175f5096fb48a7c8a9ae8d7}{Get\+Enum\+Strings}} ()
+\begin{DoxyCompactList}\small\item\em Get an array of string representations of the enum values. \end{DoxyCompactList}\item 
+static const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_k_t_n_1_1_enum_base_ade7182f912eb96a3ef32cfdce1425eae}{To\+String}} (Enum e)
+\begin{DoxyCompactList}\small\item\em Convert the enum value to its string representation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Enum, typename Derived$>$\newline
+class KTN\+::\+Enum\+Base$<$ Enum, Derived $>$}
+Base class for creating enum classes with string conversion support. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Enum} & The enum type. \\
+\hline
+{\em Derived} & The derived enum class. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_enum_base_a0c6adb269175f5096fb48a7c8a9ae8d7}\index{KTN::EnumBase$<$ Enum, Derived $>$@{KTN::EnumBase$<$ Enum, Derived $>$}!GetEnumStrings@{GetEnumStrings}}
+\index{GetEnumStrings@{GetEnumStrings}!KTN::EnumBase$<$ Enum, Derived $>$@{KTN::EnumBase$<$ Enum, Derived $>$}}
+\doxysubsubsection{\texorpdfstring{GetEnumStrings()}{GetEnumStrings()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_enum_base_a0c6adb269175f5096fb48a7c8a9ae8d7} 
+template$<$typename Enum , typename Derived $>$ \\
+static constexpr std\+::array$<$ const char \texorpdfstring{$\ast$}{*}, static\+\_\+cast$<$ size\+\_\+t $>$(Derived\+::\+COUNT)$>$ \mbox{\hyperlink{class_k_t_n_1_1_enum_base}{KTN\+::\+Enum\+Base}}$<$ Enum, Derived $>$\+::\+Get\+Enum\+Strings (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Get an array of string representations of the enum values. 
+
+\begin{DoxyReturn}{Returns}
+constexpr std\+::array\texorpdfstring{$<$}{<}const char\texorpdfstring{$\ast$}{*}, static\+\_\+cast$<$size\+\_\+t$>$(\+Derived\+::\+COUNT)\texorpdfstring{$>$}{>} The array of string representations. 
+\end{DoxyReturn}
+\Hypertarget{class_k_t_n_1_1_enum_base_ade7182f912eb96a3ef32cfdce1425eae}\index{KTN::EnumBase$<$ Enum, Derived $>$@{KTN::EnumBase$<$ Enum, Derived $>$}!ToString@{ToString}}
+\index{ToString@{ToString}!KTN::EnumBase$<$ Enum, Derived $>$@{KTN::EnumBase$<$ Enum, Derived $>$}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_enum_base_ade7182f912eb96a3ef32cfdce1425eae} 
+template$<$typename Enum , typename Derived $>$ \\
+static const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_k_t_n_1_1_enum_base}{KTN\+::\+Enum\+Base}}$<$ Enum, Derived $>$\+::\+To\+String (\begin{DoxyParamCaption}\item[{Enum}]{e}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Convert the enum value to its string representation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The enum value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const char\texorpdfstring{$\ast$}{*} The string representation of the enum value. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Core/Enum\+Base.\+hpp\end{DoxyCompactItemize}

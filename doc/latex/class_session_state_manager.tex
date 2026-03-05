@@ -1,0 +1,618 @@
+\doxysection{Session\+State\+Manager Class Reference}
+\hypertarget{class_session_state_manager}{}\label{class_session_state_manager}\index{SessionStateManager@{SessionStateManager}}
+
+
+Manages the state of a session.  
+
+
+
+
+{\ttfamily \#include $<$Session\+State\+Manager.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_session_state_manager_ab6908c0942d180b932642db9b41c7eb7}{Session\+State\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_session_state_manager_ab730c0fc16174fc252bd1f55080aeb75}{\texorpdfstring{$\sim$}{\string~}\+Session\+State\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_session_state_manager_afdd7610f2a138fa5b69bf48d7837a2ed}{Init}} (string sessionid, string firmid, int segid, int hbsecs, int hbbuffms)
+\begin{DoxyCompactList}\small\item\em Initializes the session state manager. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_session_state_manager_a4d256d9b2e4ddea0b71393976ff754b3}{Stop}} ()
+\begin{DoxyCompactList}\small\item\em Stops the session state manager. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_session_state_manager_a17085e14d61ad39378381e0c901ddc51}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Updates the session state manager. \end{DoxyCompactList}\item 
+const bool \mbox{\hyperlink{class_session_state_manager_a4d0f76806736bbc593bf57fcfcc2860b}{Connected}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the session is connected. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_session_state_manager_a12d14525768a656f58fddcc2c22a94f8}{on\+State\+Change}} (\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_enum_session_state_a1a4fdd123ba195de2c11897d7329f645}{Enum\+Session\+State\+::\+Enum}} new\+State)
+\begin{DoxyCompactList}\small\item\em Handles the state change of the session. \end{DoxyCompactList}\item 
+const string \& \mbox{\hyperlink{class_session_state_manager_a5ee16179811204c35932bc17b46723e7}{Firmid}} () const
+\begin{DoxyCompactList}\small\item\em Gets the firm ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_session_state_manager_a2a20b733e4101b41a00fd744d2573682}{Set\+Firmid}} (const string \&firmid)
+\begin{DoxyCompactList}\small\item\em Sets the firm ID. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{class_session_state_manager_aa86a9b1446901c9e660b609bd7a4b93d}{Prevuuid}} () const
+\begin{DoxyCompactList}\small\item\em Gets the previous UUID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_session_state_manager_a4db72eb3c88fd2e817934005a60bc5ac}{Set\+Prevuuid}} (uint64\+\_\+t prevuuid)
+\begin{DoxyCompactList}\small\item\em Sets the previous UUID. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_session_state_manager_a0ffe1b4e2f93637d108e753a879f5b7a}{Segid}} () const
+\begin{DoxyCompactList}\small\item\em Gets the segment ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_session_state_manager_ad078d664d8a8af2162a188d185c4dc0d}{Set\+Segid}} (int segid)
+\begin{DoxyCompactList}\small\item\em Sets the segment ID. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{class_session_state_manager_a48aa568dfd683b7eddc77478a5a7930d}{Seq\+In}} () const
+\begin{DoxyCompactList}\small\item\em Gets the incoming sequence number. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_session_state_manager_a1e7761bc13940162a72692d68e7d9ff0}{Set\+Seq\+In}} (uint64\+\_\+t seq\+In)
+\begin{DoxyCompactList}\small\item\em Sets the incoming sequence number. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{class_session_state_manager_a0b1da71a2bf731a3ccf630885bb3e4fe}{Inc\+Seq\+In}} (int numseqs)
+\begin{DoxyCompactList}\small\item\em Increments the incoming sequence number by a specified number of sequences. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{class_session_state_manager_ab73c070a262e6061008d4067b68836ed}{Seq\+Out}} () const
+\begin{DoxyCompactList}\small\item\em Gets the outgoing sequence number. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{class_session_state_manager_a6ed584e34be024568c5674a65ddca399}{Seq\+Out\+And\+Advance}} ()
+\begin{DoxyCompactList}\small\item\em Advances the outgoing sequence number and returns the previous value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_session_state_manager_aeb4486e832fe4c1c88b53bdc4adc2950}{Set\+Seq\+Out}} (uint64\+\_\+t seq\+Out, bool persist)
+\begin{DoxyCompactList}\small\item\em Sets the outgoing sequence number. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{class_session_state_manager_a670774b1d7b737842ddbd3c66c0dc10a}{Inc\+Seq\+Out}} (int num\+Seqs)
+\begin{DoxyCompactList}\small\item\em Increments the outgoing sequence number by a specified number of sequences. \end{DoxyCompactList}\item 
+const string \& \mbox{\hyperlink{class_session_state_manager_a19de96fac58be7f6fe78ea2ecc3e5730}{Sessid}} () const
+\begin{DoxyCompactList}\small\item\em Gets the session ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_session_state_manager_a021411060eb1bde86fa63182ddcea410}{Set\+Sessid}} (const string \&sessid)
+\begin{DoxyCompactList}\small\item\em Sets the session ID. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{class_session_state_manager_a55c0af0d0bb8a9f389bcfa9f230e9d6a}{Uuid}} () const
+\begin{DoxyCompactList}\small\item\em Gets the UUID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_session_state_manager_adc1e6caca2cf1f86210010866491e94d}{Set\+Uuid}} (uint64\+\_\+t uuid)
+\begin{DoxyCompactList}\small\item\em Sets the UUID. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{class_session_state_manager_a81259c19042e8a7be5976e7f508b03eb}{New\+Req\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Generates a new request ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_session_state_manager_ac468c5be957c75843f5a1a178e962c81}{Set\+Req\+Id}} (uint64\+\_\+t id)
+\begin{DoxyCompactList}\small\item\em Sets the request ID. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{class_session_state_manager_a4db80b354d5984f74e0c1c8e35fccb7c}{Last\+Req\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Gets the last request ID. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_session_state_manager_adfdd199318a8ba2d1beb27bbf26c3c31}{Hb\+Triggered}} ()
+\begin{DoxyCompactList}\small\item\em Checks if a heartbeat has been triggered. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_session_state_manager_a6ddbf763d3d2de772bf0a85c03ca25ca}{Hb\+Sent}} ()
+\begin{DoxyCompactList}\small\item\em Marks a heartbeat as sent. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{class_session_state_manager_ab765aeab168e86c52fdcad728e685c42}{Last\+Hb}} () const
+\begin{DoxyCompactList}\small\item\em Gets the timestamp of the last heartbeat. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_session_state_manager_a6fd3b746ce959a77fa132bb453e2ac17}{Set\+Last\+Hb}} (uint64\+\_\+t hb)
+\begin{DoxyCompactList}\small\item\em Sets the timestamp of the last heartbeat. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{class_session_state_manager_a3654b680045bad81925249269a201b8a}{Hb\+Count}} () const
+\begin{DoxyCompactList}\small\item\em Gets the heartbeat count. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_enum_session_state_a1a4fdd123ba195de2c11897d7329f645}{Enum\+Session\+State\+::\+Enum}} \mbox{\hyperlink{class_session_state_manager_a8c152ca3470f3862496152e419f15971}{Current\+State}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages the state of a session. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_session_state_manager_ab6908c0942d180b932642db9b41c7eb7}\index{SessionStateManager@{SessionStateManager}!SessionStateManager@{SessionStateManager}}
+\index{SessionStateManager@{SessionStateManager}!SessionStateManager@{SessionStateManager}}
+\doxysubsubsection{\texorpdfstring{SessionStateManager()}{SessionStateManager()}}
+{\footnotesize\ttfamily \label{class_session_state_manager_ab6908c0942d180b932642db9b41c7eb7} 
+Session\+State\+Manager\+::\+Session\+State\+Manager (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+\Hypertarget{class_session_state_manager_ab730c0fc16174fc252bd1f55080aeb75}\index{SessionStateManager@{SessionStateManager}!````~SessionStateManager@{\texorpdfstring{$\sim$}{\string~}SessionStateManager}}
+\index{````~SessionStateManager@{\texorpdfstring{$\sim$}{\string~}SessionStateManager}!SessionStateManager@{SessionStateManager}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}SessionStateManager()}{\string~SessionStateManager()}}
+{\footnotesize\ttfamily \label{class_session_state_manager_ab730c0fc16174fc252bd1f55080aeb75} 
+Session\+State\+Manager\+::\texorpdfstring{$\sim$}{\string~}\+Session\+State\+Manager (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_session_state_manager_a4d0f76806736bbc593bf57fcfcc2860b}\index{SessionStateManager@{SessionStateManager}!Connected@{Connected}}
+\index{Connected@{Connected}!SessionStateManager@{SessionStateManager}}
+\doxysubsubsection{\texorpdfstring{Connected()}{Connected()}}
+{\footnotesize\ttfamily \label{class_session_state_manager_a4d0f76806736bbc593bf57fcfcc2860b} 
+const bool Session\+State\+Manager\+::\+Connected (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks if the session is connected. 
+
+\begin{DoxyReturn}{Returns}
+True if connected, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_session_state_manager_a5ee16179811204c35932bc17b46723e7}\index{SessionStateManager@{SessionStateManager}!Firmid@{Firmid}}
+\index{Firmid@{Firmid}!SessionStateManager@{SessionStateManager}}
+\doxysubsubsection{\texorpdfstring{Firmid()}{Firmid()}}
+{\footnotesize\ttfamily \label{class_session_state_manager_a5ee16179811204c35932bc17b46723e7} 
+const string \& Session\+State\+Manager\+::\+Firmid (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the firm ID. 
+
+\begin{DoxyReturn}{Returns}
+The firm ID 
+\end{DoxyReturn}
+\Hypertarget{class_session_state_manager_a3654b680045bad81925249269a201b8a}\index{SessionStateManager@{SessionStateManager}!HbCount@{HbCount}}
+\index{HbCount@{HbCount}!SessionStateManager@{SessionStateManager}}
+\doxysubsubsection{\texorpdfstring{HbCount()}{HbCount()}}
+{\footnotesize\ttfamily \label{class_session_state_manager_a3654b680045bad81925249269a201b8a} 
+uint64\+\_\+t Session\+State\+Manager\+::\+Hb\+Count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the heartbeat count. 
+
+\begin{DoxyReturn}{Returns}
+The heartbeat count 
+\end{DoxyReturn}
+\Hypertarget{class_session_state_manager_a6ddbf763d3d2de772bf0a85c03ca25ca}\index{SessionStateManager@{SessionStateManager}!HbSent@{HbSent}}
+\index{HbSent@{HbSent}!SessionStateManager@{SessionStateManager}}
+\doxysubsubsection{\texorpdfstring{HbSent()}{HbSent()}}
+{\footnotesize\ttfamily \label{class_session_state_manager_a6ddbf763d3d2de772bf0a85c03ca25ca} 
+void Session\+State\+Manager\+::\+Hb\+Sent (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Marks a heartbeat as sent. 
+
+
+
+References \mbox{\hyperlink{l00045}{KTN\+::\+Core\+::\+Heartbeat\+Monitor\+::\+Reset()}}.
+
+\Hypertarget{class_session_state_manager_adfdd199318a8ba2d1beb27bbf26c3c31}\index{SessionStateManager@{SessionStateManager}!HbTriggered@{HbTriggered}}
+\index{HbTriggered@{HbTriggered}!SessionStateManager@{SessionStateManager}}
+\doxysubsubsection{\texorpdfstring{HbTriggered()}{HbTriggered()}}
+{\footnotesize\ttfamily \label{class_session_state_manager_adfdd199318a8ba2d1beb27bbf26c3c31} 
+bool Session\+State\+Manager\+::\+Hb\+Triggered (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Checks if a heartbeat has been triggered. 
+
+\begin{DoxyReturn}{Returns}
+True if a heartbeat has been triggered, false otherwise 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00063}{KTN\+::\+Core\+::\+Heartbeat\+Monitor\+::\+Is\+Flag\+Set()}}.
+
+\Hypertarget{class_session_state_manager_a0b1da71a2bf731a3ccf630885bb3e4fe}\index{SessionStateManager@{SessionStateManager}!IncSeqIn@{IncSeqIn}}
+\index{IncSeqIn@{IncSeqIn}!SessionStateManager@{SessionStateManager}}
+\doxysubsubsection{\texorpdfstring{IncSeqIn()}{IncSeqIn()}}
+{\footnotesize\ttfamily \label{class_session_state_manager_a0b1da71a2bf731a3ccf630885bb3e4fe} 
+uint64\+\_\+t Session\+State\+Manager\+::\+Inc\+Seq\+In (\begin{DoxyParamCaption}\item[{int}]{numseqs}{ = {\ttfamily 1}}\end{DoxyParamCaption})}
+
+
+
+Increments the incoming sequence number by a specified number of sequences. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em numseqs} & The number of sequences to increment by \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new incoming sequence number 
+\end{DoxyReturn}
+\Hypertarget{class_session_state_manager_a670774b1d7b737842ddbd3c66c0dc10a}\index{SessionStateManager@{SessionStateManager}!IncSeqOut@{IncSeqOut}}
+\index{IncSeqOut@{IncSeqOut}!SessionStateManager@{SessionStateManager}}
+\doxysubsubsection{\texorpdfstring{IncSeqOut()}{IncSeqOut()}}
+{\footnotesize\ttfamily \label{class_session_state_manager_a670774b1d7b737842ddbd3c66c0dc10a} 
+uint64\+\_\+t Session\+State\+Manager\+::\+Inc\+Seq\+Out (\begin{DoxyParamCaption}\item[{int}]{num\+Seqs}{ = {\ttfamily 1}}\end{DoxyParamCaption})}
+
+
+
+Increments the outgoing sequence number by a specified number of sequences. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+Seqs} & The number of sequences to increment by \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new outgoing sequence number 
+\end{DoxyReturn}
+\Hypertarget{class_session_state_manager_afdd7610f2a138fa5b69bf48d7837a2ed}\index{SessionStateManager@{SessionStateManager}!Init@{Init}}
+\index{Init@{Init}!SessionStateManager@{SessionStateManager}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_session_state_manager_afdd7610f2a138fa5b69bf48d7837a2ed} 
+void Session\+State\+Manager\+::\+Init (\begin{DoxyParamCaption}\item[{string}]{sessionid}{, }\item[{string}]{firmid}{, }\item[{int}]{segid}{, }\item[{int}]{hbsecs}{, }\item[{int}]{hbbuffms}{}\end{DoxyParamCaption})}
+
+
+
+Initializes the session state manager. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sessionid} & The session ID \\
+\hline
+{\em firmid} & The firm ID \\
+\hline
+{\em segid} & The segment ID \\
+\hline
+{\em hbsecs} & The heartbeat interval in seconds \\
+\hline
+{\em hbbuffms} & The heartbeat buffer in milliseconds \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00123}{Settings\+::get()}}, \mbox{\hyperlink{l00193}{Settings\+::get\+Boolean()}}, \mbox{\hyperlink{l00133}{Settings\+::get\+Integer()}}, \mbox{\hyperlink{l00153}{Settings\+::get\+Long()}}, \mbox{\hyperlink{l00023}{KTN\+::\+Core\+::\+Heartbeat\+Monitor\+::\+Start()}}, and \mbox{\hyperlink{l00132}{Update()}}.
+
+\Hypertarget{class_session_state_manager_ab765aeab168e86c52fdcad728e685c42}\index{SessionStateManager@{SessionStateManager}!LastHb@{LastHb}}
+\index{LastHb@{LastHb}!SessionStateManager@{SessionStateManager}}
+\doxysubsubsection{\texorpdfstring{LastHb()}{LastHb()}}
+{\footnotesize\ttfamily \label{class_session_state_manager_ab765aeab168e86c52fdcad728e685c42} 
+uint64\+\_\+t Session\+State\+Manager\+::\+Last\+Hb (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the timestamp of the last heartbeat. 
+
+\begin{DoxyReturn}{Returns}
+The timestamp of the last heartbeat 
+\end{DoxyReturn}
+\Hypertarget{class_session_state_manager_a4db80b354d5984f74e0c1c8e35fccb7c}\index{SessionStateManager@{SessionStateManager}!LastReqId@{LastReqId}}
+\index{LastReqId@{LastReqId}!SessionStateManager@{SessionStateManager}}
+\doxysubsubsection{\texorpdfstring{LastReqId()}{LastReqId()}}
+{\footnotesize\ttfamily \label{class_session_state_manager_a4db80b354d5984f74e0c1c8e35fccb7c} 
+uint64\+\_\+t Session\+State\+Manager\+::\+Last\+Req\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the last request ID. 
+
+\begin{DoxyReturn}{Returns}
+The last request ID 
+\end{DoxyReturn}
+\Hypertarget{class_session_state_manager_a81259c19042e8a7be5976e7f508b03eb}\index{SessionStateManager@{SessionStateManager}!NewReqId@{NewReqId}}
+\index{NewReqId@{NewReqId}!SessionStateManager@{SessionStateManager}}
+\doxysubsubsection{\texorpdfstring{NewReqId()}{NewReqId()}}
+{\footnotesize\ttfamily \label{class_session_state_manager_a81259c19042e8a7be5976e7f508b03eb} 
+uint64\+\_\+t Session\+State\+Manager\+::\+New\+Req\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Generates a new request ID. 
+
+\begin{DoxyReturn}{Returns}
+The new request ID 
+\end{DoxyReturn}
+\Hypertarget{class_session_state_manager_a12d14525768a656f58fddcc2c22a94f8}\index{SessionStateManager@{SessionStateManager}!onStateChange@{onStateChange}}
+\index{onStateChange@{onStateChange}!SessionStateManager@{SessionStateManager}}
+\doxysubsubsection{\texorpdfstring{onStateChange()}{onStateChange()}}
+{\footnotesize\ttfamily \label{class_session_state_manager_a12d14525768a656f58fddcc2c22a94f8} 
+void Session\+State\+Manager\+::on\+State\+Change (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_enum_session_state_a1a4fdd123ba195de2c11897d7329f645}{Enum\+Session\+State\+::\+Enum}}}]{new\+State}{}\end{DoxyParamCaption})}
+
+
+
+Handles the state change of the session. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+State} & The new state of the session \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00023}{KTN\+::\+CME\+::\+IL3\+::\+Enum\+Session\+State\+::\+Disconnected}}, \mbox{\hyperlink{l00039}{KTN\+::\+CME\+::\+IL3\+::\+Enum\+Session\+State\+::\+Established}}, and \mbox{\hyperlink{l00178}{Segid()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00126}{Stop()}}.
+
+\Hypertarget{class_session_state_manager_aa86a9b1446901c9e660b609bd7a4b93d}\index{SessionStateManager@{SessionStateManager}!Prevuuid@{Prevuuid}}
+\index{Prevuuid@{Prevuuid}!SessionStateManager@{SessionStateManager}}
+\doxysubsubsection{\texorpdfstring{Prevuuid()}{Prevuuid()}}
+{\footnotesize\ttfamily \label{class_session_state_manager_aa86a9b1446901c9e660b609bd7a4b93d} 
+uint64\+\_\+t Session\+State\+Manager\+::\+Prevuuid (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the previous UUID. 
+
+\begin{DoxyReturn}{Returns}
+The previous UUID 
+\end{DoxyReturn}
+\Hypertarget{class_session_state_manager_a0ffe1b4e2f93637d108e753a879f5b7a}\index{SessionStateManager@{SessionStateManager}!Segid@{Segid}}
+\index{Segid@{Segid}!SessionStateManager@{SessionStateManager}}
+\doxysubsubsection{\texorpdfstring{Segid()}{Segid()}}
+{\footnotesize\ttfamily \label{class_session_state_manager_a0ffe1b4e2f93637d108e753a879f5b7a} 
+int Session\+State\+Manager\+::\+Segid (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the segment ID. 
+
+\begin{DoxyReturn}{Returns}
+The segment ID 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00263}{on\+State\+Change()}}.
+
+\Hypertarget{class_session_state_manager_a48aa568dfd683b7eddc77478a5a7930d}\index{SessionStateManager@{SessionStateManager}!SeqIn@{SeqIn}}
+\index{SeqIn@{SeqIn}!SessionStateManager@{SessionStateManager}}
+\doxysubsubsection{\texorpdfstring{SeqIn()}{SeqIn()}}
+{\footnotesize\ttfamily \label{class_session_state_manager_a48aa568dfd683b7eddc77478a5a7930d} 
+uint64\+\_\+t Session\+State\+Manager\+::\+Seq\+In (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the incoming sequence number. 
+
+\begin{DoxyReturn}{Returns}
+The incoming sequence number 
+\end{DoxyReturn}
+\Hypertarget{class_session_state_manager_ab73c070a262e6061008d4067b68836ed}\index{SessionStateManager@{SessionStateManager}!SeqOut@{SeqOut}}
+\index{SeqOut@{SeqOut}!SessionStateManager@{SessionStateManager}}
+\doxysubsubsection{\texorpdfstring{SeqOut()}{SeqOut()}}
+{\footnotesize\ttfamily \label{class_session_state_manager_ab73c070a262e6061008d4067b68836ed} 
+uint64\+\_\+t Session\+State\+Manager\+::\+Seq\+Out (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the outgoing sequence number. 
+
+\begin{DoxyReturn}{Returns}
+The outgoing sequence number 
+\end{DoxyReturn}
+\Hypertarget{class_session_state_manager_a6ed584e34be024568c5674a65ddca399}\index{SessionStateManager@{SessionStateManager}!SeqOutAndAdvance@{SeqOutAndAdvance}}
+\index{SeqOutAndAdvance@{SeqOutAndAdvance}!SessionStateManager@{SessionStateManager}}
+\doxysubsubsection{\texorpdfstring{SeqOutAndAdvance()}{SeqOutAndAdvance()}}
+{\footnotesize\ttfamily \label{class_session_state_manager_a6ed584e34be024568c5674a65ddca399} 
+uint64\+\_\+t Session\+State\+Manager\+::\+Seq\+Out\+And\+Advance (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Advances the outgoing sequence number and returns the previous value. 
+
+\begin{DoxyReturn}{Returns}
+The previous outgoing sequence number 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l01104}{KTN\+::\+CME\+::\+Cme\+Algo\+::\+Send()}}, and \mbox{\hyperlink{l00889}{KTN\+::\+CME\+::\+Cme\+GT5\+::\+Send()}}.
+
+\Hypertarget{class_session_state_manager_a19de96fac58be7f6fe78ea2ecc3e5730}\index{SessionStateManager@{SessionStateManager}!Sessid@{Sessid}}
+\index{Sessid@{Sessid}!SessionStateManager@{SessionStateManager}}
+\doxysubsubsection{\texorpdfstring{Sessid()}{Sessid()}}
+{\footnotesize\ttfamily \label{class_session_state_manager_a19de96fac58be7f6fe78ea2ecc3e5730} 
+const string \& Session\+State\+Manager\+::\+Sessid (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the session ID. 
+
+\begin{DoxyReturn}{Returns}
+The session ID 
+\end{DoxyReturn}
+\Hypertarget{class_session_state_manager_a2a20b733e4101b41a00fd744d2573682}\index{SessionStateManager@{SessionStateManager}!SetFirmid@{SetFirmid}}
+\index{SetFirmid@{SetFirmid}!SessionStateManager@{SessionStateManager}}
+\doxysubsubsection{\texorpdfstring{SetFirmid()}{SetFirmid()}}
+{\footnotesize\ttfamily \label{class_session_state_manager_a2a20b733e4101b41a00fd744d2573682} 
+void Session\+State\+Manager\+::\+Set\+Firmid (\begin{DoxyParamCaption}\item[{const string \&}]{firmid}{}\end{DoxyParamCaption})}
+
+
+
+Sets the firm ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em firmid} & The firm ID \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00132}{Update()}}.
+
+\Hypertarget{class_session_state_manager_a6fd3b746ce959a77fa132bb453e2ac17}\index{SessionStateManager@{SessionStateManager}!SetLastHb@{SetLastHb}}
+\index{SetLastHb@{SetLastHb}!SessionStateManager@{SessionStateManager}}
+\doxysubsubsection{\texorpdfstring{SetLastHb()}{SetLastHb()}}
+{\footnotesize\ttfamily \label{class_session_state_manager_a6fd3b746ce959a77fa132bb453e2ac17} 
+void Session\+State\+Manager\+::\+Set\+Last\+Hb (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{hb}{}\end{DoxyParamCaption})}
+
+
+
+Sets the timestamp of the last heartbeat. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hb} & The timestamp of the last heartbeat \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_session_state_manager_a4db72eb3c88fd2e817934005a60bc5ac}\index{SessionStateManager@{SessionStateManager}!SetPrevuuid@{SetPrevuuid}}
+\index{SetPrevuuid@{SetPrevuuid}!SessionStateManager@{SessionStateManager}}
+\doxysubsubsection{\texorpdfstring{SetPrevuuid()}{SetPrevuuid()}}
+{\footnotesize\ttfamily \label{class_session_state_manager_a4db72eb3c88fd2e817934005a60bc5ac} 
+void Session\+State\+Manager\+::\+Set\+Prevuuid (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{prevuuid}{}\end{DoxyParamCaption})}
+
+
+
+Sets the previous UUID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prevuuid} & The previous UUID \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00132}{Update()}}.
+
+\Hypertarget{class_session_state_manager_ac468c5be957c75843f5a1a178e962c81}\index{SessionStateManager@{SessionStateManager}!SetReqId@{SetReqId}}
+\index{SetReqId@{SetReqId}!SessionStateManager@{SessionStateManager}}
+\doxysubsubsection{\texorpdfstring{SetReqId()}{SetReqId()}}
+{\footnotesize\ttfamily \label{class_session_state_manager_ac468c5be957c75843f5a1a178e962c81} 
+void Session\+State\+Manager\+::\+Set\+Req\+Id (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Sets the request ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The request ID \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_session_state_manager_ad078d664d8a8af2162a188d185c4dc0d}\index{SessionStateManager@{SessionStateManager}!SetSegid@{SetSegid}}
+\index{SetSegid@{SetSegid}!SessionStateManager@{SessionStateManager}}
+\doxysubsubsection{\texorpdfstring{SetSegid()}{SetSegid()}}
+{\footnotesize\ttfamily \label{class_session_state_manager_ad078d664d8a8af2162a188d185c4dc0d} 
+void Session\+State\+Manager\+::\+Set\+Segid (\begin{DoxyParamCaption}\item[{int}]{segid}{}\end{DoxyParamCaption})}
+
+
+
+Sets the segment ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em segid} & The segment ID \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00132}{Update()}}.
+
+\Hypertarget{class_session_state_manager_a1e7761bc13940162a72692d68e7d9ff0}\index{SessionStateManager@{SessionStateManager}!SetSeqIn@{SetSeqIn}}
+\index{SetSeqIn@{SetSeqIn}!SessionStateManager@{SessionStateManager}}
+\doxysubsubsection{\texorpdfstring{SetSeqIn()}{SetSeqIn()}}
+{\footnotesize\ttfamily \label{class_session_state_manager_a1e7761bc13940162a72692d68e7d9ff0} 
+void Session\+State\+Manager\+::\+Set\+Seq\+In (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{seq\+In}{}\end{DoxyParamCaption})}
+
+
+
+Sets the incoming sequence number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seq\+In} & The incoming sequence number \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00132}{Update()}}.
+
+\Hypertarget{class_session_state_manager_aeb4486e832fe4c1c88b53bdc4adc2950}\index{SessionStateManager@{SessionStateManager}!SetSeqOut@{SetSeqOut}}
+\index{SetSeqOut@{SetSeqOut}!SessionStateManager@{SessionStateManager}}
+\doxysubsubsection{\texorpdfstring{SetSeqOut()}{SetSeqOut()}}
+{\footnotesize\ttfamily \label{class_session_state_manager_aeb4486e832fe4c1c88b53bdc4adc2950} 
+void Session\+State\+Manager\+::\+Set\+Seq\+Out (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{seq\+Out}{, }\item[{bool}]{persist}{}\end{DoxyParamCaption})}
+
+
+
+Sets the outgoing sequence number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seq\+Out} & The outgoing sequence number \\
+\hline
+{\em persist} & Flag indicating whether to persist the sequence number \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00132}{Update()}}.
+
+\Hypertarget{class_session_state_manager_a021411060eb1bde86fa63182ddcea410}\index{SessionStateManager@{SessionStateManager}!SetSessid@{SetSessid}}
+\index{SetSessid@{SetSessid}!SessionStateManager@{SessionStateManager}}
+\doxysubsubsection{\texorpdfstring{SetSessid()}{SetSessid()}}
+{\footnotesize\ttfamily \label{class_session_state_manager_a021411060eb1bde86fa63182ddcea410} 
+void Session\+State\+Manager\+::\+Set\+Sessid (\begin{DoxyParamCaption}\item[{const string \&}]{sessid}{}\end{DoxyParamCaption})}
+
+
+
+Sets the session ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sessid} & The session ID \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00132}{Update()}}.
+
+\Hypertarget{class_session_state_manager_adc1e6caca2cf1f86210010866491e94d}\index{SessionStateManager@{SessionStateManager}!SetUuid@{SetUuid}}
+\index{SetUuid@{SetUuid}!SessionStateManager@{SessionStateManager}}
+\doxysubsubsection{\texorpdfstring{SetUuid()}{SetUuid()}}
+{\footnotesize\ttfamily \label{class_session_state_manager_adc1e6caca2cf1f86210010866491e94d} 
+void Session\+State\+Manager\+::\+Set\+Uuid (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{uuid}{}\end{DoxyParamCaption})}
+
+
+
+Sets the UUID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uuid} & The UUID \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00132}{Update()}}.
+
+\Hypertarget{class_session_state_manager_a4d256d9b2e4ddea0b71393976ff754b3}\index{SessionStateManager@{SessionStateManager}!Stop@{Stop}}
+\index{Stop@{Stop}!SessionStateManager@{SessionStateManager}}
+\doxysubsubsection{\texorpdfstring{Stop()}{Stop()}}
+{\footnotesize\ttfamily \label{class_session_state_manager_a4d256d9b2e4ddea0b71393976ff754b3} 
+void Session\+State\+Manager\+::\+Stop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Stops the session state manager. 
+
+
+
+References \mbox{\hyperlink{l00023}{KTN\+::\+CME\+::\+IL3\+::\+Enum\+Session\+State\+::\+Disconnected}}, \mbox{\hyperlink{l00263}{on\+State\+Change()}}, and \mbox{\hyperlink{l00037}{KTN\+::\+Core\+::\+Heartbeat\+Monitor\+::\+Stop()}}.
+
+\Hypertarget{class_session_state_manager_a17085e14d61ad39378381e0c901ddc51}\index{SessionStateManager@{SessionStateManager}!Update@{Update}}
+\index{Update@{Update}!SessionStateManager@{SessionStateManager}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_session_state_manager_a17085e14d61ad39378381e0c901ddc51} 
+void Session\+State\+Manager\+::\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Updates the session state manager. 
+
+
+
+References \mbox{\hyperlink{l00036}{Sess\+Svc\+::\+Persist()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00029}{Init()}}, \mbox{\hyperlink{l00164}{Set\+Firmid()}}, \mbox{\hyperlink{l00173}{Set\+Prevuuid()}}, \mbox{\hyperlink{l00182}{Set\+Segid()}}, \mbox{\hyperlink{l00192}{Set\+Seq\+In()}}, \mbox{\hyperlink{l00207}{Set\+Seq\+Out()}}, \mbox{\hyperlink{l00217}{Set\+Sessid()}}, and \mbox{\hyperlink{l00226}{Set\+Uuid()}}.
+
+\Hypertarget{class_session_state_manager_a55c0af0d0bb8a9f389bcfa9f230e9d6a}\index{SessionStateManager@{SessionStateManager}!Uuid@{Uuid}}
+\index{Uuid@{Uuid}!SessionStateManager@{SessionStateManager}}
+\doxysubsubsection{\texorpdfstring{Uuid()}{Uuid()}}
+{\footnotesize\ttfamily \label{class_session_state_manager_a55c0af0d0bb8a9f389bcfa9f230e9d6a} 
+uint64\+\_\+t Session\+State\+Manager\+::\+Uuid (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the UUID. 
+
+\begin{DoxyReturn}{Returns}
+The UUID 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_session_state_manager_a8c152ca3470f3862496152e419f15971}\index{SessionStateManager@{SessionStateManager}!CurrentState@{CurrentState}}
+\index{CurrentState@{CurrentState}!SessionStateManager@{SessionStateManager}}
+\doxysubsubsection{\texorpdfstring{CurrentState}{CurrentState}}
+{\footnotesize\ttfamily \label{class_session_state_manager_a8c152ca3470f3862496152e419f15971} 
+\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_enum_session_state_a1a4fdd123ba195de2c11897d7329f645}{Enum\+Session\+State\+::\+Enum}} Session\+State\+Manager\+::\+Current\+State}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+exchsupport/cme/il3/Session\+State\+Manager.\+hpp\item 
+exchsupport/cme/il3/Session\+State\+Manager.\+cpp\end{DoxyCompactItemize}

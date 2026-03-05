@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1channel" xml:lang="en-US">
+<title>KTN::Feeds::CME::channel Struct Reference</title>
+<indexterm><primary>KTN::Feeds::CME::channel</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1channel_1a9840303c03f83859ea16125f6b486725">init</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1channel_1ab731acab98cd22789b9ed9474a0c2856">id</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1channel_1a11a0fe6988426f19959ab6abb778d568">label</link></para>
+</listitem>
+            <listitem><para>KOrderProdType::Enum <link linkend="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1channel_1a8792b2ff03369e4307748535e02bbb01">prodtype</link></para>
+</listitem>
+            <listitem><para>std::unordered_map&lt; string, <link linkend="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1product">product</link> &gt; <link linkend="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1channel_1a2540bdbd5313c6314cf1d4829eceb6d7">products</link></para>
+</listitem>
+            <listitem><para>std::unordered_map&lt; string, <link linkend="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1connection">connection</link> &gt; <link linkend="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1channel_1a5e71a8e59c0935534e021a5d5d607f1d">connections</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1channel_1a9840303c03f83859ea16125f6b486725"/><section>
+    <title>init()</title>
+<indexterm><primary>init</primary><secondary>KTN::Feeds::CME::channel</secondary></indexterm>
+<indexterm><primary>KTN::Feeds::CME::channel</primary><secondary>init</secondary></indexterm>
+<para><computeroutput>void KTN::Feeds::CME::channel::init ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1channel_1a5e71a8e59c0935534e021a5d5d607f1d"/><section>
+    <title>connections</title>
+<indexterm><primary>connections</primary><secondary>KTN::Feeds::CME::channel</secondary></indexterm>
+<indexterm><primary>KTN::Feeds::CME::channel</primary><secondary>connections</secondary></indexterm>
+<para><computeroutput>std::unordered_map&lt;string, <link linkend="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1connection">connection</link>&gt; KTN::Feeds::CME::channel::connections</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1channel_1ab731acab98cd22789b9ed9474a0c2856"/><section>
+    <title>id</title>
+<indexterm><primary>id</primary><secondary>KTN::Feeds::CME::channel</secondary></indexterm>
+<indexterm><primary>KTN::Feeds::CME::channel</primary><secondary>id</secondary></indexterm>
+<para><computeroutput>string KTN::Feeds::CME::channel::id</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1channel_1a11a0fe6988426f19959ab6abb778d568"/><section>
+    <title>label</title>
+<indexterm><primary>label</primary><secondary>KTN::Feeds::CME::channel</secondary></indexterm>
+<indexterm><primary>KTN::Feeds::CME::channel</primary><secondary>label</secondary></indexterm>
+<para><computeroutput>string KTN::Feeds::CME::channel::label</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1channel_1a8792b2ff03369e4307748535e02bbb01"/><section>
+    <title>prodtype</title>
+<indexterm><primary>prodtype</primary><secondary>KTN::Feeds::CME::channel</secondary></indexterm>
+<indexterm><primary>KTN::Feeds::CME::channel</primary><secondary>prodtype</secondary></indexterm>
+<para><computeroutput>KOrderProdType::Enum KTN::Feeds::CME::channel::prodtype</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1channel_1a2540bdbd5313c6314cf1d4829eceb6d7"/><section>
+    <title>products</title>
+<indexterm><primary>products</primary><secondary>KTN::Feeds::CME::channel</secondary></indexterm>
+<indexterm><primary>KTN::Feeds::CME::channel</primary><secondary>products</secondary></indexterm>
+<para><computeroutput>std::unordered_map&lt;string, <link linkend="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1product">product</link>&gt; KTN::Feeds::CME::channel::products</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+exchsupport/cme/ChannelStructs.hpp</section>
+</section>

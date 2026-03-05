@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structalgoinstr" xml:lang="en-US">
+<title>algoinstr Struct Reference</title>
+<indexterm><primary>algoinstr</primary></indexterm>
+<para>
+
+<para>Structure representing a plain instrument. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;algo_structs.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>std::string <link linkend="_structalgoinstr_1ac994983a96654b7c2664a73759366563">Symbol</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_structalgoinstr_1a138172a9cb330eec5a6eb043a3cb3cfd">Exch</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structalgoinstr_1a3565726e81a3a08a2d6d150124ab9cb0">Channel</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Structure representing a plain instrument. </para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structalgoinstr_1a3565726e81a3a08a2d6d150124ab9cb0"/><section>
+    <title>Channel</title>
+<indexterm><primary>Channel</primary><secondary>algoinstr</secondary></indexterm>
+<indexterm><primary>algoinstr</primary><secondary>Channel</secondary></indexterm>
+<para><computeroutput>int algoinstr::Channel</computeroutput></para>
+<para>The channel. </para>
+</section>
+<anchor xml:id="_structalgoinstr_1a138172a9cb330eec5a6eb043a3cb3cfd"/><section>
+    <title>Exch</title>
+<indexterm><primary>Exch</primary><secondary>algoinstr</secondary></indexterm>
+<indexterm><primary>algoinstr</primary><secondary>Exch</secondary></indexterm>
+<para><computeroutput>std::string algoinstr::Exch</computeroutput></para>
+<para>The exchange. </para>
+</section>
+<anchor xml:id="_structalgoinstr_1ac994983a96654b7c2664a73759366563"/><section>
+    <title>Symbol</title>
+<indexterm><primary>Symbol</primary><secondary>algoinstr</secondary></indexterm>
+<indexterm><primary>algoinstr</primary><secondary>Symbol</secondary></indexterm>
+<para><computeroutput>std::string algoinstr::Symbol</computeroutput></para>
+<para>The symbol. </para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+AlgoSupport/algo_structs.hpp</section>
+</section>

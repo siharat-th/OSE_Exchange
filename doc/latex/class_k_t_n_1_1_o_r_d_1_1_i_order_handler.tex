@@ -1,0 +1,159 @@
+\doxysection{KTN\+::ORD\+::IOrder\+Handler Class Reference}
+\hypertarget{class_k_t_n_1_1_o_r_d_1_1_i_order_handler}{}\label{class_k_t_n_1_1_o_r_d_1_1_i_order_handler}\index{KTN::ORD::IOrderHandler@{KTN::ORD::IOrderHandler}}
+
+
+Interface for handling order-\/related operations.  
+
+
+
+
+{\ttfamily \#include $<$IOrder\+Handler.\+hpp$>$}
+
+Inheritance diagram for KTN\+::ORD\+::IOrder\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_k_t_n_1_1_o_r_d_1_1_i_order_handler}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_o_r_d_1_1_i_order_handler_a6f79de7ce6abebc6e9c55aef7b948d45}{Process\+Order\+Id}} (uint64\+\_\+t ordid)=0
+\begin{DoxyCompactList}\small\item\em Process the order ID. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_o_r_d_1_1_i_order_handler_a9ccd75ac68157508d9c5d360692b6d63}{Process\+Order}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{Order\+Pod}} \&ord)=0
+\begin{DoxyCompactList}\small\item\em Process the order. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_o_r_d_1_1_i_order_handler_a141f40ff19ff873f9d4ffeddb30d9717}{Process\+Fill}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{Order\+Pod}} \&ord)=0
+\begin{DoxyCompactList}\small\item\em Process the fill. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_o_r_d_1_1_i_order_handler_a06dee577b900a917b66e60af98fa9251}{Process\+Sent\+Order}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{Order\+Pod}} \&ord)=0
+\begin{DoxyCompactList}\small\item\em Process the sent order. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_o_r_d_1_1_i_order_handler_a2cff128da83c1cc54c7c8dd8b7ff8f74}{Process\+Rejected\+Order}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{Order\+Pod}} \&ord, const string \&text)=0
+\begin{DoxyCompactList}\small\item\em Process the rejected order. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_o_r_d_1_1_i_order_handler_aefdbb0a1ca024675cc9ed52842cd1bad}{Register\+Order\+Template}} (\mbox{\hyperlink{struct_k_t_n_1_1_order}{Order}} \&ord)=0
+\begin{DoxyCompactList}\small\item\em Register an order template. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for handling order-\/related operations. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_o_r_d_1_1_i_order_handler_a141f40ff19ff873f9d4ffeddb30d9717}\index{KTN::ORD::IOrderHandler@{KTN::ORD::IOrderHandler}!ProcessFill@{ProcessFill}}
+\index{ProcessFill@{ProcessFill}!KTN::ORD::IOrderHandler@{KTN::ORD::IOrderHandler}}
+\doxysubsubsection{\texorpdfstring{ProcessFill()}{ProcessFill()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_o_r_d_1_1_i_order_handler_a141f40ff19ff873f9d4ffeddb30d9717} 
+virtual void KTN\+::\+ORD\+::\+IOrder\+Handler\+::\+Process\+Fill (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{Order\+Pod}} \&}]{ord}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Process the fill. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ord} & The fill to process. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_order_manager_v5_a88cb299300df75f849674f6aa5f1e296}{Order\+Manager\+V5}}.
+
+\Hypertarget{class_k_t_n_1_1_o_r_d_1_1_i_order_handler_a9ccd75ac68157508d9c5d360692b6d63}\index{KTN::ORD::IOrderHandler@{KTN::ORD::IOrderHandler}!ProcessOrder@{ProcessOrder}}
+\index{ProcessOrder@{ProcessOrder}!KTN::ORD::IOrderHandler@{KTN::ORD::IOrderHandler}}
+\doxysubsubsection{\texorpdfstring{ProcessOrder()}{ProcessOrder()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_o_r_d_1_1_i_order_handler_a9ccd75ac68157508d9c5d360692b6d63} 
+virtual void KTN\+::\+ORD\+::\+IOrder\+Handler\+::\+Process\+Order (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{Order\+Pod}} \&}]{ord}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Process the order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ord} & The order to process. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_order_manager_v5_a645bc9bb5d6724ff14073b03948a0fa8}{Order\+Manager\+V5}}.
+
+\Hypertarget{class_k_t_n_1_1_o_r_d_1_1_i_order_handler_a6f79de7ce6abebc6e9c55aef7b948d45}\index{KTN::ORD::IOrderHandler@{KTN::ORD::IOrderHandler}!ProcessOrderID@{ProcessOrderID}}
+\index{ProcessOrderID@{ProcessOrderID}!KTN::ORD::IOrderHandler@{KTN::ORD::IOrderHandler}}
+\doxysubsubsection{\texorpdfstring{ProcessOrderID()}{ProcessOrderID()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_o_r_d_1_1_i_order_handler_a6f79de7ce6abebc6e9c55aef7b948d45} 
+virtual void KTN\+::\+ORD\+::\+IOrder\+Handler\+::\+Process\+Order\+Id (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{ordid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Process the order ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ordid} & The order ID to process. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_order_manager_v5_a3c2efb71d798d9d6da7e26c6033348f5}{Order\+Manager\+V5}}.
+
+\Hypertarget{class_k_t_n_1_1_o_r_d_1_1_i_order_handler_a2cff128da83c1cc54c7c8dd8b7ff8f74}\index{KTN::ORD::IOrderHandler@{KTN::ORD::IOrderHandler}!ProcessRejectedOrder@{ProcessRejectedOrder}}
+\index{ProcessRejectedOrder@{ProcessRejectedOrder}!KTN::ORD::IOrderHandler@{KTN::ORD::IOrderHandler}}
+\doxysubsubsection{\texorpdfstring{ProcessRejectedOrder()}{ProcessRejectedOrder()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_o_r_d_1_1_i_order_handler_a2cff128da83c1cc54c7c8dd8b7ff8f74} 
+virtual void KTN\+::\+ORD\+::\+IOrder\+Handler\+::\+Process\+Rejected\+Order (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{Order\+Pod}} \&}]{ord}{, }\item[{const string \&}]{text}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Process the rejected order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ord} & The rejected order to process. \\
+\hline
+{\em text} & The rejection text. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_order_manager_v5_a7427c8594b22f65d05a86a007e53aaa2}{Order\+Manager\+V5}}.
+
+\Hypertarget{class_k_t_n_1_1_o_r_d_1_1_i_order_handler_a06dee577b900a917b66e60af98fa9251}\index{KTN::ORD::IOrderHandler@{KTN::ORD::IOrderHandler}!ProcessSentOrder@{ProcessSentOrder}}
+\index{ProcessSentOrder@{ProcessSentOrder}!KTN::ORD::IOrderHandler@{KTN::ORD::IOrderHandler}}
+\doxysubsubsection{\texorpdfstring{ProcessSentOrder()}{ProcessSentOrder()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_o_r_d_1_1_i_order_handler_a06dee577b900a917b66e60af98fa9251} 
+virtual void KTN\+::\+ORD\+::\+IOrder\+Handler\+::\+Process\+Sent\+Order (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{Order\+Pod}} \&}]{ord}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Process the sent order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ord} & The sent order to process. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_order_manager_v5_a43512c55a3fe9472d66401f0fadf22ca}{Order\+Manager\+V5}}.
+
+\Hypertarget{class_k_t_n_1_1_o_r_d_1_1_i_order_handler_aefdbb0a1ca024675cc9ed52842cd1bad}\index{KTN::ORD::IOrderHandler@{KTN::ORD::IOrderHandler}!RegisterOrderTemplate@{RegisterOrderTemplate}}
+\index{RegisterOrderTemplate@{RegisterOrderTemplate}!KTN::ORD::IOrderHandler@{KTN::ORD::IOrderHandler}}
+\doxysubsubsection{\texorpdfstring{RegisterOrderTemplate()}{RegisterOrderTemplate()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_o_r_d_1_1_i_order_handler_aefdbb0a1ca024675cc9ed52842cd1bad} 
+virtual void KTN\+::\+ORD\+::\+IOrder\+Handler\+::\+Register\+Order\+Template (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order}{Order}} \&}]{ord}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Register an order template. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ord} & The order template to register. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_order_manager_v5_a435d221b404b1a9238d1ffaf634f429e}{Order\+Manager\+V5}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Orders/IOrder\+Handler.\+hpp\end{DoxyCompactItemize}

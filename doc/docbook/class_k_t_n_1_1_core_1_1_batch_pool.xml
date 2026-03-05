@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_core_1_1_batch_pool" xml:lang="en-US">
+<title>KTN::Core::BatchPool Class Reference</title>
+<indexterm><primary>KTN::Core::BatchPool</primary></indexterm>
+<para>
+
+<para>A class that represents a pool of message batches. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;BatchPool.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_core_1_1_batch_pool_1ab399fac402c0d073fd7bf5c8c8632958">BatchPool</link> (size_t pool_size)</para>
+
+<para>Constructs a <link linkend="_class_k_t_n_1_1_core_1_1_batch_pool">BatchPool</link> object with the specified pool size. </para>
+</listitem>
+            <listitem><para><link linkend="_class_k_t_n_1_1_core_1_1_batch_pool_1a2223396a121e415cf13f5419d0984640">~BatchPool</link> ()</para>
+
+<para>Destructor for the <link linkend="_class_k_t_n_1_1_core_1_1_batch_pool">BatchPool</link> object. </para>
+</listitem>
+            <listitem><para><link linkend="_struct_msg_batch">MsgBatch</link> * <link linkend="_class_k_t_n_1_1_core_1_1_batch_pool_1a8f4b309b331691843ee71e5a5aedd60a">get</link> ()</para>
+
+<para>Retrieves a message batch from the pool. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_core_1_1_batch_pool_1a1b2ded96ca81ba09c83578ff48376a6d">put</link> (<link linkend="_struct_msg_batch">MsgBatch</link> *buffer)</para>
+
+<para>Puts a message batch back into the pool. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>A class that represents a pool of message batches. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_batch_pool_1ab399fac402c0d073fd7bf5c8c8632958"/><section>
+    <title>BatchPool()</title>
+<indexterm><primary>BatchPool</primary><secondary>KTN::Core::BatchPool</secondary></indexterm>
+<indexterm><primary>KTN::Core::BatchPool</primary><secondary>BatchPool</secondary></indexterm>
+<para><computeroutput>BatchPool::BatchPool (size_t pool_size)</computeroutput></para><para>
+
+<para>Constructs a <link linkend="_class_k_t_n_1_1_core_1_1_batch_pool">BatchPool</link> object with the specified pool size. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>pool_size</entry><entry>
+<para>The size of the pool. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_batch_pool_1a2223396a121e415cf13f5419d0984640"/><section>
+    <title>~BatchPool()</title>
+<indexterm><primary>~BatchPool</primary><secondary>KTN::Core::BatchPool</secondary></indexterm>
+<indexterm><primary>KTN::Core::BatchPool</primary><secondary>~BatchPool</secondary></indexterm>
+<para><computeroutput>BatchPool::~BatchPool ( )</computeroutput></para><para>
+
+<para>Destructor for the <link linkend="_class_k_t_n_1_1_core_1_1_batch_pool">BatchPool</link> object. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_batch_pool_1a8f4b309b331691843ee71e5a5aedd60a"/><section>
+    <title>get()</title>
+<indexterm><primary>get</primary><secondary>KTN::Core::BatchPool</secondary></indexterm>
+<indexterm><primary>KTN::Core::BatchPool</primary><secondary>get</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_msg_batch">MsgBatch</link> * BatchPool::get ( )</computeroutput></para><para>
+
+<para>Retrieves a message batch from the pool. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>A pointer to the retrieved message batch. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_batch_pool_1a1b2ded96ca81ba09c83578ff48376a6d"/><section>
+    <title>put()</title>
+<indexterm><primary>put</primary><secondary>KTN::Core::BatchPool</secondary></indexterm>
+<indexterm><primary>KTN::Core::BatchPool</primary><secondary>put</secondary></indexterm>
+<para><computeroutput>bool BatchPool::put (<link linkend="_struct_msg_batch">MsgBatch</link> * buffer)</computeroutput></para><para>
+
+<para>Puts a message batch back into the pool. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>buffer</entry><entry>
+<para>A pointer to the message batch to be put back into the pool. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the message batch was successfully put back into the pool, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Core/BatchPool.hppCore/BatchPool.cpp</section>
+</section>

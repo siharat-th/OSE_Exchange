@@ -1,0 +1,104 @@
+\doxysection{i01\+::core\+::Mapped\+Ring\+Base Class Reference}
+\hypertarget{classi01_1_1core_1_1_mapped_ring_base}{}\label{classi01_1_1core_1_1_mapped_ring_base}\index{i01::core::MappedRingBase@{i01::core::MappedRingBase}}
+Inheritance diagram for i01\+::core\+::Mapped\+Ring\+Base\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classi01_1_1core_1_1_mapped_ring_base}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classi01_1_1core_1_1_mapped_ring_base_ad594d19293ee7a1025f85fd230090b98}{Mapped\+Ring\+Base}} (int fd, std\+::uint64\+\_\+t offset=0, std\+::uint8\+\_\+t order=27)
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classi01_1_1core_1_1_mapped_ring_base_ad0d4a6ecbf9802922c39406f4f1b2695}{write\+\_\+address}} ()
+\item 
+void \mbox{\hyperlink{classi01_1_1core_1_1_mapped_ring_base_a8dfca7000913fb2e4b0aac096ed1651f}{write\+\_\+advance}} (std\+::uint64\+\_\+t count)
+\item 
+const void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classi01_1_1core_1_1_mapped_ring_base_a06f813c72c31b5a0a960165e87f9e62d}{read\+\_\+address}} () const
+\item 
+void \mbox{\hyperlink{classi01_1_1core_1_1_mapped_ring_base_aa268b7d0b5eae40f623350ed78c89d3b}{read\+\_\+advance}} (std\+::uint64\+\_\+t count)
+\item 
+std\+::uint64\+\_\+t \mbox{\hyperlink{classi01_1_1core_1_1_mapped_ring_base_ad5482ad23bd5d3fca64f4509b378e7fe}{size}} () const
+\item 
+std\+::uint64\+\_\+t \mbox{\hyperlink{classi01_1_1core_1_1_mapped_ring_base_ad15ea1ce1a58cf11748939a7068e8285}{capacity}} () const
+\item 
+std\+::int64\+\_\+t \mbox{\hyperlink{classi01_1_1core_1_1_mapped_ring_base_aa9f59b49b0896b3bf5cb42d8670357db}{free}} () const
+\item 
+void \mbox{\hyperlink{classi01_1_1core_1_1_mapped_ring_base_a441596836fc80d29b9190ca03453f4e5}{clear}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classi01_1_1core_1_1_mapped_ring_base_ad594d19293ee7a1025f85fd230090b98}\index{i01::core::MappedRingBase@{i01::core::MappedRingBase}!MappedRingBase@{MappedRingBase}}
+\index{MappedRingBase@{MappedRingBase}!i01::core::MappedRingBase@{i01::core::MappedRingBase}}
+\doxysubsubsection{\texorpdfstring{MappedRingBase()}{MappedRingBase()}}
+{\footnotesize\ttfamily \label{classi01_1_1core_1_1_mapped_ring_base_ad594d19293ee7a1025f85fd230090b98} 
+i01\+::core\+::\+Mapped\+Ring\+Base\+::\+Mapped\+Ring\+Base (\begin{DoxyParamCaption}\item[{int}]{fd}{, }\item[{std\+::uint64\+\_\+t}]{offset}{ = {\ttfamily 0}, }\item[{std\+::uint8\+\_\+t}]{order}{ = {\ttfamily 27}}\end{DoxyParamCaption})}
+
+Map a ring using file descriptor {\ttfamily fd}, starting at offset {\ttfamily offset}, in segments of size {\ttfamily 2\texorpdfstring{$^\wedge$}{\string^}(order)}. \Hypertarget{classi01_1_1core_1_1_mapped_ring_base_a1b47598061e0081df3601853a0cf6238}\index{i01::core::MappedRingBase@{i01::core::MappedRingBase}!````~MappedRingBase@{\texorpdfstring{$\sim$}{\string~}MappedRingBase}}
+\index{````~MappedRingBase@{\texorpdfstring{$\sim$}{\string~}MappedRingBase}!i01::core::MappedRingBase@{i01::core::MappedRingBase}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}MappedRingBase()}{\string~MappedRingBase()}}
+{\footnotesize\ttfamily \label{classi01_1_1core_1_1_mapped_ring_base_a1b47598061e0081df3601853a0cf6238} 
+i01\+::core\+::\+Mapped\+Ring\+Base\+::\texorpdfstring{$\sim$}{\string~}\+Mapped\+Ring\+Base (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classi01_1_1core_1_1_mapped_ring_base_ad15ea1ce1a58cf11748939a7068e8285}\index{i01::core::MappedRingBase@{i01::core::MappedRingBase}!capacity@{capacity}}
+\index{capacity@{capacity}!i01::core::MappedRingBase@{i01::core::MappedRingBase}}
+\doxysubsubsection{\texorpdfstring{capacity()}{capacity()}}
+{\footnotesize\ttfamily \label{classi01_1_1core_1_1_mapped_ring_base_ad15ea1ce1a58cf11748939a7068e8285} 
+std\+::uint64\+\_\+t i01\+::core\+::\+Mapped\+Ring\+Base\+::capacity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classi01_1_1core_1_1_mapped_ring_base_a441596836fc80d29b9190ca03453f4e5}\index{i01::core::MappedRingBase@{i01::core::MappedRingBase}!clear@{clear}}
+\index{clear@{clear}!i01::core::MappedRingBase@{i01::core::MappedRingBase}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \label{classi01_1_1core_1_1_mapped_ring_base_a441596836fc80d29b9190ca03453f4e5} 
+void i01\+::core\+::\+Mapped\+Ring\+Base\+::clear (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classi01_1_1core_1_1_mapped_ring_base_aa9f59b49b0896b3bf5cb42d8670357db}\index{i01::core::MappedRingBase@{i01::core::MappedRingBase}!free@{free}}
+\index{free@{free}!i01::core::MappedRingBase@{i01::core::MappedRingBase}}
+\doxysubsubsection{\texorpdfstring{free()}{free()}}
+{\footnotesize\ttfamily \label{classi01_1_1core_1_1_mapped_ring_base_aa9f59b49b0896b3bf5cb42d8670357db} 
+std\+::int64\+\_\+t i01\+::core\+::\+Mapped\+Ring\+Base\+::free (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classi01_1_1core_1_1_mapped_ring_base_a06f813c72c31b5a0a960165e87f9e62d}\index{i01::core::MappedRingBase@{i01::core::MappedRingBase}!read\_address@{read\_address}}
+\index{read\_address@{read\_address}!i01::core::MappedRingBase@{i01::core::MappedRingBase}}
+\doxysubsubsection{\texorpdfstring{read\_address()}{read\_address()}}
+{\footnotesize\ttfamily \label{classi01_1_1core_1_1_mapped_ring_base_a06f813c72c31b5a0a960165e87f9e62d} 
+const void \texorpdfstring{$\ast$}{*} i01\+::core\+::\+Mapped\+Ring\+Base\+::read\+\_\+address (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{classi01_1_1core_1_1_mapped_ring_base_aa268b7d0b5eae40f623350ed78c89d3b}\index{i01::core::MappedRingBase@{i01::core::MappedRingBase}!read\_advance@{read\_advance}}
+\index{read\_advance@{read\_advance}!i01::core::MappedRingBase@{i01::core::MappedRingBase}}
+\doxysubsubsection{\texorpdfstring{read\_advance()}{read\_advance()}}
+{\footnotesize\ttfamily \label{classi01_1_1core_1_1_mapped_ring_base_aa268b7d0b5eae40f623350ed78c89d3b} 
+void i01\+::core\+::\+Mapped\+Ring\+Base\+::read\+\_\+advance (\begin{DoxyParamCaption}\item[{std\+::uint64\+\_\+t}]{count}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classi01_1_1core_1_1_mapped_ring_base_ad5482ad23bd5d3fca64f4509b378e7fe}\index{i01::core::MappedRingBase@{i01::core::MappedRingBase}!size@{size}}
+\index{size@{size}!i01::core::MappedRingBase@{i01::core::MappedRingBase}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily \label{classi01_1_1core_1_1_mapped_ring_base_ad5482ad23bd5d3fca64f4509b378e7fe} 
+std\+::uint64\+\_\+t i01\+::core\+::\+Mapped\+Ring\+Base\+::size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classi01_1_1core_1_1_mapped_ring_base_ad0d4a6ecbf9802922c39406f4f1b2695}\index{i01::core::MappedRingBase@{i01::core::MappedRingBase}!write\_address@{write\_address}}
+\index{write\_address@{write\_address}!i01::core::MappedRingBase@{i01::core::MappedRingBase}}
+\doxysubsubsection{\texorpdfstring{write\_address()}{write\_address()}}
+{\footnotesize\ttfamily \label{classi01_1_1core_1_1_mapped_ring_base_ad0d4a6ecbf9802922c39406f4f1b2695} 
+void \texorpdfstring{$\ast$}{*} i01\+::core\+::\+Mapped\+Ring\+Base\+::write\+\_\+address (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classi01_1_1core_1_1_mapped_ring_base_a8dfca7000913fb2e4b0aac096ed1651f}\index{i01::core::MappedRingBase@{i01::core::MappedRingBase}!write\_advance@{write\_advance}}
+\index{write\_advance@{write\_advance}!i01::core::MappedRingBase@{i01::core::MappedRingBase}}
+\doxysubsubsection{\texorpdfstring{write\_advance()}{write\_advance()}}
+{\footnotesize\ttfamily \label{classi01_1_1core_1_1_mapped_ring_base_a8dfca7000913fb2e4b0aac096ed1651f} 
+void i01\+::core\+::\+Mapped\+Ring\+Base\+::write\+\_\+advance (\begin{DoxyParamCaption}\item[{std\+::uint64\+\_\+t}]{count}{}\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sgaer/source/repos/katanafinancial/\+Occam\+CME4/\+Occam\+CME4/src/i01\+\_\+core/Mapped\+Ring.\+hpp\item 
+C\+:/\+Users/sgaer/source/repos/katanafinancial/\+Occam\+CME4/\+Occam\+CME4/src/i01\+\_\+core/Mapped\+Ring.\+cpp\end{DoxyCompactItemize}

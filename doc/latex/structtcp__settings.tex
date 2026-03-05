@@ -1,0 +1,248 @@
+\doxysection{tcp\+\_\+settings Struct Reference}
+\hypertarget{structtcp__settings}{}\label{structtcp__settings}\index{tcp\_settings@{tcp\_settings}}
+
+
+Struct representing TCP settings.  
+
+
+
+
+{\ttfamily \#include $<$Net\+Settings.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{structtcp__settings_a426dc33021283f08a42c1bfc38790fcf}{Load}} (\mbox{\hyperlink{structtcp__settings}{tcp\+\_\+settings}} \&ef)
+\begin{DoxyCompactList}\small\item\em Load the TCP settings from the configuration file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structtcp__settings_a2f38a0a1a48afb809bfbf225364391a3}{Affinity}}
+\item 
+int \mbox{\hyperlink{structtcp__settings_a82c9476b64136e655fd81c0a806f9cb5}{Event\+Poll\+Max}}
+\item 
+bool \mbox{\hyperlink{structtcp__settings_af8c34ff1108590fc1ae3071d9dca9b49}{Use\+Del\+Sends}}
+\item 
+bool \mbox{\hyperlink{structtcp__settings_af11aa16e354091106601fd39f16807b6}{Calc\+Latency}}
+\item 
+bool \mbox{\hyperlink{structtcp__settings_a9213542fdf8260e39b0c0bf68485ca6a}{Use\+Ctpio}}
+\item 
+int \mbox{\hyperlink{structtcp__settings_a6fc380a80a8a864c3ee37e4e96cb2381}{Offset}}
+\item 
+int \mbox{\hyperlink{structtcp__settings_a6da9ddab84bf9f41110ec4ce2dc26bd1}{Rx\+Poll\+Cnt}}
+\item 
+int \mbox{\hyperlink{structtcp__settings_ab1f59b15a88c916133ed0984bcf803b3}{Poll\+Wait\+Ns}}
+\item 
+int \mbox{\hyperlink{structtcp__settings_afee8fb885dc36a7785012ad1848f3b21}{Rx\+Capacity}}
+\item 
+int \mbox{\hyperlink{structtcp__settings_a94695cc5b18b3597493a300538f2d8ad}{Rx\+Batch\+Size}}
+\item 
+int \mbox{\hyperlink{structtcp__settings_a16ac029998e7deaa6b0f181ab153529f}{Msg\+Buf\+Size}}
+\item 
+int \mbox{\hyperlink{structtcp__settings_a1af3e28e5246e39dc8d2eb8944e42b9f}{Timeout}}
+\item 
+string \mbox{\hyperlink{structtcp__settings_a30e1d7c5c12c7897f5cba2dfcefaa5ac}{IntfA}}
+\item 
+string \mbox{\hyperlink{structtcp__settings_a16c9fb37949028cd8ee5e70151798fff}{IntfB}}
+\item 
+string \mbox{\hyperlink{structtcp__settings_a344029b6030a5826a1cd46310cf6c70f}{Intf\+NameA}}
+\item 
+string \mbox{\hyperlink{structtcp__settings_ab38ddfd3252927736edb53e601b69ee0}{Intf\+NameB}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Struct representing TCP settings. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structtcp__settings_a426dc33021283f08a42c1bfc38790fcf}\index{tcp\_settings@{tcp\_settings}!Load@{Load}}
+\index{Load@{Load}!tcp\_settings@{tcp\_settings}}
+\doxysubsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily \label{structtcp__settings_a426dc33021283f08a42c1bfc38790fcf} 
+static void tcp\+\_\+settings\+::\+Load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtcp__settings}{tcp\+\_\+settings}} \&}]{ef}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Load the TCP settings from the configuration file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ef} & The TCP settings object to load. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00020}{Affinity}}, \mbox{\hyperlink{l00023}{Calc\+Latency}}, \mbox{\hyperlink{l00021}{Event\+Poll\+Max}}, \mbox{\hyperlink{l00123}{Settings\+::get()}}, \mbox{\hyperlink{l00193}{Settings\+::get\+Boolean()}}, \mbox{\hyperlink{l00133}{Settings\+::get\+Integer()}}, \mbox{\hyperlink{l00033}{IntfA}}, \mbox{\hyperlink{l00034}{IntfB}}, \mbox{\hyperlink{l00035}{Intf\+NameA}}, \mbox{\hyperlink{l00036}{Intf\+NameB}}, \mbox{\hyperlink{l00030}{Msg\+Buf\+Size}}, \mbox{\hyperlink{l00025}{Offset}}, \mbox{\hyperlink{l00027}{Poll\+Wait\+Ns}}, \mbox{\hyperlink{l00029}{Rx\+Batch\+Size}}, \mbox{\hyperlink{l00028}{Rx\+Capacity}}, \mbox{\hyperlink{l00026}{Rx\+Poll\+Cnt}}, \mbox{\hyperlink{l00031}{Timeout}}, \mbox{\hyperlink{l00024}{Use\+Ctpio}}, and \mbox{\hyperlink{l00022}{Use\+Del\+Sends}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00060}{KTN\+::\+TCP\+::\+EFVITcp\+V2\+::\+Init()}}, and \mbox{\hyperlink{l00032}{KTN\+::\+TCP\+::\+EFVITcp\+V5\+::\+Init()}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structtcp__settings_a2f38a0a1a48afb809bfbf225364391a3}\index{tcp\_settings@{tcp\_settings}!Affinity@{Affinity}}
+\index{Affinity@{Affinity}!tcp\_settings@{tcp\_settings}}
+\doxysubsubsection{\texorpdfstring{Affinity}{Affinity}}
+{\footnotesize\ttfamily \label{structtcp__settings_a2f38a0a1a48afb809bfbf225364391a3} 
+int tcp\+\_\+settings\+::\+Affinity}
+
+The affinity value. 
+
+Referenced by \mbox{\hyperlink{l00042}{Load()}}.
+
+\Hypertarget{structtcp__settings_af11aa16e354091106601fd39f16807b6}\index{tcp\_settings@{tcp\_settings}!CalcLatency@{CalcLatency}}
+\index{CalcLatency@{CalcLatency}!tcp\_settings@{tcp\_settings}}
+\doxysubsubsection{\texorpdfstring{CalcLatency}{CalcLatency}}
+{\footnotesize\ttfamily \label{structtcp__settings_af11aa16e354091106601fd39f16807b6} 
+bool tcp\+\_\+settings\+::\+Calc\+Latency}
+
+Flag indicating whether to calculate latency. 
+
+Referenced by \mbox{\hyperlink{l00042}{Load()}}.
+
+\Hypertarget{structtcp__settings_a82c9476b64136e655fd81c0a806f9cb5}\index{tcp\_settings@{tcp\_settings}!EventPollMax@{EventPollMax}}
+\index{EventPollMax@{EventPollMax}!tcp\_settings@{tcp\_settings}}
+\doxysubsubsection{\texorpdfstring{EventPollMax}{EventPollMax}}
+{\footnotesize\ttfamily \label{structtcp__settings_a82c9476b64136e655fd81c0a806f9cb5} 
+int tcp\+\_\+settings\+::\+Event\+Poll\+Max}
+
+The maximum event poll value. 
+
+Referenced by \mbox{\hyperlink{l00042}{Load()}}.
+
+\Hypertarget{structtcp__settings_a30e1d7c5c12c7897f5cba2dfcefaa5ac}\index{tcp\_settings@{tcp\_settings}!IntfA@{IntfA}}
+\index{IntfA@{IntfA}!tcp\_settings@{tcp\_settings}}
+\doxysubsubsection{\texorpdfstring{IntfA}{IntfA}}
+{\footnotesize\ttfamily \label{structtcp__settings_a30e1d7c5c12c7897f5cba2dfcefaa5ac} 
+string tcp\+\_\+settings\+::\+IntfA}
+
+The interface A. 
+
+Referenced by \mbox{\hyperlink{l00060}{KTN\+::\+TCP\+::\+EFVITcp\+V2\+::\+Init()}}, \mbox{\hyperlink{l00032}{KTN\+::\+TCP\+::\+EFVITcp\+V5\+::\+Init()}}, and \mbox{\hyperlink{l00042}{Load()}}.
+
+\Hypertarget{structtcp__settings_a16c9fb37949028cd8ee5e70151798fff}\index{tcp\_settings@{tcp\_settings}!IntfB@{IntfB}}
+\index{IntfB@{IntfB}!tcp\_settings@{tcp\_settings}}
+\doxysubsubsection{\texorpdfstring{IntfB}{IntfB}}
+{\footnotesize\ttfamily \label{structtcp__settings_a16c9fb37949028cd8ee5e70151798fff} 
+string tcp\+\_\+settings\+::\+IntfB}
+
+The interface B. 
+
+Referenced by \mbox{\hyperlink{l00060}{KTN\+::\+TCP\+::\+EFVITcp\+V2\+::\+Init()}}, \mbox{\hyperlink{l00032}{KTN\+::\+TCP\+::\+EFVITcp\+V5\+::\+Init()}}, and \mbox{\hyperlink{l00042}{Load()}}.
+
+\Hypertarget{structtcp__settings_a344029b6030a5826a1cd46310cf6c70f}\index{tcp\_settings@{tcp\_settings}!IntfNameA@{IntfNameA}}
+\index{IntfNameA@{IntfNameA}!tcp\_settings@{tcp\_settings}}
+\doxysubsubsection{\texorpdfstring{IntfNameA}{IntfNameA}}
+{\footnotesize\ttfamily \label{structtcp__settings_a344029b6030a5826a1cd46310cf6c70f} 
+string tcp\+\_\+settings\+::\+Intf\+NameA}
+
+The interface name A. 
+
+Referenced by \mbox{\hyperlink{l00060}{KTN\+::\+TCP\+::\+EFVITcp\+V2\+::\+Init()}}, \mbox{\hyperlink{l00032}{KTN\+::\+TCP\+::\+EFVITcp\+V5\+::\+Init()}}, and \mbox{\hyperlink{l00042}{Load()}}.
+
+\Hypertarget{structtcp__settings_ab38ddfd3252927736edb53e601b69ee0}\index{tcp\_settings@{tcp\_settings}!IntfNameB@{IntfNameB}}
+\index{IntfNameB@{IntfNameB}!tcp\_settings@{tcp\_settings}}
+\doxysubsubsection{\texorpdfstring{IntfNameB}{IntfNameB}}
+{\footnotesize\ttfamily \label{structtcp__settings_ab38ddfd3252927736edb53e601b69ee0} 
+string tcp\+\_\+settings\+::\+Intf\+NameB}
+
+The interface name B. 
+
+Referenced by \mbox{\hyperlink{l00060}{KTN\+::\+TCP\+::\+EFVITcp\+V2\+::\+Init()}}, \mbox{\hyperlink{l00032}{KTN\+::\+TCP\+::\+EFVITcp\+V5\+::\+Init()}}, and \mbox{\hyperlink{l00042}{Load()}}.
+
+\Hypertarget{structtcp__settings_a16ac029998e7deaa6b0f181ab153529f}\index{tcp\_settings@{tcp\_settings}!MsgBufSize@{MsgBufSize}}
+\index{MsgBufSize@{MsgBufSize}!tcp\_settings@{tcp\_settings}}
+\doxysubsubsection{\texorpdfstring{MsgBufSize}{MsgBufSize}}
+{\footnotesize\ttfamily \label{structtcp__settings_a16ac029998e7deaa6b0f181ab153529f} 
+int tcp\+\_\+settings\+::\+Msg\+Buf\+Size}
+
+The message buffer size. 
+
+Referenced by \mbox{\hyperlink{l00125}{KTN\+::\+TCP\+::\+EFVITcp\+V2\+::\+EFVI\+\_\+\+TCP\+\_\+\+Start()}}, and \mbox{\hyperlink{l00042}{Load()}}.
+
+\Hypertarget{structtcp__settings_a6fc380a80a8a864c3ee37e4e96cb2381}\index{tcp\_settings@{tcp\_settings}!Offset@{Offset}}
+\index{Offset@{Offset}!tcp\_settings@{tcp\_settings}}
+\doxysubsubsection{\texorpdfstring{Offset}{Offset}}
+{\footnotesize\ttfamily \label{structtcp__settings_a6fc380a80a8a864c3ee37e4e96cb2381} 
+int tcp\+\_\+settings\+::\+Offset}
+
+The offset value. 
+
+Referenced by \mbox{\hyperlink{l00042}{Load()}}.
+
+\Hypertarget{structtcp__settings_ab1f59b15a88c916133ed0984bcf803b3}\index{tcp\_settings@{tcp\_settings}!PollWaitNs@{PollWaitNs}}
+\index{PollWaitNs@{PollWaitNs}!tcp\_settings@{tcp\_settings}}
+\doxysubsubsection{\texorpdfstring{PollWaitNs}{PollWaitNs}}
+{\footnotesize\ttfamily \label{structtcp__settings_ab1f59b15a88c916133ed0984bcf803b3} 
+int tcp\+\_\+settings\+::\+Poll\+Wait\+Ns}
+
+The poll wait time in nanoseconds. 
+
+Referenced by \mbox{\hyperlink{l00042}{Load()}}.
+
+\Hypertarget{structtcp__settings_a94695cc5b18b3597493a300538f2d8ad}\index{tcp\_settings@{tcp\_settings}!RxBatchSize@{RxBatchSize}}
+\index{RxBatchSize@{RxBatchSize}!tcp\_settings@{tcp\_settings}}
+\doxysubsubsection{\texorpdfstring{RxBatchSize}{RxBatchSize}}
+{\footnotesize\ttfamily \label{structtcp__settings_a94695cc5b18b3597493a300538f2d8ad} 
+int tcp\+\_\+settings\+::\+Rx\+Batch\+Size}
+
+The receive batch size. 
+
+Referenced by \mbox{\hyperlink{l00042}{Load()}}.
+
+\Hypertarget{structtcp__settings_afee8fb885dc36a7785012ad1848f3b21}\index{tcp\_settings@{tcp\_settings}!RxCapacity@{RxCapacity}}
+\index{RxCapacity@{RxCapacity}!tcp\_settings@{tcp\_settings}}
+\doxysubsubsection{\texorpdfstring{RxCapacity}{RxCapacity}}
+{\footnotesize\ttfamily \label{structtcp__settings_afee8fb885dc36a7785012ad1848f3b21} 
+int tcp\+\_\+settings\+::\+Rx\+Capacity}
+
+The receive capacity. 
+
+Referenced by \mbox{\hyperlink{l00125}{KTN\+::\+TCP\+::\+EFVITcp\+V2\+::\+EFVI\+\_\+\+TCP\+\_\+\+Start()}}, and \mbox{\hyperlink{l00042}{Load()}}.
+
+\Hypertarget{structtcp__settings_a6da9ddab84bf9f41110ec4ce2dc26bd1}\index{tcp\_settings@{tcp\_settings}!RxPollCnt@{RxPollCnt}}
+\index{RxPollCnt@{RxPollCnt}!tcp\_settings@{tcp\_settings}}
+\doxysubsubsection{\texorpdfstring{RxPollCnt}{RxPollCnt}}
+{\footnotesize\ttfamily \label{structtcp__settings_a6da9ddab84bf9f41110ec4ce2dc26bd1} 
+int tcp\+\_\+settings\+::\+Rx\+Poll\+Cnt}
+
+The receive poll count. 
+
+Referenced by \mbox{\hyperlink{l00042}{Load()}}.
+
+\Hypertarget{structtcp__settings_a1af3e28e5246e39dc8d2eb8944e42b9f}\index{tcp\_settings@{tcp\_settings}!Timeout@{Timeout}}
+\index{Timeout@{Timeout}!tcp\_settings@{tcp\_settings}}
+\doxysubsubsection{\texorpdfstring{Timeout}{Timeout}}
+{\footnotesize\ttfamily \label{structtcp__settings_a1af3e28e5246e39dc8d2eb8944e42b9f} 
+int tcp\+\_\+settings\+::\+Timeout}
+
+The timeout value. 
+
+Referenced by \mbox{\hyperlink{l00042}{Load()}}.
+
+\Hypertarget{structtcp__settings_a9213542fdf8260e39b0c0bf68485ca6a}\index{tcp\_settings@{tcp\_settings}!UseCtpio@{UseCtpio}}
+\index{UseCtpio@{UseCtpio}!tcp\_settings@{tcp\_settings}}
+\doxysubsubsection{\texorpdfstring{UseCtpio}{UseCtpio}}
+{\footnotesize\ttfamily \label{structtcp__settings_a9213542fdf8260e39b0c0bf68485ca6a} 
+bool tcp\+\_\+settings\+::\+Use\+Ctpio}
+
+Flag indicating whether to use Ctpio. 
+
+Referenced by \mbox{\hyperlink{l00060}{KTN\+::\+TCP\+::\+EFVITcp\+V2\+::\+Init()}}, \mbox{\hyperlink{l00032}{KTN\+::\+TCP\+::\+EFVITcp\+V5\+::\+Init()}}, and \mbox{\hyperlink{l00042}{Load()}}.
+
+\Hypertarget{structtcp__settings_af8c34ff1108590fc1ae3071d9dca9b49}\index{tcp\_settings@{tcp\_settings}!UseDelSends@{UseDelSends}}
+\index{UseDelSends@{UseDelSends}!tcp\_settings@{tcp\_settings}}
+\doxysubsubsection{\texorpdfstring{UseDelSends}{UseDelSends}}
+{\footnotesize\ttfamily \label{structtcp__settings_af8c34ff1108590fc1ae3071d9dca9b49} 
+bool tcp\+\_\+settings\+::\+Use\+Del\+Sends}
+
+Flag indicating whether to use delegated sends. 
+
+Referenced by \mbox{\hyperlink{l00060}{KTN\+::\+TCP\+::\+EFVITcp\+V2\+::\+Init()}}, and \mbox{\hyperlink{l00042}{Load()}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ktn\+Efvi/Net\+Settings.\+hpp\end{DoxyCompactItemize}

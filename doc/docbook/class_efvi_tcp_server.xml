@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_efvi_tcp_server" xml:lang="en-US">
+<title>EfviTcpServer&lt; Conf &gt; Class Template Reference</title>
+<indexterm><primary>EfviTcpServer&lt; Conf &gt;</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_efvi_tcp_server_1_1_conn">Conn</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>const char * <link linkend="_class_efvi_tcp_server_1a691c08924dc7e01ee32971bbced468c2">getLastError</link> ()</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_efvi_tcp_server_1ad7ec6f43096c97d50c65e663b955cc58">init</link> (const char *interface, const char *server_ip, uint16_t server_port)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_efvi_tcp_server_1ac882a583aae5f42dc45d0511be0012ed">close</link> (const char *reason)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_efvi_tcp_server_1a76d396147e8808c6d4da330fd32bd4a2">isClosed</link> ()</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_class_efvi_tcp_server_1aa3b2e34ed3ed9e94f7098f7b356d2235">getConnCnt</link> ()</para>
+</listitem>
+            <listitem><para>template&lt;typename Handler &gt; </para><para>void <link linkend="_class_efvi_tcp_server_1ad3819b63397702426d946380e7d5c653">foreachConn</link> (Handler handler)</para>
+</listitem>
+            <listitem><para>template&lt;typename Handler &gt; </para><para>void <link linkend="_class_efvi_tcp_server_1a5e43cf17f2cdb4a2ae3c87127c431d20">poll</link> (Handler &amp;handler, int64_t ns=0)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>const char * <link linkend="_class_efvi_tcp_server_1a8eb918f599f0ec1851a5f8dd69eedaaf">err_</link> = &quot;Closed&quot;</para>
+</listitem>
+            <listitem><para><link linkend="_classefvitcp_1_1_tcp_server">TcpServer</link> <link linkend="_class_efvi_tcp_server_1a4a6cc245419c9aa36e4924c33c87461e">server_</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;typename Conf&gt;<?linebreak?>class EfviTcpServer&lt; Conf &gt;</title></simplesect>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_efvi_tcp_server_1a9dba37f0dad9b4936d8b69d49330fb30"/><section>
+    <title>EfviTcpServer()</title>
+<indexterm><primary>EfviTcpServer</primary><secondary>EfviTcpServer&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>EfviTcpServer&lt; Conf &gt;</primary><secondary>EfviTcpServer</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput><link linkend="_class_efvi_tcp_server">EfviTcpServer</link>&lt; Conf &gt;<link linkend="_class_efvi_tcp_server">::EfviTcpServer</link> ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_efvi_tcp_server_1ac882a583aae5f42dc45d0511be0012ed"/><section>
+    <title>close()</title>
+<indexterm><primary>close</primary><secondary>EfviTcpServer&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>EfviTcpServer&lt; Conf &gt;</primary><secondary>close</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>void <link linkend="_class_efvi_tcp_server">EfviTcpServer</link>&lt; Conf &gt;::close (const char * reason)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_efvi_tcp_server_1ad3819b63397702426d946380e7d5c653"/><section>
+    <title>foreachConn()</title>
+<indexterm><primary>foreachConn</primary><secondary>EfviTcpServer&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>EfviTcpServer&lt; Conf &gt;</primary><secondary>foreachConn</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><computeroutput>template&lt;typename Handler &gt; </computeroutput><para><computeroutput>void <link linkend="_class_efvi_tcp_server">EfviTcpServer</link>&lt; Conf &gt;::foreachConn (Handler handler)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_efvi_tcp_server_1aa3b2e34ed3ed9e94f7098f7b356d2235"/><section>
+    <title>getConnCnt()</title>
+<indexterm><primary>getConnCnt</primary><secondary>EfviTcpServer&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>EfviTcpServer&lt; Conf &gt;</primary><secondary>getConnCnt</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>uint32_t <link linkend="_class_efvi_tcp_server">EfviTcpServer</link>&lt; Conf &gt;::getConnCnt ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_efvi_tcp_server_1a691c08924dc7e01ee32971bbced468c2"/><section>
+    <title>getLastError()</title>
+<indexterm><primary>getLastError</primary><secondary>EfviTcpServer&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>EfviTcpServer&lt; Conf &gt;</primary><secondary>getLastError</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>const char * <link linkend="_class_efvi_tcp_server">EfviTcpServer</link>&lt; Conf &gt;::getLastError ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_efvi_tcp_server_1ad7ec6f43096c97d50c65e663b955cc58"/><section>
+    <title>init()</title>
+<indexterm><primary>init</primary><secondary>EfviTcpServer&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>EfviTcpServer&lt; Conf &gt;</primary><secondary>init</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>bool <link linkend="_class_efvi_tcp_server">EfviTcpServer</link>&lt; Conf &gt;::init (const char * interface, const char * server_ip, uint16_t server_port)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_efvi_tcp_server_1a76d396147e8808c6d4da330fd32bd4a2"/><section>
+    <title>isClosed()</title>
+<indexterm><primary>isClosed</primary><secondary>EfviTcpServer&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>EfviTcpServer&lt; Conf &gt;</primary><secondary>isClosed</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>bool <link linkend="_class_efvi_tcp_server">EfviTcpServer</link>&lt; Conf &gt;::isClosed ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_efvi_tcp_server_1a5e43cf17f2cdb4a2ae3c87127c431d20"/><section>
+    <title>poll()</title>
+<indexterm><primary>poll</primary><secondary>EfviTcpServer&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>EfviTcpServer&lt; Conf &gt;</primary><secondary>poll</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><computeroutput>template&lt;typename Handler &gt; </computeroutput><para><computeroutput>void <link linkend="_class_efvi_tcp_server">EfviTcpServer</link>&lt; Conf &gt;::poll (Handler &amp; handler, int64_t ns = <computeroutput>0</computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_efvi_tcp_server_1a8eb918f599f0ec1851a5f8dd69eedaaf"/><section>
+    <title>err_</title>
+<indexterm><primary>err_</primary><secondary>EfviTcpServer&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>EfviTcpServer&lt; Conf &gt;</primary><secondary>err_</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>const char* <link linkend="_class_efvi_tcp_server">EfviTcpServer</link>&lt; Conf &gt;::err_ = &quot;Closed&quot;</computeroutput></para></section>
+<anchor xml:id="_class_efvi_tcp_server_1a4a6cc245419c9aa36e4924c33c87461e"/><section>
+    <title>server_</title>
+<indexterm><primary>server_</primary><secondary>EfviTcpServer&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>EfviTcpServer&lt; Conf &gt;</primary><secondary>server_</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput><link linkend="_classefvitcp_1_1_tcp_server">TcpServer</link> <link linkend="_class_efvi_tcp_server">EfviTcpServer</link>&lt; Conf &gt;::server_</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/external/pollnet/efvitcp/EfviTcp.h</section>
+</section>

@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_cross_msg_1_1_block_data" xml:lang="en-US">
+<title>KTN::CME::IL3::NewOrderCrossMsg::BlockData Struct Reference</title>
+<indexterm><primary>KTN::CME::IL3::NewOrderCrossMsg::BlockData</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_cross_msg_1_1_block_data_1a648c8a232fd19b3d9a320dde2f43d1d2">CrossID</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_cross_msg_1_1_block_data_1aacdfc3445f62c78ebf57f6dc8607c7fc">OrderRequestID</link></para>
+</listitem>
+            <listitem><para>EnumManualOrdIndReq <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_cross_msg_1_1_block_data_1a52a63d4e314a85acfb0ba7ffae4d67d9">ManualOrderIndicator</link></para>
+</listitem>
+            <listitem><para>uInt32 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_cross_msg_1_1_block_data_1a3cc88c12740e827c5a845bec41bee0f9">SeqNum</link></para>
+</listitem>
+            <listitem><para>String20Req <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_cross_msg_1_1_block_data_1a8cec36ce95d915a687034fd66a1aadd9">SenderID</link></para>
+</listitem>
+            <listitem><para><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_p_r_i_c_e9">PRICE9</link> <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_cross_msg_1_1_block_data_1a16e79430577d8eb2665a120d9327a7d6">Price</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_cross_msg_1_1_block_data_1ac118948e726a7820bff0421a0013bdb2">TransBkdTime</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_cross_msg_1_1_block_data_1a393cea4ed237e85d6a700a7da049c34a">SendingTimeEpoch</link></para>
+</listitem>
+            <listitem><para>String5Req <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_cross_msg_1_1_block_data_1a4ff7cf7beb4868420568215b3a781ec2">Location</link></para>
+</listitem>
+            <listitem><para>Int32 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_cross_msg_1_1_block_data_1afce4c9a12d99b03927bb8cb1eb86c5a8">SecurityID</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_cross_msg_1_1_block_data_1a648c8a232fd19b3d9a320dde2f43d1d2"/><section>
+    <title>CrossID</title>
+<indexterm><primary>CrossID</primary><secondary>KTN::CME::IL3::NewOrderCrossMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::NewOrderCrossMsg::BlockData</primary><secondary>CrossID</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::NewOrderCrossMsg::BlockData::CrossID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_cross_msg_1_1_block_data_1a4ff7cf7beb4868420568215b3a781ec2"/><section>
+    <title>Location</title>
+<indexterm><primary>Location</primary><secondary>KTN::CME::IL3::NewOrderCrossMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::NewOrderCrossMsg::BlockData</primary><secondary>Location</secondary></indexterm>
+<para><computeroutput>String5Req KTN::CME::IL3::NewOrderCrossMsg::BlockData::Location</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_cross_msg_1_1_block_data_1a52a63d4e314a85acfb0ba7ffae4d67d9"/><section>
+    <title>ManualOrderIndicator</title>
+<indexterm><primary>ManualOrderIndicator</primary><secondary>KTN::CME::IL3::NewOrderCrossMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::NewOrderCrossMsg::BlockData</primary><secondary>ManualOrderIndicator</secondary></indexterm>
+<para><computeroutput>EnumManualOrdIndReq KTN::CME::IL3::NewOrderCrossMsg::BlockData::ManualOrderIndicator</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_cross_msg_1_1_block_data_1aacdfc3445f62c78ebf57f6dc8607c7fc"/><section>
+    <title>OrderRequestID</title>
+<indexterm><primary>OrderRequestID</primary><secondary>KTN::CME::IL3::NewOrderCrossMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::NewOrderCrossMsg::BlockData</primary><secondary>OrderRequestID</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::NewOrderCrossMsg::BlockData::OrderRequestID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_cross_msg_1_1_block_data_1a16e79430577d8eb2665a120d9327a7d6"/><section>
+    <title>Price</title>
+<indexterm><primary>Price</primary><secondary>KTN::CME::IL3::NewOrderCrossMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::NewOrderCrossMsg::BlockData</primary><secondary>Price</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_p_r_i_c_e9">PRICE9</link> KTN::CME::IL3::NewOrderCrossMsg::BlockData::Price</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_cross_msg_1_1_block_data_1afce4c9a12d99b03927bb8cb1eb86c5a8"/><section>
+    <title>SecurityID</title>
+<indexterm><primary>SecurityID</primary><secondary>KTN::CME::IL3::NewOrderCrossMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::NewOrderCrossMsg::BlockData</primary><secondary>SecurityID</secondary></indexterm>
+<para><computeroutput>Int32 KTN::CME::IL3::NewOrderCrossMsg::BlockData::SecurityID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_cross_msg_1_1_block_data_1a8cec36ce95d915a687034fd66a1aadd9"/><section>
+    <title>SenderID</title>
+<indexterm><primary>SenderID</primary><secondary>KTN::CME::IL3::NewOrderCrossMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::NewOrderCrossMsg::BlockData</primary><secondary>SenderID</secondary></indexterm>
+<para><computeroutput>String20Req KTN::CME::IL3::NewOrderCrossMsg::BlockData::SenderID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_cross_msg_1_1_block_data_1a393cea4ed237e85d6a700a7da049c34a"/><section>
+    <title>SendingTimeEpoch</title>
+<indexterm><primary>SendingTimeEpoch</primary><secondary>KTN::CME::IL3::NewOrderCrossMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::NewOrderCrossMsg::BlockData</primary><secondary>SendingTimeEpoch</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::NewOrderCrossMsg::BlockData::SendingTimeEpoch</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_cross_msg_1_1_block_data_1a3cc88c12740e827c5a845bec41bee0f9"/><section>
+    <title>SeqNum</title>
+<indexterm><primary>SeqNum</primary><secondary>KTN::CME::IL3::NewOrderCrossMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::NewOrderCrossMsg::BlockData</primary><secondary>SeqNum</secondary></indexterm>
+<para><computeroutput>uInt32 KTN::CME::IL3::NewOrderCrossMsg::BlockData::SeqNum</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_cross_msg_1_1_block_data_1ac118948e726a7820bff0421a0013bdb2"/><section>
+    <title>TransBkdTime</title>
+<indexterm><primary>TransBkdTime</primary><secondary>KTN::CME::IL3::NewOrderCrossMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::NewOrderCrossMsg::BlockData</primary><secondary>TransBkdTime</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::NewOrderCrossMsg::BlockData::TransBkdTime</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+exchsupport/cme/il3/IL3Messages2.hpp</section>
+</section>

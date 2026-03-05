@@ -1,0 +1,134 @@
+\doxysection{Wavg\+Calc Struct Reference}
+\hypertarget{struct_wavg_calc}{}\label{struct_wavg_calc}\index{WavgCalc@{WavgCalc}}
+
+
+Structure representing the weighted average calculation.  
+
+
+
+
+{\ttfamily \#include $<$algo\+\_\+structs.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{struct_wavg_calc_a521db981bc930cdec3c33becb6fe70ad}{calculate}} (int32\+\_\+t price, int32\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Calculates the weighted average based on the price and size. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{struct_wavg_calc_a8bd485c370e21b3d94dab51d21a71054}{wavg}}
+\item 
+double \mbox{\hyperlink{struct_wavg_calc_af1a10004bc479423083b75d33d7b6150}{wsum}}
+\item 
+int \mbox{\hyperlink{struct_wavg_calc_a84e1ff059cfecde6d2755cd526681dbf}{volume}}
+\item 
+int \mbox{\hyperlink{struct_wavg_calc_a661328af6aaa74eec97d5a249ee7976e}{count}}
+\item 
+int \mbox{\hyperlink{struct_wavg_calc_a66212fc8fda27c07edcfe25f1c2403af}{row}}
+\item 
+int \mbox{\hyperlink{struct_wavg_calc_a953e0d55f73de9a8d03c617c5bf917f9}{col}}
+\item 
+string \mbox{\hyperlink{struct_wavg_calc_a2c4d1440c8abab89a496b90c70d8db3d}{symb}}
+\item 
+double \mbox{\hyperlink{struct_wavg_calc_aff82b77519e0e1cbd1c04b749592ef43}{stpr}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure representing the weighted average calculation. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_wavg_calc_a521db981bc930cdec3c33becb6fe70ad}\index{WavgCalc@{WavgCalc}!calculate@{calculate}}
+\index{calculate@{calculate}!WavgCalc@{WavgCalc}}
+\doxysubsubsection{\texorpdfstring{calculate()}{calculate()}}
+{\footnotesize\ttfamily \label{struct_wavg_calc_a521db981bc930cdec3c33becb6fe70ad} 
+void Wavg\+Calc\+::calculate (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{price}{, }\item[{int32\+\_\+t}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calculates the weighted average based on the price and size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em price} & The price. \\
+\hline
+{\em size} & The size. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00474}{count}}, \mbox{\hyperlink{l00473}{volume}}, \mbox{\hyperlink{l00471}{wavg}}, and \mbox{\hyperlink{l00472}{wsum}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_wavg_calc_a953e0d55f73de9a8d03c617c5bf917f9}\index{WavgCalc@{WavgCalc}!col@{col}}
+\index{col@{col}!WavgCalc@{WavgCalc}}
+\doxysubsubsection{\texorpdfstring{col}{col}}
+{\footnotesize\ttfamily \label{struct_wavg_calc_a953e0d55f73de9a8d03c617c5bf917f9} 
+int Wavg\+Calc\+::col}
+
+The column. \Hypertarget{struct_wavg_calc_a661328af6aaa74eec97d5a249ee7976e}\index{WavgCalc@{WavgCalc}!count@{count}}
+\index{count@{count}!WavgCalc@{WavgCalc}}
+\doxysubsubsection{\texorpdfstring{count}{count}}
+{\footnotesize\ttfamily \label{struct_wavg_calc_a661328af6aaa74eec97d5a249ee7976e} 
+int Wavg\+Calc\+::count}
+
+The count. 
+
+Referenced by \mbox{\hyperlink{l00485}{calculate()}}.
+
+\Hypertarget{struct_wavg_calc_a66212fc8fda27c07edcfe25f1c2403af}\index{WavgCalc@{WavgCalc}!row@{row}}
+\index{row@{row}!WavgCalc@{WavgCalc}}
+\doxysubsubsection{\texorpdfstring{row}{row}}
+{\footnotesize\ttfamily \label{struct_wavg_calc_a66212fc8fda27c07edcfe25f1c2403af} 
+int Wavg\+Calc\+::row}
+
+The row. \Hypertarget{struct_wavg_calc_aff82b77519e0e1cbd1c04b749592ef43}\index{WavgCalc@{WavgCalc}!stpr@{stpr}}
+\index{stpr@{stpr}!WavgCalc@{WavgCalc}}
+\doxysubsubsection{\texorpdfstring{stpr}{stpr}}
+{\footnotesize\ttfamily \label{struct_wavg_calc_aff82b77519e0e1cbd1c04b749592ef43} 
+double Wavg\+Calc\+::stpr}
+
+The starting price. \Hypertarget{struct_wavg_calc_a2c4d1440c8abab89a496b90c70d8db3d}\index{WavgCalc@{WavgCalc}!symb@{symb}}
+\index{symb@{symb}!WavgCalc@{WavgCalc}}
+\doxysubsubsection{\texorpdfstring{symb}{symb}}
+{\footnotesize\ttfamily \label{struct_wavg_calc_a2c4d1440c8abab89a496b90c70d8db3d} 
+string Wavg\+Calc\+::symb}
+
+The symbol. \Hypertarget{struct_wavg_calc_a84e1ff059cfecde6d2755cd526681dbf}\index{WavgCalc@{WavgCalc}!volume@{volume}}
+\index{volume@{volume}!WavgCalc@{WavgCalc}}
+\doxysubsubsection{\texorpdfstring{volume}{volume}}
+{\footnotesize\ttfamily \label{struct_wavg_calc_a84e1ff059cfecde6d2755cd526681dbf} 
+int Wavg\+Calc\+::volume}
+
+The volume. 
+
+Referenced by \mbox{\hyperlink{l00485}{calculate()}}.
+
+\Hypertarget{struct_wavg_calc_a8bd485c370e21b3d94dab51d21a71054}\index{WavgCalc@{WavgCalc}!wavg@{wavg}}
+\index{wavg@{wavg}!WavgCalc@{WavgCalc}}
+\doxysubsubsection{\texorpdfstring{wavg}{wavg}}
+{\footnotesize\ttfamily \label{struct_wavg_calc_a8bd485c370e21b3d94dab51d21a71054} 
+double Wavg\+Calc\+::wavg}
+
+The weighted average. 
+
+Referenced by \mbox{\hyperlink{l00485}{calculate()}}.
+
+\Hypertarget{struct_wavg_calc_af1a10004bc479423083b75d33d7b6150}\index{WavgCalc@{WavgCalc}!wsum@{wsum}}
+\index{wsum@{wsum}!WavgCalc@{WavgCalc}}
+\doxysubsubsection{\texorpdfstring{wsum}{wsum}}
+{\footnotesize\ttfamily \label{struct_wavg_calc_af1a10004bc479423083b75d33d7b6150} 
+double Wavg\+Calc\+::wsum}
+
+The weighted sum. 
+
+Referenced by \mbox{\hyperlink{l00485}{calculate()}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Algo\+Support/algo\+\_\+structs.\+hpp\end{DoxyCompactItemize}

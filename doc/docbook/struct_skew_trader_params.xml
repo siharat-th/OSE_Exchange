@@ -1,0 +1,303 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_skew_trader_params" xml:lang="en-US">
+<title>SkewTraderParams Struct Reference</title>
+<indexterm><primary>SkewTraderParams</primary></indexterm>
+<para>
+
+<para>The <link linkend="_struct_skew_trader_params">SkewTraderParams</link> struct represents the parameters for the SkewTrader algorithm. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;SkewTraderParams.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_struct_skew_trader_params">SkewTraderParams</link> <link linkend="_struct_skew_trader_params_1a8fbd8067ff74c6532b3e48cbd99825a1">parse</link> (const std::string &amp;json_str)</para>
+
+<para>parse the JSON string and create a <link linkend="_struct_skew_trader_params">SkewTraderParams</link> object. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_struct_skew_trader_params_1afae18c3c272a1c03e6400d6f36affbbf">ValidJson</link></para>
+</listitem>
+            <listitem><para><link linkend="_structalgometa">algometa</link> <link linkend="_struct_skew_trader_params_1a6a50f8e2f355db21f9b3a6a5f4ba035c">meta</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_skew_trader_params_1a6e131bdf3d26af94e4f2504324098190">subid</link></para>
+</listitem>
+            <listitem><para>std::unordered_map&lt; int, <link linkend="_structinstrument">instrument</link> &gt; <link linkend="_struct_skew_trader_params_1a8df722df962dcfa6a630a4dba8d6515b">LegSecIdMap</link></para>
+</listitem>
+            <listitem><para><link linkend="_structinstrument">instrument</link> <link linkend="_struct_skew_trader_params_1a775f0f7e5cb54b1ea9e715772c5a04e3">Legs</link> [4]</para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_skew_trader_params_1a6e045b891ca26fd2f49b0541ed44315e">LegCount</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_skew_trader_params_1ae768902a68655f7151fc47b139b6da6f">StartTime</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_skew_trader_params_1a591583556ca7ed8d73869ba9a6e57227">EndTime</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_skew_trader_params_1ad0424fa3ad85a7ec5e29c9327455a210">OrderQty</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_skew_trader_params_1addb337ec62cd8d2729d7c3584cf551ce">TotalQty</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_skew_trader_params_1a2e45710e5e28a77c52b7177b7b54fb7f">IntervalSecs</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_skew_trader_params_1a50f043dc042df65de57ab710b4316ad0">SendBids</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_skew_trader_params_1a9d3971be5a20d77837ec9e9e4cdfc5a8">SendAsks</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_skew_trader_params_1acc6bcabd284cc6d60964fe85e4e2c305">SkewThreshold</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_skew_trader_params_1ad252c4d247eba17437ec834a408e0468">SkewMax</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_skew_trader_params_1ac25310fa596d4946839dce70cba85e77">SkewMaxQty</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_skew_trader_params_1a4f218ac30567eff3ccd3472f0169e08e">SkewLevels</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_skew_trader_params_1a7f3640d60c11b3cc4ad0144327075b68">FlipSkew</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_skew_trader_params_1adc0ba3b3aaf2ec368caf469da83c953a">UseTotalPL</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_skew_trader_params_1acbde6d193dea0b4bfddc83f67c88729d">ProfitTicks</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_skew_trader_params_1a5f3238e2f91c96cad8f2dca0305d2675">StopTicks</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_skew_trader_params_1a208ee98d590001b0d6ef30cd38de1f6c">TimeoutMS</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_skew_trader_params_1a7e50968d8add12e38d94dfd3d4b3bed8">NetPosition</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_skew_trader_params_1a3d1f43305755b839eabd1a0414b1387a">TotalExec</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_skew_trader_params_1ad490e51fbfacc117927a917d17a35eff">TotalBuys</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_skew_trader_params_1ad4a39a703509a9ee6d0a7458e4e28cb8">TotalSells</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_skew_trader_params_1a65f75205e7c50bfdeaec4b1e59681394">TotalBuyPrice</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_skew_trader_params_1af1ce6d1d3e0d7753d8912677038ff0b3">TotalSellPrice</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_skew_trader_params_1aadda447491fa7ff4a0d60bef558971f1">AvgBuyPrice</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_skew_trader_params_1a748589d62c294aa4c3a9915c152f3b5f">AvgSellPrice</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_skew_trader_params_1a82b62df0bc4fd19aa9ba1d578088166b">SqueezeRatio</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_skew_trader_params_1a30cbc91b1a2c4957a04f526556950b73">Reset</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_struct_skew_trader_params">SkewTraderParams</link> struct represents the parameters for the SkewTrader algorithm. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_skew_trader_params_1a8fbd8067ff74c6532b3e48cbd99825a1"/><section>
+    <title>parse()</title>
+<indexterm><primary>parse</primary><secondary>SkewTraderParams</secondary></indexterm>
+<indexterm><primary>SkewTraderParams</primary><secondary>parse</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_skew_trader_params">SkewTraderParams</link> SkewTraderParams::parse (const std::string &amp; json_str)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>parse the JSON string and create a <link linkend="_struct_skew_trader_params">SkewTraderParams</link> object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>json_str</entry><entry>
+<para>the JSON string to parse. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>the parsed <link linkend="_struct_skew_trader_params">SkewTraderParams</link> object. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00260">algometa::Enabled</link>, <link linkend="_l00049">UserInfo::groupname</link>, <link linkend="_l00048">UserInfo::org</link>, <link linkend="_l00262">algometa::Source</link>, <link linkend="_l00256">algometa::Strategy</link>, <link linkend="_l00257">algometa::StratId</link>, <link linkend="_l00264">algometa::Tag</link>, <link linkend="_l00258">algometa::TemplateName</link>, <link linkend="_l00261">algometa::UniqueId</link>, <link linkend="_l00047">UserInfo::user</link>, and <link linkend="_l00279">algometa::userinfo</link>.</para>
+<para>
+Referenced by <link linkend="_l00057">KTN::SkewTrader::onLaunch()</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_skew_trader_params_1aadda447491fa7ff4a0d60bef558971f1"/><section>
+    <title>AvgBuyPrice</title>
+<indexterm><primary>AvgBuyPrice</primary><secondary>SkewTraderParams</secondary></indexterm>
+<indexterm><primary>SkewTraderParams</primary><secondary>AvgBuyPrice</secondary></indexterm>
+<para><computeroutput>double SkewTraderParams::AvgBuyPrice</computeroutput></para></section>
+<anchor xml:id="_struct_skew_trader_params_1a748589d62c294aa4c3a9915c152f3b5f"/><section>
+    <title>AvgSellPrice</title>
+<indexterm><primary>AvgSellPrice</primary><secondary>SkewTraderParams</secondary></indexterm>
+<indexterm><primary>SkewTraderParams</primary><secondary>AvgSellPrice</secondary></indexterm>
+<para><computeroutput>double SkewTraderParams::AvgSellPrice</computeroutput></para></section>
+<anchor xml:id="_struct_skew_trader_params_1a591583556ca7ed8d73869ba9a6e57227"/><section>
+    <title>EndTime</title>
+<indexterm><primary>EndTime</primary><secondary>SkewTraderParams</secondary></indexterm>
+<indexterm><primary>SkewTraderParams</primary><secondary>EndTime</secondary></indexterm>
+<para><computeroutput>string SkewTraderParams::EndTime</computeroutput></para></section>
+<anchor xml:id="_struct_skew_trader_params_1a7f3640d60c11b3cc4ad0144327075b68"/><section>
+    <title>FlipSkew</title>
+<indexterm><primary>FlipSkew</primary><secondary>SkewTraderParams</secondary></indexterm>
+<indexterm><primary>SkewTraderParams</primary><secondary>FlipSkew</secondary></indexterm>
+<para><computeroutput>bool SkewTraderParams::FlipSkew</computeroutput></para></section>
+<anchor xml:id="_struct_skew_trader_params_1a2e45710e5e28a77c52b7177b7b54fb7f"/><section>
+    <title>IntervalSecs</title>
+<indexterm><primary>IntervalSecs</primary><secondary>SkewTraderParams</secondary></indexterm>
+<indexterm><primary>SkewTraderParams</primary><secondary>IntervalSecs</secondary></indexterm>
+<para><computeroutput>int SkewTraderParams::IntervalSecs</computeroutput></para></section>
+<anchor xml:id="_struct_skew_trader_params_1a6e045b891ca26fd2f49b0541ed44315e"/><section>
+    <title>LegCount</title>
+<indexterm><primary>LegCount</primary><secondary>SkewTraderParams</secondary></indexterm>
+<indexterm><primary>SkewTraderParams</primary><secondary>LegCount</secondary></indexterm>
+<para><computeroutput>int SkewTraderParams::LegCount</computeroutput></para></section>
+<anchor xml:id="_struct_skew_trader_params_1a775f0f7e5cb54b1ea9e715772c5a04e3"/><section>
+    <title>Legs</title>
+<indexterm><primary>Legs</primary><secondary>SkewTraderParams</secondary></indexterm>
+<indexterm><primary>SkewTraderParams</primary><secondary>Legs</secondary></indexterm>
+<para><computeroutput><link linkend="_structinstrument">instrument</link> SkewTraderParams::Legs[4]</computeroutput></para></section>
+<anchor xml:id="_struct_skew_trader_params_1a8df722df962dcfa6a630a4dba8d6515b"/><section>
+    <title>LegSecIdMap</title>
+<indexterm><primary>LegSecIdMap</primary><secondary>SkewTraderParams</secondary></indexterm>
+<indexterm><primary>SkewTraderParams</primary><secondary>LegSecIdMap</secondary></indexterm>
+<para><computeroutput>std::unordered_map&lt;int, <link linkend="_structinstrument">instrument</link>&gt; SkewTraderParams::LegSecIdMap</computeroutput></para></section>
+<anchor xml:id="_struct_skew_trader_params_1a6a50f8e2f355db21f9b3a6a5f4ba035c"/><section>
+    <title>meta</title>
+<indexterm><primary>meta</primary><secondary>SkewTraderParams</secondary></indexterm>
+<indexterm><primary>SkewTraderParams</primary><secondary>meta</secondary></indexterm>
+<para><computeroutput><link linkend="_structalgometa">algometa</link> SkewTraderParams::meta</computeroutput></para></section>
+<anchor xml:id="_struct_skew_trader_params_1a7e50968d8add12e38d94dfd3d4b3bed8"/><section>
+    <title>NetPosition</title>
+<indexterm><primary>NetPosition</primary><secondary>SkewTraderParams</secondary></indexterm>
+<indexterm><primary>SkewTraderParams</primary><secondary>NetPosition</secondary></indexterm>
+<para><computeroutput>int SkewTraderParams::NetPosition</computeroutput></para></section>
+<anchor xml:id="_struct_skew_trader_params_1ad0424fa3ad85a7ec5e29c9327455a210"/><section>
+    <title>OrderQty</title>
+<indexterm><primary>OrderQty</primary><secondary>SkewTraderParams</secondary></indexterm>
+<indexterm><primary>SkewTraderParams</primary><secondary>OrderQty</secondary></indexterm>
+<para><computeroutput>double SkewTraderParams::OrderQty</computeroutput></para></section>
+<anchor xml:id="_struct_skew_trader_params_1acbde6d193dea0b4bfddc83f67c88729d"/><section>
+    <title>ProfitTicks</title>
+<indexterm><primary>ProfitTicks</primary><secondary>SkewTraderParams</secondary></indexterm>
+<indexterm><primary>SkewTraderParams</primary><secondary>ProfitTicks</secondary></indexterm>
+<para><computeroutput>int SkewTraderParams::ProfitTicks</computeroutput></para></section>
+<anchor xml:id="_struct_skew_trader_params_1a30cbc91b1a2c4957a04f526556950b73"/><section>
+    <title>Reset</title>
+<indexterm><primary>Reset</primary><secondary>SkewTraderParams</secondary></indexterm>
+<indexterm><primary>SkewTraderParams</primary><secondary>Reset</secondary></indexterm>
+<para><computeroutput>bool SkewTraderParams::Reset</computeroutput></para></section>
+<anchor xml:id="_struct_skew_trader_params_1a9d3971be5a20d77837ec9e9e4cdfc5a8"/><section>
+    <title>SendAsks</title>
+<indexterm><primary>SendAsks</primary><secondary>SkewTraderParams</secondary></indexterm>
+<indexterm><primary>SkewTraderParams</primary><secondary>SendAsks</secondary></indexterm>
+<para><computeroutput>bool SkewTraderParams::SendAsks</computeroutput></para></section>
+<anchor xml:id="_struct_skew_trader_params_1a50f043dc042df65de57ab710b4316ad0"/><section>
+    <title>SendBids</title>
+<indexterm><primary>SendBids</primary><secondary>SkewTraderParams</secondary></indexterm>
+<indexterm><primary>SkewTraderParams</primary><secondary>SendBids</secondary></indexterm>
+<para><computeroutput>bool SkewTraderParams::SendBids</computeroutput></para></section>
+<anchor xml:id="_struct_skew_trader_params_1a4f218ac30567eff3ccd3472f0169e08e"/><section>
+    <title>SkewLevels</title>
+<indexterm><primary>SkewLevels</primary><secondary>SkewTraderParams</secondary></indexterm>
+<indexterm><primary>SkewTraderParams</primary><secondary>SkewLevels</secondary></indexterm>
+<para><computeroutput>int SkewTraderParams::SkewLevels</computeroutput></para></section>
+<anchor xml:id="_struct_skew_trader_params_1ad252c4d247eba17437ec834a408e0468"/><section>
+    <title>SkewMax</title>
+<indexterm><primary>SkewMax</primary><secondary>SkewTraderParams</secondary></indexterm>
+<indexterm><primary>SkewTraderParams</primary><secondary>SkewMax</secondary></indexterm>
+<para><computeroutput>double SkewTraderParams::SkewMax</computeroutput></para></section>
+<anchor xml:id="_struct_skew_trader_params_1ac25310fa596d4946839dce70cba85e77"/><section>
+    <title>SkewMaxQty</title>
+<indexterm><primary>SkewMaxQty</primary><secondary>SkewTraderParams</secondary></indexterm>
+<indexterm><primary>SkewTraderParams</primary><secondary>SkewMaxQty</secondary></indexterm>
+<para><computeroutput>int SkewTraderParams::SkewMaxQty</computeroutput></para></section>
+<anchor xml:id="_struct_skew_trader_params_1acc6bcabd284cc6d60964fe85e4e2c305"/><section>
+    <title>SkewThreshold</title>
+<indexterm><primary>SkewThreshold</primary><secondary>SkewTraderParams</secondary></indexterm>
+<indexterm><primary>SkewTraderParams</primary><secondary>SkewThreshold</secondary></indexterm>
+<para><computeroutput>double SkewTraderParams::SkewThreshold</computeroutput></para></section>
+<anchor xml:id="_struct_skew_trader_params_1a82b62df0bc4fd19aa9ba1d578088166b"/><section>
+    <title>SqueezeRatio</title>
+<indexterm><primary>SqueezeRatio</primary><secondary>SkewTraderParams</secondary></indexterm>
+<indexterm><primary>SkewTraderParams</primary><secondary>SqueezeRatio</secondary></indexterm>
+<para><computeroutput>double SkewTraderParams::SqueezeRatio</computeroutput></para></section>
+<anchor xml:id="_struct_skew_trader_params_1ae768902a68655f7151fc47b139b6da6f"/><section>
+    <title>StartTime</title>
+<indexterm><primary>StartTime</primary><secondary>SkewTraderParams</secondary></indexterm>
+<indexterm><primary>SkewTraderParams</primary><secondary>StartTime</secondary></indexterm>
+<para><computeroutput>string SkewTraderParams::StartTime</computeroutput></para></section>
+<anchor xml:id="_struct_skew_trader_params_1a5f3238e2f91c96cad8f2dca0305d2675"/><section>
+    <title>StopTicks</title>
+<indexterm><primary>StopTicks</primary><secondary>SkewTraderParams</secondary></indexterm>
+<indexterm><primary>SkewTraderParams</primary><secondary>StopTicks</secondary></indexterm>
+<para><computeroutput>int SkewTraderParams::StopTicks</computeroutput></para></section>
+<anchor xml:id="_struct_skew_trader_params_1a6e131bdf3d26af94e4f2504324098190"/><section>
+    <title>subid</title>
+<indexterm><primary>subid</primary><secondary>SkewTraderParams</secondary></indexterm>
+<indexterm><primary>SkewTraderParams</primary><secondary>subid</secondary></indexterm>
+<para><computeroutput>string SkewTraderParams::subid</computeroutput></para></section>
+<anchor xml:id="_struct_skew_trader_params_1a208ee98d590001b0d6ef30cd38de1f6c"/><section>
+    <title>TimeoutMS</title>
+<indexterm><primary>TimeoutMS</primary><secondary>SkewTraderParams</secondary></indexterm>
+<indexterm><primary>SkewTraderParams</primary><secondary>TimeoutMS</secondary></indexterm>
+<para><computeroutput>int SkewTraderParams::TimeoutMS</computeroutput></para></section>
+<anchor xml:id="_struct_skew_trader_params_1a65f75205e7c50bfdeaec4b1e59681394"/><section>
+    <title>TotalBuyPrice</title>
+<indexterm><primary>TotalBuyPrice</primary><secondary>SkewTraderParams</secondary></indexterm>
+<indexterm><primary>SkewTraderParams</primary><secondary>TotalBuyPrice</secondary></indexterm>
+<para><computeroutput>double SkewTraderParams::TotalBuyPrice</computeroutput></para></section>
+<anchor xml:id="_struct_skew_trader_params_1ad490e51fbfacc117927a917d17a35eff"/><section>
+    <title>TotalBuys</title>
+<indexterm><primary>TotalBuys</primary><secondary>SkewTraderParams</secondary></indexterm>
+<indexterm><primary>SkewTraderParams</primary><secondary>TotalBuys</secondary></indexterm>
+<para><computeroutput>int SkewTraderParams::TotalBuys</computeroutput></para></section>
+<anchor xml:id="_struct_skew_trader_params_1a3d1f43305755b839eabd1a0414b1387a"/><section>
+    <title>TotalExec</title>
+<indexterm><primary>TotalExec</primary><secondary>SkewTraderParams</secondary></indexterm>
+<indexterm><primary>SkewTraderParams</primary><secondary>TotalExec</secondary></indexterm>
+<para><computeroutput>int SkewTraderParams::TotalExec</computeroutput></para></section>
+<anchor xml:id="_struct_skew_trader_params_1addb337ec62cd8d2729d7c3584cf551ce"/><section>
+    <title>TotalQty</title>
+<indexterm><primary>TotalQty</primary><secondary>SkewTraderParams</secondary></indexterm>
+<indexterm><primary>SkewTraderParams</primary><secondary>TotalQty</secondary></indexterm>
+<para><computeroutput>double SkewTraderParams::TotalQty</computeroutput></para></section>
+<anchor xml:id="_struct_skew_trader_params_1af1ce6d1d3e0d7753d8912677038ff0b3"/><section>
+    <title>TotalSellPrice</title>
+<indexterm><primary>TotalSellPrice</primary><secondary>SkewTraderParams</secondary></indexterm>
+<indexterm><primary>SkewTraderParams</primary><secondary>TotalSellPrice</secondary></indexterm>
+<para><computeroutput>double SkewTraderParams::TotalSellPrice</computeroutput></para></section>
+<anchor xml:id="_struct_skew_trader_params_1ad4a39a703509a9ee6d0a7458e4e28cb8"/><section>
+    <title>TotalSells</title>
+<indexterm><primary>TotalSells</primary><secondary>SkewTraderParams</secondary></indexterm>
+<indexterm><primary>SkewTraderParams</primary><secondary>TotalSells</secondary></indexterm>
+<para><computeroutput>int SkewTraderParams::TotalSells</computeroutput></para></section>
+<anchor xml:id="_struct_skew_trader_params_1adc0ba3b3aaf2ec368caf469da83c953a"/><section>
+    <title>UseTotalPL</title>
+<indexterm><primary>UseTotalPL</primary><secondary>SkewTraderParams</secondary></indexterm>
+<indexterm><primary>SkewTraderParams</primary><secondary>UseTotalPL</secondary></indexterm>
+<para><computeroutput>bool SkewTraderParams::UseTotalPL</computeroutput></para></section>
+<anchor xml:id="_struct_skew_trader_params_1afae18c3c272a1c03e6400d6f36affbbf"/><section>
+    <title>ValidJson</title>
+<indexterm><primary>ValidJson</primary><secondary>SkewTraderParams</secondary></indexterm>
+<indexterm><primary>SkewTraderParams</primary><secondary>ValidJson</secondary></indexterm>
+<para><computeroutput>bool SkewTraderParams::ValidJson</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following files:</para>
+AlgoParams/SkewTraderParams.hppAlgoParams/SkewTraderParams.cpp</section>
+</section>

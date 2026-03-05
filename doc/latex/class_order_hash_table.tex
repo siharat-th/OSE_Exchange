@@ -1,0 +1,177 @@
+\doxysection{Order\+Hash\+Table Class Reference}
+\hypertarget{class_order_hash_table}{}\label{class_order_hash_table}\index{OrderHashTable@{OrderHashTable}}
+
+
+A hash table implementation for storing orders.  
+
+
+
+
+{\ttfamily \#include $<$Order\+Hash\+Table.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_order_hash_table_afeb7d65cefb23f0beb4cceae7b32991e}{Order\+Hash\+Table}} (size\+\_\+t initial\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{class_order_hash_table}{Order\+Hash\+Table} object with the specified initial size. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_order_hash_table_a2e1a9150457f5cf5a5e4874b3d711c6d}{\texorpdfstring{$\sim$}{\string~}\+Order\+Hash\+Table}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{class_order_hash_table}{Order\+Hash\+Table} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_order_hash_table_a6b75a0324496ea0053ee3cdaabbf2963}{insert}} (const string \&key, const \mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} \&value)
+\begin{DoxyCompactList}\small\item\em Inserts an order into the hash table. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_order_hash_table_a34bd98a0d8da05453fe590b4ccf532fa}{lookup}} (const string \&key, \mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} \&value) const
+\begin{DoxyCompactList}\small\item\em Looks up an order in the hash table. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_order_hash_table_aef11e574e490d320cdcab4f23f48b3f1}{all}} (vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} $>$ \&result)
+\begin{DoxyCompactList}\small\item\em Retrieves all orders stored in the hash table. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_order_hash_table_a35b4d87abe0081d642742b2c71682278}{erase}} (const string \&key)
+\begin{DoxyCompactList}\small\item\em Removes an order from the hash table. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_order_hash_table_ae499bf678f2e521f48db5b2ce11a4a75}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Clears all orders from the hash table. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_order_hash_table_a5b1c82487c0ac6390c654af2d2c26b35}{count}} ()
+\begin{DoxyCompactList}\small\item\em Returns the number of orders in the hash table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr float \mbox{\hyperlink{class_order_hash_table_a08e55c5d4d01703db21bcf9271fcb66b}{LOAD\+\_\+\+FACTOR}} = 0.\+75f
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A hash table implementation for storing orders. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_order_hash_table_afeb7d65cefb23f0beb4cceae7b32991e}\index{OrderHashTable@{OrderHashTable}!OrderHashTable@{OrderHashTable}}
+\index{OrderHashTable@{OrderHashTable}!OrderHashTable@{OrderHashTable}}
+\doxysubsubsection{\texorpdfstring{OrderHashTable()}{OrderHashTable()}}
+{\footnotesize\ttfamily \label{class_order_hash_table_afeb7d65cefb23f0beb4cceae7b32991e} 
+Order\+Hash\+Table\+::\+Order\+Hash\+Table (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{initial\+\_\+size}{}\end{DoxyParamCaption})}
+
+
+
+Constructs an \doxylink{class_order_hash_table}{Order\+Hash\+Table} object with the specified initial size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em initial\+\_\+size} & The initial size of the hash table. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_order_hash_table_a2e1a9150457f5cf5a5e4874b3d711c6d}\index{OrderHashTable@{OrderHashTable}!````~OrderHashTable@{\texorpdfstring{$\sim$}{\string~}OrderHashTable}}
+\index{````~OrderHashTable@{\texorpdfstring{$\sim$}{\string~}OrderHashTable}!OrderHashTable@{OrderHashTable}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}OrderHashTable()}{\string~OrderHashTable()}}
+{\footnotesize\ttfamily \label{class_order_hash_table_a2e1a9150457f5cf5a5e4874b3d711c6d} 
+Order\+Hash\+Table\+::\texorpdfstring{$\sim$}{\string~}\+Order\+Hash\+Table (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor for the \doxylink{class_order_hash_table}{Order\+Hash\+Table} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_order_hash_table_aef11e574e490d320cdcab4f23f48b3f1}\index{OrderHashTable@{OrderHashTable}!all@{all}}
+\index{all@{all}!OrderHashTable@{OrderHashTable}}
+\doxysubsubsection{\texorpdfstring{all()}{all()}}
+{\footnotesize\ttfamily \label{class_order_hash_table_aef11e574e490d320cdcab4f23f48b3f1} 
+bool Order\+Hash\+Table\+::all (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} $>$ \&}]{result}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves all orders stored in the hash table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em result} & The vector to store the retrieved orders. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if there are orders in the hash table, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_order_hash_table_ae499bf678f2e521f48db5b2ce11a4a75}\index{OrderHashTable@{OrderHashTable}!clear@{clear}}
+\index{clear@{clear}!OrderHashTable@{OrderHashTable}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \label{class_order_hash_table_ae499bf678f2e521f48db5b2ce11a4a75} 
+void Order\+Hash\+Table\+::clear (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Clears all orders from the hash table. 
+
+\Hypertarget{class_order_hash_table_a5b1c82487c0ac6390c654af2d2c26b35}\index{OrderHashTable@{OrderHashTable}!count@{count}}
+\index{count@{count}!OrderHashTable@{OrderHashTable}}
+\doxysubsubsection{\texorpdfstring{count()}{count()}}
+{\footnotesize\ttfamily \label{class_order_hash_table_a5b1c82487c0ac6390c654af2d2c26b35} 
+int Order\+Hash\+Table\+::count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the number of orders in the hash table. 
+
+\begin{DoxyReturn}{Returns}
+The number of orders in the hash table. 
+\end{DoxyReturn}
+\Hypertarget{class_order_hash_table_a35b4d87abe0081d642742b2c71682278}\index{OrderHashTable@{OrderHashTable}!erase@{erase}}
+\index{erase@{erase}!OrderHashTable@{OrderHashTable}}
+\doxysubsubsection{\texorpdfstring{erase()}{erase()}}
+{\footnotesize\ttfamily \label{class_order_hash_table_a35b4d87abe0081d642742b2c71682278} 
+void Order\+Hash\+Table\+::erase (\begin{DoxyParamCaption}\item[{const string \&}]{key}{}\end{DoxyParamCaption})}
+
+
+
+Removes an order from the hash table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key associated with the order to be removed. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_order_hash_table_a6b75a0324496ea0053ee3cdaabbf2963}\index{OrderHashTable@{OrderHashTable}!insert@{insert}}
+\index{insert@{insert}!OrderHashTable@{OrderHashTable}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily \label{class_order_hash_table_a6b75a0324496ea0053ee3cdaabbf2963} 
+void Order\+Hash\+Table\+::insert (\begin{DoxyParamCaption}\item[{const string \&}]{key}{, }\item[{const \mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} \&}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Inserts an order into the hash table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key associated with the order. \\
+\hline
+{\em value} & The order to be inserted. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_order_hash_table_a34bd98a0d8da05453fe590b4ccf532fa}\index{OrderHashTable@{OrderHashTable}!lookup@{lookup}}
+\index{lookup@{lookup}!OrderHashTable@{OrderHashTable}}
+\doxysubsubsection{\texorpdfstring{lookup()}{lookup()}}
+{\footnotesize\ttfamily \label{class_order_hash_table_a34bd98a0d8da05453fe590b4ccf532fa} 
+bool Order\+Hash\+Table\+::lookup (\begin{DoxyParamCaption}\item[{const string \&}]{key}{, }\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} \&}]{value}{}\end{DoxyParamCaption}) const}
+
+
+
+Looks up an order in the hash table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key associated with the order. \\
+\hline
+{\em value} & The found order will be stored in this parameter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the order was found, false otherwise. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_order_hash_table_a08e55c5d4d01703db21bcf9271fcb66b}\index{OrderHashTable@{OrderHashTable}!LOAD\_FACTOR@{LOAD\_FACTOR}}
+\index{LOAD\_FACTOR@{LOAD\_FACTOR}!OrderHashTable@{OrderHashTable}}
+\doxysubsubsection{\texorpdfstring{LOAD\_FACTOR}{LOAD\_FACTOR}}
+{\footnotesize\ttfamily \label{class_order_hash_table_a08e55c5d4d01703db21bcf9271fcb66b} 
+float Order\+Hash\+Table\+::\+LOAD\+\_\+\+FACTOR = 0.\+75f\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Maps/Order\+Hash\+Table.\+hpp\item 
+Maps/Order\+Hash\+Table.\+cpp\end{DoxyCompactItemize}

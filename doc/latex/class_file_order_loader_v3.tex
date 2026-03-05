@@ -1,0 +1,63 @@
+\doxysection{File\+Order\+Loader\+V3 Class Reference}
+\hypertarget{class_file_order_loader_v3}{}\label{class_file_order_loader_v3}\index{FileOrderLoaderV3@{FileOrderLoaderV3}}
+
+
+A Legacy class for loading order data from a file. Mainly used for testing or for TAS order loading.  
+
+
+
+
+{\ttfamily \#include $<$File\+Order\+Loader\+V3.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{class_file_order_loader_v3_abf1e854e5dc3c8171e8bfdd06d4da57e}{Data\+Vector}} = std\+::vector$<$std\+::unordered\+\_\+map$<$std\+::string, std\+::string$>$$>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Data\+Vector \mbox{\hyperlink{class_file_order_loader_v3_a8b821bfbecba63def1321ad5f7dccac2}{Read\+File}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Reads the contents of a file and returns the data as a vector of unordered maps. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A Legacy class for loading order data from a file. Mainly used for testing or for TAS order loading. 
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{class_file_order_loader_v3_abf1e854e5dc3c8171e8bfdd06d4da57e}\index{FileOrderLoaderV3@{FileOrderLoaderV3}!DataVector@{DataVector}}
+\index{DataVector@{DataVector}!FileOrderLoaderV3@{FileOrderLoaderV3}}
+\doxysubsubsection{\texorpdfstring{DataVector}{DataVector}}
+{\footnotesize\ttfamily \label{class_file_order_loader_v3_abf1e854e5dc3c8171e8bfdd06d4da57e} 
+using File\+Order\+Loader\+V3\+::\+Data\+Vector = std\+::vector$<$std\+::unordered\+\_\+map$<$std\+::string, std\+::string$>$$>$}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_file_order_loader_v3_a8b821bfbecba63def1321ad5f7dccac2}\index{FileOrderLoaderV3@{FileOrderLoaderV3}!ReadFile@{ReadFile}}
+\index{ReadFile@{ReadFile}!FileOrderLoaderV3@{FileOrderLoaderV3}}
+\doxysubsubsection{\texorpdfstring{ReadFile()}{ReadFile()}}
+{\footnotesize\ttfamily \label{class_file_order_loader_v3_a8b821bfbecba63def1321ad5f7dccac2} 
+static Data\+Vector File\+Order\+Loader\+V3\+::\+Read\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Reads the contents of a file and returns the data as a vector of unordered maps. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file to read. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The data read from the file as a vector of unordered maps. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00550}{KTN\+::\+ORD\+::\+Order\+Handler\+Zmq\+V6\+::\+Load\+Tas\+Orders()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Orders/File\+Order\+Loader\+V3.\+hpp\end{DoxyCompactItemize}

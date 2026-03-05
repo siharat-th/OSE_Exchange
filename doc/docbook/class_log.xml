@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_log" xml:lang="en-US">
+<title>Log Class Reference</title>
+<indexterm><primary>Log</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_log">Log</link> class provides a singleton logger for logging messages. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;LogV2.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for Log:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_log.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_log_1af6071a60aa52b6c1b511f99b4bc1b8fe">Log</link> ()</para>
+
+<para>Constructor for <link linkend="_class_log">Log</link> class. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_log_1a8c7c444c10a3ccd972d12d0c0f028c07">WriteLine</link> (const std::string &amp;msg, const std::string &amp;topic, int color)</para>
+
+<para>Writes a line to the log with the specified message, topic, and color. </para>
+</listitem>
+            <listitem><para><link linkend="_class_log_1af6071a60aa52b6c1b511f99b4bc1b8fe">Log</link> ()</para>
+
+<para>Constructs a <link linkend="_class_log">Log</link> object and initializes the console logger. </para>
+</listitem>
+            <listitem><para>std::shared_ptr&lt; spdlog::logger &gt; <link linkend="_class_log_1aed2180c52a8db9a4e04caf57236b97cc">console</link> ()</para>
+
+<para>Returns the console logger. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+Static Public Member Functions inherited from <link linkend="_class_singleton">Singleton&lt; Log &gt;</link>        <itemizedlist>
+            <listitem><para>static KT01_API <link linkend="_class_log">Log</link> &amp; <link linkend="_class_singleton_1a257c9c4633fa4e06bd93469e379f8eff">instance</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Protected Member Functions inherited from <link linkend="_class_singleton">Singleton&lt; Log &gt;</link>        <itemizedlist>
+            <listitem><para><emphasis role="strong">Singleton</emphasis> (const <link linkend="_class_singleton">Singleton</link> &amp;)=delete</para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_log">Log</link> class provides a singleton logger for logging messages. </para>
+
+
+
+<para><link linkend="_class_singleton">Singleton</link> class for logging messages. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_log_1af6071a60aa52b6c1b511f99b4bc1b8fe"/><section>
+    <title>Log()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>Log</primary><secondary>Log</secondary></indexterm>
+<indexterm><primary>Log</primary><secondary>Log</secondary></indexterm>
+<para><computeroutput>Log::Log ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Constructor for <link linkend="_class_log">Log</link> class. </para>
+</para>
+<para>
+References <link linkend="_l00027">LoggerFactory::createLogger()</link>.</para>
+</section>
+<anchor xml:id="_class_log_1af6071a60aa52b6c1b511f99b4bc1b8fe"/><section>
+    <title>Log()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>Log</primary><secondary>Log</secondary></indexterm>
+<indexterm><primary>Log</primary><secondary>Log</secondary></indexterm>
+<para><computeroutput>Log::Log ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Constructs a <link linkend="_class_log">Log</link> object and initializes the console logger. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_log_1aed2180c52a8db9a4e04caf57236b97cc"/><section>
+    <title>console()</title>
+<indexterm><primary>console</primary><secondary>Log</secondary></indexterm>
+<indexterm><primary>Log</primary><secondary>console</secondary></indexterm>
+<para><computeroutput>std::shared_ptr&lt; spdlog::logger &gt; Log::console ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Returns the console logger. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The shared pointer to the console logger. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_log_1a8c7c444c10a3ccd972d12d0c0f028c07"/><section>
+    <title>WriteLine()</title>
+<indexterm><primary>WriteLine</primary><secondary>Log</secondary></indexterm>
+<indexterm><primary>Log</primary><secondary>WriteLine</secondary></indexterm>
+<para><computeroutput>void Log::WriteLine (const std::string &amp; msg, const std::string &amp; topic, int color)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Writes a line to the log with the specified message, topic, and color. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>msg</entry><entry>
+<para>The message to write to the log. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>topic</entry><entry>
+<para>The topic of the log message. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>color</entry><entry>
+<para>The color of the log message. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Loggers/Log.hppLoggers/LogV2.hpp</section>
+</section>

@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classi01_1_1core_1_1_timestamp" xml:lang="en-US">
+<title>i01::core::Timestamp Class Reference</title>
+<indexterm><primary>i01::core::Timestamp</primary></indexterm>
+<para>Inheritance diagram for i01::core::Timestamp:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classi01_1_1core_1_1_timestamp.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classi01_1_1core_1_1_timestamp_1ae6d42785f14856ba8b346a7148a36781">Timestamp</link> (const time_t s, const long n)</para>
+</listitem>
+            <listitem><para><link linkend="_classi01_1_1core_1_1_timestamp">Timestamp</link> <link linkend="_classi01_1_1core_1_1_timestamp_1ad0ed37c37215e8d0e4f11ae16c5e41aa">operator+</link> (const <link linkend="_classi01_1_1core_1_1_timestamp">Timestamp</link> &amp;t) const</para>
+</listitem>
+            <listitem><para><link linkend="_classi01_1_1core_1_1_timestamp">Timestamp</link> &amp; <link linkend="_classi01_1_1core_1_1_timestamp_1a1b1692938d9c5193b3118501a947ed30">operator+=</link> (const <link linkend="_classi01_1_1core_1_1_timestamp">Timestamp</link> &amp;t)</para>
+</listitem>
+            <listitem><para><link linkend="_classi01_1_1core_1_1_timestamp">Timestamp</link> <link linkend="_classi01_1_1core_1_1_timestamp_1ad37aa779dfda43b431f1bc09b8277eca">operator-</link> (const <link linkend="_classi01_1_1core_1_1_timestamp">Timestamp</link> &amp;t) const</para>
+</listitem>
+            <listitem><para><link linkend="_classi01_1_1core_1_1_timestamp">Timestamp</link> &amp; <link linkend="_classi01_1_1core_1_1_timestamp_1a3ee5b301162117c6637f0f2f566e109e">operator-=</link> (const <link linkend="_classi01_1_1core_1_1_timestamp">Timestamp</link> &amp;t)</para>
+</listitem>
+            <listitem><para><link linkend="_classi01_1_1core_1_1_timestamp">Timestamp</link> <link linkend="_classi01_1_1core_1_1_timestamp_1a8eb4932c293c03eec8b8eb22171be8e8">get_midnight</link> (const std::uint64_t &amp;add_ns=0) const</para>
+</listitem>
+            <listitem><para>std::uint64_t <link linkend="_classi01_1_1core_1_1_timestamp_1a0d06a6c5209757c308217b5b54037089">seconds_since_midnight</link> () const</para>
+</listitem>
+            <listitem><para>std::uint64_t <link linkend="_classi01_1_1core_1_1_timestamp_1aba44b8c2f803cb3dfb95b586b93830cc">milliseconds_since_midnight</link> () const</para>
+</listitem>
+            <listitem><para>std::uint64_t <link linkend="_classi01_1_1core_1_1_timestamp_1a3b428a746012ab03a2b9e306196dd2ef">nanoseconds_since_midnight</link> () const</para>
+</listitem>
+            <listitem><para>time_t <link linkend="_classi01_1_1core_1_1_timestamp_1a31227dcf9fdf962f83008b3d4c9e5db9">local_midnight_seconds_since_epoch_slow</link> ()</para>
+</listitem>
+            <listitem><para>std::uint64_t <link linkend="_classi01_1_1core_1_1_timestamp_1a0d7336c92bacc16e550140f8d42512b6">nanoseconds_since_midnight_local_cached</link> () const</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static const <link linkend="_classi01_1_1core_1_1_timestamp">Timestamp</link> <link linkend="_classi01_1_1core_1_1_timestamp_1a943a29ce5a5004fb44661cae25736183">now</link> ()</para>
+</listitem>
+            <listitem><para>static bool <link linkend="_classi01_1_1core_1_1_timestamp_1af6670965fc149800a04c34f7c3aea5bb">now</link> (<link linkend="_classi01_1_1core_1_1_timestamp">Timestamp</link> &amp;ts)</para>
+</listitem>
+            <listitem><para>static time_t <link linkend="_classi01_1_1core_1_1_timestamp_1a40ff2e68bd50929d693b7fb6f93703fb">to_local_midnight_seconds_since_epoch_slow</link> (const time_t &amp;tv_sec_utc)</para>
+</listitem>
+            <listitem><para>static std::uint64_t <link linkend="_classi01_1_1core_1_1_timestamp_1aba5336caab42d4abb699b1f9ec1599fe">to_ns_since_cached_local_midnight</link> (const <link linkend="_classi01_1_1core_1_1_timestamp">Timestamp</link> &amp;ts_utc)</para>
+</listitem>
+            <listitem><para>static const <link linkend="_classi01_1_1core_1_1_timestamp">Timestamp</link> &amp; <link linkend="_classi01_1_1core_1_1_timestamp_1a8a1b75dcb8b019cc9e5a1545dce88dbe">last_event</link> (const <link linkend="_classi01_1_1core_1_1_timestamp">Timestamp</link> &amp;newts={0, 0})</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Friends    </title>
+        <itemizedlist>
+            <listitem><para>std::ostream &amp; <link linkend="_classi01_1_1core_1_1_timestamp_1adc0006f2c8afae2319488fb98d731596">operator&lt;&lt;</link> (std::ostream &amp;o, const <link linkend="_classi01_1_1core_1_1_timestamp">Timestamp</link> &amp;t)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classi01_1_1core_1_1_timestamp_1a9ed6bd5dbe92eb04d7d56a1863de2a80"/><section>
+    <title>Timestamp()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>Timestamp</primary><secondary>i01::core::Timestamp</secondary></indexterm>
+<indexterm><primary>i01::core::Timestamp</primary><secondary>Timestamp</secondary></indexterm>
+<para><computeroutput>i01::core::Timestamp::Timestamp ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classi01_1_1core_1_1_timestamp_1ae6d42785f14856ba8b346a7148a36781"/><section>
+    <title>Timestamp()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>Timestamp</primary><secondary>i01::core::Timestamp</secondary></indexterm>
+<indexterm><primary>i01::core::Timestamp</primary><secondary>Timestamp</secondary></indexterm>
+<para><computeroutput>i01::core::Timestamp::Timestamp (const time_t s, const long n)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classi01_1_1core_1_1_timestamp_1a8eb4932c293c03eec8b8eb22171be8e8"/><section>
+    <title>get_midnight()</title>
+<indexterm><primary>get_midnight</primary><secondary>i01::core::Timestamp</secondary></indexterm>
+<indexterm><primary>i01::core::Timestamp</primary><secondary>get_midnight</secondary></indexterm>
+<para><computeroutput><link linkend="_classi01_1_1core_1_1_timestamp">Timestamp</link> i01::core::Timestamp::get_midnight (const std::uint64_t &amp; add_ns = <computeroutput>0</computeroutput>
+) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classi01_1_1core_1_1_timestamp_1a8a1b75dcb8b019cc9e5a1545dce88dbe"/><section>
+    <title>last_event()</title>
+<indexterm><primary>last_event</primary><secondary>i01::core::Timestamp</secondary></indexterm>
+<indexterm><primary>i01::core::Timestamp</primary><secondary>last_event</secondary></indexterm>
+<para><computeroutput>const <link linkend="_classi01_1_1core_1_1_timestamp">Timestamp</link> &amp; i01::core::Timestamp::last_event (const <link linkend="_classi01_1_1core_1_1_timestamp">Timestamp</link> &amp; newts = <computeroutput>{0,0}</computeroutput>
+)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classi01_1_1core_1_1_timestamp_1a31227dcf9fdf962f83008b3d4c9e5db9"/><section>
+    <title>local_midnight_seconds_since_epoch_slow()</title>
+<indexterm><primary>local_midnight_seconds_since_epoch_slow</primary><secondary>i01::core::Timestamp</secondary></indexterm>
+<indexterm><primary>i01::core::Timestamp</primary><secondary>local_midnight_seconds_since_epoch_slow</secondary></indexterm>
+<para><computeroutput>time_t i01::core::Timestamp::local_midnight_seconds_since_epoch_slow ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classi01_1_1core_1_1_timestamp_1aba44b8c2f803cb3dfb95b586b93830cc"/><section>
+    <title>milliseconds_since_midnight()</title>
+<indexterm><primary>milliseconds_since_midnight</primary><secondary>i01::core::Timestamp</secondary></indexterm>
+<indexterm><primary>i01::core::Timestamp</primary><secondary>milliseconds_since_midnight</secondary></indexterm>
+<para><computeroutput>std::uint64_t i01::core::Timestamp::milliseconds_since_midnight ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classi01_1_1core_1_1_timestamp_1a3b428a746012ab03a2b9e306196dd2ef"/><section>
+    <title>nanoseconds_since_midnight()</title>
+<indexterm><primary>nanoseconds_since_midnight</primary><secondary>i01::core::Timestamp</secondary></indexterm>
+<indexterm><primary>i01::core::Timestamp</primary><secondary>nanoseconds_since_midnight</secondary></indexterm>
+<para><computeroutput>std::uint64_t i01::core::Timestamp::nanoseconds_since_midnight ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classi01_1_1core_1_1_timestamp_1a0d7336c92bacc16e550140f8d42512b6"/><section>
+    <title>nanoseconds_since_midnight_local_cached()</title>
+<indexterm><primary>nanoseconds_since_midnight_local_cached</primary><secondary>i01::core::Timestamp</secondary></indexterm>
+<indexterm><primary>i01::core::Timestamp</primary><secondary>nanoseconds_since_midnight_local_cached</secondary></indexterm>
+<para><computeroutput>std::uint64_t i01::core::Timestamp::nanoseconds_since_midnight_local_cached ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classi01_1_1core_1_1_timestamp_1a943a29ce5a5004fb44661cae25736183"/><section>
+    <title>now()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>now</primary><secondary>i01::core::Timestamp</secondary></indexterm>
+<indexterm><primary>i01::core::Timestamp</primary><secondary>now</secondary></indexterm>
+<para><computeroutput>static const <link linkend="_classi01_1_1core_1_1_timestamp">Timestamp</link> i01::core::Timestamp::now ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classi01_1_1core_1_1_timestamp_1af6670965fc149800a04c34f7c3aea5bb"/><section>
+    <title>now()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>now</primary><secondary>i01::core::Timestamp</secondary></indexterm>
+<indexterm><primary>i01::core::Timestamp</primary><secondary>now</secondary></indexterm>
+<para><computeroutput>static bool i01::core::Timestamp::now (<link linkend="_classi01_1_1core_1_1_timestamp">Timestamp</link> &amp; ts)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classi01_1_1core_1_1_timestamp_1ad0ed37c37215e8d0e4f11ae16c5e41aa"/><section>
+    <title>operator+()</title>
+<indexterm><primary>operator+</primary><secondary>i01::core::Timestamp</secondary></indexterm>
+<indexterm><primary>i01::core::Timestamp</primary><secondary>operator+</secondary></indexterm>
+<para><computeroutput><link linkend="_classi01_1_1core_1_1_timestamp">Timestamp</link> i01::core::Timestamp::operator+ (const <link linkend="_classi01_1_1core_1_1_timestamp">Timestamp</link> &amp; t) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classi01_1_1core_1_1_timestamp_1a1b1692938d9c5193b3118501a947ed30"/><section>
+    <title>operator+=()</title>
+<indexterm><primary>operator+=</primary><secondary>i01::core::Timestamp</secondary></indexterm>
+<indexterm><primary>i01::core::Timestamp</primary><secondary>operator+=</secondary></indexterm>
+<para><computeroutput><link linkend="_classi01_1_1core_1_1_timestamp">Timestamp</link> &amp; i01::core::Timestamp::operator+= (const <link linkend="_classi01_1_1core_1_1_timestamp">Timestamp</link> &amp; t)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classi01_1_1core_1_1_timestamp_1ad37aa779dfda43b431f1bc09b8277eca"/><section>
+    <title>operator-()</title>
+<indexterm><primary>operator-</primary><secondary>i01::core::Timestamp</secondary></indexterm>
+<indexterm><primary>i01::core::Timestamp</primary><secondary>operator-</secondary></indexterm>
+<para><computeroutput><link linkend="_classi01_1_1core_1_1_timestamp">Timestamp</link> i01::core::Timestamp::operator- (const <link linkend="_classi01_1_1core_1_1_timestamp">Timestamp</link> &amp; t) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classi01_1_1core_1_1_timestamp_1a3ee5b301162117c6637f0f2f566e109e"/><section>
+    <title>operator-=()</title>
+<indexterm><primary>operator-=</primary><secondary>i01::core::Timestamp</secondary></indexterm>
+<indexterm><primary>i01::core::Timestamp</primary><secondary>operator-=</secondary></indexterm>
+<para><computeroutput><link linkend="_classi01_1_1core_1_1_timestamp">Timestamp</link> &amp; i01::core::Timestamp::operator-= (const <link linkend="_classi01_1_1core_1_1_timestamp">Timestamp</link> &amp; t)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classi01_1_1core_1_1_timestamp_1a0d06a6c5209757c308217b5b54037089"/><section>
+    <title>seconds_since_midnight()</title>
+<indexterm><primary>seconds_since_midnight</primary><secondary>i01::core::Timestamp</secondary></indexterm>
+<indexterm><primary>i01::core::Timestamp</primary><secondary>seconds_since_midnight</secondary></indexterm>
+<para><computeroutput>std::uint64_t i01::core::Timestamp::seconds_since_midnight ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classi01_1_1core_1_1_timestamp_1a40ff2e68bd50929d693b7fb6f93703fb"/><section>
+    <title>to_local_midnight_seconds_since_epoch_slow()</title>
+<indexterm><primary>to_local_midnight_seconds_since_epoch_slow</primary><secondary>i01::core::Timestamp</secondary></indexterm>
+<indexterm><primary>i01::core::Timestamp</primary><secondary>to_local_midnight_seconds_since_epoch_slow</secondary></indexterm>
+<para><computeroutput>time_t i01::core::Timestamp::to_local_midnight_seconds_since_epoch_slow (const time_t &amp; tv_sec_utc)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classi01_1_1core_1_1_timestamp_1aba5336caab42d4abb699b1f9ec1599fe"/><section>
+    <title>to_ns_since_cached_local_midnight()</title>
+<indexterm><primary>to_ns_since_cached_local_midnight</primary><secondary>i01::core::Timestamp</secondary></indexterm>
+<indexterm><primary>i01::core::Timestamp</primary><secondary>to_ns_since_cached_local_midnight</secondary></indexterm>
+<para><computeroutput>std::uint64_t i01::core::Timestamp::to_ns_since_cached_local_midnight (const <link linkend="_classi01_1_1core_1_1_timestamp">Timestamp</link> &amp; ts_utc)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Friends And Related Symbol Documentation</title>
+<anchor xml:id="_classi01_1_1core_1_1_timestamp_1adc0006f2c8afae2319488fb98d731596"/><section>
+    <title>operator&lt;&lt;</title>
+<indexterm><primary>operator&lt;&lt;</primary><secondary>i01::core::Timestamp</secondary></indexterm>
+<indexterm><primary>i01::core::Timestamp</primary><secondary>operator&lt;&lt;</secondary></indexterm>
+<para><computeroutput>std::ostream &amp; operator&lt;&lt; (std::ostream &amp; o, const <link linkend="_classi01_1_1core_1_1_timestamp">Timestamp</link> &amp; t)<computeroutput>[friend]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+C:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/i01_core/Time.hppC:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/i01_core/Time.cpp</section>
+</section>

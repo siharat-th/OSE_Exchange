@@ -1,0 +1,71 @@
+\doxysection{i01\+::net\+::SFCPkt\+Buf\+::SFCPkt\+Buf\+POD Struct Reference}
+\hypertarget{structi01_1_1net_1_1_s_f_c_pkt_buf_1_1_s_f_c_pkt_buf_p_o_d}{}\label{structi01_1_1net_1_1_s_f_c_pkt_buf_1_1_s_f_c_pkt_buf_p_o_d}\index{i01::net::SFCPktBuf::SFCPktBufPOD@{i01::net::SFCPktBuf::SFCPktBufPOD}}
+
+
+Represents the Packet Buffer POD (Plain Old Data) structure.  
+
+
+
+
+{\ttfamily \#include $<$SFCPkt\+Buf.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structi01_1_1net_1_1_s_f_c_pkt_buf_1_1_s_f_c_pkt_buf_p_o_d_acd8e7fb03ada6bd299bf57e7eefe31d0}\label{structi01_1_1net_1_1_s_f_c_pkt_buf_1_1_s_f_c_pkt_buf_p_o_d_acd8e7fb03ada6bd299bf57e7eefe31d0} 
+char m\+\_\+dma\+\_\+buf\mbox{[}1\mbox{]} {\bfseries \+\_\+\+\_\+attribute\+\_\+\+\_\+} ((aligned(EF\+\_\+\+VI\+\_\+\+DMA\+\_\+\+ALIGN)))
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+ef\+\_\+addr \mbox{\hyperlink{structi01_1_1net_1_1_s_f_c_pkt_buf_1_1_s_f_c_pkt_buf_p_o_d_a243a15d70294ac9d32730ca0f41916ba}{m\+\_\+addr}}
+\begin{DoxyCompactList}\small\item\em Which SFCVirtual\+Interface owns this \doxylink{classi01_1_1net_1_1_s_f_c_pkt_buf}{SFCPkt\+Buf}, for forward compatibility with RSS, etc. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structi01_1_1net_1_1_s_f_c_pkt_buf_1_1_s_f_c_pkt_buf_p_o_d_accd9422a526ccf1306999222dfbfe5d5}{m\+\_\+pool\+\_\+id}}
+\item 
+size\+\_\+t \mbox{\hyperlink{structi01_1_1net_1_1_s_f_c_pkt_buf_1_1_s_f_c_pkt_buf_p_o_d_a707e98f118554c38967ce6e8022e184a}{m\+\_\+data\+\_\+size}}
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structi01_1_1net_1_1_s_f_c_pkt_buf_1_1_s_f_c_pkt_buf_p_o_d_ac46fce1b136ade3ccbc2309f88c8f876}{m\+\_\+dma\+\_\+buf\+\_\+p}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the Packet Buffer POD (Plain Old Data) structure. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structi01_1_1net_1_1_s_f_c_pkt_buf_1_1_s_f_c_pkt_buf_p_o_d_a243a15d70294ac9d32730ca0f41916ba}\index{i01::net::SFCPktBuf::SFCPktBufPOD@{i01::net::SFCPktBuf::SFCPktBufPOD}!m\_addr@{m\_addr}}
+\index{m\_addr@{m\_addr}!i01::net::SFCPktBuf::SFCPktBufPOD@{i01::net::SFCPktBuf::SFCPktBufPOD}}
+\doxysubsubsection{\texorpdfstring{m\_addr}{m\_addr}}
+{\footnotesize\ttfamily \label{structi01_1_1net_1_1_s_f_c_pkt_buf_1_1_s_f_c_pkt_buf_p_o_d_a243a15d70294ac9d32730ca0f41916ba} 
+ef\+\_\+addr i01\+::net\+::\+SFCPkt\+Buf\+::\+SFCPkt\+Buf\+POD\+::m\+\_\+addr}
+
+
+
+Which SFCVirtual\+Interface owns this \doxylink{classi01_1_1net_1_1_s_f_c_pkt_buf}{SFCPkt\+Buf}, for forward compatibility with RSS, etc. 
+
+
+
+Referenced by \mbox{\hyperlink{l00042}{i01\+::net\+::\+SFCPkt\+Buf\+::addr()}}, and \mbox{\hyperlink{l00125}{KTN\+::\+TCP\+::\+EFVITcp\+V2\+::\+EFVI\+\_\+\+TCP\+\_\+\+Start()}}.
+
+\Hypertarget{structi01_1_1net_1_1_s_f_c_pkt_buf_1_1_s_f_c_pkt_buf_p_o_d_a707e98f118554c38967ce6e8022e184a}\index{i01::net::SFCPktBuf::SFCPktBufPOD@{i01::net::SFCPktBuf::SFCPktBufPOD}!m\_data\_size@{m\_data\_size}}
+\index{m\_data\_size@{m\_data\_size}!i01::net::SFCPktBuf::SFCPktBufPOD@{i01::net::SFCPktBuf::SFCPktBufPOD}}
+\doxysubsubsection{\texorpdfstring{m\_data\_size}{m\_data\_size}}
+{\footnotesize\ttfamily \label{structi01_1_1net_1_1_s_f_c_pkt_buf_1_1_s_f_c_pkt_buf_p_o_d_a707e98f118554c38967ce6e8022e184a} 
+size\+\_\+t i01\+::net\+::\+SFCPkt\+Buf\+::\+SFCPkt\+Buf\+POD\+::m\+\_\+data\+\_\+size}
+
+\Hypertarget{structi01_1_1net_1_1_s_f_c_pkt_buf_1_1_s_f_c_pkt_buf_p_o_d_ac46fce1b136ade3ccbc2309f88c8f876}\index{i01::net::SFCPktBuf::SFCPktBufPOD@{i01::net::SFCPktBuf::SFCPktBufPOD}!m\_dma\_buf\_p@{m\_dma\_buf\_p}}
+\index{m\_dma\_buf\_p@{m\_dma\_buf\_p}!i01::net::SFCPktBuf::SFCPktBufPOD@{i01::net::SFCPktBuf::SFCPktBufPOD}}
+\doxysubsubsection{\texorpdfstring{m\_dma\_buf\_p}{m\_dma\_buf\_p}}
+{\footnotesize\ttfamily \label{structi01_1_1net_1_1_s_f_c_pkt_buf_1_1_s_f_c_pkt_buf_p_o_d_ac46fce1b136ade3ccbc2309f88c8f876} 
+char\texorpdfstring{$\ast$}{*} i01\+::net\+::\+SFCPkt\+Buf\+::\+SFCPkt\+Buf\+POD\+::m\+\_\+dma\+\_\+buf\+\_\+p}
+
+\Hypertarget{structi01_1_1net_1_1_s_f_c_pkt_buf_1_1_s_f_c_pkt_buf_p_o_d_accd9422a526ccf1306999222dfbfe5d5}\index{i01::net::SFCPktBuf::SFCPktBufPOD@{i01::net::SFCPktBuf::SFCPktBufPOD}!m\_pool\_id@{m\_pool\_id}}
+\index{m\_pool\_id@{m\_pool\_id}!i01::net::SFCPktBuf::SFCPktBufPOD@{i01::net::SFCPktBuf::SFCPktBufPOD}}
+\doxysubsubsection{\texorpdfstring{m\_pool\_id}{m\_pool\_id}}
+{\footnotesize\ttfamily \label{structi01_1_1net_1_1_s_f_c_pkt_buf_1_1_s_f_c_pkt_buf_p_o_d_accd9422a526ccf1306999222dfbfe5d5} 
+int i01\+::net\+::\+SFCPkt\+Buf\+::\+SFCPkt\+Buf\+POD\+::m\+\_\+pool\+\_\+id}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sgaer/source/repos/katanafinancial/\+Occam\+CME4/\+Occam\+CME4/src/i01\+\_\+net/SFCPkt\+Buf.\+hpp\end{DoxyCompactItemize}

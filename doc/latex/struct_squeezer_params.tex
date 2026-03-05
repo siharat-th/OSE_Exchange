@@ -1,0 +1,112 @@
+\doxysection{Squeezer\+Params Struct Reference}
+\hypertarget{struct_squeezer_params}{}\label{struct_squeezer_params}\index{SqueezerParams@{SqueezerParams}}
+
+
+The \doxylink{struct_squeezer_params}{Squeezer\+Params} struct represents the parameters for the Squeezer algorithm.  
+
+
+
+
+{\ttfamily \#include $<$Squeezer\+Params.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_squeezer_params}{Squeezer\+Params}} \mbox{\hyperlink{struct_squeezer_params_a9c0c07577ff58c5b390850a3be695bbe}{parse}} (const std\+::string \&json\+\_\+str)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{struct_squeezer_params_ae0237dba11d0093d19580a6645b62fbb}{Valid\+Json}}
+\item 
+\mbox{\hyperlink{structalgometa}{algometa}} \mbox{\hyperlink{struct_squeezer_params_a3a49e3e134ad344fc19f206e957da4f0}{meta}}
+\item 
+string \mbox{\hyperlink{struct_squeezer_params_a1f44700431509a10a6570a4d19cb3906}{subid}}
+\item 
+tr1\+::unordered\+\_\+map$<$ int, \mbox{\hyperlink{structinstrument}{instrument}} $>$ \mbox{\hyperlink{struct_squeezer_params_a2459c5d758f5a7217667a2b09b769914}{Leg\+Sec\+Id\+Map}}
+\item 
+\mbox{\hyperlink{structinstrument}{instrument}} \mbox{\hyperlink{struct_squeezer_params_a05efdd1733bdfb3d8ab5c7fc64060b3a}{Legs}} \mbox{[}24\mbox{]}
+\item 
+int \mbox{\hyperlink{struct_squeezer_params_ad2a39d8264aba7587c45247b5b0e71ed}{Leg\+Count}}
+\item 
+tr1\+::unordered\+\_\+map$<$ string, \mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} $>$ \mbox{\hyperlink{struct_squeezer_params_a05617cb10133bba9951b6ee959ed77c4}{Ords}}
+\item 
+double \mbox{\hyperlink{struct_squeezer_params_afd3ce054a53097b0c48ff996efc8c2b6}{Order\+Qty}}
+\item 
+double \mbox{\hyperlink{struct_squeezer_params_a435a73dcdb8ba6b0e8f543dec02d1e83}{Total\+Qty}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{struct_squeezer_params}{Squeezer\+Params} struct represents the parameters for the Squeezer algorithm. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_squeezer_params_a9c0c07577ff58c5b390850a3be695bbe}\index{SqueezerParams@{SqueezerParams}!parse@{parse}}
+\index{parse@{parse}!SqueezerParams@{SqueezerParams}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily \label{struct_squeezer_params_a9c0c07577ff58c5b390850a3be695bbe} 
+\mbox{\hyperlink{struct_squeezer_params}{Squeezer\+Params}} Squeezer\+Params\+::parse (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{json\+\_\+str}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_squeezer_params_ad2a39d8264aba7587c45247b5b0e71ed}\index{SqueezerParams@{SqueezerParams}!LegCount@{LegCount}}
+\index{LegCount@{LegCount}!SqueezerParams@{SqueezerParams}}
+\doxysubsubsection{\texorpdfstring{LegCount}{LegCount}}
+{\footnotesize\ttfamily \label{struct_squeezer_params_ad2a39d8264aba7587c45247b5b0e71ed} 
+int Squeezer\+Params\+::\+Leg\+Count}
+
+\Hypertarget{struct_squeezer_params_a05efdd1733bdfb3d8ab5c7fc64060b3a}\index{SqueezerParams@{SqueezerParams}!Legs@{Legs}}
+\index{Legs@{Legs}!SqueezerParams@{SqueezerParams}}
+\doxysubsubsection{\texorpdfstring{Legs}{Legs}}
+{\footnotesize\ttfamily \label{struct_squeezer_params_a05efdd1733bdfb3d8ab5c7fc64060b3a} 
+\mbox{\hyperlink{structinstrument}{instrument}} Squeezer\+Params\+::\+Legs\mbox{[}24\mbox{]}}
+
+\Hypertarget{struct_squeezer_params_a2459c5d758f5a7217667a2b09b769914}\index{SqueezerParams@{SqueezerParams}!LegSecIdMap@{LegSecIdMap}}
+\index{LegSecIdMap@{LegSecIdMap}!SqueezerParams@{SqueezerParams}}
+\doxysubsubsection{\texorpdfstring{LegSecIdMap}{LegSecIdMap}}
+{\footnotesize\ttfamily \label{struct_squeezer_params_a2459c5d758f5a7217667a2b09b769914} 
+tr1\+::unordered\+\_\+map$<$int, \mbox{\hyperlink{structinstrument}{instrument}}$>$ Squeezer\+Params\+::\+Leg\+Sec\+Id\+Map}
+
+\Hypertarget{struct_squeezer_params_a3a49e3e134ad344fc19f206e957da4f0}\index{SqueezerParams@{SqueezerParams}!meta@{meta}}
+\index{meta@{meta}!SqueezerParams@{SqueezerParams}}
+\doxysubsubsection{\texorpdfstring{meta}{meta}}
+{\footnotesize\ttfamily \label{struct_squeezer_params_a3a49e3e134ad344fc19f206e957da4f0} 
+\mbox{\hyperlink{structalgometa}{algometa}} Squeezer\+Params\+::meta}
+
+\Hypertarget{struct_squeezer_params_afd3ce054a53097b0c48ff996efc8c2b6}\index{SqueezerParams@{SqueezerParams}!OrderQty@{OrderQty}}
+\index{OrderQty@{OrderQty}!SqueezerParams@{SqueezerParams}}
+\doxysubsubsection{\texorpdfstring{OrderQty}{OrderQty}}
+{\footnotesize\ttfamily \label{struct_squeezer_params_afd3ce054a53097b0c48ff996efc8c2b6} 
+double Squeezer\+Params\+::\+Order\+Qty}
+
+\Hypertarget{struct_squeezer_params_a05617cb10133bba9951b6ee959ed77c4}\index{SqueezerParams@{SqueezerParams}!Ords@{Ords}}
+\index{Ords@{Ords}!SqueezerParams@{SqueezerParams}}
+\doxysubsubsection{\texorpdfstring{Ords}{Ords}}
+{\footnotesize\ttfamily \label{struct_squeezer_params_a05617cb10133bba9951b6ee959ed77c4} 
+tr1\+::unordered\+\_\+map$<$string, \mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}}$>$ Squeezer\+Params\+::\+Ords}
+
+\Hypertarget{struct_squeezer_params_a1f44700431509a10a6570a4d19cb3906}\index{SqueezerParams@{SqueezerParams}!subid@{subid}}
+\index{subid@{subid}!SqueezerParams@{SqueezerParams}}
+\doxysubsubsection{\texorpdfstring{subid}{subid}}
+{\footnotesize\ttfamily \label{struct_squeezer_params_a1f44700431509a10a6570a4d19cb3906} 
+string Squeezer\+Params\+::subid}
+
+\Hypertarget{struct_squeezer_params_a435a73dcdb8ba6b0e8f543dec02d1e83}\index{SqueezerParams@{SqueezerParams}!TotalQty@{TotalQty}}
+\index{TotalQty@{TotalQty}!SqueezerParams@{SqueezerParams}}
+\doxysubsubsection{\texorpdfstring{TotalQty}{TotalQty}}
+{\footnotesize\ttfamily \label{struct_squeezer_params_a435a73dcdb8ba6b0e8f543dec02d1e83} 
+double Squeezer\+Params\+::\+Total\+Qty}
+
+\Hypertarget{struct_squeezer_params_ae0237dba11d0093d19580a6645b62fbb}\index{SqueezerParams@{SqueezerParams}!ValidJson@{ValidJson}}
+\index{ValidJson@{ValidJson}!SqueezerParams@{SqueezerParams}}
+\doxysubsubsection{\texorpdfstring{ValidJson}{ValidJson}}
+{\footnotesize\ttfamily \label{struct_squeezer_params_ae0237dba11d0093d19580a6645b62fbb} 
+bool Squeezer\+Params\+::\+Valid\+Json}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Algo\+Params/Squeezer\+Params.\+hpp\item 
+Algo\+Params/Squeezer\+Params.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiation_response_msg_1_1_block_data" xml:lang="en-US">
+<title>KTN::CME::IL3::NegotiationResponseMsg::BlockData Struct Reference</title>
+<indexterm><primary>KTN::CME::IL3::NegotiationResponseMsg::BlockData</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiation_response_msg_1_1_block_data_1a21f3c23c28a7b6e6d4dc00d933b421ac">UUID</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiation_response_msg_1_1_block_data_1af663c92e7a308a1d19cf6fea3e075c44">RequestTimestamp</link></para>
+</listitem>
+            <listitem><para>uInt16NULL <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiation_response_msg_1_1_block_data_1a013cf4053351031aec9d305bb38bd792">SecretKeySecureIDExpiration</link></para>
+</listitem>
+            <listitem><para>EnumFTI <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiation_response_msg_1_1_block_data_1a10f7a4ffb44793a306308398a8910979">FaultToleranceIndicator</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiation_response_msg_1_1_block_data_1aa9fade902250d893aeeac44ea59facbf">SplitMsg</link></para>
+</listitem>
+            <listitem><para>uInt32 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiation_response_msg_1_1_block_data_1a15b6420427b04f1d7dcf3f8279dc0b4b">PreviousSeqNo</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiation_response_msg_1_1_block_data_1a88049afabdda3aa3fc474277f383f93a">PreviousUUID</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiation_response_msg_1_1_block_data_1a10f7a4ffb44793a306308398a8910979"/><section>
+    <title>FaultToleranceIndicator</title>
+<indexterm><primary>FaultToleranceIndicator</primary><secondary>KTN::CME::IL3::NegotiationResponseMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::NegotiationResponseMsg::BlockData</primary><secondary>FaultToleranceIndicator</secondary></indexterm>
+<para><computeroutput>EnumFTI KTN::CME::IL3::NegotiationResponseMsg::BlockData::FaultToleranceIndicator</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiation_response_msg_1_1_block_data_1a15b6420427b04f1d7dcf3f8279dc0b4b"/><section>
+    <title>PreviousSeqNo</title>
+<indexterm><primary>PreviousSeqNo</primary><secondary>KTN::CME::IL3::NegotiationResponseMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::NegotiationResponseMsg::BlockData</primary><secondary>PreviousSeqNo</secondary></indexterm>
+<para><computeroutput>uInt32 KTN::CME::IL3::NegotiationResponseMsg::BlockData::PreviousSeqNo</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiation_response_msg_1_1_block_data_1a88049afabdda3aa3fc474277f383f93a"/><section>
+    <title>PreviousUUID</title>
+<indexterm><primary>PreviousUUID</primary><secondary>KTN::CME::IL3::NegotiationResponseMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::NegotiationResponseMsg::BlockData</primary><secondary>PreviousUUID</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::NegotiationResponseMsg::BlockData::PreviousUUID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiation_response_msg_1_1_block_data_1af663c92e7a308a1d19cf6fea3e075c44"/><section>
+    <title>RequestTimestamp</title>
+<indexterm><primary>RequestTimestamp</primary><secondary>KTN::CME::IL3::NegotiationResponseMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::NegotiationResponseMsg::BlockData</primary><secondary>RequestTimestamp</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::NegotiationResponseMsg::BlockData::RequestTimestamp</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiation_response_msg_1_1_block_data_1a013cf4053351031aec9d305bb38bd792"/><section>
+    <title>SecretKeySecureIDExpiration</title>
+<indexterm><primary>SecretKeySecureIDExpiration</primary><secondary>KTN::CME::IL3::NegotiationResponseMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::NegotiationResponseMsg::BlockData</primary><secondary>SecretKeySecureIDExpiration</secondary></indexterm>
+<para><computeroutput>uInt16NULL KTN::CME::IL3::NegotiationResponseMsg::BlockData::SecretKeySecureIDExpiration</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiation_response_msg_1_1_block_data_1aa9fade902250d893aeeac44ea59facbf"/><section>
+    <title>SplitMsg</title>
+<indexterm><primary>SplitMsg</primary><secondary>KTN::CME::IL3::NegotiationResponseMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::NegotiationResponseMsg::BlockData</primary><secondary>SplitMsg</secondary></indexterm>
+<para><computeroutput>uint8_t KTN::CME::IL3::NegotiationResponseMsg::BlockData::SplitMsg</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiation_response_msg_1_1_block_data_1a21f3c23c28a7b6e6d4dc00d933b421ac"/><section>
+    <title>UUID</title>
+<indexterm><primary>UUID</primary><secondary>KTN::CME::IL3::NegotiationResponseMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::NegotiationResponseMsg::BlockData</primary><secondary>UUID</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::NegotiationResponseMsg::BlockData::UUID</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+exchsupport/cme/il3/IL3Messages2.hpp</section>
+</section>

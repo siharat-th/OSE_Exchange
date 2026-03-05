@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_zmq_logger" xml:lang="en-US">
+<title>ZmqLogger Class Reference</title>
+<indexterm><primary>ZmqLogger</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_zmq_logger">ZmqLogger</link> class is responsible for logging messages using ZeroMQ. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;ZmqLogger.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for ZmqLogger:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_zmq_logger.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_zmq_logger_1aaea5cf5130efc1fb06eda25d9006d8d3">ZmqLogger</link> ()</para>
+
+<para>Default constructor for the <link linkend="_class_zmq_logger">ZmqLogger</link> class. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_zmq_logger_1ae2ec7e0ef12c79d2051845fc65c21eb0">~ZmqLogger</link> ()</para>
+
+<para>Destructor for the <link linkend="_class_zmq_logger">ZmqLogger</link> class. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_zmq_logger_1ad990e9562dac546aee2d166056f8d56d">WriteLine</link> (const std::string &amp;msg, const std::string &amp;topic, int color)</para>
+
+<para>Writes a log message with the specified topic and color. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_zmq_logger_1a7ebfbb239d76dca960d4f3f0bd990bdb">Run</link> () override</para>
+
+<para>Runs the <link linkend="_class_zmq_logger">ZmqLogger</link> thread. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_zmq_logger_1a8b68efd8d2f5f6df976ccdcd8b549268">Replay</link> (int count)</para>
+
+<para>Replays a specified number of log messages. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_zmq_logger_1abe56640a0b769cccae37533bda02aff3">Replay</link> (int count, const string &amp;owner)</para>
+
+<para>Replays a specified number of log messages for a specific owner. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_class_i_logger">ILogger</link>        <itemizedlist>
+            <listitem><para>virtual <emphasis role="strong">~ILogger</emphasis> ()=default</para>
+
+<para>Destructor for the <link linkend="_class_i_logger">ILogger</link> class. </para>
+</listitem>
+        </itemizedlist>
+Public Member Functions inherited from <link linkend="_class_named_thread">NamedThread</link>        <itemizedlist>
+            <listitem><para><link linkend="_class_named_thread_1a891fabdc2d824048ec05c82e7ef8c69a">NamedThread</link> ()</para>
+
+<para>Default constructor. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_named_thread_1a018dadb59e5af98ee734301a1baa50cb">~NamedThread</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_named_thread_1a9fa42542ff43c89fb9bbc33de9c87e34">CreateAndRun</link> (string name, int core)</para>
+
+<para>Creates and runs the named thread on the specified core. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_named_thread_1ad4809c571171be13f0f91f540d5c196f">Join</link> ()</para>
+
+<para>Joins the named thread. </para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_zmq_logger">ZmqLogger</link> class is responsible for logging messages using ZeroMQ. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_zmq_logger_1aaea5cf5130efc1fb06eda25d9006d8d3"/><section>
+    <title>ZmqLogger()</title>
+<indexterm><primary>ZmqLogger</primary><secondary>ZmqLogger</secondary></indexterm>
+<indexterm><primary>ZmqLogger</primary><secondary>ZmqLogger</secondary></indexterm>
+<para><computeroutput>ZmqLogger::ZmqLogger ( )</computeroutput></para><para>
+
+<para>Default constructor for the <link linkend="_class_zmq_logger">ZmqLogger</link> class. </para>
+</para>
+<para>
+References <link linkend="_l00018">NamedThread::CreateAndRun()</link>, and <link linkend="_l00123">Settings::get()</link>.</para>
+</section>
+<anchor xml:id="_class_zmq_logger_1ae2ec7e0ef12c79d2051845fc65c21eb0"/><section>
+    <title>~ZmqLogger()</title>
+<indexterm><primary>~ZmqLogger</primary><secondary>ZmqLogger</secondary></indexterm>
+<indexterm><primary>ZmqLogger</primary><secondary>~ZmqLogger</secondary></indexterm>
+<para><computeroutput>ZmqLogger::~ZmqLogger ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Destructor for the <link linkend="_class_zmq_logger">ZmqLogger</link> class. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_zmq_logger_1a8b68efd8d2f5f6df976ccdcd8b549268"/><section>
+    <title>Replay()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>Replay</primary><secondary>ZmqLogger</secondary></indexterm>
+<indexterm><primary>ZmqLogger</primary><secondary>Replay</secondary></indexterm>
+<para><computeroutput>void ZmqLogger::Replay (int count)</computeroutput></para><para>
+
+<para>Replays a specified number of log messages. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>count</entry><entry>
+<para>The number of log messages to replay. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_zmq_logger_1abe56640a0b769cccae37533bda02aff3"/><section>
+    <title>Replay()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>Replay</primary><secondary>ZmqLogger</secondary></indexterm>
+<indexterm><primary>ZmqLogger</primary><secondary>Replay</secondary></indexterm>
+<para><computeroutput>void ZmqLogger::Replay (int count, const string &amp; owner)</computeroutput></para><para>
+
+<para>Replays a specified number of log messages for a specific owner. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>count</entry><entry>
+<para>The number of log messages to replay. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>owner</entry><entry>
+<para>The owner of the log messages. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_zmq_logger_1a7ebfbb239d76dca960d4f3f0bd990bdb"/><section>
+    <title>Run()</title>
+<indexterm><primary>Run</primary><secondary>ZmqLogger</secondary></indexterm>
+<indexterm><primary>ZmqLogger</primary><secondary>Run</secondary></indexterm>
+<para><computeroutput>void ZmqLogger::Run ( )<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Runs the <link linkend="_class_zmq_logger">ZmqLogger</link> thread. </para>
+</para>
+<para>
+Implements <link linkend="_class_named_thread">NamedThread</link>.</para>
+<para>
+References <link linkend="_l00123">Settings::get()</link>, <link linkend="_l00133">Settings::getInteger()</link>, <link linkend="_l00174">KTN::Core::SPSCRingBuffer&lt; T &gt;::size_approx()</link>, and <link linkend="_l00123">KTN::Core::SPSCRingBuffer&lt; T &gt;::try_dequeue()</link>.</para>
+</section>
+<anchor xml:id="_class_zmq_logger_1ad990e9562dac546aee2d166056f8d56d"/><section>
+    <title>WriteLine()</title>
+<indexterm><primary>WriteLine</primary><secondary>ZmqLogger</secondary></indexterm>
+<indexterm><primary>ZmqLogger</primary><secondary>WriteLine</secondary></indexterm>
+<para><computeroutput>void ZmqLogger::WriteLine (const std::string &amp; msg, const std::string &amp; topic, int color)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Writes a log message with the specified topic and color. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>msg</entry><entry>
+<para>The log message to write. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>topic</entry><entry>
+<para>The topic of the log message. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>color</entry><entry>
+<para>The color of the log message. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implements <link linkend="_class_i_logger_1aad7dd43147c64f86da71bf6bfb488b36">ILogger</link>.</para>
+<para>
+References <link linkend="_l00026">LogMsg::color</link>, <link linkend="_l00062">KTN::Core::SPSCRingBuffer&lt; T &gt;::enqueue()</link>, <link linkend="_l00031">LogLevel::ERROR</link>, <link linkend="_l00029">LogLevel::INFO</link>, <link linkend="_l00027">LogMsg::loglevel</link>, <link linkend="_l00025">LogMsg::msg</link>, and <link linkend="_l00024">LogMsg::topic</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Loggers/ZmqLogger.hppLoggers/ZmqLogger.cpp</section>
+</section>

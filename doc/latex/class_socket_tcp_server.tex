@@ -1,0 +1,108 @@
+\doxysection{Socket\+Tcp\+Server\texorpdfstring{$<$}{<} Conf \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_socket_tcp_server}{}\label{class_socket_tcp_server}\index{SocketTcpServer$<$ Conf $>$@{SocketTcpServer$<$ Conf $>$}}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{class_socket_tcp_server_a481018e89fe949fe4c97684d82ee7f6b}{Conn}} = \mbox{\hyperlink{class_socket_tcp_connection}{Socket\+Tcp\+Connection}}$<$Conf$>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_socket_tcp_server_a64c03f40f33c4cf219d41bfebd0f62dd}{init}} (const char \texorpdfstring{$\ast$}{*}interface, const char \texorpdfstring{$\ast$}{*}server\+\_\+ip, uint16\+\_\+t server\+\_\+port)
+\item 
+void \mbox{\hyperlink{class_socket_tcp_server_a21c97ee0bffa8574165fe0ed18170244}{close}} (const char \texorpdfstring{$\ast$}{*}reason)
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_socket_tcp_server_ab04fbf0769baf7d2477c6df56d0d9360}{get\+Last\+Error}} ()
+\item 
+bool \mbox{\hyperlink{class_socket_tcp_server_aada9eb34e078b12773540958cfb09ab8}{is\+Closed}} ()
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_socket_tcp_server_a625a77978323dd339f304bd59f0d24d7}{get\+Conn\+Cnt}} ()
+\item 
+{\footnotesize template$<$typename Handler $>$ }\\void \mbox{\hyperlink{class_socket_tcp_server_af676a25abb5a6a82c01ab90665879452}{foreach\+Conn}} (Handler handler)
+\item 
+{\footnotesize template$<$typename Handler $>$ }\\void \mbox{\hyperlink{class_socket_tcp_server_acfe139b1d46dfd875b096e6fdd75bdfa}{poll}} (Handler \&handler)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Conf$>$\newline
+class Socket\+Tcp\+Server$<$ Conf $>$}
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{class_socket_tcp_server_a481018e89fe949fe4c97684d82ee7f6b}\index{SocketTcpServer$<$ Conf $>$@{SocketTcpServer$<$ Conf $>$}!Conn@{Conn}}
+\index{Conn@{Conn}!SocketTcpServer$<$ Conf $>$@{SocketTcpServer$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{Conn}{Conn}}
+{\footnotesize\ttfamily \label{class_socket_tcp_server_a481018e89fe949fe4c97684d82ee7f6b} 
+template$<$typename Conf $>$ \\
+using \mbox{\hyperlink{class_socket_tcp_server}{Socket\+Tcp\+Server}}$<$ Conf $>$\+::\+Conn = \mbox{\hyperlink{class_socket_tcp_connection}{Socket\+Tcp\+Connection}}$<$Conf$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_socket_tcp_server_a09d5d48bddfea25e40d78b67863c0be1}\index{SocketTcpServer$<$ Conf $>$@{SocketTcpServer$<$ Conf $>$}!````~SocketTcpServer@{\texorpdfstring{$\sim$}{\string~}SocketTcpServer}}
+\index{````~SocketTcpServer@{\texorpdfstring{$\sim$}{\string~}SocketTcpServer}!SocketTcpServer$<$ Conf $>$@{SocketTcpServer$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}SocketTcpServer()}{\string~SocketTcpServer()}}
+{\footnotesize\ttfamily \label{class_socket_tcp_server_a09d5d48bddfea25e40d78b67863c0be1} 
+template$<$typename Conf $>$ \\
+\mbox{\hyperlink{class_socket_tcp_server}{Socket\+Tcp\+Server}}$<$ Conf $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{class_socket_tcp_server}{Socket\+Tcp\+Server}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_socket_tcp_server_a21c97ee0bffa8574165fe0ed18170244}\index{SocketTcpServer$<$ Conf $>$@{SocketTcpServer$<$ Conf $>$}!close@{close}}
+\index{close@{close}!SocketTcpServer$<$ Conf $>$@{SocketTcpServer$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily \label{class_socket_tcp_server_a21c97ee0bffa8574165fe0ed18170244} 
+template$<$typename Conf $>$ \\
+void \mbox{\hyperlink{class_socket_tcp_server}{Socket\+Tcp\+Server}}$<$ Conf $>$\+::close (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{reason}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_socket_tcp_server_af676a25abb5a6a82c01ab90665879452}\index{SocketTcpServer$<$ Conf $>$@{SocketTcpServer$<$ Conf $>$}!foreachConn@{foreachConn}}
+\index{foreachConn@{foreachConn}!SocketTcpServer$<$ Conf $>$@{SocketTcpServer$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{foreachConn()}{foreachConn()}}
+{\footnotesize\ttfamily \label{class_socket_tcp_server_af676a25abb5a6a82c01ab90665879452} 
+template$<$typename Conf $>$ \\
+template$<$typename Handler $>$ \\
+void \mbox{\hyperlink{class_socket_tcp_server}{Socket\+Tcp\+Server}}$<$ Conf $>$\+::foreach\+Conn (\begin{DoxyParamCaption}\item[{Handler}]{handler}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_socket_tcp_server_a625a77978323dd339f304bd59f0d24d7}\index{SocketTcpServer$<$ Conf $>$@{SocketTcpServer$<$ Conf $>$}!getConnCnt@{getConnCnt}}
+\index{getConnCnt@{getConnCnt}!SocketTcpServer$<$ Conf $>$@{SocketTcpServer$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{getConnCnt()}{getConnCnt()}}
+{\footnotesize\ttfamily \label{class_socket_tcp_server_a625a77978323dd339f304bd59f0d24d7} 
+template$<$typename Conf $>$ \\
+uint32\+\_\+t \mbox{\hyperlink{class_socket_tcp_server}{Socket\+Tcp\+Server}}$<$ Conf $>$\+::get\+Conn\+Cnt (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_socket_tcp_server_ab04fbf0769baf7d2477c6df56d0d9360}\index{SocketTcpServer$<$ Conf $>$@{SocketTcpServer$<$ Conf $>$}!getLastError@{getLastError}}
+\index{getLastError@{getLastError}!SocketTcpServer$<$ Conf $>$@{SocketTcpServer$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{getLastError()}{getLastError()}}
+{\footnotesize\ttfamily \label{class_socket_tcp_server_ab04fbf0769baf7d2477c6df56d0d9360} 
+template$<$typename Conf $>$ \\
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_socket_tcp_server}{Socket\+Tcp\+Server}}$<$ Conf $>$\+::get\+Last\+Error (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_socket_tcp_server_a64c03f40f33c4cf219d41bfebd0f62dd}\index{SocketTcpServer$<$ Conf $>$@{SocketTcpServer$<$ Conf $>$}!init@{init}}
+\index{init@{init}!SocketTcpServer$<$ Conf $>$@{SocketTcpServer$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \label{class_socket_tcp_server_a64c03f40f33c4cf219d41bfebd0f62dd} 
+template$<$typename Conf $>$ \\
+bool \mbox{\hyperlink{class_socket_tcp_server}{Socket\+Tcp\+Server}}$<$ Conf $>$\+::init (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{interface}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{server\+\_\+ip}{, }\item[{uint16\+\_\+t}]{server\+\_\+port}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_socket_tcp_server_aada9eb34e078b12773540958cfb09ab8}\index{SocketTcpServer$<$ Conf $>$@{SocketTcpServer$<$ Conf $>$}!isClosed@{isClosed}}
+\index{isClosed@{isClosed}!SocketTcpServer$<$ Conf $>$@{SocketTcpServer$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{isClosed()}{isClosed()}}
+{\footnotesize\ttfamily \label{class_socket_tcp_server_aada9eb34e078b12773540958cfb09ab8} 
+template$<$typename Conf $>$ \\
+bool \mbox{\hyperlink{class_socket_tcp_server}{Socket\+Tcp\+Server}}$<$ Conf $>$\+::is\+Closed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_socket_tcp_server_acfe139b1d46dfd875b096e6fdd75bdfa}\index{SocketTcpServer$<$ Conf $>$@{SocketTcpServer$<$ Conf $>$}!poll@{poll}}
+\index{poll@{poll}!SocketTcpServer$<$ Conf $>$@{SocketTcpServer$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{poll()}{poll()}}
+{\footnotesize\ttfamily \label{class_socket_tcp_server_acfe139b1d46dfd875b096e6fdd75bdfa} 
+template$<$typename Conf $>$ \\
+template$<$typename Handler $>$ \\
+void \mbox{\hyperlink{class_socket_tcp_server}{Socket\+Tcp\+Server}}$<$ Conf $>$\+::poll (\begin{DoxyParamCaption}\item[{Handler \&}]{handler}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sgaer/source/repos/katanafinancial/\+Occam\+CME4/\+Occam\+CME4/src/external/pollnet/Socket.\+h\end{DoxyCompactItemize}

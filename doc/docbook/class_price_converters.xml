@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_price_converters" xml:lang="en-US">
+<title>PriceConverters Class Reference</title>
+<indexterm><primary>PriceConverters</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_price_converters">PriceConverters</link> class provides utility functions for converting prices. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;PriceConverters.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static int32_t <link linkend="_class_price_converters_1ad297b0e0e7aa63c33f715d4da0041074">FromMantissa9</link> (int64_t mantissa)</para>
+
+<para>Converts a mantissa value to an integer price. </para>
+</listitem>
+            <listitem><para>static int64_t <link linkend="_class_price_converters_1ad98e8875e6619d705d62bb5b4185abf3">ToMantissa</link> (int32_t price)</para>
+
+<para>Converts an integer price to a mantissa value. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>static constexpr int64_t <link linkend="_class_price_converters_1aa41186b120a5a12b85399d90737ae7d2">ten_to_the_nine</link> = 1000000000</para>
+</listitem>
+            <listitem><para>static constexpr double <link linkend="_class_price_converters_1a2cd9b60fbc302b6f44960c2898137853">reciprocal</link> = 1.0 / ten_to_the_nine</para>
+</listitem>
+            <listitem><para>static constexpr int64_t <link linkend="_class_price_converters_1aca4fed0fbfdd813373bceae6275b4d62">MAGIC_NUMBER</link> = 2305843009LL</para>
+</listitem>
+            <listitem><para>static constexpr int32_t <link linkend="_class_price_converters_1a6350e5469a7fe98a35d28eb22e08c563">SHIFT</link> = 30</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_price_converters">PriceConverters</link> class provides utility functions for converting prices. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_price_converters_1ad297b0e0e7aa63c33f715d4da0041074"/><section>
+    <title>FromMantissa9()</title>
+<indexterm><primary>FromMantissa9</primary><secondary>PriceConverters</secondary></indexterm>
+<indexterm><primary>PriceConverters</primary><secondary>FromMantissa9</secondary></indexterm>
+<para><computeroutput>static int32_t PriceConverters::FromMantissa9 (int64_t mantissa)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Converts a mantissa value to an integer price. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>mantissa</entry><entry>
+<para>The mantissa value to convert. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The converted integer price. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_price_converters_1ad98e8875e6619d705d62bb5b4185abf3"/><section>
+    <title>ToMantissa()</title>
+<indexterm><primary>ToMantissa</primary><secondary>PriceConverters</secondary></indexterm>
+<indexterm><primary>PriceConverters</primary><secondary>ToMantissa</secondary></indexterm>
+<para><computeroutput>static int64_t PriceConverters::ToMantissa (int32_t price)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Converts an integer price to a mantissa value. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>price</entry><entry>
+<para>The integer price to convert. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The converted mantissa value. </para>
+</formalpara>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_price_converters_1aca4fed0fbfdd813373bceae6275b4d62"/><section>
+    <title>MAGIC_NUMBER</title>
+<indexterm><primary>MAGIC_NUMBER</primary><secondary>PriceConverters</secondary></indexterm>
+<indexterm><primary>PriceConverters</primary><secondary>MAGIC_NUMBER</secondary></indexterm>
+<para><computeroutput>int64_t PriceConverters::MAGIC_NUMBER = 2305843009LL<computeroutput>[static]</computeroutput>, <computeroutput>[constexpr]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_price_converters_1a2cd9b60fbc302b6f44960c2898137853"/><section>
+    <title>reciprocal</title>
+<indexterm><primary>reciprocal</primary><secondary>PriceConverters</secondary></indexterm>
+<indexterm><primary>PriceConverters</primary><secondary>reciprocal</secondary></indexterm>
+<para><computeroutput>double PriceConverters::reciprocal = 1.0 / ten_to_the_nine<computeroutput>[static]</computeroutput>, <computeroutput>[constexpr]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_price_converters_1a6350e5469a7fe98a35d28eb22e08c563"/><section>
+    <title>SHIFT</title>
+<indexterm><primary>SHIFT</primary><secondary>PriceConverters</secondary></indexterm>
+<indexterm><primary>PriceConverters</primary><secondary>SHIFT</secondary></indexterm>
+<para><computeroutput>int32_t PriceConverters::SHIFT = 30<computeroutput>[static]</computeroutput>, <computeroutput>[constexpr]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_price_converters_1aa41186b120a5a12b85399d90737ae7d2"/><section>
+    <title>ten_to_the_nine</title>
+<indexterm><primary>ten_to_the_nine</primary><secondary>PriceConverters</secondary></indexterm>
+<indexterm><primary>PriceConverters</primary><secondary>ten_to_the_nine</secondary></indexterm>
+<para><computeroutput>int64_t PriceConverters::ten_to_the_nine = 1000000000<computeroutput>[static]</computeroutput>, <computeroutput>[constexpr]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+exchsupport/cme/PriceConverters.hpp</section>
+</section>

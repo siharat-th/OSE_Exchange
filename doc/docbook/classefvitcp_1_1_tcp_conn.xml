@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classefvitcp_1_1_tcp_conn" xml:lang="en-US">
+<title>efvitcp::TcpConn&lt; Conf &gt; Class Template Reference</title>
+<indexterm><primary>efvitcp::TcpConn&lt; Conf &gt;</primary></indexterm>
+<para>Inheritance diagram for efvitcp::TcpConn&lt; Conf &gt;:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classefvitcp_1_1_tcp_conn.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>uint32_t <link linkend="_classefvitcp_1_1_tcp_conn_1aea31f915fbb4cf0f2928286a4b7840f0">getConnId</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classefvitcp_1_1_tcp_conn_1ade7a61d34bfa969fd8848ddddae49aac">getPeername</link> (struct sockaddr_in &amp;addr)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classefvitcp_1_1_tcp_conn_1a9efaac2226d449f304fd88627d1eb464">isEstablished</link> ()</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classefvitcp_1_1_tcp_conn_1a7353cd5d41392e5c33837d0c487b32b6">isClosed</link> ()</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_classefvitcp_1_1_tcp_conn_1a8b74de6bba8315256552b9a2fb475b0b">getSendable</link> ()</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_classefvitcp_1_1_tcp_conn_1aabb28825bcfb444c85712a9ec7b36124">getImmediatelySendable</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classefvitcp_1_1_tcp_conn_1ad7253e226cfd132ada2aff4b082e795d">send_warmup_to_conn</link> ()</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_classefvitcp_1_1_tcp_conn_1aa68e2383508338bd5ea577724b0bd471">send</link> (const void *data, uint32_t size, bool more=false)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_classefvitcp_1_1_tcp_conn_1ac147bf60cb37f19b40cabc0ccb6ccc52">sendv</link> (const iovec *iov, int iovcnt)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classefvitcp_1_1_tcp_conn_1a0e0c6cfcff5b002cfbebe7e6953c16f5">sendFin</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classefvitcp_1_1_tcp_conn_1ab4bffbf85257a1d1394c1d89173a2069">setUserTimer</link> (uint32_t timer_id, uint32_t duration)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classefvitcp_1_1_tcp_conn_1a4849d6c6b4876f7d7be8e571b012703b">close</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Friends    </title>
+        <itemizedlist>
+            <listitem><para>template&lt;typename C &gt; </para><para>class <link linkend="_classefvitcp_1_1_tcp_conn_1a8c25230390bc314e8170aa74b7dc7c1f">TcpClient</link></para>
+</listitem>
+            <listitem><para>template&lt;typename C &gt; </para><para>class <link linkend="_classefvitcp_1_1_tcp_conn_1a91ddfaf0dcaf2389521d34efd207d9f6">TcpServer</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;typename Conf&gt;<?linebreak?>class efvitcp::TcpConn&lt; Conf &gt;</title></simplesect>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classefvitcp_1_1_tcp_conn_1a4849d6c6b4876f7d7be8e571b012703b"/><section>
+    <title>close()</title>
+<indexterm><primary>close</primary><secondary>efvitcp::TcpConn&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::TcpConn&lt; Conf &gt;</primary><secondary>close</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>void <link linkend="_classefvitcp_1_1_tcp_conn">efvitcp::TcpConn</link>&lt; Conf &gt;::close ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_tcp_conn_1aea31f915fbb4cf0f2928286a4b7840f0"/><section>
+    <title>getConnId()</title>
+<indexterm><primary>getConnId</primary><secondary>efvitcp::TcpConn&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::TcpConn&lt; Conf &gt;</primary><secondary>getConnId</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>uint32_t <link linkend="_classefvitcp_1_1_tcp_conn">efvitcp::TcpConn</link>&lt; Conf &gt;::getConnId ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_tcp_conn_1aabb28825bcfb444c85712a9ec7b36124"/><section>
+    <title>getImmediatelySendable()</title>
+<indexterm><primary>getImmediatelySendable</primary><secondary>efvitcp::TcpConn&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::TcpConn&lt; Conf &gt;</primary><secondary>getImmediatelySendable</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>uint32_t <link linkend="_classefvitcp_1_1_tcp_conn">efvitcp::TcpConn</link>&lt; Conf &gt;::getImmediatelySendable ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_tcp_conn_1ade7a61d34bfa969fd8848ddddae49aac"/><section>
+    <title>getPeername()</title>
+<indexterm><primary>getPeername</primary><secondary>efvitcp::TcpConn&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::TcpConn&lt; Conf &gt;</primary><secondary>getPeername</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>void <link linkend="_classefvitcp_1_1_tcp_conn">efvitcp::TcpConn</link>&lt; Conf &gt;::getPeername (struct sockaddr_in &amp; addr)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_tcp_conn_1a8b74de6bba8315256552b9a2fb475b0b"/><section>
+    <title>getSendable()</title>
+<indexterm><primary>getSendable</primary><secondary>efvitcp::TcpConn&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::TcpConn&lt; Conf &gt;</primary><secondary>getSendable</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>uint32_t <link linkend="_classefvitcp_1_1_tcp_conn">efvitcp::TcpConn</link>&lt; Conf &gt;::getSendable ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_tcp_conn_1a7353cd5d41392e5c33837d0c487b32b6"/><section>
+    <title>isClosed()</title>
+<indexterm><primary>isClosed</primary><secondary>efvitcp::TcpConn&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::TcpConn&lt; Conf &gt;</primary><secondary>isClosed</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>bool <link linkend="_classefvitcp_1_1_tcp_conn">efvitcp::TcpConn</link>&lt; Conf &gt;::isClosed ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_tcp_conn_1a9efaac2226d449f304fd88627d1eb464"/><section>
+    <title>isEstablished()</title>
+<indexterm><primary>isEstablished</primary><secondary>efvitcp::TcpConn&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::TcpConn&lt; Conf &gt;</primary><secondary>isEstablished</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>bool <link linkend="_classefvitcp_1_1_tcp_conn">efvitcp::TcpConn</link>&lt; Conf &gt;::isEstablished ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_tcp_conn_1aa68e2383508338bd5ea577724b0bd471"/><section>
+    <title>send()</title>
+<indexterm><primary>send</primary><secondary>efvitcp::TcpConn&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::TcpConn&lt; Conf &gt;</primary><secondary>send</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>uint32_t <link linkend="_classefvitcp_1_1_tcp_conn">efvitcp::TcpConn</link>&lt; Conf &gt;::send (const void * data, uint32_t size, bool more = <computeroutput>false</computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_tcp_conn_1ad7253e226cfd132ada2aff4b082e795d"/><section>
+    <title>send_warmup_to_conn()</title>
+<indexterm><primary>send_warmup_to_conn</primary><secondary>efvitcp::TcpConn&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::TcpConn&lt; Conf &gt;</primary><secondary>send_warmup_to_conn</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>void <link linkend="_classefvitcp_1_1_tcp_conn">efvitcp::TcpConn</link>&lt; Conf &gt;::send_warmup_to_conn ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_tcp_conn_1a0e0c6cfcff5b002cfbebe7e6953c16f5"/><section>
+    <title>sendFin()</title>
+<indexterm><primary>sendFin</primary><secondary>efvitcp::TcpConn&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::TcpConn&lt; Conf &gt;</primary><secondary>sendFin</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>void <link linkend="_classefvitcp_1_1_tcp_conn">efvitcp::TcpConn</link>&lt; Conf &gt;::sendFin ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_tcp_conn_1ac147bf60cb37f19b40cabc0ccb6ccc52"/><section>
+    <title>sendv()</title>
+<indexterm><primary>sendv</primary><secondary>efvitcp::TcpConn&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::TcpConn&lt; Conf &gt;</primary><secondary>sendv</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>uint32_t <link linkend="_classefvitcp_1_1_tcp_conn">efvitcp::TcpConn</link>&lt; Conf &gt;::sendv (const iovec * iov, int iovcnt)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_tcp_conn_1ab4bffbf85257a1d1394c1d89173a2069"/><section>
+    <title>setUserTimer()</title>
+<indexterm><primary>setUserTimer</primary><secondary>efvitcp::TcpConn&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::TcpConn&lt; Conf &gt;</primary><secondary>setUserTimer</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>void <link linkend="_classefvitcp_1_1_tcp_conn">efvitcp::TcpConn</link>&lt; Conf &gt;::setUserTimer (uint32_t timer_id, uint32_t duration)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Friends And Related Symbol Documentation</title>
+<anchor xml:id="_classefvitcp_1_1_tcp_conn_1a8c25230390bc314e8170aa74b7dc7c1f"/><section>
+    <title>TcpClient</title>
+<indexterm><primary>TcpClient</primary><secondary>efvitcp::TcpConn&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::TcpConn&lt; Conf &gt;</primary><secondary>TcpClient</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><computeroutput>template&lt;typename C &gt; </computeroutput><para><computeroutput>friend class <link linkend="_classefvitcp_1_1_tcp_client">TcpClient</link><computeroutput>[friend]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_tcp_conn_1a91ddfaf0dcaf2389521d34efd207d9f6"/><section>
+    <title>TcpServer</title>
+<indexterm><primary>TcpServer</primary><secondary>efvitcp::TcpConn&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::TcpConn&lt; Conf &gt;</primary><secondary>TcpServer</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><computeroutput>template&lt;typename C &gt; </computeroutput><para><computeroutput>friend class <link linkend="_classefvitcp_1_1_tcp_server">TcpServer</link><computeroutput>[friend]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classefvitcp_1_1_tcp_conn_1a487084d4f31318f075e63efdf355e643"/><section>
+    <title>cong_av</title>
+<indexterm><primary>cong_av</primary><secondary>efvitcp::TcpConn&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::TcpConn&lt; Conf &gt;</primary><secondary>cong_av</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>uint16_t <link linkend="_classefvitcp_1_1_tcp_conn">efvitcp::TcpConn</link>&lt; Conf &gt;::cong_av</computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_tcp_conn_1a02b05b21cf506a7479cb785030ef20df"/><section>
+    <title>established</title>
+<indexterm><primary>established</primary><secondary>efvitcp::TcpConn&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::TcpConn&lt; Conf &gt;</primary><secondary>established</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>uint16_t <link linkend="_classefvitcp_1_1_tcp_conn">efvitcp::TcpConn</link>&lt; Conf &gt;::established</computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_tcp_conn_1acaf74ecf7c05ad6d8679a7986dc69d26"/><section>
+    <title>fast_re</title>
+<indexterm><primary>fast_re</primary><secondary>efvitcp::TcpConn&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::TcpConn&lt; Conf &gt;</primary><secondary>fast_re</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>uint16_t <link linkend="_classefvitcp_1_1_tcp_conn">efvitcp::TcpConn</link>&lt; Conf &gt;::fast_re</computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_tcp_conn_1a7093bec65eb4efc0d2781b40f1d49d4e"/><section>
+    <title>fin_received</title>
+<indexterm><primary>fin_received</primary><secondary>efvitcp::TcpConn&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::TcpConn&lt; Conf &gt;</primary><secondary>fin_received</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>uint16_t <link linkend="_classefvitcp_1_1_tcp_conn">efvitcp::TcpConn</link>&lt; Conf &gt;::fin_received</computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_tcp_conn_1a542b25455e21b4afb0ef088f7702b08d"/><section>
+    <title>fin_sent</title>
+<indexterm><primary>fin_sent</primary><secondary>efvitcp::TcpConn&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::TcpConn&lt; Conf &gt;</primary><secondary>fin_sent</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>uint16_t <link linkend="_classefvitcp_1_1_tcp_conn">efvitcp::TcpConn</link>&lt; Conf &gt;::fin_sent</computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_tcp_conn_1a49b8aebaa2b67e9dccd94a9383f7c092"/><section>
+    <title>flags</title>
+<indexterm><primary>flags</primary><secondary>efvitcp::TcpConn&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::TcpConn&lt; Conf &gt;</primary><secondary>flags</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>uint16_t <link linkend="_classefvitcp_1_1_tcp_conn">efvitcp::TcpConn</link>&lt; Conf &gt;::flags</computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_tcp_conn_1a3db1992fb88adb5f4dd27c30e4d1a8d5"/><section>
+    <title>has_ts</title>
+<indexterm><primary>has_ts</primary><secondary>efvitcp::TcpConn&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::TcpConn&lt; Conf &gt;</primary><secondary>has_ts</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>uint16_t <link linkend="_classefvitcp_1_1_tcp_conn">efvitcp::TcpConn</link>&lt; Conf &gt;::has_ts</computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_tcp_conn_1a55a2c9f1a03c0262a045780a1a80a1ae"/><section>
+    <title>has_ws</title>
+<indexterm><primary>has_ws</primary><secondary>efvitcp::TcpConn&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::TcpConn&lt; Conf &gt;</primary><secondary>has_ws</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>uint16_t <link linkend="_classefvitcp_1_1_tcp_conn">efvitcp::TcpConn</link>&lt; Conf &gt;::has_ws</computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_tcp_conn_1a41a0fb334b8d10d6d1b4476fa2278e2c"/><section>
+    <title>in_recover</title>
+<indexterm><primary>in_recover</primary><secondary>efvitcp::TcpConn&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::TcpConn&lt; Conf &gt;</primary><secondary>in_recover</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>uint16_t <link linkend="_classefvitcp_1_1_tcp_conn">efvitcp::TcpConn</link>&lt; Conf &gt;::in_recover</computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_tcp_conn_1a38d1fcb94f0120849c48841242015db3"/><section>
+    <title>pending_ack</title>
+<indexterm><primary>pending_ack</primary><secondary>efvitcp::TcpConn&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::TcpConn&lt; Conf &gt;</primary><secondary>pending_ack</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>uint16_t <link linkend="_classefvitcp_1_1_tcp_conn">efvitcp::TcpConn</link>&lt; Conf &gt;::pending_ack</computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_tcp_conn_1a235ab159c25cb1b45eb914a46697135a"/><section>
+    <title>retries</title>
+<indexterm><primary>retries</primary><secondary>efvitcp::TcpConn&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::TcpConn&lt; Conf &gt;</primary><secondary>retries</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>uint16_t <link linkend="_classefvitcp_1_1_tcp_conn">efvitcp::TcpConn</link>&lt; Conf &gt;::retries</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/external/pollnet/efvitcp/TcpConn.h</section>
+</section>

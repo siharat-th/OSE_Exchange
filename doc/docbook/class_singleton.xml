@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_singleton" xml:lang="en-US">
+<title>Singleton&lt; T &gt; Class Template Reference</title>
+<indexterm><primary>Singleton&lt; T &gt;</primary></indexterm>
+<para>
+<computeroutput>#include &lt;Singleton.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static KT01_API T &amp; <link linkend="_class_singleton_1a257c9c4633fa4e06bd93469e379f8eff">instance</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_singleton_1a23b2407170cc04f6746874704b928044"/><emphasis role="strong">Singleton</emphasis> (const <link linkend="_class_singleton">Singleton</link> &amp;)=delete</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;typename T&gt;<?linebreak?>class Singleton&lt; T &gt;</title></simplesect>
+
+<para><link linkend="_class_singleton">Singleton</link> class template. Relies on C++11 thread-safety of static initialization. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_singleton_1a923b995920da9c06590adb170ab2f890"/><section>
+    <title>Singleton()</title>
+<indexterm><primary>Singleton</primary><secondary>Singleton&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Singleton&lt; T &gt;</primary><secondary>Singleton</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput><link linkend="_class_singleton">Singleton</link>&lt; T &gt;<link linkend="_class_singleton">::Singleton</link> ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[protected]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_singleton_1a257c9c4633fa4e06bd93469e379f8eff"/><section>
+    <title>instance()</title>
+<indexterm><primary>instance</primary><secondary>Singleton&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Singleton&lt; T &gt;</primary><secondary>instance</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>static KT01_API T &amp; <link linkend="_class_singleton">Singleton</link>&lt; T &gt;::instance ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Core/Singleton.hpp</section>
+</section>

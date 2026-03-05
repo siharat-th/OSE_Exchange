@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_mdp3_1_1_match_event_indicator_bits_enum" xml:lang="en-US">
+<title>KTN::Mdp3::MatchEventIndicatorBitsEnum Class Reference</title>
+<indexterm><primary>KTN::Mdp3::MatchEventIndicatorBitsEnum</primary></indexterm>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <emphasis role="strong">Bits</emphasis> : uint8_t { <?linebreak?><emphasis role="strong">LastTradeSummary</emphasis> = 0
+, <emphasis role="strong">LastElectronicVolume</emphasis>
+, <emphasis role="strong">LastCustomerOrderQuote</emphasis>
+, <emphasis role="strong">LastStatistic</emphasis>
+, <?linebreak?><emphasis role="strong">LastImpliedQuote</emphasis>
+, <emphasis role="strong">MessageResent</emphasis>
+, <emphasis role="strong">Reserved</emphasis>
+, <emphasis role="strong">LastMessage</emphasis>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static bool <link linkend="_class_k_t_n_1_1_mdp3_1_1_match_event_indicator_bits_enum_1afdbcb8bffa60930f30bf3bc2492d39bf">isBitSet</link> (uint8_t field, Bits bit)</para>
+</listitem>
+            <listitem><para>static std::bitset&lt; 8 &gt; <link linkend="_class_k_t_n_1_1_mdp3_1_1_match_event_indicator_bits_enum_1a08e5da0d109f0a2326765ba4536c5b6b">getSetFields</link> (uint8_t field)</para>
+</listitem>
+            <listitem><para>static uint8_t <link linkend="_class_k_t_n_1_1_mdp3_1_1_match_event_indicator_bits_enum_1a672350b377999fd3fed2e5a5ca295f2c">getValue</link> (Bits bit)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_k_t_n_1_1_mdp3_1_1_match_event_indicator_bits_enum_1af36b0942dd2d0d0cdee83489650fbdd3"/>enum KTN::Mdp3::MatchEventIndicatorBitsEnum::Bits <emphasis role="strong">__attribute__</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_mdp3_1_1_match_event_indicator_bits_enum_1a04b5f192aa9179d84045685eca5d7120"/><section>
+    <title>Bits</title>
+<indexterm><primary>Bits</primary><secondary>KTN::Mdp3::MatchEventIndicatorBitsEnum</secondary></indexterm>
+<indexterm><primary>KTN::Mdp3::MatchEventIndicatorBitsEnum</primary><secondary>Bits</secondary></indexterm>
+<para><computeroutput>enum KTN::Mdp3::MatchEventIndicatorBitsEnum::Bits : uint8_t</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_mdp3_1_1_match_event_indicator_bits_enum_1a08e5da0d109f0a2326765ba4536c5b6b"/><section>
+    <title>getSetFields()</title>
+<indexterm><primary>getSetFields</primary><secondary>KTN::Mdp3::MatchEventIndicatorBitsEnum</secondary></indexterm>
+<indexterm><primary>KTN::Mdp3::MatchEventIndicatorBitsEnum</primary><secondary>getSetFields</secondary></indexterm>
+<para><computeroutput>static std::bitset&lt; 8 &gt; KTN::Mdp3::MatchEventIndicatorBitsEnum::getSetFields (uint8_t field)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_mdp3_1_1_match_event_indicator_bits_enum_1a672350b377999fd3fed2e5a5ca295f2c"/><section>
+    <title>getValue()</title>
+<indexterm><primary>getValue</primary><secondary>KTN::Mdp3::MatchEventIndicatorBitsEnum</secondary></indexterm>
+<indexterm><primary>KTN::Mdp3::MatchEventIndicatorBitsEnum</primary><secondary>getValue</secondary></indexterm>
+<para><computeroutput>static uint8_t KTN::Mdp3::MatchEventIndicatorBitsEnum::getValue (Bits bit)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_mdp3_1_1_match_event_indicator_bits_enum_1afdbcb8bffa60930f30bf3bc2492d39bf"/><section>
+    <title>isBitSet()</title>
+<indexterm><primary>isBitSet</primary><secondary>KTN::Mdp3::MatchEventIndicatorBitsEnum</secondary></indexterm>
+<indexterm><primary>KTN::Mdp3::MatchEventIndicatorBitsEnum</primary><secondary>isBitSet</secondary></indexterm>
+<para><computeroutput>static bool KTN::Mdp3::MatchEventIndicatorBitsEnum::isBitSet (uint8_t field, Bits bit)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+exchsupport/cme/Mdp3Messages.hpp</section>
+</section>

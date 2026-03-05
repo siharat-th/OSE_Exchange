@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_sess_svc" xml:lang="en-US">
+<title>SessSvc Class Reference</title>
+<indexterm><primary>SessSvc</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_sess_svc">SessSvc</link> class represents a CME session service.We use this service for persisting session state. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;SessSvc.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_sess_svc_1a5e815fef2bc4f61b0709426e95e0deb9">SessSvc</link> (string sesid, string firmid, int segid, int keepalive)</para>
+
+<para>Constructs a <link linkend="_class_sess_svc">SessSvc</link> object. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_sess_svc_1afe4a9eda2bc258bae97fc76623a3268f">~SessSvc</link> ()</para>
+
+<para>Destroys the <link linkend="_class_sess_svc">SessSvc</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_sess_svc_1a5a7548926702238b1bea5a3d176a5ef1">Start</link> ()</para>
+
+<para>Starts the session service. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_sess_svc_1a5270a51c5ea059127b0ad315f2811cc6">Persist</link> (const <link linkend="_struct_sess_state_msg">SessStateMsg</link> &amp;msg)</para>
+
+<para>Persists the session state message. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_sess_svc">SessSvc</link> class represents a CME session service.We use this service for persisting session state. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_sess_svc_1a5e815fef2bc4f61b0709426e95e0deb9"/><section>
+    <title>SessSvc()</title>
+<indexterm><primary>SessSvc</primary><secondary>SessSvc</secondary></indexterm>
+<indexterm><primary>SessSvc</primary><secondary>SessSvc</secondary></indexterm>
+<para><computeroutput>SessSvc::SessSvc (string sesid, string firmid, int segid, int keepalive)</computeroutput></para><para>
+
+<para>Constructs a <link linkend="_class_sess_svc">SessSvc</link> object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>sesid</entry><entry>
+<para>The session ID. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>firmid</entry><entry>
+<para>The firm ID. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>segid</entry><entry>
+<para>The segment ID. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>keepalive</entry><entry>
+<para>The keep-alive value. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_sess_svc_1afe4a9eda2bc258bae97fc76623a3268f"/><section>
+    <title>~SessSvc()</title>
+<indexterm><primary>~SessSvc</primary><secondary>SessSvc</secondary></indexterm>
+<indexterm><primary>SessSvc</primary><secondary>~SessSvc</secondary></indexterm>
+<para><computeroutput>SessSvc::~SessSvc ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Destroys the <link linkend="_class_sess_svc">SessSvc</link> object. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_sess_svc_1a5270a51c5ea059127b0ad315f2811cc6"/><section>
+    <title>Persist()</title>
+<indexterm><primary>Persist</primary><secondary>SessSvc</secondary></indexterm>
+<indexterm><primary>SessSvc</primary><secondary>Persist</secondary></indexterm>
+<para><computeroutput>void SessSvc::Persist (const <link linkend="_struct_sess_state_msg">SessStateMsg</link> &amp; msg)</computeroutput></para><para>
+
+<para>Persists the session state message. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>msg</entry><entry>
+<para>The session state message to persist. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Referenced by <link linkend="_l00132">SessionStateManager::Update()</link>.</para>
+</section>
+<anchor xml:id="_class_sess_svc_1a5a7548926702238b1bea5a3d176a5ef1"/><section>
+    <title>Start()</title>
+<indexterm><primary>Start</primary><secondary>SessSvc</secondary></indexterm>
+<indexterm><primary>SessSvc</primary><secondary>Start</secondary></indexterm>
+<para><computeroutput>void SessSvc::Start ( )</computeroutput></para><para>
+
+<para>Starts the session service. </para>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Loggers/SessSvc.hppLoggers/SessSvc.cpp</section>
+</section>

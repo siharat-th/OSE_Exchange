@@ -1,0 +1,102 @@
+\doxysection{Socket\+Udp\+Receiver\texorpdfstring{$<$}{<} Recv\+Buf\+Size \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_socket_udp_receiver}{}\label{class_socket_udp_receiver}\index{SocketUdpReceiver$<$ RecvBufSize $>$@{SocketUdpReceiver$<$ RecvBufSize $>$}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_socket_udp_receiver_a691dfabc01750158593bcef4694ac3f0}{init}} (const char \texorpdfstring{$\ast$}{*}interface, const char \texorpdfstring{$\ast$}{*}dest\+\_\+ip, uint16\+\_\+t dest\+\_\+port, const char \texorpdfstring{$\ast$}{*}subscribe\+\_\+ip="{}"{})
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_socket_udp_receiver_aa62fb475a251b73f94e2f4072877cbc4}{get\+Local\+Port}} ()
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_socket_udp_receiver_a218b2c9b76950dbded9ce6e04c4f68f7}{get\+Last\+Error}} ()
+\item 
+bool \mbox{\hyperlink{class_socket_udp_receiver_a06557c52af166a0ea2556ad64a4bf7b3}{is\+Closed}} ()
+\item 
+void \mbox{\hyperlink{class_socket_udp_receiver_ace5791529aedce3698c60363d462a90f}{close}} (const char \texorpdfstring{$\ast$}{*}reason)
+\item 
+{\footnotesize template$<$typename Handler $>$ }\\bool \mbox{\hyperlink{class_socket_udp_receiver_af65a159abfe2702a3e6376b4f8cf098a}{read}} (Handler handler)
+\item 
+{\footnotesize template$<$typename Handler $>$ }\\bool \mbox{\hyperlink{class_socket_udp_receiver_aaad072668d3eb2872620b136748f12a6}{recvfrom}} (Handler handler)
+\item 
+bool \mbox{\hyperlink{class_socket_udp_receiver_a320997c083458b42682609eb2404aaa7}{sendto}} (const void \texorpdfstring{$\ast$}{*}data, uint32\+\_\+t size, const sockaddr\+\_\+in \&dst\+\_\+addr)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$uint32\+\_\+t Recv\+Buf\+Size = 1500$>$\newline
+class Socket\+Udp\+Receiver$<$ Recv\+Buf\+Size $>$}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_socket_udp_receiver_a470b78e45f9707d108184fe278690e3c}\index{SocketUdpReceiver$<$ RecvBufSize $>$@{SocketUdpReceiver$<$ RecvBufSize $>$}!````~SocketUdpReceiver@{\texorpdfstring{$\sim$}{\string~}SocketUdpReceiver}}
+\index{````~SocketUdpReceiver@{\texorpdfstring{$\sim$}{\string~}SocketUdpReceiver}!SocketUdpReceiver$<$ RecvBufSize $>$@{SocketUdpReceiver$<$ RecvBufSize $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}SocketUdpReceiver()}{\string~SocketUdpReceiver()}}
+{\footnotesize\ttfamily \label{class_socket_udp_receiver_a470b78e45f9707d108184fe278690e3c} 
+template$<$uint32\+\_\+t Recv\+Buf\+Size = 1500$>$ \\
+\mbox{\hyperlink{class_socket_udp_receiver}{Socket\+Udp\+Receiver}}$<$ Recv\+Buf\+Size $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{class_socket_udp_receiver}{Socket\+Udp\+Receiver}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_socket_udp_receiver_ace5791529aedce3698c60363d462a90f}\index{SocketUdpReceiver$<$ RecvBufSize $>$@{SocketUdpReceiver$<$ RecvBufSize $>$}!close@{close}}
+\index{close@{close}!SocketUdpReceiver$<$ RecvBufSize $>$@{SocketUdpReceiver$<$ RecvBufSize $>$}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily \label{class_socket_udp_receiver_ace5791529aedce3698c60363d462a90f} 
+template$<$uint32\+\_\+t Recv\+Buf\+Size = 1500$>$ \\
+void \mbox{\hyperlink{class_socket_udp_receiver}{Socket\+Udp\+Receiver}}$<$ Recv\+Buf\+Size $>$\+::close (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{reason}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_socket_udp_receiver_a218b2c9b76950dbded9ce6e04c4f68f7}\index{SocketUdpReceiver$<$ RecvBufSize $>$@{SocketUdpReceiver$<$ RecvBufSize $>$}!getLastError@{getLastError}}
+\index{getLastError@{getLastError}!SocketUdpReceiver$<$ RecvBufSize $>$@{SocketUdpReceiver$<$ RecvBufSize $>$}}
+\doxysubsubsection{\texorpdfstring{getLastError()}{getLastError()}}
+{\footnotesize\ttfamily \label{class_socket_udp_receiver_a218b2c9b76950dbded9ce6e04c4f68f7} 
+template$<$uint32\+\_\+t Recv\+Buf\+Size = 1500$>$ \\
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_socket_udp_receiver}{Socket\+Udp\+Receiver}}$<$ Recv\+Buf\+Size $>$\+::get\+Last\+Error (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_socket_udp_receiver_aa62fb475a251b73f94e2f4072877cbc4}\index{SocketUdpReceiver$<$ RecvBufSize $>$@{SocketUdpReceiver$<$ RecvBufSize $>$}!getLocalPort@{getLocalPort}}
+\index{getLocalPort@{getLocalPort}!SocketUdpReceiver$<$ RecvBufSize $>$@{SocketUdpReceiver$<$ RecvBufSize $>$}}
+\doxysubsubsection{\texorpdfstring{getLocalPort()}{getLocalPort()}}
+{\footnotesize\ttfamily \label{class_socket_udp_receiver_aa62fb475a251b73f94e2f4072877cbc4} 
+template$<$uint32\+\_\+t Recv\+Buf\+Size = 1500$>$ \\
+uint16\+\_\+t \mbox{\hyperlink{class_socket_udp_receiver}{Socket\+Udp\+Receiver}}$<$ Recv\+Buf\+Size $>$\+::get\+Local\+Port (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_socket_udp_receiver_a691dfabc01750158593bcef4694ac3f0}\index{SocketUdpReceiver$<$ RecvBufSize $>$@{SocketUdpReceiver$<$ RecvBufSize $>$}!init@{init}}
+\index{init@{init}!SocketUdpReceiver$<$ RecvBufSize $>$@{SocketUdpReceiver$<$ RecvBufSize $>$}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \label{class_socket_udp_receiver_a691dfabc01750158593bcef4694ac3f0} 
+template$<$uint32\+\_\+t Recv\+Buf\+Size = 1500$>$ \\
+bool \mbox{\hyperlink{class_socket_udp_receiver}{Socket\+Udp\+Receiver}}$<$ Recv\+Buf\+Size $>$\+::init (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{interface}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{dest\+\_\+ip}{, }\item[{uint16\+\_\+t}]{dest\+\_\+port}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{subscribe\+\_\+ip}{ = {\ttfamily "{}"{}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_socket_udp_receiver_a06557c52af166a0ea2556ad64a4bf7b3}\index{SocketUdpReceiver$<$ RecvBufSize $>$@{SocketUdpReceiver$<$ RecvBufSize $>$}!isClosed@{isClosed}}
+\index{isClosed@{isClosed}!SocketUdpReceiver$<$ RecvBufSize $>$@{SocketUdpReceiver$<$ RecvBufSize $>$}}
+\doxysubsubsection{\texorpdfstring{isClosed()}{isClosed()}}
+{\footnotesize\ttfamily \label{class_socket_udp_receiver_a06557c52af166a0ea2556ad64a4bf7b3} 
+template$<$uint32\+\_\+t Recv\+Buf\+Size = 1500$>$ \\
+bool \mbox{\hyperlink{class_socket_udp_receiver}{Socket\+Udp\+Receiver}}$<$ Recv\+Buf\+Size $>$\+::is\+Closed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_socket_udp_receiver_af65a159abfe2702a3e6376b4f8cf098a}\index{SocketUdpReceiver$<$ RecvBufSize $>$@{SocketUdpReceiver$<$ RecvBufSize $>$}!read@{read}}
+\index{read@{read}!SocketUdpReceiver$<$ RecvBufSize $>$@{SocketUdpReceiver$<$ RecvBufSize $>$}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily \label{class_socket_udp_receiver_af65a159abfe2702a3e6376b4f8cf098a} 
+template$<$uint32\+\_\+t Recv\+Buf\+Size = 1500$>$ \\
+template$<$typename Handler $>$ \\
+bool \mbox{\hyperlink{class_socket_udp_receiver}{Socket\+Udp\+Receiver}}$<$ Recv\+Buf\+Size $>$\+::read (\begin{DoxyParamCaption}\item[{Handler}]{handler}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_socket_udp_receiver_aaad072668d3eb2872620b136748f12a6}\index{SocketUdpReceiver$<$ RecvBufSize $>$@{SocketUdpReceiver$<$ RecvBufSize $>$}!recvfrom@{recvfrom}}
+\index{recvfrom@{recvfrom}!SocketUdpReceiver$<$ RecvBufSize $>$@{SocketUdpReceiver$<$ RecvBufSize $>$}}
+\doxysubsubsection{\texorpdfstring{recvfrom()}{recvfrom()}}
+{\footnotesize\ttfamily \label{class_socket_udp_receiver_aaad072668d3eb2872620b136748f12a6} 
+template$<$uint32\+\_\+t Recv\+Buf\+Size = 1500$>$ \\
+template$<$typename Handler $>$ \\
+bool \mbox{\hyperlink{class_socket_udp_receiver}{Socket\+Udp\+Receiver}}$<$ Recv\+Buf\+Size $>$\+::recvfrom (\begin{DoxyParamCaption}\item[{Handler}]{handler}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_socket_udp_receiver_a320997c083458b42682609eb2404aaa7}\index{SocketUdpReceiver$<$ RecvBufSize $>$@{SocketUdpReceiver$<$ RecvBufSize $>$}!sendto@{sendto}}
+\index{sendto@{sendto}!SocketUdpReceiver$<$ RecvBufSize $>$@{SocketUdpReceiver$<$ RecvBufSize $>$}}
+\doxysubsubsection{\texorpdfstring{sendto()}{sendto()}}
+{\footnotesize\ttfamily \label{class_socket_udp_receiver_a320997c083458b42682609eb2404aaa7} 
+template$<$uint32\+\_\+t Recv\+Buf\+Size = 1500$>$ \\
+bool \mbox{\hyperlink{class_socket_udp_receiver}{Socket\+Udp\+Receiver}}$<$ Recv\+Buf\+Size $>$\+::sendto (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{uint32\+\_\+t}]{size}{, }\item[{const sockaddr\+\_\+in \&}]{dst\+\_\+addr}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sgaer/source/repos/katanafinancial/\+Occam\+CME4/\+Occam\+CME4/src/external/pollnet/Socket.\+h\end{DoxyCompactItemize}

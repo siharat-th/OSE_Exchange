@@ -1,0 +1,351 @@
+\doxysection{Wavg\+Calc\+Multi Class Reference}
+\hypertarget{class_wavg_calc_multi}{}\label{class_wavg_calc_multi}\index{WavgCalcMulti@{WavgCalcMulti}}
+
+
+Class for calculating weighted averages and performing related operations.  
+
+
+
+
+{\ttfamily \#include $<$Wavg\+Calc\+Multi.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_wavg_calc_multi_a600a085c863628d571651b098307482a}{Wavg\+Calc\+Multi}} (\mbox{\hyperlink{class_timer_callback}{Timer\+Callback}} \&cb)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{class_wavg_calc_multi}{Wavg\+Calc\+Multi} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_wavg_calc_multi_ae9ac6f5d38a83837227fc15f8390738b}{Test}} ()
+\begin{DoxyCompactList}\small\item\em Test function for \doxylink{class_wavg_calc_multi}{Wavg\+Calc\+Multi} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_wavg_calc_multi_a054c78260e91fddd538e51f3e26411dd}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Start the calculation process. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_wavg_calc_multi_a65ab8f13d83df8a7aa48344e229554d0}{Stop}} ()
+\begin{DoxyCompactList}\small\item\em Stop the calculation process. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_wavg_calc_multi_a1fa6d8805495a0984dbe50e8157b8c31}{set\+Start\+End\+Time}} (const std\+::string \&start\+Time, const std\+::string \&end\+Time)
+\begin{DoxyCompactList}\small\item\em Set the start and end time for the calculation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_wavg_calc_multi_a56293e39f4e9562a0bc591f58b2c8f92}{calculate}} (int n, int j, int64\+\_\+t price, int32\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Perform the calculation for a given set of parameters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_wavg_calc_multi_a9238d4e4fadfc0cd0a06f28842fb7bde}{Calculate\+Settlements}} ()
+\begin{DoxyCompactList}\small\item\em Calculate the settlements. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_wavg_calc_multi_a7e3e8b98cb2a068255e37973567a145c}{Calc\+Stpr}} (int n)
+\begin{DoxyCompactList}\small\item\em Calculate the Stpr value for a given n. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_wavg_calc_multi_a4330f5405f813ba6cea9f227a5ac54b4}{get\+Current\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Get the current time in string format. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_wavg_calc_multi_afaaa5b1759ff40cbf4bd6a97f3826897}{get\+Stpr}} (int n, int j)
+\begin{DoxyCompactList}\small\item\em Get the Stpr value for a given n and j. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_wavg_calc_multi_a466f40e3b5831061d0fcac10b3cb02fc}{get\+Wavg}} (int n, int j)
+\begin{DoxyCompactList}\small\item\em Get the weighted average value for a given n and j. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_wavg_calc_multi_aaa2d6a2fbacce3abf4b1376084826c0d}{get\+Volume}} (int n, int j)
+\begin{DoxyCompactList}\small\item\em Get the volume value for a given n and j. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_wavg_calc_multi_a670730f76901bbf2dc3dffdb01e93bc5}{get\+Count}} (int n, int j)
+\begin{DoxyCompactList}\small\item\em Get the count value for a given n and j. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_wavg_calc_multi_a9a8514c27f5c56f58f07e60c046076a0}{Triggered}} ()
+\begin{DoxyCompactList}\small\item\em Check if the calculation is triggered. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_wavg_calc_multi_a9276a9674f2a145481f257981697b421}{Started}} ()
+\begin{DoxyCompactList}\small\item\em Check if the calculation is started. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_wavg_calc_multi_ab6f72e06b1f564d30671f0cc53e9c4a1}{Init}} (string product, string startmonth, int startyear, int nummonths)
+\begin{DoxyCompactList}\small\item\em Initialize the \doxylink{class_wavg_calc_multi}{Wavg\+Calc\+Multi} object with the given parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for calculating weighted averages and performing related operations. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_wavg_calc_multi_a600a085c863628d571651b098307482a}\index{WavgCalcMulti@{WavgCalcMulti}!WavgCalcMulti@{WavgCalcMulti}}
+\index{WavgCalcMulti@{WavgCalcMulti}!WavgCalcMulti@{WavgCalcMulti}}
+\doxysubsubsection{\texorpdfstring{WavgCalcMulti()}{WavgCalcMulti()}}
+{\footnotesize\ttfamily \label{class_wavg_calc_multi_a600a085c863628d571651b098307482a} 
+Wavg\+Calc\+Multi\+::\+Wavg\+Calc\+Multi (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_timer_callback}{Timer\+Callback}} \&}]{cb}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for \doxylink{class_wavg_calc_multi}{Wavg\+Calc\+Multi} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cb} & The \doxylink{class_timer_callback}{Timer\+Callback} object to be used for timing operations. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_wavg_calc_multi_a7e3e8b98cb2a068255e37973567a145c}\index{WavgCalcMulti@{WavgCalcMulti}!CalcStpr@{CalcStpr}}
+\index{CalcStpr@{CalcStpr}!WavgCalcMulti@{WavgCalcMulti}}
+\doxysubsubsection{\texorpdfstring{CalcStpr()}{CalcStpr()}}
+{\footnotesize\ttfamily \label{class_wavg_calc_multi_a7e3e8b98cb2a068255e37973567a145c} 
+double Wavg\+Calc\+Multi\+::\+Calc\+Stpr (\begin{DoxyParamCaption}\item[{int}]{n}{}\end{DoxyParamCaption})}
+
+
+
+Calculate the Stpr value for a given n. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The value of n. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The calculated Stpr value. 
+\end{DoxyReturn}
+\Hypertarget{class_wavg_calc_multi_a56293e39f4e9562a0bc591f58b2c8f92}\index{WavgCalcMulti@{WavgCalcMulti}!calculate@{calculate}}
+\index{calculate@{calculate}!WavgCalcMulti@{WavgCalcMulti}}
+\doxysubsubsection{\texorpdfstring{calculate()}{calculate()}}
+{\footnotesize\ttfamily \label{class_wavg_calc_multi_a56293e39f4e9562a0bc591f58b2c8f92} 
+void Wavg\+Calc\+Multi\+::calculate (\begin{DoxyParamCaption}\item[{int}]{n}{, }\item[{int}]{j}{, }\item[{int64\+\_\+t}]{price}{, }\item[{int32\+\_\+t}]{size}{}\end{DoxyParamCaption})}
+
+
+
+Perform the calculation for a given set of parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The value of n. \\
+\hline
+{\em j} & The value of j. \\
+\hline
+{\em price} & The price value. \\
+\hline
+{\em size} & The size value. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00347}{Calculate\+Settlements()}}.
+
+\Hypertarget{class_wavg_calc_multi_a9238d4e4fadfc0cd0a06f28842fb7bde}\index{WavgCalcMulti@{WavgCalcMulti}!CalculateSettlements@{CalculateSettlements}}
+\index{CalculateSettlements@{CalculateSettlements}!WavgCalcMulti@{WavgCalcMulti}}
+\doxysubsubsection{\texorpdfstring{CalculateSettlements()}{CalculateSettlements()}}
+{\footnotesize\ttfamily \label{class_wavg_calc_multi_a9238d4e4fadfc0cd0a06f28842fb7bde} 
+void Wavg\+Calc\+Multi\+::\+Calculate\+Settlements (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Calculate the settlements. 
+
+
+
+Referenced by \mbox{\hyperlink{l00322}{calculate()}}.
+
+\Hypertarget{class_wavg_calc_multi_a670730f76901bbf2dc3dffdb01e93bc5}\index{WavgCalcMulti@{WavgCalcMulti}!getCount@{getCount}}
+\index{getCount@{getCount}!WavgCalcMulti@{WavgCalcMulti}}
+\doxysubsubsection{\texorpdfstring{getCount()}{getCount()}}
+{\footnotesize\ttfamily \label{class_wavg_calc_multi_a670730f76901bbf2dc3dffdb01e93bc5} 
+double Wavg\+Calc\+Multi\+::get\+Count (\begin{DoxyParamCaption}\item[{int}]{n}{, }\item[{int}]{j}{}\end{DoxyParamCaption})}
+
+
+
+Get the count value for a given n and j. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The value of n. \\
+\hline
+{\em j} & The value of j. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The count value. 
+\end{DoxyReturn}
+\Hypertarget{class_wavg_calc_multi_a4330f5405f813ba6cea9f227a5ac54b4}\index{WavgCalcMulti@{WavgCalcMulti}!getCurrentTime@{getCurrentTime}}
+\index{getCurrentTime@{getCurrentTime}!WavgCalcMulti@{WavgCalcMulti}}
+\doxysubsubsection{\texorpdfstring{getCurrentTime()}{getCurrentTime()}}
+{\footnotesize\ttfamily \label{class_wavg_calc_multi_a4330f5405f813ba6cea9f227a5ac54b4} 
+std\+::string Wavg\+Calc\+Multi\+::get\+Current\+Time (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the current time in string format. 
+
+\begin{DoxyReturn}{Returns}
+The current time in string format. 
+\end{DoxyReturn}
+\Hypertarget{class_wavg_calc_multi_afaaa5b1759ff40cbf4bd6a97f3826897}\index{WavgCalcMulti@{WavgCalcMulti}!getStpr@{getStpr}}
+\index{getStpr@{getStpr}!WavgCalcMulti@{WavgCalcMulti}}
+\doxysubsubsection{\texorpdfstring{getStpr()}{getStpr()}}
+{\footnotesize\ttfamily \label{class_wavg_calc_multi_afaaa5b1759ff40cbf4bd6a97f3826897} 
+double Wavg\+Calc\+Multi\+::get\+Stpr (\begin{DoxyParamCaption}\item[{int}]{n}{, }\item[{int}]{j}{}\end{DoxyParamCaption})}
+
+
+
+Get the Stpr value for a given n and j. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The value of n. \\
+\hline
+{\em j} & The value of j. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Stpr value. 
+\end{DoxyReturn}
+\Hypertarget{class_wavg_calc_multi_aaa2d6a2fbacce3abf4b1376084826c0d}\index{WavgCalcMulti@{WavgCalcMulti}!getVolume@{getVolume}}
+\index{getVolume@{getVolume}!WavgCalcMulti@{WavgCalcMulti}}
+\doxysubsubsection{\texorpdfstring{getVolume()}{getVolume()}}
+{\footnotesize\ttfamily \label{class_wavg_calc_multi_aaa2d6a2fbacce3abf4b1376084826c0d} 
+double Wavg\+Calc\+Multi\+::get\+Volume (\begin{DoxyParamCaption}\item[{int}]{n}{, }\item[{int}]{j}{}\end{DoxyParamCaption})}
+
+
+
+Get the volume value for a given n and j. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The value of n. \\
+\hline
+{\em j} & The value of j. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The volume value. 
+\end{DoxyReturn}
+\Hypertarget{class_wavg_calc_multi_a466f40e3b5831061d0fcac10b3cb02fc}\index{WavgCalcMulti@{WavgCalcMulti}!getWavg@{getWavg}}
+\index{getWavg@{getWavg}!WavgCalcMulti@{WavgCalcMulti}}
+\doxysubsubsection{\texorpdfstring{getWavg()}{getWavg()}}
+{\footnotesize\ttfamily \label{class_wavg_calc_multi_a466f40e3b5831061d0fcac10b3cb02fc} 
+double Wavg\+Calc\+Multi\+::get\+Wavg (\begin{DoxyParamCaption}\item[{int}]{n}{, }\item[{int}]{j}{}\end{DoxyParamCaption})}
+
+
+
+Get the weighted average value for a given n and j. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The value of n. \\
+\hline
+{\em j} & The value of j. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The weighted average value. 
+\end{DoxyReturn}
+\Hypertarget{class_wavg_calc_multi_ab6f72e06b1f564d30671f0cc53e9c4a1}\index{WavgCalcMulti@{WavgCalcMulti}!Init@{Init}}
+\index{Init@{Init}!WavgCalcMulti@{WavgCalcMulti}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_wavg_calc_multi_ab6f72e06b1f564d30671f0cc53e9c4a1} 
+void Wavg\+Calc\+Multi\+::\+Init (\begin{DoxyParamCaption}\item[{string}]{product}{, }\item[{string}]{startmonth}{, }\item[{int}]{startyear}{, }\item[{int}]{nummonths}{}\end{DoxyParamCaption})}
+
+
+
+Initialize the \doxylink{class_wavg_calc_multi}{Wavg\+Calc\+Multi} object with the given parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em product} & The product string. \\
+\hline
+{\em startmonth} & The start month string. \\
+\hline
+{\em startyear} & The start year value. \\
+\hline
+{\em nummonths} & The number of months value. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00025}{Matrix\+Gen\+::\+Gen\+Outright\+Matrix()}}, \mbox{\hyperlink{l00088}{Matrix\+Gen\+::\+Gen\+Spread\+Matrix()}}, and \mbox{\hyperlink{l00172}{Matrix\+Gen\+::\+Get\+Graph\+Map()}}.
+
+\Hypertarget{class_wavg_calc_multi_a1fa6d8805495a0984dbe50e8157b8c31}\index{WavgCalcMulti@{WavgCalcMulti}!setStartEndTime@{setStartEndTime}}
+\index{setStartEndTime@{setStartEndTime}!WavgCalcMulti@{WavgCalcMulti}}
+\doxysubsubsection{\texorpdfstring{setStartEndTime()}{setStartEndTime()}}
+{\footnotesize\ttfamily \label{class_wavg_calc_multi_a1fa6d8805495a0984dbe50e8157b8c31} 
+bool Wavg\+Calc\+Multi\+::set\+Start\+End\+Time (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{start\+Time}{, }\item[{const std\+::string \&}]{end\+Time}{}\end{DoxyParamCaption})}
+
+
+
+Set the start and end time for the calculation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Time} & The start time in string format. \\
+\hline
+{\em end\+Time} & The end time in string format. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the start and end time are successfully set, false otherwise. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00217}{Start()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00193}{Test()}}.
+
+\Hypertarget{class_wavg_calc_multi_a054c78260e91fddd538e51f3e26411dd}\index{WavgCalcMulti@{WavgCalcMulti}!Start@{Start}}
+\index{Start@{Start}!WavgCalcMulti@{WavgCalcMulti}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily \label{class_wavg_calc_multi_a054c78260e91fddd538e51f3e26411dd} 
+void Wavg\+Calc\+Multi\+::\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Start the calculation process. 
+
+
+
+References \mbox{\hyperlink{l00493}{Started()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00139}{set\+Start\+End\+Time()}}, and \mbox{\hyperlink{l00193}{Test()}}.
+
+\Hypertarget{class_wavg_calc_multi_a9276a9674f2a145481f257981697b421}\index{WavgCalcMulti@{WavgCalcMulti}!Started@{Started}}
+\index{Started@{Started}!WavgCalcMulti@{WavgCalcMulti}}
+\doxysubsubsection{\texorpdfstring{Started()}{Started()}}
+{\footnotesize\ttfamily \label{class_wavg_calc_multi_a9276a9674f2a145481f257981697b421} 
+bool Wavg\+Calc\+Multi\+::\+Started (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Check if the calculation is started. 
+
+\begin{DoxyReturn}{Returns}
+True if the calculation is started, false otherwise. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00217}{Start()}}.
+
+\Hypertarget{class_wavg_calc_multi_a65ab8f13d83df8a7aa48344e229554d0}\index{WavgCalcMulti@{WavgCalcMulti}!Stop@{Stop}}
+\index{Stop@{Stop}!WavgCalcMulti@{WavgCalcMulti}}
+\doxysubsubsection{\texorpdfstring{Stop()}{Stop()}}
+{\footnotesize\ttfamily \label{class_wavg_calc_multi_a65ab8f13d83df8a7aa48344e229554d0} 
+void Wavg\+Calc\+Multi\+::\+Stop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Stop the calculation process. 
+
+\Hypertarget{class_wavg_calc_multi_ae9ac6f5d38a83837227fc15f8390738b}\index{WavgCalcMulti@{WavgCalcMulti}!Test@{Test}}
+\index{Test@{Test}!WavgCalcMulti@{WavgCalcMulti}}
+\doxysubsubsection{\texorpdfstring{Test()}{Test()}}
+{\footnotesize\ttfamily \label{class_wavg_calc_multi_ae9ac6f5d38a83837227fc15f8390738b} 
+void Wavg\+Calc\+Multi\+::\+Test (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Test function for \doxylink{class_wavg_calc_multi}{Wavg\+Calc\+Multi} class. 
+
+
+
+References \mbox{\hyperlink{l00139}{set\+Start\+End\+Time()}}, and \mbox{\hyperlink{l00217}{Start()}}.
+
+\Hypertarget{class_wavg_calc_multi_a9a8514c27f5c56f58f07e60c046076a0}\index{WavgCalcMulti@{WavgCalcMulti}!Triggered@{Triggered}}
+\index{Triggered@{Triggered}!WavgCalcMulti@{WavgCalcMulti}}
+\doxysubsubsection{\texorpdfstring{Triggered()}{Triggered()}}
+{\footnotesize\ttfamily \label{class_wavg_calc_multi_a9a8514c27f5c56f58f07e60c046076a0} 
+bool Wavg\+Calc\+Multi\+::\+Triggered (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Check if the calculation is triggered. 
+
+\begin{DoxyReturn}{Returns}
+True if the calculation is triggered, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Algo\+Engines/Wavg\+Calc\+Multi.\+hpp\item 
+Algo\+Engines/Wavg\+Calc\+Multi.\+cpp\end{DoxyCompactItemize}

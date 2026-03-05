@@ -1,0 +1,219 @@
+\doxysection{Performance\+Counter Class Reference}
+\hypertarget{class_performance_counter}{}\label{class_performance_counter}\index{PerformanceCounter@{PerformanceCounter}}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef timespec \mbox{\hyperlink{class_performance_counter_ad4cd866ac6599aefe9d5128bfbcbb7b9}{Count}}
+\begin{DoxyCompactList}\small\item\em Represents a high-\/resolution performance counter value. \end{DoxyCompactList}\item 
+typedef long long \mbox{\hyperlink{class_performance_counter_a535551411cb230fa83f9d3982bebc9ed}{Span}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_performance_counter_ab731e9c80529b9716d5272222ae1e0e3}{set\+To\+Undefined\+Value}} (\mbox{\hyperlink{class_performance_counter_ad4cd866ac6599aefe9d5128bfbcbb7b9}{Count}} \texorpdfstring{$\ast$}{*}value)
+\begin{DoxyCompactList}\small\item\em Sets the given performance counter value to an undefined state. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_performance_counter_a237590f3779b33379f04fd3a667c946a}{is\+Undefined\+Value}} (\mbox{\hyperlink{class_performance_counter_ad4cd866ac6599aefe9d5128bfbcbb7b9}{Count}} \&value)
+\begin{DoxyCompactList}\small\item\em Checks if the given performance counter value is in an undefined state. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_performance_counter_ad4cd866ac6599aefe9d5128bfbcbb7b9}{Count}} \mbox{\hyperlink{class_performance_counter_a0d8a3ab30904b2d914d17232b3240d11}{current}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current value of the high-\/resolution performance counter. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_performance_counter_ab7120a4172e66cd37e6bc3d159717196}{current}} (\mbox{\hyperlink{class_performance_counter_ad4cd866ac6599aefe9d5128bfbcbb7b9}{Count}} \texorpdfstring{$\ast$}{*}result)
+\begin{DoxyCompactList}\small\item\em Retrieves the current value of the high-\/resolution performance counter. \end{DoxyCompactList}\item 
+static Span \mbox{\hyperlink{class_performance_counter_a82f45af03a474858960a02d1609c3bb2}{ns\+Span}} (const \mbox{\hyperlink{class_performance_counter_ad4cd866ac6599aefe9d5128bfbcbb7b9}{Performance\+Counter\+::\+Count}} \&stop, const \mbox{\hyperlink{class_performance_counter_ad4cd866ac6599aefe9d5128bfbcbb7b9}{Performance\+Counter\+::\+Count}} \&start)
+\begin{DoxyCompactList}\small\item\em Calculates the time span in nanoseconds between two performance counter values. \end{DoxyCompactList}\item 
+static Span \mbox{\hyperlink{class_performance_counter_a567721a17e05079cb8bdea99d23e18fa}{us\+Span}} (const \mbox{\hyperlink{class_performance_counter_ad4cd866ac6599aefe9d5128bfbcbb7b9}{Performance\+Counter\+::\+Count}} \&stop, const \mbox{\hyperlink{class_performance_counter_ad4cd866ac6599aefe9d5128bfbcbb7b9}{Performance\+Counter\+::\+Count}} \&start)
+\begin{DoxyCompactList}\small\item\em Calculates the time span in microseconds between two performance counter values. \end{DoxyCompactList}\item 
+static Span \mbox{\hyperlink{class_performance_counter_aa7d0792009d5c3616af15069c0fcb058}{elapsed\+Nanoseconds}} (const \mbox{\hyperlink{class_performance_counter_ad4cd866ac6599aefe9d5128bfbcbb7b9}{Performance\+Counter\+::\+Count}} \&start)
+\begin{DoxyCompactList}\small\item\em Calculates the elapsed time in nanoseconds since the given performance counter value. \end{DoxyCompactList}\item 
+static Span \mbox{\hyperlink{class_performance_counter_a06ef52f4dec5e4f5ea6029c4677ff70a}{elapsed\+Microseconds}} (const \mbox{\hyperlink{class_performance_counter_ad4cd866ac6599aefe9d5128bfbcbb7b9}{Performance\+Counter\+::\+Count}} \&start)
+\begin{DoxyCompactList}\small\item\em Calculates the elapsed time in microseconds since the given performance counter value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{class_performance_counter_ad4cd866ac6599aefe9d5128bfbcbb7b9}\index{PerformanceCounter@{PerformanceCounter}!Count@{Count}}
+\index{Count@{Count}!PerformanceCounter@{PerformanceCounter}}
+\doxysubsubsection{\texorpdfstring{Count}{Count}}
+{\footnotesize\ttfamily \label{class_performance_counter_ad4cd866ac6599aefe9d5128bfbcbb7b9} 
+timespec \mbox{\hyperlink{class_performance_counter_ad4cd866ac6599aefe9d5128bfbcbb7b9}{Performance\+Counter\+::\+Count}}}
+
+
+
+Represents a high-\/resolution performance counter value. 
+
+\Hypertarget{class_performance_counter_a535551411cb230fa83f9d3982bebc9ed}\index{PerformanceCounter@{PerformanceCounter}!Span@{Span}}
+\index{Span@{Span}!PerformanceCounter@{PerformanceCounter}}
+\doxysubsubsection{\texorpdfstring{Span}{Span}}
+{\footnotesize\ttfamily \label{class_performance_counter_a535551411cb230fa83f9d3982bebc9ed} 
+long long Performance\+Counter\+::\+Span}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_performance_counter_a0d8a3ab30904b2d914d17232b3240d11}\index{PerformanceCounter@{PerformanceCounter}!current@{current}}
+\index{current@{current}!PerformanceCounter@{PerformanceCounter}}
+\doxysubsubsection{\texorpdfstring{current()}{current()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_performance_counter_a0d8a3ab30904b2d914d17232b3240d11} 
+\mbox{\hyperlink{class_performance_counter_ad4cd866ac6599aefe9d5128bfbcbb7b9}{Performance\+Counter\+::\+Count}} Performance\+Counter\+::current (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Retrieves the current value of the high-\/resolution performance counter. 
+
+\begin{DoxyReturn}{Returns}
+The current performance counter value. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00155}{current()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00155}{current()}}, \mbox{\hyperlink{l00134}{elapsed\+Microseconds()}}, and \mbox{\hyperlink{l00129}{elapsed\+Nanoseconds()}}.
+
+\Hypertarget{class_performance_counter_ab7120a4172e66cd37e6bc3d159717196}\index{PerformanceCounter@{PerformanceCounter}!current@{current}}
+\index{current@{current}!PerformanceCounter@{PerformanceCounter}}
+\doxysubsubsection{\texorpdfstring{current()}{current()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_performance_counter_ab7120a4172e66cd37e6bc3d159717196} 
+void Performance\+Counter\+::current (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_performance_counter_ad4cd866ac6599aefe9d5128bfbcbb7b9}{Performance\+Counter\+::\+Count}} \texorpdfstring{$\ast$}{*}}]{result}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Retrieves the current value of the high-\/resolution performance counter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em result} & The variable to store the current performance counter value. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_performance_counter_a06ef52f4dec5e4f5ea6029c4677ff70a}\index{PerformanceCounter@{PerformanceCounter}!elapsedMicroseconds@{elapsedMicroseconds}}
+\index{elapsedMicroseconds@{elapsedMicroseconds}!PerformanceCounter@{PerformanceCounter}}
+\doxysubsubsection{\texorpdfstring{elapsedMicroseconds()}{elapsedMicroseconds()}}
+{\footnotesize\ttfamily \label{class_performance_counter_a06ef52f4dec5e4f5ea6029c4677ff70a} 
+Span Performance\+Counter\+::elapsed\+Microseconds (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_performance_counter_ad4cd866ac6599aefe9d5128bfbcbb7b9}{Performance\+Counter\+::\+Count}} \&}]{start}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Calculates the elapsed time in microseconds since the given performance counter value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & The start performance counter value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The elapsed time in microseconds. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00155}{current()}}, and \mbox{\hyperlink{l00124}{us\+Span()}}.
+
+\Hypertarget{class_performance_counter_aa7d0792009d5c3616af15069c0fcb058}\index{PerformanceCounter@{PerformanceCounter}!elapsedNanoseconds@{elapsedNanoseconds}}
+\index{elapsedNanoseconds@{elapsedNanoseconds}!PerformanceCounter@{PerformanceCounter}}
+\doxysubsubsection{\texorpdfstring{elapsedNanoseconds()}{elapsedNanoseconds()}}
+{\footnotesize\ttfamily \label{class_performance_counter_aa7d0792009d5c3616af15069c0fcb058} 
+Span Performance\+Counter\+::elapsed\+Nanoseconds (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_performance_counter_ad4cd866ac6599aefe9d5128bfbcbb7b9}{Performance\+Counter\+::\+Count}} \&}]{start}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Calculates the elapsed time in nanoseconds since the given performance counter value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & The start performance counter value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The elapsed time in nanoseconds. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00155}{current()}}, and \mbox{\hyperlink{l00119}{ns\+Span()}}.
+
+\Hypertarget{class_performance_counter_a237590f3779b33379f04fd3a667c946a}\index{PerformanceCounter@{PerformanceCounter}!isUndefinedValue@{isUndefinedValue}}
+\index{isUndefinedValue@{isUndefinedValue}!PerformanceCounter@{PerformanceCounter}}
+\doxysubsubsection{\texorpdfstring{isUndefinedValue()}{isUndefinedValue()}}
+{\footnotesize\ttfamily \label{class_performance_counter_a237590f3779b33379f04fd3a667c946a} 
+bool Performance\+Counter\+::is\+Undefined\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_performance_counter_ad4cd866ac6599aefe9d5128bfbcbb7b9}{Count}} \&}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Checks if the given performance counter value is in an undefined state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The performance counter value to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the performance counter value is undefined, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_performance_counter_a82f45af03a474858960a02d1609c3bb2}\index{PerformanceCounter@{PerformanceCounter}!nsSpan@{nsSpan}}
+\index{nsSpan@{nsSpan}!PerformanceCounter@{PerformanceCounter}}
+\doxysubsubsection{\texorpdfstring{nsSpan()}{nsSpan()}}
+{\footnotesize\ttfamily \label{class_performance_counter_a82f45af03a474858960a02d1609c3bb2} 
+Span Performance\+Counter\+::ns\+Span (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_performance_counter_ad4cd866ac6599aefe9d5128bfbcbb7b9}{Performance\+Counter\+::\+Count}} \&}]{stop}{, }\item[{const \mbox{\hyperlink{class_performance_counter_ad4cd866ac6599aefe9d5128bfbcbb7b9}{Performance\+Counter\+::\+Count}} \&}]{start}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Calculates the time span in nanoseconds between two performance counter values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stop} & The stop performance counter value. \\
+\hline
+{\em start} & The start performance counter value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The time span in nanoseconds. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00129}{elapsed\+Nanoseconds()}}.
+
+\Hypertarget{class_performance_counter_ab731e9c80529b9716d5272222ae1e0e3}\index{PerformanceCounter@{PerformanceCounter}!setToUndefinedValue@{setToUndefinedValue}}
+\index{setToUndefinedValue@{setToUndefinedValue}!PerformanceCounter@{PerformanceCounter}}
+\doxysubsubsection{\texorpdfstring{setToUndefinedValue()}{setToUndefinedValue()}}
+{\footnotesize\ttfamily \label{class_performance_counter_ab731e9c80529b9716d5272222ae1e0e3} 
+void Performance\+Counter\+::set\+To\+Undefined\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_performance_counter_ad4cd866ac6599aefe9d5128bfbcbb7b9}{Count}} \texorpdfstring{$\ast$}{*}}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Sets the given performance counter value to an undefined state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The performance counter value to set. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_performance_counter_a567721a17e05079cb8bdea99d23e18fa}\index{PerformanceCounter@{PerformanceCounter}!usSpan@{usSpan}}
+\index{usSpan@{usSpan}!PerformanceCounter@{PerformanceCounter}}
+\doxysubsubsection{\texorpdfstring{usSpan()}{usSpan()}}
+{\footnotesize\ttfamily \label{class_performance_counter_a567721a17e05079cb8bdea99d23e18fa} 
+Span Performance\+Counter\+::us\+Span (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_performance_counter_ad4cd866ac6599aefe9d5128bfbcbb7b9}{Performance\+Counter\+::\+Count}} \&}]{stop}{, }\item[{const \mbox{\hyperlink{class_performance_counter_ad4cd866ac6599aefe9d5128bfbcbb7b9}{Performance\+Counter\+::\+Count}} \&}]{start}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Calculates the time span in microseconds between two performance counter values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stop} & The stop performance counter value. \\
+\hline
+{\em start} & The start performance counter value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The time span in microseconds. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00134}{elapsed\+Microseconds()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Core/Performance\+Counter.\+h\end{DoxyCompactItemize}

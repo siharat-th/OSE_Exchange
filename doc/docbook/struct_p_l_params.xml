@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_p_l_params" xml:lang="en-US">
+<title>PLParams Struct Reference</title>
+<indexterm><primary>PLParams</primary></indexterm>
+<para>
+
+<para>The <link linkend="_struct_p_l_params">PLParams</link> struct represents the parameters for the PL algorithm. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;PLWatcherParams.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>vector&lt; <link linkend="_struct_p_l_position">PLPosition</link> &gt; <link linkend="_struct_p_l_params_1af208d9d0e95b2911cc297c55f1f5ee23">Positions</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_p_l_params_1a8ec9c38edb2e777832afc8f1eb382e13">SpreadId</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_p_l_params_1adba2159700306e7d26fd75fadbb6bb07">UseBarriers</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_p_l_params_1a645d05efa22e0a1c145d8d44adb05584">UseSqueeze</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_p_l_params_1ae72dfe056dc51fe016767d29093d8e69">SqueezeQty</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_p_l_params_1aaa4a9b20f50441666402a5103a16f7ba">PrimaryLeg</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_p_l_params_1a3578f1c578204997e60239e51e8ba88b">MaxPl</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_p_l_params_1ace6951bff7060461217106c1570577b9">MinPl</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_p_l_params_1a57a2cdb401a108ada1d2f63b6b41024c">TimeToLiveSecs</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_p_l_params_1a6bee097d505271c4508e7224a0ef7382">LastPL</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_p_l_params_1a997ba3c672b2dd220815cc69a18012ac">Elected</link></para>
+</listitem>
+            <listitem><para><link linkend="_struct_k_t_n_1_1_o_r_d_1_1_k_order_algo_trigger">KOrderAlgoTrigger</link> <link linkend="_struct_p_l_params_1accf2e9dc5ead91dffc878d50ca74ff01">Trig</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_struct_p_l_params">PLParams</link> struct represents the parameters for the PL algorithm. </para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_p_l_params_1a997ba3c672b2dd220815cc69a18012ac"/><section>
+    <title>Elected</title>
+<indexterm><primary>Elected</primary><secondary>PLParams</secondary></indexterm>
+<indexterm><primary>PLParams</primary><secondary>Elected</secondary></indexterm>
+<para><computeroutput>bool PLParams::Elected</computeroutput></para></section>
+<anchor xml:id="_struct_p_l_params_1a6bee097d505271c4508e7224a0ef7382"/><section>
+    <title>LastPL</title>
+<indexterm><primary>LastPL</primary><secondary>PLParams</secondary></indexterm>
+<indexterm><primary>PLParams</primary><secondary>LastPL</secondary></indexterm>
+<para><computeroutput>double PLParams::LastPL</computeroutput></para></section>
+<anchor xml:id="_struct_p_l_params_1a3578f1c578204997e60239e51e8ba88b"/><section>
+    <title>MaxPl</title>
+<indexterm><primary>MaxPl</primary><secondary>PLParams</secondary></indexterm>
+<indexterm><primary>PLParams</primary><secondary>MaxPl</secondary></indexterm>
+<para><computeroutput>double PLParams::MaxPl</computeroutput></para></section>
+<anchor xml:id="_struct_p_l_params_1ace6951bff7060461217106c1570577b9"/><section>
+    <title>MinPl</title>
+<indexterm><primary>MinPl</primary><secondary>PLParams</secondary></indexterm>
+<indexterm><primary>PLParams</primary><secondary>MinPl</secondary></indexterm>
+<para><computeroutput>double PLParams::MinPl</computeroutput></para></section>
+<anchor xml:id="_struct_p_l_params_1af208d9d0e95b2911cc297c55f1f5ee23"/><section>
+    <title>Positions</title>
+<indexterm><primary>Positions</primary><secondary>PLParams</secondary></indexterm>
+<indexterm><primary>PLParams</primary><secondary>Positions</secondary></indexterm>
+<para><computeroutput>vector&lt;<link linkend="_struct_p_l_position">PLPosition</link>&gt; PLParams::Positions</computeroutput></para></section>
+<anchor xml:id="_struct_p_l_params_1aaa4a9b20f50441666402a5103a16f7ba"/><section>
+    <title>PrimaryLeg</title>
+<indexterm><primary>PrimaryLeg</primary><secondary>PLParams</secondary></indexterm>
+<indexterm><primary>PLParams</primary><secondary>PrimaryLeg</secondary></indexterm>
+<para><computeroutput>int PLParams::PrimaryLeg</computeroutput></para></section>
+<anchor xml:id="_struct_p_l_params_1a8ec9c38edb2e777832afc8f1eb382e13"/><section>
+    <title>SpreadId</title>
+<indexterm><primary>SpreadId</primary><secondary>PLParams</secondary></indexterm>
+<indexterm><primary>PLParams</primary><secondary>SpreadId</secondary></indexterm>
+<para><computeroutput>string PLParams::SpreadId</computeroutput></para></section>
+<anchor xml:id="_struct_p_l_params_1ae72dfe056dc51fe016767d29093d8e69"/><section>
+    <title>SqueezeQty</title>
+<indexterm><primary>SqueezeQty</primary><secondary>PLParams</secondary></indexterm>
+<indexterm><primary>PLParams</primary><secondary>SqueezeQty</secondary></indexterm>
+<para><computeroutput>int PLParams::SqueezeQty</computeroutput></para></section>
+<anchor xml:id="_struct_p_l_params_1a57a2cdb401a108ada1d2f63b6b41024c"/><section>
+    <title>TimeToLiveSecs</title>
+<indexterm><primary>TimeToLiveSecs</primary><secondary>PLParams</secondary></indexterm>
+<indexterm><primary>PLParams</primary><secondary>TimeToLiveSecs</secondary></indexterm>
+<para><computeroutput>int PLParams::TimeToLiveSecs</computeroutput></para></section>
+<anchor xml:id="_struct_p_l_params_1accf2e9dc5ead91dffc878d50ca74ff01"/><section>
+    <title>Trig</title>
+<indexterm><primary>Trig</primary><secondary>PLParams</secondary></indexterm>
+<indexterm><primary>PLParams</primary><secondary>Trig</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_k_t_n_1_1_o_r_d_1_1_k_order_algo_trigger">KOrderAlgoTrigger</link> PLParams::Trig</computeroutput></para></section>
+<anchor xml:id="_struct_p_l_params_1adba2159700306e7d26fd75fadbb6bb07"/><section>
+    <title>UseBarriers</title>
+<indexterm><primary>UseBarriers</primary><secondary>PLParams</secondary></indexterm>
+<indexterm><primary>PLParams</primary><secondary>UseBarriers</secondary></indexterm>
+<para><computeroutput>bool PLParams::UseBarriers</computeroutput></para></section>
+<anchor xml:id="_struct_p_l_params_1a645d05efa22e0a1c145d8d44adb05584"/><section>
+    <title>UseSqueeze</title>
+<indexterm><primary>UseSqueeze</primary><secondary>PLParams</secondary></indexterm>
+<indexterm><primary>PLParams</primary><secondary>UseSqueeze</secondary></indexterm>
+<para><computeroutput>bool PLParams::UseSqueeze</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+AlgoParams/PLWatcherParams.hpp</section>
+</section>

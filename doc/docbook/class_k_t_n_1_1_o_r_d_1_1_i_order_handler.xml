@@ -1,0 +1,263 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_o_r_d_1_1_i_order_handler" xml:lang="en-US">
+<title>KTN::ORD::IOrderHandler Class Reference</title>
+<indexterm><primary>KTN::ORD::IOrderHandler</primary></indexterm>
+<para>
+
+<para>Interface for handling order-related operations. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;IOrderHandler.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for KTN::ORD::IOrderHandler:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_k_t_n_1_1_o_r_d_1_1_i_order_handler.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_o_r_d_1_1_i_order_handler_1a6f79de7ce6abebc6e9c55aef7b948d45">ProcessOrderID</link> (uint64_t ordid)=0</para>
+
+<para>Process the order ID. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_o_r_d_1_1_i_order_handler_1a9ccd75ac68157508d9c5d360692b6d63">ProcessOrder</link> (<link linkend="_struct_k_t_n_1_1_order_pod">OrderPod</link> &amp;ord)=0</para>
+
+<para>Process the order. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_o_r_d_1_1_i_order_handler_1a141f40ff19ff873f9d4ffeddb30d9717">ProcessFill</link> (<link linkend="_struct_k_t_n_1_1_order_pod">OrderPod</link> &amp;ord)=0</para>
+
+<para>Process the fill. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_o_r_d_1_1_i_order_handler_1a06dee577b900a917b66e60af98fa9251">ProcessSentOrder</link> (<link linkend="_struct_k_t_n_1_1_order_pod">OrderPod</link> &amp;ord)=0</para>
+
+<para>Process the sent order. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_o_r_d_1_1_i_order_handler_1a2cff128da83c1cc54c7c8dd8b7ff8f74">ProcessRejectedOrder</link> (<link linkend="_struct_k_t_n_1_1_order_pod">OrderPod</link> &amp;ord, const string &amp;text)=0</para>
+
+<para>Process the rejected order. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_o_r_d_1_1_i_order_handler_1aefdbb0a1ca024675cc9ed52842cd1bad">RegisterOrderTemplate</link> (<link linkend="_struct_k_t_n_1_1_order">Order</link> &amp;ord)=0</para>
+
+<para>Register an order template. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Interface for handling order-related operations. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_o_r_d_1_1_i_order_handler_1a141f40ff19ff873f9d4ffeddb30d9717"/><section>
+    <title>ProcessFill()</title>
+<indexterm><primary>ProcessFill</primary><secondary>KTN::ORD::IOrderHandler</secondary></indexterm>
+<indexterm><primary>KTN::ORD::IOrderHandler</primary><secondary>ProcessFill</secondary></indexterm>
+<para><computeroutput>virtual void KTN::ORD::IOrderHandler::ProcessFill (<link linkend="_struct_k_t_n_1_1_order_pod">OrderPod</link> &amp; ord)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>Process the fill. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ord</entry><entry>
+<para>The fill to process. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implemented in <link linkend="_class_order_manager_v5_1a88cb299300df75f849674f6aa5f1e296">OrderManagerV5</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_o_r_d_1_1_i_order_handler_1a9ccd75ac68157508d9c5d360692b6d63"/><section>
+    <title>ProcessOrder()</title>
+<indexterm><primary>ProcessOrder</primary><secondary>KTN::ORD::IOrderHandler</secondary></indexterm>
+<indexterm><primary>KTN::ORD::IOrderHandler</primary><secondary>ProcessOrder</secondary></indexterm>
+<para><computeroutput>virtual void KTN::ORD::IOrderHandler::ProcessOrder (<link linkend="_struct_k_t_n_1_1_order_pod">OrderPod</link> &amp; ord)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>Process the order. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ord</entry><entry>
+<para>The order to process. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implemented in <link linkend="_class_order_manager_v5_1a645bc9bb5d6724ff14073b03948a0fa8">OrderManagerV5</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_o_r_d_1_1_i_order_handler_1a6f79de7ce6abebc6e9c55aef7b948d45"/><section>
+    <title>ProcessOrderID()</title>
+<indexterm><primary>ProcessOrderID</primary><secondary>KTN::ORD::IOrderHandler</secondary></indexterm>
+<indexterm><primary>KTN::ORD::IOrderHandler</primary><secondary>ProcessOrderID</secondary></indexterm>
+<para><computeroutput>virtual void KTN::ORD::IOrderHandler::ProcessOrderID (uint64_t ordid)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>Process the order ID. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ordid</entry><entry>
+<para>The order ID to process. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implemented in <link linkend="_class_order_manager_v5_1a3c2efb71d798d9d6da7e26c6033348f5">OrderManagerV5</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_o_r_d_1_1_i_order_handler_1a2cff128da83c1cc54c7c8dd8b7ff8f74"/><section>
+    <title>ProcessRejectedOrder()</title>
+<indexterm><primary>ProcessRejectedOrder</primary><secondary>KTN::ORD::IOrderHandler</secondary></indexterm>
+<indexterm><primary>KTN::ORD::IOrderHandler</primary><secondary>ProcessRejectedOrder</secondary></indexterm>
+<para><computeroutput>virtual void KTN::ORD::IOrderHandler::ProcessRejectedOrder (<link linkend="_struct_k_t_n_1_1_order_pod">OrderPod</link> &amp; ord, const string &amp; text)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>Process the rejected order. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ord</entry><entry>
+<para>The rejected order to process. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>text</entry><entry>
+<para>The rejection text. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implemented in <link linkend="_class_order_manager_v5_1a7427c8594b22f65d05a86a007e53aaa2">OrderManagerV5</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_o_r_d_1_1_i_order_handler_1a06dee577b900a917b66e60af98fa9251"/><section>
+    <title>ProcessSentOrder()</title>
+<indexterm><primary>ProcessSentOrder</primary><secondary>KTN::ORD::IOrderHandler</secondary></indexterm>
+<indexterm><primary>KTN::ORD::IOrderHandler</primary><secondary>ProcessSentOrder</secondary></indexterm>
+<para><computeroutput>virtual void KTN::ORD::IOrderHandler::ProcessSentOrder (<link linkend="_struct_k_t_n_1_1_order_pod">OrderPod</link> &amp; ord)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>Process the sent order. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ord</entry><entry>
+<para>The sent order to process. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implemented in <link linkend="_class_order_manager_v5_1a43512c55a3fe9472d66401f0fadf22ca">OrderManagerV5</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_o_r_d_1_1_i_order_handler_1aefdbb0a1ca024675cc9ed52842cd1bad"/><section>
+    <title>RegisterOrderTemplate()</title>
+<indexterm><primary>RegisterOrderTemplate</primary><secondary>KTN::ORD::IOrderHandler</secondary></indexterm>
+<indexterm><primary>KTN::ORD::IOrderHandler</primary><secondary>RegisterOrderTemplate</secondary></indexterm>
+<para><computeroutput>virtual void KTN::ORD::IOrderHandler::RegisterOrderTemplate (<link linkend="_struct_k_t_n_1_1_order">Order</link> &amp; ord)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>Register an order template. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ord</entry><entry>
+<para>The order template to register. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implemented in <link linkend="_class_order_manager_v5_1a435d221b404b1a9238d1ffaf634f429e">OrderManagerV5</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Orders/IOrderHandler.hpp</section>
+</section>

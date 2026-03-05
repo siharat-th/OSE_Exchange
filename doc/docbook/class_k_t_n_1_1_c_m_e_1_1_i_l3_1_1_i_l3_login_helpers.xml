@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers" xml:lang="en-US">
+<title>KTN::CME::IL3::IL3LoginHelpers Class Reference</title>
+<indexterm><primary>KTN::CME::IL3::IL3LoginHelpers</primary></indexterm>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>typedef std::vector&lt; unsigned char &gt; <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_1a65719cb84f0da96c71e92533555a9627">ByteArray</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static uint64_t <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_1a37fbaf15d9c11ca6a3686f64505f072d">GenerateRequestTimestamp</link> ()</para>
+</listitem>
+            <listitem><para>static uint64_t <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_1a29329862c3cf24618f96fef8ad81ce2e">GenFastTimestamp</link> ()</para>
+</listitem>
+            <listitem><para>static uint64_t <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_1a1c646075dfa9a3b6bfffdca65646ea31">GenerateUUID</link> ()</para>
+</listitem>
+            <listitem><para>static std::string <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_1a5bf68e0c5f492fe68d507012dc7da22c">GenerateCanonicalMessageForNegotiate</link> (string session, string firmID, long requestTimestamp, long uUID)</para>
+</listitem>
+            <listitem><para>static std::string <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_1a00eb1372a1861de099b197ef98431afa">GenerateCanonicalMessageForEstablish</link> (string session, string firmID, long requestTimestamp, long uUID, string tradingSystemName, string tradingSystemVersionId, string tradingSystemVendorId, long nextSeqNo=1, long keepAliveInterval=30)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_1ab6d98383a56374337305b6c97fc3dc7b">calculateHMAC</link> (const std::string &amp;canonicalRequest, const std::string &amp;userKey, char result[32])</para>
+</listitem>
+            <listitem><para>static std::string <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_1a3f2984aa054feb1d11960617a7826652">calculateHMAC3</link> (const std::string &amp;canonicalRequest, const std::string &amp;userKey)</para>
+</listitem>
+            <listitem><para>static std::string <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_1a4cb86edc2cbe81bba0066dd433963e7e">calculateHMAC3Mtx</link> (const std::string &amp;canonicalRequest, const std::string &amp;userKey)</para>
+</listitem>
+            <listitem><para>static std::string <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_1aa283e44e6a13a2741b281bfd42bb3a0c">HmacEncode2</link> (const char *key, const char *input)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_1a593c8af7aa153116c04d4e1f5c879c6a">base64url_decode</link> (ByteArray &amp;output, const std::string &amp;input)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_1ac9f736112017db80bbbc1ce164e5d1af">calculateHmacSha256</link> (const ByteArray &amp;key, const std::string &amp;data, ByteArray &amp;result)</para>
+</listitem>
+            <listitem><para>static std::string <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_1a8aa101d9bcc15431d00ef86414cf3a0a">encodeUrl</link> (const void *data, const size_t dataSize)</para>
+</listitem>
+            <listitem><para>static std::string <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_1aa5af01c7677c4d585b0539928cbb746a">calculateHmacOG</link> (const std::string &amp;data, const std::string &amp;secretKey)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Typedef Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_1a65719cb84f0da96c71e92533555a9627"/><section>
+    <title>ByteArray</title>
+<indexterm><primary>ByteArray</primary><secondary>KTN::CME::IL3::IL3LoginHelpers</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::IL3LoginHelpers</primary><secondary>ByteArray</secondary></indexterm>
+<para><computeroutput>std::vector&lt;unsigned char&gt; KTN::CME::IL3::IL3LoginHelpers::ByteArray</computeroutput></para></section>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_1a8747f4abeb6d98b2cde345aea11ff434"/><section>
+    <title>IL3LoginHelpers()</title>
+<indexterm><primary>IL3LoginHelpers</primary><secondary>KTN::CME::IL3::IL3LoginHelpers</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::IL3LoginHelpers</primary><secondary>IL3LoginHelpers</secondary></indexterm>
+<para><computeroutput>IL3LoginHelpers::IL3LoginHelpers ( )</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_1aeb83fbd44f8b18da5db81d08ba9fc5eb"/><section>
+    <title>~IL3LoginHelpers()</title>
+<indexterm><primary>~IL3LoginHelpers</primary><secondary>KTN::CME::IL3::IL3LoginHelpers</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::IL3LoginHelpers</primary><secondary>~IL3LoginHelpers</secondary></indexterm>
+<para><computeroutput>IL3LoginHelpers::~IL3LoginHelpers ( )<computeroutput>[virtual]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_1a593c8af7aa153116c04d4e1f5c879c6a"/><section>
+    <title>base64url_decode()</title>
+<indexterm><primary>base64url_decode</primary><secondary>KTN::CME::IL3::IL3LoginHelpers</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::IL3LoginHelpers</primary><secondary>base64url_decode</secondary></indexterm>
+<para><computeroutput>static void KTN::CME::IL3::IL3LoginHelpers::base64url_decode (ByteArray &amp; output, const std::string &amp; input)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_1ab6d98383a56374337305b6c97fc3dc7b"/><section>
+    <title>calculateHMAC()</title>
+<indexterm><primary>calculateHMAC</primary><secondary>KTN::CME::IL3::IL3LoginHelpers</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::IL3LoginHelpers</primary><secondary>calculateHMAC</secondary></indexterm>
+<para><computeroutput>static void KTN::CME::IL3::IL3LoginHelpers::calculateHMAC (const std::string &amp; canonicalRequest, const std::string &amp; userKey, char result[32])<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_1a3f2984aa054feb1d11960617a7826652"/><section>
+    <title>calculateHMAC3()</title>
+<indexterm><primary>calculateHMAC3</primary><secondary>KTN::CME::IL3::IL3LoginHelpers</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::IL3LoginHelpers</primary><secondary>calculateHMAC3</secondary></indexterm>
+<para><computeroutput>static std::string KTN::CME::IL3::IL3LoginHelpers::calculateHMAC3 (const std::string &amp; canonicalRequest, const std::string &amp; userKey)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_1a4cb86edc2cbe81bba0066dd433963e7e"/><section>
+    <title>calculateHMAC3Mtx()</title>
+<indexterm><primary>calculateHMAC3Mtx</primary><secondary>KTN::CME::IL3::IL3LoginHelpers</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::IL3LoginHelpers</primary><secondary>calculateHMAC3Mtx</secondary></indexterm>
+<para><computeroutput>static std::string KTN::CME::IL3::IL3LoginHelpers::calculateHMAC3Mtx (const std::string &amp; canonicalRequest, const std::string &amp; userKey)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_1aa5af01c7677c4d585b0539928cbb746a"/><section>
+    <title>calculateHmacOG()</title>
+<indexterm><primary>calculateHmacOG</primary><secondary>KTN::CME::IL3::IL3LoginHelpers</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::IL3LoginHelpers</primary><secondary>calculateHmacOG</secondary></indexterm>
+<para><computeroutput>static std::string KTN::CME::IL3::IL3LoginHelpers::calculateHmacOG (const std::string &amp; data, const std::string &amp; secretKey)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_1ac9f736112017db80bbbc1ce164e5d1af"/><section>
+    <title>calculateHmacSha256()</title>
+<indexterm><primary>calculateHmacSha256</primary><secondary>KTN::CME::IL3::IL3LoginHelpers</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::IL3LoginHelpers</primary><secondary>calculateHmacSha256</secondary></indexterm>
+<para><computeroutput>static void KTN::CME::IL3::IL3LoginHelpers::calculateHmacSha256 (const ByteArray &amp; key, const std::string &amp; data, ByteArray &amp; result)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_1a8aa101d9bcc15431d00ef86414cf3a0a"/><section>
+    <title>encodeUrl()</title>
+<indexterm><primary>encodeUrl</primary><secondary>KTN::CME::IL3::IL3LoginHelpers</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::IL3LoginHelpers</primary><secondary>encodeUrl</secondary></indexterm>
+<para><computeroutput>static std::string KTN::CME::IL3::IL3LoginHelpers::encodeUrl (const void * data, const size_t dataSize)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_1a00eb1372a1861de099b197ef98431afa"/><section>
+    <title>GenerateCanonicalMessageForEstablish()</title>
+<indexterm><primary>GenerateCanonicalMessageForEstablish</primary><secondary>KTN::CME::IL3::IL3LoginHelpers</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::IL3LoginHelpers</primary><secondary>GenerateCanonicalMessageForEstablish</secondary></indexterm>
+<para><computeroutput>static std::string KTN::CME::IL3::IL3LoginHelpers::GenerateCanonicalMessageForEstablish (string session, string firmID, long requestTimestamp, long uUID, string tradingSystemName, string tradingSystemVersionId, string tradingSystemVendorId, long nextSeqNo = <computeroutput>1</computeroutput>
+, long keepAliveInterval = <computeroutput>30</computeroutput>
+)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_1a5bf68e0c5f492fe68d507012dc7da22c"/><section>
+    <title>GenerateCanonicalMessageForNegotiate()</title>
+<indexterm><primary>GenerateCanonicalMessageForNegotiate</primary><secondary>KTN::CME::IL3::IL3LoginHelpers</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::IL3LoginHelpers</primary><secondary>GenerateCanonicalMessageForNegotiate</secondary></indexterm>
+<para><computeroutput>static std::string KTN::CME::IL3::IL3LoginHelpers::GenerateCanonicalMessageForNegotiate (string session, string firmID, long requestTimestamp, long uUID)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_1a37fbaf15d9c11ca6a3686f64505f072d"/><section>
+    <title>GenerateRequestTimestamp()</title>
+<indexterm><primary>GenerateRequestTimestamp</primary><secondary>KTN::CME::IL3::IL3LoginHelpers</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::IL3LoginHelpers</primary><secondary>GenerateRequestTimestamp</secondary></indexterm>
+<para><computeroutput>static uint64_t KTN::CME::IL3::IL3LoginHelpers::GenerateRequestTimestamp ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_1a1c646075dfa9a3b6bfffdca65646ea31"/><section>
+    <title>GenerateUUID()</title>
+<indexterm><primary>GenerateUUID</primary><secondary>KTN::CME::IL3::IL3LoginHelpers</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::IL3LoginHelpers</primary><secondary>GenerateUUID</secondary></indexterm>
+<para><computeroutput>static uint64_t KTN::CME::IL3::IL3LoginHelpers::GenerateUUID ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_1a29329862c3cf24618f96fef8ad81ce2e"/><section>
+    <title>GenFastTimestamp()</title>
+<indexterm><primary>GenFastTimestamp</primary><secondary>KTN::CME::IL3::IL3LoginHelpers</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::IL3LoginHelpers</primary><secondary>GenFastTimestamp</secondary></indexterm>
+<para><computeroutput>static uint64_t KTN::CME::IL3::IL3LoginHelpers::GenFastTimestamp ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers_1aa283e44e6a13a2741b281bfd42bb3a0c"/><section>
+    <title>HmacEncode2()</title>
+<indexterm><primary>HmacEncode2</primary><secondary>KTN::CME::IL3::IL3LoginHelpers</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::IL3LoginHelpers</primary><secondary>HmacEncode2</secondary></indexterm>
+<para><computeroutput>static std::string KTN::CME::IL3::IL3LoginHelpers::HmacEncode2 (const char * key, const char * input)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+exchsupport/cme/il3/IL3LoginHelpers.hppexchsupport/cme/il3/IL3LoginHelpers.cpp</section>
+</section>

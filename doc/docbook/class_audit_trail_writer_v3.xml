@@ -1,0 +1,328 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_audit_trail_writer_v3" xml:lang="en-US">
+<title>AuditTrailWriterV3 Class Reference</title>
+<indexterm><primary>AuditTrailWriterV3</primary></indexterm>
+<para>
+
+<para>Represents a ultra low latency class for writing audit trail logs using SPSC RingBuffer Queues. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;AuditTrailWriterV3.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for AuditTrailWriterV3:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_audit_trail_writer_v3.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_audit_trail_writer_v3_1a48be441ef448e073f58f76149868c6ba">AuditTrailWriterV3</link> ()</para>
+
+<para>Default constructor for <link linkend="_class_audit_trail_writer_v3">AuditTrailWriterV3</link>. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_audit_trail_writer_v3_1ae9933dada8dcb1c4a24652688002a7bd">~AuditTrailWriterV3</link> ()</para>
+
+<para>Destructor for <link linkend="_class_audit_trail_writer_v3">AuditTrailWriterV3</link>. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_audit_trail_writer_v3_1a4ac7f4af6a9dfea0c7d7caa3c4e8e3ee">Start</link> (string dir, string sessid, string firmid, int core)</para>
+
+<para>Starts the audit trail writer. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_audit_trail_writer_v3_1a121c6aefb539fca096dc29cd32b214d3">InitFileForSeg</link> (int segid)</para>
+
+<para>Initializes the audit trail file for a specific segment. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_audit_trail_writer_v3_1ad1303293f9633fcead84d036dff97248">CreateAuditFile</link> (string sessid, string firmid, int segid)</para>
+
+<para>Creates an audit trail file for a specific session, firm, and segment. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_audit_trail_writer_v3_1abcb0819e22e027ebde282073c12979e8">Write</link> (<link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf">KTNBuf</link> *msg)</para>
+
+<para>Writes a message to the audit trail. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_audit_trail_writer_v3_1a9f690c5484dc8925f5139039b5f08ebb">Write</link> (char *buf, int msgtype, int segid)</para>
+
+<para>Writes a message to the audit trail. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_audit_trail_writer_v3_1a5e44d7a03b462bf396e2ba0ddfae15fe">Size</link> ()</para>
+
+<para>Gets the size of the audit trail writer. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_class_named_thread">NamedThread</link>        <itemizedlist>
+            <listitem><para><link linkend="_class_named_thread_1a891fabdc2d824048ec05c82e7ef8c69a">NamedThread</link> ()</para>
+
+<para>Default constructor. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_named_thread_1a018dadb59e5af98ee734301a1baa50cb">~NamedThread</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_named_thread_1a9fa42542ff43c89fb9bbc33de9c87e34">CreateAndRun</link> (string name, int core)</para>
+
+<para>Creates and runs the named thread on the specified core. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_named_thread_1ad4809c571171be13f0f91f540d5c196f">Join</link> ()</para>
+
+<para>Joins the named thread. </para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+
+<para>Represents a ultra low latency class for writing audit trail logs using SPSC RingBuffer Queues. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_audit_trail_writer_v3_1a48be441ef448e073f58f76149868c6ba"/><section>
+    <title>AuditTrailWriterV3()</title>
+<indexterm><primary>AuditTrailWriterV3</primary><secondary>AuditTrailWriterV3</secondary></indexterm>
+<indexterm><primary>AuditTrailWriterV3</primary><secondary>AuditTrailWriterV3</secondary></indexterm>
+<para><computeroutput>AuditTrailWriterV3::AuditTrailWriterV3 ( )</computeroutput></para><para>
+
+<para>Default constructor for <link linkend="_class_audit_trail_writer_v3">AuditTrailWriterV3</link>. </para>
+</para>
+</section>
+<anchor xml:id="_class_audit_trail_writer_v3_1ae9933dada8dcb1c4a24652688002a7bd"/><section>
+    <title>~AuditTrailWriterV3()</title>
+<indexterm><primary>~AuditTrailWriterV3</primary><secondary>AuditTrailWriterV3</secondary></indexterm>
+<indexterm><primary>AuditTrailWriterV3</primary><secondary>~AuditTrailWriterV3</secondary></indexterm>
+<para><computeroutput>AuditTrailWriterV3::~AuditTrailWriterV3 ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Destructor for <link linkend="_class_audit_trail_writer_v3">AuditTrailWriterV3</link>. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_audit_trail_writer_v3_1ad1303293f9633fcead84d036dff97248"/><section>
+    <title>CreateAuditFile()</title>
+<indexterm><primary>CreateAuditFile</primary><secondary>AuditTrailWriterV3</secondary></indexterm>
+<indexterm><primary>AuditTrailWriterV3</primary><secondary>CreateAuditFile</secondary></indexterm>
+<para><computeroutput>void AuditTrailWriterV3::CreateAuditFile (string sessid, string firmid, int segid)</computeroutput></para><para>
+
+<para>Creates an audit trail file for a specific session, firm, and segment. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>sessid</entry><entry>
+<para>The session ID. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>firmid</entry><entry>
+<para>The firm ID. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>segid</entry><entry>
+<para>The segment ID. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Referenced by <link linkend="_l00039">InitFileForSeg()</link>.</para>
+</section>
+<anchor xml:id="_class_audit_trail_writer_v3_1a121c6aefb539fca096dc29cd32b214d3"/><section>
+    <title>InitFileForSeg()</title>
+<indexterm><primary>InitFileForSeg</primary><secondary>AuditTrailWriterV3</secondary></indexterm>
+<indexterm><primary>AuditTrailWriterV3</primary><secondary>InitFileForSeg</secondary></indexterm>
+<para><computeroutput>void AuditTrailWriterV3::InitFileForSeg (int segid)</computeroutput></para><para>
+
+<para>Initializes the audit trail file for a specific segment. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>segid</entry><entry>
+<para>The segment ID. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00055">CreateAuditFile()</link>.</para>
+<para>
+Referenced by <link linkend="_l00019">KTN::CME::CmeAlgo::CmeAlgo()</link>, and <link linkend="_l00019">KTN::CME::CmeGT5::CmeGT5()</link>.</para>
+</section>
+<anchor xml:id="_class_audit_trail_writer_v3_1a5e44d7a03b462bf396e2ba0ddfae15fe"/><section>
+    <title>Size()</title>
+<indexterm><primary>Size</primary><secondary>AuditTrailWriterV3</secondary></indexterm>
+<indexterm><primary>AuditTrailWriterV3</primary><secondary>Size</secondary></indexterm>
+<para><computeroutput>int AuditTrailWriterV3::Size ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Gets the size of the audit trail writer. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The size of the audit trail writer. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00191">KTN::Core::SPSCRingBuffer&lt; T &gt;::empty()</link>.</para>
+</section>
+<anchor xml:id="_class_audit_trail_writer_v3_1a4ac7f4af6a9dfea0c7d7caa3c4e8e3ee"/><section>
+    <title>Start()</title>
+<indexterm><primary>Start</primary><secondary>AuditTrailWriterV3</secondary></indexterm>
+<indexterm><primary>AuditTrailWriterV3</primary><secondary>Start</secondary></indexterm>
+<para><computeroutput>void AuditTrailWriterV3::Start (string dir, string sessid, string firmid, int core)</computeroutput></para><para>
+
+<para>Starts the audit trail writer. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>dir</entry><entry>
+<para>The directory path for storing the audit trail files. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>sessid</entry><entry>
+<para>The session ID. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>firmid</entry><entry>
+<para>The firm ID. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>core</entry><entry>
+<para>The core number. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00018">NamedThread::CreateAndRun()</link>, and <link linkend="_l00021">KTN::CME::IL3::META::IL3MetaMap::init()</link>.</para>
+<para>
+Referenced by <link linkend="_l00019">KTN::CME::CmeAlgo::CmeAlgo()</link>, and <link linkend="_l00019">KTN::CME::CmeGT5::CmeGT5()</link>.</para>
+</section>
+<anchor xml:id="_class_audit_trail_writer_v3_1a9f690c5484dc8925f5139039b5f08ebb"/><section>
+    <title>Write()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>Write</primary><secondary>AuditTrailWriterV3</secondary></indexterm>
+<indexterm><primary>AuditTrailWriterV3</primary><secondary>Write</secondary></indexterm>
+<para><computeroutput>void AuditTrailWriterV3::Write (char * buf, int msgtype, int segid)</computeroutput></para><para>
+
+<para>Writes a message to the audit trail. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>buf</entry><entry>
+<para>The buffer containing the message. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>msgtype</entry><entry>
+<para>The message type. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>segid</entry><entry>
+<para>The segment ID. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00084">KTN::Core::SPSCRingBuffer&lt; T &gt;::push()</link>.</para>
+</section>
+<anchor xml:id="_class_audit_trail_writer_v3_1abcb0819e22e027ebde282073c12979e8"/><section>
+    <title>Write()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>Write</primary><secondary>AuditTrailWriterV3</secondary></indexterm>
+<indexterm><primary>AuditTrailWriterV3</primary><secondary>Write</secondary></indexterm>
+<para><computeroutput>void AuditTrailWriterV3::Write (<link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf">KTNBuf</link> * msg)</computeroutput></para><para>
+
+<para>Writes a message to the audit trail. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>msg</entry><entry>
+<para>The message to write. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Referenced by <link linkend="_l00369">KTN::CME::CmeAlgo::onRecv()</link>, <link linkend="_l00365">KTN::CME::CmeGT5::onRecv()</link>, <link linkend="_l01104">KTN::CME::CmeAlgo::Send()</link>, and <link linkend="_l00889">KTN::CME::CmeGT5::Send()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Loggers/AuditTrailWriterV3.hppLoggers/AuditTrailWriterV3.cpp</section>
+</section>

@@ -1,0 +1,65 @@
+\doxysection{KTN\+::TCP\+::Tcp\+Callback8t Class Reference}
+\hypertarget{class_k_t_n_1_1_t_c_p_1_1_tcp_callback8t}{}\label{class_k_t_n_1_1_t_c_p_1_1_tcp_callback8t}\index{KTN::TCP::TcpCallback8t@{KTN::TCP::TcpCallback8t}}
+
+
+The \doxylink{class_k_t_n_1_1_t_c_p_1_1_tcp_callback8t}{Tcp\+Callback8t} class is an abstract base class for TCP callbacks with 8-\/bit data.  
+
+
+
+
+{\ttfamily \#include $<$Tcp\+Callback.\+hpp$>$}
+
+Inheritance diagram for KTN\+::TCP\+::Tcp\+Callback8t\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_k_t_n_1_1_t_c_p_1_1_tcp_callback8t}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual uint16\+\_\+t \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_tcp_callback8t_a611efc1c25fd7385ff42935d567a63b0}{on\+Recv}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}data, int len, int segid, int index)=0
+\begin{DoxyCompactList}\small\item\em This method is called when 8-\/bit data is received over TCP. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_k_t_n_1_1_t_c_p_1_1_tcp_callback8t}{Tcp\+Callback8t} class is an abstract base class for TCP callbacks with 8-\/bit data. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_tcp_callback8t_a611efc1c25fd7385ff42935d567a63b0}\index{KTN::TCP::TcpCallback8t@{KTN::TCP::TcpCallback8t}!onRecv@{onRecv}}
+\index{onRecv@{onRecv}!KTN::TCP::TcpCallback8t@{KTN::TCP::TcpCallback8t}}
+\doxysubsubsection{\texorpdfstring{onRecv()}{onRecv()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_tcp_callback8t_a611efc1c25fd7385ff42935d567a63b0} 
+virtual uint16\+\_\+t KTN\+::\+TCP\+::\+Tcp\+Callback8t\+::on\+Recv (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{int}]{len}{, }\item[{int}]{segid}{, }\item[{int}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This method is called when 8-\/bit data is received over TCP. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The received data. \\
+\hline
+{\em len} & The length of the received data. \\
+\hline
+{\em segid} & The segment ID. \\
+\hline
+{\em index} & The index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The response code. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_cme_algo_a718254278f457eb625a371b5d1ec2498}{KTN\+::\+CME\+::\+Cme\+Algo}}, and \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_cme_g_t5_a56a7f9ddcfb39b77238b2de0360857f1}{KTN\+::\+CME\+::\+Cme\+GT5}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00125}{KTN\+::\+TCP\+::\+EFVITcp\+V5\+::on\+Data()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ktn\+Efvi/Tcp\+Callback.\+hpp\end{DoxyCompactItemize}

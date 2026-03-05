@@ -1,0 +1,498 @@
+\doxysection{instrument Struct Reference}
+\hypertarget{structinstrument}{}\label{structinstrument}\index{instrument@{instrument}}
+
+
+Structure representing an instrument.  
+
+
+
+
+{\ttfamily \#include $<$algo\+\_\+structs.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{structinstrument_ada5fdf547794159e51af99df80e15dd6}{Print}} ()
+\begin{DoxyCompactList}\small\item\em Prints the instrument information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{structinstrument_a06aed3ed474bfe49aec391df2140d18d}{totalexec}}
+\item 
+double \mbox{\hyperlink{structinstrument_a6aceff97bf9d668b6e9053d1a4f29fa2}{position}}
+\item 
+double \mbox{\hyperlink{structinstrument_ac5b5db602036708c5ee5d24e39a21743}{effective}}
+\item 
+double \mbox{\hyperlink{structinstrument_a7c58a29d197ee2095ddb5805b40e29c1}{pricemult}}
+\item 
+double \mbox{\hyperlink{structinstrument_a49df4af30e40e9fea592dcea28ed2851}{spreadmult}}
+\item 
+double \mbox{\hyperlink{structinstrument_ab39cc9cfa3d3aae7015008f494dcf3c5}{minsize}}
+\item 
+double \mbox{\hyperlink{structinstrument_a5fdc5b37dd7093c85d58215fa16ae606}{mintick}}
+\item 
+double \mbox{\hyperlink{structinstrument_a476b10bddcb9b6150d8c6b171e3cafe7}{tickvalue}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structinstrument_a795bf78d1b3312620f4a7eb34b6ee1d5}{last\+Buy\+Id}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structinstrument_aa0bd64ba11d2bf9ef9193d2c863f47b8}{last\+Sell\+Id}}
+\item 
+int \mbox{\hyperlink{structinstrument_a274ebe416049ebbb47ff6d6c4fa7093d}{callbackid}}
+\item 
+int \mbox{\hyperlink{structinstrument_ac6805605a091de0b703b03c886b63912}{index}}
+\item 
+int \mbox{\hyperlink{structinstrument_a40bf21232ee478a6e4441e59d1716dba}{mdindex}}
+\item 
+int \mbox{\hyperlink{structinstrument_ad2d748e211820c79627a04eb1f7c5fab}{secid}}
+\item 
+int \mbox{\hyperlink{structinstrument_aa21c85702791ce35fea3b863ae1d7cf1}{mktsegid}}
+\item 
+int \mbox{\hyperlink{structinstrument_ac9fc4a319a8fea73fd6bbf188f072e90}{iside}}
+\item 
+int \mbox{\hyperlink{structinstrument_a6cc66f347b520485bb3fe2c1049feb1d}{id}}
+\item 
+int \mbox{\hyperlink{structinstrument_afef79d97afd9b0c596c0f6bf72243fd3}{tickprecision}}
+\item 
+int \mbox{\hyperlink{structinstrument_a95ff8e0b792d301e070528788562da99}{last\+Bid}}
+\item 
+int \mbox{\hyperlink{structinstrument_ac0d8ac2100701f13b2bcd5007eeb92a8}{last\+Ask}}
+\item 
+int \mbox{\hyperlink{structinstrument_a949dbdba9bc80a877ed2e8220941bc25}{last\+Sent\+Buy\+Price}}
+\item 
+int \mbox{\hyperlink{structinstrument_aaaf56c87d3d9346abadce7e97bfc84a3}{last\+Sent\+Sell\+Price}}
+\item 
+int \mbox{\hyperlink{structinstrument_a780460a77118b57a9c9773f89a93bc34}{row}}
+\item 
+int \mbox{\hyperlink{structinstrument_a587166c4faab0b45ed8b7005d8a1175a}{col}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structinstrument_a92ffd5fe8b9ba9cadedcd753a6d3f377}{connindex}}
+\item 
+bool \mbox{\hyperlink{structinstrument_a212cb7e6aff36b7b4ba51cc4997eee7d}{gotdata}}
+\item 
+bool \mbox{\hyperlink{structinstrument_a8645dde1d69dd445a2a1dac6dd16aba5}{ishedge}}
+\item 
+bool \mbox{\hyperlink{structinstrument_af86b440ac92dd7c67ad0cb2381788f75}{isquote}}
+\item 
+bool \mbox{\hyperlink{structinstrument_a52f871da9ff0c234c89a5f15a5af0526}{squeeze}}
+\item 
+bool \mbox{\hyperlink{structinstrument_a2d41daee97a89cb075dee3df2e2a74c6}{active\+Quoting}}
+\item 
+bool \mbox{\hyperlink{structinstrument_a23dec69da9ba9e25117af497e1cc5350}{bid\+Changed}}
+\item 
+bool \mbox{\hyperlink{structinstrument_a1429f85f05b6f13991a48aa3c00b7991}{ask\+Changed}}
+\item 
+bool \mbox{\hyperlink{structinstrument_a02323bc17ca05577f26782ee63afa107}{iscme}}
+\item 
+bool \mbox{\hyperlink{structinstrument_a2f9e12a3f27ac155e6664d67a974ac65}{istas}}
+\item 
+KOrder\+Prod\+Type\+::\+Enum \mbox{\hyperlink{structinstrument_a26984a94d9b508b6e50079700cfef5cb}{prodtype}}
+\item 
+KOrder\+State\+::\+Enum \mbox{\hyperlink{structinstrument_aca290d43e56faae355bcac429f48596a}{buy\+State}}
+\item 
+KOrder\+State\+::\+Enum \mbox{\hyperlink{structinstrument_a312feb0583fdbe181a12ae2161b04995}{sell\+State}}
+\item 
+std\+::string \mbox{\hyperlink{structinstrument_ab966bb92dfcca559d9a1640ee27e2f1f}{label}}
+\item 
+std\+::string \mbox{\hyperlink{structinstrument_a991b6a3dc6c37b2b22fc7cc1928a67b5}{exch}}
+\item 
+std\+::string \mbox{\hyperlink{structinstrument_ad36118311780c814c4c25ecea9949c12}{product}}
+\item 
+std\+::string \mbox{\hyperlink{structinstrument_a308e7211097fc848fa81e9120dc61cc5}{symbol}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure representing an instrument. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structinstrument_ada5fdf547794159e51af99df80e15dd6}\index{instrument@{instrument}!Print@{Print}}
+\index{Print@{Print}!instrument@{instrument}}
+\doxysubsubsection{\texorpdfstring{Print()}{Print()}}
+{\footnotesize\ttfamily \label{structinstrument_ada5fdf547794159e51af99df80e15dd6} 
+string instrument\+::\+Print (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prints the instrument information. 
+
+\begin{DoxyReturn}{Returns}
+The string representation of the instrument. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00098}{active\+Quoting}}, \mbox{\hyperlink{l00111}{exch}}, \mbox{\hyperlink{l00064}{pricemult}}, \mbox{\hyperlink{l00105}{prodtype}}, \mbox{\hyperlink{l00065}{spreadmult}}, and \mbox{\hyperlink{l00113}{symbol}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00012}{Leg\+Param\+Parser\+::\+Parse\+Spread\+Legs()}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structinstrument_a2d41daee97a89cb075dee3df2e2a74c6}\index{instrument@{instrument}!activeQuoting@{activeQuoting}}
+\index{activeQuoting@{activeQuoting}!instrument@{instrument}}
+\doxysubsubsection{\texorpdfstring{activeQuoting}{activeQuoting}}
+{\footnotesize\ttfamily \label{structinstrument_a2d41daee97a89cb075dee3df2e2a74c6} 
+bool instrument\+::active\+Quoting}
+
+Flag indicating if quoting is active. 
+
+Referenced by \mbox{\hyperlink{l00130}{Leg\+Param\+Parser\+::\+Get\+Cme\+Leg()}}, \mbox{\hyperlink{l00501}{KTN\+::\+Multi\+Spreader\+V3\+::on\+Calculate()}}, \mbox{\hyperlink{l00044}{KTN\+::\+Multi\+Spreader\+V3\+::on\+Json()}}, \mbox{\hyperlink{l00066}{KTN\+::\+Skewer\+::on\+Json()}}, \mbox{\hyperlink{l00071}{KTN\+::\+Skew\+Trader\+::on\+Json()}}, \mbox{\hyperlink{l00066}{KTN\+::\+Stacker\+::on\+Json()}}, \mbox{\hyperlink{l00052}{KTN\+::\+Stacker\+Timer\+::on\+Json()}}, \mbox{\hyperlink{l00053}{KTN\+::\+Twap\+::on\+Json()}}, \mbox{\hyperlink{l00012}{Leg\+Param\+Parser\+::\+Parse\+Spread\+Legs()}}, and \mbox{\hyperlink{l00120}{Print()}}.
+
+\Hypertarget{structinstrument_a1429f85f05b6f13991a48aa3c00b7991}\index{instrument@{instrument}!askChanged@{askChanged}}
+\index{askChanged@{askChanged}!instrument@{instrument}}
+\doxysubsubsection{\texorpdfstring{askChanged}{askChanged}}
+{\footnotesize\ttfamily \label{structinstrument_a1429f85f05b6f13991a48aa3c00b7991} 
+bool instrument\+::ask\+Changed}
+
+Flag indicating if the ask has changed. 
+
+Referenced by \mbox{\hyperlink{l00501}{KTN\+::\+Multi\+Spreader\+V3\+::on\+Calculate()}}.
+
+\Hypertarget{structinstrument_a23dec69da9ba9e25117af497e1cc5350}\index{instrument@{instrument}!bidChanged@{bidChanged}}
+\index{bidChanged@{bidChanged}!instrument@{instrument}}
+\doxysubsubsection{\texorpdfstring{bidChanged}{bidChanged}}
+{\footnotesize\ttfamily \label{structinstrument_a23dec69da9ba9e25117af497e1cc5350} 
+bool instrument\+::bid\+Changed}
+
+Flag indicating if the bid has changed. 
+
+Referenced by \mbox{\hyperlink{l00501}{KTN\+::\+Multi\+Spreader\+V3\+::on\+Calculate()}}.
+
+\Hypertarget{structinstrument_aca290d43e56faae355bcac429f48596a}\index{instrument@{instrument}!buyState@{buyState}}
+\index{buyState@{buyState}!instrument@{instrument}}
+\doxysubsubsection{\texorpdfstring{buyState}{buyState}}
+{\footnotesize\ttfamily \label{structinstrument_aca290d43e56faae355bcac429f48596a} 
+KOrder\+State\+::\+Enum instrument\+::buy\+State}
+
+The buy order state. 
+
+Referenced by \mbox{\hyperlink{l00312}{KTN\+::\+Waves\+::\+Reset\+Position()}}.
+
+\Hypertarget{structinstrument_a274ebe416049ebbb47ff6d6c4fa7093d}\index{instrument@{instrument}!callbackid@{callbackid}}
+\index{callbackid@{callbackid}!instrument@{instrument}}
+\doxysubsubsection{\texorpdfstring{callbackid}{callbackid}}
+{\footnotesize\ttfamily \label{structinstrument_a274ebe416049ebbb47ff6d6c4fa7093d} 
+int instrument\+::callbackid}
+
+The callback ID. \Hypertarget{structinstrument_a587166c4faab0b45ed8b7005d8a1175a}\index{instrument@{instrument}!col@{col}}
+\index{col@{col}!instrument@{instrument}}
+\doxysubsubsection{\texorpdfstring{col}{col}}
+{\footnotesize\ttfamily \label{structinstrument_a587166c4faab0b45ed8b7005d8a1175a} 
+int instrument\+::col}
+
+The column. 
+
+Referenced by \mbox{\hyperlink{l00224}{KTN\+::\+Waves\+::\+Print()}}.
+
+\Hypertarget{structinstrument_a92ffd5fe8b9ba9cadedcd753a6d3f377}\index{instrument@{instrument}!connindex@{connindex}}
+\index{connindex@{connindex}!instrument@{instrument}}
+\doxysubsubsection{\texorpdfstring{connindex}{connindex}}
+{\footnotesize\ttfamily \label{structinstrument_a92ffd5fe8b9ba9cadedcd753a6d3f377} 
+uint8\+\_\+t instrument\+::connindex}
+
+The connection index. \Hypertarget{structinstrument_ac5b5db602036708c5ee5d24e39a21743}\index{instrument@{instrument}!effective@{effective}}
+\index{effective@{effective}!instrument@{instrument}}
+\doxysubsubsection{\texorpdfstring{effective}{effective}}
+{\footnotesize\ttfamily \label{structinstrument_ac5b5db602036708c5ee5d24e39a21743} 
+double instrument\+::effective}
+
+The effective price. 
+
+Referenced by \mbox{\hyperlink{l00383}{KTN\+::\+Multi\+Spreader\+V3\+::\+Reset\+Position()}}, \mbox{\hyperlink{l00471}{KTN\+::\+Skewer\+::\+Reset\+Position()}}, \mbox{\hyperlink{l00470}{KTN\+::\+Skew\+Trader\+::\+Reset\+Position()}}, \mbox{\hyperlink{l00428}{KTN\+::\+Stacker\+::\+Reset\+Position()}}, \mbox{\hyperlink{l00339}{KTN\+::\+Stacker\+Timer\+::\+Reset\+Position()}}, and \mbox{\hyperlink{l00391}{KTN\+::\+Twap\+::\+Reset\+Position()}}.
+
+\Hypertarget{structinstrument_a991b6a3dc6c37b2b22fc7cc1928a67b5}\index{instrument@{instrument}!exch@{exch}}
+\index{exch@{exch}!instrument@{instrument}}
+\doxysubsubsection{\texorpdfstring{exch}{exch}}
+{\footnotesize\ttfamily \label{structinstrument_a991b6a3dc6c37b2b22fc7cc1928a67b5} 
+std\+::string instrument\+::exch}
+
+The exchange. 
+
+Referenced by \mbox{\hyperlink{l00076}{Quoter\+V3\+::\+Construct()}}, \mbox{\hyperlink{l00130}{Leg\+Param\+Parser\+::\+Get\+Cme\+Leg()}}, \mbox{\hyperlink{l00068}{Algo\+Factory\+::\+Launch\+Algo()}}, \mbox{\hyperlink{l00183}{Algo\+Factory\+::\+Parse\+Legs()}}, \mbox{\hyperlink{l00012}{Leg\+Param\+Parser\+::\+Parse\+Spread\+Legs()}}, and \mbox{\hyperlink{l00120}{Print()}}.
+
+\Hypertarget{structinstrument_a212cb7e6aff36b7b4ba51cc4997eee7d}\index{instrument@{instrument}!gotdata@{gotdata}}
+\index{gotdata@{gotdata}!instrument@{instrument}}
+\doxysubsubsection{\texorpdfstring{gotdata}{gotdata}}
+{\footnotesize\ttfamily \label{structinstrument_a212cb7e6aff36b7b4ba51cc4997eee7d} 
+bool instrument\+::gotdata}
+
+Flag indicating if data is available. \Hypertarget{structinstrument_a6cc66f347b520485bb3fe2c1049feb1d}\index{instrument@{instrument}!id@{id}}
+\index{id@{id}!instrument@{instrument}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily \label{structinstrument_a6cc66f347b520485bb3fe2c1049feb1d} 
+int instrument\+::id}
+
+The ID. \Hypertarget{structinstrument_ac6805605a091de0b703b03c886b63912}\index{instrument@{instrument}!index@{index}}
+\index{index@{index}!instrument@{instrument}}
+\doxysubsubsection{\texorpdfstring{index}{index}}
+{\footnotesize\ttfamily \label{structinstrument_ac6805605a091de0b703b03c886b63912} 
+int instrument\+::index}
+
+The index. 
+
+Referenced by \mbox{\hyperlink{l00106}{KTN\+::\+ALGO\+::\+PRICING\+::\+Implied\+Pricer\+::\+Calculate\+Side()}}, \mbox{\hyperlink{l00048}{KTN\+::\+ALGO\+::\+PRICING\+::\+Spread\+Pricer\+::\+Calculate\+Side2()}}, \mbox{\hyperlink{l00212}{KTN\+::\+ALGO\+::\+PRICING\+::\+Spread\+Pricer\+::\+Calculate\+Side3()}}, \mbox{\hyperlink{l00076}{Quoter\+V3\+::\+Construct()}}, \mbox{\hyperlink{l00130}{Leg\+Param\+Parser\+::\+Get\+Cme\+Leg()}}, \mbox{\hyperlink{l01041}{KTN\+::\+Skew\+Trader\+::min\+Order\+Execution()}}, \mbox{\hyperlink{l00501}{KTN\+::\+Multi\+Spreader\+V3\+::on\+Calculate()}}, \mbox{\hyperlink{l00047}{KTN\+::\+Auto\+Hedge\+OB\+::on\+Json()}}, \mbox{\hyperlink{l00062}{KTN\+::\+PLWatcher\+::on\+Json()}}, \mbox{\hyperlink{l00045}{KTN\+::\+Squeezer\+OB\+::on\+Json()}}, and \mbox{\hyperlink{l00012}{Leg\+Param\+Parser\+::\+Parse\+Spread\+Legs()}}.
+
+\Hypertarget{structinstrument_a02323bc17ca05577f26782ee63afa107}\index{instrument@{instrument}!iscme@{iscme}}
+\index{iscme@{iscme}!instrument@{instrument}}
+\doxysubsubsection{\texorpdfstring{iscme}{iscme}}
+{\footnotesize\ttfamily \label{structinstrument_a02323bc17ca05577f26782ee63afa107} 
+bool instrument\+::iscme}
+
+Flag indicating if it is a CME instrument. 
+
+Referenced by \mbox{\hyperlink{l00130}{Leg\+Param\+Parser\+::\+Get\+Cme\+Leg()}}, and \mbox{\hyperlink{l00012}{Leg\+Param\+Parser\+::\+Parse\+Spread\+Legs()}}.
+
+\Hypertarget{structinstrument_a8645dde1d69dd445a2a1dac6dd16aba5}\index{instrument@{instrument}!ishedge@{ishedge}}
+\index{ishedge@{ishedge}!instrument@{instrument}}
+\doxysubsubsection{\texorpdfstring{ishedge}{ishedge}}
+{\footnotesize\ttfamily \label{structinstrument_a8645dde1d69dd445a2a1dac6dd16aba5} 
+bool instrument\+::ishedge}
+
+Flag indicating if it is a hedge. \Hypertarget{structinstrument_ac9fc4a319a8fea73fd6bbf188f072e90}\index{instrument@{instrument}!iside@{iside}}
+\index{iside@{iside}!instrument@{instrument}}
+\doxysubsubsection{\texorpdfstring{iside}{iside}}
+{\footnotesize\ttfamily \label{structinstrument_ac9fc4a319a8fea73fd6bbf188f072e90} 
+int instrument\+::iside}
+
+The side. 
+
+Referenced by \mbox{\hyperlink{l00130}{Leg\+Param\+Parser\+::\+Get\+Cme\+Leg()}}, and \mbox{\hyperlink{l00012}{Leg\+Param\+Parser\+::\+Parse\+Spread\+Legs()}}.
+
+\Hypertarget{structinstrument_af86b440ac92dd7c67ad0cb2381788f75}\index{instrument@{instrument}!isquote@{isquote}}
+\index{isquote@{isquote}!instrument@{instrument}}
+\doxysubsubsection{\texorpdfstring{isquote}{isquote}}
+{\footnotesize\ttfamily \label{structinstrument_af86b440ac92dd7c67ad0cb2381788f75} 
+bool instrument\+::isquote}
+
+Flag indicating if it is a quote. \Hypertarget{structinstrument_a2f9e12a3f27ac155e6664d67a974ac65}\index{instrument@{instrument}!istas@{istas}}
+\index{istas@{istas}!instrument@{instrument}}
+\doxysubsubsection{\texorpdfstring{istas}{istas}}
+{\footnotesize\ttfamily \label{structinstrument_a2f9e12a3f27ac155e6664d67a974ac65} 
+bool instrument\+::istas}
+
+Flag indicating if it is a TAS instrument. 
+
+Referenced by \mbox{\hyperlink{l00224}{KTN\+::\+Waves\+::\+Print()}}.
+
+\Hypertarget{structinstrument_ab966bb92dfcca559d9a1640ee27e2f1f}\index{instrument@{instrument}!label@{label}}
+\index{label@{label}!instrument@{instrument}}
+\doxysubsubsection{\texorpdfstring{label}{label}}
+{\footnotesize\ttfamily \label{structinstrument_ab966bb92dfcca559d9a1640ee27e2f1f} 
+std\+::string instrument\+::label}
+
+The label. \Hypertarget{structinstrument_ac0d8ac2100701f13b2bcd5007eeb92a8}\index{instrument@{instrument}!lastAsk@{lastAsk}}
+\index{lastAsk@{lastAsk}!instrument@{instrument}}
+\doxysubsubsection{\texorpdfstring{lastAsk}{lastAsk}}
+{\footnotesize\ttfamily \label{structinstrument_ac0d8ac2100701f13b2bcd5007eeb92a8} 
+int instrument\+::last\+Ask}
+
+The last ask price. 
+
+Referenced by \mbox{\hyperlink{l00411}{KTN\+::\+Multi\+Spreader\+V3\+::\+Enable()}}, \mbox{\hyperlink{l00506}{KTN\+::\+Skewer\+::\+Enable()}}, \mbox{\hyperlink{l00511}{KTN\+::\+Skew\+Trader\+::\+Enable()}}, \mbox{\hyperlink{l00461}{KTN\+::\+Stacker\+::\+Enable()}}, \mbox{\hyperlink{l00374}{KTN\+::\+Stacker\+Timer\+::\+Enable()}}, \mbox{\hyperlink{l00426}{KTN\+::\+Twap\+::\+Enable()}}, \mbox{\hyperlink{l00343}{KTN\+::\+Waves\+::\+Enable()}}, \mbox{\hyperlink{l00130}{Leg\+Param\+Parser\+::\+Get\+Cme\+Leg()}}, \mbox{\hyperlink{l00501}{KTN\+::\+Multi\+Spreader\+V3\+::on\+Calculate()}}, \mbox{\hyperlink{l00724}{KTN\+::\+Twap\+::on\+Calculate()}}, \mbox{\hyperlink{l00066}{KTN\+::\+Skewer\+::on\+Json()}}, \mbox{\hyperlink{l00071}{KTN\+::\+Skew\+Trader\+::on\+Json()}}, \mbox{\hyperlink{l00066}{KTN\+::\+Stacker\+::on\+Json()}}, \mbox{\hyperlink{l00052}{KTN\+::\+Stacker\+Timer\+::on\+Json()}}, \mbox{\hyperlink{l00053}{KTN\+::\+Twap\+::on\+Json()}}, \mbox{\hyperlink{l00012}{Leg\+Param\+Parser\+::\+Parse\+Spread\+Legs()}}, \mbox{\hyperlink{l00383}{KTN\+::\+Multi\+Spreader\+V3\+::\+Reset\+Position()}}, \mbox{\hyperlink{l00471}{KTN\+::\+Skewer\+::\+Reset\+Position()}}, \mbox{\hyperlink{l00470}{KTN\+::\+Skew\+Trader\+::\+Reset\+Position()}}, \mbox{\hyperlink{l00428}{KTN\+::\+Stacker\+::\+Reset\+Position()}}, \mbox{\hyperlink{l00339}{KTN\+::\+Stacker\+Timer\+::\+Reset\+Position()}}, and \mbox{\hyperlink{l00391}{KTN\+::\+Twap\+::\+Reset\+Position()}}.
+
+\Hypertarget{structinstrument_a95ff8e0b792d301e070528788562da99}\index{instrument@{instrument}!lastBid@{lastBid}}
+\index{lastBid@{lastBid}!instrument@{instrument}}
+\doxysubsubsection{\texorpdfstring{lastBid}{lastBid}}
+{\footnotesize\ttfamily \label{structinstrument_a95ff8e0b792d301e070528788562da99} 
+int instrument\+::last\+Bid}
+
+The last bid price. 
+
+Referenced by \mbox{\hyperlink{l00411}{KTN\+::\+Multi\+Spreader\+V3\+::\+Enable()}}, \mbox{\hyperlink{l00506}{KTN\+::\+Skewer\+::\+Enable()}}, \mbox{\hyperlink{l00511}{KTN\+::\+Skew\+Trader\+::\+Enable()}}, \mbox{\hyperlink{l00461}{KTN\+::\+Stacker\+::\+Enable()}}, \mbox{\hyperlink{l00374}{KTN\+::\+Stacker\+Timer\+::\+Enable()}}, \mbox{\hyperlink{l00426}{KTN\+::\+Twap\+::\+Enable()}}, \mbox{\hyperlink{l00343}{KTN\+::\+Waves\+::\+Enable()}}, \mbox{\hyperlink{l00130}{Leg\+Param\+Parser\+::\+Get\+Cme\+Leg()}}, \mbox{\hyperlink{l00501}{KTN\+::\+Multi\+Spreader\+V3\+::on\+Calculate()}}, \mbox{\hyperlink{l00724}{KTN\+::\+Twap\+::on\+Calculate()}}, \mbox{\hyperlink{l00066}{KTN\+::\+Skewer\+::on\+Json()}}, \mbox{\hyperlink{l00071}{KTN\+::\+Skew\+Trader\+::on\+Json()}}, \mbox{\hyperlink{l00066}{KTN\+::\+Stacker\+::on\+Json()}}, \mbox{\hyperlink{l00052}{KTN\+::\+Stacker\+Timer\+::on\+Json()}}, \mbox{\hyperlink{l00053}{KTN\+::\+Twap\+::on\+Json()}}, \mbox{\hyperlink{l00012}{Leg\+Param\+Parser\+::\+Parse\+Spread\+Legs()}}, \mbox{\hyperlink{l00383}{KTN\+::\+Multi\+Spreader\+V3\+::\+Reset\+Position()}}, \mbox{\hyperlink{l00471}{KTN\+::\+Skewer\+::\+Reset\+Position()}}, \mbox{\hyperlink{l00470}{KTN\+::\+Skew\+Trader\+::\+Reset\+Position()}}, \mbox{\hyperlink{l00428}{KTN\+::\+Stacker\+::\+Reset\+Position()}}, \mbox{\hyperlink{l00339}{KTN\+::\+Stacker\+Timer\+::\+Reset\+Position()}}, and \mbox{\hyperlink{l00391}{KTN\+::\+Twap\+::\+Reset\+Position()}}.
+
+\Hypertarget{structinstrument_a795bf78d1b3312620f4a7eb34b6ee1d5}\index{instrument@{instrument}!lastBuyId@{lastBuyId}}
+\index{lastBuyId@{lastBuyId}!instrument@{instrument}}
+\doxysubsubsection{\texorpdfstring{lastBuyId}{lastBuyId}}
+{\footnotesize\ttfamily \label{structinstrument_a795bf78d1b3312620f4a7eb34b6ee1d5} 
+uint64\+\_\+t instrument\+::last\+Buy\+Id}
+
+The ID of the last buy order. 
+
+Referenced by \mbox{\hyperlink{l00312}{KTN\+::\+Waves\+::\+Reset\+Position()}}.
+
+\Hypertarget{structinstrument_aa0bd64ba11d2bf9ef9193d2c863f47b8}\index{instrument@{instrument}!lastSellId@{lastSellId}}
+\index{lastSellId@{lastSellId}!instrument@{instrument}}
+\doxysubsubsection{\texorpdfstring{lastSellId}{lastSellId}}
+{\footnotesize\ttfamily \label{structinstrument_aa0bd64ba11d2bf9ef9193d2c863f47b8} 
+uint64\+\_\+t instrument\+::last\+Sell\+Id}
+
+The ID of the last sell order. \Hypertarget{structinstrument_a949dbdba9bc80a877ed2e8220941bc25}\index{instrument@{instrument}!lastSentBuyPrice@{lastSentBuyPrice}}
+\index{lastSentBuyPrice@{lastSentBuyPrice}!instrument@{instrument}}
+\doxysubsubsection{\texorpdfstring{lastSentBuyPrice}{lastSentBuyPrice}}
+{\footnotesize\ttfamily \label{structinstrument_a949dbdba9bc80a877ed2e8220941bc25} 
+int instrument\+::last\+Sent\+Buy\+Price}
+
+The last sent buy price. 
+
+Referenced by \mbox{\hyperlink{l00411}{KTN\+::\+Multi\+Spreader\+V3\+::\+Enable()}}, \mbox{\hyperlink{l00506}{KTN\+::\+Skewer\+::\+Enable()}}, \mbox{\hyperlink{l00511}{KTN\+::\+Skew\+Trader\+::\+Enable()}}, \mbox{\hyperlink{l00461}{KTN\+::\+Stacker\+::\+Enable()}}, \mbox{\hyperlink{l00374}{KTN\+::\+Stacker\+Timer\+::\+Enable()}}, \mbox{\hyperlink{l00426}{KTN\+::\+Twap\+::\+Enable()}}, \mbox{\hyperlink{l00343}{KTN\+::\+Waves\+::\+Enable()}}, \mbox{\hyperlink{l00066}{KTN\+::\+Skewer\+::on\+Json()}}, \mbox{\hyperlink{l00071}{KTN\+::\+Skew\+Trader\+::on\+Json()}}, \mbox{\hyperlink{l00066}{KTN\+::\+Stacker\+::on\+Json()}}, \mbox{\hyperlink{l00052}{KTN\+::\+Stacker\+Timer\+::on\+Json()}}, \mbox{\hyperlink{l00053}{KTN\+::\+Twap\+::on\+Json()}}, \mbox{\hyperlink{l00383}{KTN\+::\+Multi\+Spreader\+V3\+::\+Reset\+Position()}}, \mbox{\hyperlink{l00471}{KTN\+::\+Skewer\+::\+Reset\+Position()}}, \mbox{\hyperlink{l00470}{KTN\+::\+Skew\+Trader\+::\+Reset\+Position()}}, \mbox{\hyperlink{l00428}{KTN\+::\+Stacker\+::\+Reset\+Position()}}, \mbox{\hyperlink{l00339}{KTN\+::\+Stacker\+Timer\+::\+Reset\+Position()}}, \mbox{\hyperlink{l00391}{KTN\+::\+Twap\+::\+Reset\+Position()}}, and \mbox{\hyperlink{l00312}{KTN\+::\+Waves\+::\+Reset\+Position()}}.
+
+\Hypertarget{structinstrument_aaaf56c87d3d9346abadce7e97bfc84a3}\index{instrument@{instrument}!lastSentSellPrice@{lastSentSellPrice}}
+\index{lastSentSellPrice@{lastSentSellPrice}!instrument@{instrument}}
+\doxysubsubsection{\texorpdfstring{lastSentSellPrice}{lastSentSellPrice}}
+{\footnotesize\ttfamily \label{structinstrument_aaaf56c87d3d9346abadce7e97bfc84a3} 
+int instrument\+::last\+Sent\+Sell\+Price}
+
+The last sent sell price. 
+
+Referenced by \mbox{\hyperlink{l00411}{KTN\+::\+Multi\+Spreader\+V3\+::\+Enable()}}, \mbox{\hyperlink{l00506}{KTN\+::\+Skewer\+::\+Enable()}}, \mbox{\hyperlink{l00511}{KTN\+::\+Skew\+Trader\+::\+Enable()}}, \mbox{\hyperlink{l00461}{KTN\+::\+Stacker\+::\+Enable()}}, \mbox{\hyperlink{l00374}{KTN\+::\+Stacker\+Timer\+::\+Enable()}}, \mbox{\hyperlink{l00426}{KTN\+::\+Twap\+::\+Enable()}}, \mbox{\hyperlink{l00343}{KTN\+::\+Waves\+::\+Enable()}}, \mbox{\hyperlink{l00066}{KTN\+::\+Skewer\+::on\+Json()}}, \mbox{\hyperlink{l00071}{KTN\+::\+Skew\+Trader\+::on\+Json()}}, \mbox{\hyperlink{l00066}{KTN\+::\+Stacker\+::on\+Json()}}, \mbox{\hyperlink{l00052}{KTN\+::\+Stacker\+Timer\+::on\+Json()}}, \mbox{\hyperlink{l00053}{KTN\+::\+Twap\+::on\+Json()}}, \mbox{\hyperlink{l00383}{KTN\+::\+Multi\+Spreader\+V3\+::\+Reset\+Position()}}, \mbox{\hyperlink{l00471}{KTN\+::\+Skewer\+::\+Reset\+Position()}}, \mbox{\hyperlink{l00470}{KTN\+::\+Skew\+Trader\+::\+Reset\+Position()}}, \mbox{\hyperlink{l00428}{KTN\+::\+Stacker\+::\+Reset\+Position()}}, \mbox{\hyperlink{l00339}{KTN\+::\+Stacker\+Timer\+::\+Reset\+Position()}}, and \mbox{\hyperlink{l00391}{KTN\+::\+Twap\+::\+Reset\+Position()}}.
+
+\Hypertarget{structinstrument_a40bf21232ee478a6e4441e59d1716dba}\index{instrument@{instrument}!mdindex@{mdindex}}
+\index{mdindex@{mdindex}!instrument@{instrument}}
+\doxysubsubsection{\texorpdfstring{mdindex}{mdindex}}
+{\footnotesize\ttfamily \label{structinstrument_a40bf21232ee478a6e4441e59d1716dba} 
+int instrument\+::mdindex}
+
+The market data index. \Hypertarget{structinstrument_ab39cc9cfa3d3aae7015008f494dcf3c5}\index{instrument@{instrument}!minsize@{minsize}}
+\index{minsize@{minsize}!instrument@{instrument}}
+\doxysubsubsection{\texorpdfstring{minsize}{minsize}}
+{\footnotesize\ttfamily \label{structinstrument_ab39cc9cfa3d3aae7015008f494dcf3c5} 
+double instrument\+::minsize}
+
+The minimum size. \Hypertarget{structinstrument_a5fdc5b37dd7093c85d58215fa16ae606}\index{instrument@{instrument}!mintick@{mintick}}
+\index{mintick@{mintick}!instrument@{instrument}}
+\doxysubsubsection{\texorpdfstring{mintick}{mintick}}
+{\footnotesize\ttfamily \label{structinstrument_a5fdc5b37dd7093c85d58215fa16ae606} 
+double instrument\+::mintick}
+
+The minimum tick. 
+
+Referenced by \mbox{\hyperlink{l00106}{KTN\+::\+ALGO\+::\+PRICING\+::\+Implied\+Pricer\+::\+Calculate\+Side()}}, \mbox{\hyperlink{l00212}{KTN\+::\+ALGO\+::\+PRICING\+::\+Spread\+Pricer\+::\+Calculate\+Side3()}}, \mbox{\hyperlink{l00076}{Quoter\+V3\+::\+Construct()}}, \mbox{\hyperlink{l00501}{KTN\+::\+Multi\+Spreader\+V3\+::on\+Calculate()}}, and \mbox{\hyperlink{l00629}{KTN\+::\+Stacker\+Timer\+::on\+Calculate()}}.
+
+\Hypertarget{structinstrument_aa21c85702791ce35fea3b863ae1d7cf1}\index{instrument@{instrument}!mktsegid@{mktsegid}}
+\index{mktsegid@{mktsegid}!instrument@{instrument}}
+\doxysubsubsection{\texorpdfstring{mktsegid}{mktsegid}}
+{\footnotesize\ttfamily \label{structinstrument_aa21c85702791ce35fea3b863ae1d7cf1} 
+int instrument\+::mktsegid}
+
+The market segment ID. 
+
+Referenced by \mbox{\hyperlink{l00048}{KTN\+::\+ALGO\+::\+PRICING\+::\+Spread\+Pricer\+::\+Calculate\+Side2()}}, \mbox{\hyperlink{l00212}{KTN\+::\+ALGO\+::\+PRICING\+::\+Spread\+Pricer\+::\+Calculate\+Side3()}}, \mbox{\hyperlink{l00076}{Quoter\+V3\+::\+Construct()}}, \mbox{\hyperlink{l00047}{KTN\+::\+Auto\+Hedge\+OB\+::on\+Json()}}, \mbox{\hyperlink{l00062}{KTN\+::\+PLWatcher\+::on\+Json()}}, and \mbox{\hyperlink{l00045}{KTN\+::\+Squeezer\+OB\+::on\+Json()}}.
+
+\Hypertarget{structinstrument_a6aceff97bf9d668b6e9053d1a4f29fa2}\index{instrument@{instrument}!position@{position}}
+\index{position@{position}!instrument@{instrument}}
+\doxysubsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily \label{structinstrument_a6aceff97bf9d668b6e9053d1a4f29fa2} 
+double instrument\+::position}
+
+The current position. 
+
+Referenced by \mbox{\hyperlink{l00383}{KTN\+::\+Multi\+Spreader\+V3\+::\+Reset\+Position()}}, \mbox{\hyperlink{l00471}{KTN\+::\+Skewer\+::\+Reset\+Position()}}, \mbox{\hyperlink{l00470}{KTN\+::\+Skew\+Trader\+::\+Reset\+Position()}}, \mbox{\hyperlink{l00428}{KTN\+::\+Stacker\+::\+Reset\+Position()}}, \mbox{\hyperlink{l00339}{KTN\+::\+Stacker\+Timer\+::\+Reset\+Position()}}, and \mbox{\hyperlink{l00391}{KTN\+::\+Twap\+::\+Reset\+Position()}}.
+
+\Hypertarget{structinstrument_a7c58a29d197ee2095ddb5805b40e29c1}\index{instrument@{instrument}!pricemult@{pricemult}}
+\index{pricemult@{pricemult}!instrument@{instrument}}
+\doxysubsubsection{\texorpdfstring{pricemult}{pricemult}}
+{\footnotesize\ttfamily \label{structinstrument_a7c58a29d197ee2095ddb5805b40e29c1} 
+double instrument\+::pricemult}
+
+The price multiplier. 
+
+Referenced by \mbox{\hyperlink{l00106}{KTN\+::\+ALGO\+::\+PRICING\+::\+Implied\+Pricer\+::\+Calculate\+Side()}}, \mbox{\hyperlink{l00048}{KTN\+::\+ALGO\+::\+PRICING\+::\+Spread\+Pricer\+::\+Calculate\+Side2()}}, \mbox{\hyperlink{l00212}{KTN\+::\+ALGO\+::\+PRICING\+::\+Spread\+Pricer\+::\+Calculate\+Side3()}}, \mbox{\hyperlink{l00369}{KTN\+::\+ALGO\+::\+PRICING\+::\+Spread\+Pricer\+::\+Calculate\+Simple()}}, \mbox{\hyperlink{l00130}{Leg\+Param\+Parser\+::\+Get\+Cme\+Leg()}}, \mbox{\hyperlink{l00062}{KTN\+::\+PLWatcher\+::on\+Json()}}, \mbox{\hyperlink{l00012}{Leg\+Param\+Parser\+::\+Parse\+Spread\+Legs()}}, and \mbox{\hyperlink{l00120}{Print()}}.
+
+\Hypertarget{structinstrument_a26984a94d9b508b6e50079700cfef5cb}\index{instrument@{instrument}!prodtype@{prodtype}}
+\index{prodtype@{prodtype}!instrument@{instrument}}
+\doxysubsubsection{\texorpdfstring{prodtype}{prodtype}}
+{\footnotesize\ttfamily \label{structinstrument_a26984a94d9b508b6e50079700cfef5cb} 
+KOrder\+Prod\+Type\+::\+Enum instrument\+::prodtype}
+
+The product type. 
+
+Referenced by \mbox{\hyperlink{l00076}{Quoter\+V3\+::\+Construct()}}, \mbox{\hyperlink{l00130}{Leg\+Param\+Parser\+::\+Get\+Cme\+Leg()}}, \mbox{\hyperlink{l00012}{Leg\+Param\+Parser\+::\+Parse\+Spread\+Legs()}}, and \mbox{\hyperlink{l00120}{Print()}}.
+
+\Hypertarget{structinstrument_ad36118311780c814c4c25ecea9949c12}\index{instrument@{instrument}!product@{product}}
+\index{product@{product}!instrument@{instrument}}
+\doxysubsubsection{\texorpdfstring{product}{product}}
+{\footnotesize\ttfamily \label{structinstrument_ad36118311780c814c4c25ecea9949c12} 
+std\+::string instrument\+::product}
+
+The product. 
+
+Referenced by \mbox{\hyperlink{l00076}{Quoter\+V3\+::\+Construct()}}.
+
+\Hypertarget{structinstrument_a780460a77118b57a9c9773f89a93bc34}\index{instrument@{instrument}!row@{row}}
+\index{row@{row}!instrument@{instrument}}
+\doxysubsubsection{\texorpdfstring{row}{row}}
+{\footnotesize\ttfamily \label{structinstrument_a780460a77118b57a9c9773f89a93bc34} 
+int instrument\+::row}
+
+The row. 
+
+Referenced by \mbox{\hyperlink{l00224}{KTN\+::\+Waves\+::\+Print()}}.
+
+\Hypertarget{structinstrument_ad2d748e211820c79627a04eb1f7c5fab}\index{instrument@{instrument}!secid@{secid}}
+\index{secid@{secid}!instrument@{instrument}}
+\doxysubsubsection{\texorpdfstring{secid}{secid}}
+{\footnotesize\ttfamily \label{structinstrument_ad2d748e211820c79627a04eb1f7c5fab} 
+int instrument\+::secid}
+
+The security ID. 
+
+Referenced by \mbox{\hyperlink{l00048}{KTN\+::\+ALGO\+::\+PRICING\+::\+Spread\+Pricer\+::\+Calculate\+Side2()}}, \mbox{\hyperlink{l00212}{KTN\+::\+ALGO\+::\+PRICING\+::\+Spread\+Pricer\+::\+Calculate\+Side3()}}, \mbox{\hyperlink{l00076}{Quoter\+V3\+::\+Construct()}}, \mbox{\hyperlink{l00024}{KTN\+::\+ALGO\+::\+PRICING\+::\+Pricing\+Strategy\+Base\+::\+Load()}}, \mbox{\hyperlink{l00629}{KTN\+::\+Stacker\+Timer\+::on\+Calculate()}}, \mbox{\hyperlink{l00378}{KTN\+::\+Waves\+::on\+Hedge\+Order\+Sent()}}, \mbox{\hyperlink{l00045}{KTN\+::\+Squeezer\+OB\+::on\+Json()}}, \mbox{\hyperlink{l00686}{KTN\+::\+Stacker\+::on\+Trade()}}, \mbox{\hyperlink{l00697}{KTN\+::\+Stacker\+Timer\+::on\+Trade()}}, and \mbox{\hyperlink{l00341}{KTN\+::\+Stacker\+::\+Print()}}.
+
+\Hypertarget{structinstrument_a312feb0583fdbe181a12ae2161b04995}\index{instrument@{instrument}!sellState@{sellState}}
+\index{sellState@{sellState}!instrument@{instrument}}
+\doxysubsubsection{\texorpdfstring{sellState}{sellState}}
+{\footnotesize\ttfamily \label{structinstrument_a312feb0583fdbe181a12ae2161b04995} 
+KOrder\+State\+::\+Enum instrument\+::sell\+State}
+
+The sell order state. \Hypertarget{structinstrument_a49df4af30e40e9fea592dcea28ed2851}\index{instrument@{instrument}!spreadmult@{spreadmult}}
+\index{spreadmult@{spreadmult}!instrument@{instrument}}
+\doxysubsubsection{\texorpdfstring{spreadmult}{spreadmult}}
+{\footnotesize\ttfamily \label{structinstrument_a49df4af30e40e9fea592dcea28ed2851} 
+double instrument\+::spreadmult}
+
+The spread multiplier. 
+
+Referenced by \mbox{\hyperlink{l00106}{KTN\+::\+ALGO\+::\+PRICING\+::\+Implied\+Pricer\+::\+Calculate\+Side()}}, \mbox{\hyperlink{l00048}{KTN\+::\+ALGO\+::\+PRICING\+::\+Spread\+Pricer\+::\+Calculate\+Side2()}}, \mbox{\hyperlink{l00212}{KTN\+::\+ALGO\+::\+PRICING\+::\+Spread\+Pricer\+::\+Calculate\+Side3()}}, \mbox{\hyperlink{l00369}{KTN\+::\+ALGO\+::\+PRICING\+::\+Spread\+Pricer\+::\+Calculate\+Simple()}}, \mbox{\hyperlink{l00130}{Leg\+Param\+Parser\+::\+Get\+Cme\+Leg()}}, \mbox{\hyperlink{l01041}{KTN\+::\+Skew\+Trader\+::min\+Order\+Execution()}}, \mbox{\hyperlink{l00724}{KTN\+::\+Twap\+::on\+Calculate()}}, \mbox{\hyperlink{l00062}{KTN\+::\+PLWatcher\+::on\+Json()}}, \mbox{\hyperlink{l00012}{Leg\+Param\+Parser\+::\+Parse\+Spread\+Legs()}}, and \mbox{\hyperlink{l00120}{Print()}}.
+
+\Hypertarget{structinstrument_a52f871da9ff0c234c89a5f15a5af0526}\index{instrument@{instrument}!squeeze@{squeeze}}
+\index{squeeze@{squeeze}!instrument@{instrument}}
+\doxysubsubsection{\texorpdfstring{squeeze}{squeeze}}
+{\footnotesize\ttfamily \label{structinstrument_a52f871da9ff0c234c89a5f15a5af0526} 
+bool instrument\+::squeeze}
+
+Flag indicating if it is a squeeze. 
+
+Referenced by \mbox{\hyperlink{l00212}{KTN\+::\+ALGO\+::\+PRICING\+::\+Spread\+Pricer\+::\+Calculate\+Side3()}}, and \mbox{\hyperlink{l00012}{Leg\+Param\+Parser\+::\+Parse\+Spread\+Legs()}}.
+
+\Hypertarget{structinstrument_a308e7211097fc848fa81e9120dc61cc5}\index{instrument@{instrument}!symbol@{symbol}}
+\index{symbol@{symbol}!instrument@{instrument}}
+\doxysubsubsection{\texorpdfstring{symbol}{symbol}}
+{\footnotesize\ttfamily \label{structinstrument_a308e7211097fc848fa81e9120dc61cc5} 
+std\+::string instrument\+::symbol}
+
+The symbol. 
+
+Referenced by \mbox{\hyperlink{l00106}{KTN\+::\+ALGO\+::\+PRICING\+::\+Implied\+Pricer\+::\+Calculate\+Side()}}, \mbox{\hyperlink{l00076}{Quoter\+V3\+::\+Construct()}}, \mbox{\hyperlink{l00130}{Leg\+Param\+Parser\+::\+Get\+Cme\+Leg()}}, \mbox{\hyperlink{l00629}{KTN\+::\+Stacker\+Timer\+::on\+Calculate()}}, \mbox{\hyperlink{l00044}{KTN\+::\+Multi\+Spreader\+V3\+::on\+Json()}}, \mbox{\hyperlink{l00062}{KTN\+::\+PLWatcher\+::on\+Json()}}, \mbox{\hyperlink{l00045}{KTN\+::\+Squeezer\+OB\+::on\+Json()}}, \mbox{\hyperlink{l00838}{KTN\+::\+Multi\+Spreader\+V3\+::on\+Order\+Sent()}}, \mbox{\hyperlink{l01205}{KTN\+::\+Skew\+Trader\+::on\+Order\+Sent()}}, \mbox{\hyperlink{l01215}{KTN\+::\+Stacker\+::on\+Order\+Sent()}}, \mbox{\hyperlink{l00451}{KTN\+::\+Waves\+::on\+Order\+Sent()}}, \mbox{\hyperlink{l00198}{KTN\+::\+PLWatcher\+::\+Order\+Received()}}, \mbox{\hyperlink{l01140}{KTN\+::\+Waves\+::\+Order\+Received()}}, \mbox{\hyperlink{l00012}{Leg\+Param\+Parser\+::\+Parse\+Spread\+Legs()}}, \mbox{\hyperlink{l00120}{Print()}}, \mbox{\hyperlink{l00299}{KTN\+::\+Multi\+Spreader\+V3\+::\+Print()}}, \mbox{\hyperlink{l00328}{KTN\+::\+Skewer\+::\+Print()}}, \mbox{\hyperlink{l00331}{KTN\+::\+Skew\+Trader\+::\+Print()}}, \mbox{\hyperlink{l00341}{KTN\+::\+Stacker\+::\+Print()}}, \mbox{\hyperlink{l00307}{KTN\+::\+Twap\+::\+Print()}}, \mbox{\hyperlink{l00224}{KTN\+::\+Waves\+::\+Print()}}, \mbox{\hyperlink{l00286}{KTN\+::\+Multi\+Spreader\+V3\+::\+Symbols()}}, \mbox{\hyperlink{l00315}{KTN\+::\+Skewer\+::\+Symbols()}}, \mbox{\hyperlink{l00318}{KTN\+::\+Skew\+Trader\+::\+Symbols()}}, \mbox{\hyperlink{l00328}{KTN\+::\+Stacker\+::\+Symbols()}}, \mbox{\hyperlink{l00307}{KTN\+::\+Stacker\+Timer\+::\+Symbols()}}, and \mbox{\hyperlink{l00294}{KTN\+::\+Twap\+::\+Symbols()}}.
+
+\Hypertarget{structinstrument_afef79d97afd9b0c596c0f6bf72243fd3}\index{instrument@{instrument}!tickprecision@{tickprecision}}
+\index{tickprecision@{tickprecision}!instrument@{instrument}}
+\doxysubsubsection{\texorpdfstring{tickprecision}{tickprecision}}
+{\footnotesize\ttfamily \label{structinstrument_afef79d97afd9b0c596c0f6bf72243fd3} 
+int instrument\+::tickprecision}
+
+The tick precision. \Hypertarget{structinstrument_a476b10bddcb9b6150d8c6b171e3cafe7}\index{instrument@{instrument}!tickvalue@{tickvalue}}
+\index{tickvalue@{tickvalue}!instrument@{instrument}}
+\doxysubsubsection{\texorpdfstring{tickvalue}{tickvalue}}
+{\footnotesize\ttfamily \label{structinstrument_a476b10bddcb9b6150d8c6b171e3cafe7} 
+double instrument\+::tickvalue}
+
+The tick value. 
+
+Referenced by \mbox{\hyperlink{l00130}{Leg\+Param\+Parser\+::\+Get\+Cme\+Leg()}}, and \mbox{\hyperlink{l00012}{Leg\+Param\+Parser\+::\+Parse\+Spread\+Legs()}}.
+
+\Hypertarget{structinstrument_a06aed3ed474bfe49aec391df2140d18d}\index{instrument@{instrument}!totalexec@{totalexec}}
+\index{totalexec@{totalexec}!instrument@{instrument}}
+\doxysubsubsection{\texorpdfstring{totalexec}{totalexec}}
+{\footnotesize\ttfamily \label{structinstrument_a06aed3ed474bfe49aec391df2140d18d} 
+double instrument\+::totalexec}
+
+The total executed quantity. 
+
+Referenced by \mbox{\hyperlink{l00299}{KTN\+::\+Multi\+Spreader\+V3\+::\+Print()}}, \mbox{\hyperlink{l00328}{KTN\+::\+Skewer\+::\+Print()}}, \mbox{\hyperlink{l00331}{KTN\+::\+Skew\+Trader\+::\+Print()}}, \mbox{\hyperlink{l00307}{KTN\+::\+Twap\+::\+Print()}}, \mbox{\hyperlink{l00383}{KTN\+::\+Multi\+Spreader\+V3\+::\+Reset\+Position()}}, \mbox{\hyperlink{l00471}{KTN\+::\+Skewer\+::\+Reset\+Position()}}, \mbox{\hyperlink{l00470}{KTN\+::\+Skew\+Trader\+::\+Reset\+Position()}}, \mbox{\hyperlink{l00428}{KTN\+::\+Stacker\+::\+Reset\+Position()}}, \mbox{\hyperlink{l00339}{KTN\+::\+Stacker\+Timer\+::\+Reset\+Position()}}, and \mbox{\hyperlink{l00391}{KTN\+::\+Twap\+::\+Reset\+Position()}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Algo\+Support/algo\+\_\+structs.\+hpp\end{DoxyCompactItemize}

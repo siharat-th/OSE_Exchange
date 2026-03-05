@@ -1,0 +1,390 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_core_1_1_simple_map" xml:lang="en-US">
+<title>KTN::Core::SimpleMap&lt; K, T &gt; Class Template Reference</title>
+<indexterm><primary>KTN::Core::SimpleMap&lt; K, T &gt;</primary></indexterm>
+<para>
+
+<para>A simple map implementation that associates keys with values. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;SimpleMap.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_core_1_1_simple_map_1a6573b13c88be54ff6ae7d8442056a43a">SimpleMap</link> (size_t capacity)</para>
+
+<para>Constructs a <link linkend="_class_k_t_n_1_1_core_1_1_simple_map">SimpleMap</link> object with the specified capacity. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_core_1_1_simple_map_1a58320d78c9b126ddf37e65859111503a">insert</link> (K key, T *value)</para>
+
+<para>Inserts a key-value pair into the map. </para>
+</listitem>
+            <listitem><para>T * <link linkend="_class_k_t_n_1_1_core_1_1_simple_map_1ab779f0a5c0875d6d4794d948b2dea681">get</link> (K key)</para>
+
+<para>Retrieves the value associated with the specified key. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_core_1_1_simple_map_1a9f31c2bb619ea65488cf76a97e29d00d">find</link> (K key)</para>
+
+<para>Checks if the map contains the specified key. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t_n_1_1_core_1_1_simple_map_1a057842bf233420071e147a365afe9ef5">size</link> () const</para>
+
+<para>Gets the number of elements in the map. </para>
+</listitem>
+            <listitem><para>T * <link linkend="_class_k_t_n_1_1_core_1_1_simple_map_1a377e7bf2679f87ff3987f25793c3e119">at</link> (int index) const</para>
+
+<para>Retrieves the value at the specified index. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_core_1_1_simple_map_1ac5a3732b49f06e54b80ab7dc08aaba5f">clear</link> ()</para>
+
+<para>Clears the map, removing all elements. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_core_1_1_simple_map_1a68464368af2fc9425f4ec774a6eca415">cleardead</link> ()</para>
+
+<para>Clears any dead elements from the map. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_core_1_1_simple_map_1a09efd1669972d525c8c497cbac1ecc43">erase</link> (K key)</para>
+
+<para>Removes the element with the specified key from the map. </para>
+</listitem>
+            <listitem><para>T &amp; <link linkend="_class_k_t_n_1_1_core_1_1_simple_map_1ae522b87900afc1f38c1b2ae79030c761">operator[]</link> (K key)</para>
+
+<para>Retrieves the value associated with the specified key. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;typename K, typename T&gt;<?linebreak?>class KTN::Core::SimpleMap&lt; K, T &gt;</title></simplesect>
+
+<para>A simple map implementation that associates keys with values. </para>
+
+
+
+<para>
+                <formalpara>
+                    <title>
+Template Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>K</entry><entry>
+<para>The type of the keys. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>T</entry><entry>
+<para>The type of the values. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_simple_map_1a6573b13c88be54ff6ae7d8442056a43a"/><section>
+    <title>SimpleMap()</title>
+<indexterm><primary>SimpleMap</primary><secondary>KTN::Core::SimpleMap&lt; K, T &gt;</secondary></indexterm>
+<indexterm><primary>KTN::Core::SimpleMap&lt; K, T &gt;</primary><secondary>SimpleMap</secondary></indexterm>
+<computeroutput>template&lt;typename K , typename T &gt; </computeroutput><para><computeroutput><link linkend="_class_k_t_n_1_1_core_1_1_simple_map">KTN::Core::SimpleMap</link>&lt; K, T &gt;::SimpleMap (size_t capacity)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Constructs a <link linkend="_class_k_t_n_1_1_core_1_1_simple_map">SimpleMap</link> object with the specified capacity. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>capacity</entry><entry>
+<para>The maximum number of elements the map can hold. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_simple_map_1a377e7bf2679f87ff3987f25793c3e119"/><section>
+    <title>at()</title>
+<indexterm><primary>at</primary><secondary>KTN::Core::SimpleMap&lt; K, T &gt;</secondary></indexterm>
+<indexterm><primary>KTN::Core::SimpleMap&lt; K, T &gt;</primary><secondary>at</secondary></indexterm>
+<computeroutput>template&lt;typename K , typename T &gt; </computeroutput><para><computeroutput>T * <link linkend="_class_k_t_n_1_1_core_1_1_simple_map">KTN::Core::SimpleMap</link>&lt; K, T &gt;::at (int index) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Retrieves the value at the specified index. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>index</entry><entry>
+<para>The index of the value to retrieve. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A pointer to the value at the specified index, or nullptr if the index is out of bounds. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00075">KTN::Core::AllocatorBase&lt; T &gt;::get()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_simple_map_1ac5a3732b49f06e54b80ab7dc08aaba5f"/><section>
+    <title>clear()</title>
+<indexterm><primary>clear</primary><secondary>KTN::Core::SimpleMap&lt; K, T &gt;</secondary></indexterm>
+<indexterm><primary>KTN::Core::SimpleMap&lt; K, T &gt;</primary><secondary>clear</secondary></indexterm>
+<computeroutput>template&lt;typename K , typename T &gt; </computeroutput><para><computeroutput>void <link linkend="_class_k_t_n_1_1_core_1_1_simple_map">KTN::Core::SimpleMap</link>&lt; K, T &gt;::clear ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Clears the map, removing all elements. </para>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_simple_map_1a68464368af2fc9425f4ec774a6eca415"/><section>
+    <title>cleardead()</title>
+<indexterm><primary>cleardead</primary><secondary>KTN::Core::SimpleMap&lt; K, T &gt;</secondary></indexterm>
+<indexterm><primary>KTN::Core::SimpleMap&lt; K, T &gt;</primary><secondary>cleardead</secondary></indexterm>
+<computeroutput>template&lt;typename K , typename T &gt; </computeroutput><para><computeroutput>void <link linkend="_class_k_t_n_1_1_core_1_1_simple_map">KTN::Core::SimpleMap</link>&lt; K, T &gt;::cleardead ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Clears any dead elements from the map. </para>
+</para>
+
+<para>Implement logic to clear dead elements if needed. </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_simple_map_1a09efd1669972d525c8c497cbac1ecc43"/><section>
+    <title>erase()</title>
+<indexterm><primary>erase</primary><secondary>KTN::Core::SimpleMap&lt; K, T &gt;</secondary></indexterm>
+<indexterm><primary>KTN::Core::SimpleMap&lt; K, T &gt;</primary><secondary>erase</secondary></indexterm>
+<computeroutput>template&lt;typename K , typename T &gt; </computeroutput><para><computeroutput>void <link linkend="_class_k_t_n_1_1_core_1_1_simple_map">KTN::Core::SimpleMap</link>&lt; K, T &gt;::erase (K key)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Removes the element with the specified key from the map. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>key</entry><entry>
+<para>The key of the element to remove. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00075">KTN::Core::AllocatorBase&lt; T &gt;::get()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_simple_map_1a9f31c2bb619ea65488cf76a97e29d00d"/><section>
+    <title>find()</title>
+<indexterm><primary>find</primary><secondary>KTN::Core::SimpleMap&lt; K, T &gt;</secondary></indexterm>
+<indexterm><primary>KTN::Core::SimpleMap&lt; K, T &gt;</primary><secondary>find</secondary></indexterm>
+<computeroutput>template&lt;typename K , typename T &gt; </computeroutput><para><computeroutput>bool <link linkend="_class_k_t_n_1_1_core_1_1_simple_map">KTN::Core::SimpleMap</link>&lt; K, T &gt;::find (K key)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Checks if the map contains the specified key. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>key</entry><entry>
+<para>The key to search for. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true if the key is found, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_simple_map_1ab779f0a5c0875d6d4794d948b2dea681"/><section>
+    <title>get()</title>
+<indexterm><primary>get</primary><secondary>KTN::Core::SimpleMap&lt; K, T &gt;</secondary></indexterm>
+<indexterm><primary>KTN::Core::SimpleMap&lt; K, T &gt;</primary><secondary>get</secondary></indexterm>
+<computeroutput>template&lt;typename K , typename T &gt; </computeroutput><para><computeroutput>T * <link linkend="_class_k_t_n_1_1_core_1_1_simple_map">KTN::Core::SimpleMap</link>&lt; K, T &gt;::get (K key)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Retrieves the value associated with the specified key. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>key</entry><entry>
+<para>The key to search for. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A pointer to the value associated with the key, or nullptr if the key is not found. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00075">KTN::Core::AllocatorBase&lt; T &gt;::get()</link>.</para>
+<para>
+Referenced by <link linkend="_l00146">KTN::Core::SimpleMap&lt; K, T &gt;::operator[]()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_simple_map_1a58320d78c9b126ddf37e65859111503a"/><section>
+    <title>insert()</title>
+<indexterm><primary>insert</primary><secondary>KTN::Core::SimpleMap&lt; K, T &gt;</secondary></indexterm>
+<indexterm><primary>KTN::Core::SimpleMap&lt; K, T &gt;</primary><secondary>insert</secondary></indexterm>
+<computeroutput>template&lt;typename K , typename T &gt; </computeroutput><para><computeroutput>void <link linkend="_class_k_t_n_1_1_core_1_1_simple_map">KTN::Core::SimpleMap</link>&lt; K, T &gt;::insert (K key, T * value)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Inserts a key-value pair into the map. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>key</entry><entry>
+<para>The key to insert. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>value</entry><entry>
+<para>A pointer to the value to insert. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00075">KTN::Core::AllocatorBase&lt; T &gt;::get()</link>.</para>
+<para>
+Referenced by <link linkend="_l00146">KTN::Core::SimpleMap&lt; K, T &gt;::operator[]()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_simple_map_1ae522b87900afc1f38c1b2ae79030c761"/><section>
+    <title>operator[]()</title>
+<indexterm><primary>operator[]</primary><secondary>KTN::Core::SimpleMap&lt; K, T &gt;</secondary></indexterm>
+<indexterm><primary>KTN::Core::SimpleMap&lt; K, T &gt;</primary><secondary>operator[]</secondary></indexterm>
+<computeroutput>template&lt;typename K , typename T &gt; </computeroutput><para><computeroutput>T &amp; <link linkend="_class_k_t_n_1_1_core_1_1_simple_map">KTN::Core::SimpleMap</link>&lt; K, T &gt;::operator[] (K key)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Retrieves the value associated with the specified key. </para>
+</para>
+
+<para>If the key is not found, a new value is created and associated with the key.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>key</entry><entry>
+<para>The key to search for. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A reference to the value associated with the key. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00056">KTN::Core::SimpleMap&lt; K, T &gt;::get()</link>, and <link linkend="_l00041">KTN::Core::SimpleMap&lt; K, T &gt;::insert()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_simple_map_1a057842bf233420071e147a365afe9ef5"/><section>
+    <title>size()</title>
+<indexterm><primary>size</primary><secondary>KTN::Core::SimpleMap&lt; K, T &gt;</secondary></indexterm>
+<indexterm><primary>KTN::Core::SimpleMap&lt; K, T &gt;</primary><secondary>size</secondary></indexterm>
+<computeroutput>template&lt;typename K , typename T &gt; </computeroutput><para><computeroutput>int <link linkend="_class_k_t_n_1_1_core_1_1_simple_map">KTN::Core::SimpleMap</link>&lt; K, T &gt;::size ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Gets the number of elements in the map. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The number of elements in the map. </para>
+</formalpara>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Maps/SimpleMap.hpp</section>
+</section>

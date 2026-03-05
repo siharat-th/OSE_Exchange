@@ -1,0 +1,251 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1notify_1_1_notifier_rest" xml:lang="en-US">
+<title>KTN::notify::NotifierRest Class Reference</title>
+<indexterm><primary>KTN::notify::NotifierRest</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_k_t_n_1_1notify_1_1_notifier_rest">NotifierRest</link> class is responsible for sending notifications via REST. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;NotifierRest.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for KTN::notify::NotifierRest:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_k_t_n_1_1notify_1_1_notifier_rest.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1notify_1_1_notifier_rest_1a648aa4398c0a6541e159eabb5efe3aa4">NotifierRest</link> ()</para>
+
+<para>Constructs a <link linkend="_class_k_t_n_1_1notify_1_1_notifier_rest">NotifierRest</link> object. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_k_t_n_1_1notify_1_1_notifier_rest_1a3fce31924986232ba949a6aba953b3df">~NotifierRest</link> ()</para>
+
+<para>Destroys the <link linkend="_class_k_t_n_1_1notify_1_1_notifier_rest">NotifierRest</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1notify_1_1_notifier_rest_1a916bb74aee084b13a433a5bb6b229b1e">Notify</link> (std::string source, string exch, string org, string user, std::string text, MsgLevel::Enum lvl, MsgType::Enum msgtype)</para>
+
+<para>Sends a notification with the specified parameters. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1notify_1_1_notifier_rest_1aef9304d5c61dd2b46a37e148dfcbdb89">Notify</link> (<link linkend="_struct_k_t_n_1_1notify_1_1_notification">Notification</link> &amp;msg)</para>
+
+<para>Sends a notification. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1notify_1_1_notifier_rest_1a80bbe8222d8262bebdef277291253926">Heartbeat</link> (std::string source, std::string exch, string org)</para>
+
+<para>Sends a heartbeat notification with the specified parameters. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_k_t_n_1_1notify_1_1_notifier_rest_1a8e47a434fcc50cd348dc79beb75d46e3"/>void <emphasis role="strong">Start</emphasis> ()</para>
+
+<para>Starts the <link linkend="_class_k_t_n_1_1notify_1_1_notifier_rest">NotifierRest</link> thread. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_class_named_thread">NamedThread</link>        <itemizedlist>
+            <listitem><para><link linkend="_class_named_thread_1a891fabdc2d824048ec05c82e7ef8c69a">NamedThread</link> ()</para>
+
+<para>Default constructor. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_named_thread_1a018dadb59e5af98ee734301a1baa50cb">~NamedThread</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_named_thread_1a9fa42542ff43c89fb9bbc33de9c87e34">CreateAndRun</link> (string name, int core)</para>
+
+<para>Creates and runs the named thread on the specified core. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_named_thread_1ad4809c571171be13f0f91f540d5c196f">Join</link> ()</para>
+
+<para>Joins the named thread. </para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+Static Public Member Functions inherited from <link linkend="_class_singleton">Singleton&lt; NotifierRest &gt;</link>        <itemizedlist>
+            <listitem><para>static KT01_API NotifierRest &amp; <link linkend="_class_singleton_1a257c9c4633fa4e06bd93469e379f8eff">instance</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Protected Member Functions inherited from <link linkend="_class_singleton">Singleton&lt; NotifierRest &gt;</link>        <itemizedlist>
+            <listitem><para><emphasis role="strong">Singleton</emphasis> (const <link linkend="_class_singleton">Singleton</link> &amp;)=delete</para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_k_t_n_1_1notify_1_1_notifier_rest">NotifierRest</link> class is responsible for sending notifications via REST. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1notify_1_1_notifier_rest_1a648aa4398c0a6541e159eabb5efe3aa4"/><section>
+    <title>NotifierRest()</title>
+<indexterm><primary>NotifierRest</primary><secondary>KTN::notify::NotifierRest</secondary></indexterm>
+<indexterm><primary>KTN::notify::NotifierRest</primary><secondary>NotifierRest</secondary></indexterm>
+<para><computeroutput>NotifierRest::NotifierRest ( )</computeroutput></para><para>
+
+<para>Constructs a <link linkend="_class_k_t_n_1_1notify_1_1_notifier_rest">NotifierRest</link> object. </para>
+</para>
+<para>
+References <link linkend="_l00018">NamedThread::CreateAndRun()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1notify_1_1_notifier_rest_1a3fce31924986232ba949a6aba953b3df"/><section>
+    <title>~NotifierRest()</title>
+<indexterm><primary>~NotifierRest</primary><secondary>KTN::notify::NotifierRest</secondary></indexterm>
+<indexterm><primary>KTN::notify::NotifierRest</primary><secondary>~NotifierRest</secondary></indexterm>
+<para><computeroutput>NotifierRest::~NotifierRest ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Destroys the <link linkend="_class_k_t_n_1_1notify_1_1_notifier_rest">NotifierRest</link> object. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1notify_1_1_notifier_rest_1a80bbe8222d8262bebdef277291253926"/><section>
+    <title>Heartbeat()</title>
+<indexterm><primary>Heartbeat</primary><secondary>KTN::notify::NotifierRest</secondary></indexterm>
+<indexterm><primary>KTN::notify::NotifierRest</primary><secondary>Heartbeat</secondary></indexterm>
+<para><computeroutput>void NotifierRest::Heartbeat (std::string source, std::string exch, string org)</computeroutput></para><para>
+
+<para>Sends a heartbeat notification with the specified parameters. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>source</entry><entry>
+<para>The source of the heartbeat. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>exch</entry><entry>
+<para>The exchange of the heartbeat. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>org</entry><entry>
+<para>The organization of the heartbeat. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00036">Notify()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1notify_1_1_notifier_rest_1aef9304d5c61dd2b46a37e148dfcbdb89"/><section>
+    <title>Notify()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>Notify</primary><secondary>KTN::notify::NotifierRest</secondary></indexterm>
+<indexterm><primary>KTN::notify::NotifierRest</primary><secondary>Notify</secondary></indexterm>
+<para><computeroutput>void NotifierRest::Notify (<link linkend="_struct_k_t_n_1_1notify_1_1_notification">Notification</link> &amp; msg)</computeroutput></para><para>
+
+<para>Sends a notification. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>msg</entry><entry>
+<para>The notification to send. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1notify_1_1_notifier_rest_1a916bb74aee084b13a433a5bb6b229b1e"/><section>
+    <title>Notify()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>Notify</primary><secondary>KTN::notify::NotifierRest</secondary></indexterm>
+<indexterm><primary>KTN::notify::NotifierRest</primary><secondary>Notify</secondary></indexterm>
+<para><computeroutput>void NotifierRest::Notify (std::string source, string exch, string org, string user, std::string text, MsgLevel::Enum lvl, MsgType::Enum msgtype)</computeroutput></para><para>
+
+<para>Sends a notification with the specified parameters. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>source</entry><entry>
+<para>The source of the notification. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>exch</entry><entry>
+<para>The exchange of the notification. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>org</entry><entry>
+<para>The organization of the notification. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>user</entry><entry>
+<para>The user of the notification. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>text</entry><entry>
+<para>The text of the notification. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>lvl</entry><entry>
+<para>The level of the notification. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>msgtype</entry><entry>
+<para>The type of the notification. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00036">Notify()</link>.</para>
+<para>
+Referenced by <link linkend="_l00057">Heartbeat()</link>, and <link linkend="_l00036">Notify()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Notifications/NotifierRest.hppNotifications/NotifierRest.cpp</section>
+</section>

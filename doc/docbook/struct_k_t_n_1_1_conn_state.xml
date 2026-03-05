@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_t_n_1_1_conn_state" xml:lang="en-US">
+<title>KTN::ConnState Struct Reference</title>
+<indexterm><primary>KTN::ConnState</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_conn_state_1a3d8c1ba2919eb9149cb033db7fe01174">index</link></para>
+
+<para>Represents the connection state of a connection. </para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_conn_state_1a02ab20a94377d67e82a7c8aace66d947">segid</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5">EFVITcpV5</link> * <link linkend="_struct_k_t_n_1_1_conn_state_1a38a062f01877f22644035f9dc01bae6a">tcpHandler</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_session_state_manager">SessionStateManager</link> <link linkend="_struct_k_t_n_1_1_conn_state_1a09d6faff2e732e8e48567954ae641de3">sessmgr</link></para>
+</listitem>
+            <listitem><para><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_enum_session_state_1a1a4fdd123ba195de2c11897d7329f645">EnumSessionState::Enum</link> <link linkend="_struct_k_t_n_1_1_conn_state_1a6ed5e9d6bb40aa76d6142bdda3753e9d">connectionState</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_conn_state_1a6ed5e9d6bb40aa76d6142bdda3753e9d"/><section>
+    <title>connectionState</title>
+<indexterm><primary>connectionState</primary><secondary>KTN::ConnState</secondary></indexterm>
+<indexterm><primary>KTN::ConnState</primary><secondary>connectionState</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_enum_session_state_1a1a4fdd123ba195de2c11897d7329f645">EnumSessionState::Enum</link> KTN::ConnState::connectionState</computeroutput></para>
+<para>The state of the connection. </para>
+<para>
+Referenced by <link linkend="_l01104">KTN::CME::CmeAlgo::Send()</link>, <link linkend="_l00889">KTN::CME::CmeGT5::Send()</link>, and <link linkend="_l00175">KTN::CME::CmeGT5::Start()</link>.</para>
+</section>
+<anchor xml:id="_struct_k_t_n_1_1_conn_state_1a3d8c1ba2919eb9149cb033db7fe01174"/><section>
+    <title>index</title>
+<indexterm><primary>index</primary><secondary>KTN::ConnState</secondary></indexterm>
+<indexterm><primary>KTN::ConnState</primary><secondary>index</secondary></indexterm>
+<para><computeroutput>int KTN::ConnState::index</computeroutput></para><para>
+
+<para>Represents the connection state of a connection. </para>
+</para>
+
+<para>The index of the connection. </para>
+<para>
+Referenced by <link linkend="_l00175">KTN::CME::CmeGT5::Start()</link>.</para>
+</section>
+<anchor xml:id="_struct_k_t_n_1_1_conn_state_1a02ab20a94377d67e82a7c8aace66d947"/><section>
+    <title>segid</title>
+<indexterm><primary>segid</primary><secondary>KTN::ConnState</secondary></indexterm>
+<indexterm><primary>KTN::ConnState</primary><secondary>segid</secondary></indexterm>
+<para><computeroutput>int KTN::ConnState::segid</computeroutput></para>
+<para>The segment ID of the connection. </para>
+<para>
+Referenced by <link linkend="_l00175">KTN::CME::CmeGT5::Start()</link>.</para>
+</section>
+<anchor xml:id="_struct_k_t_n_1_1_conn_state_1a09d6faff2e732e8e48567954ae641de3"/><section>
+    <title>sessmgr</title>
+<indexterm><primary>sessmgr</primary><secondary>KTN::ConnState</secondary></indexterm>
+<indexterm><primary>KTN::ConnState</primary><secondary>sessmgr</secondary></indexterm>
+<para><computeroutput><link linkend="_class_session_state_manager">SessionStateManager</link> KTN::ConnState::sessmgr</computeroutput></para>
+<para>The session state manager of the connection. </para>
+<para>
+Referenced by <link linkend="_l01104">KTN::CME::CmeAlgo::Send()</link>, and <link linkend="_l00889">KTN::CME::CmeGT5::Send()</link>.</para>
+</section>
+<anchor xml:id="_struct_k_t_n_1_1_conn_state_1a38a062f01877f22644035f9dc01bae6a"/><section>
+    <title>tcpHandler</title>
+<indexterm><primary>tcpHandler</primary><secondary>KTN::ConnState</secondary></indexterm>
+<indexterm><primary>KTN::ConnState</primary><secondary>tcpHandler</secondary></indexterm>
+<para><computeroutput><link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5">EFVITcpV5</link>* KTN::ConnState::tcpHandler</computeroutput></para>
+<para>The TCP handler of the connection. </para>
+<para>
+Referenced by <link linkend="_l01104">KTN::CME::CmeAlgo::Send()</link>, <link linkend="_l00889">KTN::CME::CmeGT5::Send()</link>, <link linkend="_l00883">KTN::CME::CmeGT5::SendWarm()</link>, and <link linkend="_l00175">KTN::CME::CmeGT5::Start()</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+ExchangeHandlers2/ExchangeBase2.hpp</section>
+</section>

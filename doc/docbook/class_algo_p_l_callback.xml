@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_algo_p_l_callback" xml:lang="en-US">
+<title>AlgoPLCallback Class Reference</title>
+<indexterm><primary>AlgoPLCallback</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_algo_p_l_callback">AlgoPLCallback</link> class is an abstract class that defines the interface for handling profit and loss events. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;AlgoPLCallback.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for AlgoPLCallback:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_algo_p_l_callback.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_class_algo_p_l_callback_1a06714cabdb3853ff4e5566814891a324">ProfitEvent</link> { <?linebreak?><link linkend="_class_algo_p_l_callback_1a06714cabdb3853ff4e5566814891a324a5716fdc31bb7e36a9c78b9c5b0ad3050">NONE</link>
+, <link linkend="_class_algo_p_l_callback_1a06714cabdb3853ff4e5566814891a324a606976a56e71f0cbd80075aca9abda3e">PROFITTAKE</link>
+, <link linkend="_class_algo_p_l_callback_1a06714cabdb3853ff4e5566814891a324a249c454213699ab207874983a3d35801">STOPLOSS</link>
+, <link linkend="_class_algo_p_l_callback_1a06714cabdb3853ff4e5566814891a324a9d5d5464c40f496f0838551abb425731">TIMERHIT</link>
+, <?linebreak?><link linkend="_class_algo_p_l_callback_1a06714cabdb3853ff4e5566814891a324a63605381ddd4d06bede0cc0f1f6360d1">MKT</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_algo_p_l_callback_1a26f3ee1e5c8efa670f43baaec0bc3ef6">onPL</link> (<link linkend="_struct_position">Position</link> &amp;pos, <link linkend="_class_algo_p_l_callback_1a06714cabdb3853ff4e5566814891a324">ProfitEvent</link> event)=0</para>
+
+<para>This method is called when a profit or loss event occurs. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_algo_p_l_callback">AlgoPLCallback</link> class is an abstract class that defines the interface for handling profit and loss events. </para>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_class_algo_p_l_callback_1a06714cabdb3853ff4e5566814891a324"/><section>
+    <title>ProfitEvent</title>
+<indexterm><primary>ProfitEvent</primary><secondary>AlgoPLCallback</secondary></indexterm>
+<indexterm><primary>AlgoPLCallback</primary><secondary>ProfitEvent</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_class_algo_p_l_callback_1a06714cabdb3853ff4e5566814891a324">AlgoPLCallback::ProfitEvent</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>NONE</primary><secondary>AlgoPLCallback</secondary></indexterm>
+<indexterm><primary>AlgoPLCallback</primary><secondary>NONE</secondary></indexterm>
+<anchor xml:id="_class_algo_p_l_callback_1a06714cabdb3853ff4e5566814891a324a5716fdc31bb7e36a9c78b9c5b0ad3050"/>NONE</entry><entry>
+<para>No profit event </para>
+</entry></row><row><entry><indexterm><primary>PROFITTAKE</primary><secondary>AlgoPLCallback</secondary></indexterm>
+<indexterm><primary>AlgoPLCallback</primary><secondary>PROFITTAKE</secondary></indexterm>
+<anchor xml:id="_class_algo_p_l_callback_1a06714cabdb3853ff4e5566814891a324a606976a56e71f0cbd80075aca9abda3e"/>PROFITTAKE</entry><entry>
+<para>Profit take event </para>
+</entry></row><row><entry><indexterm><primary>STOPLOSS</primary><secondary>AlgoPLCallback</secondary></indexterm>
+<indexterm><primary>AlgoPLCallback</primary><secondary>STOPLOSS</secondary></indexterm>
+<anchor xml:id="_class_algo_p_l_callback_1a06714cabdb3853ff4e5566814891a324a249c454213699ab207874983a3d35801"/>STOPLOSS</entry><entry>
+<para>Stop loss event </para>
+</entry></row><row><entry><indexterm><primary>TIMERHIT</primary><secondary>AlgoPLCallback</secondary></indexterm>
+<indexterm><primary>AlgoPLCallback</primary><secondary>TIMERHIT</secondary></indexterm>
+<anchor xml:id="_class_algo_p_l_callback_1a06714cabdb3853ff4e5566814891a324a9d5d5464c40f496f0838551abb425731"/>TIMERHIT</entry><entry>
+<para>Timer hit event </para>
+</entry></row><row><entry><indexterm><primary>MKT</primary><secondary>AlgoPLCallback</secondary></indexterm>
+<indexterm><primary>AlgoPLCallback</primary><secondary>MKT</secondary></indexterm>
+<anchor xml:id="_class_algo_p_l_callback_1a06714cabdb3853ff4e5566814891a324a63605381ddd4d06bede0cc0f1f6360d1"/>MKT</entry><entry>
+<para>Market event </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_algo_p_l_callback_1a26f3ee1e5c8efa670f43baaec0bc3ef6"/><section>
+    <title>onPL()</title>
+<indexterm><primary>onPL</primary><secondary>AlgoPLCallback</secondary></indexterm>
+<indexterm><primary>AlgoPLCallback</primary><secondary>onPL</secondary></indexterm>
+<para><computeroutput>virtual void AlgoPLCallback::onPL (<link linkend="_struct_position">Position</link> &amp; pos, <link linkend="_class_algo_p_l_callback_1a06714cabdb3853ff4e5566814891a324">ProfitEvent</link> event)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>This method is called when a profit or loss event occurs. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>pos</entry><entry>
+<para>The position associated with the event. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>event</entry><entry>
+<para>The type of profit event. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implemented in <link linkend="_class_k_t_n_1_1_p_l_watcher_1a20adfd48a1cea2bd875b6d80ff4496e2">KTN::PLWatcher</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+AlgoSupport/AlgoPLCallback.hpp</section>
+</section>

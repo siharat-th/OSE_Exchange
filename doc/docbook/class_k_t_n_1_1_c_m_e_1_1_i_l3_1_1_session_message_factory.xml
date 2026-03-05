@@ -1,0 +1,456 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory" xml:lang="en-US">
+<title>KTN::CME::IL3::SessionMessageFactory Class Reference</title>
+<indexterm><primary>KTN::CME::IL3::SessionMessageFactory</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory">SessionMessageFactory</link> class is responsible for creating various session messages. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;SessionMessageFactory.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory_1a8478d4648e81f8080e28f0daa28f2b3e">Init</link> (string settingsfile)</para>
+
+<para>Initializes the <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory">SessionMessageFactory</link> with the specified settings file. </para>
+</listitem>
+            <listitem><para><link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g">KTN_MSG</link> <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory_1a609368c0e23b1a204c5b10e818e79111">SofhEncode</link> (uint16_t msglen)</para>
+
+<para>Encodes the <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_s_o_f_h">SOFH</link> (Start of Frame Header) for the given message length. </para>
+</listitem>
+            <listitem><para><link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g">KTN_MSG</link> <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory_1a204b3a09f15032b2bd8a47b658d93016">NegotiateEncode</link> (uint64_t uuid)</para>
+
+<para>Encodes the Negotiate message with the specified UUID. </para>
+</listitem>
+            <listitem><para><link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf">KTNBuf</link> <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory_1ab1e462ed27d1b5117286c1094bf03d8b">EstablishEncode</link> (uint64_t uuid, uint64_t seqid)</para>
+
+<para>Encodes the Establish message with the specified UUID and sequence ID. </para>
+</listitem>
+            <listitem><para><link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g">KTN_MSG</link> <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory_1ae5ecd54e09f8878d120ceeb6ed6e014a">SequenceEncode</link> (uint64_t uuid, uint64_t seqid, bool primary, bool lapse)</para>
+
+<para>Encodes the Sequence message with the specified UUID, sequence ID, primary flag, and lapse flag. </para>
+</listitem>
+            <listitem><para><link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf">KTNBuf</link> <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory_1aedb0566a6995845253e4905046980459">TerminateEncode</link> (uint64_t uuid, string reason, int errorcodes)</para>
+
+<para>Encodes the Terminate message with the specified UUID, reason, and error codes. </para>
+</listitem>
+            <listitem><para><link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g">KTN_MSG</link> <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory_1a3eb1481997b3009b68b44a6e5ea85037">RetransRequestEncode</link> (uint64_t uuid, uint32_t FromSeqNo, uint16_t MsgCount, uInt64NULL lastuuid)</para>
+
+<para>Encodes the RetransRequest message with the specified UUID, FromSeqNo, MsgCount, and last UUID. </para>
+</listitem>
+            <listitem><para><link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g">KTN_MSG</link> <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory_1a7de7d849e46d9feca398c86f43b89591">PartyDetailsDefEncode</link> (uint64_t uuid, uint64_t seqid, uint64_t partyDetailsListReqID, uint64_t selfmatchId, string account, string firmid, string traderid)</para>
+
+<para>Encodes the PartyDetailsDef message with the specified UUID, sequence ID, partyDetailsListReqID, selfmatchId, account, firmid, and traderid. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static uint64_t <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory_1a392dd4864c6ac7981337395de10cceba">getSendingTimeEpoch</link> ()</para>
+
+<para>Gets the current sending time epoch. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory">SessionMessageFactory</link> class is responsible for creating various session messages. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory_1ab1e462ed27d1b5117286c1094bf03d8b"/><section>
+    <title>EstablishEncode()</title>
+<indexterm><primary>EstablishEncode</primary><secondary>KTN::CME::IL3::SessionMessageFactory</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::SessionMessageFactory</primary><secondary>EstablishEncode</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf">KTNBuf</link> SessionMessageFactory::EstablishEncode (uint64_t uuid, uint64_t seqid = <computeroutput>1</computeroutput>
+)</computeroutput></para><para>
+
+<para>Encodes the Establish message with the specified UUID and sequence ID. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>uuid</entry><entry>
+<para>The UUID for the message. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>seqid</entry><entry>
+<para>The sequence ID for the message. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The encoded Establish message. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00149">KTN::NET::ByteWriter::cur()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory_1a392dd4864c6ac7981337395de10cceba"/><section>
+    <title>getSendingTimeEpoch()</title>
+<indexterm><primary>getSendingTimeEpoch</primary><secondary>KTN::CME::IL3::SessionMessageFactory</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::SessionMessageFactory</primary><secondary>getSendingTimeEpoch</secondary></indexterm>
+<para><computeroutput>static uint64_t KTN::CME::IL3::SessionMessageFactory::getSendingTimeEpoch ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Gets the current sending time epoch. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The current sending time epoch. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory_1a8478d4648e81f8080e28f0daa28f2b3e"/><section>
+    <title>Init()</title>
+<indexterm><primary>Init</primary><secondary>KTN::CME::IL3::SessionMessageFactory</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::SessionMessageFactory</primary><secondary>Init</secondary></indexterm>
+<para><computeroutput>void SessionMessageFactory::Init (string settingsfile)</computeroutput></para><para>
+
+<para>Initializes the <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory">SessionMessageFactory</link> with the specified settings file. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>settingsfile</entry><entry>
+<para>The path to the settings file. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00065">CmeSessionSettings::Load()</link>.</para>
+<para>
+Referenced by <link linkend="_l00019">KTN::CME::CmeAlgo::CmeAlgo()</link>, and <link linkend="_l00019">KTN::CME::CmeGT5::CmeGT5()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory_1a204b3a09f15032b2bd8a47b658d93016"/><section>
+    <title>NegotiateEncode()</title>
+<indexterm><primary>NegotiateEncode</primary><secondary>KTN::CME::IL3::SessionMessageFactory</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::SessionMessageFactory</primary><secondary>NegotiateEncode</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g">KTN_MSG</link> SessionMessageFactory::NegotiateEncode (uint64_t uuid = <computeroutput>0</computeroutput>
+)</computeroutput></para><para>
+
+<para>Encodes the Negotiate message with the specified UUID. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>uuid</entry><entry>
+<para>The UUID for the message. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The encoded Negotiate message. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00149">KTN::NET::ByteWriter::cur()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory_1a7de7d849e46d9feca398c86f43b89591"/><section>
+    <title>PartyDetailsDefEncode()</title>
+<indexterm><primary>PartyDetailsDefEncode</primary><secondary>KTN::CME::IL3::SessionMessageFactory</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::SessionMessageFactory</primary><secondary>PartyDetailsDefEncode</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g">KTN_MSG</link> KTN::CME::IL3::SessionMessageFactory::PartyDetailsDefEncode (uint64_t uuid, uint64_t seqid, uint64_t partyDetailsListReqID, uint64_t selfmatchId, string account, string firmid, string traderid)</computeroutput></para><para>
+
+<para>Encodes the PartyDetailsDef message with the specified UUID, sequence ID, partyDetailsListReqID, selfmatchId, account, firmid, and traderid. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>uuid</entry><entry>
+<para>The UUID for the message. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>seqid</entry><entry>
+<para>The sequence ID for the message. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>partyDetailsListReqID</entry><entry>
+<para>The partyDetailsListReqID for the message. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>selfmatchId</entry><entry>
+<para>The selfmatchId for the message. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>account</entry><entry>
+<para>The account for the message. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>firmid</entry><entry>
+<para>The firmid for the message. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>traderid</entry><entry>
+<para>The traderid for the message. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The encoded PartyDetailsDef message. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory_1a3eb1481997b3009b68b44a6e5ea85037"/><section>
+    <title>RetransRequestEncode()</title>
+<indexterm><primary>RetransRequestEncode</primary><secondary>KTN::CME::IL3::SessionMessageFactory</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::SessionMessageFactory</primary><secondary>RetransRequestEncode</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g">KTN_MSG</link> SessionMessageFactory::RetransRequestEncode (uint64_t uuid, uint32_t FromSeqNo, uint16_t MsgCount, uInt64NULL lastuuid = <computeroutput>0</computeroutput>
+)</computeroutput></para><para>
+
+<para>Encodes the RetransRequest message with the specified UUID, FromSeqNo, MsgCount, and last UUID. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>uuid</entry><entry>
+<para>The UUID for the message. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>FromSeqNo</entry><entry>
+<para>The starting sequence number for retransmission. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>MsgCount</entry><entry>
+<para>The number of messages to retransmit. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>lastuuid</entry><entry>
+<para>The last UUID for retransmission. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The encoded RetransRequest message. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00149">KTN::NET::ByteWriter::cur()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory_1ae5ecd54e09f8878d120ceeb6ed6e014a"/><section>
+    <title>SequenceEncode()</title>
+<indexterm><primary>SequenceEncode</primary><secondary>KTN::CME::IL3::SessionMessageFactory</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::SessionMessageFactory</primary><secondary>SequenceEncode</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g">KTN_MSG</link> SessionMessageFactory::SequenceEncode (uint64_t uuid, uint64_t seqid, bool primary = <computeroutput>true</computeroutput>
+, bool lapse = <computeroutput>false</computeroutput>
+)</computeroutput></para><para>
+
+<para>Encodes the Sequence message with the specified UUID, sequence ID, primary flag, and lapse flag. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>uuid</entry><entry>
+<para>The UUID for the message. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>seqid</entry><entry>
+<para>The sequence ID for the message. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>primary</entry><entry>
+<para>The primary flag for the message. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>lapse</entry><entry>
+<para>The lapse flag for the message. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The encoded Sequence message. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00149">KTN::NET::ByteWriter::cur()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory_1a609368c0e23b1a204c5b10e818e79111"/><section>
+    <title>SofhEncode()</title>
+<indexterm><primary>SofhEncode</primary><secondary>KTN::CME::IL3::SessionMessageFactory</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::SessionMessageFactory</primary><secondary>SofhEncode</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g">KTN_MSG</link> SessionMessageFactory::SofhEncode (uint16_t msglen)</computeroutput></para><para>
+
+<para>Encodes the <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_s_o_f_h">SOFH</link> (Start of Frame Header) for the given message length. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>msglen</entry><entry>
+<para>The length of the message. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The encoded <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_s_o_f_h">SOFH</link> message. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00149">KTN::NET::ByteWriter::cur()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory_1aedb0566a6995845253e4905046980459"/><section>
+    <title>TerminateEncode()</title>
+<indexterm><primary>TerminateEncode</primary><secondary>KTN::CME::IL3::SessionMessageFactory</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::SessionMessageFactory</primary><secondary>TerminateEncode</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf">KTNBuf</link> SessionMessageFactory::TerminateEncode (uint64_t uuid, string reason, int errorcodes)</computeroutput></para><para>
+
+<para>Encodes the Terminate message with the specified UUID, reason, and error codes. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>uuid</entry><entry>
+<para>The UUID for the message. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>reason</entry><entry>
+<para>The reason for termination. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>errorcodes</entry><entry>
+<para>The error codes for the message. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The encoded Terminate message. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00149">KTN::NET::ByteWriter::cur()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+exchsupport/cme/factory/SessionMessageFactory.hppexchsupport/cme/factory/SessionMessageFactory.cpp</section>
+</section>

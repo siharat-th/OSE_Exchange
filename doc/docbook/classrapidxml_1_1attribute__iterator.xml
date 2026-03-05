@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classrapidxml_1_1attribute__iterator" xml:lang="en-US">
+<title>rapidxml::attribute_iterator&lt; Ch &gt; Class Template Reference</title>
+<indexterm><primary>rapidxml::attribute_iterator&lt; Ch &gt;</primary></indexterm>
+<para>
+
+<para>Iterator of child attributes of <link linkend="_classrapidxml_1_1xml__node">xml_node</link>. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;rapidxml_iterators.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>typedef <link linkend="_classrapidxml_1_1xml__attribute">xml_attribute</link>&lt; Ch &gt; <link linkend="_classrapidxml_1_1attribute__iterator_1a8fae4f0d01e41626791342b2f3340818">value_type</link></para>
+</listitem>
+            <listitem><para>typedef <link linkend="_classrapidxml_1_1xml__attribute">xml_attribute</link>&lt; Ch &gt; &amp; <link linkend="_classrapidxml_1_1attribute__iterator_1a8a8a45110466d8f74e6e4ca71f248d05">reference</link></para>
+</listitem>
+            <listitem><para>typedef <link linkend="_classrapidxml_1_1xml__attribute">xml_attribute</link>&lt; Ch &gt; * <link linkend="_classrapidxml_1_1attribute__iterator_1ac74e44e9cd4df40fe274876977f0a601">pointer</link></para>
+</listitem>
+            <listitem><para>typedef std::ptrdiff_t <link linkend="_classrapidxml_1_1attribute__iterator_1a19b2015b735001cb08a3ad2861248245">difference_type</link></para>
+</listitem>
+            <listitem><para>typedef std::bidirectional_iterator_tag <link linkend="_classrapidxml_1_1attribute__iterator_1a9e7a9d558b92e40f78649f46f1c79c2e">iterator_category</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classrapidxml_1_1attribute__iterator_1a1109344dead88533ae4dd68cea5d9613">attribute_iterator</link> (<link linkend="_classrapidxml_1_1xml__node">xml_node</link>&lt; Ch &gt; *node)</para>
+</listitem>
+            <listitem><para><link linkend="_classrapidxml_1_1xml__attribute">reference</link> <link linkend="_classrapidxml_1_1attribute__iterator_1aa15f5f06d2a6199467a33aa19f4357aa">operator*</link> () const</para>
+</listitem>
+            <listitem><para><link linkend="_classrapidxml_1_1xml__attribute">pointer</link> <link linkend="_classrapidxml_1_1attribute__iterator_1a499c7ed0e1835f029585d0a9ba25f446">operator-&gt;</link> () const</para>
+</listitem>
+            <listitem><para><link linkend="_classrapidxml_1_1attribute__iterator">attribute_iterator</link> &amp; <link linkend="_classrapidxml_1_1attribute__iterator_1a1eb0082d75d6d43ea3a3b1e98f7213a1">operator++</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_classrapidxml_1_1attribute__iterator">attribute_iterator</link> <link linkend="_classrapidxml_1_1attribute__iterator_1a82c8859b9eebd45caa3afc25b9e78c36">operator++</link> (int)</para>
+</listitem>
+            <listitem><para><link linkend="_classrapidxml_1_1attribute__iterator">attribute_iterator</link> &amp; <link linkend="_classrapidxml_1_1attribute__iterator_1a78aa3aa5dab93560f2e5e3bc9d060899">operator--</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_classrapidxml_1_1attribute__iterator">attribute_iterator</link> <link linkend="_classrapidxml_1_1attribute__iterator_1af52a8562ab1b2c0391cdde79f55e4a6f">operator--</link> (int)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classrapidxml_1_1attribute__iterator_1ab1dc8dd11d21e145a4e3f76d46aead0d">operator==</link> (const <link linkend="_classrapidxml_1_1attribute__iterator">attribute_iterator</link>&lt; Ch &gt; &amp;rhs)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classrapidxml_1_1attribute__iterator_1a39e8cf336c324521fd9c720abf280d88">operator!=</link> (const <link linkend="_classrapidxml_1_1attribute__iterator">attribute_iterator</link>&lt; Ch &gt; &amp;rhs)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;class Ch&gt;<?linebreak?>class rapidxml::attribute_iterator&lt; Ch &gt;</title></simplesect>
+
+<para>Iterator of child attributes of <link linkend="_classrapidxml_1_1xml__node">xml_node</link>. </para>
+</section>
+<section>
+<title>Member Typedef Documentation</title>
+<anchor xml:id="_classrapidxml_1_1attribute__iterator_1a19b2015b735001cb08a3ad2861248245"/><section>
+    <title>difference_type</title>
+<indexterm><primary>difference_type</primary><secondary>rapidxml::attribute_iterator&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::attribute_iterator&lt; Ch &gt;</primary><secondary>difference_type</secondary></indexterm>
+<computeroutput>template&lt;class Ch &gt; </computeroutput><para><computeroutput>std::ptrdiff_t <link linkend="_classrapidxml_1_1attribute__iterator">rapidxml::attribute_iterator</link>&lt; Ch &gt;::difference_type</computeroutput></para></section>
+<anchor xml:id="_classrapidxml_1_1attribute__iterator_1a9e7a9d558b92e40f78649f46f1c79c2e"/><section>
+    <title>iterator_category</title>
+<indexterm><primary>iterator_category</primary><secondary>rapidxml::attribute_iterator&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::attribute_iterator&lt; Ch &gt;</primary><secondary>iterator_category</secondary></indexterm>
+<computeroutput>template&lt;class Ch &gt; </computeroutput><para><computeroutput>std::bidirectional_iterator_tag <link linkend="_classrapidxml_1_1attribute__iterator">rapidxml::attribute_iterator</link>&lt; Ch &gt;::iterator_category</computeroutput></para></section>
+<anchor xml:id="_classrapidxml_1_1attribute__iterator_1ac74e44e9cd4df40fe274876977f0a601"/><section>
+    <title>pointer</title>
+<indexterm><primary>pointer</primary><secondary>rapidxml::attribute_iterator&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::attribute_iterator&lt; Ch &gt;</primary><secondary>pointer</secondary></indexterm>
+<computeroutput>template&lt;class Ch &gt; </computeroutput><para><computeroutput><link linkend="_classrapidxml_1_1xml__attribute">xml_attribute</link>&lt;Ch&gt;* <link linkend="_classrapidxml_1_1attribute__iterator">rapidxml::attribute_iterator</link>&lt; Ch &gt;::pointer</computeroutput></para></section>
+<anchor xml:id="_classrapidxml_1_1attribute__iterator_1a8a8a45110466d8f74e6e4ca71f248d05"/><section>
+    <title>reference</title>
+<indexterm><primary>reference</primary><secondary>rapidxml::attribute_iterator&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::attribute_iterator&lt; Ch &gt;</primary><secondary>reference</secondary></indexterm>
+<computeroutput>template&lt;class Ch &gt; </computeroutput><para><computeroutput><link linkend="_classrapidxml_1_1xml__attribute">xml_attribute</link>&lt;Ch&gt;&amp; <link linkend="_classrapidxml_1_1attribute__iterator">rapidxml::attribute_iterator</link>&lt; Ch &gt;::reference</computeroutput></para></section>
+<anchor xml:id="_classrapidxml_1_1attribute__iterator_1a8fae4f0d01e41626791342b2f3340818"/><section>
+    <title>value_type</title>
+<indexterm><primary>value_type</primary><secondary>rapidxml::attribute_iterator&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::attribute_iterator&lt; Ch &gt;</primary><secondary>value_type</secondary></indexterm>
+<computeroutput>template&lt;class Ch &gt; </computeroutput><para><computeroutput><link linkend="_classrapidxml_1_1xml__attribute">xml_attribute</link>&lt;Ch&gt; <link linkend="_classrapidxml_1_1attribute__iterator">rapidxml::attribute_iterator</link>&lt; Ch &gt;::value_type</computeroutput></para></section>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classrapidxml_1_1attribute__iterator_1a30a82132793bc59d4e7b20f5be6237b9"/><section>
+    <title>attribute_iterator()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>attribute_iterator</primary><secondary>rapidxml::attribute_iterator&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::attribute_iterator&lt; Ch &gt;</primary><secondary>attribute_iterator</secondary></indexterm>
+<computeroutput>template&lt;class Ch &gt; </computeroutput><para><computeroutput><link linkend="_classrapidxml_1_1attribute__iterator">rapidxml::attribute_iterator</link>&lt; Ch &gt;::attribute_iterator ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classrapidxml_1_1attribute__iterator_1a1109344dead88533ae4dd68cea5d9613"/><section>
+    <title>attribute_iterator()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>attribute_iterator</primary><secondary>rapidxml::attribute_iterator&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::attribute_iterator&lt; Ch &gt;</primary><secondary>attribute_iterator</secondary></indexterm>
+<computeroutput>template&lt;class Ch &gt; </computeroutput><para><computeroutput><link linkend="_classrapidxml_1_1attribute__iterator">rapidxml::attribute_iterator</link>&lt; Ch &gt;::attribute_iterator (<link linkend="_classrapidxml_1_1xml__node">xml_node</link>&lt; Ch &gt; * node)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classrapidxml_1_1attribute__iterator_1a39e8cf336c324521fd9c720abf280d88"/><section>
+    <title>operator!=()</title>
+<indexterm><primary>operator!=</primary><secondary>rapidxml::attribute_iterator&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::attribute_iterator&lt; Ch &gt;</primary><secondary>operator!=</secondary></indexterm>
+<computeroutput>template&lt;class Ch &gt; </computeroutput><para><computeroutput>bool <link linkend="_classrapidxml_1_1attribute__iterator">rapidxml::attribute_iterator</link>&lt; Ch &gt;::operator!= (const <link linkend="_classrapidxml_1_1attribute__iterator">attribute_iterator</link>&lt; Ch &gt; &amp; rhs)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classrapidxml_1_1attribute__iterator_1aa15f5f06d2a6199467a33aa19f4357aa"/><section>
+    <title>operator*()</title>
+<indexterm><primary>operator*</primary><secondary>rapidxml::attribute_iterator&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::attribute_iterator&lt; Ch &gt;</primary><secondary>operator*</secondary></indexterm>
+<computeroutput>template&lt;class Ch &gt; </computeroutput><para><computeroutput><link linkend="_classrapidxml_1_1xml__attribute">reference</link> <link linkend="_classrapidxml_1_1attribute__iterator">rapidxml::attribute_iterator</link>&lt; Ch &gt;::operator* ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classrapidxml_1_1attribute__iterator_1a1eb0082d75d6d43ea3a3b1e98f7213a1"/><section>
+    <title>operator++()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>operator++</primary><secondary>rapidxml::attribute_iterator&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::attribute_iterator&lt; Ch &gt;</primary><secondary>operator++</secondary></indexterm>
+<computeroutput>template&lt;class Ch &gt; </computeroutput><para><computeroutput><link linkend="_classrapidxml_1_1attribute__iterator">attribute_iterator</link> &amp; <link linkend="_classrapidxml_1_1attribute__iterator">rapidxml::attribute_iterator</link>&lt; Ch &gt;::operator++ ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classrapidxml_1_1attribute__iterator_1a82c8859b9eebd45caa3afc25b9e78c36"/><section>
+    <title>operator++()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>operator++</primary><secondary>rapidxml::attribute_iterator&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::attribute_iterator&lt; Ch &gt;</primary><secondary>operator++</secondary></indexterm>
+<computeroutput>template&lt;class Ch &gt; </computeroutput><para><computeroutput><link linkend="_classrapidxml_1_1attribute__iterator">attribute_iterator</link> <link linkend="_classrapidxml_1_1attribute__iterator">rapidxml::attribute_iterator</link>&lt; Ch &gt;::operator++ (int )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classrapidxml_1_1attribute__iterator_1a78aa3aa5dab93560f2e5e3bc9d060899"/><section>
+    <title>operator--()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>operator--</primary><secondary>rapidxml::attribute_iterator&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::attribute_iterator&lt; Ch &gt;</primary><secondary>operator--</secondary></indexterm>
+<computeroutput>template&lt;class Ch &gt; </computeroutput><para><computeroutput><link linkend="_classrapidxml_1_1attribute__iterator">attribute_iterator</link> &amp; <link linkend="_classrapidxml_1_1attribute__iterator">rapidxml::attribute_iterator</link>&lt; Ch &gt;::operator-- ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classrapidxml_1_1attribute__iterator_1af52a8562ab1b2c0391cdde79f55e4a6f"/><section>
+    <title>operator--()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>operator--</primary><secondary>rapidxml::attribute_iterator&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::attribute_iterator&lt; Ch &gt;</primary><secondary>operator--</secondary></indexterm>
+<computeroutput>template&lt;class Ch &gt; </computeroutput><para><computeroutput><link linkend="_classrapidxml_1_1attribute__iterator">attribute_iterator</link> <link linkend="_classrapidxml_1_1attribute__iterator">rapidxml::attribute_iterator</link>&lt; Ch &gt;::operator-- (int )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classrapidxml_1_1attribute__iterator_1a499c7ed0e1835f029585d0a9ba25f446"/><section>
+    <title>operator-&gt;()</title>
+<indexterm><primary>operator-&gt;</primary><secondary>rapidxml::attribute_iterator&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::attribute_iterator&lt; Ch &gt;</primary><secondary>operator-&gt;</secondary></indexterm>
+<computeroutput>template&lt;class Ch &gt; </computeroutput><para><computeroutput><link linkend="_classrapidxml_1_1xml__attribute">pointer</link> <link linkend="_classrapidxml_1_1attribute__iterator">rapidxml::attribute_iterator</link>&lt; Ch &gt;::operator-&gt; ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classrapidxml_1_1attribute__iterator_1ab1dc8dd11d21e145a4e3f76d46aead0d"/><section>
+    <title>operator==()</title>
+<indexterm><primary>operator==</primary><secondary>rapidxml::attribute_iterator&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::attribute_iterator&lt; Ch &gt;</primary><secondary>operator==</secondary></indexterm>
+<computeroutput>template&lt;class Ch &gt; </computeroutput><para><computeroutput>bool <link linkend="_classrapidxml_1_1attribute__iterator">rapidxml::attribute_iterator</link>&lt; Ch &gt;::operator== (const <link linkend="_classrapidxml_1_1attribute__iterator">attribute_iterator</link>&lt; Ch &gt; &amp; rhs)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/external/rapidxml/rapidxml_iterators.hpp</section>
+</section>

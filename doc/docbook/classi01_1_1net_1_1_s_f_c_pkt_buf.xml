@@ -1,0 +1,331 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classi01_1_1net_1_1_s_f_c_pkt_buf" xml:lang="en-US">
+<title>i01::net::SFCPktBuf Class Reference</title>
+<indexterm><primary>i01::net::SFCPktBuf</primary></indexterm>
+<para>
+
+<para>Represents a packet buffer used in the SFC network library. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;SFCPktBuf.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structi01_1_1net_1_1_s_f_c_pkt_buf_1_1_s_f_c_pkt_buf_p_o_d">SFCPktBufPOD</link></para>
+
+<para>Represents the Packet Buffer POD (Plain Old Data) structure. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>ef_addr &amp; <link linkend="_classi01_1_1net_1_1_s_f_c_pkt_buf_1a920eb595de36e50c440d44fd7fcdd606">addr</link> ()</para>
+
+<para>Returns the address of the packet buffer. </para>
+</listitem>
+            <listitem><para>int <link linkend="_classi01_1_1net_1_1_s_f_c_pkt_buf_1a2f10f71fd0547cbe1b27b0bfbf6795bb">pool_id</link> ()</para>
+
+<para>Returns the pool ID of the packet buffer. </para>
+</listitem>
+            <listitem><para>size_t <link linkend="_classi01_1_1net_1_1_s_f_c_pkt_buf_1ac12087e1cdb438248f2d2d1d202fbaa9">size</link> ()</para>
+
+<para>Returns the size of the packet buffer. </para>
+</listitem>
+            <listitem><para>const char * <link linkend="_classi01_1_1net_1_1_s_f_c_pkt_buf_1ae70d60e59c1f27176b16ce7bde23a549">data</link> () const</para>
+
+<para>Returns a constant pointer to the data in the packet buffer. </para>
+</listitem>
+            <listitem><para>char * <link linkend="_classi01_1_1net_1_1_s_f_c_pkt_buf_1a62664f755f3c7bdf3bb3138d4f40c40e">data</link> ()</para>
+
+<para>Returns a pointer to the data in the packet buffer. </para>
+</listitem>
+            <listitem><para>const char * <link linkend="_classi01_1_1net_1_1_s_f_c_pkt_buf_1a4a63e53ff8412441039b923822680ba4">data2</link> () const</para>
+
+<para>Returns a constant pointer to the secondary data in the packet buffer. </para>
+</listitem>
+            <listitem><para>char * <link linkend="_classi01_1_1net_1_1_s_f_c_pkt_buf_1a5db25326d81ff1f28248b20e64486e52">data2</link> ()</para>
+
+<para>Returns a pointer to the secondary data in the packet buffer. </para>
+</listitem>
+            <listitem><para>const char * <link linkend="_classi01_1_1net_1_1_s_f_c_pkt_buf_1a9f5f9c08b474b720359f6032b6c875e4">operator[]</link> (int n) const</para>
+
+<para>Returns a constant pointer to the data at the specified index in the packet buffer. </para>
+</listitem>
+            <listitem><para>char * <link linkend="_classi01_1_1net_1_1_s_f_c_pkt_buf_1affcd9c9ca86ded64b5b1d1648e6ebdca">operator[]</link> (int n)</para>
+
+<para>Returns a pointer to the data at the specified index in the packet buffer. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static constexpr size_t <link linkend="_classi01_1_1net_1_1_s_f_c_pkt_buf_1a4af5a56b975ee77bbb5ec82c15b7521e">prefix_size</link> ()</para>
+
+<para>Returns the size of the prefix in the packet buffer. </para>
+</listitem>
+            <listitem><para>static constexpr size_t <link linkend="_classi01_1_1net_1_1_s_f_c_pkt_buf_1a7c739eb9762afb31d5ceaa3285fd21ad">capacity</link> ()</para>
+
+<para>Returns the capacity of the packet buffer. </para>
+</listitem>
+            <listitem><para>static constexpr size_t <link linkend="_classi01_1_1net_1_1_s_f_c_pkt_buf_1abde49f4de9be280f8a1a4c0a31e55282">alloc_size</link> ()</para>
+
+<para>Returns the allocation size of the packet buffer. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_classi01_1_1net_1_1_s_f_c_pkt_buf_1a4e1345511e978c98d2410dd78812c305"/>struct <link linkend="_structi01_1_1net_1_1_s_f_c_pkt_buf_1_1_s_f_c_pkt_buf_p_o_d">i01::net::SFCPktBuf::SFCPktBufPOD</link> <emphasis role="strong">m_pod</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Represents a packet buffer used in the SFC network library. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classi01_1_1net_1_1_s_f_c_pkt_buf_1a920eb595de36e50c440d44fd7fcdd606"/><section>
+    <title>addr()</title>
+<indexterm><primary>addr</primary><secondary>i01::net::SFCPktBuf</secondary></indexterm>
+<indexterm><primary>i01::net::SFCPktBuf</primary><secondary>addr</secondary></indexterm>
+<para><computeroutput>ef_addr &amp; i01::net::SFCPktBuf::addr ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Returns the address of the packet buffer. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The address of the packet buffer. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00100">i01::net::SFCPktBuf::SFCPktBufPOD::m_addr</link>.</para>
+</section>
+<anchor xml:id="_classi01_1_1net_1_1_s_f_c_pkt_buf_1abde49f4de9be280f8a1a4c0a31e55282"/><section>
+    <title>alloc_size()</title>
+<indexterm><primary>alloc_size</primary><secondary>i01::net::SFCPktBuf</secondary></indexterm>
+<indexterm><primary>i01::net::SFCPktBuf</primary><secondary>alloc_size</secondary></indexterm>
+<para><computeroutput>static constexpr size_t i01::net::SFCPktBuf::alloc_size ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[constexpr]</computeroutput></computeroutput></para><para>
+
+<para>Returns the allocation size of the packet buffer. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The allocation size of the packet buffer. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00125">KTN::TCP::EFVITcpV2::EFVI_TCP_Start()</link>.</para>
+</section>
+<anchor xml:id="_classi01_1_1net_1_1_s_f_c_pkt_buf_1a7c739eb9762afb31d5ceaa3285fd21ad"/><section>
+    <title>capacity()</title>
+<indexterm><primary>capacity</primary><secondary>i01::net::SFCPktBuf</secondary></indexterm>
+<indexterm><primary>i01::net::SFCPktBuf</primary><secondary>capacity</secondary></indexterm>
+<para><computeroutput>static constexpr size_t i01::net::SFCPktBuf::capacity ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[constexpr]</computeroutput></computeroutput></para><para>
+
+<para>Returns the capacity of the packet buffer. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The capacity of the packet buffer. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00022">prefix_size()</link>.</para>
+</section>
+<anchor xml:id="_classi01_1_1net_1_1_s_f_c_pkt_buf_1a62664f755f3c7bdf3bb3138d4f40c40e"/><section>
+    <title>data()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>data</primary><secondary>i01::net::SFCPktBuf</secondary></indexterm>
+<indexterm><primary>i01::net::SFCPktBuf</primary><secondary>data</secondary></indexterm>
+<para><computeroutput>char * i01::net::SFCPktBuf::data ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Returns a pointer to the data in the packet buffer. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>A pointer to the data in the packet buffer. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classi01_1_1net_1_1_s_f_c_pkt_buf_1ae70d60e59c1f27176b16ce7bde23a549"/><section>
+    <title>data()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>data</primary><secondary>i01::net::SFCPktBuf</secondary></indexterm>
+<indexterm><primary>i01::net::SFCPktBuf</primary><secondary>data</secondary></indexterm>
+<para><computeroutput>const char * i01::net::SFCPktBuf::data ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Returns a constant pointer to the data in the packet buffer. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>A constant pointer to the data in the packet buffer. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00092">operator[]()</link>, and <link linkend="_l00085">operator[]()</link>.</para>
+</section>
+<anchor xml:id="_classi01_1_1net_1_1_s_f_c_pkt_buf_1a5db25326d81ff1f28248b20e64486e52"/><section>
+    <title>data2()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>data2</primary><secondary>i01::net::SFCPktBuf</secondary></indexterm>
+<indexterm><primary>i01::net::SFCPktBuf</primary><secondary>data2</secondary></indexterm>
+<para><computeroutput>char * i01::net::SFCPktBuf::data2 ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Returns a pointer to the secondary data in the packet buffer. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>A pointer to the secondary data in the packet buffer. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classi01_1_1net_1_1_s_f_c_pkt_buf_1a4a63e53ff8412441039b923822680ba4"/><section>
+    <title>data2()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>data2</primary><secondary>i01::net::SFCPktBuf</secondary></indexterm>
+<indexterm><primary>i01::net::SFCPktBuf</primary><secondary>data2</secondary></indexterm>
+<para><computeroutput>const char * i01::net::SFCPktBuf::data2 ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Returns a constant pointer to the secondary data in the packet buffer. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>A constant pointer to the secondary data in the packet buffer. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classi01_1_1net_1_1_s_f_c_pkt_buf_1affcd9c9ca86ded64b5b1d1648e6ebdca"/><section>
+    <title>operator[]()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>operator[]</primary><secondary>i01::net::SFCPktBuf</secondary></indexterm>
+<indexterm><primary>i01::net::SFCPktBuf</primary><secondary>operator[]</secondary></indexterm>
+<para><computeroutput>char * i01::net::SFCPktBuf::operator[] (int n)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Returns a pointer to the data at the specified index in the packet buffer. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>n</entry><entry>
+<para>The index of the data. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A pointer to the data at the specified index in the packet buffer. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00060">data()</link>.</para>
+</section>
+<anchor xml:id="_classi01_1_1net_1_1_s_f_c_pkt_buf_1a9f5f9c08b474b720359f6032b6c875e4"/><section>
+    <title>operator[]()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>operator[]</primary><secondary>i01::net::SFCPktBuf</secondary></indexterm>
+<indexterm><primary>i01::net::SFCPktBuf</primary><secondary>operator[]</secondary></indexterm>
+<para><computeroutput>const char * i01::net::SFCPktBuf::operator[] (int n) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Returns a constant pointer to the data at the specified index in the packet buffer. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>n</entry><entry>
+<para>The index of the data. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A constant pointer to the data at the specified index in the packet buffer. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00060">data()</link>.</para>
+</section>
+<anchor xml:id="_classi01_1_1net_1_1_s_f_c_pkt_buf_1a2f10f71fd0547cbe1b27b0bfbf6795bb"/><section>
+    <title>pool_id()</title>
+<indexterm><primary>pool_id</primary><secondary>i01::net::SFCPktBuf</secondary></indexterm>
+<indexterm><primary>i01::net::SFCPktBuf</primary><secondary>pool_id</secondary></indexterm>
+<para><computeroutput>int i01::net::SFCPktBuf::pool_id ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Returns the pool ID of the packet buffer. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The pool ID of the packet buffer. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classi01_1_1net_1_1_s_f_c_pkt_buf_1a4af5a56b975ee77bbb5ec82c15b7521e"/><section>
+    <title>prefix_size()</title>
+<indexterm><primary>prefix_size</primary><secondary>i01::net::SFCPktBuf</secondary></indexterm>
+<indexterm><primary>i01::net::SFCPktBuf</primary><secondary>prefix_size</secondary></indexterm>
+<para><computeroutput>static constexpr size_t i01::net::SFCPktBuf::prefix_size ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[constexpr]</computeroutput></computeroutput></para><para>
+
+<para>Returns the size of the prefix in the packet buffer. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The size of the prefix. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00028">capacity()</link>.</para>
+</section>
+<anchor xml:id="_classi01_1_1net_1_1_s_f_c_pkt_buf_1ac12087e1cdb438248f2d2d1d202fbaa9"/><section>
+    <title>size()</title>
+<indexterm><primary>size</primary><secondary>i01::net::SFCPktBuf</secondary></indexterm>
+<indexterm><primary>i01::net::SFCPktBuf</primary><secondary>size</secondary></indexterm>
+<para><computeroutput>size_t i01::net::SFCPktBuf::size ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Returns the size of the packet buffer. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The size of the packet buffer. </para>
+</formalpara>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/i01_net/SFCPktBuf.hpp</section>
+</section>

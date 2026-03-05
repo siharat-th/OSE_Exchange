@@ -1,0 +1,539 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_c_m_e_1_1_cme_algo" xml:lang="en-US">
+<title>KTN::CME::CmeAlgo Class Reference</title>
+<indexterm><primary>KTN::CME::CmeAlgo</primary></indexterm>
+<para>Inheritance diagram for KTN::CME::CmeAlgo:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_k_t_n_1_1_c_m_e_1_1_cme_algo.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_algo_1abef4664377cbc641f3ae524dc9a2f56e">CmeAlgo</link> (tbb::concurrent_queue&lt; <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &gt; &amp;qords, const std::string &amp;settingsfile, const std::string &amp;source)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_algo_1ae4e2d6b6f8395790afc3ad357a30b5dc">Start</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_algo_1aa9280100ccb7b88cd21ac14b95ff3355">Stop</link> ()</para>
+
+<para>Stops the exchange. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_algo_1a1625d07eff160396acadbc6d0aa39381">ClearMaps</link> ()</para>
+
+<para>Clears the maps. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_algo_1ae3c1caae992f3908a0a9f32529b5a819">Reset</link> ()</para>
+
+<para>Resets the exchange. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_algo_1ad97315d21479a9830c1c5d08bd4a58ee">Command</link> (<link linkend="_struct_instruction">Instruction</link> cmd)</para>
+
+<para>Executes a command. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_algo_1acbcca72c86296c821fbbcf9d718b753f">PrintLatencies</link> (bool clear)</para>
+
+<para>Prints the latencies. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_algo_1a11a59d04213970bfee722d1afaf8b934">Poll</link> ()</para>
+
+<para>Polls the exchange. </para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_algo_1a718254278f457eb625a371b5d1ec2498">onRecv</link> (byte_ptr data, int len, int segid, int index) override</para>
+
+<para>This method is called when 8-bit data is received over TCP. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_algo_1a92751fedbe3e878a143239ccf7418892">on_rx_cb</link> (char *buf, int len) override</para>
+
+<para>Received packet callback. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_algo_1aee0a9d988b4e8d831d6461c9415cd983">AddChannelFilter</link> (const <link linkend="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def">CmeSecDef</link> &amp;secdef)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_algo_1ab8f6365f0e693ed652928109125909e8">AddSymbol</link> (string symb)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_algo_1ad5f8d5ad0764407ebd8123d4ef97c7b5">Send</link> (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord, int action)</para>
+
+<para>Sends an order. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_algo_1a0ceb37250c83003365c0821755a5930b">SendMassAction</link> (<link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> &amp;)</para>
+
+<para>Sends a mass action. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_algo_1a581287a85a94b2b01ff4fd0e546dfb75">SendHedgeInstruction</link> (uint64_t ordereqid, const vector&lt; <link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3">SpreadHedgeV3</link> &gt; &amp;hdg)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_algo_1abb2b3b8bba929f71495f937974a5745d">BankTas</link> (std::string secgrp, vector&lt; <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &gt; &amp;ords)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_algo_1a09c52c0f8b338de11a6bde3f1fd3033f">BankHedgeOrders</link> (uint64_t ordereqid, const vector&lt; <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &gt; &amp;ords)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_algo_1ac5a206f953d46e98621fa5d0f8b55b8e">AlgoJson</link> (string json, ExchCmd::Enum cmd)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_algo_1a388e72624edd2bd4ff18fcb40650dfd3">SendWarm</link> (int index)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_algo_1a32f5a112c51fdaa93818e33ccc90484d">PrintSessionMap</link> (<link linkend="_struct_k_t_n_1_1_conn_state">ConnState</link>(&amp;conns)[4])</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_class_k_t_n_1_1_exchange_base2">KTN::ExchangeBase2</link>        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_exchange_base2_1ac8cff2c312e11492aaf84fa948985ba3">ExchangeBase2</link> (const std::string &amp;settingsfile, const std::string &amp;source, const std::string &amp;exchname)</para>
+
+<para>Constructor for <link linkend="_class_k_t_n_1_1_exchange_base2">ExchangeBase2</link>. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_k_t_n_1_1_exchange_base2_1a1aaa796870fbd3e877e591162dd91acd">~ExchangeBase2</link> ()</para>
+
+<para>Destructor for <link linkend="_class_k_t_n_1_1_exchange_base2">ExchangeBase2</link>. </para>
+</listitem>
+            <listitem><para>const std::string &amp; <link linkend="_class_k_t_n_1_1_exchange_base2_1acefbf50e1593eaa77c555da52e06ddd1">Name</link> () const</para>
+
+<para>Gets the name of the exchange. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_exchange_base2_1aa01ce3c26302432c51131c24f315e144">SendHedgeInstruction</link> (uint64_t ordereqid, const std::vector&lt; <link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3">SpreadHedgeV3</link> &gt; &amp;hdg)</para>
+
+<para>Sends a hedge instruction. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_exchange_base2_1a8004561a90abb64af280cf4692e430ad">AlgoJson</link> (std::string json, ExchCmd::Enum cmd)</para>
+
+<para>Sends an algorithmic command in JSON format. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_exchange_base2_1ae91c14c6b3ade61bb1af7b253ebe7319">PrintMsgRatios</link> ()</para>
+
+<para>Prints the message ratios. </para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_k_t_n_1_1_exchange_base2_1a905bc64ef29aff02280d769cde3c594c">SettFile</link> ()</para>
+
+<para>Gets the settings file path. </para>
+</listitem>
+        </itemizedlist>
+Public Member Functions inherited from <link linkend="_class_k_t_n_1_1_n_e_t_1_1_e_f_v_i_udp_v4">KTN::NET::EFVIUdpV4</link>        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_n_e_t_1_1_e_f_v_i_udp_v4_1a9f730e4019f1af105fd676d9387761b1">EFVIUdpV4</link> (std::string feed, bool hwtimestamping, std::string name, bool useCertNrConfigFile=false)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_n_e_t_1_1_e_f_v_i_udp_v4_1a74bd7d0f286ee158010c001284e800dd">apply_filter</link> (const string &amp;connid, const string &amp;ipaddr, int port, bool isA)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_n_e_t_1_1_e_f_v_i_udp_v4_1a2fdd6e1009f5757cf747849cbd378173">poll</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_n_e_t_1_1_e_f_v_i_udp_v4_1aaed8ad15510f7d769d1d8cfa087717e0">EfPrintStats</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_n_e_t_1_1_e_f_v_i_udp_v4_1a89b48869b44e139429398523bb8f9565">RefillRing</link> ()</para>
+</listitem>
+            <listitem><para>void <emphasis role="strong">testticket</emphasis> ()</para>
+</listitem>
+            <listitem><para>int <emphasis role="strong">Source</emphasis> ()</para>
+</listitem>
+        </itemizedlist>
+Public Member Functions inherited from <link linkend="_class_k_t_n_1_1_t_c_p_1_1_tcp_callback8t">KTN::TCP::TcpCallback8t</link><simplesect>
+    <title>Additional Inherited Members    </title>
+Public Types inherited from <link linkend="_class_k_t_n_1_1_n_e_t_1_1_e_f_v_i_udp_v4">KTN::NET::EFVIUdpV4</link>        <itemizedlist>
+            <listitem><para>enum class <emphasis role="strong">FilterIPProto</emphasis> : int { <emphasis role="strong">UDP</emphasis> = ::IPPROTO_UDP
+, <emphasis role="strong">TCP</emphasis> = ::IPPROTO_TCP
+ }</para>
+</listitem>
+            <listitem><para>typedef i01::core::Timestamp <link linkend="_class_k_t_n_1_1_n_e_t_1_1_e_f_v_i_udp_v4_1af3fff59f5d869b122aa5394cee758084">Timestamp</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Protected Member Functions inherited from <link linkend="_class_k_t_n_1_1_exchange_base2">KTN::ExchangeBase2</link>        <itemizedlist>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_exchange_base2_1ab8bccf95f1f0b8e5e117923104d31c75">LogMe</link> (const std::string &amp;szMsg, int iColor=LOG_WHITE)</para>
+
+<para>Logs a message. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_exchange_base2_1ad28c9111fb5ebbac595ecd657aecee52">ChangeName</link> (const std::string &amp;owner, const std::string &amp;source)</para>
+
+<para>Changes the name of the exchange. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_exchange_base2_1a9bc40ada22590f70a55abdc06c56c486">ReportStatus</link> (<link linkend="_class_session_status">SessionStatus</link> s)</para>
+
+<para>Reports the status of the session. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_exchange_base2_1a41f8f46ef5cb13108b86b23433f9c57c">MsgSent</link> (const std::string &amp;symb, int cnt, int volume, int event)</para>
+
+<para>Logs a message indicating that a message was sent. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_exchange_base2_1ac4da9f4a137e7c255276ca9a4120510f">StopBase</link> ()</para>
+
+<para>Stops the base exchange. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_exchange_base2_1a924d04a8225331c72fc26e7f62e8338c">fastCopy2</link> (char *dest, const char *src, size_t length)</para>
+
+<para>Fast copy function for copying memory. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_exchange_base2_1a5fde3aacdf5f50b70162b2213d0359b1">needhb</link> ()</para>
+
+<para>Checks if a heartbeat is needed. </para>
+</listitem>
+        </itemizedlist>
+Protected Attributes inherited from <link linkend="_class_k_t_n_1_1_exchange_base2">KTN::ExchangeBase2</link>        <itemizedlist>
+            <listitem><para><link linkend="_struct_exch_state">ExchState</link> <link linkend="_class_k_t_n_1_1_exchange_base2_1a7886a4389dc6aadf2ef4363d5090508e">_State</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_log_svc">LogSvc</link> * <link linkend="_class_k_t_n_1_1_exchange_base2_1a5433583addc6365cbe84c8d633b158b2">_logsvc</link></para>
+</listitem>
+            <listitem><para>std::unordered_map&lt; std::string, <link linkend="_structmsgrate">msgrate</link> &gt; <link linkend="_class_k_t_n_1_1_exchange_base2_1a53c5d19661493033ff9a67dc35fc77b1">_msgratio</link></para>
+</listitem>
+            <listitem><para>std::unordered_map&lt; std::string, <link linkend="_structmsgevents">msgevents</link> &gt; <link linkend="_class_k_t_n_1_1_exchange_base2_1a9e0644d5ec5c1c838f4fe3c90028ea02">_msgevents</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_hash_map">HashMap</link>&lt; uint64_t, std::vector&lt; <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &gt;, 1000 &gt; <link linkend="_class_k_t_n_1_1_exchange_base2_1aa7c788acbea7b004d77b2a462c356e17">_hedgeOrds</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_spread_hedge_circ_buff">SpreadHedgeCircBuff</link> <link linkend="_class_k_t_n_1_1_exchange_base2_1a1dae76a622dbf06f70bd7572fcd3e0d3">_hedgeMap</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_performance_tracker">PerformanceTracker</link> <link linkend="_class_k_t_n_1_1_exchange_base2_1a52371b9708664b6e7d9b24e7e39f8bb8">_trk</link></para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_cme_algo_1abef4664377cbc641f3ae524dc9a2f56e"/><section>
+    <title>CmeAlgo()</title>
+<indexterm><primary>CmeAlgo</primary><secondary>KTN::CME::CmeAlgo</secondary></indexterm>
+<indexterm><primary>KTN::CME::CmeAlgo</primary><secondary>CmeAlgo</secondary></indexterm>
+<para><computeroutput>CmeAlgo::CmeAlgo (tbb::concurrent_queue&lt; <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &gt; &amp; qords, const std::string &amp; settingsfile, const std::string &amp; source)<computeroutput>[explicit]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>qords</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>settingsfile</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>source</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_class_log_svc_1ac6af8498311999f4ecb338e7eb354c43">LogSvc::ChangeName()</link>, <link linkend="_l00062">KTN::Core::SPSCRingBuffer&lt; T &gt;::enqueue()</link>, <link linkend="_l00029">AlgoState::EXCH_CALLBACK_ID</link>, <link linkend="_l00123">Settings::get()</link>, <link linkend="_l00193">Settings::getBoolean()</link>, <link linkend="_l00133">Settings::getInteger()</link>, <link linkend="_l00153">Settings::getLong()</link>, <link linkend="_l00024">AlgoState::HedgingState</link>, <link linkend="_l00021">KTN::CME::IL3::SessionMessageFactory::Init()</link>, <link linkend="_l00039">AuditTrailWriterV3::InitFileForSeg()</link>, <link linkend="_l00065">CmeSessionSettings::Load()</link>, <link linkend="_l00034">KT01::MSGW::CmeMsgw::Load()</link>, <link linkend="_l00050">KTN::ExchangeBase2::LogMe()</link>, <link linkend="_l00050">OrderNums::NextOrderID()</link>, <link linkend="_l00086">OrderNums::NextReqIdEncoded()</link>, <link linkend="_l00262">algometa::Source</link>, <link linkend="_l00019">StringSplitter::Split()</link>, and <link linkend="_l00021">AuditTrailWriterV3::Start()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_cme_algo_1ad6a0f4e49ae53dbfe0ae88b069a904de"/><section>
+    <title>~CmeAlgo()</title>
+<indexterm><primary>~CmeAlgo</primary><secondary>KTN::CME::CmeAlgo</secondary></indexterm>
+<indexterm><primary>KTN::CME::CmeAlgo</primary><secondary>~CmeAlgo</secondary></indexterm>
+<para><computeroutput>CmeAlgo::~CmeAlgo ( )<computeroutput>[virtual]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_cme_algo_1aee0a9d988b4e8d831d6461c9415cd983"/><section>
+    <title>AddChannelFilter()</title>
+<indexterm><primary>AddChannelFilter</primary><secondary>KTN::CME::CmeAlgo</secondary></indexterm>
+<indexterm><primary>KTN::CME::CmeAlgo</primary><secondary>AddChannelFilter</secondary></indexterm>
+<para><computeroutput>void CmeAlgo::AddChannelFilter (const <link linkend="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def">CmeSecDef</link> &amp; secdef)</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_cme_algo_1ab8f6365f0e693ed652928109125909e8"/><section>
+    <title>AddSymbol()</title>
+<indexterm><primary>AddSymbol</primary><secondary>KTN::CME::CmeAlgo</secondary></indexterm>
+<indexterm><primary>KTN::CME::CmeAlgo</primary><secondary>AddSymbol</secondary></indexterm>
+<para><computeroutput>void CmeAlgo::AddSymbol (string symb)</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_cme_algo_1ac5a206f953d46e98621fa5d0f8b55b8e"/><section>
+    <title>AlgoJson()</title>
+<indexterm><primary>AlgoJson</primary><secondary>KTN::CME::CmeAlgo</secondary></indexterm>
+<indexterm><primary>KTN::CME::CmeAlgo</primary><secondary>AlgoJson</secondary></indexterm>
+<para><computeroutput>void CmeAlgo::AlgoJson (string json, ExchCmd::Enum cmd)</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_cme_algo_1a09c52c0f8b338de11a6bde3f1fd3033f"/><section>
+    <title>BankHedgeOrders()</title>
+<indexterm><primary>BankHedgeOrders</primary><secondary>KTN::CME::CmeAlgo</secondary></indexterm>
+<indexterm><primary>KTN::CME::CmeAlgo</primary><secondary>BankHedgeOrders</secondary></indexterm>
+<para><computeroutput>void CmeAlgo::BankHedgeOrders (uint64_t ordereqid, const vector&lt; <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &gt; &amp; ords)</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_cme_algo_1abb2b3b8bba929f71495f937974a5745d"/><section>
+    <title>BankTas()</title>
+<indexterm><primary>BankTas</primary><secondary>KTN::CME::CmeAlgo</secondary></indexterm>
+<indexterm><primary>KTN::CME::CmeAlgo</primary><secondary>BankTas</secondary></indexterm>
+<para><computeroutput>void CmeAlgo::BankTas (std::string secgrp, vector&lt; <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &gt; &amp; ords)</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_cme_algo_1a1625d07eff160396acadbc6d0aa39381"/><section>
+    <title>ClearMaps()</title>
+<indexterm><primary>ClearMaps</primary><secondary>KTN::CME::CmeAlgo</secondary></indexterm>
+<indexterm><primary>KTN::CME::CmeAlgo</primary><secondary>ClearMaps</secondary></indexterm>
+<para><computeroutput>void CmeAlgo::ClearMaps ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Clears the maps. </para>
+</para>
+<para>
+Reimplemented from <link linkend="_class_k_t_n_1_1_exchange_base2_1ac2201df8037a75fbaf0619ecf8684e8a">KTN::ExchangeBase2</link>.</para>
+<para>
+References <link linkend="_l00047">HashMap&lt; Key, Value, TableSize &gt;::clear()</link>, <link linkend="_l00106">SpreadHedgeCircBuff::clear()</link>, and <link linkend="_l00050">KTN::ExchangeBase2::LogMe()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_cme_algo_1ad97315d21479a9830c1c5d08bd4a58ee"/><section>
+    <title>Command()</title>
+<indexterm><primary>Command</primary><secondary>KTN::CME::CmeAlgo</secondary></indexterm>
+<indexterm><primary>KTN::CME::CmeAlgo</primary><secondary>Command</secondary></indexterm>
+<para><computeroutput>void CmeAlgo::Command (<link linkend="_struct_instruction">Instruction</link> command)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Executes a command. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>command</entry><entry>
+<para>The command to execute. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Reimplemented from <link linkend="_class_k_t_n_1_1_exchange_base2_1abc7051e6780afdbb0ee227548a6b6564">KTN::ExchangeBase2</link>.</para>
+<para>
+References <link linkend="_l00050">KTN::ExchangeBase2::LogMe()</link>, and <link linkend="_l00084">KTN::Core::SPSCRingBuffer&lt; T &gt;::push()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_cme_algo_1a92751fedbe3e878a143239ccf7418892"/><section>
+    <title>on_rx_cb()</title>
+<indexterm><primary>on_rx_cb</primary><secondary>KTN::CME::CmeAlgo</secondary></indexterm>
+<indexterm><primary>KTN::CME::CmeAlgo</primary><secondary>on_rx_cb</secondary></indexterm>
+<para><computeroutput>void CmeAlgo::on_rx_cb (char * data, int len)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Received packet callback. </para>
+</para>
+<para>
+Implements <link linkend="_class_k_t_n_1_1_n_e_t_1_1_e_f_v_i_udp_v4">KTN::NET::EFVIUdpV4</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_cme_algo_1a718254278f457eb625a371b5d1ec2498"/><section>
+    <title>onRecv()</title>
+<indexterm><primary>onRecv</primary><secondary>KTN::CME::CmeAlgo</secondary></indexterm>
+<indexterm><primary>KTN::CME::CmeAlgo</primary><secondary>onRecv</secondary></indexterm>
+<para><computeroutput>uint16_t CmeAlgo::onRecv (byte_ptr data, int len, int segid, int index)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>This method is called when 8-bit data is received over TCP. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>data</entry><entry>
+<para>The received data. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>len</entry><entry>
+<para>The length of the received data. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>segid</entry><entry>
+<para>The segment ID. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>index</entry><entry>
+<para>The index. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The response code. </para>
+</formalpara>
+</para>
+<para>
+Implements <link linkend="_class_k_t_n_1_1_t_c_p_1_1_tcp_callback8t_1a611efc1c25fd7385ff42935d567a63b0">KTN::TCP::TcpCallback8t</link>.</para>
+<para>
+References <link linkend="_l00050">KTN::ExchangeBase2::LogMe()</link>, <link linkend="_l00033">PerformanceTracker::startMeasurement()</link>, <link linkend="_l00042">PerformanceTracker::stopMeasurement()</link>, and <link linkend="_l00111">AuditTrailWriterV3::Write()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_cme_algo_1a11a59d04213970bfee722d1afaf8b934"/><section>
+    <title>Poll()</title>
+<indexterm><primary>Poll</primary><secondary>KTN::CME::CmeAlgo</secondary></indexterm>
+<indexterm><primary>KTN::CME::CmeAlgo</primary><secondary>Poll</secondary></indexterm>
+<para><computeroutput>void CmeAlgo::Poll ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Polls the exchange. </para>
+</para>
+<para>
+Reimplemented from <link linkend="_class_k_t_n_1_1_exchange_base2_1ad48b506ce66acbbff141641f003cca99">KTN::ExchangeBase2</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_cme_algo_1acbcca72c86296c821fbbcf9d718b753f"/><section>
+    <title>PrintLatencies()</title>
+<indexterm><primary>PrintLatencies</primary><secondary>KTN::CME::CmeAlgo</secondary></indexterm>
+<indexterm><primary>KTN::CME::CmeAlgo</primary><secondary>PrintLatencies</secondary></indexterm>
+<para><computeroutput>void CmeAlgo::PrintLatencies (bool clear)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Prints the latencies. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>clear</entry><entry>
+<para>Indicates whether to clear the latencies after printing. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Reimplemented from <link linkend="_class_k_t_n_1_1_exchange_base2_1a5c433c74f81d16e7f45df711692cd7d4">KTN::ExchangeBase2</link>.</para>
+<para>
+References <link linkend="_l00159">algomd::ask</link>, <link linkend="_l00161">algomd::asksize</link>, <link linkend="_l00158">algomd::bid</link>, <link linkend="_l00160">algomd::bidsize</link>, <link linkend="_l00088">PerformanceTracker::clear()</link>, <link linkend="_l00172">algomd::last</link>, <link linkend="_l00155">algomd::lastagressor</link>, <link linkend="_l00173">algomd::lastsize</link>, <link linkend="_l00050">KTN::ExchangeBase2::LogMe()</link>, <link linkend="_l00077">OrderManagerV5::Print()</link>, <link linkend="_l00052">PerformanceTracker::printMeasurements()</link>, and <link linkend="_l00176">algomd::secid</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_cme_algo_1a32f5a112c51fdaa93818e33ccc90484d"/><section>
+    <title>PrintSessionMap()</title>
+<indexterm><primary>PrintSessionMap</primary><secondary>KTN::CME::CmeAlgo</secondary></indexterm>
+<indexterm><primary>KTN::CME::CmeAlgo</primary><secondary>PrintSessionMap</secondary></indexterm>
+<para><computeroutput>void CmeAlgo::PrintSessionMap (<link linkend="_struct_k_t_n_1_1_conn_state">ConnState</link>(&amp;) conns[4])</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_cme_algo_1ae3c1caae992f3908a0a9f32529b5a819"/><section>
+    <title>Reset()</title>
+<indexterm><primary>Reset</primary><secondary>KTN::CME::CmeAlgo</secondary></indexterm>
+<indexterm><primary>KTN::CME::CmeAlgo</primary><secondary>Reset</secondary></indexterm>
+<para><computeroutput>void CmeAlgo::Reset ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Resets the exchange. </para>
+</para>
+<para>
+Reimplemented from <link linkend="_class_k_t_n_1_1_exchange_base2_1aea11c9501a1207b83af80c6c7abbd4fe">KTN::ExchangeBase2</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_cme_algo_1ad5f8d5ad0764407ebd8123d4ef97c7b5"/><section>
+    <title>Send()</title>
+<indexterm><primary>Send</primary><secondary>KTN::CME::CmeAlgo</secondary></indexterm>
+<indexterm><primary>KTN::CME::CmeAlgo</primary><secondary>Send</secondary></indexterm>
+<para><computeroutput>void CmeAlgo::Send (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp; order, int action)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Sends an order. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>order</entry><entry>
+<para>The order to send. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>action</entry><entry>
+<para>The action to perform. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implements <link linkend="_class_k_t_n_1_1_exchange_base2_1a561385a2be9f113e775efed5aeb64163">KTN::ExchangeBase2</link>.</para>
+<para>
+References <link linkend="_l00035">KTN::ConnState::connectionState</link>, <link linkend="_l00039">KTN::CME::IL3::EnumSessionState::Established</link>, <link linkend="_l00052">KTN::Core::BufferPool::get()</link>, <link linkend="_l00053">KTN::OrderPod::isManual</link>, <link linkend="_l00050">KTN::ExchangeBase2::LogMe()</link>, <link linkend="_l00050">KTN::OrderPod::mktsegid</link>, <link linkend="_l00059">KTN::OrderPod::OrdAction</link>, <link linkend="_l00032">KTN::OrderPod::ordernum</link>, <link linkend="_l00037">KTN::OrderPod::orderReqId</link>, <link linkend="_l00060">KTN::OrderPod::OrdSide</link>, <link linkend="_l00034">KTN::OrderPod::price</link>, <link linkend="_l00068">KTN::Core::BufferPool::put()</link>, <link linkend="_l00041">KTN::OrderPod::quantity</link>, <link linkend="_l00040">KTN::OrderPod::secid</link>, <link linkend="_l00328">KTN::TCP::EFVITcpV5::SendFastPath()</link>, <link linkend="_l00201">SessionStateManager::SeqOutAndAdvance()</link>, <link linkend="_l00034">KTN::ConnState::sessmgr</link>, <link linkend="_l00033">PerformanceTracker::startMeasurement()</link>, <link linkend="_l00042">PerformanceTracker::stopMeasurement()</link>, <link linkend="_l00033">KTN::ConnState::tcpHandler</link>, and <link linkend="_l00111">AuditTrailWriterV3::Write()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_cme_algo_1a581287a85a94b2b01ff4fd0e546dfb75"/><section>
+    <title>SendHedgeInstruction()</title>
+<indexterm><primary>SendHedgeInstruction</primary><secondary>KTN::CME::CmeAlgo</secondary></indexterm>
+<indexterm><primary>KTN::CME::CmeAlgo</primary><secondary>SendHedgeInstruction</secondary></indexterm>
+<para><computeroutput>void CmeAlgo::SendHedgeInstruction (uint64_t ordereqid, const vector&lt; <link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3">SpreadHedgeV3</link> &gt; &amp; hdg)</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_cme_algo_1a0ceb37250c83003365c0821755a5930b"/><section>
+    <title>SendMassAction()</title>
+<indexterm><primary>SendMassAction</primary><secondary>KTN::CME::CmeAlgo</secondary></indexterm>
+<indexterm><primary>KTN::CME::CmeAlgo</primary><secondary>SendMassAction</secondary></indexterm>
+<para><computeroutput>void CmeAlgo::SendMassAction (<link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> &amp; order)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Sends a mass action. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>order</entry><entry>
+<para>The order to send. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implements <link linkend="_class_k_t_n_1_1_exchange_base2_1ad75278174244955c2693e21e738f7e7a">KTN::ExchangeBase2</link>.</para>
+<para>
+References <link linkend="_l00084">KTN::Core::SPSCRingBuffer&lt; T &gt;::push()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_cme_algo_1a388e72624edd2bd4ff18fcb40650dfd3"/><section>
+    <title>SendWarm()</title>
+<indexterm><primary>SendWarm</primary><secondary>KTN::CME::CmeAlgo</secondary></indexterm>
+<indexterm><primary>KTN::CME::CmeAlgo</primary><secondary>SendWarm</secondary></indexterm>
+<para><computeroutput>void CmeAlgo::SendWarm (int index)</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_cme_algo_1ae4e2d6b6f8395790afc3ad357a30b5dc"/><section>
+    <title>Start()</title>
+<indexterm><primary>Start</primary><secondary>KTN::CME::CmeAlgo</secondary></indexterm>
+<indexterm><primary>KTN::CME::CmeAlgo</primary><secondary>Start</secondary></indexterm>
+<para><computeroutput>void CmeAlgo::Start ( )</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_cme_algo_1aa9280100ccb7b88cd21ac14b95ff3355"/><section>
+    <title>Stop()</title>
+<indexterm><primary>Stop</primary><secondary>KTN::CME::CmeAlgo</secondary></indexterm>
+<indexterm><primary>KTN::CME::CmeAlgo</primary><secondary>Stop</secondary></indexterm>
+<para><computeroutput>void CmeAlgo::Stop ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Stops the exchange. </para>
+</para>
+<para>
+Implements <link linkend="_class_k_t_n_1_1_exchange_base2_1aef0e3d1c9bc59575fb88df7240e0c8ef">KTN::ExchangeBase2</link>.</para>
+<para>
+References <link linkend="_l00050">KTN::ExchangeBase2::LogMe()</link>, and <link linkend="_l00084">KTN::Core::SPSCRingBuffer&lt; T &gt;::push()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+ExchangeHandlers2/CmeAlgo.hppExchangeHandlers2/CmeAlgo.cpp</section>
+</section>

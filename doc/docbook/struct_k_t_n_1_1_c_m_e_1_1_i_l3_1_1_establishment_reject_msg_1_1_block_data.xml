@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establishment_reject_msg_1_1_block_data" xml:lang="en-US">
+<title>KTN::CME::IL3::EstablishmentRejectMsg::BlockData Struct Reference</title>
+<indexterm><primary>KTN::CME::IL3::EstablishmentRejectMsg::BlockData</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>String48 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establishment_reject_msg_1_1_block_data_1a0b3008e42f51148dd03a206733463b67">Reason</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establishment_reject_msg_1_1_block_data_1a56948b56b55bb0090e6aff0b6d9a2d7f">UUID</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establishment_reject_msg_1_1_block_data_1ad36639bd93127ede3bd19f619df0ff5c">RequestTimestamp</link></para>
+</listitem>
+            <listitem><para>uInt32 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establishment_reject_msg_1_1_block_data_1a35174ceb02e59e6d911ad2e51c8b4e6d">NextSeqNo</link></para>
+</listitem>
+            <listitem><para>uInt16 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establishment_reject_msg_1_1_block_data_1a2cfec17cee12470a0ea56ac430462070">ErrorCodes</link></para>
+</listitem>
+            <listitem><para>EnumFTI <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establishment_reject_msg_1_1_block_data_1a87850aee81f88b5e9e986b0fb307c3c6">FaultToleranceIndicator</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establishment_reject_msg_1_1_block_data_1afca2f9da18aff75cbe35069debd4e72b">SplitMsg</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establishment_reject_msg_1_1_block_data_1a2cfec17cee12470a0ea56ac430462070"/><section>
+    <title>ErrorCodes</title>
+<indexterm><primary>ErrorCodes</primary><secondary>KTN::CME::IL3::EstablishmentRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::EstablishmentRejectMsg::BlockData</primary><secondary>ErrorCodes</secondary></indexterm>
+<para><computeroutput>uInt16 KTN::CME::IL3::EstablishmentRejectMsg::BlockData::ErrorCodes</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establishment_reject_msg_1_1_block_data_1a87850aee81f88b5e9e986b0fb307c3c6"/><section>
+    <title>FaultToleranceIndicator</title>
+<indexterm><primary>FaultToleranceIndicator</primary><secondary>KTN::CME::IL3::EstablishmentRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::EstablishmentRejectMsg::BlockData</primary><secondary>FaultToleranceIndicator</secondary></indexterm>
+<para><computeroutput>EnumFTI KTN::CME::IL3::EstablishmentRejectMsg::BlockData::FaultToleranceIndicator</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establishment_reject_msg_1_1_block_data_1a35174ceb02e59e6d911ad2e51c8b4e6d"/><section>
+    <title>NextSeqNo</title>
+<indexterm><primary>NextSeqNo</primary><secondary>KTN::CME::IL3::EstablishmentRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::EstablishmentRejectMsg::BlockData</primary><secondary>NextSeqNo</secondary></indexterm>
+<para><computeroutput>uInt32 KTN::CME::IL3::EstablishmentRejectMsg::BlockData::NextSeqNo</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establishment_reject_msg_1_1_block_data_1a0b3008e42f51148dd03a206733463b67"/><section>
+    <title>Reason</title>
+<indexterm><primary>Reason</primary><secondary>KTN::CME::IL3::EstablishmentRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::EstablishmentRejectMsg::BlockData</primary><secondary>Reason</secondary></indexterm>
+<para><computeroutput>String48 KTN::CME::IL3::EstablishmentRejectMsg::BlockData::Reason</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establishment_reject_msg_1_1_block_data_1ad36639bd93127ede3bd19f619df0ff5c"/><section>
+    <title>RequestTimestamp</title>
+<indexterm><primary>RequestTimestamp</primary><secondary>KTN::CME::IL3::EstablishmentRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::EstablishmentRejectMsg::BlockData</primary><secondary>RequestTimestamp</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::EstablishmentRejectMsg::BlockData::RequestTimestamp</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establishment_reject_msg_1_1_block_data_1afca2f9da18aff75cbe35069debd4e72b"/><section>
+    <title>SplitMsg</title>
+<indexterm><primary>SplitMsg</primary><secondary>KTN::CME::IL3::EstablishmentRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::EstablishmentRejectMsg::BlockData</primary><secondary>SplitMsg</secondary></indexterm>
+<para><computeroutput>uint8_t KTN::CME::IL3::EstablishmentRejectMsg::BlockData::SplitMsg</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establishment_reject_msg_1_1_block_data_1a56948b56b55bb0090e6aff0b6d9a2d7f"/><section>
+    <title>UUID</title>
+<indexterm><primary>UUID</primary><secondary>KTN::CME::IL3::EstablishmentRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::EstablishmentRejectMsg::BlockData</primary><secondary>UUID</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::EstablishmentRejectMsg::BlockData::UUID</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+exchsupport/cme/il3/IL3Messages2.hpp</section>
+</section>

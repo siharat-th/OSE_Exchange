@@ -1,0 +1,483 @@
+\doxysection{KTN\+::TCP\+::EFVITcp\+V5 Class Reference}
+\hypertarget{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5}{}\label{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5}\index{KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}}
+
+
+Represents the \doxylink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5}{EFVITcp\+V5} class. This is our main TCP class. This class is a true EFVI TCP implementation.  
+
+
+
+
+{\ttfamily \#include $<$EFVITcp\+V5.\+hpp$>$}
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1_1_conf}{Conf}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_aac278547690a4797cfdf1378c1fb33ea}{Tcp\+Client}} = efvitcp\+::\+Tcp\+Client$<$\mbox{\hyperlink{struct_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1_1_conf}{Conf}}$>$
+\item 
+using \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a2a657dba59b002de5d2146cf8af6d060}{Tcp\+Conn}} = Tcp\+Client\+::\+Conn
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a231c2bd33948dfd64f9d95855cfc6880}{EFVITcp\+V5}} (\mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_tcp_callback8t}{Tcp\+Callback8t}} \texorpdfstring{$\ast$}{*}callback)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5}{EFVITcp\+V5} object with the specified callback. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a8621811bdd5f72eff5a343904705db3a}{\texorpdfstring{$\sim$}{\string~}\+EFVITcp\+V5}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5}{EFVITcp\+V5} object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a5612c85b7ca7e95db17239805cff5d80}{Init}} (\mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_service_descriptor}{Service\+Descriptor}} \&desc, bool isA)
+\begin{DoxyCompactList}\small\item\em Initializes the \doxylink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5}{EFVITcp\+V5} object with the specified service descriptor and flag. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a1dcf1645ac21bd6ca67ab70a265e1423}{Subscribe}} (\mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_tcp_callback8t}{Tcp\+Callback8t}} \texorpdfstring{$\ast$}{*}callback)
+\begin{DoxyCompactList}\small\item\em Subscribes to the \doxylink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5}{EFVITcp\+V5} object with the specified callback. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a8bf436d7a3e4043205b7bd3aa958005c}{Stop}} ()
+\begin{DoxyCompactList}\small\item\em Stops the \doxylink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5}{EFVITcp\+V5} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_ac23f63929f1f0b785a3e83aaf916f5ca}{Poll}} ()
+\begin{DoxyCompactList}\small\item\em Polls the \doxylink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5}{EFVITcp\+V5} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_ad660da2947d4171ce44cf8f56f247b14}{Send\+Master}} (char \texorpdfstring{$\ast$}{*}buffer, size\+\_\+t buffer\+\_\+length, bool send\+\_\+delegated)
+\begin{DoxyCompactList}\small\item\em Sends the master data with the specified buffer and buffer length. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a774676091babd14211aaba73a7b566b5}{Send\+Fast\+Path}} (char \texorpdfstring{$\ast$}{*}buffer, size\+\_\+t buffer\+\_\+length)
+\begin{DoxyCompactList}\small\item\em Sends the data using the fast path with the specified buffer and buffer length. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a0b8cc58f529f1ceef3287d4775a84da1}{Send\+Normal}} (char \texorpdfstring{$\ast$}{*}buffer, size\+\_\+t buffer\+\_\+length)
+\begin{DoxyCompactList}\small\item\em Sends the data using the normal path with the specified buffer and buffer length. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a4f5ea7c2db7a995ea34b4d08abb40dd5}{Send\+Warm}} ()
+\begin{DoxyCompactList}\small\item\em Sends the warm data. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_ace2413c0513b10580bf474b67d2904fe}{Fd}} ()
+\begin{DoxyCompactList}\small\item\em Gets the file descriptor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a915b27817cf372b340be9fcd9b313a3a}{Seg\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Gets the segment ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a6bbccfd259b6bed1b2a08cbab3e76e4c}{poll}} ()
+\begin{DoxyCompactList}\small\item\em Polls the \doxylink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5}{EFVITcp\+V5} object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_aae21294b1553123089b7cba692da26fa}{bye}} ()
+\begin{DoxyCompactList}\small\item\em Sends the bye message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a2806b82c941d42029d5f02e54b807fb8}{on\+Connection\+Refused}} ()
+\begin{DoxyCompactList}\small\item\em Handles the connection refused event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a3bb1a76478e7ead41be5e317716a8a14}{on\+Connection\+Established}} (Tcp\+Conn \&conn)
+\begin{DoxyCompactList}\small\item\em Handles the connection established event. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a6b70fda5d49b8e86b17624915c7b5a0b}{on\+Data}} (Tcp\+Conn \&conn, uint8\+\_\+t \texorpdfstring{$\ast$}{*}data, uint32\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Handles the data event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a58ea7c3a943be29d0f023a5474c7bb05}{on\+Connection\+Reset}} (Tcp\+Conn \&conn)
+\begin{DoxyCompactList}\small\item\em Handles the connection reset event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a9bf7ee32cc0802c895be905b4737e6a8}{on\+Connection\+Closed}} (Tcp\+Conn \&conn)
+\begin{DoxyCompactList}\small\item\em Handles the connection closed event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a0096d655f36b8b5763e526b9abf2dede}{on\+Fin}} (Tcp\+Conn \&conn, uint8\+\_\+t \texorpdfstring{$\ast$}{*}data, uint32\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Handles the FIN event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_ac4ab8c0df798807faf3464fd6775a2ef}{on\+Connection\+Timeout}} (Tcp\+Conn \&conn)
+\begin{DoxyCompactList}\small\item\em Handles the connection timeout event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a6be27263b6ea0be28e6d7796ad48fe22}{on\+More\+Sendable}} (Tcp\+Conn \&conn)
+\begin{DoxyCompactList}\small\item\em Handles the more sendable event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a43ef884bd512f91efa3afb820bbc28e5}{on\+User\+Timeout}} (Tcp\+Conn \&conn, uint32\+\_\+t timer\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Handles the user timeout event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the \doxylink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5}{EFVITcp\+V5} class. This is our main TCP class. This class is a true EFVI TCP implementation. 
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_aac278547690a4797cfdf1378c1fb33ea}\index{KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}!TcpClient@{TcpClient}}
+\index{TcpClient@{TcpClient}!KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}}
+\doxysubsubsection{\texorpdfstring{TcpClient}{TcpClient}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_aac278547690a4797cfdf1378c1fb33ea} 
+using KTN\+::\+TCP\+::\+EFVITcp\+V5\+::\+Tcp\+Client = efvitcp\+::\+Tcp\+Client$<$\mbox{\hyperlink{struct_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1_1_conf}{Conf}}$>$}
+
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a2a657dba59b002de5d2146cf8af6d060}\index{KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}!TcpConn@{TcpConn}}
+\index{TcpConn@{TcpConn}!KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}}
+\doxysubsubsection{\texorpdfstring{TcpConn}{TcpConn}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a2a657dba59b002de5d2146cf8af6d060} 
+using KTN\+::\+TCP\+::\+EFVITcp\+V5\+::\+Tcp\+Conn = Tcp\+Client\+::\+Conn}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a231c2bd33948dfd64f9d95855cfc6880}\index{KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}!EFVITcpV5@{EFVITcpV5}}
+\index{EFVITcpV5@{EFVITcpV5}!KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}}
+\doxysubsubsection{\texorpdfstring{EFVITcpV5()}{EFVITcpV5()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a231c2bd33948dfd64f9d95855cfc6880} 
+EFVITcp\+V5\+::\+EFVITcp\+V5 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_tcp_callback8t}{Tcp\+Callback8t}} \texorpdfstring{$\ast$}{*}}]{callback}{}\end{DoxyParamCaption})}
+
+
+
+Constructs an \doxylink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5}{EFVITcp\+V5} object with the specified callback. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback} & The callback object. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a8621811bdd5f72eff5a343904705db3a}\index{KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}!````~EFVITcpV5@{\texorpdfstring{$\sim$}{\string~}EFVITcpV5}}
+\index{````~EFVITcpV5@{\texorpdfstring{$\sim$}{\string~}EFVITcpV5}!KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}EFVITcpV5()}{\string~EFVITcpV5()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a8621811bdd5f72eff5a343904705db3a} 
+EFVITcp\+V5\+::\texorpdfstring{$\sim$}{\string~}\+EFVITcp\+V5 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destroys the \doxylink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5}{EFVITcp\+V5} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_aae21294b1553123089b7cba692da26fa}\index{KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}!bye@{bye}}
+\index{bye@{bye}!KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}}
+\doxysubsubsection{\texorpdfstring{bye()}{bye()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_aae21294b1553123089b7cba692da26fa} 
+bool EFVITcp\+V5\+::bye (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Sends the bye message. 
+
+\begin{DoxyReturn}{Returns}
+True if sending the bye message is successful, false otherwise. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00087}{Stop()}}.
+
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_ace2413c0513b10580bf474b67d2904fe}\index{KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}!Fd@{Fd}}
+\index{Fd@{Fd}!KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}}
+\doxysubsubsection{\texorpdfstring{Fd()}{Fd()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_ace2413c0513b10580bf474b67d2904fe} 
+int KTN\+::\+TCP\+::\+EFVITcp\+V5\+::\+Fd (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the file descriptor. 
+
+\begin{DoxyReturn}{Returns}
+The file descriptor. 
+\end{DoxyReturn}
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a5612c85b7ca7e95db17239805cff5d80}\index{KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}!Init@{Init}}
+\index{Init@{Init}!KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a5612c85b7ca7e95db17239805cff5d80} 
+bool EFVITcp\+V5\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_service_descriptor}{Service\+Descriptor}} \&}]{desc}{, }\item[{bool}]{isA}{ = {\ttfamily true}}\end{DoxyParamCaption})}
+
+
+
+Initializes the \doxylink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5}{EFVITcp\+V5} object with the specified service descriptor and flag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em desc} & The service descriptor. \\
+\hline
+{\em isA} & The flag indicating whether it is A. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if initialization is successful, false otherwise. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00072}{KTN\+::\+TCP\+::\+Service\+Descriptor\+::address}}, \mbox{\hyperlink{l00077}{KTN\+::\+TCP\+::\+Service\+Descriptor\+::feedtype}}, \mbox{\hyperlink{l00083}{KTN\+::\+TCP\+::\+Service\+Descriptor\+::index}}, \mbox{\hyperlink{l00033}{tcp\+\_\+settings\+::\+IntfA}}, \mbox{\hyperlink{l00034}{tcp\+\_\+settings\+::\+IntfB}}, \mbox{\hyperlink{l00035}{tcp\+\_\+settings\+::\+Intf\+NameA}}, \mbox{\hyperlink{l00036}{tcp\+\_\+settings\+::\+Intf\+NameB}}, \mbox{\hyperlink{l00078}{KTN\+::\+TCP\+::\+Service\+Descriptor\+::i\+Source}}, \mbox{\hyperlink{l00042}{tcp\+\_\+settings\+::\+Load()}}, \mbox{\hyperlink{l00076}{KTN\+::\+TCP\+::\+Service\+Descriptor\+::localinterface}}, \mbox{\hyperlink{l00075}{KTN\+::\+TCP\+::\+Service\+Descriptor\+::localinterfacename}}, \mbox{\hyperlink{l00073}{KTN\+::\+TCP\+::\+Service\+Descriptor\+::port}}, and \mbox{\hyperlink{l00024}{tcp\+\_\+settings\+::\+Use\+Ctpio}}.
+
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a9bf7ee32cc0802c895be905b4737e6a8}\index{KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}!onConnectionClosed@{onConnectionClosed}}
+\index{onConnectionClosed@{onConnectionClosed}!KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}}
+\doxysubsubsection{\texorpdfstring{onConnectionClosed()}{onConnectionClosed()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a9bf7ee32cc0802c895be905b4737e6a8} 
+void EFVITcp\+V5\+::on\+Connection\+Closed (\begin{DoxyParamCaption}\item[{Tcp\+Conn \&}]{conn}{}\end{DoxyParamCaption})}
+
+
+
+Handles the connection closed event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em conn} & The TCP connection. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a3bb1a76478e7ead41be5e317716a8a14}\index{KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}!onConnectionEstablished@{onConnectionEstablished}}
+\index{onConnectionEstablished@{onConnectionEstablished}!KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}}
+\doxysubsubsection{\texorpdfstring{onConnectionEstablished()}{onConnectionEstablished()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a3bb1a76478e7ead41be5e317716a8a14} 
+void EFVITcp\+V5\+::on\+Connection\+Established (\begin{DoxyParamCaption}\item[{Tcp\+Conn \&}]{conn}{}\end{DoxyParamCaption})}
+
+
+
+Handles the connection established event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em conn} & The TCP connection. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a2806b82c941d42029d5f02e54b807fb8}\index{KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}!onConnectionRefused@{onConnectionRefused}}
+\index{onConnectionRefused@{onConnectionRefused}!KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}}
+\doxysubsubsection{\texorpdfstring{onConnectionRefused()}{onConnectionRefused()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a2806b82c941d42029d5f02e54b807fb8} 
+void EFVITcp\+V5\+::on\+Connection\+Refused (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Handles the connection refused event. 
+
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a58ea7c3a943be29d0f023a5474c7bb05}\index{KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}!onConnectionReset@{onConnectionReset}}
+\index{onConnectionReset@{onConnectionReset}!KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}}
+\doxysubsubsection{\texorpdfstring{onConnectionReset()}{onConnectionReset()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a58ea7c3a943be29d0f023a5474c7bb05} 
+void EFVITcp\+V5\+::on\+Connection\+Reset (\begin{DoxyParamCaption}\item[{Tcp\+Conn \&}]{conn}{}\end{DoxyParamCaption})}
+
+
+
+Handles the connection reset event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em conn} & The TCP connection. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_ac4ab8c0df798807faf3464fd6775a2ef}\index{KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}!onConnectionTimeout@{onConnectionTimeout}}
+\index{onConnectionTimeout@{onConnectionTimeout}!KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}}
+\doxysubsubsection{\texorpdfstring{onConnectionTimeout()}{onConnectionTimeout()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_ac4ab8c0df798807faf3464fd6775a2ef} 
+void EFVITcp\+V5\+::on\+Connection\+Timeout (\begin{DoxyParamCaption}\item[{Tcp\+Conn \&}]{conn}{}\end{DoxyParamCaption})}
+
+
+
+Handles the connection timeout event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em conn} & The TCP connection. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a6b70fda5d49b8e86b17624915c7b5a0b}\index{KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}!onData@{onData}}
+\index{onData@{onData}!KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}}
+\doxysubsubsection{\texorpdfstring{onData()}{onData()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a6b70fda5d49b8e86b17624915c7b5a0b} 
+uint32\+\_\+t EFVITcp\+V5\+::on\+Data (\begin{DoxyParamCaption}\item[{Tcp\+Conn \&}]{conn}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{uint32\+\_\+t}]{size}{}\end{DoxyParamCaption})}
+
+
+
+Handles the data event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em conn} & The TCP connection. \\
+\hline
+{\em data} & The data received. \\
+\hline
+{\em size} & The size of the data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of bytes processed. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_tcp_callback8t_a611efc1c25fd7385ff42935d567a63b0}{KTN\+::\+TCP\+::\+Tcp\+Callback8t\+::on\+Recv()}}.
+
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a0096d655f36b8b5763e526b9abf2dede}\index{KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}!onFin@{onFin}}
+\index{onFin@{onFin}!KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}}
+\doxysubsubsection{\texorpdfstring{onFin()}{onFin()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a0096d655f36b8b5763e526b9abf2dede} 
+void EFVITcp\+V5\+::on\+Fin (\begin{DoxyParamCaption}\item[{Tcp\+Conn \&}]{conn}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{uint32\+\_\+t}]{size}{}\end{DoxyParamCaption})}
+
+
+
+Handles the FIN event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em conn} & The TCP connection. \\
+\hline
+{\em data} & The data received. \\
+\hline
+{\em size} & The size of the data. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a6be27263b6ea0be28e6d7796ad48fe22}\index{KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}!onMoreSendable@{onMoreSendable}}
+\index{onMoreSendable@{onMoreSendable}!KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}}
+\doxysubsubsection{\texorpdfstring{onMoreSendable()}{onMoreSendable()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a6be27263b6ea0be28e6d7796ad48fe22} 
+void EFVITcp\+V5\+::on\+More\+Sendable (\begin{DoxyParamCaption}\item[{Tcp\+Conn \&}]{conn}{}\end{DoxyParamCaption})}
+
+
+
+Handles the more sendable event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em conn} & The TCP connection. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a43ef884bd512f91efa3afb820bbc28e5}\index{KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}!onUserTimeout@{onUserTimeout}}
+\index{onUserTimeout@{onUserTimeout}!KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}}
+\doxysubsubsection{\texorpdfstring{onUserTimeout()}{onUserTimeout()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a43ef884bd512f91efa3afb820bbc28e5} 
+void EFVITcp\+V5\+::on\+User\+Timeout (\begin{DoxyParamCaption}\item[{Tcp\+Conn \&}]{conn}{, }\item[{uint32\+\_\+t}]{timer\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Handles the user timeout event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em conn} & The TCP connection. \\
+\hline
+{\em timer\+\_\+id} & The timer ID. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_ac23f63929f1f0b785a3e83aaf916f5ca}\index{KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}!Poll@{Poll}}
+\index{Poll@{Poll}!KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}}
+\doxysubsubsection{\texorpdfstring{Poll()}{Poll()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_ac23f63929f1f0b785a3e83aaf916f5ca} 
+void EFVITcp\+V5\+::\+Poll (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Polls the \doxylink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5}{EFVITcp\+V5} object. 
+
+
+
+References \mbox{\hyperlink{l00097}{poll()}}.
+
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a6bbccfd259b6bed1b2a08cbab3e76e4c}\index{KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}!poll@{poll}}
+\index{poll@{poll}!KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}}
+\doxysubsubsection{\texorpdfstring{poll()}{poll()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a6bbccfd259b6bed1b2a08cbab3e76e4c} 
+void EFVITcp\+V5\+::poll (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Polls the \doxylink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5}{EFVITcp\+V5} object. 
+
+
+
+Referenced by \mbox{\hyperlink{l00259}{Poll()}}.
+
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a915b27817cf372b340be9fcd9b313a3a}\index{KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}!SegId@{SegId}}
+\index{SegId@{SegId}!KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}}
+\doxysubsubsection{\texorpdfstring{SegId()}{SegId()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a915b27817cf372b340be9fcd9b313a3a} 
+int KTN\+::\+TCP\+::\+EFVITcp\+V5\+::\+Seg\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the segment ID. 
+
+\begin{DoxyReturn}{Returns}
+The segment ID. 
+\end{DoxyReturn}
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a774676091babd14211aaba73a7b566b5}\index{KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}!SendFastPath@{SendFastPath}}
+\index{SendFastPath@{SendFastPath}!KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}}
+\doxysubsubsection{\texorpdfstring{SendFastPath()}{SendFastPath()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a774676091babd14211aaba73a7b566b5} 
+int EFVITcp\+V5\+::\+Send\+Fast\+Path (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{buffer}{, }\item[{size\+\_\+t}]{buffer\+\_\+length}{}\end{DoxyParamCaption})}
+
+
+
+Sends the data using the fast path with the specified buffer and buffer length. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The buffer containing the data to send. \\
+\hline
+{\em buffer\+\_\+length} & The length of the buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of bytes sent. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l01104}{KTN\+::\+CME\+::\+Cme\+Algo\+::\+Send()}}, \mbox{\hyperlink{l00889}{KTN\+::\+CME\+::\+Cme\+GT5\+::\+Send()}}, and \mbox{\hyperlink{l00266}{Send\+Master()}}.
+
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_ad660da2947d4171ce44cf8f56f247b14}\index{KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}!SendMaster@{SendMaster}}
+\index{SendMaster@{SendMaster}!KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}}
+\doxysubsubsection{\texorpdfstring{SendMaster()}{SendMaster()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_ad660da2947d4171ce44cf8f56f247b14} 
+void EFVITcp\+V5\+::\+Send\+Master (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{buffer}{, }\item[{size\+\_\+t}]{buffer\+\_\+length}{, }\item[{bool}]{send\+\_\+delegated}{}\end{DoxyParamCaption})}
+
+
+
+Sends the master data with the specified buffer and buffer length. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The buffer containing the data to send. \\
+\hline
+{\em buffer\+\_\+length} & The length of the buffer. \\
+\hline
+{\em send\+\_\+delegated} & The flag indicating whether to send delegated. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00328}{Send\+Fast\+Path()}}, and \mbox{\hyperlink{l00301}{Send\+Normal()}}.
+
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a0b8cc58f529f1ceef3287d4775a84da1}\index{KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}!SendNormal@{SendNormal}}
+\index{SendNormal@{SendNormal}!KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}}
+\doxysubsubsection{\texorpdfstring{SendNormal()}{SendNormal()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a0b8cc58f529f1ceef3287d4775a84da1} 
+int EFVITcp\+V5\+::\+Send\+Normal (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{buffer}{, }\item[{size\+\_\+t}]{buffer\+\_\+length}{}\end{DoxyParamCaption})}
+
+
+
+Sends the data using the normal path with the specified buffer and buffer length. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The buffer containing the data to send. \\
+\hline
+{\em buffer\+\_\+length} & The length of the buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of bytes sent. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00266}{Send\+Master()}}.
+
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a4f5ea7c2db7a995ea34b4d08abb40dd5}\index{KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}!SendWarm@{SendWarm}}
+\index{SendWarm@{SendWarm}!KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}}
+\doxysubsubsection{\texorpdfstring{SendWarm()}{SendWarm()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a4f5ea7c2db7a995ea34b4d08abb40dd5} 
+void EFVITcp\+V5\+::\+Send\+Warm (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Sends the warm data. 
+
+
+
+Referenced by \mbox{\hyperlink{l00883}{KTN\+::\+CME\+::\+Cme\+GT5\+::\+Send\+Warm()}}.
+
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a8bf436d7a3e4043205b7bd3aa958005c}\index{KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}!Stop@{Stop}}
+\index{Stop@{Stop}!KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}}
+\doxysubsubsection{\texorpdfstring{Stop()}{Stop()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a8bf436d7a3e4043205b7bd3aa958005c} 
+void EFVITcp\+V5\+::\+Stop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Stops the \doxylink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5}{EFVITcp\+V5} object. 
+
+
+
+References \mbox{\hyperlink{l00102}{bye()}}.
+
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a1dcf1645ac21bd6ca67ab70a265e1423}\index{KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}!Subscribe@{Subscribe}}
+\index{Subscribe@{Subscribe}!KTN::TCP::EFVITcpV5@{KTN::TCP::EFVITcpV5}}
+\doxysubsubsection{\texorpdfstring{Subscribe()}{Subscribe()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_a1dcf1645ac21bd6ca67ab70a265e1423} 
+void EFVITcp\+V5\+::\+Subscribe (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_tcp_callback8t}{Tcp\+Callback8t}} \texorpdfstring{$\ast$}{*}}]{callback}{}\end{DoxyParamCaption})}
+
+
+
+Subscribes to the \doxylink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5}{EFVITcp\+V5} object with the specified callback. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback} & The callback object. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Ktn\+Efvi/EFVITcp\+V5.\+hpp\item 
+Ktn\+Efvi/EFVITcp\+V5.\+cpp\end{DoxyCompactItemize}

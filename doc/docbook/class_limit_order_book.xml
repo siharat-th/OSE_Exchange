@@ -1,0 +1,509 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_limit_order_book" xml:lang="en-US">
+<title>LimitOrderBook Class Reference</title>
+<indexterm><primary>LimitOrderBook</primary></indexterm>
+<para>
+
+<para>Represents a limit order book. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;circular_book_array.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_limit_order_book_1ad99c13f2e45fa518220274c5e6733532">LimitOrderBook</link> (int precision, int depth)</para>
+
+<para>Constructor for <link linkend="_class_limit_order_book">LimitOrderBook</link>. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_limit_order_book_1a1bbac02b75eea670106bda7ff8cd73a4">add_order</link> (const <link linkend="_class_md_order">MdOrder</link> &amp;order, bool is_bid)</para>
+
+<para>Adds an order to the order book. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_limit_order_book_1af4a27931853de1103c4e388b9182b30c">update_order</link> (const <link linkend="_class_md_order">MdOrder</link> &amp;order, bool is_bid)</para>
+
+<para>Updates an order in the order book. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_limit_order_book_1acb663d556d8a30c4f0996573527cd382">delete_order</link> (const <link linkend="_class_md_order">MdOrder</link> &amp;order, bool is_bid)</para>
+
+<para>Deletes an order from the order book. </para>
+</listitem>
+            <listitem><para><link linkend="_class_md_order">MdOrder</link> <link linkend="_class_limit_order_book_1a99df373a85001f771ab082c11d932518">find_order_by_id</link> (int order_id)</para>
+
+<para>Finds an order in the order book by its ID. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_md_order">MdOrder</link> <link linkend="_class_limit_order_book_1a185a6cb890650582276bed0785ba8578">get_best_bid</link> ()</para>
+
+<para>Gets the best bid order in the order book. </para>
+</listitem>
+            <listitem><para><link linkend="_class_md_order">MdOrder</link> <link linkend="_class_limit_order_book_1a4198b5eae81013071c120796f679cebf">get_lowest_bid</link> ()</para>
+
+<para>Gets the lowest bid order in the order book. </para>
+</listitem>
+            <listitem><para><link linkend="_class_md_order">MdOrder</link> <link linkend="_class_limit_order_book_1adfba6ee4734aabe0460e68abc06f2ace">get_best_offer</link> ()</para>
+
+<para>Gets the best offer order in the order book. </para>
+</listitem>
+            <listitem><para><link linkend="_class_md_order">MdOrder</link> <link linkend="_class_limit_order_book_1ab2210ccf5440abe95ecb885ba4e6c51b">get_highest_offer</link> ()</para>
+
+<para>Gets the highest offer order in the order book. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_limit_order_book_1a498b2ab131fc890bd1cbec208f952ade">print_bids</link> ()</para>
+
+<para>Prints the bid orders in the order book. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_limit_order_book_1ad0565a52ad1a13a2e3f273951cf4f999">print_offers</link> ()</para>
+
+<para>Prints the offer orders in the order book. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_class_limit_order_book_1a0f893b3bcd1fc17b1fd54596f087f153">price_to_index</link> (int32_t price, bool is_bid, bool update_pointers=true)</para>
+
+<para>Converts a price to its corresponding index in the order book. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_limit_order_book_1a922a4ca7246dd65496bf0e928b31e38b">order_id_to_index</link> (int order_id, bool is_bid)</para>
+
+<para>Converts an order ID to its corresponding index in the order book. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_md_order">MdOrder</link> * <link linkend="_class_limit_order_book_1af146af389f7862331f695f022eade708">ptr_bid_ini</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_md_order">MdOrder</link> * <link linkend="_class_limit_order_book_1a766eb6a2bd32ac0fa766e3706df44b9d">ptr_bid_end</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_md_order">MdOrder</link> * <link linkend="_class_limit_order_book_1a12c0a4f4768a23688d3b58e5237f5f0a">ptr_offer_ini</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_md_order">MdOrder</link> * <link linkend="_class_limit_order_book_1af6ed946b7278f08c8e069e6ca92317dc">ptr_offer_end</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Represents a limit order book. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_limit_order_book_1ad99c13f2e45fa518220274c5e6733532"/><section>
+    <title>LimitOrderBook()</title>
+<indexterm><primary>LimitOrderBook</primary><secondary>LimitOrderBook</secondary></indexterm>
+<indexterm><primary>LimitOrderBook</primary><secondary>LimitOrderBook</secondary></indexterm>
+<para><computeroutput>LimitOrderBook::LimitOrderBook (int precision, int depth)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Constructor for <link linkend="_class_limit_order_book">LimitOrderBook</link>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>precision</entry><entry>
+<para>The precision of the order prices. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>depth</entry><entry>
+<para>The depth of the order book. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00067">ptr_bid_end</link>, <link linkend="_l00066">ptr_bid_ini</link>, <link linkend="_l00069">ptr_offer_end</link>, and <link linkend="_l00068">ptr_offer_ini</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_limit_order_book_1a1bbac02b75eea670106bda7ff8cd73a4"/><section>
+    <title>add_order()</title>
+<indexterm><primary>add_order</primary><secondary>LimitOrderBook</secondary></indexterm>
+<indexterm><primary>LimitOrderBook</primary><secondary>add_order</secondary></indexterm>
+<para><computeroutput>virtual void LimitOrderBook::add_order (const <link linkend="_class_md_order">MdOrder</link> &amp; order, bool is_bid)<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Adds an order to the order book. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>order</entry><entry>
+<para>The order to add. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>is_bid</entry><entry>
+<para>Flag indicating if the order is a bid order. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00023">MdOrder::price</link>, and <link linkend="_l00078">price_to_index()</link>.</para>
+</section>
+<anchor xml:id="_class_limit_order_book_1acb663d556d8a30c4f0996573527cd382"/><section>
+    <title>delete_order()</title>
+<indexterm><primary>delete_order</primary><secondary>LimitOrderBook</secondary></indexterm>
+<indexterm><primary>LimitOrderBook</primary><secondary>delete_order</secondary></indexterm>
+<para><computeroutput>void LimitOrderBook::delete_order (const <link linkend="_class_md_order">MdOrder</link> &amp; order, bool is_bid)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Deletes an order from the order book. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>order</entry><entry>
+<para>The order to delete. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>is_bid</entry><entry>
+<para>Flag indicating if the order is a bid order. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00023">MdOrder::price</link>, and <link linkend="_l00078">price_to_index()</link>.</para>
+</section>
+<anchor xml:id="_class_limit_order_book_1a99df373a85001f771ab082c11d932518"/><section>
+    <title>find_order_by_id()</title>
+<indexterm><primary>find_order_by_id</primary><secondary>LimitOrderBook</secondary></indexterm>
+<indexterm><primary>LimitOrderBook</primary><secondary>find_order_by_id</secondary></indexterm>
+<para><computeroutput><link linkend="_class_md_order">MdOrder</link> LimitOrderBook::find_order_by_id (int order_id)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Finds an order in the order book by its ID. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>order_id</entry><entry>
+<para>The ID of the order to find. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The order with the given ID, or a default order if not found. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00089">order_id_to_index()</link>.</para>
+</section>
+<anchor xml:id="_class_limit_order_book_1a185a6cb890650582276bed0785ba8578"/><section>
+    <title>get_best_bid()</title>
+<indexterm><primary>get_best_bid</primary><secondary>LimitOrderBook</secondary></indexterm>
+<indexterm><primary>LimitOrderBook</primary><secondary>get_best_bid</secondary></indexterm>
+<para><computeroutput>virtual <link linkend="_class_md_order">MdOrder</link> LimitOrderBook::get_best_bid ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Gets the best bid order in the order book. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The best bid order. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00067">ptr_bid_end</link>.</para>
+</section>
+<anchor xml:id="_class_limit_order_book_1adfba6ee4734aabe0460e68abc06f2ace"/><section>
+    <title>get_best_offer()</title>
+<indexterm><primary>get_best_offer</primary><secondary>LimitOrderBook</secondary></indexterm>
+<indexterm><primary>LimitOrderBook</primary><secondary>get_best_offer</secondary></indexterm>
+<para><computeroutput><link linkend="_class_md_order">MdOrder</link> LimitOrderBook::get_best_offer ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Gets the best offer order in the order book. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The best offer order. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00068">ptr_offer_ini</link>.</para>
+</section>
+<anchor xml:id="_class_limit_order_book_1ab2210ccf5440abe95ecb885ba4e6c51b"/><section>
+    <title>get_highest_offer()</title>
+<indexterm><primary>get_highest_offer</primary><secondary>LimitOrderBook</secondary></indexterm>
+<indexterm><primary>LimitOrderBook</primary><secondary>get_highest_offer</secondary></indexterm>
+<para><computeroutput><link linkend="_class_md_order">MdOrder</link> LimitOrderBook::get_highest_offer ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Gets the highest offer order in the order book. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The highest offer order. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00069">ptr_offer_end</link>.</para>
+</section>
+<anchor xml:id="_class_limit_order_book_1a4198b5eae81013071c120796f679cebf"/><section>
+    <title>get_lowest_bid()</title>
+<indexterm><primary>get_lowest_bid</primary><secondary>LimitOrderBook</secondary></indexterm>
+<indexterm><primary>LimitOrderBook</primary><secondary>get_lowest_bid</secondary></indexterm>
+<para><computeroutput><link linkend="_class_md_order">MdOrder</link> LimitOrderBook::get_lowest_bid ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Gets the lowest bid order in the order book. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The lowest bid order. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00066">ptr_bid_ini</link>.</para>
+</section>
+<anchor xml:id="_class_limit_order_book_1a922a4ca7246dd65496bf0e928b31e38b"/><section>
+    <title>order_id_to_index()</title>
+<indexterm><primary>order_id_to_index</primary><secondary>LimitOrderBook</secondary></indexterm>
+<indexterm><primary>LimitOrderBook</primary><secondary>order_id_to_index</secondary></indexterm>
+<para><computeroutput>int LimitOrderBook::order_id_to_index (int order_id, bool is_bid)<computeroutput>[inline]</computeroutput>, <computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Converts an order ID to its corresponding index in the order book. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>order_id</entry><entry>
+<para>The order ID to convert. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>is_bid</entry><entry>
+<para>Flag indicating if the order is a bid order. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The index of the order ID in the order book. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00168">find_order_by_id()</link>.</para>
+</section>
+<anchor xml:id="_class_limit_order_book_1a0f893b3bcd1fc17b1fd54596f087f153"/><section>
+    <title>price_to_index()</title>
+<indexterm><primary>price_to_index</primary><secondary>LimitOrderBook</secondary></indexterm>
+<indexterm><primary>LimitOrderBook</primary><secondary>price_to_index</secondary></indexterm>
+<para><computeroutput>int LimitOrderBook::price_to_index (int32_t price, bool is_bid, bool update_pointers = <computeroutput>true</computeroutput>
+)<computeroutput>[inline]</computeroutput>, <computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Converts a price to its corresponding index in the order book. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>price</entry><entry>
+<para>The price to convert. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>is_bid</entry><entry>
+<para>Flag indicating if the price is for a bid order. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>update_pointers</entry><entry>
+<para>Flag indicating if the order book pointers should be updated. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The index of the price in the order book. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00119">add_order()</link>, <link linkend="_l00152">delete_order()</link>, and <link linkend="_l00136">update_order()</link>.</para>
+</section>
+<anchor xml:id="_class_limit_order_book_1a498b2ab131fc890bd1cbec208f952ade"/><section>
+    <title>print_bids()</title>
+<indexterm><primary>print_bids</primary><secondary>LimitOrderBook</secondary></indexterm>
+<indexterm><primary>LimitOrderBook</primary><secondary>print_bids</secondary></indexterm>
+<para><computeroutput>void LimitOrderBook::print_bids ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Prints the bid orders in the order book. </para>
+</para>
+<para>
+References <link linkend="_l00023">MdOrder::price</link>, <link linkend="_l00067">ptr_bid_end</link>, and <link linkend="_l00066">ptr_bid_ini</link>.</para>
+</section>
+<anchor xml:id="_class_limit_order_book_1ad0565a52ad1a13a2e3f273951cf4f999"/><section>
+    <title>print_offers()</title>
+<indexterm><primary>print_offers</primary><secondary>LimitOrderBook</secondary></indexterm>
+<indexterm><primary>LimitOrderBook</primary><secondary>print_offers</secondary></indexterm>
+<para><computeroutput>void LimitOrderBook::print_offers ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Prints the offer orders in the order book. </para>
+</para>
+<para>
+References <link linkend="_l00023">MdOrder::price</link>, <link linkend="_l00069">ptr_offer_end</link>, and <link linkend="_l00068">ptr_offer_ini</link>.</para>
+</section>
+<anchor xml:id="_class_limit_order_book_1af4a27931853de1103c4e388b9182b30c"/><section>
+    <title>update_order()</title>
+<indexterm><primary>update_order</primary><secondary>LimitOrderBook</secondary></indexterm>
+<indexterm><primary>LimitOrderBook</primary><secondary>update_order</secondary></indexterm>
+<para><computeroutput>void LimitOrderBook::update_order (const <link linkend="_class_md_order">MdOrder</link> &amp; order, bool is_bid)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Updates an order in the order book. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>order</entry><entry>
+<para>The order to update. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>is_bid</entry><entry>
+<para>Flag indicating if the order is a bid order. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00023">MdOrder::price</link>, and <link linkend="_l00078">price_to_index()</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_limit_order_book_1a766eb6a2bd32ac0fa766e3706df44b9d"/><section>
+    <title>ptr_bid_end</title>
+<indexterm><primary>ptr_bid_end</primary><secondary>LimitOrderBook</secondary></indexterm>
+<indexterm><primary>LimitOrderBook</primary><secondary>ptr_bid_end</secondary></indexterm>
+<para><computeroutput><link linkend="_class_md_order">MdOrder</link>* LimitOrderBook::ptr_bid_end<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>Pointer to the end bid order. </para>
+<para>
+Referenced by <link linkend="_l00185">get_best_bid()</link>, <link linkend="_l00106">LimitOrderBook()</link>, and <link linkend="_l00216">print_bids()</link>.</para>
+</section>
+<anchor xml:id="_class_limit_order_book_1af146af389f7862331f695f022eade708"/><section>
+    <title>ptr_bid_ini</title>
+<indexterm><primary>ptr_bid_ini</primary><secondary>LimitOrderBook</secondary></indexterm>
+<indexterm><primary>LimitOrderBook</primary><secondary>ptr_bid_ini</secondary></indexterm>
+<para><computeroutput><link linkend="_class_md_order">MdOrder</link>* LimitOrderBook::ptr_bid_ini<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>Pointer to the initial bid order. </para>
+<para>
+Referenced by <link linkend="_l00193">get_lowest_bid()</link>, <link linkend="_l00106">LimitOrderBook()</link>, and <link linkend="_l00216">print_bids()</link>.</para>
+</section>
+<anchor xml:id="_class_limit_order_book_1af6ed946b7278f08c8e069e6ca92317dc"/><section>
+    <title>ptr_offer_end</title>
+<indexterm><primary>ptr_offer_end</primary><secondary>LimitOrderBook</secondary></indexterm>
+<indexterm><primary>LimitOrderBook</primary><secondary>ptr_offer_end</secondary></indexterm>
+<para><computeroutput><link linkend="_class_md_order">MdOrder</link>* LimitOrderBook::ptr_offer_end<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>Pointer to the end offer order. </para>
+<para>
+Referenced by <link linkend="_l00209">get_highest_offer()</link>, <link linkend="_l00106">LimitOrderBook()</link>, and <link linkend="_l00229">print_offers()</link>.</para>
+</section>
+<anchor xml:id="_class_limit_order_book_1a12c0a4f4768a23688d3b58e5237f5f0a"/><section>
+    <title>ptr_offer_ini</title>
+<indexterm><primary>ptr_offer_ini</primary><secondary>LimitOrderBook</secondary></indexterm>
+<indexterm><primary>LimitOrderBook</primary><secondary>ptr_offer_ini</secondary></indexterm>
+<para><computeroutput><link linkend="_class_md_order">MdOrder</link>* LimitOrderBook::ptr_offer_ini<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para>Pointer to the initial offer order. </para>
+<para>
+Referenced by <link linkend="_l00201">get_best_offer()</link>, <link linkend="_l00106">LimitOrderBook()</link>, and <link linkend="_l00229">print_offers()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Core/circular_book_array.hpp</section>
+</section>

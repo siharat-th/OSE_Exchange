@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_mod_ord_pool" xml:lang="en-US">
+<title>ModOrdPool Class Reference</title>
+<indexterm><primary>ModOrdPool</primary></indexterm>
+<para>
+
+<para>ILink3 Modify Order Pool pre-allocates a pool of OrderCancelReplaceRequestMsg objects to be used by the ILink3 handler. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;IL3Pool.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_mod_ord_pool_1ae982a0ff621e8dd8b041211d60457159">ModOrdPool</link> ()</para>
+
+<para>Constructor for <link linkend="_class_mod_ord_pool">ModOrdPool</link> class. Initializes the <link linkend="_class_mod_ord_pool">ModOrdPool</link> object and reserves memory for the pool. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_mod_ord_pool_1ac57bb0e13a207ce7e0110d3176c5fcdc">add</link> (<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg">OrderCancelReplaceRequestMsg</link> *msg)</para>
+
+<para>Add an OrderCancelReplaceRequestMsg object to the pool. </para>
+</listitem>
+            <listitem><para><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg">OrderCancelReplaceRequestMsg</link> * <link linkend="_class_mod_ord_pool_1af5c5f1b8911e155cd7492cc1f0869caa">get</link> ()</para>
+
+<para>Get an OrderCancelReplaceRequestMsg object from the pool. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>ILink3 Modify Order Pool pre-allocates a pool of OrderCancelReplaceRequestMsg objects to be used by the ILink3 handler. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_mod_ord_pool_1ae982a0ff621e8dd8b041211d60457159"/><section>
+    <title>ModOrdPool()</title>
+<indexterm><primary>ModOrdPool</primary><secondary>ModOrdPool</secondary></indexterm>
+<indexterm><primary>ModOrdPool</primary><secondary>ModOrdPool</secondary></indexterm>
+<para><computeroutput>ModOrdPool::ModOrdPool ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Constructor for <link linkend="_class_mod_ord_pool">ModOrdPool</link> class. Initializes the <link linkend="_class_mod_ord_pool">ModOrdPool</link> object and reserves memory for the pool. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_mod_ord_pool_1ac57bb0e13a207ce7e0110d3176c5fcdc"/><section>
+    <title>add()</title>
+<indexterm><primary>add</primary><secondary>ModOrdPool</secondary></indexterm>
+<indexterm><primary>ModOrdPool</primary><secondary>add</secondary></indexterm>
+<para><computeroutput>void ModOrdPool::add (<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg">OrderCancelReplaceRequestMsg</link> * msg)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Add an OrderCancelReplaceRequestMsg object to the pool. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>msg</entry><entry>
+<para>The OrderCancelReplaceRequestMsg object to add. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_mod_ord_pool_1af5c5f1b8911e155cd7492cc1f0869caa"/><section>
+    <title>get()</title>
+<indexterm><primary>get</primary><secondary>ModOrdPool</secondary></indexterm>
+<indexterm><primary>ModOrdPool</primary><secondary>get</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg">OrderCancelReplaceRequestMsg</link> * ModOrdPool::get ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Get an OrderCancelReplaceRequestMsg object from the pool. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>A pointer to the OrderCancelReplaceRequestMsg object. </para>
+</formalpara>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+exchsupport/cme/il3/IL3Pool.hpp</section>
+</section>

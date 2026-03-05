@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_t_n_1_1_o_r_d_1_1_k_order_status" xml:lang="en-US">
+<title>KTN::ORD::KOrderStatus Struct Reference</title>
+<indexterm><primary>KTN::ORD::KOrderStatus</primary></indexterm>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <emphasis role="strong">Enum</emphasis> : int8_t { <?linebreak?><emphasis role="strong">BANKED</emphasis> = 1
+, <emphasis role="strong">sent_new</emphasis>
+, <emphasis role="strong">sent_mod</emphasis>
+, <emphasis role="strong">sent_cxl</emphasis>
+, <?linebreak?><emphasis role="strong">EXPIRED</emphasis>
+, <emphasis role="strong">NEW</emphasis>
+, <emphasis role="strong">CANCELED</emphasis>
+, <emphasis role="strong">MODIFIED</emphasis>
+, <?linebreak?><emphasis role="strong">PARTIALLY_FILLED</emphasis>
+, <emphasis role="strong">FILLED</emphasis>
+, <emphasis role="strong">REJECTED</emphasis>
+, <emphasis role="strong">CXL_REPL_REJECT</emphasis>
+, <?linebreak?><emphasis role="strong">CXL_REJECT</emphasis>
+, <emphasis role="strong">FAILED</emphasis>
+, <emphasis role="strong">HEDGE_SENT</emphasis>
+, <emphasis role="strong">PASSOUT_SENT</emphasis>
+, <?linebreak?><emphasis role="strong">UNKNOWN</emphasis> = -1
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static std::string <link linkend="_struct_k_t_n_1_1_o_r_d_1_1_k_order_status_1a0ceb0fcbc6ee85ec80f1550baf1066e9">toString</link> (Enum status)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_o_r_d_1_1_k_order_status_1a50919635d07404c371fb3644de222e19"/><section>
+    <title>Enum</title>
+<indexterm><primary>Enum</primary><secondary>KTN::ORD::KOrderStatus</secondary></indexterm>
+<indexterm><primary>KTN::ORD::KOrderStatus</primary><secondary>Enum</secondary></indexterm>
+<para><computeroutput>enum KTN::ORD::KOrderStatus::Enum : int8_t</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_o_r_d_1_1_k_order_status_1a0ceb0fcbc6ee85ec80f1550baf1066e9"/><section>
+    <title>toString()</title>
+<indexterm><primary>toString</primary><secondary>KTN::ORD::KOrderStatus</secondary></indexterm>
+<indexterm><primary>KTN::ORD::KOrderStatus</primary><secondary>toString</secondary></indexterm>
+<para><computeroutput>static std::string KTN::ORD::KOrderStatus::toString (Enum status)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Orders/OrderEnumsV2.hpp</section>
+</section>

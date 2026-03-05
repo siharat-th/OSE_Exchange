@@ -1,0 +1,617 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_settings" xml:lang="en-US">
+<title>Settings Class Reference</title>
+<indexterm><primary>Settings</primary></indexterm>
+<para>
+
+<para><link linkend="_class_settings">Settings</link> collection. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;Settings.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_settings_1ab7169a6eefce79566dd07db3b1e5e967">Settings</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_settings_1a0babc4f5985803a94f9c6b34b168d4a3">Settings</link> (const std::string filename)</para>
+</listitem>
+            <listitem><para><link linkend="_class_settings_1ae79d9331e3fa87d009ef089b8dade21c">~Settings</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_settings_1ab49d0d124e6b9667c9739469906a99cf">Get</link> (const std::string &amp;filePath, std::string szMe)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_settings_1a8c115f572d11db71822fe7e37a50b13c">Dump</link> ()</para>
+</listitem>
+            <listitem><para>vector&lt; string &gt; <link linkend="_class_settings_1a95abeba6ae3224a3a43ed2e326644e4e">LogDump</link> (int indent)</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_settings_1a14cdbd2a8fa11593a025b1e75e6d9524">get</link> (const std::string &amp;key) const</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_settings_1a5219a28535d0f8e7de4058bbb228dae8">getInteger</link> (const std::string &amp;key, int *value) const</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_settings_1adbf2f32523e015277df9b3559d174346">getInteger</link> (const std::string &amp;key) const</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_settings_1ae7c7a50ebf35427b9e352a44d22e1227">getLong</link> (const std::string &amp;key, long *value) const</para>
+</listitem>
+            <listitem><para>long <link linkend="_class_settings_1a3329d282f3ae14acfb54d73ab7348aff">getLong</link> (const std::string &amp;key) const</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_settings_1a28f959bd2849f62ffb6fde239fbedad2">getBoolean</link> (const std::string &amp;key) const</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_settings_1a209d20c28ea8dfb9e6ef4b5e7634e5f4">getDouble</link> (const::std::string &amp;key, double *value) const</para>
+</listitem>
+            <listitem><para>double <link linkend="_class_settings_1a050673799770ad22fd1849dfe62a45eb">getDouble</link> (const std::string &amp;key) const</para>
+</listitem>
+            <listitem><para>vector&lt; string &gt; <link linkend="_class_settings_1ac5abe4d9868f61c1fb68fbe2e07f1c47">getListCsv</link> (const std::string &amp;key) const</para>
+</listitem>
+            <listitem><para>map&lt; std::string, std::string &gt; <link linkend="_class_settings_1a6d2b778732a348400bd188e3b122838e">GetMap</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static void <link linkend="_class_settings_1aaec4a6da3a7677d7dbd80f285e104469">trimSpaces</link> (std::string *str)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Types    </title>
+        <itemizedlist>
+            <listitem><para>typedef std::map&lt; std::string, std::string &gt; <link linkend="_class_settings_1ae050e2bcef67052a77f3177604c2106e">Key2ValueMap</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para>Key2ValueMap <link linkend="_class_settings_1a8a37979f05a537428b5ba64ce52a7c4b">map_</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_settings_1a69645eccc1ef87ae5e99ba762a526ef0">m_Me</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_settings_1a584ba608c0d2fbf2b1d0683590b01db1">m_FilePath</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para><link linkend="_class_settings">Settings</link> collection. </para>
+</section>
+<section>
+<title>Member Typedef Documentation</title>
+<anchor xml:id="_class_settings_1ae050e2bcef67052a77f3177604c2106e"/><section>
+    <title>Key2ValueMap</title>
+<indexterm><primary>Key2ValueMap</primary><secondary>Settings</secondary></indexterm>
+<indexterm><primary>Settings</primary><secondary>Key2ValueMap</secondary></indexterm>
+<para><computeroutput>std::map&lt;std::string , std::string &gt; Settings::Key2ValueMap<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_settings_1ab7169a6eefce79566dd07db3b1e5e967"/><section>
+    <title>Settings()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>Settings</primary><secondary>Settings</secondary></indexterm>
+<indexterm><primary>Settings</primary><secondary>Settings</secondary></indexterm>
+<para><computeroutput>Settings::Settings ( )</computeroutput></para>
+<para>Default constructor for the <link linkend="_class_settings">Settings</link> class. </para>
+</section>
+<anchor xml:id="_class_settings_1a0babc4f5985803a94f9c6b34b168d4a3"/><section>
+    <title>Settings()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>Settings</primary><secondary>Settings</secondary></indexterm>
+<indexterm><primary>Settings</primary><secondary>Settings</secondary></indexterm>
+<para><computeroutput>Settings::Settings (const std::string filename)</computeroutput></para>
+<para>Constructor for the <link linkend="_class_settings">Settings</link> class that takes a filename.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>filename</entry><entry>
+<para>The name of the file to load settings from. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00038">trimSpaces()</link>.</para>
+</section>
+<anchor xml:id="_class_settings_1ae79d9331e3fa87d009ef089b8dade21c"/><section>
+    <title>~Settings()</title>
+<indexterm><primary>~Settings</primary><secondary>Settings</secondary></indexterm>
+<indexterm><primary>Settings</primary><secondary>~Settings</secondary></indexterm>
+<para><computeroutput>Settings::~Settings (void )</computeroutput></para>
+<para>Destructor for the <link linkend="_class_settings">Settings</link> class. </para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_settings_1a8c115f572d11db71822fe7e37a50b13c"/><section>
+    <title>Dump()</title>
+<indexterm><primary>Dump</primary><secondary>Settings</secondary></indexterm>
+<indexterm><primary>Settings</primary><secondary>Dump</secondary></indexterm>
+<para><computeroutput>void Settings::Dump ( )</computeroutput></para>
+<para>Dump all the settings to the console. </para>
+</section>
+<anchor xml:id="_class_settings_1ab49d0d124e6b9667c9739469906a99cf"/><section>
+    <title>Get()</title>
+<indexterm><primary>Get</primary><secondary>Settings</secondary></indexterm>
+<indexterm><primary>Settings</primary><secondary>Get</secondary></indexterm>
+<para><computeroutput>void Settings::Get (const std::string &amp; filePath, std::string szMe)</computeroutput></para>
+<para>Get the value associated with the given key from the specified file.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>filePath</entry><entry>
+<para>The path of the file to read settings from. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>szMe</entry><entry>
+<para>The key to retrieve the value for. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00038">trimSpaces()</link>.</para>
+</section>
+<anchor xml:id="_class_settings_1a14cdbd2a8fa11593a025b1e75e6d9524"/><section>
+    <title>get()</title>
+<indexterm><primary>get</primary><secondary>Settings</secondary></indexterm>
+<indexterm><primary>Settings</primary><secondary>get</secondary></indexterm>
+<para><computeroutput>std::string Settings::get (const std::string &amp; key) const</computeroutput></para>
+<para>Get the value associated with the given key.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>key</entry><entry>
+<para>The key to retrieve the value for. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The value associated with the key. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00014">KTN::AlgoBaseV3::AlgoBaseV3()</link>, <link linkend="_l00023">KTN::AlgoServiceBrokerV3::AlgoServiceBrokerV3()</link>, <link linkend="_l00014">KTN::REPORTER::AlgoV3Reporter::AlgoV3Reporter()</link>, <link linkend="_l00019">KTN::CME::CmeAlgo::CmeAlgo()</link>, <link linkend="_l00019">KTN::CME::CmeGT5::CmeGT5()</link>, <link linkend="_l00027">LoggerFactory::createLogger()</link>, <link linkend="_l00030">MenuFactory::createMenu()</link>, <link linkend="_l00011">KTN::ExchangeManager::ExchangeManager()</link>, <link linkend="_l00193">getBoolean()</link>, <link linkend="_l00133">getInteger()</link>, <link linkend="_l00203">getListCsv()</link>, <link linkend="_l00153">getLong()</link>, <link linkend="_l00055">CmeSettingsHelper::GetString()</link>, <link linkend="_l00029">SessionStateManager::Init()</link>, <link linkend="_l00016">KTN::notify::Slacker::InitAndRun()</link>, <link linkend="_l00065">CmeSessionSettings::Load()</link>, <link linkend="_l00042">tcp_settings::Load()</link>, <link linkend="_l00096">udp_settings::Load()</link>, <link linkend="_l00550">KTN::ORD::OrderHandlerZmqV6::LoadTasOrders()</link>, <link linkend="_l00015">KTN::ORD::OrderHandlerZmqV6::OrderHandlerZmqV6()</link>, <link linkend="_l00014">KTN::REPORTER::OrderReporterV5::OrderReporterV5()</link>, <link linkend="_l00041">ZmqLogger::Run()</link>, <link linkend="_l00027">KTN::REPORTER::ReporterBase::Start()</link>, <link linkend="_l00014">KTN::REPORTER::StatusReporter::StatusReporter()</link>, and <link linkend="_l00011">ZmqLogger::ZmqLogger()</link>.</para>
+</section>
+<anchor xml:id="_class_settings_1a28f959bd2849f62ffb6fde239fbedad2"/><section>
+    <title>getBoolean()</title>
+<indexterm><primary>getBoolean</primary><secondary>Settings</secondary></indexterm>
+<indexterm><primary>Settings</primary><secondary>getBoolean</secondary></indexterm>
+<para><computeroutput>bool Settings::getBoolean (const std::string &amp; key) const</computeroutput></para>
+<para>Get the boolean value associated with the given key.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>key</entry><entry>
+<para>The key to retrieve the value for. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The boolean value associated with the key. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00123">get()</link>.</para>
+<para>
+Referenced by <link linkend="_l00019">KTN::CME::CmeAlgo::CmeAlgo()</link>, <link linkend="_l00019">KTN::CME::CmeGT5::CmeGT5()</link>, <link linkend="_l00029">CmeSettingsHelper::GetBool()</link>, <link linkend="_l00029">SessionStateManager::Init()</link>, <link linkend="_l00065">CmeSessionSettings::Load()</link>, <link linkend="_l00042">tcp_settings::Load()</link>, <link linkend="_l00096">udp_settings::Load()</link>, and <link linkend="_l00015">KTN::ORD::OrderHandlerZmqV6::OrderHandlerZmqV6()</link>.</para>
+</section>
+<anchor xml:id="_class_settings_1a050673799770ad22fd1849dfe62a45eb"/><section>
+    <title>getDouble()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>getDouble</primary><secondary>Settings</secondary></indexterm>
+<indexterm><primary>Settings</primary><secondary>getDouble</secondary></indexterm>
+<para><computeroutput>double Settings::getDouble (const std::string &amp; key) const</computeroutput></para>
+<para>Get the double value associated with the given key.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>key</entry><entry>
+<para>The key to retrieve the value for. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The double value associated with the key. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_class_settings_1a209d20c28ea8dfb9e6ef4b5e7634e5f4">getDouble()</link>.</para>
+</section>
+<anchor xml:id="_class_settings_1a209d20c28ea8dfb9e6ef4b5e7634e5f4"/><section>
+    <title>getDouble()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>getDouble</primary><secondary>Settings</secondary></indexterm>
+<indexterm><primary>Settings</primary><secondary>getDouble</secondary></indexterm>
+<para><computeroutput>bool Settings::getDouble (const::std::string &amp; key, double * value) const</computeroutput></para>
+<para>Get the double value associated with the given key.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>key</entry><entry>
+<para>The key to retrieve the value for. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>value</entry><entry>
+<para>A pointer to store the retrieved double value. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the value was successfully retrieved, false otherwise. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00183">getDouble()</link>.</para>
+</section>
+<anchor xml:id="_class_settings_1adbf2f32523e015277df9b3559d174346"/><section>
+    <title>getInteger()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>getInteger</primary><secondary>Settings</secondary></indexterm>
+<indexterm><primary>Settings</primary><secondary>getInteger</secondary></indexterm>
+<para><computeroutput>int Settings::getInteger (const std::string &amp; key) const</computeroutput></para>
+<para>Get the integer value associated with the given key.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>key</entry><entry>
+<para>The key to retrieve the value for. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The integer value associated with the key. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00133">getInteger()</link>.</para>
+</section>
+<anchor xml:id="_class_settings_1a5219a28535d0f8e7de4058bbb228dae8"/><section>
+    <title>getInteger()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>getInteger</primary><secondary>Settings</secondary></indexterm>
+<indexterm><primary>Settings</primary><secondary>getInteger</secondary></indexterm>
+<para><computeroutput>bool Settings::getInteger (const std::string &amp; key, int * value) const</computeroutput></para>
+<para>Get the integer value associated with the given key.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>key</entry><entry>
+<para>The key to retrieve the value for. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>value</entry><entry>
+<para>A pointer to store the retrieved integer value. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the value was successfully retrieved, false otherwise. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00123">get()</link>.</para>
+<para>
+Referenced by <link linkend="_l00014">KTN::AlgoBaseV3::AlgoBaseV3()</link>, <link linkend="_l00023">KTN::AlgoServiceBrokerV3::AlgoServiceBrokerV3()</link>, <link linkend="_l00019">KTN::CME::CmeAlgo::CmeAlgo()</link>, <link linkend="_l00019">KTN::CME::CmeGT5::CmeGT5()</link>, <link linkend="_l00011">KTN::ExchangeManager::ExchangeManager()</link>, <link linkend="_l00042">CmeSettingsHelper::GetInt()</link>, <link linkend="_l00144">getInteger()</link>, <link linkend="_l00029">SessionStateManager::Init()</link>, <link linkend="_l00065">CmeSessionSettings::Load()</link>, <link linkend="_l00042">tcp_settings::Load()</link>, <link linkend="_l00096">udp_settings::Load()</link>, <link linkend="_l00550">KTN::ORD::OrderHandlerZmqV6::LoadTasOrders()</link>, <link linkend="_l00015">KTN::ORD::OrderHandlerZmqV6::OrderHandlerZmqV6()</link>, <link linkend="_l00041">ZmqLogger::Run()</link>, <link linkend="_l00027">KTN::REPORTER::ReporterBase::Start()</link>, and <link linkend="_l00014">KTN::REPORTER::StatusReporter::StatusReporter()</link>.</para>
+</section>
+<anchor xml:id="_class_settings_1ac5abe4d9868f61c1fb68fbe2e07f1c47"/><section>
+    <title>getListCsv()</title>
+<indexterm><primary>getListCsv</primary><secondary>Settings</secondary></indexterm>
+<indexterm><primary>Settings</primary><secondary>getListCsv</secondary></indexterm>
+<para><computeroutput>vector&lt; string &gt; Settings::getListCsv (const std::string &amp; key) const</computeroutput></para>
+<para>Get the list of values associated with the given key, separated by commas.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>key</entry><entry>
+<para>The key to retrieve the list for. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A vector of strings containing the values in the list. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00123">get()</link>, and <link linkend="_l00019">StringSplitter::Split()</link>.</para>
+<para>
+Referenced by <link linkend="_l00027">ZmqSubscriber::Init()</link>, <link linkend="_l00012">ZmqSubscriber::LoadTopics()</link>, and <link linkend="_l00035">ZmqSubscriberV5::LoadTopics()</link>.</para>
+</section>
+<anchor xml:id="_class_settings_1a3329d282f3ae14acfb54d73ab7348aff"/><section>
+    <title>getLong()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>getLong</primary><secondary>Settings</secondary></indexterm>
+<indexterm><primary>Settings</primary><secondary>getLong</secondary></indexterm>
+<para><computeroutput>long Settings::getLong (const std::string &amp; key) const</computeroutput></para>
+<para>Get the long value associated with the given key.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>key</entry><entry>
+<para>The key to retrieve the value for. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The long value associated with the key. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00153">getLong()</link>.</para>
+</section>
+<anchor xml:id="_class_settings_1ae7c7a50ebf35427b9e352a44d22e1227"/><section>
+    <title>getLong()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>getLong</primary><secondary>Settings</secondary></indexterm>
+<indexterm><primary>Settings</primary><secondary>getLong</secondary></indexterm>
+<para><computeroutput>bool Settings::getLong (const std::string &amp; key, long * value) const</computeroutput></para>
+<para>Get the long value associated with the given key.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>key</entry><entry>
+<para>The key to retrieve the value for. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>value</entry><entry>
+<para>A pointer to store the retrieved long value. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the value was successfully retrieved, false otherwise. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00123">get()</link>.</para>
+<para>
+Referenced by <link linkend="_l00019">KTN::CME::CmeAlgo::CmeAlgo()</link>, <link linkend="_l00019">KTN::CME::CmeGT5::CmeGT5()</link>, <link linkend="_l00068">CmeSettingsHelper::GetLong()</link>, <link linkend="_l00164">getLong()</link>, <link linkend="_l00029">SessionStateManager::Init()</link>, and <link linkend="_l00065">CmeSessionSettings::Load()</link>.</para>
+</section>
+<anchor xml:id="_class_settings_1a6d2b778732a348400bd188e3b122838e"/><section>
+    <title>GetMap()</title>
+<indexterm><primary>GetMap</primary><secondary>Settings</secondary></indexterm>
+<indexterm><primary>Settings</primary><secondary>GetMap</secondary></indexterm>
+<para><computeroutput>map&lt; std::string, std::string &gt; Settings::GetMap ( )<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Get the map of all settings.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>A map containing all the settings. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_settings_1a95abeba6ae3224a3a43ed2e326644e4e"/><section>
+    <title>LogDump()</title>
+<indexterm><primary>LogDump</primary><secondary>Settings</secondary></indexterm>
+<indexterm><primary>Settings</primary><secondary>LogDump</secondary></indexterm>
+<para><computeroutput>vector&lt; string &gt; Settings::LogDump (int indent)</computeroutput></para>
+<para>Dump all the settings to a vector of strings with indentation.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>indent</entry><entry>
+<para>The number of spaces to indent each setting. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A vector of strings containing the dumped settings. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_settings_1aaec4a6da3a7677d7dbd80f285e104469"/><section>
+    <title>trimSpaces()</title>
+<indexterm><primary>trimSpaces</primary><secondary>Settings</secondary></indexterm>
+<indexterm><primary>Settings</primary><secondary>trimSpaces</secondary></indexterm>
+<para><computeroutput>void Settings::trimSpaces (std::string * str)<computeroutput>[static]</computeroutput></computeroutput></para>
+<para>Trim leading and trailing spaces from the given string.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>str</entry><entry>
+<para>The string to trim. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Referenced by <link linkend="_l00058">Get()</link>, and <link linkend="_l00007">Settings()</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_settings_1a584ba608c0d2fbf2b1d0683590b01db1"/><section>
+    <title>m_FilePath</title>
+<indexterm><primary>m_FilePath</primary><secondary>Settings</secondary></indexterm>
+<indexterm><primary>Settings</primary><secondary>m_FilePath</secondary></indexterm>
+<para><computeroutput>std::string Settings::m_FilePath<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_settings_1a69645eccc1ef87ae5e99ba762a526ef0"/><section>
+    <title>m_Me</title>
+<indexterm><primary>m_Me</primary><secondary>Settings</secondary></indexterm>
+<indexterm><primary>Settings</primary><secondary>m_Me</secondary></indexterm>
+<para><computeroutput>std::string Settings::m_Me<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_settings_1a8a37979f05a537428b5ba64ce52a7c4b"/><section>
+    <title>map_</title>
+<indexterm><primary>map_</primary><secondary>Settings</secondary></indexterm>
+<indexterm><primary>Settings</primary><secondary>map_</secondary></indexterm>
+<para><computeroutput>Key2ValueMap Settings::map_<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Settings/Settings.hSettings/Settings.cpp</section>
+</section>

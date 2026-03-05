@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_json_url_poster" xml:lang="en-US">
+<title>JsonUrlPoster Class Reference</title>
+<indexterm><primary>JsonUrlPoster</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_json_url_poster_1ab6504e450fbc37ce659c03760c9dd5ee">JsonUrlPoster</link> ()</para>
+
+<para>Default constructor for <link linkend="_class_json_url_poster">JsonUrlPoster</link> class. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_json_url_poster_1a006e65d01a2e62b56fae49d3a2b59860">~JsonUrlPoster</link> ()</para>
+
+<para>Destructor for <link linkend="_class_json_url_poster">JsonUrlPoster</link> class. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static size_t <link linkend="_class_json_url_poster_1ac7f3bcb6661686120c4515757216a8fe">WriteCallback</link> (void *contents, size_t size, size_t nmemb, void *userp)</para>
+
+<para>Callback function for writing response data. </para>
+</listitem>
+            <listitem><para>static std::string <link linkend="_class_json_url_poster_1a4e773945c46de2c9be9534923844e3bf">Post</link> (const std::string &amp;url, const std::unordered_map&lt; std::string, std::string &gt; &amp;postfields)</para>
+
+<para>Sends a POST request to the specified URL with the given postfields. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_json_url_poster_1ab6504e450fbc37ce659c03760c9dd5ee"/><section>
+    <title>JsonUrlPoster()</title>
+<indexterm><primary>JsonUrlPoster</primary><secondary>JsonUrlPoster</secondary></indexterm>
+<indexterm><primary>JsonUrlPoster</primary><secondary>JsonUrlPoster</secondary></indexterm>
+<para><computeroutput>JsonUrlPoster::JsonUrlPoster ( )</computeroutput></para><para>
+
+<para>Default constructor for <link linkend="_class_json_url_poster">JsonUrlPoster</link> class. </para>
+</para>
+</section>
+<anchor xml:id="_class_json_url_poster_1a006e65d01a2e62b56fae49d3a2b59860"/><section>
+    <title>~JsonUrlPoster()</title>
+<indexterm><primary>~JsonUrlPoster</primary><secondary>JsonUrlPoster</secondary></indexterm>
+<indexterm><primary>JsonUrlPoster</primary><secondary>~JsonUrlPoster</secondary></indexterm>
+<para><computeroutput>JsonUrlPoster::~JsonUrlPoster ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Destructor for <link linkend="_class_json_url_poster">JsonUrlPoster</link> class. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_json_url_poster_1a4e773945c46de2c9be9534923844e3bf"/><section>
+    <title>Post()</title>
+<indexterm><primary>Post</primary><secondary>JsonUrlPoster</secondary></indexterm>
+<indexterm><primary>JsonUrlPoster</primary><secondary>Post</secondary></indexterm>
+<para><computeroutput>static std::string JsonUrlPoster::Post (const std::string &amp; url, const std::unordered_map&lt; std::string, std::string &gt; &amp; postfields)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Sends a POST request to the specified URL with the given postfields. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>url</entry><entry>
+<para>The URL to send the POST request to. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>postfields</entry><entry>
+<para>The key-value pairs of the postfields to include in the request. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The response received from the server. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00043">WriteCallback()</link>.</para>
+</section>
+<anchor xml:id="_class_json_url_poster_1ac7f3bcb6661686120c4515757216a8fe"/><section>
+    <title>WriteCallback()</title>
+<indexterm><primary>WriteCallback</primary><secondary>JsonUrlPoster</secondary></indexterm>
+<indexterm><primary>JsonUrlPoster</primary><secondary>WriteCallback</secondary></indexterm>
+<para><computeroutput>static size_t JsonUrlPoster::WriteCallback (void * contents, size_t size, size_t nmemb, void * userp)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Callback function for writing response data. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>contents</entry><entry>
+<para>Pointer to the response data. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>size</entry><entry>
+<para>Size of each element in the response data. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>nmemb</entry><entry>
+<para>Number of elements in the response data. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>userp</entry><entry>
+<para>Pointer to the user data. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The total size of the response data. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00057">Post()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Rest/JsonUrlPoster.hppRest/JsonUrlPoster.cpp</section>
+</section>

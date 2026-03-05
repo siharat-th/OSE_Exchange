@@ -1,0 +1,111 @@
+\doxysection{moodycamel\+::weak\+\_\+atomic\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classmoodycamel_1_1weak__atomic}{}\label{classmoodycamel_1_1weak__atomic}\index{moodycamel::weak\_atomic$<$ T $>$@{moodycamel::weak\_atomic$<$ T $>$}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename U $>$ }\\AE\+\_\+\+NO\+\_\+\+TSAN \mbox{\hyperlink{classmoodycamel_1_1weak__atomic_a69a032b867540275b270588d952181be}{weak\+\_\+atomic}} (U \&\&x)
+\item 
+AE\+\_\+\+NO\+\_\+\+TSAN \mbox{\hyperlink{classmoodycamel_1_1weak__atomic_a21fa3545cc957a4013cfdd9a5d33b16b}{weak\+\_\+atomic}} (\mbox{\hyperlink{classmoodycamel_1_1weak__atomic}{weak\+\_\+atomic}} const \&other)
+\item 
+AE\+\_\+\+NO\+\_\+\+TSAN \mbox{\hyperlink{classmoodycamel_1_1weak__atomic_a1f375955e6886b3bab2b0e8037b33e9c}{weak\+\_\+atomic}} (\mbox{\hyperlink{classmoodycamel_1_1weak__atomic}{weak\+\_\+atomic}} \&\&other)
+\item 
+AE\+\_\+\+FORCEINLINE \mbox{\hyperlink{classmoodycamel_1_1weak__atomic_ae580d7f86a88474d43a1b3e86cab32ab}{operator T}} () const AE\+\_\+\+NO\+\_\+\+TSAN
+\item 
+{\footnotesize template$<$typename U $>$ }\\AE\+\_\+\+FORCEINLINE \mbox{\hyperlink{classmoodycamel_1_1weak__atomic}{weak\+\_\+atomic}} const \& \mbox{\hyperlink{classmoodycamel_1_1weak__atomic_a0e080a981633b242cab0b4c39427c7ff}{operator=}} (U \&\&x) AE\+\_\+\+NO\+\_\+\+TSAN
+\item 
+AE\+\_\+\+FORCEINLINE \mbox{\hyperlink{classmoodycamel_1_1weak__atomic}{weak\+\_\+atomic}} const \& \mbox{\hyperlink{classmoodycamel_1_1weak__atomic_ad4ab3ddf9f5b26a1f3743e67a60e3eac}{operator=}} (\mbox{\hyperlink{classmoodycamel_1_1weak__atomic}{weak\+\_\+atomic}} const \&other) AE\+\_\+\+NO\+\_\+\+TSAN
+\item 
+AE\+\_\+\+FORCEINLINE T \mbox{\hyperlink{classmoodycamel_1_1weak__atomic_a34ac736752060c9e44f633dae2cfe267}{load}} () const AE\+\_\+\+NO\+\_\+\+TSAN
+\item 
+AE\+\_\+\+FORCEINLINE T \mbox{\hyperlink{classmoodycamel_1_1weak__atomic_aee9cf5ed8e00a7643272fb075e5db7cf}{fetch\+\_\+add\+\_\+acquire}} (T increment) AE\+\_\+\+NO\+\_\+\+TSAN
+\item 
+AE\+\_\+\+FORCEINLINE T \mbox{\hyperlink{classmoodycamel_1_1weak__atomic_a300875cd9089da27c3a7546a69962573}{fetch\+\_\+add\+\_\+release}} (T increment) AE\+\_\+\+NO\+\_\+\+TSAN
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class moodycamel\+::weak\+\_\+atomic$<$ T $>$}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classmoodycamel_1_1weak__atomic_a4273781324f541e7e67c11f4fe06c9f3}\index{moodycamel::weak\_atomic$<$ T $>$@{moodycamel::weak\_atomic$<$ T $>$}!weak\_atomic@{weak\_atomic}}
+\index{weak\_atomic@{weak\_atomic}!moodycamel::weak\_atomic$<$ T $>$@{moodycamel::weak\_atomic$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{weak\_atomic()}{weak\_atomic()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1weak__atomic_a4273781324f541e7e67c11f4fe06c9f3} 
+template$<$typename T $>$ \\
+AE\+\_\+\+NO\+\_\+\+TSAN \mbox{\hyperlink{classmoodycamel_1_1weak__atomic}{moodycamel\+::weak\+\_\+atomic}}$<$ T $>$\+::weak\+\_\+atomic (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1weak__atomic_a69a032b867540275b270588d952181be}\index{moodycamel::weak\_atomic$<$ T $>$@{moodycamel::weak\_atomic$<$ T $>$}!weak\_atomic@{weak\_atomic}}
+\index{weak\_atomic@{weak\_atomic}!moodycamel::weak\_atomic$<$ T $>$@{moodycamel::weak\_atomic$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{weak\_atomic()}{weak\_atomic()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1weak__atomic_a69a032b867540275b270588d952181be} 
+template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+AE\+\_\+\+NO\+\_\+\+TSAN \mbox{\hyperlink{classmoodycamel_1_1weak__atomic}{moodycamel\+::weak\+\_\+atomic}}$<$ T $>$\+::weak\+\_\+atomic (\begin{DoxyParamCaption}\item[{U \&\&}]{x}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1weak__atomic_a21fa3545cc957a4013cfdd9a5d33b16b}\index{moodycamel::weak\_atomic$<$ T $>$@{moodycamel::weak\_atomic$<$ T $>$}!weak\_atomic@{weak\_atomic}}
+\index{weak\_atomic@{weak\_atomic}!moodycamel::weak\_atomic$<$ T $>$@{moodycamel::weak\_atomic$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{weak\_atomic()}{weak\_atomic()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1weak__atomic_a21fa3545cc957a4013cfdd9a5d33b16b} 
+template$<$typename T $>$ \\
+AE\+\_\+\+NO\+\_\+\+TSAN \mbox{\hyperlink{classmoodycamel_1_1weak__atomic}{moodycamel\+::weak\+\_\+atomic}}$<$ T $>$\+::weak\+\_\+atomic (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmoodycamel_1_1weak__atomic}{weak\+\_\+atomic}}$<$ T $>$ const \&}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1weak__atomic_a1f375955e6886b3bab2b0e8037b33e9c}\index{moodycamel::weak\_atomic$<$ T $>$@{moodycamel::weak\_atomic$<$ T $>$}!weak\_atomic@{weak\_atomic}}
+\index{weak\_atomic@{weak\_atomic}!moodycamel::weak\_atomic$<$ T $>$@{moodycamel::weak\_atomic$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{weak\_atomic()}{weak\_atomic()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1weak__atomic_a1f375955e6886b3bab2b0e8037b33e9c} 
+template$<$typename T $>$ \\
+AE\+\_\+\+NO\+\_\+\+TSAN \mbox{\hyperlink{classmoodycamel_1_1weak__atomic}{moodycamel\+::weak\+\_\+atomic}}$<$ T $>$\+::weak\+\_\+atomic (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmoodycamel_1_1weak__atomic}{weak\+\_\+atomic}}$<$ T $>$ \&\&}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmoodycamel_1_1weak__atomic_aee9cf5ed8e00a7643272fb075e5db7cf}\index{moodycamel::weak\_atomic$<$ T $>$@{moodycamel::weak\_atomic$<$ T $>$}!fetch\_add\_acquire@{fetch\_add\_acquire}}
+\index{fetch\_add\_acquire@{fetch\_add\_acquire}!moodycamel::weak\_atomic$<$ T $>$@{moodycamel::weak\_atomic$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{fetch\_add\_acquire()}{fetch\_add\_acquire()}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1weak__atomic_aee9cf5ed8e00a7643272fb075e5db7cf} 
+template$<$typename T $>$ \\
+AE\+\_\+\+FORCEINLINE T \mbox{\hyperlink{classmoodycamel_1_1weak__atomic}{moodycamel\+::weak\+\_\+atomic}}$<$ T $>$\+::fetch\+\_\+add\+\_\+acquire (\begin{DoxyParamCaption}\item[{T}]{increment}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1weak__atomic_a300875cd9089da27c3a7546a69962573}\index{moodycamel::weak\_atomic$<$ T $>$@{moodycamel::weak\_atomic$<$ T $>$}!fetch\_add\_release@{fetch\_add\_release}}
+\index{fetch\_add\_release@{fetch\_add\_release}!moodycamel::weak\_atomic$<$ T $>$@{moodycamel::weak\_atomic$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{fetch\_add\_release()}{fetch\_add\_release()}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1weak__atomic_a300875cd9089da27c3a7546a69962573} 
+template$<$typename T $>$ \\
+AE\+\_\+\+FORCEINLINE T \mbox{\hyperlink{classmoodycamel_1_1weak__atomic}{moodycamel\+::weak\+\_\+atomic}}$<$ T $>$\+::fetch\+\_\+add\+\_\+release (\begin{DoxyParamCaption}\item[{T}]{increment}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1weak__atomic_a34ac736752060c9e44f633dae2cfe267}\index{moodycamel::weak\_atomic$<$ T $>$@{moodycamel::weak\_atomic$<$ T $>$}!load@{load}}
+\index{load@{load}!moodycamel::weak\_atomic$<$ T $>$@{moodycamel::weak\_atomic$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1weak__atomic_a34ac736752060c9e44f633dae2cfe267} 
+template$<$typename T $>$ \\
+AE\+\_\+\+FORCEINLINE T \mbox{\hyperlink{classmoodycamel_1_1weak__atomic}{moodycamel\+::weak\+\_\+atomic}}$<$ T $>$\+::load (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1weak__atomic_ae580d7f86a88474d43a1b3e86cab32ab}\index{moodycamel::weak\_atomic$<$ T $>$@{moodycamel::weak\_atomic$<$ T $>$}!operator T@{operator T}}
+\index{operator T@{operator T}!moodycamel::weak\_atomic$<$ T $>$@{moodycamel::weak\_atomic$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator T()}{operator T()}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1weak__atomic_ae580d7f86a88474d43a1b3e86cab32ab} 
+template$<$typename T $>$ \\
+AE\+\_\+\+FORCEINLINE \mbox{\hyperlink{classmoodycamel_1_1weak__atomic}{moodycamel\+::weak\+\_\+atomic}}$<$ T $>$\+::operator T (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1weak__atomic_a0e080a981633b242cab0b4c39427c7ff}\index{moodycamel::weak\_atomic$<$ T $>$@{moodycamel::weak\_atomic$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!moodycamel::weak\_atomic$<$ T $>$@{moodycamel::weak\_atomic$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1weak__atomic_a0e080a981633b242cab0b4c39427c7ff} 
+template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+AE\+\_\+\+FORCEINLINE \mbox{\hyperlink{classmoodycamel_1_1weak__atomic}{weak\+\_\+atomic}} const  \& \mbox{\hyperlink{classmoodycamel_1_1weak__atomic}{moodycamel\+::weak\+\_\+atomic}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{U \&\&}]{x}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1weak__atomic_ad4ab3ddf9f5b26a1f3743e67a60e3eac}\index{moodycamel::weak\_atomic$<$ T $>$@{moodycamel::weak\_atomic$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!moodycamel::weak\_atomic$<$ T $>$@{moodycamel::weak\_atomic$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1weak__atomic_ad4ab3ddf9f5b26a1f3743e67a60e3eac} 
+template$<$typename T $>$ \\
+AE\+\_\+\+FORCEINLINE \mbox{\hyperlink{classmoodycamel_1_1weak__atomic}{weak\+\_\+atomic}} const  \& \mbox{\hyperlink{classmoodycamel_1_1weak__atomic}{moodycamel\+::weak\+\_\+atomic}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmoodycamel_1_1weak__atomic}{weak\+\_\+atomic}}$<$ T $>$ const \&}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sgaer/source/repos/katanafinancial/\+Occam\+CME4/\+Occam\+CME4/src/external/camel/atomicops.\+h\end{DoxyCompactItemize}

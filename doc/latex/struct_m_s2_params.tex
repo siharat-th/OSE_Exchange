@@ -1,0 +1,340 @@
+\doxysection{MS2\+Params Struct Reference}
+\hypertarget{struct_m_s2_params}{}\label{struct_m_s2_params}\index{MS2Params@{MS2Params}}
+
+
+The struct representing the parameters for the Multi\+Spreader2 algorithm.  
+
+
+
+
+{\ttfamily \#include $<$MS2\+Params.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_m_s2_params}{MS2\+Params}} \mbox{\hyperlink{struct_m_s2_params_a771720a6ad58a6b8812e44d56afbc2f5}{parse}} (const std\+::string \&json\+\_\+str)
+\begin{DoxyCompactList}\small\item\em Parses the JSON string and returns an instance of \doxylink{struct_m_s2_params}{MS2\+Params}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{struct_m_s2_params_acbbdd0c91b5755b5d3f48049bb71d345}{Valid\+Json}}
+\item 
+\mbox{\hyperlink{structalgometa}{algometa}} \mbox{\hyperlink{struct_m_s2_params_afd5d197d3c5f4f870812c6851f2810eb}{meta}}
+\item 
+string \mbox{\hyperlink{struct_m_s2_params_a8806ed95bc60ce657143a324767a9d60}{subid}}
+\item 
+tr1\+::unordered\+\_\+map$<$ int, \mbox{\hyperlink{structinstrument}{instrument}} $>$ \mbox{\hyperlink{struct_m_s2_params_ad8d6936215d7ad301ee8c3fd945c5539}{Leg\+Sec\+Id\+Map}}
+\item 
+tr1\+::unordered\+\_\+map$<$ string, \mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} $>$ \mbox{\hyperlink{struct_m_s2_params_a605ffafc462cfa0e79bfc421d04b4571}{Ords}}
+\item 
+\mbox{\hyperlink{structinstrument}{instrument}} \mbox{\hyperlink{struct_m_s2_params_a00ded2a40df6f9a96b5941178c540e2b}{Legs}} \mbox{[}24\mbox{]}
+\item 
+int \mbox{\hyperlink{struct_m_s2_params_a636c07f2c4199b96a8d137e21b9d5bab}{Leg\+Count}}
+\item 
+bool \mbox{\hyperlink{struct_m_s2_params_a8a567c8dc0d384819c10e35152e129cb}{Test\+Mode}}
+\item 
+bool \mbox{\hyperlink{struct_m_s2_params_a516e211a6e58c5cfb966324131b9f3a0}{Reset}}
+\item 
+double \mbox{\hyperlink{struct_m_s2_params_a05c9b1cb821c639b53bc37cde3f9c59e}{Order\+Qty}}
+\item 
+double \mbox{\hyperlink{struct_m_s2_params_a448263b228eed7932a87e990ded16409}{Total\+Qty}}
+\item 
+double \mbox{\hyperlink{struct_m_s2_params_ae4c3981342ea4b3513b1b7ceebb9953c}{Max\+Position}}
+\item 
+bool \mbox{\hyperlink{struct_m_s2_params_a102f579c1d1ac77489bfe8c4bcbd8fd4}{Reload\+On\+Fill}}
+\item 
+int \mbox{\hyperlink{struct_m_s2_params_a7ceef3a90cfb39f87eb73072b3909906}{Min\+Lean\+Qty}}
+\item 
+double \mbox{\hyperlink{struct_m_s2_params_abd64cc78c920115ad6ebee0876d0ac2f}{Net\+Position}}
+\item 
+double \mbox{\hyperlink{struct_m_s2_params_a33f068004175645956b1a3aa83b7e915}{Total\+Exec}}
+\item 
+double \mbox{\hyperlink{struct_m_s2_params_aeacd9039efaec3bac7e2187bc8c58afd}{Total\+Working}}
+\item 
+int \mbox{\hyperlink{struct_m_s2_params_a93b952730e5e490ba718d0a477dff7f1}{Msgs\+Sent}}
+\item 
+int \mbox{\hyperlink{struct_m_s2_params_a9f0fb2bc5aab7c0897cd9ef2304c016c}{Msgs\+Exec}}
+\item 
+double \mbox{\hyperlink{struct_m_s2_params_a6936350bb8f26b38f09b8cb2fc062780}{Slop}}
+\item 
+bool \mbox{\hyperlink{struct_m_s2_params_a139a2d77c9f94725b3236c3a34ac966a}{Send\+Bids}}
+\item 
+bool \mbox{\hyperlink{struct_m_s2_params_ab29794f6661f6301988e76b9205c83d5}{Send\+Asks}}
+\item 
+double \mbox{\hyperlink{struct_m_s2_params_abeb06e45170aadd224fda2589a06a7c9}{Spread\+Bid}}
+\item 
+double \mbox{\hyperlink{struct_m_s2_params_ae15564005e7426e24715d8ab5920ca74}{Spread\+Ask}}
+\item 
+double \mbox{\hyperlink{struct_m_s2_params_aef392aaa8f55ee3d57b585eac202403e}{Buy\+Disc}}
+\item 
+double \mbox{\hyperlink{struct_m_s2_params_aa6a26a8d8ac39ecd420b692ffeb5684a}{Sell\+Disc}}
+\item 
+double \mbox{\hyperlink{struct_m_s2_params_ab3c85f049c6fb36baaf23a719f63108f}{Hedge\+Stop}}
+\item 
+double \mbox{\hyperlink{struct_m_s2_params_aaaa0239f51d9f78af60f771bc7d35455}{Squeeze\+Ratio}}
+\item 
+int \mbox{\hyperlink{struct_m_s2_params_a5e55444616ec2ddc226a0b1aa1c86fab}{Squeeze\+Qty}}
+\item 
+bool \mbox{\hyperlink{struct_m_s2_params_a24101b3a009c99e6b2c498b8ba8bfee4}{Wavg\+Plus}}
+\item 
+double \mbox{\hyperlink{struct_m_s2_params_ada59fdd6e281d8b4eeabcbcff72898f9}{Wavg\+Threshold}}
+\item 
+double \mbox{\hyperlink{struct_m_s2_params_a486bd2ff0cd355c55a2daab7b294bae8}{Exch\+Fee}}
+\item 
+bool \mbox{\hyperlink{struct_m_s2_params_a427e46eb4a0267e2711c23bf9c77bc01}{Generative}}
+\item 
+bool \mbox{\hyperlink{struct_m_s2_params_a7e98c0bf58165d1f9662aa74301744cd}{Doubles}}
+\item 
+bool \mbox{\hyperlink{struct_m_s2_params_acd80988cd1857bbf74ec648076d131f7}{Triples}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The struct representing the parameters for the Multi\+Spreader2 algorithm. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_m_s2_params_a771720a6ad58a6b8812e44d56afbc2f5}\index{MS2Params@{MS2Params}!parse@{parse}}
+\index{parse@{parse}!MS2Params@{MS2Params}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily \label{struct_m_s2_params_a771720a6ad58a6b8812e44d56afbc2f5} 
+\mbox{\hyperlink{struct_m_s2_params}{MS2\+Params}} MS2\+Params\+::parse (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{json\+\_\+str}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Parses the JSON string and returns an instance of \doxylink{struct_m_s2_params}{MS2\+Params}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json\+\_\+str} & The JSON string to parse. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An instance of \doxylink{struct_m_s2_params}{MS2\+Params}. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00260}{algometa\+::\+Enabled}}, \mbox{\hyperlink{l00049}{User\+Info\+::groupname}}, \mbox{\hyperlink{l00048}{User\+Info\+::org}}, \mbox{\hyperlink{l00262}{algometa\+::\+Source}}, \mbox{\hyperlink{l00256}{algometa\+::\+Strategy}}, \mbox{\hyperlink{l00257}{algometa\+::\+Strat\+Id}}, \mbox{\hyperlink{l00264}{algometa\+::\+Tag}}, \mbox{\hyperlink{l00258}{algometa\+::\+Template\+Name}}, \mbox{\hyperlink{l00261}{algometa\+::\+Unique\+Id}}, \mbox{\hyperlink{l00047}{User\+Info\+::user}}, and \mbox{\hyperlink{l00279}{algometa\+::userinfo}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00032}{KTN\+::\+Multi\+Spreader\+V3\+::on\+Launch()}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_m_s2_params_aef392aaa8f55ee3d57b585eac202403e}\index{MS2Params@{MS2Params}!BuyDisc@{BuyDisc}}
+\index{BuyDisc@{BuyDisc}!MS2Params@{MS2Params}}
+\doxysubsubsection{\texorpdfstring{BuyDisc}{BuyDisc}}
+{\footnotesize\ttfamily \label{struct_m_s2_params_aef392aaa8f55ee3d57b585eac202403e} 
+double MS2\+Params\+::\+Buy\+Disc}
+
+\Hypertarget{struct_m_s2_params_a7e98c0bf58165d1f9662aa74301744cd}\index{MS2Params@{MS2Params}!Doubles@{Doubles}}
+\index{Doubles@{Doubles}!MS2Params@{MS2Params}}
+\doxysubsubsection{\texorpdfstring{Doubles}{Doubles}}
+{\footnotesize\ttfamily \label{struct_m_s2_params_a7e98c0bf58165d1f9662aa74301744cd} 
+bool MS2\+Params\+::\+Doubles}
+
+\Hypertarget{struct_m_s2_params_a486bd2ff0cd355c55a2daab7b294bae8}\index{MS2Params@{MS2Params}!ExchFee@{ExchFee}}
+\index{ExchFee@{ExchFee}!MS2Params@{MS2Params}}
+\doxysubsubsection{\texorpdfstring{ExchFee}{ExchFee}}
+{\footnotesize\ttfamily \label{struct_m_s2_params_a486bd2ff0cd355c55a2daab7b294bae8} 
+double MS2\+Params\+::\+Exch\+Fee}
+
+\Hypertarget{struct_m_s2_params_a427e46eb4a0267e2711c23bf9c77bc01}\index{MS2Params@{MS2Params}!Generative@{Generative}}
+\index{Generative@{Generative}!MS2Params@{MS2Params}}
+\doxysubsubsection{\texorpdfstring{Generative}{Generative}}
+{\footnotesize\ttfamily \label{struct_m_s2_params_a427e46eb4a0267e2711c23bf9c77bc01} 
+bool MS2\+Params\+::\+Generative}
+
+\Hypertarget{struct_m_s2_params_ab3c85f049c6fb36baaf23a719f63108f}\index{MS2Params@{MS2Params}!HedgeStop@{HedgeStop}}
+\index{HedgeStop@{HedgeStop}!MS2Params@{MS2Params}}
+\doxysubsubsection{\texorpdfstring{HedgeStop}{HedgeStop}}
+{\footnotesize\ttfamily \label{struct_m_s2_params_ab3c85f049c6fb36baaf23a719f63108f} 
+double MS2\+Params\+::\+Hedge\+Stop}
+
+\Hypertarget{struct_m_s2_params_a636c07f2c4199b96a8d137e21b9d5bab}\index{MS2Params@{MS2Params}!LegCount@{LegCount}}
+\index{LegCount@{LegCount}!MS2Params@{MS2Params}}
+\doxysubsubsection{\texorpdfstring{LegCount}{LegCount}}
+{\footnotesize\ttfamily \label{struct_m_s2_params_a636c07f2c4199b96a8d137e21b9d5bab} 
+int MS2\+Params\+::\+Leg\+Count}
+
+\Hypertarget{struct_m_s2_params_a00ded2a40df6f9a96b5941178c540e2b}\index{MS2Params@{MS2Params}!Legs@{Legs}}
+\index{Legs@{Legs}!MS2Params@{MS2Params}}
+\doxysubsubsection{\texorpdfstring{Legs}{Legs}}
+{\footnotesize\ttfamily \label{struct_m_s2_params_a00ded2a40df6f9a96b5941178c540e2b} 
+\mbox{\hyperlink{structinstrument}{instrument}} MS2\+Params\+::\+Legs\mbox{[}24\mbox{]}}
+
+\Hypertarget{struct_m_s2_params_ad8d6936215d7ad301ee8c3fd945c5539}\index{MS2Params@{MS2Params}!LegSecIdMap@{LegSecIdMap}}
+\index{LegSecIdMap@{LegSecIdMap}!MS2Params@{MS2Params}}
+\doxysubsubsection{\texorpdfstring{LegSecIdMap}{LegSecIdMap}}
+{\footnotesize\ttfamily \label{struct_m_s2_params_ad8d6936215d7ad301ee8c3fd945c5539} 
+tr1\+::unordered\+\_\+map$<$int, \mbox{\hyperlink{structinstrument}{instrument}}$>$ MS2\+Params\+::\+Leg\+Sec\+Id\+Map}
+
+\Hypertarget{struct_m_s2_params_ae4c3981342ea4b3513b1b7ceebb9953c}\index{MS2Params@{MS2Params}!MaxPosition@{MaxPosition}}
+\index{MaxPosition@{MaxPosition}!MS2Params@{MS2Params}}
+\doxysubsubsection{\texorpdfstring{MaxPosition}{MaxPosition}}
+{\footnotesize\ttfamily \label{struct_m_s2_params_ae4c3981342ea4b3513b1b7ceebb9953c} 
+double MS2\+Params\+::\+Max\+Position}
+
+\Hypertarget{struct_m_s2_params_afd5d197d3c5f4f870812c6851f2810eb}\index{MS2Params@{MS2Params}!meta@{meta}}
+\index{meta@{meta}!MS2Params@{MS2Params}}
+\doxysubsubsection{\texorpdfstring{meta}{meta}}
+{\footnotesize\ttfamily \label{struct_m_s2_params_afd5d197d3c5f4f870812c6851f2810eb} 
+\mbox{\hyperlink{structalgometa}{algometa}} MS2\+Params\+::meta}
+
+\Hypertarget{struct_m_s2_params_a7ceef3a90cfb39f87eb73072b3909906}\index{MS2Params@{MS2Params}!MinLeanQty@{MinLeanQty}}
+\index{MinLeanQty@{MinLeanQty}!MS2Params@{MS2Params}}
+\doxysubsubsection{\texorpdfstring{MinLeanQty}{MinLeanQty}}
+{\footnotesize\ttfamily \label{struct_m_s2_params_a7ceef3a90cfb39f87eb73072b3909906} 
+int MS2\+Params\+::\+Min\+Lean\+Qty}
+
+\Hypertarget{struct_m_s2_params_a9f0fb2bc5aab7c0897cd9ef2304c016c}\index{MS2Params@{MS2Params}!MsgsExec@{MsgsExec}}
+\index{MsgsExec@{MsgsExec}!MS2Params@{MS2Params}}
+\doxysubsubsection{\texorpdfstring{MsgsExec}{MsgsExec}}
+{\footnotesize\ttfamily \label{struct_m_s2_params_a9f0fb2bc5aab7c0897cd9ef2304c016c} 
+int MS2\+Params\+::\+Msgs\+Exec}
+
+\Hypertarget{struct_m_s2_params_a93b952730e5e490ba718d0a477dff7f1}\index{MS2Params@{MS2Params}!MsgsSent@{MsgsSent}}
+\index{MsgsSent@{MsgsSent}!MS2Params@{MS2Params}}
+\doxysubsubsection{\texorpdfstring{MsgsSent}{MsgsSent}}
+{\footnotesize\ttfamily \label{struct_m_s2_params_a93b952730e5e490ba718d0a477dff7f1} 
+int MS2\+Params\+::\+Msgs\+Sent}
+
+\Hypertarget{struct_m_s2_params_abd64cc78c920115ad6ebee0876d0ac2f}\index{MS2Params@{MS2Params}!NetPosition@{NetPosition}}
+\index{NetPosition@{NetPosition}!MS2Params@{MS2Params}}
+\doxysubsubsection{\texorpdfstring{NetPosition}{NetPosition}}
+{\footnotesize\ttfamily \label{struct_m_s2_params_abd64cc78c920115ad6ebee0876d0ac2f} 
+double MS2\+Params\+::\+Net\+Position}
+
+\Hypertarget{struct_m_s2_params_a05c9b1cb821c639b53bc37cde3f9c59e}\index{MS2Params@{MS2Params}!OrderQty@{OrderQty}}
+\index{OrderQty@{OrderQty}!MS2Params@{MS2Params}}
+\doxysubsubsection{\texorpdfstring{OrderQty}{OrderQty}}
+{\footnotesize\ttfamily \label{struct_m_s2_params_a05c9b1cb821c639b53bc37cde3f9c59e} 
+double MS2\+Params\+::\+Order\+Qty}
+
+\Hypertarget{struct_m_s2_params_a605ffafc462cfa0e79bfc421d04b4571}\index{MS2Params@{MS2Params}!Ords@{Ords}}
+\index{Ords@{Ords}!MS2Params@{MS2Params}}
+\doxysubsubsection{\texorpdfstring{Ords}{Ords}}
+{\footnotesize\ttfamily \label{struct_m_s2_params_a605ffafc462cfa0e79bfc421d04b4571} 
+tr1\+::unordered\+\_\+map$<$string, \mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}}$>$ MS2\+Params\+::\+Ords}
+
+\Hypertarget{struct_m_s2_params_a102f579c1d1ac77489bfe8c4bcbd8fd4}\index{MS2Params@{MS2Params}!ReloadOnFill@{ReloadOnFill}}
+\index{ReloadOnFill@{ReloadOnFill}!MS2Params@{MS2Params}}
+\doxysubsubsection{\texorpdfstring{ReloadOnFill}{ReloadOnFill}}
+{\footnotesize\ttfamily \label{struct_m_s2_params_a102f579c1d1ac77489bfe8c4bcbd8fd4} 
+bool MS2\+Params\+::\+Reload\+On\+Fill}
+
+\Hypertarget{struct_m_s2_params_a516e211a6e58c5cfb966324131b9f3a0}\index{MS2Params@{MS2Params}!Reset@{Reset}}
+\index{Reset@{Reset}!MS2Params@{MS2Params}}
+\doxysubsubsection{\texorpdfstring{Reset}{Reset}}
+{\footnotesize\ttfamily \label{struct_m_s2_params_a516e211a6e58c5cfb966324131b9f3a0} 
+bool MS2\+Params\+::\+Reset}
+
+\Hypertarget{struct_m_s2_params_aa6a26a8d8ac39ecd420b692ffeb5684a}\index{MS2Params@{MS2Params}!SellDisc@{SellDisc}}
+\index{SellDisc@{SellDisc}!MS2Params@{MS2Params}}
+\doxysubsubsection{\texorpdfstring{SellDisc}{SellDisc}}
+{\footnotesize\ttfamily \label{struct_m_s2_params_aa6a26a8d8ac39ecd420b692ffeb5684a} 
+double MS2\+Params\+::\+Sell\+Disc}
+
+\Hypertarget{struct_m_s2_params_ab29794f6661f6301988e76b9205c83d5}\index{MS2Params@{MS2Params}!SendAsks@{SendAsks}}
+\index{SendAsks@{SendAsks}!MS2Params@{MS2Params}}
+\doxysubsubsection{\texorpdfstring{SendAsks}{SendAsks}}
+{\footnotesize\ttfamily \label{struct_m_s2_params_ab29794f6661f6301988e76b9205c83d5} 
+bool MS2\+Params\+::\+Send\+Asks}
+
+\Hypertarget{struct_m_s2_params_a139a2d77c9f94725b3236c3a34ac966a}\index{MS2Params@{MS2Params}!SendBids@{SendBids}}
+\index{SendBids@{SendBids}!MS2Params@{MS2Params}}
+\doxysubsubsection{\texorpdfstring{SendBids}{SendBids}}
+{\footnotesize\ttfamily \label{struct_m_s2_params_a139a2d77c9f94725b3236c3a34ac966a} 
+bool MS2\+Params\+::\+Send\+Bids}
+
+\Hypertarget{struct_m_s2_params_a6936350bb8f26b38f09b8cb2fc062780}\index{MS2Params@{MS2Params}!Slop@{Slop}}
+\index{Slop@{Slop}!MS2Params@{MS2Params}}
+\doxysubsubsection{\texorpdfstring{Slop}{Slop}}
+{\footnotesize\ttfamily \label{struct_m_s2_params_a6936350bb8f26b38f09b8cb2fc062780} 
+double MS2\+Params\+::\+Slop}
+
+\Hypertarget{struct_m_s2_params_ae15564005e7426e24715d8ab5920ca74}\index{MS2Params@{MS2Params}!SpreadAsk@{SpreadAsk}}
+\index{SpreadAsk@{SpreadAsk}!MS2Params@{MS2Params}}
+\doxysubsubsection{\texorpdfstring{SpreadAsk}{SpreadAsk}}
+{\footnotesize\ttfamily \label{struct_m_s2_params_ae15564005e7426e24715d8ab5920ca74} 
+double MS2\+Params\+::\+Spread\+Ask}
+
+\Hypertarget{struct_m_s2_params_abeb06e45170aadd224fda2589a06a7c9}\index{MS2Params@{MS2Params}!SpreadBid@{SpreadBid}}
+\index{SpreadBid@{SpreadBid}!MS2Params@{MS2Params}}
+\doxysubsubsection{\texorpdfstring{SpreadBid}{SpreadBid}}
+{\footnotesize\ttfamily \label{struct_m_s2_params_abeb06e45170aadd224fda2589a06a7c9} 
+double MS2\+Params\+::\+Spread\+Bid}
+
+\Hypertarget{struct_m_s2_params_a5e55444616ec2ddc226a0b1aa1c86fab}\index{MS2Params@{MS2Params}!SqueezeQty@{SqueezeQty}}
+\index{SqueezeQty@{SqueezeQty}!MS2Params@{MS2Params}}
+\doxysubsubsection{\texorpdfstring{SqueezeQty}{SqueezeQty}}
+{\footnotesize\ttfamily \label{struct_m_s2_params_a5e55444616ec2ddc226a0b1aa1c86fab} 
+int MS2\+Params\+::\+Squeeze\+Qty}
+
+\Hypertarget{struct_m_s2_params_aaaa0239f51d9f78af60f771bc7d35455}\index{MS2Params@{MS2Params}!SqueezeRatio@{SqueezeRatio}}
+\index{SqueezeRatio@{SqueezeRatio}!MS2Params@{MS2Params}}
+\doxysubsubsection{\texorpdfstring{SqueezeRatio}{SqueezeRatio}}
+{\footnotesize\ttfamily \label{struct_m_s2_params_aaaa0239f51d9f78af60f771bc7d35455} 
+double MS2\+Params\+::\+Squeeze\+Ratio}
+
+\Hypertarget{struct_m_s2_params_a8806ed95bc60ce657143a324767a9d60}\index{MS2Params@{MS2Params}!subid@{subid}}
+\index{subid@{subid}!MS2Params@{MS2Params}}
+\doxysubsubsection{\texorpdfstring{subid}{subid}}
+{\footnotesize\ttfamily \label{struct_m_s2_params_a8806ed95bc60ce657143a324767a9d60} 
+string MS2\+Params\+::subid}
+
+\Hypertarget{struct_m_s2_params_a8a567c8dc0d384819c10e35152e129cb}\index{MS2Params@{MS2Params}!TestMode@{TestMode}}
+\index{TestMode@{TestMode}!MS2Params@{MS2Params}}
+\doxysubsubsection{\texorpdfstring{TestMode}{TestMode}}
+{\footnotesize\ttfamily \label{struct_m_s2_params_a8a567c8dc0d384819c10e35152e129cb} 
+bool MS2\+Params\+::\+Test\+Mode}
+
+\Hypertarget{struct_m_s2_params_a33f068004175645956b1a3aa83b7e915}\index{MS2Params@{MS2Params}!TotalExec@{TotalExec}}
+\index{TotalExec@{TotalExec}!MS2Params@{MS2Params}}
+\doxysubsubsection{\texorpdfstring{TotalExec}{TotalExec}}
+{\footnotesize\ttfamily \label{struct_m_s2_params_a33f068004175645956b1a3aa83b7e915} 
+double MS2\+Params\+::\+Total\+Exec}
+
+\Hypertarget{struct_m_s2_params_a448263b228eed7932a87e990ded16409}\index{MS2Params@{MS2Params}!TotalQty@{TotalQty}}
+\index{TotalQty@{TotalQty}!MS2Params@{MS2Params}}
+\doxysubsubsection{\texorpdfstring{TotalQty}{TotalQty}}
+{\footnotesize\ttfamily \label{struct_m_s2_params_a448263b228eed7932a87e990ded16409} 
+double MS2\+Params\+::\+Total\+Qty}
+
+\Hypertarget{struct_m_s2_params_aeacd9039efaec3bac7e2187bc8c58afd}\index{MS2Params@{MS2Params}!TotalWorking@{TotalWorking}}
+\index{TotalWorking@{TotalWorking}!MS2Params@{MS2Params}}
+\doxysubsubsection{\texorpdfstring{TotalWorking}{TotalWorking}}
+{\footnotesize\ttfamily \label{struct_m_s2_params_aeacd9039efaec3bac7e2187bc8c58afd} 
+double MS2\+Params\+::\+Total\+Working}
+
+\Hypertarget{struct_m_s2_params_acd80988cd1857bbf74ec648076d131f7}\index{MS2Params@{MS2Params}!Triples@{Triples}}
+\index{Triples@{Triples}!MS2Params@{MS2Params}}
+\doxysubsubsection{\texorpdfstring{Triples}{Triples}}
+{\footnotesize\ttfamily \label{struct_m_s2_params_acd80988cd1857bbf74ec648076d131f7} 
+bool MS2\+Params\+::\+Triples}
+
+\Hypertarget{struct_m_s2_params_acbbdd0c91b5755b5d3f48049bb71d345}\index{MS2Params@{MS2Params}!ValidJson@{ValidJson}}
+\index{ValidJson@{ValidJson}!MS2Params@{MS2Params}}
+\doxysubsubsection{\texorpdfstring{ValidJson}{ValidJson}}
+{\footnotesize\ttfamily \label{struct_m_s2_params_acbbdd0c91b5755b5d3f48049bb71d345} 
+bool MS2\+Params\+::\+Valid\+Json}
+
+\Hypertarget{struct_m_s2_params_a24101b3a009c99e6b2c498b8ba8bfee4}\index{MS2Params@{MS2Params}!WavgPlus@{WavgPlus}}
+\index{WavgPlus@{WavgPlus}!MS2Params@{MS2Params}}
+\doxysubsubsection{\texorpdfstring{WavgPlus}{WavgPlus}}
+{\footnotesize\ttfamily \label{struct_m_s2_params_a24101b3a009c99e6b2c498b8ba8bfee4} 
+bool MS2\+Params\+::\+Wavg\+Plus}
+
+\Hypertarget{struct_m_s2_params_ada59fdd6e281d8b4eeabcbcff72898f9}\index{MS2Params@{MS2Params}!WavgThreshold@{WavgThreshold}}
+\index{WavgThreshold@{WavgThreshold}!MS2Params@{MS2Params}}
+\doxysubsubsection{\texorpdfstring{WavgThreshold}{WavgThreshold}}
+{\footnotesize\ttfamily \label{struct_m_s2_params_ada59fdd6e281d8b4eeabcbcff72898f9} 
+double MS2\+Params\+::\+Wavg\+Threshold}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Algo\+Params/MS2\+Params.\+hpp\item 
+Algo\+Params/MS2\+Params.\+cpp\end{DoxyCompactItemize}

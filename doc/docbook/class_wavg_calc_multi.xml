@@ -1,0 +1,552 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_wavg_calc_multi" xml:lang="en-US">
+<title>WavgCalcMulti Class Reference</title>
+<indexterm><primary>WavgCalcMulti</primary></indexterm>
+<para>
+
+<para>Class for calculating weighted averages and performing related operations. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;WavgCalcMulti.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_wavg_calc_multi_1a600a085c863628d571651b098307482a">WavgCalcMulti</link> (<link linkend="_class_timer_callback">TimerCallback</link> &amp;cb)</para>
+
+<para>Constructor for <link linkend="_class_wavg_calc_multi">WavgCalcMulti</link> class. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_wavg_calc_multi_1ae9ac6f5d38a83837227fc15f8390738b">Test</link> ()</para>
+
+<para>Test function for <link linkend="_class_wavg_calc_multi">WavgCalcMulti</link> class. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_wavg_calc_multi_1a054c78260e91fddd538e51f3e26411dd">Start</link> ()</para>
+
+<para>Start the calculation process. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_wavg_calc_multi_1a65ab8f13d83df8a7aa48344e229554d0">Stop</link> ()</para>
+
+<para>Stop the calculation process. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_wavg_calc_multi_1a1fa6d8805495a0984dbe50e8157b8c31">setStartEndTime</link> (const std::string &amp;startTime, const std::string &amp;endTime)</para>
+
+<para>Set the start and end time for the calculation. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_wavg_calc_multi_1a56293e39f4e9562a0bc591f58b2c8f92">calculate</link> (int n, int j, int64_t price, int32_t size)</para>
+
+<para>Perform the calculation for a given set of parameters. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_wavg_calc_multi_1a9238d4e4fadfc0cd0a06f28842fb7bde">CalculateSettlements</link> ()</para>
+
+<para>Calculate the settlements. </para>
+</listitem>
+            <listitem><para>double <link linkend="_class_wavg_calc_multi_1a7e3e8b98cb2a068255e37973567a145c">CalcStpr</link> (int n)</para>
+
+<para>Calculate the Stpr value for a given n. </para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_wavg_calc_multi_1a4330f5405f813ba6cea9f227a5ac54b4">getCurrentTime</link> ()</para>
+
+<para>Get the current time in string format. </para>
+</listitem>
+            <listitem><para>double <link linkend="_class_wavg_calc_multi_1afaaa5b1759ff40cbf4bd6a97f3826897">getStpr</link> (int n, int j)</para>
+
+<para>Get the Stpr value for a given n and j. </para>
+</listitem>
+            <listitem><para>double <link linkend="_class_wavg_calc_multi_1a466f40e3b5831061d0fcac10b3cb02fc">getWavg</link> (int n, int j)</para>
+
+<para>Get the weighted average value for a given n and j. </para>
+</listitem>
+            <listitem><para>double <link linkend="_class_wavg_calc_multi_1aaa2d6a2fbacce3abf4b1376084826c0d">getVolume</link> (int n, int j)</para>
+
+<para>Get the volume value for a given n and j. </para>
+</listitem>
+            <listitem><para>double <link linkend="_class_wavg_calc_multi_1a670730f76901bbf2dc3dffdb01e93bc5">getCount</link> (int n, int j)</para>
+
+<para>Get the count value for a given n and j. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_wavg_calc_multi_1a9a8514c27f5c56f58f07e60c046076a0">Triggered</link> ()</para>
+
+<para>Check if the calculation is triggered. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_wavg_calc_multi_1a9276a9674f2a145481f257981697b421">Started</link> ()</para>
+
+<para>Check if the calculation is started. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_wavg_calc_multi_1ab6f72e06b1f564d30671f0cc53e9c4a1">Init</link> (string product, string startmonth, int startyear, int nummonths)</para>
+
+<para>Initialize the <link linkend="_class_wavg_calc_multi">WavgCalcMulti</link> object with the given parameters. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Class for calculating weighted averages and performing related operations. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_wavg_calc_multi_1a600a085c863628d571651b098307482a"/><section>
+    <title>WavgCalcMulti()</title>
+<indexterm><primary>WavgCalcMulti</primary><secondary>WavgCalcMulti</secondary></indexterm>
+<indexterm><primary>WavgCalcMulti</primary><secondary>WavgCalcMulti</secondary></indexterm>
+<para><computeroutput>WavgCalcMulti::WavgCalcMulti (<link linkend="_class_timer_callback">TimerCallback</link> &amp; cb)</computeroutput></para><para>
+
+<para>Constructor for <link linkend="_class_wavg_calc_multi">WavgCalcMulti</link> class. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>cb</entry><entry>
+<para>The <link linkend="_class_timer_callback">TimerCallback</link> object to be used for timing operations. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_wavg_calc_multi_1a7e3e8b98cb2a068255e37973567a145c"/><section>
+    <title>CalcStpr()</title>
+<indexterm><primary>CalcStpr</primary><secondary>WavgCalcMulti</secondary></indexterm>
+<indexterm><primary>WavgCalcMulti</primary><secondary>CalcStpr</secondary></indexterm>
+<para><computeroutput>double WavgCalcMulti::CalcStpr (int n)</computeroutput></para><para>
+
+<para>Calculate the Stpr value for a given n. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>n</entry><entry>
+<para>The value of n. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The calculated Stpr value. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_wavg_calc_multi_1a56293e39f4e9562a0bc591f58b2c8f92"/><section>
+    <title>calculate()</title>
+<indexterm><primary>calculate</primary><secondary>WavgCalcMulti</secondary></indexterm>
+<indexterm><primary>WavgCalcMulti</primary><secondary>calculate</secondary></indexterm>
+<para><computeroutput>void WavgCalcMulti::calculate (int n, int j, int64_t price, int32_t size)</computeroutput></para><para>
+
+<para>Perform the calculation for a given set of parameters. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>n</entry><entry>
+<para>The value of n. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>j</entry><entry>
+<para>The value of j. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>price</entry><entry>
+<para>The price value. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>size</entry><entry>
+<para>The size value. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00347">CalculateSettlements()</link>.</para>
+</section>
+<anchor xml:id="_class_wavg_calc_multi_1a9238d4e4fadfc0cd0a06f28842fb7bde"/><section>
+    <title>CalculateSettlements()</title>
+<indexterm><primary>CalculateSettlements</primary><secondary>WavgCalcMulti</secondary></indexterm>
+<indexterm><primary>WavgCalcMulti</primary><secondary>CalculateSettlements</secondary></indexterm>
+<para><computeroutput>void WavgCalcMulti::CalculateSettlements ( )</computeroutput></para><para>
+
+<para>Calculate the settlements. </para>
+</para>
+<para>
+Referenced by <link linkend="_l00322">calculate()</link>.</para>
+</section>
+<anchor xml:id="_class_wavg_calc_multi_1a670730f76901bbf2dc3dffdb01e93bc5"/><section>
+    <title>getCount()</title>
+<indexterm><primary>getCount</primary><secondary>WavgCalcMulti</secondary></indexterm>
+<indexterm><primary>WavgCalcMulti</primary><secondary>getCount</secondary></indexterm>
+<para><computeroutput>double WavgCalcMulti::getCount (int n, int j)</computeroutput></para><para>
+
+<para>Get the count value for a given n and j. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>n</entry><entry>
+<para>The value of n. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>j</entry><entry>
+<para>The value of j. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The count value. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_wavg_calc_multi_1a4330f5405f813ba6cea9f227a5ac54b4"/><section>
+    <title>getCurrentTime()</title>
+<indexterm><primary>getCurrentTime</primary><secondary>WavgCalcMulti</secondary></indexterm>
+<indexterm><primary>WavgCalcMulti</primary><secondary>getCurrentTime</secondary></indexterm>
+<para><computeroutput>std::string WavgCalcMulti::getCurrentTime ( )</computeroutput></para><para>
+
+<para>Get the current time in string format. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The current time in string format. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_wavg_calc_multi_1afaaa5b1759ff40cbf4bd6a97f3826897"/><section>
+    <title>getStpr()</title>
+<indexterm><primary>getStpr</primary><secondary>WavgCalcMulti</secondary></indexterm>
+<indexterm><primary>WavgCalcMulti</primary><secondary>getStpr</secondary></indexterm>
+<para><computeroutput>double WavgCalcMulti::getStpr (int n, int j)</computeroutput></para><para>
+
+<para>Get the Stpr value for a given n and j. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>n</entry><entry>
+<para>The value of n. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>j</entry><entry>
+<para>The value of j. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The Stpr value. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_wavg_calc_multi_1aaa2d6a2fbacce3abf4b1376084826c0d"/><section>
+    <title>getVolume()</title>
+<indexterm><primary>getVolume</primary><secondary>WavgCalcMulti</secondary></indexterm>
+<indexterm><primary>WavgCalcMulti</primary><secondary>getVolume</secondary></indexterm>
+<para><computeroutput>double WavgCalcMulti::getVolume (int n, int j)</computeroutput></para><para>
+
+<para>Get the volume value for a given n and j. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>n</entry><entry>
+<para>The value of n. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>j</entry><entry>
+<para>The value of j. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The volume value. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_wavg_calc_multi_1a466f40e3b5831061d0fcac10b3cb02fc"/><section>
+    <title>getWavg()</title>
+<indexterm><primary>getWavg</primary><secondary>WavgCalcMulti</secondary></indexterm>
+<indexterm><primary>WavgCalcMulti</primary><secondary>getWavg</secondary></indexterm>
+<para><computeroutput>double WavgCalcMulti::getWavg (int n, int j)</computeroutput></para><para>
+
+<para>Get the weighted average value for a given n and j. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>n</entry><entry>
+<para>The value of n. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>j</entry><entry>
+<para>The value of j. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The weighted average value. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_wavg_calc_multi_1ab6f72e06b1f564d30671f0cc53e9c4a1"/><section>
+    <title>Init()</title>
+<indexterm><primary>Init</primary><secondary>WavgCalcMulti</secondary></indexterm>
+<indexterm><primary>WavgCalcMulti</primary><secondary>Init</secondary></indexterm>
+<para><computeroutput>void WavgCalcMulti::Init (string product, string startmonth, int startyear, int nummonths)</computeroutput></para><para>
+
+<para>Initialize the <link linkend="_class_wavg_calc_multi">WavgCalcMulti</link> object with the given parameters. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>product</entry><entry>
+<para>The product string. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>startmonth</entry><entry>
+<para>The start month string. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>startyear</entry><entry>
+<para>The start year value. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>nummonths</entry><entry>
+<para>The number of months value. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00025">MatrixGen::GenOutrightMatrix()</link>, <link linkend="_l00088">MatrixGen::GenSpreadMatrix()</link>, and <link linkend="_l00172">MatrixGen::GetGraphMap()</link>.</para>
+</section>
+<anchor xml:id="_class_wavg_calc_multi_1a1fa6d8805495a0984dbe50e8157b8c31"/><section>
+    <title>setStartEndTime()</title>
+<indexterm><primary>setStartEndTime</primary><secondary>WavgCalcMulti</secondary></indexterm>
+<indexterm><primary>WavgCalcMulti</primary><secondary>setStartEndTime</secondary></indexterm>
+<para><computeroutput>bool WavgCalcMulti::setStartEndTime (const std::string &amp; startTime, const std::string &amp; endTime)</computeroutput></para><para>
+
+<para>Set the start and end time for the calculation. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>startTime</entry><entry>
+<para>The start time in string format. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>endTime</entry><entry>
+<para>The end time in string format. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the start and end time are successfully set, false otherwise. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00217">Start()</link>.</para>
+<para>
+Referenced by <link linkend="_l00193">Test()</link>.</para>
+</section>
+<anchor xml:id="_class_wavg_calc_multi_1a054c78260e91fddd538e51f3e26411dd"/><section>
+    <title>Start()</title>
+<indexterm><primary>Start</primary><secondary>WavgCalcMulti</secondary></indexterm>
+<indexterm><primary>WavgCalcMulti</primary><secondary>Start</secondary></indexterm>
+<para><computeroutput>void WavgCalcMulti::Start ( )</computeroutput></para><para>
+
+<para>Start the calculation process. </para>
+</para>
+<para>
+References <link linkend="_l00493">Started()</link>.</para>
+<para>
+Referenced by <link linkend="_l00139">setStartEndTime()</link>, and <link linkend="_l00193">Test()</link>.</para>
+</section>
+<anchor xml:id="_class_wavg_calc_multi_1a9276a9674f2a145481f257981697b421"/><section>
+    <title>Started()</title>
+<indexterm><primary>Started</primary><secondary>WavgCalcMulti</secondary></indexterm>
+<indexterm><primary>WavgCalcMulti</primary><secondary>Started</secondary></indexterm>
+<para><computeroutput>bool WavgCalcMulti::Started ( )</computeroutput></para><para>
+
+<para>Check if the calculation is started. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>True if the calculation is started, false otherwise. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00217">Start()</link>.</para>
+</section>
+<anchor xml:id="_class_wavg_calc_multi_1a65ab8f13d83df8a7aa48344e229554d0"/><section>
+    <title>Stop()</title>
+<indexterm><primary>Stop</primary><secondary>WavgCalcMulti</secondary></indexterm>
+<indexterm><primary>WavgCalcMulti</primary><secondary>Stop</secondary></indexterm>
+<para><computeroutput>void WavgCalcMulti::Stop ( )</computeroutput></para><para>
+
+<para>Stop the calculation process. </para>
+</para>
+</section>
+<anchor xml:id="_class_wavg_calc_multi_1ae9ac6f5d38a83837227fc15f8390738b"/><section>
+    <title>Test()</title>
+<indexterm><primary>Test</primary><secondary>WavgCalcMulti</secondary></indexterm>
+<indexterm><primary>WavgCalcMulti</primary><secondary>Test</secondary></indexterm>
+<para><computeroutput>void WavgCalcMulti::Test ( )</computeroutput></para><para>
+
+<para>Test function for <link linkend="_class_wavg_calc_multi">WavgCalcMulti</link> class. </para>
+</para>
+<para>
+References <link linkend="_l00139">setStartEndTime()</link>, and <link linkend="_l00217">Start()</link>.</para>
+</section>
+<anchor xml:id="_class_wavg_calc_multi_1a9a8514c27f5c56f58f07e60c046076a0"/><section>
+    <title>Triggered()</title>
+<indexterm><primary>Triggered</primary><secondary>WavgCalcMulti</secondary></indexterm>
+<indexterm><primary>WavgCalcMulti</primary><secondary>Triggered</secondary></indexterm>
+<para><computeroutput>bool WavgCalcMulti::Triggered ( )</computeroutput></para><para>
+
+<para>Check if the calculation is triggered. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>True if the calculation is triggered, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+AlgoEngines/WavgCalcMulti.hppAlgoEngines/WavgCalcMulti.cpp</section>
+</section>

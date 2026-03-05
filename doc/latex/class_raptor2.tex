@@ -1,0 +1,297 @@
+\doxysection{Raptor2 Class Reference}
+\hypertarget{class_raptor2}{}\label{class_raptor2}\index{Raptor2@{Raptor2}}
+
+
+Represents the \doxylink{class_raptor2}{Raptor2} Main Exchange Handler class that extends \doxylink{class_named_thread}{Named\+Thread}, \doxylink{class_menu_callback}{Menu\+Callback}, and \doxylink{class_i_exchange_sender}{IExchange\+Sender}.  
+
+
+
+
+{\ttfamily \#include $<$Raptor2.\+hpp$>$}
+
+Inheritance diagram for Raptor2\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_raptor2}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_raptor2_a54edbdcbb2e2d9a063acf6ae01e34a0d}{Raptor2}} (const string \&settingsfile)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_raptor2}{Raptor2} object with the specified settings file. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_raptor2_a61e91776b2d061a44e29d04f3476c165}{\texorpdfstring{$\sim$}{\string~}\+Raptor2}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{class_raptor2}{Raptor2} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_raptor2_ab75bd2419878cbbf20af27b78c2f0a44}{Stop}} ()
+\begin{DoxyCompactList}\small\item\em Stops the \doxylink{class_raptor2}{Raptor2} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_raptor2_a124b3408dbd2e11b05741ec574866a01}{Run}} () override
+\begin{DoxyCompactList}\small\item\em Runs the \doxylink{class_raptor2}{Raptor2} object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_raptor2_adb5e63a21043b383552c3ec84e92375a}{Subscribe}} (\mbox{\hyperlink{class_k_t_n_1_1_session_callback}{Session\+Callback}} \texorpdfstring{$\ast$}{*}cb)
+\begin{DoxyCompactList}\small\item\em Subscribes a session callback to the \doxylink{class_raptor2}{Raptor2} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_raptor2_a2c9aaf8065d7f88ad1d5e4baf5f83a42}{Send}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&order, int action)
+\begin{DoxyCompactList}\small\item\em Sends an order with the specified action to the \doxylink{class_raptor2}{Raptor2} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_raptor2_ae0092b951a92471145191df4ae1af931}{Send\+Hedge\+Instruction}} (uint64\+\_\+t ordereqid, const vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3}{Spread\+Hedge\+V3}} $>$ \&hdg)
+\begin{DoxyCompactList}\small\item\em Sends a hedge instruction with the specified order request ID and hedge to the \doxylink{class_raptor2}{Raptor2} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_raptor2_a8378cbe0ec7bb071b15962a2dba17413}{Send\+Order\+With\+Hedge}} (\mbox{\hyperlink{struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_order_with_hedge}{Order\+With\+Hedge}} \&oh)
+\begin{DoxyCompactList}\small\item\em Sends an order with hedge to the \doxylink{class_raptor2}{Raptor2} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_raptor2_af8f482d28ded7a4f1440490ee5744783}{Bank\+Tas}} (std\+::string secgrp, vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} $>$ ords)
+\begin{DoxyCompactList}\small\item\em Banks the TAS orders with the specified security group and orders. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_raptor2_a1d06036b89960001afa932ea60ccee2b}{Bank\+Hedge\+Orders}} (uint64\+\_\+t ordereqid, const vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} $>$ \&ords)
+\begin{DoxyCompactList}\small\item\em Banks the hedge orders with the specified order request ID and orders. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_raptor2_adeed6fb8144e65ee3262ce0782610ea9}{Algo\+Json}} (std\+::string json, Exch\+Cmd\+::\+Enum cmd)
+\begin{DoxyCompactList}\small\item\em Sends an algorithm JSON command with the specified JSON and command to the \doxylink{class_raptor2}{Raptor2} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_named_thread}{Named\+Thread}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_named_thread_a891fabdc2d824048ec05c82e7ef8c69a}{Named\+Thread}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_named_thread_a018dadb59e5af98ee734301a1baa50cb}{\texorpdfstring{$\sim$}{\string~}\+Named\+Thread}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_named_thread_a9fa42542ff43c89fb9bbc33de9c87e34}{Create\+And\+Run}} (string name, int core)
+\begin{DoxyCompactList}\small\item\em Creates and runs the named thread on the specified core. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_named_thread_ad4809c571171be13f0f91f540d5c196f}{Join}} ()
+\begin{DoxyCompactList}\small\item\em Joins the named thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_menu_callback}{Menu\+Callback}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_menu_callback_a7499f93b958439d57e7992315fd1b64a}{Menu\+Callback}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_menu_callback}{Menu\+Callback} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_menu_callback_ac71ee2700dd7191eab65b00344d18865}{\texorpdfstring{$\sim$}{\string~}\+Menu\+Callback}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{class_menu_callback}{Menu\+Callback} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_i_exchange_sender}{IExchange\+Sender}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_i_exchange_sender_a739bdb8fb07a3bcb6ddeda98884ec921}{IExchange\+Sender}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_i_exchange_sender_add388c15fbe5584b737e6a39b5108e57}{\texorpdfstring{$\sim$}{\string~}\+IExchange\+Sender}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the \doxylink{class_raptor2}{Raptor2} Main Exchange Handler class that extends \doxylink{class_named_thread}{Named\+Thread}, \doxylink{class_menu_callback}{Menu\+Callback}, and \doxylink{class_i_exchange_sender}{IExchange\+Sender}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_raptor2_a54edbdcbb2e2d9a063acf6ae01e34a0d}\index{Raptor2@{Raptor2}!Raptor2@{Raptor2}}
+\index{Raptor2@{Raptor2}!Raptor2@{Raptor2}}
+\doxysubsubsection{\texorpdfstring{Raptor2()}{Raptor2()}}
+{\footnotesize\ttfamily \label{class_raptor2_a54edbdcbb2e2d9a063acf6ae01e34a0d} 
+Raptor2\+::\+Raptor2 (\begin{DoxyParamCaption}\item[{const string \&}]{settingsfile}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_raptor2}{Raptor2} object with the specified settings file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em settingsfile} & The path to the settings file. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_raptor2_a61e91776b2d061a44e29d04f3476c165}\index{Raptor2@{Raptor2}!````~Raptor2@{\texorpdfstring{$\sim$}{\string~}Raptor2}}
+\index{````~Raptor2@{\texorpdfstring{$\sim$}{\string~}Raptor2}!Raptor2@{Raptor2}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Raptor2()}{\string~Raptor2()}}
+{\footnotesize\ttfamily \label{class_raptor2_a61e91776b2d061a44e29d04f3476c165} 
+Raptor2\+::\texorpdfstring{$\sim$}{\string~}\+Raptor2 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destroys the \doxylink{class_raptor2}{Raptor2} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_raptor2_adeed6fb8144e65ee3262ce0782610ea9}\index{Raptor2@{Raptor2}!AlgoJson@{AlgoJson}}
+\index{AlgoJson@{AlgoJson}!Raptor2@{Raptor2}}
+\doxysubsubsection{\texorpdfstring{AlgoJson()}{AlgoJson()}}
+{\footnotesize\ttfamily \label{class_raptor2_adeed6fb8144e65ee3262ce0782610ea9} 
+void Raptor2\+::\+Algo\+Json (\begin{DoxyParamCaption}\item[{std\+::string}]{json}{, }\item[{Exch\+Cmd\+::\+Enum}]{cmd}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sends an algorithm JSON command with the specified JSON and command to the \doxylink{class_raptor2}{Raptor2} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & The JSON command. \\
+\hline
+{\em cmd} & The command to perform. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_exchange_sender_a4e02139d13d7fc3c6347b357fabf4dee}{IExchange\+Sender}}.
+
+\Hypertarget{class_raptor2_a1d06036b89960001afa932ea60ccee2b}\index{Raptor2@{Raptor2}!BankHedgeOrders@{BankHedgeOrders}}
+\index{BankHedgeOrders@{BankHedgeOrders}!Raptor2@{Raptor2}}
+\doxysubsubsection{\texorpdfstring{BankHedgeOrders()}{BankHedgeOrders()}}
+{\footnotesize\ttfamily \label{class_raptor2_a1d06036b89960001afa932ea60ccee2b} 
+void Raptor2\+::\+Bank\+Hedge\+Orders (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{ordereqid}{, }\item[{const vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} $>$ \&}]{ords}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Banks the hedge orders with the specified order request ID and orders. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ordereqid} & The order request ID. \\
+\hline
+{\em ords} & The orders to bank. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_exchange_sender_abc56f34f5ee79f1aee3f0a4a0466ecca}{IExchange\+Sender}}.
+
+\Hypertarget{class_raptor2_af8f482d28ded7a4f1440490ee5744783}\index{Raptor2@{Raptor2}!BankTas@{BankTas}}
+\index{BankTas@{BankTas}!Raptor2@{Raptor2}}
+\doxysubsubsection{\texorpdfstring{BankTas()}{BankTas()}}
+{\footnotesize\ttfamily \label{class_raptor2_af8f482d28ded7a4f1440490ee5744783} 
+void Raptor2\+::\+Bank\+Tas (\begin{DoxyParamCaption}\item[{std\+::string}]{secgrp}{, }\item[{vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} $>$}]{ords}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Banks the TAS orders with the specified security group and orders. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em secgrp} & The security group. \\
+\hline
+{\em ords} & The orders to bank. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_exchange_sender_a4a6ed326c485630d21eebcd1c9ffd0d4}{IExchange\+Sender}}.
+
+\Hypertarget{class_raptor2_a124b3408dbd2e11b05741ec574866a01}\index{Raptor2@{Raptor2}!Run@{Run}}
+\index{Run@{Run}!Raptor2@{Raptor2}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily \label{class_raptor2_a124b3408dbd2e11b05741ec574866a01} 
+void Raptor2\+::\+Run (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Runs the \doxylink{class_raptor2}{Raptor2} object. 
+
+
+
+Implements \mbox{\hyperlink{class_named_thread}{Named\+Thread}}.
+
+
+
+References \mbox{\hyperlink{l00171}{KTN\+::\+Exchange\+Manager\+::on\+Command()}}.
+
+\Hypertarget{class_raptor2_a2c9aaf8065d7f88ad1d5e4baf5f83a42}\index{Raptor2@{Raptor2}!Send@{Send}}
+\index{Send@{Send}!Raptor2@{Raptor2}}
+\doxysubsubsection{\texorpdfstring{Send()}{Send()}}
+{\footnotesize\ttfamily \label{class_raptor2_a2c9aaf8065d7f88ad1d5e4baf5f83a42} 
+void Raptor2\+::\+Send (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&}]{order}{, }\item[{int}]{action}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sends an order with the specified action to the \doxylink{class_raptor2}{Raptor2} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order} & The order to send. \\
+\hline
+{\em action} & The action to perform on the order. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_exchange_sender_a069aede863c0d954221120082a8d2e00}{IExchange\+Sender}}.
+
+
+
+References \mbox{\hyperlink{l00171}{KTN\+::\+Exchange\+Manager\+::on\+Command()}}.
+
+\Hypertarget{class_raptor2_ae0092b951a92471145191df4ae1af931}\index{Raptor2@{Raptor2}!SendHedgeInstruction@{SendHedgeInstruction}}
+\index{SendHedgeInstruction@{SendHedgeInstruction}!Raptor2@{Raptor2}}
+\doxysubsubsection{\texorpdfstring{SendHedgeInstruction()}{SendHedgeInstruction()}}
+{\footnotesize\ttfamily \label{class_raptor2_ae0092b951a92471145191df4ae1af931} 
+void Raptor2\+::\+Send\+Hedge\+Instruction (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{ordereqid}{, }\item[{const vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3}{Spread\+Hedge\+V3}} $>$ \&}]{hdg}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sends a hedge instruction with the specified order request ID and hedge to the \doxylink{class_raptor2}{Raptor2} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ordereqid} & The order request ID. \\
+\hline
+{\em hdg} & The hedge to send. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_exchange_sender_a9e020e012fa275f3ec91a04519434cf2}{IExchange\+Sender}}.
+
+
+
+References \mbox{\hyperlink{l00171}{KTN\+::\+Exchange\+Manager\+::on\+Command()}}.
+
+\Hypertarget{class_raptor2_a8378cbe0ec7bb071b15962a2dba17413}\index{Raptor2@{Raptor2}!SendOrderWithHedge@{SendOrderWithHedge}}
+\index{SendOrderWithHedge@{SendOrderWithHedge}!Raptor2@{Raptor2}}
+\doxysubsubsection{\texorpdfstring{SendOrderWithHedge()}{SendOrderWithHedge()}}
+{\footnotesize\ttfamily \label{class_raptor2_a8378cbe0ec7bb071b15962a2dba17413} 
+void Raptor2\+::\+Send\+Order\+With\+Hedge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_order_with_hedge}{Order\+With\+Hedge}} \&}]{oh}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sends an order with hedge to the \doxylink{class_raptor2}{Raptor2} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em oh} & The order with hedge to send. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_exchange_sender_a8af535e3d8cac167015ee8111a776e6a}{IExchange\+Sender}}.
+
+
+
+References \mbox{\hyperlink{l00171}{KTN\+::\+Exchange\+Manager\+::on\+Command()}}, and \mbox{\hyperlink{l00037}{KTN\+::\+Order\+Pod\+::order\+Req\+Id}}.
+
+\Hypertarget{class_raptor2_ab75bd2419878cbbf20af27b78c2f0a44}\index{Raptor2@{Raptor2}!Stop@{Stop}}
+\index{Stop@{Stop}!Raptor2@{Raptor2}}
+\doxysubsubsection{\texorpdfstring{Stop()}{Stop()}}
+{\footnotesize\ttfamily \label{class_raptor2_ab75bd2419878cbbf20af27b78c2f0a44} 
+void Raptor2\+::\+Stop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Stops the \doxylink{class_raptor2}{Raptor2} object. 
+
+
+
+References \mbox{\hyperlink{l00171}{KTN\+::\+Exchange\+Manager\+::on\+Command()}}, \mbox{\hyperlink{l00049}{KTN\+::\+ORD\+::\+Order\+Handler\+Zmq\+V6\+::\+Stop()}}, and \mbox{\hyperlink{l00074}{KTN\+::\+Algo\+Service\+Broker\+V3\+::\+Stop\+All\+Algos()}}.
+
+\Hypertarget{class_raptor2_adb5e63a21043b383552c3ec84e92375a}\index{Raptor2@{Raptor2}!Subscribe@{Subscribe}}
+\index{Subscribe@{Subscribe}!Raptor2@{Raptor2}}
+\doxysubsubsection{\texorpdfstring{Subscribe()}{Subscribe()}}
+{\footnotesize\ttfamily \label{class_raptor2_adb5e63a21043b383552c3ec84e92375a} 
+int Raptor2\+::\+Subscribe (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_k_t_n_1_1_session_callback}{Session\+Callback}} \texorpdfstring{$\ast$}{*}}]{cb}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Subscribes a session callback to the \doxylink{class_raptor2}{Raptor2} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cb} & The session callback to subscribe. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The subscription ID. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_i_exchange_sender_a88e9077704cc02a8d10682a7b4b89d79}{IExchange\+Sender}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Raptor2.\+hpp\item 
+Raptor2.\+cpp\end{DoxyCompactItemize}

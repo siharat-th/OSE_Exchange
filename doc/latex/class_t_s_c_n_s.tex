@@ -1,0 +1,164 @@
+\doxysection{TSCNS Class Reference}
+\hypertarget{class_t_s_c_n_s}{}\label{class_t_s_c_n_s}\index{TSCNS@{TSCNS}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_t_s_c_n_s_a9d8f06c6a8c5deae3ab1c3cd5fd5d0b4}{init}} (int64\+\_\+t init\+\_\+calibrate\+\_\+ns=20000000, int64\+\_\+t calibrate\+\_\+interval\+\_\+ns=3 \texorpdfstring{$\ast$}{*}Ns\+Per\+Sec)
+\item 
+void \mbox{\hyperlink{class_t_s_c_n_s_adc1b7428aa1d9bba84b027c89b48cdbc}{calibrate}} ()
+\item 
+int64\+\_\+t \mbox{\hyperlink{class_t_s_c_n_s_ac17dd50f3a5ca98322946b45d939ea1d}{tsc2ns}} (int64\+\_\+t tsc) const
+\item 
+int64\+\_\+t \mbox{\hyperlink{class_t_s_c_n_s_abb46ce8ec9414fb665c2192ccf0e6643}{rdns}} () const
+\item 
+double \mbox{\hyperlink{class_t_s_c_n_s_a0b1598e6b497ee8a1f21f52ca0cfa90d}{get\+Tsc\+Ghz}} () const
+\item 
+void \mbox{\hyperlink{class_t_s_c_n_s_a97256856679759658689c1b77c17fc54}{save\+Param}} (int64\+\_\+t base\+\_\+tsc, int64\+\_\+t base\+\_\+ns, int64\+\_\+t sys\+\_\+ns, double new\+\_\+ns\+\_\+per\+\_\+tsc)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int64\+\_\+t \mbox{\hyperlink{class_t_s_c_n_s_a88dd3c1b13b54460d474a62e4b4ee81e}{rdtsc}} ()
+\item 
+static int64\+\_\+t \mbox{\hyperlink{class_t_s_c_n_s_a2a8b74737438bd8ba67c3b20fd41a9e9}{rdsysns}} ()
+\item 
+static void \mbox{\hyperlink{class_t_s_c_n_s_a0abf6d65933748824ad95ba8b6bf0eae}{sync\+Time}} (int64\+\_\+t \&tsc\+\_\+out, int64\+\_\+t \&ns\+\_\+out)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::atomic$<$ uint32\+\_\+t $>$ \mbox{\hyperlink{class_t_s_c_n_s_a9f794941dfdfa43030285220d9a73e81}{param\+\_\+seq\+\_\+}} = 0
+\item 
+double \mbox{\hyperlink{class_t_s_c_n_s_a20fe54d566dc3592d9aafbe9dfb7fa87}{ns\+\_\+per\+\_\+tsc\+\_\+}}
+\item 
+int64\+\_\+t \mbox{\hyperlink{class_t_s_c_n_s_aaa4aa1c1d47f938e1eedde064d96bb3f}{base\+\_\+tsc\+\_\+}}
+\item 
+int64\+\_\+t \mbox{\hyperlink{class_t_s_c_n_s_a6599f4a706d67c2d97826b25d3496872}{base\+\_\+ns\+\_\+}}
+\item 
+int64\+\_\+t \mbox{\hyperlink{class_t_s_c_n_s_aa883af2ba0e54a6eefe24df60c9c5bd8}{calibate\+\_\+interval\+\_\+ns\+\_\+}}
+\item 
+int64\+\_\+t \mbox{\hyperlink{class_t_s_c_n_s_a7d4e1fae4d66946996f2d333052cbf13}{base\+\_\+ns\+\_\+err\+\_\+}}
+\item 
+int64\+\_\+t \mbox{\hyperlink{class_t_s_c_n_s_a0833479cf49c54f238b8e5e48a440aed}{next\+\_\+calibrate\+\_\+tsc\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int64\+\_\+t \mbox{\hyperlink{class_t_s_c_n_s_aeddd431252e4b6a689c48564ddbd0775}{Ns\+Per\+Sec}} = 1000000000
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_t_s_c_n_s_adc1b7428aa1d9bba84b027c89b48cdbc}\index{TSCNS@{TSCNS}!calibrate@{calibrate}}
+\index{calibrate@{calibrate}!TSCNS@{TSCNS}}
+\doxysubsubsection{\texorpdfstring{calibrate()}{calibrate()}}
+{\footnotesize\ttfamily \label{class_t_s_c_n_s_adc1b7428aa1d9bba84b027c89b48cdbc} 
+void TSCNS\+::calibrate (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_t_s_c_n_s_a0b1598e6b497ee8a1f21f52ca0cfa90d}\index{TSCNS@{TSCNS}!getTscGhz@{getTscGhz}}
+\index{getTscGhz@{getTscGhz}!TSCNS@{TSCNS}}
+\doxysubsubsection{\texorpdfstring{getTscGhz()}{getTscGhz()}}
+{\footnotesize\ttfamily \label{class_t_s_c_n_s_a0b1598e6b497ee8a1f21f52ca0cfa90d} 
+double TSCNS\+::get\+Tsc\+Ghz (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_t_s_c_n_s_a9d8f06c6a8c5deae3ab1c3cd5fd5d0b4}\index{TSCNS@{TSCNS}!init@{init}}
+\index{init@{init}!TSCNS@{TSCNS}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \label{class_t_s_c_n_s_a9d8f06c6a8c5deae3ab1c3cd5fd5d0b4} 
+void TSCNS\+::init (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{init\+\_\+calibrate\+\_\+ns}{ = {\ttfamily 20000000}, }\item[{int64\+\_\+t}]{calibrate\+\_\+interval\+\_\+ns}{ = {\ttfamily 3~\texorpdfstring{$\ast$}{*}~NsPerSec}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_t_s_c_n_s_abb46ce8ec9414fb665c2192ccf0e6643}\index{TSCNS@{TSCNS}!rdns@{rdns}}
+\index{rdns@{rdns}!TSCNS@{TSCNS}}
+\doxysubsubsection{\texorpdfstring{rdns()}{rdns()}}
+{\footnotesize\ttfamily \label{class_t_s_c_n_s_abb46ce8ec9414fb665c2192ccf0e6643} 
+int64\+\_\+t TSCNS\+::rdns (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_t_s_c_n_s_a2a8b74737438bd8ba67c3b20fd41a9e9}\index{TSCNS@{TSCNS}!rdsysns@{rdsysns}}
+\index{rdsysns@{rdsysns}!TSCNS@{TSCNS}}
+\doxysubsubsection{\texorpdfstring{rdsysns()}{rdsysns()}}
+{\footnotesize\ttfamily \label{class_t_s_c_n_s_a2a8b74737438bd8ba67c3b20fd41a9e9} 
+static int64\+\_\+t TSCNS\+::rdsysns (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_t_s_c_n_s_a88dd3c1b13b54460d474a62e4b4ee81e}\index{TSCNS@{TSCNS}!rdtsc@{rdtsc}}
+\index{rdtsc@{rdtsc}!TSCNS@{TSCNS}}
+\doxysubsubsection{\texorpdfstring{rdtsc()}{rdtsc()}}
+{\footnotesize\ttfamily \label{class_t_s_c_n_s_a88dd3c1b13b54460d474a62e4b4ee81e} 
+static int64\+\_\+t TSCNS\+::rdtsc (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_t_s_c_n_s_a97256856679759658689c1b77c17fc54}\index{TSCNS@{TSCNS}!saveParam@{saveParam}}
+\index{saveParam@{saveParam}!TSCNS@{TSCNS}}
+\doxysubsubsection{\texorpdfstring{saveParam()}{saveParam()}}
+{\footnotesize\ttfamily \label{class_t_s_c_n_s_a97256856679759658689c1b77c17fc54} 
+void TSCNS\+::save\+Param (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{base\+\_\+tsc}{, }\item[{int64\+\_\+t}]{base\+\_\+ns}{, }\item[{int64\+\_\+t}]{sys\+\_\+ns}{, }\item[{double}]{new\+\_\+ns\+\_\+per\+\_\+tsc}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_t_s_c_n_s_a0abf6d65933748824ad95ba8b6bf0eae}\index{TSCNS@{TSCNS}!syncTime@{syncTime}}
+\index{syncTime@{syncTime}!TSCNS@{TSCNS}}
+\doxysubsubsection{\texorpdfstring{syncTime()}{syncTime()}}
+{\footnotesize\ttfamily \label{class_t_s_c_n_s_a0abf6d65933748824ad95ba8b6bf0eae} 
+static void TSCNS\+::sync\+Time (\begin{DoxyParamCaption}\item[{int64\+\_\+t \&}]{tsc\+\_\+out}{, }\item[{int64\+\_\+t \&}]{ns\+\_\+out}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_t_s_c_n_s_ac17dd50f3a5ca98322946b45d939ea1d}\index{TSCNS@{TSCNS}!tsc2ns@{tsc2ns}}
+\index{tsc2ns@{tsc2ns}!TSCNS@{TSCNS}}
+\doxysubsubsection{\texorpdfstring{tsc2ns()}{tsc2ns()}}
+{\footnotesize\ttfamily \label{class_t_s_c_n_s_ac17dd50f3a5ca98322946b45d939ea1d} 
+int64\+\_\+t TSCNS\+::tsc2ns (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{tsc}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_t_s_c_n_s_a6599f4a706d67c2d97826b25d3496872}\index{TSCNS@{TSCNS}!base\_ns\_@{base\_ns\_}}
+\index{base\_ns\_@{base\_ns\_}!TSCNS@{TSCNS}}
+\doxysubsubsection{\texorpdfstring{base\_ns\_}{base\_ns\_}}
+{\footnotesize\ttfamily \label{class_t_s_c_n_s_a6599f4a706d67c2d97826b25d3496872} 
+int64\+\_\+t TSCNS\+::base\+\_\+ns\+\_\+}
+
+\Hypertarget{class_t_s_c_n_s_a7d4e1fae4d66946996f2d333052cbf13}\index{TSCNS@{TSCNS}!base\_ns\_err\_@{base\_ns\_err\_}}
+\index{base\_ns\_err\_@{base\_ns\_err\_}!TSCNS@{TSCNS}}
+\doxysubsubsection{\texorpdfstring{base\_ns\_err\_}{base\_ns\_err\_}}
+{\footnotesize\ttfamily \label{class_t_s_c_n_s_a7d4e1fae4d66946996f2d333052cbf13} 
+int64\+\_\+t TSCNS\+::base\+\_\+ns\+\_\+err\+\_\+}
+
+\Hypertarget{class_t_s_c_n_s_aaa4aa1c1d47f938e1eedde064d96bb3f}\index{TSCNS@{TSCNS}!base\_tsc\_@{base\_tsc\_}}
+\index{base\_tsc\_@{base\_tsc\_}!TSCNS@{TSCNS}}
+\doxysubsubsection{\texorpdfstring{base\_tsc\_}{base\_tsc\_}}
+{\footnotesize\ttfamily \label{class_t_s_c_n_s_aaa4aa1c1d47f938e1eedde064d96bb3f} 
+int64\+\_\+t TSCNS\+::base\+\_\+tsc\+\_\+}
+
+\Hypertarget{class_t_s_c_n_s_aa883af2ba0e54a6eefe24df60c9c5bd8}\index{TSCNS@{TSCNS}!calibate\_interval\_ns\_@{calibate\_interval\_ns\_}}
+\index{calibate\_interval\_ns\_@{calibate\_interval\_ns\_}!TSCNS@{TSCNS}}
+\doxysubsubsection{\texorpdfstring{calibate\_interval\_ns\_}{calibate\_interval\_ns\_}}
+{\footnotesize\ttfamily \label{class_t_s_c_n_s_aa883af2ba0e54a6eefe24df60c9c5bd8} 
+int64\+\_\+t TSCNS\+::calibate\+\_\+interval\+\_\+ns\+\_\+}
+
+\Hypertarget{class_t_s_c_n_s_a0833479cf49c54f238b8e5e48a440aed}\index{TSCNS@{TSCNS}!next\_calibrate\_tsc\_@{next\_calibrate\_tsc\_}}
+\index{next\_calibrate\_tsc\_@{next\_calibrate\_tsc\_}!TSCNS@{TSCNS}}
+\doxysubsubsection{\texorpdfstring{next\_calibrate\_tsc\_}{next\_calibrate\_tsc\_}}
+{\footnotesize\ttfamily \label{class_t_s_c_n_s_a0833479cf49c54f238b8e5e48a440aed} 
+int64\+\_\+t TSCNS\+::next\+\_\+calibrate\+\_\+tsc\+\_\+}
+
+\Hypertarget{class_t_s_c_n_s_a20fe54d566dc3592d9aafbe9dfb7fa87}\index{TSCNS@{TSCNS}!ns\_per\_tsc\_@{ns\_per\_tsc\_}}
+\index{ns\_per\_tsc\_@{ns\_per\_tsc\_}!TSCNS@{TSCNS}}
+\doxysubsubsection{\texorpdfstring{ns\_per\_tsc\_}{ns\_per\_tsc\_}}
+{\footnotesize\ttfamily \label{class_t_s_c_n_s_a20fe54d566dc3592d9aafbe9dfb7fa87} 
+double TSCNS\+::ns\+\_\+per\+\_\+tsc\+\_\+}
+
+\Hypertarget{class_t_s_c_n_s_aeddd431252e4b6a689c48564ddbd0775}\index{TSCNS@{TSCNS}!NsPerSec@{NsPerSec}}
+\index{NsPerSec@{NsPerSec}!TSCNS@{TSCNS}}
+\doxysubsubsection{\texorpdfstring{NsPerSec}{NsPerSec}}
+{\footnotesize\ttfamily \label{class_t_s_c_n_s_aeddd431252e4b6a689c48564ddbd0775} 
+const int64\+\_\+t TSCNS\+::\+Ns\+Per\+Sec = 1000000000\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_t_s_c_n_s_a9f794941dfdfa43030285220d9a73e81}\index{TSCNS@{TSCNS}!param\_seq\_@{param\_seq\_}}
+\index{param\_seq\_@{param\_seq\_}!TSCNS@{TSCNS}}
+\doxysubsubsection{\texorpdfstring{param\_seq\_}{param\_seq\_}}
+{\footnotesize\ttfamily \label{class_t_s_c_n_s_a9f794941dfdfa43030285220d9a73e81} 
+std\+::atomic$<$uint32\+\_\+t$>$ TSCNS\+::param\+\_\+seq\+\_\+ = 0}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sgaer/source/repos/katanafinancial/\+Occam\+CME4/\+Occam\+CME4/src/external/tscns/tscns.\+h\end{DoxyCompactItemize}

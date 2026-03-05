@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_security_definition_request_msg_1_1_block_data" xml:lang="en-US">
+<title>KTN::CME::IL3::SecurityDefinitionRequestMsg::BlockData Struct Reference</title>
+<indexterm><primary>KTN::CME::IL3::SecurityDefinitionRequestMsg::BlockData</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_security_definition_request_msg_1_1_block_data_1aa6d64f20ecb934f503545e8ec8f49955">PartyDetailsListReqID</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_security_definition_request_msg_1_1_block_data_1ab90e8175e9542dad5b37425b83114e3a">SecurityReqID</link></para>
+</listitem>
+            <listitem><para>EnumManualOrdIndReq <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_security_definition_request_msg_1_1_block_data_1af266fa142b7742d62d96e0e87b62a96c">ManualOrderIndicator</link></para>
+</listitem>
+            <listitem><para>uInt32 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_security_definition_request_msg_1_1_block_data_1a3851be241ca726048d2278991a844139">SeqNum</link></para>
+</listitem>
+            <listitem><para>String20 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_security_definition_request_msg_1_1_block_data_1a2610f4f2f14203454dea1533e2081c30">SenderID</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_security_definition_request_msg_1_1_block_data_1a14a5fcdab38b8f4d01ed826e4de8aaf4">SendingTimeEpoch</link></para>
+</listitem>
+            <listitem><para>String8Req <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_security_definition_request_msg_1_1_block_data_1a6fe66b407e852ace5e3f36da23a27324">SecuritySubType</link></para>
+</listitem>
+            <listitem><para>String5Req <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_security_definition_request_msg_1_1_block_data_1a36ab84cb23f046dd185e12019e57247e">Location</link></para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_security_definition_request_msg_1_1_block_data_1ad524e2c3a220dec722089c37f887c124">StartDate</link></para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_security_definition_request_msg_1_1_block_data_1aedeac301967f1432eb1ee21c7b44f4f3">EndDate</link></para>
+</listitem>
+            <listitem><para>uInt8NULL <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_security_definition_request_msg_1_1_block_data_1a5f5c68fc592c017004da2a855f1eed4e">MaxNoOfSubstitutions</link></para>
+</listitem>
+            <listitem><para>Int32NULL <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_security_definition_request_msg_1_1_block_data_1aeb094cc3807ad940c31958c5e8747a6c">SourceRepoID</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_security_definition_request_msg_1_1_block_data_1aedeac301967f1432eb1ee21c7b44f4f3"/><section>
+    <title>EndDate</title>
+<indexterm><primary>EndDate</primary><secondary>KTN::CME::IL3::SecurityDefinitionRequestMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::SecurityDefinitionRequestMsg::BlockData</primary><secondary>EndDate</secondary></indexterm>
+<para><computeroutput>uint16_t KTN::CME::IL3::SecurityDefinitionRequestMsg::BlockData::EndDate</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_security_definition_request_msg_1_1_block_data_1a36ab84cb23f046dd185e12019e57247e"/><section>
+    <title>Location</title>
+<indexterm><primary>Location</primary><secondary>KTN::CME::IL3::SecurityDefinitionRequestMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::SecurityDefinitionRequestMsg::BlockData</primary><secondary>Location</secondary></indexterm>
+<para><computeroutput>String5Req KTN::CME::IL3::SecurityDefinitionRequestMsg::BlockData::Location</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_security_definition_request_msg_1_1_block_data_1af266fa142b7742d62d96e0e87b62a96c"/><section>
+    <title>ManualOrderIndicator</title>
+<indexterm><primary>ManualOrderIndicator</primary><secondary>KTN::CME::IL3::SecurityDefinitionRequestMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::SecurityDefinitionRequestMsg::BlockData</primary><secondary>ManualOrderIndicator</secondary></indexterm>
+<para><computeroutput>EnumManualOrdIndReq KTN::CME::IL3::SecurityDefinitionRequestMsg::BlockData::ManualOrderIndicator</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_security_definition_request_msg_1_1_block_data_1a5f5c68fc592c017004da2a855f1eed4e"/><section>
+    <title>MaxNoOfSubstitutions</title>
+<indexterm><primary>MaxNoOfSubstitutions</primary><secondary>KTN::CME::IL3::SecurityDefinitionRequestMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::SecurityDefinitionRequestMsg::BlockData</primary><secondary>MaxNoOfSubstitutions</secondary></indexterm>
+<para><computeroutput>uInt8NULL KTN::CME::IL3::SecurityDefinitionRequestMsg::BlockData::MaxNoOfSubstitutions</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_security_definition_request_msg_1_1_block_data_1aa6d64f20ecb934f503545e8ec8f49955"/><section>
+    <title>PartyDetailsListReqID</title>
+<indexterm><primary>PartyDetailsListReqID</primary><secondary>KTN::CME::IL3::SecurityDefinitionRequestMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::SecurityDefinitionRequestMsg::BlockData</primary><secondary>PartyDetailsListReqID</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::SecurityDefinitionRequestMsg::BlockData::PartyDetailsListReqID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_security_definition_request_msg_1_1_block_data_1ab90e8175e9542dad5b37425b83114e3a"/><section>
+    <title>SecurityReqID</title>
+<indexterm><primary>SecurityReqID</primary><secondary>KTN::CME::IL3::SecurityDefinitionRequestMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::SecurityDefinitionRequestMsg::BlockData</primary><secondary>SecurityReqID</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::SecurityDefinitionRequestMsg::BlockData::SecurityReqID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_security_definition_request_msg_1_1_block_data_1a6fe66b407e852ace5e3f36da23a27324"/><section>
+    <title>SecuritySubType</title>
+<indexterm><primary>SecuritySubType</primary><secondary>KTN::CME::IL3::SecurityDefinitionRequestMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::SecurityDefinitionRequestMsg::BlockData</primary><secondary>SecuritySubType</secondary></indexterm>
+<para><computeroutput>String8Req KTN::CME::IL3::SecurityDefinitionRequestMsg::BlockData::SecuritySubType</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_security_definition_request_msg_1_1_block_data_1a2610f4f2f14203454dea1533e2081c30"/><section>
+    <title>SenderID</title>
+<indexterm><primary>SenderID</primary><secondary>KTN::CME::IL3::SecurityDefinitionRequestMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::SecurityDefinitionRequestMsg::BlockData</primary><secondary>SenderID</secondary></indexterm>
+<para><computeroutput>String20 KTN::CME::IL3::SecurityDefinitionRequestMsg::BlockData::SenderID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_security_definition_request_msg_1_1_block_data_1a14a5fcdab38b8f4d01ed826e4de8aaf4"/><section>
+    <title>SendingTimeEpoch</title>
+<indexterm><primary>SendingTimeEpoch</primary><secondary>KTN::CME::IL3::SecurityDefinitionRequestMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::SecurityDefinitionRequestMsg::BlockData</primary><secondary>SendingTimeEpoch</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::SecurityDefinitionRequestMsg::BlockData::SendingTimeEpoch</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_security_definition_request_msg_1_1_block_data_1a3851be241ca726048d2278991a844139"/><section>
+    <title>SeqNum</title>
+<indexterm><primary>SeqNum</primary><secondary>KTN::CME::IL3::SecurityDefinitionRequestMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::SecurityDefinitionRequestMsg::BlockData</primary><secondary>SeqNum</secondary></indexterm>
+<para><computeroutput>uInt32 KTN::CME::IL3::SecurityDefinitionRequestMsg::BlockData::SeqNum</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_security_definition_request_msg_1_1_block_data_1aeb094cc3807ad940c31958c5e8747a6c"/><section>
+    <title>SourceRepoID</title>
+<indexterm><primary>SourceRepoID</primary><secondary>KTN::CME::IL3::SecurityDefinitionRequestMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::SecurityDefinitionRequestMsg::BlockData</primary><secondary>SourceRepoID</secondary></indexterm>
+<para><computeroutput>Int32NULL KTN::CME::IL3::SecurityDefinitionRequestMsg::BlockData::SourceRepoID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_security_definition_request_msg_1_1_block_data_1ad524e2c3a220dec722089c37f887c124"/><section>
+    <title>StartDate</title>
+<indexterm><primary>StartDate</primary><secondary>KTN::CME::IL3::SecurityDefinitionRequestMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::SecurityDefinitionRequestMsg::BlockData</primary><secondary>StartDate</secondary></indexterm>
+<para><computeroutput>uint16_t KTN::CME::IL3::SecurityDefinitionRequestMsg::BlockData::StartDate</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+exchsupport/cme/il3/IL3Messages2.hpp</section>
+</section>

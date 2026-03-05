@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_core_1_1_mem_pool" xml:lang="en-US">
+<title>KTN::Core::MemPool&lt; T &gt; Class Template Reference</title>
+<indexterm><primary>KTN::Core::MemPool&lt; T &gt;</primary></indexterm>
+<para>
+
+<para>A memory pool implementation for efficient object allocation and deallocation. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;MemPool.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_core_1_1_mem_pool_1a8d593761605251508450bb1a3a3225ff">MemPool</link> (std::size_t num_elems)</para>
+
+<para>Constructs a memory pool with a specified number of elements. </para>
+</listitem>
+            <listitem><para>template&lt;typename... Args&gt; </para><para>T * <link linkend="_class_k_t_n_1_1_core_1_1_mem_pool_1ae0bda57059d8e1fcbded5b9ff1c4e595">allocate</link> (Args... args) noexcept</para>
+
+<para>Allocates an object from the memory pool. </para>
+</listitem>
+            <listitem><para>auto <link linkend="_class_k_t_n_1_1_core_1_1_mem_pool_1a00ec3f90ac2458a7590fefc1e5951b95">deallocate</link> (const T *elem) noexcept</para>
+
+<para>Deallocates an object from the memory pool. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_k_t_n_1_1_core_1_1_mem_pool_1a39a981b4c234392c830633b21640847f"/><emphasis role="strong">MemPool</emphasis> (const <link linkend="_class_k_t_n_1_1_core_1_1_mem_pool">MemPool</link> &amp;)=delete</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_k_t_n_1_1_core_1_1_mem_pool_1a258e3fd357de9830caf363e4c82f2ca4"/><emphasis role="strong">MemPool</emphasis> (const <link linkend="_class_k_t_n_1_1_core_1_1_mem_pool">MemPool</link> &amp;&amp;)=delete</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_k_t_n_1_1_core_1_1_mem_pool_1a32be344f86f5f03d20303a77aad9a4a9"/><link linkend="_class_k_t_n_1_1_core_1_1_mem_pool">MemPool</link> &amp; <emphasis role="strong">operator=</emphasis> (const <link linkend="_class_k_t_n_1_1_core_1_1_mem_pool">MemPool</link> &amp;)=delete</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_k_t_n_1_1_core_1_1_mem_pool_1a99bf05b8de0e5d5a577b848d37a47035"/><link linkend="_class_k_t_n_1_1_core_1_1_mem_pool">MemPool</link> &amp; <emphasis role="strong">operator=</emphasis> (const <link linkend="_class_k_t_n_1_1_core_1_1_mem_pool">MemPool</link> &amp;&amp;)=delete</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;typename T&gt;<?linebreak?>class KTN::Core::MemPool&lt; T &gt;</title></simplesect>
+
+<para>A memory pool implementation for efficient object allocation and deallocation. </para>
+
+
+
+<para>
+                <formalpara>
+                    <title>
+Template Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>T</entry><entry>
+<para>The type of objects to be stored in the memory pool. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_mem_pool_1a8d593761605251508450bb1a3a3225ff"/><section>
+    <title>MemPool()</title>
+<indexterm><primary>MemPool</primary><secondary>KTN::Core::MemPool&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>KTN::Core::MemPool&lt; T &gt;</primary><secondary>MemPool</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput><link linkend="_class_k_t_n_1_1_core_1_1_mem_pool">KTN::Core::MemPool</link>&lt; T &gt;::MemPool (std::size_t num_elems)<computeroutput>[inline]</computeroutput>, <computeroutput>[explicit]</computeroutput></computeroutput></para><para>
+
+<para>Constructs a memory pool with a specified number of elements. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>num_elems</entry><entry>
+<para>The number of elements to pre-allocate in the memory pool. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_mem_pool_1ae0bda57059d8e1fcbded5b9ff1c4e595"/><section>
+    <title>allocate()</title>
+<indexterm><primary>allocate</primary><secondary>KTN::Core::MemPool&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>KTN::Core::MemPool&lt; T &gt;</primary><secondary>allocate</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><computeroutput>template&lt;typename... Args&gt; </computeroutput><para><computeroutput>T * <link linkend="_class_k_t_n_1_1_core_1_1_mem_pool">KTN::Core::MemPool</link>&lt; T &gt;::allocate (Args... args)<computeroutput>[inline]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+
+<para>Allocates an object from the memory pool. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Template Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Args</entry><entry>
+<para>The types of arguments to be passed to the object&apos;s constructor. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>args</entry><entry>
+<para>The arguments to be passed to the object&apos;s constructor. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>T* A pointer to the allocated object. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_mem_pool_1a00ec3f90ac2458a7590fefc1e5951b95"/><section>
+    <title>deallocate()</title>
+<indexterm><primary>deallocate</primary><secondary>KTN::Core::MemPool&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>KTN::Core::MemPool&lt; T &gt;</primary><secondary>deallocate</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>auto <link linkend="_class_k_t_n_1_1_core_1_1_mem_pool">KTN::Core::MemPool</link>&lt; T &gt;::deallocate (const T * elem)<computeroutput>[inline]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+
+<para>Deallocates an object from the memory pool. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>elem</entry><entry>
+<para>A pointer to the object to be deallocated. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Core/MemPool.hpp</section>
+</section>

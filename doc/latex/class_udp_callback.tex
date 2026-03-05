@@ -1,0 +1,74 @@
+\doxysection{Udp\+Callback Class Reference}
+\hypertarget{class_udp_callback}{}\label{class_udp_callback}\index{UdpCallback@{UdpCallback}}
+
+
+Represents a callback interface for UDP data reception.  
+
+
+
+
+{\ttfamily \#include $<$Udp\+Callback.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_udp_callback_a2d6d52e24a188f6fea865096ab91dc34}{Udp\+Callback}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_udp_callback_a471a94b47fa36c46f1f1d8ffae600b25}{\texorpdfstring{$\sim$}{\string~}\+Udp\+Callback}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_udp_callback_ad6665230e8a8c2b3efaa70c90b04b6d8}{on\+Recv}} (char \texorpdfstring{$\ast$}{*}data, int len, int source)=0
+\begin{DoxyCompactList}\small\item\em Called when UDP data is received. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a callback interface for UDP data reception. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_udp_callback_a2d6d52e24a188f6fea865096ab91dc34}\index{UdpCallback@{UdpCallback}!UdpCallback@{UdpCallback}}
+\index{UdpCallback@{UdpCallback}!UdpCallback@{UdpCallback}}
+\doxysubsubsection{\texorpdfstring{UdpCallback()}{UdpCallback()}}
+{\footnotesize\ttfamily \label{class_udp_callback_a2d6d52e24a188f6fea865096ab91dc34} 
+Udp\+Callback\+::\+Udp\+Callback (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+\Hypertarget{class_udp_callback_a471a94b47fa36c46f1f1d8ffae600b25}\index{UdpCallback@{UdpCallback}!````~UdpCallback@{\texorpdfstring{$\sim$}{\string~}UdpCallback}}
+\index{````~UdpCallback@{\texorpdfstring{$\sim$}{\string~}UdpCallback}!UdpCallback@{UdpCallback}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}UdpCallback()}{\string~UdpCallback()}}
+{\footnotesize\ttfamily \label{class_udp_callback_a471a94b47fa36c46f1f1d8ffae600b25} 
+Udp\+Callback\+::\texorpdfstring{$\sim$}{\string~}\+Udp\+Callback (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Virtual destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_udp_callback_ad6665230e8a8c2b3efaa70c90b04b6d8}\index{UdpCallback@{UdpCallback}!onRecv@{onRecv}}
+\index{onRecv@{onRecv}!UdpCallback@{UdpCallback}}
+\doxysubsubsection{\texorpdfstring{onRecv()}{onRecv()}}
+{\footnotesize\ttfamily \label{class_udp_callback_ad6665230e8a8c2b3efaa70c90b04b6d8} 
+virtual void Udp\+Callback\+::on\+Recv (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{int}]{len}{, }\item[{int}]{source}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Called when UDP data is received. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The received data. \\
+\hline
+{\em len} & The length of the received data. \\
+\hline
+{\em source} & The source of the received data. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Ktn\+Efvi/Udp\+Callback.\+hpp\item 
+Ktn\+Efvi/Udp\+Callback.\+cpp\end{DoxyCompactItemize}

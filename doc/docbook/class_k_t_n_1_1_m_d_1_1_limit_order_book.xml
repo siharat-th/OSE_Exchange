@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_m_d_1_1_limit_order_book" xml:lang="en-US">
+<title>KTN::MD::LimitOrderBook Class Reference</title>
+<indexterm><primary>KTN::MD::LimitOrderBook</primary></indexterm>
+<para>Inheritance diagram for KTN::MD::LimitOrderBook:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_k_t_n_1_1_m_d_1_1_limit_order_book.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_m_d_1_1_limit_order_book_1aedadba5aa58bbd957305a5ef6d606619">LimitOrderBook</link> (int precision, int depth)</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_m_d_1_1_limit_order_book_1a397f122c2e0c64e13956c60abec66751">add_order</link> (const <link linkend="_class_k_t_n_1_1_m_d_1_1_md_order">MdOrder</link> &amp;order, bool is_bid)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_m_d_1_1_limit_order_book_1a154dce1c2ce97cdbeaf259be9af07d16">update_order</link> (const <link linkend="_class_k_t_n_1_1_m_d_1_1_md_order">MdOrder</link> &amp;order, bool is_bid)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_m_d_1_1_limit_order_book_1a6fae2630dda0bd9c3515a3458e434575">delete_order</link> (const <link linkend="_class_k_t_n_1_1_m_d_1_1_md_order">MdOrder</link> &amp;order, bool is_bid)</para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_k_t_n_1_1_m_d_1_1_md_order">MdOrder</link> <link linkend="_class_k_t_n_1_1_m_d_1_1_limit_order_book_1afd01835759f6db8770479ef51a974ca2">get_best_bid</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_k_t_n_1_1_m_d_1_1_md_order">MdOrder</link> <link linkend="_class_k_t_n_1_1_m_d_1_1_limit_order_book_1afad5cb88ef2e3dee7ff1396aa7789d59">get_lowest_bid</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_k_t_n_1_1_m_d_1_1_md_order">MdOrder</link> <link linkend="_class_k_t_n_1_1_m_d_1_1_limit_order_book_1a59af9259c00b5b696c6ecf8d2f4e9c9a">get_best_offer</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_k_t_n_1_1_m_d_1_1_md_order">MdOrder</link> <link linkend="_class_k_t_n_1_1_m_d_1_1_limit_order_book_1ac2cb985e14462c788553114f3b59c390">get_highest_offer</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_m_d_1_1_limit_order_book_1af496b4db8f565183906258073e08a90a">print_bids</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_m_d_1_1_limit_order_book_1a3fa5f823ea2a3df82de53442ec56964b">print_offers</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_class_k_t_n_1_1_m_d_1_1_limit_order_book_1a55c76f78bddb793af8f5336e7eb03d89">price_to_index</link> (int32_t price, bool is_bid, bool update_pointers=true)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_m_d_1_1_md_order">MdOrder</link> * <link linkend="_class_k_t_n_1_1_m_d_1_1_limit_order_book_1afc5ff6663f1dcb8f296ddeee52c1d524">ptr_bid_ini</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_k_t_n_1_1_m_d_1_1_md_order">MdOrder</link> * <link linkend="_class_k_t_n_1_1_m_d_1_1_limit_order_book_1a473c69da77787a948d393cf4e8345490">ptr_bid_end</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_k_t_n_1_1_m_d_1_1_md_order">MdOrder</link> * <link linkend="_class_k_t_n_1_1_m_d_1_1_limit_order_book_1a94626f094f8e12e1bb6c9f9823301950">ptr_offer_ini</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_k_t_n_1_1_m_d_1_1_md_order">MdOrder</link> * <link linkend="_class_k_t_n_1_1_m_d_1_1_limit_order_book_1a3c201d8fa0d9c9205901bcbc852ddc7a">ptr_offer_end</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_m_d_1_1_limit_order_book_1aedadba5aa58bbd957305a5ef6d606619"/><section>
+    <title>LimitOrderBook()</title>
+<indexterm><primary>LimitOrderBook</primary><secondary>KTN::MD::LimitOrderBook</secondary></indexterm>
+<indexterm><primary>KTN::MD::LimitOrderBook</primary><secondary>LimitOrderBook</secondary></indexterm>
+<para><computeroutput>KTN::MD::LimitOrderBook::LimitOrderBook (int precision, int depth)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_m_d_1_1_limit_order_book_1a397f122c2e0c64e13956c60abec66751"/><section>
+    <title>add_order()</title>
+<indexterm><primary>add_order</primary><secondary>KTN::MD::LimitOrderBook</secondary></indexterm>
+<indexterm><primary>KTN::MD::LimitOrderBook</primary><secondary>add_order</secondary></indexterm>
+<para><computeroutput>virtual void KTN::MD::LimitOrderBook::add_order (const <link linkend="_class_k_t_n_1_1_m_d_1_1_md_order">MdOrder</link> &amp; order, bool is_bid)<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented in <link linkend="_class_k_t_n_1_1_m_d_1_1_lock_free_limit_order_book_1ad58a4f200bc6db5587103c5a10a6e40f">KTN::MD::LockFreeLimitOrderBook</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_m_d_1_1_limit_order_book_1a6fae2630dda0bd9c3515a3458e434575"/><section>
+    <title>delete_order()</title>
+<indexterm><primary>delete_order</primary><secondary>KTN::MD::LimitOrderBook</secondary></indexterm>
+<indexterm><primary>KTN::MD::LimitOrderBook</primary><secondary>delete_order</secondary></indexterm>
+<para><computeroutput>void KTN::MD::LimitOrderBook::delete_order (const <link linkend="_class_k_t_n_1_1_m_d_1_1_md_order">MdOrder</link> &amp; order, bool is_bid)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_m_d_1_1_limit_order_book_1afd01835759f6db8770479ef51a974ca2"/><section>
+    <title>get_best_bid()</title>
+<indexterm><primary>get_best_bid</primary><secondary>KTN::MD::LimitOrderBook</secondary></indexterm>
+<indexterm><primary>KTN::MD::LimitOrderBook</primary><secondary>get_best_bid</secondary></indexterm>
+<para><computeroutput>virtual <link linkend="_class_k_t_n_1_1_m_d_1_1_md_order">MdOrder</link> KTN::MD::LimitOrderBook::get_best_bid ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented in <link linkend="_class_k_t_n_1_1_m_d_1_1_lock_free_limit_order_book_1af292fd038277e99f2983eab54a08f3b2">KTN::MD::LockFreeLimitOrderBook</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_m_d_1_1_limit_order_book_1a59af9259c00b5b696c6ecf8d2f4e9c9a"/><section>
+    <title>get_best_offer()</title>
+<indexterm><primary>get_best_offer</primary><secondary>KTN::MD::LimitOrderBook</secondary></indexterm>
+<indexterm><primary>KTN::MD::LimitOrderBook</primary><secondary>get_best_offer</secondary></indexterm>
+<para><computeroutput><link linkend="_class_k_t_n_1_1_m_d_1_1_md_order">MdOrder</link> KTN::MD::LimitOrderBook::get_best_offer ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_m_d_1_1_limit_order_book_1ac2cb985e14462c788553114f3b59c390"/><section>
+    <title>get_highest_offer()</title>
+<indexterm><primary>get_highest_offer</primary><secondary>KTN::MD::LimitOrderBook</secondary></indexterm>
+<indexterm><primary>KTN::MD::LimitOrderBook</primary><secondary>get_highest_offer</secondary></indexterm>
+<para><computeroutput><link linkend="_class_k_t_n_1_1_m_d_1_1_md_order">MdOrder</link> KTN::MD::LimitOrderBook::get_highest_offer ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_m_d_1_1_limit_order_book_1afad5cb88ef2e3dee7ff1396aa7789d59"/><section>
+    <title>get_lowest_bid()</title>
+<indexterm><primary>get_lowest_bid</primary><secondary>KTN::MD::LimitOrderBook</secondary></indexterm>
+<indexterm><primary>KTN::MD::LimitOrderBook</primary><secondary>get_lowest_bid</secondary></indexterm>
+<para><computeroutput><link linkend="_class_k_t_n_1_1_m_d_1_1_md_order">MdOrder</link> KTN::MD::LimitOrderBook::get_lowest_bid ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_m_d_1_1_limit_order_book_1a55c76f78bddb793af8f5336e7eb03d89"/><section>
+    <title>price_to_index()</title>
+<indexterm><primary>price_to_index</primary><secondary>KTN::MD::LimitOrderBook</secondary></indexterm>
+<indexterm><primary>KTN::MD::LimitOrderBook</primary><secondary>price_to_index</secondary></indexterm>
+<para><computeroutput>int KTN::MD::LimitOrderBook::price_to_index (int32_t price, bool is_bid, bool update_pointers = <computeroutput>true</computeroutput>
+)<computeroutput>[inline]</computeroutput>, <computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_m_d_1_1_limit_order_book_1af496b4db8f565183906258073e08a90a"/><section>
+    <title>print_bids()</title>
+<indexterm><primary>print_bids</primary><secondary>KTN::MD::LimitOrderBook</secondary></indexterm>
+<indexterm><primary>KTN::MD::LimitOrderBook</primary><secondary>print_bids</secondary></indexterm>
+<para><computeroutput>void KTN::MD::LimitOrderBook::print_bids ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_m_d_1_1_limit_order_book_1a3fa5f823ea2a3df82de53442ec56964b"/><section>
+    <title>print_offers()</title>
+<indexterm><primary>print_offers</primary><secondary>KTN::MD::LimitOrderBook</secondary></indexterm>
+<indexterm><primary>KTN::MD::LimitOrderBook</primary><secondary>print_offers</secondary></indexterm>
+<para><computeroutput>void KTN::MD::LimitOrderBook::print_offers ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_m_d_1_1_limit_order_book_1a154dce1c2ce97cdbeaf259be9af07d16"/><section>
+    <title>update_order()</title>
+<indexterm><primary>update_order</primary><secondary>KTN::MD::LimitOrderBook</secondary></indexterm>
+<indexterm><primary>KTN::MD::LimitOrderBook</primary><secondary>update_order</secondary></indexterm>
+<para><computeroutput>void KTN::MD::LimitOrderBook::update_order (const <link linkend="_class_k_t_n_1_1_m_d_1_1_md_order">MdOrder</link> &amp; order, bool is_bid)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_m_d_1_1_limit_order_book_1a473c69da77787a948d393cf4e8345490"/><section>
+    <title>ptr_bid_end</title>
+<indexterm><primary>ptr_bid_end</primary><secondary>KTN::MD::LimitOrderBook</secondary></indexterm>
+<indexterm><primary>KTN::MD::LimitOrderBook</primary><secondary>ptr_bid_end</secondary></indexterm>
+<para><computeroutput><link linkend="_class_k_t_n_1_1_m_d_1_1_md_order">MdOrder</link>* KTN::MD::LimitOrderBook::ptr_bid_end<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_m_d_1_1_limit_order_book_1afc5ff6663f1dcb8f296ddeee52c1d524"/><section>
+    <title>ptr_bid_ini</title>
+<indexterm><primary>ptr_bid_ini</primary><secondary>KTN::MD::LimitOrderBook</secondary></indexterm>
+<indexterm><primary>KTN::MD::LimitOrderBook</primary><secondary>ptr_bid_ini</secondary></indexterm>
+<para><computeroutput><link linkend="_class_k_t_n_1_1_m_d_1_1_md_order">MdOrder</link>* KTN::MD::LimitOrderBook::ptr_bid_ini<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_m_d_1_1_limit_order_book_1a3c201d8fa0d9c9205901bcbc852ddc7a"/><section>
+    <title>ptr_offer_end</title>
+<indexterm><primary>ptr_offer_end</primary><secondary>KTN::MD::LimitOrderBook</secondary></indexterm>
+<indexterm><primary>KTN::MD::LimitOrderBook</primary><secondary>ptr_offer_end</secondary></indexterm>
+<para><computeroutput><link linkend="_class_k_t_n_1_1_m_d_1_1_md_order">MdOrder</link>* KTN::MD::LimitOrderBook::ptr_offer_end<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_m_d_1_1_limit_order_book_1a94626f094f8e12e1bb6c9f9823301950"/><section>
+    <title>ptr_offer_ini</title>
+<indexterm><primary>ptr_offer_ini</primary><secondary>KTN::MD::LimitOrderBook</secondary></indexterm>
+<indexterm><primary>KTN::MD::LimitOrderBook</primary><secondary>ptr_offer_ini</secondary></indexterm>
+<para><computeroutput><link linkend="_class_k_t_n_1_1_m_d_1_1_md_order">MdOrder</link>* KTN::MD::LimitOrderBook::ptr_offer_ini<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+OrderBook/circular_array.hpp</section>
+</section>

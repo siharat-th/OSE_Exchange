@@ -1,0 +1,59 @@
+\doxysection{ILogger Class Reference}
+\hypertarget{class_i_logger}{}\label{class_i_logger}\index{ILogger@{ILogger}}
+
+
+The \doxylink{class_i_logger}{ILogger} class is an interface for logging messages.  
+
+
+
+
+{\ttfamily \#include $<$ILogger.\+hpp$>$}
+
+Inheritance diagram for ILogger\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_i_logger}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_i_logger_ad5d37badb7f177d73bb0344109ff847d}\label{class_i_logger_ad5d37badb7f177d73bb0344109ff847d} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+ILogger} ()=default
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{class_i_logger}{ILogger} class. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_i_logger_aad7dd43147c64f86da71bf6bfb488b36}{Write\+Line}} (const std\+::string \&msg, const std\+::string \&topic, int color)=0
+\begin{DoxyCompactList}\small\item\em Writes a line to the log with the specified message, topic, and color. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_i_logger}{ILogger} class is an interface for logging messages. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_i_logger_aad7dd43147c64f86da71bf6bfb488b36}\index{ILogger@{ILogger}!WriteLine@{WriteLine}}
+\index{WriteLine@{WriteLine}!ILogger@{ILogger}}
+\doxysubsubsection{\texorpdfstring{WriteLine()}{WriteLine()}}
+{\footnotesize\ttfamily \label{class_i_logger_aad7dd43147c64f86da71bf6bfb488b36} 
+virtual void ILogger\+::\+Write\+Line (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{msg}{, }\item[{const std\+::string \&}]{topic}{, }\item[{int}]{color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Writes a line to the log with the specified message, topic, and color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The message to be logged. \\
+\hline
+{\em topic} & The topic of the log message. \\
+\hline
+{\em color} & The color of the log message. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_console_logger_a6785e7847dd004a6c30574c2485648c0}{Console\+Logger}}, and \mbox{\hyperlink{class_zmq_logger_ad990e9562dac546aee2d166056f8d56d}{Zmq\+Logger}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Loggers/ILogger.\+hpp\end{DoxyCompactItemize}

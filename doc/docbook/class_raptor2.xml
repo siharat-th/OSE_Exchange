@@ -1,0 +1,451 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_raptor2" xml:lang="en-US">
+<title>Raptor2 Class Reference</title>
+<indexterm><primary>Raptor2</primary></indexterm>
+<para>
+
+<para>Represents the <link linkend="_class_raptor2">Raptor2</link> Main Exchange Handler class that extends <link linkend="_class_named_thread">NamedThread</link>, <link linkend="_class_menu_callback">MenuCallback</link>, and <link linkend="_class_i_exchange_sender">IExchangeSender</link>. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;Raptor2.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for Raptor2:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_raptor2.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_raptor2_1a54edbdcbb2e2d9a063acf6ae01e34a0d">Raptor2</link> (const string &amp;settingsfile)</para>
+
+<para>Constructs a <link linkend="_class_raptor2">Raptor2</link> object with the specified settings file. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_raptor2_1a61e91776b2d061a44e29d04f3476c165">~Raptor2</link> ()</para>
+
+<para>Destroys the <link linkend="_class_raptor2">Raptor2</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_raptor2_1ab75bd2419878cbbf20af27b78c2f0a44">Stop</link> ()</para>
+
+<para>Stops the <link linkend="_class_raptor2">Raptor2</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_raptor2_1a124b3408dbd2e11b05741ec574866a01">Run</link> () override</para>
+
+<para>Runs the <link linkend="_class_raptor2">Raptor2</link> object. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_raptor2_1adb5e63a21043b383552c3ec84e92375a">Subscribe</link> (<link linkend="_class_k_t_n_1_1_session_callback">SessionCallback</link> *cb)</para>
+
+<para>Subscribes a session callback to the <link linkend="_class_raptor2">Raptor2</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_raptor2_1a2c9aaf8065d7f88ad1d5e4baf5f83a42">Send</link> (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;order, int action)</para>
+
+<para>Sends an order with the specified action to the <link linkend="_class_raptor2">Raptor2</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_raptor2_1ae0092b951a92471145191df4ae1af931">SendHedgeInstruction</link> (uint64_t ordereqid, const vector&lt; <link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3">SpreadHedgeV3</link> &gt; &amp;hdg)</para>
+
+<para>Sends a hedge instruction with the specified order request ID and hedge to the <link linkend="_class_raptor2">Raptor2</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_raptor2_1a8378cbe0ec7bb071b15962a2dba17413">SendOrderWithHedge</link> (<link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_order_with_hedge">OrderWithHedge</link> &amp;oh)</para>
+
+<para>Sends an order with hedge to the <link linkend="_class_raptor2">Raptor2</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_raptor2_1af8f482d28ded7a4f1440490ee5744783">BankTas</link> (std::string secgrp, vector&lt; <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &gt; ords)</para>
+
+<para>Banks the TAS orders with the specified security group and orders. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_raptor2_1a1d06036b89960001afa932ea60ccee2b">BankHedgeOrders</link> (uint64_t ordereqid, const vector&lt; <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &gt; &amp;ords)</para>
+
+<para>Banks the hedge orders with the specified order request ID and orders. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_raptor2_1adeed6fb8144e65ee3262ce0782610ea9">AlgoJson</link> (std::string json, ExchCmd::Enum cmd)</para>
+
+<para>Sends an algorithm JSON command with the specified JSON and command to the <link linkend="_class_raptor2">Raptor2</link> object. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_class_named_thread">NamedThread</link>        <itemizedlist>
+            <listitem><para><link linkend="_class_named_thread_1a891fabdc2d824048ec05c82e7ef8c69a">NamedThread</link> ()</para>
+
+<para>Default constructor. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_named_thread_1a018dadb59e5af98ee734301a1baa50cb">~NamedThread</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_named_thread_1a9fa42542ff43c89fb9bbc33de9c87e34">CreateAndRun</link> (string name, int core)</para>
+
+<para>Creates and runs the named thread on the specified core. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_named_thread_1ad4809c571171be13f0f91f540d5c196f">Join</link> ()</para>
+
+<para>Joins the named thread. </para>
+</listitem>
+        </itemizedlist>
+Public Member Functions inherited from <link linkend="_class_menu_callback">MenuCallback</link>        <itemizedlist>
+            <listitem><para><link linkend="_class_menu_callback_1a7499f93b958439d57e7992315fd1b64a">MenuCallback</link> ()</para>
+
+<para>Constructs a <link linkend="_class_menu_callback">MenuCallback</link> object. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_menu_callback_1ac71ee2700dd7191eab65b00344d18865">~MenuCallback</link> ()</para>
+
+<para>Destroys the <link linkend="_class_menu_callback">MenuCallback</link> object. </para>
+</listitem>
+        </itemizedlist>
+Public Member Functions inherited from <link linkend="_class_i_exchange_sender">IExchangeSender</link>        <itemizedlist>
+            <listitem><para><link linkend="_class_i_exchange_sender_1a739bdb8fb07a3bcb6ddeda98884ec921">IExchangeSender</link> ()</para>
+
+<para>Default constructor. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_i_exchange_sender_1add388c15fbe5584b737e6a39b5108e57">~IExchangeSender</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+
+<para>Represents the <link linkend="_class_raptor2">Raptor2</link> Main Exchange Handler class that extends <link linkend="_class_named_thread">NamedThread</link>, <link linkend="_class_menu_callback">MenuCallback</link>, and <link linkend="_class_i_exchange_sender">IExchangeSender</link>. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_raptor2_1a54edbdcbb2e2d9a063acf6ae01e34a0d"/><section>
+    <title>Raptor2()</title>
+<indexterm><primary>Raptor2</primary><secondary>Raptor2</secondary></indexterm>
+<indexterm><primary>Raptor2</primary><secondary>Raptor2</secondary></indexterm>
+<para><computeroutput>Raptor2::Raptor2 (const string &amp; settingsfile)</computeroutput></para><para>
+
+<para>Constructs a <link linkend="_class_raptor2">Raptor2</link> object with the specified settings file. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>settingsfile</entry><entry>
+<para>The path to the settings file. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_raptor2_1a61e91776b2d061a44e29d04f3476c165"/><section>
+    <title>~Raptor2()</title>
+<indexterm><primary>~Raptor2</primary><secondary>Raptor2</secondary></indexterm>
+<indexterm><primary>Raptor2</primary><secondary>~Raptor2</secondary></indexterm>
+<para><computeroutput>Raptor2::~Raptor2 ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Destroys the <link linkend="_class_raptor2">Raptor2</link> object. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_raptor2_1adeed6fb8144e65ee3262ce0782610ea9"/><section>
+    <title>AlgoJson()</title>
+<indexterm><primary>AlgoJson</primary><secondary>Raptor2</secondary></indexterm>
+<indexterm><primary>Raptor2</primary><secondary>AlgoJson</secondary></indexterm>
+<para><computeroutput>void Raptor2::AlgoJson (std::string json, ExchCmd::Enum cmd)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Sends an algorithm JSON command with the specified JSON and command to the <link linkend="_class_raptor2">Raptor2</link> object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>json</entry><entry>
+<para>The JSON command. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>cmd</entry><entry>
+<para>The command to perform. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implements <link linkend="_class_i_exchange_sender_1a4e02139d13d7fc3c6347b357fabf4dee">IExchangeSender</link>.</para>
+</section>
+<anchor xml:id="_class_raptor2_1a1d06036b89960001afa932ea60ccee2b"/><section>
+    <title>BankHedgeOrders()</title>
+<indexterm><primary>BankHedgeOrders</primary><secondary>Raptor2</secondary></indexterm>
+<indexterm><primary>Raptor2</primary><secondary>BankHedgeOrders</secondary></indexterm>
+<para><computeroutput>void Raptor2::BankHedgeOrders (uint64_t ordereqid, const vector&lt; <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &gt; &amp; ords)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Banks the hedge orders with the specified order request ID and orders. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ordereqid</entry><entry>
+<para>The order request ID. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>ords</entry><entry>
+<para>The orders to bank. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implements <link linkend="_class_i_exchange_sender_1abc56f34f5ee79f1aee3f0a4a0466ecca">IExchangeSender</link>.</para>
+</section>
+<anchor xml:id="_class_raptor2_1af8f482d28ded7a4f1440490ee5744783"/><section>
+    <title>BankTas()</title>
+<indexterm><primary>BankTas</primary><secondary>Raptor2</secondary></indexterm>
+<indexterm><primary>Raptor2</primary><secondary>BankTas</secondary></indexterm>
+<para><computeroutput>void Raptor2::BankTas (std::string secgrp, vector&lt; <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &gt; ords)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Banks the TAS orders with the specified security group and orders. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>secgrp</entry><entry>
+<para>The security group. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>ords</entry><entry>
+<para>The orders to bank. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implements <link linkend="_class_i_exchange_sender_1a4a6ed326c485630d21eebcd1c9ffd0d4">IExchangeSender</link>.</para>
+</section>
+<anchor xml:id="_class_raptor2_1a124b3408dbd2e11b05741ec574866a01"/><section>
+    <title>Run()</title>
+<indexterm><primary>Run</primary><secondary>Raptor2</secondary></indexterm>
+<indexterm><primary>Raptor2</primary><secondary>Run</secondary></indexterm>
+<para><computeroutput>void Raptor2::Run ( )<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Runs the <link linkend="_class_raptor2">Raptor2</link> object. </para>
+</para>
+<para>
+Implements <link linkend="_class_named_thread">NamedThread</link>.</para>
+<para>
+References <link linkend="_l00171">KTN::ExchangeManager::onCommand()</link>.</para>
+</section>
+<anchor xml:id="_class_raptor2_1a2c9aaf8065d7f88ad1d5e4baf5f83a42"/><section>
+    <title>Send()</title>
+<indexterm><primary>Send</primary><secondary>Raptor2</secondary></indexterm>
+<indexterm><primary>Raptor2</primary><secondary>Send</secondary></indexterm>
+<para><computeroutput>void Raptor2::Send (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp; order, int action)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Sends an order with the specified action to the <link linkend="_class_raptor2">Raptor2</link> object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>order</entry><entry>
+<para>The order to send. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>action</entry><entry>
+<para>The action to perform on the order. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implements <link linkend="_class_i_exchange_sender_1a069aede863c0d954221120082a8d2e00">IExchangeSender</link>.</para>
+<para>
+References <link linkend="_l00171">KTN::ExchangeManager::onCommand()</link>.</para>
+</section>
+<anchor xml:id="_class_raptor2_1ae0092b951a92471145191df4ae1af931"/><section>
+    <title>SendHedgeInstruction()</title>
+<indexterm><primary>SendHedgeInstruction</primary><secondary>Raptor2</secondary></indexterm>
+<indexterm><primary>Raptor2</primary><secondary>SendHedgeInstruction</secondary></indexterm>
+<para><computeroutput>void Raptor2::SendHedgeInstruction (uint64_t ordereqid, const vector&lt; <link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3">SpreadHedgeV3</link> &gt; &amp; hdg)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Sends a hedge instruction with the specified order request ID and hedge to the <link linkend="_class_raptor2">Raptor2</link> object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ordereqid</entry><entry>
+<para>The order request ID. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>hdg</entry><entry>
+<para>The hedge to send. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implements <link linkend="_class_i_exchange_sender_1a9e020e012fa275f3ec91a04519434cf2">IExchangeSender</link>.</para>
+<para>
+References <link linkend="_l00171">KTN::ExchangeManager::onCommand()</link>.</para>
+</section>
+<anchor xml:id="_class_raptor2_1a8378cbe0ec7bb071b15962a2dba17413"/><section>
+    <title>SendOrderWithHedge()</title>
+<indexterm><primary>SendOrderWithHedge</primary><secondary>Raptor2</secondary></indexterm>
+<indexterm><primary>Raptor2</primary><secondary>SendOrderWithHedge</secondary></indexterm>
+<para><computeroutput>void Raptor2::SendOrderWithHedge (<link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_order_with_hedge">OrderWithHedge</link> &amp; oh)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Sends an order with hedge to the <link linkend="_class_raptor2">Raptor2</link> object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>oh</entry><entry>
+<para>The order with hedge to send. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implements <link linkend="_class_i_exchange_sender_1a8af535e3d8cac167015ee8111a776e6a">IExchangeSender</link>.</para>
+<para>
+References <link linkend="_l00171">KTN::ExchangeManager::onCommand()</link>, and <link linkend="_l00037">KTN::OrderPod::orderReqId</link>.</para>
+</section>
+<anchor xml:id="_class_raptor2_1ab75bd2419878cbbf20af27b78c2f0a44"/><section>
+    <title>Stop()</title>
+<indexterm><primary>Stop</primary><secondary>Raptor2</secondary></indexterm>
+<indexterm><primary>Raptor2</primary><secondary>Stop</secondary></indexterm>
+<para><computeroutput>void Raptor2::Stop ( )</computeroutput></para><para>
+
+<para>Stops the <link linkend="_class_raptor2">Raptor2</link> object. </para>
+</para>
+<para>
+References <link linkend="_l00171">KTN::ExchangeManager::onCommand()</link>, <link linkend="_l00049">KTN::ORD::OrderHandlerZmqV6::Stop()</link>, and <link linkend="_l00074">KTN::AlgoServiceBrokerV3::StopAllAlgos()</link>.</para>
+</section>
+<anchor xml:id="_class_raptor2_1adb5e63a21043b383552c3ec84e92375a"/><section>
+    <title>Subscribe()</title>
+<indexterm><primary>Subscribe</primary><secondary>Raptor2</secondary></indexterm>
+<indexterm><primary>Raptor2</primary><secondary>Subscribe</secondary></indexterm>
+<para><computeroutput>int Raptor2::Subscribe (<link linkend="_class_k_t_n_1_1_session_callback">SessionCallback</link> * cb)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Subscribes a session callback to the <link linkend="_class_raptor2">Raptor2</link> object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>cb</entry><entry>
+<para>The session callback to subscribe. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The subscription ID. </para>
+</formalpara>
+</para>
+<para>
+Implements <link linkend="_class_i_exchange_sender_1a88e9077704cc02a8d10682a7b4b89d79">IExchangeSender</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Raptor2.hppRaptor2.cpp</section>
+</section>

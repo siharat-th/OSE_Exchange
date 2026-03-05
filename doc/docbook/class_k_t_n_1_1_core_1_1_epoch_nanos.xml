@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_core_1_1_epoch_nanos" xml:lang="en-US">
+<title>KTN::Core::EpochNanos Class Reference</title>
+<indexterm><primary>KTN::Core::EpochNanos</primary></indexterm>
+<para>
+
+<para>Class that quickly computes the nanos since epoch timestamp. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;EpochNanos.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_core_1_1_epoch_nanos_1aab79f374b528132a469cef9f863e5028">EpochNanos</link> ()</para>
+
+<para>Default constructor. </para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_class_k_t_n_1_1_core_1_1_epoch_nanos_1a1e8765303ad92b7e564c36bc6d2e305b">Current</link> ()</para>
+
+<para>Computes the current nanoseconds since the epoch timestamp. </para>
+</listitem>
+            <listitem><para>double <link linkend="_class_k_t_n_1_1_core_1_1_epoch_nanos_1a8fed7138261909ccc2e3678f80528a42">GetCPUClockSpeedInHz</link> ()</para>
+
+<para>Retrieves the CPU clock speed in Hz. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static uint64_t <link linkend="_class_k_t_n_1_1_core_1_1_epoch_nanos_1a9cb0b07ca50cab3c642424b16a7b7cc8">Current</link> (const <link linkend="_class_k_t_n_1_1_core_1_1_epoch_nanos">EpochNanos</link> &amp;en)</para>
+
+<para>Computes the current nanoseconds since the epoch timestamp. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Class that quickly computes the nanos since epoch timestamp. </para>
+
+
+
+<para>This class is not intended to be a precise timing mechanism, but rather a class that quickly computes the nanoseconds since the epoch timestamp. It is not intended to be super accurate, but accurate enough to satisfy exchange clock resolution tolerances. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_epoch_nanos_1aab79f374b528132a469cef9f863e5028"/><section>
+    <title>EpochNanos()</title>
+<indexterm><primary>EpochNanos</primary><secondary>KTN::Core::EpochNanos</secondary></indexterm>
+<indexterm><primary>KTN::Core::EpochNanos</primary><secondary>EpochNanos</secondary></indexterm>
+<para><computeroutput>KTN::Core::EpochNanos::EpochNanos ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Default constructor. </para>
+</para>
+
+<para>Initializes the <link linkend="_class_k_t_n_1_1_core_1_1_epoch_nanos">EpochNanos</link> object by capturing the current timestamp and initializing the necessary variables. </para>
+<para>
+References <link linkend="_l00091">GetCPUClockSpeedInHz()</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_epoch_nanos_1a1e8765303ad92b7e564c36bc6d2e305b"/><section>
+    <title>Current()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>Current</primary><secondary>KTN::Core::EpochNanos</secondary></indexterm>
+<indexterm><primary>KTN::Core::EpochNanos</primary><secondary>Current</secondary></indexterm>
+<para><computeroutput>uint64_t KTN::Core::EpochNanos::Current ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Computes the current nanoseconds since the epoch timestamp. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The current nanoseconds since the epoch timestamp. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_epoch_nanos_1a9cb0b07ca50cab3c642424b16a7b7cc8"/><section>
+    <title>Current()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>Current</primary><secondary>KTN::Core::EpochNanos</secondary></indexterm>
+<indexterm><primary>KTN::Core::EpochNanos</primary><secondary>Current</secondary></indexterm>
+<para><computeroutput>static uint64_t KTN::Core::EpochNanos::Current (const <link linkend="_class_k_t_n_1_1_core_1_1_epoch_nanos">EpochNanos</link> &amp; en)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Computes the current nanoseconds since the epoch timestamp. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>en</entry><entry>
+<para>The <link linkend="_class_k_t_n_1_1_core_1_1_epoch_nanos">EpochNanos</link> object. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The current nanoseconds since the epoch timestamp. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_epoch_nanos_1a8fed7138261909ccc2e3678f80528a42"/><section>
+    <title>GetCPUClockSpeedInHz()</title>
+<indexterm><primary>GetCPUClockSpeedInHz</primary><secondary>KTN::Core::EpochNanos</secondary></indexterm>
+<indexterm><primary>KTN::Core::EpochNanos</primary><secondary>GetCPUClockSpeedInHz</secondary></indexterm>
+<para><computeroutput>double KTN::Core::EpochNanos::GetCPUClockSpeedInHz ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Retrieves the CPU clock speed in Hz. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The CPU clock speed in Hz. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00050">EpochNanos()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Core/EpochNanos.hpp</section>
+</section>

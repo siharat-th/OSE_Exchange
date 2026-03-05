@@ -1,0 +1,128 @@
+\doxysection{KTN\+::TCP\+::Epoller Class Reference}
+\hypertarget{class_k_t_n_1_1_t_c_p_1_1_epoller}{}\label{class_k_t_n_1_1_t_c_p_1_1_epoller}\index{KTN::TCP::Epoller@{KTN::TCP::Epoller}}
+
+
+The \doxylink{class_k_t_n_1_1_t_c_p_1_1_epoller}{Epoller} class handles epoll operations for TCP sockets.  
+
+
+
+
+{\ttfamily \#include $<$Epoller.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_epoller_a06ef0dcac3d8b9e801c9695c43d5459e}{Epoller}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \doxylink{class_k_t_n_1_1_t_c_p_1_1_epoller}{Epoller} class. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_epoller_a15a045fc6d08662d4b80c26f34a3b416}{\texorpdfstring{$\sim$}{\string~}\+Epoller}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{class_k_t_n_1_1_t_c_p_1_1_epoller}{Epoller} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_epoller_a74b0e118f853b48bcbde445a2bf4473d}{Create\+Epoll}} (int numfeeds)
+\begin{DoxyCompactList}\small\item\em Creates an epoll instance with the specified number of feeds. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_epoller_acac43475941edd46c77e4d9bab598df2}{Add\+Socket}} (int fd, int source)
+\begin{DoxyCompactList}\small\item\em Adds a socket to the epoll instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_epoller_aa5e08f4b1ee7bc586d48e29670ddf8dc}{Remove\+Socket\+From\+Epoll}} (int fd)
+\begin{DoxyCompactList}\small\item\em Removes a socket from the epoll instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_k_t_n_1_1_t_c_p_1_1pollbase}{pollbase}} \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_epoller_a2ffaea37e2d35f856641580973254f69}{\+\_\+eps}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_k_t_n_1_1_t_c_p_1_1_epoller}{Epoller} class handles epoll operations for TCP sockets. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_epoller_a06ef0dcac3d8b9e801c9695c43d5459e}\index{KTN::TCP::Epoller@{KTN::TCP::Epoller}!Epoller@{Epoller}}
+\index{Epoller@{Epoller}!KTN::TCP::Epoller@{KTN::TCP::Epoller}}
+\doxysubsubsection{\texorpdfstring{Epoller()}{Epoller()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_epoller_a06ef0dcac3d8b9e801c9695c43d5459e} 
+Epoller\+::\+Epoller (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor for the \doxylink{class_k_t_n_1_1_t_c_p_1_1_epoller}{Epoller} class. 
+
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_epoller_a15a045fc6d08662d4b80c26f34a3b416}\index{KTN::TCP::Epoller@{KTN::TCP::Epoller}!````~Epoller@{\texorpdfstring{$\sim$}{\string~}Epoller}}
+\index{````~Epoller@{\texorpdfstring{$\sim$}{\string~}Epoller}!KTN::TCP::Epoller@{KTN::TCP::Epoller}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Epoller()}{\string~Epoller()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_epoller_a15a045fc6d08662d4b80c26f34a3b416} 
+Epoller\+::\texorpdfstring{$\sim$}{\string~}\+Epoller (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor for the \doxylink{class_k_t_n_1_1_t_c_p_1_1_epoller}{Epoller} class. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_epoller_acac43475941edd46c77e4d9bab598df2}\index{KTN::TCP::Epoller@{KTN::TCP::Epoller}!AddSocket@{AddSocket}}
+\index{AddSocket@{AddSocket}!KTN::TCP::Epoller@{KTN::TCP::Epoller}}
+\doxysubsubsection{\texorpdfstring{AddSocket()}{AddSocket()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_epoller_acac43475941edd46c77e4d9bab598df2} 
+void Epoller\+::\+Add\+Socket (\begin{DoxyParamCaption}\item[{int}]{fd}{, }\item[{int}]{source}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+
+
+Adds a socket to the epoll instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fd} & The file descriptor of the socket to add. \\
+\hline
+{\em source} & The source identifier of the socket. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{l00060}{KTN\+::\+TCP\+::\+EFVITcp\+V2\+::\+Init()}}.
+
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_epoller_a74b0e118f853b48bcbde445a2bf4473d}\index{KTN::TCP::Epoller@{KTN::TCP::Epoller}!CreateEpoll@{CreateEpoll}}
+\index{CreateEpoll@{CreateEpoll}!KTN::TCP::Epoller@{KTN::TCP::Epoller}}
+\doxysubsubsection{\texorpdfstring{CreateEpoll()}{CreateEpoll()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_epoller_a74b0e118f853b48bcbde445a2bf4473d} 
+void Epoller\+::\+Create\+Epoll (\begin{DoxyParamCaption}\item[{int}]{numfeeds}{}\end{DoxyParamCaption})}
+
+
+
+Creates an epoll instance with the specified number of feeds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em numfeeds} & The number of feeds for the epoll instance. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{l00060}{KTN\+::\+TCP\+::\+EFVITcp\+V2\+::\+Init()}}.
+
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_epoller_aa5e08f4b1ee7bc586d48e29670ddf8dc}\index{KTN::TCP::Epoller@{KTN::TCP::Epoller}!RemoveSocketFromEpoll@{RemoveSocketFromEpoll}}
+\index{RemoveSocketFromEpoll@{RemoveSocketFromEpoll}!KTN::TCP::Epoller@{KTN::TCP::Epoller}}
+\doxysubsubsection{\texorpdfstring{RemoveSocketFromEpoll()}{RemoveSocketFromEpoll()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_epoller_aa5e08f4b1ee7bc586d48e29670ddf8dc} 
+void Epoller\+::\+Remove\+Socket\+From\+Epoll (\begin{DoxyParamCaption}\item[{int}]{fd}{}\end{DoxyParamCaption})}
+
+
+
+Removes a socket from the epoll instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fd} & The file descriptor of the socket to remove. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_epoller_a2ffaea37e2d35f856641580973254f69}\index{KTN::TCP::Epoller@{KTN::TCP::Epoller}!\_eps@{\_eps}}
+\index{\_eps@{\_eps}!KTN::TCP::Epoller@{KTN::TCP::Epoller}}
+\doxysubsubsection{\texorpdfstring{\_eps}{\_eps}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_epoller_a2ffaea37e2d35f856641580973254f69} 
+\mbox{\hyperlink{struct_k_t_n_1_1_t_c_p_1_1pollbase}{pollbase}} KTN\+::\+TCP\+::\+Epoller\+::\+\_\+eps}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Net/Epoller.\+hpp\item 
+Net/Epoller.\+cpp\end{DoxyCompactItemize}

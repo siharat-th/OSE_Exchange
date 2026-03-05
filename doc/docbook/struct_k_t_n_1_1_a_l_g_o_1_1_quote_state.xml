@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_t_n_1_1_a_l_g_o_1_1_quote_state" xml:lang="en-US">
+<title>KTN::ALGO::QuoteState Struct Reference</title>
+<indexterm><primary>KTN::ALGO::QuoteState</primary></indexterm>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <emphasis role="strong">Enum</emphasis> : uint8_t { <?linebreak?><emphasis role="strong">Disabled</emphasis>
+, <emphasis role="strong">Calculating</emphasis>
+, <emphasis role="strong">ReadyToRefresh</emphasis>
+, <emphasis role="strong">TimerTick</emphasis>
+, <?linebreak?><emphasis role="strong">ModifyInFlight</emphasis>
+, <emphasis role="strong">SentOrders</emphasis>
+, <emphasis role="strong">GotOrderAcks</emphasis>
+, <emphasis role="strong">SentCancels</emphasis>
+, <?linebreak?><emphasis role="strong">GotCancelAcks</emphasis>
+, <emphasis role="strong">ReadyToSendOrders</emphasis>
+, <emphasis role="strong">GotPrimaryLegFill</emphasis>
+, <emphasis role="strong">ReadyToHedge</emphasis>
+, <?linebreak?><emphasis role="strong">MaxExposure</emphasis>
+, <emphasis role="strong">MonitorPL</emphasis>
+, <emphasis role="strong">MonitorPrimaryPL</emphasis>
+, <emphasis role="strong">CoveredPosition</emphasis>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static std::string <link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_quote_state_1ac7432068f7cd4f187e05a402ffd164f6">toString</link> (Enum state)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_a_l_g_o_1_1_quote_state_1ac0a8fe302090fcbe65dcf07acc1f7de9"/><section>
+    <title>Enum</title>
+<indexterm><primary>Enum</primary><secondary>KTN::ALGO::QuoteState</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::QuoteState</primary><secondary>Enum</secondary></indexterm>
+<para><computeroutput>enum KTN::ALGO::QuoteState::Enum : uint8_t</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_a_l_g_o_1_1_quote_state_1ac7432068f7cd4f187e05a402ffd164f6"/><section>
+    <title>toString()</title>
+<indexterm><primary>toString</primary><secondary>KTN::ALGO::QuoteState</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::QuoteState</primary><secondary>toString</secondary></indexterm>
+<para><computeroutput>static std::string KTN::ALGO::QuoteState::toString (Enum state)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+AlgoSupport/algo_enums.hpp</section>
+</section>

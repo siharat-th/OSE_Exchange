@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_i_l3_cert_helpers" xml:lang="en-US">
+<title>IL3CertHelpers Class Reference</title>
+<indexterm><primary>IL3CertHelpers</primary></indexterm>
+<para>
+
+<para>Helper class for working with IL3 certification environments. FOR TESTING ONLY. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;IL3CertHelpers.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static long <link linkend="_class_i_l3_cert_helpers_1aaae325f9663391c60e2ba3a6078c6e38">CertSecId</link> (string symbol)</para>
+
+<para>Get the cert environment security ID for a given symbol. FOR TESTING ONLY. </para>
+</listitem>
+            <listitem><para>static string <link linkend="_class_i_l3_cert_helpers_1aac3f8cd11933ecb9c7041b68489b6088">CertSymbol</link> (long secid)</para>
+
+<para>Get the certification environment symbol for a given security ID. FOR TESTING ONLY. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Helper class for working with IL3 certification environments. FOR TESTING ONLY. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_i_l3_cert_helpers_1aaf1900f4d467cd0cbe1ddf46b64ee231"/><section>
+    <title>IL3CertHelpers()</title>
+<indexterm><primary>IL3CertHelpers</primary><secondary>IL3CertHelpers</secondary></indexterm>
+<indexterm><primary>IL3CertHelpers</primary><secondary>IL3CertHelpers</secondary></indexterm>
+<para><computeroutput>IL3CertHelpers::IL3CertHelpers ( )</computeroutput></para></section>
+<anchor xml:id="_class_i_l3_cert_helpers_1a4dbf2e91636c85a8b8b27129edb27cb9"/><section>
+    <title>~IL3CertHelpers()</title>
+<indexterm><primary>~IL3CertHelpers</primary><secondary>IL3CertHelpers</secondary></indexterm>
+<indexterm><primary>IL3CertHelpers</primary><secondary>~IL3CertHelpers</secondary></indexterm>
+<para><computeroutput>IL3CertHelpers::~IL3CertHelpers ( )<computeroutput>[virtual]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_i_l3_cert_helpers_1aaae325f9663391c60e2ba3a6078c6e38"/><section>
+    <title>CertSecId()</title>
+<indexterm><primary>CertSecId</primary><secondary>IL3CertHelpers</secondary></indexterm>
+<indexterm><primary>IL3CertHelpers</primary><secondary>CertSecId</secondary></indexterm>
+<para><computeroutput>static long IL3CertHelpers::CertSecId (string symbol)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Get the cert environment security ID for a given symbol. FOR TESTING ONLY. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>symbol</entry><entry>
+<para>The cert symbol of the contract. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The security ID. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00052">JsonUrlReader::Get()</link>.</para>
+<para>
+Referenced by <link linkend="_l00146">KTN::ALGO::PRICING::PricingStrategyBase::getCertSecId()</link>.</para>
+</section>
+<anchor xml:id="_class_i_l3_cert_helpers_1aac3f8cd11933ecb9c7041b68489b6088"/><section>
+    <title>CertSymbol()</title>
+<indexterm><primary>CertSymbol</primary><secondary>IL3CertHelpers</secondary></indexterm>
+<indexterm><primary>IL3CertHelpers</primary><secondary>CertSymbol</secondary></indexterm>
+<para><computeroutput>static string IL3CertHelpers::CertSymbol (long secid)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Get the certification environment symbol for a given security ID. FOR TESTING ONLY. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>secid</entry><entry>
+<para>The security ID. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The symbol of the certificate. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00052">JsonUrlReader::Get()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+exchsupport/cme/il3/IL3CertHelpers.hppexchsupport/cme/il3/IL3CertHelpers.cpp</section>
+</section>

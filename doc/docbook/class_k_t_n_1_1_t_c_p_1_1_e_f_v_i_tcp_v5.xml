@@ -1,0 +1,772 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5" xml:lang="en-US">
+<title>KTN::TCP::EFVITcpV5 Class Reference</title>
+<indexterm><primary>KTN::TCP::EFVITcpV5</primary></indexterm>
+<para>
+
+<para>Represents the <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5">EFVITcpV5</link> class. This is our main TCP class. This class is a true EFVI TCP implementation. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;EFVITcpV5.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1_1_conf">Conf</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>using <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1aac278547690a4797cfdf1378c1fb33ea">TcpClient</link> = efvitcp::TcpClient&lt;<link linkend="_struct_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1_1_conf">Conf</link>&gt;</para>
+</listitem>
+            <listitem><para>using <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1a2a657dba59b002de5d2146cf8af6d060">TcpConn</link> = TcpClient::Conn</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1a231c2bd33948dfd64f9d95855cfc6880">EFVITcpV5</link> (<link linkend="_class_k_t_n_1_1_t_c_p_1_1_tcp_callback8t">TcpCallback8t</link> *callback)</para>
+
+<para>Constructs an <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5">EFVITcpV5</link> object with the specified callback. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1a8621811bdd5f72eff5a343904705db3a">~EFVITcpV5</link> ()</para>
+
+<para>Destroys the <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5">EFVITcpV5</link> object. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1a5612c85b7ca7e95db17239805cff5d80">Init</link> (<link linkend="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor">ServiceDescriptor</link> &amp;desc, bool isA)</para>
+
+<para>Initializes the <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5">EFVITcpV5</link> object with the specified service descriptor and flag. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1a1dcf1645ac21bd6ca67ab70a265e1423">Subscribe</link> (<link linkend="_class_k_t_n_1_1_t_c_p_1_1_tcp_callback8t">TcpCallback8t</link> *callback)</para>
+
+<para>Subscribes to the <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5">EFVITcpV5</link> object with the specified callback. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1a8bf436d7a3e4043205b7bd3aa958005c">Stop</link> ()</para>
+
+<para>Stops the <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5">EFVITcpV5</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1ac23f63929f1f0b785a3e83aaf916f5ca">Poll</link> ()</para>
+
+<para>Polls the <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5">EFVITcpV5</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1ad660da2947d4171ce44cf8f56f247b14">SendMaster</link> (char *buffer, size_t buffer_length, bool send_delegated)</para>
+
+<para>Sends the master data with the specified buffer and buffer length. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1a774676091babd14211aaba73a7b566b5">SendFastPath</link> (char *buffer, size_t buffer_length)</para>
+
+<para>Sends the data using the fast path with the specified buffer and buffer length. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1a0b8cc58f529f1ceef3287d4775a84da1">SendNormal</link> (char *buffer, size_t buffer_length)</para>
+
+<para>Sends the data using the normal path with the specified buffer and buffer length. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1a4f5ea7c2db7a995ea34b4d08abb40dd5">SendWarm</link> ()</para>
+
+<para>Sends the warm data. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1ace2413c0513b10580bf474b67d2904fe">Fd</link> ()</para>
+
+<para>Gets the file descriptor. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1a915b27817cf372b340be9fcd9b313a3a">SegId</link> ()</para>
+
+<para>Gets the segment ID. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1a6bbccfd259b6bed1b2a08cbab3e76e4c">poll</link> ()</para>
+
+<para>Polls the <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5">EFVITcpV5</link> object. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1aae21294b1553123089b7cba692da26fa">bye</link> ()</para>
+
+<para>Sends the bye message. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1a2806b82c941d42029d5f02e54b807fb8">onConnectionRefused</link> ()</para>
+
+<para>Handles the connection refused event. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1a3bb1a76478e7ead41be5e317716a8a14">onConnectionEstablished</link> (TcpConn &amp;conn)</para>
+
+<para>Handles the connection established event. </para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1a6b70fda5d49b8e86b17624915c7b5a0b">onData</link> (TcpConn &amp;conn, uint8_t *data, uint32_t size)</para>
+
+<para>Handles the data event. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1a58ea7c3a943be29d0f023a5474c7bb05">onConnectionReset</link> (TcpConn &amp;conn)</para>
+
+<para>Handles the connection reset event. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1a9bf7ee32cc0802c895be905b4737e6a8">onConnectionClosed</link> (TcpConn &amp;conn)</para>
+
+<para>Handles the connection closed event. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1a0096d655f36b8b5763e526b9abf2dede">onFin</link> (TcpConn &amp;conn, uint8_t *data, uint32_t size)</para>
+
+<para>Handles the FIN event. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1ac4ab8c0df798807faf3464fd6775a2ef">onConnectionTimeout</link> (TcpConn &amp;conn)</para>
+
+<para>Handles the connection timeout event. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1a6be27263b6ea0be28e6d7796ad48fe22">onMoreSendable</link> (TcpConn &amp;conn)</para>
+
+<para>Handles the more sendable event. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1a43ef884bd512f91efa3afb820bbc28e5">onUserTimeout</link> (TcpConn &amp;conn, uint32_t timer_id)</para>
+
+<para>Handles the user timeout event. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Represents the <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5">EFVITcpV5</link> class. This is our main TCP class. This class is a true EFVI TCP implementation. </para>
+</section>
+<section>
+<title>Member Typedef Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1aac278547690a4797cfdf1378c1fb33ea"/><section>
+    <title>TcpClient</title>
+<indexterm><primary>TcpClient</primary><secondary>KTN::TCP::EFVITcpV5</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV5</primary><secondary>TcpClient</secondary></indexterm>
+<para><computeroutput>using KTN::TCP::EFVITcpV5::TcpClient = efvitcp::TcpClient&lt;<link linkend="_struct_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1_1_conf">Conf</link>&gt;</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1a2a657dba59b002de5d2146cf8af6d060"/><section>
+    <title>TcpConn</title>
+<indexterm><primary>TcpConn</primary><secondary>KTN::TCP::EFVITcpV5</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV5</primary><secondary>TcpConn</secondary></indexterm>
+<para><computeroutput>using KTN::TCP::EFVITcpV5::TcpConn = TcpClient::Conn</computeroutput></para></section>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1a231c2bd33948dfd64f9d95855cfc6880"/><section>
+    <title>EFVITcpV5()</title>
+<indexterm><primary>EFVITcpV5</primary><secondary>KTN::TCP::EFVITcpV5</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV5</primary><secondary>EFVITcpV5</secondary></indexterm>
+<para><computeroutput>EFVITcpV5::EFVITcpV5 (<link linkend="_class_k_t_n_1_1_t_c_p_1_1_tcp_callback8t">TcpCallback8t</link> * callback)</computeroutput></para><para>
+
+<para>Constructs an <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5">EFVITcpV5</link> object with the specified callback. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>callback</entry><entry>
+<para>The callback object. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1a8621811bdd5f72eff5a343904705db3a"/><section>
+    <title>~EFVITcpV5()</title>
+<indexterm><primary>~EFVITcpV5</primary><secondary>KTN::TCP::EFVITcpV5</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV5</primary><secondary>~EFVITcpV5</secondary></indexterm>
+<para><computeroutput>EFVITcpV5::~EFVITcpV5 ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Destroys the <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5">EFVITcpV5</link> object. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1aae21294b1553123089b7cba692da26fa"/><section>
+    <title>bye()</title>
+<indexterm><primary>bye</primary><secondary>KTN::TCP::EFVITcpV5</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV5</primary><secondary>bye</secondary></indexterm>
+<para><computeroutput>bool EFVITcpV5::bye ( )</computeroutput></para><para>
+
+<para>Sends the bye message. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>True if sending the bye message is successful, false otherwise. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00087">Stop()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1ace2413c0513b10580bf474b67d2904fe"/><section>
+    <title>Fd()</title>
+<indexterm><primary>Fd</primary><secondary>KTN::TCP::EFVITcpV5</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV5</primary><secondary>Fd</secondary></indexterm>
+<para><computeroutput>int KTN::TCP::EFVITcpV5::Fd ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Gets the file descriptor. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The file descriptor. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1a5612c85b7ca7e95db17239805cff5d80"/><section>
+    <title>Init()</title>
+<indexterm><primary>Init</primary><secondary>KTN::TCP::EFVITcpV5</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV5</primary><secondary>Init</secondary></indexterm>
+<para><computeroutput>bool EFVITcpV5::Init (<link linkend="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor">ServiceDescriptor</link> &amp; desc, bool isA = <computeroutput>true</computeroutput>
+)</computeroutput></para><para>
+
+<para>Initializes the <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5">EFVITcpV5</link> object with the specified service descriptor and flag. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>desc</entry><entry>
+<para>The service descriptor. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>isA</entry><entry>
+<para>The flag indicating whether it is A. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if initialization is successful, false otherwise. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00072">KTN::TCP::ServiceDescriptor::address</link>, <link linkend="_l00077">KTN::TCP::ServiceDescriptor::feedtype</link>, <link linkend="_l00083">KTN::TCP::ServiceDescriptor::index</link>, <link linkend="_l00033">tcp_settings::IntfA</link>, <link linkend="_l00034">tcp_settings::IntfB</link>, <link linkend="_l00035">tcp_settings::IntfNameA</link>, <link linkend="_l00036">tcp_settings::IntfNameB</link>, <link linkend="_l00078">KTN::TCP::ServiceDescriptor::iSource</link>, <link linkend="_l00042">tcp_settings::Load()</link>, <link linkend="_l00076">KTN::TCP::ServiceDescriptor::localinterface</link>, <link linkend="_l00075">KTN::TCP::ServiceDescriptor::localinterfacename</link>, <link linkend="_l00073">KTN::TCP::ServiceDescriptor::port</link>, and <link linkend="_l00024">tcp_settings::UseCtpio</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1a9bf7ee32cc0802c895be905b4737e6a8"/><section>
+    <title>onConnectionClosed()</title>
+<indexterm><primary>onConnectionClosed</primary><secondary>KTN::TCP::EFVITcpV5</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV5</primary><secondary>onConnectionClosed</secondary></indexterm>
+<para><computeroutput>void EFVITcpV5::onConnectionClosed (TcpConn &amp; conn)</computeroutput></para><para>
+
+<para>Handles the connection closed event. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>conn</entry><entry>
+<para>The TCP connection. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1a3bb1a76478e7ead41be5e317716a8a14"/><section>
+    <title>onConnectionEstablished()</title>
+<indexterm><primary>onConnectionEstablished</primary><secondary>KTN::TCP::EFVITcpV5</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV5</primary><secondary>onConnectionEstablished</secondary></indexterm>
+<para><computeroutput>void EFVITcpV5::onConnectionEstablished (TcpConn &amp; conn)</computeroutput></para><para>
+
+<para>Handles the connection established event. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>conn</entry><entry>
+<para>The TCP connection. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1a2806b82c941d42029d5f02e54b807fb8"/><section>
+    <title>onConnectionRefused()</title>
+<indexterm><primary>onConnectionRefused</primary><secondary>KTN::TCP::EFVITcpV5</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV5</primary><secondary>onConnectionRefused</secondary></indexterm>
+<para><computeroutput>void EFVITcpV5::onConnectionRefused ( )</computeroutput></para><para>
+
+<para>Handles the connection refused event. </para>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1a58ea7c3a943be29d0f023a5474c7bb05"/><section>
+    <title>onConnectionReset()</title>
+<indexterm><primary>onConnectionReset</primary><secondary>KTN::TCP::EFVITcpV5</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV5</primary><secondary>onConnectionReset</secondary></indexterm>
+<para><computeroutput>void EFVITcpV5::onConnectionReset (TcpConn &amp; conn)</computeroutput></para><para>
+
+<para>Handles the connection reset event. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>conn</entry><entry>
+<para>The TCP connection. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1ac4ab8c0df798807faf3464fd6775a2ef"/><section>
+    <title>onConnectionTimeout()</title>
+<indexterm><primary>onConnectionTimeout</primary><secondary>KTN::TCP::EFVITcpV5</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV5</primary><secondary>onConnectionTimeout</secondary></indexterm>
+<para><computeroutput>void EFVITcpV5::onConnectionTimeout (TcpConn &amp; conn)</computeroutput></para><para>
+
+<para>Handles the connection timeout event. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>conn</entry><entry>
+<para>The TCP connection. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1a6b70fda5d49b8e86b17624915c7b5a0b"/><section>
+    <title>onData()</title>
+<indexterm><primary>onData</primary><secondary>KTN::TCP::EFVITcpV5</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV5</primary><secondary>onData</secondary></indexterm>
+<para><computeroutput>uint32_t EFVITcpV5::onData (TcpConn &amp; conn, uint8_t * data, uint32_t size)</computeroutput></para><para>
+
+<para>Handles the data event. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>conn</entry><entry>
+<para>The TCP connection. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>data</entry><entry>
+<para>The data received. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>size</entry><entry>
+<para>The size of the data. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The number of bytes processed. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_class_k_t_n_1_1_t_c_p_1_1_tcp_callback8t_1a611efc1c25fd7385ff42935d567a63b0">KTN::TCP::TcpCallback8t::onRecv()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1a0096d655f36b8b5763e526b9abf2dede"/><section>
+    <title>onFin()</title>
+<indexterm><primary>onFin</primary><secondary>KTN::TCP::EFVITcpV5</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV5</primary><secondary>onFin</secondary></indexterm>
+<para><computeroutput>void EFVITcpV5::onFin (TcpConn &amp; conn, uint8_t * data, uint32_t size)</computeroutput></para><para>
+
+<para>Handles the FIN event. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>conn</entry><entry>
+<para>The TCP connection. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>data</entry><entry>
+<para>The data received. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>size</entry><entry>
+<para>The size of the data. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1a6be27263b6ea0be28e6d7796ad48fe22"/><section>
+    <title>onMoreSendable()</title>
+<indexterm><primary>onMoreSendable</primary><secondary>KTN::TCP::EFVITcpV5</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV5</primary><secondary>onMoreSendable</secondary></indexterm>
+<para><computeroutput>void EFVITcpV5::onMoreSendable (TcpConn &amp; conn)</computeroutput></para><para>
+
+<para>Handles the more sendable event. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>conn</entry><entry>
+<para>The TCP connection. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1a43ef884bd512f91efa3afb820bbc28e5"/><section>
+    <title>onUserTimeout()</title>
+<indexterm><primary>onUserTimeout</primary><secondary>KTN::TCP::EFVITcpV5</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV5</primary><secondary>onUserTimeout</secondary></indexterm>
+<para><computeroutput>void EFVITcpV5::onUserTimeout (TcpConn &amp; conn, uint32_t timer_id)</computeroutput></para><para>
+
+<para>Handles the user timeout event. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>conn</entry><entry>
+<para>The TCP connection. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>timer_id</entry><entry>
+<para>The timer ID. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1ac23f63929f1f0b785a3e83aaf916f5ca"/><section>
+    <title>Poll()</title>
+<indexterm><primary>Poll</primary><secondary>KTN::TCP::EFVITcpV5</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV5</primary><secondary>Poll</secondary></indexterm>
+<para><computeroutput>void EFVITcpV5::Poll ( )</computeroutput></para><para>
+
+<para>Polls the <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5">EFVITcpV5</link> object. </para>
+</para>
+<para>
+References <link linkend="_l00097">poll()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1a6bbccfd259b6bed1b2a08cbab3e76e4c"/><section>
+    <title>poll()</title>
+<indexterm><primary>poll</primary><secondary>KTN::TCP::EFVITcpV5</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV5</primary><secondary>poll</secondary></indexterm>
+<para><computeroutput>void EFVITcpV5::poll ( )</computeroutput></para><para>
+
+<para>Polls the <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5">EFVITcpV5</link> object. </para>
+</para>
+<para>
+Referenced by <link linkend="_l00259">Poll()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1a915b27817cf372b340be9fcd9b313a3a"/><section>
+    <title>SegId()</title>
+<indexterm><primary>SegId</primary><secondary>KTN::TCP::EFVITcpV5</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV5</primary><secondary>SegId</secondary></indexterm>
+<para><computeroutput>int KTN::TCP::EFVITcpV5::SegId ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Gets the segment ID. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The segment ID. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1a774676091babd14211aaba73a7b566b5"/><section>
+    <title>SendFastPath()</title>
+<indexterm><primary>SendFastPath</primary><secondary>KTN::TCP::EFVITcpV5</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV5</primary><secondary>SendFastPath</secondary></indexterm>
+<para><computeroutput>int EFVITcpV5::SendFastPath (char * buffer, size_t buffer_length)</computeroutput></para><para>
+
+<para>Sends the data using the fast path with the specified buffer and buffer length. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>buffer</entry><entry>
+<para>The buffer containing the data to send. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>buffer_length</entry><entry>
+<para>The length of the buffer. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The number of bytes sent. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l01104">KTN::CME::CmeAlgo::Send()</link>, <link linkend="_l00889">KTN::CME::CmeGT5::Send()</link>, and <link linkend="_l00266">SendMaster()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1ad660da2947d4171ce44cf8f56f247b14"/><section>
+    <title>SendMaster()</title>
+<indexterm><primary>SendMaster</primary><secondary>KTN::TCP::EFVITcpV5</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV5</primary><secondary>SendMaster</secondary></indexterm>
+<para><computeroutput>void EFVITcpV5::SendMaster (char * buffer, size_t buffer_length, bool send_delegated)</computeroutput></para><para>
+
+<para>Sends the master data with the specified buffer and buffer length. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>buffer</entry><entry>
+<para>The buffer containing the data to send. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>buffer_length</entry><entry>
+<para>The length of the buffer. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>send_delegated</entry><entry>
+<para>The flag indicating whether to send delegated. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00328">SendFastPath()</link>, and <link linkend="_l00301">SendNormal()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1a0b8cc58f529f1ceef3287d4775a84da1"/><section>
+    <title>SendNormal()</title>
+<indexterm><primary>SendNormal</primary><secondary>KTN::TCP::EFVITcpV5</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV5</primary><secondary>SendNormal</secondary></indexterm>
+<para><computeroutput>int EFVITcpV5::SendNormal (char * buffer, size_t buffer_length)</computeroutput></para><para>
+
+<para>Sends the data using the normal path with the specified buffer and buffer length. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>buffer</entry><entry>
+<para>The buffer containing the data to send. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>buffer_length</entry><entry>
+<para>The length of the buffer. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The number of bytes sent. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00266">SendMaster()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1a4f5ea7c2db7a995ea34b4d08abb40dd5"/><section>
+    <title>SendWarm()</title>
+<indexterm><primary>SendWarm</primary><secondary>KTN::TCP::EFVITcpV5</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV5</primary><secondary>SendWarm</secondary></indexterm>
+<para><computeroutput>void EFVITcpV5::SendWarm ( )</computeroutput></para><para>
+
+<para>Sends the warm data. </para>
+</para>
+<para>
+Referenced by <link linkend="_l00883">KTN::CME::CmeGT5::SendWarm()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1a8bf436d7a3e4043205b7bd3aa958005c"/><section>
+    <title>Stop()</title>
+<indexterm><primary>Stop</primary><secondary>KTN::TCP::EFVITcpV5</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV5</primary><secondary>Stop</secondary></indexterm>
+<para><computeroutput>void EFVITcpV5::Stop ( )</computeroutput></para><para>
+
+<para>Stops the <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5">EFVITcpV5</link> object. </para>
+</para>
+<para>
+References <link linkend="_l00102">bye()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1a1dcf1645ac21bd6ca67ab70a265e1423"/><section>
+    <title>Subscribe()</title>
+<indexterm><primary>Subscribe</primary><secondary>KTN::TCP::EFVITcpV5</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV5</primary><secondary>Subscribe</secondary></indexterm>
+<para><computeroutput>void EFVITcpV5::Subscribe (<link linkend="_class_k_t_n_1_1_t_c_p_1_1_tcp_callback8t">TcpCallback8t</link> * callback)</computeroutput></para><para>
+
+<para>Subscribes to the <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5">EFVITcpV5</link> object with the specified callback. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>callback</entry><entry>
+<para>The callback object. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+KtnEfvi/EFVITcpV5.hppKtnEfvi/EFVITcpV5.cpp</section>
+</section>

@@ -1,0 +1,241 @@
+\doxysection{Tcpdirect\+Tcp\+Connection\texorpdfstring{$<$}{<} Conf \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_tcpdirect_tcp_connection}{}\label{class_tcpdirect_tcp_connection}\index{TcpdirectTcpConnection$<$ Conf $>$@{TcpdirectTcpConnection$<$ Conf $>$}}
+Inheritance diagram for Tcpdirect\+Tcp\+Connection\texorpdfstring{$<$}{<} Conf \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_tcpdirect_tcp_connection}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_tcpdirect_tcp_connection_a3b096b8b1e8c3fc1b0a8d5b9f8448f07}{get\+Last\+Error}} ()
+\item 
+bool \mbox{\hyperlink{class_tcpdirect_tcp_connection_a96ef93942303a6e7718e66fa219479a3}{is\+Connected}} ()
+\item 
+bool \mbox{\hyperlink{class_tcpdirect_tcp_connection_a39d3c33915028ba1b51973809555828c}{get\+Peername}} (struct sockaddr\+\_\+in \&addr)
+\item 
+void \mbox{\hyperlink{class_tcpdirect_tcp_connection_a1120ef889c59dde767d9b33c21fbd7e5}{close}} (const char \texorpdfstring{$\ast$}{*}reason)
+\item 
+int \mbox{\hyperlink{class_tcpdirect_tcp_connection_a3ea1a8cfa6a4c61f2f2e0973efb132ef}{write\+Some}} (const void \texorpdfstring{$\ast$}{*}data, uint32\+\_\+t size, bool more=false)
+\item 
+bool \mbox{\hyperlink{class_tcpdirect_tcp_connection_abfb5e6190502a507dbb0782893cc9456}{write}} (const void \texorpdfstring{$\ast$}{*}data\+\_\+, uint32\+\_\+t size, bool more=false)
+\item 
+bool \mbox{\hyperlink{class_tcpdirect_tcp_connection_a00f707b76c22a840e827839543c75922}{write\+Nonblock}} (const void \texorpdfstring{$\ast$}{*}data, uint32\+\_\+t size, bool more=false)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_tcpdirect_tcp_connection_ad8d8495a1deed451e76e91776516ef64}{connect}} (struct zf\+\_\+attr \texorpdfstring{$\ast$}{*}attr, struct sockaddr\+\_\+in \&server\+\_\+addr, uint16\+\_\+t local\+\_\+port\+\_\+be)
+\item 
+{\footnotesize template$<$typename Handler $>$ }\\void \mbox{\hyperlink{class_tcpdirect_tcp_connection_a45e16f204cc018cd8630492118bb81ac}{poll\+Conn}} (int64\+\_\+t now, Handler \&handler)
+\item 
+{\footnotesize template$<$typename Handler $>$ }\\bool \mbox{\hyperlink{class_tcpdirect_tcp_connection_a4633b144aeae5bba785d788158e5f1f1}{read}} (Handler handler)
+\item 
+bool \mbox{\hyperlink{class_tcpdirect_tcp_connection_a0f19a2e03df8d31e7714a7b523da54ff}{open}} (int64\+\_\+t now, struct zft \texorpdfstring{$\ast$}{*}zock, struct zf\+\_\+stack \texorpdfstring{$\ast$}{*}stack)
+\item 
+void \mbox{\hyperlink{class_tcpdirect_tcp_connection_a66a5e6a0763277046cacd4eca0015997}{save\+Error}} (const char \texorpdfstring{$\ast$}{*}msg, int rc)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct zft \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_tcpdirect_tcp_connection_a09f8fe3144ef29c94fc6405d0dc9d333}{zock\+\_\+}} = nullptr
+\item 
+struct zf\+\_\+stack \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_tcpdirect_tcp_connection_a458cd2bd3e99b03d01ba96e95d62c523}{stack\+\_\+}} = nullptr
+\item 
+int64\+\_\+t \mbox{\hyperlink{class_tcpdirect_tcp_connection_a6007b0dd5801ef67e66492aed1810120}{send\+\_\+ts\+\_\+}} = 0
+\item 
+int64\+\_\+t \mbox{\hyperlink{class_tcpdirect_tcp_connection_a92ca0d1c688946834eb3b759c967db4e}{expire\+\_\+ts\+\_\+}} = 0
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_tcpdirect_tcp_connection_ab996c89203d8989d4657b9c602c5c292}{head\+\_\+}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_tcpdirect_tcp_connection_a315aa6e4b555c9538ace77594fa6c5cc}{tail\+\_\+}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_tcpdirect_tcp_connection_af393eeda2aae243ce1f4e0fe1a133799}{recvbuf\+\_\+}} \mbox{[}Conf\+::\+Recv\+Buf\+Size\mbox{]}
+\item 
+char \mbox{\hyperlink{class_tcpdirect_tcp_connection_a8e2f57c37f9ab3f86aa6e46dded84349}{last\+\_\+error\+\_\+}} \mbox{[}64\mbox{]} = "{}"{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Server\+Conf $>$ }\\class \mbox{\hyperlink{class_tcpdirect_tcp_connection_acfad2664c2988ff270d9243efebb152f}{Tcpdirect\+Tcp\+Server}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Conf$>$\newline
+class Tcpdirect\+Tcp\+Connection$<$ Conf $>$}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_tcpdirect_tcp_connection_a0815ae3fcaa362f3292461d4c0c04877}\index{TcpdirectTcpConnection$<$ Conf $>$@{TcpdirectTcpConnection$<$ Conf $>$}!````~TcpdirectTcpConnection@{\texorpdfstring{$\sim$}{\string~}TcpdirectTcpConnection}}
+\index{````~TcpdirectTcpConnection@{\texorpdfstring{$\sim$}{\string~}TcpdirectTcpConnection}!TcpdirectTcpConnection$<$ Conf $>$@{TcpdirectTcpConnection$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}TcpdirectTcpConnection()}{\string~TcpdirectTcpConnection()}}
+{\footnotesize\ttfamily \label{class_tcpdirect_tcp_connection_a0815ae3fcaa362f3292461d4c0c04877} 
+template$<$typename Conf $>$ \\
+\mbox{\hyperlink{class_tcpdirect_tcp_connection}{Tcpdirect\+Tcp\+Connection}}$<$ Conf $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{class_tcpdirect_tcp_connection}{Tcpdirect\+Tcp\+Connection}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_tcpdirect_tcp_connection_a1120ef889c59dde767d9b33c21fbd7e5}\index{TcpdirectTcpConnection$<$ Conf $>$@{TcpdirectTcpConnection$<$ Conf $>$}!close@{close}}
+\index{close@{close}!TcpdirectTcpConnection$<$ Conf $>$@{TcpdirectTcpConnection$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily \label{class_tcpdirect_tcp_connection_a1120ef889c59dde767d9b33c21fbd7e5} 
+template$<$typename Conf $>$ \\
+void \mbox{\hyperlink{class_tcpdirect_tcp_connection}{Tcpdirect\+Tcp\+Connection}}$<$ Conf $>$\+::close (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{reason}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_tcpdirect_tcp_connection_ad8d8495a1deed451e76e91776516ef64}\index{TcpdirectTcpConnection$<$ Conf $>$@{TcpdirectTcpConnection$<$ Conf $>$}!connect@{connect}}
+\index{connect@{connect}!TcpdirectTcpConnection$<$ Conf $>$@{TcpdirectTcpConnection$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily \label{class_tcpdirect_tcp_connection_ad8d8495a1deed451e76e91776516ef64} 
+template$<$typename Conf $>$ \\
+bool \mbox{\hyperlink{class_tcpdirect_tcp_connection}{Tcpdirect\+Tcp\+Connection}}$<$ Conf $>$\+::connect (\begin{DoxyParamCaption}\item[{struct zf\+\_\+attr \texorpdfstring{$\ast$}{*}}]{attr}{, }\item[{struct sockaddr\+\_\+in \&}]{server\+\_\+addr}{, }\item[{uint16\+\_\+t}]{local\+\_\+port\+\_\+be}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_tcpdirect_tcp_connection_a3b096b8b1e8c3fc1b0a8d5b9f8448f07}\index{TcpdirectTcpConnection$<$ Conf $>$@{TcpdirectTcpConnection$<$ Conf $>$}!getLastError@{getLastError}}
+\index{getLastError@{getLastError}!TcpdirectTcpConnection$<$ Conf $>$@{TcpdirectTcpConnection$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{getLastError()}{getLastError()}}
+{\footnotesize\ttfamily \label{class_tcpdirect_tcp_connection_a3b096b8b1e8c3fc1b0a8d5b9f8448f07} 
+template$<$typename Conf $>$ \\
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_tcpdirect_tcp_connection}{Tcpdirect\+Tcp\+Connection}}$<$ Conf $>$\+::get\+Last\+Error (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_tcpdirect_tcp_connection_a39d3c33915028ba1b51973809555828c}\index{TcpdirectTcpConnection$<$ Conf $>$@{TcpdirectTcpConnection$<$ Conf $>$}!getPeername@{getPeername}}
+\index{getPeername@{getPeername}!TcpdirectTcpConnection$<$ Conf $>$@{TcpdirectTcpConnection$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{getPeername()}{getPeername()}}
+{\footnotesize\ttfamily \label{class_tcpdirect_tcp_connection_a39d3c33915028ba1b51973809555828c} 
+template$<$typename Conf $>$ \\
+bool \mbox{\hyperlink{class_tcpdirect_tcp_connection}{Tcpdirect\+Tcp\+Connection}}$<$ Conf $>$\+::get\+Peername (\begin{DoxyParamCaption}\item[{struct sockaddr\+\_\+in \&}]{addr}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_tcpdirect_tcp_connection_a96ef93942303a6e7718e66fa219479a3}\index{TcpdirectTcpConnection$<$ Conf $>$@{TcpdirectTcpConnection$<$ Conf $>$}!isConnected@{isConnected}}
+\index{isConnected@{isConnected}!TcpdirectTcpConnection$<$ Conf $>$@{TcpdirectTcpConnection$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{isConnected()}{isConnected()}}
+{\footnotesize\ttfamily \label{class_tcpdirect_tcp_connection_a96ef93942303a6e7718e66fa219479a3} 
+template$<$typename Conf $>$ \\
+bool \mbox{\hyperlink{class_tcpdirect_tcp_connection}{Tcpdirect\+Tcp\+Connection}}$<$ Conf $>$\+::is\+Connected (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_tcpdirect_tcp_connection_a0f19a2e03df8d31e7714a7b523da54ff}\index{TcpdirectTcpConnection$<$ Conf $>$@{TcpdirectTcpConnection$<$ Conf $>$}!open@{open}}
+\index{open@{open}!TcpdirectTcpConnection$<$ Conf $>$@{TcpdirectTcpConnection$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily \label{class_tcpdirect_tcp_connection_a0f19a2e03df8d31e7714a7b523da54ff} 
+template$<$typename Conf $>$ \\
+bool \mbox{\hyperlink{class_tcpdirect_tcp_connection}{Tcpdirect\+Tcp\+Connection}}$<$ Conf $>$\+::open (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{now}{, }\item[{struct zft \texorpdfstring{$\ast$}{*}}]{zock}{, }\item[{struct zf\+\_\+stack \texorpdfstring{$\ast$}{*}}]{stack}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_tcpdirect_tcp_connection_a45e16f204cc018cd8630492118bb81ac}\index{TcpdirectTcpConnection$<$ Conf $>$@{TcpdirectTcpConnection$<$ Conf $>$}!pollConn@{pollConn}}
+\index{pollConn@{pollConn}!TcpdirectTcpConnection$<$ Conf $>$@{TcpdirectTcpConnection$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{pollConn()}{pollConn()}}
+{\footnotesize\ttfamily \label{class_tcpdirect_tcp_connection_a45e16f204cc018cd8630492118bb81ac} 
+template$<$typename Conf $>$ \\
+template$<$typename Handler $>$ \\
+void \mbox{\hyperlink{class_tcpdirect_tcp_connection}{Tcpdirect\+Tcp\+Connection}}$<$ Conf $>$\+::poll\+Conn (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{now}{, }\item[{Handler \&}]{handler}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_tcpdirect_tcp_connection_a4633b144aeae5bba785d788158e5f1f1}\index{TcpdirectTcpConnection$<$ Conf $>$@{TcpdirectTcpConnection$<$ Conf $>$}!read@{read}}
+\index{read@{read}!TcpdirectTcpConnection$<$ Conf $>$@{TcpdirectTcpConnection$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily \label{class_tcpdirect_tcp_connection_a4633b144aeae5bba785d788158e5f1f1} 
+template$<$typename Conf $>$ \\
+template$<$typename Handler $>$ \\
+bool \mbox{\hyperlink{class_tcpdirect_tcp_connection}{Tcpdirect\+Tcp\+Connection}}$<$ Conf $>$\+::read (\begin{DoxyParamCaption}\item[{Handler}]{handler}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_tcpdirect_tcp_connection_a66a5e6a0763277046cacd4eca0015997}\index{TcpdirectTcpConnection$<$ Conf $>$@{TcpdirectTcpConnection$<$ Conf $>$}!saveError@{saveError}}
+\index{saveError@{saveError}!TcpdirectTcpConnection$<$ Conf $>$@{TcpdirectTcpConnection$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{saveError()}{saveError()}}
+{\footnotesize\ttfamily \label{class_tcpdirect_tcp_connection_a66a5e6a0763277046cacd4eca0015997} 
+template$<$typename Conf $>$ \\
+void \mbox{\hyperlink{class_tcpdirect_tcp_connection}{Tcpdirect\+Tcp\+Connection}}$<$ Conf $>$\+::save\+Error (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{msg}{, }\item[{int}]{rc}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_tcpdirect_tcp_connection_abfb5e6190502a507dbb0782893cc9456}\index{TcpdirectTcpConnection$<$ Conf $>$@{TcpdirectTcpConnection$<$ Conf $>$}!write@{write}}
+\index{write@{write}!TcpdirectTcpConnection$<$ Conf $>$@{TcpdirectTcpConnection$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily \label{class_tcpdirect_tcp_connection_abfb5e6190502a507dbb0782893cc9456} 
+template$<$typename Conf $>$ \\
+bool \mbox{\hyperlink{class_tcpdirect_tcp_connection}{Tcpdirect\+Tcp\+Connection}}$<$ Conf $>$\+::write (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{data\+\_\+}{, }\item[{uint32\+\_\+t}]{size}{, }\item[{bool}]{more}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_tcpdirect_tcp_connection_a00f707b76c22a840e827839543c75922}\index{TcpdirectTcpConnection$<$ Conf $>$@{TcpdirectTcpConnection$<$ Conf $>$}!writeNonblock@{writeNonblock}}
+\index{writeNonblock@{writeNonblock}!TcpdirectTcpConnection$<$ Conf $>$@{TcpdirectTcpConnection$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{writeNonblock()}{writeNonblock()}}
+{\footnotesize\ttfamily \label{class_tcpdirect_tcp_connection_a00f707b76c22a840e827839543c75922} 
+template$<$typename Conf $>$ \\
+bool \mbox{\hyperlink{class_tcpdirect_tcp_connection}{Tcpdirect\+Tcp\+Connection}}$<$ Conf $>$\+::write\+Nonblock (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{uint32\+\_\+t}]{size}{, }\item[{bool}]{more}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_tcpdirect_tcp_connection_a3ea1a8cfa6a4c61f2f2e0973efb132ef}\index{TcpdirectTcpConnection$<$ Conf $>$@{TcpdirectTcpConnection$<$ Conf $>$}!writeSome@{writeSome}}
+\index{writeSome@{writeSome}!TcpdirectTcpConnection$<$ Conf $>$@{TcpdirectTcpConnection$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{writeSome()}{writeSome()}}
+{\footnotesize\ttfamily \label{class_tcpdirect_tcp_connection_a3ea1a8cfa6a4c61f2f2e0973efb132ef} 
+template$<$typename Conf $>$ \\
+int \mbox{\hyperlink{class_tcpdirect_tcp_connection}{Tcpdirect\+Tcp\+Connection}}$<$ Conf $>$\+::write\+Some (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{uint32\+\_\+t}]{size}{, }\item[{bool}]{more}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{class_tcpdirect_tcp_connection_acfad2664c2988ff270d9243efebb152f}\index{TcpdirectTcpConnection$<$ Conf $>$@{TcpdirectTcpConnection$<$ Conf $>$}!TcpdirectTcpServer@{TcpdirectTcpServer}}
+\index{TcpdirectTcpServer@{TcpdirectTcpServer}!TcpdirectTcpConnection$<$ Conf $>$@{TcpdirectTcpConnection$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{TcpdirectTcpServer}{TcpdirectTcpServer}}
+{\footnotesize\ttfamily \label{class_tcpdirect_tcp_connection_acfad2664c2988ff270d9243efebb152f} 
+template$<$typename Conf $>$ \\
+template$<$typename Server\+Conf $>$ \\
+friend class \mbox{\hyperlink{class_tcpdirect_tcp_server}{Tcpdirect\+Tcp\+Server}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_tcpdirect_tcp_connection_a92ca0d1c688946834eb3b759c967db4e}\index{TcpdirectTcpConnection$<$ Conf $>$@{TcpdirectTcpConnection$<$ Conf $>$}!expire\_ts\_@{expire\_ts\_}}
+\index{expire\_ts\_@{expire\_ts\_}!TcpdirectTcpConnection$<$ Conf $>$@{TcpdirectTcpConnection$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{expire\_ts\_}{expire\_ts\_}}
+{\footnotesize\ttfamily \label{class_tcpdirect_tcp_connection_a92ca0d1c688946834eb3b759c967db4e} 
+template$<$typename Conf $>$ \\
+int64\+\_\+t \mbox{\hyperlink{class_tcpdirect_tcp_connection}{Tcpdirect\+Tcp\+Connection}}$<$ Conf $>$\+::expire\+\_\+ts\+\_\+ = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_tcpdirect_tcp_connection_ab996c89203d8989d4657b9c602c5c292}\index{TcpdirectTcpConnection$<$ Conf $>$@{TcpdirectTcpConnection$<$ Conf $>$}!head\_@{head\_}}
+\index{head\_@{head\_}!TcpdirectTcpConnection$<$ Conf $>$@{TcpdirectTcpConnection$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{head\_}{head\_}}
+{\footnotesize\ttfamily \label{class_tcpdirect_tcp_connection_ab996c89203d8989d4657b9c602c5c292} 
+template$<$typename Conf $>$ \\
+uint32\+\_\+t \mbox{\hyperlink{class_tcpdirect_tcp_connection}{Tcpdirect\+Tcp\+Connection}}$<$ Conf $>$\+::head\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_tcpdirect_tcp_connection_a8e2f57c37f9ab3f86aa6e46dded84349}\index{TcpdirectTcpConnection$<$ Conf $>$@{TcpdirectTcpConnection$<$ Conf $>$}!last\_error\_@{last\_error\_}}
+\index{last\_error\_@{last\_error\_}!TcpdirectTcpConnection$<$ Conf $>$@{TcpdirectTcpConnection$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{last\_error\_}{last\_error\_}}
+{\footnotesize\ttfamily \label{class_tcpdirect_tcp_connection_a8e2f57c37f9ab3f86aa6e46dded84349} 
+template$<$typename Conf $>$ \\
+char \mbox{\hyperlink{class_tcpdirect_tcp_connection}{Tcpdirect\+Tcp\+Connection}}$<$ Conf $>$\+::last\+\_\+error\+\_\+\mbox{[}64\mbox{]} = "{}"{}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_tcpdirect_tcp_connection_af393eeda2aae243ce1f4e0fe1a133799}\index{TcpdirectTcpConnection$<$ Conf $>$@{TcpdirectTcpConnection$<$ Conf $>$}!recvbuf\_@{recvbuf\_}}
+\index{recvbuf\_@{recvbuf\_}!TcpdirectTcpConnection$<$ Conf $>$@{TcpdirectTcpConnection$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{recvbuf\_}{recvbuf\_}}
+{\footnotesize\ttfamily \label{class_tcpdirect_tcp_connection_af393eeda2aae243ce1f4e0fe1a133799} 
+template$<$typename Conf $>$ \\
+uint8\+\_\+t \mbox{\hyperlink{class_tcpdirect_tcp_connection}{Tcpdirect\+Tcp\+Connection}}$<$ Conf $>$\+::recvbuf\+\_\+\mbox{[}Conf\+::\+Recv\+Buf\+Size\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_tcpdirect_tcp_connection_a6007b0dd5801ef67e66492aed1810120}\index{TcpdirectTcpConnection$<$ Conf $>$@{TcpdirectTcpConnection$<$ Conf $>$}!send\_ts\_@{send\_ts\_}}
+\index{send\_ts\_@{send\_ts\_}!TcpdirectTcpConnection$<$ Conf $>$@{TcpdirectTcpConnection$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{send\_ts\_}{send\_ts\_}}
+{\footnotesize\ttfamily \label{class_tcpdirect_tcp_connection_a6007b0dd5801ef67e66492aed1810120} 
+template$<$typename Conf $>$ \\
+int64\+\_\+t \mbox{\hyperlink{class_tcpdirect_tcp_connection}{Tcpdirect\+Tcp\+Connection}}$<$ Conf $>$\+::send\+\_\+ts\+\_\+ = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_tcpdirect_tcp_connection_a458cd2bd3e99b03d01ba96e95d62c523}\index{TcpdirectTcpConnection$<$ Conf $>$@{TcpdirectTcpConnection$<$ Conf $>$}!stack\_@{stack\_}}
+\index{stack\_@{stack\_}!TcpdirectTcpConnection$<$ Conf $>$@{TcpdirectTcpConnection$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{stack\_}{stack\_}}
+{\footnotesize\ttfamily \label{class_tcpdirect_tcp_connection_a458cd2bd3e99b03d01ba96e95d62c523} 
+template$<$typename Conf $>$ \\
+struct zf\+\_\+stack\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_tcpdirect_tcp_connection}{Tcpdirect\+Tcp\+Connection}}$<$ Conf $>$\+::stack\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_tcpdirect_tcp_connection_a315aa6e4b555c9538ace77594fa6c5cc}\index{TcpdirectTcpConnection$<$ Conf $>$@{TcpdirectTcpConnection$<$ Conf $>$}!tail\_@{tail\_}}
+\index{tail\_@{tail\_}!TcpdirectTcpConnection$<$ Conf $>$@{TcpdirectTcpConnection$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{tail\_}{tail\_}}
+{\footnotesize\ttfamily \label{class_tcpdirect_tcp_connection_a315aa6e4b555c9538ace77594fa6c5cc} 
+template$<$typename Conf $>$ \\
+uint32\+\_\+t \mbox{\hyperlink{class_tcpdirect_tcp_connection}{Tcpdirect\+Tcp\+Connection}}$<$ Conf $>$\+::tail\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_tcpdirect_tcp_connection_a09f8fe3144ef29c94fc6405d0dc9d333}\index{TcpdirectTcpConnection$<$ Conf $>$@{TcpdirectTcpConnection$<$ Conf $>$}!zock\_@{zock\_}}
+\index{zock\_@{zock\_}!TcpdirectTcpConnection$<$ Conf $>$@{TcpdirectTcpConnection$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{zock\_}{zock\_}}
+{\footnotesize\ttfamily \label{class_tcpdirect_tcp_connection_a09f8fe3144ef29c94fc6405d0dc9d333} 
+template$<$typename Conf $>$ \\
+struct zft\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_tcpdirect_tcp_connection}{Tcpdirect\+Tcp\+Connection}}$<$ Conf $>$\+::zock\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sgaer/source/repos/katanafinancial/\+Occam\+CME4/\+Occam\+CME4/src/external/pollnet/Tcpdirect.\+h\end{DoxyCompactItemize}

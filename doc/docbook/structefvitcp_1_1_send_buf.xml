@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structefvitcp_1_1_send_buf" xml:lang="en-US">
+<title>efvitcp::SendBuf Struct Reference</title>
+<indexterm><primary>efvitcp::SendBuf</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_structefvitcp_1_1_send_buf_1ab56eccd1685a0d8603cc1537ce3c7fce">setOptDataLen</link> (uint16_t len, <link linkend="_structefvitcp_1_1_c_sum">CSum</link> ipsum, <link linkend="_structefvitcp_1_1_c_sum">CSum</link> tcpsum)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>ef_addr <link linkend="_structefvitcp_1_1_send_buf_1af1af04a40b1d947dd6fe7a38b72b80b9">post_addr</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_structefvitcp_1_1_send_buf_1a74aef4945373b80cc3e75cb6d1a9b5db">send_ts</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_structefvitcp_1_1_send_buf_1ab9724c6ef26db7868eafb52cd2022240">avail</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_structefvitcp_1_1_send_buf_1a9e404a7fb70cf17c2e7848715c16d58e">pad</link></para>
+</listitem>
+            <listitem><para><link linkend="_structefvitcp_1_1_ether_header">EtherHeader</link> <link linkend="_structefvitcp_1_1_send_buf_1ad14d3ef1d7c79e49a234cfbceb668dea">eth_hdr</link></para>
+</listitem>
+            <listitem><para><link linkend="_structefvitcp_1_1_ip_header">IpHeader</link> <link linkend="_structefvitcp_1_1_send_buf_1a5e7246e06b28fc746784073fa2e72dfa">ip_hdr</link></para>
+</listitem>
+            <listitem><para><link linkend="_structefvitcp_1_1_tcp_header">TcpHeader</link> <link linkend="_structefvitcp_1_1_send_buf_1aa78fbfef726b98887d1322d20b898c8d">tcp_hdr</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_structefvitcp_1_1_send_buf_1ab56eccd1685a0d8603cc1537ce3c7fce"/><section>
+    <title>setOptDataLen()</title>
+<indexterm><primary>setOptDataLen</primary><secondary>efvitcp::SendBuf</secondary></indexterm>
+<indexterm><primary>efvitcp::SendBuf</primary><secondary>setOptDataLen</secondary></indexterm>
+<para><computeroutput>void efvitcp::SendBuf::setOptDataLen (uint16_t len, <link linkend="_structefvitcp_1_1_c_sum">CSum</link> ipsum, <link linkend="_structefvitcp_1_1_c_sum">CSum</link> tcpsum)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structefvitcp_1_1_send_buf_1ab9724c6ef26db7868eafb52cd2022240"/><section>
+    <title>avail</title>
+<indexterm><primary>avail</primary><secondary>efvitcp::SendBuf</secondary></indexterm>
+<indexterm><primary>efvitcp::SendBuf</primary><secondary>avail</secondary></indexterm>
+<para><computeroutput>bool efvitcp::SendBuf::avail</computeroutput></para></section>
+<anchor xml:id="_structefvitcp_1_1_send_buf_1ad14d3ef1d7c79e49a234cfbceb668dea"/><section>
+    <title>eth_hdr</title>
+<indexterm><primary>eth_hdr</primary><secondary>efvitcp::SendBuf</secondary></indexterm>
+<indexterm><primary>efvitcp::SendBuf</primary><secondary>eth_hdr</secondary></indexterm>
+<para><computeroutput><link linkend="_structefvitcp_1_1_ether_header">EtherHeader</link> efvitcp::SendBuf::eth_hdr</computeroutput></para></section>
+<anchor xml:id="_structefvitcp_1_1_send_buf_1a5e7246e06b28fc746784073fa2e72dfa"/><section>
+    <title>ip_hdr</title>
+<indexterm><primary>ip_hdr</primary><secondary>efvitcp::SendBuf</secondary></indexterm>
+<indexterm><primary>efvitcp::SendBuf</primary><secondary>ip_hdr</secondary></indexterm>
+<para><computeroutput><link linkend="_structefvitcp_1_1_ip_header">IpHeader</link> efvitcp::SendBuf::ip_hdr</computeroutput></para></section>
+<anchor xml:id="_structefvitcp_1_1_send_buf_1a9e404a7fb70cf17c2e7848715c16d58e"/><section>
+    <title>pad</title>
+<indexterm><primary>pad</primary><secondary>efvitcp::SendBuf</secondary></indexterm>
+<indexterm><primary>efvitcp::SendBuf</primary><secondary>pad</secondary></indexterm>
+<para><computeroutput>uint8_t efvitcp::SendBuf::pad</computeroutput></para></section>
+<anchor xml:id="_structefvitcp_1_1_send_buf_1af1af04a40b1d947dd6fe7a38b72b80b9"/><section>
+    <title>post_addr</title>
+<indexterm><primary>post_addr</primary><secondary>efvitcp::SendBuf</secondary></indexterm>
+<indexterm><primary>efvitcp::SendBuf</primary><secondary>post_addr</secondary></indexterm>
+<para><computeroutput>ef_addr efvitcp::SendBuf::post_addr</computeroutput></para></section>
+<anchor xml:id="_structefvitcp_1_1_send_buf_1a74aef4945373b80cc3e75cb6d1a9b5db"/><section>
+    <title>send_ts</title>
+<indexterm><primary>send_ts</primary><secondary>efvitcp::SendBuf</secondary></indexterm>
+<indexterm><primary>efvitcp::SendBuf</primary><secondary>send_ts</secondary></indexterm>
+<para><computeroutput>uint32_t efvitcp::SendBuf::send_ts</computeroutput></para></section>
+<anchor xml:id="_structefvitcp_1_1_send_buf_1aa78fbfef726b98887d1322d20b898c8d"/><section>
+    <title>tcp_hdr</title>
+<indexterm><primary>tcp_hdr</primary><secondary>efvitcp::SendBuf</secondary></indexterm>
+<indexterm><primary>efvitcp::SendBuf</primary><secondary>tcp_hdr</secondary></indexterm>
+<para><computeroutput><link linkend="_structefvitcp_1_1_tcp_header">TcpHeader</link> efvitcp::SendBuf::tcp_hdr</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+C:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/external/pollnet/efvitcp/Core.h</section>
+</section>

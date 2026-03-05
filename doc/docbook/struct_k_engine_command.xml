@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_engine_command" xml:lang="en-US">
+<title>KEngineCommand Struct Reference</title>
+<indexterm><primary>KEngineCommand</primary></indexterm>
+<para>
+
+<para>Enumeration for the algo engine commands. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;engine_structs.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_struct_k_engine_command_1a48a31526f0365e35b4c067ae4c30c45b">Enum</link> : uint8_t { <link linkend="_struct_k_engine_command_1a48a31526f0365e35b4c067ae4c30c45badfe81ef94216f4790329e3539d04a648">NONE</link>
+, <link linkend="_struct_k_engine_command_1a48a31526f0365e35b4c067ae4c30c45ba0c39021606bb62f51e2eacaac460d079">CANCEL</link>
+, <link linkend="_struct_k_engine_command_1a48a31526f0365e35b4c067ae4c30c45ba32a7d2ce9f20efeb0c8a6fb3c03dfa2d">MARKET</link>
+, <link linkend="_struct_k_engine_command_1a48a31526f0365e35b4c067ae4c30c45babf14078fd9205927f0343aa91cbb4132">RISK</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_struct_k_engine_command_1a48a31526f0365e35b4c067ae4c30c45b">KEngineCommand::Enum</link> <link linkend="_struct_k_engine_command_1ac864226be736ecae9603bcca74e82b92">Value</link> (string cmd)</para>
+
+<para>Converts a string command to the corresponding enumeration value. </para>
+</listitem>
+            <listitem><para>static <link linkend="_struct_k_engine_command_1a48a31526f0365e35b4c067ae4c30c45b">KEngineCommand::Enum</link> <link linkend="_struct_k_engine_command_1ad4c588c34c6858a4b9131d42b5150866">Value</link> (int cmd)</para>
+
+<para>Converts an integer command to the corresponding enumeration value. </para>
+</listitem>
+            <listitem><para>static std::string <link linkend="_struct_k_engine_command_1aa82d75744190e551a0fc7e3c4e5b72c2">toString</link> (<link linkend="_struct_k_engine_command_1a48a31526f0365e35b4c067ae4c30c45b">Enum</link> status)</para>
+
+<para>Converts an enumeration value to its string representation. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Enumeration for the algo engine commands. </para>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_struct_k_engine_command_1a48a31526f0365e35b4c067ae4c30c45b"/><section>
+    <title>Enum</title>
+<indexterm><primary>Enum</primary><secondary>KEngineCommand</secondary></indexterm>
+<indexterm><primary>KEngineCommand</primary><secondary>Enum</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_struct_k_engine_command_1a48a31526f0365e35b4c067ae4c30c45b">KEngineCommand::Enum</link> : uint8_t</computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>NONE</primary><secondary>KEngineCommand</secondary></indexterm>
+<indexterm><primary>KEngineCommand</primary><secondary>NONE</secondary></indexterm>
+<anchor xml:id="_struct_k_engine_command_1a48a31526f0365e35b4c067ae4c30c45badfe81ef94216f4790329e3539d04a648"/>NONE</entry><entry>
+<para>No command </para>
+</entry></row><row><entry><indexterm><primary>CANCEL</primary><secondary>KEngineCommand</secondary></indexterm>
+<indexterm><primary>KEngineCommand</primary><secondary>CANCEL</secondary></indexterm>
+<anchor xml:id="_struct_k_engine_command_1a48a31526f0365e35b4c067ae4c30c45ba0c39021606bb62f51e2eacaac460d079"/>CANCEL</entry><entry>
+<para>Cancel command </para>
+</entry></row><row><entry><indexterm><primary>MARKET</primary><secondary>KEngineCommand</secondary></indexterm>
+<indexterm><primary>KEngineCommand</primary><secondary>MARKET</secondary></indexterm>
+<anchor xml:id="_struct_k_engine_command_1a48a31526f0365e35b4c067ae4c30c45ba32a7d2ce9f20efeb0c8a6fb3c03dfa2d"/>MARKET</entry><entry>
+<para>Market command </para>
+</entry></row><row><entry><indexterm><primary>RISK</primary><secondary>KEngineCommand</secondary></indexterm>
+<indexterm><primary>KEngineCommand</primary><secondary>RISK</secondary></indexterm>
+<anchor xml:id="_struct_k_engine_command_1a48a31526f0365e35b4c067ae4c30c45babf14078fd9205927f0343aa91cbb4132"/>RISK</entry><entry>
+<para>Risk command </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_k_engine_command_1aa82d75744190e551a0fc7e3c4e5b72c2"/><section>
+    <title>toString()</title>
+<indexterm><primary>toString</primary><secondary>KEngineCommand</secondary></indexterm>
+<indexterm><primary>KEngineCommand</primary><secondary>toString</secondary></indexterm>
+<para><computeroutput>static std::string KEngineCommand::toString (<link linkend="_struct_k_engine_command_1a48a31526f0365e35b4c067ae4c30c45b">Enum</link> status)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Converts an enumeration value to its string representation. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>status</entry><entry>
+<para>The enumeration value. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The string representation of the enumeration value. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00024">CANCEL</link>, <link linkend="_l00025">MARKET</link>, <link linkend="_l00023">NONE</link>, and <link linkend="_l00026">RISK</link>.</para>
+</section>
+<anchor xml:id="_struct_k_engine_command_1ad4c588c34c6858a4b9131d42b5150866"/><section>
+    <title>Value()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>Value</primary><secondary>KEngineCommand</secondary></indexterm>
+<indexterm><primary>KEngineCommand</primary><secondary>Value</secondary></indexterm>
+<para><computeroutput>static <link linkend="_struct_k_engine_command_1a48a31526f0365e35b4c067ae4c30c45b">KEngineCommand::Enum</link> KEngineCommand::Value (int cmd)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Converts an integer command to the corresponding enumeration value. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>cmd</entry><entry>
+<para>The integer command. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The corresponding enumeration value. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00024">CANCEL</link>, <link linkend="_l00025">MARKET</link>, <link linkend="_l00023">NONE</link>, and <link linkend="_l00026">RISK</link>.</para>
+</section>
+<anchor xml:id="_struct_k_engine_command_1ac864226be736ecae9603bcca74e82b92"/><section>
+    <title>Value()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>Value</primary><secondary>KEngineCommand</secondary></indexterm>
+<indexterm><primary>KEngineCommand</primary><secondary>Value</secondary></indexterm>
+<para><computeroutput>static <link linkend="_struct_k_engine_command_1a48a31526f0365e35b4c067ae4c30c45b">KEngineCommand::Enum</link> KEngineCommand::Value (string cmd)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Converts a string command to the corresponding enumeration value. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>cmd</entry><entry>
+<para>The string command. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The corresponding enumeration value. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00024">CANCEL</link>, <link linkend="_l00025">MARKET</link>, <link linkend="_l00023">NONE</link>, and <link linkend="_l00026">RISK</link>.</para>
+<para>
+Referenced by <link linkend="_l00283">AlgoFactory::ParseEngineCommand()</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+AlgoEngines/engine_structs.hpp</section>
+</section>

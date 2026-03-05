@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['label_0',['label',['../structinstrument.html#ab966bb92dfcca559d9a1640ee27e2f1f',1,'instrument']]],
+  ['last_1',['last',['../structalgomd.html#a5ef4c5b327a7bdbbabcf1e23fdb3104b',1,'algomd']]],
+  ['lastagressor_2',['lastagressor',['../structalgomd.html#a853f9f53357aba49a591a28ac06ec8c0',1,'algomd']]],
+  ['lastask_3',['lastAsk',['../structinstrument.html#ac0d8ac2100701f13b2bcd5007eeb92a8',1,'instrument']]],
+  ['lastbid_4',['lastBid',['../structinstrument.html#a95ff8e0b792d301e070528788562da99',1,'instrument']]],
+  ['lastbuyid_5',['lastBuyId',['../structinstrument.html#a795bf78d1b3312620f4a7eb34b6ee1d5',1,'instrument']]],
+  ['lastordernumrecd_6',['lastOrdernumRecd',['../structsidestate.html#a1a9a42133ee9ec66069eff194cb64eda',1,'sidestate']]],
+  ['lastordernumsent_7',['lastOrdernumSent',['../structsidestate.html#a62144ac69e26ead27cb4a21ac84b329a',1,'sidestate']]],
+  ['lastprice_8',['lastPrice',['../structsidestate.html#a29902a7e17f0f73d8763852484507f82',1,'sidestate']]],
+  ['lastpx_9',['lastpx',['../struct_k_t_n_1_1_order_pod.html#a97d7accb865af260f93936bcce482609',1,'KTN::OrderPod']]],
+  ['lastqty_10',['lastqty',['../struct_k_t_n_1_1_order_pod.html#a4084578c32198787e6cb8f1b6da3e697',1,'KTN::OrderPod']]],
+  ['lastsellid_11',['lastSellId',['../structinstrument.html#aa0bd64ba11d2bf9ef9193d2c863f47b8',1,'instrument']]],
+  ['lastsentbuyprice_12',['lastSentBuyPrice',['../structinstrument.html#a949dbdba9bc80a877ed2e8220941bc25',1,'instrument']]],
+  ['lastsentsellprice_13',['lastSentSellPrice',['../structinstrument.html#aaaf56c87d3d9346abadce7e97bfc84a3',1,'instrument']]],
+  ['lastsize_14',['lastSize',['../structsidestate.html#a4c9994530d37f528b622656894dd4628',1,'sidestate']]],
+  ['lastsize_15',['lastsize',['../structalgomd.html#adbe5e035cfff95be2788af832adc9111',1,'algomd']]],
+  ['leavesqty_16',['leavesqty',['../struct_k_t_n_1_1_order_pod.html#af573bfb288d6d7ebe1c327b600343ed9',1,'KTN::OrderPod']]],
+  ['legid_17',['LegId',['../structalgoleg.html#abf1fea1efa21e100ee096b23c03a25f0',1,'algoleg']]],
+  ['legs_18',['legs',['../struct_algo_initializer.html#a1e043d8c2ac514ff456dc9670ce52874',1,'AlgoInitializer::legs'],['../structcombopath.html#a81d5e75537d95b0cc3a041783e4f1f34',1,'combopath::legs']]],
+  ['localinterface_19',['localinterface',['../class_k_t_n_1_1_t_c_p_1_1_service_descriptor.html#acb37545f482093deb424ceb81347e10e',1,'KTN::TCP::ServiceDescriptor']]],
+  ['localinterfacename_20',['localinterfacename',['../class_k_t_n_1_1_t_c_p_1_1_service_descriptor.html#a2e758be8c2379adfd09e363c8097ae2b',1,'KTN::TCP::ServiceDescriptor']]],
+  ['loglevel_21',['loglevel',['../struct_log_msg.html#a0ce4dfbfe0e417015fe56fec4fd0460f',1,'LogMsg']]],
+  ['low_22',['low',['../structalgomd.html#aea7baa973889794185a3108bb42b6f4f',1,'algomd']]]
+];

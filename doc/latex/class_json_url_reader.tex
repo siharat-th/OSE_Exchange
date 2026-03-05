@@ -1,0 +1,114 @@
+\doxysection{Json\+Url\+Reader Class Reference}
+\hypertarget{class_json_url_reader}{}\label{class_json_url_reader}\index{JsonUrlReader@{JsonUrlReader}}
+
+
+The \doxylink{class_json_url_reader}{Json\+Url\+Reader} class is responsible for reading JSON data from a URL.  
+
+
+
+
+{\ttfamily \#include $<$Json\+Url\+Reader.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_json_url_reader_a589c4b2f79c33642ee6dd761c3ac0873}{Json\+Url\+Reader}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{class_json_url_reader}{Json\+Url\+Reader}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_json_url_reader_a94d31b5c867485fd8d1607580f2ea577}{\texorpdfstring{$\sim$}{\string~}\+Json\+Url\+Reader}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{class_json_url_reader}{Json\+Url\+Reader}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{class_json_url_reader_a5c7afaff9b7e34f700a64497e6d31adf}{Write\+Callback}} (void \texorpdfstring{$\ast$}{*}contents, size\+\_\+t size, size\+\_\+t nmemb, void \texorpdfstring{$\ast$}{*}userp)
+\begin{DoxyCompactList}\small\item\em Callback function used by libcurl to write received data to a string buffer. \end{DoxyCompactList}\item 
+static std\+::string \mbox{\hyperlink{class_json_url_reader_a06e5a6fef9f4160c3979960550dcff76}{Get}} (std\+::string url)
+\begin{DoxyCompactList}\small\item\em Sends an HTTP GET request to the specified URL and returns the response as a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_json_url_reader}{Json\+Url\+Reader} class is responsible for reading JSON data from a URL. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_json_url_reader_a589c4b2f79c33642ee6dd761c3ac0873}\index{JsonUrlReader@{JsonUrlReader}!JsonUrlReader@{JsonUrlReader}}
+\index{JsonUrlReader@{JsonUrlReader}!JsonUrlReader@{JsonUrlReader}}
+\doxysubsubsection{\texorpdfstring{JsonUrlReader()}{JsonUrlReader()}}
+{\footnotesize\ttfamily \label{class_json_url_reader_a589c4b2f79c33642ee6dd761c3ac0873} 
+Json\+Url\+Reader\+::\+Json\+Url\+Reader (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor for \doxylink{class_json_url_reader}{Json\+Url\+Reader}. 
+
+\Hypertarget{class_json_url_reader_a94d31b5c867485fd8d1607580f2ea577}\index{JsonUrlReader@{JsonUrlReader}!````~JsonUrlReader@{\texorpdfstring{$\sim$}{\string~}JsonUrlReader}}
+\index{````~JsonUrlReader@{\texorpdfstring{$\sim$}{\string~}JsonUrlReader}!JsonUrlReader@{JsonUrlReader}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}JsonUrlReader()}{\string~JsonUrlReader()}}
+{\footnotesize\ttfamily \label{class_json_url_reader_a94d31b5c867485fd8d1607580f2ea577} 
+Json\+Url\+Reader\+::\texorpdfstring{$\sim$}{\string~}\+Json\+Url\+Reader (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor for \doxylink{class_json_url_reader}{Json\+Url\+Reader}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_json_url_reader_a06e5a6fef9f4160c3979960550dcff76}\index{JsonUrlReader@{JsonUrlReader}!Get@{Get}}
+\index{Get@{Get}!JsonUrlReader@{JsonUrlReader}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily \label{class_json_url_reader_a06e5a6fef9f4160c3979960550dcff76} 
+static std\+::string Json\+Url\+Reader\+::\+Get (\begin{DoxyParamCaption}\item[{std\+::string}]{url}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Sends an HTTP GET request to the specified URL and returns the response as a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em url} & The URL to send the GET request to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The response received from the URL as a string. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00041}{Write\+Callback()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00039}{IL3\+Cert\+Helpers\+::\+Cert\+Sec\+Id()}}, and \mbox{\hyperlink{l00063}{IL3\+Cert\+Helpers\+::\+Cert\+Symbol()}}.
+
+\Hypertarget{class_json_url_reader_a5c7afaff9b7e34f700a64497e6d31adf}\index{JsonUrlReader@{JsonUrlReader}!WriteCallback@{WriteCallback}}
+\index{WriteCallback@{WriteCallback}!JsonUrlReader@{JsonUrlReader}}
+\doxysubsubsection{\texorpdfstring{WriteCallback()}{WriteCallback()}}
+{\footnotesize\ttfamily \label{class_json_url_reader_a5c7afaff9b7e34f700a64497e6d31adf} 
+static size\+\_\+t Json\+Url\+Reader\+::\+Write\+Callback (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{contents}{, }\item[{size\+\_\+t}]{size}{, }\item[{size\+\_\+t}]{nmemb}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{userp}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Callback function used by libcurl to write received data to a string buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em contents} & Pointer to the received data. \\
+\hline
+{\em size} & Size of each element in the received data. \\
+\hline
+{\em nmemb} & Number of elements in the received data. \\
+\hline
+{\em userp} & Pointer to the string buffer where the received data is stored. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The total number of bytes written to the string buffer. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00052}{Get()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Rest/Json\+Url\+Reader.\+hpp\item 
+Rest/Json\+Url\+Reader.\+cpp\end{DoxyCompactItemize}

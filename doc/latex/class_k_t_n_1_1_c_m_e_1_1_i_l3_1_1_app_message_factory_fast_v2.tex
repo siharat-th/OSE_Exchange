@@ -1,0 +1,209 @@
+\doxysection{KTN\+::CME\+::IL3\+::App\+Message\+Factory\+Fast\+V2 Class Reference}
+\hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2}{}\label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2}\index{KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_a56e84a57ce3dfffa7dd9585a74514f6a}{Init}} (string settingsfile)
+\item 
+\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_single_msg}{New\+Order\+Single\+Msg}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_aa613da1e7a17fd042bead260c3f60830}{New\+Order\+Msg\+Auto}} ()
+\item 
+\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg}{Order\+Cancel\+Replace\+Request\+Msg}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_a3372cd19212320600cecc5d472384e33}{Mod\+Order\+Msg\+Auto}} ()
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_aa2953dbe693f6e650be90278222c02be}{New\+Order\+Encode\+Man}} (const \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord, uint64\+\_\+t ordreqid, uint32\+\_\+t seqnum, \mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf}{KTNBuf}} \&msg)
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_a11d887044fc8958f5fc09f9d8354d5a6}{Modify\+Order\+Encode\+Man}} (const \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord, uint32\+\_\+t seqnum, \mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf}{KTNBuf}} \&msg)
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_af4e1b6e01122ea127f9bbf8f737a9306}{Cancel\+Order\+Encode\+Man}} (const \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord, uint32\+\_\+t seqnum, \mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf}{KTNBuf}} \&container)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_a9107ea2c91d0f2eaf90ad642c920129b}{Modify\+Order\+Encode\+Auto\+V4}} (const \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord, uint32\+\_\+t seqnum, char \texorpdfstring{$\ast$}{*}\&buf)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_a94592dd4c51b41a0c3363515627c691f}{New\+Order\+Encode\+Auto\+V42}} (char \texorpdfstring{$\ast$}{*}clordid, uint32\+\_\+t qty, int32\+\_\+t px, int32\+\_\+t secid, KOrder\+Side\+::\+Enum side, uint64\+\_\+t ordreqid, uint32\+\_\+t seqnum, char \texorpdfstring{$\ast$}{*}\&buf)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_a69c5c145dd7ba522797b94d4702c0cbb}{New\+Order\+Msg\+Encode}} (\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_single_msg}{New\+Order\+Single\+Msg}} \texorpdfstring{$\ast$}{*}msg, char \texorpdfstring{$\ast$}{*}\&buf)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_a16358c69da0bff2e6b9aa3aa98df5dd6}{Modify\+Order\+Msg\+Encode}} (\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg}{Order\+Cancel\+Replace\+Request\+Msg}} \texorpdfstring{$\ast$}{*}msg, char \texorpdfstring{$\ast$}{*}\&buf)
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_a23ee88cfe4510ae6e543703cbaeba3c8}{Cancel\+Order\+Encode\+Auto}} (const \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord, uint32\+\_\+t seqnum, \mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf}{KTNBuf}} \&container)
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_a36b9abe5b46b4149c6492abb4f47fdce}{Pre\+Serialize\+New\+Orders}} (vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} $>$ \texorpdfstring{$\ast$}{*}ords, \mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf}{KTNBuf}} \&msg, uint32\+\_\+t seqnum, uint64\+\_\+t startreqid, int segid)
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_ac9b46f93465c7aa70d35db1800a3a988}{Pre\+Serialize\+New\+Orders2}} (vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} $>$ \texorpdfstring{$\ast$}{*}ords, \mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf}{KTNBuf}} \&msg, uint32\+\_\+t seqnum, int segid)
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_a999e8c9a8646f1bf3d97792b69c8b06d}{Serialize\+Batch}} (\mbox{\hyperlink{struct_msg_batch}{Msg\+Batch}} \texorpdfstring{$\ast$}{*}batch, \mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf}{KTNBuf}} \&msg, uint32\+\_\+t seqnum, int segid)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_a29662cbdba1d7fa823916a632fdedbf6}{Serialize\+Tas}} (vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} $>$ ords, char \texorpdfstring{$\ast$}{*}\&buf, uint32\+\_\+t seqnum, int segid)
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_ac1fd4b05596e516ed21ef4bf87415abf}{Update\+Msg}} (\mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf}{KTNBuf}} \&msg, uint32\+\_\+t qty, uint32\+\_\+t seq, uint64\+\_\+t reqid)
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_adcfb997f46423e23521c97440cc0805d}{Get\+New\+Order\+Template}} (\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_single_msg}{New\+Order\+Single\+Msg}} \texorpdfstring{$\ast$}{*}\&msg)
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_ac87e45d41249fa00e6153a562e6f295a}{Get\+Mod\+Order\+Template}} (\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg}{Order\+Cancel\+Replace\+Request\+Msg}} \texorpdfstring{$\ast$}{*}\&msg)
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_a0259d04e3bba2f00aa4f9e55a6e2d61c}{Get\+Cxl\+Order\+Template}} (\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_request_msg}{Order\+Cancel\+Request\+Msg}} \texorpdfstring{$\ast$}{*}\&msg)
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_aa503601ed8460831a011bf0bb328f520}{Update\+Clock}} ()
+\item 
+uint64\+\_\+t \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_a4a2fd1ba6661011819d5e5f57e593b92}{Get\+Timestamp}} ()
+\item 
+{\footnotesize template$<$Enum\+Side\+Req Side$>$ }\\uint16\+\_\+t \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_ae8b1ca2f2e34bf4cf577c6c32795921f}{Modify\+Order\+Encode\+Auto\+V4}} (const \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord, uint64\+\_\+t ordreqid, uint32\+\_\+t seqnum, char \texorpdfstring{$\ast$}{*}\&buf)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_aee673bd14572ff9326b9c94e557b237c}\index{KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}!AppMessageFactoryFastV2@{AppMessageFactoryFastV2}}
+\index{AppMessageFactoryFastV2@{AppMessageFactoryFastV2}!KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}}
+\doxysubsubsection{\texorpdfstring{AppMessageFactoryFastV2()}{AppMessageFactoryFastV2()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_aee673bd14572ff9326b9c94e557b237c} 
+App\+Message\+Factory\+Fast\+V2\+::\+App\+Message\+Factory\+Fast\+V2 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_a473bcc3d7bce5ba878557d3750d42a18}\index{KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}!````~AppMessageFactoryFastV2@{\texorpdfstring{$\sim$}{\string~}AppMessageFactoryFastV2}}
+\index{````~AppMessageFactoryFastV2@{\texorpdfstring{$\sim$}{\string~}AppMessageFactoryFastV2}!KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}AppMessageFactoryFastV2()}{\string~AppMessageFactoryFastV2()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_a473bcc3d7bce5ba878557d3750d42a18} 
+App\+Message\+Factory\+Fast\+V2\+::\texorpdfstring{$\sim$}{\string~}\+App\+Message\+Factory\+Fast\+V2 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_a23ee88cfe4510ae6e543703cbaeba3c8}\index{KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}!CancelOrderEncodeAuto@{CancelOrderEncodeAuto}}
+\index{CancelOrderEncodeAuto@{CancelOrderEncodeAuto}!KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}}
+\doxysubsubsection{\texorpdfstring{CancelOrderEncodeAuto()}{CancelOrderEncodeAuto()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_a23ee88cfe4510ae6e543703cbaeba3c8} 
+void App\+Message\+Factory\+Fast\+V2\+::\+Cancel\+Order\+Encode\+Auto (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&}]{ord}{, }\item[{uint32\+\_\+t}]{seqnum}{, }\item[{\mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf}{KTNBuf}} \&}]{container}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_af4e1b6e01122ea127f9bbf8f737a9306}\index{KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}!CancelOrderEncodeMan@{CancelOrderEncodeMan}}
+\index{CancelOrderEncodeMan@{CancelOrderEncodeMan}!KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}}
+\doxysubsubsection{\texorpdfstring{CancelOrderEncodeMan()}{CancelOrderEncodeMan()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_af4e1b6e01122ea127f9bbf8f737a9306} 
+void App\+Message\+Factory\+Fast\+V2\+::\+Cancel\+Order\+Encode\+Man (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&}]{ord}{, }\item[{uint32\+\_\+t}]{seqnum}{, }\item[{\mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf}{KTNBuf}} \&}]{container}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_a0259d04e3bba2f00aa4f9e55a6e2d61c}\index{KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}!GetCxlOrderTemplate@{GetCxlOrderTemplate}}
+\index{GetCxlOrderTemplate@{GetCxlOrderTemplate}!KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}}
+\doxysubsubsection{\texorpdfstring{GetCxlOrderTemplate()}{GetCxlOrderTemplate()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_a0259d04e3bba2f00aa4f9e55a6e2d61c} 
+void App\+Message\+Factory\+Fast\+V2\+::\+Get\+Cxl\+Order\+Template (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_request_msg}{Order\+Cancel\+Request\+Msg}} \texorpdfstring{$\ast$}{*}\&}]{msg}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_ac87e45d41249fa00e6153a562e6f295a}\index{KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}!GetModOrderTemplate@{GetModOrderTemplate}}
+\index{GetModOrderTemplate@{GetModOrderTemplate}!KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}}
+\doxysubsubsection{\texorpdfstring{GetModOrderTemplate()}{GetModOrderTemplate()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_ac87e45d41249fa00e6153a562e6f295a} 
+void App\+Message\+Factory\+Fast\+V2\+::\+Get\+Mod\+Order\+Template (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg}{Order\+Cancel\+Replace\+Request\+Msg}} \texorpdfstring{$\ast$}{*}\&}]{msg}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_adcfb997f46423e23521c97440cc0805d}\index{KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}!GetNewOrderTemplate@{GetNewOrderTemplate}}
+\index{GetNewOrderTemplate@{GetNewOrderTemplate}!KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}}
+\doxysubsubsection{\texorpdfstring{GetNewOrderTemplate()}{GetNewOrderTemplate()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_adcfb997f46423e23521c97440cc0805d} 
+void App\+Message\+Factory\+Fast\+V2\+::\+Get\+New\+Order\+Template (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_single_msg}{New\+Order\+Single\+Msg}} \texorpdfstring{$\ast$}{*}\&}]{msg}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_a4a2fd1ba6661011819d5e5f57e593b92}\index{KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}!GetTimestamp@{GetTimestamp}}
+\index{GetTimestamp@{GetTimestamp}!KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}}
+\doxysubsubsection{\texorpdfstring{GetTimestamp()}{GetTimestamp()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_a4a2fd1ba6661011819d5e5f57e593b92} 
+uint64\+\_\+t KTN\+::\+CME\+::\+IL3\+::\+App\+Message\+Factory\+Fast\+V2\+::\+Get\+Timestamp (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_a56e84a57ce3dfffa7dd9585a74514f6a}\index{KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}!Init@{Init}}
+\index{Init@{Init}!KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_a56e84a57ce3dfffa7dd9585a74514f6a} 
+void App\+Message\+Factory\+Fast\+V2\+::\+Init (\begin{DoxyParamCaption}\item[{string}]{settingsfile}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_a9107ea2c91d0f2eaf90ad642c920129b}\index{KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}!ModifyOrderEncodeAutoV4@{ModifyOrderEncodeAutoV4}}
+\index{ModifyOrderEncodeAutoV4@{ModifyOrderEncodeAutoV4}!KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}}
+\doxysubsubsection{\texorpdfstring{ModifyOrderEncodeAutoV4()}{ModifyOrderEncodeAutoV4()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_a9107ea2c91d0f2eaf90ad642c920129b} 
+uint16\+\_\+t App\+Message\+Factory\+Fast\+V2\+::\+Modify\+Order\+Encode\+Auto\+V4 (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&}]{ord}{, }\item[{uint32\+\_\+t}]{seqnum}{, }\item[{char \texorpdfstring{$\ast$}{*}\&}]{buf}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_ae8b1ca2f2e34bf4cf577c6c32795921f}\index{KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}!ModifyOrderEncodeAutoV4@{ModifyOrderEncodeAutoV4}}
+\index{ModifyOrderEncodeAutoV4@{ModifyOrderEncodeAutoV4}!KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}}
+\doxysubsubsection{\texorpdfstring{ModifyOrderEncodeAutoV4()}{ModifyOrderEncodeAutoV4()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_ae8b1ca2f2e34bf4cf577c6c32795921f} 
+template$<$Enum\+Side\+Req Side$>$ \\
+uint16\+\_\+t KTN\+::\+CME\+::\+IL3\+::\+App\+Message\+Factory\+Fast\+V2\+::\+Modify\+Order\+Encode\+Auto\+V4 (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&}]{ord}{, }\item[{uint64\+\_\+t}]{ordreqid}{, }\item[{uint32\+\_\+t}]{seqnum}{, }\item[{char \texorpdfstring{$\ast$}{*}\&}]{buf}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_a11d887044fc8958f5fc09f9d8354d5a6}\index{KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}!ModifyOrderEncodeMan@{ModifyOrderEncodeMan}}
+\index{ModifyOrderEncodeMan@{ModifyOrderEncodeMan}!KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}}
+\doxysubsubsection{\texorpdfstring{ModifyOrderEncodeMan()}{ModifyOrderEncodeMan()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_a11d887044fc8958f5fc09f9d8354d5a6} 
+void App\+Message\+Factory\+Fast\+V2\+::\+Modify\+Order\+Encode\+Man (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&}]{ord}{, }\item[{uint32\+\_\+t}]{seqnum}{, }\item[{\mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf}{KTNBuf}} \&}]{msg}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_a16358c69da0bff2e6b9aa3aa98df5dd6}\index{KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}!ModifyOrderMsgEncode@{ModifyOrderMsgEncode}}
+\index{ModifyOrderMsgEncode@{ModifyOrderMsgEncode}!KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}}
+\doxysubsubsection{\texorpdfstring{ModifyOrderMsgEncode()}{ModifyOrderMsgEncode()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_a16358c69da0bff2e6b9aa3aa98df5dd6} 
+uint16\+\_\+t App\+Message\+Factory\+Fast\+V2\+::\+Modify\+Order\+Msg\+Encode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg}{Order\+Cancel\+Replace\+Request\+Msg}} \texorpdfstring{$\ast$}{*}}]{msg}{, }\item[{char \texorpdfstring{$\ast$}{*}\&}]{buf}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_a3372cd19212320600cecc5d472384e33}\index{KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}!ModOrderMsgAuto@{ModOrderMsgAuto}}
+\index{ModOrderMsgAuto@{ModOrderMsgAuto}!KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}}
+\doxysubsubsection{\texorpdfstring{ModOrderMsgAuto()}{ModOrderMsgAuto()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_a3372cd19212320600cecc5d472384e33} 
+\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg}{Order\+Cancel\+Replace\+Request\+Msg}} \texorpdfstring{$\ast$}{*} KTN\+::\+CME\+::\+IL3\+::\+App\+Message\+Factory\+Fast\+V2\+::\+Mod\+Order\+Msg\+Auto (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_a94592dd4c51b41a0c3363515627c691f}\index{KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}!NewOrderEncodeAutoV42@{NewOrderEncodeAutoV42}}
+\index{NewOrderEncodeAutoV42@{NewOrderEncodeAutoV42}!KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}}
+\doxysubsubsection{\texorpdfstring{NewOrderEncodeAutoV42()}{NewOrderEncodeAutoV42()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_a94592dd4c51b41a0c3363515627c691f} 
+uint16\+\_\+t App\+Message\+Factory\+Fast\+V2\+::\+New\+Order\+Encode\+Auto\+V42 (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{clordid}{, }\item[{uint32\+\_\+t}]{qty}{, }\item[{int32\+\_\+t}]{px}{, }\item[{int32\+\_\+t}]{secid}{, }\item[{KOrder\+Side\+::\+Enum}]{side}{, }\item[{uint64\+\_\+t}]{ordreqid}{, }\item[{uint32\+\_\+t}]{seqnum}{, }\item[{char \texorpdfstring{$\ast$}{*}\&}]{buf}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_aa2953dbe693f6e650be90278222c02be}\index{KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}!NewOrderEncodeMan@{NewOrderEncodeMan}}
+\index{NewOrderEncodeMan@{NewOrderEncodeMan}!KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}}
+\doxysubsubsection{\texorpdfstring{NewOrderEncodeMan()}{NewOrderEncodeMan()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_aa2953dbe693f6e650be90278222c02be} 
+void App\+Message\+Factory\+Fast\+V2\+::\+New\+Order\+Encode\+Man (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&}]{ord}{, }\item[{uint64\+\_\+t}]{ordreqid}{, }\item[{uint32\+\_\+t}]{seqnum}{, }\item[{\mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf}{KTNBuf}} \&}]{msg}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_aa613da1e7a17fd042bead260c3f60830}\index{KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}!NewOrderMsgAuto@{NewOrderMsgAuto}}
+\index{NewOrderMsgAuto@{NewOrderMsgAuto}!KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}}
+\doxysubsubsection{\texorpdfstring{NewOrderMsgAuto()}{NewOrderMsgAuto()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_aa613da1e7a17fd042bead260c3f60830} 
+\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_single_msg}{New\+Order\+Single\+Msg}} \texorpdfstring{$\ast$}{*} KTN\+::\+CME\+::\+IL3\+::\+App\+Message\+Factory\+Fast\+V2\+::\+New\+Order\+Msg\+Auto (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_a69c5c145dd7ba522797b94d4702c0cbb}\index{KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}!NewOrderMsgEncode@{NewOrderMsgEncode}}
+\index{NewOrderMsgEncode@{NewOrderMsgEncode}!KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}}
+\doxysubsubsection{\texorpdfstring{NewOrderMsgEncode()}{NewOrderMsgEncode()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_a69c5c145dd7ba522797b94d4702c0cbb} 
+uint16\+\_\+t App\+Message\+Factory\+Fast\+V2\+::\+New\+Order\+Msg\+Encode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_single_msg}{New\+Order\+Single\+Msg}} \texorpdfstring{$\ast$}{*}}]{msg}{, }\item[{char \texorpdfstring{$\ast$}{*}\&}]{buf}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_a36b9abe5b46b4149c6492abb4f47fdce}\index{KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}!PreSerializeNewOrders@{PreSerializeNewOrders}}
+\index{PreSerializeNewOrders@{PreSerializeNewOrders}!KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}}
+\doxysubsubsection{\texorpdfstring{PreSerializeNewOrders()}{PreSerializeNewOrders()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_a36b9abe5b46b4149c6492abb4f47fdce} 
+void App\+Message\+Factory\+Fast\+V2\+::\+Pre\+Serialize\+New\+Orders (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} $>$ \texorpdfstring{$\ast$}{*}}]{ords}{, }\item[{\mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf}{KTNBuf}} \&}]{msg}{, }\item[{uint32\+\_\+t}]{seqnum}{, }\item[{uint64\+\_\+t}]{startreqid}{, }\item[{int}]{segid}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_ac9b46f93465c7aa70d35db1800a3a988}\index{KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}!PreSerializeNewOrders2@{PreSerializeNewOrders2}}
+\index{PreSerializeNewOrders2@{PreSerializeNewOrders2}!KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}}
+\doxysubsubsection{\texorpdfstring{PreSerializeNewOrders2()}{PreSerializeNewOrders2()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_ac9b46f93465c7aa70d35db1800a3a988} 
+void App\+Message\+Factory\+Fast\+V2\+::\+Pre\+Serialize\+New\+Orders2 (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} $>$ \texorpdfstring{$\ast$}{*}}]{ords}{, }\item[{\mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf}{KTNBuf}} \&}]{msg}{, }\item[{uint32\+\_\+t}]{seqnum}{, }\item[{int}]{segid}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_a999e8c9a8646f1bf3d97792b69c8b06d}\index{KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}!SerializeBatch@{SerializeBatch}}
+\index{SerializeBatch@{SerializeBatch}!KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}}
+\doxysubsubsection{\texorpdfstring{SerializeBatch()}{SerializeBatch()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_a999e8c9a8646f1bf3d97792b69c8b06d} 
+void App\+Message\+Factory\+Fast\+V2\+::\+Serialize\+Batch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_msg_batch}{Msg\+Batch}} \texorpdfstring{$\ast$}{*}}]{batch}{, }\item[{\mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf}{KTNBuf}} \&}]{msg}{, }\item[{uint32\+\_\+t}]{seqnum}{, }\item[{int}]{segid}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_a29662cbdba1d7fa823916a632fdedbf6}\index{KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}!SerializeTas@{SerializeTas}}
+\index{SerializeTas@{SerializeTas}!KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}}
+\doxysubsubsection{\texorpdfstring{SerializeTas()}{SerializeTas()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_a29662cbdba1d7fa823916a632fdedbf6} 
+uint16\+\_\+t App\+Message\+Factory\+Fast\+V2\+::\+Serialize\+Tas (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} $>$}]{ords}{, }\item[{char \texorpdfstring{$\ast$}{*}\&}]{buf}{, }\item[{uint32\+\_\+t}]{seqnum}{, }\item[{int}]{segid}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_aa503601ed8460831a011bf0bb328f520}\index{KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}!UpdateClock@{UpdateClock}}
+\index{UpdateClock@{UpdateClock}!KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}}
+\doxysubsubsection{\texorpdfstring{UpdateClock()}{UpdateClock()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_aa503601ed8460831a011bf0bb328f520} 
+void KTN\+::\+CME\+::\+IL3\+::\+App\+Message\+Factory\+Fast\+V2\+::\+Update\+Clock (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_ac1fd4b05596e516ed21ef4bf87415abf}\index{KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}!UpdateMsg@{UpdateMsg}}
+\index{UpdateMsg@{UpdateMsg}!KTN::CME::IL3::AppMessageFactoryFastV2@{KTN::CME::IL3::AppMessageFactoryFastV2}}
+\doxysubsubsection{\texorpdfstring{UpdateMsg()}{UpdateMsg()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_ac1fd4b05596e516ed21ef4bf87415abf} 
+void App\+Message\+Factory\+Fast\+V2\+::\+Update\+Msg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf}{KTNBuf}} \&}]{msg}{, }\item[{uint32\+\_\+t}]{qty}{, }\item[{uint32\+\_\+t}]{seq}{, }\item[{uint64\+\_\+t}]{reqid}{}\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+exchsupport/cme/factory/App\+Message\+Factory\+Fast\+V2.\+hpp\item 
+exchsupport/cme/factory/App\+Message\+Factory\+Fast\+V2.\+cpp\end{DoxyCompactItemize}

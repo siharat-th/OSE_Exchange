@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structmoodycamel_1_1_concurrent_queue_default_traits" xml:lang="en-US">
+<title>moodycamel::ConcurrentQueueDefaultTraits Struct Reference</title>
+<indexterm><primary>moodycamel::ConcurrentQueueDefaultTraits</primary></indexterm>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>typedef std::size_t <link linkend="_structmoodycamel_1_1_concurrent_queue_default_traits_1aedbe74aec1f4656b054cdaccf4785f2c">size_t</link></para>
+</listitem>
+            <listitem><para>typedef std::size_t <link linkend="_structmoodycamel_1_1_concurrent_queue_default_traits_1a7fdbfca41e530465588aa4094f1e9b32">index_t</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static void * <link linkend="_structmoodycamel_1_1_concurrent_queue_default_traits_1a0e7970954fe4d0d826702f576ea370e2">malloc</link> (size_t size)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_structmoodycamel_1_1_concurrent_queue_default_traits_1a14038cd9299cd88b74d9ae5371a637d8">free</link> (void *ptr)</para>
+</listitem>
+            <listitem><para>static void * <link linkend="_structmoodycamel_1_1_concurrent_queue_default_traits_1a0e7970954fe4d0d826702f576ea370e2">malloc</link> (size_t size)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_structmoodycamel_1_1_concurrent_queue_default_traits_1a14038cd9299cd88b74d9ae5371a637d8">free</link> (void *ptr)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>static const size_t <link linkend="_structmoodycamel_1_1_concurrent_queue_default_traits_1a8fa79925436f59f30f463ee6fb455211">BLOCK_SIZE</link> = 32</para>
+</listitem>
+            <listitem><para>static const size_t <link linkend="_structmoodycamel_1_1_concurrent_queue_default_traits_1a9ba01e3abe5332bead7617b90aca7ed7">EXPLICIT_BLOCK_EMPTY_COUNTER_THRESHOLD</link> = 32</para>
+</listitem>
+            <listitem><para>static const size_t <link linkend="_structmoodycamel_1_1_concurrent_queue_default_traits_1a0027732e36807cf199f8a064ba31464d">EXPLICIT_INITIAL_INDEX_SIZE</link> = 32</para>
+</listitem>
+            <listitem><para>static const size_t <link linkend="_structmoodycamel_1_1_concurrent_queue_default_traits_1aeee974147f3fd589cd6e7b62c74a17bb">IMPLICIT_INITIAL_INDEX_SIZE</link> = 32</para>
+</listitem>
+            <listitem><para>static const size_t <link linkend="_structmoodycamel_1_1_concurrent_queue_default_traits_1a390c8adce6e52989000a25e663a7e704">INITIAL_IMPLICIT_PRODUCER_HASH_SIZE</link> = 32</para>
+</listitem>
+            <listitem><para>static const std::uint32_t <link linkend="_structmoodycamel_1_1_concurrent_queue_default_traits_1a995ad4874283b6376632e1eb22e6dce0">EXPLICIT_CONSUMER_CONSUMPTION_QUOTA_BEFORE_ROTATE</link> = 256</para>
+</listitem>
+            <listitem><para>static const size_t <link linkend="_structmoodycamel_1_1_concurrent_queue_default_traits_1a43120643b7dc02cf65fc9aac56711562">MAX_SUBQUEUE_SIZE</link> = <link linkend="_structmoodycamel_1_1details_1_1const__numeric__max">details::const_numeric_max</link>&lt;size_t&gt;::value</para>
+</listitem>
+            <listitem><para>static const int <link linkend="_structmoodycamel_1_1_concurrent_queue_default_traits_1a9958ef4aedba8d60285737bd4be8e6e2">MAX_SEMA_SPINS</link> = 10000</para>
+</listitem>
+            <listitem><para>static const bool <link linkend="_structmoodycamel_1_1_concurrent_queue_default_traits_1ae64c9f072761caf5dfac9058c49ceac2">RECYCLE_ALLOCATED_BLOCKS</link> = false</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Typedef Documentation</title>
+<anchor xml:id="_structmoodycamel_1_1_concurrent_queue_default_traits_1a7fdbfca41e530465588aa4094f1e9b32"/><section>
+    <title>index_t</title>
+<indexterm><primary>index_t</primary><secondary>moodycamel::ConcurrentQueueDefaultTraits</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueueDefaultTraits</primary><secondary>index_t</secondary></indexterm>
+<para><computeroutput>typedef std::size_t moodycamel::ConcurrentQueueDefaultTraits::index_t</computeroutput></para></section>
+<anchor xml:id="_structmoodycamel_1_1_concurrent_queue_default_traits_1aedbe74aec1f4656b054cdaccf4785f2c"/><section>
+    <title>size_t</title>
+<indexterm><primary>size_t</primary><secondary>moodycamel::ConcurrentQueueDefaultTraits</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueueDefaultTraits</primary><secondary>size_t</secondary></indexterm>
+<para><computeroutput>typedef std::size_t moodycamel::ConcurrentQueueDefaultTraits::size_t</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_structmoodycamel_1_1_concurrent_queue_default_traits_1a14038cd9299cd88b74d9ae5371a637d8"/><section>
+    <title>free()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>free</primary><secondary>moodycamel::ConcurrentQueueDefaultTraits</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueueDefaultTraits</primary><secondary>free</secondary></indexterm>
+<para><computeroutput>static void moodycamel::ConcurrentQueueDefaultTraits::free (void * ptr)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structmoodycamel_1_1_concurrent_queue_default_traits_1a14038cd9299cd88b74d9ae5371a637d8"/><section>
+    <title>free()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>free</primary><secondary>moodycamel::ConcurrentQueueDefaultTraits</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueueDefaultTraits</primary><secondary>free</secondary></indexterm>
+<para><computeroutput>static void moodycamel::ConcurrentQueueDefaultTraits::free (void * ptr)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structmoodycamel_1_1_concurrent_queue_default_traits_1a0e7970954fe4d0d826702f576ea370e2"/><section>
+    <title>malloc()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>malloc</primary><secondary>moodycamel::ConcurrentQueueDefaultTraits</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueueDefaultTraits</primary><secondary>malloc</secondary></indexterm>
+<para><computeroutput>static void * moodycamel::ConcurrentQueueDefaultTraits::malloc (size_t size)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structmoodycamel_1_1_concurrent_queue_default_traits_1a0e7970954fe4d0d826702f576ea370e2"/><section>
+    <title>malloc()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>malloc</primary><secondary>moodycamel::ConcurrentQueueDefaultTraits</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueueDefaultTraits</primary><secondary>malloc</secondary></indexterm>
+<para><computeroutput>static void * moodycamel::ConcurrentQueueDefaultTraits::malloc (size_t size)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structmoodycamel_1_1_concurrent_queue_default_traits_1a8fa79925436f59f30f463ee6fb455211"/><section>
+    <title>BLOCK_SIZE</title>
+<indexterm><primary>BLOCK_SIZE</primary><secondary>moodycamel::ConcurrentQueueDefaultTraits</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueueDefaultTraits</primary><secondary>BLOCK_SIZE</secondary></indexterm>
+<para><computeroutput>static const size_t moodycamel::ConcurrentQueueDefaultTraits::BLOCK_SIZE = 32<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structmoodycamel_1_1_concurrent_queue_default_traits_1a9ba01e3abe5332bead7617b90aca7ed7"/><section>
+    <title>EXPLICIT_BLOCK_EMPTY_COUNTER_THRESHOLD</title>
+<indexterm><primary>EXPLICIT_BLOCK_EMPTY_COUNTER_THRESHOLD</primary><secondary>moodycamel::ConcurrentQueueDefaultTraits</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueueDefaultTraits</primary><secondary>EXPLICIT_BLOCK_EMPTY_COUNTER_THRESHOLD</secondary></indexterm>
+<para><computeroutput>static const size_t moodycamel::ConcurrentQueueDefaultTraits::EXPLICIT_BLOCK_EMPTY_COUNTER_THRESHOLD = 32<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structmoodycamel_1_1_concurrent_queue_default_traits_1a995ad4874283b6376632e1eb22e6dce0"/><section>
+    <title>EXPLICIT_CONSUMER_CONSUMPTION_QUOTA_BEFORE_ROTATE</title>
+<indexterm><primary>EXPLICIT_CONSUMER_CONSUMPTION_QUOTA_BEFORE_ROTATE</primary><secondary>moodycamel::ConcurrentQueueDefaultTraits</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueueDefaultTraits</primary><secondary>EXPLICIT_CONSUMER_CONSUMPTION_QUOTA_BEFORE_ROTATE</secondary></indexterm>
+<para><computeroutput>static const std::uint32_t moodycamel::ConcurrentQueueDefaultTraits::EXPLICIT_CONSUMER_CONSUMPTION_QUOTA_BEFORE_ROTATE = 256<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structmoodycamel_1_1_concurrent_queue_default_traits_1a0027732e36807cf199f8a064ba31464d"/><section>
+    <title>EXPLICIT_INITIAL_INDEX_SIZE</title>
+<indexterm><primary>EXPLICIT_INITIAL_INDEX_SIZE</primary><secondary>moodycamel::ConcurrentQueueDefaultTraits</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueueDefaultTraits</primary><secondary>EXPLICIT_INITIAL_INDEX_SIZE</secondary></indexterm>
+<para><computeroutput>static const size_t moodycamel::ConcurrentQueueDefaultTraits::EXPLICIT_INITIAL_INDEX_SIZE = 32<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structmoodycamel_1_1_concurrent_queue_default_traits_1aeee974147f3fd589cd6e7b62c74a17bb"/><section>
+    <title>IMPLICIT_INITIAL_INDEX_SIZE</title>
+<indexterm><primary>IMPLICIT_INITIAL_INDEX_SIZE</primary><secondary>moodycamel::ConcurrentQueueDefaultTraits</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueueDefaultTraits</primary><secondary>IMPLICIT_INITIAL_INDEX_SIZE</secondary></indexterm>
+<para><computeroutput>static const size_t moodycamel::ConcurrentQueueDefaultTraits::IMPLICIT_INITIAL_INDEX_SIZE = 32<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structmoodycamel_1_1_concurrent_queue_default_traits_1a390c8adce6e52989000a25e663a7e704"/><section>
+    <title>INITIAL_IMPLICIT_PRODUCER_HASH_SIZE</title>
+<indexterm><primary>INITIAL_IMPLICIT_PRODUCER_HASH_SIZE</primary><secondary>moodycamel::ConcurrentQueueDefaultTraits</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueueDefaultTraits</primary><secondary>INITIAL_IMPLICIT_PRODUCER_HASH_SIZE</secondary></indexterm>
+<para><computeroutput>static const size_t moodycamel::ConcurrentQueueDefaultTraits::INITIAL_IMPLICIT_PRODUCER_HASH_SIZE = 32<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structmoodycamel_1_1_concurrent_queue_default_traits_1a9958ef4aedba8d60285737bd4be8e6e2"/><section>
+    <title>MAX_SEMA_SPINS</title>
+<indexterm><primary>MAX_SEMA_SPINS</primary><secondary>moodycamel::ConcurrentQueueDefaultTraits</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueueDefaultTraits</primary><secondary>MAX_SEMA_SPINS</secondary></indexterm>
+<para><computeroutput>const int moodycamel::ConcurrentQueueDefaultTraits::MAX_SEMA_SPINS = 10000<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structmoodycamel_1_1_concurrent_queue_default_traits_1a43120643b7dc02cf65fc9aac56711562"/><section>
+    <title>MAX_SUBQUEUE_SIZE</title>
+<indexterm><primary>MAX_SUBQUEUE_SIZE</primary><secondary>moodycamel::ConcurrentQueueDefaultTraits</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueueDefaultTraits</primary><secondary>MAX_SUBQUEUE_SIZE</secondary></indexterm>
+<para><computeroutput>static const size_t moodycamel::ConcurrentQueueDefaultTraits::MAX_SUBQUEUE_SIZE = <link linkend="_structmoodycamel_1_1details_1_1const__numeric__max">details::const_numeric_max</link>&lt;size_t&gt;::value<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structmoodycamel_1_1_concurrent_queue_default_traits_1ae64c9f072761caf5dfac9058c49ceac2"/><section>
+    <title>RECYCLE_ALLOCATED_BLOCKS</title>
+<indexterm><primary>RECYCLE_ALLOCATED_BLOCKS</primary><secondary>moodycamel::ConcurrentQueueDefaultTraits</secondary></indexterm>
+<indexterm><primary>moodycamel::ConcurrentQueueDefaultTraits</primary><secondary>RECYCLE_ALLOCATED_BLOCKS</secondary></indexterm>
+<para><computeroutput>const bool moodycamel::ConcurrentQueueDefaultTraits::RECYCLE_ALLOCATED_BLOCKS = false<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following files:</para>
+C:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/external/camel/concurrentqueue.hC:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/external/camel/concurrentqueue2.h</section>
+</section>

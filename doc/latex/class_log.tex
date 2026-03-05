@@ -1,0 +1,112 @@
+\doxysection{Log Class Reference}
+\hypertarget{class_log}{}\label{class_log}\index{Log@{Log}}
+
+
+The \doxylink{class_log}{Log} class provides a singleton logger for logging messages.  
+
+
+
+
+{\ttfamily \#include $<$Log\+V2.\+hpp$>$}
+
+Inheritance diagram for Log\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_log}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_log_af6071a60aa52b6c1b511f99b4bc1b8fe}{Log}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{class_log}{Log} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_log_a8c7c444c10a3ccd972d12d0c0f028c07}{Write\+Line}} (const std\+::string \&msg, const std\+::string \&topic, int color)
+\begin{DoxyCompactList}\small\item\em Writes a line to the log with the specified message, topic, and color. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_log_af6071a60aa52b6c1b511f99b4bc1b8fe}{Log}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_log}{Log} object and initializes the console logger. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ spdlog\+::logger $>$ \mbox{\hyperlink{class_log_aed2180c52a8db9a4e04caf57236b97cc}{console}} ()
+\begin{DoxyCompactList}\small\item\em Returns the console logger. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_singleton}{Singleton$<$ Log $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+static I01\+\_\+\+API \mbox{\hyperlink{class_log}{Log}} \& \mbox{\hyperlink{class_singleton_a257c9c4633fa4e06bd93469e379f8eff}{instance}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_singleton}{Singleton$<$ Log $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Singleton} (const \mbox{\hyperlink{class_singleton}{Singleton}} \&)=delete
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_log}{Log} class provides a singleton logger for logging messages. 
+
+\doxylink{class_singleton}{Singleton} class for logging messages. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_log_af6071a60aa52b6c1b511f99b4bc1b8fe}\index{Log@{Log}!Log@{Log}}
+\index{Log@{Log}!Log@{Log}}
+\doxysubsubsection{\texorpdfstring{Log()}{Log()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_log_af6071a60aa52b6c1b511f99b4bc1b8fe} 
+Log\+::\+Log (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor for \doxylink{class_log}{Log} class. 
+
+
+
+References \mbox{\hyperlink{l00027}{Logger\+Factory\+::create\+Logger()}}.
+
+\Hypertarget{class_log_af6071a60aa52b6c1b511f99b4bc1b8fe}\index{Log@{Log}!Log@{Log}}
+\index{Log@{Log}!Log@{Log}}
+\doxysubsubsection{\texorpdfstring{Log()}{Log()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_log_af6071a60aa52b6c1b511f99b4bc1b8fe} 
+Log\+::\+Log (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a \doxylink{class_log}{Log} object and initializes the console logger. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_log_aed2180c52a8db9a4e04caf57236b97cc}\index{Log@{Log}!console@{console}}
+\index{console@{console}!Log@{Log}}
+\doxysubsubsection{\texorpdfstring{console()}{console()}}
+{\footnotesize\ttfamily \label{class_log_aed2180c52a8db9a4e04caf57236b97cc} 
+std\+::shared\+\_\+ptr$<$ spdlog\+::logger $>$ Log\+::console (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the console logger. 
+
+\begin{DoxyReturn}{Returns}
+The shared pointer to the console logger. 
+\end{DoxyReturn}
+\Hypertarget{class_log_a8c7c444c10a3ccd972d12d0c0f028c07}\index{Log@{Log}!WriteLine@{WriteLine}}
+\index{WriteLine@{WriteLine}!Log@{Log}}
+\doxysubsubsection{\texorpdfstring{WriteLine()}{WriteLine()}}
+{\footnotesize\ttfamily \label{class_log_a8c7c444c10a3ccd972d12d0c0f028c07} 
+void Log\+::\+Write\+Line (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{msg}{, }\item[{const std\+::string \&}]{topic}{, }\item[{int}]{color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Writes a line to the log with the specified message, topic, and color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The message to write to the log. \\
+\hline
+{\em topic} & The topic of the log message. \\
+\hline
+{\em color} & The color of the log message. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Loggers/Log.\+hpp\item 
+Loggers/Log\+V2.\+hpp\end{DoxyCompactItemize}

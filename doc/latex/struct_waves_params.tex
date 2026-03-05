@@ -1,0 +1,326 @@
+\doxysection{Waves\+Params Struct Reference}
+\hypertarget{struct_waves_params}{}\label{struct_waves_params}\index{WavesParams@{WavesParams}}
+
+
+Struct representing the parameters for the Waves algorithm.  
+
+
+
+
+{\ttfamily \#include $<$Waves\+Params.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{struct_waves_params_aca727c049b8e7fd4a0139762e2ad9f69}{init}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the curve\+Matrix with default values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_waves_params}{Waves\+Params}} \mbox{\hyperlink{struct_waves_params_a47ecd81979737506cd8d68f5cbd42b6c}{parse}} (const std\+::string \&json\+\_\+str)
+\begin{DoxyCompactList}\small\item\em Parses the \doxylink{struct_waves_params}{Waves\+Params} from a JSON string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_edge_struct}{Edge\+Struct}} \mbox{\hyperlink{struct_waves_params_a266f9a280129a3f3522a0120360148e4}{curve\+Matrix}} \mbox{[}MAX\+\_\+\+SIZE\mbox{]}\mbox{[}MAX\+\_\+\+SIZE\mbox{]}
+\item 
+bool \mbox{\hyperlink{struct_waves_params_ab8207ccd95dc8b1db0fcd11473489df9}{Valid\+Json}}
+\item 
+\mbox{\hyperlink{structalgometa}{algometa}} \mbox{\hyperlink{struct_waves_params_a1ab60a27d466b7b7ce3732caf6f70e6a}{meta}}
+\item 
+string \mbox{\hyperlink{struct_waves_params_a9b3653280a44bf1ff8c493e220e21ca7}{subid}}
+\item 
+std\+::unordered\+\_\+map$<$ int, \mbox{\hyperlink{structinstrument}{instrument}} $>$ \mbox{\hyperlink{struct_waves_params_a24198b6abedc964e15c6dcaf3d3f03c6}{Leg\+Sec\+Id\+Map}}
+\item 
+\mbox{\hyperlink{structinstrument}{instrument}} \mbox{\hyperlink{struct_waves_params_ad50717931795fd280eb880bb3cf9e5e0}{Legs}} \mbox{[}32\mbox{]}
+\item 
+int \mbox{\hyperlink{struct_waves_params_ae3136f7981d1f6aca8b1c9fc4ada5181}{Leg\+Count}}
+\item 
+\mbox{\hyperlink{structcombopath}{combopath}} \mbox{\hyperlink{struct_waves_params_a6077157f0e17e2a0e609f4826aae9cb1}{paths}} \mbox{[}MAX\+\_\+\+SIZE\mbox{]}\mbox{[}MAX\+\_\+\+SIZE\mbox{]}
+\item 
+bool \mbox{\hyperlink{struct_waves_params_a35666e8692148757e481473b651768a4}{Test\+Mode}}
+\item 
+bool \mbox{\hyperlink{struct_waves_params_a99f5ccc232eb251322f8e7d329831993}{Reset}}
+\item 
+string \mbox{\hyperlink{struct_waves_params_a9bba2c9bf2779c13f52e63cf436bccb9}{Product}}
+\item 
+string \mbox{\hyperlink{struct_waves_params_affea24ef66c62a8dfc4191d6e0e93758}{Start\+Month}}
+\item 
+int \mbox{\hyperlink{struct_waves_params_ab04e478f2b3230209589cd9ec5c1ee21}{Start\+Year}}
+\item 
+int \mbox{\hyperlink{struct_waves_params_aa804f56d43dff1905db5dc412048a8ae}{Num\+Months}}
+\item 
+int \mbox{\hyperlink{struct_waves_params_a49171ef2e3342ee8595deb4f4c0f4f25}{Min\+Width}}
+\item 
+int \mbox{\hyperlink{struct_waves_params_a8afcd72cf653c59e700c55ca38966009}{Max\+Width}}
+\item 
+int \mbox{\hyperlink{struct_waves_params_aa94db07b329d27a10dc87f6a559273e0}{Order\+Qty}}
+\item 
+int \mbox{\hyperlink{struct_waves_params_a5261d908a2126c9cdd54ad567a60c82c}{Total\+Qty}}
+\item 
+int \mbox{\hyperlink{struct_waves_params_a5eb86537db7e74df09945632c4ba9f5c}{Total\+Exec}}
+\item 
+int \mbox{\hyperlink{struct_waves_params_a6ac9048ded33cf4c720876a89b359582}{Bid\+Edge}}
+\item 
+int \mbox{\hyperlink{struct_waves_params_adde5afe39cc27eb8c7dfb8663790d609}{Ask\+Edge}}
+\item 
+bool \mbox{\hyperlink{struct_waves_params_a60154a36a72ada4da9fd55a29109cba9}{Send\+Bids}}
+\item 
+bool \mbox{\hyperlink{struct_waves_params_a88d051314ca024b813ab4863c6711062}{Send\+Asks}}
+\item 
+bool \mbox{\hyperlink{struct_waves_params_a27363b58e7f1871d6c425df455761e78}{Doubles}}
+\item 
+bool \mbox{\hyperlink{struct_waves_params_afa870404d4b412bb5da0caea24b3d80a}{Triples}}
+\item 
+bool \mbox{\hyperlink{struct_waves_params_acf24a3ad49654851eb35d0cbd2717d3e}{Quads}}
+\item 
+double \mbox{\hyperlink{struct_waves_params_af2a90eead684275a3a2f9bfda3e7eea6}{Wavg\+Threshold}}
+\item 
+double \mbox{\hyperlink{struct_waves_params_a6344346fc76e4242bcfea39a1ebfa64f}{Squeeze\+Ratio}}
+\item 
+int \mbox{\hyperlink{struct_waves_params_aed747312f151343f42801f913e81af31}{Squeeze\+Qty}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{struct_waves_params_a209466bda2e1ca28caf6dc652b6477a9}{MAX\+\_\+\+SIZE}} = 24
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Struct representing the parameters for the Waves algorithm. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_waves_params_aca727c049b8e7fd4a0139762e2ad9f69}\index{WavesParams@{WavesParams}!init@{init}}
+\index{init@{init}!WavesParams@{WavesParams}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \label{struct_waves_params_aca727c049b8e7fd4a0139762e2ad9f69} 
+void Waves\+Params\+::init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes the curve\+Matrix with default values. 
+
+
+
+References \mbox{\hyperlink{l00463}{Leg\+Prices\+::ask}}, \mbox{\hyperlink{l00462}{Leg\+Prices\+::bid}}, \mbox{\hyperlink{l00500}{Edge\+Struct\+::exists}}, \mbox{\hyperlink{l00501}{Edge\+Struct\+::index}}, \mbox{\hyperlink{l00499}{Edge\+Struct\+::istas}}, and \mbox{\hyperlink{l00504}{Edge\+Struct\+::prices}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00012}{parse()}}.
+
+\Hypertarget{struct_waves_params_a47ecd81979737506cd8d68f5cbd42b6c}\index{WavesParams@{WavesParams}!parse@{parse}}
+\index{parse@{parse}!WavesParams@{WavesParams}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily \label{struct_waves_params_a47ecd81979737506cd8d68f5cbd42b6c} 
+\mbox{\hyperlink{struct_waves_params}{Waves\+Params}} Waves\+Params\+::parse (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{json\+\_\+str}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Parses the \doxylink{struct_waves_params}{Waves\+Params} from a JSON string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json\+\_\+str} & The JSON string to parse. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The parsed \doxylink{struct_waves_params}{Waves\+Params} object. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00260}{algometa\+::\+Enabled}}, \mbox{\hyperlink{l00049}{User\+Info\+::groupname}}, \mbox{\hyperlink{l00037}{init()}}, \mbox{\hyperlink{l00048}{User\+Info\+::org}}, \mbox{\hyperlink{l00262}{algometa\+::\+Source}}, \mbox{\hyperlink{l00256}{algometa\+::\+Strategy}}, \mbox{\hyperlink{l00264}{algometa\+::\+Tag}}, \mbox{\hyperlink{l00258}{algometa\+::\+Template\+Name}}, \mbox{\hyperlink{l00261}{algometa\+::\+Unique\+Id}}, \mbox{\hyperlink{l00047}{User\+Info\+::user}}, and \mbox{\hyperlink{l00279}{algometa\+::userinfo}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00039}{KTN\+::\+Waves\+::on\+Launch()}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_waves_params_adde5afe39cc27eb8c7dfb8663790d609}\index{WavesParams@{WavesParams}!AskEdge@{AskEdge}}
+\index{AskEdge@{AskEdge}!WavesParams@{WavesParams}}
+\doxysubsubsection{\texorpdfstring{AskEdge}{AskEdge}}
+{\footnotesize\ttfamily \label{struct_waves_params_adde5afe39cc27eb8c7dfb8663790d609} 
+int Waves\+Params\+::\+Ask\+Edge}
+
+\Hypertarget{struct_waves_params_a6ac9048ded33cf4c720876a89b359582}\index{WavesParams@{WavesParams}!BidEdge@{BidEdge}}
+\index{BidEdge@{BidEdge}!WavesParams@{WavesParams}}
+\doxysubsubsection{\texorpdfstring{BidEdge}{BidEdge}}
+{\footnotesize\ttfamily \label{struct_waves_params_a6ac9048ded33cf4c720876a89b359582} 
+int Waves\+Params\+::\+Bid\+Edge}
+
+\Hypertarget{struct_waves_params_a266f9a280129a3f3522a0120360148e4}\index{WavesParams@{WavesParams}!curveMatrix@{curveMatrix}}
+\index{curveMatrix@{curveMatrix}!WavesParams@{WavesParams}}
+\doxysubsubsection{\texorpdfstring{curveMatrix}{curveMatrix}}
+{\footnotesize\ttfamily \label{struct_waves_params_a266f9a280129a3f3522a0120360148e4} 
+\mbox{\hyperlink{struct_edge_struct}{Edge\+Struct}} Waves\+Params\+::curve\+Matrix\mbox{[}MAX\+\_\+\+SIZE\mbox{]}\mbox{[}MAX\+\_\+\+SIZE\mbox{]}}
+
+\Hypertarget{struct_waves_params_a27363b58e7f1871d6c425df455761e78}\index{WavesParams@{WavesParams}!Doubles@{Doubles}}
+\index{Doubles@{Doubles}!WavesParams@{WavesParams}}
+\doxysubsubsection{\texorpdfstring{Doubles}{Doubles}}
+{\footnotesize\ttfamily \label{struct_waves_params_a27363b58e7f1871d6c425df455761e78} 
+bool Waves\+Params\+::\+Doubles}
+
+\Hypertarget{struct_waves_params_ae3136f7981d1f6aca8b1c9fc4ada5181}\index{WavesParams@{WavesParams}!LegCount@{LegCount}}
+\index{LegCount@{LegCount}!WavesParams@{WavesParams}}
+\doxysubsubsection{\texorpdfstring{LegCount}{LegCount}}
+{\footnotesize\ttfamily \label{struct_waves_params_ae3136f7981d1f6aca8b1c9fc4ada5181} 
+int Waves\+Params\+::\+Leg\+Count}
+
+\Hypertarget{struct_waves_params_ad50717931795fd280eb880bb3cf9e5e0}\index{WavesParams@{WavesParams}!Legs@{Legs}}
+\index{Legs@{Legs}!WavesParams@{WavesParams}}
+\doxysubsubsection{\texorpdfstring{Legs}{Legs}}
+{\footnotesize\ttfamily \label{struct_waves_params_ad50717931795fd280eb880bb3cf9e5e0} 
+\mbox{\hyperlink{structinstrument}{instrument}} Waves\+Params\+::\+Legs\mbox{[}32\mbox{]}}
+
+\Hypertarget{struct_waves_params_a24198b6abedc964e15c6dcaf3d3f03c6}\index{WavesParams@{WavesParams}!LegSecIdMap@{LegSecIdMap}}
+\index{LegSecIdMap@{LegSecIdMap}!WavesParams@{WavesParams}}
+\doxysubsubsection{\texorpdfstring{LegSecIdMap}{LegSecIdMap}}
+{\footnotesize\ttfamily \label{struct_waves_params_a24198b6abedc964e15c6dcaf3d3f03c6} 
+std\+::unordered\+\_\+map$<$int, \mbox{\hyperlink{structinstrument}{instrument}}$>$ Waves\+Params\+::\+Leg\+Sec\+Id\+Map}
+
+\Hypertarget{struct_waves_params_a209466bda2e1ca28caf6dc652b6477a9}\index{WavesParams@{WavesParams}!MAX\_SIZE@{MAX\_SIZE}}
+\index{MAX\_SIZE@{MAX\_SIZE}!WavesParams@{WavesParams}}
+\doxysubsubsection{\texorpdfstring{MAX\_SIZE}{MAX\_SIZE}}
+{\footnotesize\ttfamily \label{struct_waves_params_a209466bda2e1ca28caf6dc652b6477a9} 
+const int Waves\+Params\+::\+MAX\+\_\+\+SIZE = 24\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{struct_waves_params_a8afcd72cf653c59e700c55ca38966009}\index{WavesParams@{WavesParams}!MaxWidth@{MaxWidth}}
+\index{MaxWidth@{MaxWidth}!WavesParams@{WavesParams}}
+\doxysubsubsection{\texorpdfstring{MaxWidth}{MaxWidth}}
+{\footnotesize\ttfamily \label{struct_waves_params_a8afcd72cf653c59e700c55ca38966009} 
+int Waves\+Params\+::\+Max\+Width}
+
+\Hypertarget{struct_waves_params_a1ab60a27d466b7b7ce3732caf6f70e6a}\index{WavesParams@{WavesParams}!meta@{meta}}
+\index{meta@{meta}!WavesParams@{WavesParams}}
+\doxysubsubsection{\texorpdfstring{meta}{meta}}
+{\footnotesize\ttfamily \label{struct_waves_params_a1ab60a27d466b7b7ce3732caf6f70e6a} 
+\mbox{\hyperlink{structalgometa}{algometa}} Waves\+Params\+::meta}
+
+\Hypertarget{struct_waves_params_a49171ef2e3342ee8595deb4f4c0f4f25}\index{WavesParams@{WavesParams}!MinWidth@{MinWidth}}
+\index{MinWidth@{MinWidth}!WavesParams@{WavesParams}}
+\doxysubsubsection{\texorpdfstring{MinWidth}{MinWidth}}
+{\footnotesize\ttfamily \label{struct_waves_params_a49171ef2e3342ee8595deb4f4c0f4f25} 
+int Waves\+Params\+::\+Min\+Width}
+
+\Hypertarget{struct_waves_params_aa804f56d43dff1905db5dc412048a8ae}\index{WavesParams@{WavesParams}!NumMonths@{NumMonths}}
+\index{NumMonths@{NumMonths}!WavesParams@{WavesParams}}
+\doxysubsubsection{\texorpdfstring{NumMonths}{NumMonths}}
+{\footnotesize\ttfamily \label{struct_waves_params_aa804f56d43dff1905db5dc412048a8ae} 
+int Waves\+Params\+::\+Num\+Months}
+
+\Hypertarget{struct_waves_params_aa94db07b329d27a10dc87f6a559273e0}\index{WavesParams@{WavesParams}!OrderQty@{OrderQty}}
+\index{OrderQty@{OrderQty}!WavesParams@{WavesParams}}
+\doxysubsubsection{\texorpdfstring{OrderQty}{OrderQty}}
+{\footnotesize\ttfamily \label{struct_waves_params_aa94db07b329d27a10dc87f6a559273e0} 
+int Waves\+Params\+::\+Order\+Qty}
+
+\Hypertarget{struct_waves_params_a6077157f0e17e2a0e609f4826aae9cb1}\index{WavesParams@{WavesParams}!paths@{paths}}
+\index{paths@{paths}!WavesParams@{WavesParams}}
+\doxysubsubsection{\texorpdfstring{paths}{paths}}
+{\footnotesize\ttfamily \label{struct_waves_params_a6077157f0e17e2a0e609f4826aae9cb1} 
+\mbox{\hyperlink{structcombopath}{combopath}} Waves\+Params\+::paths\mbox{[}MAX\+\_\+\+SIZE\mbox{]}\mbox{[}MAX\+\_\+\+SIZE\mbox{]}}
+
+\Hypertarget{struct_waves_params_a9bba2c9bf2779c13f52e63cf436bccb9}\index{WavesParams@{WavesParams}!Product@{Product}}
+\index{Product@{Product}!WavesParams@{WavesParams}}
+\doxysubsubsection{\texorpdfstring{Product}{Product}}
+{\footnotesize\ttfamily \label{struct_waves_params_a9bba2c9bf2779c13f52e63cf436bccb9} 
+string Waves\+Params\+::\+Product}
+
+\Hypertarget{struct_waves_params_acf24a3ad49654851eb35d0cbd2717d3e}\index{WavesParams@{WavesParams}!Quads@{Quads}}
+\index{Quads@{Quads}!WavesParams@{WavesParams}}
+\doxysubsubsection{\texorpdfstring{Quads}{Quads}}
+{\footnotesize\ttfamily \label{struct_waves_params_acf24a3ad49654851eb35d0cbd2717d3e} 
+bool Waves\+Params\+::\+Quads}
+
+\Hypertarget{struct_waves_params_a99f5ccc232eb251322f8e7d329831993}\index{WavesParams@{WavesParams}!Reset@{Reset}}
+\index{Reset@{Reset}!WavesParams@{WavesParams}}
+\doxysubsubsection{\texorpdfstring{Reset}{Reset}}
+{\footnotesize\ttfamily \label{struct_waves_params_a99f5ccc232eb251322f8e7d329831993} 
+bool Waves\+Params\+::\+Reset}
+
+\Hypertarget{struct_waves_params_a88d051314ca024b813ab4863c6711062}\index{WavesParams@{WavesParams}!SendAsks@{SendAsks}}
+\index{SendAsks@{SendAsks}!WavesParams@{WavesParams}}
+\doxysubsubsection{\texorpdfstring{SendAsks}{SendAsks}}
+{\footnotesize\ttfamily \label{struct_waves_params_a88d051314ca024b813ab4863c6711062} 
+bool Waves\+Params\+::\+Send\+Asks}
+
+\Hypertarget{struct_waves_params_a60154a36a72ada4da9fd55a29109cba9}\index{WavesParams@{WavesParams}!SendBids@{SendBids}}
+\index{SendBids@{SendBids}!WavesParams@{WavesParams}}
+\doxysubsubsection{\texorpdfstring{SendBids}{SendBids}}
+{\footnotesize\ttfamily \label{struct_waves_params_a60154a36a72ada4da9fd55a29109cba9} 
+bool Waves\+Params\+::\+Send\+Bids}
+
+\Hypertarget{struct_waves_params_aed747312f151343f42801f913e81af31}\index{WavesParams@{WavesParams}!SqueezeQty@{SqueezeQty}}
+\index{SqueezeQty@{SqueezeQty}!WavesParams@{WavesParams}}
+\doxysubsubsection{\texorpdfstring{SqueezeQty}{SqueezeQty}}
+{\footnotesize\ttfamily \label{struct_waves_params_aed747312f151343f42801f913e81af31} 
+int Waves\+Params\+::\+Squeeze\+Qty}
+
+\Hypertarget{struct_waves_params_a6344346fc76e4242bcfea39a1ebfa64f}\index{WavesParams@{WavesParams}!SqueezeRatio@{SqueezeRatio}}
+\index{SqueezeRatio@{SqueezeRatio}!WavesParams@{WavesParams}}
+\doxysubsubsection{\texorpdfstring{SqueezeRatio}{SqueezeRatio}}
+{\footnotesize\ttfamily \label{struct_waves_params_a6344346fc76e4242bcfea39a1ebfa64f} 
+double Waves\+Params\+::\+Squeeze\+Ratio}
+
+\Hypertarget{struct_waves_params_affea24ef66c62a8dfc4191d6e0e93758}\index{WavesParams@{WavesParams}!StartMonth@{StartMonth}}
+\index{StartMonth@{StartMonth}!WavesParams@{WavesParams}}
+\doxysubsubsection{\texorpdfstring{StartMonth}{StartMonth}}
+{\footnotesize\ttfamily \label{struct_waves_params_affea24ef66c62a8dfc4191d6e0e93758} 
+string Waves\+Params\+::\+Start\+Month}
+
+\Hypertarget{struct_waves_params_ab04e478f2b3230209589cd9ec5c1ee21}\index{WavesParams@{WavesParams}!StartYear@{StartYear}}
+\index{StartYear@{StartYear}!WavesParams@{WavesParams}}
+\doxysubsubsection{\texorpdfstring{StartYear}{StartYear}}
+{\footnotesize\ttfamily \label{struct_waves_params_ab04e478f2b3230209589cd9ec5c1ee21} 
+int Waves\+Params\+::\+Start\+Year}
+
+\Hypertarget{struct_waves_params_a9b3653280a44bf1ff8c493e220e21ca7}\index{WavesParams@{WavesParams}!subid@{subid}}
+\index{subid@{subid}!WavesParams@{WavesParams}}
+\doxysubsubsection{\texorpdfstring{subid}{subid}}
+{\footnotesize\ttfamily \label{struct_waves_params_a9b3653280a44bf1ff8c493e220e21ca7} 
+string Waves\+Params\+::subid}
+
+\Hypertarget{struct_waves_params_a35666e8692148757e481473b651768a4}\index{WavesParams@{WavesParams}!TestMode@{TestMode}}
+\index{TestMode@{TestMode}!WavesParams@{WavesParams}}
+\doxysubsubsection{\texorpdfstring{TestMode}{TestMode}}
+{\footnotesize\ttfamily \label{struct_waves_params_a35666e8692148757e481473b651768a4} 
+bool Waves\+Params\+::\+Test\+Mode}
+
+\Hypertarget{struct_waves_params_a5eb86537db7e74df09945632c4ba9f5c}\index{WavesParams@{WavesParams}!TotalExec@{TotalExec}}
+\index{TotalExec@{TotalExec}!WavesParams@{WavesParams}}
+\doxysubsubsection{\texorpdfstring{TotalExec}{TotalExec}}
+{\footnotesize\ttfamily \label{struct_waves_params_a5eb86537db7e74df09945632c4ba9f5c} 
+int Waves\+Params\+::\+Total\+Exec}
+
+\Hypertarget{struct_waves_params_a5261d908a2126c9cdd54ad567a60c82c}\index{WavesParams@{WavesParams}!TotalQty@{TotalQty}}
+\index{TotalQty@{TotalQty}!WavesParams@{WavesParams}}
+\doxysubsubsection{\texorpdfstring{TotalQty}{TotalQty}}
+{\footnotesize\ttfamily \label{struct_waves_params_a5261d908a2126c9cdd54ad567a60c82c} 
+int Waves\+Params\+::\+Total\+Qty}
+
+\Hypertarget{struct_waves_params_afa870404d4b412bb5da0caea24b3d80a}\index{WavesParams@{WavesParams}!Triples@{Triples}}
+\index{Triples@{Triples}!WavesParams@{WavesParams}}
+\doxysubsubsection{\texorpdfstring{Triples}{Triples}}
+{\footnotesize\ttfamily \label{struct_waves_params_afa870404d4b412bb5da0caea24b3d80a} 
+bool Waves\+Params\+::\+Triples}
+
+\Hypertarget{struct_waves_params_ab8207ccd95dc8b1db0fcd11473489df9}\index{WavesParams@{WavesParams}!ValidJson@{ValidJson}}
+\index{ValidJson@{ValidJson}!WavesParams@{WavesParams}}
+\doxysubsubsection{\texorpdfstring{ValidJson}{ValidJson}}
+{\footnotesize\ttfamily \label{struct_waves_params_ab8207ccd95dc8b1db0fcd11473489df9} 
+bool Waves\+Params\+::\+Valid\+Json}
+
+\Hypertarget{struct_waves_params_af2a90eead684275a3a2f9bfda3e7eea6}\index{WavesParams@{WavesParams}!WavgThreshold@{WavgThreshold}}
+\index{WavgThreshold@{WavgThreshold}!WavesParams@{WavesParams}}
+\doxysubsubsection{\texorpdfstring{WavgThreshold}{WavgThreshold}}
+{\footnotesize\ttfamily \label{struct_waves_params_af2a90eead684275a3a2f9bfda3e7eea6} 
+double Waves\+Params\+::\+Wavg\+Threshold}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Algo\+Params/Waves\+Params.\+hpp\item 
+Algo\+Params/Waves\+Params.\+cpp\end{DoxyCompactItemize}

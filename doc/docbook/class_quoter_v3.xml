@@ -1,0 +1,437 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_quoter_v3" xml:lang="en-US">
+<title>QuoterV3 Class Reference</title>
+<indexterm><primary>QuoterV3</primary></indexterm>
+<para>
+
+<para>Represents a <link linkend="_class_quoter_v3">QuoterV3</link> class that manages quoting orders and functions. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;QuoterV3.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_quoter_v3_1a8c84543f5827deb91ed412253bd6db02">QuoterV3</link> ()</para>
+
+<para>Default constructor for <link linkend="_class_quoter_v3">QuoterV3</link>. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_quoter_v3_1ade7535112737d50fa8918a41460bf476">~QuoterV3</link> ()</para>
+
+<para>Destructor for <link linkend="_class_quoter_v3">QuoterV3</link>. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_quoter_v3_1a51225c4f207f6ab4301edf58fae3bfcc">Construct</link> (int cbid, <link linkend="_structinstrument">instrument</link> inst, <link linkend="_structalgometa">algometa</link> meta, bool cert)</para>
+
+<para>Constructs a <link linkend="_class_quoter_v3">QuoterV3</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_quoter_v3_1a78d550993280d2fe66c00078db75a465">Get</link> (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord)</para>
+
+<para>Gets the OrderPod object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_quoter_v3_1aabcbbbe6526033e37265460cb070d481">NextNew</link> (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord, KOrderSide::Enum side, uint64_t exchordid, uint32_t qty, int price)</para>
+
+<para>Retrieve a new OrderPod object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_quoter_v3_1aff46be83858c472055de88fcee890254">NextMod</link> (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord, KOrderSide::Enum side, uint64_t reqid, uint64_t exchordid, uint32_t qty, int price)</para>
+
+<para>Modifies an existing OrderPod object. </para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_class_quoter_v3_1a44b5bdec37c57f27336d275663d05cc3">HedgeReqId</link> (int32_t secid, int16_t differential, uint8_t multiplier)</para>
+
+<para>Generates a HedgeReqId. </para>
+</listitem>
+            <listitem><para><link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> <link linkend="_class_quoter_v3_1a46d061f2659ed8ee90e57a675b026a6a">NewBlank</link> ()</para>
+
+<para>Creates a new blank Order object. </para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_class_quoter_v3_1a2269ac1f163a6fb785dc4036f8d0fe80">CertSecId</link> (string symbol)</para>
+
+<para>Gets the CertSecId. </para>
+</listitem>
+            <listitem><para><link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> <link linkend="_class_quoter_v3_1a481649217edab30ef3d0a2587ddc20b7">GetTemplate</link> ()</para>
+
+<para>Gets the template Order object. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_quoter_v3_1a7f5e3e3d3302da1b7dd9032940ae02aa">Total</link> ()</para>
+
+<para>Gets the total count. </para>
+</listitem>
+            <listitem><para>string <link linkend="_class_quoter_v3_1a2764f36f3aac020112637a0de0d9b8c8">NextId</link> ()</para>
+
+<para>Generates the next ID. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Represents a <link linkend="_class_quoter_v3">QuoterV3</link> class that manages quoting orders and functions. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_quoter_v3_1a8c84543f5827deb91ed412253bd6db02"/><section>
+    <title>QuoterV3()</title>
+<indexterm><primary>QuoterV3</primary><secondary>QuoterV3</secondary></indexterm>
+<indexterm><primary>QuoterV3</primary><secondary>QuoterV3</secondary></indexterm>
+<para><computeroutput>QuoterV3::QuoterV3 ( )</computeroutput></para><para>
+
+<para>Default constructor for <link linkend="_class_quoter_v3">QuoterV3</link>. </para>
+</para>
+</section>
+<anchor xml:id="_class_quoter_v3_1ade7535112737d50fa8918a41460bf476"/><section>
+    <title>~QuoterV3()</title>
+<indexterm><primary>~QuoterV3</primary><secondary>QuoterV3</secondary></indexterm>
+<indexterm><primary>QuoterV3</primary><secondary>~QuoterV3</secondary></indexterm>
+<para><computeroutput>QuoterV3::~QuoterV3 ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Destructor for <link linkend="_class_quoter_v3">QuoterV3</link>. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_quoter_v3_1a2269ac1f163a6fb785dc4036f8d0fe80"/><section>
+    <title>CertSecId()</title>
+<indexterm><primary>CertSecId</primary><secondary>QuoterV3</secondary></indexterm>
+<indexterm><primary>QuoterV3</primary><secondary>CertSecId</secondary></indexterm>
+<para><computeroutput>int32_t QuoterV3::CertSecId (string symbol)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Gets the CertSecId. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>symbol</entry><entry>
+<para>The symbol value. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The CertSecId. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_quoter_v3_1a51225c4f207f6ab4301edf58fae3bfcc"/><section>
+    <title>Construct()</title>
+<indexterm><primary>Construct</primary><secondary>QuoterV3</secondary></indexterm>
+<indexterm><primary>QuoterV3</primary><secondary>Construct</secondary></indexterm>
+<para><computeroutput>void QuoterV3::Construct (int cbid, <link linkend="_structinstrument">instrument</link> inst, <link linkend="_structalgometa">algometa</link> meta, bool cert)</computeroutput></para><para>
+
+<para>Constructs a <link linkend="_class_quoter_v3">QuoterV3</link> object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>cbid</entry><entry>
+<para>The cbid value. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>inst</entry><entry>
+<para>The instrument value. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>meta</entry><entry>
+<para>The algometa value. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>cert</entry><entry>
+<para>The cert value. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00111">instrument::exch</link>, <link linkend="_l00075">instrument::index</link>, <link linkend="_l00067">instrument::mintick</link>, <link linkend="_l00078">instrument::mktsegid</link>, <link linkend="_l00105">instrument::prodtype</link>, <link linkend="_l00112">instrument::product</link>, <link linkend="_l00077">instrument::secid</link>, <link linkend="_l00262">algometa::Source</link>, <link linkend="_l00256">algometa::Strategy</link>, <link linkend="_l00257">algometa::StratId</link>, <link linkend="_l00113">instrument::symbol</link>, <link linkend="_l00264">algometa::Tag</link>, <link linkend="_l00261">algometa::UniqueId</link>, and <link linkend="_l00279">algometa::userinfo</link>.</para>
+</section>
+<anchor xml:id="_class_quoter_v3_1a78d550993280d2fe66c00078db75a465"/><section>
+    <title>Get()</title>
+<indexterm><primary>Get</primary><secondary>QuoterV3</secondary></indexterm>
+<indexterm><primary>QuoterV3</primary><secondary>Get</secondary></indexterm>
+<para><computeroutput>void QuoterV3::Get (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp; ord)</computeroutput></para><para>
+
+<para>Gets the OrderPod object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ord</entry><entry>
+<para>The OrderPod object to get. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00141">KTN::Core::SPSCRingBuffer&lt; T &gt;::try_pop()</link>.</para>
+<para>
+Referenced by <link linkend="_l00198">KTN::PLWatcher::OrderReceived()</link>.</para>
+</section>
+<anchor xml:id="_class_quoter_v3_1a481649217edab30ef3d0a2587ddc20b7"/><section>
+    <title>GetTemplate()</title>
+<indexterm><primary>GetTemplate</primary><secondary>QuoterV3</secondary></indexterm>
+<indexterm><primary>QuoterV3</primary><secondary>GetTemplate</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> QuoterV3::GetTemplate ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Gets the template Order object. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The template Order object. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_quoter_v3_1a44b5bdec37c57f27336d275663d05cc3"/><section>
+    <title>HedgeReqId()</title>
+<indexterm><primary>HedgeReqId</primary><secondary>QuoterV3</secondary></indexterm>
+<indexterm><primary>QuoterV3</primary><secondary>HedgeReqId</secondary></indexterm>
+<para><computeroutput>uint64_t QuoterV3::HedgeReqId (int32_t secid, int16_t differential, uint8_t multiplier)</computeroutput></para><para>
+
+<para>Generates a HedgeReqId. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>secid</entry><entry>
+<para>The secid value. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>differential</entry><entry>
+<para>The differential value. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>multiplier</entry><entry>
+<para>The multiplier value. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The generated HedgeReqId. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00046">AlgoHdgEncoder::encodeData()</link>.</para>
+</section>
+<anchor xml:id="_class_quoter_v3_1a46d061f2659ed8ee90e57a675b026a6a"/><section>
+    <title>NewBlank()</title>
+<indexterm><primary>NewBlank</primary><secondary>QuoterV3</secondary></indexterm>
+<indexterm><primary>QuoterV3</primary><secondary>NewBlank</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> QuoterV3::NewBlank ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Creates a new blank Order object. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The new blank Order object. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_quoter_v3_1a2764f36f3aac020112637a0de0d9b8c8"/><section>
+    <title>NextId()</title>
+<indexterm><primary>NextId</primary><secondary>QuoterV3</secondary></indexterm>
+<indexterm><primary>QuoterV3</primary><secondary>NextId</secondary></indexterm>
+<para><computeroutput>string QuoterV3::NextId ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Generates the next ID. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The next ID. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l01140">KTN::Waves::OrderReceived()</link>.</para>
+</section>
+<anchor xml:id="_class_quoter_v3_1aff46be83858c472055de88fcee890254"/><section>
+    <title>NextMod()</title>
+<indexterm><primary>NextMod</primary><secondary>QuoterV3</secondary></indexterm>
+<indexterm><primary>QuoterV3</primary><secondary>NextMod</secondary></indexterm>
+<para><computeroutput>void QuoterV3::NextMod (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp; ord, KOrderSide::Enum side, uint64_t reqid, uint64_t exchordid, uint32_t qty, int price)</computeroutput></para><para>
+
+<para>Modifies an existing OrderPod object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ord</entry><entry>
+<para>The OrderPod object to modify. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>side</entry><entry>
+<para>The KOrderSide value. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>reqid</entry><entry>
+<para>The reqid value. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>exchordid</entry><entry>
+<para>The exchordid value. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>qty</entry><entry>
+<para>The quantity value. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>price</entry><entry>
+<para>The price value. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00038">KTN::OrderPod::exchordid</link>, <link linkend="_l00059">KTN::OrderPod::OrdAction</link>, <link linkend="_l00037">KTN::OrderPod::orderReqId</link>, <link linkend="_l00060">KTN::OrderPod::OrdSide</link>, <link linkend="_l00061">KTN::OrderPod::OrdStatus</link>, <link linkend="_l00034">KTN::OrderPod::price</link>, <link linkend="_l00041">KTN::OrderPod::quantity</link>, and <link linkend="_l00141">KTN::Core::SPSCRingBuffer&lt; T &gt;::try_pop()</link>.</para>
+</section>
+<anchor xml:id="_class_quoter_v3_1aabcbbbe6526033e37265460cb070d481"/><section>
+    <title>NextNew()</title>
+<indexterm><primary>NextNew</primary><secondary>QuoterV3</secondary></indexterm>
+<indexterm><primary>QuoterV3</primary><secondary>NextNew</secondary></indexterm>
+<para><computeroutput>void QuoterV3::NextNew (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp; ord, KOrderSide::Enum side, uint64_t exchordid, uint32_t qty, int price)</computeroutput></para><para>
+
+<para>Retrieve a new OrderPod object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ord</entry><entry>
+<para>The OrderPod object to create. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>side</entry><entry>
+<para>The KOrderSide value. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>exchordid</entry><entry>
+<para>The exchordid value. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>qty</entry><entry>
+<para>The quantity value. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>price</entry><entry>
+<para>The price value. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00059">KTN::OrderPod::OrdAction</link>, <link linkend="_l00060">KTN::OrderPod::OrdSide</link>, <link linkend="_l00061">KTN::OrderPod::OrdStatus</link>, <link linkend="_l00034">KTN::OrderPod::price</link>, <link linkend="_l00041">KTN::OrderPod::quantity</link>, and <link linkend="_l00141">KTN::Core::SPSCRingBuffer&lt; T &gt;::try_pop()</link>.</para>
+<para>
+Referenced by <link linkend="_l00803">KTN::MultiSpreaderV3::onHedgeOrderSent()</link>, <link linkend="_l01169">KTN::SkewTrader::onHedgeOrderSent()</link>, <link linkend="_l01180">KTN::Stacker::onHedgeOrderSent()</link>, <link linkend="_l00378">KTN::Waves::onHedgeOrderSent()</link>, <link linkend="_l00047">KTN::AutoHedgeOB::onJson()</link>, <link linkend="_l00045">KTN::SqueezerOB::onJson()</link>, <link linkend="_l00838">KTN::MultiSpreaderV3::onOrderSent()</link>, <link linkend="_l01205">KTN::SkewTrader::onOrderSent()</link>, <link linkend="_l01215">KTN::Stacker::onOrderSent()</link>, <link linkend="_l00451">KTN::Waves::onOrderSent()</link>, and <link linkend="_l00379">KTN::PLWatcher::onPL()</link>.</para>
+</section>
+<anchor xml:id="_class_quoter_v3_1a7f5e3e3d3302da1b7dd9032940ae02aa"/><section>
+    <title>Total()</title>
+<indexterm><primary>Total</primary><secondary>QuoterV3</secondary></indexterm>
+<indexterm><primary>QuoterV3</primary><secondary>Total</secondary></indexterm>
+<para><computeroutput>int QuoterV3::Total ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Gets the total count. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The total count. </para>
+</formalpara>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+AlgoEngines/QuoterV3.hppAlgoEngines/QuoterV3.cpp</section>
+</section>

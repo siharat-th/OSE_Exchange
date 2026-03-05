@@ -1,0 +1,676 @@
+\doxysection{KTN\+::PLWatcher Class Reference}
+\hypertarget{class_k_t_n_1_1_p_l_watcher}{}\label{class_k_t_n_1_1_p_l_watcher}\index{KTN::PLWatcher@{KTN::PLWatcher}}
+
+
+The \doxylink{class_k_t_n_1_1_p_l_watcher}{PLWatcher} class is responsible for monitoring the profit and loss of a trading algorithm.  
+
+
+
+
+{\ttfamily \#include $<$PLWatcher.\+hpp$>$}
+
+Inheritance diagram for KTN\+::PLWatcher\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_k_t_n_1_1_p_l_watcher}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_p_l_watcher_a5cef54fa8c437bc2d781d6d5fa4479f4}{PLWatcher}} (\mbox{\hyperlink{struct_algo_initializer}{Algo\+Initializer}} p)
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{class_k_t_n_1_1_p_l_watcher}{PLWatcher} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_k_t_n_1_1_p_l_watcher_a7c0d81243cfba5d0270f14ad21f2cae6}{\texorpdfstring{$\sim$}{\string~}\+PLWatcher}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{class_k_t_n_1_1_p_l_watcher}{PLWatcher} object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_p_l_watcher_aae2b2501b5cf2b1fa2146b2692263a20}{on\+Json}} (std\+::string json)
+\begin{DoxyCompactList}\small\item\em Processes a JSON-\/formatted string. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_p_l_watcher_a94a345a2d46e61eb0b4dfe0ea044703d}{on\+Launch}} (std\+::string json)
+\begin{DoxyCompactList}\small\item\em Triggered when the algorithm is launched. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_p_l_watcher_a2e24e0b4a7212691de006a71c0983c38}{on\+Calculate}} ()
+\begin{DoxyCompactList}\small\item\em Performs calculation logic for the algorithm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_p_l_watcher_a2ef7aa8763bd2932602cebdd0f1ab325}{on\+Mkt\+Data}} (int index) override
+\begin{DoxyCompactList}\small\item\em Handles market data updates. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_p_l_watcher_a06cde2c1d43e120a4c2f883b6e81f07b}{on\+Trade}} (int index, double price, double size, int aggressor) override
+\begin{DoxyCompactList}\small\item\em Handles a trade event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_p_l_watcher_a07b56c9833d44be5b2fb32b02aa14758}{min\+Order\+Execution}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord, bool hedge\+Sent) override
+\begin{DoxyCompactList}\small\item\em This method is called when a minimum order execution is received. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_p_l_watcher_a475ebe0375d4b893e5aaff41733ba5a3}{Enable}} (bool b\+Enable)
+\begin{DoxyCompactList}\small\item\em Enables or disables the algorithm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_p_l_watcher_a72497ba92a921e258857286e1f272263}{Reset\+Position}} () override
+\begin{DoxyCompactList}\small\item\em Resets the algorithm\textquotesingle{}s position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_p_l_watcher_af2db5e8f7d6f218ab2cc195dd886b80b}{Print}} () override
+\begin{DoxyCompactList}\small\item\em Prints information about the algorithm instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_p_l_watcher_a5928785e0612726d0bb992b9a6eb60f3}{Toggle\+Command}} (int id) override
+\begin{DoxyCompactList}\small\item\em Toggles a specific command by ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_p_l_watcher_a4ea9094c37fef58e71fe8692e40d6aa8}{Restart}} () override
+\begin{DoxyCompactList}\small\item\em Restarts the algorithm. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_p_l_watcher_a20adfd48a1cea2bd875b6d80ff4496e2}{on\+PL}} (\mbox{\hyperlink{struct_position}{Position}} \&pos, \mbox{\hyperlink{class_algo_p_l_callback_a06714cabdb3853ff4e5566814891a324}{Profit\+Event}} event)
+\begin{DoxyCompactList}\small\item\em This method is called when a profit or loss event occurs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_p_l_watcher_a907189c24ffbc39dfdefb1b45ccf779e}{on\+Engine\+Json}} (\mbox{\hyperlink{struct_engine_command}{Engine\+Command}} \&cmd)
+\begin{DoxyCompactList}\small\item\em Processes algo engine-\/specific commands. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_p_l_watcher_ab4ad9fd6e3d78d0af3d6582d3315848d}{Order\+Received}} (\mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} \&incoming, int index) override
+\begin{DoxyCompactList}\small\item\em Processes received order events. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_p_l_watcher_a5cc952455e4564a1f10ab2aa0263b942}{Order\+Min\+Update}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord) override
+\begin{DoxyCompactList}\small\item\em Processes updates for an order. Order\+Min is a minimal order object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3}{KTN\+::\+Algo\+Base\+V3}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_aa84e3a731dd27f3388fa377f7681d750}{Algo\+Base\+V3}} (\mbox{\hyperlink{struct_algo_initializer}{Algo\+Initializer}} params)
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{class_k_t_n_1_1_algo_base_v3}{Algo\+Base\+V3} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a0c267b1a15439b0a1ddeb01cecfc56bb}{\texorpdfstring{$\sim$}{\string~}\+Algo\+Base\+V3}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{class_k_t_n_1_1_algo_base_v3}{Algo\+Base\+V3}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_abe50ec326db3767c94cd72fe835dc701}{GUID}} ()
+\begin{DoxyCompactList}\small\item\em Returns the globally unique identifier (GUID) of the algorithm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a589e249d7ff79c65e040555041bcdc1c}{Poll}} ()
+\begin{DoxyCompactList}\small\item\em Polls the system for events. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a8065b608926c8356a505a7a0aaa2e312}{on\+Heartbeat}} (int msgseqnum)
+\begin{DoxyCompactList}\small\item\em Handles session heartbeat events. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_aa605b30edbe772e6fec73a60f46997d9}{on\+Session\+Status}} (std\+::string exch, int mktsegid, int protocol, std\+::string desc, std\+::string state)
+\begin{DoxyCompactList}\small\item\em Handles session status updates. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a6ca56111952acf91d9a1dcc250ae4ba6}{on\+Spread\+Leg\+Order\+Execution}} (\mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} \&ord)
+\begin{DoxyCompactList}\small\item\em Executes spread leg orders. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_afe46d7c3b727f40d8298b8009ef6a4f1}{min\+Order\+Ack}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord) override
+\begin{DoxyCompactList}\small\item\em This method is called when a minimum order acknowledgement is received. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a3ffdc246cd30b2429670bc1a083a7e5d}{min\+Order\+Cancel}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord) override
+\begin{DoxyCompactList}\small\item\em This method is called when a minimum order cancellation is received. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a9eb48a787a7992de5e850421c37b010b}{min\+Order\+Modify}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord) override
+\begin{DoxyCompactList}\small\item\em This method is called when a minimum order modification is received. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a143281eb198c3682d54c91bf812f2d2f}{min\+Order\+Reject}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord, const std\+::string \&text)
+\begin{DoxyCompactList}\small\item\em Handles order rejection events. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a8dd989bacc92082a8087ec03af874af1}{min\+Order\+Cancel\+Reject}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord, const std\+::string \&text)
+\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_af5e473737ae68f0343bb0374dcac2c0e}{min\+Order\+Cancel\+Replace\+Reject}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord, const std\+::string \&text)
+\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a0d3c0ceb84a7b46e838d6e466db8f88b}{on\+Hedge\+Order\+Sent}} (char \texorpdfstring{$\ast$}{*}clordid, uint64\+\_\+t reqid, int32\+\_\+t secid, KOrder\+Side\+::\+Enum side, uint32\+\_\+t qty, int32\+\_\+t price9, uint16\+\_\+t instindex)
+\begin{DoxyCompactList}\small\item\em Handles hedge order sent events. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a813c6fe078d94ed9a5c4c11db6c30f02}{on\+Order\+Sent}} (char \texorpdfstring{$\ast$}{*}clordid, uint64\+\_\+t reqid, int32\+\_\+t secid, KOrder\+Side\+::\+Enum side, uint32\+\_\+t qty, int32\+\_\+t price, KOrder\+Algo\+Trigger\+::\+Enum trig)
+\begin{DoxyCompactList}\small\item\em Handles order sent events. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a53e56ae819cd84801cd33ac4c3be1be8}{Shutdown}} ()
+\begin{DoxyCompactList}\small\item\em Shuts down the algorithm. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a3c5087ea209789b14ba84e370e448da5}{Cancel\+All\+Orders}} ()
+\begin{DoxyCompactList}\small\item\em Cancels all orders. \end{DoxyCompactList}\item 
+void {\bfseries shutdown\+Handler} ()
+\begin{DoxyCompactList}\small\item\em Shuts down the algorithm handler. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a76a59c9484fb7f3638fccd93ad935da1}{on\+Mkt\+Data\+Bid\+Ask}} (const \mbox{\hyperlink{structalgomd}{algomd}} \&md)
+\begin{DoxyCompactList}\small\item\em Handles bid-\/ask market data updates. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_ac29c33857d9a4cbc28c52c9bef3b2707}{on\+Mkt\+Data\+Trade}} (const \mbox{\hyperlink{structalgomd}{algomd}} \&md)
+\begin{DoxyCompactList}\small\item\em Handles trade market data updates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_k_t_n_1_1_algo_mkt_data_callback}{KTN\+::\+Algo\+Mkt\+Data\+Callback}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_algo_mkt_data_callback_a758e9e927074286b79fdac74a87376fc}{Algo\+Mkt\+Data\+Callback}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{class_k_t_n_1_1_algo_mkt_data_callback}{Algo\+Mkt\+Data\+Callback}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_k_t_n_1_1_algo_mkt_data_callback_a38a45c5e4e5b4e64e264cbf4d7b21cb8}{\texorpdfstring{$\sim$}{\string~}\+Algo\+Mkt\+Data\+Callback}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{class_k_t_n_1_1_algo_mkt_data_callback}{Algo\+Mkt\+Data\+Callback}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_algo_mkt_data_callback_ab05b9837ca4811ef7abca271aa693218}{on\+State\+Change}} (int state)
+\begin{DoxyCompactList}\small\item\em This method is called when the state of the algorithm changes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_k_t_n_1_1_session_callback}{KTN\+::\+Session\+Callback}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_session_callback_a0d9e306c44667fb2e28788c8141416b1}{on\+Session\+Status}} (string exch, int mktsegid, int protocol, string desc, string state)=0
+\begin{DoxyCompactList}\small\item\em This method is called when the session status changes. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_session_callback_ae6efabe36af252db685a5e397d875f0f}{min\+Order\+Reject}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord, const string \&text)=0
+\begin{DoxyCompactList}\small\item\em This method is called when a minimum order rejection is received. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_session_callback_aaaa0946280382f9b444a639c4ab61a42}{min\+Order\+Cancel\+Reject}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord, const string \&text)=0
+\begin{DoxyCompactList}\small\item\em This method is called when a minimum order cancellation rejection is received. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_session_callback_aee8568b17d2b440518c27f1f24b8022d}{min\+Order\+Cancel\+Replace\+Reject}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord, const string \&text)=0
+\begin{DoxyCompactList}\small\item\em This method is called when a minimum order cancel/replace rejection is received. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_algo_p_l_callback}{Algo\+PLCallback}}}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{class_algo_p_l_callback}{Algo\+PLCallback}}}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_algo_p_l_callback_a06714cabdb3853ff4e5566814891a324}{Profit\+Event}} \{ \newline
+\mbox{\hyperlink{class_algo_p_l_callback_a06714cabdb3853ff4e5566814891a324a5716fdc31bb7e36a9c78b9c5b0ad3050}{NONE}}
+, \mbox{\hyperlink{class_algo_p_l_callback_a06714cabdb3853ff4e5566814891a324a606976a56e71f0cbd80075aca9abda3e}{PROFITTAKE}}
+, \mbox{\hyperlink{class_algo_p_l_callback_a06714cabdb3853ff4e5566814891a324a249c454213699ab207874983a3d35801}{STOPLOSS}}
+, \mbox{\hyperlink{class_algo_p_l_callback_a06714cabdb3853ff4e5566814891a324a9d5d5464c40f496f0838551abb425731}{TIMERHIT}}
+, \newline
+\mbox{\hyperlink{class_algo_p_l_callback_a06714cabdb3853ff4e5566814891a324a63605381ddd4d06bede0cc0f1f6360d1}{MKT}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3}{KTN\+::\+Algo\+Base\+V3}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structinstrument}{instrument}} $>$ \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a966bcf61a6f11e60e1c4c57f763bac9f}{\+\_\+\+LEGS}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3}{KTN\+::\+Algo\+Base\+V3}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_af754365117e4020619e46a406cb0a570}{Log\+Me}} (std\+::string sz\+Msg, int i\+Color=LOG\+\_\+\+WHITE)
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a768aa4b64b526b5f2cf30d7e09d0c905}{Notify}} (std\+::string msg, Msg\+Level\+::\+Enum level, Msg\+Type\+::\+Enum msgtype)
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_aad5ea283f908dea36cbf276dca36a8e8}{Print\+Md\+Map}} ()
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_afc26768577728c52362643733cd04f91}{Print\+Book\+Map}} ()
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a1395ee7d0cefd09a658a4cea980f4d61}{Print\+Book}} (\mbox{\hyperlink{structinstrument}{instrument}} inst)
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_ac2232a403037ec457751f90a93b98e63}{Update\+Meta\+Params}} (\mbox{\hyperlink{structalgometa}{algometa}} meta)
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a4b80cca84992d7cb24ee41864775f821}{Change\+Quote\+State}} (const Quote\+State\+::\+Enum \&newstate)
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_ac9b82a09f91527882ee7f5fc918e468a}{Change\+Hedge\+State}} (const Hedge\+State\+::\+Enum \&newstate)
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_aa5d0d12e8178b6adaed259e248739d0a}{Register\+Callback\+Id}} ()
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_abcc7cbba1e96b579d93ebf44959cd06a}{Register\+Params}} (std\+::string json)
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a4c11d263d9db92868468faaea2241ba6}{Register\+Cme\+Sec\+Id}} (\mbox{\hyperlink{structinstrument}{instrument}} \&inst)
+\item 
+\mbox{\hyperlink{structalgomd}{algomd}} \& \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a8f4f8a0f02f954ed882c8cdb0c47ce17}{Get\+Quote}} (const \mbox{\hyperlink{structinstrument}{instrument}} \&inst)
+\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_ad77091e4d6893805ddd71576ece325fb}{Get\+Quote}} (const \mbox{\hyperlink{structinstrument}{instrument}} \&inst, \mbox{\hyperlink{structalgomd}{algomd}} \&md)
+\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_af351ae135bad426bc9c22522aa726c9a}{Get\+Quote\+By\+Index}} (int index, \mbox{\hyperlink{structalgomd}{algomd}} \&md)
+\item 
+\mbox{\hyperlink{structbookmd}{bookmd}} \& \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a5014b7fc359fecb6d937a105aa64b4e7}{Get\+Book}} (const \mbox{\hyperlink{structinstrument}{instrument}} \&inst)
+\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a501536096e71969794f93f566b4a7007}{Get\+Book}} (const \mbox{\hyperlink{structinstrument}{instrument}} \&inst, \mbox{\hyperlink{structbookmd}{bookmd}} \&book)
+\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a06d010b3cbf541488f9849842e0aa78b}{Risk\+Check\+Qty}} (int qty, int totalqty, int execqty, KOrder\+Side\+::\+Enum side)
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a8785c2b4e8498e65fe98844889328e59}{Send\+Order}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord, \mbox{\hyperlink{structinstrument}{instrument}} \&inst)
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a56f099ef60d4831abe45fa7dfb699b4b}{Send\+Order\+With\+Hedge}} (\mbox{\hyperlink{struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_order_with_hedge}{Order\+With\+Hedge}} \&oh, \mbox{\hyperlink{structinstrument}{instrument}} \&inst)
+\item 
+int {\bfseries Get\+Bid} (int index)
+\item 
+int {\bfseries Get\+Ask} (int index)
+\item 
+void {\bfseries Get\+Bid} (int index, \mbox{\hyperlink{structatomicquote}{atomicquote}} \&qt)
+\item 
+void {\bfseries Get\+Ask} (int index, \mbox{\hyperlink{structatomicquote}{atomicquote}} \&qt)
+\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a7d5a8e7b26d1e6684451723a8a23a282}{is\+Valid\+Sec\+Id}} (uint32\+\_\+t secid)
+\item 
+const \mbox{\hyperlink{structalgomd}{algomd}} \& \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a88f20b9f48e390c5c9edbfc6d3895b3f}{find\+By\+Sec\+Id}} (int id) const
+\item 
+int \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_ac7fe7e56d73b0e4e42e4b03e44c95736}{index\+By\+Sec\+Id}} (int id)
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_aa00863dc89beef679746f91ddcba788c}{Gen\+Ids}} (std\+::string prefix)
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a96b4be5f32acac196f8d9878b19646f0}{Add\+Reporting\+Msg}} (std\+::string msg, std\+::string msgtype)
+\item 
+void {\bfseries Add\+Cme\+Symbol} (std\+::string symbol)
+\item 
+std\+::string {\bfseries get\+Cert\+Symbol} (long secid)
+\item 
+int32\+\_\+t {\bfseries get\+Cert\+Sec\+Id} (std\+::string symbol)
+\item 
+int32\+\_\+t {\bfseries get\+Prod\+Sec\+Id\+From\+Cert} (long secid)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3}{KTN\+::\+Algo\+Base\+V3}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::atomic$<$ bool $>$ \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_ab9a34128d8b3aeeb09959b15c7b5ff72}{\+\_\+\+ACTIVE}}
+\item 
+\mbox{\hyperlink{class_i_exchange_sender}{IExchange\+Sender}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_add06140811bdf5b96cd79f4a1534c672}{\+\_\+ordersender}}
+\item 
+\mbox{\hyperlink{class_ktn_cme_mdp_v4}{Ktn\+Cme\+Mdp\+V4}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_ab2305e6e5fcc2626a3dd57a0588fe6c8}{\+\_\+mdh}}
+\item 
+\mbox{\hyperlink{class_k_t01_1_1_m_s_g_w_1_1_cme_msgw}{Cme\+Msgw}} \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a5d2f60a85210ce4692e247314a5b4a41}{\+\_\+msgw}}
+\item 
+\mbox{\hyperlink{class_order_manager_v5}{Order\+Manager\+V5}} \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_ab3e66b66ae8858b4e4807b9c269744ed}{\+\_\+\+Ords}}
+\item 
+\mbox{\hyperlink{class_performance_tracker}{Performance\+Tracker}} \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a1c83cb0bfc9f4a2fdb6dba7db13650f6}{\+\_\+trk}}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_a_l_g_o_1_1_algo_helpers}{Algo\+Helpers}} \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a33e25c7650a50ef096842e8394354cb8}{helpers}}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1notify_1_1_slacker}{Slacker}} \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_aeddc3ae7c163538d51183b894dc7b386}{\+\_\+\+SLACK}}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter}{Algo\+V3\+Reporter}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_ab974a614ba683835ebdbe282b0496875}{\+\_\+algorpt}}
+\item 
+\mbox{\hyperlink{classgenericstats}{genericstats}} \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a7c45c8e5722e65b9724efc32502a8118}{\+\_\+mystats}}
+\item 
+\mbox{\hyperlink{struct_log_msg}{Log\+Msg}} \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a67c3c9ffd68d36c81efd64f4b568b9ad}{\+\_\+\+LOG}}
+\item 
+\mbox{\hyperlink{structalgometa}{algometa}} \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_acca251481d32f164433d1cc4ddfd49b5}{\+\_\+\+PARAMS}}
+\item 
+int \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_acd68213430e95983d5955c83f834c821}{\+\_\+\+NUMLEGS}}
+\item 
+\mbox{\hyperlink{structalgomd}{algomd}} \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a90cfa2ebb0bb5c7d9a77d32f4a1f04d4}{\+\_\+\+MD}} \mbox{[}8\mbox{]}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{structinstrument}{instrument}} $>$ \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a30713405c9ca581f24e73c077e22aace}{\+\_\+\+LEGMAP}}
+\item 
+std\+::unordered\+\_\+map$<$ int, \mbox{\hyperlink{structinstrument}{instrument}} $>$ \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a799241356579cb3ee2d9fdf80df7fdd3}{\+\_\+\+SECIDMAP}}
+\item 
+std\+::unordered\+\_\+map$<$ long, std\+::string $>$ \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a4b831638e78a687e6c2c7022ba36782d}{\+\_\+cert\+Id\+Map}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, long $>$ \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_ac241287a78c4f775307ace882afa34ad}{\+\_\+cert\+Id\+Symbol\+Map}}
+\item 
+Quote\+State\+::\+Enum \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_af5bb24c444c8824fcdd9fef89faf78a4}{\+\_\+\+Quoting\+State}}
+\item 
+Hedge\+State\+::\+Enum \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_aec66462926eb7181c16da4d6b922a57d}{\+\_\+\+Hedging\+State}}
+\item 
+\mbox{\hyperlink{class_settings}{Settings}} \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a556ac4cb554e7be794524342e2aa94a6}{settings\+\_\+}}
+\item 
+volatile bool \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_aab3dd4a33a9180c0bd98066a2ac22412}{stopped\+\_\+}}
+\item 
+int \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a49b8ccaebf6e50554468bbba4b0fcb6c}{\+\_\+\+EXCH\+\_\+\+CALLBACK\+\_\+\+ID}}
+\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_ac8f4cfb47349b5137787658bcd3449f9}{\+\_\+\+CME\+\_\+\+BY\+\_\+\+SECID}}
+\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a9d7a1ff56e7881de9d04ad7432de19a7}{\+\_\+b\+Quote\+In\+Flight}}
+\item 
+std\+::string \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_aa2694c4e45dce7d9ddcfcb28666bf0c1}{\+\_\+\+GUID}}
+\item 
+std\+::string \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_aa1cd61a7a64843c75c94186b0b6533dd}{\+\_\+\+ORG}}
+\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a9ea574d11ea872b31f169b700635b3e9}{\+\_\+\+MEASURE}}
+\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a93e981a64f666a723867d35c79d99cf8}{\+\_\+\+CERTNR}}
+\item 
+int \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_af393edf33b660b0c82ac9882ca97d0f6}{\+\_\+\+MKT\+\_\+\+DATA\+\_\+\+CPU}}
+\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a3bb93cd1daf47c268d873836b6f41aa2}{\+\_\+\+MKT\+\_\+\+DATA\+\_\+\+OK}}
+\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a728ab307e35b8eff9fc92983e1d1e895}{\+\_\+\+GOT\+\_\+\+DATA}}
+\item 
+long \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a9d8c3622072260b6ab4512e8d7102e50}{\+\_\+\+DATA\+\_\+\+TRIES}}
+\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a52f58e54acd68a4cd64a32ed676a4814}{\+\_\+\+WATCH\+\_\+\+TRADES}}
+\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a42983b18504632cd847b72175a38c0e2}{\+\_\+\+WATCH\+\_\+\+VOLUME}}
+\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a9abdef275285d926aab0655234d37387}{\+\_\+\+USEAUDIT}}
+\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_aa57c79654a5a7b64f277f9079a08d1c4}{\+\_\+\+ENABLED}}
+\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a92780888cf697c50098c58f94e86b2e2}{\+\_\+\+CAN\+\_\+\+TRADE}}
+\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a8669362a97ac32894ae53006e1000f17}{\+\_\+\+HANDLER\+\_\+\+STARTED}}
+\item 
+double \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a132b82efbc59bed31683f35aa2e9a61b}{\+\_\+\+NETPOS}}
+\item 
+double \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a4e9f629294473e1d87583f703a1bcb85}{\+\_\+\+TOTALEXEC}}
+\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a50d8054e6b76a7d6eccc4de76bb5f85f}{\+\_\+\+USE\+\_\+\+REPORTING\+\_\+\+MSGS}}
+\item 
+volatile bool \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a9e9d644ca21f00ed354e4ac078a56f13}{\+\_\+\+RPT\+\_\+\+ACTIVE}}
+\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a31b05e978db923360b47221645162cf4}{\+\_\+\+USE\+\_\+\+STOPS}}
+\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a9c2bc36166378b9dee8a9f34a9fc9751}{\+\_\+\+CME\+\_\+\+MKT\+\_\+\+DATA\+\_\+\+STARTED}}
+\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a3248fdaa352f1a57f043c3a74489b840}{\+\_\+\+ALLSYMBOLS}}
+\item 
+std\+::string \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a1a28244e6ec621384d2b470ee4b2195c}{\+\_\+\+BASE}}
+\item 
+int \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a9ec3c14036eef7e827276a2c321b8521}{\+\_\+\+CNT}}
+\item 
+int \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a7c25d52afaa6bab46e5a50b5ef77b051}{\+\_\+\+TESTID}}
+\item 
+int \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a4e05c983237fb49f01bb17106289bef4}{\+\_\+\+GROUPCNT}}
+\item 
+std\+::string \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a5caaa01aeb0d7d1f881f4777cafb560c}{\+\_\+\+SPRDID}}
+\item 
+int \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_ae267196619512a8e639202240d4e0256}{\+\_\+\+CORE}}
+\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a905f360dbfb556d4e66b358743bf8ca4}{\+\_\+\+VERBOSE}}
+\item 
+std\+::string \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a306b8a5f734edd4f5c05706b901143a6}{m\+\_\+\+Name}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_k_t_n_1_1_p_l_watcher}{PLWatcher} class is responsible for monitoring the profit and loss of a trading algorithm. 
+
+It inherits from \doxylink{class_k_t_n_1_1_algo_base_v3}{Algo\+Base\+V3} and \doxylink{class_algo_p_l_callback}{Algo\+PLCallback} classes and provides implementations for various methods. The \doxylink{class_k_t_n_1_1_p_l_watcher}{PLWatcher} class is used to track market data, trades, and order execution. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_k_t_n_1_1_p_l_watcher_a5cef54fa8c437bc2d781d6d5fa4479f4}\index{KTN::PLWatcher@{KTN::PLWatcher}!PLWatcher@{PLWatcher}}
+\index{PLWatcher@{PLWatcher}!KTN::PLWatcher@{KTN::PLWatcher}}
+\doxysubsubsection{\texorpdfstring{PLWatcher()}{PLWatcher()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_p_l_watcher_a5cef54fa8c437bc2d781d6d5fa4479f4} 
+KTN\+::\+PLWatcher\+::\+PLWatcher (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_algo_initializer}{Algo\+Initializer}}}]{p}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a new \doxylink{class_k_t_n_1_1_p_l_watcher}{PLWatcher} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & The \doxylink{struct_algo_initializer}{Algo\+Initializer} object used to initialize the \doxylink{class_k_t_n_1_1_p_l_watcher}{PLWatcher}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_p_l_watcher_a7c0d81243cfba5d0270f14ad21f2cae6}\index{KTN::PLWatcher@{KTN::PLWatcher}!````~PLWatcher@{\texorpdfstring{$\sim$}{\string~}PLWatcher}}
+\index{````~PLWatcher@{\texorpdfstring{$\sim$}{\string~}PLWatcher}!KTN::PLWatcher@{KTN::PLWatcher}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}PLWatcher()}{\string~PLWatcher()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_p_l_watcher_a7c0d81243cfba5d0270f14ad21f2cae6} 
+KTN\+::\+PLWatcher\+::\texorpdfstring{$\sim$}{\string~}\+PLWatcher (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destroys the \doxylink{class_k_t_n_1_1_p_l_watcher}{PLWatcher} object. 
+
+
+
+References \mbox{\hyperlink{l00038}{PLMonitor\+::\+Stop()}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_p_l_watcher_a475ebe0375d4b893e5aaff41733ba5a3}\index{KTN::PLWatcher@{KTN::PLWatcher}!Enable@{Enable}}
+\index{Enable@{Enable}!KTN::PLWatcher@{KTN::PLWatcher}}
+\doxysubsubsection{\texorpdfstring{Enable()}{Enable()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_p_l_watcher_a475ebe0375d4b893e5aaff41733ba5a3} 
+void KTN\+::\+PLWatcher\+::\+Enable (\begin{DoxyParamCaption}\item[{bool}]{b\+Enable}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Enables or disables the algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b\+Enable} & A boolean indicating whether to enable or disable. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a9b82e6434bd4e990661b735106090aa0}{KTN\+::\+Algo\+Base\+V3}}.
+
+\Hypertarget{class_k_t_n_1_1_p_l_watcher_a07b56c9833d44be5b2fb32b02aa14758}\index{KTN::PLWatcher@{KTN::PLWatcher}!minOrderExecution@{minOrderExecution}}
+\index{minOrderExecution@{minOrderExecution}!KTN::PLWatcher@{KTN::PLWatcher}}
+\doxysubsubsection{\texorpdfstring{minOrderExecution()}{minOrderExecution()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_p_l_watcher_a07b56c9833d44be5b2fb32b02aa14758} 
+void KTN\+::\+PLWatcher\+::min\+Order\+Execution (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&}]{ord}{, }\item[{bool}]{hedge\+Sent}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+This method is called when a minimum order execution is received. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ord} & The order details. \\
+\hline
+{\em hedge\+Sent} & Indicates whether a hedge order was sent. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a461b855181c911e47b3b7096379c3f3d}{KTN\+::\+Algo\+Base\+V3}}.
+
+
+
+References \mbox{\hyperlink{l00038}{KTN\+::\+Order\+Pod\+::exchordid}}, \mbox{\hyperlink{l00035}{KTN\+::\+Order\+Pod\+::lastpx}}, \mbox{\hyperlink{l00044}{KTN\+::\+Order\+Pod\+::lastqty}}, \mbox{\hyperlink{l00460}{Order\+Manager\+V5\+::min\+Order\+Execution()}}, \mbox{\hyperlink{l00060}{KTN\+::\+Order\+Pod\+::\+Ord\+Side}}, and \mbox{\hyperlink{l00040}{KTN\+::\+Order\+Pod\+::secid}}.
+
+\Hypertarget{class_k_t_n_1_1_p_l_watcher_a2e24e0b4a7212691de006a71c0983c38}\index{KTN::PLWatcher@{KTN::PLWatcher}!onCalculate@{onCalculate}}
+\index{onCalculate@{onCalculate}!KTN::PLWatcher@{KTN::PLWatcher}}
+\doxysubsubsection{\texorpdfstring{onCalculate()}{onCalculate()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_p_l_watcher_a2e24e0b4a7212691de006a71c0983c38} 
+void KTN\+::\+PLWatcher\+::on\+Calculate (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Performs calculation logic for the algorithm. 
+
+
+
+Implements \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_ab585b47daf40a15aa424c7566bee7e05}{KTN\+::\+Algo\+Base\+V3}}.
+
+\Hypertarget{class_k_t_n_1_1_p_l_watcher_a907189c24ffbc39dfdefb1b45ccf779e}\index{KTN::PLWatcher@{KTN::PLWatcher}!onEngineJson@{onEngineJson}}
+\index{onEngineJson@{onEngineJson}!KTN::PLWatcher@{KTN::PLWatcher}}
+\doxysubsubsection{\texorpdfstring{onEngineJson()}{onEngineJson()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_p_l_watcher_a907189c24ffbc39dfdefb1b45ccf779e} 
+void KTN\+::\+PLWatcher\+::on\+Engine\+Json (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_engine_command}{Engine\+Command}} \&}]{cmd}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Processes algo engine-\/specific commands. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & The engine command to process. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_acc49921eaed80056b85f122b05db4281}{KTN\+::\+Algo\+Base\+V3}}.
+
+
+
+References \mbox{\hyperlink{l00100}{PLMonitor\+::\+Adjust\+Risk()}}.
+
+\Hypertarget{class_k_t_n_1_1_p_l_watcher_aae2b2501b5cf2b1fa2146b2692263a20}\index{KTN::PLWatcher@{KTN::PLWatcher}!onJson@{onJson}}
+\index{onJson@{onJson}!KTN::PLWatcher@{KTN::PLWatcher}}
+\doxysubsubsection{\texorpdfstring{onJson()}{onJson()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_p_l_watcher_aae2b2501b5cf2b1fa2146b2692263a20} 
+void KTN\+::\+PLWatcher\+::on\+Json (\begin{DoxyParamCaption}\item[{std\+::string}]{json}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Processes a JSON-\/formatted string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & A JSON-\/formatted string representing algo parameters. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This is a pure virtual function that must be implemented by derived classes. 
+\end{DoxyNote}
+
+
+Implements \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_aa92f8eb8209076ad95d6fa70814bfa80}{KTN\+::\+Algo\+Base\+V3}}.
+
+
+
+References \mbox{\hyperlink{l00075}{instrument\+::index}}, \mbox{\hyperlink{l00032}{Risk\+Base\+::\+Minutes\+To\+Live}}, \mbox{\hyperlink{l00078}{instrument\+::mktsegid}}, \mbox{\hyperlink{l00012}{Order\+Parser\+::parseorder()}}, \mbox{\hyperlink{l00064}{instrument\+::pricemult}}, \mbox{\hyperlink{l00030}{Risk\+Base\+::\+Profit\+Taking}}, \mbox{\hyperlink{l00046}{PLMonitor\+::\+Register()}}, \mbox{\hyperlink{l00065}{instrument\+::spreadmult}}, \mbox{\hyperlink{l00031}{Risk\+Base\+::\+Stop\+Loss}}, and \mbox{\hyperlink{l00113}{instrument\+::symbol}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00043}{on\+Launch()}}.
+
+\Hypertarget{class_k_t_n_1_1_p_l_watcher_a94a345a2d46e61eb0b4dfe0ea044703d}\index{KTN::PLWatcher@{KTN::PLWatcher}!onLaunch@{onLaunch}}
+\index{onLaunch@{onLaunch}!KTN::PLWatcher@{KTN::PLWatcher}}
+\doxysubsubsection{\texorpdfstring{onLaunch()}{onLaunch()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_p_l_watcher_a94a345a2d46e61eb0b4dfe0ea044703d} 
+void KTN\+::\+PLWatcher\+::on\+Launch (\begin{DoxyParamCaption}\item[{std\+::string}]{json}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Triggered when the algorithm is launched. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & A JSON-\/formatted string representing launch data. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a34bec80956d511dbf840927e5a530cae}{KTN\+::\+Algo\+Base\+V3}}.
+
+
+
+References \mbox{\hyperlink{l00260}{algometa\+::\+Enabled}}, \mbox{\hyperlink{l00062}{on\+Json()}}, \mbox{\hyperlink{l00195}{Ktn\+Cme\+Mdp\+V4\+::\+Set\+Handle\+Trades()}}, and \mbox{\hyperlink{l00025}{PLMonitor\+::\+Start()}}.
+
+\Hypertarget{class_k_t_n_1_1_p_l_watcher_a2ef7aa8763bd2932602cebdd0f1ab325}\index{KTN::PLWatcher@{KTN::PLWatcher}!onMktData@{onMktData}}
+\index{onMktData@{onMktData}!KTN::PLWatcher@{KTN::PLWatcher}}
+\doxysubsubsection{\texorpdfstring{onMktData()}{onMktData()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_p_l_watcher_a2ef7aa8763bd2932602cebdd0f1ab325} 
+void KTN\+::\+PLWatcher\+::on\+Mkt\+Data (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Handles market data updates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Market data index. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_ae7d8beff667ecdcb9360a35f484b5f58}{KTN\+::\+Algo\+Base\+V3}}.
+
+
+
+References \mbox{\hyperlink{l00051}{PLMonitor\+::on\+Market\+Data()}}.
+
+\Hypertarget{class_k_t_n_1_1_p_l_watcher_a20adfd48a1cea2bd875b6d80ff4496e2}\index{KTN::PLWatcher@{KTN::PLWatcher}!onPL@{onPL}}
+\index{onPL@{onPL}!KTN::PLWatcher@{KTN::PLWatcher}}
+\doxysubsubsection{\texorpdfstring{onPL()}{onPL()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_p_l_watcher_a20adfd48a1cea2bd875b6d80ff4496e2} 
+void KTN\+::\+PLWatcher\+::on\+PL (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_position}{Position}} \&}]{pos}{, }\item[{\mbox{\hyperlink{class_algo_p_l_callback_a06714cabdb3853ff4e5566814891a324}{Profit\+Event}}}]{event}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+This method is called when a profit or loss event occurs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & The position associated with the event. \\
+\hline
+{\em event} & The type of profit event. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_algo_p_l_callback_a26f3ee1e5c8efa670f43baaec0bc3ef6}{Algo\+PLCallback}}.
+
+
+
+References \mbox{\hyperlink{l00159}{algomd\+::ask}}, \mbox{\hyperlink{l00158}{algomd\+::bid}}, \mbox{\hyperlink{l00027}{Algo\+PLCallback\+::\+MKT}}, \mbox{\hyperlink{l00033}{Quoter\+V3\+::\+Next\+New()}}, \mbox{\hyperlink{l00357}{Order\+Manager\+V5\+::on\+Sent\+Order\+Fast()}}, \mbox{\hyperlink{l00064}{KTN\+::\+Order\+Pod\+::\+Ord\+Algo\+Trig}}, \mbox{\hyperlink{l00024}{Algo\+PLCallback\+::\+PROFITTAKE}}, \mbox{\hyperlink{class_i_exchange_sender_a069aede863c0d954221120082a8d2e00}{IExchange\+Sender\+::\+Send()}}, and \mbox{\hyperlink{l00026}{Algo\+PLCallback\+::\+TIMERHIT}}.
+
+\Hypertarget{class_k_t_n_1_1_p_l_watcher_a06cde2c1d43e120a4c2f883b6e81f07b}\index{KTN::PLWatcher@{KTN::PLWatcher}!onTrade@{onTrade}}
+\index{onTrade@{onTrade}!KTN::PLWatcher@{KTN::PLWatcher}}
+\doxysubsubsection{\texorpdfstring{onTrade()}{onTrade()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_p_l_watcher_a06cde2c1d43e120a4c2f883b6e81f07b} 
+void KTN\+::\+PLWatcher\+::on\+Trade (\begin{DoxyParamCaption}\item[{int}]{index}{, }\item[{double}]{price}{, }\item[{double}]{size}{, }\item[{int}]{aggressor}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Handles a trade event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Trade index. \\
+\hline
+{\em price} & Trade price. \\
+\hline
+{\em size} & Trade size. \\
+\hline
+{\em aggressor} & Trade aggressor indicator. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a814203709c21a30df1fa0835d277fc2e}{KTN\+::\+Algo\+Base\+V3}}.
+
+\Hypertarget{class_k_t_n_1_1_p_l_watcher_a5cc952455e4564a1f10ab2aa0263b942}\index{KTN::PLWatcher@{KTN::PLWatcher}!OrderMinUpdate@{OrderMinUpdate}}
+\index{OrderMinUpdate@{OrderMinUpdate}!KTN::PLWatcher@{KTN::PLWatcher}}
+\doxysubsubsection{\texorpdfstring{OrderMinUpdate()}{OrderMinUpdate()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_p_l_watcher_a5cc952455e4564a1f10ab2aa0263b942} 
+void KTN\+::\+PLWatcher\+::\+Order\+Min\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&}]{ord}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Processes updates for an order. Order\+Min is a minimal order object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ord} & The order pod containing order details. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a7f1791448e96444fdca741c87e7f16cb}{KTN\+::\+Algo\+Base\+V3}}.
+
+\Hypertarget{class_k_t_n_1_1_p_l_watcher_ab4ad9fd6e3d78d0af3d6582d3315848d}\index{KTN::PLWatcher@{KTN::PLWatcher}!OrderReceived@{OrderReceived}}
+\index{OrderReceived@{OrderReceived}!KTN::PLWatcher@{KTN::PLWatcher}}
+\doxysubsubsection{\texorpdfstring{OrderReceived()}{OrderReceived()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_p_l_watcher_ab4ad9fd6e3d78d0af3d6582d3315848d} 
+void KTN\+::\+PLWatcher\+::\+Order\+Received (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} \&}]{ord}{, }\item[{int}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Processes received order events. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ord} & The received order. \\
+\hline
+{\em index} & \doxylink{struct_k_t_n_1_1_order}{Order} index. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_ad8c78569808102e9fa78dc1fbdbe06c9}{KTN\+::\+Algo\+Base\+V3}}.
+
+
+
+References \mbox{\hyperlink{l00049}{KTN\+::\+Order\+Pod\+::callbackid}}, \mbox{\hyperlink{l00038}{KTN\+::\+Order\+Pod\+::exchordid}}, \mbox{\hyperlink{l00026}{Quoter\+V3\+::\+Get()}}, \mbox{\hyperlink{l00385}{Order\+Manager\+V5\+::on\+Sent\+Order\+Cxl()}}, \mbox{\hyperlink{l00357}{Order\+Manager\+V5\+::on\+Sent\+Order\+Fast()}}, \mbox{\hyperlink{l00379}{Order\+Manager\+V5\+::on\+Sent\+Order\+Mod()}}, \mbox{\hyperlink{l00059}{KTN\+::\+Order\+Pod\+::\+Ord\+Action}}, \mbox{\hyperlink{l00056}{KTN\+::\+Order\+Pod\+::\+Ord\+Exch}}, \mbox{\hyperlink{l00062}{KTN\+::\+Order\+Pod\+::\+Ord\+State}}, \mbox{\hyperlink{l00061}{KTN\+::\+Order\+Pod\+::\+Ord\+Status}}, \mbox{\hyperlink{l00034}{KTN\+::\+Order\+Pod\+::price}}, \mbox{\hyperlink{l00041}{KTN\+::\+Order\+Pod\+::quantity}}, \mbox{\hyperlink{class_i_exchange_sender_a069aede863c0d954221120082a8d2e00}{IExchange\+Sender\+::\+Send()}}, and \mbox{\hyperlink{l00113}{instrument\+::symbol}}.
+
+\Hypertarget{class_k_t_n_1_1_p_l_watcher_af2db5e8f7d6f218ab2cc195dd886b80b}\index{KTN::PLWatcher@{KTN::PLWatcher}!Print@{Print}}
+\index{Print@{Print}!KTN::PLWatcher@{KTN::PLWatcher}}
+\doxysubsubsection{\texorpdfstring{Print()}{Print()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_p_l_watcher_af2db5e8f7d6f218ab2cc195dd886b80b} 
+void KTN\+::\+PLWatcher\+::\+Print (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Prints information about the algorithm instance. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a2bf71f5b2363a299e36e5b0bbe981575}{KTN\+::\+Algo\+Base\+V3}}.
+
+
+
+References \mbox{\hyperlink{l00339}{KTN\+::\+Algo\+Base\+V3\+::\+Print()}}, and \mbox{\hyperlink{l00395}{PLMonitor\+::\+Print()}}.
+
+\Hypertarget{class_k_t_n_1_1_p_l_watcher_a72497ba92a921e258857286e1f272263}\index{KTN::PLWatcher@{KTN::PLWatcher}!ResetPosition@{ResetPosition}}
+\index{ResetPosition@{ResetPosition}!KTN::PLWatcher@{KTN::PLWatcher}}
+\doxysubsubsection{\texorpdfstring{ResetPosition()}{ResetPosition()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_p_l_watcher_a72497ba92a921e258857286e1f272263} 
+void KTN\+::\+PLWatcher\+::\+Reset\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Resets the algorithm\textquotesingle{}s position. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a7ae2f0dd0510cc9a0baef39fd40272d9}{KTN\+::\+Algo\+Base\+V3}}.
+
+\Hypertarget{class_k_t_n_1_1_p_l_watcher_a4ea9094c37fef58e71fe8692e40d6aa8}\index{KTN::PLWatcher@{KTN::PLWatcher}!Restart@{Restart}}
+\index{Restart@{Restart}!KTN::PLWatcher@{KTN::PLWatcher}}
+\doxysubsubsection{\texorpdfstring{Restart()}{Restart()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_p_l_watcher_a4ea9094c37fef58e71fe8692e40d6aa8} 
+void KTN\+::\+PLWatcher\+::\+Restart (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Restarts the algorithm. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a5c67b73c17d673193c7c54560e0e8f3e}{KTN\+::\+Algo\+Base\+V3}}.
+
+\Hypertarget{class_k_t_n_1_1_p_l_watcher_a5928785e0612726d0bb992b9a6eb60f3}\index{KTN::PLWatcher@{KTN::PLWatcher}!ToggleCommand@{ToggleCommand}}
+\index{ToggleCommand@{ToggleCommand}!KTN::PLWatcher@{KTN::PLWatcher}}
+\doxysubsubsection{\texorpdfstring{ToggleCommand()}{ToggleCommand()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_p_l_watcher_a5928785e0612726d0bb992b9a6eb60f3} 
+void KTN\+::\+PLWatcher\+::\+Toggle\+Command (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Toggles a specific command by ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Command ID to toggle. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3_a96cc734b074166749c1749353bd5c3b7}{KTN\+::\+Algo\+Base\+V3}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Algos/PLWatcher.\+hpp\item 
+Algos/PLWatcher.\+cpp\end{DoxyCompactItemize}

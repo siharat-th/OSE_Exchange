@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data" xml:lang="en-US">
+<title>KTN::CME::IL3::PartyDetailsListReportMsg::BlockData Struct Reference</title>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsListReportMsg::BlockData</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>uInt32 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data_1aeed5fd0d27c1ac18add71487c2504f2f">SeqNum</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data_1aeaae70192b06b9358b67a21f86764522">UUID</link></para>
+</listitem>
+            <listitem><para>String20 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data_1a2cd07e1b9263ba8922be6c3943eaffe2">AvgPxGroupID</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data_1adbf3de6b66a7e9d27838a8e9c5586a56">PartyDetailsListReqID</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data_1aa557530bb9d28cae11cb2915b4e8be6c">PartyDetailsListReportID</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data_1add2cb0e8c461aceaf76d7afa48e88e8e">SendingTimeEpoch</link></para>
+</listitem>
+            <listitem><para>uInt64NULL <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data_1a35fdc672997154dab6093185da93edac">SelfMatchPreventionID</link></para>
+</listitem>
+            <listitem><para>uInt16 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data_1a062d53a57b16346e519c2c374ecaac7f">TotNumParties</link></para>
+</listitem>
+            <listitem><para>EnumReqResult <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data_1a6c9bd78330d31a2f1a12e3be13a46d78">RequestResult</link></para>
+</listitem>
+            <listitem><para>EnumBooleanFlag <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data_1acde12791a6e1a297be348586e43c7e84">LastFragment</link></para>
+</listitem>
+            <listitem><para>EnumCustOrderCapacity <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data_1afefa763cd1cb0c35e28945b2d04fa787">CustOrderCapacity</link></para>
+</listitem>
+            <listitem><para>EnumClearingAcctType <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data_1a868f55403816237f921423dd8e155ecc">ClearingAccountType</link></para>
+</listitem>
+            <listitem><para>EnumSMPI <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data_1a7dfe984eecc1bc96eeed70991e43ea9b">SelfMatchPreventionInstruction</link></para>
+</listitem>
+            <listitem><para>EnumAvgPxInd <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data_1aa69f45129ea9d49c771d146ff0cffda1">AvgPxIndicator</link></para>
+</listitem>
+            <listitem><para>EnumSLEDS <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data_1a24d5c2f3ba144278cd2a7d26eb28dc6b">ClearingTradePriceType</link></para>
+</listitem>
+            <listitem><para>EnumCmtaGiveUpCD <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data_1af57530aea8e28088af3a21f544e24ab2">CmtaGiveupCD</link></para>
+</listitem>
+            <listitem><para>EnumCustOrdHandlInst <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data_1a5d99584fc0bba649f72cbd2c7c5af7f5">CustOrderHandlingInst</link></para>
+</listitem>
+            <listitem><para>uInt64NULL <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data_1a874ac8a701ff373f1475d94c114d3503">Executor</link></para>
+</listitem>
+            <listitem><para>uInt64NULL <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data_1a022ccd6249c0ac130d133b3e7bef0cc7">IDMShortCode</link></para>
+</listitem>
+            <listitem><para>EnumBooleanFlag <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data_1a63f012401dae9a89d4e31741674b1b41">PossRetransFlag</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data_1aafb033fca261c0d7d8a9fb538ddbde80">SplitMsg</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data_1a2cd07e1b9263ba8922be6c3943eaffe2"/><section>
+    <title>AvgPxGroupID</title>
+<indexterm><primary>AvgPxGroupID</primary><secondary>KTN::CME::IL3::PartyDetailsListReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsListReportMsg::BlockData</primary><secondary>AvgPxGroupID</secondary></indexterm>
+<para><computeroutput>String20 KTN::CME::IL3::PartyDetailsListReportMsg::BlockData::AvgPxGroupID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data_1aa69f45129ea9d49c771d146ff0cffda1"/><section>
+    <title>AvgPxIndicator</title>
+<indexterm><primary>AvgPxIndicator</primary><secondary>KTN::CME::IL3::PartyDetailsListReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsListReportMsg::BlockData</primary><secondary>AvgPxIndicator</secondary></indexterm>
+<para><computeroutput>EnumAvgPxInd KTN::CME::IL3::PartyDetailsListReportMsg::BlockData::AvgPxIndicator</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data_1a868f55403816237f921423dd8e155ecc"/><section>
+    <title>ClearingAccountType</title>
+<indexterm><primary>ClearingAccountType</primary><secondary>KTN::CME::IL3::PartyDetailsListReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsListReportMsg::BlockData</primary><secondary>ClearingAccountType</secondary></indexterm>
+<para><computeroutput>EnumClearingAcctType KTN::CME::IL3::PartyDetailsListReportMsg::BlockData::ClearingAccountType</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data_1a24d5c2f3ba144278cd2a7d26eb28dc6b"/><section>
+    <title>ClearingTradePriceType</title>
+<indexterm><primary>ClearingTradePriceType</primary><secondary>KTN::CME::IL3::PartyDetailsListReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsListReportMsg::BlockData</primary><secondary>ClearingTradePriceType</secondary></indexterm>
+<para><computeroutput>EnumSLEDS KTN::CME::IL3::PartyDetailsListReportMsg::BlockData::ClearingTradePriceType</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data_1af57530aea8e28088af3a21f544e24ab2"/><section>
+    <title>CmtaGiveupCD</title>
+<indexterm><primary>CmtaGiveupCD</primary><secondary>KTN::CME::IL3::PartyDetailsListReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsListReportMsg::BlockData</primary><secondary>CmtaGiveupCD</secondary></indexterm>
+<para><computeroutput>EnumCmtaGiveUpCD KTN::CME::IL3::PartyDetailsListReportMsg::BlockData::CmtaGiveupCD</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data_1afefa763cd1cb0c35e28945b2d04fa787"/><section>
+    <title>CustOrderCapacity</title>
+<indexterm><primary>CustOrderCapacity</primary><secondary>KTN::CME::IL3::PartyDetailsListReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsListReportMsg::BlockData</primary><secondary>CustOrderCapacity</secondary></indexterm>
+<para><computeroutput>EnumCustOrderCapacity KTN::CME::IL3::PartyDetailsListReportMsg::BlockData::CustOrderCapacity</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data_1a5d99584fc0bba649f72cbd2c7c5af7f5"/><section>
+    <title>CustOrderHandlingInst</title>
+<indexterm><primary>CustOrderHandlingInst</primary><secondary>KTN::CME::IL3::PartyDetailsListReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsListReportMsg::BlockData</primary><secondary>CustOrderHandlingInst</secondary></indexterm>
+<para><computeroutput>EnumCustOrdHandlInst KTN::CME::IL3::PartyDetailsListReportMsg::BlockData::CustOrderHandlingInst</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data_1a874ac8a701ff373f1475d94c114d3503"/><section>
+    <title>Executor</title>
+<indexterm><primary>Executor</primary><secondary>KTN::CME::IL3::PartyDetailsListReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsListReportMsg::BlockData</primary><secondary>Executor</secondary></indexterm>
+<para><computeroutput>uInt64NULL KTN::CME::IL3::PartyDetailsListReportMsg::BlockData::Executor</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data_1a022ccd6249c0ac130d133b3e7bef0cc7"/><section>
+    <title>IDMShortCode</title>
+<indexterm><primary>IDMShortCode</primary><secondary>KTN::CME::IL3::PartyDetailsListReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsListReportMsg::BlockData</primary><secondary>IDMShortCode</secondary></indexterm>
+<para><computeroutput>uInt64NULL KTN::CME::IL3::PartyDetailsListReportMsg::BlockData::IDMShortCode</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data_1acde12791a6e1a297be348586e43c7e84"/><section>
+    <title>LastFragment</title>
+<indexterm><primary>LastFragment</primary><secondary>KTN::CME::IL3::PartyDetailsListReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsListReportMsg::BlockData</primary><secondary>LastFragment</secondary></indexterm>
+<para><computeroutput>EnumBooleanFlag KTN::CME::IL3::PartyDetailsListReportMsg::BlockData::LastFragment</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data_1aa557530bb9d28cae11cb2915b4e8be6c"/><section>
+    <title>PartyDetailsListReportID</title>
+<indexterm><primary>PartyDetailsListReportID</primary><secondary>KTN::CME::IL3::PartyDetailsListReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsListReportMsg::BlockData</primary><secondary>PartyDetailsListReportID</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::PartyDetailsListReportMsg::BlockData::PartyDetailsListReportID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data_1adbf3de6b66a7e9d27838a8e9c5586a56"/><section>
+    <title>PartyDetailsListReqID</title>
+<indexterm><primary>PartyDetailsListReqID</primary><secondary>KTN::CME::IL3::PartyDetailsListReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsListReportMsg::BlockData</primary><secondary>PartyDetailsListReqID</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::PartyDetailsListReportMsg::BlockData::PartyDetailsListReqID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data_1a63f012401dae9a89d4e31741674b1b41"/><section>
+    <title>PossRetransFlag</title>
+<indexterm><primary>PossRetransFlag</primary><secondary>KTN::CME::IL3::PartyDetailsListReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsListReportMsg::BlockData</primary><secondary>PossRetransFlag</secondary></indexterm>
+<para><computeroutput>EnumBooleanFlag KTN::CME::IL3::PartyDetailsListReportMsg::BlockData::PossRetransFlag</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data_1a6c9bd78330d31a2f1a12e3be13a46d78"/><section>
+    <title>RequestResult</title>
+<indexterm><primary>RequestResult</primary><secondary>KTN::CME::IL3::PartyDetailsListReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsListReportMsg::BlockData</primary><secondary>RequestResult</secondary></indexterm>
+<para><computeroutput>EnumReqResult KTN::CME::IL3::PartyDetailsListReportMsg::BlockData::RequestResult</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data_1a35fdc672997154dab6093185da93edac"/><section>
+    <title>SelfMatchPreventionID</title>
+<indexterm><primary>SelfMatchPreventionID</primary><secondary>KTN::CME::IL3::PartyDetailsListReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsListReportMsg::BlockData</primary><secondary>SelfMatchPreventionID</secondary></indexterm>
+<para><computeroutput>uInt64NULL KTN::CME::IL3::PartyDetailsListReportMsg::BlockData::SelfMatchPreventionID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data_1a7dfe984eecc1bc96eeed70991e43ea9b"/><section>
+    <title>SelfMatchPreventionInstruction</title>
+<indexterm><primary>SelfMatchPreventionInstruction</primary><secondary>KTN::CME::IL3::PartyDetailsListReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsListReportMsg::BlockData</primary><secondary>SelfMatchPreventionInstruction</secondary></indexterm>
+<para><computeroutput>EnumSMPI KTN::CME::IL3::PartyDetailsListReportMsg::BlockData::SelfMatchPreventionInstruction</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data_1add2cb0e8c461aceaf76d7afa48e88e8e"/><section>
+    <title>SendingTimeEpoch</title>
+<indexterm><primary>SendingTimeEpoch</primary><secondary>KTN::CME::IL3::PartyDetailsListReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsListReportMsg::BlockData</primary><secondary>SendingTimeEpoch</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::PartyDetailsListReportMsg::BlockData::SendingTimeEpoch</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data_1aeed5fd0d27c1ac18add71487c2504f2f"/><section>
+    <title>SeqNum</title>
+<indexterm><primary>SeqNum</primary><secondary>KTN::CME::IL3::PartyDetailsListReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsListReportMsg::BlockData</primary><secondary>SeqNum</secondary></indexterm>
+<para><computeroutput>uInt32 KTN::CME::IL3::PartyDetailsListReportMsg::BlockData::SeqNum</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data_1aafb033fca261c0d7d8a9fb538ddbde80"/><section>
+    <title>SplitMsg</title>
+<indexterm><primary>SplitMsg</primary><secondary>KTN::CME::IL3::PartyDetailsListReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsListReportMsg::BlockData</primary><secondary>SplitMsg</secondary></indexterm>
+<para><computeroutput>uint8_t KTN::CME::IL3::PartyDetailsListReportMsg::BlockData::SplitMsg</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data_1a062d53a57b16346e519c2c374ecaac7f"/><section>
+    <title>TotNumParties</title>
+<indexterm><primary>TotNumParties</primary><secondary>KTN::CME::IL3::PartyDetailsListReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsListReportMsg::BlockData</primary><secondary>TotNumParties</secondary></indexterm>
+<para><computeroutput>uInt16 KTN::CME::IL3::PartyDetailsListReportMsg::BlockData::TotNumParties</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data_1aeaae70192b06b9358b67a21f86764522"/><section>
+    <title>UUID</title>
+<indexterm><primary>UUID</primary><secondary>KTN::CME::IL3::PartyDetailsListReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::PartyDetailsListReportMsg::BlockData</primary><secondary>UUID</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::PartyDetailsListReportMsg::BlockData::UUID</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+exchsupport/cme/il3/IL3Messages2.hpp</section>
+</section>

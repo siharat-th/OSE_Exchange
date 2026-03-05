@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_id_gen" xml:lang="en-US">
+<title>KTN::IdGen Class Reference</title>
+<indexterm><primary>KTN::IdGen</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_k_t_n_1_1_id_gen_1_1_decoded_data">DecodedData</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_id_gen_1a5e5a967a959ac2a7287aad7114c20b64">Seed</link> ()</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t_n_1_1_id_gen_1a2d7a73c9bca47a948fbc59d82c194522">Current</link> ()</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t_n_1_1_id_gen_1a3fcb5d6f371dc923c70b58a87a2fcc08">Next</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static std::string <link linkend="_class_k_t_n_1_1_id_gen_1aa43360422f200b86fff3317eb5987037">UUID</link> (int len=6)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_k_t_n_1_1_id_gen_1a9a166a9594ac595c8cebaff304f2ba69">GenClOrdID10</link> (char *buffer, const std::string &amp;prefix, unsigned int int_value)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_k_t_n_1_1_id_gen_1a9b518a2ab1e6de7c4850a3c9d784bbdb">Append</link> (char *dest, char *src, size_t numChars)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_k_t_n_1_1_id_gen_1ad31930dbf916da1330e728abb994e7b5">AppendQuickChar</link> (char *dest, const char *src, uint8_t fillnbr)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_k_t_n_1_1_id_gen_1a16c5f9ec9155801e953b89435f5d242d">Append</link> (const char *orig, char *dest, char *src, size_t numChars)</para>
+</listitem>
+            <listitem><para>static string <link linkend="_class_k_t_n_1_1_id_gen_1a30e9b50efbcedd16ca901bc791a42161">NumericID</link> ()</para>
+</listitem>
+            <listitem><para>static uint64_t <link linkend="_class_k_t_n_1_1_id_gen_1ae1f5554bd26a85853c463d62c4d90d11">ReqId</link> ()</para>
+</listitem>
+            <listitem><para>static uint64_t <link linkend="_class_k_t_n_1_1_id_gen_1a23fc6943725bbc56b8e3c4cd4b381536">encodeRequestID</link> (int algoBaseID, uint64_t uniqueMessageID)</para>
+</listitem>
+            <listitem><para>static int <link linkend="_class_k_t_n_1_1_id_gen_1a00ac93adf084c9649e9c790ab25db1a0">extractAlgoBaseID</link> (uint64_t requestID)</para>
+</listitem>
+            <listitem><para>static uint32_t <link linkend="_class_k_t_n_1_1_id_gen_1a45cb2ecef2927f07b7d531404364d7c6">ReqId24</link> ()</para>
+</listitem>
+            <listitem><para>static uint16_t <link linkend="_class_k_t_n_1_1_id_gen_1a939f8d95448875edb6b103e61189fa28">ReqId16</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_id_gen_1a845f66030c35a50d6d4ab4cb382797fe"/><section>
+    <title>IdGen()</title>
+<indexterm><primary>IdGen</primary><secondary>KTN::IdGen</secondary></indexterm>
+<indexterm><primary>KTN::IdGen</primary><secondary>IdGen</secondary></indexterm>
+<para><computeroutput>IdGen::IdGen ( )</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_id_gen_1af144752654047103fdaf9e50cc44e80c"/><section>
+    <title>~IdGen()</title>
+<indexterm><primary>~IdGen</primary><secondary>KTN::IdGen</secondary></indexterm>
+<indexterm><primary>KTN::IdGen</primary><secondary>~IdGen</secondary></indexterm>
+<para><computeroutput>IdGen::~IdGen ( )</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_id_gen_1a9b518a2ab1e6de7c4850a3c9d784bbdb"/><section>
+    <title>Append()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>Append</primary><secondary>KTN::IdGen</secondary></indexterm>
+<indexterm><primary>KTN::IdGen</primary><secondary>Append</secondary></indexterm>
+<para><computeroutput>static void KTN::IdGen::Append (char * dest, char * src, size_t numChars)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_id_gen_1a16c5f9ec9155801e953b89435f5d242d"/><section>
+    <title>Append()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>Append</primary><secondary>KTN::IdGen</secondary></indexterm>
+<indexterm><primary>KTN::IdGen</primary><secondary>Append</secondary></indexterm>
+<para><computeroutput>static void KTN::IdGen::Append (const char * orig, char * dest, char * src, size_t numChars)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_id_gen_1ad31930dbf916da1330e728abb994e7b5"/><section>
+    <title>AppendQuickChar()</title>
+<indexterm><primary>AppendQuickChar</primary><secondary>KTN::IdGen</secondary></indexterm>
+<indexterm><primary>KTN::IdGen</primary><secondary>AppendQuickChar</secondary></indexterm>
+<para><computeroutput>static void KTN::IdGen::AppendQuickChar (char * dest, const char * src, uint8_t fillnbr)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_id_gen_1a2d7a73c9bca47a948fbc59d82c194522"/><section>
+    <title>Current()</title>
+<indexterm><primary>Current</primary><secondary>KTN::IdGen</secondary></indexterm>
+<indexterm><primary>KTN::IdGen</primary><secondary>Current</secondary></indexterm>
+<para><computeroutput>int IdGen::Current ( )</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_id_gen_1a23fc6943725bbc56b8e3c4cd4b381536"/><section>
+    <title>encodeRequestID()</title>
+<indexterm><primary>encodeRequestID</primary><secondary>KTN::IdGen</secondary></indexterm>
+<indexterm><primary>KTN::IdGen</primary><secondary>encodeRequestID</secondary></indexterm>
+<para><computeroutput>static uint64_t KTN::IdGen::encodeRequestID (int algoBaseID, uint64_t uniqueMessageID)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_id_gen_1a00ac93adf084c9649e9c790ab25db1a0"/><section>
+    <title>extractAlgoBaseID()</title>
+<indexterm><primary>extractAlgoBaseID</primary><secondary>KTN::IdGen</secondary></indexterm>
+<indexterm><primary>KTN::IdGen</primary><secondary>extractAlgoBaseID</secondary></indexterm>
+<para><computeroutput>static int KTN::IdGen::extractAlgoBaseID (uint64_t requestID)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_id_gen_1a9a166a9594ac595c8cebaff304f2ba69"/><section>
+    <title>GenClOrdID10()</title>
+<indexterm><primary>GenClOrdID10</primary><secondary>KTN::IdGen</secondary></indexterm>
+<indexterm><primary>KTN::IdGen</primary><secondary>GenClOrdID10</secondary></indexterm>
+<para><computeroutput>static void KTN::IdGen::GenClOrdID10 (char * buffer, const std::string &amp; prefix, unsigned int int_value)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_id_gen_1a3fcb5d6f371dc923c70b58a87a2fcc08"/><section>
+    <title>Next()</title>
+<indexterm><primary>Next</primary><secondary>KTN::IdGen</secondary></indexterm>
+<indexterm><primary>KTN::IdGen</primary><secondary>Next</secondary></indexterm>
+<para><computeroutput>int IdGen::Next ( )</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_id_gen_1a30e9b50efbcedd16ca901bc791a42161"/><section>
+    <title>NumericID()</title>
+<indexterm><primary>NumericID</primary><secondary>KTN::IdGen</secondary></indexterm>
+<indexterm><primary>KTN::IdGen</primary><secondary>NumericID</secondary></indexterm>
+<para><computeroutput>static string KTN::IdGen::NumericID ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_id_gen_1ae1f5554bd26a85853c463d62c4d90d11"/><section>
+    <title>ReqId()</title>
+<indexterm><primary>ReqId</primary><secondary>KTN::IdGen</secondary></indexterm>
+<indexterm><primary>KTN::IdGen</primary><secondary>ReqId</secondary></indexterm>
+<para><computeroutput>static uint64_t KTN::IdGen::ReqId ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_id_gen_1a939f8d95448875edb6b103e61189fa28"/><section>
+    <title>ReqId16()</title>
+<indexterm><primary>ReqId16</primary><secondary>KTN::IdGen</secondary></indexterm>
+<indexterm><primary>KTN::IdGen</primary><secondary>ReqId16</secondary></indexterm>
+<para><computeroutput>static uint16_t KTN::IdGen::ReqId16 ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_id_gen_1a45cb2ecef2927f07b7d531404364d7c6"/><section>
+    <title>ReqId24()</title>
+<indexterm><primary>ReqId24</primary><secondary>KTN::IdGen</secondary></indexterm>
+<indexterm><primary>KTN::IdGen</primary><secondary>ReqId24</secondary></indexterm>
+<para><computeroutput>static uint32_t KTN::IdGen::ReqId24 ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_id_gen_1a5e5a967a959ac2a7287aad7114c20b64"/><section>
+    <title>Seed()</title>
+<indexterm><primary>Seed</primary><secondary>KTN::IdGen</secondary></indexterm>
+<indexterm><primary>KTN::IdGen</primary><secondary>Seed</secondary></indexterm>
+<para><computeroutput>void IdGen::Seed ( )</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_id_gen_1aa43360422f200b86fff3317eb5987037"/><section>
+    <title>UUID()</title>
+<indexterm><primary>UUID</primary><secondary>KTN::IdGen</secondary></indexterm>
+<indexterm><primary>KTN::IdGen</primary><secondary>UUID</secondary></indexterm>
+<para><computeroutput>static std::string KTN::IdGen::UUID (int len = <computeroutput>6</computeroutput>
+)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Orders/IdGen.hOrders/IdGen.cpp</section>
+</section>

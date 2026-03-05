@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_session_status" xml:lang="en-US">
+<title>SessionStatus Class Reference</title>
+<indexterm><primary>SessionStatus</primary></indexterm>
+<para>
+
+<para>Represents the status of a session. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;SessionStatus.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>std::string <link linkend="_class_session_status_1a218a6130afd72797eda9b43a5b539bca">source</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_session_status_1aa7a93f17f935b0c28c9de77052ba99a6">subid</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_session_status_1aedf8c178eb89a97d3f248cf0b45ae110">ok</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_session_status_1a642be6377db270faa391fa8028b149ae">sessionstatus</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_session_status_1a75fccfd416c579b8555268c80d44e5c1">msgseqnum</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_session_status_1a9eb959850b74a886993d76af8dd31db1">ipaddress</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_session_status_1a19338d2c3ec04bfcc492157165d0fba2">port</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_class_session_status_1a6356be3126665d26d58856932863997e">org</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_session_status_1afcf1ea3c85ed1a00819747b79522e685">mktsegid</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_class_session_status_1a2c75dbc25966712f2e56bf8a330983dc">desc</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_session_status_1a01725fc451f80f0e89d83ce417b139d4">protocol</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_class_session_status_1ad0dc4f5028643fdf9f7516bc94138da1">state</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_class_session_status_1ace0dd0c3dfef60232e5b1e9d05d1e372">exch</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_session_status_1a13bb412e5191ff23d8c59b560424facb">m_bIsLoggedIn</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_session_status_1ada951a66f70ddc02a42589dc9ec4c33d">m_bHbStarted</link></para>
+</listitem>
+            <listitem><para>char <link linkend="_class_session_status_1adb549dd02e7b2601d575db0e12fd60b7">m_LoginResponseStatus</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_session_status_1a4d8130b4b730771b7ba550eab911c216">m_LoginResponseText</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_class_session_status_1aef733a47123105f2224b4f23805303b9">m_LastSeqNum</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_class_session_status_1a30f1f09a5c73378db5cc2de1d3c2d643">MSG_SEQ_OUT_</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_session_status_1a26c6e49a824f871f964430587ed8ca4e">TAS_SEQ_LAST</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Represents the status of a session. </para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_session_status_1a2c75dbc25966712f2e56bf8a330983dc"/><section>
+    <title>desc</title>
+<indexterm><primary>desc</primary><secondary>SessionStatus</secondary></indexterm>
+<indexterm><primary>SessionStatus</primary><secondary>desc</secondary></indexterm>
+<para><computeroutput>string SessionStatus::desc</computeroutput></para>
+<para>The description of the session. </para>
+<para>
+Referenced by <link linkend="_l00037">SessionStatusFormatter::Get()</link>, and <link linkend="_l00033">SessionStatusJsonFormatter::GetJson()</link>.</para>
+</section>
+<anchor xml:id="_class_session_status_1ace0dd0c3dfef60232e5b1e9d05d1e372"/><section>
+    <title>exch</title>
+<indexterm><primary>exch</primary><secondary>SessionStatus</secondary></indexterm>
+<indexterm><primary>SessionStatus</primary><secondary>exch</secondary></indexterm>
+<para><computeroutput>string SessionStatus::exch</computeroutput></para>
+<para>The exchange of the session. </para>
+<para>
+Referenced by <link linkend="_l00037">SessionStatusFormatter::Get()</link>, and <link linkend="_l00033">SessionStatusJsonFormatter::GetJson()</link>.</para>
+</section>
+<anchor xml:id="_class_session_status_1a9eb959850b74a886993d76af8dd31db1"/><section>
+    <title>ipaddress</title>
+<indexterm><primary>ipaddress</primary><secondary>SessionStatus</secondary></indexterm>
+<indexterm><primary>SessionStatus</primary><secondary>ipaddress</secondary></indexterm>
+<para><computeroutput>std::string SessionStatus::ipaddress</computeroutput></para>
+<para>The IP address of the session. </para>
+<para>
+Referenced by <link linkend="_l00037">SessionStatusFormatter::Get()</link>, and <link linkend="_l00033">SessionStatusJsonFormatter::GetJson()</link>.</para>
+</section>
+<anchor xml:id="_class_session_status_1ada951a66f70ddc02a42589dc9ec4c33d"/><section>
+    <title>m_bHbStarted</title>
+<indexterm><primary>m_bHbStarted</primary><secondary>SessionStatus</secondary></indexterm>
+<indexterm><primary>SessionStatus</primary><secondary>m_bHbStarted</secondary></indexterm>
+<para><computeroutput>bool SessionStatus::m_bHbStarted</computeroutput></para>
+<para>Flag indicating if the session heartbeat has started. </para>
+</section>
+<anchor xml:id="_class_session_status_1a13bb412e5191ff23d8c59b560424facb"/><section>
+    <title>m_bIsLoggedIn</title>
+<indexterm><primary>m_bIsLoggedIn</primary><secondary>SessionStatus</secondary></indexterm>
+<indexterm><primary>SessionStatus</primary><secondary>m_bIsLoggedIn</secondary></indexterm>
+<para><computeroutput>bool SessionStatus::m_bIsLoggedIn</computeroutput></para>
+<para>Flag indicating if the session is logged in. </para>
+</section>
+<anchor xml:id="_class_session_status_1aef733a47123105f2224b4f23805303b9"/><section>
+    <title>m_LastSeqNum</title>
+<indexterm><primary>m_LastSeqNum</primary><secondary>SessionStatus</secondary></indexterm>
+<indexterm><primary>SessionStatus</primary><secondary>m_LastSeqNum</secondary></indexterm>
+<para><computeroutput>uint32_t SessionStatus::m_LastSeqNum</computeroutput></para>
+<para>The last sequence number of the session. </para>
+</section>
+<anchor xml:id="_class_session_status_1adb549dd02e7b2601d575db0e12fd60b7"/><section>
+    <title>m_LoginResponseStatus</title>
+<indexterm><primary>m_LoginResponseStatus</primary><secondary>SessionStatus</secondary></indexterm>
+<indexterm><primary>SessionStatus</primary><secondary>m_LoginResponseStatus</secondary></indexterm>
+<para><computeroutput>char SessionStatus::m_LoginResponseStatus</computeroutput></para>
+<para>The login response status of the session. </para>
+</section>
+<anchor xml:id="_class_session_status_1a4d8130b4b730771b7ba550eab911c216"/><section>
+    <title>m_LoginResponseText</title>
+<indexterm><primary>m_LoginResponseText</primary><secondary>SessionStatus</secondary></indexterm>
+<indexterm><primary>SessionStatus</primary><secondary>m_LoginResponseText</secondary></indexterm>
+<para><computeroutput>std::string SessionStatus::m_LoginResponseText</computeroutput></para>
+<para>The login response text of the session. </para>
+</section>
+<anchor xml:id="_class_session_status_1afcf1ea3c85ed1a00819747b79522e685"/><section>
+    <title>mktsegid</title>
+<indexterm><primary>mktsegid</primary><secondary>SessionStatus</secondary></indexterm>
+<indexterm><primary>SessionStatus</primary><secondary>mktsegid</secondary></indexterm>
+<para><computeroutput>int SessionStatus::mktsegid</computeroutput></para>
+<para>The market segment ID of the session. </para>
+<para>
+Referenced by <link linkend="_l00037">SessionStatusFormatter::Get()</link>, and <link linkend="_l00033">SessionStatusJsonFormatter::GetJson()</link>.</para>
+</section>
+<anchor xml:id="_class_session_status_1a30f1f09a5c73378db5cc2de1d3c2d643"/><section>
+    <title>MSG_SEQ_OUT_</title>
+<indexterm><primary>MSG_SEQ_OUT_</primary><secondary>SessionStatus</secondary></indexterm>
+<indexterm><primary>SessionStatus</primary><secondary>MSG_SEQ_OUT_</secondary></indexterm>
+<para><computeroutput>uint32_t SessionStatus::MSG_SEQ_OUT_</computeroutput></para>
+<para>The outgoing message sequence number of the session. </para>
+</section>
+<anchor xml:id="_class_session_status_1a75fccfd416c579b8555268c80d44e5c1"/><section>
+    <title>msgseqnum</title>
+<indexterm><primary>msgseqnum</primary><secondary>SessionStatus</secondary></indexterm>
+<indexterm><primary>SessionStatus</primary><secondary>msgseqnum</secondary></indexterm>
+<para><computeroutput>int SessionStatus::msgseqnum</computeroutput></para>
+<para>The message sequence number of the session. </para>
+<para>
+Referenced by <link linkend="_l00037">SessionStatusFormatter::Get()</link>, and <link linkend="_l00033">SessionStatusJsonFormatter::GetJson()</link>.</para>
+</section>
+<anchor xml:id="_class_session_status_1aedf8c178eb89a97d3f248cf0b45ae110"/><section>
+    <title>ok</title>
+<indexterm><primary>ok</primary><secondary>SessionStatus</secondary></indexterm>
+<indexterm><primary>SessionStatus</primary><secondary>ok</secondary></indexterm>
+<para><computeroutput>std::string SessionStatus::ok</computeroutput></para>
+<para>The ok status of the session. </para>
+<para>
+Referenced by <link linkend="_l00037">SessionStatusFormatter::Get()</link>, and <link linkend="_l00033">SessionStatusJsonFormatter::GetJson()</link>.</para>
+</section>
+<anchor xml:id="_class_session_status_1a6356be3126665d26d58856932863997e"/><section>
+    <title>org</title>
+<indexterm><primary>org</primary><secondary>SessionStatus</secondary></indexterm>
+<indexterm><primary>SessionStatus</primary><secondary>org</secondary></indexterm>
+<para><computeroutput>string SessionStatus::org</computeroutput></para>
+<para>The organization of the session. </para>
+</section>
+<anchor xml:id="_class_session_status_1a19338d2c3ec04bfcc492157165d0fba2"/><section>
+    <title>port</title>
+<indexterm><primary>port</primary><secondary>SessionStatus</secondary></indexterm>
+<indexterm><primary>SessionStatus</primary><secondary>port</secondary></indexterm>
+<para><computeroutput>int SessionStatus::port</computeroutput></para>
+<para>The port of the session. </para>
+<para>
+Referenced by <link linkend="_l00037">SessionStatusFormatter::Get()</link>, and <link linkend="_l00033">SessionStatusJsonFormatter::GetJson()</link>.</para>
+</section>
+<anchor xml:id="_class_session_status_1a01725fc451f80f0e89d83ce417b139d4"/><section>
+    <title>protocol</title>
+<indexterm><primary>protocol</primary><secondary>SessionStatus</secondary></indexterm>
+<indexterm><primary>SessionStatus</primary><secondary>protocol</secondary></indexterm>
+<para><computeroutput>int SessionStatus::protocol</computeroutput></para>
+<para>The protocol of the session. </para>
+<para>
+Referenced by <link linkend="_l00037">SessionStatusFormatter::Get()</link>, and <link linkend="_l00033">SessionStatusJsonFormatter::GetJson()</link>.</para>
+</section>
+<anchor xml:id="_class_session_status_1a642be6377db270faa391fa8028b149ae"/><section>
+    <title>sessionstatus</title>
+<indexterm><primary>sessionstatus</primary><secondary>SessionStatus</secondary></indexterm>
+<indexterm><primary>SessionStatus</primary><secondary>sessionstatus</secondary></indexterm>
+<para><computeroutput>std::string SessionStatus::sessionstatus</computeroutput></para>
+<para>The status of the session. </para>
+<para>
+Referenced by <link linkend="_l00037">SessionStatusFormatter::Get()</link>, and <link linkend="_l00033">SessionStatusJsonFormatter::GetJson()</link>.</para>
+</section>
+<anchor xml:id="_class_session_status_1a218a6130afd72797eda9b43a5b539bca"/><section>
+    <title>source</title>
+<indexterm><primary>source</primary><secondary>SessionStatus</secondary></indexterm>
+<indexterm><primary>SessionStatus</primary><secondary>source</secondary></indexterm>
+<para><computeroutput>std::string SessionStatus::source</computeroutput></para>
+<para>The source of the session. </para>
+<para>
+Referenced by <link linkend="_l00037">SessionStatusFormatter::Get()</link>, and <link linkend="_l00033">SessionStatusJsonFormatter::GetJson()</link>.</para>
+</section>
+<anchor xml:id="_class_session_status_1ad0dc4f5028643fdf9f7516bc94138da1"/><section>
+    <title>state</title>
+<indexterm><primary>state</primary><secondary>SessionStatus</secondary></indexterm>
+<indexterm><primary>SessionStatus</primary><secondary>state</secondary></indexterm>
+<para><computeroutput>string SessionStatus::state</computeroutput></para>
+<para>The state of the session. </para>
+<para>
+Referenced by <link linkend="_l00037">SessionStatusFormatter::Get()</link>, and <link linkend="_l00033">SessionStatusJsonFormatter::GetJson()</link>.</para>
+</section>
+<anchor xml:id="_class_session_status_1aa7a93f17f935b0c28c9de77052ba99a6"/><section>
+    <title>subid</title>
+<indexterm><primary>subid</primary><secondary>SessionStatus</secondary></indexterm>
+<indexterm><primary>SessionStatus</primary><secondary>subid</secondary></indexterm>
+<para><computeroutput>std::string SessionStatus::subid</computeroutput></para>
+<para>The subid of the session. </para>
+<para>
+Referenced by <link linkend="_l00037">SessionStatusFormatter::Get()</link>, and <link linkend="_l00033">SessionStatusJsonFormatter::GetJson()</link>.</para>
+</section>
+<anchor xml:id="_class_session_status_1a26c6e49a824f871f964430587ed8ca4e"/><section>
+    <title>TAS_SEQ_LAST</title>
+<indexterm><primary>TAS_SEQ_LAST</primary><secondary>SessionStatus</secondary></indexterm>
+<indexterm><primary>SessionStatus</primary><secondary>TAS_SEQ_LAST</secondary></indexterm>
+<para><computeroutput>int SessionStatus::TAS_SEQ_LAST</computeroutput></para>
+<para>The last TAS sequence number of the session. </para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Session/SessionStatus.hpp</section>
+</section>

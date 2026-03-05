@@ -1,0 +1,164 @@
+\doxysection{Zmq\+Logger Class Reference}
+\hypertarget{class_zmq_logger}{}\label{class_zmq_logger}\index{ZmqLogger@{ZmqLogger}}
+
+
+The \doxylink{class_zmq_logger}{Zmq\+Logger} class is responsible for logging messages using Zero\+MQ.  
+
+
+
+
+{\ttfamily \#include $<$Zmq\+Logger.\+hpp$>$}
+
+Inheritance diagram for Zmq\+Logger\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_zmq_logger}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_zmq_logger_aaea5cf5130efc1fb06eda25d9006d8d3}{Zmq\+Logger}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \doxylink{class_zmq_logger}{Zmq\+Logger} class. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_zmq_logger_ae2ec7e0ef12c79d2051845fc65c21eb0}{\texorpdfstring{$\sim$}{\string~}\+Zmq\+Logger}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{class_zmq_logger}{Zmq\+Logger} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_zmq_logger_ad990e9562dac546aee2d166056f8d56d}{Write\+Line}} (const std\+::string \&msg, const std\+::string \&topic, int color)
+\begin{DoxyCompactList}\small\item\em Writes a log message with the specified topic and color. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_zmq_logger_a7ebfbb239d76dca960d4f3f0bd990bdb}{Run}} () override
+\begin{DoxyCompactList}\small\item\em Runs the \doxylink{class_zmq_logger}{Zmq\+Logger} thread. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_zmq_logger_a8b68efd8d2f5f6df976ccdcd8b549268}{Replay}} (int count)
+\begin{DoxyCompactList}\small\item\em Replays a specified number of log messages. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_zmq_logger_abe56640a0b769cccae37533bda02aff3}{Replay}} (int count, const string \&owner)
+\begin{DoxyCompactList}\small\item\em Replays a specified number of log messages for a specific owner. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_i_logger}{ILogger}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+ILogger} ()=default
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{class_i_logger}{ILogger} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_named_thread}{Named\+Thread}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_named_thread_a891fabdc2d824048ec05c82e7ef8c69a}{Named\+Thread}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_named_thread_a018dadb59e5af98ee734301a1baa50cb}{\texorpdfstring{$\sim$}{\string~}\+Named\+Thread}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_named_thread_a9fa42542ff43c89fb9bbc33de9c87e34}{Create\+And\+Run}} (string name, int core)
+\begin{DoxyCompactList}\small\item\em Creates and runs the named thread on the specified core. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_named_thread_ad4809c571171be13f0f91f540d5c196f}{Join}} ()
+\begin{DoxyCompactList}\small\item\em Joins the named thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_zmq_logger}{Zmq\+Logger} class is responsible for logging messages using Zero\+MQ. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_zmq_logger_aaea5cf5130efc1fb06eda25d9006d8d3}\index{ZmqLogger@{ZmqLogger}!ZmqLogger@{ZmqLogger}}
+\index{ZmqLogger@{ZmqLogger}!ZmqLogger@{ZmqLogger}}
+\doxysubsubsection{\texorpdfstring{ZmqLogger()}{ZmqLogger()}}
+{\footnotesize\ttfamily \label{class_zmq_logger_aaea5cf5130efc1fb06eda25d9006d8d3} 
+Zmq\+Logger\+::\+Zmq\+Logger (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor for the \doxylink{class_zmq_logger}{Zmq\+Logger} class. 
+
+
+
+References \mbox{\hyperlink{l00018}{Named\+Thread\+::\+Create\+And\+Run()}}, and \mbox{\hyperlink{l00123}{Settings\+::get()}}.
+
+\Hypertarget{class_zmq_logger_ae2ec7e0ef12c79d2051845fc65c21eb0}\index{ZmqLogger@{ZmqLogger}!````~ZmqLogger@{\texorpdfstring{$\sim$}{\string~}ZmqLogger}}
+\index{````~ZmqLogger@{\texorpdfstring{$\sim$}{\string~}ZmqLogger}!ZmqLogger@{ZmqLogger}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ZmqLogger()}{\string~ZmqLogger()}}
+{\footnotesize\ttfamily \label{class_zmq_logger_ae2ec7e0ef12c79d2051845fc65c21eb0} 
+Zmq\+Logger\+::\texorpdfstring{$\sim$}{\string~}\+Zmq\+Logger (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor for the \doxylink{class_zmq_logger}{Zmq\+Logger} class. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_zmq_logger_a8b68efd8d2f5f6df976ccdcd8b549268}\index{ZmqLogger@{ZmqLogger}!Replay@{Replay}}
+\index{Replay@{Replay}!ZmqLogger@{ZmqLogger}}
+\doxysubsubsection{\texorpdfstring{Replay()}{Replay()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_zmq_logger_a8b68efd8d2f5f6df976ccdcd8b549268} 
+void Zmq\+Logger\+::\+Replay (\begin{DoxyParamCaption}\item[{int}]{count}{}\end{DoxyParamCaption})}
+
+
+
+Replays a specified number of log messages. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em count} & The number of log messages to replay. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_zmq_logger_abe56640a0b769cccae37533bda02aff3}\index{ZmqLogger@{ZmqLogger}!Replay@{Replay}}
+\index{Replay@{Replay}!ZmqLogger@{ZmqLogger}}
+\doxysubsubsection{\texorpdfstring{Replay()}{Replay()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_zmq_logger_abe56640a0b769cccae37533bda02aff3} 
+void Zmq\+Logger\+::\+Replay (\begin{DoxyParamCaption}\item[{int}]{count}{, }\item[{const string \&}]{owner}{}\end{DoxyParamCaption})}
+
+
+
+Replays a specified number of log messages for a specific owner. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em count} & The number of log messages to replay. \\
+\hline
+{\em owner} & The owner of the log messages. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_zmq_logger_a7ebfbb239d76dca960d4f3f0bd990bdb}\index{ZmqLogger@{ZmqLogger}!Run@{Run}}
+\index{Run@{Run}!ZmqLogger@{ZmqLogger}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily \label{class_zmq_logger_a7ebfbb239d76dca960d4f3f0bd990bdb} 
+void Zmq\+Logger\+::\+Run (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Runs the \doxylink{class_zmq_logger}{Zmq\+Logger} thread. 
+
+
+
+Implements \mbox{\hyperlink{class_named_thread}{Named\+Thread}}.
+
+
+
+References \mbox{\hyperlink{l00123}{Settings\+::get()}}, \mbox{\hyperlink{l00133}{Settings\+::get\+Integer()}}, \mbox{\hyperlink{l00174}{KTN\+::\+Core\+::\+SPSCRing\+Buffer$<$ T $>$\+::size\+\_\+approx()}}, and \mbox{\hyperlink{l00123}{KTN\+::\+Core\+::\+SPSCRing\+Buffer$<$ T $>$\+::try\+\_\+dequeue()}}.
+
+\Hypertarget{class_zmq_logger_ad990e9562dac546aee2d166056f8d56d}\index{ZmqLogger@{ZmqLogger}!WriteLine@{WriteLine}}
+\index{WriteLine@{WriteLine}!ZmqLogger@{ZmqLogger}}
+\doxysubsubsection{\texorpdfstring{WriteLine()}{WriteLine()}}
+{\footnotesize\ttfamily \label{class_zmq_logger_ad990e9562dac546aee2d166056f8d56d} 
+void Zmq\+Logger\+::\+Write\+Line (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{msg}{, }\item[{const std\+::string \&}]{topic}{, }\item[{int}]{color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Writes a log message with the specified topic and color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The log message to write. \\
+\hline
+{\em topic} & The topic of the log message. \\
+\hline
+{\em color} & The color of the log message. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_logger_aad7dd43147c64f86da71bf6bfb488b36}{ILogger}}.
+
+
+
+References \mbox{\hyperlink{l00026}{Log\+Msg\+::color}}, \mbox{\hyperlink{l00062}{KTN\+::\+Core\+::\+SPSCRing\+Buffer$<$ T $>$\+::enqueue()}}, \mbox{\hyperlink{l00031}{Log\+Level\+::\+ERROR}}, \mbox{\hyperlink{l00029}{Log\+Level\+::\+INFO}}, \mbox{\hyperlink{l00027}{Log\+Msg\+::loglevel}}, \mbox{\hyperlink{l00025}{Log\+Msg\+::msg}}, and \mbox{\hyperlink{l00024}{Log\+Msg\+::topic}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Loggers/Zmq\+Logger.\+hpp\item 
+Loggers/Zmq\+Logger.\+cpp\end{DoxyCompactItemize}

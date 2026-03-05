@@ -1,0 +1,142 @@
+\doxysection{Custom\+Hash\+Table\texorpdfstring{$<$}{<} K, V \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_custom_hash_table}{}\label{class_custom_hash_table}\index{CustomHashTable$<$ K, V $>$@{CustomHashTable$<$ K, V $>$}}
+
+
+A custom hash table implementation.  
+
+
+
+
+{\ttfamily \#include $<$Custom\+Hash\+Table.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_custom_hash_table_a8bc011e57b0d1a23803bd592a9b2e391}{Custom\+Hash\+Table}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_custom_hash_table_a0a59b8a478987aec59cf2bdb69c52d99}{Custom\+Hash\+Table}} (size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Constructor with initial size. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_custom_hash_table_a59e946306e57e93d1fe742fe59ef08c7}{insert}} (const K \&key, const V \&value)
+\begin{DoxyCompactList}\small\item\em Insert a key-\/value pair into the hash table. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_custom_hash_table_a7e3bfbbbe4000c1957b9cbd66dcdc723}{lookup}} (const K \&key, V \&value) const
+\begin{DoxyCompactList}\small\item\em Lookup a value by key. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_custom_hash_table_a05d8c160e60420fe0f65180e90506675}{erase}} (const K \&key)
+\begin{DoxyCompactList}\small\item\em Erase a key-\/value pair from the hash table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename K, typename V$>$\newline
+class Custom\+Hash\+Table$<$ K, V $>$}
+A custom hash table implementation. 
+
+This class provides a custom hash table data structure that allows insertion, lookup, and deletion of key-\/value pairs.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em K} & The type of the keys in the hash table. \\
+\hline
+{\em V} & The type of the values in the hash table. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_custom_hash_table_a8bc011e57b0d1a23803bd592a9b2e391}\index{CustomHashTable$<$ K, V $>$@{CustomHashTable$<$ K, V $>$}!CustomHashTable@{CustomHashTable}}
+\index{CustomHashTable@{CustomHashTable}!CustomHashTable$<$ K, V $>$@{CustomHashTable$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{CustomHashTable()}{CustomHashTable()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_custom_hash_table_a8bc011e57b0d1a23803bd592a9b2e391} 
+template$<$typename K , typename V $>$ \\
+\mbox{\hyperlink{class_custom_hash_table}{Custom\+Hash\+Table}}$<$ K, V $>$\mbox{\hyperlink{class_custom_hash_table}{\+::\+Custom\+Hash\+Table}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+Constructs an empty hash table with a default size. \Hypertarget{class_custom_hash_table_a0a59b8a478987aec59cf2bdb69c52d99}\index{CustomHashTable$<$ K, V $>$@{CustomHashTable$<$ K, V $>$}!CustomHashTable@{CustomHashTable}}
+\index{CustomHashTable@{CustomHashTable}!CustomHashTable$<$ K, V $>$@{CustomHashTable$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{CustomHashTable()}{CustomHashTable()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_custom_hash_table_a0a59b8a478987aec59cf2bdb69c52d99} 
+template$<$typename K , typename V $>$ \\
+\mbox{\hyperlink{class_custom_hash_table}{Custom\+Hash\+Table}}$<$ K, V $>$\mbox{\hyperlink{class_custom_hash_table}{\+::\+Custom\+Hash\+Table}} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size}{}\end{DoxyParamCaption})}
+
+
+
+Constructor with initial size. 
+
+Constructs an empty hash table with the specified size.
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & The initial size of the hash table. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_custom_hash_table_a05d8c160e60420fe0f65180e90506675}\index{CustomHashTable$<$ K, V $>$@{CustomHashTable$<$ K, V $>$}!erase@{erase}}
+\index{erase@{erase}!CustomHashTable$<$ K, V $>$@{CustomHashTable$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{erase()}{erase()}}
+{\footnotesize\ttfamily \label{class_custom_hash_table_a05d8c160e60420fe0f65180e90506675} 
+template$<$typename K , typename V $>$ \\
+void \mbox{\hyperlink{class_custom_hash_table}{Custom\+Hash\+Table}}$<$ K, V $>$\+::erase (\begin{DoxyParamCaption}\item[{const K \&}]{key}{}\end{DoxyParamCaption})}
+
+
+
+Erase a key-\/value pair from the hash table. 
+
+Removes the key-\/value pair with the specified key from the hash table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to erase. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_custom_hash_table_a59e946306e57e93d1fe742fe59ef08c7}\index{CustomHashTable$<$ K, V $>$@{CustomHashTable$<$ K, V $>$}!insert@{insert}}
+\index{insert@{insert}!CustomHashTable$<$ K, V $>$@{CustomHashTable$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily \label{class_custom_hash_table_a59e946306e57e93d1fe742fe59ef08c7} 
+template$<$typename K , typename V $>$ \\
+void \mbox{\hyperlink{class_custom_hash_table}{Custom\+Hash\+Table}}$<$ K, V $>$\+::insert (\begin{DoxyParamCaption}\item[{const K \&}]{key}{, }\item[{const V \&}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Insert a key-\/value pair into the hash table. 
+
+Inserts the specified key-\/value pair into the hash table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to insert. \\
+\hline
+{\em value} & The value to insert. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_custom_hash_table_a7e3bfbbbe4000c1957b9cbd66dcdc723}\index{CustomHashTable$<$ K, V $>$@{CustomHashTable$<$ K, V $>$}!lookup@{lookup}}
+\index{lookup@{lookup}!CustomHashTable$<$ K, V $>$@{CustomHashTable$<$ K, V $>$}}
+\doxysubsubsection{\texorpdfstring{lookup()}{lookup()}}
+{\footnotesize\ttfamily \label{class_custom_hash_table_a7e3bfbbbe4000c1957b9cbd66dcdc723} 
+template$<$typename K , typename V $>$ \\
+bool \mbox{\hyperlink{class_custom_hash_table}{Custom\+Hash\+Table}}$<$ K, V $>$\+::lookup (\begin{DoxyParamCaption}\item[{const K \&}]{key}{, }\item[{V \&}]{value}{}\end{DoxyParamCaption}) const}
+
+
+
+Lookup a value by key. 
+
+Looks up the value associated with the specified key in the hash table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to lookup. \\
+\hline
+{\em value} & The variable to store the found value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the key was found, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Core/Custom\+Hash\+Table.\+hpp\item 
+Core/Custom\+Hash\+Table.\+cpp\end{DoxyCompactItemize}

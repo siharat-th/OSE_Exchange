@@ -1,0 +1,170 @@
+\doxysection{KTN\+::NET\+::KTNPkt\+Buf Class Reference}
+\hypertarget{class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf}{}\label{class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf}\index{KTN::NET::KTNPktBuf@{KTN::NET::KTNPktBuf}}
+
+
+Represents a packet buffer used in the \doxylink{class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf}{KTNPkt\+Buf} class.  
+
+
+
+
+{\ttfamily \#include $<$KTNPkt\+Buf.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \mbox{\hyperlink{class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf_a00abdcf20176bc9a72a8935b090adf75}{index}} ()
+\begin{DoxyCompactList}\small\item\em Returns the index of the packet buffer. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf_a08ade3e312f314a9857ff205d58781f0}{size}} ()
+\begin{DoxyCompactList}\small\item\em Returns the size of the packet buffer. \end{DoxyCompactList}\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf_aaf2fbc8e07eb5fd15e66ca8922a39cae}{data}} () const
+\begin{DoxyCompactList}\small\item\em Returns a constant pointer to the data in the packet buffer. \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf_ac0963712e08684cef9a9a4c09c0cd1d2}{data}} ()
+\begin{DoxyCompactList}\small\item\em Returns a pointer to the data in the packet buffer. \end{DoxyCompactList}\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf_a4b28e66897548370ee84227bd85721a1}{operator\mbox{[}$\,$\mbox{]}}} (int n) const
+\begin{DoxyCompactList}\small\item\em Returns a constant pointer to the data at the specified index in the packet buffer. \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf_a9be68fb53c524417c5eefff0b598716e}{operator\mbox{[}$\,$\mbox{]}}} (int n)
+\begin{DoxyCompactList}\small\item\em Returns a pointer to the data at the specified index in the packet buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr size\+\_\+t \mbox{\hyperlink{class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf_a13b22f38d0a5a16ac279c14410f79ab6}{capacity}} ()
+\begin{DoxyCompactList}\small\item\em Returns the capacity of the packet buffer. \end{DoxyCompactList}\item 
+static constexpr size\+\_\+t \mbox{\hyperlink{class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf_a56726ca29c5db8857d1336ea4e640a35}{alloc\+\_\+size}} ()
+\begin{DoxyCompactList}\small\item\em Returns the allocation size of the packet buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a packet buffer used in the \doxylink{class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf}{KTNPkt\+Buf} class. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf_a56726ca29c5db8857d1336ea4e640a35}\index{KTN::NET::KTNPktBuf@{KTN::NET::KTNPktBuf}!alloc\_size@{alloc\_size}}
+\index{alloc\_size@{alloc\_size}!KTN::NET::KTNPktBuf@{KTN::NET::KTNPktBuf}}
+\doxysubsubsection{\texorpdfstring{alloc\_size()}{alloc\_size()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf_a56726ca29c5db8857d1336ea4e640a35} 
+static constexpr size\+\_\+t KTN\+::\+NET\+::\+KTNPkt\+Buf\+::alloc\+\_\+size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Returns the allocation size of the packet buffer. 
+
+\begin{DoxyReturn}{Returns}
+The allocation size of the packet buffer. 
+\end{DoxyReturn}
+\Hypertarget{class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf_a13b22f38d0a5a16ac279c14410f79ab6}\index{KTN::NET::KTNPktBuf@{KTN::NET::KTNPktBuf}!capacity@{capacity}}
+\index{capacity@{capacity}!KTN::NET::KTNPktBuf@{KTN::NET::KTNPktBuf}}
+\doxysubsubsection{\texorpdfstring{capacity()}{capacity()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf_a13b22f38d0a5a16ac279c14410f79ab6} 
+static constexpr size\+\_\+t KTN\+::\+NET\+::\+KTNPkt\+Buf\+::capacity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Returns the capacity of the packet buffer. 
+
+\begin{DoxyReturn}{Returns}
+The capacity of the packet buffer. 
+\end{DoxyReturn}
+\Hypertarget{class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf_ac0963712e08684cef9a9a4c09c0cd1d2}\index{KTN::NET::KTNPktBuf@{KTN::NET::KTNPktBuf}!data@{data}}
+\index{data@{data}!KTN::NET::KTNPktBuf@{KTN::NET::KTNPktBuf}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf_ac0963712e08684cef9a9a4c09c0cd1d2} 
+char \texorpdfstring{$\ast$}{*} KTN\+::\+NET\+::\+KTNPkt\+Buf\+::data (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a pointer to the data in the packet buffer. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the data in the packet buffer. 
+\end{DoxyReturn}
+\Hypertarget{class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf_aaf2fbc8e07eb5fd15e66ca8922a39cae}\index{KTN::NET::KTNPktBuf@{KTN::NET::KTNPktBuf}!data@{data}}
+\index{data@{data}!KTN::NET::KTNPktBuf@{KTN::NET::KTNPktBuf}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf_aaf2fbc8e07eb5fd15e66ca8922a39cae} 
+const char \texorpdfstring{$\ast$}{*} KTN\+::\+NET\+::\+KTNPkt\+Buf\+::data (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a constant pointer to the data in the packet buffer. 
+
+\begin{DoxyReturn}{Returns}
+A constant pointer to the data in the packet buffer. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00066}{operator\mbox{[}$\,$\mbox{]}()}}, and \mbox{\hyperlink{l00059}{operator\mbox{[}$\,$\mbox{]}()}}.
+
+\Hypertarget{class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf_a00abdcf20176bc9a72a8935b090adf75}\index{KTN::NET::KTNPktBuf@{KTN::NET::KTNPktBuf}!index@{index}}
+\index{index@{index}!KTN::NET::KTNPktBuf@{KTN::NET::KTNPktBuf}}
+\doxysubsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf_a00abdcf20176bc9a72a8935b090adf75} 
+size\+\_\+t KTN\+::\+NET\+::\+KTNPkt\+Buf\+::index (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the index of the packet buffer. 
+
+\begin{DoxyReturn}{Returns}
+The index of the packet buffer. 
+\end{DoxyReturn}
+\Hypertarget{class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf_a9be68fb53c524417c5eefff0b598716e}\index{KTN::NET::KTNPktBuf@{KTN::NET::KTNPktBuf}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!KTN::NET::KTNPktBuf@{KTN::NET::KTNPktBuf}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf_a9be68fb53c524417c5eefff0b598716e} 
+char \texorpdfstring{$\ast$}{*} KTN\+::\+NET\+::\+KTNPkt\+Buf\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{n}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a pointer to the data at the specified index in the packet buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The index of the data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the data at the specified index in the packet buffer. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00046}{data()}}.
+
+\Hypertarget{class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf_a4b28e66897548370ee84227bd85721a1}\index{KTN::NET::KTNPktBuf@{KTN::NET::KTNPktBuf}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!KTN::NET::KTNPktBuf@{KTN::NET::KTNPktBuf}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf_a4b28e66897548370ee84227bd85721a1} 
+const char \texorpdfstring{$\ast$}{*} KTN\+::\+NET\+::\+KTNPkt\+Buf\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{n}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a constant pointer to the data at the specified index in the packet buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The index of the data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A constant pointer to the data at the specified index in the packet buffer. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00046}{data()}}.
+
+\Hypertarget{class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf_a08ade3e312f314a9857ff205d58781f0}\index{KTN::NET::KTNPktBuf@{KTN::NET::KTNPktBuf}!size@{size}}
+\index{size@{size}!KTN::NET::KTNPktBuf@{KTN::NET::KTNPktBuf}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf_a08ade3e312f314a9857ff205d58781f0} 
+size\+\_\+t KTN\+::\+NET\+::\+KTNPkt\+Buf\+::size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the size of the packet buffer. 
+
+\begin{DoxyReturn}{Returns}
+The size of the packet buffer. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Core/KTNPkt\+Buf.\+hpp\end{DoxyCompactItemize}

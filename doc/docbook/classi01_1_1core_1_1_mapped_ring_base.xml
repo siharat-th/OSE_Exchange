@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classi01_1_1core_1_1_mapped_ring_base" xml:lang="en-US">
+<title>i01::core::MappedRingBase Class Reference</title>
+<indexterm><primary>i01::core::MappedRingBase</primary></indexterm>
+<para>Inheritance diagram for i01::core::MappedRingBase:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classi01_1_1core_1_1_mapped_ring_base.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classi01_1_1core_1_1_mapped_ring_base_1ad594d19293ee7a1025f85fd230090b98">MappedRingBase</link> (int fd, std::uint64_t offset=0, std::uint8_t order=27)</para>
+</listitem>
+            <listitem><para>void * <link linkend="_classi01_1_1core_1_1_mapped_ring_base_1ad0d4a6ecbf9802922c39406f4f1b2695">write_address</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classi01_1_1core_1_1_mapped_ring_base_1a8dfca7000913fb2e4b0aac096ed1651f">write_advance</link> (std::uint64_t count)</para>
+</listitem>
+            <listitem><para>const void * <link linkend="_classi01_1_1core_1_1_mapped_ring_base_1a06f813c72c31b5a0a960165e87f9e62d">read_address</link> () const</para>
+</listitem>
+            <listitem><para>void <link linkend="_classi01_1_1core_1_1_mapped_ring_base_1aa268b7d0b5eae40f623350ed78c89d3b">read_advance</link> (std::uint64_t count)</para>
+</listitem>
+            <listitem><para>std::uint64_t <link linkend="_classi01_1_1core_1_1_mapped_ring_base_1ad5482ad23bd5d3fca64f4509b378e7fe">size</link> () const</para>
+</listitem>
+            <listitem><para>std::uint64_t <link linkend="_classi01_1_1core_1_1_mapped_ring_base_1ad15ea1ce1a58cf11748939a7068e8285">capacity</link> () const</para>
+</listitem>
+            <listitem><para>std::int64_t <link linkend="_classi01_1_1core_1_1_mapped_ring_base_1aa9f59b49b0896b3bf5cb42d8670357db">free</link> () const</para>
+</listitem>
+            <listitem><para>void <link linkend="_classi01_1_1core_1_1_mapped_ring_base_1a441596836fc80d29b9190ca03453f4e5">clear</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classi01_1_1core_1_1_mapped_ring_base_1ad594d19293ee7a1025f85fd230090b98"/><section>
+    <title>MappedRingBase()</title>
+<indexterm><primary>MappedRingBase</primary><secondary>i01::core::MappedRingBase</secondary></indexterm>
+<indexterm><primary>i01::core::MappedRingBase</primary><secondary>MappedRingBase</secondary></indexterm>
+<para><computeroutput>i01::core::MappedRingBase::MappedRingBase (int fd, std::uint64_t offset = <computeroutput>0</computeroutput>
+, std::uint8_t order = <computeroutput>27</computeroutput>
+)</computeroutput></para>
+<para>Map a ring using file descriptor <computeroutput>fd</computeroutput>, starting at offset <computeroutput>offset</computeroutput>, in segments of size <computeroutput>2^(order)</computeroutput>. </para>
+</section>
+<anchor xml:id="_classi01_1_1core_1_1_mapped_ring_base_1a1b47598061e0081df3601853a0cf6238"/><section>
+    <title>~MappedRingBase()</title>
+<indexterm><primary>~MappedRingBase</primary><secondary>i01::core::MappedRingBase</secondary></indexterm>
+<indexterm><primary>i01::core::MappedRingBase</primary><secondary>~MappedRingBase</secondary></indexterm>
+<para><computeroutput>i01::core::MappedRingBase::~MappedRingBase ( )<computeroutput>[virtual]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classi01_1_1core_1_1_mapped_ring_base_1ad15ea1ce1a58cf11748939a7068e8285"/><section>
+    <title>capacity()</title>
+<indexterm><primary>capacity</primary><secondary>i01::core::MappedRingBase</secondary></indexterm>
+<indexterm><primary>i01::core::MappedRingBase</primary><secondary>capacity</secondary></indexterm>
+<para><computeroutput>std::uint64_t i01::core::MappedRingBase::capacity ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classi01_1_1core_1_1_mapped_ring_base_1a441596836fc80d29b9190ca03453f4e5"/><section>
+    <title>clear()</title>
+<indexterm><primary>clear</primary><secondary>i01::core::MappedRingBase</secondary></indexterm>
+<indexterm><primary>i01::core::MappedRingBase</primary><secondary>clear</secondary></indexterm>
+<para><computeroutput>void i01::core::MappedRingBase::clear ( )</computeroutput></para></section>
+<anchor xml:id="_classi01_1_1core_1_1_mapped_ring_base_1aa9f59b49b0896b3bf5cb42d8670357db"/><section>
+    <title>free()</title>
+<indexterm><primary>free</primary><secondary>i01::core::MappedRingBase</secondary></indexterm>
+<indexterm><primary>i01::core::MappedRingBase</primary><secondary>free</secondary></indexterm>
+<para><computeroutput>std::int64_t i01::core::MappedRingBase::free ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classi01_1_1core_1_1_mapped_ring_base_1a06f813c72c31b5a0a960165e87f9e62d"/><section>
+    <title>read_address()</title>
+<indexterm><primary>read_address</primary><secondary>i01::core::MappedRingBase</secondary></indexterm>
+<indexterm><primary>i01::core::MappedRingBase</primary><secondary>read_address</secondary></indexterm>
+<para><computeroutput>const void * i01::core::MappedRingBase::read_address ( ) const</computeroutput></para></section>
+<anchor xml:id="_classi01_1_1core_1_1_mapped_ring_base_1aa268b7d0b5eae40f623350ed78c89d3b"/><section>
+    <title>read_advance()</title>
+<indexterm><primary>read_advance</primary><secondary>i01::core::MappedRingBase</secondary></indexterm>
+<indexterm><primary>i01::core::MappedRingBase</primary><secondary>read_advance</secondary></indexterm>
+<para><computeroutput>void i01::core::MappedRingBase::read_advance (std::uint64_t count)</computeroutput></para></section>
+<anchor xml:id="_classi01_1_1core_1_1_mapped_ring_base_1ad5482ad23bd5d3fca64f4509b378e7fe"/><section>
+    <title>size()</title>
+<indexterm><primary>size</primary><secondary>i01::core::MappedRingBase</secondary></indexterm>
+<indexterm><primary>i01::core::MappedRingBase</primary><secondary>size</secondary></indexterm>
+<para><computeroutput>std::uint64_t i01::core::MappedRingBase::size ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classi01_1_1core_1_1_mapped_ring_base_1ad0d4a6ecbf9802922c39406f4f1b2695"/><section>
+    <title>write_address()</title>
+<indexterm><primary>write_address</primary><secondary>i01::core::MappedRingBase</secondary></indexterm>
+<indexterm><primary>i01::core::MappedRingBase</primary><secondary>write_address</secondary></indexterm>
+<para><computeroutput>void * i01::core::MappedRingBase::write_address ( )</computeroutput></para></section>
+<anchor xml:id="_classi01_1_1core_1_1_mapped_ring_base_1a8dfca7000913fb2e4b0aac096ed1651f"/><section>
+    <title>write_advance()</title>
+<indexterm><primary>write_advance</primary><secondary>i01::core::MappedRingBase</secondary></indexterm>
+<indexterm><primary>i01::core::MappedRingBase</primary><secondary>write_advance</secondary></indexterm>
+<para><computeroutput>void i01::core::MappedRingBase::write_advance (std::uint64_t count)</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+C:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/i01_core/MappedRing.hppC:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/i01_core/MappedRing.cpp</section>
+</section>

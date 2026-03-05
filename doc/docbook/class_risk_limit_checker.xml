@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_risk_limit_checker" xml:lang="en-US">
+<title>RiskLimitChecker Class Reference</title>
+<indexterm><primary>RiskLimitChecker</primary></indexterm>
+<para>
+
+<para>Class for checking risk limits for orders. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;RiskLimitChecker.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_risk_limit_checker_1a611765e0d23daa60265dc8440b428949">RiskLimitChecker</link> ()</para>
+
+<para>Default constructor. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_risk_limit_checker_1a83d2551a33a2d08b5b9fa8fc70dbbd02">~RiskLimitChecker</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_risk_limit_checker_1a6187eeb97369f02b847e189c7fc7f4d4">LoadRiskLimits</link> ()</para>
+
+<para>Load the risk limits from a source. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_risk_limit_checker_1a95046c9cc55d6cbb38d355e287032ce9">isOrderOK</link> (double notional, string acct)</para>
+
+<para>Check if an order is within the risk limits. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Class for checking risk limits for orders. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_risk_limit_checker_1a611765e0d23daa60265dc8440b428949"/><section>
+    <title>RiskLimitChecker()</title>
+<indexterm><primary>RiskLimitChecker</primary><secondary>RiskLimitChecker</secondary></indexterm>
+<indexterm><primary>RiskLimitChecker</primary><secondary>RiskLimitChecker</secondary></indexterm>
+<para><computeroutput>RiskLimitChecker::RiskLimitChecker ( )</computeroutput></para><para>
+
+<para>Default constructor. </para>
+</para>
+</section>
+<anchor xml:id="_class_risk_limit_checker_1a83d2551a33a2d08b5b9fa8fc70dbbd02"/><section>
+    <title>~RiskLimitChecker()</title>
+<indexterm><primary>~RiskLimitChecker</primary><secondary>RiskLimitChecker</secondary></indexterm>
+<indexterm><primary>RiskLimitChecker</primary><secondary>~RiskLimitChecker</secondary></indexterm>
+<para><computeroutput>RiskLimitChecker::~RiskLimitChecker ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Destructor. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_risk_limit_checker_1a95046c9cc55d6cbb38d355e287032ce9"/><section>
+    <title>isOrderOK()</title>
+<indexterm><primary>isOrderOK</primary><secondary>RiskLimitChecker</secondary></indexterm>
+<indexterm><primary>RiskLimitChecker</primary><secondary>isOrderOK</secondary></indexterm>
+<para><computeroutput>bool RiskLimitChecker::isOrderOK (double notional, string acct)</computeroutput></para><para>
+
+<para>Check if an order is within the risk limits. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>notional</entry><entry>
+<para>The notional value of the order </para>
+</entry>
+                            </row>
+                            <row>
+<entry>acct</entry><entry>
+<para>The account associated with the order </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the order is within the risk limits, false otherwise </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_risk_limit_checker_1a6187eeb97369f02b847e189c7fc7f4d4"/><section>
+    <title>LoadRiskLimits()</title>
+<indexterm><primary>LoadRiskLimits</primary><secondary>RiskLimitChecker</secondary></indexterm>
+<indexterm><primary>RiskLimitChecker</primary><secondary>LoadRiskLimits</secondary></indexterm>
+<para><computeroutput>void RiskLimitChecker::LoadRiskLimits ( )</computeroutput></para><para>
+
+<para>Load the risk limits from a source. </para>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Risk/RiskLimitChecker.hppRisk/RiskLimitChecker.cpp</section>
+</section>

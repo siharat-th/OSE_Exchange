@@ -1,0 +1,185 @@
+\doxysection{Algo\+Factory Class Reference}
+\hypertarget{class_algo_factory}{}\label{class_algo_factory}\index{AlgoFactory@{AlgoFactory}}
+
+
+Factory class responsible for launching various algorithms.  
+
+
+
+
+{\ttfamily \#include $<$Algo\+Factory.\+hpp$>$}
+
+Inheritance diagram for Algo\+Factory\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_algo_factory}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3}{Algo\+Base\+V3}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_algo_factory_ab536aa9376ccb4f0727956e964a9a8d3}{Launch\+Algo}} (const std\+::string \&json, int cpu, \mbox{\hyperlink{class_i_exchange_sender}{IExchange\+Sender}} \texorpdfstring{$\ast$}{*}exch)
+\begin{DoxyCompactList}\small\item\em Launches an algorithm based on the provided JSON configuration. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_algo_factory_ad1eddb711e96a7e53e7d222eb00f264d}{Parse\+Legs}} (string archetype, string json, vector$<$ \mbox{\hyperlink{structinstrument}{instrument}} $>$ \&legs)
+\begin{DoxyCompactList}\small\item\em Parses the legs for the specified algorithm. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_algo_header}{Algo\+Header}} \mbox{\hyperlink{class_algo_factory_a1fd482dca0c3bbb3381e260b3811a86e}{Parse\+Algo\+Header}} (string json)
+\begin{DoxyCompactList}\small\item\em Parses the header section of the JSON string and extracts algorithm metadata. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} \mbox{\hyperlink{class_algo_factory_a2d6f5a12b298ac92a686f8be8ba53ab0}{Parse\+Algo\+Order}} (const std\+::string \&json)
+\begin{DoxyCompactList}\small\item\em Parses an order from a JSON string and returns a \doxylink{struct_k_t_n_1_1_order}{KTN\+::\+Order} object. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_engine_command}{Engine\+Command}} \mbox{\hyperlink{class_algo_factory_a46575d0510922def5608619ac1284972}{Parse\+Engine\+Command}} (string json)
+\begin{DoxyCompactList}\small\item\em Parses an engine command from the given JSON string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_singleton}{Singleton$<$ Algo\+Factory $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+static I01\+\_\+\+API \mbox{\hyperlink{class_algo_factory}{Algo\+Factory}} \& \mbox{\hyperlink{class_singleton_a257c9c4633fa4e06bd93469e379f8eff}{instance}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_singleton}{Singleton$<$ Algo\+Factory $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Singleton} (const \mbox{\hyperlink{class_singleton}{Singleton}} \&)=delete
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Factory class responsible for launching various algorithms. 
+
+This class parses the input JSON, extracts algorithm parameters and legs, and returns an instance of the appropriate algorithm. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_algo_factory_ab536aa9376ccb4f0727956e964a9a8d3}\index{AlgoFactory@{AlgoFactory}!LaunchAlgo@{LaunchAlgo}}
+\index{LaunchAlgo@{LaunchAlgo}!AlgoFactory@{AlgoFactory}}
+\doxysubsubsection{\texorpdfstring{LaunchAlgo()}{LaunchAlgo()}}
+{\footnotesize\ttfamily \label{class_algo_factory_ab536aa9376ccb4f0727956e964a9a8d3} 
+static \mbox{\hyperlink{class_k_t_n_1_1_algo_base_v3}{Algo\+Base\+V3}} \texorpdfstring{$\ast$}{*} Algo\+Factory\+::\+Launch\+Algo (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{json}{, }\item[{int}]{cpu}{, }\item[{\mbox{\hyperlink{class_i_exchange_sender}{IExchange\+Sender}} \texorpdfstring{$\ast$}{*}}]{exch}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Launches an algorithm based on the provided JSON configuration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & JSON string containing algorithm configuration. \\
+\hline
+{\em cpu} & CPU affinity for the algorithm. \\
+\hline
+{\em exch} & Exchange sender interface for sending orders. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the created Algo\+Base\+V3 object, or nullptr if the algorithm could not be created. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00111}{instrument\+::exch}}, \mbox{\hyperlink{l00209}{Parse\+Algo\+Header()}}, \mbox{\hyperlink{l00183}{Parse\+Legs()}}, and \mbox{\hyperlink{l00012}{Leg\+Param\+Parser\+::\+Parse\+Spread\+Legs()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00196}{KTN\+::\+Algo\+Service\+Broker\+V3\+::on\+Algo\+Command()}}.
+
+\Hypertarget{class_algo_factory_a1fd482dca0c3bbb3381e260b3811a86e}\index{AlgoFactory@{AlgoFactory}!ParseAlgoHeader@{ParseAlgoHeader}}
+\index{ParseAlgoHeader@{ParseAlgoHeader}!AlgoFactory@{AlgoFactory}}
+\doxysubsubsection{\texorpdfstring{ParseAlgoHeader()}{ParseAlgoHeader()}}
+{\footnotesize\ttfamily \label{class_algo_factory_a1fd482dca0c3bbb3381e260b3811a86e} 
+static \mbox{\hyperlink{struct_algo_header}{Algo\+Header}} Algo\+Factory\+::\+Parse\+Algo\+Header (\begin{DoxyParamCaption}\item[{string}]{json}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Parses the header section of the JSON string and extracts algorithm metadata. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & JSON string containing the header information. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An \doxylink{struct_algo_header}{Algo\+Header} structure containing parsed metadata. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00068}{Launch\+Algo()}}, and \mbox{\hyperlink{l00196}{KTN\+::\+Algo\+Service\+Broker\+V3\+::on\+Algo\+Command()}}.
+
+\Hypertarget{class_algo_factory_a2d6f5a12b298ac92a686f8be8ba53ab0}\index{AlgoFactory@{AlgoFactory}!ParseAlgoOrder@{ParseAlgoOrder}}
+\index{ParseAlgoOrder@{ParseAlgoOrder}!AlgoFactory@{AlgoFactory}}
+\doxysubsubsection{\texorpdfstring{ParseAlgoOrder()}{ParseAlgoOrder()}}
+{\footnotesize\ttfamily \label{class_algo_factory_a2d6f5a12b298ac92a686f8be8ba53ab0} 
+static \mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} Algo\+Factory\+::\+Parse\+Algo\+Order (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{json}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Parses an order from a JSON string and returns a \doxylink{struct_k_t_n_1_1_order}{KTN\+::\+Order} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & JSON string containing the order. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A \doxylink{struct_k_t_n_1_1_order}{KTN\+::\+Order} object representing the parsed order. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00062}{Order\+Parser\+::parseincoming()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00196}{KTN\+::\+Algo\+Service\+Broker\+V3\+::on\+Algo\+Command()}}.
+
+\Hypertarget{class_algo_factory_a46575d0510922def5608619ac1284972}\index{AlgoFactory@{AlgoFactory}!ParseEngineCommand@{ParseEngineCommand}}
+\index{ParseEngineCommand@{ParseEngineCommand}!AlgoFactory@{AlgoFactory}}
+\doxysubsubsection{\texorpdfstring{ParseEngineCommand()}{ParseEngineCommand()}}
+{\footnotesize\ttfamily \label{class_algo_factory_a46575d0510922def5608619ac1284972} 
+static \mbox{\hyperlink{struct_engine_command}{Engine\+Command}} Algo\+Factory\+::\+Parse\+Engine\+Command (\begin{DoxyParamCaption}\item[{string}]{json}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Parses an engine command from the given JSON string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & JSON string containing the engine command. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An \doxylink{struct_engine_command}{Engine\+Command} object containing parsed engine command details. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00023}{KEngine\+Command\+::\+NONE}}, \mbox{\hyperlink{l00149}{KEngine\+Type\+::\+NONE}}, \mbox{\hyperlink{l00034}{KEngine\+Command\+::\+Value()}}, \mbox{\hyperlink{l00104}{KEngine\+Item\+::\+Value()}}, and \mbox{\hyperlink{l00159}{KEngine\+Type\+::\+Value()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00196}{KTN\+::\+Algo\+Service\+Broker\+V3\+::on\+Algo\+Command()}}.
+
+\Hypertarget{class_algo_factory_ad1eddb711e96a7e53e7d222eb00f264d}\index{AlgoFactory@{AlgoFactory}!ParseLegs@{ParseLegs}}
+\index{ParseLegs@{ParseLegs}!AlgoFactory@{AlgoFactory}}
+\doxysubsubsection{\texorpdfstring{ParseLegs()}{ParseLegs()}}
+{\footnotesize\ttfamily \label{class_algo_factory_ad1eddb711e96a7e53e7d222eb00f264d} 
+static void Algo\+Factory\+::\+Parse\+Legs (\begin{DoxyParamCaption}\item[{string}]{archetype}{, }\item[{string}]{json}{, }\item[{vector$<$ \mbox{\hyperlink{structinstrument}{instrument}} $>$ \&}]{legs}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Parses the legs for the specified algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em archetype} & The type of algorithm. \\
+\hline
+{\em json} & JSON string containing leg configurations. \\
+\hline
+{\em legs} & Vector where the parsed legs will be stored. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00111}{instrument\+::exch}}, and \mbox{\hyperlink{l00012}{Leg\+Param\+Parser\+::\+Parse\+Spread\+Legs()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00068}{Launch\+Algo()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Algos/Algo\+Factory.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,119 @@
+\doxysection{KTN\+::TCP\+::Tcp\+Feed\+Base Class Reference}
+\hypertarget{class_k_t_n_1_1_t_c_p_1_1_tcp_feed_base}{}\label{class_k_t_n_1_1_t_c_p_1_1_tcp_feed_base}\index{KTN::TCP::TcpFeedBase@{KTN::TCP::TcpFeedBase}}
+
+
+The base class for TCP feed.  
+
+
+
+
+{\ttfamily \#include $<$Tcp\+Feed\+Base.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_tcp_feed_base_a4ddc7f9055c620e2fe2c0fe2b539e5ef}{Tcp\+Feed\+Base}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_tcp_feed_base_a09931540193568f3724b7256c80a5db1}{\texorpdfstring{$\sim$}{\string~}\+Tcp\+Feed\+Base}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_tcp_feed_base_a482bc1c01ad9c6058e3e03cf019e70e1}{Init}} (\mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_service_descriptor}{Service\+Descriptor}} \&desc, bool isA)=0
+\begin{DoxyCompactList}\small\item\em Initializes the TCP feed. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_tcp_feed_base_ae3a5fca180ad7f38436806a3e778e0c2}{Subscribe}} (\mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_tcp_callback}{Tcp\+Callback}} \texorpdfstring{$\ast$}{*}callback)=0
+\begin{DoxyCompactList}\small\item\em Subscribes to the TCP feed. \end{DoxyCompactList}\item 
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_tcp_feed_base_a5b9246b0771a132f5aed34ec75697594}\label{class_k_t_n_1_1_t_c_p_1_1_tcp_feed_base_a5b9246b0771a132f5aed34ec75697594} 
+virtual void {\bfseries Stop} ()=0
+\begin{DoxyCompactList}\small\item\em Stops the TCP feed. \end{DoxyCompactList}\item 
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_tcp_feed_base_a7436d52ca5dccf02f2aee90066fa1706}\label{class_k_t_n_1_1_t_c_p_1_1_tcp_feed_base_a7436d52ca5dccf02f2aee90066fa1706} 
+virtual void {\bfseries Poll} ()=0
+\begin{DoxyCompactList}\small\item\em Polls the TCP feed. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_tcp_feed_base_ab64bbc284c9ed281bb9baa34f832038d}{Send\+Master}} (char \texorpdfstring{$\ast$}{*}buffer, size\+\_\+t buffer\+\_\+length, bool send\+\_\+delegated)=0
+\begin{DoxyCompactList}\small\item\em Sends the master. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The base class for TCP feed. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_tcp_feed_base_a4ddc7f9055c620e2fe2c0fe2b539e5ef}\index{KTN::TCP::TcpFeedBase@{KTN::TCP::TcpFeedBase}!TcpFeedBase@{TcpFeedBase}}
+\index{TcpFeedBase@{TcpFeedBase}!KTN::TCP::TcpFeedBase@{KTN::TCP::TcpFeedBase}}
+\doxysubsubsection{\texorpdfstring{TcpFeedBase()}{TcpFeedBase()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_tcp_feed_base_a4ddc7f9055c620e2fe2c0fe2b539e5ef} 
+Tcp\+Feed\+Base\+::\+Tcp\+Feed\+Base (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_tcp_feed_base_a09931540193568f3724b7256c80a5db1}\index{KTN::TCP::TcpFeedBase@{KTN::TCP::TcpFeedBase}!````~TcpFeedBase@{\texorpdfstring{$\sim$}{\string~}TcpFeedBase}}
+\index{````~TcpFeedBase@{\texorpdfstring{$\sim$}{\string~}TcpFeedBase}!KTN::TCP::TcpFeedBase@{KTN::TCP::TcpFeedBase}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}TcpFeedBase()}{\string~TcpFeedBase()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_tcp_feed_base_a09931540193568f3724b7256c80a5db1} 
+Tcp\+Feed\+Base\+::\texorpdfstring{$\sim$}{\string~}\+Tcp\+Feed\+Base (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_tcp_feed_base_a482bc1c01ad9c6058e3e03cf019e70e1}\index{KTN::TCP::TcpFeedBase@{KTN::TCP::TcpFeedBase}!Init@{Init}}
+\index{Init@{Init}!KTN::TCP::TcpFeedBase@{KTN::TCP::TcpFeedBase}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_tcp_feed_base_a482bc1c01ad9c6058e3e03cf019e70e1} 
+virtual bool KTN\+::\+TCP\+::\+Tcp\+Feed\+Base\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_service_descriptor}{Service\+Descriptor}} \&}]{desc}{, }\item[{bool}]{isA}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Initializes the TCP feed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em desc} & The service descriptor. \\
+\hline
+{\em isA} & A boolean indicating if it is A. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if initialization is successful, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_tcp_feed_base_ab64bbc284c9ed281bb9baa34f832038d}\index{KTN::TCP::TcpFeedBase@{KTN::TCP::TcpFeedBase}!SendMaster@{SendMaster}}
+\index{SendMaster@{SendMaster}!KTN::TCP::TcpFeedBase@{KTN::TCP::TcpFeedBase}}
+\doxysubsubsection{\texorpdfstring{SendMaster()}{SendMaster()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_tcp_feed_base_ab64bbc284c9ed281bb9baa34f832038d} 
+virtual void KTN\+::\+TCP\+::\+Tcp\+Feed\+Base\+::\+Send\+Master (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{buffer}{, }\item[{size\+\_\+t}]{buffer\+\_\+length}{, }\item[{bool}]{send\+\_\+delegated}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sends the master. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The buffer to send. \\
+\hline
+{\em buffer\+\_\+length} & The length of the buffer. \\
+\hline
+{\em send\+\_\+delegated} & A boolean indicating if it should send delegated. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_tcp_feed_base_ae3a5fca180ad7f38436806a3e778e0c2}\index{KTN::TCP::TcpFeedBase@{KTN::TCP::TcpFeedBase}!Subscribe@{Subscribe}}
+\index{Subscribe@{Subscribe}!KTN::TCP::TcpFeedBase@{KTN::TCP::TcpFeedBase}}
+\doxysubsubsection{\texorpdfstring{Subscribe()}{Subscribe()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_tcp_feed_base_ae3a5fca180ad7f38436806a3e778e0c2} 
+virtual void KTN\+::\+TCP\+::\+Tcp\+Feed\+Base\+::\+Subscribe (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_tcp_callback}{Tcp\+Callback}} \texorpdfstring{$\ast$}{*}}]{callback}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Subscribes to the TCP feed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback} & The TCP callback. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Ktn\+Efvi/Tcp\+Feed\+Base.\+hpp\item 
+Ktn\+Efvi/Tcp\+Feed\+Base.\+cpp\end{DoxyCompactItemize}

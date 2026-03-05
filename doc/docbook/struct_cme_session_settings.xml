@@ -1,0 +1,269 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_cme_session_settings" xml:lang="en-US">
+<title>CmeSessionSettings Struct Reference</title>
+<indexterm><primary>CmeSessionSettings</primary></indexterm>
+<para>
+
+<para>Represents the settings for a CME session. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;CmeSessionSettings.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for CmeSessionSettings:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="struct_cme_session_settings.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_struct_cme_session_settings_1a76afb4945701cda96b06c27e3a39ce1d">Load</link> (const string &amp;filename)</para>
+
+<para>Loads the session settings from the specified file. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>std::string <link linkend="_struct_cme_session_settings_1a727c624d06e87e44b234748cae1833c0">TraderId</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_cme_session_settings_1a4f0005bf838a1efba873a4c88598c9f1">SessionId</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_cme_session_settings_1a70acc2c53a0b0a49e63950f097b86ee2">FirmId</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_cme_session_settings_1ad904c36cf5133a45695919bfc681f571">AccessKey</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_cme_session_settings_1a1b0fb276e484b80ba644013d468a1b40">SecretKey</link></para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_struct_cme_session_settings_1ae3cb440b363a34048f378e130b75184c">SelfMatchId</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_cme_session_settings_1afd5bcaf3a9aba689082e0ef471fd1d3f">Port</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_cme_session_settings_1a221aaf12c73c695dcacd28f574fead27">BackupPort</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_cme_session_settings_1a7d6936403875b773350baf80b9719e6f">PartyListId</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_cme_session_settings_1a8863d37c9acea388cecc460be6e6fb5b">KeepAliveSecs</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_cme_session_settings_1a36623c280694e1b0532c44862a8dcbdb">FaultTolerance</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_cme_session_settings_1ab6e9061329bee9af35a7cb6e0102c81c">Source</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_cme_session_settings_1a75d1b0e0a6b7c69b2d4a02131e183507">ExchName</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_cme_session_settings_1a766ed84327da11f4f5dc769688552003">Org</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_cme_session_settings_1adc915922f8768421d2185527bfaa8169">Account</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_cme_session_settings_1a226cb5082ee59e5ff1ba07a854fb328e">CustOrdCapacity</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_cme_session_settings_1a9f5b804fcd098f72ba4457ae06331095">Location</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_cme_session_settings_1a4249399af2dc5432dfd2b33a635ca5cc">Tag50_Manual</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_cme_session_settings_1ae7becf23a75285fe42595a93125762ab">Tag50_Auto</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_cme_session_settings_1aebb25540bb25e0600d8d7c25e159f079">CertNr</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_cme_session_settings_1ab628ca5d3df5124b3d295b40b98b6870">SystemName</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_cme_session_settings_1a401ef0f5f946efdb93046fea914c5fd9">SystemVersionId</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_cme_session_settings_1af273f1307920f98c6bde0f0be76b6822">SystemVendor</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_cme_session_settings_1a83a74d953ddac7a35260ec23e03bc563">UseFeed_A</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_cme_session_settings_1ac2582e84a2ec9c8f322791664d7925dd">Affinity</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_cme_session_settings_1ae969051eb902cc40251d29a3fc50ce95">Filename</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Attributes inherited from <link linkend="_struct_session_settings">SessionSettings</link>        <itemizedlist>
+            <listitem><para>string <link linkend="_struct_session_settings_1af7dafea725963eb415b285606c280647">Filename</link></para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+
+<para>Represents the settings for a CME session. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_cme_session_settings_1a76afb4945701cda96b06c27e3a39ce1d"/><section>
+    <title>Load()</title>
+<indexterm><primary>Load</primary><secondary>CmeSessionSettings</secondary></indexterm>
+<indexterm><primary>CmeSessionSettings</primary><secondary>Load</secondary></indexterm>
+<para><computeroutput>void CmeSessionSettings::Load (const string &amp; filename)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Loads the session settings from the specified file. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>filename</entry><entry>
+<para>The name of the file containing the session settings. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00123">Settings::get()</link>, <link linkend="_l00193">Settings::getBoolean()</link>, <link linkend="_l00133">Settings::getInteger()</link>, and <link linkend="_l00153">Settings::getLong()</link>.</para>
+<para>
+Referenced by <link linkend="_l00019">KTN::CME::CmeAlgo::CmeAlgo()</link>, <link linkend="_l00019">KTN::CME::CmeGT5::CmeGT5()</link>, and <link linkend="_l00021">KTN::CME::IL3::SessionMessageFactory::Init()</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_cme_session_settings_1ad904c36cf5133a45695919bfc681f571"/><section>
+    <title>AccessKey</title>
+<indexterm><primary>AccessKey</primary><secondary>CmeSessionSettings</secondary></indexterm>
+<indexterm><primary>CmeSessionSettings</primary><secondary>AccessKey</secondary></indexterm>
+<para><computeroutput>string CmeSessionSettings::AccessKey</computeroutput></para></section>
+<anchor xml:id="_struct_cme_session_settings_1adc915922f8768421d2185527bfaa8169"/><section>
+    <title>Account</title>
+<indexterm><primary>Account</primary><secondary>CmeSessionSettings</secondary></indexterm>
+<indexterm><primary>CmeSessionSettings</primary><secondary>Account</secondary></indexterm>
+<para><computeroutput>std::string CmeSessionSettings::Account</computeroutput></para></section>
+<anchor xml:id="_struct_cme_session_settings_1ac2582e84a2ec9c8f322791664d7925dd"/><section>
+    <title>Affinity</title>
+<indexterm><primary>Affinity</primary><secondary>CmeSessionSettings</secondary></indexterm>
+<indexterm><primary>CmeSessionSettings</primary><secondary>Affinity</secondary></indexterm>
+<para><computeroutput>int CmeSessionSettings::Affinity</computeroutput></para></section>
+<anchor xml:id="_struct_cme_session_settings_1a221aaf12c73c695dcacd28f574fead27"/><section>
+    <title>BackupPort</title>
+<indexterm><primary>BackupPort</primary><secondary>CmeSessionSettings</secondary></indexterm>
+<indexterm><primary>CmeSessionSettings</primary><secondary>BackupPort</secondary></indexterm>
+<para><computeroutput>int CmeSessionSettings::BackupPort</computeroutput></para></section>
+<anchor xml:id="_struct_cme_session_settings_1aebb25540bb25e0600d8d7c25e159f079"/><section>
+    <title>CertNr</title>
+<indexterm><primary>CertNr</primary><secondary>CmeSessionSettings</secondary></indexterm>
+<indexterm><primary>CmeSessionSettings</primary><secondary>CertNr</secondary></indexterm>
+<para><computeroutput>bool CmeSessionSettings::CertNr</computeroutput></para></section>
+<anchor xml:id="_struct_cme_session_settings_1a226cb5082ee59e5ff1ba07a854fb328e"/><section>
+    <title>CustOrdCapacity</title>
+<indexterm><primary>CustOrdCapacity</primary><secondary>CmeSessionSettings</secondary></indexterm>
+<indexterm><primary>CmeSessionSettings</primary><secondary>CustOrdCapacity</secondary></indexterm>
+<para><computeroutput>int CmeSessionSettings::CustOrdCapacity</computeroutput></para></section>
+<anchor xml:id="_struct_cme_session_settings_1a75d1b0e0a6b7c69b2d4a02131e183507"/><section>
+    <title>ExchName</title>
+<indexterm><primary>ExchName</primary><secondary>CmeSessionSettings</secondary></indexterm>
+<indexterm><primary>CmeSessionSettings</primary><secondary>ExchName</secondary></indexterm>
+<para><computeroutput>std::string CmeSessionSettings::ExchName</computeroutput></para></section>
+<anchor xml:id="_struct_cme_session_settings_1a36623c280694e1b0532c44862a8dcbdb"/><section>
+    <title>FaultTolerance</title>
+<indexterm><primary>FaultTolerance</primary><secondary>CmeSessionSettings</secondary></indexterm>
+<indexterm><primary>CmeSessionSettings</primary><secondary>FaultTolerance</secondary></indexterm>
+<para><computeroutput>bool CmeSessionSettings::FaultTolerance</computeroutput></para></section>
+<anchor xml:id="_struct_cme_session_settings_1ae969051eb902cc40251d29a3fc50ce95"/><section>
+    <title>Filename</title>
+<indexterm><primary>Filename</primary><secondary>CmeSessionSettings</secondary></indexterm>
+<indexterm><primary>CmeSessionSettings</primary><secondary>Filename</secondary></indexterm>
+<para><computeroutput>string CmeSessionSettings::Filename</computeroutput></para></section>
+<anchor xml:id="_struct_cme_session_settings_1a70acc2c53a0b0a49e63950f097b86ee2"/><section>
+    <title>FirmId</title>
+<indexterm><primary>FirmId</primary><secondary>CmeSessionSettings</secondary></indexterm>
+<indexterm><primary>CmeSessionSettings</primary><secondary>FirmId</secondary></indexterm>
+<para><computeroutput>string CmeSessionSettings::FirmId</computeroutput></para></section>
+<anchor xml:id="_struct_cme_session_settings_1a8863d37c9acea388cecc460be6e6fb5b"/><section>
+    <title>KeepAliveSecs</title>
+<indexterm><primary>KeepAliveSecs</primary><secondary>CmeSessionSettings</secondary></indexterm>
+<indexterm><primary>CmeSessionSettings</primary><secondary>KeepAliveSecs</secondary></indexterm>
+<para><computeroutput>int CmeSessionSettings::KeepAliveSecs</computeroutput></para></section>
+<anchor xml:id="_struct_cme_session_settings_1a9f5b804fcd098f72ba4457ae06331095"/><section>
+    <title>Location</title>
+<indexterm><primary>Location</primary><secondary>CmeSessionSettings</secondary></indexterm>
+<indexterm><primary>CmeSessionSettings</primary><secondary>Location</secondary></indexterm>
+<para><computeroutput>std::string CmeSessionSettings::Location</computeroutput></para></section>
+<anchor xml:id="_struct_cme_session_settings_1a766ed84327da11f4f5dc769688552003"/><section>
+    <title>Org</title>
+<indexterm><primary>Org</primary><secondary>CmeSessionSettings</secondary></indexterm>
+<indexterm><primary>CmeSessionSettings</primary><secondary>Org</secondary></indexterm>
+<para><computeroutput>std::string CmeSessionSettings::Org</computeroutput></para></section>
+<anchor xml:id="_struct_cme_session_settings_1a7d6936403875b773350baf80b9719e6f"/><section>
+    <title>PartyListId</title>
+<indexterm><primary>PartyListId</primary><secondary>CmeSessionSettings</secondary></indexterm>
+<indexterm><primary>CmeSessionSettings</primary><secondary>PartyListId</secondary></indexterm>
+<para><computeroutput>int CmeSessionSettings::PartyListId</computeroutput></para></section>
+<anchor xml:id="_struct_cme_session_settings_1afd5bcaf3a9aba689082e0ef471fd1d3f"/><section>
+    <title>Port</title>
+<indexterm><primary>Port</primary><secondary>CmeSessionSettings</secondary></indexterm>
+<indexterm><primary>CmeSessionSettings</primary><secondary>Port</secondary></indexterm>
+<para><computeroutput>int CmeSessionSettings::Port</computeroutput></para></section>
+<anchor xml:id="_struct_cme_session_settings_1a1b0fb276e484b80ba644013d468a1b40"/><section>
+    <title>SecretKey</title>
+<indexterm><primary>SecretKey</primary><secondary>CmeSessionSettings</secondary></indexterm>
+<indexterm><primary>CmeSessionSettings</primary><secondary>SecretKey</secondary></indexterm>
+<para><computeroutput>string CmeSessionSettings::SecretKey</computeroutput></para></section>
+<anchor xml:id="_struct_cme_session_settings_1ae3cb440b363a34048f378e130b75184c"/><section>
+    <title>SelfMatchId</title>
+<indexterm><primary>SelfMatchId</primary><secondary>CmeSessionSettings</secondary></indexterm>
+<indexterm><primary>CmeSessionSettings</primary><secondary>SelfMatchId</secondary></indexterm>
+<para><computeroutput>uint64_t CmeSessionSettings::SelfMatchId</computeroutput></para></section>
+<anchor xml:id="_struct_cme_session_settings_1a4f0005bf838a1efba873a4c88598c9f1"/><section>
+    <title>SessionId</title>
+<indexterm><primary>SessionId</primary><secondary>CmeSessionSettings</secondary></indexterm>
+<indexterm><primary>CmeSessionSettings</primary><secondary>SessionId</secondary></indexterm>
+<para><computeroutput>string CmeSessionSettings::SessionId</computeroutput></para></section>
+<anchor xml:id="_struct_cme_session_settings_1ab6e9061329bee9af35a7cb6e0102c81c"/><section>
+    <title>Source</title>
+<indexterm><primary>Source</primary><secondary>CmeSessionSettings</secondary></indexterm>
+<indexterm><primary>CmeSessionSettings</primary><secondary>Source</secondary></indexterm>
+<para><computeroutput>std::string CmeSessionSettings::Source</computeroutput></para></section>
+<anchor xml:id="_struct_cme_session_settings_1ab628ca5d3df5124b3d295b40b98b6870"/><section>
+    <title>SystemName</title>
+<indexterm><primary>SystemName</primary><secondary>CmeSessionSettings</secondary></indexterm>
+<indexterm><primary>CmeSessionSettings</primary><secondary>SystemName</secondary></indexterm>
+<para><computeroutput>std::string CmeSessionSettings::SystemName</computeroutput></para></section>
+<anchor xml:id="_struct_cme_session_settings_1af273f1307920f98c6bde0f0be76b6822"/><section>
+    <title>SystemVendor</title>
+<indexterm><primary>SystemVendor</primary><secondary>CmeSessionSettings</secondary></indexterm>
+<indexterm><primary>CmeSessionSettings</primary><secondary>SystemVendor</secondary></indexterm>
+<para><computeroutput>std::string CmeSessionSettings::SystemVendor</computeroutput></para></section>
+<anchor xml:id="_struct_cme_session_settings_1a401ef0f5f946efdb93046fea914c5fd9"/><section>
+    <title>SystemVersionId</title>
+<indexterm><primary>SystemVersionId</primary><secondary>CmeSessionSettings</secondary></indexterm>
+<indexterm><primary>CmeSessionSettings</primary><secondary>SystemVersionId</secondary></indexterm>
+<para><computeroutput>std::string CmeSessionSettings::SystemVersionId</computeroutput></para></section>
+<anchor xml:id="_struct_cme_session_settings_1ae7becf23a75285fe42595a93125762ab"/><section>
+    <title>Tag50_Auto</title>
+<indexterm><primary>Tag50_Auto</primary><secondary>CmeSessionSettings</secondary></indexterm>
+<indexterm><primary>CmeSessionSettings</primary><secondary>Tag50_Auto</secondary></indexterm>
+<para><computeroutput>std::string CmeSessionSettings::Tag50_Auto</computeroutput></para></section>
+<anchor xml:id="_struct_cme_session_settings_1a4249399af2dc5432dfd2b33a635ca5cc"/><section>
+    <title>Tag50_Manual</title>
+<indexterm><primary>Tag50_Manual</primary><secondary>CmeSessionSettings</secondary></indexterm>
+<indexterm><primary>CmeSessionSettings</primary><secondary>Tag50_Manual</secondary></indexterm>
+<para><computeroutput>std::string CmeSessionSettings::Tag50_Manual</computeroutput></para></section>
+<anchor xml:id="_struct_cme_session_settings_1a727c624d06e87e44b234748cae1833c0"/><section>
+    <title>TraderId</title>
+<indexterm><primary>TraderId</primary><secondary>CmeSessionSettings</secondary></indexterm>
+<indexterm><primary>CmeSessionSettings</primary><secondary>TraderId</secondary></indexterm>
+<para><computeroutput>std::string CmeSessionSettings::TraderId</computeroutput></para></section>
+<anchor xml:id="_struct_cme_session_settings_1a83a74d953ddac7a35260ec23e03bc563"/><section>
+    <title>UseFeed_A</title>
+<indexterm><primary>UseFeed_A</primary><secondary>CmeSessionSettings</secondary></indexterm>
+<indexterm><primary>CmeSessionSettings</primary><secondary>UseFeed_A</secondary></indexterm>
+<para><computeroutput>bool CmeSessionSettings::UseFeed_A</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+exchsupport/cme/il3/CmeSessionSettings.hpp</section>
+</section>

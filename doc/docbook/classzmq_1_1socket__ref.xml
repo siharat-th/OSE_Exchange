@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classzmq_1_1socket__ref" xml:lang="en-US">
+<title>zmq::socket_ref Class Reference</title>
+<indexterm><primary>zmq::socket_ref</primary></indexterm>
+<para>Inheritance diagram for zmq::socket_ref:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classzmq_1_1socket__ref.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classzmq_1_1socket__ref_1ad38bf1dd7ab89f7c1769462287c60c6f">socket_ref</link> (<link linkend="_structzmq_1_1from__handle__t">from_handle_t</link>, void *handle) ZMQ_NOTHROW</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_classzmq_1_1detail_1_1socket__base">zmq::detail::socket_base</link>        <itemizedlist>
+            <listitem><para>ZMQ_EXPLICIT <link linkend="_classzmq_1_1detail_1_1socket__base_1a482d492460ad5d9030181211fe3f77d9">socket_base</link> (void *handle) ZMQ_NOTHROW</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>void <link linkend="_classzmq_1_1detail_1_1socket__base_1a9a5fec44878fbae7f19432c23d103778">setsockopt</link> (int option_, T const &amp;optval)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classzmq_1_1detail_1_1socket__base_1ae8b25975545d24389d597f22416d3128">setsockopt</link> (int option_, const void *optval_, size_t optvallen_)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classzmq_1_1detail_1_1socket__base_1ae1ba7ffc7cbb86191fb224d572a3d871">getsockopt</link> (int option_, void *optval_, size_t *optvallen_) const</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>T <link linkend="_classzmq_1_1detail_1_1socket__base_1a763b3fa30215174e4e013c696008a56b">getsockopt</link> (int option_) const</para>
+</listitem>
+            <listitem><para>void <link linkend="_classzmq_1_1detail_1_1socket__base_1a628dccb2728cb2023674e40b61cf162e">bind</link> (std::string const &amp;addr)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classzmq_1_1detail_1_1socket__base_1ab2c7a5b316d1a01b308c67e09329d1b9">bind</link> (const char *addr_)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classzmq_1_1detail_1_1socket__base_1a1fd02cd14a084aa43172cecb31bf2283">unbind</link> (std::string const &amp;addr)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classzmq_1_1detail_1_1socket__base_1abcbafe7ea943efce7f495893d45c0217">unbind</link> (const char *addr_)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classzmq_1_1detail_1_1socket__base_1a086993903f2780ab07d86dd25621ba45">connect</link> (std::string const &amp;addr)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classzmq_1_1detail_1_1socket__base_1ac67aa317f184a19b5680b0749e3ded44">connect</link> (const char *addr_)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classzmq_1_1detail_1_1socket__base_1a01f21e0aab723a2f1eae23c732a2b0b8">disconnect</link> (std::string const &amp;addr)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classzmq_1_1detail_1_1socket__base_1aea931e2b556381ec5ee9a5e15b3d6c66">disconnect</link> (const char *addr_)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classzmq_1_1detail_1_1socket__base_1ad0d40c27911c67d71602c3b1ab06331f">connected</link> () const ZMQ_NOTHROW</para>
+</listitem>
+            <listitem><para>size_t <link linkend="_classzmq_1_1detail_1_1socket__base_1a2d723ddb789deed1e56a662b2ae7d296">send</link> (const void *buf_, size_t len_, int flags_=0)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classzmq_1_1detail_1_1socket__base_1acbe2664870fd1d0584789e6848be546c">send</link> (<link linkend="_classzmq_1_1message__t">message_t</link> &amp;msg_, int flags_=0)</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>bool <link linkend="_classzmq_1_1detail_1_1socket__base_1ae2fc0a7fd811ecb9e125c06dd1023906">send</link> (T first, T last, int flags_=0)</para>
+</listitem>
+            <listitem><para>size_t <link linkend="_classzmq_1_1detail_1_1socket__base_1a6ec3c910060124c12aaca86e4ac684f0">recv</link> (void *buf_, size_t len_, int flags_=0)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classzmq_1_1detail_1_1socket__base_1a569f111034e696188df635d428bbcb2f">recv</link> (<link linkend="_classzmq_1_1message__t">message_t</link> *msg_, int flags_=0)</para>
+</listitem>
+            <listitem><para>ZMQ_NODISCARD void * <link linkend="_classzmq_1_1detail_1_1socket__base_1a951d47913055ae4da376bffe5f83127e">handle</link> () ZMQ_NOTHROW</para>
+</listitem>
+            <listitem><para>ZMQ_NODISCARD const void * <link linkend="_classzmq_1_1detail_1_1socket__base_1af16156aaeb7961340b44bfa23828f80f">handle</link> () const ZMQ_NOTHROW</para>
+</listitem>
+            <listitem><para>ZMQ_EXPLICIT <link linkend="_classzmq_1_1detail_1_1socket__base_1ab3143ebc18e274d9783c87dadf71262a">operator bool</link> () const ZMQ_NOTHROW</para>
+</listitem>
+            <listitem><para>ZMQ_EXPLICIT <link linkend="_classzmq_1_1detail_1_1socket__base_1a1eed50cf58d014bf27e3f53bdbd85356">operator bool</link> () ZMQ_NOTHROW</para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+Protected Attributes inherited from <link linkend="_classzmq_1_1detail_1_1socket__base">zmq::detail::socket_base</link>        <itemizedlist>
+            <listitem><para>void * <link linkend="_classzmq_1_1detail_1_1socket__base_1a69da2b4caf46c0e316c9c121298c827f">_handle</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classzmq_1_1socket__ref_1a3b9ba8aecff5e3ead5f6991970ec43af"/><section>
+    <title>socket_ref()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>socket_ref</primary><secondary>zmq::socket_ref</secondary></indexterm>
+<indexterm><primary>zmq::socket_ref</primary><secondary>socket_ref</secondary></indexterm>
+<para><computeroutput>zmq::socket_ref::socket_ref ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1socket__ref_1ad38bf1dd7ab89f7c1769462287c60c6f"/><section>
+    <title>socket_ref()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>socket_ref</primary><secondary>zmq::socket_ref</secondary></indexterm>
+<indexterm><primary>zmq::socket_ref</primary><secondary>socket_ref</secondary></indexterm>
+<para><computeroutput>zmq::socket_ref::socket_ref (<link linkend="_structzmq_1_1from__handle__t">from_handle_t</link> , void * handle)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+ZMQ/zmq.hpp</section>
+</section>

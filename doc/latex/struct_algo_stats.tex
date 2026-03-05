@@ -1,0 +1,84 @@
+\doxysection{Algo\+Stats Struct Reference}
+\hypertarget{struct_algo_stats}{}\label{struct_algo_stats}\index{AlgoStats@{AlgoStats}}
+
+
+Structure representing the types of algorithm statistics.  
+
+
+
+
+{\ttfamily \#include $<$algo\+\_\+structs.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{struct_algo_stats_aa6ad6c12d8ac79f84e3d98668b9347c6}{Enum}} \{ \mbox{\hyperlink{struct_algo_stats_aa6ad6c12d8ac79f84e3d98668b9347c6aa97e45cc60ab644c0e0c2f9f4bfbc210}{GENERIC}} = 0
+, \mbox{\hyperlink{struct_algo_stats_aa6ad6c12d8ac79f84e3d98668b9347c6ac9d9521518d66348b16ce0fce2e70783}{MESSAGING}} = 1
+, \mbox{\hyperlink{struct_algo_stats_aa6ad6c12d8ac79f84e3d98668b9347c6a7206a8074913492ee1d1149da5282269}{ALERT}} = 2
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{struct_algo_stats_a14d6d045430c4b177d9b39da620f6331}{to\+String}} (\mbox{\hyperlink{struct_algo_stats_aa6ad6c12d8ac79f84e3d98668b9347c6}{Enum}} statstype)
+\begin{DoxyCompactList}\small\item\em Converts the statistics type to string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure representing the types of algorithm statistics. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{struct_algo_stats_aa6ad6c12d8ac79f84e3d98668b9347c6}\index{AlgoStats@{AlgoStats}!Enum@{Enum}}
+\index{Enum@{Enum}!AlgoStats@{AlgoStats}}
+\doxysubsubsection{\texorpdfstring{Enum}{Enum}}
+{\footnotesize\ttfamily \label{struct_algo_stats_aa6ad6c12d8ac79f84e3d98668b9347c6} 
+enum \mbox{\hyperlink{struct_algo_stats_aa6ad6c12d8ac79f84e3d98668b9347c6}{Algo\+Stats\+::\+Enum}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GENERIC@{GENERIC}!AlgoStats@{AlgoStats}}\index{AlgoStats@{AlgoStats}!GENERIC@{GENERIC}}}\Hypertarget{struct_algo_stats_aa6ad6c12d8ac79f84e3d98668b9347c6aa97e45cc60ab644c0e0c2f9f4bfbc210}\label{struct_algo_stats_aa6ad6c12d8ac79f84e3d98668b9347c6} 
+GENERIC&Generic statistics. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MESSAGING@{MESSAGING}!AlgoStats@{AlgoStats}}\index{AlgoStats@{AlgoStats}!MESSAGING@{MESSAGING}}}\Hypertarget{struct_algo_stats_aa6ad6c12d8ac79f84e3d98668b9347c6ac9d9521518d66348b16ce0fce2e70783}\label{struct_algo_stats_aa6ad6c12d8ac79f84e3d98668b9347c6} 
+MESSAGING&Messaging statistics. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ALERT@{ALERT}!AlgoStats@{AlgoStats}}\index{AlgoStats@{AlgoStats}!ALERT@{ALERT}}}\Hypertarget{struct_algo_stats_aa6ad6c12d8ac79f84e3d98668b9347c6a7206a8074913492ee1d1149da5282269}\label{struct_algo_stats_aa6ad6c12d8ac79f84e3d98668b9347c6} 
+ALERT&Alert statistics. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_algo_stats_a14d6d045430c4b177d9b39da620f6331}\index{AlgoStats@{AlgoStats}!toString@{toString}}
+\index{toString@{toString}!AlgoStats@{AlgoStats}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily \label{struct_algo_stats_a14d6d045430c4b177d9b39da620f6331} 
+static std\+::string Algo\+Stats\+::to\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_algo_stats_aa6ad6c12d8ac79f84e3d98668b9347c6}{Enum}}}]{statstype}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Converts the statistics type to string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em statstype} & The statistics type. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The string representation of the statistics type. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00343}{ALERT}}, \mbox{\hyperlink{l00341}{GENERIC}}, and \mbox{\hyperlink{l00342}{MESSAGING}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00379}{stats\+::\+Get\+Type()}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Algo\+Support/algo\+\_\+structs.\+hpp\end{DoxyCompactItemize}

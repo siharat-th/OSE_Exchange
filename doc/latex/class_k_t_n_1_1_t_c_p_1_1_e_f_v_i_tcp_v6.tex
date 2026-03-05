@@ -1,0 +1,142 @@
+\doxysection{KTN\+::TCP\+::EFVITcp\+V6 Class Reference}
+\hypertarget{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6}{}\label{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6}\index{KTN::TCP::EFVITcpV6@{KTN::TCP::EFVITcpV6}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_a02ef009f3aca8db044088a220eeb886b}\label{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_a02ef009f3aca8db044088a220eeb886b} 
+void {\bfseries EFVI\+\_\+\+TCP\+\_\+\+Start} (int fd)
+\item 
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_a8379e746a9554114dff9d4817b46d9b5}\label{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_a8379e746a9554114dff9d4817b46d9b5} 
+void {\bfseries create\+Efvi\+Tcp\+Feed\+Filter} (\mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_service_descriptor}{Service\+Descriptor}} \&feed)
+\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_a5c6f6d7f905742675d55b30dc40011a3}{Init}} (\mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_service_descriptor}{Service\+Descriptor}} \&desc, bool isA)
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_ad0b37b10f454b0537150302eac4da029}{Subscribe}} (\mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_tcp_callback}{Tcp\+Callback}} \texorpdfstring{$\ast$}{*}callback)
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_abdc9c1497ec4a4cf7f46cacd7f1c810b}{Stop}} ()
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_ab21fecd7ed3ecc748d6980b7681c7bce}{Poll}} ()
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_a91acf32f2f3fbd84477597d055b0514d}{Send\+Master}} (char \texorpdfstring{$\ast$}{*}buffer, size\+\_\+t buffer\+\_\+length, bool send\+\_\+delegated)
+\item 
+int \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_ac0510e41fe4f3e6b4833e5217d370ec6}{Send\+EFVI\+\_\+\+Delegated}} (char \texorpdfstring{$\ast$}{*}buffer, size\+\_\+t buffer\+\_\+length)
+\item 
+int \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_a4706c635df547e0ae4b7265001bcdf79}{Send\+TCP\+\_\+\+Direct}} (char \texorpdfstring{$\ast$}{*}buffer, size\+\_\+t buffer\+\_\+length)
+\item 
+int \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_aa71eeecd20db6c77f6c83b9af0da36dd}{Send\+Normal}} (char \texorpdfstring{$\ast$}{*}buffer, size\+\_\+t buffer\+\_\+length)
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_a6f8d5ae2c5fdca8d0722e235c9a9b1a5}{Send\+Warmup}} (char \texorpdfstring{$\ast$}{*}buffer, size\+\_\+t buffer\+\_\+length)
+\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_aa14bd4cb7ffcac3b6dd62c64b2e34241}{tas\+\_\+send}} ()
+\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_a9cca5b147976771693dffb8b574aff9d}{tas\+\_\+prepare}} (const \mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g}{KTN\+\_\+\+MSG}} \&msg)
+\item 
+int \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_afa55926ea49ec2ec5d87b615c7aa24f1}{Fd}} ()
+\item 
+int \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_a2ab576633955430571c9e8ec1deac7be}{Seg\+Id}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_a20586fe251db8ffd74dc0120d19a18bb}\index{KTN::TCP::EFVITcpV6@{KTN::TCP::EFVITcpV6}!EFVITcpV6@{EFVITcpV6}}
+\index{EFVITcpV6@{EFVITcpV6}!KTN::TCP::EFVITcpV6@{KTN::TCP::EFVITcpV6}}
+\doxysubsubsection{\texorpdfstring{EFVITcpV6()}{EFVITcpV6()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_a20586fe251db8ffd74dc0120d19a18bb} 
+EFVITcp\+V6\+::\+EFVITcp\+V6 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_abf15cfa798605425f8f9fae38e38e243}\index{KTN::TCP::EFVITcpV6@{KTN::TCP::EFVITcpV6}!````~EFVITcpV6@{\texorpdfstring{$\sim$}{\string~}EFVITcpV6}}
+\index{````~EFVITcpV6@{\texorpdfstring{$\sim$}{\string~}EFVITcpV6}!KTN::TCP::EFVITcpV6@{KTN::TCP::EFVITcpV6}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}EFVITcpV6()}{\string~EFVITcpV6()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_abf15cfa798605425f8f9fae38e38e243} 
+EFVITcp\+V6\+::\texorpdfstring{$\sim$}{\string~}\+EFVITcp\+V6 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_afa55926ea49ec2ec5d87b615c7aa24f1}\index{KTN::TCP::EFVITcpV6@{KTN::TCP::EFVITcpV6}!Fd@{Fd}}
+\index{Fd@{Fd}!KTN::TCP::EFVITcpV6@{KTN::TCP::EFVITcpV6}}
+\doxysubsubsection{\texorpdfstring{Fd()}{Fd()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_afa55926ea49ec2ec5d87b615c7aa24f1} 
+int KTN\+::\+TCP\+::\+EFVITcp\+V6\+::\+Fd (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_a5c6f6d7f905742675d55b30dc40011a3}\index{KTN::TCP::EFVITcpV6@{KTN::TCP::EFVITcpV6}!Init@{Init}}
+\index{Init@{Init}!KTN::TCP::EFVITcpV6@{KTN::TCP::EFVITcpV6}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_a5c6f6d7f905742675d55b30dc40011a3} 
+bool EFVITcp\+V6\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_service_descriptor}{Service\+Descriptor}} \&}]{desc}{, }\item[{bool}]{isA}{ = {\ttfamily true}}\end{DoxyParamCaption})}
+
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_ab21fecd7ed3ecc748d6980b7681c7bce}\index{KTN::TCP::EFVITcpV6@{KTN::TCP::EFVITcpV6}!Poll@{Poll}}
+\index{Poll@{Poll}!KTN::TCP::EFVITcpV6@{KTN::TCP::EFVITcpV6}}
+\doxysubsubsection{\texorpdfstring{Poll()}{Poll()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_ab21fecd7ed3ecc748d6980b7681c7bce} 
+void EFVITcp\+V6\+::\+Poll (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_a2ab576633955430571c9e8ec1deac7be}\index{KTN::TCP::EFVITcpV6@{KTN::TCP::EFVITcpV6}!SegId@{SegId}}
+\index{SegId@{SegId}!KTN::TCP::EFVITcpV6@{KTN::TCP::EFVITcpV6}}
+\doxysubsubsection{\texorpdfstring{SegId()}{SegId()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_a2ab576633955430571c9e8ec1deac7be} 
+int KTN\+::\+TCP\+::\+EFVITcp\+V6\+::\+Seg\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_ac0510e41fe4f3e6b4833e5217d370ec6}\index{KTN::TCP::EFVITcpV6@{KTN::TCP::EFVITcpV6}!SendEFVI\_Delegated@{SendEFVI\_Delegated}}
+\index{SendEFVI\_Delegated@{SendEFVI\_Delegated}!KTN::TCP::EFVITcpV6@{KTN::TCP::EFVITcpV6}}
+\doxysubsubsection{\texorpdfstring{SendEFVI\_Delegated()}{SendEFVI\_Delegated()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_ac0510e41fe4f3e6b4833e5217d370ec6} 
+int EFVITcp\+V6\+::\+Send\+EFVI\+\_\+\+Delegated (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{buffer}{, }\item[{size\+\_\+t}]{buffer\+\_\+length}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_a91acf32f2f3fbd84477597d055b0514d}\index{KTN::TCP::EFVITcpV6@{KTN::TCP::EFVITcpV6}!SendMaster@{SendMaster}}
+\index{SendMaster@{SendMaster}!KTN::TCP::EFVITcpV6@{KTN::TCP::EFVITcpV6}}
+\doxysubsubsection{\texorpdfstring{SendMaster()}{SendMaster()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_a91acf32f2f3fbd84477597d055b0514d} 
+void EFVITcp\+V6\+::\+Send\+Master (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{buffer}{, }\item[{size\+\_\+t}]{buffer\+\_\+length}{, }\item[{bool}]{send\+\_\+delegated}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_aa71eeecd20db6c77f6c83b9af0da36dd}\index{KTN::TCP::EFVITcpV6@{KTN::TCP::EFVITcpV6}!SendNormal@{SendNormal}}
+\index{SendNormal@{SendNormal}!KTN::TCP::EFVITcpV6@{KTN::TCP::EFVITcpV6}}
+\doxysubsubsection{\texorpdfstring{SendNormal()}{SendNormal()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_aa71eeecd20db6c77f6c83b9af0da36dd} 
+int EFVITcp\+V6\+::\+Send\+Normal (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{buffer}{, }\item[{size\+\_\+t}]{buffer\+\_\+length}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_a4706c635df547e0ae4b7265001bcdf79}\index{KTN::TCP::EFVITcpV6@{KTN::TCP::EFVITcpV6}!SendTCP\_Direct@{SendTCP\_Direct}}
+\index{SendTCP\_Direct@{SendTCP\_Direct}!KTN::TCP::EFVITcpV6@{KTN::TCP::EFVITcpV6}}
+\doxysubsubsection{\texorpdfstring{SendTCP\_Direct()}{SendTCP\_Direct()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_a4706c635df547e0ae4b7265001bcdf79} 
+int EFVITcp\+V6\+::\+Send\+TCP\+\_\+\+Direct (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{buffer}{, }\item[{size\+\_\+t}]{buffer\+\_\+length}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_a6f8d5ae2c5fdca8d0722e235c9a9b1a5}\index{KTN::TCP::EFVITcpV6@{KTN::TCP::EFVITcpV6}!SendWarmup@{SendWarmup}}
+\index{SendWarmup@{SendWarmup}!KTN::TCP::EFVITcpV6@{KTN::TCP::EFVITcpV6}}
+\doxysubsubsection{\texorpdfstring{SendWarmup()}{SendWarmup()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_a6f8d5ae2c5fdca8d0722e235c9a9b1a5} 
+void EFVITcp\+V6\+::\+Send\+Warmup (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{buffer}{, }\item[{size\+\_\+t}]{buffer\+\_\+length}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_abdc9c1497ec4a4cf7f46cacd7f1c810b}\index{KTN::TCP::EFVITcpV6@{KTN::TCP::EFVITcpV6}!Stop@{Stop}}
+\index{Stop@{Stop}!KTN::TCP::EFVITcpV6@{KTN::TCP::EFVITcpV6}}
+\doxysubsubsection{\texorpdfstring{Stop()}{Stop()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_abdc9c1497ec4a4cf7f46cacd7f1c810b} 
+void EFVITcp\+V6\+::\+Stop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_ad0b37b10f454b0537150302eac4da029}\index{KTN::TCP::EFVITcpV6@{KTN::TCP::EFVITcpV6}!Subscribe@{Subscribe}}
+\index{Subscribe@{Subscribe}!KTN::TCP::EFVITcpV6@{KTN::TCP::EFVITcpV6}}
+\doxysubsubsection{\texorpdfstring{Subscribe()}{Subscribe()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_ad0b37b10f454b0537150302eac4da029} 
+void EFVITcp\+V6\+::\+Subscribe (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_tcp_callback}{Tcp\+Callback}} \texorpdfstring{$\ast$}{*}}]{callback}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_a9cca5b147976771693dffb8b574aff9d}\index{KTN::TCP::EFVITcpV6@{KTN::TCP::EFVITcpV6}!tas\_prepare@{tas\_prepare}}
+\index{tas\_prepare@{tas\_prepare}!KTN::TCP::EFVITcpV6@{KTN::TCP::EFVITcpV6}}
+\doxysubsubsection{\texorpdfstring{tas\_prepare()}{tas\_prepare()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_a9cca5b147976771693dffb8b574aff9d} 
+bool EFVITcp\+V6\+::tas\+\_\+prepare (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g}{KTN\+\_\+\+MSG}} \&}]{msg}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_aa14bd4cb7ffcac3b6dd62c64b2e34241}\index{KTN::TCP::EFVITcpV6@{KTN::TCP::EFVITcpV6}!tas\_send@{tas\_send}}
+\index{tas\_send@{tas\_send}!KTN::TCP::EFVITcpV6@{KTN::TCP::EFVITcpV6}}
+\doxysubsubsection{\texorpdfstring{tas\_send()}{tas\_send()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6_aa14bd4cb7ffcac3b6dd62c64b2e34241} 
+bool EFVITcp\+V6\+::tas\+\_\+send (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Ktn\+Efvi/EFVITcp\+V6.\+hpp\item 
+Ktn\+Efvi/EFVITcp\+V6.\+cpp\end{DoxyCompactItemize}

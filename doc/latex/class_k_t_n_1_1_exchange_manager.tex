@@ -1,0 +1,126 @@
+\doxysection{KTN\+::Exchange\+Manager Class Reference}
+\hypertarget{class_k_t_n_1_1_exchange_manager}{}\label{class_k_t_n_1_1_exchange_manager}\index{KTN::ExchangeManager@{KTN::ExchangeManager}}
+
+
+{\ttfamily \#include $<$Exchange\+Manager.\+hpp$>$}
+
+Inheritance diagram for KTN\+::Exchange\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_k_t_n_1_1_exchange_manager}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_exchange_manager_a0a85bc16e850b8f6c3362b223b45fad6}{Exchange\+Manager}} (tbb\+::concurrent\+\_\+queue$<$ \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} $>$ \&qords, const string \&settingsfile)
+\item 
+virtual \mbox{\hyperlink{class_k_t_n_1_1_exchange_manager_aaee74b0b7085d6285206174432c6089e}{\texorpdfstring{$\sim$}{\string~}\+Exchange\+Manager}} ()
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_exchange_manager_a8e13dfc55d6f21a3eb32b0749d613590}{on\+Command}} (const \mbox{\hyperlink{struct_instruction}{Instruction}} \&cmd)
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_exchange_manager_aa3e0ad72fbf75b496abaec2520617734}{Send}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord)
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_exchange_manager_a4664b7f9f0263b681940d91b2dfa850f}{Send\+Order\+With\+Hedge}} (\mbox{\hyperlink{struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_order_with_hedge}{Order\+With\+Hedge}} \&oh)
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_exchange_manager_a1bb3e122b0712f0f20eaff8717e196a2}{Send\+Hedge\+Instruction}} (uint64\+\_\+t ordereqid, const vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3}{Spread\+Hedge\+V3}} $>$ \&hdg)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_named_thread}{Named\+Thread}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_named_thread_a891fabdc2d824048ec05c82e7ef8c69a}{Named\+Thread}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_named_thread_a018dadb59e5af98ee734301a1baa50cb}{\texorpdfstring{$\sim$}{\string~}\+Named\+Thread}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_named_thread_a9fa42542ff43c89fb9bbc33de9c87e34}{Create\+And\+Run}} (string name, int core)
+\begin{DoxyCompactList}\small\item\em Creates and runs the named thread on the specified core. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_named_thread_ad4809c571171be13f0f91f540d5c196f}{Join}} ()
+\begin{DoxyCompactList}\small\item\em Joins the named thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class Name\+: \doxylink{class_k_t_n_1_1_exchange_manager}{Exchange\+Manager} Purpose\+: Container class for exchange handlers. This class will spawn a thread for polling of exchange handler You can also pass messages/commands to the exchange handler via queues 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_k_t_n_1_1_exchange_manager_a0a85bc16e850b8f6c3362b223b45fad6}\index{KTN::ExchangeManager@{KTN::ExchangeManager}!ExchangeManager@{ExchangeManager}}
+\index{ExchangeManager@{ExchangeManager}!KTN::ExchangeManager@{KTN::ExchangeManager}}
+\doxysubsubsection{\texorpdfstring{ExchangeManager()}{ExchangeManager()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_exchange_manager_a0a85bc16e850b8f6c3362b223b45fad6} 
+Exchange\+Manager\+::\+Exchange\+Manager (\begin{DoxyParamCaption}\item[{tbb\+::concurrent\+\_\+queue$<$ \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} $>$ \&}]{qords}{, }\item[{const string \&}]{settingsfile}{}\end{DoxyParamCaption})}
+
+Constructor for \doxylink{class_k_t_n_1_1_exchange_manager}{Exchange\+Manager} class. 
+\begin{DoxyParams}{Parameters}
+{\em qords} & The concurrent queue for storing order pods. \\
+\hline
+{\em settingsfile} & The settings file for the exchange manager. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00018}{Named\+Thread\+::\+Create\+And\+Run()}}, \mbox{\hyperlink{l00123}{Settings\+::get()}}, \mbox{\hyperlink{l00133}{Settings\+::get\+Integer()}}, and \mbox{\hyperlink{l00019}{String\+Splitter\+::\+Split()}}.
+
+\Hypertarget{class_k_t_n_1_1_exchange_manager_aaee74b0b7085d6285206174432c6089e}\index{KTN::ExchangeManager@{KTN::ExchangeManager}!````~ExchangeManager@{\texorpdfstring{$\sim$}{\string~}ExchangeManager}}
+\index{````~ExchangeManager@{\texorpdfstring{$\sim$}{\string~}ExchangeManager}!KTN::ExchangeManager@{KTN::ExchangeManager}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ExchangeManager()}{\string~ExchangeManager()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_exchange_manager_aaee74b0b7085d6285206174432c6089e} 
+Exchange\+Manager\+::\texorpdfstring{$\sim$}{\string~}\+Exchange\+Manager (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destructor for \doxylink{class_k_t_n_1_1_exchange_manager}{Exchange\+Manager} class. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_exchange_manager_a8e13dfc55d6f21a3eb32b0749d613590}\index{KTN::ExchangeManager@{KTN::ExchangeManager}!onCommand@{onCommand}}
+\index{onCommand@{onCommand}!KTN::ExchangeManager@{KTN::ExchangeManager}}
+\doxysubsubsection{\texorpdfstring{onCommand()}{onCommand()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_exchange_manager_a8e13dfc55d6f21a3eb32b0749d613590} 
+void Exchange\+Manager\+::on\+Command (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_instruction}{Instruction}} \&}]{cmd}{}\end{DoxyParamCaption})}
+
+Handles the command received by the exchange manager. 
+\begin{DoxyParams}{Parameters}
+{\em cmd} & The instruction/command to be handled. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{l00102}{Raptor2\+::\+Run()}}, \mbox{\hyperlink{l00455}{Raptor2\+::\+Send()}}, \mbox{\hyperlink{l00507}{Raptor2\+::\+Send\+Hedge\+Instruction()}}, \mbox{\hyperlink{l00475}{Raptor2\+::\+Send\+Order\+With\+Hedge()}}, and \mbox{\hyperlink{l00146}{Raptor2\+::\+Stop()}}.
+
+\Hypertarget{class_k_t_n_1_1_exchange_manager_aa3e0ad72fbf75b496abaec2520617734}\index{KTN::ExchangeManager@{KTN::ExchangeManager}!Send@{Send}}
+\index{Send@{Send}!KTN::ExchangeManager@{KTN::ExchangeManager}}
+\doxysubsubsection{\texorpdfstring{Send()}{Send()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_exchange_manager_aa3e0ad72fbf75b496abaec2520617734} 
+void KTN\+::\+Exchange\+Manager\+::\+Send (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&}]{ord}{}\end{DoxyParamCaption})}
+
+Sends an order pod to the exchange. 
+\begin{DoxyParams}{Parameters}
+{\em ord} & The order pod to be sent. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_exchange_manager_a1bb3e122b0712f0f20eaff8717e196a2}\index{KTN::ExchangeManager@{KTN::ExchangeManager}!SendHedgeInstruction@{SendHedgeInstruction}}
+\index{SendHedgeInstruction@{SendHedgeInstruction}!KTN::ExchangeManager@{KTN::ExchangeManager}}
+\doxysubsubsection{\texorpdfstring{SendHedgeInstruction()}{SendHedgeInstruction()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_exchange_manager_a1bb3e122b0712f0f20eaff8717e196a2} 
+void KTN\+::\+Exchange\+Manager\+::\+Send\+Hedge\+Instruction (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{ordereqid}{, }\item[{const vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3}{Spread\+Hedge\+V3}} $>$ \&}]{hdg}{}\end{DoxyParamCaption})}
+
+Sends a hedge instruction to the exchange. 
+\begin{DoxyParams}{Parameters}
+{\em ordereqid} & The order request ID. \\
+\hline
+{\em hdg} & The vector of spread hedge instructions. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_exchange_manager_a4664b7f9f0263b681940d91b2dfa850f}\index{KTN::ExchangeManager@{KTN::ExchangeManager}!SendOrderWithHedge@{SendOrderWithHedge}}
+\index{SendOrderWithHedge@{SendOrderWithHedge}!KTN::ExchangeManager@{KTN::ExchangeManager}}
+\doxysubsubsection{\texorpdfstring{SendOrderWithHedge()}{SendOrderWithHedge()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_exchange_manager_a4664b7f9f0263b681940d91b2dfa850f} 
+void KTN\+::\+Exchange\+Manager\+::\+Send\+Order\+With\+Hedge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_order_with_hedge}{Order\+With\+Hedge}} \&}]{oh}{}\end{DoxyParamCaption})}
+
+Sends an order with hedge to the exchange. 
+\begin{DoxyParams}{Parameters}
+{\em oh} & The order with hedge to be sent. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Exchange\+Handlers2/Exchange\+Manager.\+hpp\item 
+Exchange\+Handlers2/Exchange\+Manager.\+cpp\end{DoxyCompactItemize}

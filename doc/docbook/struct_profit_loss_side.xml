@@ -1,0 +1,303 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_profit_loss_side" xml:lang="en-US">
+<title>ProfitLossSide Struct Reference</title>
+<indexterm><primary>ProfitLossSide</primary></indexterm>
+<para>
+
+<para>Structure representing the profit and loss of a side of a trade (Buy or Sell) </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;algo_pl.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_struct_profit_loss_side_1ad10bee35fa092e7950177054d85f6d84">Print</link> ()</para>
+
+<para>Prints the profit and loss side information. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_struct_profit_loss_side">ProfitLossSide</link> <link linkend="_struct_profit_loss_side_1a0530cb20bc4ace405ed3f6449ad745b4">getPlMolecule</link> (const vector&lt; <link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> &gt; &amp;fills, double bidprice, double askprice, double tick)</para>
+
+<para>Calculates the profit and loss side based on the fills, bid price, ask price, and tick value. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_struct_profit_loss_side_1aa8703869c8db40c696b029953a1c7c5c">iside</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_profit_loss_side_1a6c40b2bb652d24f55d648ce58a0f2002">bid</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_profit_loss_side_1a641844ab61b2844b47a2a3ab2b16735d">ask</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_profit_loss_side_1a7aa01ca7d15e368766d80aea6fbc1ace">totqty</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_profit_loss_side_1a1268a77e01c28ff65dbfba339adf3dfa">totbuys</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_profit_loss_side_1ab0d9442b8c53e04771ac8701962f0e94">totsells</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_profit_loss_side_1a6db7a6cf201e7f5f90bd74ef0037e9f4">netpos</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_profit_loss_side_1ad47b1852604d11715bd204c8e6555c95">sumpx</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_profit_loss_side_1a2ebb552c10f2df1f2968e16706330c14">avgpx</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_profit_loss_side_1a03195e73bbf750640f73b99e206ec5ef">buyavgpx</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_profit_loss_side_1a23b55ad894620f4064e0323b5a88fadf">sellavgpx</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_profit_loss_side_1a27f88c7a68dd58d7e3e397b515fb1eb0">realized</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_profit_loss_side_1aea47c5f16fd9cb6552ce9511c307a48a">unrealized</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_profit_loss_side_1af15623ac8f0da9dc12ac6a957f8dc23f">tickvalue</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_profit_loss_side_1af70b796a37b6dee34565e8c20401a5cb">pl</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_profit_loss_side_1afa9468ae9c4a8e752af3402e8a0399b1">plprice</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_profit_loss_side_1a4a77cd5b5eaa8a129d7a1498592e7e7e">fillcount</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Structure representing the profit and loss of a side of a trade (Buy or Sell) </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_profit_loss_side_1a0530cb20bc4ace405ed3f6449ad745b4"/><section>
+    <title>getPlMolecule()</title>
+<indexterm><primary>getPlMolecule</primary><secondary>ProfitLossSide</secondary></indexterm>
+<indexterm><primary>ProfitLossSide</primary><secondary>getPlMolecule</secondary></indexterm>
+<para><computeroutput>static <link linkend="_struct_profit_loss_side">ProfitLossSide</link> ProfitLossSide::getPlMolecule (const vector&lt; <link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> &gt; &amp; fills, double bidprice, double askprice, double tick)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Calculates the profit and loss side based on the fills, bid price, ask price, and tick value. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>fills</entry><entry>
+<para>The vector of fills </para>
+</entry>
+                            </row>
+                            <row>
+<entry>bidprice</entry><entry>
+<para>The bid price </para>
+</entry>
+                            </row>
+                            <row>
+<entry>askprice</entry><entry>
+<para>The ask price </para>
+</entry>
+                            </row>
+                            <row>
+<entry>tick</entry><entry>
+<para>The tick value </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The calculated profit and loss side </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00030">ask</link>, <link linkend="_l00036">avgpx</link>, <link linkend="_l00029">bid</link>, <link linkend="_l00038">buyavgpx</link>, <link linkend="_l00047">fillcount</link>, <link linkend="_l00034">netpos</link>, <link linkend="_l00045">pl</link>, <link linkend="_l00046">plprice</link>, <link linkend="_l00041">realized</link>, <link linkend="_l00039">sellavgpx</link>, <link linkend="_l00035">sumpx</link>, <link linkend="_l00044">tickvalue</link>, <link linkend="_l00032">totbuys</link>, <link linkend="_l00031">totqty</link>, <link linkend="_l00033">totsells</link>, and <link linkend="_l00042">unrealized</link>.</para>
+</section>
+<anchor xml:id="_struct_profit_loss_side_1ad10bee35fa092e7950177054d85f6d84"/><section>
+    <title>Print()</title>
+<indexterm><primary>Print</primary><secondary>ProfitLossSide</secondary></indexterm>
+<indexterm><primary>ProfitLossSide</primary><secondary>Print</secondary></indexterm>
+<para><computeroutput>string ProfitLossSide::Print ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Prints the profit and loss side information. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The formatted string representation of the profit and loss side </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00036">avgpx</link>, <link linkend="_l00045">pl</link>, <link linkend="_l00035">sumpx</link>, and <link linkend="_l00031">totqty</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_profit_loss_side_1a641844ab61b2844b47a2a3ab2b16735d"/><section>
+    <title>ask</title>
+<indexterm><primary>ask</primary><secondary>ProfitLossSide</secondary></indexterm>
+<indexterm><primary>ProfitLossSide</primary><secondary>ask</secondary></indexterm>
+<para><computeroutput>double ProfitLossSide::ask</computeroutput></para>
+<para>The ask price </para>
+<para>
+Referenced by <link linkend="_l00069">getPlMolecule()</link>.</para>
+</section>
+<anchor xml:id="_struct_profit_loss_side_1a2ebb552c10f2df1f2968e16706330c14"/><section>
+    <title>avgpx</title>
+<indexterm><primary>avgpx</primary><secondary>ProfitLossSide</secondary></indexterm>
+<indexterm><primary>ProfitLossSide</primary><secondary>avgpx</secondary></indexterm>
+<para><computeroutput>double ProfitLossSide::avgpx</computeroutput></para>
+<para>The average price </para>
+<para>
+Referenced by <link linkend="_l00069">getPlMolecule()</link>, and <link linkend="_l00053">Print()</link>.</para>
+</section>
+<anchor xml:id="_struct_profit_loss_side_1a6c40b2bb652d24f55d648ce58a0f2002"/><section>
+    <title>bid</title>
+<indexterm><primary>bid</primary><secondary>ProfitLossSide</secondary></indexterm>
+<indexterm><primary>ProfitLossSide</primary><secondary>bid</secondary></indexterm>
+<para><computeroutput>double ProfitLossSide::bid</computeroutput></para>
+<para>The bid price </para>
+<para>
+Referenced by <link linkend="_l00069">getPlMolecule()</link>.</para>
+</section>
+<anchor xml:id="_struct_profit_loss_side_1a03195e73bbf750640f73b99e206ec5ef"/><section>
+    <title>buyavgpx</title>
+<indexterm><primary>buyavgpx</primary><secondary>ProfitLossSide</secondary></indexterm>
+<indexterm><primary>ProfitLossSide</primary><secondary>buyavgpx</secondary></indexterm>
+<para><computeroutput>double ProfitLossSide::buyavgpx</computeroutput></para>
+<para>The average buy price </para>
+<para>
+Referenced by <link linkend="_l00069">getPlMolecule()</link>.</para>
+</section>
+<anchor xml:id="_struct_profit_loss_side_1a4a77cd5b5eaa8a129d7a1498592e7e7e"/><section>
+    <title>fillcount</title>
+<indexterm><primary>fillcount</primary><secondary>ProfitLossSide</secondary></indexterm>
+<indexterm><primary>ProfitLossSide</primary><secondary>fillcount</secondary></indexterm>
+<para><computeroutput>int ProfitLossSide::fillcount</computeroutput></para>
+<para>The number of fills </para>
+<para>
+Referenced by <link linkend="_l00069">getPlMolecule()</link>.</para>
+</section>
+<anchor xml:id="_struct_profit_loss_side_1aa8703869c8db40c696b029953a1c7c5c"/><section>
+    <title>iside</title>
+<indexterm><primary>iside</primary><secondary>ProfitLossSide</secondary></indexterm>
+<indexterm><primary>ProfitLossSide</primary><secondary>iside</secondary></indexterm>
+<para><computeroutput>int ProfitLossSide::iside</computeroutput></para>
+<para>The side of the trade </para>
+</section>
+<anchor xml:id="_struct_profit_loss_side_1a6db7a6cf201e7f5f90bd74ef0037e9f4"/><section>
+    <title>netpos</title>
+<indexterm><primary>netpos</primary><secondary>ProfitLossSide</secondary></indexterm>
+<indexterm><primary>ProfitLossSide</primary><secondary>netpos</secondary></indexterm>
+<para><computeroutput>double ProfitLossSide::netpos</computeroutput></para>
+<para>The net position </para>
+<para>
+Referenced by <link linkend="_l00069">getPlMolecule()</link>.</para>
+</section>
+<anchor xml:id="_struct_profit_loss_side_1af70b796a37b6dee34565e8c20401a5cb"/><section>
+    <title>pl</title>
+<indexterm><primary>pl</primary><secondary>ProfitLossSide</secondary></indexterm>
+<indexterm><primary>ProfitLossSide</primary><secondary>pl</secondary></indexterm>
+<para><computeroutput>double ProfitLossSide::pl</computeroutput></para>
+<para>The profit/loss </para>
+<para>
+Referenced by <link linkend="_l00069">getPlMolecule()</link>, and <link linkend="_l00053">Print()</link>.</para>
+</section>
+<anchor xml:id="_struct_profit_loss_side_1afa9468ae9c4a8e752af3402e8a0399b1"/><section>
+    <title>plprice</title>
+<indexterm><primary>plprice</primary><secondary>ProfitLossSide</secondary></indexterm>
+<indexterm><primary>ProfitLossSide</primary><secondary>plprice</secondary></indexterm>
+<para><computeroutput>double ProfitLossSide::plprice</computeroutput></para>
+<para>The profit/loss price </para>
+<para>
+Referenced by <link linkend="_l00069">getPlMolecule()</link>.</para>
+</section>
+<anchor xml:id="_struct_profit_loss_side_1a27f88c7a68dd58d7e3e397b515fb1eb0"/><section>
+    <title>realized</title>
+<indexterm><primary>realized</primary><secondary>ProfitLossSide</secondary></indexterm>
+<indexterm><primary>ProfitLossSide</primary><secondary>realized</secondary></indexterm>
+<para><computeroutput>double ProfitLossSide::realized</computeroutput></para>
+<para>The realized profit/loss </para>
+<para>
+Referenced by <link linkend="_l00069">getPlMolecule()</link>.</para>
+</section>
+<anchor xml:id="_struct_profit_loss_side_1a23b55ad894620f4064e0323b5a88fadf"/><section>
+    <title>sellavgpx</title>
+<indexterm><primary>sellavgpx</primary><secondary>ProfitLossSide</secondary></indexterm>
+<indexterm><primary>ProfitLossSide</primary><secondary>sellavgpx</secondary></indexterm>
+<para><computeroutput>double ProfitLossSide::sellavgpx</computeroutput></para>
+<para>The average sell price </para>
+<para>
+Referenced by <link linkend="_l00069">getPlMolecule()</link>.</para>
+</section>
+<anchor xml:id="_struct_profit_loss_side_1ad47b1852604d11715bd204c8e6555c95"/><section>
+    <title>sumpx</title>
+<indexterm><primary>sumpx</primary><secondary>ProfitLossSide</secondary></indexterm>
+<indexterm><primary>ProfitLossSide</primary><secondary>sumpx</secondary></indexterm>
+<para><computeroutput>double ProfitLossSide::sumpx</computeroutput></para>
+<para>The sum of prices </para>
+<para>
+Referenced by <link linkend="_l00069">getPlMolecule()</link>, and <link linkend="_l00053">Print()</link>.</para>
+</section>
+<anchor xml:id="_struct_profit_loss_side_1af15623ac8f0da9dc12ac6a957f8dc23f"/><section>
+    <title>tickvalue</title>
+<indexterm><primary>tickvalue</primary><secondary>ProfitLossSide</secondary></indexterm>
+<indexterm><primary>ProfitLossSide</primary><secondary>tickvalue</secondary></indexterm>
+<para><computeroutput>double ProfitLossSide::tickvalue</computeroutput></para>
+<para>The tick value </para>
+<para>
+Referenced by <link linkend="_l00069">getPlMolecule()</link>.</para>
+</section>
+<anchor xml:id="_struct_profit_loss_side_1a1268a77e01c28ff65dbfba339adf3dfa"/><section>
+    <title>totbuys</title>
+<indexterm><primary>totbuys</primary><secondary>ProfitLossSide</secondary></indexterm>
+<indexterm><primary>ProfitLossSide</primary><secondary>totbuys</secondary></indexterm>
+<para><computeroutput>double ProfitLossSide::totbuys</computeroutput></para>
+<para>The total buy quantity </para>
+<para>
+Referenced by <link linkend="_l00069">getPlMolecule()</link>.</para>
+</section>
+<anchor xml:id="_struct_profit_loss_side_1a7aa01ca7d15e368766d80aea6fbc1ace"/><section>
+    <title>totqty</title>
+<indexterm><primary>totqty</primary><secondary>ProfitLossSide</secondary></indexterm>
+<indexterm><primary>ProfitLossSide</primary><secondary>totqty</secondary></indexterm>
+<para><computeroutput>double ProfitLossSide::totqty</computeroutput></para>
+<para>The total quantity </para>
+<para>
+Referenced by <link linkend="_l00069">getPlMolecule()</link>, and <link linkend="_l00053">Print()</link>.</para>
+</section>
+<anchor xml:id="_struct_profit_loss_side_1ab0d9442b8c53e04771ac8701962f0e94"/><section>
+    <title>totsells</title>
+<indexterm><primary>totsells</primary><secondary>ProfitLossSide</secondary></indexterm>
+<indexterm><primary>ProfitLossSide</primary><secondary>totsells</secondary></indexterm>
+<para><computeroutput>double ProfitLossSide::totsells</computeroutput></para>
+<para>The total sell quantity </para>
+<para>
+Referenced by <link linkend="_l00069">getPlMolecule()</link>.</para>
+</section>
+<anchor xml:id="_struct_profit_loss_side_1aea47c5f16fd9cb6552ce9511c307a48a"/><section>
+    <title>unrealized</title>
+<indexterm><primary>unrealized</primary><secondary>ProfitLossSide</secondary></indexterm>
+<indexterm><primary>ProfitLossSide</primary><secondary>unrealized</secondary></indexterm>
+<para><computeroutput>double ProfitLossSide::unrealized</computeroutput></para>
+<para>The unrealized profit/loss </para>
+<para>
+Referenced by <link linkend="_l00069">getPlMolecule()</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+AlgoSupport/algo_pl.hpp</section>
+</section>

@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_enum_session_state" xml:lang="en-US">
+<title>KTN::CME::IL3::EnumSessionState Struct Reference</title>
+<indexterm><primary>KTN::CME::IL3::EnumSessionState</primary></indexterm>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_enum_session_state_1a1a4fdd123ba195de2c11897d7329f645">Enum</link> : int { <?linebreak?><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_enum_session_state_1a1a4fdd123ba195de2c11897d7329f645a21efb64214a3afa2213da7282063c6ba">Disconnected</link>
+, <emphasis role="strong">StartingLoginProcess</emphasis>
+, <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_enum_session_state_1a1a4fdd123ba195de2c11897d7329f645a1ce80c86d8024bf33448693ccd95b7af">AwaitNegotiationResponse</link>
+, <emphasis role="strong">Negotiated</emphasis>
+, <?linebreak?><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_enum_session_state_1a1a4fdd123ba195de2c11897d7329f645accc6ea1b4a68e24940b1422c2c670162">AwaitEstablishmentAck</link>
+, <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_enum_session_state_1a1a4fdd123ba195de2c11897d7329f645a9167a10c646618f2b67441bc385fa3d9">AwaitConfirmingTerminate</link>
+, <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_enum_session_state_1a1a4fdd123ba195de2c11897d7329f645aa38d3bd559ab3125d2921ffa35a37a54">Established</link>
+, <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_enum_session_state_1a1a4fdd123ba195de2c11897d7329f645a8fa95f632ebbc9ccf2005eeef24b3821">Reconnecting</link>
+, <?linebreak?><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_enum_session_state_1a1a4fdd123ba195de2c11897d7329f645afe66cd4e3e6379de4c9bdafca38a444f">WaitForRetransmission</link>
+, <emphasis role="strong">Terminating</emphasis>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static std::string <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_enum_session_state_1a2f81a4c996e138d52cd13b200b80d664">toString</link> (int state)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_enum_session_state_1a1a4fdd123ba195de2c11897d7329f645"/><section>
+    <title>Enum</title>
+<indexterm><primary>Enum</primary><secondary>KTN::CME::IL3::EnumSessionState</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::EnumSessionState</primary><secondary>Enum</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_enum_session_state_1a1a4fdd123ba195de2c11897d7329f645">KTN::CME::IL3::EnumSessionState::Enum</link> : int</computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>Disconnected</primary><secondary>KTN::CME::IL3::EnumSessionState</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::EnumSessionState</primary><secondary>Disconnected</secondary></indexterm>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_enum_session_state_1a1a4fdd123ba195de2c11897d7329f645a21efb64214a3afa2213da7282063c6ba"/>Disconnected</entry><entry>
+<para>Session is disconnected. </para>
+</entry></row><row><entry><indexterm><primary>AwaitNegotiationResponse</primary><secondary>KTN::CME::IL3::EnumSessionState</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::EnumSessionState</primary><secondary>AwaitNegotiationResponse</secondary></indexterm>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_enum_session_state_1a1a4fdd123ba195de2c11897d7329f645a1ce80c86d8024bf33448693ccd95b7af"/>AwaitNegotiationResponse</entry><entry>
+<para>Session is waiting for the <link xlink:href="https://www.cmegroup.com/confluence/display/EPICSANDBOX/Negotiation+Response">Negotiation Response</link> message from the exchange. </para>
+</entry></row><row><entry><indexterm><primary>AwaitEstablishmentAck</primary><secondary>KTN::CME::IL3::EnumSessionState</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::EnumSessionState</primary><secondary>AwaitEstablishmentAck</secondary></indexterm>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_enum_session_state_1a1a4fdd123ba195de2c11897d7329f645accc6ea1b4a68e24940b1422c2c670162"/>AwaitEstablishmentAck</entry><entry>
+<para>Session is waiting for the <link xlink:href="https://www.cmegroup.com/confluence/display/EPICSANDBOX/Establishment+Acknowledgment">Establishment Acknowledgment</link> message from the exchange. </para>
+</entry></row><row><entry><indexterm><primary>AwaitConfirmingTerminate</primary><secondary>KTN::CME::IL3::EnumSessionState</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::EnumSessionState</primary><secondary>AwaitConfirmingTerminate</secondary></indexterm>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_enum_session_state_1a1a4fdd123ba195de2c11897d7329f645a9167a10c646618f2b67441bc385fa3d9"/>AwaitConfirmingTerminate</entry><entry>
+<para>Session is waiting for the confirming <link xlink:href="https://www.cmegroup.com/confluence/display/EPICSANDBOX/Terminate">Terminate</link> message from the exchange. </para>
+</entry></row><row><entry><indexterm><primary>Established</primary><secondary>KTN::CME::IL3::EnumSessionState</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::EnumSessionState</primary><secondary>Established</secondary></indexterm>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_enum_session_state_1a1a4fdd123ba195de2c11897d7329f645aa38d3bd559ab3125d2921ffa35a37a54"/>Established</entry><entry>
+<para>Session is fully established. </para>
+</entry></row><row><entry><indexterm><primary>Reconnecting</primary><secondary>KTN::CME::IL3::EnumSessionState</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::EnumSessionState</primary><secondary>Reconnecting</secondary></indexterm>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_enum_session_state_1a1a4fdd123ba195de2c11897d7329f645a8fa95f632ebbc9ccf2005eeef24b3821"/>Reconnecting</entry><entry>
+<para>Session is trying to restore the telecommunication link. </para>
+</entry></row><row><entry><indexterm><primary>WaitForRetransmission</primary><secondary>KTN::CME::IL3::EnumSessionState</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::EnumSessionState</primary><secondary>WaitForRetransmission</secondary></indexterm>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_enum_session_state_1a1a4fdd123ba195de2c11897d7329f645afe66cd4e3e6379de4c9bdafca38a444f"/>WaitForRetransmission</entry><entry>
+<para>Session is waiting for the message retransmission from the exchange. </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_enum_session_state_1a2f81a4c996e138d52cd13b200b80d664"/><section>
+    <title>toString()</title>
+<indexterm><primary>toString</primary><secondary>KTN::CME::IL3::EnumSessionState</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::EnumSessionState</primary><secondary>toString</secondary></indexterm>
+<para><computeroutput>static std::string KTN::CME::IL3::EnumSessionState::toString (int state)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+exchsupport/cme/il3/IL3SessionEnums.hpp</section>
+</section>

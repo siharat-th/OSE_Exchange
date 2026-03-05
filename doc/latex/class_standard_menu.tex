@@ -1,0 +1,126 @@
+\doxysection{Standard\+Menu Class Reference}
+\hypertarget{class_standard_menu}{}\label{class_standard_menu}\index{StandardMenu@{StandardMenu}}
+
+
+The \doxylink{class_standard_menu}{Standard\+Menu} class represents a standard menu implementation.  
+
+
+
+
+{\ttfamily \#include $<$Standard\+Menu.\+hpp$>$}
+
+Inheritance diagram for Standard\+Menu\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_standard_menu}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_standard_menu_ab484fae7deb778de9ba107b932ee6ecf}{Standard\+Menu}} (\mbox{\hyperlink{class_menu_callback}{Menu\+Callback}} \&callback, std\+::string file, std\+::string name)
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{class_standard_menu}{Standard\+Menu} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_standard_menu_a076826ba870fa025cc2208f7d96ce587}{\texorpdfstring{$\sim$}{\string~}\+Standard\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{class_standard_menu}{Standard\+Menu} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_standard_menu_a8a183b7bfadff568145c7e7465fa6dea}{Display\+And\+Wait}} ()
+\begin{DoxyCompactList}\small\item\em Displays the menu and waits for user input. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_standard_menu_a69ce47fefe06675d22b2c03a7bb6797c}{Run}} () override
+\begin{DoxyCompactList}\small\item\em Runs the menu in a separate thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_i_menu}{IMenu}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+IMenu} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_named_thread}{Named\+Thread}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_named_thread_a891fabdc2d824048ec05c82e7ef8c69a}{Named\+Thread}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_named_thread_a018dadb59e5af98ee734301a1baa50cb}{\texorpdfstring{$\sim$}{\string~}\+Named\+Thread}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_named_thread_a9fa42542ff43c89fb9bbc33de9c87e34}{Create\+And\+Run}} (string name, int core)
+\begin{DoxyCompactList}\small\item\em Creates and runs the named thread on the specified core. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_named_thread_ad4809c571171be13f0f91f540d5c196f}{Join}} ()
+\begin{DoxyCompactList}\small\item\em Joins the named thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_standard_menu}{Standard\+Menu} class represents a standard menu implementation. 
+
+This class inherits from the \doxylink{class_i_menu}{IMenu} interface and the \doxylink{class_named_thread}{Named\+Thread} class. It provides functionality to display and interact with a menu. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_standard_menu_ab484fae7deb778de9ba107b932ee6ecf}\index{StandardMenu@{StandardMenu}!StandardMenu@{StandardMenu}}
+\index{StandardMenu@{StandardMenu}!StandardMenu@{StandardMenu}}
+\doxysubsubsection{\texorpdfstring{StandardMenu()}{StandardMenu()}}
+{\footnotesize\ttfamily \label{class_standard_menu_ab484fae7deb778de9ba107b932ee6ecf} 
+Standard\+Menu\+::\+Standard\+Menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_menu_callback}{Menu\+Callback}} \&}]{callback}{, }\item[{std\+::string}]{file}{, }\item[{std\+::string}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a new \doxylink{class_standard_menu}{Standard\+Menu} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback} & The \doxylink{class_menu_callback}{Menu\+Callback} object to handle menu events. \\
+\hline
+{\em file} & The file associated with the menu. \\
+\hline
+{\em name} & The name of the menu. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_standard_menu_a076826ba870fa025cc2208f7d96ce587}\index{StandardMenu@{StandardMenu}!````~StandardMenu@{\texorpdfstring{$\sim$}{\string~}StandardMenu}}
+\index{````~StandardMenu@{\texorpdfstring{$\sim$}{\string~}StandardMenu}!StandardMenu@{StandardMenu}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}StandardMenu()}{\string~StandardMenu()}}
+{\footnotesize\ttfamily \label{class_standard_menu_a076826ba870fa025cc2208f7d96ce587} 
+Standard\+Menu\+::\texorpdfstring{$\sim$}{\string~}\+Standard\+Menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destroys the \doxylink{class_standard_menu}{Standard\+Menu} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_standard_menu_a8a183b7bfadff568145c7e7465fa6dea}\index{StandardMenu@{StandardMenu}!DisplayAndWait@{DisplayAndWait}}
+\index{DisplayAndWait@{DisplayAndWait}!StandardMenu@{StandardMenu}}
+\doxysubsubsection{\texorpdfstring{DisplayAndWait()}{DisplayAndWait()}}
+{\footnotesize\ttfamily \label{class_standard_menu_a8a183b7bfadff568145c7e7465fa6dea} 
+void Standard\+Menu\+::\+Display\+And\+Wait (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Displays the menu and waits for user input. 
+
+
+
+Implements \mbox{\hyperlink{class_i_menu_a20bb56f784595e326d76b2f08612a106}{IMenu}}.
+
+
+
+References \mbox{\hyperlink{l00018}{Named\+Thread\+::\+Create\+And\+Run()}}.
+
+\Hypertarget{class_standard_menu_a69ce47fefe06675d22b2c03a7bb6797c}\index{StandardMenu@{StandardMenu}!Run@{Run}}
+\index{Run@{Run}!StandardMenu@{StandardMenu}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily \label{class_standard_menu_a69ce47fefe06675d22b2c03a7bb6797c} 
+void Standard\+Menu\+::\+Run (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Runs the menu in a separate thread. 
+
+
+
+Implements \mbox{\hyperlink{class_named_thread}{Named\+Thread}}.
+
+
+
+References \mbox{\hyperlink{class_menu_callback_a987f7022ef9680ecff369ed1f77b62ea}{Menu\+Callback\+::on\+Menu\+Choice()}}, and \mbox{\hyperlink{l00019}{String\+Splitter\+::\+Split()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Menu/Standard\+Menu.\+hpp\item 
+Menu/Standard\+Menu.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,555 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_ktn_cme_mbo" xml:lang="en-US">
+<title>KtnCmeMbo Class Reference</title>
+<indexterm><primary>KtnCmeMbo</primary></indexterm>
+<para>
+
+<para>Represents a class that handles CME market by order (MBO) data. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;KtnCmeMbo.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for KtnCmeMbo:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_ktn_cme_mbo.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>using <link linkend="_class_ktn_cme_mbo_1aa1165d1ffce34a950231119e2c4189f0">UpdateAlgoCallback</link> = void (*)(const <link linkend="_structalgomd">algomd</link>&amp;)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Types inherited from <link linkend="_class_k_t_n_1_1_n_e_t_1_1_e_f_v_i_udp_v4">KTN::NET::EFVIUdpV4</link>        <itemizedlist>
+            <listitem><para>enum class <emphasis role="strong">FilterIPProto</emphasis> : int { <emphasis role="strong">UDP</emphasis> = ::IPPROTO_UDP
+, <emphasis role="strong">TCP</emphasis> = ::IPPROTO_TCP
+ }</para>
+</listitem>
+            <listitem><para>typedef i01::core::Timestamp <link linkend="_class_k_t_n_1_1_n_e_t_1_1_e_f_v_i_udp_v4_1af3fff59f5d869b122aa5394cee758084">Timestamp</link></para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_ktn_cme_mbo_1add279786d0619f2a663ddeb173ed34c8">KtnCmeMbo</link> (string name, int core, bool handletrades)</para>
+
+<para>Constructs a <link linkend="_class_ktn_cme_mbo">KtnCmeMbo</link> object. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_ktn_cme_mbo_1a4ed6fc0d236ba4281d78b3cd92aa06c7">~KtnCmeMbo</link> ()</para>
+
+<para>Destroys the <link linkend="_class_ktn_cme_mbo">KtnCmeMbo</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_ktn_cme_mbo_1a9778353f315c5b0665552c2d2daa68f4">Start</link> ()</para>
+
+<para>Starts the <link linkend="_class_ktn_cme_mbo">KtnCmeMbo</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_ktn_cme_mbo_1a0417b58b48a18f3502a797b9c2990118">Stop</link> ()</para>
+
+<para>Stops the <link linkend="_class_ktn_cme_mbo">KtnCmeMbo</link> object. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_ktn_cme_mbo_1a5efe8d7c34f1fe37c629e83a3a672dae"/>void <emphasis role="strong">Reset</emphasis> ()</para>
+
+<para>Resets the <link linkend="_class_ktn_cme_mbo">KtnCmeMbo</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_ktn_cme_mbo_1a6d216bc263430aec519aeae3daa9f9ec">PrintStats</link> ()</para>
+
+<para>Prints the statistics of the <link linkend="_class_ktn_cme_mbo">KtnCmeMbo</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_ktn_cme_mbo_1afb0e42b28ef33ff682e2174422bd25f3">AddSymbols</link> (vector&lt; string &gt; symbols)</para>
+
+<para>Adds a list of symbols to the <link linkend="_class_ktn_cme_mbo">KtnCmeMbo</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_ktn_cme_mbo_1a6e479fb338d54628884dfbfd3f751549">AddSymbols</link> (vector&lt; <link linkend="_structinstrument">instrument</link> &gt; legs)</para>
+
+<para>Adds a list of instruments to the <link linkend="_class_ktn_cme_mbo">KtnCmeMbo</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_ktn_cme_mbo_1a792cf2dd79e099ce80b4fbb9c04859c6">AddSymbol</link> (string symb)</para>
+
+<para>Adds a symbol to the <link linkend="_class_ktn_cme_mbo">KtnCmeMbo</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_ktn_cme_mbo_1ad24edab3004dcd29c03a9ee1f62a649a">AddBookDepth</link> (string symb)</para>
+
+<para>Adds book depth for a symbol to the <link linkend="_class_ktn_cme_mbo">KtnCmeMbo</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_ktn_cme_mbo_1a61f846fa838f4010ccf324d58b92a3aa">AddMbo</link> (string symb)</para>
+
+<para>Adds market by order (MBO) data for a symbol to the <link linkend="_class_ktn_cme_mbo">KtnCmeMbo</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_ktn_cme_mbo_1a464e72fa9e9dade72298b35f681c941f">AddChannelFilter</link> (const <link linkend="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def">CmeSecDef</link> &amp;secdef, const string &amp;feedtype)</para>
+
+<para>Adds a channel filter for a CME security definition and feed type to the <link linkend="_class_ktn_cme_mbo">KtnCmeMbo</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_ktn_cme_mbo_1a1f322db914f3d5a963d73067a2a7e626">Subscribe</link> (<link linkend="_class_k_t_n_1_1_algo_mkt_data_callback">AlgoMktDataCallback</link> *subscriber)</para>
+
+<para>Subscribes an AlgoMktDataCallback object to the <link linkend="_class_ktn_cme_mbo">KtnCmeMbo</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_ktn_cme_mbo_1aa8c9c9427268a2a3e23a1e7ecbe6a310">Print</link> (bool verbose)</para>
+
+<para>Prints the <link linkend="_class_ktn_cme_mbo">KtnCmeMbo</link> object. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_class_named_thread">NamedThread</link>        <itemizedlist>
+            <listitem><para><link linkend="_class_named_thread_1a891fabdc2d824048ec05c82e7ef8c69a">NamedThread</link> ()</para>
+
+<para>Default constructor. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_named_thread_1a018dadb59e5af98ee734301a1baa50cb">~NamedThread</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_named_thread_1a9fa42542ff43c89fb9bbc33de9c87e34">CreateAndRun</link> (string name, int core)</para>
+
+<para>Creates and runs the named thread on the specified core. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_named_thread_1ad4809c571171be13f0f91f540d5c196f">Join</link> ()</para>
+
+<para>Joins the named thread. </para>
+</listitem>
+        </itemizedlist>
+Public Member Functions inherited from <link linkend="_class_k_t_n_1_1_n_e_t_1_1_e_f_v_i_udp_v4">KTN::NET::EFVIUdpV4</link>        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_n_e_t_1_1_e_f_v_i_udp_v4_1a9f730e4019f1af105fd676d9387761b1">EFVIUdpV4</link> (std::string feed, bool hwtimestamping, std::string name, bool useCertNrConfigFile=false)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_n_e_t_1_1_e_f_v_i_udp_v4_1a74bd7d0f286ee158010c001284e800dd">apply_filter</link> (const string &amp;connid, const string &amp;ipaddr, int port, bool isA)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_n_e_t_1_1_e_f_v_i_udp_v4_1a2fdd6e1009f5757cf747849cbd378173">poll</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_n_e_t_1_1_e_f_v_i_udp_v4_1aaed8ad15510f7d769d1d8cfa087717e0">EfPrintStats</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_n_e_t_1_1_e_f_v_i_udp_v4_1a89b48869b44e139429398523bb8f9565">RefillRing</link> ()</para>
+</listitem>
+            <listitem><para>void <emphasis role="strong">testticket</emphasis> ()</para>
+</listitem>
+            <listitem><para>int <emphasis role="strong">Source</emphasis> ()</para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_structalgomd">algomd</link> <link linkend="_class_ktn_cme_mbo_1a8be9502d90906f7b720db635beeaa7a3">_algomds</link> [16]</para>
+</listitem>
+            <listitem><para><link linkend="_structbookmd">bookmd</link> <link linkend="_class_ktn_cme_mbo_1a7a2a1af8f9d342859f12c318d6d102c9">_bookmds</link> [16]</para>
+</listitem>
+            <listitem><para>std::vector&lt; string &gt; <link linkend="_class_ktn_cme_mbo_1adcca061d310ebe3a336a95d31b925880">_FILTERS</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_ktn_cme_mbo_1a2e4ca9c05e08149f00b1918c061d9a76">_SECIDS</link> [16]</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_ktn_cme_mbo_1ab17548b517e3c7220f3b8876ded3aca3">_NUMSECS</link></para>
+</listitem>
+            <listitem><para>vector&lt; <link linkend="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def">CmeSecDef</link> &gt; <link linkend="_class_ktn_cme_mbo_1a0e08e2d873c5e0bc6890834f9ad8e5df">_DEFS</link></para>
+</listitem>
+            <listitem><para>std::unordered_map&lt; int, string &gt; <link linkend="_class_ktn_cme_mbo_1abee2cbfdf09b6f1241aa8c83a2576817">_SYMBMAP</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Represents a class that handles CME market by order (MBO) data. </para>
+</section>
+<section>
+<title>Member Typedef Documentation</title>
+<anchor xml:id="_class_ktn_cme_mbo_1aa1165d1ffce34a950231119e2c4189f0"/><section>
+    <title>UpdateAlgoCallback</title>
+<indexterm><primary>UpdateAlgoCallback</primary><secondary>KtnCmeMbo</secondary></indexterm>
+<indexterm><primary>KtnCmeMbo</primary><secondary>UpdateAlgoCallback</secondary></indexterm>
+<para><computeroutput>using KtnCmeMbo::UpdateAlgoCallback = void (*)(const <link linkend="_structalgomd">algomd</link>&amp;)</computeroutput></para></section>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_ktn_cme_mbo_1add279786d0619f2a663ddeb173ed34c8"/><section>
+    <title>KtnCmeMbo()</title>
+<indexterm><primary>KtnCmeMbo</primary><secondary>KtnCmeMbo</secondary></indexterm>
+<indexterm><primary>KtnCmeMbo</primary><secondary>KtnCmeMbo</secondary></indexterm>
+<para><computeroutput>KtnCmeMbo::KtnCmeMbo (string name, int core, bool handletrades)<computeroutput>[explicit]</computeroutput></computeroutput></para><para>
+
+<para>Constructs a <link linkend="_class_ktn_cme_mbo">KtnCmeMbo</link> object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>name</entry><entry>
+<para>The name of the <link linkend="_class_ktn_cme_mbo">KtnCmeMbo</link> object. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>core</entry><entry>
+<para>The core number to run the <link linkend="_class_ktn_cme_mbo">KtnCmeMbo</link> object on. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>handletrades</entry><entry>
+<para>A flag indicating whether to handle trades. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_ktn_cme_mbo_1a4ed6fc0d236ba4281d78b3cd92aa06c7"/><section>
+    <title>~KtnCmeMbo()</title>
+<indexterm><primary>~KtnCmeMbo</primary><secondary>KtnCmeMbo</secondary></indexterm>
+<indexterm><primary>KtnCmeMbo</primary><secondary>~KtnCmeMbo</secondary></indexterm>
+<para><computeroutput>KtnCmeMbo::~KtnCmeMbo ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Destroys the <link linkend="_class_ktn_cme_mbo">KtnCmeMbo</link> object. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_ktn_cme_mbo_1ad24edab3004dcd29c03a9ee1f62a649a"/><section>
+    <title>AddBookDepth()</title>
+<indexterm><primary>AddBookDepth</primary><secondary>KtnCmeMbo</secondary></indexterm>
+<indexterm><primary>KtnCmeMbo</primary><secondary>AddBookDepth</secondary></indexterm>
+<para><computeroutput>void KtnCmeMbo::AddBookDepth (string symb)</computeroutput></para><para>
+
+<para>Adds book depth for a symbol to the <link linkend="_class_ktn_cme_mbo">KtnCmeMbo</link> object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>symb</entry><entry>
+<para>The symbol to add book depth for. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00753">AddChannelFilter()</link>, <link linkend="_l00209">bookmd::index</link>, and <link linkend="_l00210">bookmd::secid</link>.</para>
+</section>
+<anchor xml:id="_class_ktn_cme_mbo_1a464e72fa9e9dade72298b35f681c941f"/><section>
+    <title>AddChannelFilter()</title>
+<indexterm><primary>AddChannelFilter</primary><secondary>KtnCmeMbo</secondary></indexterm>
+<indexterm><primary>KtnCmeMbo</primary><secondary>AddChannelFilter</secondary></indexterm>
+<para><computeroutput>void KtnCmeMbo::AddChannelFilter (const <link linkend="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def">CmeSecDef</link> &amp; secdef, const string &amp; feedtype)</computeroutput></para><para>
+
+<para>Adds a channel filter for a CME security definition and feed type to the <link linkend="_class_ktn_cme_mbo">KtnCmeMbo</link> object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>secdef</entry><entry>
+<para>The CME security definition. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>feedtype</entry><entry>
+<para>The feed type. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Referenced by <link linkend="_l00707">AddBookDepth()</link>, and <link linkend="_l00647">AddSymbol()</link>.</para>
+</section>
+<anchor xml:id="_class_ktn_cme_mbo_1a61f846fa838f4010ccf324d58b92a3aa"/><section>
+    <title>AddMbo()</title>
+<indexterm><primary>AddMbo</primary><secondary>KtnCmeMbo</secondary></indexterm>
+<indexterm><primary>KtnCmeMbo</primary><secondary>AddMbo</secondary></indexterm>
+<para><computeroutput>void KtnCmeMbo::AddMbo (string symb)</computeroutput></para><para>
+
+<para>Adds market by order (MBO) data for a symbol to the <link linkend="_class_ktn_cme_mbo">KtnCmeMbo</link> object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>symb</entry><entry>
+<para>The symbol to add MBO data for. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_ktn_cme_mbo_1a792cf2dd79e099ce80b4fbb9c04859c6"/><section>
+    <title>AddSymbol()</title>
+<indexterm><primary>AddSymbol</primary><secondary>KtnCmeMbo</secondary></indexterm>
+<indexterm><primary>KtnCmeMbo</primary><secondary>AddSymbol</secondary></indexterm>
+<para><computeroutput>void KtnCmeMbo::AddSymbol (string symb)</computeroutput></para><para>
+
+<para>Adds a symbol to the <link linkend="_class_ktn_cme_mbo">KtnCmeMbo</link> object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>symb</entry><entry>
+<para>The symbol to add. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00753">AddChannelFilter()</link>, <link linkend="_l00178">algomd::hasImpliedEnabled</link>, <link linkend="_l00156">algomd::index</link>, and <link linkend="_l00176">algomd::secid</link>.</para>
+<para>
+Referenced by <link linkend="_l00639">AddSymbols()</link>, and <link linkend="_l00631">AddSymbols()</link>.</para>
+</section>
+<anchor xml:id="_class_ktn_cme_mbo_1a6e479fb338d54628884dfbfd3f751549"/><section>
+    <title>AddSymbols()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>AddSymbols</primary><secondary>KtnCmeMbo</secondary></indexterm>
+<indexterm><primary>KtnCmeMbo</primary><secondary>AddSymbols</secondary></indexterm>
+<para><computeroutput>void KtnCmeMbo::AddSymbols (vector&lt; <link linkend="_structinstrument">instrument</link> &gt; legs)</computeroutput></para><para>
+
+<para>Adds a list of instruments to the <link linkend="_class_ktn_cme_mbo">KtnCmeMbo</link> object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>legs</entry><entry>
+<para>The list of instruments to add. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00647">AddSymbol()</link>.</para>
+</section>
+<anchor xml:id="_class_ktn_cme_mbo_1afb0e42b28ef33ff682e2174422bd25f3"/><section>
+    <title>AddSymbols()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>AddSymbols</primary><secondary>KtnCmeMbo</secondary></indexterm>
+<indexterm><primary>KtnCmeMbo</primary><secondary>AddSymbols</secondary></indexterm>
+<para><computeroutput>void KtnCmeMbo::AddSymbols (vector&lt; string &gt; symbols)</computeroutput></para><para>
+
+<para>Adds a list of symbols to the <link linkend="_class_ktn_cme_mbo">KtnCmeMbo</link> object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>symbols</entry><entry>
+<para>The list of symbols to add. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00647">AddSymbol()</link>.</para>
+</section>
+<anchor xml:id="_class_ktn_cme_mbo_1aa8c9c9427268a2a3e23a1e7ecbe6a310"/><section>
+    <title>Print()</title>
+<indexterm><primary>Print</primary><secondary>KtnCmeMbo</secondary></indexterm>
+<indexterm><primary>KtnCmeMbo</primary><secondary>Print</secondary></indexterm>
+<para><computeroutput>void KtnCmeMbo::Print (bool verbose)</computeroutput></para><para>
+
+<para>Prints the <link linkend="_class_ktn_cme_mbo">KtnCmeMbo</link> object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>verbose</entry><entry>
+<para>A flag indicating whether to print verbose information. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_ktn_cme_mbo_1a6d216bc263430aec519aeae3daa9f9ec"/><section>
+    <title>PrintStats()</title>
+<indexterm><primary>PrintStats</primary><secondary>KtnCmeMbo</secondary></indexterm>
+<indexterm><primary>KtnCmeMbo</primary><secondary>PrintStats</secondary></indexterm>
+<para><computeroutput>void KtnCmeMbo::PrintStats ( )</computeroutput></para><para>
+
+<para>Prints the statistics of the <link linkend="_class_ktn_cme_mbo">KtnCmeMbo</link> object. </para>
+</para>
+<para>
+References <link linkend="_l00052">PerformanceTracker::printMeasurements()</link>.</para>
+</section>
+<anchor xml:id="_class_ktn_cme_mbo_1a9778353f315c5b0665552c2d2daa68f4"/><section>
+    <title>Start()</title>
+<indexterm><primary>Start</primary><secondary>KtnCmeMbo</secondary></indexterm>
+<indexterm><primary>KtnCmeMbo</primary><secondary>Start</secondary></indexterm>
+<para><computeroutput>void KtnCmeMbo::Start ( )</computeroutput></para><para>
+
+<para>Starts the <link linkend="_class_ktn_cme_mbo">KtnCmeMbo</link> object. </para>
+</para>
+<para>
+References <link linkend="_l00018">NamedThread::CreateAndRun()</link>.</para>
+</section>
+<anchor xml:id="_class_ktn_cme_mbo_1a0417b58b48a18f3502a797b9c2990118"/><section>
+    <title>Stop()</title>
+<indexterm><primary>Stop</primary><secondary>KtnCmeMbo</secondary></indexterm>
+<indexterm><primary>KtnCmeMbo</primary><secondary>Stop</secondary></indexterm>
+<para><computeroutput>void KtnCmeMbo::Stop ( )</computeroutput></para><para>
+
+<para>Stops the <link linkend="_class_ktn_cme_mbo">KtnCmeMbo</link> object. </para>
+</para>
+</section>
+<anchor xml:id="_class_ktn_cme_mbo_1a1f322db914f3d5a963d73067a2a7e626"/><section>
+    <title>Subscribe()</title>
+<indexterm><primary>Subscribe</primary><secondary>KtnCmeMbo</secondary></indexterm>
+<indexterm><primary>KtnCmeMbo</primary><secondary>Subscribe</secondary></indexterm>
+<para><computeroutput>void KtnCmeMbo::Subscribe (<link linkend="_class_k_t_n_1_1_algo_mkt_data_callback">AlgoMktDataCallback</link> * subscriber)</computeroutput></para><para>
+
+<para>Subscribes an AlgoMktDataCallback object to the <link linkend="_class_ktn_cme_mbo">KtnCmeMbo</link> object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>subscriber</entry><entry>
+<para>The AlgoMktDataCallback object to subscribe. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_ktn_cme_mbo_1a8be9502d90906f7b720db635beeaa7a3"/><section>
+    <title>_algomds</title>
+<indexterm><primary>_algomds</primary><secondary>KtnCmeMbo</secondary></indexterm>
+<indexterm><primary>KtnCmeMbo</primary><secondary>_algomds</secondary></indexterm>
+<para><computeroutput><link linkend="_structalgomd">algomd</link> KtnCmeMbo::_algomds[16]</computeroutput></para></section>
+<anchor xml:id="_class_ktn_cme_mbo_1a7a2a1af8f9d342859f12c318d6d102c9"/><section>
+    <title>_bookmds</title>
+<indexterm><primary>_bookmds</primary><secondary>KtnCmeMbo</secondary></indexterm>
+<indexterm><primary>KtnCmeMbo</primary><secondary>_bookmds</secondary></indexterm>
+<para><computeroutput><link linkend="_structbookmd">bookmd</link> KtnCmeMbo::_bookmds[16]</computeroutput></para></section>
+<anchor xml:id="_class_ktn_cme_mbo_1a0e08e2d873c5e0bc6890834f9ad8e5df"/><section>
+    <title>_DEFS</title>
+<indexterm><primary>_DEFS</primary><secondary>KtnCmeMbo</secondary></indexterm>
+<indexterm><primary>KtnCmeMbo</primary><secondary>_DEFS</secondary></indexterm>
+<para><computeroutput>vector&lt;<link linkend="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def">CmeSecDef</link>&gt; KtnCmeMbo::_DEFS</computeroutput></para></section>
+<anchor xml:id="_class_ktn_cme_mbo_1adcca061d310ebe3a336a95d31b925880"/><section>
+    <title>_FILTERS</title>
+<indexterm><primary>_FILTERS</primary><secondary>KtnCmeMbo</secondary></indexterm>
+<indexterm><primary>KtnCmeMbo</primary><secondary>_FILTERS</secondary></indexterm>
+<para><computeroutput>std::vector&lt;string&gt; KtnCmeMbo::_FILTERS</computeroutput></para></section>
+<anchor xml:id="_class_ktn_cme_mbo_1ab17548b517e3c7220f3b8876ded3aca3"/><section>
+    <title>_NUMSECS</title>
+<indexterm><primary>_NUMSECS</primary><secondary>KtnCmeMbo</secondary></indexterm>
+<indexterm><primary>KtnCmeMbo</primary><secondary>_NUMSECS</secondary></indexterm>
+<para><computeroutput>int KtnCmeMbo::_NUMSECS</computeroutput></para></section>
+<anchor xml:id="_class_ktn_cme_mbo_1a2e4ca9c05e08149f00b1918c061d9a76"/><section>
+    <title>_SECIDS</title>
+<indexterm><primary>_SECIDS</primary><secondary>KtnCmeMbo</secondary></indexterm>
+<indexterm><primary>KtnCmeMbo</primary><secondary>_SECIDS</secondary></indexterm>
+<para><computeroutput>int KtnCmeMbo::_SECIDS[16]</computeroutput></para></section>
+<anchor xml:id="_class_ktn_cme_mbo_1abee2cbfdf09b6f1241aa8c83a2576817"/><section>
+    <title>_SYMBMAP</title>
+<indexterm><primary>_SYMBMAP</primary><secondary>KtnCmeMbo</secondary></indexterm>
+<indexterm><primary>KtnCmeMbo</primary><secondary>_SYMBMAP</secondary></indexterm>
+<para><computeroutput>std::unordered_map&lt;int, string&gt; KtnCmeMbo::_SYMBMAP</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+exchsupport/cme/KtnCmeMbo.hppexchsupport/cme/KtnCmeMbo.cpp</section>
+</section>

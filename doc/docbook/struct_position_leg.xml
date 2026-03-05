@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_position_leg" xml:lang="en-US">
+<title>PositionLeg Struct Reference</title>
+<indexterm><primary>PositionLeg</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_struct_position_leg_1af55496443990e66569403e27aa35b8b5">calc</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_structinstrument">instrument</link> <link linkend="_struct_position_leg_1aa2cedcb100c66580f0a7b3dc32175be1">leg</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_position_leg_1a5cda0e43f3275f781fd73d74112dc8d7">index</link></para>
+</listitem>
+            <listitem><para>KOrderSide::Enum <link linkend="_struct_position_leg_1aa64432f3dac81bcd294fa477d6708d60">side</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_position_leg_1aa1e1494148a24132c2d5b467dc7035ca">netpos</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_position_leg_1ac49e1e055f292fa6d965042a104df7ef">price</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_position_leg_1a056ebd21826f0e4b5d0558deab228612">bid</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_position_leg_1a76009927cef1009c227a2f87aae9fadd">ask</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_position_leg_1a5048b8b4193d40121fae68c017d5889b">pl</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_position_leg_1af55496443990e66569403e27aa35b8b5"/><section>
+    <title>calc()</title>
+<indexterm><primary>calc</primary><secondary>PositionLeg</secondary></indexterm>
+<indexterm><primary>PositionLeg</primary><secondary>calc</secondary></indexterm>
+<para><computeroutput>void PositionLeg::calc ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_position_leg_1a76009927cef1009c227a2f87aae9fadd"/><section>
+    <title>ask</title>
+<indexterm><primary>ask</primary><secondary>PositionLeg</secondary></indexterm>
+<indexterm><primary>PositionLeg</primary><secondary>ask</secondary></indexterm>
+<para><computeroutput>double PositionLeg::ask</computeroutput></para></section>
+<anchor xml:id="_struct_position_leg_1a056ebd21826f0e4b5d0558deab228612"/><section>
+    <title>bid</title>
+<indexterm><primary>bid</primary><secondary>PositionLeg</secondary></indexterm>
+<indexterm><primary>PositionLeg</primary><secondary>bid</secondary></indexterm>
+<para><computeroutput>double PositionLeg::bid</computeroutput></para></section>
+<anchor xml:id="_struct_position_leg_1a5cda0e43f3275f781fd73d74112dc8d7"/><section>
+    <title>index</title>
+<indexterm><primary>index</primary><secondary>PositionLeg</secondary></indexterm>
+<indexterm><primary>PositionLeg</primary><secondary>index</secondary></indexterm>
+<para><computeroutput>int PositionLeg::index</computeroutput></para></section>
+<anchor xml:id="_struct_position_leg_1aa2cedcb100c66580f0a7b3dc32175be1"/><section>
+    <title>leg</title>
+<indexterm><primary>leg</primary><secondary>PositionLeg</secondary></indexterm>
+<indexterm><primary>PositionLeg</primary><secondary>leg</secondary></indexterm>
+<para><computeroutput><link linkend="_structinstrument">instrument</link> PositionLeg::leg</computeroutput></para></section>
+<anchor xml:id="_struct_position_leg_1aa1e1494148a24132c2d5b467dc7035ca"/><section>
+    <title>netpos</title>
+<indexterm><primary>netpos</primary><secondary>PositionLeg</secondary></indexterm>
+<indexterm><primary>PositionLeg</primary><secondary>netpos</secondary></indexterm>
+<para><computeroutput>int PositionLeg::netpos</computeroutput></para></section>
+<anchor xml:id="_struct_position_leg_1a5048b8b4193d40121fae68c017d5889b"/><section>
+    <title>pl</title>
+<indexterm><primary>pl</primary><secondary>PositionLeg</secondary></indexterm>
+<indexterm><primary>PositionLeg</primary><secondary>pl</secondary></indexterm>
+<para><computeroutput>double PositionLeg::pl</computeroutput></para></section>
+<anchor xml:id="_struct_position_leg_1ac49e1e055f292fa6d965042a104df7ef"/><section>
+    <title>price</title>
+<indexterm><primary>price</primary><secondary>PositionLeg</secondary></indexterm>
+<indexterm><primary>PositionLeg</primary><secondary>price</secondary></indexterm>
+<para><computeroutput>double PositionLeg::price</computeroutput></para></section>
+<anchor xml:id="_struct_position_leg_1aa64432f3dac81bcd294fa477d6708d60"/><section>
+    <title>side</title>
+<indexterm><primary>side</primary><secondary>PositionLeg</secondary></indexterm>
+<indexterm><primary>PositionLeg</primary><secondary>side</secondary></indexterm>
+<para><computeroutput>KOrderSide::Enum PositionLeg::side</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+AlgoParams/Position.hpp</section>
+</section>

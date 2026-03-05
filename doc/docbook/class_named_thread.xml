@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_named_thread" xml:lang="en-US">
+<title>NamedThread Class Reference</title>
+<indexterm><primary>NamedThread</primary></indexterm>
+<para>
+
+<para>Represents a named thread with affinity to a specific core. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;NamedThread.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for NamedThread:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_named_thread.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_named_thread_1a891fabdc2d824048ec05c82e7ef8c69a">NamedThread</link> ()</para>
+
+<para>Default constructor. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_named_thread_1a018dadb59e5af98ee734301a1baa50cb">~NamedThread</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_named_thread_1a9fa42542ff43c89fb9bbc33de9c87e34">CreateAndRun</link> (string name, int core)</para>
+
+<para>Creates and runs the named thread on the specified core. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_named_thread_1ad4809c571171be13f0f91f540d5c196f">Join</link> ()</para>
+
+<para>Joins the named thread. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Represents a named thread with affinity to a specific core. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_named_thread_1a891fabdc2d824048ec05c82e7ef8c69a"/><section>
+    <title>NamedThread()</title>
+<indexterm><primary>NamedThread</primary><secondary>NamedThread</secondary></indexterm>
+<indexterm><primary>NamedThread</primary><secondary>NamedThread</secondary></indexterm>
+<para><computeroutput>NamedThread::NamedThread ( )</computeroutput></para><para>
+
+<para>Default constructor. </para>
+</para>
+</section>
+<anchor xml:id="_class_named_thread_1a018dadb59e5af98ee734301a1baa50cb"/><section>
+    <title>~NamedThread()</title>
+<indexterm><primary>~NamedThread</primary><secondary>NamedThread</secondary></indexterm>
+<indexterm><primary>NamedThread</primary><secondary>~NamedThread</secondary></indexterm>
+<para><computeroutput>NamedThread::~NamedThread ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Destructor. </para>
+</para>
+<para>
+References <link linkend="_l00031">Join()</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_named_thread_1a9fa42542ff43c89fb9bbc33de9c87e34"/><section>
+    <title>CreateAndRun()</title>
+<indexterm><primary>CreateAndRun</primary><secondary>NamedThread</secondary></indexterm>
+<indexterm><primary>NamedThread</primary><secondary>CreateAndRun</secondary></indexterm>
+<para><computeroutput>void NamedThread::CreateAndRun (string name, int core)</computeroutput></para><para>
+
+<para>Creates and runs the named thread on the specified core. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>name</entry><entry>
+<para>The name of the thread. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>core</entry><entry>
+<para>The core to which the thread should be affinitized. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Referenced by <link linkend="_l00023">KTN::AlgoServiceBrokerV3::AlgoServiceBrokerV3()</link>, <link linkend="_l00026">StandardMenu::DisplayAndWait()</link>, <link linkend="_l00026">ZmqMenu::DisplayAndWait()</link>, <link linkend="_l00011">KTN::ExchangeManager::ExchangeManager()</link>, <link linkend="_l00016">KTN::notify::Slacker::InitAndRun()</link>, <link linkend="_l00020">KTN::notify::NotifierRest::NotifierRest()</link>, <link linkend="_l00020">AuditTrailWriter::Start()</link>, <link linkend="_l00021">AuditTrailWriterV3::Start()</link>, <link linkend="_l00027">KTN::ALGO::IntervalTimer::Start()</link>, <link linkend="_l00027">KTN::ALGO::SimpleTimer::Start()</link>, <link linkend="_l00023">KTN::Core::HeartbeatMonitor::Start()</link>, <link linkend="_l00032">KtnCmeMbo::Start()</link>, <link linkend="_l00043">KtnCmeMdpV4::Start()</link>, <link linkend="_l00025">OrderManagerV5::UpdateMetaParams()</link>, <link linkend="_l00011">ZmqLogger::ZmqLogger()</link>, <link linkend="_l00012">ZmqSubscriberV5::ZmqSubscriberV5()</link>, and <link linkend="_l00003">ZmqSubscriberV5::ZmqSubscriberV5()</link>.</para>
+</section>
+<anchor xml:id="_class_named_thread_1ad4809c571171be13f0f91f540d5c196f"/><section>
+    <title>Join()</title>
+<indexterm><primary>Join</primary><secondary>NamedThread</secondary></indexterm>
+<indexterm><primary>NamedThread</primary><secondary>Join</secondary></indexterm>
+<para><computeroutput>void NamedThread::Join ( )</computeroutput></para><para>
+
+<para>Joins the named thread. </para>
+</para>
+<para>
+Referenced by <link linkend="_l00014">~NamedThread()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Core/NamedThread.hppCore/NamedThread.cpp</section>
+</section>

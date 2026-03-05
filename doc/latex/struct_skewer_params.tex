@@ -1,0 +1,284 @@
+\doxysection{Skewer\+Params Struct Reference}
+\hypertarget{struct_skewer_params}{}\label{struct_skewer_params}\index{SkewerParams@{SkewerParams}}
+
+
+The \doxylink{struct_skewer_params}{Skewer\+Params} struct represents the parameters for the Skewer algorithm.  
+
+
+
+
+{\ttfamily \#include $<$Skewer\+Params.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_skewer_params}{Skewer\+Params}} \mbox{\hyperlink{struct_skewer_params_ad05c7a489603424cd336d9252e550515}{parse}} (const std\+::string \&json\+\_\+str)
+\begin{DoxyCompactList}\small\item\em parse the JSON string and create a \doxylink{struct_skewer_params}{Skewer\+Params} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{struct_skewer_params_aa8160c06d8cc9471ee245a515679b120}{Valid\+Json}}
+\item 
+\mbox{\hyperlink{structalgometa}{algometa}} \mbox{\hyperlink{struct_skewer_params_ad7ed2b366e0e1e7f30a843e2a3a1d686}{meta}}
+\item 
+string \mbox{\hyperlink{struct_skewer_params_a5cccfa9d53dd3229ded4d8e41cffca8a}{subid}}
+\item 
+tr1\+::unordered\+\_\+map$<$ int, \mbox{\hyperlink{structinstrument}{instrument}} $>$ \mbox{\hyperlink{struct_skewer_params_abd5ae35adc9d27bca602fa4994a8c90c}{Leg\+Sec\+Id\+Map}}
+\item 
+\mbox{\hyperlink{structinstrument}{instrument}} \mbox{\hyperlink{struct_skewer_params_aa67f3ed6938322fe00dc77df4ef31416}{Legs}} \mbox{[}4\mbox{]}
+\item 
+int \mbox{\hyperlink{struct_skewer_params_aa959759663649d5daf66a12301124fdf}{Leg\+Count}}
+\item 
+string \mbox{\hyperlink{struct_skewer_params_a6ba68e53c57f55a3c046679693aabd66}{Start\+Time}}
+\item 
+string \mbox{\hyperlink{struct_skewer_params_afe0997717c7abdc94fd6525457b6ae0a}{End\+Time}}
+\item 
+double \mbox{\hyperlink{struct_skewer_params_abe3fb775c0917d1aa6a22f3cfe1628f5}{Order\+Qty}}
+\item 
+double \mbox{\hyperlink{struct_skewer_params_a77eeaa5a5b13753f489679a0991825fa}{Total\+Qty}}
+\item 
+int \mbox{\hyperlink{struct_skewer_params_a9836bfb4b6e46b8322f534bf30b99912}{Interval\+Secs}}
+\item 
+double \mbox{\hyperlink{struct_skewer_params_a15abdeeb59af14d592383f62a715945b}{Squeeze\+Ratio}}
+\item 
+int \mbox{\hyperlink{struct_skewer_params_a3d8cac8b8dce18417c1d8fc0a72e4bc2}{Squeeze\+Qty}}
+\item 
+bool \mbox{\hyperlink{struct_skewer_params_a19094ed80728f0b7b2b8bfd115335722}{Randomize}}
+\item 
+double \mbox{\hyperlink{struct_skewer_params_ad2b26cc2321fcb0f7a542f4976c02b10}{Skew\+Threshold}}
+\item 
+double \mbox{\hyperlink{struct_skewer_params_a5ad1367d05517a5ac41486ddccdbfe84}{Skew\+Max}}
+\item 
+int \mbox{\hyperlink{struct_skewer_params_ac0891502ab765cba93ec3ea9169460fe}{Skew\+Max\+Qty}}
+\item 
+int \mbox{\hyperlink{struct_skewer_params_aadc2c34db7a7a098149914c03faaed53}{Skew\+Levels}}
+\item 
+bool \mbox{\hyperlink{struct_skewer_params_a0f72d99ce137d29aa063ffd10a061d6d}{Aggressive}}
+\item 
+int \mbox{\hyperlink{struct_skewer_params_af00ee570453d5fc40bb30c3ee7022c28}{Net\+Position}}
+\item 
+int \mbox{\hyperlink{struct_skewer_params_a2292396145c2cbf88540d4dd2c230e5b}{Total\+Exec}}
+\item 
+int \mbox{\hyperlink{struct_skewer_params_a1e0a80164c7660089f3aba5965f98ba1}{Total\+Buys}}
+\item 
+int \mbox{\hyperlink{struct_skewer_params_ad034dab57d92a8a77958b81de5f5f400}{Total\+Sells}}
+\item 
+double \mbox{\hyperlink{struct_skewer_params_a40b1f092d55a6daf32d5bb2bf481a5be}{Total\+Buy\+Price}}
+\item 
+double \mbox{\hyperlink{struct_skewer_params_a260874b41b183362c114b96ab55f5063}{Total\+Sell\+Price}}
+\item 
+double \mbox{\hyperlink{struct_skewer_params_a13cf3ab016d189f2bf9fff3c128cfec1}{Avg\+Buy\+Price}}
+\item 
+double \mbox{\hyperlink{struct_skewer_params_ae03de2439dd793930e1f7378a5c110bc}{Avg\+Sell\+Price}}
+\item 
+bool \mbox{\hyperlink{struct_skewer_params_acc4fa3978e45e71e86bb0c7fb57aac81}{Reset}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{struct_skewer_params}{Skewer\+Params} struct represents the parameters for the Skewer algorithm. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_skewer_params_ad05c7a489603424cd336d9252e550515}\index{SkewerParams@{SkewerParams}!parse@{parse}}
+\index{parse@{parse}!SkewerParams@{SkewerParams}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily \label{struct_skewer_params_ad05c7a489603424cd336d9252e550515} 
+\mbox{\hyperlink{struct_skewer_params}{Skewer\+Params}} Skewer\+Params\+::parse (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{json\+\_\+str}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+parse the JSON string and create a \doxylink{struct_skewer_params}{Skewer\+Params} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json\+\_\+str} & the JSON string to parse. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the parsed \doxylink{struct_skewer_params}{Skewer\+Params} object. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00260}{algometa\+::\+Enabled}}, \mbox{\hyperlink{l00049}{User\+Info\+::groupname}}, \mbox{\hyperlink{l00048}{User\+Info\+::org}}, \mbox{\hyperlink{l00262}{algometa\+::\+Source}}, \mbox{\hyperlink{l00256}{algometa\+::\+Strategy}}, \mbox{\hyperlink{l00257}{algometa\+::\+Strat\+Id}}, \mbox{\hyperlink{l00264}{algometa\+::\+Tag}}, \mbox{\hyperlink{l00258}{algometa\+::\+Template\+Name}}, \mbox{\hyperlink{l00261}{algometa\+::\+Unique\+Id}}, \mbox{\hyperlink{l00047}{User\+Info\+::user}}, and \mbox{\hyperlink{l00279}{algometa\+::userinfo}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00052}{KTN\+::\+Skewer\+::on\+Launch()}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_skewer_params_a0f72d99ce137d29aa063ffd10a061d6d}\index{SkewerParams@{SkewerParams}!Aggressive@{Aggressive}}
+\index{Aggressive@{Aggressive}!SkewerParams@{SkewerParams}}
+\doxysubsubsection{\texorpdfstring{Aggressive}{Aggressive}}
+{\footnotesize\ttfamily \label{struct_skewer_params_a0f72d99ce137d29aa063ffd10a061d6d} 
+bool Skewer\+Params\+::\+Aggressive}
+
+\Hypertarget{struct_skewer_params_a13cf3ab016d189f2bf9fff3c128cfec1}\index{SkewerParams@{SkewerParams}!AvgBuyPrice@{AvgBuyPrice}}
+\index{AvgBuyPrice@{AvgBuyPrice}!SkewerParams@{SkewerParams}}
+\doxysubsubsection{\texorpdfstring{AvgBuyPrice}{AvgBuyPrice}}
+{\footnotesize\ttfamily \label{struct_skewer_params_a13cf3ab016d189f2bf9fff3c128cfec1} 
+double Skewer\+Params\+::\+Avg\+Buy\+Price}
+
+\Hypertarget{struct_skewer_params_ae03de2439dd793930e1f7378a5c110bc}\index{SkewerParams@{SkewerParams}!AvgSellPrice@{AvgSellPrice}}
+\index{AvgSellPrice@{AvgSellPrice}!SkewerParams@{SkewerParams}}
+\doxysubsubsection{\texorpdfstring{AvgSellPrice}{AvgSellPrice}}
+{\footnotesize\ttfamily \label{struct_skewer_params_ae03de2439dd793930e1f7378a5c110bc} 
+double Skewer\+Params\+::\+Avg\+Sell\+Price}
+
+\Hypertarget{struct_skewer_params_afe0997717c7abdc94fd6525457b6ae0a}\index{SkewerParams@{SkewerParams}!EndTime@{EndTime}}
+\index{EndTime@{EndTime}!SkewerParams@{SkewerParams}}
+\doxysubsubsection{\texorpdfstring{EndTime}{EndTime}}
+{\footnotesize\ttfamily \label{struct_skewer_params_afe0997717c7abdc94fd6525457b6ae0a} 
+string Skewer\+Params\+::\+End\+Time}
+
+\Hypertarget{struct_skewer_params_a9836bfb4b6e46b8322f534bf30b99912}\index{SkewerParams@{SkewerParams}!IntervalSecs@{IntervalSecs}}
+\index{IntervalSecs@{IntervalSecs}!SkewerParams@{SkewerParams}}
+\doxysubsubsection{\texorpdfstring{IntervalSecs}{IntervalSecs}}
+{\footnotesize\ttfamily \label{struct_skewer_params_a9836bfb4b6e46b8322f534bf30b99912} 
+int Skewer\+Params\+::\+Interval\+Secs}
+
+\Hypertarget{struct_skewer_params_aa959759663649d5daf66a12301124fdf}\index{SkewerParams@{SkewerParams}!LegCount@{LegCount}}
+\index{LegCount@{LegCount}!SkewerParams@{SkewerParams}}
+\doxysubsubsection{\texorpdfstring{LegCount}{LegCount}}
+{\footnotesize\ttfamily \label{struct_skewer_params_aa959759663649d5daf66a12301124fdf} 
+int Skewer\+Params\+::\+Leg\+Count}
+
+\Hypertarget{struct_skewer_params_aa67f3ed6938322fe00dc77df4ef31416}\index{SkewerParams@{SkewerParams}!Legs@{Legs}}
+\index{Legs@{Legs}!SkewerParams@{SkewerParams}}
+\doxysubsubsection{\texorpdfstring{Legs}{Legs}}
+{\footnotesize\ttfamily \label{struct_skewer_params_aa67f3ed6938322fe00dc77df4ef31416} 
+\mbox{\hyperlink{structinstrument}{instrument}} Skewer\+Params\+::\+Legs\mbox{[}4\mbox{]}}
+
+\Hypertarget{struct_skewer_params_abd5ae35adc9d27bca602fa4994a8c90c}\index{SkewerParams@{SkewerParams}!LegSecIdMap@{LegSecIdMap}}
+\index{LegSecIdMap@{LegSecIdMap}!SkewerParams@{SkewerParams}}
+\doxysubsubsection{\texorpdfstring{LegSecIdMap}{LegSecIdMap}}
+{\footnotesize\ttfamily \label{struct_skewer_params_abd5ae35adc9d27bca602fa4994a8c90c} 
+tr1\+::unordered\+\_\+map$<$int, \mbox{\hyperlink{structinstrument}{instrument}}$>$ Skewer\+Params\+::\+Leg\+Sec\+Id\+Map}
+
+\Hypertarget{struct_skewer_params_ad7ed2b366e0e1e7f30a843e2a3a1d686}\index{SkewerParams@{SkewerParams}!meta@{meta}}
+\index{meta@{meta}!SkewerParams@{SkewerParams}}
+\doxysubsubsection{\texorpdfstring{meta}{meta}}
+{\footnotesize\ttfamily \label{struct_skewer_params_ad7ed2b366e0e1e7f30a843e2a3a1d686} 
+\mbox{\hyperlink{structalgometa}{algometa}} Skewer\+Params\+::meta}
+
+\Hypertarget{struct_skewer_params_af00ee570453d5fc40bb30c3ee7022c28}\index{SkewerParams@{SkewerParams}!NetPosition@{NetPosition}}
+\index{NetPosition@{NetPosition}!SkewerParams@{SkewerParams}}
+\doxysubsubsection{\texorpdfstring{NetPosition}{NetPosition}}
+{\footnotesize\ttfamily \label{struct_skewer_params_af00ee570453d5fc40bb30c3ee7022c28} 
+int Skewer\+Params\+::\+Net\+Position}
+
+\Hypertarget{struct_skewer_params_abe3fb775c0917d1aa6a22f3cfe1628f5}\index{SkewerParams@{SkewerParams}!OrderQty@{OrderQty}}
+\index{OrderQty@{OrderQty}!SkewerParams@{SkewerParams}}
+\doxysubsubsection{\texorpdfstring{OrderQty}{OrderQty}}
+{\footnotesize\ttfamily \label{struct_skewer_params_abe3fb775c0917d1aa6a22f3cfe1628f5} 
+double Skewer\+Params\+::\+Order\+Qty}
+
+\Hypertarget{struct_skewer_params_a19094ed80728f0b7b2b8bfd115335722}\index{SkewerParams@{SkewerParams}!Randomize@{Randomize}}
+\index{Randomize@{Randomize}!SkewerParams@{SkewerParams}}
+\doxysubsubsection{\texorpdfstring{Randomize}{Randomize}}
+{\footnotesize\ttfamily \label{struct_skewer_params_a19094ed80728f0b7b2b8bfd115335722} 
+bool Skewer\+Params\+::\+Randomize}
+
+\Hypertarget{struct_skewer_params_acc4fa3978e45e71e86bb0c7fb57aac81}\index{SkewerParams@{SkewerParams}!Reset@{Reset}}
+\index{Reset@{Reset}!SkewerParams@{SkewerParams}}
+\doxysubsubsection{\texorpdfstring{Reset}{Reset}}
+{\footnotesize\ttfamily \label{struct_skewer_params_acc4fa3978e45e71e86bb0c7fb57aac81} 
+bool Skewer\+Params\+::\+Reset}
+
+\Hypertarget{struct_skewer_params_aadc2c34db7a7a098149914c03faaed53}\index{SkewerParams@{SkewerParams}!SkewLevels@{SkewLevels}}
+\index{SkewLevels@{SkewLevels}!SkewerParams@{SkewerParams}}
+\doxysubsubsection{\texorpdfstring{SkewLevels}{SkewLevels}}
+{\footnotesize\ttfamily \label{struct_skewer_params_aadc2c34db7a7a098149914c03faaed53} 
+int Skewer\+Params\+::\+Skew\+Levels}
+
+\Hypertarget{struct_skewer_params_a5ad1367d05517a5ac41486ddccdbfe84}\index{SkewerParams@{SkewerParams}!SkewMax@{SkewMax}}
+\index{SkewMax@{SkewMax}!SkewerParams@{SkewerParams}}
+\doxysubsubsection{\texorpdfstring{SkewMax}{SkewMax}}
+{\footnotesize\ttfamily \label{struct_skewer_params_a5ad1367d05517a5ac41486ddccdbfe84} 
+double Skewer\+Params\+::\+Skew\+Max}
+
+\Hypertarget{struct_skewer_params_ac0891502ab765cba93ec3ea9169460fe}\index{SkewerParams@{SkewerParams}!SkewMaxQty@{SkewMaxQty}}
+\index{SkewMaxQty@{SkewMaxQty}!SkewerParams@{SkewerParams}}
+\doxysubsubsection{\texorpdfstring{SkewMaxQty}{SkewMaxQty}}
+{\footnotesize\ttfamily \label{struct_skewer_params_ac0891502ab765cba93ec3ea9169460fe} 
+int Skewer\+Params\+::\+Skew\+Max\+Qty}
+
+\Hypertarget{struct_skewer_params_ad2b26cc2321fcb0f7a542f4976c02b10}\index{SkewerParams@{SkewerParams}!SkewThreshold@{SkewThreshold}}
+\index{SkewThreshold@{SkewThreshold}!SkewerParams@{SkewerParams}}
+\doxysubsubsection{\texorpdfstring{SkewThreshold}{SkewThreshold}}
+{\footnotesize\ttfamily \label{struct_skewer_params_ad2b26cc2321fcb0f7a542f4976c02b10} 
+double Skewer\+Params\+::\+Skew\+Threshold}
+
+\Hypertarget{struct_skewer_params_a3d8cac8b8dce18417c1d8fc0a72e4bc2}\index{SkewerParams@{SkewerParams}!SqueezeQty@{SqueezeQty}}
+\index{SqueezeQty@{SqueezeQty}!SkewerParams@{SkewerParams}}
+\doxysubsubsection{\texorpdfstring{SqueezeQty}{SqueezeQty}}
+{\footnotesize\ttfamily \label{struct_skewer_params_a3d8cac8b8dce18417c1d8fc0a72e4bc2} 
+int Skewer\+Params\+::\+Squeeze\+Qty}
+
+\Hypertarget{struct_skewer_params_a15abdeeb59af14d592383f62a715945b}\index{SkewerParams@{SkewerParams}!SqueezeRatio@{SqueezeRatio}}
+\index{SqueezeRatio@{SqueezeRatio}!SkewerParams@{SkewerParams}}
+\doxysubsubsection{\texorpdfstring{SqueezeRatio}{SqueezeRatio}}
+{\footnotesize\ttfamily \label{struct_skewer_params_a15abdeeb59af14d592383f62a715945b} 
+double Skewer\+Params\+::\+Squeeze\+Ratio}
+
+\Hypertarget{struct_skewer_params_a6ba68e53c57f55a3c046679693aabd66}\index{SkewerParams@{SkewerParams}!StartTime@{StartTime}}
+\index{StartTime@{StartTime}!SkewerParams@{SkewerParams}}
+\doxysubsubsection{\texorpdfstring{StartTime}{StartTime}}
+{\footnotesize\ttfamily \label{struct_skewer_params_a6ba68e53c57f55a3c046679693aabd66} 
+string Skewer\+Params\+::\+Start\+Time}
+
+\Hypertarget{struct_skewer_params_a5cccfa9d53dd3229ded4d8e41cffca8a}\index{SkewerParams@{SkewerParams}!subid@{subid}}
+\index{subid@{subid}!SkewerParams@{SkewerParams}}
+\doxysubsubsection{\texorpdfstring{subid}{subid}}
+{\footnotesize\ttfamily \label{struct_skewer_params_a5cccfa9d53dd3229ded4d8e41cffca8a} 
+string Skewer\+Params\+::subid}
+
+\Hypertarget{struct_skewer_params_a40b1f092d55a6daf32d5bb2bf481a5be}\index{SkewerParams@{SkewerParams}!TotalBuyPrice@{TotalBuyPrice}}
+\index{TotalBuyPrice@{TotalBuyPrice}!SkewerParams@{SkewerParams}}
+\doxysubsubsection{\texorpdfstring{TotalBuyPrice}{TotalBuyPrice}}
+{\footnotesize\ttfamily \label{struct_skewer_params_a40b1f092d55a6daf32d5bb2bf481a5be} 
+double Skewer\+Params\+::\+Total\+Buy\+Price}
+
+\Hypertarget{struct_skewer_params_a1e0a80164c7660089f3aba5965f98ba1}\index{SkewerParams@{SkewerParams}!TotalBuys@{TotalBuys}}
+\index{TotalBuys@{TotalBuys}!SkewerParams@{SkewerParams}}
+\doxysubsubsection{\texorpdfstring{TotalBuys}{TotalBuys}}
+{\footnotesize\ttfamily \label{struct_skewer_params_a1e0a80164c7660089f3aba5965f98ba1} 
+int Skewer\+Params\+::\+Total\+Buys}
+
+\Hypertarget{struct_skewer_params_a2292396145c2cbf88540d4dd2c230e5b}\index{SkewerParams@{SkewerParams}!TotalExec@{TotalExec}}
+\index{TotalExec@{TotalExec}!SkewerParams@{SkewerParams}}
+\doxysubsubsection{\texorpdfstring{TotalExec}{TotalExec}}
+{\footnotesize\ttfamily \label{struct_skewer_params_a2292396145c2cbf88540d4dd2c230e5b} 
+int Skewer\+Params\+::\+Total\+Exec}
+
+\Hypertarget{struct_skewer_params_a77eeaa5a5b13753f489679a0991825fa}\index{SkewerParams@{SkewerParams}!TotalQty@{TotalQty}}
+\index{TotalQty@{TotalQty}!SkewerParams@{SkewerParams}}
+\doxysubsubsection{\texorpdfstring{TotalQty}{TotalQty}}
+{\footnotesize\ttfamily \label{struct_skewer_params_a77eeaa5a5b13753f489679a0991825fa} 
+double Skewer\+Params\+::\+Total\+Qty}
+
+\Hypertarget{struct_skewer_params_a260874b41b183362c114b96ab55f5063}\index{SkewerParams@{SkewerParams}!TotalSellPrice@{TotalSellPrice}}
+\index{TotalSellPrice@{TotalSellPrice}!SkewerParams@{SkewerParams}}
+\doxysubsubsection{\texorpdfstring{TotalSellPrice}{TotalSellPrice}}
+{\footnotesize\ttfamily \label{struct_skewer_params_a260874b41b183362c114b96ab55f5063} 
+double Skewer\+Params\+::\+Total\+Sell\+Price}
+
+\Hypertarget{struct_skewer_params_ad034dab57d92a8a77958b81de5f5f400}\index{SkewerParams@{SkewerParams}!TotalSells@{TotalSells}}
+\index{TotalSells@{TotalSells}!SkewerParams@{SkewerParams}}
+\doxysubsubsection{\texorpdfstring{TotalSells}{TotalSells}}
+{\footnotesize\ttfamily \label{struct_skewer_params_ad034dab57d92a8a77958b81de5f5f400} 
+int Skewer\+Params\+::\+Total\+Sells}
+
+\Hypertarget{struct_skewer_params_aa8160c06d8cc9471ee245a515679b120}\index{SkewerParams@{SkewerParams}!ValidJson@{ValidJson}}
+\index{ValidJson@{ValidJson}!SkewerParams@{SkewerParams}}
+\doxysubsubsection{\texorpdfstring{ValidJson}{ValidJson}}
+{\footnotesize\ttfamily \label{struct_skewer_params_aa8160c06d8cc9471ee245a515679b120} 
+bool Skewer\+Params\+::\+Valid\+Json}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Algo\+Params/Skewer\+Params.\+hpp\item 
+Algo\+Params/Skewer\+Params.\+cpp\end{DoxyCompactItemize}

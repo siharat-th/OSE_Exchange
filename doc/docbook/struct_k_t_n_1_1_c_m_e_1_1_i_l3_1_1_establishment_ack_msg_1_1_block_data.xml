@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establishment_ack_msg_1_1_block_data" xml:lang="en-US">
+<title>KTN::CME::IL3::EstablishmentAckMsg::BlockData Struct Reference</title>
+<indexterm><primary>KTN::CME::IL3::EstablishmentAckMsg::BlockData</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establishment_ack_msg_1_1_block_data_1a47563798f35c27d8a4876dd6ff12245e">UUID</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establishment_ack_msg_1_1_block_data_1a1dfb3080503d2bf73190fc01439374a1">RequestTimestamp</link></para>
+</listitem>
+            <listitem><para>uInt32 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establishment_ack_msg_1_1_block_data_1a9b0d62c5922e428c735235f44b1a9b39">NextSeqNo</link></para>
+</listitem>
+            <listitem><para>uInt32 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establishment_ack_msg_1_1_block_data_1a528054a9ceb2e5af830d1dd4ea70e138">PreviousSeqNo</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establishment_ack_msg_1_1_block_data_1a70b918e26c63122ab3739955c0d76fa0">PreviousUUID</link></para>
+</listitem>
+            <listitem><para>uInt16 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establishment_ack_msg_1_1_block_data_1a5961f4c099cd78d0f8e335408df5fa30">KeepAliveInterval</link></para>
+</listitem>
+            <listitem><para>uInt16NULL <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establishment_ack_msg_1_1_block_data_1a5b98e63bae85f45384935031050fb13b">SecretKeySecureIDExpiration</link></para>
+</listitem>
+            <listitem><para>EnumFTI <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establishment_ack_msg_1_1_block_data_1a269e44f25f4354dc300ca088bb55f92f">FaultToleranceIndicator</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establishment_ack_msg_1_1_block_data_1a777a7db9dc39837fcc2a98b8ef36650a">SplitMsg</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establishment_ack_msg_1_1_block_data_1a269e44f25f4354dc300ca088bb55f92f"/><section>
+    <title>FaultToleranceIndicator</title>
+<indexterm><primary>FaultToleranceIndicator</primary><secondary>KTN::CME::IL3::EstablishmentAckMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::EstablishmentAckMsg::BlockData</primary><secondary>FaultToleranceIndicator</secondary></indexterm>
+<para><computeroutput>EnumFTI KTN::CME::IL3::EstablishmentAckMsg::BlockData::FaultToleranceIndicator</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establishment_ack_msg_1_1_block_data_1a5961f4c099cd78d0f8e335408df5fa30"/><section>
+    <title>KeepAliveInterval</title>
+<indexterm><primary>KeepAliveInterval</primary><secondary>KTN::CME::IL3::EstablishmentAckMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::EstablishmentAckMsg::BlockData</primary><secondary>KeepAliveInterval</secondary></indexterm>
+<para><computeroutput>uInt16 KTN::CME::IL3::EstablishmentAckMsg::BlockData::KeepAliveInterval</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establishment_ack_msg_1_1_block_data_1a9b0d62c5922e428c735235f44b1a9b39"/><section>
+    <title>NextSeqNo</title>
+<indexterm><primary>NextSeqNo</primary><secondary>KTN::CME::IL3::EstablishmentAckMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::EstablishmentAckMsg::BlockData</primary><secondary>NextSeqNo</secondary></indexterm>
+<para><computeroutput>uInt32 KTN::CME::IL3::EstablishmentAckMsg::BlockData::NextSeqNo</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establishment_ack_msg_1_1_block_data_1a528054a9ceb2e5af830d1dd4ea70e138"/><section>
+    <title>PreviousSeqNo</title>
+<indexterm><primary>PreviousSeqNo</primary><secondary>KTN::CME::IL3::EstablishmentAckMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::EstablishmentAckMsg::BlockData</primary><secondary>PreviousSeqNo</secondary></indexterm>
+<para><computeroutput>uInt32 KTN::CME::IL3::EstablishmentAckMsg::BlockData::PreviousSeqNo</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establishment_ack_msg_1_1_block_data_1a70b918e26c63122ab3739955c0d76fa0"/><section>
+    <title>PreviousUUID</title>
+<indexterm><primary>PreviousUUID</primary><secondary>KTN::CME::IL3::EstablishmentAckMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::EstablishmentAckMsg::BlockData</primary><secondary>PreviousUUID</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::EstablishmentAckMsg::BlockData::PreviousUUID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establishment_ack_msg_1_1_block_data_1a1dfb3080503d2bf73190fc01439374a1"/><section>
+    <title>RequestTimestamp</title>
+<indexterm><primary>RequestTimestamp</primary><secondary>KTN::CME::IL3::EstablishmentAckMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::EstablishmentAckMsg::BlockData</primary><secondary>RequestTimestamp</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::EstablishmentAckMsg::BlockData::RequestTimestamp</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establishment_ack_msg_1_1_block_data_1a5b98e63bae85f45384935031050fb13b"/><section>
+    <title>SecretKeySecureIDExpiration</title>
+<indexterm><primary>SecretKeySecureIDExpiration</primary><secondary>KTN::CME::IL3::EstablishmentAckMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::EstablishmentAckMsg::BlockData</primary><secondary>SecretKeySecureIDExpiration</secondary></indexterm>
+<para><computeroutput>uInt16NULL KTN::CME::IL3::EstablishmentAckMsg::BlockData::SecretKeySecureIDExpiration</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establishment_ack_msg_1_1_block_data_1a777a7db9dc39837fcc2a98b8ef36650a"/><section>
+    <title>SplitMsg</title>
+<indexterm><primary>SplitMsg</primary><secondary>KTN::CME::IL3::EstablishmentAckMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::EstablishmentAckMsg::BlockData</primary><secondary>SplitMsg</secondary></indexterm>
+<para><computeroutput>uint8_t KTN::CME::IL3::EstablishmentAckMsg::BlockData::SplitMsg</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establishment_ack_msg_1_1_block_data_1a47563798f35c27d8a4876dd6ff12245e"/><section>
+    <title>UUID</title>
+<indexterm><primary>UUID</primary><secondary>KTN::CME::IL3::EstablishmentAckMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::EstablishmentAckMsg::BlockData</primary><secondary>UUID</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::EstablishmentAckMsg::BlockData::UUID</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+exchsupport/cme/il3/IL3Messages2.hpp</section>
+</section>

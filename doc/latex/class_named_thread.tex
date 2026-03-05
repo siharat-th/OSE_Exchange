@@ -1,0 +1,102 @@
+\doxysection{Named\+Thread Class Reference}
+\hypertarget{class_named_thread}{}\label{class_named_thread}\index{NamedThread@{NamedThread}}
+
+
+Represents a named thread with affinity to a specific core.  
+
+
+
+
+{\ttfamily \#include $<$Named\+Thread.\+hpp$>$}
+
+Inheritance diagram for Named\+Thread\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_named_thread}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_named_thread_a891fabdc2d824048ec05c82e7ef8c69a}{Named\+Thread}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_named_thread_a018dadb59e5af98ee734301a1baa50cb}{\texorpdfstring{$\sim$}{\string~}\+Named\+Thread}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_named_thread_a9fa42542ff43c89fb9bbc33de9c87e34}{Create\+And\+Run}} (string name, int core)
+\begin{DoxyCompactList}\small\item\em Creates and runs the named thread on the specified core. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_named_thread_ad4809c571171be13f0f91f540d5c196f}{Join}} ()
+\begin{DoxyCompactList}\small\item\em Joins the named thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a named thread with affinity to a specific core. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_named_thread_a891fabdc2d824048ec05c82e7ef8c69a}\index{NamedThread@{NamedThread}!NamedThread@{NamedThread}}
+\index{NamedThread@{NamedThread}!NamedThread@{NamedThread}}
+\doxysubsubsection{\texorpdfstring{NamedThread()}{NamedThread()}}
+{\footnotesize\ttfamily \label{class_named_thread_a891fabdc2d824048ec05c82e7ef8c69a} 
+Named\+Thread\+::\+Named\+Thread (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+\Hypertarget{class_named_thread_a018dadb59e5af98ee734301a1baa50cb}\index{NamedThread@{NamedThread}!````~NamedThread@{\texorpdfstring{$\sim$}{\string~}NamedThread}}
+\index{````~NamedThread@{\texorpdfstring{$\sim$}{\string~}NamedThread}!NamedThread@{NamedThread}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}NamedThread()}{\string~NamedThread()}}
+{\footnotesize\ttfamily \label{class_named_thread_a018dadb59e5af98ee734301a1baa50cb} 
+Named\+Thread\+::\texorpdfstring{$\sim$}{\string~}\+Named\+Thread (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+
+
+References \mbox{\hyperlink{l00031}{Join()}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_named_thread_a9fa42542ff43c89fb9bbc33de9c87e34}\index{NamedThread@{NamedThread}!CreateAndRun@{CreateAndRun}}
+\index{CreateAndRun@{CreateAndRun}!NamedThread@{NamedThread}}
+\doxysubsubsection{\texorpdfstring{CreateAndRun()}{CreateAndRun()}}
+{\footnotesize\ttfamily \label{class_named_thread_a9fa42542ff43c89fb9bbc33de9c87e34} 
+void Named\+Thread\+::\+Create\+And\+Run (\begin{DoxyParamCaption}\item[{string}]{name}{, }\item[{int}]{core}{}\end{DoxyParamCaption})}
+
+
+
+Creates and runs the named thread on the specified core. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the thread. \\
+\hline
+{\em core} & The core to which the thread should be affinitized. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{l00023}{KTN\+::\+Algo\+Service\+Broker\+V3\+::\+Algo\+Service\+Broker\+V3()}}, \mbox{\hyperlink{l00026}{Standard\+Menu\+::\+Display\+And\+Wait()}}, \mbox{\hyperlink{l00026}{Zmq\+Menu\+::\+Display\+And\+Wait()}}, \mbox{\hyperlink{l00011}{KTN\+::\+Exchange\+Manager\+::\+Exchange\+Manager()}}, \mbox{\hyperlink{l00016}{KTN\+::notify\+::\+Slacker\+::\+Init\+And\+Run()}}, \mbox{\hyperlink{l00020}{KTN\+::notify\+::\+Notifier\+Rest\+::\+Notifier\+Rest()}}, \mbox{\hyperlink{l00020}{Audit\+Trail\+Writer\+::\+Start()}}, \mbox{\hyperlink{l00021}{Audit\+Trail\+Writer\+V3\+::\+Start()}}, \mbox{\hyperlink{l00027}{KTN\+::\+ALGO\+::\+Interval\+Timer\+::\+Start()}}, \mbox{\hyperlink{l00027}{KTN\+::\+ALGO\+::\+Simple\+Timer\+::\+Start()}}, \mbox{\hyperlink{l00023}{KTN\+::\+Core\+::\+Heartbeat\+Monitor\+::\+Start()}}, \mbox{\hyperlink{l00032}{Ktn\+Cme\+Mbo\+::\+Start()}}, \mbox{\hyperlink{l00043}{Ktn\+Cme\+Mdp\+V4\+::\+Start()}}, \mbox{\hyperlink{l00025}{Order\+Manager\+V5\+::\+Update\+Meta\+Params()}}, \mbox{\hyperlink{l00011}{Zmq\+Logger\+::\+Zmq\+Logger()}}, \mbox{\hyperlink{l00012}{Zmq\+Subscriber\+V5\+::\+Zmq\+Subscriber\+V5()}}, and \mbox{\hyperlink{l00003}{Zmq\+Subscriber\+V5\+::\+Zmq\+Subscriber\+V5()}}.
+
+\Hypertarget{class_named_thread_ad4809c571171be13f0f91f540d5c196f}\index{NamedThread@{NamedThread}!Join@{Join}}
+\index{Join@{Join}!NamedThread@{NamedThread}}
+\doxysubsubsection{\texorpdfstring{Join()}{Join()}}
+{\footnotesize\ttfamily \label{class_named_thread_ad4809c571171be13f0f91f540d5c196f} 
+void Named\+Thread\+::\+Join (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Joins the named thread. 
+
+
+
+Referenced by \mbox{\hyperlink{l00014}{\texorpdfstring{$\sim$}{\string~}\+Named\+Thread()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Core/Named\+Thread.\+hpp\item 
+Core/Named\+Thread.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,97 @@
+\doxysection{Algo\+PLCallback Class Reference}
+\hypertarget{class_algo_p_l_callback}{}\label{class_algo_p_l_callback}\index{AlgoPLCallback@{AlgoPLCallback}}
+
+
+The \doxylink{class_algo_p_l_callback}{Algo\+PLCallback} class is an abstract class that defines the interface for handling profit and loss events.  
+
+
+
+
+{\ttfamily \#include $<$Algo\+PLCallback.\+hpp$>$}
+
+Inheritance diagram for Algo\+PLCallback\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_algo_p_l_callback}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_algo_p_l_callback_a06714cabdb3853ff4e5566814891a324}{Profit\+Event}} \{ \newline
+\mbox{\hyperlink{class_algo_p_l_callback_a06714cabdb3853ff4e5566814891a324a5716fdc31bb7e36a9c78b9c5b0ad3050}{NONE}}
+, \mbox{\hyperlink{class_algo_p_l_callback_a06714cabdb3853ff4e5566814891a324a606976a56e71f0cbd80075aca9abda3e}{PROFITTAKE}}
+, \mbox{\hyperlink{class_algo_p_l_callback_a06714cabdb3853ff4e5566814891a324a249c454213699ab207874983a3d35801}{STOPLOSS}}
+, \mbox{\hyperlink{class_algo_p_l_callback_a06714cabdb3853ff4e5566814891a324a9d5d5464c40f496f0838551abb425731}{TIMERHIT}}
+, \newline
+\mbox{\hyperlink{class_algo_p_l_callback_a06714cabdb3853ff4e5566814891a324a63605381ddd4d06bede0cc0f1f6360d1}{MKT}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_algo_p_l_callback_a26f3ee1e5c8efa670f43baaec0bc3ef6}{on\+PL}} (\mbox{\hyperlink{struct_position}{Position}} \&pos, \mbox{\hyperlink{class_algo_p_l_callback_a06714cabdb3853ff4e5566814891a324}{Profit\+Event}} event)=0
+\begin{DoxyCompactList}\small\item\em This method is called when a profit or loss event occurs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_algo_p_l_callback}{Algo\+PLCallback} class is an abstract class that defines the interface for handling profit and loss events. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_algo_p_l_callback_a06714cabdb3853ff4e5566814891a324}\index{AlgoPLCallback@{AlgoPLCallback}!ProfitEvent@{ProfitEvent}}
+\index{ProfitEvent@{ProfitEvent}!AlgoPLCallback@{AlgoPLCallback}}
+\doxysubsubsection{\texorpdfstring{ProfitEvent}{ProfitEvent}}
+{\footnotesize\ttfamily \label{class_algo_p_l_callback_a06714cabdb3853ff4e5566814891a324} 
+enum \mbox{\hyperlink{class_algo_p_l_callback_a06714cabdb3853ff4e5566814891a324}{Algo\+PLCallback\+::\+Profit\+Event}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NONE@{NONE}!AlgoPLCallback@{AlgoPLCallback}}\index{AlgoPLCallback@{AlgoPLCallback}!NONE@{NONE}}}\Hypertarget{class_algo_p_l_callback_a06714cabdb3853ff4e5566814891a324a5716fdc31bb7e36a9c78b9c5b0ad3050}\label{class_algo_p_l_callback_a06714cabdb3853ff4e5566814891a324} 
+NONE&No profit event \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PROFITTAKE@{PROFITTAKE}!AlgoPLCallback@{AlgoPLCallback}}\index{AlgoPLCallback@{AlgoPLCallback}!PROFITTAKE@{PROFITTAKE}}}\Hypertarget{class_algo_p_l_callback_a06714cabdb3853ff4e5566814891a324a606976a56e71f0cbd80075aca9abda3e}\label{class_algo_p_l_callback_a06714cabdb3853ff4e5566814891a324} 
+PROFITTAKE&Profit take event \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STOPLOSS@{STOPLOSS}!AlgoPLCallback@{AlgoPLCallback}}\index{AlgoPLCallback@{AlgoPLCallback}!STOPLOSS@{STOPLOSS}}}\Hypertarget{class_algo_p_l_callback_a06714cabdb3853ff4e5566814891a324a249c454213699ab207874983a3d35801}\label{class_algo_p_l_callback_a06714cabdb3853ff4e5566814891a324} 
+STOPLOSS&Stop loss event \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TIMERHIT@{TIMERHIT}!AlgoPLCallback@{AlgoPLCallback}}\index{AlgoPLCallback@{AlgoPLCallback}!TIMERHIT@{TIMERHIT}}}\Hypertarget{class_algo_p_l_callback_a06714cabdb3853ff4e5566814891a324a9d5d5464c40f496f0838551abb425731}\label{class_algo_p_l_callback_a06714cabdb3853ff4e5566814891a324} 
+TIMERHIT&Timer hit event \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MKT@{MKT}!AlgoPLCallback@{AlgoPLCallback}}\index{AlgoPLCallback@{AlgoPLCallback}!MKT@{MKT}}}\Hypertarget{class_algo_p_l_callback_a06714cabdb3853ff4e5566814891a324a63605381ddd4d06bede0cc0f1f6360d1}\label{class_algo_p_l_callback_a06714cabdb3853ff4e5566814891a324} 
+MKT&Market event \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_algo_p_l_callback_a26f3ee1e5c8efa670f43baaec0bc3ef6}\index{AlgoPLCallback@{AlgoPLCallback}!onPL@{onPL}}
+\index{onPL@{onPL}!AlgoPLCallback@{AlgoPLCallback}}
+\doxysubsubsection{\texorpdfstring{onPL()}{onPL()}}
+{\footnotesize\ttfamily \label{class_algo_p_l_callback_a26f3ee1e5c8efa670f43baaec0bc3ef6} 
+virtual void Algo\+PLCallback\+::on\+PL (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_position}{Position}} \&}]{pos}{, }\item[{\mbox{\hyperlink{class_algo_p_l_callback_a06714cabdb3853ff4e5566814891a324}{Profit\+Event}}}]{event}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This method is called when a profit or loss event occurs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & The position associated with the event. \\
+\hline
+{\em event} & The type of profit event. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_k_t_n_1_1_p_l_watcher_a20adfd48a1cea2bd875b6d80ff4496e2}{KTN\+::\+PLWatcher}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Algo\+Support/Algo\+PLCallback.\+hpp\end{DoxyCompactItemize}

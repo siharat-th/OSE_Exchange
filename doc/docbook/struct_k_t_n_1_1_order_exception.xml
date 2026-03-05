@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_t_n_1_1_order_exception" xml:lang="en-US">
+<title>KTN::OrderException Struct Reference</title>
+<indexterm><primary>KTN::OrderException</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>int8_t <link linkend="_struct_k_t_n_1_1_order_exception_1a4cb70c5217f4fb77806c3e041bab532a">callbackid</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_struct_k_t_n_1_1_order_exception_1a0d236ae903b13c64514e758ae2018ea2">mktsegid</link></para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_struct_k_t_n_1_1_order_exception_1a2d7dd72c35b76ab8a9a6c975b7b136e0">exchordid</link></para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_struct_k_t_n_1_1_order_exception_1a7bbd9d08c15194fb14d3c6a898b0df3c">reason</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_k_t_n_1_1_order_exception_1a88b8136396efc06bbf907c26c0578168">text</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_order_exception_1a4cb70c5217f4fb77806c3e041bab532a"/><section>
+    <title>callbackid</title>
+<indexterm><primary>callbackid</primary><secondary>KTN::OrderException</secondary></indexterm>
+<indexterm><primary>KTN::OrderException</primary><secondary>callbackid</secondary></indexterm>
+<para><computeroutput>int8_t KTN::OrderException::callbackid</computeroutput></para>
+<para>The callback ID of the order exception. </para>
+</section>
+<anchor xml:id="_struct_k_t_n_1_1_order_exception_1a2d7dd72c35b76ab8a9a6c975b7b136e0"/><section>
+    <title>exchordid</title>
+<indexterm><primary>exchordid</primary><secondary>KTN::OrderException</secondary></indexterm>
+<indexterm><primary>KTN::OrderException</primary><secondary>exchordid</secondary></indexterm>
+<para><computeroutput>uint64_t KTN::OrderException::exchordid</computeroutput></para>
+<para>The CME ID of the order exception. </para>
+</section>
+<anchor xml:id="_struct_k_t_n_1_1_order_exception_1a0d236ae903b13c64514e758ae2018ea2"/><section>
+    <title>mktsegid</title>
+<indexterm><primary>mktsegid</primary><secondary>KTN::OrderException</secondary></indexterm>
+<indexterm><primary>KTN::OrderException</primary><secondary>mktsegid</secondary></indexterm>
+<para><computeroutput>uint8_t KTN::OrderException::mktsegid</computeroutput></para>
+<para>The market segment ID of the order exception. </para>
+</section>
+<anchor xml:id="_struct_k_t_n_1_1_order_exception_1a7bbd9d08c15194fb14d3c6a898b0df3c"/><section>
+    <title>reason</title>
+<indexterm><primary>reason</primary><secondary>KTN::OrderException</secondary></indexterm>
+<indexterm><primary>KTN::OrderException</primary><secondary>reason</secondary></indexterm>
+<para><computeroutput>uint16_t KTN::OrderException::reason</computeroutput></para>
+<para>The reason code of the order exception. </para>
+</section>
+<anchor xml:id="_struct_k_t_n_1_1_order_exception_1a88b8136396efc06bbf907c26c0578168"/><section>
+    <title>text</title>
+<indexterm><primary>text</primary><secondary>KTN::OrderException</secondary></indexterm>
+<indexterm><primary>KTN::OrderException</primary><secondary>text</secondary></indexterm>
+<para><computeroutput>string KTN::OrderException::text</computeroutput></para>
+<para>The text description of the order exception. </para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Orders/OrderPod.hpp</section>
+</section>

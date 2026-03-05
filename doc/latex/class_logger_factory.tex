@@ -1,0 +1,48 @@
+\doxysection{Logger\+Factory Class Reference}
+\hypertarget{class_logger_factory}{}\label{class_logger_factory}\index{LoggerFactory@{LoggerFactory}}
+
+
+Factory class for creating loggers based on the configuration settings.  
+
+
+
+
+{\ttfamily \#include $<$Logger\+Factory.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_logger}{ILogger}} $>$ \mbox{\hyperlink{class_logger_factory_a3e9b5cbd61024a40fad3f51a27096d8f}{create\+Logger}} ()
+\begin{DoxyCompactList}\small\item\em Creates a logger based on the configuration settings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Factory class for creating loggers based on the configuration settings. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_logger_factory_a3e9b5cbd61024a40fad3f51a27096d8f}\index{LoggerFactory@{LoggerFactory}!createLogger@{createLogger}}
+\index{createLogger@{createLogger}!LoggerFactory@{LoggerFactory}}
+\doxysubsubsection{\texorpdfstring{createLogger()}{createLogger()}}
+{\footnotesize\ttfamily \label{class_logger_factory_a3e9b5cbd61024a40fad3f51a27096d8f} 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_logger}{ILogger}} $>$ Logger\+Factory\+::create\+Logger (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Creates a logger based on the configuration settings. 
+
+\begin{DoxyReturn}{Returns}
+A shared pointer to the created logger. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00123}{Settings\+::get()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00068}{Log\+::\+Log()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Loggers/Logger\+Factory.\+hpp\end{DoxyCompactItemize}

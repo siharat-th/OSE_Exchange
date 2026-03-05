@@ -1,0 +1,356 @@
+\doxysection{Stacker\+Params Struct Reference}
+\hypertarget{struct_stacker_params}{}\label{struct_stacker_params}\index{StackerParams@{StackerParams}}
+
+
+The \doxylink{struct_stacker_params}{Stacker\+Params} struct represents the parameters for the Stacker algorithm.  
+
+
+
+
+{\ttfamily \#include $<$Stacker\+Params.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_stacker_params}{Stacker\+Params}} \mbox{\hyperlink{struct_stacker_params_abb5fa895ed40911b4893b9093d526ca4}{parse}} (const std\+::string \&json\+\_\+str)
+\begin{DoxyCompactList}\small\item\em parse the \doxylink{struct_stacker_params}{Stacker\+Params} from a JSON string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{struct_stacker_params_a9486aaa9f9078dad81214f50035bec7a}{Valid\+Json}}
+\item 
+\mbox{\hyperlink{structalgometa}{algometa}} \mbox{\hyperlink{struct_stacker_params_aab54884a17c9b3f968e9761a88c65958}{meta}}
+\item 
+string \mbox{\hyperlink{struct_stacker_params_aac7e58c10b3e0d2e39e2eb7daece79b0}{subid}}
+\item 
+tr1\+::unordered\+\_\+map$<$ int, \mbox{\hyperlink{structinstrument}{instrument}} $>$ \mbox{\hyperlink{struct_stacker_params_adc5d0ed9e96215f6c8ad6493b11afddc}{Leg\+Sec\+Id\+Map}}
+\item 
+\mbox{\hyperlink{structinstrument}{instrument}} \mbox{\hyperlink{struct_stacker_params_a5e1141fd7f88cb786b59d8e9d3111e45}{Legs}} \mbox{[}4\mbox{]}
+\item 
+int \mbox{\hyperlink{struct_stacker_params_ac06b4f6b3cd13dfbae18be7f6403557e}{Leg\+Count}}
+\item 
+double \mbox{\hyperlink{struct_stacker_params_a0283e3eaaa30812749d47a0fb065f4bc}{Order\+Qty}}
+\item 
+double \mbox{\hyperlink{struct_stacker_params_a6a623f0fa7db9cd553c78d895ddbdd23}{Total\+Qty}}
+\item 
+double \mbox{\hyperlink{struct_stacker_params_a66f14fc3905a448a3551276fd7baadb1}{Total\+Exec}}
+\item 
+double \mbox{\hyperlink{struct_stacker_params_ad80f951e3aa768ab1e119269e7a350b7}{Total\+Sent}}
+\item 
+double \mbox{\hyperlink{struct_stacker_params_ae272ba94e937a8f3bfba406efbf40969}{Net\+Position}}
+\item 
+int \mbox{\hyperlink{struct_stacker_params_adf1cd130f589d1b8ba4ae990ed760948}{Max\+Open\+Buys}}
+\item 
+int \mbox{\hyperlink{struct_stacker_params_a4b9513cbd9b10ef26d50cfc61f8ff0c9}{Max\+Open\+Sells}}
+\item 
+int \mbox{\hyperlink{struct_stacker_params_a56fcb95142a89c443e8d4fc3985d5f85}{Curr\+Open\+Buys}}
+\item 
+int \mbox{\hyperlink{struct_stacker_params_a2772348cbd1430bd7a1b2c84db40e522}{Curr\+Open\+Sells}}
+\item 
+int \mbox{\hyperlink{struct_stacker_params_ac5678e56c16c227a5505cf9e0ba6c4ed}{Bid\+Levels}}
+\item 
+int \mbox{\hyperlink{struct_stacker_params_a5c73c94dd88b005e82fbe4196a7d0672}{Ask\+Levels}}
+\item 
+int \mbox{\hyperlink{struct_stacker_params_a489f964ad08d46091473112af486bdab}{Offset\+Levels}}
+\item 
+bool \mbox{\hyperlink{struct_stacker_params_abb6dd686df3aa30fb065e007807a2fe9}{Send\+Bids}}
+\item 
+bool \mbox{\hyperlink{struct_stacker_params_a5898f069bcbd4abb2ac4d63b4f2b62fc}{Send\+Asks}}
+\item 
+bool \mbox{\hyperlink{struct_stacker_params_ac2f3a3facfac8de6f57eb3dd5dee1f53}{Auto\+Hedge}}
+\item 
+int \mbox{\hyperlink{struct_stacker_params_a43cda7dd615661c33d24236e9e61ad46}{Edge}}
+\item 
+double \mbox{\hyperlink{struct_stacker_params_acde187ab2ce706193622e2eb871f8e86}{Squeeze\+Ratio}}
+\item 
+int \mbox{\hyperlink{struct_stacker_params_a56f1a600f5bd9a704f218b2df0ea0209}{Squeeze\+Qty}}
+\item 
+double \mbox{\hyperlink{struct_stacker_params_abaa5bc01916edc34c6d81525e132e429}{Skew\+Threshold}}
+\item 
+int \mbox{\hyperlink{struct_stacker_params_a746ef43615eba588a58a23a945d4c37d}{Skew\+Levels}}
+\item 
+double \mbox{\hyperlink{struct_stacker_params_a8536a451a4e0da7767ac0feca71c99f3}{Puke\+Ratio}}
+\item 
+int \mbox{\hyperlink{struct_stacker_params_a9e8e9093dc2eac5fa7fcb6458f13987d}{Puke\+Qty}}
+\item 
+double \mbox{\hyperlink{struct_stacker_params_aaab02ad9cb70cffd474bfa8faede4e50}{Puke\+Pct\+Priority}}
+\item 
+bool \mbox{\hyperlink{struct_stacker_params_af98a3b90957fabce045bf7e781ff2efc}{Enable\+Restack}}
+\item 
+int \mbox{\hyperlink{struct_stacker_params_a2a8b2e148c3ff00b223f1e2f248fa4f5}{Restack\+Qty}}
+\item 
+bool \mbox{\hyperlink{struct_stacker_params_aad0aeee1ef68bc08dd877ed8788659e9}{Restack\+Top\+Level}}
+\item 
+bool \mbox{\hyperlink{struct_stacker_params_a5c4c173ac08c4fb4485b57eedd12f1b2}{Pull\+On\+Large\+Trade}}
+\item 
+int \mbox{\hyperlink{struct_stacker_params_a1a109f7c2d0a7c3c60a67cfee0753796}{Large\+Trade\+Qty}}
+\item 
+int \mbox{\hyperlink{struct_stacker_params_ac4b04935477a2a2e83d8bca25ef81cf9}{Large\+Ord\+Qty}}
+\item 
+bool \mbox{\hyperlink{struct_stacker_params_ae63de31681f4bfb4fed8711ed16d9729}{Trade\+On\+Large\+Qty}}
+\item 
+bool \mbox{\hyperlink{struct_stacker_params_afe44b12b7f60c89d9d1d8b753a9d9442}{Reset}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{struct_stacker_params}{Stacker\+Params} struct represents the parameters for the Stacker algorithm. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_stacker_params_abb5fa895ed40911b4893b9093d526ca4}\index{StackerParams@{StackerParams}!parse@{parse}}
+\index{parse@{parse}!StackerParams@{StackerParams}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily \label{struct_stacker_params_abb5fa895ed40911b4893b9093d526ca4} 
+\mbox{\hyperlink{struct_stacker_params}{Stacker\+Params}} Stacker\+Params\+::parse (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{json\+\_\+str}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+parse the \doxylink{struct_stacker_params}{Stacker\+Params} from a JSON string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json\+\_\+str} & The JSON string to parse. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The parsed \doxylink{struct_stacker_params}{Stacker\+Params} object. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00260}{algometa\+::\+Enabled}}, \mbox{\hyperlink{l00049}{User\+Info\+::groupname}}, \mbox{\hyperlink{l00048}{User\+Info\+::org}}, \mbox{\hyperlink{l00262}{algometa\+::\+Source}}, \mbox{\hyperlink{l00256}{algometa\+::\+Strategy}}, \mbox{\hyperlink{l00264}{algometa\+::\+Tag}}, \mbox{\hyperlink{l00258}{algometa\+::\+Template\+Name}}, \mbox{\hyperlink{l00261}{algometa\+::\+Unique\+Id}}, \mbox{\hyperlink{l00047}{User\+Info\+::user}}, and \mbox{\hyperlink{l00279}{algometa\+::userinfo}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00050}{KTN\+::\+Stacker\+::on\+Launch()}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_stacker_params_a5c73c94dd88b005e82fbe4196a7d0672}\index{StackerParams@{StackerParams}!AskLevels@{AskLevels}}
+\index{AskLevels@{AskLevels}!StackerParams@{StackerParams}}
+\doxysubsubsection{\texorpdfstring{AskLevels}{AskLevels}}
+{\footnotesize\ttfamily \label{struct_stacker_params_a5c73c94dd88b005e82fbe4196a7d0672} 
+int Stacker\+Params\+::\+Ask\+Levels}
+
+\Hypertarget{struct_stacker_params_ac2f3a3facfac8de6f57eb3dd5dee1f53}\index{StackerParams@{StackerParams}!AutoHedge@{AutoHedge}}
+\index{AutoHedge@{AutoHedge}!StackerParams@{StackerParams}}
+\doxysubsubsection{\texorpdfstring{AutoHedge}{AutoHedge}}
+{\footnotesize\ttfamily \label{struct_stacker_params_ac2f3a3facfac8de6f57eb3dd5dee1f53} 
+bool Stacker\+Params\+::\+Auto\+Hedge}
+
+\Hypertarget{struct_stacker_params_ac5678e56c16c227a5505cf9e0ba6c4ed}\index{StackerParams@{StackerParams}!BidLevels@{BidLevels}}
+\index{BidLevels@{BidLevels}!StackerParams@{StackerParams}}
+\doxysubsubsection{\texorpdfstring{BidLevels}{BidLevels}}
+{\footnotesize\ttfamily \label{struct_stacker_params_ac5678e56c16c227a5505cf9e0ba6c4ed} 
+int Stacker\+Params\+::\+Bid\+Levels}
+
+\Hypertarget{struct_stacker_params_a56fcb95142a89c443e8d4fc3985d5f85}\index{StackerParams@{StackerParams}!CurrOpenBuys@{CurrOpenBuys}}
+\index{CurrOpenBuys@{CurrOpenBuys}!StackerParams@{StackerParams}}
+\doxysubsubsection{\texorpdfstring{CurrOpenBuys}{CurrOpenBuys}}
+{\footnotesize\ttfamily \label{struct_stacker_params_a56fcb95142a89c443e8d4fc3985d5f85} 
+int Stacker\+Params\+::\+Curr\+Open\+Buys}
+
+\Hypertarget{struct_stacker_params_a2772348cbd1430bd7a1b2c84db40e522}\index{StackerParams@{StackerParams}!CurrOpenSells@{CurrOpenSells}}
+\index{CurrOpenSells@{CurrOpenSells}!StackerParams@{StackerParams}}
+\doxysubsubsection{\texorpdfstring{CurrOpenSells}{CurrOpenSells}}
+{\footnotesize\ttfamily \label{struct_stacker_params_a2772348cbd1430bd7a1b2c84db40e522} 
+int Stacker\+Params\+::\+Curr\+Open\+Sells}
+
+\Hypertarget{struct_stacker_params_a43cda7dd615661c33d24236e9e61ad46}\index{StackerParams@{StackerParams}!Edge@{Edge}}
+\index{Edge@{Edge}!StackerParams@{StackerParams}}
+\doxysubsubsection{\texorpdfstring{Edge}{Edge}}
+{\footnotesize\ttfamily \label{struct_stacker_params_a43cda7dd615661c33d24236e9e61ad46} 
+int Stacker\+Params\+::\+Edge}
+
+\Hypertarget{struct_stacker_params_af98a3b90957fabce045bf7e781ff2efc}\index{StackerParams@{StackerParams}!EnableRestack@{EnableRestack}}
+\index{EnableRestack@{EnableRestack}!StackerParams@{StackerParams}}
+\doxysubsubsection{\texorpdfstring{EnableRestack}{EnableRestack}}
+{\footnotesize\ttfamily \label{struct_stacker_params_af98a3b90957fabce045bf7e781ff2efc} 
+bool Stacker\+Params\+::\+Enable\+Restack}
+
+\Hypertarget{struct_stacker_params_ac4b04935477a2a2e83d8bca25ef81cf9}\index{StackerParams@{StackerParams}!LargeOrdQty@{LargeOrdQty}}
+\index{LargeOrdQty@{LargeOrdQty}!StackerParams@{StackerParams}}
+\doxysubsubsection{\texorpdfstring{LargeOrdQty}{LargeOrdQty}}
+{\footnotesize\ttfamily \label{struct_stacker_params_ac4b04935477a2a2e83d8bca25ef81cf9} 
+int Stacker\+Params\+::\+Large\+Ord\+Qty}
+
+\Hypertarget{struct_stacker_params_a1a109f7c2d0a7c3c60a67cfee0753796}\index{StackerParams@{StackerParams}!LargeTradeQty@{LargeTradeQty}}
+\index{LargeTradeQty@{LargeTradeQty}!StackerParams@{StackerParams}}
+\doxysubsubsection{\texorpdfstring{LargeTradeQty}{LargeTradeQty}}
+{\footnotesize\ttfamily \label{struct_stacker_params_a1a109f7c2d0a7c3c60a67cfee0753796} 
+int Stacker\+Params\+::\+Large\+Trade\+Qty}
+
+\Hypertarget{struct_stacker_params_ac06b4f6b3cd13dfbae18be7f6403557e}\index{StackerParams@{StackerParams}!LegCount@{LegCount}}
+\index{LegCount@{LegCount}!StackerParams@{StackerParams}}
+\doxysubsubsection{\texorpdfstring{LegCount}{LegCount}}
+{\footnotesize\ttfamily \label{struct_stacker_params_ac06b4f6b3cd13dfbae18be7f6403557e} 
+int Stacker\+Params\+::\+Leg\+Count}
+
+\Hypertarget{struct_stacker_params_a5e1141fd7f88cb786b59d8e9d3111e45}\index{StackerParams@{StackerParams}!Legs@{Legs}}
+\index{Legs@{Legs}!StackerParams@{StackerParams}}
+\doxysubsubsection{\texorpdfstring{Legs}{Legs}}
+{\footnotesize\ttfamily \label{struct_stacker_params_a5e1141fd7f88cb786b59d8e9d3111e45} 
+\mbox{\hyperlink{structinstrument}{instrument}} Stacker\+Params\+::\+Legs\mbox{[}4\mbox{]}}
+
+\Hypertarget{struct_stacker_params_adc5d0ed9e96215f6c8ad6493b11afddc}\index{StackerParams@{StackerParams}!LegSecIdMap@{LegSecIdMap}}
+\index{LegSecIdMap@{LegSecIdMap}!StackerParams@{StackerParams}}
+\doxysubsubsection{\texorpdfstring{LegSecIdMap}{LegSecIdMap}}
+{\footnotesize\ttfamily \label{struct_stacker_params_adc5d0ed9e96215f6c8ad6493b11afddc} 
+tr1\+::unordered\+\_\+map$<$int, \mbox{\hyperlink{structinstrument}{instrument}}$>$ Stacker\+Params\+::\+Leg\+Sec\+Id\+Map}
+
+\Hypertarget{struct_stacker_params_adf1cd130f589d1b8ba4ae990ed760948}\index{StackerParams@{StackerParams}!MaxOpenBuys@{MaxOpenBuys}}
+\index{MaxOpenBuys@{MaxOpenBuys}!StackerParams@{StackerParams}}
+\doxysubsubsection{\texorpdfstring{MaxOpenBuys}{MaxOpenBuys}}
+{\footnotesize\ttfamily \label{struct_stacker_params_adf1cd130f589d1b8ba4ae990ed760948} 
+int Stacker\+Params\+::\+Max\+Open\+Buys}
+
+\Hypertarget{struct_stacker_params_a4b9513cbd9b10ef26d50cfc61f8ff0c9}\index{StackerParams@{StackerParams}!MaxOpenSells@{MaxOpenSells}}
+\index{MaxOpenSells@{MaxOpenSells}!StackerParams@{StackerParams}}
+\doxysubsubsection{\texorpdfstring{MaxOpenSells}{MaxOpenSells}}
+{\footnotesize\ttfamily \label{struct_stacker_params_a4b9513cbd9b10ef26d50cfc61f8ff0c9} 
+int Stacker\+Params\+::\+Max\+Open\+Sells}
+
+\Hypertarget{struct_stacker_params_aab54884a17c9b3f968e9761a88c65958}\index{StackerParams@{StackerParams}!meta@{meta}}
+\index{meta@{meta}!StackerParams@{StackerParams}}
+\doxysubsubsection{\texorpdfstring{meta}{meta}}
+{\footnotesize\ttfamily \label{struct_stacker_params_aab54884a17c9b3f968e9761a88c65958} 
+\mbox{\hyperlink{structalgometa}{algometa}} Stacker\+Params\+::meta}
+
+\Hypertarget{struct_stacker_params_ae272ba94e937a8f3bfba406efbf40969}\index{StackerParams@{StackerParams}!NetPosition@{NetPosition}}
+\index{NetPosition@{NetPosition}!StackerParams@{StackerParams}}
+\doxysubsubsection{\texorpdfstring{NetPosition}{NetPosition}}
+{\footnotesize\ttfamily \label{struct_stacker_params_ae272ba94e937a8f3bfba406efbf40969} 
+double Stacker\+Params\+::\+Net\+Position}
+
+\Hypertarget{struct_stacker_params_a489f964ad08d46091473112af486bdab}\index{StackerParams@{StackerParams}!OffsetLevels@{OffsetLevels}}
+\index{OffsetLevels@{OffsetLevels}!StackerParams@{StackerParams}}
+\doxysubsubsection{\texorpdfstring{OffsetLevels}{OffsetLevels}}
+{\footnotesize\ttfamily \label{struct_stacker_params_a489f964ad08d46091473112af486bdab} 
+int Stacker\+Params\+::\+Offset\+Levels}
+
+\Hypertarget{struct_stacker_params_a0283e3eaaa30812749d47a0fb065f4bc}\index{StackerParams@{StackerParams}!OrderQty@{OrderQty}}
+\index{OrderQty@{OrderQty}!StackerParams@{StackerParams}}
+\doxysubsubsection{\texorpdfstring{OrderQty}{OrderQty}}
+{\footnotesize\ttfamily \label{struct_stacker_params_a0283e3eaaa30812749d47a0fb065f4bc} 
+double Stacker\+Params\+::\+Order\+Qty}
+
+\Hypertarget{struct_stacker_params_aaab02ad9cb70cffd474bfa8faede4e50}\index{StackerParams@{StackerParams}!PukePctPriority@{PukePctPriority}}
+\index{PukePctPriority@{PukePctPriority}!StackerParams@{StackerParams}}
+\doxysubsubsection{\texorpdfstring{PukePctPriority}{PukePctPriority}}
+{\footnotesize\ttfamily \label{struct_stacker_params_aaab02ad9cb70cffd474bfa8faede4e50} 
+double Stacker\+Params\+::\+Puke\+Pct\+Priority}
+
+\Hypertarget{struct_stacker_params_a9e8e9093dc2eac5fa7fcb6458f13987d}\index{StackerParams@{StackerParams}!PukeQty@{PukeQty}}
+\index{PukeQty@{PukeQty}!StackerParams@{StackerParams}}
+\doxysubsubsection{\texorpdfstring{PukeQty}{PukeQty}}
+{\footnotesize\ttfamily \label{struct_stacker_params_a9e8e9093dc2eac5fa7fcb6458f13987d} 
+int Stacker\+Params\+::\+Puke\+Qty}
+
+\Hypertarget{struct_stacker_params_a8536a451a4e0da7767ac0feca71c99f3}\index{StackerParams@{StackerParams}!PukeRatio@{PukeRatio}}
+\index{PukeRatio@{PukeRatio}!StackerParams@{StackerParams}}
+\doxysubsubsection{\texorpdfstring{PukeRatio}{PukeRatio}}
+{\footnotesize\ttfamily \label{struct_stacker_params_a8536a451a4e0da7767ac0feca71c99f3} 
+double Stacker\+Params\+::\+Puke\+Ratio}
+
+\Hypertarget{struct_stacker_params_a5c4c173ac08c4fb4485b57eedd12f1b2}\index{StackerParams@{StackerParams}!PullOnLargeTrade@{PullOnLargeTrade}}
+\index{PullOnLargeTrade@{PullOnLargeTrade}!StackerParams@{StackerParams}}
+\doxysubsubsection{\texorpdfstring{PullOnLargeTrade}{PullOnLargeTrade}}
+{\footnotesize\ttfamily \label{struct_stacker_params_a5c4c173ac08c4fb4485b57eedd12f1b2} 
+bool Stacker\+Params\+::\+Pull\+On\+Large\+Trade}
+
+\Hypertarget{struct_stacker_params_afe44b12b7f60c89d9d1d8b753a9d9442}\index{StackerParams@{StackerParams}!Reset@{Reset}}
+\index{Reset@{Reset}!StackerParams@{StackerParams}}
+\doxysubsubsection{\texorpdfstring{Reset}{Reset}}
+{\footnotesize\ttfamily \label{struct_stacker_params_afe44b12b7f60c89d9d1d8b753a9d9442} 
+bool Stacker\+Params\+::\+Reset}
+
+\Hypertarget{struct_stacker_params_a2a8b2e148c3ff00b223f1e2f248fa4f5}\index{StackerParams@{StackerParams}!RestackQty@{RestackQty}}
+\index{RestackQty@{RestackQty}!StackerParams@{StackerParams}}
+\doxysubsubsection{\texorpdfstring{RestackQty}{RestackQty}}
+{\footnotesize\ttfamily \label{struct_stacker_params_a2a8b2e148c3ff00b223f1e2f248fa4f5} 
+int Stacker\+Params\+::\+Restack\+Qty}
+
+\Hypertarget{struct_stacker_params_aad0aeee1ef68bc08dd877ed8788659e9}\index{StackerParams@{StackerParams}!RestackTopLevel@{RestackTopLevel}}
+\index{RestackTopLevel@{RestackTopLevel}!StackerParams@{StackerParams}}
+\doxysubsubsection{\texorpdfstring{RestackTopLevel}{RestackTopLevel}}
+{\footnotesize\ttfamily \label{struct_stacker_params_aad0aeee1ef68bc08dd877ed8788659e9} 
+bool Stacker\+Params\+::\+Restack\+Top\+Level}
+
+\Hypertarget{struct_stacker_params_a5898f069bcbd4abb2ac4d63b4f2b62fc}\index{StackerParams@{StackerParams}!SendAsks@{SendAsks}}
+\index{SendAsks@{SendAsks}!StackerParams@{StackerParams}}
+\doxysubsubsection{\texorpdfstring{SendAsks}{SendAsks}}
+{\footnotesize\ttfamily \label{struct_stacker_params_a5898f069bcbd4abb2ac4d63b4f2b62fc} 
+bool Stacker\+Params\+::\+Send\+Asks}
+
+\Hypertarget{struct_stacker_params_abb6dd686df3aa30fb065e007807a2fe9}\index{StackerParams@{StackerParams}!SendBids@{SendBids}}
+\index{SendBids@{SendBids}!StackerParams@{StackerParams}}
+\doxysubsubsection{\texorpdfstring{SendBids}{SendBids}}
+{\footnotesize\ttfamily \label{struct_stacker_params_abb6dd686df3aa30fb065e007807a2fe9} 
+bool Stacker\+Params\+::\+Send\+Bids}
+
+\Hypertarget{struct_stacker_params_a746ef43615eba588a58a23a945d4c37d}\index{StackerParams@{StackerParams}!SkewLevels@{SkewLevels}}
+\index{SkewLevels@{SkewLevels}!StackerParams@{StackerParams}}
+\doxysubsubsection{\texorpdfstring{SkewLevels}{SkewLevels}}
+{\footnotesize\ttfamily \label{struct_stacker_params_a746ef43615eba588a58a23a945d4c37d} 
+int Stacker\+Params\+::\+Skew\+Levels}
+
+\Hypertarget{struct_stacker_params_abaa5bc01916edc34c6d81525e132e429}\index{StackerParams@{StackerParams}!SkewThreshold@{SkewThreshold}}
+\index{SkewThreshold@{SkewThreshold}!StackerParams@{StackerParams}}
+\doxysubsubsection{\texorpdfstring{SkewThreshold}{SkewThreshold}}
+{\footnotesize\ttfamily \label{struct_stacker_params_abaa5bc01916edc34c6d81525e132e429} 
+double Stacker\+Params\+::\+Skew\+Threshold}
+
+\Hypertarget{struct_stacker_params_a56f1a600f5bd9a704f218b2df0ea0209}\index{StackerParams@{StackerParams}!SqueezeQty@{SqueezeQty}}
+\index{SqueezeQty@{SqueezeQty}!StackerParams@{StackerParams}}
+\doxysubsubsection{\texorpdfstring{SqueezeQty}{SqueezeQty}}
+{\footnotesize\ttfamily \label{struct_stacker_params_a56f1a600f5bd9a704f218b2df0ea0209} 
+int Stacker\+Params\+::\+Squeeze\+Qty}
+
+\Hypertarget{struct_stacker_params_acde187ab2ce706193622e2eb871f8e86}\index{StackerParams@{StackerParams}!SqueezeRatio@{SqueezeRatio}}
+\index{SqueezeRatio@{SqueezeRatio}!StackerParams@{StackerParams}}
+\doxysubsubsection{\texorpdfstring{SqueezeRatio}{SqueezeRatio}}
+{\footnotesize\ttfamily \label{struct_stacker_params_acde187ab2ce706193622e2eb871f8e86} 
+double Stacker\+Params\+::\+Squeeze\+Ratio}
+
+\Hypertarget{struct_stacker_params_aac7e58c10b3e0d2e39e2eb7daece79b0}\index{StackerParams@{StackerParams}!subid@{subid}}
+\index{subid@{subid}!StackerParams@{StackerParams}}
+\doxysubsubsection{\texorpdfstring{subid}{subid}}
+{\footnotesize\ttfamily \label{struct_stacker_params_aac7e58c10b3e0d2e39e2eb7daece79b0} 
+string Stacker\+Params\+::subid}
+
+\Hypertarget{struct_stacker_params_a66f14fc3905a448a3551276fd7baadb1}\index{StackerParams@{StackerParams}!TotalExec@{TotalExec}}
+\index{TotalExec@{TotalExec}!StackerParams@{StackerParams}}
+\doxysubsubsection{\texorpdfstring{TotalExec}{TotalExec}}
+{\footnotesize\ttfamily \label{struct_stacker_params_a66f14fc3905a448a3551276fd7baadb1} 
+double Stacker\+Params\+::\+Total\+Exec}
+
+\Hypertarget{struct_stacker_params_a6a623f0fa7db9cd553c78d895ddbdd23}\index{StackerParams@{StackerParams}!TotalQty@{TotalQty}}
+\index{TotalQty@{TotalQty}!StackerParams@{StackerParams}}
+\doxysubsubsection{\texorpdfstring{TotalQty}{TotalQty}}
+{\footnotesize\ttfamily \label{struct_stacker_params_a6a623f0fa7db9cd553c78d895ddbdd23} 
+double Stacker\+Params\+::\+Total\+Qty}
+
+\Hypertarget{struct_stacker_params_ad80f951e3aa768ab1e119269e7a350b7}\index{StackerParams@{StackerParams}!TotalSent@{TotalSent}}
+\index{TotalSent@{TotalSent}!StackerParams@{StackerParams}}
+\doxysubsubsection{\texorpdfstring{TotalSent}{TotalSent}}
+{\footnotesize\ttfamily \label{struct_stacker_params_ad80f951e3aa768ab1e119269e7a350b7} 
+double Stacker\+Params\+::\+Total\+Sent}
+
+\Hypertarget{struct_stacker_params_ae63de31681f4bfb4fed8711ed16d9729}\index{StackerParams@{StackerParams}!TradeOnLargeQty@{TradeOnLargeQty}}
+\index{TradeOnLargeQty@{TradeOnLargeQty}!StackerParams@{StackerParams}}
+\doxysubsubsection{\texorpdfstring{TradeOnLargeQty}{TradeOnLargeQty}}
+{\footnotesize\ttfamily \label{struct_stacker_params_ae63de31681f4bfb4fed8711ed16d9729} 
+bool Stacker\+Params\+::\+Trade\+On\+Large\+Qty}
+
+\Hypertarget{struct_stacker_params_a9486aaa9f9078dad81214f50035bec7a}\index{StackerParams@{StackerParams}!ValidJson@{ValidJson}}
+\index{ValidJson@{ValidJson}!StackerParams@{StackerParams}}
+\doxysubsubsection{\texorpdfstring{ValidJson}{ValidJson}}
+{\footnotesize\ttfamily \label{struct_stacker_params_a9486aaa9f9078dad81214f50035bec7a} 
+bool Stacker\+Params\+::\+Valid\+Json}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Algo\+Params/Stacker\+Params.\+hpp\item 
+Algo\+Params/Stacker\+Params.\+cpp\end{DoxyCompactItemize}

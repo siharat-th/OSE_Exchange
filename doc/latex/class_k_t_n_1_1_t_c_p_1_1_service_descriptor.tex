@@ -1,0 +1,210 @@
+\doxysection{KTN\+::TCP\+::Service\+Descriptor Class Reference}
+\hypertarget{class_k_t_n_1_1_t_c_p_1_1_service_descriptor}{}\label{class_k_t_n_1_1_t_c_p_1_1_service_descriptor}\index{KTN::TCP::ServiceDescriptor@{KTN::TCP::ServiceDescriptor}}
+
+
+The \doxylink{class_k_t_n_1_1_t_c_p_1_1_service_descriptor}{Service\+Descriptor} class represents a network service parameter set.  
+
+
+
+
+{\ttfamily \#include $<$Service\+Descriptor.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_service_descriptor_a18e78e84c574141558bf4bf4ca2dc8a2}{Service\+Descriptor}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{class_k_t_n_1_1_t_c_p_1_1_service_descriptor}{Service\+Descriptor}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_service_descriptor_a4041fc0e32d00d52d73c53868dc9d03c}{Service\+Descriptor}} (std\+::string \+\_\+address, unsigned \+\_\+port, std\+::string \+\_\+intf, std\+::string \+\_\+intfname, int \+\_\+feed, int \+\_\+isrc)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{class_k_t_n_1_1_t_c_p_1_1_service_descriptor}{Service\+Descriptor}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_service_descriptor_afc486ca8470d1722103e196284e5f77b}{\texorpdfstring{$\sim$}{\string~}\+Service\+Descriptor}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{class_k_t_n_1_1_t_c_p_1_1_service_descriptor}{Service\+Descriptor}. \end{DoxyCompactList}\item 
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_service_descriptor_a95c8d7bccb1ee8eb6ddfde2ad292075d}\label{class_k_t_n_1_1_t_c_p_1_1_service_descriptor_a95c8d7bccb1ee8eb6ddfde2ad292075d} 
+void {\bfseries Print} ()
+\begin{DoxyCompactList}\small\item\em Print the service descriptor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_service_descriptor_a51b7ac0d5b96ae9373b273064480b9c7}{address}}
+\item 
+unsigned \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_service_descriptor_af3013c4535c99c1617cb6281c53cc69d}{port}}
+\item 
+std\+::string \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_service_descriptor_a2e758be8c2379adfd09e363c8097ae2b}{localinterfacename}}
+\item 
+std\+::string \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_service_descriptor_acb37545f482093deb424ceb81347e10e}{localinterface}}
+\item 
+int \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_service_descriptor_aaadb12a8d6e02a382ef0c9c1d6d99d3d}{feedtype}}
+\item 
+int \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_service_descriptor_a0e757b8444ff25d0e0c9af70e2df8446}{i\+Source}}
+\item 
+struct sockaddr\+\_\+in \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_service_descriptor_ada0bf841042736033d6c65c283772d5c}{sa\+\_\+tcplocal}}
+\item 
+struct sockaddr\+\_\+in \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_service_descriptor_a9757eb5dfe6789cbb05cc47c88fb78e5}{sa\+\_\+tcpremote}}
+\item 
+int \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_service_descriptor_a838273271183957e82609c5de33b0dc0}{fd}}
+\item 
+int \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_service_descriptor_a901b99386b59f7fd238b4e82a967ea93}{index}}
+\item 
+int \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_service_descriptor_a815db9e979f71fd42e02e05044a8f9ef}{segid}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_k_t_n_1_1_t_c_p_1_1_service_descriptor}{Service\+Descriptor} class represents a network service parameter set. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_service_descriptor_a18e78e84c574141558bf4bf4ca2dc8a2}\index{KTN::TCP::ServiceDescriptor@{KTN::TCP::ServiceDescriptor}!ServiceDescriptor@{ServiceDescriptor}}
+\index{ServiceDescriptor@{ServiceDescriptor}!KTN::TCP::ServiceDescriptor@{KTN::TCP::ServiceDescriptor}}
+\doxysubsubsection{\texorpdfstring{ServiceDescriptor()}{ServiceDescriptor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_service_descriptor_a18e78e84c574141558bf4bf4ca2dc8a2} 
+Service\+Descriptor\+::\+Service\+Descriptor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor for \doxylink{class_k_t_n_1_1_t_c_p_1_1_service_descriptor}{Service\+Descriptor}. 
+
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_service_descriptor_a4041fc0e32d00d52d73c53868dc9d03c}\index{KTN::TCP::ServiceDescriptor@{KTN::TCP::ServiceDescriptor}!ServiceDescriptor@{ServiceDescriptor}}
+\index{ServiceDescriptor@{ServiceDescriptor}!KTN::TCP::ServiceDescriptor@{KTN::TCP::ServiceDescriptor}}
+\doxysubsubsection{\texorpdfstring{ServiceDescriptor()}{ServiceDescriptor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_service_descriptor_a4041fc0e32d00d52d73c53868dc9d03c} 
+Service\+Descriptor\+::\+Service\+Descriptor (\begin{DoxyParamCaption}\item[{std\+::string}]{\+\_\+address}{, }\item[{unsigned}]{\+\_\+port}{, }\item[{std\+::string}]{\+\_\+intf}{, }\item[{std\+::string}]{\+\_\+intfname}{, }\item[{int}]{\+\_\+feed}{, }\item[{int}]{\+\_\+isrc}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for \doxylink{class_k_t_n_1_1_t_c_p_1_1_service_descriptor}{Service\+Descriptor}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+address} & The address of the service. \\
+\hline
+{\em \+\_\+port} & The port of the service. \\
+\hline
+{\em \+\_\+intf} & The interface of the service. \\
+\hline
+{\em \+\_\+intfname} & The name of the interface of the service. \\
+\hline
+{\em \+\_\+feed} & The feed type of the service. \\
+\hline
+{\em \+\_\+isrc} & The source of the service. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00072}{address}}, \mbox{\hyperlink{l00077}{feedtype}}, \mbox{\hyperlink{l00078}{i\+Source}}, \mbox{\hyperlink{l00076}{localinterface}}, \mbox{\hyperlink{l00075}{localinterfacename}}, and \mbox{\hyperlink{l00073}{port}}.
+
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_service_descriptor_afc486ca8470d1722103e196284e5f77b}\index{KTN::TCP::ServiceDescriptor@{KTN::TCP::ServiceDescriptor}!````~ServiceDescriptor@{\texorpdfstring{$\sim$}{\string~}ServiceDescriptor}}
+\index{````~ServiceDescriptor@{\texorpdfstring{$\sim$}{\string~}ServiceDescriptor}!KTN::TCP::ServiceDescriptor@{KTN::TCP::ServiceDescriptor}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ServiceDescriptor()}{\string~ServiceDescriptor()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_service_descriptor_afc486ca8470d1722103e196284e5f77b} 
+Service\+Descriptor\+::\texorpdfstring{$\sim$}{\string~}\+Service\+Descriptor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor for \doxylink{class_k_t_n_1_1_t_c_p_1_1_service_descriptor}{Service\+Descriptor}. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_service_descriptor_a51b7ac0d5b96ae9373b273064480b9c7}\index{KTN::TCP::ServiceDescriptor@{KTN::TCP::ServiceDescriptor}!address@{address}}
+\index{address@{address}!KTN::TCP::ServiceDescriptor@{KTN::TCP::ServiceDescriptor}}
+\doxysubsubsection{\texorpdfstring{address}{address}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_service_descriptor_a51b7ac0d5b96ae9373b273064480b9c7} 
+std\+::string KTN\+::\+TCP\+::\+Service\+Descriptor\+::address}
+
+The address of the service. 
+
+Referenced by \mbox{\hyperlink{l00245}{KTN\+::\+TCP\+::\+EFVITcp\+V2\+::create\+Efvi\+Tcp\+Feed\+Filter()}}, \mbox{\hyperlink{l00030}{KTN\+::\+TCP\+::\+Udp\+Socket\+::\+Create\+Socket()}}, \mbox{\hyperlink{l00032}{KTN\+::\+TCP\+::\+EFVITcp\+V5\+::\+Init()}}, and \mbox{\hyperlink{l00020}{Service\+Descriptor()}}.
+
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_service_descriptor_a838273271183957e82609c5de33b0dc0}\index{KTN::TCP::ServiceDescriptor@{KTN::TCP::ServiceDescriptor}!fd@{fd}}
+\index{fd@{fd}!KTN::TCP::ServiceDescriptor@{KTN::TCP::ServiceDescriptor}}
+\doxysubsubsection{\texorpdfstring{fd}{fd}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_service_descriptor_a838273271183957e82609c5de33b0dc0} 
+int KTN\+::\+TCP\+::\+Service\+Descriptor\+::fd}
+
+The file descriptor. \Hypertarget{class_k_t_n_1_1_t_c_p_1_1_service_descriptor_aaadb12a8d6e02a382ef0c9c1d6d99d3d}\index{KTN::TCP::ServiceDescriptor@{KTN::TCP::ServiceDescriptor}!feedtype@{feedtype}}
+\index{feedtype@{feedtype}!KTN::TCP::ServiceDescriptor@{KTN::TCP::ServiceDescriptor}}
+\doxysubsubsection{\texorpdfstring{feedtype}{feedtype}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_service_descriptor_aaadb12a8d6e02a382ef0c9c1d6d99d3d} 
+int KTN\+::\+TCP\+::\+Service\+Descriptor\+::feedtype}
+
+The feed type. 
+
+Referenced by \mbox{\hyperlink{l00060}{KTN\+::\+TCP\+::\+EFVITcp\+V2\+::\+Init()}}, \mbox{\hyperlink{l00032}{KTN\+::\+TCP\+::\+EFVITcp\+V5\+::\+Init()}}, and \mbox{\hyperlink{l00020}{Service\+Descriptor()}}.
+
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_service_descriptor_a901b99386b59f7fd238b4e82a967ea93}\index{KTN::TCP::ServiceDescriptor@{KTN::TCP::ServiceDescriptor}!index@{index}}
+\index{index@{index}!KTN::TCP::ServiceDescriptor@{KTN::TCP::ServiceDescriptor}}
+\doxysubsubsection{\texorpdfstring{index}{index}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_service_descriptor_a901b99386b59f7fd238b4e82a967ea93} 
+int KTN\+::\+TCP\+::\+Service\+Descriptor\+::index}
+
+The index. 
+
+Referenced by \mbox{\hyperlink{l00032}{KTN\+::\+TCP\+::\+EFVITcp\+V5\+::\+Init()}}.
+
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_service_descriptor_a0e757b8444ff25d0e0c9af70e2df8446}\index{KTN::TCP::ServiceDescriptor@{KTN::TCP::ServiceDescriptor}!iSource@{iSource}}
+\index{iSource@{iSource}!KTN::TCP::ServiceDescriptor@{KTN::TCP::ServiceDescriptor}}
+\doxysubsubsection{\texorpdfstring{iSource}{iSource}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_service_descriptor_a0e757b8444ff25d0e0c9af70e2df8446} 
+int KTN\+::\+TCP\+::\+Service\+Descriptor\+::i\+Source}
+
+The source. 
+
+Referenced by \mbox{\hyperlink{l00060}{KTN\+::\+TCP\+::\+EFVITcp\+V2\+::\+Init()}}, \mbox{\hyperlink{l00032}{KTN\+::\+TCP\+::\+EFVITcp\+V5\+::\+Init()}}, and \mbox{\hyperlink{l00020}{Service\+Descriptor()}}.
+
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_service_descriptor_acb37545f482093deb424ceb81347e10e}\index{KTN::TCP::ServiceDescriptor@{KTN::TCP::ServiceDescriptor}!localinterface@{localinterface}}
+\index{localinterface@{localinterface}!KTN::TCP::ServiceDescriptor@{KTN::TCP::ServiceDescriptor}}
+\doxysubsubsection{\texorpdfstring{localinterface}{localinterface}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_service_descriptor_acb37545f482093deb424ceb81347e10e} 
+std\+::string KTN\+::\+TCP\+::\+Service\+Descriptor\+::localinterface}
+
+The local interface. 
+
+Referenced by \mbox{\hyperlink{l00245}{KTN\+::\+TCP\+::\+EFVITcp\+V2\+::create\+Efvi\+Tcp\+Feed\+Filter()}}, \mbox{\hyperlink{l00030}{KTN\+::\+TCP\+::\+Udp\+Socket\+::\+Create\+Socket()}}, \mbox{\hyperlink{l00060}{KTN\+::\+TCP\+::\+EFVITcp\+V2\+::\+Init()}}, \mbox{\hyperlink{l00032}{KTN\+::\+TCP\+::\+EFVITcp\+V5\+::\+Init()}}, and \mbox{\hyperlink{l00020}{Service\+Descriptor()}}.
+
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_service_descriptor_a2e758be8c2379adfd09e363c8097ae2b}\index{KTN::TCP::ServiceDescriptor@{KTN::TCP::ServiceDescriptor}!localinterfacename@{localinterfacename}}
+\index{localinterfacename@{localinterfacename}!KTN::TCP::ServiceDescriptor@{KTN::TCP::ServiceDescriptor}}
+\doxysubsubsection{\texorpdfstring{localinterfacename}{localinterfacename}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_service_descriptor_a2e758be8c2379adfd09e363c8097ae2b} 
+std\+::string KTN\+::\+TCP\+::\+Service\+Descriptor\+::localinterfacename}
+
+The name of the local interface. 
+
+Referenced by \mbox{\hyperlink{l00245}{KTN\+::\+TCP\+::\+EFVITcp\+V2\+::create\+Efvi\+Tcp\+Feed\+Filter()}}, \mbox{\hyperlink{l00060}{KTN\+::\+TCP\+::\+EFVITcp\+V2\+::\+Init()}}, \mbox{\hyperlink{l00032}{KTN\+::\+TCP\+::\+EFVITcp\+V5\+::\+Init()}}, and \mbox{\hyperlink{l00020}{Service\+Descriptor()}}.
+
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_service_descriptor_af3013c4535c99c1617cb6281c53cc69d}\index{KTN::TCP::ServiceDescriptor@{KTN::TCP::ServiceDescriptor}!port@{port}}
+\index{port@{port}!KTN::TCP::ServiceDescriptor@{KTN::TCP::ServiceDescriptor}}
+\doxysubsubsection{\texorpdfstring{port}{port}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_service_descriptor_af3013c4535c99c1617cb6281c53cc69d} 
+unsigned KTN\+::\+TCP\+::\+Service\+Descriptor\+::port}
+
+The port of the service. 
+
+Referenced by \mbox{\hyperlink{l00245}{KTN\+::\+TCP\+::\+EFVITcp\+V2\+::create\+Efvi\+Tcp\+Feed\+Filter()}}, \mbox{\hyperlink{l00032}{KTN\+::\+TCP\+::\+EFVITcp\+V5\+::\+Init()}}, and \mbox{\hyperlink{l00020}{Service\+Descriptor()}}.
+
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_service_descriptor_ada0bf841042736033d6c65c283772d5c}\index{KTN::TCP::ServiceDescriptor@{KTN::TCP::ServiceDescriptor}!sa\_tcplocal@{sa\_tcplocal}}
+\index{sa\_tcplocal@{sa\_tcplocal}!KTN::TCP::ServiceDescriptor@{KTN::TCP::ServiceDescriptor}}
+\doxysubsubsection{\texorpdfstring{sa\_tcplocal}{sa\_tcplocal}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_service_descriptor_ada0bf841042736033d6c65c283772d5c} 
+struct sockaddr\+\_\+in KTN\+::\+TCP\+::\+Service\+Descriptor\+::sa\+\_\+tcplocal}
+
+The TCP local socket address. 
+
+Referenced by \mbox{\hyperlink{l00245}{KTN\+::\+TCP\+::\+EFVITcp\+V2\+::create\+Efvi\+Tcp\+Feed\+Filter()}}.
+
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_service_descriptor_a9757eb5dfe6789cbb05cc47c88fb78e5}\index{KTN::TCP::ServiceDescriptor@{KTN::TCP::ServiceDescriptor}!sa\_tcpremote@{sa\_tcpremote}}
+\index{sa\_tcpremote@{sa\_tcpremote}!KTN::TCP::ServiceDescriptor@{KTN::TCP::ServiceDescriptor}}
+\doxysubsubsection{\texorpdfstring{sa\_tcpremote}{sa\_tcpremote}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_service_descriptor_a9757eb5dfe6789cbb05cc47c88fb78e5} 
+struct sockaddr\+\_\+in KTN\+::\+TCP\+::\+Service\+Descriptor\+::sa\+\_\+tcpremote}
+
+The TCP remote socket address. \Hypertarget{class_k_t_n_1_1_t_c_p_1_1_service_descriptor_a815db9e979f71fd42e02e05044a8f9ef}\index{KTN::TCP::ServiceDescriptor@{KTN::TCP::ServiceDescriptor}!segid@{segid}}
+\index{segid@{segid}!KTN::TCP::ServiceDescriptor@{KTN::TCP::ServiceDescriptor}}
+\doxysubsubsection{\texorpdfstring{segid}{segid}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_service_descriptor_a815db9e979f71fd42e02e05044a8f9ef} 
+int KTN\+::\+TCP\+::\+Service\+Descriptor\+::segid}
+
+The segment ID. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Net/Service\+Descriptor.\+hpp\item 
+Net/Service\+Descriptor.\+cpp\end{DoxyCompactItemize}

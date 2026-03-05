@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_algo_helpers" xml:lang="en-US">
+<title>KTN::ALGO::AlgoHelpers Class Reference</title>
+<indexterm><primary>KTN::ALGO::AlgoHelpers</primary></indexterm>
+<para>
+
+<para>Helper class for various algorithmic functions and calculations. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;algo_helpers.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_algo_helpers_1aaee216a937b38e0122a126c4729fbb01">roundUp</link> (int numToRound, int multiple)</para>
+
+<para>Rounds up a number to the nearest multiple. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_algo_helpers_1a18ea17b7fb28ab0d501b1ecec9f0c653">getSide</link> (std::string side)</para>
+
+<para>Gets the side value based on the given string. </para>
+</listitem>
+            <listitem><para>double <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_algo_helpers_1ac08ce8a0113353f3172beabff86ef795">avg</link> (std::vector&lt; double &gt; px)</para>
+
+<para>Calculates the average of a vector of doubles. </para>
+</listitem>
+            <listitem><para>double <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_algo_helpers_1af158216a36753c72f97fb91bf2e0ee67">computeMean</link> (const vector&lt; double &gt; &amp;v)</para>
+
+<para>Computes the mean of a vector of doubles. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Helper class for various algorithmic functions and calculations. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_algo_helpers_1ac08ce8a0113353f3172beabff86ef795"/><section>
+    <title>avg()</title>
+<indexterm><primary>avg</primary><secondary>KTN::ALGO::AlgoHelpers</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::AlgoHelpers</primary><secondary>avg</secondary></indexterm>
+<para><computeroutput>double KTN::ALGO::AlgoHelpers::avg (std::vector&lt; double &gt; px)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Calculates the average of a vector of doubles. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>px</entry><entry>
+<para>The vector of doubles. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The average value. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00081">avg()</link>.</para>
+<para>
+Referenced by <link linkend="_l00081">avg()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_algo_helpers_1af158216a36753c72f97fb91bf2e0ee67"/><section>
+    <title>computeMean()</title>
+<indexterm><primary>computeMean</primary><secondary>KTN::ALGO::AlgoHelpers</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::AlgoHelpers</primary><secondary>computeMean</secondary></indexterm>
+<para><computeroutput>double KTN::ALGO::AlgoHelpers::computeMean (const vector&lt; double &gt; &amp; v)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Computes the mean of a vector of doubles. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>v</entry><entry>
+<para>The vector of doubles. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The mean value. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_algo_helpers_1a18ea17b7fb28ab0d501b1ecec9f0c653"/><section>
+    <title>getSide()</title>
+<indexterm><primary>getSide</primary><secondary>KTN::ALGO::AlgoHelpers</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::AlgoHelpers</primary><secondary>getSide</secondary></indexterm>
+<para><computeroutput>int KTN::ALGO::AlgoHelpers::getSide (std::string side)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Gets the side value based on the given string. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>side</entry><entry>
+<para>The side string. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The side value (-1 for &apos;S&apos;, 1 for &apos;B&apos;, 0 otherwise). </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_algo_helpers_1aaee216a937b38e0122a126c4729fbb01"/><section>
+    <title>roundUp()</title>
+<indexterm><primary>roundUp</primary><secondary>KTN::ALGO::AlgoHelpers</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::AlgoHelpers</primary><secondary>roundUp</secondary></indexterm>
+<para><computeroutput>int KTN::ALGO::AlgoHelpers::roundUp (int numToRound, int multiple)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Rounds up a number to the nearest multiple. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>numToRound</entry><entry>
+<para>The number to round up. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>multiple</entry><entry>
+<para>The multiple to round up to. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The rounded up number. </para>
+</formalpara>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+AlgoSupport/algo_helpers.hpp</section>
+</section>

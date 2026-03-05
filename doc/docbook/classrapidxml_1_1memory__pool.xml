@@ -1,0 +1,316 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classrapidxml_1_1memory__pool" xml:lang="en-US">
+<title>rapidxml::memory_pool&lt; Ch &gt; Class Template Reference</title>
+<indexterm><primary>rapidxml::memory_pool&lt; Ch &gt;</primary></indexterm>
+<para>
+<computeroutput>#include &lt;rapidxml.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classrapidxml_1_1memory__pool_1a0b609da81dff28a19ebd704400788429">memory_pool</link> ()</para>
+
+<para>Constructs empty pool with default allocator functions. </para>
+</listitem>
+            <listitem><para><link linkend="_classrapidxml_1_1memory__pool_1a0a3e82126e59e4077f41e933130bb5a0">~memory_pool</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_classrapidxml_1_1xml__node">xml_node</link>&lt; Ch &gt; * <link linkend="_classrapidxml_1_1memory__pool_1a7ff6d5e4882ec25636b5788dcb663f3d">allocate_node</link> (node_type type, const Ch *name=0, const Ch *value=0, std::size_t name_size=0, std::size_t value_size=0)</para>
+</listitem>
+            <listitem><para><link linkend="_classrapidxml_1_1xml__attribute">xml_attribute</link>&lt; Ch &gt; * <link linkend="_classrapidxml_1_1memory__pool_1ab57ac9d02ce13dad1aba2d40bdd7afac">allocate_attribute</link> (const Ch *name=0, const Ch *value=0, std::size_t name_size=0, std::size_t value_size=0)</para>
+</listitem>
+            <listitem><para>Ch * <link linkend="_classrapidxml_1_1memory__pool_1a8f58ea09e6a0ef89b21c6346bd5ce8fb">allocate_string</link> (const Ch *source=0, std::size_t size=0)</para>
+</listitem>
+            <listitem><para><link linkend="_classrapidxml_1_1xml__node">xml_node</link>&lt; Ch &gt; * <link linkend="_classrapidxml_1_1memory__pool_1a3925460987a199b302e11eb34de40139">clone_node</link> (const <link linkend="_classrapidxml_1_1xml__node">xml_node</link>&lt; Ch &gt; *source, <link linkend="_classrapidxml_1_1xml__node">xml_node</link>&lt; Ch &gt; *result=0)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classrapidxml_1_1memory__pool_1aad377c835fdaed1cb2cc9df194cf84e4">clear</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classrapidxml_1_1memory__pool_1a84d3d8d2cdfc00501e1dcf26d889ae03">set_allocator</link> (alloc_func *af, free_func *ff)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;class Ch = char&gt;<?linebreak?>class rapidxml::memory_pool&lt; Ch &gt;</title></simplesect>
+
+<para>This class is used by the parser to create new nodes and attributes, without overheads of dynamic memory allocation. In most cases, you will not need to use this class directly. However, if you need to create nodes manually or modify names/values of nodes, you are encouraged to use <link linkend="_classrapidxml_1_1memory__pool">memory_pool</link> of relevant <link linkend="_classrapidxml_1_1xml__document">xml_document</link> to allocate the memory. Not only is this faster than allocating them by using <computeroutput>new</computeroutput> operator, but also their lifetime will be tied to the lifetime of document, possibly simplyfing memory management. <?linebreak?><?linebreak?> Call <link linkend="_classrapidxml_1_1memory__pool_1a7ff6d5e4882ec25636b5788dcb663f3d">allocate_node()</link> or <link linkend="_classrapidxml_1_1memory__pool_1ab57ac9d02ce13dad1aba2d40bdd7afac">allocate_attribute()</link> functions to obtain new nodes or attributes from the pool. You can also call <link linkend="_classrapidxml_1_1memory__pool_1a8f58ea09e6a0ef89b21c6346bd5ce8fb">allocate_string()</link> function to allocate strings. Such strings can then be used as names or values of nodes without worrying about their lifetime. Note that there is no <computeroutput>free()</computeroutput> function &#8211; all allocations are freed at once when <link linkend="_classrapidxml_1_1memory__pool_1aad377c835fdaed1cb2cc9df194cf84e4">clear()</link> function is called, or when the pool is destroyed. <?linebreak?><?linebreak?> It is also possible to create a standalone <link linkend="_classrapidxml_1_1memory__pool">memory_pool</link>, and use it to allocate nodes, whose lifetime will not be tied to any document. <?linebreak?><?linebreak?> Pool maintains <computeroutput>RAPIDXML_STATIC_POOL_SIZE</computeroutput> bytes of statically allocated memory. Until static memory is exhausted, no dynamic memory allocations are done. When static memory is exhausted, pool allocates additional blocks of memory of size <computeroutput>RAPIDXML_DYNAMIC_POOL_SIZE</computeroutput> each, by using global <computeroutput>new[]</computeroutput> and <computeroutput>delete[]</computeroutput> operators. This behaviour can be changed by setting custom allocation routines. Use <link linkend="_classrapidxml_1_1memory__pool_1a84d3d8d2cdfc00501e1dcf26d889ae03">set_allocator()</link> function to set them. <?linebreak?><?linebreak?> Allocations for nodes, attributes and strings are aligned at <computeroutput>RAPIDXML_ALIGNMENT</computeroutput> bytes. This value defaults to the size of pointer on target architecture. <?linebreak?><?linebreak?> To obtain absolutely top performance from the parser, it is important that all nodes are allocated from a single, contiguous block of memory. Otherwise, cache misses when jumping between two (or more) disjoint blocks of memory can slow down parsing quite considerably. If required, you can tweak <computeroutput>RAPIDXML_STATIC_POOL_SIZE</computeroutput>, <computeroutput>RAPIDXML_DYNAMIC_POOL_SIZE</computeroutput> and <computeroutput>RAPIDXML_ALIGNMENT</computeroutput> to obtain best wasted memory to performance compromise. To do it, define their values before <link linkend="_">rapidxml.hpp</link> file is included. 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Ch</entry><entry>
+<para>Character type of created nodes. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classrapidxml_1_1memory__pool_1a0b609da81dff28a19ebd704400788429"/><section>
+    <title>memory_pool()</title>
+<indexterm><primary>memory_pool</primary><secondary>rapidxml::memory_pool&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::memory_pool&lt; Ch &gt;</primary><secondary>memory_pool</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput><link linkend="_classrapidxml_1_1memory__pool">rapidxml::memory_pool</link>&lt; Ch &gt;::memory_pool ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Constructs empty pool with default allocator functions. </para>
+</para>
+</section>
+<anchor xml:id="_classrapidxml_1_1memory__pool_1a0a3e82126e59e4077f41e933130bb5a0"/><section>
+    <title>~memory_pool()</title>
+<indexterm><primary>~memory_pool</primary><secondary>rapidxml::memory_pool&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::memory_pool&lt; Ch &gt;</primary><secondary>~memory_pool</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput><link linkend="_classrapidxml_1_1memory__pool">rapidxml::memory_pool</link>&lt; Ch &gt;::~<link linkend="_classrapidxml_1_1memory__pool">memory_pool</link> ( )<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Destroys pool and frees all the memory. This causes memory occupied by nodes allocated by the pool to be freed. Nodes allocated from the pool are no longer valid. </para>
+<para>
+References <link linkend="_l00532">rapidxml::memory_pool&lt; Ch &gt;::clear()</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classrapidxml_1_1memory__pool_1ab57ac9d02ce13dad1aba2d40bdd7afac"/><section>
+    <title>allocate_attribute()</title>
+<indexterm><primary>allocate_attribute</primary><secondary>rapidxml::memory_pool&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::memory_pool&lt; Ch &gt;</primary><secondary>allocate_attribute</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput><link linkend="_classrapidxml_1_1xml__attribute">xml_attribute</link>&lt; Ch &gt; * <link linkend="_classrapidxml_1_1memory__pool">rapidxml::memory_pool</link>&lt; Ch &gt;::allocate_attribute (const Ch * name = <computeroutput>0</computeroutput>
+, const Ch * value = <computeroutput>0</computeroutput>
+, std::size_t name_size = <computeroutput>0</computeroutput>
+, std::size_t value_size = <computeroutput>0</computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Allocates a new attribute from the pool, and optionally assigns name and value to it. If the allocation request cannot be accomodated, this function will throw <computeroutput>std::bad_alloc</computeroutput>. If exceptions are disabled by defining RAPIDXML_NO_EXCEPTIONS, this function will call rapidxml::parse_error_handler() function. 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>name</entry><entry>
+<para>Name to assign to the attribute, or 0 to assign no name. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>value</entry><entry>
+<para>Value to assign to the attribute, or 0 to assign no value. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>name_size</entry><entry>
+<para>Size of name to assign, or 0 to automatically calculate size from name string. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>value_size</entry><entry>
+<para>Size of value to assign, or 0 to automatically calculate size from value string. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to allocated attribute. This pointer will never be NULL. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00680">rapidxml::xml_base&lt; Ch &gt;::name()</link>, and <link linkend="_l00699">rapidxml::xml_base&lt; Ch &gt;::value()</link>.</para>
+<para>
+Referenced by <link linkend="_l00504">rapidxml::memory_pool&lt; Ch &gt;::clone_node()</link>.</para>
+</section>
+<anchor xml:id="_classrapidxml_1_1memory__pool_1a7ff6d5e4882ec25636b5788dcb663f3d"/><section>
+    <title>allocate_node()</title>
+<indexterm><primary>allocate_node</primary><secondary>rapidxml::memory_pool&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::memory_pool&lt; Ch &gt;</primary><secondary>allocate_node</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput><link linkend="_classrapidxml_1_1xml__node">xml_node</link>&lt; Ch &gt; * <link linkend="_classrapidxml_1_1memory__pool">rapidxml::memory_pool</link>&lt; Ch &gt;::allocate_node (node_type type, const Ch * name = <computeroutput>0</computeroutput>
+, const Ch * value = <computeroutput>0</computeroutput>
+, std::size_t name_size = <computeroutput>0</computeroutput>
+, std::size_t value_size = <computeroutput>0</computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Allocates a new node from the pool, and optionally assigns name and value to it. If the allocation request cannot be accomodated, this function will throw <computeroutput>std::bad_alloc</computeroutput>. If exceptions are disabled by defining RAPIDXML_NO_EXCEPTIONS, this function will call rapidxml::parse_error_handler() function. 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>type</entry><entry>
+<para>Type of node to create. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>name</entry><entry>
+<para>Name to assign to the node, or 0 to assign no name. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>value</entry><entry>
+<para>Value to assign to the node, or 0 to assign no value. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>name_size</entry><entry>
+<para>Size of name to assign, or 0 to automatically calculate size from name string. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>value_size</entry><entry>
+<para>Size of value to assign, or 0 to automatically calculate size from value string. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to allocated node. This pointer will never be NULL. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00680">rapidxml::xml_base&lt; Ch &gt;::name()</link>, and <link linkend="_l00699">rapidxml::xml_base&lt; Ch &gt;::value()</link>.</para>
+<para>
+Referenced by <link linkend="_l00504">rapidxml::memory_pool&lt; Ch &gt;::clone_node()</link>.</para>
+</section>
+<anchor xml:id="_classrapidxml_1_1memory__pool_1a8f58ea09e6a0ef89b21c6346bd5ce8fb"/><section>
+    <title>allocate_string()</title>
+<indexterm><primary>allocate_string</primary><secondary>rapidxml::memory_pool&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::memory_pool&lt; Ch &gt;</primary><secondary>allocate_string</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput>Ch * <link linkend="_classrapidxml_1_1memory__pool">rapidxml::memory_pool</link>&lt; Ch &gt;::allocate_string (const Ch * source = <computeroutput>0</computeroutput>
+, std::size_t size = <computeroutput>0</computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Allocates a char array of given size from the pool, and optionally copies a given string to it. If the allocation request cannot be accomodated, this function will throw <computeroutput>std::bad_alloc</computeroutput>. If exceptions are disabled by defining RAPIDXML_NO_EXCEPTIONS, this function will call rapidxml::parse_error_handler() function. 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>source</entry><entry>
+<para>String to initialize the allocated memory with, or 0 to not initialize it. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>size</entry><entry>
+<para>Number of characters to allocate, or zero to calculate it automatically from source string length; if size is 0, source string must be specified and null terminated. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to allocated char array. This pointer will never be NULL. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classrapidxml_1_1memory__pool_1aad377c835fdaed1cb2cc9df194cf84e4"/><section>
+    <title>clear()</title>
+<indexterm><primary>clear</primary><secondary>rapidxml::memory_pool&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::memory_pool&lt; Ch &gt;</primary><secondary>clear</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput>void <link linkend="_classrapidxml_1_1memory__pool">rapidxml::memory_pool</link>&lt; Ch &gt;::clear ( )<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Clears the pool. This causes memory occupied by nodes allocated by the pool to be freed. Any nodes or strings allocated from the pool will no longer be valid. </para>
+<para>
+Referenced by <link linkend="_l01422">rapidxml::xml_document&lt; Ch &gt;::clear()</link>, and <link linkend="_l00407">rapidxml::memory_pool&lt; Ch &gt;::~memory_pool()</link>.</para>
+</section>
+<anchor xml:id="_classrapidxml_1_1memory__pool_1a3925460987a199b302e11eb34de40139"/><section>
+    <title>clone_node()</title>
+<indexterm><primary>clone_node</primary><secondary>rapidxml::memory_pool&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::memory_pool&lt; Ch &gt;</primary><secondary>clone_node</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput><link linkend="_classrapidxml_1_1xml__node">xml_node</link>&lt; Ch &gt; * <link linkend="_classrapidxml_1_1memory__pool">rapidxml::memory_pool</link>&lt; Ch &gt;::clone_node (const <link linkend="_classrapidxml_1_1xml__node">xml_node</link>&lt; Ch &gt; * source, <link linkend="_classrapidxml_1_1xml__node">xml_node</link>&lt; Ch &gt; * result = <computeroutput>0</computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Clones an <link linkend="_classrapidxml_1_1xml__node">xml_node</link> and its hierarchy of child nodes and attributes. Nodes and attributes are allocated from this memory pool. Names and values are not cloned, they are shared between the clone and the source. Result node can be optionally specified as a second parameter, in which case its contents will be replaced with cloned source node. This is useful when you want to clone entire document. 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>source</entry><entry>
+<para>Node to clone. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>result</entry><entry>
+<para>Node to put results in, or 0 to automatically allocate result node </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to cloned node. This pointer will never be NULL. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00454">rapidxml::memory_pool&lt; Ch &gt;::allocate_attribute()</link>, <link linkend="_l00422">rapidxml::memory_pool&lt; Ch &gt;::allocate_node()</link>, <link linkend="_l00504">rapidxml::memory_pool&lt; Ch &gt;::clone_node()</link>, <link linkend="_l01032">rapidxml::xml_node&lt; Ch &gt;::first_attribute()</link>, <link linkend="_l00943">rapidxml::xml_node&lt; Ch &gt;::first_node()</link>, <link linkend="_l00680">rapidxml::xml_base&lt; Ch &gt;::name()</link>, <link linkend="_l00688">rapidxml::xml_base&lt; Ch &gt;::name_size()</link>, <link linkend="_l00863">rapidxml::xml_attribute&lt; Ch &gt;::next_attribute()</link>, <link linkend="_l01011">rapidxml::xml_node&lt; Ch &gt;::next_sibling()</link>, <link linkend="_l00920">rapidxml::xml_node&lt; Ch &gt;::type()</link>, <link linkend="_l00699">rapidxml::xml_base&lt; Ch &gt;::value()</link>, and <link linkend="_l00707">rapidxml::xml_base&lt; Ch &gt;::value_size()</link>.</para>
+<para>
+Referenced by <link linkend="_l00504">rapidxml::memory_pool&lt; Ch &gt;::clone_node()</link>.</para>
+</section>
+<anchor xml:id="_classrapidxml_1_1memory__pool_1a84d3d8d2cdfc00501e1dcf26d889ae03"/><section>
+    <title>set_allocator()</title>
+<indexterm><primary>set_allocator</primary><secondary>rapidxml::memory_pool&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::memory_pool&lt; Ch &gt;</primary><secondary>set_allocator</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput>void <link linkend="_classrapidxml_1_1memory__pool">rapidxml::memory_pool</link>&lt; Ch &gt;::set_allocator (alloc_func * af, free_func * ff)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Sets or resets the user-defined memory allocation functions for the pool. This can only be called when no memory is allocated from the pool yet, otherwise results are undefined. Allocation function must not return invalid pointer on failure. It should either throw, stop the program, or use <computeroutput>longjmp()</computeroutput> function to pass control to other place of program. If it returns invalid pointer, results are undefined. <?linebreak?><?linebreak?> User defined allocation functions must have the following forms: <?linebreak?><computeroutput> <?linebreak?>void *allocate(std::size_t size); <?linebreak?>void free(void *pointer); </computeroutput><?linebreak?> 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>af</entry><entry>
+<para>Allocation function, or 0 to restore default function </para>
+</entry>
+                            </row>
+                            <row>
+<entry>ff</entry><entry>
+<para>Free function, or 0 to restore default function </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/external/rapidxml/rapidxml.hpp</section>
+</section>

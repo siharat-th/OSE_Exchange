@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classmoodycamel_1_1spsc__sema_1_1_lightweight_semaphore" xml:lang="en-US">
+<title>moodycamel::spsc_sema::LightweightSemaphore Class Reference</title>
+<indexterm><primary>moodycamel::spsc_sema::LightweightSemaphore</primary></indexterm>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>typedef std::make_signed&lt; std::size_t &gt;::type <link linkend="_classmoodycamel_1_1spsc__sema_1_1_lightweight_semaphore_1a46841836a5dc89e3df10bca12f66b655">ssize_t</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>AE_NO_TSAN <link linkend="_classmoodycamel_1_1spsc__sema_1_1_lightweight_semaphore_1a833100d00f5b67ed874ce48e713b0276">LightweightSemaphore</link> (ssize_t initialCount=0)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classmoodycamel_1_1spsc__sema_1_1_lightweight_semaphore_1ac9705d28d2493140483112a1ac899f31">tryWait</link> () AE_NO_TSAN</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classmoodycamel_1_1spsc__sema_1_1_lightweight_semaphore_1ac26eb31ae596d2ca72f470c643641c7b">wait</link> () AE_NO_TSAN</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classmoodycamel_1_1spsc__sema_1_1_lightweight_semaphore_1a00003253988c9368df080951b37ffa1c">wait</link> (std::int64_t timeout_usecs) AE_NO_TSAN</para>
+</listitem>
+            <listitem><para>void <link linkend="_classmoodycamel_1_1spsc__sema_1_1_lightweight_semaphore_1a4f6ac02af433e5a097d266aa9d27eceb">signal</link> (ssize_t count=1) AE_NO_TSAN</para>
+</listitem>
+            <listitem><para>ssize_t <link linkend="_classmoodycamel_1_1spsc__sema_1_1_lightweight_semaphore_1ad2167590fb21fa46109bbe2c2445ee68">availableApprox</link> () const AE_NO_TSAN</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Typedef Documentation</title>
+<anchor xml:id="_classmoodycamel_1_1spsc__sema_1_1_lightweight_semaphore_1a46841836a5dc89e3df10bca12f66b655"/><section>
+    <title>ssize_t</title>
+<indexterm><primary>ssize_t</primary><secondary>moodycamel::spsc_sema::LightweightSemaphore</secondary></indexterm>
+<indexterm><primary>moodycamel::spsc_sema::LightweightSemaphore</primary><secondary>ssize_t</secondary></indexterm>
+<para><computeroutput>std::make_signed&lt;std::size_t&gt;::type moodycamel::spsc_sema::LightweightSemaphore::ssize_t</computeroutput></para></section>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classmoodycamel_1_1spsc__sema_1_1_lightweight_semaphore_1a833100d00f5b67ed874ce48e713b0276"/><section>
+    <title>LightweightSemaphore()</title>
+<indexterm><primary>LightweightSemaphore</primary><secondary>moodycamel::spsc_sema::LightweightSemaphore</secondary></indexterm>
+<indexterm><primary>moodycamel::spsc_sema::LightweightSemaphore</primary><secondary>LightweightSemaphore</secondary></indexterm>
+<para><computeroutput>AE_NO_TSAN moodycamel::spsc_sema::LightweightSemaphore::LightweightSemaphore (ssize_t initialCount = <computeroutput>0</computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classmoodycamel_1_1spsc__sema_1_1_lightweight_semaphore_1ad2167590fb21fa46109bbe2c2445ee68"/><section>
+    <title>availableApprox()</title>
+<indexterm><primary>availableApprox</primary><secondary>moodycamel::spsc_sema::LightweightSemaphore</secondary></indexterm>
+<indexterm><primary>moodycamel::spsc_sema::LightweightSemaphore</primary><secondary>availableApprox</secondary></indexterm>
+<para><computeroutput>ssize_t moodycamel::spsc_sema::LightweightSemaphore::availableApprox ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1spsc__sema_1_1_lightweight_semaphore_1a4f6ac02af433e5a097d266aa9d27eceb"/><section>
+    <title>signal()</title>
+<indexterm><primary>signal</primary><secondary>moodycamel::spsc_sema::LightweightSemaphore</secondary></indexterm>
+<indexterm><primary>moodycamel::spsc_sema::LightweightSemaphore</primary><secondary>signal</secondary></indexterm>
+<para><computeroutput>void moodycamel::spsc_sema::LightweightSemaphore::signal (ssize_t count = <computeroutput>1</computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1spsc__sema_1_1_lightweight_semaphore_1ac9705d28d2493140483112a1ac899f31"/><section>
+    <title>tryWait()</title>
+<indexterm><primary>tryWait</primary><secondary>moodycamel::spsc_sema::LightweightSemaphore</secondary></indexterm>
+<indexterm><primary>moodycamel::spsc_sema::LightweightSemaphore</primary><secondary>tryWait</secondary></indexterm>
+<para><computeroutput>bool moodycamel::spsc_sema::LightweightSemaphore::tryWait ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1spsc__sema_1_1_lightweight_semaphore_1ac26eb31ae596d2ca72f470c643641c7b"/><section>
+    <title>wait()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>wait</primary><secondary>moodycamel::spsc_sema::LightweightSemaphore</secondary></indexterm>
+<indexterm><primary>moodycamel::spsc_sema::LightweightSemaphore</primary><secondary>wait</secondary></indexterm>
+<para><computeroutput>bool moodycamel::spsc_sema::LightweightSemaphore::wait ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1spsc__sema_1_1_lightweight_semaphore_1a00003253988c9368df080951b37ffa1c"/><section>
+    <title>wait()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>wait</primary><secondary>moodycamel::spsc_sema::LightweightSemaphore</secondary></indexterm>
+<indexterm><primary>moodycamel::spsc_sema::LightweightSemaphore</primary><secondary>wait</secondary></indexterm>
+<para><computeroutput>bool moodycamel::spsc_sema::LightweightSemaphore::wait (std::int64_t timeout_usecs)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/external/camel/atomicops.h</section>
+</section>

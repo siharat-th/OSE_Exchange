@@ -1,0 +1,200 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classgenericstats" xml:lang="en-US">
+<title>genericstats Class Reference</title>
+<indexterm><primary>genericstats</primary></indexterm>
+<para>
+
+<para>Class representing generic statistics. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;algo_structs.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for genericstats:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classgenericstats.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_classgenericstats_1a449eeb0df0a188a53da05206b14f5b1c">enabled</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classgenericstats_1a8c7c1db4bda74f44661063d0975e39d6">name</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classgenericstats_1a0febd5053a1a68b2fc4079feb5390e4d">templatename</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classgenericstats_1abd717ba3dc89b35add99f6851444391b">uniqueid</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classgenericstats_1ad1b3b0f1a5d4fc63240930815d4abed8">source</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classgenericstats_1a9a77ba6cca19faad7f13492ad8bfb218">exch</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classgenericstats_1ad20094d31b98b5d6d613aa97e20dbdf8">symbol</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classgenericstats_1a43b9024d60d10f85bd433b3c0a169e73">msgtype</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classgenericstats_1a3b22b41c393f085348aa75cfec0accc9">text</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_classgenericstats_1ab059427d89ede8fddb529e6c30b983bc">position</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_classgenericstats_1aaa1ec86e27d2f1b32e9a5b9de81a6c77">totalexec</link></para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_classgenericstats_1acbe069b442000520549d2db1728a4d00">ssboe</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_classgenericstats_1aac106f0927bffcb95c25e975c302c091">updatetime</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+Protected Member Functions inherited from <link linkend="_classstats">stats</link>        <itemizedlist>
+            <listitem><para>string <link linkend="_classstats_1a9aa1d4ceadaad7dbf6359f4b8b7675fe">GetType</link> ()</para>
+
+<para>Gets the type of the statistics. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Protected Attributes inherited from <link linkend="_classstats">stats</link>        <itemizedlist>
+            <listitem><para><link linkend="_struct_algo_stats_1aa6ad6c12d8ac79f84e3d98668b9347c6">AlgoStats::Enum</link> <link linkend="_classstats_1a900f893a3794febac7311264ff573c5d">StatType</link></para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+
+<para>Class representing generic statistics. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classgenericstats_1a909a1033f3797de166c2f96adee771c6"/><section>
+    <title>genericstats()</title>
+<indexterm><primary>genericstats</primary><secondary>genericstats</secondary></indexterm>
+<indexterm><primary>genericstats</primary><secondary>genericstats</secondary></indexterm>
+<para><computeroutput>genericstats::genericstats ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classgenericstats_1a449eeb0df0a188a53da05206b14f5b1c"/><section>
+    <title>enabled</title>
+<indexterm><primary>enabled</primary><secondary>genericstats</secondary></indexterm>
+<indexterm><primary>genericstats</primary><secondary>enabled</secondary></indexterm>
+<para><computeroutput>bool genericstats::enabled</computeroutput></para>
+<para>Flag indicating if the statistics is enabled. </para>
+<para>
+Referenced by <link linkend="_l00039">KTN::REPORTER::AlgoV3Reporter::DoWork()</link>, and <link linkend="_l00087">KTN::REPORTER::AlgoV3Reporter::SendMessage()</link>.</para>
+</section>
+<anchor xml:id="_classgenericstats_1a9a77ba6cca19faad7f13492ad8bfb218"/><section>
+    <title>exch</title>
+<indexterm><primary>exch</primary><secondary>genericstats</secondary></indexterm>
+<indexterm><primary>genericstats</primary><secondary>exch</secondary></indexterm>
+<para><computeroutput>std::string genericstats::exch</computeroutput></para>
+<para>The exchange. </para>
+<para>
+Referenced by <link linkend="_l00087">KTN::REPORTER::AlgoV3Reporter::SendMessage()</link>.</para>
+</section>
+<anchor xml:id="_classgenericstats_1a43b9024d60d10f85bd433b3c0a169e73"/><section>
+    <title>msgtype</title>
+<indexterm><primary>msgtype</primary><secondary>genericstats</secondary></indexterm>
+<indexterm><primary>genericstats</primary><secondary>msgtype</secondary></indexterm>
+<para><computeroutput>std::string genericstats::msgtype</computeroutput></para>
+<para>The message type. </para>
+<para>
+Referenced by <link linkend="_l00039">KTN::REPORTER::AlgoV3Reporter::DoWork()</link>, and <link linkend="_l00087">KTN::REPORTER::AlgoV3Reporter::SendMessage()</link>.</para>
+</section>
+<anchor xml:id="_classgenericstats_1a8c7c1db4bda74f44661063d0975e39d6"/><section>
+    <title>name</title>
+<indexterm><primary>name</primary><secondary>genericstats</secondary></indexterm>
+<indexterm><primary>genericstats</primary><secondary>name</secondary></indexterm>
+<para><computeroutput>std::string genericstats::name</computeroutput></para>
+<para>The name. </para>
+<para>
+Referenced by <link linkend="_l00087">KTN::REPORTER::AlgoV3Reporter::SendMessage()</link>.</para>
+</section>
+<anchor xml:id="_classgenericstats_1ab059427d89ede8fddb529e6c30b983bc"/><section>
+    <title>position</title>
+<indexterm><primary>position</primary><secondary>genericstats</secondary></indexterm>
+<indexterm><primary>genericstats</primary><secondary>position</secondary></indexterm>
+<para><computeroutput>double genericstats::position</computeroutput></para>
+<para>The position. </para>
+<para>
+Referenced by <link linkend="_l00087">KTN::REPORTER::AlgoV3Reporter::SendMessage()</link>.</para>
+</section>
+<anchor xml:id="_classgenericstats_1ad1b3b0f1a5d4fc63240930815d4abed8"/><section>
+    <title>source</title>
+<indexterm><primary>source</primary><secondary>genericstats</secondary></indexterm>
+<indexterm><primary>genericstats</primary><secondary>source</secondary></indexterm>
+<para><computeroutput>std::string genericstats::source</computeroutput></para>
+<para>The source. </para>
+<para>
+Referenced by <link linkend="_l00087">KTN::REPORTER::AlgoV3Reporter::SendMessage()</link>.</para>
+</section>
+<anchor xml:id="_classgenericstats_1acbe069b442000520549d2db1728a4d00"/><section>
+    <title>ssboe</title>
+<indexterm><primary>ssboe</primary><secondary>genericstats</secondary></indexterm>
+<indexterm><primary>genericstats</primary><secondary>ssboe</secondary></indexterm>
+<para><computeroutput>uint64_t genericstats::ssboe</computeroutput></para>
+<para>The SSBOE. </para>
+<para>
+Referenced by <link linkend="_l00039">KTN::REPORTER::AlgoV3Reporter::DoWork()</link>.</para>
+</section>
+<anchor xml:id="_classgenericstats_1ad20094d31b98b5d6d613aa97e20dbdf8"/><section>
+    <title>symbol</title>
+<indexterm><primary>symbol</primary><secondary>genericstats</secondary></indexterm>
+<indexterm><primary>genericstats</primary><secondary>symbol</secondary></indexterm>
+<para><computeroutput>std::string genericstats::symbol</computeroutput></para>
+<para>The symbol. </para>
+<para>
+Referenced by <link linkend="_l00087">KTN::REPORTER::AlgoV3Reporter::SendMessage()</link>.</para>
+</section>
+<anchor xml:id="_classgenericstats_1a0febd5053a1a68b2fc4079feb5390e4d"/><section>
+    <title>templatename</title>
+<indexterm><primary>templatename</primary><secondary>genericstats</secondary></indexterm>
+<indexterm><primary>genericstats</primary><secondary>templatename</secondary></indexterm>
+<para><computeroutput>std::string genericstats::templatename</computeroutput></para>
+<para>The template name. </para>
+<para>
+Referenced by <link linkend="_l00087">KTN::REPORTER::AlgoV3Reporter::SendMessage()</link>.</para>
+</section>
+<anchor xml:id="_classgenericstats_1a3b22b41c393f085348aa75cfec0accc9"/><section>
+    <title>text</title>
+<indexterm><primary>text</primary><secondary>genericstats</secondary></indexterm>
+<indexterm><primary>genericstats</primary><secondary>text</secondary></indexterm>
+<para><computeroutput>std::string genericstats::text</computeroutput></para>
+<para>The text. </para>
+<para>
+Referenced by <link linkend="_l00087">KTN::REPORTER::AlgoV3Reporter::SendMessage()</link>.</para>
+</section>
+<anchor xml:id="_classgenericstats_1aaa1ec86e27d2f1b32e9a5b9de81a6c77"/><section>
+    <title>totalexec</title>
+<indexterm><primary>totalexec</primary><secondary>genericstats</secondary></indexterm>
+<indexterm><primary>genericstats</primary><secondary>totalexec</secondary></indexterm>
+<para><computeroutput>double genericstats::totalexec</computeroutput></para>
+<para>The total executed quantity. </para>
+<para>
+Referenced by <link linkend="_l00087">KTN::REPORTER::AlgoV3Reporter::SendMessage()</link>.</para>
+</section>
+<anchor xml:id="_classgenericstats_1abd717ba3dc89b35add99f6851444391b"/><section>
+    <title>uniqueid</title>
+<indexterm><primary>uniqueid</primary><secondary>genericstats</secondary></indexterm>
+<indexterm><primary>genericstats</primary><secondary>uniqueid</secondary></indexterm>
+<para><computeroutput>std::string genericstats::uniqueid</computeroutput></para>
+<para>The unique ID. </para>
+<para>
+Referenced by <link linkend="_l00039">KTN::REPORTER::AlgoV3Reporter::DoWork()</link>, and <link linkend="_l00087">KTN::REPORTER::AlgoV3Reporter::SendMessage()</link>.</para>
+</section>
+<anchor xml:id="_classgenericstats_1aac106f0927bffcb95c25e975c302c091"/><section>
+    <title>updatetime</title>
+<indexterm><primary>updatetime</primary><secondary>genericstats</secondary></indexterm>
+<indexterm><primary>genericstats</primary><secondary>updatetime</secondary></indexterm>
+<para><computeroutput>string genericstats::updatetime</computeroutput></para>
+<para>The update time. </para>
+<para>
+Referenced by <link linkend="_l00039">KTN::REPORTER::AlgoV3Reporter::DoWork()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+AlgoSupport/algo_structs.hpp</section>
+</section>

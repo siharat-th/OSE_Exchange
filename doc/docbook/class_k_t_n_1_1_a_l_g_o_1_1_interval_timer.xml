@@ -1,0 +1,316 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_interval_timer" xml:lang="en-US">
+<title>KTN::ALGO::IntervalTimer Class Reference</title>
+<indexterm><primary>KTN::ALGO::IntervalTimer</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_interval_timer">IntervalTimer</link> class represents a timer that triggers at regular intervals. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;IntervalTimer.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for KTN::ALGO::IntervalTimer:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_k_t_n_1_1_a_l_g_o_1_1_interval_timer.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_1af2d7471eb5381f8726f7aeec55b52179">IntervalTimer</link> (<link linkend="_class_timer_callback">TimerCallback</link> &amp;cb)</para>
+
+<para>Constructs an <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_interval_timer">IntervalTimer</link> object. </para>
+</listitem>
+            <listitem><para><link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_1a8a3549c73c7093ee01423ae239af895c">~IntervalTimer</link> ()</para>
+
+<para>Destroys the <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_interval_timer">IntervalTimer</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_1afec42301f4a33a90c4b2d174083e8e86">Test</link> ()</para>
+
+<para>Test function for the <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_interval_timer">IntervalTimer</link>. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_1a8956c2ba207971d54c3054453e81edc4">Pause</link> (bool paused)</para>
+
+<para>Pauses or resumes the timer. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_1af83afb4dea10d2cb70326165f2bf0521">Start</link> (const std::string &amp;startTime, const std::string &amp;endTime, int intervalsecs, int maxworksecs)</para>
+
+<para>Starts the timer with the specified parameters. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_1a522419063c1ce6b13bf81b44f0f7973d">Stop</link> ()</para>
+
+<para>Stops the timer. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_1aa9825dbe1f907a249b150f52050ff3ac">UpdateInterval</link> (int intervalsecs)</para>
+
+<para>Updates the interval at which the timer triggers. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_1a7eaeb800339685d1a9bb32e205909aad">ResetInterval</link> ()</para>
+
+<para>Resets the timer interval. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_1ae28997667168f0878d0976ded830ac46">Triggered</link> ()</para>
+
+<para>Checks if the timer has been triggered. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_1a5c62134eff0f83f4a5e3327903b27341">Started</link> ()</para>
+
+<para>Checks if the timer has started. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_class_named_thread">NamedThread</link>        <itemizedlist>
+            <listitem><para><link linkend="_class_named_thread_1a891fabdc2d824048ec05c82e7ef8c69a">NamedThread</link> ()</para>
+
+<para>Default constructor. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_named_thread_1a018dadb59e5af98ee734301a1baa50cb">~NamedThread</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_named_thread_1a9fa42542ff43c89fb9bbc33de9c87e34">CreateAndRun</link> (string name, int core)</para>
+
+<para>Creates and runs the named thread on the specified core. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_named_thread_1ad4809c571171be13f0f91f540d5c196f">Join</link> ()</para>
+
+<para>Joins the named thread. </para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_interval_timer">IntervalTimer</link> class represents a timer that triggers at regular intervals. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_1af2d7471eb5381f8726f7aeec55b52179"/><section>
+    <title>IntervalTimer()</title>
+<indexterm><primary>IntervalTimer</primary><secondary>KTN::ALGO::IntervalTimer</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::IntervalTimer</primary><secondary>IntervalTimer</secondary></indexterm>
+<para><computeroutput>IntervalTimer::IntervalTimer (<link linkend="_class_timer_callback">TimerCallback</link> &amp; cb)</computeroutput></para><para>
+
+<para>Constructs an <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_interval_timer">IntervalTimer</link> object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>cb</entry><entry>
+<para>The <link linkend="_class_timer_callback">TimerCallback</link> object to be called when the timer triggers. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_1a8a3549c73c7093ee01423ae239af895c"/><section>
+    <title>~IntervalTimer()</title>
+<indexterm><primary>~IntervalTimer</primary><secondary>KTN::ALGO::IntervalTimer</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::IntervalTimer</primary><secondary>~IntervalTimer</secondary></indexterm>
+<para><computeroutput>IntervalTimer::~IntervalTimer ( )</computeroutput></para><para>
+
+<para>Destroys the <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_interval_timer">IntervalTimer</link> object. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_1a8956c2ba207971d54c3054453e81edc4"/><section>
+    <title>Pause()</title>
+<indexterm><primary>Pause</primary><secondary>KTN::ALGO::IntervalTimer</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::IntervalTimer</primary><secondary>Pause</secondary></indexterm>
+<para><computeroutput>void IntervalTimer::Pause (bool paused)</computeroutput></para><para>
+
+<para>Pauses or resumes the timer. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>paused</entry><entry>
+<para>True to pause the timer, false to resume. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Referenced by <link linkend="_l00506">KTN::Skewer::Enable()</link>, <link linkend="_l00511">KTN::SkewTrader::Enable()</link>, <link linkend="_l00426">KTN::Twap::Enable()</link>, <link linkend="_l00066">KTN::Skewer::onJson()</link>, <link linkend="_l00071">KTN::SkewTrader::onJson()</link>, and <link linkend="_l00053">KTN::Twap::onJson()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_1a7eaeb800339685d1a9bb32e205909aad"/><section>
+    <title>ResetInterval()</title>
+<indexterm><primary>ResetInterval</primary><secondary>KTN::ALGO::IntervalTimer</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::IntervalTimer</primary><secondary>ResetInterval</secondary></indexterm>
+<para><computeroutput>void KTN::ALGO::IntervalTimer::ResetInterval ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Resets the timer interval. </para>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_1af83afb4dea10d2cb70326165f2bf0521"/><section>
+    <title>Start()</title>
+<indexterm><primary>Start</primary><secondary>KTN::ALGO::IntervalTimer</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::IntervalTimer</primary><secondary>Start</secondary></indexterm>
+<para><computeroutput>void IntervalTimer::Start (const std::string &amp; startTime, const std::string &amp; endTime, int intervalsecs, int maxworksecs)</computeroutput></para><para>
+
+<para>Starts the timer with the specified parameters. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>startTime</entry><entry>
+<para>The start time of the timer in string format. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>endTime</entry><entry>
+<para>The end time of the timer in string format. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>intervalsecs</entry><entry>
+<para>The interval in seconds at which the timer triggers. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>maxworksecs</entry><entry>
+<para>The maximum duration in seconds for the timer to perform its work. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00018">NamedThread::CreateAndRun()</link>, <link linkend="_l00103">Started()</link>, and <link linkend="_l00057">UpdateInterval()</link>.</para>
+<para>
+Referenced by <link linkend="_l00066">KTN::Skewer::onJson()</link>, <link linkend="_l00071">KTN::SkewTrader::onJson()</link>, <link linkend="_l00053">KTN::Twap::onJson()</link>, and <link linkend="_l00297">Test()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_1a5c62134eff0f83f4a5e3327903b27341"/><section>
+    <title>Started()</title>
+<indexterm><primary>Started</primary><secondary>KTN::ALGO::IntervalTimer</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::IntervalTimer</primary><secondary>Started</secondary></indexterm>
+<para><computeroutput>bool KTN::ALGO::IntervalTimer::Started ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Checks if the timer has started. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>True if the timer has started, false otherwise. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00506">KTN::Skewer::Enable()</link>, <link linkend="_l00511">KTN::SkewTrader::Enable()</link>, <link linkend="_l00426">KTN::Twap::Enable()</link>, <link linkend="_l01043">KTN::Skewer::minOrderExecution()</link>, <link linkend="_l01041">KTN::SkewTrader::minOrderExecution()</link>, <link linkend="_l00975">KTN::Twap::minOrderExecution()</link>, <link linkend="_l00066">KTN::Skewer::onJson()</link>, <link linkend="_l00071">KTN::SkewTrader::onJson()</link>, <link linkend="_l00053">KTN::Twap::onJson()</link>, <link linkend="_l00027">Start()</link>, <link linkend="_l00041">KTN::Skewer::~Skewer()</link>, <link linkend="_l00046">KTN::SkewTrader::~SkewTrader()</link>, and <link linkend="_l00037">KTN::Twap::~Twap()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_1a522419063c1ce6b13bf81b44f0f7973d"/><section>
+    <title>Stop()</title>
+<indexterm><primary>Stop</primary><secondary>KTN::ALGO::IntervalTimer</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::IntervalTimer</primary><secondary>Stop</secondary></indexterm>
+<para><computeroutput>void IntervalTimer::Stop ( )</computeroutput></para><para>
+
+<para>Stops the timer. </para>
+</para>
+<para>
+Referenced by <link linkend="_l01043">KTN::Skewer::minOrderExecution()</link>, <link linkend="_l01041">KTN::SkewTrader::minOrderExecution()</link>, <link linkend="_l00975">KTN::Twap::minOrderExecution()</link>, <link linkend="_l00471">KTN::Skewer::ResetPosition()</link>, <link linkend="_l00470">KTN::SkewTrader::ResetPosition()</link>, <link linkend="_l00391">KTN::Twap::ResetPosition()</link>, <link linkend="_l00041">KTN::Skewer::~Skewer()</link>, <link linkend="_l00046">KTN::SkewTrader::~SkewTrader()</link>, and <link linkend="_l00037">KTN::Twap::~Twap()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_1afec42301f4a33a90c4b2d174083e8e86"/><section>
+    <title>Test()</title>
+<indexterm><primary>Test</primary><secondary>KTN::ALGO::IntervalTimer</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::IntervalTimer</primary><secondary>Test</secondary></indexterm>
+<para><computeroutput>void IntervalTimer::Test ( )</computeroutput></para><para>
+
+<para>Test function for the <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_interval_timer">IntervalTimer</link>. </para>
+</para>
+<para>
+References <link linkend="_l00027">Start()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_1ae28997667168f0878d0976ded830ac46"/><section>
+    <title>Triggered()</title>
+<indexterm><primary>Triggered</primary><secondary>KTN::ALGO::IntervalTimer</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::IntervalTimer</primary><secondary>Triggered</secondary></indexterm>
+<para><computeroutput>bool KTN::ALGO::IntervalTimer::Triggered ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Checks if the timer has been triggered. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>True if the timer has been triggered, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_interval_timer_1aa9825dbe1f907a249b150f52050ff3ac"/><section>
+    <title>UpdateInterval()</title>
+<indexterm><primary>UpdateInterval</primary><secondary>KTN::ALGO::IntervalTimer</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::IntervalTimer</primary><secondary>UpdateInterval</secondary></indexterm>
+<para><computeroutput>void IntervalTimer::UpdateInterval (int intervalsecs)</computeroutput></para><para>
+
+<para>Updates the interval at which the timer triggers. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>intervalsecs</entry><entry>
+<para>The new interval in seconds. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Referenced by <link linkend="_l00066">KTN::Skewer::onJson()</link>, and <link linkend="_l00027">Start()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+AlgoCalculators/IntervalTimer.hppAlgoCalculators/IntervalTimer.cpp</section>
+</section>

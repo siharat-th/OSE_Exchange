@@ -1,0 +1,254 @@
+\doxysection{Weighted\+Average\+Calculator Class Reference}
+\hypertarget{class_weighted_average_calculator}{}\label{class_weighted_average_calculator}\index{WeightedAverageCalculator@{WeightedAverageCalculator}}
+
+
+Calculates the weighted average based on price and size.  
+
+
+
+
+{\ttfamily \#include $<$Weighted\+Average\+Calculator.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_weighted_average_calculator_a424a6bae9daf62719e799c868e9438e9}{Weighted\+Average\+Calculator}} (\mbox{\hyperlink{class_timer_callback}{Timer\+Callback}} \&cb)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_weighted_average_calculator}{Weighted\+Average\+Calculator} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_weighted_average_calculator_ad8b21ffd868ad102fc7ccc367ed414ba}{Test}} ()
+\begin{DoxyCompactList}\small\item\em Performs a test. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_weighted_average_calculator_a38f60ae98da35a24c88b2798b3a5146b}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Starts the calculation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_weighted_average_calculator_a69785baebc911328af5c84370032dd9c}{Stop}} ()
+\begin{DoxyCompactList}\small\item\em Stops the calculation. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_weighted_average_calculator_aa757a6b542fc2c9199596df3d87eea4f}{set\+Start\+End\+Time}} (const std\+::string \&start\+Time, const std\+::string \&end\+Time)
+\begin{DoxyCompactList}\small\item\em Sets the start and end time for the calculation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_weighted_average_calculator_acb7a5389bc8fb7427db59b2a77b66884}{calculate}} (int index, int64\+\_\+t price, int32\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Calculates the weighted average based on the given index, price, and size. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_weighted_average_calculator_a0f6986b5ee827238253161ba16d3c5a5}{get\+Current\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current time. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_weighted_average_calculator_aacafb7f210698abf2a73eac92b945c59}{get\+Wavg}} (int index)
+\begin{DoxyCompactList}\small\item\em Gets the weighted average based on the given index. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_weighted_average_calculator_a47af7f3996dc9337d4abde35fde3a399}{get\+Volume}} (int index)
+\begin{DoxyCompactList}\small\item\em Gets the volume based on the given index. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_weighted_average_calculator_aa77008ab8cbe3dbed58638494420cc14}{get\+Count}} (int index)
+\begin{DoxyCompactList}\small\item\em Gets the count based on the given index. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_weighted_average_calculator_a70e017eb4671f007d3970f1cd44ea483}{Triggered}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the timer is triggered. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_weighted_average_calculator_aa1bbb115eb6e2e67a5e85fb8733f38bf}{Started}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the calculation is started. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Calculates the weighted average based on price and size. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_weighted_average_calculator_a424a6bae9daf62719e799c868e9438e9}\index{WeightedAverageCalculator@{WeightedAverageCalculator}!WeightedAverageCalculator@{WeightedAverageCalculator}}
+\index{WeightedAverageCalculator@{WeightedAverageCalculator}!WeightedAverageCalculator@{WeightedAverageCalculator}}
+\doxysubsubsection{\texorpdfstring{WeightedAverageCalculator()}{WeightedAverageCalculator()}}
+{\footnotesize\ttfamily \label{class_weighted_average_calculator_a424a6bae9daf62719e799c868e9438e9} 
+Weighted\+Average\+Calculator\+::\+Weighted\+Average\+Calculator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_timer_callback}{Timer\+Callback}} \&}]{cb}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_weighted_average_calculator}{Weighted\+Average\+Calculator} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cb} & The \doxylink{class_timer_callback}{Timer\+Callback} object. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_weighted_average_calculator_acb7a5389bc8fb7427db59b2a77b66884}\index{WeightedAverageCalculator@{WeightedAverageCalculator}!calculate@{calculate}}
+\index{calculate@{calculate}!WeightedAverageCalculator@{WeightedAverageCalculator}}
+\doxysubsubsection{\texorpdfstring{calculate()}{calculate()}}
+{\footnotesize\ttfamily \label{class_weighted_average_calculator_acb7a5389bc8fb7427db59b2a77b66884} 
+void Weighted\+Average\+Calculator\+::calculate (\begin{DoxyParamCaption}\item[{int}]{index}{, }\item[{int64\+\_\+t}]{price}{, }\item[{int32\+\_\+t}]{size}{}\end{DoxyParamCaption})}
+
+
+
+Calculates the weighted average based on the given index, price, and size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index. \\
+\hline
+{\em price} & The price. \\
+\hline
+{\em size} & The size. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_weighted_average_calculator_aa77008ab8cbe3dbed58638494420cc14}\index{WeightedAverageCalculator@{WeightedAverageCalculator}!getCount@{getCount}}
+\index{getCount@{getCount}!WeightedAverageCalculator@{WeightedAverageCalculator}}
+\doxysubsubsection{\texorpdfstring{getCount()}{getCount()}}
+{\footnotesize\ttfamily \label{class_weighted_average_calculator_aa77008ab8cbe3dbed58638494420cc14} 
+double Weighted\+Average\+Calculator\+::get\+Count (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})}
+
+
+
+Gets the count based on the given index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The count. 
+\end{DoxyReturn}
+\Hypertarget{class_weighted_average_calculator_a0f6986b5ee827238253161ba16d3c5a5}\index{WeightedAverageCalculator@{WeightedAverageCalculator}!getCurrentTime@{getCurrentTime}}
+\index{getCurrentTime@{getCurrentTime}!WeightedAverageCalculator@{WeightedAverageCalculator}}
+\doxysubsubsection{\texorpdfstring{getCurrentTime()}{getCurrentTime()}}
+{\footnotesize\ttfamily \label{class_weighted_average_calculator_a0f6986b5ee827238253161ba16d3c5a5} 
+std\+::string Weighted\+Average\+Calculator\+::get\+Current\+Time (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the current time. 
+
+\begin{DoxyReturn}{Returns}
+The current time in string format. 
+\end{DoxyReturn}
+\Hypertarget{class_weighted_average_calculator_a47af7f3996dc9337d4abde35fde3a399}\index{WeightedAverageCalculator@{WeightedAverageCalculator}!getVolume@{getVolume}}
+\index{getVolume@{getVolume}!WeightedAverageCalculator@{WeightedAverageCalculator}}
+\doxysubsubsection{\texorpdfstring{getVolume()}{getVolume()}}
+{\footnotesize\ttfamily \label{class_weighted_average_calculator_a47af7f3996dc9337d4abde35fde3a399} 
+double Weighted\+Average\+Calculator\+::get\+Volume (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})}
+
+
+
+Gets the volume based on the given index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The volume. 
+\end{DoxyReturn}
+\Hypertarget{class_weighted_average_calculator_aacafb7f210698abf2a73eac92b945c59}\index{WeightedAverageCalculator@{WeightedAverageCalculator}!getWavg@{getWavg}}
+\index{getWavg@{getWavg}!WeightedAverageCalculator@{WeightedAverageCalculator}}
+\doxysubsubsection{\texorpdfstring{getWavg()}{getWavg()}}
+{\footnotesize\ttfamily \label{class_weighted_average_calculator_aacafb7f210698abf2a73eac92b945c59} 
+double Weighted\+Average\+Calculator\+::get\+Wavg (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})}
+
+
+
+Gets the weighted average based on the given index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The weighted average. 
+\end{DoxyReturn}
+\Hypertarget{class_weighted_average_calculator_aa757a6b542fc2c9199596df3d87eea4f}\index{WeightedAverageCalculator@{WeightedAverageCalculator}!setStartEndTime@{setStartEndTime}}
+\index{setStartEndTime@{setStartEndTime}!WeightedAverageCalculator@{WeightedAverageCalculator}}
+\doxysubsubsection{\texorpdfstring{setStartEndTime()}{setStartEndTime()}}
+{\footnotesize\ttfamily \label{class_weighted_average_calculator_aa757a6b542fc2c9199596df3d87eea4f} 
+bool Weighted\+Average\+Calculator\+::set\+Start\+End\+Time (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{start\+Time}{, }\item[{const std\+::string \&}]{end\+Time}{}\end{DoxyParamCaption})}
+
+
+
+Sets the start and end time for the calculation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Time} & The start time in string format. \\
+\hline
+{\em end\+Time} & The end time in string format. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the start and end time are successfully set, false otherwise. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00107}{Start()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00083}{Test()}}.
+
+\Hypertarget{class_weighted_average_calculator_a38f60ae98da35a24c88b2798b3a5146b}\index{WeightedAverageCalculator@{WeightedAverageCalculator}!Start@{Start}}
+\index{Start@{Start}!WeightedAverageCalculator@{WeightedAverageCalculator}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily \label{class_weighted_average_calculator_a38f60ae98da35a24c88b2798b3a5146b} 
+void Weighted\+Average\+Calculator\+::\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Starts the calculation. 
+
+
+
+References \mbox{\hyperlink{l00280}{Started()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00017}{set\+Start\+End\+Time()}}, and \mbox{\hyperlink{l00083}{Test()}}.
+
+\Hypertarget{class_weighted_average_calculator_aa1bbb115eb6e2e67a5e85fb8733f38bf}\index{WeightedAverageCalculator@{WeightedAverageCalculator}!Started@{Started}}
+\index{Started@{Started}!WeightedAverageCalculator@{WeightedAverageCalculator}}
+\doxysubsubsection{\texorpdfstring{Started()}{Started()}}
+{\footnotesize\ttfamily \label{class_weighted_average_calculator_aa1bbb115eb6e2e67a5e85fb8733f38bf} 
+bool Weighted\+Average\+Calculator\+::\+Started (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the calculation is started. 
+
+\begin{DoxyReturn}{Returns}
+True if the calculation is started, false otherwise. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00107}{Start()}}.
+
+\Hypertarget{class_weighted_average_calculator_a69785baebc911328af5c84370032dd9c}\index{WeightedAverageCalculator@{WeightedAverageCalculator}!Stop@{Stop}}
+\index{Stop@{Stop}!WeightedAverageCalculator@{WeightedAverageCalculator}}
+\doxysubsubsection{\texorpdfstring{Stop()}{Stop()}}
+{\footnotesize\ttfamily \label{class_weighted_average_calculator_a69785baebc911328af5c84370032dd9c} 
+void Weighted\+Average\+Calculator\+::\+Stop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Stops the calculation. 
+
+\Hypertarget{class_weighted_average_calculator_ad8b21ffd868ad102fc7ccc367ed414ba}\index{WeightedAverageCalculator@{WeightedAverageCalculator}!Test@{Test}}
+\index{Test@{Test}!WeightedAverageCalculator@{WeightedAverageCalculator}}
+\doxysubsubsection{\texorpdfstring{Test()}{Test()}}
+{\footnotesize\ttfamily \label{class_weighted_average_calculator_ad8b21ffd868ad102fc7ccc367ed414ba} 
+void Weighted\+Average\+Calculator\+::\+Test (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Performs a test. 
+
+
+
+References \mbox{\hyperlink{l00017}{set\+Start\+End\+Time()}}, and \mbox{\hyperlink{l00107}{Start()}}.
+
+\Hypertarget{class_weighted_average_calculator_a70e017eb4671f007d3970f1cd44ea483}\index{WeightedAverageCalculator@{WeightedAverageCalculator}!Triggered@{Triggered}}
+\index{Triggered@{Triggered}!WeightedAverageCalculator@{WeightedAverageCalculator}}
+\doxysubsubsection{\texorpdfstring{Triggered()}{Triggered()}}
+{\footnotesize\ttfamily \label{class_weighted_average_calculator_a70e017eb4671f007d3970f1cd44ea483} 
+bool Weighted\+Average\+Calculator\+::\+Triggered (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the timer is triggered. 
+
+\begin{DoxyReturn}{Returns}
+True if the timer is triggered, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Algo\+Calculators/Weighted\+Average\+Calculator.\+hpp\item 
+Algo\+Calculators/Weighted\+Average\+Calculator.\+cpp\end{DoxyCompactItemize}

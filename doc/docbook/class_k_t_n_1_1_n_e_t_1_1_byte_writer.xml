@@ -1,0 +1,411 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_n_e_t_1_1_byte_writer" xml:lang="en-US">
+<title>KTN::NET::ByteWriter Class Reference</title>
+<indexterm><primary>KTN::NET::ByteWriter</primary></indexterm>
+<para>
+
+<para>Class for writing bytes to a buffer. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;byte_writer.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_n_e_t_1_1_byte_writer_1a8336bc1a4eadce9edacdb986dcbee5e5">ByteWriter</link> ()</para>
+
+<para>Default constructor. </para>
+</listitem>
+            <listitem><para><link linkend="_class_k_t_n_1_1_n_e_t_1_1_byte_writer_1ad413b954db8922bd0c81072d286014c0">ByteWriter</link> (void *<link linkend="_class_k_t_n_1_1_n_e_t_1_1_byte_writer_1a1e7f6520aa7fd235028b936b6d127c8d">data</link>, uint32_t total_data_length, uint32_t *output_length)</para>
+
+<para>Constructor that sets the initial buffer and length. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_k_t_n_1_1_n_e_t_1_1_byte_writer_1a7749a5c081cc551f7876188aaff2efbb">~ByteWriter</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_n_e_t_1_1_byte_writer_1a87387d28672f953a1b10326ea56ac666">Set</link> (void *<link linkend="_class_k_t_n_1_1_n_e_t_1_1_byte_writer_1a1e7f6520aa7fd235028b936b6d127c8d">data</link>, uint32_t total_data_length, uint32_t *output_length)</para>
+
+<para>Sets the buffer and length for writing. </para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>bool <link linkend="_class_k_t_n_1_1_n_e_t_1_1_byte_writer_1a49bb64247edf64f7e0af351b20307412">Write</link> (const T &amp;val)</para>
+
+<para>Writes a value to the buffer. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_n_e_t_1_1_byte_writer_1ad69a2971f1fe74be50706ed0379d55d9">Write</link> (const void *val, uint32_t val_length)</para>
+
+<para>Writes a block of data to the buffer. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_n_e_t_1_1_byte_writer_1affa46d2bd4c8406f1a1f8d209fe0a01c">Seek</link> (int32_t bytes)</para>
+
+<para>Moves the write position in the buffer by the specified number of bytes. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_n_e_t_1_1_byte_writer_1a06cab111fcff6d7138a1a956c3de9956">Reset</link> ()</para>
+
+<para>Resets the write position to the beginning of the buffer. </para>
+</listitem>
+            <listitem><para>uint8_t * <link linkend="_class_k_t_n_1_1_n_e_t_1_1_byte_writer_1a1e7f6520aa7fd235028b936b6d127c8d">data</link> ()</para>
+
+<para>Gets a pointer to the buffer. </para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_class_k_t_n_1_1_n_e_t_1_1_byte_writer_1ac47cad9b0fd468f12184dfd542dbc362">bytes_written</link> ()</para>
+
+<para>Gets the number of bytes that were written to the buffer. </para>
+</listitem>
+            <listitem><para>uint8_t * <link linkend="_class_k_t_n_1_1_n_e_t_1_1_byte_writer_1a5ebc39e09618ef9b6a1a8d667104596c">cur</link> ()</para>
+
+<para>Gets a pointer to the current write position in the buffer. </para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_class_k_t_n_1_1_n_e_t_1_1_byte_writer_1a1518c49b9213eea7c2afcb963a3bce40">bytes_available</link> ()</para>
+
+<para>Gets the number of bytes left to write in the buffer. </para>
+</listitem>
+            <listitem><para>uint32_t * <link linkend="_class_k_t_n_1_1_n_e_t_1_1_byte_writer_1a136d2cd02aaa761dee24f1477dedc04b">cur_length</link> ()</para>
+
+<para>Gets a pointer to the variable that stores the length of the written data. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Class for writing bytes to a buffer. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_n_e_t_1_1_byte_writer_1a8336bc1a4eadce9edacdb986dcbee5e5"/><section>
+    <title>ByteWriter()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>ByteWriter</primary><secondary>KTN::NET::ByteWriter</secondary></indexterm>
+<indexterm><primary>KTN::NET::ByteWriter</primary><secondary>ByteWriter</secondary></indexterm>
+<para><computeroutput>KTN::NET::ByteWriter::ByteWriter ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Default constructor. </para>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_n_e_t_1_1_byte_writer_1ad413b954db8922bd0c81072d286014c0"/><section>
+    <title>ByteWriter()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>ByteWriter</primary><secondary>KTN::NET::ByteWriter</secondary></indexterm>
+<indexterm><primary>KTN::NET::ByteWriter</primary><secondary>ByteWriter</secondary></indexterm>
+<para><computeroutput>KTN::NET::ByteWriter::ByteWriter (void * data, uint32_t total_data_length, uint32_t * output_length)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Constructor that sets the initial buffer and length. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>data</entry><entry>
+<para>Pointer to the buffer. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>total_data_length</entry><entry>
+<para>Total length of the buffer. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>output_length</entry><entry>
+<para>Pointer to the variable that will store the length of the written data. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_n_e_t_1_1_byte_writer_1a7749a5c081cc551f7876188aaff2efbb"/><section>
+    <title>~ByteWriter()</title>
+<indexterm><primary>~ByteWriter</primary><secondary>KTN::NET::ByteWriter</secondary></indexterm>
+<indexterm><primary>KTN::NET::ByteWriter</primary><secondary>~ByteWriter</secondary></indexterm>
+<para><computeroutput>virtual KTN::NET::ByteWriter::~ByteWriter ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Destructor. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_n_e_t_1_1_byte_writer_1a1518c49b9213eea7c2afcb963a3bce40"/><section>
+    <title>bytes_available()</title>
+<indexterm><primary>bytes_available</primary><secondary>KTN::NET::ByteWriter</secondary></indexterm>
+<indexterm><primary>KTN::NET::ByteWriter</primary><secondary>bytes_available</secondary></indexterm>
+<para><computeroutput>uint32_t KTN::NET::ByteWriter::bytes_available ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Gets the number of bytes left to write in the buffer. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The number of bytes available for writing. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_n_e_t_1_1_byte_writer_1ac47cad9b0fd468f12184dfd542dbc362"/><section>
+    <title>bytes_written()</title>
+<indexterm><primary>bytes_written</primary><secondary>KTN::NET::ByteWriter</secondary></indexterm>
+<indexterm><primary>KTN::NET::ByteWriter</primary><secondary>bytes_written</secondary></indexterm>
+<para><computeroutput>uint64_t KTN::NET::ByteWriter::bytes_written ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Gets the number of bytes that were written to the buffer. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The number of bytes written. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00129">Reset()</link>, and <link linkend="_l00112">Seek()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_n_e_t_1_1_byte_writer_1a5ebc39e09618ef9b6a1a8d667104596c"/><section>
+    <title>cur()</title>
+<indexterm><primary>cur</primary><secondary>KTN::NET::ByteWriter</secondary></indexterm>
+<indexterm><primary>KTN::NET::ByteWriter</primary><secondary>cur</secondary></indexterm>
+<para><computeroutput>uint8_t * KTN::NET::ByteWriter::cur ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Gets a pointer to the current write position in the buffer. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Pointer to the current write position. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00106">KTN::CME::IL3::SessionMessageFactory::EstablishEncode()</link>, <link linkend="_l00051">KTN::CME::IL3::SessionMessageFactory::NegotiateEncode()</link>, <link linkend="_l00257">KTN::CME::IL3::SessionMessageFactory::RetransRequestEncode()</link>, <link linkend="_l00174">KTN::CME::IL3::SessionMessageFactory::SequenceEncode()</link>, <link linkend="_l00026">KTN::CME::IL3::SessionMessageFactory::SofhEncode()</link>, and <link linkend="_l00219">KTN::CME::IL3::SessionMessageFactory::TerminateEncode()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_n_e_t_1_1_byte_writer_1a136d2cd02aaa761dee24f1477dedc04b"/><section>
+    <title>cur_length()</title>
+<indexterm><primary>cur_length</primary><secondary>KTN::NET::ByteWriter</secondary></indexterm>
+<indexterm><primary>KTN::NET::ByteWriter</primary><secondary>cur_length</secondary></indexterm>
+<para><computeroutput>uint32_t * KTN::NET::ByteWriter::cur_length ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Gets a pointer to the variable that stores the length of the written data. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Pointer to the variable that stores the length of the written data. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_n_e_t_1_1_byte_writer_1a1e7f6520aa7fd235028b936b6d127c8d"/><section>
+    <title>data()</title>
+<indexterm><primary>data</primary><secondary>KTN::NET::ByteWriter</secondary></indexterm>
+<indexterm><primary>KTN::NET::ByteWriter</primary><secondary>data</secondary></indexterm>
+<para><computeroutput>uint8_t * KTN::NET::ByteWriter::data ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Gets a pointer to the buffer. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Pointer to the buffer. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00061">Set()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_n_e_t_1_1_byte_writer_1a06cab111fcff6d7138a1a956c3de9956"/><section>
+    <title>Reset()</title>
+<indexterm><primary>Reset</primary><secondary>KTN::NET::ByteWriter</secondary></indexterm>
+<indexterm><primary>KTN::NET::ByteWriter</primary><secondary>Reset</secondary></indexterm>
+<para><computeroutput>void KTN::NET::ByteWriter::Reset ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Resets the write position to the beginning of the buffer. </para>
+</para>
+<para>
+References <link linkend="_l00143">bytes_written()</link>, and <link linkend="_l00112">Seek()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_n_e_t_1_1_byte_writer_1affa46d2bd4c8406f1a1f8d209fe0a01c"/><section>
+    <title>Seek()</title>
+<indexterm><primary>Seek</primary><secondary>KTN::NET::ByteWriter</secondary></indexterm>
+<indexterm><primary>KTN::NET::ByteWriter</primary><secondary>Seek</secondary></indexterm>
+<para><computeroutput>bool KTN::NET::ByteWriter::Seek (int32_t bytes)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Moves the write position in the buffer by the specified number of bytes. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>bytes</entry><entry>
+<para>The number of bytes to move the write position. Positive value moves forward, negative value moves backward. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the write position was successfully moved, false otherwise. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00143">bytes_written()</link>.</para>
+<para>
+Referenced by <link linkend="_l00129">Reset()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_n_e_t_1_1_byte_writer_1a87387d28672f953a1b10326ea56ac666"/><section>
+    <title>Set()</title>
+<indexterm><primary>Set</primary><secondary>KTN::NET::ByteWriter</secondary></indexterm>
+<indexterm><primary>KTN::NET::ByteWriter</primary><secondary>Set</secondary></indexterm>
+<para><computeroutput>void KTN::NET::ByteWriter::Set (void * data, uint32_t total_data_length, uint32_t * output_length)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Sets the buffer and length for writing. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>data</entry><entry>
+<para>Pointer to the buffer. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>total_data_length</entry><entry>
+<para>Total length of the buffer. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>output_length</entry><entry>
+<para>Pointer to the variable that will store the length of the written data. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00137">data()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_n_e_t_1_1_byte_writer_1a49bb64247edf64f7e0af351b20307412"/><section>
+    <title>Write()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>Write</primary><secondary>KTN::NET::ByteWriter</secondary></indexterm>
+<indexterm><primary>KTN::NET::ByteWriter</primary><secondary>Write</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>bool KTN::NET::ByteWriter::Write (const T &amp; val)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Writes a value to the buffer. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Template Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>T</entry><entry>
+<para>The type of the value to write. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>val</entry><entry>
+<para>The value to write. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the value was successfully written, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_n_e_t_1_1_byte_writer_1ad69a2971f1fe74be50706ed0379d55d9"/><section>
+    <title>Write()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>Write</primary><secondary>KTN::NET::ByteWriter</secondary></indexterm>
+<indexterm><primary>KTN::NET::ByteWriter</primary><secondary>Write</secondary></indexterm>
+<para><computeroutput>bool KTN::NET::ByteWriter::Write (const void * val, uint32_t val_length)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Writes a block of data to the buffer. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>val</entry><entry>
+<para>Pointer to the data to write. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>val_length</entry><entry>
+<para>Length of the data to write. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the data was successfully written, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+exchsupport/cme/net/byte_writer.hpp</section>
+</section>

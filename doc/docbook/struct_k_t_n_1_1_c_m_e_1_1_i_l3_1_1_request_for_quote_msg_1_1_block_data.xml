@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_request_for_quote_msg_1_1_block_data" xml:lang="en-US">
+<title>KTN::CME::IL3::RequestForQuoteMsg::BlockData Struct Reference</title>
+<indexterm><primary>KTN::CME::IL3::RequestForQuoteMsg::BlockData</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_request_for_quote_msg_1_1_block_data_1a6b225e9c5f77c11ea4eba4fb812f1d02">PartyDetailsListReqID</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_request_for_quote_msg_1_1_block_data_1a2efa932f77b5516fd0a1931eca0bda90">QuoteReqID</link></para>
+</listitem>
+            <listitem><para>EnumManualOrdIndReq <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_request_for_quote_msg_1_1_block_data_1a5e1bc8d0b4138097f617df55a78d9e75">ManualOrderIndicator</link></para>
+</listitem>
+            <listitem><para>uInt32 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_request_for_quote_msg_1_1_block_data_1a788ff94f68ffeea45d58b7b4daa6d230">SeqNum</link></para>
+</listitem>
+            <listitem><para>String20Req <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_request_for_quote_msg_1_1_block_data_1a7895332729c30a5bdb89a3f3f12440db">SenderID</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_request_for_quote_msg_1_1_block_data_1a38426258259da6b82f5378d51f266527">SendingTimeEpoch</link></para>
+</listitem>
+            <listitem><para>String5Req <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_request_for_quote_msg_1_1_block_data_1ad050d51fae5e1adfa5c11c176c3f0819">Location</link></para>
+</listitem>
+            <listitem><para>EnumQuoteTyp <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_request_for_quote_msg_1_1_block_data_1a7671b82166c6236782df1a8082496b8b">QuoteType</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_request_for_quote_msg_1_1_block_data_1ad050d51fae5e1adfa5c11c176c3f0819"/><section>
+    <title>Location</title>
+<indexterm><primary>Location</primary><secondary>KTN::CME::IL3::RequestForQuoteMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::RequestForQuoteMsg::BlockData</primary><secondary>Location</secondary></indexterm>
+<para><computeroutput>String5Req KTN::CME::IL3::RequestForQuoteMsg::BlockData::Location</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_request_for_quote_msg_1_1_block_data_1a5e1bc8d0b4138097f617df55a78d9e75"/><section>
+    <title>ManualOrderIndicator</title>
+<indexterm><primary>ManualOrderIndicator</primary><secondary>KTN::CME::IL3::RequestForQuoteMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::RequestForQuoteMsg::BlockData</primary><secondary>ManualOrderIndicator</secondary></indexterm>
+<para><computeroutput>EnumManualOrdIndReq KTN::CME::IL3::RequestForQuoteMsg::BlockData::ManualOrderIndicator</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_request_for_quote_msg_1_1_block_data_1a6b225e9c5f77c11ea4eba4fb812f1d02"/><section>
+    <title>PartyDetailsListReqID</title>
+<indexterm><primary>PartyDetailsListReqID</primary><secondary>KTN::CME::IL3::RequestForQuoteMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::RequestForQuoteMsg::BlockData</primary><secondary>PartyDetailsListReqID</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::RequestForQuoteMsg::BlockData::PartyDetailsListReqID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_request_for_quote_msg_1_1_block_data_1a2efa932f77b5516fd0a1931eca0bda90"/><section>
+    <title>QuoteReqID</title>
+<indexterm><primary>QuoteReqID</primary><secondary>KTN::CME::IL3::RequestForQuoteMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::RequestForQuoteMsg::BlockData</primary><secondary>QuoteReqID</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::RequestForQuoteMsg::BlockData::QuoteReqID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_request_for_quote_msg_1_1_block_data_1a7671b82166c6236782df1a8082496b8b"/><section>
+    <title>QuoteType</title>
+<indexterm><primary>QuoteType</primary><secondary>KTN::CME::IL3::RequestForQuoteMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::RequestForQuoteMsg::BlockData</primary><secondary>QuoteType</secondary></indexterm>
+<para><computeroutput>EnumQuoteTyp KTN::CME::IL3::RequestForQuoteMsg::BlockData::QuoteType</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_request_for_quote_msg_1_1_block_data_1a7895332729c30a5bdb89a3f3f12440db"/><section>
+    <title>SenderID</title>
+<indexterm><primary>SenderID</primary><secondary>KTN::CME::IL3::RequestForQuoteMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::RequestForQuoteMsg::BlockData</primary><secondary>SenderID</secondary></indexterm>
+<para><computeroutput>String20Req KTN::CME::IL3::RequestForQuoteMsg::BlockData::SenderID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_request_for_quote_msg_1_1_block_data_1a38426258259da6b82f5378d51f266527"/><section>
+    <title>SendingTimeEpoch</title>
+<indexterm><primary>SendingTimeEpoch</primary><secondary>KTN::CME::IL3::RequestForQuoteMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::RequestForQuoteMsg::BlockData</primary><secondary>SendingTimeEpoch</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::RequestForQuoteMsg::BlockData::SendingTimeEpoch</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_request_for_quote_msg_1_1_block_data_1a788ff94f68ffeea45d58b7b4daa6d230"/><section>
+    <title>SeqNum</title>
+<indexterm><primary>SeqNum</primary><secondary>KTN::CME::IL3::RequestForQuoteMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::RequestForQuoteMsg::BlockData</primary><secondary>SeqNum</secondary></indexterm>
+<para><computeroutput>uInt32 KTN::CME::IL3::RequestForQuoteMsg::BlockData::SeqNum</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+exchsupport/cme/il3/IL3Messages2.hpp</section>
+</section>

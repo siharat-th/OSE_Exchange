@@ -1,0 +1,53 @@
+\doxysection{Zmq\+Sub\+Listener Class Reference}
+\hypertarget{class_zmq_sub_listener}{}\label{class_zmq_sub_listener}\index{ZmqSubListener@{ZmqSubListener}}
+
+
+The \doxylink{class_zmq_sub_listener}{Zmq\+Sub\+Listener} class is an abstract base class for ZMQ subscriber listeners.  
+
+
+
+
+{\ttfamily \#include $<$Zmq\+Subscriber.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_zmq_sub_listener_ab7d3b76ba03ba28eb8cd9c2f7edf9170}{on\+Pub\+Msg}} (std\+::string sz\+Topic, std\+::string sz\+Msg)=0
+\begin{DoxyCompactList}\small\item\em on\+Pub\+Msg is a pure virtual function that is called when a new message is received. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_zmq_sub_listener}{Zmq\+Sub\+Listener} class is an abstract base class for ZMQ subscriber listeners. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_zmq_sub_listener_aabca9baee369d8f77694f000d1b5d7b6}\index{ZmqSubListener@{ZmqSubListener}!````~ZmqSubListener@{\texorpdfstring{$\sim$}{\string~}ZmqSubListener}}
+\index{````~ZmqSubListener@{\texorpdfstring{$\sim$}{\string~}ZmqSubListener}!ZmqSubListener@{ZmqSubListener}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ZmqSubListener()}{\string~ZmqSubListener()}}
+{\footnotesize\ttfamily \label{class_zmq_sub_listener_aabca9baee369d8f77694f000d1b5d7b6} 
+virtual Zmq\+Sub\+Listener\+::\texorpdfstring{$\sim$}{\string~}\+Zmq\+Sub\+Listener (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_zmq_sub_listener_ab7d3b76ba03ba28eb8cd9c2f7edf9170}\index{ZmqSubListener@{ZmqSubListener}!onPubMsg@{onPubMsg}}
+\index{onPubMsg@{onPubMsg}!ZmqSubListener@{ZmqSubListener}}
+\doxysubsubsection{\texorpdfstring{onPubMsg()}{onPubMsg()}}
+{\footnotesize\ttfamily \label{class_zmq_sub_listener_ab7d3b76ba03ba28eb8cd9c2f7edf9170} 
+virtual void Zmq\+Sub\+Listener\+::on\+Pub\+Msg (\begin{DoxyParamCaption}\item[{std\+::string}]{sz\+Topic}{, }\item[{std\+::string}]{sz\+Msg}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+on\+Pub\+Msg is a pure virtual function that is called when a new message is received. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sz\+Topic} & The topic of the received message. \\
+\hline
+{\em sz\+Msg} & The content of the received message. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+ZMQ/Zmq\+Subscriber.\+h\end{DoxyCompactItemize}

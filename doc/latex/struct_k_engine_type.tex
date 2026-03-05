@@ -1,0 +1,132 @@
+\doxysection{KEngine\+Type Struct Reference}
+\hypertarget{struct_k_engine_type}{}\label{struct_k_engine_type}\index{KEngineType@{KEngineType}}
+
+
+Enumeration for the engine types.  
+
+
+
+
+{\ttfamily \#include $<$engine\+\_\+structs.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{struct_k_engine_type_a5ce479e529f2e621a260e88a5309655a}{Enum}} \+: uint8\+\_\+t \{ \mbox{\hyperlink{struct_k_engine_type_a5ce479e529f2e621a260e88a5309655aab574fda0dbae730a28a4ef7b2345cf3b}{NONE}}
+, \mbox{\hyperlink{struct_k_engine_type_a5ce479e529f2e621a260e88a5309655aa6e8f44c50c7a45f852a849ccc46d5f20}{PLMON}}
+, \mbox{\hyperlink{struct_k_engine_type_a5ce479e529f2e621a260e88a5309655aa7f58eb66686e3c5ba185c227cfa5fd8a}{SPREADPRICER}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_k_engine_type_a5ce479e529f2e621a260e88a5309655a}{KEngine\+Type\+::\+Enum}} \mbox{\hyperlink{struct_k_engine_type_af439c01a2a35dc1c173662adf7f60a80}{Value}} (string cmd)
+\begin{DoxyCompactList}\small\item\em Converts a string engine type to the corresponding enumeration value. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_k_engine_type_a5ce479e529f2e621a260e88a5309655a}{KEngine\+Type\+::\+Enum}} \mbox{\hyperlink{struct_k_engine_type_a453379a037ed24e64fa99e03b1634ad7}{Value}} (int cmd)
+\begin{DoxyCompactList}\small\item\em Converts an integer engine type to the corresponding enumeration value. \end{DoxyCompactList}\item 
+static std\+::string \mbox{\hyperlink{struct_k_engine_type_a81d663f4e967b4f90411533f46764f0e}{to\+String}} (\mbox{\hyperlink{struct_k_engine_type_a5ce479e529f2e621a260e88a5309655a}{Enum}} engine)
+\begin{DoxyCompactList}\small\item\em Converts an enumeration value to its string representation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Enumeration for the engine types. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{struct_k_engine_type_a5ce479e529f2e621a260e88a5309655a}\index{KEngineType@{KEngineType}!Enum@{Enum}}
+\index{Enum@{Enum}!KEngineType@{KEngineType}}
+\doxysubsubsection{\texorpdfstring{Enum}{Enum}}
+{\footnotesize\ttfamily \label{struct_k_engine_type_a5ce479e529f2e621a260e88a5309655a} 
+enum \mbox{\hyperlink{struct_k_engine_type_a5ce479e529f2e621a260e88a5309655a}{KEngine\+Type\+::\+Enum}} \+: uint8\+\_\+t}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NONE@{NONE}!KEngineType@{KEngineType}}\index{KEngineType@{KEngineType}!NONE@{NONE}}}\Hypertarget{struct_k_engine_type_a5ce479e529f2e621a260e88a5309655aab574fda0dbae730a28a4ef7b2345cf3b}\label{struct_k_engine_type_a5ce479e529f2e621a260e88a5309655a} 
+NONE&No engine type \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PLMON@{PLMON}!KEngineType@{KEngineType}}\index{KEngineType@{KEngineType}!PLMON@{PLMON}}}\Hypertarget{struct_k_engine_type_a5ce479e529f2e621a260e88a5309655aa6e8f44c50c7a45f852a849ccc46d5f20}\label{struct_k_engine_type_a5ce479e529f2e621a260e88a5309655a} 
+PLMON&PLMON engine type \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPREADPRICER@{SPREADPRICER}!KEngineType@{KEngineType}}\index{KEngineType@{KEngineType}!SPREADPRICER@{SPREADPRICER}}}\Hypertarget{struct_k_engine_type_a5ce479e529f2e621a260e88a5309655aa7f58eb66686e3c5ba185c227cfa5fd8a}\label{struct_k_engine_type_a5ce479e529f2e621a260e88a5309655a} 
+SPREADPRICER&SPREADPRICER engine type \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_k_engine_type_a81d663f4e967b4f90411533f46764f0e}\index{KEngineType@{KEngineType}!toString@{toString}}
+\index{toString@{toString}!KEngineType@{KEngineType}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily \label{struct_k_engine_type_a81d663f4e967b4f90411533f46764f0e} 
+static std\+::string KEngine\+Type\+::to\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_engine_type_a5ce479e529f2e621a260e88a5309655a}{Enum}}}]{engine}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Converts an enumeration value to its string representation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em engine} & The enumeration value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The string representation of the enumeration value. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00150}{PLMON}}, and \mbox{\hyperlink{l00151}{SPREADPRICER}}.
+
+\Hypertarget{struct_k_engine_type_a453379a037ed24e64fa99e03b1634ad7}\index{KEngineType@{KEngineType}!Value@{Value}}
+\index{Value@{Value}!KEngineType@{KEngineType}}
+\doxysubsubsection{\texorpdfstring{Value()}{Value()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_k_engine_type_a453379a037ed24e64fa99e03b1634ad7} 
+static \mbox{\hyperlink{struct_k_engine_type_a5ce479e529f2e621a260e88a5309655a}{KEngine\+Type\+::\+Enum}} KEngine\+Type\+::\+Value (\begin{DoxyParamCaption}\item[{int}]{cmd}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Converts an integer engine type to the corresponding enumeration value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & The integer engine type. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The corresponding enumeration value. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00149}{NONE}}, \mbox{\hyperlink{l00150}{PLMON}}, and \mbox{\hyperlink{l00151}{SPREADPRICER}}.
+
+\Hypertarget{struct_k_engine_type_af439c01a2a35dc1c173662adf7f60a80}\index{KEngineType@{KEngineType}!Value@{Value}}
+\index{Value@{Value}!KEngineType@{KEngineType}}
+\doxysubsubsection{\texorpdfstring{Value()}{Value()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_k_engine_type_af439c01a2a35dc1c173662adf7f60a80} 
+static \mbox{\hyperlink{struct_k_engine_type_a5ce479e529f2e621a260e88a5309655a}{KEngine\+Type\+::\+Enum}} KEngine\+Type\+::\+Value (\begin{DoxyParamCaption}\item[{string}]{cmd}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Converts a string engine type to the corresponding enumeration value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & The string engine type. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The corresponding enumeration value. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00149}{NONE}}, \mbox{\hyperlink{l00150}{PLMON}}, and \mbox{\hyperlink{l00151}{SPREADPRICER}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00283}{Algo\+Factory\+::\+Parse\+Engine\+Command()}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Algo\+Engines/engine\+\_\+structs.\+hpp\end{DoxyCompactItemize}

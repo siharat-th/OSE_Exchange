@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_perf_timer" xml:lang="en-US">
+<title>PerfTimer Class Reference</title>
+<indexterm><primary>PerfTimer</primary></indexterm>
+<para>
+
+<para>High-resolution performance counter. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;PerfTimer.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_perf_timer_1a663b181ed2d6fe2041ea9f28c0703033">PerfTimer</link> (const std::string &amp;name)</para>
+
+<para>Constructs a <link linkend="_class_perf_timer">PerfTimer</link> object with the given name. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_perf_timer_1ae62ad823fd00d0be308ae8b833cc205d">Clear</link> ()</para>
+
+<para>Clears the measurements. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_perf_timer_1ad6d11f24d3689040feea6827f5eb79c0">start</link> ()</para>
+
+<para>Starts the timer. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_perf_timer_1ad02651b4558d127f8bb5aba24959e4ce">stop</link> ()</para>
+
+<para>Stops the timer and records the elapsed time. </para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_class_perf_timer_1a8f103953315cd7e8588626500375270c">Current</link> ()</para>
+
+<para>Gets the current timestamp. </para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_perf_timer_1a2b28af8e6a64cc5f4084d8e2f6afcdc0">Print</link> ()</para>
+
+<para>Prints the measurements. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>High-resolution performance counter. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_perf_timer_1a663b181ed2d6fe2041ea9f28c0703033"/><section>
+    <title>PerfTimer()</title>
+<indexterm><primary>PerfTimer</primary><secondary>PerfTimer</secondary></indexterm>
+<indexterm><primary>PerfTimer</primary><secondary>PerfTimer</secondary></indexterm>
+<para><computeroutput>PerfTimer::PerfTimer (const std::string &amp; name)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Constructs a <link linkend="_class_perf_timer">PerfTimer</link> object with the given name. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>name</entry><entry>
+<para>The name of the <link linkend="_class_perf_timer">PerfTimer</link>. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_perf_timer_1ae62ad823fd00d0be308ae8b833cc205d"/><section>
+    <title>Clear()</title>
+<indexterm><primary>Clear</primary><secondary>PerfTimer</secondary></indexterm>
+<indexterm><primary>PerfTimer</primary><secondary>Clear</secondary></indexterm>
+<para><computeroutput>void PerfTimer::Clear ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Clears the measurements. </para>
+</para>
+</section>
+<anchor xml:id="_class_perf_timer_1a8f103953315cd7e8588626500375270c"/><section>
+    <title>Current()</title>
+<indexterm><primary>Current</primary><secondary>PerfTimer</secondary></indexterm>
+<indexterm><primary>PerfTimer</primary><secondary>Current</secondary></indexterm>
+<para><computeroutput>uint64_t PerfTimer::Current ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Gets the current timestamp. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The current timestamp. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_perf_timer_1a2b28af8e6a64cc5f4084d8e2f6afcdc0"/><section>
+    <title>Print()</title>
+<indexterm><primary>Print</primary><secondary>PerfTimer</secondary></indexterm>
+<indexterm><primary>PerfTimer</primary><secondary>Print</secondary></indexterm>
+<para><computeroutput>std::string PerfTimer::Print ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Prints the measurements. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>A string representation of the measurements. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_perf_timer_1ad6d11f24d3689040feea6827f5eb79c0"/><section>
+    <title>start()</title>
+<indexterm><primary>start</primary><secondary>PerfTimer</secondary></indexterm>
+<indexterm><primary>PerfTimer</primary><secondary>start</secondary></indexterm>
+<para><computeroutput>void PerfTimer::start ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Starts the timer. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>If the timer is already started, an error message will be printed. </para>
+</note>
+</para>
+</section>
+<anchor xml:id="_class_perf_timer_1ad02651b4558d127f8bb5aba24959e4ce"/><section>
+    <title>stop()</title>
+<indexterm><primary>stop</primary><secondary>PerfTimer</secondary></indexterm>
+<indexterm><primary>PerfTimer</primary><secondary>stop</secondary></indexterm>
+<para><computeroutput>void PerfTimer::stop ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Stops the timer and records the elapsed time. </para>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Core/PerfTimer.hpp</section>
+</section>

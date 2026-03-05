@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classmoodycamel_1_1weak__atomic" xml:lang="en-US">
+<title>moodycamel::weak_atomic&lt; T &gt; Class Template Reference</title>
+<indexterm><primary>moodycamel::weak_atomic&lt; T &gt;</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>template&lt;typename U &gt; </para><para>AE_NO_TSAN <link linkend="_classmoodycamel_1_1weak__atomic_1a69a032b867540275b270588d952181be">weak_atomic</link> (U &amp;&amp;x)</para>
+</listitem>
+            <listitem><para>AE_NO_TSAN <link linkend="_classmoodycamel_1_1weak__atomic_1a21fa3545cc957a4013cfdd9a5d33b16b">weak_atomic</link> (<link linkend="_classmoodycamel_1_1weak__atomic">weak_atomic</link> const &amp;other)</para>
+</listitem>
+            <listitem><para>AE_NO_TSAN <link linkend="_classmoodycamel_1_1weak__atomic_1a1f375955e6886b3bab2b0e8037b33e9c">weak_atomic</link> (<link linkend="_classmoodycamel_1_1weak__atomic">weak_atomic</link> &amp;&amp;other)</para>
+</listitem>
+            <listitem><para>AE_FORCEINLINE <link linkend="_classmoodycamel_1_1weak__atomic_1ae580d7f86a88474d43a1b3e86cab32ab">operator T</link> () const AE_NO_TSAN</para>
+</listitem>
+            <listitem><para>template&lt;typename U &gt; </para><para>AE_FORCEINLINE <link linkend="_classmoodycamel_1_1weak__atomic">weak_atomic</link> const &amp; <link linkend="_classmoodycamel_1_1weak__atomic_1a0e080a981633b242cab0b4c39427c7ff">operator=</link> (U &amp;&amp;x) AE_NO_TSAN</para>
+</listitem>
+            <listitem><para>AE_FORCEINLINE <link linkend="_classmoodycamel_1_1weak__atomic">weak_atomic</link> const &amp; <link linkend="_classmoodycamel_1_1weak__atomic_1ad4ab3ddf9f5b26a1f3743e67a60e3eac">operator=</link> (<link linkend="_classmoodycamel_1_1weak__atomic">weak_atomic</link> const &amp;other) AE_NO_TSAN</para>
+</listitem>
+            <listitem><para>AE_FORCEINLINE T <link linkend="_classmoodycamel_1_1weak__atomic_1a34ac736752060c9e44f633dae2cfe267">load</link> () const AE_NO_TSAN</para>
+</listitem>
+            <listitem><para>AE_FORCEINLINE T <link linkend="_classmoodycamel_1_1weak__atomic_1aee9cf5ed8e00a7643272fb075e5db7cf">fetch_add_acquire</link> (T increment) AE_NO_TSAN</para>
+</listitem>
+            <listitem><para>AE_FORCEINLINE T <link linkend="_classmoodycamel_1_1weak__atomic_1a300875cd9089da27c3a7546a69962573">fetch_add_release</link> (T increment) AE_NO_TSAN</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;typename T&gt;<?linebreak?>class moodycamel::weak_atomic&lt; T &gt;</title></simplesect>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classmoodycamel_1_1weak__atomic_1a4273781324f541e7e67c11f4fe06c9f3"/><section>
+    <title>weak_atomic()<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>weak_atomic</primary><secondary>moodycamel::weak_atomic&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::weak_atomic&lt; T &gt;</primary><secondary>weak_atomic</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>AE_NO_TSAN <link linkend="_classmoodycamel_1_1weak__atomic">moodycamel::weak_atomic</link>&lt; T &gt;::weak_atomic ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1weak__atomic_1a69a032b867540275b270588d952181be"/><section>
+    <title>weak_atomic()<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>weak_atomic</primary><secondary>moodycamel::weak_atomic&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::weak_atomic&lt; T &gt;</primary><secondary>weak_atomic</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><computeroutput>template&lt;typename U &gt; </computeroutput><para><computeroutput>AE_NO_TSAN <link linkend="_classmoodycamel_1_1weak__atomic">moodycamel::weak_atomic</link>&lt; T &gt;::weak_atomic (U &amp;&amp; x)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1weak__atomic_1a21fa3545cc957a4013cfdd9a5d33b16b"/><section>
+    <title>weak_atomic()<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>weak_atomic</primary><secondary>moodycamel::weak_atomic&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::weak_atomic&lt; T &gt;</primary><secondary>weak_atomic</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>AE_NO_TSAN <link linkend="_classmoodycamel_1_1weak__atomic">moodycamel::weak_atomic</link>&lt; T &gt;::weak_atomic (<link linkend="_classmoodycamel_1_1weak__atomic">weak_atomic</link>&lt; T &gt; const &amp; other)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1weak__atomic_1a1f375955e6886b3bab2b0e8037b33e9c"/><section>
+    <title>weak_atomic()<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>weak_atomic</primary><secondary>moodycamel::weak_atomic&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::weak_atomic&lt; T &gt;</primary><secondary>weak_atomic</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>AE_NO_TSAN <link linkend="_classmoodycamel_1_1weak__atomic">moodycamel::weak_atomic</link>&lt; T &gt;::weak_atomic (<link linkend="_classmoodycamel_1_1weak__atomic">weak_atomic</link>&lt; T &gt; &amp;&amp; other)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classmoodycamel_1_1weak__atomic_1aee9cf5ed8e00a7643272fb075e5db7cf"/><section>
+    <title>fetch_add_acquire()</title>
+<indexterm><primary>fetch_add_acquire</primary><secondary>moodycamel::weak_atomic&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::weak_atomic&lt; T &gt;</primary><secondary>fetch_add_acquire</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>AE_FORCEINLINE T <link linkend="_classmoodycamel_1_1weak__atomic">moodycamel::weak_atomic</link>&lt; T &gt;::fetch_add_acquire (T increment)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1weak__atomic_1a300875cd9089da27c3a7546a69962573"/><section>
+    <title>fetch_add_release()</title>
+<indexterm><primary>fetch_add_release</primary><secondary>moodycamel::weak_atomic&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::weak_atomic&lt; T &gt;</primary><secondary>fetch_add_release</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>AE_FORCEINLINE T <link linkend="_classmoodycamel_1_1weak__atomic">moodycamel::weak_atomic</link>&lt; T &gt;::fetch_add_release (T increment)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1weak__atomic_1a34ac736752060c9e44f633dae2cfe267"/><section>
+    <title>load()</title>
+<indexterm><primary>load</primary><secondary>moodycamel::weak_atomic&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::weak_atomic&lt; T &gt;</primary><secondary>load</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>AE_FORCEINLINE T <link linkend="_classmoodycamel_1_1weak__atomic">moodycamel::weak_atomic</link>&lt; T &gt;::load ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1weak__atomic_1ae580d7f86a88474d43a1b3e86cab32ab"/><section>
+    <title>operator T()</title>
+<indexterm><primary>operator T</primary><secondary>moodycamel::weak_atomic&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::weak_atomic&lt; T &gt;</primary><secondary>operator T</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>AE_FORCEINLINE <link linkend="_classmoodycamel_1_1weak__atomic">moodycamel::weak_atomic</link>&lt; T &gt;::operator T ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1weak__atomic_1a0e080a981633b242cab0b4c39427c7ff"/><section>
+    <title>operator=()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>operator=</primary><secondary>moodycamel::weak_atomic&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::weak_atomic&lt; T &gt;</primary><secondary>operator=</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><computeroutput>template&lt;typename U &gt; </computeroutput><para><computeroutput>AE_FORCEINLINE <link linkend="_classmoodycamel_1_1weak__atomic">weak_atomic</link> const  &amp; <link linkend="_classmoodycamel_1_1weak__atomic">moodycamel::weak_atomic</link>&lt; T &gt;::operator= (U &amp;&amp; x)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classmoodycamel_1_1weak__atomic_1ad4ab3ddf9f5b26a1f3743e67a60e3eac"/><section>
+    <title>operator=()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>operator=</primary><secondary>moodycamel::weak_atomic&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::weak_atomic&lt; T &gt;</primary><secondary>operator=</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>AE_FORCEINLINE <link linkend="_classmoodycamel_1_1weak__atomic">weak_atomic</link> const  &amp; <link linkend="_classmoodycamel_1_1weak__atomic">moodycamel::weak_atomic</link>&lt; T &gt;::operator= (<link linkend="_classmoodycamel_1_1weak__atomic">weak_atomic</link>&lt; T &gt; const &amp; other)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/external/camel/atomicops.h</section>
+</section>

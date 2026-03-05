@@ -1,0 +1,257 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t01_1_1_m_s_g_w_1_1_cme_msgw" xml:lang="en-US">
+<title>KT01::MSGW::CmeMsgw Class Reference</title>
+<indexterm><primary>KT01::MSGW::CmeMsgw</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_k_t01_1_1_m_s_g_w_1_1_cme_msgw">CmeMsgw</link> class represents the CME Message Gateway. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;CmeMsgw.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_k_t01_1_1_m_s_g_w_1_1_cme_msgw_1adaae71bd05b4492858ae73270d01c3a5">Load</link> (bool certnr)</para>
+
+<para>Loads the CME Message Gateway. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t01_1_1_m_s_g_w_1_1_cme_msgw_1adeea3c787a349de7c15408c75f16ab6c">LoadProductGatewayFile</link> ()</para>
+
+<para>Loads the product gateway file. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t01_1_1_m_s_g_w_1_1_cme_msgw_1a1b1a5a87016fb19a8216be2beb6c092a">Print</link> ()</para>
+
+<para>Prints the CME Message Gateway. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t01_1_1_m_s_g_w_1_1_cme_msgw_1a707f5d979a481bd1cb447455b6667898">IsLoaded</link> ()</para>
+
+<para>Checks if the CME Message Gateway is loaded. </para>
+</listitem>
+            <listitem><para><link linkend="_class_k_t01_1_1_m_s_g_w_1_1_msgw">Msgw</link> <link linkend="_class_k_t01_1_1_m_s_g_w_1_1_cme_msgw_1a594631adc19f993d8d9e51c95a830d8f">getMsgw</link> (int segid)</para>
+
+<para>Gets the <link linkend="_class_k_t01_1_1_m_s_g_w_1_1_msgw">Msgw</link> object with the specified segment ID. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t01_1_1_m_s_g_w_1_1_cme_msgw_1afa67bd72f802702640e415e75247e052">getSegIdFromIp</link> (string ipaddress)</para>
+
+<para>Gets the segment ID from the specified IP address. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t01_1_1_m_s_g_w_1_1_cme_msgw_1a1046dc59ad25007cc283deb6c715e060">getProdSegId</link> (string product, bool futures)</para>
+
+<para>Gets the product segment ID. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_k_t01_1_1_m_s_g_w_1_1_cme_msgw">CmeMsgw</link> class represents the CME Message Gateway. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t01_1_1_m_s_g_w_1_1_cme_msgw_1a3549055098c340ac8454d48f8babb84c"/><section>
+    <title>CmeMsgw()</title>
+<indexterm><primary>CmeMsgw</primary><secondary>KT01::MSGW::CmeMsgw</secondary></indexterm>
+<indexterm><primary>KT01::MSGW::CmeMsgw</primary><secondary>CmeMsgw</secondary></indexterm>
+<para><computeroutput>CmeMsgw::CmeMsgw ( )</computeroutput></para></section>
+<anchor xml:id="_class_k_t01_1_1_m_s_g_w_1_1_cme_msgw_1ab3bd79b88af6b9d63530478cf70ad0b7"/><section>
+    <title>~CmeMsgw()</title>
+<indexterm><primary>~CmeMsgw</primary><secondary>KT01::MSGW::CmeMsgw</secondary></indexterm>
+<indexterm><primary>KT01::MSGW::CmeMsgw</primary><secondary>~CmeMsgw</secondary></indexterm>
+<para><computeroutput>CmeMsgw::~CmeMsgw ( )<computeroutput>[virtual]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t01_1_1_m_s_g_w_1_1_cme_msgw_1a594631adc19f993d8d9e51c95a830d8f"/><section>
+    <title>getMsgw()</title>
+<indexterm><primary>getMsgw</primary><secondary>KT01::MSGW::CmeMsgw</secondary></indexterm>
+<indexterm><primary>KT01::MSGW::CmeMsgw</primary><secondary>getMsgw</secondary></indexterm>
+<para><computeroutput><link linkend="_class_k_t01_1_1_m_s_g_w_1_1_msgw">Msgw</link> KT01::MSGW::CmeMsgw::getMsgw (int segid)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Gets the <link linkend="_class_k_t01_1_1_m_s_g_w_1_1_msgw">Msgw</link> object with the specified segment ID. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>segid</entry><entry>
+<para>The segment ID. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The <link linkend="_class_k_t01_1_1_m_s_g_w_1_1_msgw">Msgw</link> object with the specified segment ID. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_k_t01_1_1_m_s_g_w_1_1_cme_msgw_1a1046dc59ad25007cc283deb6c715e060"/><section>
+    <title>getProdSegId()</title>
+<indexterm><primary>getProdSegId</primary><secondary>KT01::MSGW::CmeMsgw</secondary></indexterm>
+<indexterm><primary>KT01::MSGW::CmeMsgw</primary><secondary>getProdSegId</secondary></indexterm>
+<para><computeroutput>int KT01::MSGW::CmeMsgw::getProdSegId (string product, bool futures)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Gets the product segment ID. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>product</entry><entry>
+<para>The product name. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>futures</entry><entry>
+<para>A boolean indicating whether the product is for futures. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The product segment ID. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00550">KTN::ORD::OrderHandlerZmqV6::LoadTasOrders()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t01_1_1_m_s_g_w_1_1_cme_msgw_1afa67bd72f802702640e415e75247e052"/><section>
+    <title>getSegIdFromIp()</title>
+<indexterm><primary>getSegIdFromIp</primary><secondary>KT01::MSGW::CmeMsgw</secondary></indexterm>
+<indexterm><primary>KT01::MSGW::CmeMsgw</primary><secondary>getSegIdFromIp</secondary></indexterm>
+<para><computeroutput>int KT01::MSGW::CmeMsgw::getSegIdFromIp (string ipaddress)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Gets the segment ID from the specified IP address. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ipaddress</entry><entry>
+<para>The IP address. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The segment ID corresponding to the IP address. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_k_t01_1_1_m_s_g_w_1_1_cme_msgw_1a707f5d979a481bd1cb447455b6667898"/><section>
+    <title>IsLoaded()</title>
+<indexterm><primary>IsLoaded</primary><secondary>KT01::MSGW::CmeMsgw</secondary></indexterm>
+<indexterm><primary>KT01::MSGW::CmeMsgw</primary><secondary>IsLoaded</secondary></indexterm>
+<para><computeroutput>bool KT01::MSGW::CmeMsgw::IsLoaded ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Checks if the CME Message Gateway is loaded. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>True if the CME Message Gateway is loaded, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_k_t01_1_1_m_s_g_w_1_1_cme_msgw_1adaae71bd05b4492858ae73270d01c3a5"/><section>
+    <title>Load()</title>
+<indexterm><primary>Load</primary><secondary>KT01::MSGW::CmeMsgw</secondary></indexterm>
+<indexterm><primary>KT01::MSGW::CmeMsgw</primary><secondary>Load</secondary></indexterm>
+<para><computeroutput>void CmeMsgw::Load (bool certnr)</computeroutput></para><para>
+
+<para>Loads the CME Message Gateway. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>certnr</entry><entry>
+<para>A boolean indicating whether to load the certificate number.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                FULLY QUOALIFIED Directory must have trailing &quot;/&quot;</para>
+
+<para>NOTE: for algos, etc, doesn&apos;t matter; we just need the productgwfile.... </para>
+<para>
+References <link linkend="_l00145">LoadProductGatewayFile()</link>, <link linkend="_l00046">KT01::MSGW::Msgw::Print()</link>, and <link linkend="_l00019">StringSplitter::Split()</link>.</para>
+<para>
+Referenced by <link linkend="_l00019">KTN::CME::CmeAlgo::CmeAlgo()</link>, and <link linkend="_l00019">KTN::CME::CmeGT5::CmeGT5()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t01_1_1_m_s_g_w_1_1_cme_msgw_1adeea3c787a349de7c15408c75f16ab6c"/><section>
+    <title>LoadProductGatewayFile()</title>
+<indexterm><primary>LoadProductGatewayFile</primary><secondary>KT01::MSGW::CmeMsgw</secondary></indexterm>
+<indexterm><primary>KT01::MSGW::CmeMsgw</primary><secondary>LoadProductGatewayFile</secondary></indexterm>
+<para><computeroutput>void CmeMsgw::LoadProductGatewayFile ( )</computeroutput></para><para>
+
+<para>Loads the product gateway file. </para>
+</para>
+<para>
+References <link linkend="_l00019">StringSplitter::Split()</link>.</para>
+<para>
+Referenced by <link linkend="_l00014">KTN::AlgoBaseV3::AlgoBaseV3()</link>, <link linkend="_l00034">Load()</link>, and <link linkend="_l00015">KTN::ORD::OrderHandlerZmqV6::OrderHandlerZmqV6()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t01_1_1_m_s_g_w_1_1_cme_msgw_1a1b1a5a87016fb19a8216be2beb6c092a"/><section>
+    <title>Print()</title>
+<indexterm><primary>Print</primary><secondary>KT01::MSGW::CmeMsgw</secondary></indexterm>
+<indexterm><primary>KT01::MSGW::CmeMsgw</primary><secondary>Print</secondary></indexterm>
+<para><computeroutput>void CmeMsgw::Print ( )</computeroutput></para><para>
+
+<para>Prints the CME Message Gateway. </para>
+</para>
+<para>
+References <link linkend="_l00046">KT01::MSGW::Msgw::Print()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+exchsupport/cme/CmeMsgw.hppexchsupport/cme/CmeMsgw.cpp</section>
+</section>

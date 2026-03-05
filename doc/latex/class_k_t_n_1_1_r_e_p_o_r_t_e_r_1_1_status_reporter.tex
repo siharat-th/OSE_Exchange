@@ -1,0 +1,138 @@
+\doxysection{KTN\+::REPORTER\+::Status\+Reporter Class Reference}
+\hypertarget{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter}{}\label{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter}\index{KTN::REPORTER::StatusReporter@{KTN::REPORTER::StatusReporter}}
+
+
+The \doxylink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter}{Status\+Reporter} class is responsible for reporting session status.  
+
+
+
+
+{\ttfamily \#include $<$Status\+Reporter.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter_a383303ac6254cd9ca0826adfe5375b23}{Status\+Reporter}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter}{Status\+Reporter}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter_ad4b933dcfa2efc606685d248556c7489}{\texorpdfstring{$\sim$}{\string~}\+Status\+Reporter}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter}{Status\+Reporter}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter_a034bfd6bfd5812a7d98e6ee6a20a80bd}{Stop}} ()
+\begin{DoxyCompactList}\small\item\em Stops the \doxylink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter}{Status\+Reporter}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter_a1edbea2c90bf4d064bcdb82471e8911c}{Report}} (\mbox{\hyperlink{class_session_status}{Session\+Status}} \&data)
+\begin{DoxyCompactList}\small\item\em Reports the session status. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter_a5c5fb9d2c63c2d902da2e773149d6862}{is\+\_\+active}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the \doxylink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter}{Status\+Reporter} is active. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter_a0e21f93c37da6e838e0fcd768c9b47bb}{status\+\_\+queue\+\_\+size}} ()
+\begin{DoxyCompactList}\small\item\em Gets the size of the status queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+moodycamel\+::\+Concurrent\+Queue$<$ \mbox{\hyperlink{class_session_status}{Session\+Status}} $>$ \mbox{\hyperlink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter_a29c877c20ebe60316ecaaa6360c3d169}{\+\_\+q\+Status}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter}{Status\+Reporter} class is responsible for reporting session status. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter_a383303ac6254cd9ca0826adfe5375b23}\index{KTN::REPORTER::StatusReporter@{KTN::REPORTER::StatusReporter}!StatusReporter@{StatusReporter}}
+\index{StatusReporter@{StatusReporter}!KTN::REPORTER::StatusReporter@{KTN::REPORTER::StatusReporter}}
+\doxysubsubsection{\texorpdfstring{StatusReporter()}{StatusReporter()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter_a383303ac6254cd9ca0826adfe5375b23} 
+Status\+Reporter\+::\+Status\+Reporter (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor for \doxylink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter}{Status\+Reporter}. 
+
+
+
+References \mbox{\hyperlink{l00123}{Settings\+::get()}}, and \mbox{\hyperlink{l00133}{Settings\+::get\+Integer()}}.
+
+\Hypertarget{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter_ad4b933dcfa2efc606685d248556c7489}\index{KTN::REPORTER::StatusReporter@{KTN::REPORTER::StatusReporter}!````~StatusReporter@{\texorpdfstring{$\sim$}{\string~}StatusReporter}}
+\index{````~StatusReporter@{\texorpdfstring{$\sim$}{\string~}StatusReporter}!KTN::REPORTER::StatusReporter@{KTN::REPORTER::StatusReporter}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}StatusReporter()}{\string~StatusReporter()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter_ad4b933dcfa2efc606685d248556c7489} 
+Status\+Reporter\+::\texorpdfstring{$\sim$}{\string~}\+Status\+Reporter (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destructor for \doxylink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter}{Status\+Reporter}. 
+
+
+
+References \mbox{\hyperlink{l00044}{Stop()}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter_a5c5fb9d2c63c2d902da2e773149d6862}\index{KTN::REPORTER::StatusReporter@{KTN::REPORTER::StatusReporter}!is\_active@{is\_active}}
+\index{is\_active@{is\_active}!KTN::REPORTER::StatusReporter@{KTN::REPORTER::StatusReporter}}
+\doxysubsubsection{\texorpdfstring{is\_active()}{is\_active()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter_a5c5fb9d2c63c2d902da2e773149d6862} 
+bool KTN\+::\+REPORTER\+::\+Status\+Reporter\+::is\+\_\+active (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the \doxylink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter}{Status\+Reporter} is active. 
+
+\begin{DoxyReturn}{Returns}
+True if the \doxylink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter}{Status\+Reporter} is active, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter_a1edbea2c90bf4d064bcdb82471e8911c}\index{KTN::REPORTER::StatusReporter@{KTN::REPORTER::StatusReporter}!Report@{Report}}
+\index{Report@{Report}!KTN::REPORTER::StatusReporter@{KTN::REPORTER::StatusReporter}}
+\doxysubsubsection{\texorpdfstring{Report()}{Report()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter_a1edbea2c90bf4d064bcdb82471e8911c} 
+void Status\+Reporter\+::\+Report (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_session_status}{Session\+Status}} \&}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Reports the session status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The session status to be reported. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter_a0e21f93c37da6e838e0fcd768c9b47bb}\index{KTN::REPORTER::StatusReporter@{KTN::REPORTER::StatusReporter}!status\_queue\_size@{status\_queue\_size}}
+\index{status\_queue\_size@{status\_queue\_size}!KTN::REPORTER::StatusReporter@{KTN::REPORTER::StatusReporter}}
+\doxysubsubsection{\texorpdfstring{status\_queue\_size()}{status\_queue\_size()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter_a0e21f93c37da6e838e0fcd768c9b47bb} 
+int KTN\+::\+REPORTER\+::\+Status\+Reporter\+::status\+\_\+queue\+\_\+size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the size of the status queue. 
+
+\begin{DoxyReturn}{Returns}
+The size of the status queue. 
+\end{DoxyReturn}
+\Hypertarget{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter_a034bfd6bfd5812a7d98e6ee6a20a80bd}\index{KTN::REPORTER::StatusReporter@{KTN::REPORTER::StatusReporter}!Stop@{Stop}}
+\index{Stop@{Stop}!KTN::REPORTER::StatusReporter@{KTN::REPORTER::StatusReporter}}
+\doxysubsubsection{\texorpdfstring{Stop()}{Stop()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter_a034bfd6bfd5812a7d98e6ee6a20a80bd} 
+void Status\+Reporter\+::\+Stop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Stops the \doxylink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter}{Status\+Reporter}. 
+
+
+
+Referenced by \mbox{\hyperlink{l00022}{\texorpdfstring{$\sim$}{\string~}\+Status\+Reporter()}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter_a29c877c20ebe60316ecaaa6360c3d169}\index{KTN::REPORTER::StatusReporter@{KTN::REPORTER::StatusReporter}!\_qStatus@{\_qStatus}}
+\index{\_qStatus@{\_qStatus}!KTN::REPORTER::StatusReporter@{KTN::REPORTER::StatusReporter}}
+\doxysubsubsection{\texorpdfstring{\_qStatus}{\_qStatus}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter_a29c877c20ebe60316ecaaa6360c3d169} 
+moodycamel\+::\+Concurrent\+Queue$<$\mbox{\hyperlink{class_session_status}{Session\+Status}}$>$ KTN\+::\+REPORTER\+::\+Status\+Reporter\+::\+\_\+q\+Status}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Reporters/Status\+Reporter.\+hpp\item 
+Reporters/Status\+Reporter.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,102 @@
+\doxysection{Leg\+Param\+Parser Class Reference}
+\hypertarget{class_leg_param_parser}{}\label{class_leg_param_parser}\index{LegParamParser@{LegParamParser}}
+
+
+The \doxylink{class_leg_param_parser}{Leg\+Param\+Parser} class provides methods to parse and retrieve leg parameters.  
+
+
+
+
+{\ttfamily \#include $<$Leg\+Param\+Parser.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static vector$<$ \mbox{\hyperlink{structinstrument}{instrument}} $>$ \mbox{\hyperlink{class_leg_param_parser_ae85753c73c0e5733f03ed24c4328e0b5}{Parse\+Spread\+Legs}} (string json)
+\begin{DoxyCompactList}\small\item\em Parses the spread legs from the given JSON string. \end{DoxyCompactList}\item 
+static std\+::unordered\+\_\+map$<$ string, bool $>$ \mbox{\hyperlink{class_leg_param_parser_ab6e9408568f628782773812f86d25271}{Get\+Active\+Quote\+Setting}} (Document \&d)
+\begin{DoxyCompactList}\small\item\em Retrieves the active quote settings from the given JSON document. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{structinstrument}{instrument}} \mbox{\hyperlink{class_leg_param_parser_a297ebf724a2da80b67512a3c3ed4317c}{Get\+Cme\+Leg}} (string symbol, KOrder\+Prod\+Type\+::\+Enum prodtype, int index)
+\begin{DoxyCompactList}\small\item\em Retrieves the CME leg for the given symbol, product type, and index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_leg_param_parser}{Leg\+Param\+Parser} class provides methods to parse and retrieve leg parameters. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_leg_param_parser_ab6e9408568f628782773812f86d25271}\index{LegParamParser@{LegParamParser}!GetActiveQuoteSetting@{GetActiveQuoteSetting}}
+\index{GetActiveQuoteSetting@{GetActiveQuoteSetting}!LegParamParser@{LegParamParser}}
+\doxysubsubsection{\texorpdfstring{GetActiveQuoteSetting()}{GetActiveQuoteSetting()}}
+{\footnotesize\ttfamily \label{class_leg_param_parser_ab6e9408568f628782773812f86d25271} 
+std\+::unordered\+\_\+map$<$ string, bool $>$ Leg\+Param\+Parser\+::\+Get\+Active\+Quote\+Setting (\begin{DoxyParamCaption}\item[{Document \&}]{d}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retrieves the active quote settings from the given JSON document. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & The JSON document. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An unordered map with the active quote settings. 
+\end{DoxyReturn}
+\Hypertarget{class_leg_param_parser_a297ebf724a2da80b67512a3c3ed4317c}\index{LegParamParser@{LegParamParser}!GetCmeLeg@{GetCmeLeg}}
+\index{GetCmeLeg@{GetCmeLeg}!LegParamParser@{LegParamParser}}
+\doxysubsubsection{\texorpdfstring{GetCmeLeg()}{GetCmeLeg()}}
+{\footnotesize\ttfamily \label{class_leg_param_parser_a297ebf724a2da80b67512a3c3ed4317c} 
+\mbox{\hyperlink{structinstrument}{instrument}} Leg\+Param\+Parser\+::\+Get\+Cme\+Leg (\begin{DoxyParamCaption}\item[{string}]{symbol}{, }\item[{KOrder\+Prod\+Type\+::\+Enum}]{prodtype}{, }\item[{int}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retrieves the CME leg for the given symbol, product type, and index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em symbol} & The symbol of the leg. \\
+\hline
+{\em prodtype} & The product type of the leg. \\
+\hline
+{\em index} & The index of the leg. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The CME leg instrument. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00098}{instrument\+::active\+Quoting}}, \mbox{\hyperlink{l00111}{instrument\+::exch}}, \mbox{\hyperlink{l00075}{instrument\+::index}}, \mbox{\hyperlink{l00101}{instrument\+::iscme}}, \mbox{\hyperlink{l00079}{instrument\+::iside}}, \mbox{\hyperlink{l00083}{instrument\+::last\+Ask}}, \mbox{\hyperlink{l00082}{instrument\+::last\+Bid}}, \mbox{\hyperlink{l00064}{instrument\+::pricemult}}, \mbox{\hyperlink{l00105}{instrument\+::prodtype}}, \mbox{\hyperlink{l00065}{instrument\+::spreadmult}}, \mbox{\hyperlink{l00113}{instrument\+::symbol}}, and \mbox{\hyperlink{l00068}{instrument\+::tickvalue}}.
+
+\Hypertarget{class_leg_param_parser_ae85753c73c0e5733f03ed24c4328e0b5}\index{LegParamParser@{LegParamParser}!ParseSpreadLegs@{ParseSpreadLegs}}
+\index{ParseSpreadLegs@{ParseSpreadLegs}!LegParamParser@{LegParamParser}}
+\doxysubsubsection{\texorpdfstring{ParseSpreadLegs()}{ParseSpreadLegs()}}
+{\footnotesize\ttfamily \label{class_leg_param_parser_ae85753c73c0e5733f03ed24c4328e0b5} 
+vector$<$ \mbox{\hyperlink{structinstrument}{instrument}} $>$ Leg\+Param\+Parser\+::\+Parse\+Spread\+Legs (\begin{DoxyParamCaption}\item[{string}]{json}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Parses the spread legs from the given JSON string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & The JSON string containing the spread legs. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of instrument objects representing the spread legs. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00098}{instrument\+::active\+Quoting}}, \mbox{\hyperlink{l00111}{instrument\+::exch}}, \mbox{\hyperlink{l00075}{instrument\+::index}}, \mbox{\hyperlink{l00101}{instrument\+::iscme}}, \mbox{\hyperlink{l00079}{instrument\+::iside}}, \mbox{\hyperlink{l00083}{instrument\+::last\+Ask}}, \mbox{\hyperlink{l00082}{instrument\+::last\+Bid}}, \mbox{\hyperlink{l00064}{instrument\+::pricemult}}, \mbox{\hyperlink{l00120}{instrument\+::\+Print()}}, \mbox{\hyperlink{l00105}{instrument\+::prodtype}}, \mbox{\hyperlink{l00065}{instrument\+::spreadmult}}, \mbox{\hyperlink{l00097}{instrument\+::squeeze}}, \mbox{\hyperlink{l00113}{instrument\+::symbol}}, and \mbox{\hyperlink{l00068}{instrument\+::tickvalue}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00068}{Algo\+Factory\+::\+Launch\+Algo()}}, \mbox{\hyperlink{l00044}{KTN\+::\+Multi\+Spreader\+V3\+::on\+Json()}}, and \mbox{\hyperlink{l00183}{Algo\+Factory\+::\+Parse\+Legs()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Algo\+Params/Leg\+Param\+Parser.\+hpp\item 
+Algo\+Params/Leg\+Param\+Parser.\+cpp\end{DoxyCompactItemize}

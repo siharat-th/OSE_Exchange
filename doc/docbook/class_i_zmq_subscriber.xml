@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_i_zmq_subscriber" xml:lang="en-US">
+<title>IZmqSubscriber Class Reference</title>
+<indexterm><primary>IZmqSubscriber</primary></indexterm>
+<para>
+
+<para>The interface for a ZMQ subscriber. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;ZmqSubscriberV5.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for IZmqSubscriber:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_i_zmq_subscriber.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_i_zmq_subscriber_1af2e2a88cb831d644dd32edc238cce65d">onPubMsg</link> (string topic, string payload)=0</para>
+
+<para>Called when a message is received. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The interface for a ZMQ subscriber. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_i_zmq_subscriber_1af2e2a88cb831d644dd32edc238cce65d"/><section>
+    <title>onPubMsg()</title>
+<indexterm><primary>onPubMsg</primary><secondary>IZmqSubscriber</secondary></indexterm>
+<indexterm><primary>IZmqSubscriber</primary><secondary>onPubMsg</secondary></indexterm>
+<para><computeroutput>virtual void IZmqSubscriber::onPubMsg (string topic, string payload)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>Called when a message is received. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>topic</entry><entry>
+<para>The topic of the message. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>payload</entry><entry>
+<para>The payload of the message. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+ZMQ/ZmqSubscriberV5.hpp</section>
+</section>

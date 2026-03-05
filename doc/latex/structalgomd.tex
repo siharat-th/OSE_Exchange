@@ -1,0 +1,225 @@
+\doxysection{algomd Struct Reference}
+\hypertarget{structalgomd}{}\label{structalgomd}\index{algomd@{algomd}}
+
+
+Structure representing algorithm market data.  
+
+
+
+
+{\ttfamily \#include $<$algo\+\_\+structs.\+hpp$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structalgomd_a853f9f53357aba49a591a28ac06ec8c0}{lastagressor}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{structalgomd_a1e2a6d233c30aed46befce320bd3a602}{index}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{structalgomd_a38805f85a2c898c8002d4f502fb52dcd}{bid}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{structalgomd_abf8063317e8b55b86564fbbd052a1de6}{ask}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{structalgomd_abd1d6e95e3f8a1e53522d25a6e785c71}{bidsize}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{structalgomd_a62ef696bdf1223c997daae6622b16f74}{asksize}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{structalgomd_abd2ff087d3f69b64e4f192fbd67a5045}{ibid}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{structalgomd_a1d6d31f22db5a76a1c994d70a7327aa8}{iask}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{structalgomd_aa9c6093c59d2fdc5211798cc4f101ee8}{ibidsize}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{structalgomd_a40a4a501027e65fba109a2712d6a05b2}{iasksize}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{structalgomd_acc73973681cc1bd1fc8f43f9f253db17}{high}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{structalgomd_aea7baa973889794185a3108bb42b6f4f}{low}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{structalgomd_a82d9a56c05b093e5881e4e11502a8c17}{volume}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{structalgomd_a5ef4c5b327a7bdbbabcf1e23fdb3104b}{last}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{structalgomd_adbe5e035cfff95be2788af832adc9111}{lastsize}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{structalgomd_aa0c4a980a6b8e736701cc17f8de4c871}{secid}}
+\item 
+bool \mbox{\hyperlink{structalgomd_a263dcf25bd60c8e20d6c2e2a52382327}{has\+Implied\+Enabled}}
+\item 
+bool \mbox{\hyperlink{structalgomd_a09b219952b57c992dcdbecf7b3cea229}{is\+Bid\+Implied}}
+\item 
+bool \mbox{\hyperlink{structalgomd_a2b2d3e629ebd944e084ce39c7039f696}{is\+Ask\+Implied}}
+\item 
+bool \mbox{\hyperlink{structalgomd_a138beb978be976392dd4c6327107b534}{is\+Volume}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure representing algorithm market data. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structalgomd_abf8063317e8b55b86564fbbd052a1de6}\index{algomd@{algomd}!ask@{ask}}
+\index{ask@{ask}!algomd@{algomd}}
+\doxysubsubsection{\texorpdfstring{ask}{ask}}
+{\footnotesize\ttfamily \label{structalgomd_abf8063317e8b55b86564fbbd052a1de6} 
+int32\+\_\+t algomd\+::ask}
+
+The ask price. 
+
+Referenced by \mbox{\hyperlink{l00106}{KTN\+::\+ALGO\+::\+PRICING\+::\+Implied\+Pricer\+::\+Calculate\+Side()}}, \mbox{\hyperlink{l00048}{KTN\+::\+ALGO\+::\+PRICING\+::\+Spread\+Pricer\+::\+Calculate\+Side2()}}, \mbox{\hyperlink{l00212}{KTN\+::\+ALGO\+::\+PRICING\+::\+Spread\+Pricer\+::\+Calculate\+Side3()}}, \mbox{\hyperlink{l00369}{KTN\+::\+ALGO\+::\+PRICING\+::\+Spread\+Pricer\+::\+Calculate\+Simple()}}, \mbox{\hyperlink{l00629}{KTN\+::\+Stacker\+Timer\+::on\+Calculate()}}, \mbox{\hyperlink{l00724}{KTN\+::\+Twap\+::on\+Calculate()}}, \mbox{\hyperlink{l00361}{KTN\+::\+Algo\+Base\+V3\+::on\+Mkt\+Data\+Bid\+Ask()}}, \mbox{\hyperlink{l00372}{KTN\+::\+Algo\+Base\+V3\+::on\+Mkt\+Data\+Trade()}}, \mbox{\hyperlink{l00379}{KTN\+::\+PLWatcher\+::on\+PL()}}, and \mbox{\hyperlink{l00826}{KTN\+::\+CME\+::\+Cme\+Algo\+::\+Print\+Latencies()}}.
+
+\Hypertarget{structalgomd_a62ef696bdf1223c997daae6622b16f74}\index{algomd@{algomd}!asksize@{asksize}}
+\index{asksize@{asksize}!algomd@{algomd}}
+\doxysubsubsection{\texorpdfstring{asksize}{asksize}}
+{\footnotesize\ttfamily \label{structalgomd_a62ef696bdf1223c997daae6622b16f74} 
+int32\+\_\+t algomd\+::asksize}
+
+The ask size. 
+
+Referenced by \mbox{\hyperlink{l00724}{KTN\+::\+Twap\+::on\+Calculate()}}, and \mbox{\hyperlink{l00826}{KTN\+::\+CME\+::\+Cme\+Algo\+::\+Print\+Latencies()}}.
+
+\Hypertarget{structalgomd_a38805f85a2c898c8002d4f502fb52dcd}\index{algomd@{algomd}!bid@{bid}}
+\index{bid@{bid}!algomd@{algomd}}
+\doxysubsubsection{\texorpdfstring{bid}{bid}}
+{\footnotesize\ttfamily \label{structalgomd_a38805f85a2c898c8002d4f502fb52dcd} 
+int32\+\_\+t algomd\+::bid}
+
+The bid price. 
+
+Referenced by \mbox{\hyperlink{l00106}{KTN\+::\+ALGO\+::\+PRICING\+::\+Implied\+Pricer\+::\+Calculate\+Side()}}, \mbox{\hyperlink{l00048}{KTN\+::\+ALGO\+::\+PRICING\+::\+Spread\+Pricer\+::\+Calculate\+Side2()}}, \mbox{\hyperlink{l00212}{KTN\+::\+ALGO\+::\+PRICING\+::\+Spread\+Pricer\+::\+Calculate\+Side3()}}, \mbox{\hyperlink{l00369}{KTN\+::\+ALGO\+::\+PRICING\+::\+Spread\+Pricer\+::\+Calculate\+Simple()}}, \mbox{\hyperlink{l00629}{KTN\+::\+Stacker\+Timer\+::on\+Calculate()}}, \mbox{\hyperlink{l00724}{KTN\+::\+Twap\+::on\+Calculate()}}, \mbox{\hyperlink{l00361}{KTN\+::\+Algo\+Base\+V3\+::on\+Mkt\+Data\+Bid\+Ask()}}, \mbox{\hyperlink{l00372}{KTN\+::\+Algo\+Base\+V3\+::on\+Mkt\+Data\+Trade()}}, \mbox{\hyperlink{l00379}{KTN\+::\+PLWatcher\+::on\+PL()}}, and \mbox{\hyperlink{l00826}{KTN\+::\+CME\+::\+Cme\+Algo\+::\+Print\+Latencies()}}.
+
+\Hypertarget{structalgomd_abd1d6e95e3f8a1e53522d25a6e785c71}\index{algomd@{algomd}!bidsize@{bidsize}}
+\index{bidsize@{bidsize}!algomd@{algomd}}
+\doxysubsubsection{\texorpdfstring{bidsize}{bidsize}}
+{\footnotesize\ttfamily \label{structalgomd_abd1d6e95e3f8a1e53522d25a6e785c71} 
+int32\+\_\+t algomd\+::bidsize}
+
+The bid size. 
+
+Referenced by \mbox{\hyperlink{l00724}{KTN\+::\+Twap\+::on\+Calculate()}}, and \mbox{\hyperlink{l00826}{KTN\+::\+CME\+::\+Cme\+Algo\+::\+Print\+Latencies()}}.
+
+\Hypertarget{structalgomd_a263dcf25bd60c8e20d6c2e2a52382327}\index{algomd@{algomd}!hasImpliedEnabled@{hasImpliedEnabled}}
+\index{hasImpliedEnabled@{hasImpliedEnabled}!algomd@{algomd}}
+\doxysubsubsection{\texorpdfstring{hasImpliedEnabled}{hasImpliedEnabled}}
+{\footnotesize\ttfamily \label{structalgomd_a263dcf25bd60c8e20d6c2e2a52382327} 
+bool algomd\+::has\+Implied\+Enabled}
+
+Flag indicating if implied is enabled. 
+
+Referenced by \mbox{\hyperlink{l00647}{Ktn\+Cme\+Mbo\+::\+Add\+Symbol()}}, and \mbox{\hyperlink{l00671}{Ktn\+Cme\+Mdp\+V4\+::\+Add\+Symbol()}}.
+
+\Hypertarget{structalgomd_acc73973681cc1bd1fc8f43f9f253db17}\index{algomd@{algomd}!high@{high}}
+\index{high@{high}!algomd@{algomd}}
+\doxysubsubsection{\texorpdfstring{high}{high}}
+{\footnotesize\ttfamily \label{structalgomd_acc73973681cc1bd1fc8f43f9f253db17} 
+int32\+\_\+t algomd\+::high}
+
+The high price. \Hypertarget{structalgomd_a1d6d31f22db5a76a1c994d70a7327aa8}\index{algomd@{algomd}!iask@{iask}}
+\index{iask@{iask}!algomd@{algomd}}
+\doxysubsubsection{\texorpdfstring{iask}{iask}}
+{\footnotesize\ttfamily \label{structalgomd_a1d6d31f22db5a76a1c994d70a7327aa8} 
+int32\+\_\+t algomd\+::iask}
+
+The implied ask price. \Hypertarget{structalgomd_a40a4a501027e65fba109a2712d6a05b2}\index{algomd@{algomd}!iasksize@{iasksize}}
+\index{iasksize@{iasksize}!algomd@{algomd}}
+\doxysubsubsection{\texorpdfstring{iasksize}{iasksize}}
+{\footnotesize\ttfamily \label{structalgomd_a40a4a501027e65fba109a2712d6a05b2} 
+int32\+\_\+t algomd\+::iasksize}
+
+The implied ask size. \Hypertarget{structalgomd_abd2ff087d3f69b64e4f192fbd67a5045}\index{algomd@{algomd}!ibid@{ibid}}
+\index{ibid@{ibid}!algomd@{algomd}}
+\doxysubsubsection{\texorpdfstring{ibid}{ibid}}
+{\footnotesize\ttfamily \label{structalgomd_abd2ff087d3f69b64e4f192fbd67a5045} 
+int32\+\_\+t algomd\+::ibid}
+
+The implied bid price. \Hypertarget{structalgomd_aa9c6093c59d2fdc5211798cc4f101ee8}\index{algomd@{algomd}!ibidsize@{ibidsize}}
+\index{ibidsize@{ibidsize}!algomd@{algomd}}
+\doxysubsubsection{\texorpdfstring{ibidsize}{ibidsize}}
+{\footnotesize\ttfamily \label{structalgomd_aa9c6093c59d2fdc5211798cc4f101ee8} 
+int32\+\_\+t algomd\+::ibidsize}
+
+The implied bid size. \Hypertarget{structalgomd_a1e2a6d233c30aed46befce320bd3a602}\index{algomd@{algomd}!index@{index}}
+\index{index@{index}!algomd@{algomd}}
+\doxysubsubsection{\texorpdfstring{index}{index}}
+{\footnotesize\ttfamily \label{structalgomd_a1e2a6d233c30aed46befce320bd3a602} 
+uint16\+\_\+t algomd\+::index}
+
+The index. 
+
+Referenced by \mbox{\hyperlink{l00647}{Ktn\+Cme\+Mbo\+::\+Add\+Symbol()}}, \mbox{\hyperlink{l00671}{Ktn\+Cme\+Mdp\+V4\+::\+Add\+Symbol()}}, \mbox{\hyperlink{l00361}{KTN\+::\+Algo\+Base\+V3\+::on\+Mkt\+Data\+Bid\+Ask()}}, and \mbox{\hyperlink{l00372}{KTN\+::\+Algo\+Base\+V3\+::on\+Mkt\+Data\+Trade()}}.
+
+\Hypertarget{structalgomd_a2b2d3e629ebd944e084ce39c7039f696}\index{algomd@{algomd}!isAskImplied@{isAskImplied}}
+\index{isAskImplied@{isAskImplied}!algomd@{algomd}}
+\doxysubsubsection{\texorpdfstring{isAskImplied}{isAskImplied}}
+{\footnotesize\ttfamily \label{structalgomd_a2b2d3e629ebd944e084ce39c7039f696} 
+bool algomd\+::is\+Ask\+Implied}
+
+Flag indicating if the ask is implied. \Hypertarget{structalgomd_a09b219952b57c992dcdbecf7b3cea229}\index{algomd@{algomd}!isBidImplied@{isBidImplied}}
+\index{isBidImplied@{isBidImplied}!algomd@{algomd}}
+\doxysubsubsection{\texorpdfstring{isBidImplied}{isBidImplied}}
+{\footnotesize\ttfamily \label{structalgomd_a09b219952b57c992dcdbecf7b3cea229} 
+bool algomd\+::is\+Bid\+Implied}
+
+Flag indicating if the bid is implied. \Hypertarget{structalgomd_a138beb978be976392dd4c6327107b534}\index{algomd@{algomd}!isVolume@{isVolume}}
+\index{isVolume@{isVolume}!algomd@{algomd}}
+\doxysubsubsection{\texorpdfstring{isVolume}{isVolume}}
+{\footnotesize\ttfamily \label{structalgomd_a138beb978be976392dd4c6327107b534} 
+bool algomd\+::is\+Volume}
+
+Flag indicating if it is volume. \Hypertarget{structalgomd_a5ef4c5b327a7bdbbabcf1e23fdb3104b}\index{algomd@{algomd}!last@{last}}
+\index{last@{last}!algomd@{algomd}}
+\doxysubsubsection{\texorpdfstring{last}{last}}
+{\footnotesize\ttfamily \label{structalgomd_a5ef4c5b327a7bdbbabcf1e23fdb3104b} 
+int32\+\_\+t algomd\+::last}
+
+The last price. 
+
+Referenced by \mbox{\hyperlink{l00372}{KTN\+::\+Algo\+Base\+V3\+::on\+Mkt\+Data\+Trade()}}, and \mbox{\hyperlink{l00826}{KTN\+::\+CME\+::\+Cme\+Algo\+::\+Print\+Latencies()}}.
+
+\Hypertarget{structalgomd_a853f9f53357aba49a591a28ac06ec8c0}\index{algomd@{algomd}!lastagressor@{lastagressor}}
+\index{lastagressor@{lastagressor}!algomd@{algomd}}
+\doxysubsubsection{\texorpdfstring{lastagressor}{lastagressor}}
+{\footnotesize\ttfamily \label{structalgomd_a853f9f53357aba49a591a28ac06ec8c0} 
+uint8\+\_\+t algomd\+::lastagressor}
+
+The last aggressor. 
+
+Referenced by \mbox{\hyperlink{l00372}{KTN\+::\+Algo\+Base\+V3\+::on\+Mkt\+Data\+Trade()}}, and \mbox{\hyperlink{l00826}{KTN\+::\+CME\+::\+Cme\+Algo\+::\+Print\+Latencies()}}.
+
+\Hypertarget{structalgomd_adbe5e035cfff95be2788af832adc9111}\index{algomd@{algomd}!lastsize@{lastsize}}
+\index{lastsize@{lastsize}!algomd@{algomd}}
+\doxysubsubsection{\texorpdfstring{lastsize}{lastsize}}
+{\footnotesize\ttfamily \label{structalgomd_adbe5e035cfff95be2788af832adc9111} 
+int32\+\_\+t algomd\+::lastsize}
+
+The last size. 
+
+Referenced by \mbox{\hyperlink{l00372}{KTN\+::\+Algo\+Base\+V3\+::on\+Mkt\+Data\+Trade()}}, and \mbox{\hyperlink{l00826}{KTN\+::\+CME\+::\+Cme\+Algo\+::\+Print\+Latencies()}}.
+
+\Hypertarget{structalgomd_aea7baa973889794185a3108bb42b6f4f}\index{algomd@{algomd}!low@{low}}
+\index{low@{low}!algomd@{algomd}}
+\doxysubsubsection{\texorpdfstring{low}{low}}
+{\footnotesize\ttfamily \label{structalgomd_aea7baa973889794185a3108bb42b6f4f} 
+int32\+\_\+t algomd\+::low}
+
+The low price. \Hypertarget{structalgomd_aa0c4a980a6b8e736701cc17f8de4c871}\index{algomd@{algomd}!secid@{secid}}
+\index{secid@{secid}!algomd@{algomd}}
+\doxysubsubsection{\texorpdfstring{secid}{secid}}
+{\footnotesize\ttfamily \label{structalgomd_aa0c4a980a6b8e736701cc17f8de4c871} 
+int32\+\_\+t algomd\+::secid}
+
+The security ID. 
+
+Referenced by \mbox{\hyperlink{l00647}{Ktn\+Cme\+Mbo\+::\+Add\+Symbol()}}, \mbox{\hyperlink{l00671}{Ktn\+Cme\+Mdp\+V4\+::\+Add\+Symbol()}}, and \mbox{\hyperlink{l00826}{KTN\+::\+CME\+::\+Cme\+Algo\+::\+Print\+Latencies()}}.
+
+\Hypertarget{structalgomd_a82d9a56c05b093e5881e4e11502a8c17}\index{algomd@{algomd}!volume@{volume}}
+\index{volume@{volume}!algomd@{algomd}}
+\doxysubsubsection{\texorpdfstring{volume}{volume}}
+{\footnotesize\ttfamily \label{structalgomd_a82d9a56c05b093e5881e4e11502a8c17} 
+int32\+\_\+t algomd\+::volume}
+
+The volume. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Algo\+Support/algo\+\_\+structs.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,212 @@
+\doxysection{KTN\+::Algo\+Service\+Broker\+V3 Class Reference}
+\hypertarget{class_k_t_n_1_1_algo_service_broker_v3}{}\label{class_k_t_n_1_1_algo_service_broker_v3}\index{KTN::AlgoServiceBrokerV3@{KTN::AlgoServiceBrokerV3}}
+
+
+The \doxylink{class_k_t_n_1_1_algo_service_broker_v3}{Algo\+Service\+Broker\+V3} class routes messages to and from child instances of \doxylink{class_k_t_n_1_1_algo_base_v3}{Algo\+Base\+V3}.  
+
+
+
+
+{\ttfamily \#include $<$Algo\+Service\+Broker\+V3.\+hpp$>$}
+
+Inheritance diagram for KTN\+::Algo\+Service\+Broker\+V3\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_k_t_n_1_1_algo_service_broker_v3}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_algo_service_broker_v3_a713e842a39cdf47c5b977e0d495c5839}{Algo\+Service\+Broker\+V3}} (\mbox{\hyperlink{class_i_exchange_sender}{IExchange\+Sender}} \texorpdfstring{$\ast$}{*}sess)
+\begin{DoxyCompactList}\small\item\em Constructs an instance of \doxylink{class_k_t_n_1_1_algo_service_broker_v3}{Algo\+Service\+Broker\+V3} with the given exchange sender. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_k_t_n_1_1_algo_service_broker_v3_a06f942e0715b539b54ba0e8e94818d15}{\texorpdfstring{$\sim$}{\string~}\+Algo\+Service\+Broker\+V3}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{class_k_t_n_1_1_algo_service_broker_v3}{Algo\+Service\+Broker\+V3} instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_algo_service_broker_v3_aa618ec91fc0dd5c5b5a97f3ac99900d8}{init\+Zmq}} (std\+::string Argo\+Server, int Argo\+Port)
+\begin{DoxyCompactList}\small\item\em Initializes Zero\+MQ with the specified server and port. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_algo_service_broker_v3_a84f32591d74b0ee23c6244781cff1fc8}{Print}} ()
+\begin{DoxyCompactList}\small\item\em Prints information about the broker. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_algo_service_broker_v3_ac78fc0aa09c5c4dbaff161eefe56766f}{Stop\+All\+Algos}} ()
+\begin{DoxyCompactList}\small\item\em Stops all running algorithms. \end{DoxyCompactList}\item 
+\Hypertarget{class_k_t_n_1_1_algo_service_broker_v3_aa7d22449f87c05b3b2fc0400d82c6886}\label{class_k_t_n_1_1_algo_service_broker_v3_aa7d22449f87c05b3b2fc0400d82c6886} 
+void {\bfseries Reset\+Positions} ()
+\begin{DoxyCompactList}\small\item\em Resets all positions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_algo_service_broker_v3_a3084857c16b8fbacaa8caedcc444eca0}{Reset\+Position\+Single}} (string uniqueid)
+\begin{DoxyCompactList}\small\item\em Resets the position for a single algorithm with the specified unique ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_algo_service_broker_v3_a543f1ccc4dd977b758d1b844346ed3f2}{Send\+Command}} (int id)
+\begin{DoxyCompactList}\small\item\em Sends a command to the broker with the specified ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_algo_service_broker_v3_ab5157b9749732a33f59b5c3814ab96b3}{on\+Algo\+Command}} (const \mbox{\hyperlink{struct_instruction}{Instruction}} \&cmd)
+\begin{DoxyCompactList}\small\item\em Handles an algorithm command. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_algo_service_broker_v3_a03d3c536d4e5e98a13ef4dc03688a783}{on\+Algo\+Order}} (const \mbox{\hyperlink{struct_instruction}{Instruction}} \&cmd)
+\begin{DoxyCompactList}\small\item\em Handles an algorithm order. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_i_zmq_subscriber}{IZmq\+Subscriber}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_i_zmq_subscriber_af2e2a88cb831d644dd32edc238cce65d}{on\+Pub\+Msg}} (string topic, string payload)=0
+\begin{DoxyCompactList}\small\item\em Called when a message is received. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_named_thread}{Named\+Thread}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_named_thread_a891fabdc2d824048ec05c82e7ef8c69a}{Named\+Thread}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_named_thread_a018dadb59e5af98ee734301a1baa50cb}{\texorpdfstring{$\sim$}{\string~}\+Named\+Thread}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_named_thread_a9fa42542ff43c89fb9bbc33de9c87e34}{Create\+And\+Run}} (string name, int core)
+\begin{DoxyCompactList}\small\item\em Creates and runs the named thread on the specified core. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_named_thread_ad4809c571171be13f0f91f540d5c196f}{Join}} ()
+\begin{DoxyCompactList}\small\item\em Joins the named thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_k_t_n_1_1_algo_service_broker_v3}{Algo\+Service\+Broker\+V3} class routes messages to and from child instances of \doxylink{class_k_t_n_1_1_algo_base_v3}{Algo\+Base\+V3}. 
+
+This class provides functionality for initializing Zero\+MQ, printing information, stopping all algorithms, resetting positions, sending commands, and handling algorithm commands and orders. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_k_t_n_1_1_algo_service_broker_v3_a713e842a39cdf47c5b977e0d495c5839}\index{KTN::AlgoServiceBrokerV3@{KTN::AlgoServiceBrokerV3}!AlgoServiceBrokerV3@{AlgoServiceBrokerV3}}
+\index{AlgoServiceBrokerV3@{AlgoServiceBrokerV3}!KTN::AlgoServiceBrokerV3@{KTN::AlgoServiceBrokerV3}}
+\doxysubsubsection{\texorpdfstring{AlgoServiceBrokerV3()}{AlgoServiceBrokerV3()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_algo_service_broker_v3_a713e842a39cdf47c5b977e0d495c5839} 
+KTN\+::\+Algo\+Service\+Broker\+V3\+::\+Algo\+Service\+Broker\+V3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_exchange_sender}{IExchange\+Sender}} \texorpdfstring{$\ast$}{*}}]{sess}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructs an instance of \doxylink{class_k_t_n_1_1_algo_service_broker_v3}{Algo\+Service\+Broker\+V3} with the given exchange sender. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sess} & The exchange sender to be used by the broker. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00018}{Named\+Thread\+::\+Create\+And\+Run()}}, \mbox{\hyperlink{l00123}{Settings\+::get()}}, \mbox{\hyperlink{l00133}{Settings\+::get\+Integer()}}, and \mbox{\hyperlink{l00094}{init\+Zmq()}}.
+
+\Hypertarget{class_k_t_n_1_1_algo_service_broker_v3_a06f942e0715b539b54ba0e8e94818d15}\index{KTN::AlgoServiceBrokerV3@{KTN::AlgoServiceBrokerV3}!````~AlgoServiceBrokerV3@{\texorpdfstring{$\sim$}{\string~}AlgoServiceBrokerV3}}
+\index{````~AlgoServiceBrokerV3@{\texorpdfstring{$\sim$}{\string~}AlgoServiceBrokerV3}!KTN::AlgoServiceBrokerV3@{KTN::AlgoServiceBrokerV3}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}AlgoServiceBrokerV3()}{\string~AlgoServiceBrokerV3()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_algo_service_broker_v3_a06f942e0715b539b54ba0e8e94818d15} 
+KTN\+::\+Algo\+Service\+Broker\+V3\+::\texorpdfstring{$\sim$}{\string~}\+Algo\+Service\+Broker\+V3 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destroys the \doxylink{class_k_t_n_1_1_algo_service_broker_v3}{Algo\+Service\+Broker\+V3} instance. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_algo_service_broker_v3_aa618ec91fc0dd5c5b5a97f3ac99900d8}\index{KTN::AlgoServiceBrokerV3@{KTN::AlgoServiceBrokerV3}!initZmq@{initZmq}}
+\index{initZmq@{initZmq}!KTN::AlgoServiceBrokerV3@{KTN::AlgoServiceBrokerV3}}
+\doxysubsubsection{\texorpdfstring{initZmq()}{initZmq()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_algo_service_broker_v3_aa618ec91fc0dd5c5b5a97f3ac99900d8} 
+void KTN\+::\+Algo\+Service\+Broker\+V3\+::init\+Zmq (\begin{DoxyParamCaption}\item[{std\+::string}]{Argo\+Server}{, }\item[{int}]{Argo\+Port}{}\end{DoxyParamCaption})}
+
+
+
+Initializes Zero\+MQ with the specified server and port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Argo\+Server} & The server address for Zero\+MQ. \\
+\hline
+{\em Argo\+Port} & The port number for Zero\+MQ. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{l00023}{Algo\+Service\+Broker\+V3()}}.
+
+\Hypertarget{class_k_t_n_1_1_algo_service_broker_v3_ab5157b9749732a33f59b5c3814ab96b3}\index{KTN::AlgoServiceBrokerV3@{KTN::AlgoServiceBrokerV3}!onAlgoCommand@{onAlgoCommand}}
+\index{onAlgoCommand@{onAlgoCommand}!KTN::AlgoServiceBrokerV3@{KTN::AlgoServiceBrokerV3}}
+\doxysubsubsection{\texorpdfstring{onAlgoCommand()}{onAlgoCommand()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_algo_service_broker_v3_ab5157b9749732a33f59b5c3814ab96b3} 
+void KTN\+::\+Algo\+Service\+Broker\+V3\+::on\+Algo\+Command (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_instruction}{Instruction}} \&}]{cmd}{}\end{DoxyParamCaption})}
+
+
+
+Handles an algorithm command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & The instruction representing the algorithm command. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{class_i_exchange_sender_a4e02139d13d7fc3c6347b357fabf4dee}{IExchange\+Sender\+::\+Algo\+Json()}}, \mbox{\hyperlink{l00068}{Algo\+Factory\+::\+Launch\+Algo()}}, \mbox{\hyperlink{l00209}{Algo\+Factory\+::\+Parse\+Algo\+Header()}}, \mbox{\hyperlink{l00253}{Algo\+Factory\+::\+Parse\+Algo\+Order()}}, and \mbox{\hyperlink{l00283}{Algo\+Factory\+::\+Parse\+Engine\+Command()}}.
+
+\Hypertarget{class_k_t_n_1_1_algo_service_broker_v3_a03d3c536d4e5e98a13ef4dc03688a783}\index{KTN::AlgoServiceBrokerV3@{KTN::AlgoServiceBrokerV3}!onAlgoOrder@{onAlgoOrder}}
+\index{onAlgoOrder@{onAlgoOrder}!KTN::AlgoServiceBrokerV3@{KTN::AlgoServiceBrokerV3}}
+\doxysubsubsection{\texorpdfstring{onAlgoOrder()}{onAlgoOrder()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_algo_service_broker_v3_a03d3c536d4e5e98a13ef4dc03688a783} 
+void KTN\+::\+Algo\+Service\+Broker\+V3\+::on\+Algo\+Order (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_instruction}{Instruction}} \&}]{cmd}{}\end{DoxyParamCaption})}
+
+
+
+Handles an algorithm order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & The instruction representing the algorithm order. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_algo_service_broker_v3_a84f32591d74b0ee23c6244781cff1fc8}\index{KTN::AlgoServiceBrokerV3@{KTN::AlgoServiceBrokerV3}!Print@{Print}}
+\index{Print@{Print}!KTN::AlgoServiceBrokerV3@{KTN::AlgoServiceBrokerV3}}
+\doxysubsubsection{\texorpdfstring{Print()}{Print()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_algo_service_broker_v3_a84f32591d74b0ee23c6244781cff1fc8} 
+void KTN\+::\+Algo\+Service\+Broker\+V3\+::\+Print (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Prints information about the broker. 
+
+\Hypertarget{class_k_t_n_1_1_algo_service_broker_v3_a3084857c16b8fbacaa8caedcc444eca0}\index{KTN::AlgoServiceBrokerV3@{KTN::AlgoServiceBrokerV3}!ResetPositionSingle@{ResetPositionSingle}}
+\index{ResetPositionSingle@{ResetPositionSingle}!KTN::AlgoServiceBrokerV3@{KTN::AlgoServiceBrokerV3}}
+\doxysubsubsection{\texorpdfstring{ResetPositionSingle()}{ResetPositionSingle()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_algo_service_broker_v3_a3084857c16b8fbacaa8caedcc444eca0} 
+void KTN\+::\+Algo\+Service\+Broker\+V3\+::\+Reset\+Position\+Single (\begin{DoxyParamCaption}\item[{string}]{uniqueid}{}\end{DoxyParamCaption})}
+
+
+
+Resets the position for a single algorithm with the specified unique ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uniqueid} & The unique ID of the algorithm to reset. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_algo_service_broker_v3_a543f1ccc4dd977b758d1b844346ed3f2}\index{KTN::AlgoServiceBrokerV3@{KTN::AlgoServiceBrokerV3}!SendCommand@{SendCommand}}
+\index{SendCommand@{SendCommand}!KTN::AlgoServiceBrokerV3@{KTN::AlgoServiceBrokerV3}}
+\doxysubsubsection{\texorpdfstring{SendCommand()}{SendCommand()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_algo_service_broker_v3_a543f1ccc4dd977b758d1b844346ed3f2} 
+void KTN\+::\+Algo\+Service\+Broker\+V3\+::\+Send\+Command (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Sends a command to the broker with the specified ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the command to send. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_algo_service_broker_v3_ac78fc0aa09c5c4dbaff161eefe56766f}\index{KTN::AlgoServiceBrokerV3@{KTN::AlgoServiceBrokerV3}!StopAllAlgos@{StopAllAlgos}}
+\index{StopAllAlgos@{StopAllAlgos}!KTN::AlgoServiceBrokerV3@{KTN::AlgoServiceBrokerV3}}
+\doxysubsubsection{\texorpdfstring{StopAllAlgos()}{StopAllAlgos()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_algo_service_broker_v3_ac78fc0aa09c5c4dbaff161eefe56766f} 
+void KTN\+::\+Algo\+Service\+Broker\+V3\+::\+Stop\+All\+Algos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Stops all running algorithms. 
+
+
+
+Referenced by \mbox{\hyperlink{l00146}{Raptor2\+::\+Stop()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Algos/Algo\+Service\+Broker\+V3.\+hpp\item 
+Algos/Algo\+Service\+Broker\+V3.\+cpp\end{DoxyCompactItemize}

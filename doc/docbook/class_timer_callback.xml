@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_timer_callback" xml:lang="en-US">
+<title>TimerCallback Class Reference</title>
+<indexterm><primary>TimerCallback</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_timer_callback">TimerCallback</link> class is an abstract base class for timer callback functionality. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;TimerCallback.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for TimerCallback:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_timer_callback.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_timer_callback_1a3e292c3cd07a5bcd4794e235ca263afb">onTimerStateChange</link> (TimerState::Enum state)=0</para>
+
+<para>This method is called when the timer state changes. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_timer_callback_1a4e6f6e42bd47fe8427b65eb667253646">onTimerInterval</link> (TimerInterval::Enum interval)=0</para>
+
+<para>This method is called when the timer interval changes. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_timer_callback">TimerCallback</link> class is an abstract base class for timer callback functionality. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_timer_callback_1a860376964afb427fdc695a68a6a1b601"/><section>
+    <title>TimerCallback()</title>
+<indexterm><primary>TimerCallback</primary><secondary>TimerCallback</secondary></indexterm>
+<indexterm><primary>TimerCallback</primary><secondary>TimerCallback</secondary></indexterm>
+<para><computeroutput>TimerCallback::TimerCallback ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_timer_callback_1adcddd0aa662aaa0d16104c54e506de87"/><section>
+    <title>~TimerCallback()</title>
+<indexterm><primary>~TimerCallback</primary><secondary>TimerCallback</secondary></indexterm>
+<indexterm><primary>TimerCallback</primary><secondary>~TimerCallback</secondary></indexterm>
+<para><computeroutput>virtual TimerCallback::~TimerCallback ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_timer_callback_1a4e6f6e42bd47fe8427b65eb667253646"/><section>
+    <title>onTimerInterval()</title>
+<indexterm><primary>onTimerInterval</primary><secondary>TimerCallback</secondary></indexterm>
+<indexterm><primary>TimerCallback</primary><secondary>onTimerInterval</secondary></indexterm>
+<para><computeroutput>virtual void TimerCallback::onTimerInterval (TimerInterval::Enum interval)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>This method is called when the timer interval changes. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>interval</entry><entry>
+<para>The new interval of the timer. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implemented in <link linkend="_class_k_t_n_1_1_skewer_1a65da6b87d05b0ef9705838719d260d46">KTN::Skewer</link>, <link linkend="_class_k_t_n_1_1_skew_trader_1aa5cba2d21d4fd301c6fbc03d14ee09b1">KTN::SkewTrader</link>, <link linkend="_class_k_t_n_1_1_stacker_timer_1a03224634bd7cb53a334172df87c0dfa2">KTN::StackerTimer</link>, and <link linkend="_class_k_t_n_1_1_twap_1a0f87653959286724c5fc4d6ede817da6">KTN::Twap</link>.</para>
+</section>
+<anchor xml:id="_class_timer_callback_1a3e292c3cd07a5bcd4794e235ca263afb"/><section>
+    <title>onTimerStateChange()</title>
+<indexterm><primary>onTimerStateChange</primary><secondary>TimerCallback</secondary></indexterm>
+<indexterm><primary>TimerCallback</primary><secondary>onTimerStateChange</secondary></indexterm>
+<para><computeroutput>virtual void TimerCallback::onTimerStateChange (TimerState::Enum state)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>This method is called when the timer state changes. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>state</entry><entry>
+<para>The new state of the timer. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implemented in <link linkend="_class_k_t_n_1_1_skewer_1ac91e2faed627a58b79d242ea5cab9886">KTN::Skewer</link>, <link linkend="_class_k_t_n_1_1_skew_trader_1a30390e85c7023b1bb7b30dca4780cfb6">KTN::SkewTrader</link>, <link linkend="_class_k_t_n_1_1_stacker_timer_1ab5fc8b864084270043f88a41033caced">KTN::StackerTimer</link>, and <link linkend="_class_k_t_n_1_1_twap_1a8ea10fc97baa293388f333423f3e7ead">KTN::Twap</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+AlgoCalculators/TimerCallback.hpp</section>
+</section>

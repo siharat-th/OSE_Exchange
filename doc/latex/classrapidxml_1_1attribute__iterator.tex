@@ -1,0 +1,169 @@
+\doxysection{rapidxml\+::attribute\+\_\+iterator\texorpdfstring{$<$}{<} Ch \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classrapidxml_1_1attribute__iterator}{}\label{classrapidxml_1_1attribute__iterator}\index{rapidxml::attribute\_iterator$<$ Ch $>$@{rapidxml::attribute\_iterator$<$ Ch $>$}}
+
+
+Iterator of child attributes of \doxylink{classrapidxml_1_1xml__node}{xml\+\_\+node}.  
+
+
+
+
+{\ttfamily \#include $<$rapidxml\+\_\+iterators.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{classrapidxml_1_1xml__attribute}{xml\+\_\+attribute}}$<$ Ch $>$ \mbox{\hyperlink{classrapidxml_1_1attribute__iterator_a8fae4f0d01e41626791342b2f3340818}{value\+\_\+type}}
+\item 
+typedef \mbox{\hyperlink{classrapidxml_1_1xml__attribute}{xml\+\_\+attribute}}$<$ Ch $>$ \& \mbox{\hyperlink{classrapidxml_1_1attribute__iterator_a8a8a45110466d8f74e6e4ca71f248d05}{reference}}
+\item 
+typedef \mbox{\hyperlink{classrapidxml_1_1xml__attribute}{xml\+\_\+attribute}}$<$ Ch $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classrapidxml_1_1attribute__iterator_ac74e44e9cd4df40fe274876977f0a601}{pointer}}
+\item 
+typedef std\+::ptrdiff\+\_\+t \mbox{\hyperlink{classrapidxml_1_1attribute__iterator_a19b2015b735001cb08a3ad2861248245}{difference\+\_\+type}}
+\item 
+typedef std\+::bidirectional\+\_\+iterator\+\_\+tag \mbox{\hyperlink{classrapidxml_1_1attribute__iterator_a9e7a9d558b92e40f78649f46f1c79c2e}{iterator\+\_\+category}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrapidxml_1_1attribute__iterator_a1109344dead88533ae4dd68cea5d9613}{attribute\+\_\+iterator}} (\mbox{\hyperlink{classrapidxml_1_1xml__node}{xml\+\_\+node}}$<$ Ch $>$ \texorpdfstring{$\ast$}{*}node)
+\item 
+\mbox{\hyperlink{classrapidxml_1_1xml__attribute}{reference}} \mbox{\hyperlink{classrapidxml_1_1attribute__iterator_aa15f5f06d2a6199467a33aa19f4357aa}{operator\texorpdfstring{$\ast$}{*}}} () const
+\item 
+\mbox{\hyperlink{classrapidxml_1_1xml__attribute}{pointer}} \mbox{\hyperlink{classrapidxml_1_1attribute__iterator_a499c7ed0e1835f029585d0a9ba25f446}{operator-\/$>$}} () const
+\item 
+\mbox{\hyperlink{classrapidxml_1_1attribute__iterator}{attribute\+\_\+iterator}} \& \mbox{\hyperlink{classrapidxml_1_1attribute__iterator_a1eb0082d75d6d43ea3a3b1e98f7213a1}{operator++}} ()
+\item 
+\mbox{\hyperlink{classrapidxml_1_1attribute__iterator}{attribute\+\_\+iterator}} \mbox{\hyperlink{classrapidxml_1_1attribute__iterator_a82c8859b9eebd45caa3afc25b9e78c36}{operator++}} (int)
+\item 
+\mbox{\hyperlink{classrapidxml_1_1attribute__iterator}{attribute\+\_\+iterator}} \& \mbox{\hyperlink{classrapidxml_1_1attribute__iterator_a78aa3aa5dab93560f2e5e3bc9d060899}{operator-\/-\/}} ()
+\item 
+\mbox{\hyperlink{classrapidxml_1_1attribute__iterator}{attribute\+\_\+iterator}} \mbox{\hyperlink{classrapidxml_1_1attribute__iterator_af52a8562ab1b2c0391cdde79f55e4a6f}{operator-\/-\/}} (int)
+\item 
+bool \mbox{\hyperlink{classrapidxml_1_1attribute__iterator_ab1dc8dd11d21e145a4e3f76d46aead0d}{operator==}} (const \mbox{\hyperlink{classrapidxml_1_1attribute__iterator}{attribute\+\_\+iterator}}$<$ Ch $>$ \&rhs)
+\item 
+bool \mbox{\hyperlink{classrapidxml_1_1attribute__iterator_a39e8cf336c324521fd9c720abf280d88}{operator!=}} (const \mbox{\hyperlink{classrapidxml_1_1attribute__iterator}{attribute\+\_\+iterator}}$<$ Ch $>$ \&rhs)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class Ch$>$\newline
+class rapidxml\+::attribute\+\_\+iterator$<$ Ch $>$}
+Iterator of child attributes of \doxylink{classrapidxml_1_1xml__node}{xml\+\_\+node}. 
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classrapidxml_1_1attribute__iterator_a19b2015b735001cb08a3ad2861248245}\index{rapidxml::attribute\_iterator$<$ Ch $>$@{rapidxml::attribute\_iterator$<$ Ch $>$}!difference\_type@{difference\_type}}
+\index{difference\_type@{difference\_type}!rapidxml::attribute\_iterator$<$ Ch $>$@{rapidxml::attribute\_iterator$<$ Ch $>$}}
+\doxysubsubsection{\texorpdfstring{difference\_type}{difference\_type}}
+{\footnotesize\ttfamily \label{classrapidxml_1_1attribute__iterator_a19b2015b735001cb08a3ad2861248245} 
+template$<$class Ch $>$ \\
+std\+::ptrdiff\+\_\+t \mbox{\hyperlink{classrapidxml_1_1attribute__iterator}{rapidxml\+::attribute\+\_\+iterator}}$<$ Ch $>$\+::difference\+\_\+type}
+
+\Hypertarget{classrapidxml_1_1attribute__iterator_a9e7a9d558b92e40f78649f46f1c79c2e}\index{rapidxml::attribute\_iterator$<$ Ch $>$@{rapidxml::attribute\_iterator$<$ Ch $>$}!iterator\_category@{iterator\_category}}
+\index{iterator\_category@{iterator\_category}!rapidxml::attribute\_iterator$<$ Ch $>$@{rapidxml::attribute\_iterator$<$ Ch $>$}}
+\doxysubsubsection{\texorpdfstring{iterator\_category}{iterator\_category}}
+{\footnotesize\ttfamily \label{classrapidxml_1_1attribute__iterator_a9e7a9d558b92e40f78649f46f1c79c2e} 
+template$<$class Ch $>$ \\
+std\+::bidirectional\+\_\+iterator\+\_\+tag \mbox{\hyperlink{classrapidxml_1_1attribute__iterator}{rapidxml\+::attribute\+\_\+iterator}}$<$ Ch $>$\+::iterator\+\_\+category}
+
+\Hypertarget{classrapidxml_1_1attribute__iterator_ac74e44e9cd4df40fe274876977f0a601}\index{rapidxml::attribute\_iterator$<$ Ch $>$@{rapidxml::attribute\_iterator$<$ Ch $>$}!pointer@{pointer}}
+\index{pointer@{pointer}!rapidxml::attribute\_iterator$<$ Ch $>$@{rapidxml::attribute\_iterator$<$ Ch $>$}}
+\doxysubsubsection{\texorpdfstring{pointer}{pointer}}
+{\footnotesize\ttfamily \label{classrapidxml_1_1attribute__iterator_ac74e44e9cd4df40fe274876977f0a601} 
+template$<$class Ch $>$ \\
+\mbox{\hyperlink{classrapidxml_1_1xml__attribute}{xml\+\_\+attribute}}$<$Ch$>$\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classrapidxml_1_1attribute__iterator}{rapidxml\+::attribute\+\_\+iterator}}$<$ Ch $>$\+::pointer}
+
+\Hypertarget{classrapidxml_1_1attribute__iterator_a8a8a45110466d8f74e6e4ca71f248d05}\index{rapidxml::attribute\_iterator$<$ Ch $>$@{rapidxml::attribute\_iterator$<$ Ch $>$}!reference@{reference}}
+\index{reference@{reference}!rapidxml::attribute\_iterator$<$ Ch $>$@{rapidxml::attribute\_iterator$<$ Ch $>$}}
+\doxysubsubsection{\texorpdfstring{reference}{reference}}
+{\footnotesize\ttfamily \label{classrapidxml_1_1attribute__iterator_a8a8a45110466d8f74e6e4ca71f248d05} 
+template$<$class Ch $>$ \\
+\mbox{\hyperlink{classrapidxml_1_1xml__attribute}{xml\+\_\+attribute}}$<$Ch$>$\& \mbox{\hyperlink{classrapidxml_1_1attribute__iterator}{rapidxml\+::attribute\+\_\+iterator}}$<$ Ch $>$\+::reference}
+
+\Hypertarget{classrapidxml_1_1attribute__iterator_a8fae4f0d01e41626791342b2f3340818}\index{rapidxml::attribute\_iterator$<$ Ch $>$@{rapidxml::attribute\_iterator$<$ Ch $>$}!value\_type@{value\_type}}
+\index{value\_type@{value\_type}!rapidxml::attribute\_iterator$<$ Ch $>$@{rapidxml::attribute\_iterator$<$ Ch $>$}}
+\doxysubsubsection{\texorpdfstring{value\_type}{value\_type}}
+{\footnotesize\ttfamily \label{classrapidxml_1_1attribute__iterator_a8fae4f0d01e41626791342b2f3340818} 
+template$<$class Ch $>$ \\
+\mbox{\hyperlink{classrapidxml_1_1xml__attribute}{xml\+\_\+attribute}}$<$Ch$>$ \mbox{\hyperlink{classrapidxml_1_1attribute__iterator}{rapidxml\+::attribute\+\_\+iterator}}$<$ Ch $>$\+::value\+\_\+type}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classrapidxml_1_1attribute__iterator_a30a82132793bc59d4e7b20f5be6237b9}\index{rapidxml::attribute\_iterator$<$ Ch $>$@{rapidxml::attribute\_iterator$<$ Ch $>$}!attribute\_iterator@{attribute\_iterator}}
+\index{attribute\_iterator@{attribute\_iterator}!rapidxml::attribute\_iterator$<$ Ch $>$@{rapidxml::attribute\_iterator$<$ Ch $>$}}
+\doxysubsubsection{\texorpdfstring{attribute\_iterator()}{attribute\_iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classrapidxml_1_1attribute__iterator_a30a82132793bc59d4e7b20f5be6237b9} 
+template$<$class Ch $>$ \\
+\mbox{\hyperlink{classrapidxml_1_1attribute__iterator}{rapidxml\+::attribute\+\_\+iterator}}$<$ Ch $>$\+::attribute\+\_\+iterator (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classrapidxml_1_1attribute__iterator_a1109344dead88533ae4dd68cea5d9613}\index{rapidxml::attribute\_iterator$<$ Ch $>$@{rapidxml::attribute\_iterator$<$ Ch $>$}!attribute\_iterator@{attribute\_iterator}}
+\index{attribute\_iterator@{attribute\_iterator}!rapidxml::attribute\_iterator$<$ Ch $>$@{rapidxml::attribute\_iterator$<$ Ch $>$}}
+\doxysubsubsection{\texorpdfstring{attribute\_iterator()}{attribute\_iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classrapidxml_1_1attribute__iterator_a1109344dead88533ae4dd68cea5d9613} 
+template$<$class Ch $>$ \\
+\mbox{\hyperlink{classrapidxml_1_1attribute__iterator}{rapidxml\+::attribute\+\_\+iterator}}$<$ Ch $>$\+::attribute\+\_\+iterator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrapidxml_1_1xml__node}{xml\+\_\+node}}$<$ Ch $>$ \texorpdfstring{$\ast$}{*}}]{node}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classrapidxml_1_1attribute__iterator_a39e8cf336c324521fd9c720abf280d88}\index{rapidxml::attribute\_iterator$<$ Ch $>$@{rapidxml::attribute\_iterator$<$ Ch $>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!rapidxml::attribute\_iterator$<$ Ch $>$@{rapidxml::attribute\_iterator$<$ Ch $>$}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily \label{classrapidxml_1_1attribute__iterator_a39e8cf336c324521fd9c720abf280d88} 
+template$<$class Ch $>$ \\
+bool \mbox{\hyperlink{classrapidxml_1_1attribute__iterator}{rapidxml\+::attribute\+\_\+iterator}}$<$ Ch $>$\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrapidxml_1_1attribute__iterator}{attribute\+\_\+iterator}}$<$ Ch $>$ \&}]{rhs}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classrapidxml_1_1attribute__iterator_aa15f5f06d2a6199467a33aa19f4357aa}\index{rapidxml::attribute\_iterator$<$ Ch $>$@{rapidxml::attribute\_iterator$<$ Ch $>$}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!rapidxml::attribute\_iterator$<$ Ch $>$@{rapidxml::attribute\_iterator$<$ Ch $>$}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}}
+{\footnotesize\ttfamily \label{classrapidxml_1_1attribute__iterator_aa15f5f06d2a6199467a33aa19f4357aa} 
+template$<$class Ch $>$ \\
+\mbox{\hyperlink{classrapidxml_1_1xml__attribute}{reference}} \mbox{\hyperlink{classrapidxml_1_1attribute__iterator}{rapidxml\+::attribute\+\_\+iterator}}$<$ Ch $>$\+::operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classrapidxml_1_1attribute__iterator_a1eb0082d75d6d43ea3a3b1e98f7213a1}\index{rapidxml::attribute\_iterator$<$ Ch $>$@{rapidxml::attribute\_iterator$<$ Ch $>$}!operator++@{operator++}}
+\index{operator++@{operator++}!rapidxml::attribute\_iterator$<$ Ch $>$@{rapidxml::attribute\_iterator$<$ Ch $>$}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classrapidxml_1_1attribute__iterator_a1eb0082d75d6d43ea3a3b1e98f7213a1} 
+template$<$class Ch $>$ \\
+\mbox{\hyperlink{classrapidxml_1_1attribute__iterator}{attribute\+\_\+iterator}} \& \mbox{\hyperlink{classrapidxml_1_1attribute__iterator}{rapidxml\+::attribute\+\_\+iterator}}$<$ Ch $>$\+::operator++ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classrapidxml_1_1attribute__iterator_a82c8859b9eebd45caa3afc25b9e78c36}\index{rapidxml::attribute\_iterator$<$ Ch $>$@{rapidxml::attribute\_iterator$<$ Ch $>$}!operator++@{operator++}}
+\index{operator++@{operator++}!rapidxml::attribute\_iterator$<$ Ch $>$@{rapidxml::attribute\_iterator$<$ Ch $>$}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classrapidxml_1_1attribute__iterator_a82c8859b9eebd45caa3afc25b9e78c36} 
+template$<$class Ch $>$ \\
+\mbox{\hyperlink{classrapidxml_1_1attribute__iterator}{attribute\+\_\+iterator}} \mbox{\hyperlink{classrapidxml_1_1attribute__iterator}{rapidxml\+::attribute\+\_\+iterator}}$<$ Ch $>$\+::operator++ (\begin{DoxyParamCaption}\item[{int}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classrapidxml_1_1attribute__iterator_a78aa3aa5dab93560f2e5e3bc9d060899}\index{rapidxml::attribute\_iterator$<$ Ch $>$@{rapidxml::attribute\_iterator$<$ Ch $>$}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!rapidxml::attribute\_iterator$<$ Ch $>$@{rapidxml::attribute\_iterator$<$ Ch $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classrapidxml_1_1attribute__iterator_a78aa3aa5dab93560f2e5e3bc9d060899} 
+template$<$class Ch $>$ \\
+\mbox{\hyperlink{classrapidxml_1_1attribute__iterator}{attribute\+\_\+iterator}} \& \mbox{\hyperlink{classrapidxml_1_1attribute__iterator}{rapidxml\+::attribute\+\_\+iterator}}$<$ Ch $>$\+::operator-\/-\/ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classrapidxml_1_1attribute__iterator_af52a8562ab1b2c0391cdde79f55e4a6f}\index{rapidxml::attribute\_iterator$<$ Ch $>$@{rapidxml::attribute\_iterator$<$ Ch $>$}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!rapidxml::attribute\_iterator$<$ Ch $>$@{rapidxml::attribute\_iterator$<$ Ch $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classrapidxml_1_1attribute__iterator_af52a8562ab1b2c0391cdde79f55e4a6f} 
+template$<$class Ch $>$ \\
+\mbox{\hyperlink{classrapidxml_1_1attribute__iterator}{attribute\+\_\+iterator}} \mbox{\hyperlink{classrapidxml_1_1attribute__iterator}{rapidxml\+::attribute\+\_\+iterator}}$<$ Ch $>$\+::operator-\/-\/ (\begin{DoxyParamCaption}\item[{int}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classrapidxml_1_1attribute__iterator_a499c7ed0e1835f029585d0a9ba25f446}\index{rapidxml::attribute\_iterator$<$ Ch $>$@{rapidxml::attribute\_iterator$<$ Ch $>$}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!rapidxml::attribute\_iterator$<$ Ch $>$@{rapidxml::attribute\_iterator$<$ Ch $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}}
+{\footnotesize\ttfamily \label{classrapidxml_1_1attribute__iterator_a499c7ed0e1835f029585d0a9ba25f446} 
+template$<$class Ch $>$ \\
+\mbox{\hyperlink{classrapidxml_1_1xml__attribute}{pointer}} \mbox{\hyperlink{classrapidxml_1_1attribute__iterator}{rapidxml\+::attribute\+\_\+iterator}}$<$ Ch $>$\+::operator-\/$>$ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classrapidxml_1_1attribute__iterator_ab1dc8dd11d21e145a4e3f76d46aead0d}\index{rapidxml::attribute\_iterator$<$ Ch $>$@{rapidxml::attribute\_iterator$<$ Ch $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!rapidxml::attribute\_iterator$<$ Ch $>$@{rapidxml::attribute\_iterator$<$ Ch $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{classrapidxml_1_1attribute__iterator_ab1dc8dd11d21e145a4e3f76d46aead0d} 
+template$<$class Ch $>$ \\
+bool \mbox{\hyperlink{classrapidxml_1_1attribute__iterator}{rapidxml\+::attribute\+\_\+iterator}}$<$ Ch $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrapidxml_1_1attribute__iterator}{attribute\+\_\+iterator}}$<$ Ch $>$ \&}]{rhs}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sgaer/source/repos/katanafinancial/\+Occam\+CME4/\+Occam\+CME4/src/external/rapidxml/rapidxml\+\_\+iterators.\+hpp\end{DoxyCompactItemize}

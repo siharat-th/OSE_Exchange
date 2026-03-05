@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classrapidxml_1_1parse__error" xml:lang="en-US">
+<title>rapidxml::parse_error Class Reference</title>
+<indexterm><primary>rapidxml::parse_error</primary></indexterm>
+<para>
+<computeroutput>#include &lt;rapidxml.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for rapidxml::parse_error:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classrapidxml_1_1parse__error.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classrapidxml_1_1parse__error_1aea12a301271c393fb627b368fb9f35c1">parse_error</link> (const char *<link linkend="_classrapidxml_1_1parse__error_1a50db985db295e930698c6fb5aa5c3c52">what</link>, void *<link linkend="_classrapidxml_1_1parse__error_1ad273d80552a404fc18fb55a500fdd7ee">where</link>)</para>
+
+<para>Constructs parse error. </para>
+</listitem>
+            <listitem><para>virtual const char * <link linkend="_classrapidxml_1_1parse__error_1a50db985db295e930698c6fb5aa5c3c52">what</link> () const  throw ()</para>
+</listitem>
+            <listitem><para>template&lt;class Ch &gt; </para><para>Ch * <link linkend="_classrapidxml_1_1parse__error_1ad273d80552a404fc18fb55a500fdd7ee">where</link> () const</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Parse error exception. This exception is thrown by the parser when an error occurs. Use <link linkend="_classrapidxml_1_1parse__error_1a50db985db295e930698c6fb5aa5c3c52">what()</link> function to get human-readable error message. Use <link linkend="_classrapidxml_1_1parse__error_1ad273d80552a404fc18fb55a500fdd7ee">where()</link> function to get a pointer to position within source text where error was detected. <?linebreak?><?linebreak?> If throwing exceptions by the parser is undesirable, it can be disabled by defining RAPIDXML_NO_EXCEPTIONS macro before <link linkend="_">rapidxml.hpp</link> is included. This will cause the parser to call rapidxml::parse_error_handler() function instead of throwing an exception. This function must be defined by the user. <?linebreak?><?linebreak?> This class derives from <computeroutput>std::exception</computeroutput> class. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classrapidxml_1_1parse__error_1aea12a301271c393fb627b368fb9f35c1"/><section>
+    <title>parse_error()</title>
+<indexterm><primary>parse_error</primary><secondary>rapidxml::parse_error</secondary></indexterm>
+<indexterm><primary>rapidxml::parse_error</primary><secondary>parse_error</secondary></indexterm>
+<para><computeroutput>rapidxml::parse_error::parse_error (const char * what, void * where)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Constructs parse error. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classrapidxml_1_1parse__error_1a50db985db295e930698c6fb5aa5c3c52"/><section>
+    <title>what()</title>
+<indexterm><primary>what</primary><secondary>rapidxml::parse_error</secondary></indexterm>
+<indexterm><primary>rapidxml::parse_error</primary><secondary>what</secondary></indexterm>
+<para><computeroutput>virtual const char * rapidxml::parse_error::what ( ) const throw ( ) <computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>Gets human readable description of error. <formalpara><title>Returns</title>
+
+<para>Pointer to null terminated description of the error. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classrapidxml_1_1parse__error_1ad273d80552a404fc18fb55a500fdd7ee"/><section>
+    <title>where()</title>
+<indexterm><primary>where</primary><secondary>rapidxml::parse_error</secondary></indexterm>
+<indexterm><primary>rapidxml::parse_error</primary><secondary>where</secondary></indexterm>
+<computeroutput>template&lt;class Ch &gt; </computeroutput><para><computeroutput>Ch * rapidxml::parse_error::where ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Gets pointer to character data where error happened. Ch should be the same as char type of <link linkend="_classrapidxml_1_1xml__document">xml_document</link> that produced the error. <formalpara><title>Returns</title>
+
+<para>Pointer to location within the parsed string where error occured. </para>
+</formalpara>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/external/rapidxml/rapidxml.hpp</section>
+</section>

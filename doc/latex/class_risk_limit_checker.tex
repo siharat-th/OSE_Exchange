@@ -1,0 +1,87 @@
+\doxysection{Risk\+Limit\+Checker Class Reference}
+\hypertarget{class_risk_limit_checker}{}\label{class_risk_limit_checker}\index{RiskLimitChecker@{RiskLimitChecker}}
+
+
+Class for checking risk limits for orders.  
+
+
+
+
+{\ttfamily \#include $<$Risk\+Limit\+Checker.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_risk_limit_checker_a611765e0d23daa60265dc8440b428949}{Risk\+Limit\+Checker}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_risk_limit_checker_a83d2551a33a2d08b5b9fa8fc70dbbd02}{\texorpdfstring{$\sim$}{\string~}\+Risk\+Limit\+Checker}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_risk_limit_checker_a6187eeb97369f02b847e189c7fc7f4d4}{Load\+Risk\+Limits}} ()
+\begin{DoxyCompactList}\small\item\em Load the risk limits from a source. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_risk_limit_checker_a95046c9cc55d6cbb38d355e287032ce9}{is\+Order\+OK}} (double notional, string acct)
+\begin{DoxyCompactList}\small\item\em Check if an order is within the risk limits. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for checking risk limits for orders. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_risk_limit_checker_a611765e0d23daa60265dc8440b428949}\index{RiskLimitChecker@{RiskLimitChecker}!RiskLimitChecker@{RiskLimitChecker}}
+\index{RiskLimitChecker@{RiskLimitChecker}!RiskLimitChecker@{RiskLimitChecker}}
+\doxysubsubsection{\texorpdfstring{RiskLimitChecker()}{RiskLimitChecker()}}
+{\footnotesize\ttfamily \label{class_risk_limit_checker_a611765e0d23daa60265dc8440b428949} 
+Risk\+Limit\+Checker\+::\+Risk\+Limit\+Checker (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+\Hypertarget{class_risk_limit_checker_a83d2551a33a2d08b5b9fa8fc70dbbd02}\index{RiskLimitChecker@{RiskLimitChecker}!````~RiskLimitChecker@{\texorpdfstring{$\sim$}{\string~}RiskLimitChecker}}
+\index{````~RiskLimitChecker@{\texorpdfstring{$\sim$}{\string~}RiskLimitChecker}!RiskLimitChecker@{RiskLimitChecker}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}RiskLimitChecker()}{\string~RiskLimitChecker()}}
+{\footnotesize\ttfamily \label{class_risk_limit_checker_a83d2551a33a2d08b5b9fa8fc70dbbd02} 
+Risk\+Limit\+Checker\+::\texorpdfstring{$\sim$}{\string~}\+Risk\+Limit\+Checker (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_risk_limit_checker_a95046c9cc55d6cbb38d355e287032ce9}\index{RiskLimitChecker@{RiskLimitChecker}!isOrderOK@{isOrderOK}}
+\index{isOrderOK@{isOrderOK}!RiskLimitChecker@{RiskLimitChecker}}
+\doxysubsubsection{\texorpdfstring{isOrderOK()}{isOrderOK()}}
+{\footnotesize\ttfamily \label{class_risk_limit_checker_a95046c9cc55d6cbb38d355e287032ce9} 
+bool Risk\+Limit\+Checker\+::is\+Order\+OK (\begin{DoxyParamCaption}\item[{double}]{notional}{, }\item[{string}]{acct}{}\end{DoxyParamCaption})}
+
+
+
+Check if an order is within the risk limits. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em notional} & The notional value of the order \\
+\hline
+{\em acct} & The account associated with the order \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the order is within the risk limits, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_risk_limit_checker_a6187eeb97369f02b847e189c7fc7f4d4}\index{RiskLimitChecker@{RiskLimitChecker}!LoadRiskLimits@{LoadRiskLimits}}
+\index{LoadRiskLimits@{LoadRiskLimits}!RiskLimitChecker@{RiskLimitChecker}}
+\doxysubsubsection{\texorpdfstring{LoadRiskLimits()}{LoadRiskLimits()}}
+{\footnotesize\ttfamily \label{class_risk_limit_checker_a6187eeb97369f02b847e189c7fc7f4d4} 
+void Risk\+Limit\+Checker\+::\+Load\+Risk\+Limits (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Load the risk limits from a source. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Risk/Risk\+Limit\+Checker.\+hpp\item 
+Risk/Risk\+Limit\+Checker.\+cpp\end{DoxyCompactItemize}

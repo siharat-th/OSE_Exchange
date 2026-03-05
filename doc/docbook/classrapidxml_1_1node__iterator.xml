@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classrapidxml_1_1node__iterator" xml:lang="en-US">
+<title>rapidxml::node_iterator&lt; Ch &gt; Class Template Reference</title>
+<indexterm><primary>rapidxml::node_iterator&lt; Ch &gt;</primary></indexterm>
+<para>
+
+<para>Iterator of child nodes of <link linkend="_classrapidxml_1_1xml__node">xml_node</link>. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;rapidxml_iterators.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>typedef <link linkend="_classrapidxml_1_1xml__node">xml_node</link>&lt; Ch &gt; <link linkend="_classrapidxml_1_1node__iterator_1a793732fcdd8773feabb4d88869ccd0da">value_type</link></para>
+</listitem>
+            <listitem><para>typedef <link linkend="_classrapidxml_1_1xml__node">xml_node</link>&lt; Ch &gt; &amp; <link linkend="_classrapidxml_1_1node__iterator_1a77ac870a120d53de0fad80b59db55b22">reference</link></para>
+</listitem>
+            <listitem><para>typedef <link linkend="_classrapidxml_1_1xml__node">xml_node</link>&lt; Ch &gt; * <link linkend="_classrapidxml_1_1node__iterator_1a124d15805f466263f87b27d69b060acf">pointer</link></para>
+</listitem>
+            <listitem><para>typedef std::ptrdiff_t <link linkend="_classrapidxml_1_1node__iterator_1a44b4a207d05e6adf921710d753671d8b">difference_type</link></para>
+</listitem>
+            <listitem><para>typedef std::bidirectional_iterator_tag <link linkend="_classrapidxml_1_1node__iterator_1a81c668b40834341d01e7c18afbdc75df">iterator_category</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classrapidxml_1_1node__iterator_1a94c3da59b54e4bd003e226cc35b3c266">node_iterator</link> (<link linkend="_classrapidxml_1_1xml__node">xml_node</link>&lt; Ch &gt; *node)</para>
+</listitem>
+            <listitem><para><link linkend="_classrapidxml_1_1xml__node">reference</link> <link linkend="_classrapidxml_1_1node__iterator_1a47a076383ce706bb88e2b455646d8555">operator*</link> () const</para>
+</listitem>
+            <listitem><para><link linkend="_classrapidxml_1_1xml__node">pointer</link> <link linkend="_classrapidxml_1_1node__iterator_1a203f946893733b2f8526b49c3c9039ef">operator-&gt;</link> () const</para>
+</listitem>
+            <listitem><para><link linkend="_classrapidxml_1_1node__iterator">node_iterator</link> &amp; <link linkend="_classrapidxml_1_1node__iterator_1a4ebe23c502eaf3945195ffc3632d3ab0">operator++</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_classrapidxml_1_1node__iterator">node_iterator</link> <link linkend="_classrapidxml_1_1node__iterator_1ad01b4e43e348a330984833fd4924d0f2">operator++</link> (int)</para>
+</listitem>
+            <listitem><para><link linkend="_classrapidxml_1_1node__iterator">node_iterator</link> &amp; <link linkend="_classrapidxml_1_1node__iterator_1a0b6ffa0e8e6cb5f353eacdf9cb62af3d">operator--</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_classrapidxml_1_1node__iterator">node_iterator</link> <link linkend="_classrapidxml_1_1node__iterator_1a4ca35716bb7865f199a137b063af6080">operator--</link> (int)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classrapidxml_1_1node__iterator_1a5cb8a3b0d65a1a2517995e986a4debfd">operator==</link> (const <link linkend="_classrapidxml_1_1node__iterator">node_iterator</link>&lt; Ch &gt; &amp;rhs)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classrapidxml_1_1node__iterator_1a20f1e25347d7e3856694f18597f7c8e2">operator!=</link> (const <link linkend="_classrapidxml_1_1node__iterator">node_iterator</link>&lt; Ch &gt; &amp;rhs)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;class Ch&gt;<?linebreak?>class rapidxml::node_iterator&lt; Ch &gt;</title></simplesect>
+
+<para>Iterator of child nodes of <link linkend="_classrapidxml_1_1xml__node">xml_node</link>. </para>
+</section>
+<section>
+<title>Member Typedef Documentation</title>
+<anchor xml:id="_classrapidxml_1_1node__iterator_1a44b4a207d05e6adf921710d753671d8b"/><section>
+    <title>difference_type</title>
+<indexterm><primary>difference_type</primary><secondary>rapidxml::node_iterator&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::node_iterator&lt; Ch &gt;</primary><secondary>difference_type</secondary></indexterm>
+<computeroutput>template&lt;class Ch &gt; </computeroutput><para><computeroutput>std::ptrdiff_t <link linkend="_classrapidxml_1_1node__iterator">rapidxml::node_iterator</link>&lt; Ch &gt;::difference_type</computeroutput></para></section>
+<anchor xml:id="_classrapidxml_1_1node__iterator_1a81c668b40834341d01e7c18afbdc75df"/><section>
+    <title>iterator_category</title>
+<indexterm><primary>iterator_category</primary><secondary>rapidxml::node_iterator&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::node_iterator&lt; Ch &gt;</primary><secondary>iterator_category</secondary></indexterm>
+<computeroutput>template&lt;class Ch &gt; </computeroutput><para><computeroutput>std::bidirectional_iterator_tag <link linkend="_classrapidxml_1_1node__iterator">rapidxml::node_iterator</link>&lt; Ch &gt;::iterator_category</computeroutput></para></section>
+<anchor xml:id="_classrapidxml_1_1node__iterator_1a124d15805f466263f87b27d69b060acf"/><section>
+    <title>pointer</title>
+<indexterm><primary>pointer</primary><secondary>rapidxml::node_iterator&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::node_iterator&lt; Ch &gt;</primary><secondary>pointer</secondary></indexterm>
+<computeroutput>template&lt;class Ch &gt; </computeroutput><para><computeroutput><link linkend="_classrapidxml_1_1xml__node">xml_node</link>&lt;Ch&gt;* <link linkend="_classrapidxml_1_1node__iterator">rapidxml::node_iterator</link>&lt; Ch &gt;::pointer</computeroutput></para></section>
+<anchor xml:id="_classrapidxml_1_1node__iterator_1a77ac870a120d53de0fad80b59db55b22"/><section>
+    <title>reference</title>
+<indexterm><primary>reference</primary><secondary>rapidxml::node_iterator&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::node_iterator&lt; Ch &gt;</primary><secondary>reference</secondary></indexterm>
+<computeroutput>template&lt;class Ch &gt; </computeroutput><para><computeroutput><link linkend="_classrapidxml_1_1xml__node">xml_node</link>&lt;Ch&gt;&amp; <link linkend="_classrapidxml_1_1node__iterator">rapidxml::node_iterator</link>&lt; Ch &gt;::reference</computeroutput></para></section>
+<anchor xml:id="_classrapidxml_1_1node__iterator_1a793732fcdd8773feabb4d88869ccd0da"/><section>
+    <title>value_type</title>
+<indexterm><primary>value_type</primary><secondary>rapidxml::node_iterator&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::node_iterator&lt; Ch &gt;</primary><secondary>value_type</secondary></indexterm>
+<computeroutput>template&lt;class Ch &gt; </computeroutput><para><computeroutput><link linkend="_classrapidxml_1_1xml__node">xml_node</link>&lt;Ch&gt; <link linkend="_classrapidxml_1_1node__iterator">rapidxml::node_iterator</link>&lt; Ch &gt;::value_type</computeroutput></para></section>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classrapidxml_1_1node__iterator_1a4e1244b9e9e1d2b5129235806d1e31ad"/><section>
+    <title>node_iterator()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>node_iterator</primary><secondary>rapidxml::node_iterator&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::node_iterator&lt; Ch &gt;</primary><secondary>node_iterator</secondary></indexterm>
+<computeroutput>template&lt;class Ch &gt; </computeroutput><para><computeroutput><link linkend="_classrapidxml_1_1node__iterator">rapidxml::node_iterator</link>&lt; Ch &gt;::node_iterator ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classrapidxml_1_1node__iterator_1a94c3da59b54e4bd003e226cc35b3c266"/><section>
+    <title>node_iterator()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>node_iterator</primary><secondary>rapidxml::node_iterator&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::node_iterator&lt; Ch &gt;</primary><secondary>node_iterator</secondary></indexterm>
+<computeroutput>template&lt;class Ch &gt; </computeroutput><para><computeroutput><link linkend="_classrapidxml_1_1node__iterator">rapidxml::node_iterator</link>&lt; Ch &gt;::node_iterator (<link linkend="_classrapidxml_1_1xml__node">xml_node</link>&lt; Ch &gt; * node)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classrapidxml_1_1node__iterator_1a20f1e25347d7e3856694f18597f7c8e2"/><section>
+    <title>operator!=()</title>
+<indexterm><primary>operator!=</primary><secondary>rapidxml::node_iterator&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::node_iterator&lt; Ch &gt;</primary><secondary>operator!=</secondary></indexterm>
+<computeroutput>template&lt;class Ch &gt; </computeroutput><para><computeroutput>bool <link linkend="_classrapidxml_1_1node__iterator">rapidxml::node_iterator</link>&lt; Ch &gt;::operator!= (const <link linkend="_classrapidxml_1_1node__iterator">node_iterator</link>&lt; Ch &gt; &amp; rhs)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classrapidxml_1_1node__iterator_1a47a076383ce706bb88e2b455646d8555"/><section>
+    <title>operator*()</title>
+<indexterm><primary>operator*</primary><secondary>rapidxml::node_iterator&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::node_iterator&lt; Ch &gt;</primary><secondary>operator*</secondary></indexterm>
+<computeroutput>template&lt;class Ch &gt; </computeroutput><para><computeroutput><link linkend="_classrapidxml_1_1xml__node">reference</link> <link linkend="_classrapidxml_1_1node__iterator">rapidxml::node_iterator</link>&lt; Ch &gt;::operator* ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classrapidxml_1_1node__iterator_1a4ebe23c502eaf3945195ffc3632d3ab0"/><section>
+    <title>operator++()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>operator++</primary><secondary>rapidxml::node_iterator&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::node_iterator&lt; Ch &gt;</primary><secondary>operator++</secondary></indexterm>
+<computeroutput>template&lt;class Ch &gt; </computeroutput><para><computeroutput><link linkend="_classrapidxml_1_1node__iterator">node_iterator</link> &amp; <link linkend="_classrapidxml_1_1node__iterator">rapidxml::node_iterator</link>&lt; Ch &gt;::operator++ ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classrapidxml_1_1node__iterator_1ad01b4e43e348a330984833fd4924d0f2"/><section>
+    <title>operator++()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>operator++</primary><secondary>rapidxml::node_iterator&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::node_iterator&lt; Ch &gt;</primary><secondary>operator++</secondary></indexterm>
+<computeroutput>template&lt;class Ch &gt; </computeroutput><para><computeroutput><link linkend="_classrapidxml_1_1node__iterator">node_iterator</link> <link linkend="_classrapidxml_1_1node__iterator">rapidxml::node_iterator</link>&lt; Ch &gt;::operator++ (int )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classrapidxml_1_1node__iterator_1a0b6ffa0e8e6cb5f353eacdf9cb62af3d"/><section>
+    <title>operator--()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>operator--</primary><secondary>rapidxml::node_iterator&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::node_iterator&lt; Ch &gt;</primary><secondary>operator--</secondary></indexterm>
+<computeroutput>template&lt;class Ch &gt; </computeroutput><para><computeroutput><link linkend="_classrapidxml_1_1node__iterator">node_iterator</link> &amp; <link linkend="_classrapidxml_1_1node__iterator">rapidxml::node_iterator</link>&lt; Ch &gt;::operator-- ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classrapidxml_1_1node__iterator_1a4ca35716bb7865f199a137b063af6080"/><section>
+    <title>operator--()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>operator--</primary><secondary>rapidxml::node_iterator&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::node_iterator&lt; Ch &gt;</primary><secondary>operator--</secondary></indexterm>
+<computeroutput>template&lt;class Ch &gt; </computeroutput><para><computeroutput><link linkend="_classrapidxml_1_1node__iterator">node_iterator</link> <link linkend="_classrapidxml_1_1node__iterator">rapidxml::node_iterator</link>&lt; Ch &gt;::operator-- (int )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classrapidxml_1_1node__iterator_1a203f946893733b2f8526b49c3c9039ef"/><section>
+    <title>operator-&gt;()</title>
+<indexterm><primary>operator-&gt;</primary><secondary>rapidxml::node_iterator&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::node_iterator&lt; Ch &gt;</primary><secondary>operator-&gt;</secondary></indexterm>
+<computeroutput>template&lt;class Ch &gt; </computeroutput><para><computeroutput><link linkend="_classrapidxml_1_1xml__node">pointer</link> <link linkend="_classrapidxml_1_1node__iterator">rapidxml::node_iterator</link>&lt; Ch &gt;::operator-&gt; ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classrapidxml_1_1node__iterator_1a5cb8a3b0d65a1a2517995e986a4debfd"/><section>
+    <title>operator==()</title>
+<indexterm><primary>operator==</primary><secondary>rapidxml::node_iterator&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::node_iterator&lt; Ch &gt;</primary><secondary>operator==</secondary></indexterm>
+<computeroutput>template&lt;class Ch &gt; </computeroutput><para><computeroutput>bool <link linkend="_classrapidxml_1_1node__iterator">rapidxml::node_iterator</link>&lt; Ch &gt;::operator== (const <link linkend="_classrapidxml_1_1node__iterator">node_iterator</link>&lt; Ch &gt; &amp; rhs)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/external/rapidxml/rapidxml_iterators.hpp</section>
+</section>

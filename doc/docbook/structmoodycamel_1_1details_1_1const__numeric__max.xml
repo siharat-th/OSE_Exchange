@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structmoodycamel_1_1details_1_1const__numeric__max" xml:lang="en-US">
+<title>moodycamel::details::const_numeric_max&lt; T &gt; Struct Template Reference</title>
+<indexterm><primary>moodycamel::details::const_numeric_max&lt; T &gt;</primary></indexterm>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>static const T <link linkend="_structmoodycamel_1_1details_1_1const__numeric__max_1af75ec3360210c88149fd037fbf9e6b45">value</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;typename T&gt;<?linebreak?>struct moodycamel::details::const_numeric_max&lt; T &gt;</title></simplesect>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structmoodycamel_1_1details_1_1const__numeric__max_1af75ec3360210c88149fd037fbf9e6b45"/><section>
+    <title>value</title>
+<indexterm><primary>value</primary><secondary>moodycamel::details::const_numeric_max&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>moodycamel::details::const_numeric_max&lt; T &gt;</primary><secondary>value</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>static const T <link linkend="_structmoodycamel_1_1details_1_1const__numeric__max">moodycamel::details::const_numeric_max</link>&lt; T &gt;::value<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;std::numeric_limits&lt;T&gt;::is_signed
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;?&#32;(<emphasis role="keyword">static_cast&lt;</emphasis>T<emphasis role="keyword">&gt;</emphasis>(1)&#32;&lt;&lt;&#32;(<emphasis role="keyword">sizeof</emphasis>(T)&#32;*&#32;CHAR_BIT&#32;-&#32;1))&#32;-&#32;<emphasis role="keyword">static_cast&lt;</emphasis>T<emphasis role="keyword">&gt;</emphasis>(1)
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;static_cast&lt;T&gt;(-1)
+</programlisting></section>
+<para>
+The documentation for this struct was generated from the following files:</para>
+C:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/external/camel/concurrentqueue.hC:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/external/camel/concurrentqueue2.h</section>
+</section>

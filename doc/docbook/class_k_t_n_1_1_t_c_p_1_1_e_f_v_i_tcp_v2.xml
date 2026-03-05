@@ -1,0 +1,512 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v2" xml:lang="en-US">
+<title>KTN::TCP::EFVITcpV2 Class Reference</title>
+<indexterm><primary>KTN::TCP::EFVITcpV2</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v2">EFVITcpV2</link> class represents a TCP client making use of OpenOnload, TCP socket EPOLL, and EFVI. The class was originally designed for TAS order release. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;EFVITcpV2.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v2_1a7b83c0aaeeafb797c73dbf5f4821be03">EFVITcpV2</link> ()</para>
+
+<para>Default constructor. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v2_1a422c260fbaf07e3fdf61fe0c780c3174">~EFVITcpV2</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v2_1a26ac412279980e7f243e6d7501439b7c">EFVI_TCP_Start</link> (int fd)</para>
+
+<para>Starts the EFVI TCP client. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v2_1a91aa0f956a31b630dbaaf91a9f2a067f">createEfviTcpFeedFilter</link> (<link linkend="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor">ServiceDescriptor</link> &amp;feed)</para>
+
+<para>Creates an EFVI TCP feed filter. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v2_1af3c7361b8dc60c31f7e2cc01d28b7fce">Init</link> (<link linkend="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor">ServiceDescriptor</link> &amp;desc, bool isA)</para>
+
+<para>Initializes the EFVI TCP client. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v2_1ad0a357f2e88c9459e5bb0ff6eebf813b">Subscribe</link> (<link linkend="_class_k_t_n_1_1_t_c_p_1_1_tcp_callback">TcpCallback</link> *callback)</para>
+
+<para>Subscribes to TCP callbacks. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v2_1af301bbfc8f7914b7f33493ee9d681187">Stop</link> ()</para>
+
+<para>Stops the EFVI TCP client. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v2_1ab6b56088e8598a3016a31cffdf05a8a5">Poll</link> ()</para>
+
+<para>Polls for events. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v2_1a1494ea14175d8a5d13d92ce072699f09">SendMaster</link> (char *buffer, size_t buffer_length, bool send_delegated)</para>
+
+<para>Sends a master message. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v2_1a0cd4159d046f3d610bbbaf931ba86e13">SendEFVI_Delegated</link> (char *buffer, size_t buffer_length)</para>
+
+<para>Sends an EFVI delegated message. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v2_1ae19a8da84ecc8f53263aa31809f824ea">SendNormal</link> (char *buffer, size_t buffer_length)</para>
+
+<para>Sends a normal message. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v2_1abf54d2e3d6e10bce716fcbe2d65cd051">SendWarmup</link> ()</para>
+
+<para>Sends warmup messages. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v2_1ae2a16b21884c10f2127017ef7a2dd3a9">tas_send</link> ()</para>
+
+<para>Sends a TAS message. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v2_1af7b573f8e4e8ff28e53523ae0fac5926">tas_prepare</link> (const <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g">KTN_MSG</link> &amp;msg)</para>
+
+<para>Prepares a TAS message. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v2_1abb132bd0ee8bcb5d2f8dcc8de1d8139f">Fd</link> ()</para>
+
+<para>Gets the file descriptor of the TCP connection. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v2_1a86c24761e95844cd54823bd5164c2ecf">SegId</link> ()</para>
+
+<para>Gets the segment ID. </para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v2_1a86730d1af6b089cf23e8780e1b651485">Warmups</link> ()</para>
+
+<para>Gets the number of warmup messages sent. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v2">EFVITcpV2</link> class represents a TCP client making use of OpenOnload, TCP socket EPOLL, and EFVI. The class was originally designed for TAS order release. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v2_1a7b83c0aaeeafb797c73dbf5f4821be03"/><section>
+    <title>EFVITcpV2()</title>
+<indexterm><primary>EFVITcpV2</primary><secondary>KTN::TCP::EFVITcpV2</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV2</primary><secondary>EFVITcpV2</secondary></indexterm>
+<para><computeroutput>EFVITcpV2::EFVITcpV2 ( )</computeroutput></para><para>
+
+<para>Default constructor. </para>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v2_1a422c260fbaf07e3fdf61fe0c780c3174"/><section>
+    <title>~EFVITcpV2()</title>
+<indexterm><primary>~EFVITcpV2</primary><secondary>KTN::TCP::EFVITcpV2</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV2</primary><secondary>~EFVITcpV2</secondary></indexterm>
+<para><computeroutput>EFVITcpV2::~EFVITcpV2 ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Destructor. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v2_1a91aa0f956a31b630dbaaf91a9f2a067f"/><section>
+    <title>createEfviTcpFeedFilter()</title>
+<indexterm><primary>createEfviTcpFeedFilter</primary><secondary>KTN::TCP::EFVITcpV2</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV2</primary><secondary>createEfviTcpFeedFilter</secondary></indexterm>
+<para><computeroutput>void EFVITcpV2::createEfviTcpFeedFilter (<link linkend="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor">ServiceDescriptor</link> &amp; feed)</computeroutput></para><para>
+
+<para>Creates an EFVI TCP feed filter. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>feed</entry><entry>
+<para>The service descriptor for the feed. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00072">KTN::TCP::ServiceDescriptor::address</link>, <link linkend="_l00076">KTN::TCP::ServiceDescriptor::localinterface</link>, <link linkend="_l00075">KTN::TCP::ServiceDescriptor::localinterfacename</link>, <link linkend="_l00073">KTN::TCP::ServiceDescriptor::port</link>, and <link linkend="_l00080">KTN::TCP::ServiceDescriptor::sa_tcplocal</link>.</para>
+<para>
+Referenced by <link linkend="_l00060">Init()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v2_1a26ac412279980e7f243e6d7501439b7c"/><section>
+    <title>EFVI_TCP_Start()</title>
+<indexterm><primary>EFVI_TCP_Start</primary><secondary>KTN::TCP::EFVITcpV2</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV2</primary><secondary>EFVI_TCP_Start</secondary></indexterm>
+<para><computeroutput>void EFVITcpV2::EFVI_TCP_Start (int fd)</computeroutput></para><para>
+
+<para>Starts the EFVI TCP client. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>fd</entry><entry>
+<para>The file descriptor of the TCP connection. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00030">tcp_settings::MsgBufSize</link>, and <link linkend="_l00028">tcp_settings::RxCapacity</link>.</para>
+<para>
+Referenced by <link linkend="_l00060">Init()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v2_1abb132bd0ee8bcb5d2f8dcc8de1d8139f"/><section>
+    <title>Fd()</title>
+<indexterm><primary>Fd</primary><secondary>KTN::TCP::EFVITcpV2</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV2</primary><secondary>Fd</secondary></indexterm>
+<para><computeroutput>int KTN::TCP::EFVITcpV2::Fd ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Gets the file descriptor of the TCP connection. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The file descriptor. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v2_1af3c7361b8dc60c31f7e2cc01d28b7fce"/><section>
+    <title>Init()</title>
+<indexterm><primary>Init</primary><secondary>KTN::TCP::EFVITcpV2</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV2</primary><secondary>Init</secondary></indexterm>
+<para><computeroutput>bool EFVITcpV2::Init (<link linkend="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor">ServiceDescriptor</link> &amp; desc, bool isA = <computeroutput>true</computeroutput>
+)</computeroutput></para><para>
+
+<para>Initializes the EFVI TCP client. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>desc</entry><entry>
+<para>The service descriptor for the client. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>isA</entry><entry>
+<para>A flag indicating if the client is A. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if initialization is successful, false otherwise. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00050">KTN::TCP::Epoller::AddSocket()</link>, <link linkend="_l00245">createEfviTcpFeedFilter()</link>, <link linkend="_l00026">KTN::TCP::Epoller::CreateEpoll()</link>, <link linkend="_l00125">EFVI_TCP_Start()</link>, <link linkend="_l00077">KTN::TCP::ServiceDescriptor::feedtype</link>, <link linkend="_l00033">tcp_settings::IntfA</link>, <link linkend="_l00034">tcp_settings::IntfB</link>, <link linkend="_l00035">tcp_settings::IntfNameA</link>, <link linkend="_l00036">tcp_settings::IntfNameB</link>, <link linkend="_l00078">KTN::TCP::ServiceDescriptor::iSource</link>, <link linkend="_l00042">tcp_settings::Load()</link>, <link linkend="_l00076">KTN::TCP::ServiceDescriptor::localinterface</link>, <link linkend="_l00075">KTN::TCP::ServiceDescriptor::localinterfacename</link>, <link linkend="_l00024">tcp_settings::UseCtpio</link>, and <link linkend="_l00022">tcp_settings::UseDelSends</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v2_1ab6b56088e8598a3016a31cffdf05a8a5"/><section>
+    <title>Poll()</title>
+<indexterm><primary>Poll</primary><secondary>KTN::TCP::EFVITcpV2</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV2</primary><secondary>Poll</secondary></indexterm>
+<para><computeroutput>void EFVITcpV2::Poll ( )</computeroutput></para><para>
+
+<para>Polls for events. </para>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v2_1a86c24761e95844cd54823bd5164c2ecf"/><section>
+    <title>SegId()</title>
+<indexterm><primary>SegId</primary><secondary>KTN::TCP::EFVITcpV2</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV2</primary><secondary>SegId</secondary></indexterm>
+<para><computeroutput>int KTN::TCP::EFVITcpV2::SegId ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Gets the segment ID. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The segment ID. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v2_1a0cd4159d046f3d610bbbaf931ba86e13"/><section>
+    <title>SendEFVI_Delegated()</title>
+<indexterm><primary>SendEFVI_Delegated</primary><secondary>KTN::TCP::EFVITcpV2</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV2</primary><secondary>SendEFVI_Delegated</secondary></indexterm>
+<para><computeroutput>int EFVITcpV2::SendEFVI_Delegated (char * buffer, size_t buffer_length)</computeroutput></para><para>
+
+<para>Sends an EFVI delegated message. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>buffer</entry><entry>
+<para>The buffer containing the message. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>buffer_length</entry><entry>
+<para>The length of the buffer. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The number of bytes sent. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00088">PerformanceTracker::clear()</link>, <link linkend="_l00052">PerformanceTracker::printMeasurements()</link>, <link linkend="_l00033">PerformanceTracker::startMeasurement()</link>, and <link linkend="_l00042">PerformanceTracker::stopMeasurement()</link>.</para>
+<para>
+Referenced by <link linkend="_l00493">SendMaster()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v2_1a1494ea14175d8a5d13d92ce072699f09"/><section>
+    <title>SendMaster()</title>
+<indexterm><primary>SendMaster</primary><secondary>KTN::TCP::EFVITcpV2</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV2</primary><secondary>SendMaster</secondary></indexterm>
+<para><computeroutput>void EFVITcpV2::SendMaster (char * buffer, size_t buffer_length, bool send_delegated)</computeroutput></para><para>
+
+<para>Sends a master message. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>buffer</entry><entry>
+<para>The buffer containing the message. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>buffer_length</entry><entry>
+<para>The length of the buffer. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>send_delegated</entry><entry>
+<para>A flag indicating if the message should be sent as delegated. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00614">SendEFVI_Delegated()</link>, and <link linkend="_l00525">SendNormal()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v2_1ae19a8da84ecc8f53263aa31809f824ea"/><section>
+    <title>SendNormal()</title>
+<indexterm><primary>SendNormal</primary><secondary>KTN::TCP::EFVITcpV2</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV2</primary><secondary>SendNormal</secondary></indexterm>
+<para><computeroutput>int EFVITcpV2::SendNormal (char * buffer, size_t buffer_length)</computeroutput></para><para>
+
+<para>Sends a normal message. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>buffer</entry><entry>
+<para>The buffer containing the message. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>buffer_length</entry><entry>
+<para>The length of the buffer. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The number of bytes sent. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00493">SendMaster()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v2_1abf54d2e3d6e10bce716fcbe2d65cd051"/><section>
+    <title>SendWarmup()</title>
+<indexterm><primary>SendWarmup</primary><secondary>KTN::TCP::EFVITcpV2</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV2</primary><secondary>SendWarmup</secondary></indexterm>
+<para><computeroutput>void EFVITcpV2::SendWarmup ( )</computeroutput></para><para>
+
+<para>Sends warmup messages. </para>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v2_1af301bbfc8f7914b7f33493ee9d681187"/><section>
+    <title>Stop()</title>
+<indexterm><primary>Stop</primary><secondary>KTN::TCP::EFVITcpV2</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV2</primary><secondary>Stop</secondary></indexterm>
+<para><computeroutput>void EFVITcpV2::Stop ( )</computeroutput></para><para>
+
+<para>Stops the EFVI TCP client. </para>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v2_1ad0a357f2e88c9459e5bb0ff6eebf813b"/><section>
+    <title>Subscribe()</title>
+<indexterm><primary>Subscribe</primary><secondary>KTN::TCP::EFVITcpV2</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV2</primary><secondary>Subscribe</secondary></indexterm>
+<para><computeroutput>void EFVITcpV2::Subscribe (<link linkend="_class_k_t_n_1_1_t_c_p_1_1_tcp_callback">TcpCallback</link> * callback)</computeroutput></para><para>
+
+<para>Subscribes to TCP callbacks. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>callback</entry><entry>
+<para>The TCP callback to subscribe. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v2_1af7b573f8e4e8ff28e53523ae0fac5926"/><section>
+    <title>tas_prepare()</title>
+<indexterm><primary>tas_prepare</primary><secondary>KTN::TCP::EFVITcpV2</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV2</primary><secondary>tas_prepare</secondary></indexterm>
+<para><computeroutput>bool EFVITcpV2::tas_prepare (const <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g">KTN_MSG</link> &amp; msg)</computeroutput></para><para>
+
+<para>Prepares a TAS message. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>msg</entry><entry>
+<para>The KTN_MSG object representing the message. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if preparation is successful, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v2_1ae2a16b21884c10f2127017ef7a2dd3a9"/><section>
+    <title>tas_send()</title>
+<indexterm><primary>tas_send</primary><secondary>KTN::TCP::EFVITcpV2</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV2</primary><secondary>tas_send</secondary></indexterm>
+<para><computeroutput>bool EFVITcpV2::tas_send ( )</computeroutput></para><para>
+
+<para>Sends a TAS message. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>True if sending is successful, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v2_1a86730d1af6b089cf23e8780e1b651485"/><section>
+    <title>Warmups()</title>
+<indexterm><primary>Warmups</primary><secondary>KTN::TCP::EFVITcpV2</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV2</primary><secondary>Warmups</secondary></indexterm>
+<para><computeroutput>uint64_t KTN::TCP::EFVITcpV2::Warmups ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Gets the number of warmup messages sent. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The number of warmup messages sent. </para>
+</formalpara>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+KtnEfvi/EFVITcpV2.hppKtnEfvi/EFVITcpV2.cpp</section>
+</section>

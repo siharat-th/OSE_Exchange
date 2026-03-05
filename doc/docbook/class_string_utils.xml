@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_string_utils" xml:lang="en-US">
+<title>StringUtils Class Reference</title>
+<indexterm><primary>StringUtils</primary></indexterm>
+<para>
+
+<para>A utility class for string manipulation. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;StringUtils.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static std::string <link linkend="_class_string_utils_1a75123eeb1c54d3fc92fb44eefb14d918">RemoveDoubleQuotes</link> (const std::string &amp;input)</para>
+
+<para>Removes all occurrences of double quotes from the input string. </para>
+</listitem>
+            <listitem><para>static std::string <link linkend="_class_string_utils_1a7cfbd3b650347fe5481ed5f28c9304da">RemoveSingleQuotes</link> (const std::string &amp;input)</para>
+
+<para>Removes all occurrences of single quotes from the input string. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>A utility class for string manipulation. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_string_utils_1a75123eeb1c54d3fc92fb44eefb14d918"/><section>
+    <title>RemoveDoubleQuotes()</title>
+<indexterm><primary>RemoveDoubleQuotes</primary><secondary>StringUtils</secondary></indexterm>
+<indexterm><primary>StringUtils</primary><secondary>RemoveDoubleQuotes</secondary></indexterm>
+<para><computeroutput>static std::string StringUtils::RemoveDoubleQuotes (const std::string &amp; input)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Removes all occurrences of double quotes from the input string. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>input</entry><entry>
+<para>The input string. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The input string with all double quotes removed. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_string_utils_1a7cfbd3b650347fe5481ed5f28c9304da"/><section>
+    <title>RemoveSingleQuotes()</title>
+<indexterm><primary>RemoveSingleQuotes</primary><secondary>StringUtils</secondary></indexterm>
+<indexterm><primary>StringUtils</primary><secondary>RemoveSingleQuotes</secondary></indexterm>
+<para><computeroutput>static std::string StringUtils::RemoveSingleQuotes (const std::string &amp; input)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Removes all occurrences of single quotes from the input string. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>input</entry><entry>
+<para>The input string. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The input string with all single quotes removed. </para>
+</formalpara>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Core/StringUtils.hpp</section>
+</section>

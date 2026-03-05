@@ -1,0 +1,137 @@
+\doxysection{KEngine\+Command Struct Reference}
+\hypertarget{struct_k_engine_command}{}\label{struct_k_engine_command}\index{KEngineCommand@{KEngineCommand}}
+
+
+Enumeration for the algo engine commands.  
+
+
+
+
+{\ttfamily \#include $<$engine\+\_\+structs.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{struct_k_engine_command_a48a31526f0365e35b4c067ae4c30c45b}{Enum}} \+: uint8\+\_\+t \{ \mbox{\hyperlink{struct_k_engine_command_a48a31526f0365e35b4c067ae4c30c45badfe81ef94216f4790329e3539d04a648}{NONE}}
+, \mbox{\hyperlink{struct_k_engine_command_a48a31526f0365e35b4c067ae4c30c45ba0c39021606bb62f51e2eacaac460d079}{CANCEL}}
+, \mbox{\hyperlink{struct_k_engine_command_a48a31526f0365e35b4c067ae4c30c45ba32a7d2ce9f20efeb0c8a6fb3c03dfa2d}{MARKET}}
+, \mbox{\hyperlink{struct_k_engine_command_a48a31526f0365e35b4c067ae4c30c45babf14078fd9205927f0343aa91cbb4132}{RISK}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_k_engine_command_a48a31526f0365e35b4c067ae4c30c45b}{KEngine\+Command\+::\+Enum}} \mbox{\hyperlink{struct_k_engine_command_ac864226be736ecae9603bcca74e82b92}{Value}} (string cmd)
+\begin{DoxyCompactList}\small\item\em Converts a string command to the corresponding enumeration value. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_k_engine_command_a48a31526f0365e35b4c067ae4c30c45b}{KEngine\+Command\+::\+Enum}} \mbox{\hyperlink{struct_k_engine_command_ad4c588c34c6858a4b9131d42b5150866}{Value}} (int cmd)
+\begin{DoxyCompactList}\small\item\em Converts an integer command to the corresponding enumeration value. \end{DoxyCompactList}\item 
+static std\+::string \mbox{\hyperlink{struct_k_engine_command_aa82d75744190e551a0fc7e3c4e5b72c2}{to\+String}} (\mbox{\hyperlink{struct_k_engine_command_a48a31526f0365e35b4c067ae4c30c45b}{Enum}} status)
+\begin{DoxyCompactList}\small\item\em Converts an enumeration value to its string representation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Enumeration for the algo engine commands. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{struct_k_engine_command_a48a31526f0365e35b4c067ae4c30c45b}\index{KEngineCommand@{KEngineCommand}!Enum@{Enum}}
+\index{Enum@{Enum}!KEngineCommand@{KEngineCommand}}
+\doxysubsubsection{\texorpdfstring{Enum}{Enum}}
+{\footnotesize\ttfamily \label{struct_k_engine_command_a48a31526f0365e35b4c067ae4c30c45b} 
+enum \mbox{\hyperlink{struct_k_engine_command_a48a31526f0365e35b4c067ae4c30c45b}{KEngine\+Command\+::\+Enum}} \+: uint8\+\_\+t}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NONE@{NONE}!KEngineCommand@{KEngineCommand}}\index{KEngineCommand@{KEngineCommand}!NONE@{NONE}}}\Hypertarget{struct_k_engine_command_a48a31526f0365e35b4c067ae4c30c45badfe81ef94216f4790329e3539d04a648}\label{struct_k_engine_command_a48a31526f0365e35b4c067ae4c30c45b} 
+NONE&No command \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CANCEL@{CANCEL}!KEngineCommand@{KEngineCommand}}\index{KEngineCommand@{KEngineCommand}!CANCEL@{CANCEL}}}\Hypertarget{struct_k_engine_command_a48a31526f0365e35b4c067ae4c30c45ba0c39021606bb62f51e2eacaac460d079}\label{struct_k_engine_command_a48a31526f0365e35b4c067ae4c30c45b} 
+CANCEL&Cancel command \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MARKET@{MARKET}!KEngineCommand@{KEngineCommand}}\index{KEngineCommand@{KEngineCommand}!MARKET@{MARKET}}}\Hypertarget{struct_k_engine_command_a48a31526f0365e35b4c067ae4c30c45ba32a7d2ce9f20efeb0c8a6fb3c03dfa2d}\label{struct_k_engine_command_a48a31526f0365e35b4c067ae4c30c45b} 
+MARKET&Market command \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RISK@{RISK}!KEngineCommand@{KEngineCommand}}\index{KEngineCommand@{KEngineCommand}!RISK@{RISK}}}\Hypertarget{struct_k_engine_command_a48a31526f0365e35b4c067ae4c30c45babf14078fd9205927f0343aa91cbb4132}\label{struct_k_engine_command_a48a31526f0365e35b4c067ae4c30c45b} 
+RISK&Risk command \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_k_engine_command_aa82d75744190e551a0fc7e3c4e5b72c2}\index{KEngineCommand@{KEngineCommand}!toString@{toString}}
+\index{toString@{toString}!KEngineCommand@{KEngineCommand}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily \label{struct_k_engine_command_aa82d75744190e551a0fc7e3c4e5b72c2} 
+static std\+::string KEngine\+Command\+::to\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_engine_command_a48a31526f0365e35b4c067ae4c30c45b}{Enum}}}]{status}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Converts an enumeration value to its string representation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em status} & The enumeration value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The string representation of the enumeration value. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00024}{CANCEL}}, \mbox{\hyperlink{l00025}{MARKET}}, \mbox{\hyperlink{l00023}{NONE}}, and \mbox{\hyperlink{l00026}{RISK}}.
+
+\Hypertarget{struct_k_engine_command_ad4c588c34c6858a4b9131d42b5150866}\index{KEngineCommand@{KEngineCommand}!Value@{Value}}
+\index{Value@{Value}!KEngineCommand@{KEngineCommand}}
+\doxysubsubsection{\texorpdfstring{Value()}{Value()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_k_engine_command_ad4c588c34c6858a4b9131d42b5150866} 
+static \mbox{\hyperlink{struct_k_engine_command_a48a31526f0365e35b4c067ae4c30c45b}{KEngine\+Command\+::\+Enum}} KEngine\+Command\+::\+Value (\begin{DoxyParamCaption}\item[{int}]{cmd}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Converts an integer command to the corresponding enumeration value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & The integer command. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The corresponding enumeration value. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00024}{CANCEL}}, \mbox{\hyperlink{l00025}{MARKET}}, \mbox{\hyperlink{l00023}{NONE}}, and \mbox{\hyperlink{l00026}{RISK}}.
+
+\Hypertarget{struct_k_engine_command_ac864226be736ecae9603bcca74e82b92}\index{KEngineCommand@{KEngineCommand}!Value@{Value}}
+\index{Value@{Value}!KEngineCommand@{KEngineCommand}}
+\doxysubsubsection{\texorpdfstring{Value()}{Value()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_k_engine_command_ac864226be736ecae9603bcca74e82b92} 
+static \mbox{\hyperlink{struct_k_engine_command_a48a31526f0365e35b4c067ae4c30c45b}{KEngine\+Command\+::\+Enum}} KEngine\+Command\+::\+Value (\begin{DoxyParamCaption}\item[{string}]{cmd}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Converts a string command to the corresponding enumeration value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & The string command. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The corresponding enumeration value. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00024}{CANCEL}}, \mbox{\hyperlink{l00025}{MARKET}}, \mbox{\hyperlink{l00023}{NONE}}, and \mbox{\hyperlink{l00026}{RISK}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00283}{Algo\+Factory\+::\+Parse\+Engine\+Command()}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Algo\+Engines/engine\+\_\+structs.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,103 @@
+\doxysection{KTN\+::Core\+::Epoch\+Nanos Class Reference}
+\hypertarget{class_k_t_n_1_1_core_1_1_epoch_nanos}{}\label{class_k_t_n_1_1_core_1_1_epoch_nanos}\index{KTN::Core::EpochNanos@{KTN::Core::EpochNanos}}
+
+
+Class that quickly computes the nanos since epoch timestamp.  
+
+
+
+
+{\ttfamily \#include $<$Epoch\+Nanos.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_core_1_1_epoch_nanos_aab79f374b528132a469cef9f863e5028}{Epoch\+Nanos}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_epoch_nanos_a1e8765303ad92b7e564c36bc6d2e305b}{Current}} ()
+\begin{DoxyCompactList}\small\item\em Computes the current nanoseconds since the epoch timestamp. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_epoch_nanos_a8fed7138261909ccc2e3678f80528a42}{Get\+CPUClock\+Speed\+In\+Hz}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the CPU clock speed in Hz. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static uint64\+\_\+t \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_epoch_nanos_a9cb0b07ca50cab3c642424b16a7b7cc8}{Current}} (const \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_epoch_nanos}{Epoch\+Nanos}} \&en)
+\begin{DoxyCompactList}\small\item\em Computes the current nanoseconds since the epoch timestamp. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that quickly computes the nanos since epoch timestamp. 
+
+This class is not intended to be a precise timing mechanism, but rather a class that quickly computes the nanoseconds since the epoch timestamp. It is not intended to be super accurate, but accurate enough to satisfy exchange clock resolution tolerances. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_k_t_n_1_1_core_1_1_epoch_nanos_aab79f374b528132a469cef9f863e5028}\index{KTN::Core::EpochNanos@{KTN::Core::EpochNanos}!EpochNanos@{EpochNanos}}
+\index{EpochNanos@{EpochNanos}!KTN::Core::EpochNanos@{KTN::Core::EpochNanos}}
+\doxysubsubsection{\texorpdfstring{EpochNanos()}{EpochNanos()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_epoch_nanos_aab79f374b528132a469cef9f863e5028} 
+KTN\+::\+Core\+::\+Epoch\+Nanos\+::\+Epoch\+Nanos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default constructor. 
+
+Initializes the \doxylink{class_k_t_n_1_1_core_1_1_epoch_nanos}{Epoch\+Nanos} object by capturing the current timestamp and initializing the necessary variables. 
+
+References \mbox{\hyperlink{l00091}{Get\+CPUClock\+Speed\+In\+Hz()}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_core_1_1_epoch_nanos_a1e8765303ad92b7e564c36bc6d2e305b}\index{KTN::Core::EpochNanos@{KTN::Core::EpochNanos}!Current@{Current}}
+\index{Current@{Current}!KTN::Core::EpochNanos@{KTN::Core::EpochNanos}}
+\doxysubsubsection{\texorpdfstring{Current()}{Current()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_epoch_nanos_a1e8765303ad92b7e564c36bc6d2e305b} 
+uint64\+\_\+t KTN\+::\+Core\+::\+Epoch\+Nanos\+::\+Current (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Computes the current nanoseconds since the epoch timestamp. 
+
+\begin{DoxyReturn}{Returns}
+The current nanoseconds since the epoch timestamp. 
+\end{DoxyReturn}
+\Hypertarget{class_k_t_n_1_1_core_1_1_epoch_nanos_a9cb0b07ca50cab3c642424b16a7b7cc8}\index{KTN::Core::EpochNanos@{KTN::Core::EpochNanos}!Current@{Current}}
+\index{Current@{Current}!KTN::Core::EpochNanos@{KTN::Core::EpochNanos}}
+\doxysubsubsection{\texorpdfstring{Current()}{Current()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_epoch_nanos_a9cb0b07ca50cab3c642424b16a7b7cc8} 
+static uint64\+\_\+t KTN\+::\+Core\+::\+Epoch\+Nanos\+::\+Current (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_epoch_nanos}{Epoch\+Nanos}} \&}]{en}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Computes the current nanoseconds since the epoch timestamp. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em en} & The \doxylink{class_k_t_n_1_1_core_1_1_epoch_nanos}{Epoch\+Nanos} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current nanoseconds since the epoch timestamp. 
+\end{DoxyReturn}
+\Hypertarget{class_k_t_n_1_1_core_1_1_epoch_nanos_a8fed7138261909ccc2e3678f80528a42}\index{KTN::Core::EpochNanos@{KTN::Core::EpochNanos}!GetCPUClockSpeedInHz@{GetCPUClockSpeedInHz}}
+\index{GetCPUClockSpeedInHz@{GetCPUClockSpeedInHz}!KTN::Core::EpochNanos@{KTN::Core::EpochNanos}}
+\doxysubsubsection{\texorpdfstring{GetCPUClockSpeedInHz()}{GetCPUClockSpeedInHz()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_epoch_nanos_a8fed7138261909ccc2e3678f80528a42} 
+double KTN\+::\+Core\+::\+Epoch\+Nanos\+::\+Get\+CPUClock\+Speed\+In\+Hz (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves the CPU clock speed in Hz. 
+
+\begin{DoxyReturn}{Returns}
+The CPU clock speed in Hz. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00050}{Epoch\+Nanos()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Core/Epoch\+Nanos.\+hpp\end{DoxyCompactItemize}

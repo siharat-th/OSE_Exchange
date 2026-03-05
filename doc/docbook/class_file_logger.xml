@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_file_logger" xml:lang="en-US">
+<title>FileLogger Class Reference</title>
+<indexterm><primary>FileLogger</primary></indexterm>
+<para>
+
+<para>A class for logging messages to a file. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;FileLogger.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_file_logger_1af19950f176c9b823a28fa6b68163a35b">FileLogger</link> ()</para>
+
+<para>Default constructor for <link linkend="_class_file_logger">FileLogger</link>. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_file_logger_1a11f3c2d9d96137fbb7e51ad831ecc4a4">Init</link> (const std::string &amp;log_dir, const std::string &amp;prefix, size_t max_size, bool rotate_daily)</para>
+
+<para>Initializes the <link linkend="_class_file_logger">FileLogger</link> with the specified parameters. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_file_logger_1a33f48113b7f7af5b78a08382286a65ab">log</link> (const std::string &amp;message)</para>
+
+<para>Logs a message to the file. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>A class for logging messages to a file. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_file_logger_1af19950f176c9b823a28fa6b68163a35b"/><section>
+    <title>FileLogger()</title>
+<indexterm><primary>FileLogger</primary><secondary>FileLogger</secondary></indexterm>
+<indexterm><primary>FileLogger</primary><secondary>FileLogger</secondary></indexterm>
+<para><computeroutput>FileLogger::FileLogger ( )</computeroutput></para><para>
+
+<para>Default constructor for <link linkend="_class_file_logger">FileLogger</link>. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_file_logger_1a11f3c2d9d96137fbb7e51ad831ecc4a4"/><section>
+    <title>Init()</title>
+<indexterm><primary>Init</primary><secondary>FileLogger</secondary></indexterm>
+<indexterm><primary>FileLogger</primary><secondary>Init</secondary></indexterm>
+<para><computeroutput>void FileLogger::Init (const std::string &amp; log_dir, const std::string &amp; prefix, size_t max_size, bool rotate_daily)</computeroutput></para><para>
+
+<para>Initializes the <link linkend="_class_file_logger">FileLogger</link> with the specified parameters. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>log_dir</entry><entry>
+<para>The directory where the log files will be stored. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>prefix</entry><entry>
+<para>The prefix to be added to the log file names. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>max_size</entry><entry>
+<para>The maximum size of each log file in bytes. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>rotate_daily</entry><entry>
+<para>Flag indicating whether to rotate log files daily. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_file_logger_1a33f48113b7f7af5b78a08382286a65ab"/><section>
+    <title>log()</title>
+<indexterm><primary>log</primary><secondary>FileLogger</secondary></indexterm>
+<indexterm><primary>FileLogger</primary><secondary>log</secondary></indexterm>
+<para><computeroutput>void FileLogger::log (const std::string &amp; message)</computeroutput></para><para>
+
+<para>Logs a message to the file. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>message</entry><entry>
+<para>The message to be logged. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Loggers/FileLogger.hppLoggers/FileLogger.cpp</section>
+</section>

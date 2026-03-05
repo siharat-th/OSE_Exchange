@@ -1,0 +1,177 @@
+\doxysection{i01\+::core\+::Timestamp Class Reference}
+\hypertarget{classi01_1_1core_1_1_timestamp}{}\label{classi01_1_1core_1_1_timestamp}\index{i01::core::Timestamp@{i01::core::Timestamp}}
+Inheritance diagram for i01\+::core\+::Timestamp\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classi01_1_1core_1_1_timestamp}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classi01_1_1core_1_1_timestamp_ae6d42785f14856ba8b346a7148a36781}{Timestamp}} (const time\+\_\+t s, const long n)
+\item 
+\mbox{\hyperlink{classi01_1_1core_1_1_timestamp}{Timestamp}} \mbox{\hyperlink{classi01_1_1core_1_1_timestamp_ad0ed37c37215e8d0e4f11ae16c5e41aa}{operator+}} (const \mbox{\hyperlink{classi01_1_1core_1_1_timestamp}{Timestamp}} \&t) const
+\item 
+\mbox{\hyperlink{classi01_1_1core_1_1_timestamp}{Timestamp}} \& \mbox{\hyperlink{classi01_1_1core_1_1_timestamp_a1b1692938d9c5193b3118501a947ed30}{operator+=}} (const \mbox{\hyperlink{classi01_1_1core_1_1_timestamp}{Timestamp}} \&t)
+\item 
+\mbox{\hyperlink{classi01_1_1core_1_1_timestamp}{Timestamp}} \mbox{\hyperlink{classi01_1_1core_1_1_timestamp_ad37aa779dfda43b431f1bc09b8277eca}{operator-\/}} (const \mbox{\hyperlink{classi01_1_1core_1_1_timestamp}{Timestamp}} \&t) const
+\item 
+\mbox{\hyperlink{classi01_1_1core_1_1_timestamp}{Timestamp}} \& \mbox{\hyperlink{classi01_1_1core_1_1_timestamp_a3ee5b301162117c6637f0f2f566e109e}{operator-\/=}} (const \mbox{\hyperlink{classi01_1_1core_1_1_timestamp}{Timestamp}} \&t)
+\item 
+\mbox{\hyperlink{classi01_1_1core_1_1_timestamp}{Timestamp}} \mbox{\hyperlink{classi01_1_1core_1_1_timestamp_a8eb4932c293c03eec8b8eb22171be8e8}{get\+\_\+midnight}} (const std\+::uint64\+\_\+t \&add\+\_\+ns=0) const
+\item 
+std\+::uint64\+\_\+t \mbox{\hyperlink{classi01_1_1core_1_1_timestamp_a0d06a6c5209757c308217b5b54037089}{seconds\+\_\+since\+\_\+midnight}} () const
+\item 
+std\+::uint64\+\_\+t \mbox{\hyperlink{classi01_1_1core_1_1_timestamp_aba44b8c2f803cb3dfb95b586b93830cc}{milliseconds\+\_\+since\+\_\+midnight}} () const
+\item 
+std\+::uint64\+\_\+t \mbox{\hyperlink{classi01_1_1core_1_1_timestamp_a3b428a746012ab03a2b9e306196dd2ef}{nanoseconds\+\_\+since\+\_\+midnight}} () const
+\item 
+time\+\_\+t \mbox{\hyperlink{classi01_1_1core_1_1_timestamp_a31227dcf9fdf962f83008b3d4c9e5db9}{local\+\_\+midnight\+\_\+seconds\+\_\+since\+\_\+epoch\+\_\+slow}} ()
+\item 
+std\+::uint64\+\_\+t \mbox{\hyperlink{classi01_1_1core_1_1_timestamp_a0d7336c92bacc16e550140f8d42512b6}{nanoseconds\+\_\+since\+\_\+midnight\+\_\+local\+\_\+cached}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const \mbox{\hyperlink{classi01_1_1core_1_1_timestamp}{Timestamp}} \mbox{\hyperlink{classi01_1_1core_1_1_timestamp_a943a29ce5a5004fb44661cae25736183}{now}} ()
+\item 
+static bool \mbox{\hyperlink{classi01_1_1core_1_1_timestamp_af6670965fc149800a04c34f7c3aea5bb}{now}} (\mbox{\hyperlink{classi01_1_1core_1_1_timestamp}{Timestamp}} \&ts)
+\item 
+static time\+\_\+t \mbox{\hyperlink{classi01_1_1core_1_1_timestamp_a40ff2e68bd50929d693b7fb6f93703fb}{to\+\_\+local\+\_\+midnight\+\_\+seconds\+\_\+since\+\_\+epoch\+\_\+slow}} (const time\+\_\+t \&tv\+\_\+sec\+\_\+utc)
+\item 
+static std\+::uint64\+\_\+t \mbox{\hyperlink{classi01_1_1core_1_1_timestamp_aba5336caab42d4abb699b1f9ec1599fe}{to\+\_\+ns\+\_\+since\+\_\+cached\+\_\+local\+\_\+midnight}} (const \mbox{\hyperlink{classi01_1_1core_1_1_timestamp}{Timestamp}} \&ts\+\_\+utc)
+\item 
+static const \mbox{\hyperlink{classi01_1_1core_1_1_timestamp}{Timestamp}} \& \mbox{\hyperlink{classi01_1_1core_1_1_timestamp_a8a1b75dcb8b019cc9e5a1545dce88dbe}{last\+\_\+event}} (const \mbox{\hyperlink{classi01_1_1core_1_1_timestamp}{Timestamp}} \&newts=\{0, 0\})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classi01_1_1core_1_1_timestamp_adc0006f2c8afae2319488fb98d731596}{operator$<$$<$}} (std\+::ostream \&o, const \mbox{\hyperlink{classi01_1_1core_1_1_timestamp}{Timestamp}} \&t)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classi01_1_1core_1_1_timestamp_a9ed6bd5dbe92eb04d7d56a1863de2a80}\index{i01::core::Timestamp@{i01::core::Timestamp}!Timestamp@{Timestamp}}
+\index{Timestamp@{Timestamp}!i01::core::Timestamp@{i01::core::Timestamp}}
+\doxysubsubsection{\texorpdfstring{Timestamp()}{Timestamp()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classi01_1_1core_1_1_timestamp_a9ed6bd5dbe92eb04d7d56a1863de2a80} 
+i01\+::core\+::\+Timestamp\+::\+Timestamp (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classi01_1_1core_1_1_timestamp_ae6d42785f14856ba8b346a7148a36781}\index{i01::core::Timestamp@{i01::core::Timestamp}!Timestamp@{Timestamp}}
+\index{Timestamp@{Timestamp}!i01::core::Timestamp@{i01::core::Timestamp}}
+\doxysubsubsection{\texorpdfstring{Timestamp()}{Timestamp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classi01_1_1core_1_1_timestamp_ae6d42785f14856ba8b346a7148a36781} 
+i01\+::core\+::\+Timestamp\+::\+Timestamp (\begin{DoxyParamCaption}\item[{const time\+\_\+t}]{s}{, }\item[{const long}]{n}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classi01_1_1core_1_1_timestamp_a8eb4932c293c03eec8b8eb22171be8e8}\index{i01::core::Timestamp@{i01::core::Timestamp}!get\_midnight@{get\_midnight}}
+\index{get\_midnight@{get\_midnight}!i01::core::Timestamp@{i01::core::Timestamp}}
+\doxysubsubsection{\texorpdfstring{get\_midnight()}{get\_midnight()}}
+{\footnotesize\ttfamily \label{classi01_1_1core_1_1_timestamp_a8eb4932c293c03eec8b8eb22171be8e8} 
+\mbox{\hyperlink{classi01_1_1core_1_1_timestamp}{Timestamp}} i01\+::core\+::\+Timestamp\+::get\+\_\+midnight (\begin{DoxyParamCaption}\item[{const std\+::uint64\+\_\+t \&}]{add\+\_\+ns}{ = {\ttfamily 0}}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classi01_1_1core_1_1_timestamp_a8a1b75dcb8b019cc9e5a1545dce88dbe}\index{i01::core::Timestamp@{i01::core::Timestamp}!last\_event@{last\_event}}
+\index{last\_event@{last\_event}!i01::core::Timestamp@{i01::core::Timestamp}}
+\doxysubsubsection{\texorpdfstring{last\_event()}{last\_event()}}
+{\footnotesize\ttfamily \label{classi01_1_1core_1_1_timestamp_a8a1b75dcb8b019cc9e5a1545dce88dbe} 
+const \mbox{\hyperlink{classi01_1_1core_1_1_timestamp}{Timestamp}} \& i01\+::core\+::\+Timestamp\+::last\+\_\+event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classi01_1_1core_1_1_timestamp}{Timestamp}} \&}]{newts}{ = {\ttfamily \{0,0\}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classi01_1_1core_1_1_timestamp_a31227dcf9fdf962f83008b3d4c9e5db9}\index{i01::core::Timestamp@{i01::core::Timestamp}!local\_midnight\_seconds\_since\_epoch\_slow@{local\_midnight\_seconds\_since\_epoch\_slow}}
+\index{local\_midnight\_seconds\_since\_epoch\_slow@{local\_midnight\_seconds\_since\_epoch\_slow}!i01::core::Timestamp@{i01::core::Timestamp}}
+\doxysubsubsection{\texorpdfstring{local\_midnight\_seconds\_since\_epoch\_slow()}{local\_midnight\_seconds\_since\_epoch\_slow()}}
+{\footnotesize\ttfamily \label{classi01_1_1core_1_1_timestamp_a31227dcf9fdf962f83008b3d4c9e5db9} 
+time\+\_\+t i01\+::core\+::\+Timestamp\+::local\+\_\+midnight\+\_\+seconds\+\_\+since\+\_\+epoch\+\_\+slow (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classi01_1_1core_1_1_timestamp_aba44b8c2f803cb3dfb95b586b93830cc}\index{i01::core::Timestamp@{i01::core::Timestamp}!milliseconds\_since\_midnight@{milliseconds\_since\_midnight}}
+\index{milliseconds\_since\_midnight@{milliseconds\_since\_midnight}!i01::core::Timestamp@{i01::core::Timestamp}}
+\doxysubsubsection{\texorpdfstring{milliseconds\_since\_midnight()}{milliseconds\_since\_midnight()}}
+{\footnotesize\ttfamily \label{classi01_1_1core_1_1_timestamp_aba44b8c2f803cb3dfb95b586b93830cc} 
+std\+::uint64\+\_\+t i01\+::core\+::\+Timestamp\+::milliseconds\+\_\+since\+\_\+midnight (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classi01_1_1core_1_1_timestamp_a3b428a746012ab03a2b9e306196dd2ef}\index{i01::core::Timestamp@{i01::core::Timestamp}!nanoseconds\_since\_midnight@{nanoseconds\_since\_midnight}}
+\index{nanoseconds\_since\_midnight@{nanoseconds\_since\_midnight}!i01::core::Timestamp@{i01::core::Timestamp}}
+\doxysubsubsection{\texorpdfstring{nanoseconds\_since\_midnight()}{nanoseconds\_since\_midnight()}}
+{\footnotesize\ttfamily \label{classi01_1_1core_1_1_timestamp_a3b428a746012ab03a2b9e306196dd2ef} 
+std\+::uint64\+\_\+t i01\+::core\+::\+Timestamp\+::nanoseconds\+\_\+since\+\_\+midnight (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classi01_1_1core_1_1_timestamp_a0d7336c92bacc16e550140f8d42512b6}\index{i01::core::Timestamp@{i01::core::Timestamp}!nanoseconds\_since\_midnight\_local\_cached@{nanoseconds\_since\_midnight\_local\_cached}}
+\index{nanoseconds\_since\_midnight\_local\_cached@{nanoseconds\_since\_midnight\_local\_cached}!i01::core::Timestamp@{i01::core::Timestamp}}
+\doxysubsubsection{\texorpdfstring{nanoseconds\_since\_midnight\_local\_cached()}{nanoseconds\_since\_midnight\_local\_cached()}}
+{\footnotesize\ttfamily \label{classi01_1_1core_1_1_timestamp_a0d7336c92bacc16e550140f8d42512b6} 
+std\+::uint64\+\_\+t i01\+::core\+::\+Timestamp\+::nanoseconds\+\_\+since\+\_\+midnight\+\_\+local\+\_\+cached (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classi01_1_1core_1_1_timestamp_a943a29ce5a5004fb44661cae25736183}\index{i01::core::Timestamp@{i01::core::Timestamp}!now@{now}}
+\index{now@{now}!i01::core::Timestamp@{i01::core::Timestamp}}
+\doxysubsubsection{\texorpdfstring{now()}{now()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classi01_1_1core_1_1_timestamp_a943a29ce5a5004fb44661cae25736183} 
+static const \mbox{\hyperlink{classi01_1_1core_1_1_timestamp}{Timestamp}} i01\+::core\+::\+Timestamp\+::now (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{classi01_1_1core_1_1_timestamp_af6670965fc149800a04c34f7c3aea5bb}\index{i01::core::Timestamp@{i01::core::Timestamp}!now@{now}}
+\index{now@{now}!i01::core::Timestamp@{i01::core::Timestamp}}
+\doxysubsubsection{\texorpdfstring{now()}{now()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classi01_1_1core_1_1_timestamp_af6670965fc149800a04c34f7c3aea5bb} 
+static bool i01\+::core\+::\+Timestamp\+::now (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classi01_1_1core_1_1_timestamp}{Timestamp}} \&}]{ts}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{classi01_1_1core_1_1_timestamp_ad0ed37c37215e8d0e4f11ae16c5e41aa}\index{i01::core::Timestamp@{i01::core::Timestamp}!operator+@{operator+}}
+\index{operator+@{operator+}!i01::core::Timestamp@{i01::core::Timestamp}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \label{classi01_1_1core_1_1_timestamp_ad0ed37c37215e8d0e4f11ae16c5e41aa} 
+\mbox{\hyperlink{classi01_1_1core_1_1_timestamp}{Timestamp}} i01\+::core\+::\+Timestamp\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classi01_1_1core_1_1_timestamp}{Timestamp}} \&}]{t}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classi01_1_1core_1_1_timestamp_a1b1692938d9c5193b3118501a947ed30}\index{i01::core::Timestamp@{i01::core::Timestamp}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!i01::core::Timestamp@{i01::core::Timestamp}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily \label{classi01_1_1core_1_1_timestamp_a1b1692938d9c5193b3118501a947ed30} 
+\mbox{\hyperlink{classi01_1_1core_1_1_timestamp}{Timestamp}} \& i01\+::core\+::\+Timestamp\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classi01_1_1core_1_1_timestamp}{Timestamp}} \&}]{t}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classi01_1_1core_1_1_timestamp_ad37aa779dfda43b431f1bc09b8277eca}\index{i01::core::Timestamp@{i01::core::Timestamp}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!i01::core::Timestamp@{i01::core::Timestamp}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily \label{classi01_1_1core_1_1_timestamp_ad37aa779dfda43b431f1bc09b8277eca} 
+\mbox{\hyperlink{classi01_1_1core_1_1_timestamp}{Timestamp}} i01\+::core\+::\+Timestamp\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classi01_1_1core_1_1_timestamp}{Timestamp}} \&}]{t}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classi01_1_1core_1_1_timestamp_a3ee5b301162117c6637f0f2f566e109e}\index{i01::core::Timestamp@{i01::core::Timestamp}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!i01::core::Timestamp@{i01::core::Timestamp}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}}
+{\footnotesize\ttfamily \label{classi01_1_1core_1_1_timestamp_a3ee5b301162117c6637f0f2f566e109e} 
+\mbox{\hyperlink{classi01_1_1core_1_1_timestamp}{Timestamp}} \& i01\+::core\+::\+Timestamp\+::operator-\/= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classi01_1_1core_1_1_timestamp}{Timestamp}} \&}]{t}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classi01_1_1core_1_1_timestamp_a0d06a6c5209757c308217b5b54037089}\index{i01::core::Timestamp@{i01::core::Timestamp}!seconds\_since\_midnight@{seconds\_since\_midnight}}
+\index{seconds\_since\_midnight@{seconds\_since\_midnight}!i01::core::Timestamp@{i01::core::Timestamp}}
+\doxysubsubsection{\texorpdfstring{seconds\_since\_midnight()}{seconds\_since\_midnight()}}
+{\footnotesize\ttfamily \label{classi01_1_1core_1_1_timestamp_a0d06a6c5209757c308217b5b54037089} 
+std\+::uint64\+\_\+t i01\+::core\+::\+Timestamp\+::seconds\+\_\+since\+\_\+midnight (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classi01_1_1core_1_1_timestamp_a40ff2e68bd50929d693b7fb6f93703fb}\index{i01::core::Timestamp@{i01::core::Timestamp}!to\_local\_midnight\_seconds\_since\_epoch\_slow@{to\_local\_midnight\_seconds\_since\_epoch\_slow}}
+\index{to\_local\_midnight\_seconds\_since\_epoch\_slow@{to\_local\_midnight\_seconds\_since\_epoch\_slow}!i01::core::Timestamp@{i01::core::Timestamp}}
+\doxysubsubsection{\texorpdfstring{to\_local\_midnight\_seconds\_since\_epoch\_slow()}{to\_local\_midnight\_seconds\_since\_epoch\_slow()}}
+{\footnotesize\ttfamily \label{classi01_1_1core_1_1_timestamp_a40ff2e68bd50929d693b7fb6f93703fb} 
+time\+\_\+t i01\+::core\+::\+Timestamp\+::to\+\_\+local\+\_\+midnight\+\_\+seconds\+\_\+since\+\_\+epoch\+\_\+slow (\begin{DoxyParamCaption}\item[{const time\+\_\+t \&}]{tv\+\_\+sec\+\_\+utc}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classi01_1_1core_1_1_timestamp_aba5336caab42d4abb699b1f9ec1599fe}\index{i01::core::Timestamp@{i01::core::Timestamp}!to\_ns\_since\_cached\_local\_midnight@{to\_ns\_since\_cached\_local\_midnight}}
+\index{to\_ns\_since\_cached\_local\_midnight@{to\_ns\_since\_cached\_local\_midnight}!i01::core::Timestamp@{i01::core::Timestamp}}
+\doxysubsubsection{\texorpdfstring{to\_ns\_since\_cached\_local\_midnight()}{to\_ns\_since\_cached\_local\_midnight()}}
+{\footnotesize\ttfamily \label{classi01_1_1core_1_1_timestamp_aba5336caab42d4abb699b1f9ec1599fe} 
+std\+::uint64\+\_\+t i01\+::core\+::\+Timestamp\+::to\+\_\+ns\+\_\+since\+\_\+cached\+\_\+local\+\_\+midnight (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classi01_1_1core_1_1_timestamp}{Timestamp}} \&}]{ts\+\_\+utc}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{classi01_1_1core_1_1_timestamp_adc0006f2c8afae2319488fb98d731596}\index{i01::core::Timestamp@{i01::core::Timestamp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!i01::core::Timestamp@{i01::core::Timestamp}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily \label{classi01_1_1core_1_1_timestamp_adc0006f2c8afae2319488fb98d731596} 
+std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{o}{, }\item[{const \mbox{\hyperlink{classi01_1_1core_1_1_timestamp}{Timestamp}} \&}]{t}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sgaer/source/repos/katanafinancial/\+Occam\+CME4/\+Occam\+CME4/src/i01\+\_\+core/Time.\+hpp\item 
+C\+:/\+Users/sgaer/source/repos/katanafinancial/\+Occam\+CME4/\+Occam\+CME4/src/i01\+\_\+core/Time.\+cpp\end{DoxyCompactItemize}

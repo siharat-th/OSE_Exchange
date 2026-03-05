@@ -1,0 +1,231 @@
+\doxysection{IExchange\+Sender Class Reference}
+\hypertarget{class_i_exchange_sender}{}\label{class_i_exchange_sender}\index{IExchangeSender@{IExchangeSender}}
+
+
+The interface for sending messages to the exchange.  
+
+
+
+
+{\ttfamily \#include $<$IExchange\+Sender.\+hpp$>$}
+
+Inheritance diagram for IExchange\+Sender\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_i_exchange_sender}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_i_exchange_sender_a739bdb8fb07a3bcb6ddeda98884ec921}{IExchange\+Sender}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_i_exchange_sender_add388c15fbe5584b737e6a39b5108e57}{\texorpdfstring{$\sim$}{\string~}\+IExchange\+Sender}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_i_exchange_sender_a88e9077704cc02a8d10682a7b4b89d79}{Subscribe}} (\mbox{\hyperlink{class_k_t_n_1_1_session_callback}{Session\+Callback}} \texorpdfstring{$\ast$}{*}cb)=0
+\begin{DoxyCompactList}\small\item\em Subscribe to the exchange session. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_i_exchange_sender_a069aede863c0d954221120082a8d2e00}{Send}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord, int action)=0
+\begin{DoxyCompactList}\small\item\em Send an order to the exchange. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_i_exchange_sender_a9e020e012fa275f3ec91a04519434cf2}{Send\+Hedge\+Instruction}} (uint64\+\_\+t ordereqid, const vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3}{Spread\+Hedge\+V3}} $>$ \&hdg)=0
+\begin{DoxyCompactList}\small\item\em Send a hedge instruction to the exchange. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_i_exchange_sender_a8af535e3d8cac167015ee8111a776e6a}{Send\+Order\+With\+Hedge}} (\mbox{\hyperlink{struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_order_with_hedge}{Order\+With\+Hedge}} \&oh)=0
+\begin{DoxyCompactList}\small\item\em Send an order with hedge to the exchange. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_i_exchange_sender_abc56f34f5ee79f1aee3f0a4a0466ecca}{Bank\+Hedge\+Orders}} (uint64\+\_\+t ordereqid, const vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} $>$ \&ords)=0
+\begin{DoxyCompactList}\small\item\em Bank hedge orders. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_i_exchange_sender_a4a6ed326c485630d21eebcd1c9ffd0d4}{Bank\+Tas}} (std\+::string secgrp, vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} $>$ ords)=0
+\begin{DoxyCompactList}\small\item\em Bank TAS orders. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_i_exchange_sender_a4e02139d13d7fc3c6347b357fabf4dee}{Algo\+Json}} (std\+::string json, Exch\+Cmd\+::\+Enum cmd)=0
+\begin{DoxyCompactList}\small\item\em Send an algorithm JSON command to the exchange. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The interface for sending messages to the exchange. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_i_exchange_sender_a739bdb8fb07a3bcb6ddeda98884ec921}\index{IExchangeSender@{IExchangeSender}!IExchangeSender@{IExchangeSender}}
+\index{IExchangeSender@{IExchangeSender}!IExchangeSender@{IExchangeSender}}
+\doxysubsubsection{\texorpdfstring{IExchangeSender()}{IExchangeSender()}}
+{\footnotesize\ttfamily \label{class_i_exchange_sender_a739bdb8fb07a3bcb6ddeda98884ec921} 
+IExchange\+Sender\+::\+IExchange\+Sender (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+\Hypertarget{class_i_exchange_sender_add388c15fbe5584b737e6a39b5108e57}\index{IExchangeSender@{IExchangeSender}!````~IExchangeSender@{\texorpdfstring{$\sim$}{\string~}IExchangeSender}}
+\index{````~IExchangeSender@{\texorpdfstring{$\sim$}{\string~}IExchangeSender}!IExchangeSender@{IExchangeSender}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}IExchangeSender()}{\string~IExchangeSender()}}
+{\footnotesize\ttfamily \label{class_i_exchange_sender_add388c15fbe5584b737e6a39b5108e57} 
+IExchange\+Sender\+::\texorpdfstring{$\sim$}{\string~}\+IExchange\+Sender (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_i_exchange_sender_a4e02139d13d7fc3c6347b357fabf4dee}\index{IExchangeSender@{IExchangeSender}!AlgoJson@{AlgoJson}}
+\index{AlgoJson@{AlgoJson}!IExchangeSender@{IExchangeSender}}
+\doxysubsubsection{\texorpdfstring{AlgoJson()}{AlgoJson()}}
+{\footnotesize\ttfamily \label{class_i_exchange_sender_a4e02139d13d7fc3c6347b357fabf4dee} 
+virtual void IExchange\+Sender\+::\+Algo\+Json (\begin{DoxyParamCaption}\item[{std\+::string}]{json}{, }\item[{Exch\+Cmd\+::\+Enum}]{cmd}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Send an algorithm JSON command to the exchange. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & The JSON string. \\
+\hline
+{\em cmd} & The exchange command. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_raptor2_adeed6fb8144e65ee3262ce0782610ea9}{Raptor2}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00196}{KTN\+::\+Algo\+Service\+Broker\+V3\+::on\+Algo\+Command()}}.
+
+\Hypertarget{class_i_exchange_sender_abc56f34f5ee79f1aee3f0a4a0466ecca}\index{IExchangeSender@{IExchangeSender}!BankHedgeOrders@{BankHedgeOrders}}
+\index{BankHedgeOrders@{BankHedgeOrders}!IExchangeSender@{IExchangeSender}}
+\doxysubsubsection{\texorpdfstring{BankHedgeOrders()}{BankHedgeOrders()}}
+{\footnotesize\ttfamily \label{class_i_exchange_sender_abc56f34f5ee79f1aee3f0a4a0466ecca} 
+virtual void IExchange\+Sender\+::\+Bank\+Hedge\+Orders (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{ordereqid}{, }\item[{const vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} $>$ \&}]{ords}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Bank hedge orders. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ordereqid} & The order request ID. \\
+\hline
+{\em ords} & The order pod vector. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_raptor2_a1d06036b89960001afa932ea60ccee2b}{Raptor2}}.
+
+\Hypertarget{class_i_exchange_sender_a4a6ed326c485630d21eebcd1c9ffd0d4}\index{IExchangeSender@{IExchangeSender}!BankTas@{BankTas}}
+\index{BankTas@{BankTas}!IExchangeSender@{IExchangeSender}}
+\doxysubsubsection{\texorpdfstring{BankTas()}{BankTas()}}
+{\footnotesize\ttfamily \label{class_i_exchange_sender_a4a6ed326c485630d21eebcd1c9ffd0d4} 
+virtual void IExchange\+Sender\+::\+Bank\+Tas (\begin{DoxyParamCaption}\item[{std\+::string}]{secgrp}{, }\item[{vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} $>$}]{ords}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Bank TAS orders. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em secgrp} & The security group. \\
+\hline
+{\em ords} & The order pod vector. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_raptor2_af8f482d28ded7a4f1440490ee5744783}{Raptor2}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00550}{KTN\+::\+ORD\+::\+Order\+Handler\+Zmq\+V6\+::\+Load\+Tas\+Orders()}}.
+
+\Hypertarget{class_i_exchange_sender_a069aede863c0d954221120082a8d2e00}\index{IExchangeSender@{IExchangeSender}!Send@{Send}}
+\index{Send@{Send}!IExchangeSender@{IExchangeSender}}
+\doxysubsubsection{\texorpdfstring{Send()}{Send()}}
+{\footnotesize\ttfamily \label{class_i_exchange_sender_a069aede863c0d954221120082a8d2e00} 
+virtual void IExchange\+Sender\+::\+Send (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&}]{ord}{, }\item[{int}]{action}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Send an order to the exchange. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ord} & The order to send. \\
+\hline
+{\em action} & The action to perform on the order. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_raptor2_a2c9aaf8065d7f88ad1d5e4baf5f83a42}{Raptor2}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00045}{KTN\+::\+Squeezer\+OB\+::on\+Json()}}, \mbox{\hyperlink{l00379}{KTN\+::\+PLWatcher\+::on\+PL()}}, \mbox{\hyperlink{l00198}{KTN\+::\+PLWatcher\+::\+Order\+Received()}}, and \mbox{\hyperlink{l01140}{KTN\+::\+Waves\+::\+Order\+Received()}}.
+
+\Hypertarget{class_i_exchange_sender_a9e020e012fa275f3ec91a04519434cf2}\index{IExchangeSender@{IExchangeSender}!SendHedgeInstruction@{SendHedgeInstruction}}
+\index{SendHedgeInstruction@{SendHedgeInstruction}!IExchangeSender@{IExchangeSender}}
+\doxysubsubsection{\texorpdfstring{SendHedgeInstruction()}{SendHedgeInstruction()}}
+{\footnotesize\ttfamily \label{class_i_exchange_sender_a9e020e012fa275f3ec91a04519434cf2} 
+virtual void IExchange\+Sender\+::\+Send\+Hedge\+Instruction (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{ordereqid}{, }\item[{const vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3}{Spread\+Hedge\+V3}} $>$ \&}]{hdg}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Send a hedge instruction to the exchange. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ordereqid} & The order request ID. \\
+\hline
+{\em hdg} & The spread hedge vector. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_raptor2_ae0092b951a92471145191df4ae1af931}{Raptor2}}.
+
+\Hypertarget{class_i_exchange_sender_a8af535e3d8cac167015ee8111a776e6a}\index{IExchangeSender@{IExchangeSender}!SendOrderWithHedge@{SendOrderWithHedge}}
+\index{SendOrderWithHedge@{SendOrderWithHedge}!IExchangeSender@{IExchangeSender}}
+\doxysubsubsection{\texorpdfstring{SendOrderWithHedge()}{SendOrderWithHedge()}}
+{\footnotesize\ttfamily \label{class_i_exchange_sender_a8af535e3d8cac167015ee8111a776e6a} 
+virtual void IExchange\+Sender\+::\+Send\+Order\+With\+Hedge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_order_with_hedge}{Order\+With\+Hedge}} \&}]{oh}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Send an order with hedge to the exchange. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em oh} & The order with hedge. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_raptor2_a8378cbe0ec7bb071b15962a2dba17413}{Raptor2}}.
+
+\Hypertarget{class_i_exchange_sender_a88e9077704cc02a8d10682a7b4b89d79}\index{IExchangeSender@{IExchangeSender}!Subscribe@{Subscribe}}
+\index{Subscribe@{Subscribe}!IExchangeSender@{IExchangeSender}}
+\doxysubsubsection{\texorpdfstring{Subscribe()}{Subscribe()}}
+{\footnotesize\ttfamily \label{class_i_exchange_sender_a88e9077704cc02a8d10682a7b4b89d79} 
+virtual int IExchange\+Sender\+::\+Subscribe (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_k_t_n_1_1_session_callback}{Session\+Callback}} \texorpdfstring{$\ast$}{*}}]{cb}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Subscribe to the exchange session. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cb} & The session callback object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the subscription. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_raptor2_adb5e63a21043b383552c3ec84e92375a}{Raptor2}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Exchange\+Handlers2/IExchange\+Sender.\+hpp\item 
+Exchange\+Handlers2/IExchange\+Sender.\+cpp\end{DoxyCompactItemize}

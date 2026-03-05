@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structordlvl" xml:lang="en-US">
+<title>ordlvl Struct Reference</title>
+<indexterm><primary>ordlvl</primary></indexterm>
+<para>
+
+<para>Structure representing an order level. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;algo_structs.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>uint8_t <link linkend="_structordlvl_1af0f73bf9620fd3a65d3ebb8e34dfad16">refID</link></para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_structordlvl_1ada6ab7bee0b8d7aff92a4a028b142c46">orderID</link></para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_structordlvl_1a0ec198a80e45ee2dc3ee4481ba6a1116">orderPriority</link></para>
+</listitem>
+            <listitem><para>int64_t <link linkend="_structordlvl_1a2023c263aa0c4d38ebed17a91be384d2">price</link></para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_structordlvl_1ac3dbecd5d408fa9f92928add36fad17b">displayQty</link></para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_structordlvl_1a2ecd65524bbc4b0775cf37788c9bedc0">securityID</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structordlvl_1a498bc8b8b14d1d11f76bc203e22f0bce">updateAction</link></para>
+</listitem>
+            <listitem><para>char <link linkend="_structordlvl_1ae6aaa1c097dd9b6204715f106384cdab">entryType</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_structordlvl_1a5225d6c42ffaf813f4d159a6c6ceef11">side</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Structure representing an order level. </para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structordlvl_1ac3dbecd5d408fa9f92928add36fad17b"/><section>
+    <title>displayQty</title>
+<indexterm><primary>displayQty</primary><secondary>ordlvl</secondary></indexterm>
+<indexterm><primary>ordlvl</primary><secondary>displayQty</secondary></indexterm>
+<para><computeroutput>int32_t ordlvl::displayQty</computeroutput></para>
+<para>The display quantity. </para>
+</section>
+<anchor xml:id="_structordlvl_1ae6aaa1c097dd9b6204715f106384cdab"/><section>
+    <title>entryType</title>
+<indexterm><primary>entryType</primary><secondary>ordlvl</secondary></indexterm>
+<indexterm><primary>ordlvl</primary><secondary>entryType</secondary></indexterm>
+<para><computeroutput>char ordlvl::entryType</computeroutput></para>
+<para>The entry type. </para>
+</section>
+<anchor xml:id="_structordlvl_1ada6ab7bee0b8d7aff92a4a028b142c46"/><section>
+    <title>orderID</title>
+<indexterm><primary>orderID</primary><secondary>ordlvl</secondary></indexterm>
+<indexterm><primary>ordlvl</primary><secondary>orderID</secondary></indexterm>
+<para><computeroutput>uint64_t ordlvl::orderID</computeroutput></para>
+<para>The order ID. </para>
+</section>
+<anchor xml:id="_structordlvl_1a0ec198a80e45ee2dc3ee4481ba6a1116"/><section>
+    <title>orderPriority</title>
+<indexterm><primary>orderPriority</primary><secondary>ordlvl</secondary></indexterm>
+<indexterm><primary>ordlvl</primary><secondary>orderPriority</secondary></indexterm>
+<para><computeroutput>uint64_t ordlvl::orderPriority</computeroutput></para>
+<para>The order priority. </para>
+</section>
+<anchor xml:id="_structordlvl_1a2023c263aa0c4d38ebed17a91be384d2"/><section>
+    <title>price</title>
+<indexterm><primary>price</primary><secondary>ordlvl</secondary></indexterm>
+<indexterm><primary>ordlvl</primary><secondary>price</secondary></indexterm>
+<para><computeroutput>int64_t ordlvl::price</computeroutput></para>
+<para>The price. </para>
+</section>
+<anchor xml:id="_structordlvl_1af0f73bf9620fd3a65d3ebb8e34dfad16"/><section>
+    <title>refID</title>
+<indexterm><primary>refID</primary><secondary>ordlvl</secondary></indexterm>
+<indexterm><primary>ordlvl</primary><secondary>refID</secondary></indexterm>
+<para><computeroutput>uint8_t ordlvl::refID</computeroutput></para>
+<para>The reference ID. </para>
+</section>
+<anchor xml:id="_structordlvl_1a2ecd65524bbc4b0775cf37788c9bedc0"/><section>
+    <title>securityID</title>
+<indexterm><primary>securityID</primary><secondary>ordlvl</secondary></indexterm>
+<indexterm><primary>ordlvl</primary><secondary>securityID</secondary></indexterm>
+<para><computeroutput>int32_t ordlvl::securityID</computeroutput></para>
+<para>The security ID. </para>
+</section>
+<anchor xml:id="_structordlvl_1a5225d6c42ffaf813f4d159a6c6ceef11"/><section>
+    <title>side</title>
+<indexterm><primary>side</primary><secondary>ordlvl</secondary></indexterm>
+<indexterm><primary>ordlvl</primary><secondary>side</secondary></indexterm>
+<para><computeroutput>string ordlvl::side</computeroutput></para>
+<para>The side. </para>
+</section>
+<anchor xml:id="_structordlvl_1a498bc8b8b14d1d11f76bc203e22f0bce"/><section>
+    <title>updateAction</title>
+<indexterm><primary>updateAction</primary><secondary>ordlvl</secondary></indexterm>
+<indexterm><primary>ordlvl</primary><secondary>updateAction</secondary></indexterm>
+<para><computeroutput>int ordlvl::updateAction</computeroutput></para>
+<para>The update action. </para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+AlgoSupport/algo_structs.hpp</section>
+</section>

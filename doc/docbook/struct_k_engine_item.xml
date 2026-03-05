@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_engine_item" xml:lang="en-US">
+<title>KEngineItem Struct Reference</title>
+<indexterm><primary>KEngineItem</primary></indexterm>
+<para>
+
+<para>Enumeration for the engine items. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;engine_structs.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_struct_k_engine_item_1a2e3a58da9f141f76749c623fe6b395d7">Enum</link> : uint8_t { <?linebreak?><link linkend="_struct_k_engine_item_1a2e3a58da9f141f76749c623fe6b395d7ac173707fd461462accae96336de0ea7c">NONE</link>
+, <link linkend="_struct_k_engine_item_1a2e3a58da9f141f76749c623fe6b395d7a1ad5ca37661da265fc10c3c77dcb2860">PROFIT_TAKING</link>
+, <link linkend="_struct_k_engine_item_1a2e3a58da9f141f76749c623fe6b395d7a2aceb4c9b81c6f35948ca2d9845986df">STOP_LOSS</link>
+, <link linkend="_struct_k_engine_item_1a2e3a58da9f141f76749c623fe6b395d7aa359a8509606a39cc9ea489619f77a69">MINUTES_TO_LIVE</link>
+, <?linebreak?><link linkend="_struct_k_engine_item_1a2e3a58da9f141f76749c623fe6b395d7abe23a8c565f5b31c777a71fe6a692a0f">PUSH_TIME</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_struct_k_engine_item_1a2e3a58da9f141f76749c623fe6b395d7">KEngineItem::Enum</link> <link linkend="_struct_k_engine_item_1af51396a532554efdd71ccb4c4d70f0ba">Value</link> (string cmd)</para>
+
+<para>Converts a string item to the corresponding enumeration value. </para>
+</listitem>
+            <listitem><para>static std::string <link linkend="_struct_k_engine_item_1a952c351bfe412dc9ded4e2a4c9a7a411">toString</link> (<link linkend="_struct_k_engine_item_1a2e3a58da9f141f76749c623fe6b395d7">Enum</link> item)</para>
+
+<para>Converts an enumeration value to its string representation. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Enumeration for the engine items. </para>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_struct_k_engine_item_1a2e3a58da9f141f76749c623fe6b395d7"/><section>
+    <title>Enum</title>
+<indexterm><primary>Enum</primary><secondary>KEngineItem</secondary></indexterm>
+<indexterm><primary>KEngineItem</primary><secondary>Enum</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_struct_k_engine_item_1a2e3a58da9f141f76749c623fe6b395d7">KEngineItem::Enum</link> : uint8_t</computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>NONE</primary><secondary>KEngineItem</secondary></indexterm>
+<indexterm><primary>KEngineItem</primary><secondary>NONE</secondary></indexterm>
+<anchor xml:id="_struct_k_engine_item_1a2e3a58da9f141f76749c623fe6b395d7ac173707fd461462accae96336de0ea7c"/>NONE</entry><entry>
+<para>No item </para>
+</entry></row><row><entry><indexterm><primary>PROFIT_TAKING</primary><secondary>KEngineItem</secondary></indexterm>
+<indexterm><primary>KEngineItem</primary><secondary>PROFIT_TAKING</secondary></indexterm>
+<anchor xml:id="_struct_k_engine_item_1a2e3a58da9f141f76749c623fe6b395d7a1ad5ca37661da265fc10c3c77dcb2860"/>PROFIT_TAKING</entry><entry>
+<para>Profit taking item </para>
+</entry></row><row><entry><indexterm><primary>STOP_LOSS</primary><secondary>KEngineItem</secondary></indexterm>
+<indexterm><primary>KEngineItem</primary><secondary>STOP_LOSS</secondary></indexterm>
+<anchor xml:id="_struct_k_engine_item_1a2e3a58da9f141f76749c623fe6b395d7a2aceb4c9b81c6f35948ca2d9845986df"/>STOP_LOSS</entry><entry>
+<para>Stop loss item </para>
+</entry></row><row><entry><indexterm><primary>MINUTES_TO_LIVE</primary><secondary>KEngineItem</secondary></indexterm>
+<indexterm><primary>KEngineItem</primary><secondary>MINUTES_TO_LIVE</secondary></indexterm>
+<anchor xml:id="_struct_k_engine_item_1a2e3a58da9f141f76749c623fe6b395d7aa359a8509606a39cc9ea489619f77a69"/>MINUTES_TO_LIVE</entry><entry>
+<para>Minutes to live item </para>
+</entry></row><row><entry><indexterm><primary>PUSH_TIME</primary><secondary>KEngineItem</secondary></indexterm>
+<indexterm><primary>KEngineItem</primary><secondary>PUSH_TIME</secondary></indexterm>
+<anchor xml:id="_struct_k_engine_item_1a2e3a58da9f141f76749c623fe6b395d7abe23a8c565f5b31c777a71fe6a692a0f"/>PUSH_TIME</entry><entry>
+<para>Push time item </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_k_engine_item_1a952c351bfe412dc9ded4e2a4c9a7a411"/><section>
+    <title>toString()</title>
+<indexterm><primary>toString</primary><secondary>KEngineItem</secondary></indexterm>
+<indexterm><primary>KEngineItem</primary><secondary>toString</secondary></indexterm>
+<para><computeroutput>static std::string KEngineItem::toString (<link linkend="_struct_k_engine_item_1a2e3a58da9f141f76749c623fe6b395d7">Enum</link> item)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Converts an enumeration value to its string representation. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>item</entry><entry>
+<para>The enumeration value. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The string representation of the enumeration value. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00095">MINUTES_TO_LIVE</link>, <link linkend="_l00092">NONE</link>, <link linkend="_l00093">PROFIT_TAKING</link>, <link linkend="_l00096">PUSH_TIME</link>, and <link linkend="_l00094">STOP_LOSS</link>.</para>
+</section>
+<anchor xml:id="_struct_k_engine_item_1af51396a532554efdd71ccb4c4d70f0ba"/><section>
+    <title>Value()</title>
+<indexterm><primary>Value</primary><secondary>KEngineItem</secondary></indexterm>
+<indexterm><primary>KEngineItem</primary><secondary>Value</secondary></indexterm>
+<para><computeroutput>static <link linkend="_struct_k_engine_item_1a2e3a58da9f141f76749c623fe6b395d7">KEngineItem::Enum</link> KEngineItem::Value (string cmd)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Converts a string item to the corresponding enumeration value. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>cmd</entry><entry>
+<para>The string item. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The corresponding enumeration value. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00095">MINUTES_TO_LIVE</link>, <link linkend="_l00092">NONE</link>, <link linkend="_l00093">PROFIT_TAKING</link>, <link linkend="_l00096">PUSH_TIME</link>, and <link linkend="_l00094">STOP_LOSS</link>.</para>
+<para>
+Referenced by <link linkend="_l00283">AlgoFactory::ParseEngineCommand()</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+AlgoEngines/engine_structs.hpp</section>
+</section>

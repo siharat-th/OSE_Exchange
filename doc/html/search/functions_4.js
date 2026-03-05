@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['efvi_5ftcp_5fstart_0',['EFVI_TCP_Start',['../class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v2.html#a26ac412279980e7f243e6d7501439b7c',1,'KTN::TCP::EFVITcpV2']]],
+  ['efvitcpv2_1',['EFVITcpV2',['../class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v2.html#a7b83c0aaeeafb797c73dbf5f4821be03',1,'KTN::TCP::EFVITcpV2']]],
+  ['efvitcpv5_2',['EFVITcpV5',['../class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5.html#a231c2bd33948dfd64f9d95855cfc6880',1,'KTN::TCP::EFVITcpV5']]],
+  ['elapsedmicroseconds_3',['elapsedMicroseconds',['../class_performance_counter.html#a06ef52f4dec5e4f5ea6029c4677ff70a',1,'PerformanceCounter']]],
+  ['elapsednanoseconds_4',['elapsedNanoseconds',['../class_performance_counter.html#aa7d0792009d5c3616af15069c0fcb058',1,'PerformanceCounter']]],
+  ['empty_5',['empty',['../class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer.html#a5ce5dd8d884e84142abdcf16b18969bc',1,'KTN::Core::SPSCRingBuffer']]],
+  ['enable_6',['Enable',['../class_k_t_n_1_1_algo_base_v3.html#a9b82e6434bd4e990661b735106090aa0',1,'KTN::AlgoBaseV3::Enable()'],['../class_k_t_n_1_1_auto_hedge_o_b.html#acf38f6f166c46ca569d81a2a0da163e9',1,'KTN::AutoHedgeOB::Enable()'],['../class_k_t_n_1_1_multi_spreader_v3.html#a0f01065fe42319b21e8da87101c99755',1,'KTN::MultiSpreaderV3::Enable()'],['../class_k_t_n_1_1_p_l_watcher.html#a475ebe0375d4b893e5aaff41733ba5a3',1,'KTN::PLWatcher::Enable()'],['../class_k_t_n_1_1_skewer.html#a6a31d7ed7d7278d4531b095b2d13c606',1,'KTN::Skewer::Enable()'],['../class_k_t_n_1_1_skew_trader.html#ad36ab9af92fb7589c49ddb5c08facd95',1,'KTN::SkewTrader::Enable()'],['../class_k_t_n_1_1_squeezer_o_b.html#a2fd6d444d883d84ef8ac7d8d994d64d6',1,'KTN::SqueezerOB::Enable()'],['../class_k_t_n_1_1_stacker.html#a782de7b4a9330e9933f2878310a1149c',1,'KTN::Stacker::Enable()'],['../class_k_t_n_1_1_stacker_timer.html#adb1b84dafb8f9aac92b6c333dcd22934',1,'KTN::StackerTimer::Enable()'],['../class_k_t_n_1_1_twap.html#a0fd9f82487c8a8168918cdbd64bbfc04',1,'KTN::Twap::Enable()'],['../class_k_t_n_1_1_waves.html#a731f8f142aa375bd17887845ca8efd84',1,'KTN::Waves::Enable()'],['../class_k_t_n_1_1notify_1_1_slacker.html#a8525cf590872d41a9fecafaac9c59a76',1,'KTN::notify::Slacker::Enable()']]],
+  ['enableorderreporter_7',['EnableOrderReporter',['../class_order_manager_v5.html#ac3aff31c02a41a96aa83da07dc63773a',1,'OrderManagerV5']]],
+  ['encodedata_8',['encodeData',['../class_algo_hdg_encoder.html#a3eb420be553d6d3b4d19c9bb8e128da0',1,'AlgoHdgEncoder']]],
+  ['enqueue_9',['enqueue',['../class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer.html#a0dcec128a7780e98fd185bc73fac68e0',1,'KTN::Core::SPSCRingBuffer']]],
+  ['epochnanos_10',['EpochNanos',['../class_k_t_n_1_1_core_1_1_epoch_nanos.html#aab79f374b528132a469cef9f863e5028',1,'KTN::Core::EpochNanos']]],
+  ['epoller_11',['Epoller',['../class_k_t_n_1_1_t_c_p_1_1_epoller.html#a06ef0dcac3d8b9e801c9695c43d5459e',1,'KTN::TCP::Epoller']]],
+  ['erase_12',['erase',['../class_custom_hash_table.html#a05d8c160e60420fe0f65180e90506675',1,'CustomHashTable::erase()'],['../class_simple_hash_table.html#af464f9ec07fc90bfd16d2254b8d8dd50',1,'SimpleHashTable::erase()'],['../class_custom_h_f_t_map.html#a3b2c1c9643877d39aaaa849241621fee',1,'CustomHFTMap::erase()'],['../class_order_hash_table.html#a35b4d87abe0081d642742b2c71682278',1,'OrderHashTable::erase()'],['../class_k_t_n_1_1_core_1_1_simple_map.html#a09efd1669972d525c8c497cbac1ecc43',1,'KTN::Core::SimpleMap::erase()']]],
+  ['establishencode_13',['EstablishEncode',['../class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory.html#ab1e462ed27d1b5117286c1094bf03d8b',1,'KTN::CME::IL3::SessionMessageFactory']]],
+  ['exchangebase2_14',['ExchangeBase2',['../class_k_t_n_1_1_exchange_base2.html#ac8cff2c312e11492aaf84fa948985ba3',1,'KTN::ExchangeBase2']]],
+  ['exchangemanager_15',['ExchangeManager',['../class_k_t_n_1_1_exchange_manager.html#a0a85bc16e850b8f6c3362b223b45fad6',1,'KTN::ExchangeManager']]],
+  ['exchhandlerlogsvc_16',['ExchHandlerLogSvc',['../class_exch_handler_log_svc.html#ab19025238d37a39dcd148d78b7ccdc8d',1,'ExchHandlerLogSvc']]],
+  ['exists_17',['Exists',['../class_order_manager_v5.html#a4f39113f56d62e73b85e63a101ab0663',1,'OrderManagerV5']]],
+  ['expired_18',['Expired',['../class_k_t_n_1_1_a_l_g_o_1_1_simple_timer.html#a55f215c58d1644d1261d924e88b19bce',1,'KTN::ALGO::SimpleTimer']]]
+];

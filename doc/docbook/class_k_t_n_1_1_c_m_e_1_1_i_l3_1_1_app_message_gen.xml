@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen" xml:lang="en-US">
+<title>KTN::CME::IL3::AppMessageGen Class Reference</title>
+<indexterm><primary>KTN::CME::IL3::AppMessageGen</primary></indexterm>
+<para>
+
+<para>This class is used to generate CME IL3 application messages and provide pre-filled templates for them. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;AppMessageGen.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>template&lt;typename MessageType &gt; </para><para>static <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf">KTNBuf</link> <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_1ac6901e99f6ad3d7020fd2aefd1c22da4">MsgTemplate</link> (const string &amp;settingsfile, bool isMkt, bool isManual)</para>
+</listitem>
+            <listitem><para>template&lt;typename MessageType &gt; </para><para>static void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_1a98e21900faaa2ddc002932c81bbbe3f4">UpdateMsgSeq</link> (char *&amp;buf, uint32_t newSeqNum)</para>
+</listitem>
+            <listitem><para>template&lt;typename MessageType &gt; </para><para>static void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_1aa34adc5a4f473296960f09bfcf5a03ee">UpdateMsgPrice</link> (char *&amp;buf, uint32_t newSeqNum, uint64_t price)</para>
+</listitem>
+            <listitem><para>static <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf">KTNBuf</link> <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_1a417600a503fadace7c2d918305ccd5e8">NewOrderTemplate</link> (const string &amp;settingsfile, bool isMkt, bool isManual)</para>
+</listitem>
+            <listitem><para>static <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_single_msg">NewOrderSingleMsg</link> * <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_1a8772f755733f89475fcd42de1134e7a4">NewOrderSingleMsgAutoTemplate</link> (const string &amp;settingsfile, bool isMkt, bool isManual)</para>
+</listitem>
+            <listitem><para>static <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf">KTNBuf</link> <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_1a844dea726e996e8ed0e988d326cd87dd">ModifyOrderTemplate</link> (const string &amp;settingsfile, bool isMkt, bool isManual)</para>
+</listitem>
+            <listitem><para>static <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg">OrderCancelReplaceRequestMsg</link> * <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_1a42416d05253f35f4cca66c146b8203d7">ModOrderMsgAutoTemplate</link> (const string &amp;settingsfile, bool isMkt, bool isManual)</para>
+</listitem>
+            <listitem><para>static <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf">KTNBuf</link> <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_1a0779724fb6622eb4e17a925d5aa94b91">CancelOrderTemplate</link> (const string &amp;settingsfile, bool isManual)</para>
+</listitem>
+            <listitem><para>static <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf">KTNBuf</link> <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_1af96dc4c24ca72468b503d6208d976020">PartyDetailsDefEncode</link> (const <link linkend="_struct_cme_session_settings">CmeSessionSettings</link> &amp;sess, uint32_t seqnum)</para>
+</listitem>
+            <listitem><para>static <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf">KTNBuf</link> <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_1ac235ea176358f64d136e929404fec93e">MassActionEncode</link> (const <link linkend="_struct_cme_session_settings">CmeSessionSettings</link> &amp;sess, const EnumMassActionScope scope, int id, uint64_t ordreqid, uint32_t seqnum)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>This class is used to generate CME IL3 application messages and provide pre-filled templates for them. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_1a0779724fb6622eb4e17a925d5aa94b91"/><section>
+    <title>CancelOrderTemplate()</title>
+<indexterm><primary>CancelOrderTemplate</primary><secondary>KTN::CME::IL3::AppMessageGen</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::AppMessageGen</primary><secondary>CancelOrderTemplate</secondary></indexterm>
+<para><computeroutput>static <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf">KTNBuf</link> KTN::CME::IL3::AppMessageGen::CancelOrderTemplate (const string &amp; settingsfile, bool isManual)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_1ac235ea176358f64d136e929404fec93e"/><section>
+    <title>MassActionEncode()</title>
+<indexterm><primary>MassActionEncode</primary><secondary>KTN::CME::IL3::AppMessageGen</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::AppMessageGen</primary><secondary>MassActionEncode</secondary></indexterm>
+<para><computeroutput>static <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf">KTNBuf</link> KTN::CME::IL3::AppMessageGen::MassActionEncode (const <link linkend="_struct_cme_session_settings">CmeSessionSettings</link> &amp; sess, const EnumMassActionScope scope, int id, uint64_t ordreqid, uint32_t seqnum)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_1a844dea726e996e8ed0e988d326cd87dd"/><section>
+    <title>ModifyOrderTemplate()</title>
+<indexterm><primary>ModifyOrderTemplate</primary><secondary>KTN::CME::IL3::AppMessageGen</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::AppMessageGen</primary><secondary>ModifyOrderTemplate</secondary></indexterm>
+<para><computeroutput>static <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf">KTNBuf</link> KTN::CME::IL3::AppMessageGen::ModifyOrderTemplate (const string &amp; settingsfile, bool isMkt, bool isManual)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_1a42416d05253f35f4cca66c146b8203d7"/><section>
+    <title>ModOrderMsgAutoTemplate()</title>
+<indexterm><primary>ModOrderMsgAutoTemplate</primary><secondary>KTN::CME::IL3::AppMessageGen</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::AppMessageGen</primary><secondary>ModOrderMsgAutoTemplate</secondary></indexterm>
+<para><computeroutput>static <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg">OrderCancelReplaceRequestMsg</link> * KTN::CME::IL3::AppMessageGen::ModOrderMsgAutoTemplate (const string &amp; settingsfile, bool isMkt, bool isManual)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_1ac6901e99f6ad3d7020fd2aefd1c22da4"/><section>
+    <title>MsgTemplate()</title>
+<indexterm><primary>MsgTemplate</primary><secondary>KTN::CME::IL3::AppMessageGen</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::AppMessageGen</primary><secondary>MsgTemplate</secondary></indexterm>
+<computeroutput>template&lt;typename MessageType &gt; </computeroutput><para><computeroutput>static <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf">KTNBuf</link> KTN::CME::IL3::AppMessageGen::MsgTemplate (const string &amp; settingsfile, bool isMkt, bool isManual)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_1a8772f755733f89475fcd42de1134e7a4"/><section>
+    <title>NewOrderSingleMsgAutoTemplate()</title>
+<indexterm><primary>NewOrderSingleMsgAutoTemplate</primary><secondary>KTN::CME::IL3::AppMessageGen</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::AppMessageGen</primary><secondary>NewOrderSingleMsgAutoTemplate</secondary></indexterm>
+<para><computeroutput>static <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_single_msg">NewOrderSingleMsg</link> * KTN::CME::IL3::AppMessageGen::NewOrderSingleMsgAutoTemplate (const string &amp; settingsfile, bool isMkt, bool isManual)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_1a417600a503fadace7c2d918305ccd5e8"/><section>
+    <title>NewOrderTemplate()</title>
+<indexterm><primary>NewOrderTemplate</primary><secondary>KTN::CME::IL3::AppMessageGen</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::AppMessageGen</primary><secondary>NewOrderTemplate</secondary></indexterm>
+<para><computeroutput>static <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf">KTNBuf</link> KTN::CME::IL3::AppMessageGen::NewOrderTemplate (const string &amp; settingsfile, bool isMkt, bool isManual)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_1af96dc4c24ca72468b503d6208d976020"/><section>
+    <title>PartyDetailsDefEncode()</title>
+<indexterm><primary>PartyDetailsDefEncode</primary><secondary>KTN::CME::IL3::AppMessageGen</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::AppMessageGen</primary><secondary>PartyDetailsDefEncode</secondary></indexterm>
+<para><computeroutput>static <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf">KTNBuf</link> KTN::CME::IL3::AppMessageGen::PartyDetailsDefEncode (const <link linkend="_struct_cme_session_settings">CmeSessionSettings</link> &amp; sess, uint32_t seqnum)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_1aa34adc5a4f473296960f09bfcf5a03ee"/><section>
+    <title>UpdateMsgPrice()</title>
+<indexterm><primary>UpdateMsgPrice</primary><secondary>KTN::CME::IL3::AppMessageGen</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::AppMessageGen</primary><secondary>UpdateMsgPrice</secondary></indexterm>
+<computeroutput>template&lt;typename MessageType &gt; </computeroutput><para><computeroutput>static void KTN::CME::IL3::AppMessageGen::UpdateMsgPrice (char *&amp; buf, uint32_t newSeqNum, uint64_t price)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_1a98e21900faaa2ddc002932c81bbbe3f4"/><section>
+    <title>UpdateMsgSeq()</title>
+<indexterm><primary>UpdateMsgSeq</primary><secondary>KTN::CME::IL3::AppMessageGen</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::AppMessageGen</primary><secondary>UpdateMsgSeq</secondary></indexterm>
+<computeroutput>template&lt;typename MessageType &gt; </computeroutput><para><computeroutput>static void KTN::CME::IL3::AppMessageGen::UpdateMsgSeq (char *&amp; buf, uint32_t newSeqNum)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+exchsupport/cme/factory/AppMessageGen.hpp</section>
+</section>

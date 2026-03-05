@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_core_1_1_object_pool" xml:lang="en-US">
+<title>KTN::Core::ObjectPool&lt; T &gt; Class Template Reference</title>
+<indexterm><primary>KTN::Core::ObjectPool&lt; T &gt;</primary></indexterm>
+<para>
+
+<para>A generic object pool implementation. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;ObjectPool.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_core_1_1_object_pool_1a48723d5c01b43922621cf2ab37f3f242">ObjectPool</link> (size_t pool_size)</para>
+
+<para>Constructs an <link linkend="_class_k_t_n_1_1_core_1_1_object_pool">ObjectPool</link> with the specified pool size. </para>
+</listitem>
+            <listitem><para><link linkend="_class_k_t_n_1_1_core_1_1_object_pool_1ab023da8399080d4b02a8b988650871f2">~ObjectPool</link> ()</para>
+
+<para>Destroys the <link linkend="_class_k_t_n_1_1_core_1_1_object_pool">ObjectPool</link> and releases all allocated objects. </para>
+</listitem>
+            <listitem><para>T * <link linkend="_class_k_t_n_1_1_core_1_1_object_pool_1ad28181ff0aa8c832b5b858ba979b2fb6">get</link> ()</para>
+
+<para>Retrieves an object from the pool. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_core_1_1_object_pool_1ae8a06d1fa9f8d4e7ec7dc7c7966c7415">put</link> (T *obj)</para>
+
+<para>Returns an object to the pool. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;typename T&gt;<?linebreak?>class KTN::Core::ObjectPool&lt; T &gt;</title></simplesect>
+
+<para>A generic object pool implementation. </para>
+
+
+
+<para>This class provides a thread-safe object pool that can be used to efficiently manage and reuse objects of a specific type. Objects are preallocated and added to the pool during construction, and can be obtained and returned to the pool as needed.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Template Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>T</entry><entry>
+<para>The type of objects to be managed by the pool. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_object_pool_1a48723d5c01b43922621cf2ab37f3f242"/><section>
+    <title>ObjectPool()</title>
+<indexterm><primary>ObjectPool</primary><secondary>KTN::Core::ObjectPool&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>KTN::Core::ObjectPool&lt; T &gt;</primary><secondary>ObjectPool</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput><link linkend="_class_k_t_n_1_1_core_1_1_object_pool">KTN::Core::ObjectPool</link>&lt; T &gt;::ObjectPool (size_t pool_size)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Constructs an <link linkend="_class_k_t_n_1_1_core_1_1_object_pool">ObjectPool</link> with the specified pool size. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>pool_size</entry><entry>
+<para>The number of objects to preallocate and add to the pool. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_object_pool_1ab023da8399080d4b02a8b988650871f2"/><section>
+    <title>~ObjectPool()</title>
+<indexterm><primary>~ObjectPool</primary><secondary>KTN::Core::ObjectPool&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>KTN::Core::ObjectPool&lt; T &gt;</primary><secondary>~ObjectPool</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput><link linkend="_class_k_t_n_1_1_core_1_1_object_pool">KTN::Core::ObjectPool</link>&lt; T &gt;::~<link linkend="_class_k_t_n_1_1_core_1_1_object_pool">ObjectPool</link> ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Destroys the <link linkend="_class_k_t_n_1_1_core_1_1_object_pool">ObjectPool</link> and releases all allocated objects. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_object_pool_1ad28181ff0aa8c832b5b858ba979b2fb6"/><section>
+    <title>get()</title>
+<indexterm><primary>get</primary><secondary>KTN::Core::ObjectPool&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>KTN::Core::ObjectPool&lt; T &gt;</primary><secondary>get</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>T * <link linkend="_class_k_t_n_1_1_core_1_1_object_pool">KTN::Core::ObjectPool</link>&lt; T &gt;::get ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Retrieves an object from the pool. </para>
+</para>
+
+<para>If there are available objects in the pool, an object is obtained from the pool and returned. If the pool is empty, a new object is created and returned.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>A pointer to the retrieved object. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00048">KTN::ALGO::PRICING::SpreadPricer::CalculateSide2()</link>, and <link linkend="_l00212">KTN::ALGO::PRICING::SpreadPricer::CalculateSide3()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_object_pool_1ae8a06d1fa9f8d4e7ec7dc7c7966c7415"/><section>
+    <title>put()</title>
+<indexterm><primary>put</primary><secondary>KTN::Core::ObjectPool&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>KTN::Core::ObjectPool&lt; T &gt;</primary><secondary>put</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>bool <link linkend="_class_k_t_n_1_1_core_1_1_object_pool">KTN::Core::ObjectPool</link>&lt; T &gt;::put (T * obj)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Returns an object to the pool. </para>
+</para>
+
+<para>The specified object is returned to the pool for reuse.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>obj</entry><entry>
+<para>A pointer to the object to be returned to the pool. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the object was successfully returned to the pool, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Core/ObjectPool.hpp</section>
+</section>

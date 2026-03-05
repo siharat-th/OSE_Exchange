@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t01_1_1_m_s_g_w_1_1_msgw" xml:lang="en-US">
+<title>KT01::MSGW::Msgw Class Reference</title>
+<indexterm><primary>KT01::MSGW::Msgw</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_class_k_t01_1_1_m_s_g_w_1_1_msgw_1ae5b16fe0391201f39e0057c2e74ef760">Print</link> ()</para>
+
+<para>Returns a string representation of the <link linkend="_class_k_t01_1_1_m_s_g_w_1_1_msgw">Msgw</link> object. </para>
+</listitem>
+            <listitem><para>string <link linkend="_class_k_t01_1_1_m_s_g_w_1_1_msgw_1af7b44968427667461ea06670953666ba">FullDesc</link> ()</para>
+
+<para>Returns the full description of the <link linkend="_class_k_t01_1_1_m_s_g_w_1_1_msgw">Msgw</link> object. </para>
+</listitem>
+            <listitem><para>string <link linkend="_class_k_t01_1_1_m_s_g_w_1_1_msgw_1a0c22c06ca39881e81331729e08c11a58">SegId</link> ()</para>
+
+<para>Returns the segment ID of the <link linkend="_class_k_t01_1_1_m_s_g_w_1_1_msgw">Msgw</link> object as a string. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_class_k_t01_1_1_m_s_g_w_1_1_msgw_1a086a4d05aeebe081cf73d795b5b677b6">segid</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_class_k_t01_1_1_m_s_g_w_1_1_msgw_1a9fd564d6c8b8237667d385fe4f0a4938">primip</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_class_k_t01_1_1_m_s_g_w_1_1_msgw_1aca7178544864659e249869b0c3b78f7e">secip</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_class_k_t01_1_1_m_s_g_w_1_1_msgw_1a79bcd52b0b632fa04e68a18b675f13c2">description</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t01_1_1_m_s_g_w_1_1_msgw_1af7b44968427667461ea06670953666ba"/><section>
+    <title>FullDesc()</title>
+<indexterm><primary>FullDesc</primary><secondary>KT01::MSGW::Msgw</secondary></indexterm>
+<indexterm><primary>KT01::MSGW::Msgw</primary><secondary>FullDesc</secondary></indexterm>
+<para><computeroutput>string KT01::MSGW::Msgw::FullDesc ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Returns the full description of the <link linkend="_class_k_t01_1_1_m_s_g_w_1_1_msgw">Msgw</link> object. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The full description of the <link linkend="_class_k_t01_1_1_m_s_g_w_1_1_msgw">Msgw</link> object. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_k_t01_1_1_m_s_g_w_1_1_msgw_1ae5b16fe0391201f39e0057c2e74ef760"/><section>
+    <title>Print()</title>
+<indexterm><primary>Print</primary><secondary>KT01::MSGW::Msgw</secondary></indexterm>
+<indexterm><primary>KT01::MSGW::Msgw</primary><secondary>Print</secondary></indexterm>
+<para><computeroutput>string KT01::MSGW::Msgw::Print ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Returns a string representation of the <link linkend="_class_k_t01_1_1_m_s_g_w_1_1_msgw">Msgw</link> object. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The string representation of the <link linkend="_class_k_t01_1_1_m_s_g_w_1_1_msgw">Msgw</link> object. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00034">KT01::MSGW::CmeMsgw::Load()</link>, and <link linkend="_l00257">KT01::MSGW::CmeMsgw::Print()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t01_1_1_m_s_g_w_1_1_msgw_1a0c22c06ca39881e81331729e08c11a58"/><section>
+    <title>SegId()</title>
+<indexterm><primary>SegId</primary><secondary>KT01::MSGW::Msgw</secondary></indexterm>
+<indexterm><primary>KT01::MSGW::Msgw</primary><secondary>SegId</secondary></indexterm>
+<para><computeroutput>string KT01::MSGW::Msgw::SegId ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Returns the segment ID of the <link linkend="_class_k_t01_1_1_m_s_g_w_1_1_msgw">Msgw</link> object as a string. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The segment ID of the <link linkend="_class_k_t01_1_1_m_s_g_w_1_1_msgw">Msgw</link> object as a string. </para>
+</formalpara>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_k_t01_1_1_m_s_g_w_1_1_msgw_1a79bcd52b0b632fa04e68a18b675f13c2"/><section>
+    <title>description</title>
+<indexterm><primary>description</primary><secondary>KT01::MSGW::Msgw</secondary></indexterm>
+<indexterm><primary>KT01::MSGW::Msgw</primary><secondary>description</secondary></indexterm>
+<para><computeroutput>string KT01::MSGW::Msgw::description</computeroutput></para></section>
+<anchor xml:id="_class_k_t01_1_1_m_s_g_w_1_1_msgw_1a9fd564d6c8b8237667d385fe4f0a4938"/><section>
+    <title>primip</title>
+<indexterm><primary>primip</primary><secondary>KT01::MSGW::Msgw</secondary></indexterm>
+<indexterm><primary>KT01::MSGW::Msgw</primary><secondary>primip</secondary></indexterm>
+<para><computeroutput>string KT01::MSGW::Msgw::primip</computeroutput></para></section>
+<anchor xml:id="_class_k_t01_1_1_m_s_g_w_1_1_msgw_1aca7178544864659e249869b0c3b78f7e"/><section>
+    <title>secip</title>
+<indexterm><primary>secip</primary><secondary>KT01::MSGW::Msgw</secondary></indexterm>
+<indexterm><primary>KT01::MSGW::Msgw</primary><secondary>secip</secondary></indexterm>
+<para><computeroutput>string KT01::MSGW::Msgw::secip</computeroutput></para></section>
+<anchor xml:id="_class_k_t01_1_1_m_s_g_w_1_1_msgw_1a086a4d05aeebe081cf73d795b5b677b6"/><section>
+    <title>segid</title>
+<indexterm><primary>segid</primary><secondary>KT01::MSGW::Msgw</secondary></indexterm>
+<indexterm><primary>KT01::MSGW::Msgw</primary><secondary>segid</secondary></indexterm>
+<para><computeroutput>int KT01::MSGW::Msgw::segid</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+exchsupport/cme/CmeMsgw.hpp</section>
+</section>

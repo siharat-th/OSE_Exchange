@@ -1,0 +1,204 @@
+\doxysection{Timed\+Avg\+Params Struct Reference}
+\hypertarget{struct_timed_avg_params}{}\label{struct_timed_avg_params}\index{TimedAvgParams@{TimedAvgParams}}
+
+
+Struct representing the parameters for the Timed Average algorithm.  
+
+
+
+
+{\ttfamily \#include $<$Timed\+Avg\+Params.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_timed_avg_params}{Timed\+Avg\+Params}} \mbox{\hyperlink{struct_timed_avg_params_a571d49dc9aeb928cb32ef30980a17a7c}{parse}} (const std\+::string \&json\+\_\+str)
+\begin{DoxyCompactList}\small\item\em Parses the JSON string and returns a \doxylink{struct_timed_avg_params}{Timed\+Avg\+Params} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{struct_timed_avg_params_a5370544820fdfa31e6f424001d4b121a}{Valid\+Json}}
+\item 
+\mbox{\hyperlink{structalgometa}{algometa}} \mbox{\hyperlink{struct_timed_avg_params_a372c447d5a927926c634993158b98755}{meta}}
+\item 
+string \mbox{\hyperlink{struct_timed_avg_params_a71275915da17589a919d76f57f13d2b8}{subid}}
+\item 
+tr1\+::unordered\+\_\+map$<$ int, \mbox{\hyperlink{structinstrument}{instrument}} $>$ \mbox{\hyperlink{struct_timed_avg_params_aec279fb875c3bd9a412ecdd9755204d6}{Leg\+Sec\+Id\+Map}}
+\item 
+\mbox{\hyperlink{structinstrument}{instrument}} \mbox{\hyperlink{struct_timed_avg_params_a610cd05647cb7a44d0ed9e1a942f50d1}{Legs}} \mbox{[}4\mbox{]}
+\item 
+int \mbox{\hyperlink{struct_timed_avg_params_a4e55130581452697af06c2d229970309}{Leg\+Count}}
+\item 
+string \mbox{\hyperlink{struct_timed_avg_params_abce1864996e909ca4de403c721ff08d6}{Start\+Time}}
+\item 
+string \mbox{\hyperlink{struct_timed_avg_params_a52dae215331890d3767bc40282d18444}{End\+Time}}
+\item 
+double \mbox{\hyperlink{struct_timed_avg_params_a65559e734fdd7de1014c92626f021d88}{Order\+Qty}}
+\item 
+double \mbox{\hyperlink{struct_timed_avg_params_a7c14aac501a8e67211a5f9c2ffd6834f}{Total\+Qty}}
+\item 
+int \mbox{\hyperlink{struct_timed_avg_params_a295a01b7ede209f8036ad7494753a5a2}{Interval\+Secs}}
+\item 
+int \mbox{\hyperlink{struct_timed_avg_params_a578943e271dee16cf6e50f830f7157a0}{Min\+Work\+Secs}}
+\item 
+int \mbox{\hyperlink{struct_timed_avg_params_af37fc6bc2b5063866d80555757be08d7}{Max\+Work\+Secs}}
+\item 
+double \mbox{\hyperlink{struct_timed_avg_params_aea61c9607c553a3600e4c8ddff5dc4a1}{Squeeze\+Ratio}}
+\item 
+bool \mbox{\hyperlink{struct_timed_avg_params_ab4e8fafd42017b226dad1ccb948f03ab}{Randomize}}
+\item 
+int \mbox{\hyperlink{struct_timed_avg_params_acde76a220f18ec5f88828302f161f570}{Net\+Position}}
+\item 
+int \mbox{\hyperlink{struct_timed_avg_params_af7f59d341fa9ad01b4762a8e25528e48}{Total\+Exec}}
+\item 
+bool \mbox{\hyperlink{struct_timed_avg_params_a5e512097e41a90c45655cbcd74c5e5af}{Reset}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Struct representing the parameters for the Timed Average algorithm. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_timed_avg_params_a571d49dc9aeb928cb32ef30980a17a7c}\index{TimedAvgParams@{TimedAvgParams}!parse@{parse}}
+\index{parse@{parse}!TimedAvgParams@{TimedAvgParams}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily \label{struct_timed_avg_params_a571d49dc9aeb928cb32ef30980a17a7c} 
+\mbox{\hyperlink{struct_timed_avg_params}{Timed\+Avg\+Params}} Timed\+Avg\+Params\+::parse (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{json\+\_\+str}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Parses the JSON string and returns a \doxylink{struct_timed_avg_params}{Timed\+Avg\+Params} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json\+\_\+str} & The JSON string to parse. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A \doxylink{struct_timed_avg_params}{Timed\+Avg\+Params} object. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00260}{algometa\+::\+Enabled}}, \mbox{\hyperlink{l00049}{User\+Info\+::groupname}}, \mbox{\hyperlink{l00048}{User\+Info\+::org}}, \mbox{\hyperlink{l00262}{algometa\+::\+Source}}, \mbox{\hyperlink{l00256}{algometa\+::\+Strategy}}, \mbox{\hyperlink{l00257}{algometa\+::\+Strat\+Id}}, \mbox{\hyperlink{l00264}{algometa\+::\+Tag}}, \mbox{\hyperlink{l00258}{algometa\+::\+Template\+Name}}, \mbox{\hyperlink{l00261}{algometa\+::\+Unique\+Id}}, \mbox{\hyperlink{l00047}{User\+Info\+::user}}, and \mbox{\hyperlink{l00279}{algometa\+::userinfo}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00043}{KTN\+::\+Twap\+::on\+Launch()}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_timed_avg_params_a52dae215331890d3767bc40282d18444}\index{TimedAvgParams@{TimedAvgParams}!EndTime@{EndTime}}
+\index{EndTime@{EndTime}!TimedAvgParams@{TimedAvgParams}}
+\doxysubsubsection{\texorpdfstring{EndTime}{EndTime}}
+{\footnotesize\ttfamily \label{struct_timed_avg_params_a52dae215331890d3767bc40282d18444} 
+string Timed\+Avg\+Params\+::\+End\+Time}
+
+\Hypertarget{struct_timed_avg_params_a295a01b7ede209f8036ad7494753a5a2}\index{TimedAvgParams@{TimedAvgParams}!IntervalSecs@{IntervalSecs}}
+\index{IntervalSecs@{IntervalSecs}!TimedAvgParams@{TimedAvgParams}}
+\doxysubsubsection{\texorpdfstring{IntervalSecs}{IntervalSecs}}
+{\footnotesize\ttfamily \label{struct_timed_avg_params_a295a01b7ede209f8036ad7494753a5a2} 
+int Timed\+Avg\+Params\+::\+Interval\+Secs}
+
+\Hypertarget{struct_timed_avg_params_a4e55130581452697af06c2d229970309}\index{TimedAvgParams@{TimedAvgParams}!LegCount@{LegCount}}
+\index{LegCount@{LegCount}!TimedAvgParams@{TimedAvgParams}}
+\doxysubsubsection{\texorpdfstring{LegCount}{LegCount}}
+{\footnotesize\ttfamily \label{struct_timed_avg_params_a4e55130581452697af06c2d229970309} 
+int Timed\+Avg\+Params\+::\+Leg\+Count}
+
+\Hypertarget{struct_timed_avg_params_a610cd05647cb7a44d0ed9e1a942f50d1}\index{TimedAvgParams@{TimedAvgParams}!Legs@{Legs}}
+\index{Legs@{Legs}!TimedAvgParams@{TimedAvgParams}}
+\doxysubsubsection{\texorpdfstring{Legs}{Legs}}
+{\footnotesize\ttfamily \label{struct_timed_avg_params_a610cd05647cb7a44d0ed9e1a942f50d1} 
+\mbox{\hyperlink{structinstrument}{instrument}} Timed\+Avg\+Params\+::\+Legs\mbox{[}4\mbox{]}}
+
+\Hypertarget{struct_timed_avg_params_aec279fb875c3bd9a412ecdd9755204d6}\index{TimedAvgParams@{TimedAvgParams}!LegSecIdMap@{LegSecIdMap}}
+\index{LegSecIdMap@{LegSecIdMap}!TimedAvgParams@{TimedAvgParams}}
+\doxysubsubsection{\texorpdfstring{LegSecIdMap}{LegSecIdMap}}
+{\footnotesize\ttfamily \label{struct_timed_avg_params_aec279fb875c3bd9a412ecdd9755204d6} 
+tr1\+::unordered\+\_\+map$<$int, \mbox{\hyperlink{structinstrument}{instrument}}$>$ Timed\+Avg\+Params\+::\+Leg\+Sec\+Id\+Map}
+
+\Hypertarget{struct_timed_avg_params_af37fc6bc2b5063866d80555757be08d7}\index{TimedAvgParams@{TimedAvgParams}!MaxWorkSecs@{MaxWorkSecs}}
+\index{MaxWorkSecs@{MaxWorkSecs}!TimedAvgParams@{TimedAvgParams}}
+\doxysubsubsection{\texorpdfstring{MaxWorkSecs}{MaxWorkSecs}}
+{\footnotesize\ttfamily \label{struct_timed_avg_params_af37fc6bc2b5063866d80555757be08d7} 
+int Timed\+Avg\+Params\+::\+Max\+Work\+Secs}
+
+\Hypertarget{struct_timed_avg_params_a372c447d5a927926c634993158b98755}\index{TimedAvgParams@{TimedAvgParams}!meta@{meta}}
+\index{meta@{meta}!TimedAvgParams@{TimedAvgParams}}
+\doxysubsubsection{\texorpdfstring{meta}{meta}}
+{\footnotesize\ttfamily \label{struct_timed_avg_params_a372c447d5a927926c634993158b98755} 
+\mbox{\hyperlink{structalgometa}{algometa}} Timed\+Avg\+Params\+::meta}
+
+\Hypertarget{struct_timed_avg_params_a578943e271dee16cf6e50f830f7157a0}\index{TimedAvgParams@{TimedAvgParams}!MinWorkSecs@{MinWorkSecs}}
+\index{MinWorkSecs@{MinWorkSecs}!TimedAvgParams@{TimedAvgParams}}
+\doxysubsubsection{\texorpdfstring{MinWorkSecs}{MinWorkSecs}}
+{\footnotesize\ttfamily \label{struct_timed_avg_params_a578943e271dee16cf6e50f830f7157a0} 
+int Timed\+Avg\+Params\+::\+Min\+Work\+Secs}
+
+\Hypertarget{struct_timed_avg_params_acde76a220f18ec5f88828302f161f570}\index{TimedAvgParams@{TimedAvgParams}!NetPosition@{NetPosition}}
+\index{NetPosition@{NetPosition}!TimedAvgParams@{TimedAvgParams}}
+\doxysubsubsection{\texorpdfstring{NetPosition}{NetPosition}}
+{\footnotesize\ttfamily \label{struct_timed_avg_params_acde76a220f18ec5f88828302f161f570} 
+int Timed\+Avg\+Params\+::\+Net\+Position}
+
+\Hypertarget{struct_timed_avg_params_a65559e734fdd7de1014c92626f021d88}\index{TimedAvgParams@{TimedAvgParams}!OrderQty@{OrderQty}}
+\index{OrderQty@{OrderQty}!TimedAvgParams@{TimedAvgParams}}
+\doxysubsubsection{\texorpdfstring{OrderQty}{OrderQty}}
+{\footnotesize\ttfamily \label{struct_timed_avg_params_a65559e734fdd7de1014c92626f021d88} 
+double Timed\+Avg\+Params\+::\+Order\+Qty}
+
+\Hypertarget{struct_timed_avg_params_ab4e8fafd42017b226dad1ccb948f03ab}\index{TimedAvgParams@{TimedAvgParams}!Randomize@{Randomize}}
+\index{Randomize@{Randomize}!TimedAvgParams@{TimedAvgParams}}
+\doxysubsubsection{\texorpdfstring{Randomize}{Randomize}}
+{\footnotesize\ttfamily \label{struct_timed_avg_params_ab4e8fafd42017b226dad1ccb948f03ab} 
+bool Timed\+Avg\+Params\+::\+Randomize}
+
+\Hypertarget{struct_timed_avg_params_a5e512097e41a90c45655cbcd74c5e5af}\index{TimedAvgParams@{TimedAvgParams}!Reset@{Reset}}
+\index{Reset@{Reset}!TimedAvgParams@{TimedAvgParams}}
+\doxysubsubsection{\texorpdfstring{Reset}{Reset}}
+{\footnotesize\ttfamily \label{struct_timed_avg_params_a5e512097e41a90c45655cbcd74c5e5af} 
+bool Timed\+Avg\+Params\+::\+Reset}
+
+\Hypertarget{struct_timed_avg_params_aea61c9607c553a3600e4c8ddff5dc4a1}\index{TimedAvgParams@{TimedAvgParams}!SqueezeRatio@{SqueezeRatio}}
+\index{SqueezeRatio@{SqueezeRatio}!TimedAvgParams@{TimedAvgParams}}
+\doxysubsubsection{\texorpdfstring{SqueezeRatio}{SqueezeRatio}}
+{\footnotesize\ttfamily \label{struct_timed_avg_params_aea61c9607c553a3600e4c8ddff5dc4a1} 
+double Timed\+Avg\+Params\+::\+Squeeze\+Ratio}
+
+\Hypertarget{struct_timed_avg_params_abce1864996e909ca4de403c721ff08d6}\index{TimedAvgParams@{TimedAvgParams}!StartTime@{StartTime}}
+\index{StartTime@{StartTime}!TimedAvgParams@{TimedAvgParams}}
+\doxysubsubsection{\texorpdfstring{StartTime}{StartTime}}
+{\footnotesize\ttfamily \label{struct_timed_avg_params_abce1864996e909ca4de403c721ff08d6} 
+string Timed\+Avg\+Params\+::\+Start\+Time}
+
+\Hypertarget{struct_timed_avg_params_a71275915da17589a919d76f57f13d2b8}\index{TimedAvgParams@{TimedAvgParams}!subid@{subid}}
+\index{subid@{subid}!TimedAvgParams@{TimedAvgParams}}
+\doxysubsubsection{\texorpdfstring{subid}{subid}}
+{\footnotesize\ttfamily \label{struct_timed_avg_params_a71275915da17589a919d76f57f13d2b8} 
+string Timed\+Avg\+Params\+::subid}
+
+\Hypertarget{struct_timed_avg_params_af7f59d341fa9ad01b4762a8e25528e48}\index{TimedAvgParams@{TimedAvgParams}!TotalExec@{TotalExec}}
+\index{TotalExec@{TotalExec}!TimedAvgParams@{TimedAvgParams}}
+\doxysubsubsection{\texorpdfstring{TotalExec}{TotalExec}}
+{\footnotesize\ttfamily \label{struct_timed_avg_params_af7f59d341fa9ad01b4762a8e25528e48} 
+int Timed\+Avg\+Params\+::\+Total\+Exec}
+
+\Hypertarget{struct_timed_avg_params_a7c14aac501a8e67211a5f9c2ffd6834f}\index{TimedAvgParams@{TimedAvgParams}!TotalQty@{TotalQty}}
+\index{TotalQty@{TotalQty}!TimedAvgParams@{TimedAvgParams}}
+\doxysubsubsection{\texorpdfstring{TotalQty}{TotalQty}}
+{\footnotesize\ttfamily \label{struct_timed_avg_params_a7c14aac501a8e67211a5f9c2ffd6834f} 
+double Timed\+Avg\+Params\+::\+Total\+Qty}
+
+\Hypertarget{struct_timed_avg_params_a5370544820fdfa31e6f424001d4b121a}\index{TimedAvgParams@{TimedAvgParams}!ValidJson@{ValidJson}}
+\index{ValidJson@{ValidJson}!TimedAvgParams@{TimedAvgParams}}
+\doxysubsubsection{\texorpdfstring{ValidJson}{ValidJson}}
+{\footnotesize\ttfamily \label{struct_timed_avg_params_a5370544820fdfa31e6f424001d4b121a} 
+bool Timed\+Avg\+Params\+::\+Valid\+Json}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Algo\+Params/Timed\+Avg\+Params.\+hpp\item 
+Algo\+Params/Timed\+Avg\+Params.\+cpp\end{DoxyCompactItemize}

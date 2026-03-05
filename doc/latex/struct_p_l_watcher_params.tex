@@ -1,0 +1,88 @@
+\doxysection{PLWatcher\+Params Struct Reference}
+\hypertarget{struct_p_l_watcher_params}{}\label{struct_p_l_watcher_params}\index{PLWatcherParams@{PLWatcherParams}}
+
+
+The \doxylink{struct_p_l_watcher_params}{PLWatcher\+Params} struct represents the parameters for the PLWatcher algorithm.  
+
+
+
+
+{\ttfamily \#include $<$PLWatcher\+Params.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_p_l_watcher_params}{PLWatcher\+Params}} \mbox{\hyperlink{struct_p_l_watcher_params_a91c968c007d11781492bd7ecb8b89cf9}{parse}} (const std\+::string \&json\+\_\+str)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{struct_p_l_watcher_params_ab20e92d93d8267eafd5ad0891dde595e}{Valid\+Json}}
+\item 
+\mbox{\hyperlink{structalgometa}{algometa}} \mbox{\hyperlink{struct_p_l_watcher_params_ab98d9633e9b850296c995d4d5142154c}{meta}}
+\item 
+string \mbox{\hyperlink{struct_p_l_watcher_params_ace37eadc404fa3a8f8afcd3d66516f43}{subid}}
+\item 
+tr1\+::unordered\+\_\+map$<$ int, \mbox{\hyperlink{structinstrument}{instrument}} $>$ \mbox{\hyperlink{struct_p_l_watcher_params_a560bdf626cfe944b73fb8d98c875282f}{Leg\+Sec\+Id\+Map}}
+\item 
+\mbox{\hyperlink{structinstrument}{instrument}} \mbox{\hyperlink{struct_p_l_watcher_params_a5d0df6784c5488748264891f6eaf8f6e}{Legs}} \mbox{[}24\mbox{]}
+\item 
+int \mbox{\hyperlink{struct_p_l_watcher_params_a3421544b18bafc72012d541ef9febc61}{Leg\+Count}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{struct_p_l_watcher_params}{PLWatcher\+Params} struct represents the parameters for the PLWatcher algorithm. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_p_l_watcher_params_a91c968c007d11781492bd7ecb8b89cf9}\index{PLWatcherParams@{PLWatcherParams}!parse@{parse}}
+\index{parse@{parse}!PLWatcherParams@{PLWatcherParams}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily \label{struct_p_l_watcher_params_a91c968c007d11781492bd7ecb8b89cf9} 
+\mbox{\hyperlink{struct_p_l_watcher_params}{PLWatcher\+Params}} PLWatcher\+Params\+::parse (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{json\+\_\+str}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_p_l_watcher_params_a3421544b18bafc72012d541ef9febc61}\index{PLWatcherParams@{PLWatcherParams}!LegCount@{LegCount}}
+\index{LegCount@{LegCount}!PLWatcherParams@{PLWatcherParams}}
+\doxysubsubsection{\texorpdfstring{LegCount}{LegCount}}
+{\footnotesize\ttfamily \label{struct_p_l_watcher_params_a3421544b18bafc72012d541ef9febc61} 
+int PLWatcher\+Params\+::\+Leg\+Count}
+
+\Hypertarget{struct_p_l_watcher_params_a5d0df6784c5488748264891f6eaf8f6e}\index{PLWatcherParams@{PLWatcherParams}!Legs@{Legs}}
+\index{Legs@{Legs}!PLWatcherParams@{PLWatcherParams}}
+\doxysubsubsection{\texorpdfstring{Legs}{Legs}}
+{\footnotesize\ttfamily \label{struct_p_l_watcher_params_a5d0df6784c5488748264891f6eaf8f6e} 
+\mbox{\hyperlink{structinstrument}{instrument}} PLWatcher\+Params\+::\+Legs\mbox{[}24\mbox{]}}
+
+\Hypertarget{struct_p_l_watcher_params_a560bdf626cfe944b73fb8d98c875282f}\index{PLWatcherParams@{PLWatcherParams}!LegSecIdMap@{LegSecIdMap}}
+\index{LegSecIdMap@{LegSecIdMap}!PLWatcherParams@{PLWatcherParams}}
+\doxysubsubsection{\texorpdfstring{LegSecIdMap}{LegSecIdMap}}
+{\footnotesize\ttfamily \label{struct_p_l_watcher_params_a560bdf626cfe944b73fb8d98c875282f} 
+tr1\+::unordered\+\_\+map$<$int, \mbox{\hyperlink{structinstrument}{instrument}}$>$ PLWatcher\+Params\+::\+Leg\+Sec\+Id\+Map}
+
+\Hypertarget{struct_p_l_watcher_params_ab98d9633e9b850296c995d4d5142154c}\index{PLWatcherParams@{PLWatcherParams}!meta@{meta}}
+\index{meta@{meta}!PLWatcherParams@{PLWatcherParams}}
+\doxysubsubsection{\texorpdfstring{meta}{meta}}
+{\footnotesize\ttfamily \label{struct_p_l_watcher_params_ab98d9633e9b850296c995d4d5142154c} 
+\mbox{\hyperlink{structalgometa}{algometa}} PLWatcher\+Params\+::meta}
+
+\Hypertarget{struct_p_l_watcher_params_ace37eadc404fa3a8f8afcd3d66516f43}\index{PLWatcherParams@{PLWatcherParams}!subid@{subid}}
+\index{subid@{subid}!PLWatcherParams@{PLWatcherParams}}
+\doxysubsubsection{\texorpdfstring{subid}{subid}}
+{\footnotesize\ttfamily \label{struct_p_l_watcher_params_ace37eadc404fa3a8f8afcd3d66516f43} 
+string PLWatcher\+Params\+::subid}
+
+\Hypertarget{struct_p_l_watcher_params_ab20e92d93d8267eafd5ad0891dde595e}\index{PLWatcherParams@{PLWatcherParams}!ValidJson@{ValidJson}}
+\index{ValidJson@{ValidJson}!PLWatcherParams@{PLWatcherParams}}
+\doxysubsubsection{\texorpdfstring{ValidJson}{ValidJson}}
+{\footnotesize\ttfamily \label{struct_p_l_watcher_params_ab20e92d93d8267eafd5ad0891dde595e} 
+bool PLWatcher\+Params\+::\+Valid\+Json}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Algo\+Params/PLWatcher\+Params.\+hpp\item 
+Algo\+Params/PLWatcher\+Params.\+cpp\end{DoxyCompactItemize}

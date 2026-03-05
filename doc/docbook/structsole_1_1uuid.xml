@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structsole_1_1uuid" xml:lang="en-US">
+<title>sole::uuid Struct Reference</title>
+<indexterm><primary>sole::uuid</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_structsole_1_1uuid_1a6dc733ef60f14c0f150f4037dafc98e4">operator==</link> (const <link linkend="_structsole_1_1uuid">uuid</link> &amp;other) const</para>
+</listitem>
+            <listitem><para>bool <link linkend="_structsole_1_1uuid_1a0865681d3a41bb4130fc1c235f2d796e">operator!=</link> (const <link linkend="_structsole_1_1uuid">uuid</link> &amp;other) const</para>
+</listitem>
+            <listitem><para>bool <link linkend="_structsole_1_1uuid_1a80aee3eca6fa359f237f846b34195403">operator&lt;</link> (const <link linkend="_structsole_1_1uuid">uuid</link> &amp;other) const</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_structsole_1_1uuid_1ad96899850e1affe60054ee26ef48b44f">pretty</link> () const</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_structsole_1_1uuid_1af95b150f168a1e441f7e66c8f322c47c">base62</link> () const</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_structsole_1_1uuid_1a16178bc908fdad16ac24e9c0b930acc0">str</link> () const</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>uint64_t <link linkend="_structsole_1_1uuid_1a7934704b7da4815d0dc00a90049fceaa">ab</link></para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_structsole_1_1uuid_1ac5cd6930c9880d5e430bb7376fd1b164">cd</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Friends    </title>
+        <itemizedlist>
+            <listitem><para>template&lt;typename ostream &gt; </para><para>ostream &amp; <link linkend="_structsole_1_1uuid_1a5259a7f1127c962600550544ea93414f">operator&lt;&lt;</link> (ostream &amp;os, const <link linkend="_structsole_1_1uuid">uuid</link> &amp;self)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_structsole_1_1uuid_1af95b150f168a1e441f7e66c8f322c47c"/><section>
+    <title>base62()</title>
+<indexterm><primary>base62</primary><secondary>sole::uuid</secondary></indexterm>
+<indexterm><primary>sole::uuid</primary><secondary>base62</secondary></indexterm>
+<para><computeroutput>std::string sole::uuid::base62 ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structsole_1_1uuid_1a0865681d3a41bb4130fc1c235f2d796e"/><section>
+    <title>operator!=()</title>
+<indexterm><primary>operator!=</primary><secondary>sole::uuid</secondary></indexterm>
+<indexterm><primary>sole::uuid</primary><secondary>operator!=</secondary></indexterm>
+<para><computeroutput>bool sole::uuid::operator!= (const <link linkend="_structsole_1_1uuid">uuid</link> &amp; other) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structsole_1_1uuid_1a80aee3eca6fa359f237f846b34195403"/><section>
+    <title>operator&lt;()</title>
+<indexterm><primary>operator&lt;</primary><secondary>sole::uuid</secondary></indexterm>
+<indexterm><primary>sole::uuid</primary><secondary>operator&lt;</secondary></indexterm>
+<para><computeroutput>bool sole::uuid::operator&lt; (const <link linkend="_structsole_1_1uuid">uuid</link> &amp; other) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structsole_1_1uuid_1a6dc733ef60f14c0f150f4037dafc98e4"/><section>
+    <title>operator==()</title>
+<indexterm><primary>operator==</primary><secondary>sole::uuid</secondary></indexterm>
+<indexterm><primary>sole::uuid</primary><secondary>operator==</secondary></indexterm>
+<para><computeroutput>bool sole::uuid::operator== (const <link linkend="_structsole_1_1uuid">uuid</link> &amp; other) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structsole_1_1uuid_1ad96899850e1affe60054ee26ef48b44f"/><section>
+    <title>pretty()</title>
+<indexterm><primary>pretty</primary><secondary>sole::uuid</secondary></indexterm>
+<indexterm><primary>sole::uuid</primary><secondary>pretty</secondary></indexterm>
+<para><computeroutput>std::string sole::uuid::pretty ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structsole_1_1uuid_1a16178bc908fdad16ac24e9c0b930acc0"/><section>
+    <title>str()</title>
+<indexterm><primary>str</primary><secondary>sole::uuid</secondary></indexterm>
+<indexterm><primary>sole::uuid</primary><secondary>str</secondary></indexterm>
+<para><computeroutput>std::string sole::uuid::str ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Friends And Related Symbol Documentation</title>
+<anchor xml:id="_structsole_1_1uuid_1a5259a7f1127c962600550544ea93414f"/><section>
+    <title>operator&lt;&lt;</title>
+<indexterm><primary>operator&lt;&lt;</primary><secondary>sole::uuid</secondary></indexterm>
+<indexterm><primary>sole::uuid</primary><secondary>operator&lt;&lt;</secondary></indexterm>
+<computeroutput>template&lt;typename ostream &gt; </computeroutput><para><computeroutput>ostream &amp; operator&lt;&lt; (ostream &amp; os, const <link linkend="_structsole_1_1uuid">uuid</link> &amp; self)<computeroutput>[friend]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structsole_1_1uuid_1a7934704b7da4815d0dc00a90049fceaa"/><section>
+    <title>ab</title>
+<indexterm><primary>ab</primary><secondary>sole::uuid</secondary></indexterm>
+<indexterm><primary>sole::uuid</primary><secondary>ab</secondary></indexterm>
+<para><computeroutput>uint64_t sole::uuid::ab</computeroutput></para></section>
+<anchor xml:id="_structsole_1_1uuid_1ac5cd6930c9880d5e430bb7376fd1b164"/><section>
+    <title>cd</title>
+<indexterm><primary>cd</primary><secondary>sole::uuid</secondary></indexterm>
+<indexterm><primary>sole::uuid</primary><secondary>cd</secondary></indexterm>
+<para><computeroutput>uint64_t sole::uuid::cd</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Orders/sole.hpp</section>
+</section>

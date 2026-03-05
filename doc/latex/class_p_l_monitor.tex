@@ -1,0 +1,203 @@
+\doxysection{PLMonitor Class Reference}
+\hypertarget{class_p_l_monitor}{}\label{class_p_l_monitor}\index{PLMonitor@{PLMonitor}}
+
+
+Class responsible for monitoring and managing profit and loss calculations for positions.  
+
+
+
+
+{\ttfamily \#include $<$PLMonitor.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_p_l_monitor_a846d1dc92fc88373ab7385ba42228f56}{PLMonitor}} (\mbox{\hyperlink{class_algo_p_l_callback}{Algo\+PLCallback}} \&sender, string guid)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{class_p_l_monitor}{PLMonitor} class. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_p_l_monitor_a7f4646814dd3e1505b8d1780cc9a46ff}{\texorpdfstring{$\sim$}{\string~}\+PLMonitor}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{class_p_l_monitor}{PLMonitor} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_p_l_monitor_ad1e3e69b81a29301bc1abaced28a807a}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Starts the \doxylink{class_p_l_monitor}{PLMonitor}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_p_l_monitor_a94b9d65f56ffc393109ad1d536c9cff8}{Stop}} ()
+\begin{DoxyCompactList}\small\item\em Stops the \doxylink{class_p_l_monitor}{PLMonitor}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_p_l_monitor_a195ec49ee8f2d6cf6f6c7ad9a0a41d22}{Register}} (\mbox{\hyperlink{struct_position}{Position}} \&pos)
+\begin{DoxyCompactList}\small\item\em Registers a position for profit and loss monitoring. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_p_l_monitor_a505ad21b2200b1a923d37553e4ee6fea}{De\+Register}} (\mbox{\hyperlink{struct_position}{Position}} \&pos)
+\begin{DoxyCompactList}\small\item\em Deregisters a position from profit and loss monitoring. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_p_l_monitor_a2bc90c5574bacf076622eca6803ba310}{Adjust\+Risk}} (\mbox{\hyperlink{struct_engine_command}{Engine\+Command}} cmd)
+\begin{DoxyCompactList}\small\item\em Adjusts the risk for the positions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_p_l_monitor_ae5c0e6617eb4c2e650fbafc11f395646}{on\+Market\+Data}} (const \mbox{\hyperlink{structalgomd}{algomd}} \&md)
+\begin{DoxyCompactList}\small\item\em Handles market data updates. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_p_l_monitor_a39c77fad86681ac901c99f9295293fdb}{Running}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the \doxylink{class_p_l_monitor}{PLMonitor} is running. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_p_l_monitor_a68c581eb07010c32b9bec61277818966}{Print}} ()
+\begin{DoxyCompactList}\small\item\em Prints the current positions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class responsible for monitoring and managing profit and loss calculations for positions. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_p_l_monitor_a846d1dc92fc88373ab7385ba42228f56}\index{PLMonitor@{PLMonitor}!PLMonitor@{PLMonitor}}
+\index{PLMonitor@{PLMonitor}!PLMonitor@{PLMonitor}}
+\doxysubsubsection{\texorpdfstring{PLMonitor()}{PLMonitor()}}
+{\footnotesize\ttfamily \label{class_p_l_monitor_a846d1dc92fc88373ab7385ba42228f56} 
+PLMonitor\+::\+PLMonitor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_algo_p_l_callback}{Algo\+PLCallback}} \&}]{sender}{, }\item[{string}]{guid}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for \doxylink{class_p_l_monitor}{PLMonitor} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & The \doxylink{class_algo_p_l_callback}{Algo\+PLCallback} object used for sending profit and loss updates. \\
+\hline
+{\em guid} & The unique identifier for the \doxylink{class_p_l_monitor}{PLMonitor} instance. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_p_l_monitor_a7f4646814dd3e1505b8d1780cc9a46ff}\index{PLMonitor@{PLMonitor}!````~PLMonitor@{\texorpdfstring{$\sim$}{\string~}PLMonitor}}
+\index{````~PLMonitor@{\texorpdfstring{$\sim$}{\string~}PLMonitor}!PLMonitor@{PLMonitor}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}PLMonitor()}{\string~PLMonitor()}}
+{\footnotesize\ttfamily \label{class_p_l_monitor_a7f4646814dd3e1505b8d1780cc9a46ff} 
+PLMonitor\+::\texorpdfstring{$\sim$}{\string~}\+PLMonitor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor for \doxylink{class_p_l_monitor}{PLMonitor} class. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_p_l_monitor_a2bc90c5574bacf076622eca6803ba310}\index{PLMonitor@{PLMonitor}!AdjustRisk@{AdjustRisk}}
+\index{AdjustRisk@{AdjustRisk}!PLMonitor@{PLMonitor}}
+\doxysubsubsection{\texorpdfstring{AdjustRisk()}{AdjustRisk()}}
+{\footnotesize\ttfamily \label{class_p_l_monitor_a2bc90c5574bacf076622eca6803ba310} 
+void PLMonitor\+::\+Adjust\+Risk (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_engine_command}{Engine\+Command}}}]{cmd}{}\end{DoxyParamCaption})}
+
+
+
+Adjusts the risk for the positions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & The \doxylink{struct_engine_command}{Engine\+Command} object containing the risk adjustment command. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{l00169}{KTN\+::\+PLWatcher\+::on\+Engine\+Json()}}.
+
+\Hypertarget{class_p_l_monitor_a505ad21b2200b1a923d37553e4ee6fea}\index{PLMonitor@{PLMonitor}!DeRegister@{DeRegister}}
+\index{DeRegister@{DeRegister}!PLMonitor@{PLMonitor}}
+\doxysubsubsection{\texorpdfstring{DeRegister()}{DeRegister()}}
+{\footnotesize\ttfamily \label{class_p_l_monitor_a505ad21b2200b1a923d37553e4ee6fea} 
+void PLMonitor\+::\+De\+Register (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_position}{Position}} \&}]{pos}{}\end{DoxyParamCaption})}
+
+
+
+Deregisters a position from profit and loss monitoring. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & The \doxylink{struct_position}{Position} object to deregister. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_p_l_monitor_ae5c0e6617eb4c2e650fbafc11f395646}\index{PLMonitor@{PLMonitor}!onMarketData@{onMarketData}}
+\index{onMarketData@{onMarketData}!PLMonitor@{PLMonitor}}
+\doxysubsubsection{\texorpdfstring{onMarketData()}{onMarketData()}}
+{\footnotesize\ttfamily \label{class_p_l_monitor_ae5c0e6617eb4c2e650fbafc11f395646} 
+void PLMonitor\+::on\+Market\+Data (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structalgomd}{algomd}} \&}]{md}{}\end{DoxyParamCaption})}
+
+
+
+Handles market data updates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em md} & The algomd object containing the market data. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{l00345}{KTN\+::\+PLWatcher\+::on\+Mkt\+Data()}}.
+
+\Hypertarget{class_p_l_monitor_a68c581eb07010c32b9bec61277818966}\index{PLMonitor@{PLMonitor}!Print@{Print}}
+\index{Print@{Print}!PLMonitor@{PLMonitor}}
+\doxysubsubsection{\texorpdfstring{Print()}{Print()}}
+{\footnotesize\ttfamily \label{class_p_l_monitor_a68c581eb07010c32b9bec61277818966} 
+void PLMonitor\+::\+Print (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Prints the current positions. 
+
+
+
+Referenced by \mbox{\hyperlink{l00175}{KTN\+::\+PLWatcher\+::\+Print()}}.
+
+\Hypertarget{class_p_l_monitor_a195ec49ee8f2d6cf6f6c7ad9a0a41d22}\index{PLMonitor@{PLMonitor}!Register@{Register}}
+\index{Register@{Register}!PLMonitor@{PLMonitor}}
+\doxysubsubsection{\texorpdfstring{Register()}{Register()}}
+{\footnotesize\ttfamily \label{class_p_l_monitor_a195ec49ee8f2d6cf6f6c7ad9a0a41d22} 
+void PLMonitor\+::\+Register (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_position}{Position}} \&}]{pos}{}\end{DoxyParamCaption})}
+
+
+
+Registers a position for profit and loss monitoring. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & The \doxylink{struct_position}{Position} object to register. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{l00062}{KTN\+::\+PLWatcher\+::on\+Json()}}.
+
+\Hypertarget{class_p_l_monitor_a39c77fad86681ac901c99f9295293fdb}\index{PLMonitor@{PLMonitor}!Running@{Running}}
+\index{Running@{Running}!PLMonitor@{PLMonitor}}
+\doxysubsubsection{\texorpdfstring{Running()}{Running()}}
+{\footnotesize\ttfamily \label{class_p_l_monitor_a39c77fad86681ac901c99f9295293fdb} 
+bool PLMonitor\+::\+Running (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the \doxylink{class_p_l_monitor}{PLMonitor} is running. 
+
+\begin{DoxyReturn}{Returns}
+True if the \doxylink{class_p_l_monitor}{PLMonitor} is running, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_p_l_monitor_ad1e3e69b81a29301bc1abaced28a807a}\index{PLMonitor@{PLMonitor}!Start@{Start}}
+\index{Start@{Start}!PLMonitor@{PLMonitor}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily \label{class_p_l_monitor_ad1e3e69b81a29301bc1abaced28a807a} 
+void PLMonitor\+::\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Starts the \doxylink{class_p_l_monitor}{PLMonitor}. 
+
+
+
+Referenced by \mbox{\hyperlink{l00043}{KTN\+::\+PLWatcher\+::on\+Launch()}}.
+
+\Hypertarget{class_p_l_monitor_a94b9d65f56ffc393109ad1d536c9cff8}\index{PLMonitor@{PLMonitor}!Stop@{Stop}}
+\index{Stop@{Stop}!PLMonitor@{PLMonitor}}
+\doxysubsubsection{\texorpdfstring{Stop()}{Stop()}}
+{\footnotesize\ttfamily \label{class_p_l_monitor_a94b9d65f56ffc393109ad1d536c9cff8} 
+void PLMonitor\+::\+Stop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Stops the \doxylink{class_p_l_monitor}{PLMonitor}. 
+
+
+
+Referenced by \mbox{\hyperlink{l00028}{KTN\+::\+PLWatcher\+::\texorpdfstring{$\sim$}{\string~}\+PLWatcher()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Algo\+Engines/PLMonitor.\+hpp\item 
+Algo\+Engines/PLMonitor.\+cpp\end{DoxyCompactItemize}

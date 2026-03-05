@@ -1,0 +1,120 @@
+\doxysection{Order\+Utils Class Reference}
+\hypertarget{class_order_utils}{}\label{class_order_utils}\index{OrderUtils@{OrderUtils}}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static string \mbox{\hyperlink{class_order_utils_a1c4c390200963862683e4d28c0b0bf23}{Convert\+Cme\+Id}} (uint64\+\_\+t exchordid)
+\item 
+static void \mbox{\hyperlink{class_order_utils_ab2f168a7a95851764d7a5af84c59ac7b}{fast\+Copy}} (char \texorpdfstring{$\ast$}{*}dest, const char \texorpdfstring{$\ast$}{*}src, size\+\_\+t length)
+\item 
+static void \mbox{\hyperlink{class_order_utils_ab1a42b0e47f200629564897a32415f37}{Copy}} (char \texorpdfstring{$\ast$}{*}dest, const char \texorpdfstring{$\ast$}{*}src)
+\item 
+static string \mbox{\hyperlink{class_order_utils_a89804a5086d8cc48d4b33aeef9efc92c}{to\+String}} (const char \texorpdfstring{$\ast$}{*}src)
+\item 
+static std\+::string \mbox{\hyperlink{class_order_utils_a35832d700cc586651b7ef461fedf67ef}{Print}} (const \mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} \&ord)
+\item 
+static std\+::string \mbox{\hyperlink{class_order_utils_a2e6ff12f9d5af2b55c511c100310a978}{Print}} (const \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&ord)
+\item 
+static std\+::string \mbox{\hyperlink{class_order_utils_a98fd1da39b680965b5c8181083562549}{Quick\+Print}} (const \mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} \&ord)
+\item 
+static void \mbox{\hyperlink{class_order_utils_a8797a43399e6c486affb095c8a50c1b3}{Fill\+Fields}} (\mbox{\hyperlink{struct_k_t_n_1_1_order}{Order}} \&ord, \mbox{\hyperlink{struct_user_info}{User\+Info}} u, std\+::string algoid="{}"{})
+\item 
+static void \mbox{\hyperlink{class_order_utils_a45d84c4ae8be994177f0d2ace3081ed9}{Set\+V2\+Fields}} (\mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} \&ord, KOrder\+Action\+::\+Enum action, KOrder\+Status\+::\+Enum status, bool inflight, bool ishedge=false, int callbackid=0)
+\item 
+static \mbox{\hyperlink{struct_user_info}{User\+Info}} \mbox{\hyperlink{class_order_utils_a335ddc02b69a3118d4ce489e2f692740}{Fill\+User\+Info}} (\mbox{\hyperlink{struct_k_t_n_1_1_order}{Order}} ord)
+\item 
+static void \mbox{\hyperlink{class_order_utils_a84885f36d9557910be874363cb369ade}{Transpose}} (\mbox{\hyperlink{struct_k_t_n_1_1_order}{Order}} \&dest, const \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{Order\+Pod}} \&src)
+\item 
+static void \mbox{\hyperlink{class_order_utils_ad1f6859016b6ff38439501f056eaff12}{Update}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{Order\+Pod}} \&dest, const \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{Order\+Pod}} \&src)
+\item 
+static void \mbox{\hyperlink{class_order_utils_a677223e220a1c6883f228576ada3cd7e}{Transpose}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{Order\+Pod}} \&pod, const \mbox{\hyperlink{struct_k_t_n_1_1_order}{Order}} \&ord, string clordid, bool certnr)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_order_utils_a1c4c390200963862683e4d28c0b0bf23}\index{OrderUtils@{OrderUtils}!ConvertCmeId@{ConvertCmeId}}
+\index{ConvertCmeId@{ConvertCmeId}!OrderUtils@{OrderUtils}}
+\doxysubsubsection{\texorpdfstring{ConvertCmeId()}{ConvertCmeId()}}
+{\footnotesize\ttfamily \label{class_order_utils_a1c4c390200963862683e4d28c0b0bf23} 
+static string Order\+Utils\+::\+Convert\+Cme\+Id (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{exchordid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_order_utils_ab1a42b0e47f200629564897a32415f37}\index{OrderUtils@{OrderUtils}!Copy@{Copy}}
+\index{Copy@{Copy}!OrderUtils@{OrderUtils}}
+\doxysubsubsection{\texorpdfstring{Copy()}{Copy()}}
+{\footnotesize\ttfamily \label{class_order_utils_ab1a42b0e47f200629564897a32415f37} 
+static void Order\+Utils\+::\+Copy (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{dest}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{src}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_order_utils_ab2f168a7a95851764d7a5af84c59ac7b}\index{OrderUtils@{OrderUtils}!fastCopy@{fastCopy}}
+\index{fastCopy@{fastCopy}!OrderUtils@{OrderUtils}}
+\doxysubsubsection{\texorpdfstring{fastCopy()}{fastCopy()}}
+{\footnotesize\ttfamily \label{class_order_utils_ab2f168a7a95851764d7a5af84c59ac7b} 
+static void Order\+Utils\+::fast\+Copy (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{dest}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{src}{, }\item[{size\+\_\+t}]{length}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_order_utils_a8797a43399e6c486affb095c8a50c1b3}\index{OrderUtils@{OrderUtils}!FillFields@{FillFields}}
+\index{FillFields@{FillFields}!OrderUtils@{OrderUtils}}
+\doxysubsubsection{\texorpdfstring{FillFields()}{FillFields()}}
+{\footnotesize\ttfamily \label{class_order_utils_a8797a43399e6c486affb095c8a50c1b3} 
+static void Order\+Utils\+::\+Fill\+Fields (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order}{Order}} \&}]{ord}{, }\item[{\mbox{\hyperlink{struct_user_info}{User\+Info}}}]{u}{, }\item[{std\+::string}]{algoid}{ = {\ttfamily "{}"{}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_order_utils_a335ddc02b69a3118d4ce489e2f692740}\index{OrderUtils@{OrderUtils}!FillUserInfo@{FillUserInfo}}
+\index{FillUserInfo@{FillUserInfo}!OrderUtils@{OrderUtils}}
+\doxysubsubsection{\texorpdfstring{FillUserInfo()}{FillUserInfo()}}
+{\footnotesize\ttfamily \label{class_order_utils_a335ddc02b69a3118d4ce489e2f692740} 
+static \mbox{\hyperlink{struct_user_info}{User\+Info}} Order\+Utils\+::\+Fill\+User\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order}{Order}}}]{ord}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_order_utils_a35832d700cc586651b7ef461fedf67ef}\index{OrderUtils@{OrderUtils}!Print@{Print}}
+\index{Print@{Print}!OrderUtils@{OrderUtils}}
+\doxysubsubsection{\texorpdfstring{Print()}{Print()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_order_utils_a35832d700cc586651b7ef461fedf67ef} 
+static std\+::string Order\+Utils\+::\+Print (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} \&}]{ord}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_order_utils_a2e6ff12f9d5af2b55c511c100310a978}\index{OrderUtils@{OrderUtils}!Print@{Print}}
+\index{Print@{Print}!OrderUtils@{OrderUtils}}
+\doxysubsubsection{\texorpdfstring{Print()}{Print()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_order_utils_a2e6ff12f9d5af2b55c511c100310a978} 
+static std\+::string Order\+Utils\+::\+Print (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&}]{ord}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_order_utils_a98fd1da39b680965b5c8181083562549}\index{OrderUtils@{OrderUtils}!QuickPrint@{QuickPrint}}
+\index{QuickPrint@{QuickPrint}!OrderUtils@{OrderUtils}}
+\doxysubsubsection{\texorpdfstring{QuickPrint()}{QuickPrint()}}
+{\footnotesize\ttfamily \label{class_order_utils_a98fd1da39b680965b5c8181083562549} 
+static std\+::string Order\+Utils\+::\+Quick\+Print (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} \&}]{ord}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_order_utils_a45d84c4ae8be994177f0d2ace3081ed9}\index{OrderUtils@{OrderUtils}!SetV2Fields@{SetV2Fields}}
+\index{SetV2Fields@{SetV2Fields}!OrderUtils@{OrderUtils}}
+\doxysubsubsection{\texorpdfstring{SetV2Fields()}{SetV2Fields()}}
+{\footnotesize\ttfamily \label{class_order_utils_a45d84c4ae8be994177f0d2ace3081ed9} 
+static void Order\+Utils\+::\+Set\+V2\+Fields (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} \&}]{ord}{, }\item[{KOrder\+Action\+::\+Enum}]{action}{, }\item[{KOrder\+Status\+::\+Enum}]{status}{, }\item[{bool}]{inflight}{, }\item[{bool}]{ishedge}{ = {\ttfamily false}, }\item[{int}]{callbackid}{ = {\ttfamily 0}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_order_utils_a89804a5086d8cc48d4b33aeef9efc92c}\index{OrderUtils@{OrderUtils}!toString@{toString}}
+\index{toString@{toString}!OrderUtils@{OrderUtils}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily \label{class_order_utils_a89804a5086d8cc48d4b33aeef9efc92c} 
+static string Order\+Utils\+::to\+String (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{src}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_order_utils_a84885f36d9557910be874363cb369ade}\index{OrderUtils@{OrderUtils}!Transpose@{Transpose}}
+\index{Transpose@{Transpose}!OrderUtils@{OrderUtils}}
+\doxysubsubsection{\texorpdfstring{Transpose()}{Transpose()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_order_utils_a84885f36d9557910be874363cb369ade} 
+static void Order\+Utils\+::\+Transpose (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order}{Order}} \&}]{dest}{, }\item[{const \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{Order\+Pod}} \&}]{src}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_order_utils_a677223e220a1c6883f228576ada3cd7e}\index{OrderUtils@{OrderUtils}!Transpose@{Transpose}}
+\index{Transpose@{Transpose}!OrderUtils@{OrderUtils}}
+\doxysubsubsection{\texorpdfstring{Transpose()}{Transpose()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_order_utils_a677223e220a1c6883f228576ada3cd7e} 
+static void Order\+Utils\+::\+Transpose (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{Order\+Pod}} \&}]{pod}{, }\item[{const \mbox{\hyperlink{struct_k_t_n_1_1_order}{Order}} \&}]{ord}{, }\item[{string}]{clordid}{, }\item[{bool}]{certnr}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_order_utils_ad1f6859016b6ff38439501f056eaff12}\index{OrderUtils@{OrderUtils}!Update@{Update}}
+\index{Update@{Update}!OrderUtils@{OrderUtils}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_order_utils_ad1f6859016b6ff38439501f056eaff12} 
+static void Order\+Utils\+::\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{Order\+Pod}} \&}]{dest}{, }\item[{const \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{Order\+Pod}} \&}]{src}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Orders/Order\+Utils.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,99 @@
+\doxysection{Performance\+Tracker Class Reference}
+\hypertarget{class_performance_tracker}{}\label{class_performance_tracker}\index{PerformanceTracker@{PerformanceTracker}}
+
+
+Class for tracking performance measurements.  
+
+
+
+
+{\ttfamily \#include $<$Performance\+Tracker.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_performance_tracker_acd1f98d080bf8c2278ea55e3b4e3c93b}{start\+Measurement}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Start a new performance measurement with the given name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_performance_tracker_a1706d7a094345aa09be06d525e1d2de3}{stop\+Measurement}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Stop the performance measurement with the given name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_performance_tracker_a26e7c423c28107c2046fdea0a5bbf38d}{print\+Measurements}} ()
+\begin{DoxyCompactList}\small\item\em Print the stats for all measurements. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_performance_tracker_a8657fa4a126d0f6b47ce200af0485b75}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Clear all performance measurements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for tracking performance measurements. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_performance_tracker_a8657fa4a126d0f6b47ce200af0485b75}\index{PerformanceTracker@{PerformanceTracker}!clear@{clear}}
+\index{clear@{clear}!PerformanceTracker@{PerformanceTracker}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \label{class_performance_tracker_a8657fa4a126d0f6b47ce200af0485b75} 
+void Performance\+Tracker\+::clear (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Clear all performance measurements. 
+
+
+
+Referenced by \mbox{\hyperlink{l00299}{KTN\+::\+Multi\+Spreader\+V3\+::\+Print()}}, \mbox{\hyperlink{l00328}{KTN\+::\+Skewer\+::\+Print()}}, \mbox{\hyperlink{l00331}{KTN\+::\+Skew\+Trader\+::\+Print()}}, \mbox{\hyperlink{l00307}{KTN\+::\+Twap\+::\+Print()}}, \mbox{\hyperlink{l00826}{KTN\+::\+CME\+::\+Cme\+Algo\+::\+Print\+Latencies()}}, \mbox{\hyperlink{l00805}{KTN\+::\+CME\+::\+Cme\+GT5\+::\+Print\+Latencies()}}, \mbox{\hyperlink{l00111}{KTN\+::\+Exchange\+Base2\+::\+Print\+Latencies()}}, and \mbox{\hyperlink{l00614}{KTN\+::\+TCP\+::\+EFVITcp\+V2\+::\+Send\+EFVI\+\_\+\+Delegated()}}.
+
+\Hypertarget{class_performance_tracker_a26e7c423c28107c2046fdea0a5bbf38d}\index{PerformanceTracker@{PerformanceTracker}!printMeasurements@{printMeasurements}}
+\index{printMeasurements@{printMeasurements}!PerformanceTracker@{PerformanceTracker}}
+\doxysubsubsection{\texorpdfstring{printMeasurements()}{printMeasurements()}}
+{\footnotesize\ttfamily \label{class_performance_tracker_a26e7c423c28107c2046fdea0a5bbf38d} 
+void Performance\+Tracker\+::print\+Measurements (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Print the stats for all measurements. 
+
+
+
+Referenced by \mbox{\hyperlink{l00108}{KTN\+::\+Auto\+Hedge\+OB\+::\+Print()}}, \mbox{\hyperlink{l00299}{KTN\+::\+Multi\+Spreader\+V3\+::\+Print()}}, \mbox{\hyperlink{l00328}{KTN\+::\+Skewer\+::\+Print()}}, \mbox{\hyperlink{l00331}{KTN\+::\+Skew\+Trader\+::\+Print()}}, \mbox{\hyperlink{l00147}{KTN\+::\+Squeezer\+OB\+::\+Print()}}, \mbox{\hyperlink{l00307}{KTN\+::\+Twap\+::\+Print()}}, \mbox{\hyperlink{l00826}{KTN\+::\+CME\+::\+Cme\+Algo\+::\+Print\+Latencies()}}, \mbox{\hyperlink{l00805}{KTN\+::\+CME\+::\+Cme\+GT5\+::\+Print\+Latencies()}}, \mbox{\hyperlink{l00111}{KTN\+::\+Exchange\+Base2\+::\+Print\+Latencies()}}, \mbox{\hyperlink{l00618}{Ktn\+Cme\+Mbo\+::\+Print\+Stats()}}, \mbox{\hyperlink{l00642}{Ktn\+Cme\+Mdp\+V4\+::\+Print\+Stats()}}, and \mbox{\hyperlink{l00614}{KTN\+::\+TCP\+::\+EFVITcp\+V2\+::\+Send\+EFVI\+\_\+\+Delegated()}}.
+
+\Hypertarget{class_performance_tracker_acd1f98d080bf8c2278ea55e3b4e3c93b}\index{PerformanceTracker@{PerformanceTracker}!startMeasurement@{startMeasurement}}
+\index{startMeasurement@{startMeasurement}!PerformanceTracker@{PerformanceTracker}}
+\doxysubsubsection{\texorpdfstring{startMeasurement()}{startMeasurement()}}
+{\footnotesize\ttfamily \label{class_performance_tracker_acd1f98d080bf8c2278ea55e3b4e3c93b} 
+void Performance\+Tracker\+::start\+Measurement (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Start a new performance measurement with the given name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the performance measurement. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{l00369}{KTN\+::\+CME\+::\+Cme\+Algo\+::on\+Recv()}}, \mbox{\hyperlink{l00365}{KTN\+::\+CME\+::\+Cme\+GT5\+::on\+Recv()}}, \mbox{\hyperlink{l01104}{KTN\+::\+CME\+::\+Cme\+Algo\+::\+Send()}}, \mbox{\hyperlink{l00889}{KTN\+::\+CME\+::\+Cme\+GT5\+::\+Send()}}, \mbox{\hyperlink{l00614}{KTN\+::\+TCP\+::\+EFVITcp\+V2\+::\+Send\+EFVI\+\_\+\+Delegated()}}, and \mbox{\hyperlink{l00987}{KTN\+::\+CME\+::\+Cme\+GT5\+::\+Send\+Hedge\+Instruction()}}.
+
+\Hypertarget{class_performance_tracker_a1706d7a094345aa09be06d525e1d2de3}\index{PerformanceTracker@{PerformanceTracker}!stopMeasurement@{stopMeasurement}}
+\index{stopMeasurement@{stopMeasurement}!PerformanceTracker@{PerformanceTracker}}
+\doxysubsubsection{\texorpdfstring{stopMeasurement()}{stopMeasurement()}}
+{\footnotesize\ttfamily \label{class_performance_tracker_a1706d7a094345aa09be06d525e1d2de3} 
+void Performance\+Tracker\+::stop\+Measurement (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Stop the performance measurement with the given name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the performance measurement. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{l00369}{KTN\+::\+CME\+::\+Cme\+Algo\+::on\+Recv()}}, \mbox{\hyperlink{l00365}{KTN\+::\+CME\+::\+Cme\+GT5\+::on\+Recv()}}, \mbox{\hyperlink{l01104}{KTN\+::\+CME\+::\+Cme\+Algo\+::\+Send()}}, \mbox{\hyperlink{l00889}{KTN\+::\+CME\+::\+Cme\+GT5\+::\+Send()}}, \mbox{\hyperlink{l00614}{KTN\+::\+TCP\+::\+EFVITcp\+V2\+::\+Send\+EFVI\+\_\+\+Delegated()}}, and \mbox{\hyperlink{l00987}{KTN\+::\+CME\+::\+Cme\+GT5\+::\+Send\+Hedge\+Instruction()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Core/Performance\+Tracker.\+hpp\end{DoxyCompactItemize}

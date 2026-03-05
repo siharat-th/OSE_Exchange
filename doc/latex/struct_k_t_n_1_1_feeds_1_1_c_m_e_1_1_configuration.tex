@@ -1,0 +1,158 @@
+\doxysection{KTN\+::Feeds\+::CME\+::Configuration Struct Reference}
+\hypertarget{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration}{}\label{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration}\index{KTN::Feeds::CME::Configuration@{KTN::Feeds::CME::Configuration}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_a31510744b0b1c18ac8530272c5adb8d7}{Log\+Me}} (string msg, int color=LOG\+\_\+\+WHITE)
+\item 
+void \mbox{\hyperlink{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_a288fa933b5908724f4a966b5b6fc283d}{Info}} ()
+\item 
+void \mbox{\hyperlink{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_a4cd34784bed64ffd7a477141e3ad59bb}{Print}} (string chid)
+\item 
+\mbox{\hyperlink{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1channel}{channel}} \mbox{\hyperlink{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_a63d5f310f6def7a0e8e55f7b9fa21ef8}{Get\+Channel}} (string chid)
+\item 
+string \mbox{\hyperlink{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_ae88a77cf7edd98b903a53515912b7ede}{Get\+Chid}} (string root, KOrder\+Prod\+Type\+::\+Enum prodtype)
+\item 
+void \mbox{\hyperlink{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_a4861ccd271b22f3ffb7196c1ed7e9025}{Add\+Channel}} (string id, string label)
+\item 
+void \mbox{\hyperlink{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_aadfeb43f357949e75693012406d57b6e}{Add\+Product}} (string channelid, string code, \mbox{\hyperlink{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1productgroup}{productgroup}} pg)
+\item 
+void \mbox{\hyperlink{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_ab1a6e65407799139b387e9a2691e53e9}{Add\+Connection}} (string channelid, string id, string feed\+\_\+type, string ip, string host\+\_\+ip, string port, string feed, string proto)
+\item 
+void \mbox{\hyperlink{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_a607caecd07ff5900303bd0bca0407d38}{Load}} (std\+::string filename)
+\item 
+void \mbox{\hyperlink{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_a67f946348750e11247fb2b7ca532dad4}{Parse\+Config\+Node}} (const rapidxml\+::xml\+\_\+attribute$<$$>$ \texorpdfstring{$\ast$}{*}attr)
+\item 
+string \mbox{\hyperlink{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_a72498823c8fc11e75698141db1f29d01}{Parse\+Channel\+Node}} (const rapidxml\+::xml\+\_\+attribute$<$$>$ \texorpdfstring{$\ast$}{*}attr)
+\item 
+void \mbox{\hyperlink{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_ab8344e109224487030e6e8fd6743bc12}{Parse\+Product\+Node}} (const rapidxml\+::xml\+\_\+attribute$<$$>$ \texorpdfstring{$\ast$}{*}attr, string chid)
+\item 
+void \mbox{\hyperlink{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_a0e16d1c09533dfa719088fad8a598c07}{Parse\+Connection\+Node}} (const rapidxml\+::xml\+\_\+node$<$$>$ \texorpdfstring{$\ast$}{*}node, string chid)
+\item 
+void \mbox{\hyperlink{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_a49a8b347388422bfe6bd203468d9e127}{walk}} (const rapidxml\+::xml\+\_\+node$<$$>$ \texorpdfstring{$\ast$}{*}node, int indent=0, string chid="{}NONE"{})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_a3a7d9266ad4f3e0c97597f82c35e163d}{environment}}
+\item 
+string \mbox{\hyperlink{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_a33bcf63d0f47026a0f90e6f74bf078bb}{updated}}
+\item 
+tr1\+::unordered\+\_\+map$<$ string, \mbox{\hyperlink{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1channel}{channel}} $>$ \mbox{\hyperlink{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_a2092a374b6ee11509dfcf7effcfdb2fc}{channels}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_a4861ccd271b22f3ffb7196c1ed7e9025}\index{KTN::Feeds::CME::Configuration@{KTN::Feeds::CME::Configuration}!AddChannel@{AddChannel}}
+\index{AddChannel@{AddChannel}!KTN::Feeds::CME::Configuration@{KTN::Feeds::CME::Configuration}}
+\doxysubsubsection{\texorpdfstring{AddChannel()}{AddChannel()}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_a4861ccd271b22f3ffb7196c1ed7e9025} 
+void KTN\+::\+Feeds\+::\+CME\+::\+Configuration\+::\+Add\+Channel (\begin{DoxyParamCaption}\item[{string}]{id}{, }\item[{string}]{label}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_ab1a6e65407799139b387e9a2691e53e9}\index{KTN::Feeds::CME::Configuration@{KTN::Feeds::CME::Configuration}!AddConnection@{AddConnection}}
+\index{AddConnection@{AddConnection}!KTN::Feeds::CME::Configuration@{KTN::Feeds::CME::Configuration}}
+\doxysubsubsection{\texorpdfstring{AddConnection()}{AddConnection()}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_ab1a6e65407799139b387e9a2691e53e9} 
+void KTN\+::\+Feeds\+::\+CME\+::\+Configuration\+::\+Add\+Connection (\begin{DoxyParamCaption}\item[{string}]{channelid}{, }\item[{string}]{id}{, }\item[{string}]{feed\+\_\+type}{, }\item[{string}]{ip}{, }\item[{string}]{host\+\_\+ip}{, }\item[{string}]{port}{, }\item[{string}]{feed}{, }\item[{string}]{proto}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_aadfeb43f357949e75693012406d57b6e}\index{KTN::Feeds::CME::Configuration@{KTN::Feeds::CME::Configuration}!AddProduct@{AddProduct}}
+\index{AddProduct@{AddProduct}!KTN::Feeds::CME::Configuration@{KTN::Feeds::CME::Configuration}}
+\doxysubsubsection{\texorpdfstring{AddProduct()}{AddProduct()}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_aadfeb43f357949e75693012406d57b6e} 
+void KTN\+::\+Feeds\+::\+CME\+::\+Configuration\+::\+Add\+Product (\begin{DoxyParamCaption}\item[{string}]{channelid}{, }\item[{string}]{code}{, }\item[{\mbox{\hyperlink{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1productgroup}{productgroup}}}]{pg}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_a63d5f310f6def7a0e8e55f7b9fa21ef8}\index{KTN::Feeds::CME::Configuration@{KTN::Feeds::CME::Configuration}!GetChannel@{GetChannel}}
+\index{GetChannel@{GetChannel}!KTN::Feeds::CME::Configuration@{KTN::Feeds::CME::Configuration}}
+\doxysubsubsection{\texorpdfstring{GetChannel()}{GetChannel()}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_a63d5f310f6def7a0e8e55f7b9fa21ef8} 
+\mbox{\hyperlink{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1channel}{channel}} KTN\+::\+Feeds\+::\+CME\+::\+Configuration\+::\+Get\+Channel (\begin{DoxyParamCaption}\item[{string}]{chid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_ae88a77cf7edd98b903a53515912b7ede}\index{KTN::Feeds::CME::Configuration@{KTN::Feeds::CME::Configuration}!GetChid@{GetChid}}
+\index{GetChid@{GetChid}!KTN::Feeds::CME::Configuration@{KTN::Feeds::CME::Configuration}}
+\doxysubsubsection{\texorpdfstring{GetChid()}{GetChid()}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_ae88a77cf7edd98b903a53515912b7ede} 
+string KTN\+::\+Feeds\+::\+CME\+::\+Configuration\+::\+Get\+Chid (\begin{DoxyParamCaption}\item[{string}]{root}{, }\item[{KOrder\+Prod\+Type\+::\+Enum}]{prodtype}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_a288fa933b5908724f4a966b5b6fc283d}\index{KTN::Feeds::CME::Configuration@{KTN::Feeds::CME::Configuration}!Info@{Info}}
+\index{Info@{Info}!KTN::Feeds::CME::Configuration@{KTN::Feeds::CME::Configuration}}
+\doxysubsubsection{\texorpdfstring{Info()}{Info()}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_a288fa933b5908724f4a966b5b6fc283d} 
+void KTN\+::\+Feeds\+::\+CME\+::\+Configuration\+::\+Info (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_a607caecd07ff5900303bd0bca0407d38}\index{KTN::Feeds::CME::Configuration@{KTN::Feeds::CME::Configuration}!Load@{Load}}
+\index{Load@{Load}!KTN::Feeds::CME::Configuration@{KTN::Feeds::CME::Configuration}}
+\doxysubsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_a607caecd07ff5900303bd0bca0407d38} 
+void KTN\+::\+Feeds\+::\+CME\+::\+Configuration\+::\+Load (\begin{DoxyParamCaption}\item[{std\+::string}]{filename}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_a31510744b0b1c18ac8530272c5adb8d7}\index{KTN::Feeds::CME::Configuration@{KTN::Feeds::CME::Configuration}!LogMe@{LogMe}}
+\index{LogMe@{LogMe}!KTN::Feeds::CME::Configuration@{KTN::Feeds::CME::Configuration}}
+\doxysubsubsection{\texorpdfstring{LogMe()}{LogMe()}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_a31510744b0b1c18ac8530272c5adb8d7} 
+void KTN\+::\+Feeds\+::\+CME\+::\+Configuration\+::\+Log\+Me (\begin{DoxyParamCaption}\item[{string}]{msg}{, }\item[{int}]{color}{ = {\ttfamily LOG\+\_\+WHITE}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_a72498823c8fc11e75698141db1f29d01}\index{KTN::Feeds::CME::Configuration@{KTN::Feeds::CME::Configuration}!ParseChannelNode@{ParseChannelNode}}
+\index{ParseChannelNode@{ParseChannelNode}!KTN::Feeds::CME::Configuration@{KTN::Feeds::CME::Configuration}}
+\doxysubsubsection{\texorpdfstring{ParseChannelNode()}{ParseChannelNode()}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_a72498823c8fc11e75698141db1f29d01} 
+string KTN\+::\+Feeds\+::\+CME\+::\+Configuration\+::\+Parse\+Channel\+Node (\begin{DoxyParamCaption}\item[{const rapidxml\+::xml\+\_\+attribute$<$$>$ \texorpdfstring{$\ast$}{*}}]{attr}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_a67f946348750e11247fb2b7ca532dad4}\index{KTN::Feeds::CME::Configuration@{KTN::Feeds::CME::Configuration}!ParseConfigNode@{ParseConfigNode}}
+\index{ParseConfigNode@{ParseConfigNode}!KTN::Feeds::CME::Configuration@{KTN::Feeds::CME::Configuration}}
+\doxysubsubsection{\texorpdfstring{ParseConfigNode()}{ParseConfigNode()}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_a67f946348750e11247fb2b7ca532dad4} 
+void KTN\+::\+Feeds\+::\+CME\+::\+Configuration\+::\+Parse\+Config\+Node (\begin{DoxyParamCaption}\item[{const rapidxml\+::xml\+\_\+attribute$<$$>$ \texorpdfstring{$\ast$}{*}}]{attr}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_a0e16d1c09533dfa719088fad8a598c07}\index{KTN::Feeds::CME::Configuration@{KTN::Feeds::CME::Configuration}!ParseConnectionNode@{ParseConnectionNode}}
+\index{ParseConnectionNode@{ParseConnectionNode}!KTN::Feeds::CME::Configuration@{KTN::Feeds::CME::Configuration}}
+\doxysubsubsection{\texorpdfstring{ParseConnectionNode()}{ParseConnectionNode()}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_a0e16d1c09533dfa719088fad8a598c07} 
+void KTN\+::\+Feeds\+::\+CME\+::\+Configuration\+::\+Parse\+Connection\+Node (\begin{DoxyParamCaption}\item[{const rapidxml\+::xml\+\_\+node$<$$>$ \texorpdfstring{$\ast$}{*}}]{node}{, }\item[{string}]{chid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_ab8344e109224487030e6e8fd6743bc12}\index{KTN::Feeds::CME::Configuration@{KTN::Feeds::CME::Configuration}!ParseProductNode@{ParseProductNode}}
+\index{ParseProductNode@{ParseProductNode}!KTN::Feeds::CME::Configuration@{KTN::Feeds::CME::Configuration}}
+\doxysubsubsection{\texorpdfstring{ParseProductNode()}{ParseProductNode()}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_ab8344e109224487030e6e8fd6743bc12} 
+void KTN\+::\+Feeds\+::\+CME\+::\+Configuration\+::\+Parse\+Product\+Node (\begin{DoxyParamCaption}\item[{const rapidxml\+::xml\+\_\+attribute$<$$>$ \texorpdfstring{$\ast$}{*}}]{attr}{, }\item[{string}]{chid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_a4cd34784bed64ffd7a477141e3ad59bb}\index{KTN::Feeds::CME::Configuration@{KTN::Feeds::CME::Configuration}!Print@{Print}}
+\index{Print@{Print}!KTN::Feeds::CME::Configuration@{KTN::Feeds::CME::Configuration}}
+\doxysubsubsection{\texorpdfstring{Print()}{Print()}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_a4cd34784bed64ffd7a477141e3ad59bb} 
+void KTN\+::\+Feeds\+::\+CME\+::\+Configuration\+::\+Print (\begin{DoxyParamCaption}\item[{string}]{chid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_a49a8b347388422bfe6bd203468d9e127}\index{KTN::Feeds::CME::Configuration@{KTN::Feeds::CME::Configuration}!walk@{walk}}
+\index{walk@{walk}!KTN::Feeds::CME::Configuration@{KTN::Feeds::CME::Configuration}}
+\doxysubsubsection{\texorpdfstring{walk()}{walk()}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_a49a8b347388422bfe6bd203468d9e127} 
+void KTN\+::\+Feeds\+::\+CME\+::\+Configuration\+::walk (\begin{DoxyParamCaption}\item[{const rapidxml\+::xml\+\_\+node$<$$>$ \texorpdfstring{$\ast$}{*}}]{node}{, }\item[{int}]{indent}{ = {\ttfamily 0}, }\item[{string}]{chid}{ = {\ttfamily "{}NONE"{}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_a2092a374b6ee11509dfcf7effcfdb2fc}\index{KTN::Feeds::CME::Configuration@{KTN::Feeds::CME::Configuration}!channels@{channels}}
+\index{channels@{channels}!KTN::Feeds::CME::Configuration@{KTN::Feeds::CME::Configuration}}
+\doxysubsubsection{\texorpdfstring{channels}{channels}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_a2092a374b6ee11509dfcf7effcfdb2fc} 
+tr1\+::unordered\+\_\+map$<$string, \mbox{\hyperlink{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1channel}{channel}}$>$ KTN\+::\+Feeds\+::\+CME\+::\+Configuration\+::channels}
+
+\Hypertarget{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_a3a7d9266ad4f3e0c97597f82c35e163d}\index{KTN::Feeds::CME::Configuration@{KTN::Feeds::CME::Configuration}!environment@{environment}}
+\index{environment@{environment}!KTN::Feeds::CME::Configuration@{KTN::Feeds::CME::Configuration}}
+\doxysubsubsection{\texorpdfstring{environment}{environment}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_a3a7d9266ad4f3e0c97597f82c35e163d} 
+string KTN\+::\+Feeds\+::\+CME\+::\+Configuration\+::environment}
+
+\Hypertarget{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_a33bcf63d0f47026a0f90e6f74bf078bb}\index{KTN::Feeds::CME::Configuration@{KTN::Feeds::CME::Configuration}!updated@{updated}}
+\index{updated@{updated}!KTN::Feeds::CME::Configuration@{KTN::Feeds::CME::Configuration}}
+\doxysubsubsection{\texorpdfstring{updated}{updated}}
+{\footnotesize\ttfamily \label{struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_a33bcf63d0f47026a0f90e6f74bf078bb} 
+string KTN\+::\+Feeds\+::\+CME\+::\+Configuration\+::updated}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+exchsupport/cme/Channel\+Structs.\+hpp\end{DoxyCompactItemize}

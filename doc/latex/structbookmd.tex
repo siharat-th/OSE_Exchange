@@ -1,0 +1,65 @@
+\doxysection{bookmd Struct Reference}
+\hypertarget{structbookmd}{}\label{structbookmd}\index{bookmd@{bookmd}}
+
+
+Structure representing book market data.  
+
+
+
+
+{\ttfamily \#include $<$algo\+\_\+structs.\+hpp$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{structbookmd_ae321ed7c8e187f65044f11552c913460}{index}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{structbookmd_a78b2593a62fd39b424145103cdb5c8e8}{secid}}
+\item 
+\mbox{\hyperlink{structpxlvl}{pxlvl}} \mbox{\hyperlink{structbookmd_a3860dd60ed582047c4421a5530c45831}{bids}} \mbox{[}10\mbox{]}
+\item 
+\mbox{\hyperlink{structpxlvl}{pxlvl}} \mbox{\hyperlink{structbookmd_a4a64961c154dae4420f072cc00722f98}{asks}} \mbox{[}10\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure representing book market data. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structbookmd_a4a64961c154dae4420f072cc00722f98}\index{bookmd@{bookmd}!asks@{asks}}
+\index{asks@{asks}!bookmd@{bookmd}}
+\doxysubsubsection{\texorpdfstring{asks}{asks}}
+{\footnotesize\ttfamily \label{structbookmd_a4a64961c154dae4420f072cc00722f98} 
+\mbox{\hyperlink{structpxlvl}{pxlvl}} bookmd\+::asks\mbox{[}10\mbox{]}}
+
+The array of ask price levels. \Hypertarget{structbookmd_a3860dd60ed582047c4421a5530c45831}\index{bookmd@{bookmd}!bids@{bids}}
+\index{bids@{bids}!bookmd@{bookmd}}
+\doxysubsubsection{\texorpdfstring{bids}{bids}}
+{\footnotesize\ttfamily \label{structbookmd_a3860dd60ed582047c4421a5530c45831} 
+\mbox{\hyperlink{structpxlvl}{pxlvl}} bookmd\+::bids\mbox{[}10\mbox{]}}
+
+The array of bid price levels. \Hypertarget{structbookmd_ae321ed7c8e187f65044f11552c913460}\index{bookmd@{bookmd}!index@{index}}
+\index{index@{index}!bookmd@{bookmd}}
+\doxysubsubsection{\texorpdfstring{index}{index}}
+{\footnotesize\ttfamily \label{structbookmd_ae321ed7c8e187f65044f11552c913460} 
+uint16\+\_\+t bookmd\+::index}
+
+The index. 
+
+Referenced by \mbox{\hyperlink{l00707}{Ktn\+Cme\+Mbo\+::\+Add\+Book\+Depth()}}, and \mbox{\hyperlink{l00731}{Ktn\+Cme\+Mdp\+V4\+::\+Add\+Book\+Depth()}}.
+
+\Hypertarget{structbookmd_a78b2593a62fd39b424145103cdb5c8e8}\index{bookmd@{bookmd}!secid@{secid}}
+\index{secid@{secid}!bookmd@{bookmd}}
+\doxysubsubsection{\texorpdfstring{secid}{secid}}
+{\footnotesize\ttfamily \label{structbookmd_a78b2593a62fd39b424145103cdb5c8e8} 
+int32\+\_\+t bookmd\+::secid}
+
+The security ID. 
+
+Referenced by \mbox{\hyperlink{l00707}{Ktn\+Cme\+Mbo\+::\+Add\+Book\+Depth()}}, and \mbox{\hyperlink{l00731}{Ktn\+Cme\+Mdp\+V4\+::\+Add\+Book\+Depth()}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Algo\+Support/algo\+\_\+structs.\+hpp\end{DoxyCompactItemize}

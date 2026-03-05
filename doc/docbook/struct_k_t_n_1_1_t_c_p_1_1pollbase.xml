@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_t_n_1_1_t_c_p_1_1pollbase" xml:lang="en-US">
+<title>KTN::TCP::pollbase Struct Reference</title>
+<indexterm><primary>KTN::TCP::pollbase</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_t_c_p_1_1pollbase_1af256e8179c5ecd88a738028cc2cfb983">s</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_t_c_p_1_1pollbase_1ae6f1687bb749d0a3daf83dc1850cc660">efd</link></para>
+</listitem>
+            <listitem><para>struct epoll_event <link linkend="_struct_k_t_n_1_1_t_c_p_1_1pollbase_1a6c2a81f58c0eabe5bdfcc695b075eb68">event</link></para>
+</listitem>
+            <listitem><para>struct epoll_event * <link linkend="_struct_k_t_n_1_1_t_c_p_1_1pollbase_1aa818f9027133cc2112fef322381d1a72">events</link></para>
+</listitem>
+            <listitem><para>pthread_t <link linkend="_struct_k_t_n_1_1_t_c_p_1_1pollbase_1a1ba2a738db1ca3df99e6ab5760447a7a">tid</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_t_c_p_1_1pollbase_1a22e53d9e32b9eeb3b6c1f37341f289ba">affinity</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_t_c_p_1_1pollbase_1a11043e69dd5425420f825179bbce69f8">timeout</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_t_c_p_1_1pollbase_1a22e53d9e32b9eeb3b6c1f37341f289ba"/><section>
+    <title>affinity</title>
+<indexterm><primary>affinity</primary><secondary>KTN::TCP::pollbase</secondary></indexterm>
+<indexterm><primary>KTN::TCP::pollbase</primary><secondary>affinity</secondary></indexterm>
+<para><computeroutput>int KTN::TCP::pollbase::affinity</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_t_c_p_1_1pollbase_1ae6f1687bb749d0a3daf83dc1850cc660"/><section>
+    <title>efd</title>
+<indexterm><primary>efd</primary><secondary>KTN::TCP::pollbase</secondary></indexterm>
+<indexterm><primary>KTN::TCP::pollbase</primary><secondary>efd</secondary></indexterm>
+<para><computeroutput>int KTN::TCP::pollbase::efd</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_t_c_p_1_1pollbase_1a6c2a81f58c0eabe5bdfcc695b075eb68"/><section>
+    <title>event</title>
+<indexterm><primary>event</primary><secondary>KTN::TCP::pollbase</secondary></indexterm>
+<indexterm><primary>KTN::TCP::pollbase</primary><secondary>event</secondary></indexterm>
+<para><computeroutput>struct epoll_event KTN::TCP::pollbase::event</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_t_c_p_1_1pollbase_1aa818f9027133cc2112fef322381d1a72"/><section>
+    <title>events</title>
+<indexterm><primary>events</primary><secondary>KTN::TCP::pollbase</secondary></indexterm>
+<indexterm><primary>KTN::TCP::pollbase</primary><secondary>events</secondary></indexterm>
+<para><computeroutput>struct epoll_event* KTN::TCP::pollbase::events</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_t_c_p_1_1pollbase_1af256e8179c5ecd88a738028cc2cfb983"/><section>
+    <title>s</title>
+<indexterm><primary>s</primary><secondary>KTN::TCP::pollbase</secondary></indexterm>
+<indexterm><primary>KTN::TCP::pollbase</primary><secondary>s</secondary></indexterm>
+<para><computeroutput>int KTN::TCP::pollbase::s</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_t_c_p_1_1pollbase_1a1ba2a738db1ca3df99e6ab5760447a7a"/><section>
+    <title>tid</title>
+<indexterm><primary>tid</primary><secondary>KTN::TCP::pollbase</secondary></indexterm>
+<indexterm><primary>KTN::TCP::pollbase</primary><secondary>tid</secondary></indexterm>
+<para><computeroutput>pthread_t KTN::TCP::pollbase::tid</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_t_c_p_1_1pollbase_1a11043e69dd5425420f825179bbce69f8"/><section>
+    <title>timeout</title>
+<indexterm><primary>timeout</primary><secondary>KTN::TCP::pollbase</secondary></indexterm>
+<indexterm><primary>KTN::TCP::pollbase</primary><secondary>timeout</secondary></indexterm>
+<para><computeroutput>int KTN::TCP::pollbase::timeout</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Net/tcp_structs.hpp</section>
+</section>

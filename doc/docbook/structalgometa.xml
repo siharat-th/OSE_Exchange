@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structalgometa" xml:lang="en-US">
+<title>algometa Struct Reference</title>
+<indexterm><primary>algometa</primary></indexterm>
+<para>
+
+<para>Structure representing algorithm metadata. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;algo_structs.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>std::string <link linkend="_structalgometa_1a6e952ca2e121b4b4aa934a00fdde3d90">Strategy</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structalgometa_1a0a93d2c70632c78c851d53113505192c">StratId</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_structalgometa_1afc6f79dbd9b17a76510ae1a915f57e2e">TemplateName</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structalgometa_1a71aa3c76a331d480388f43e216b86ba1">Enabled</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_structalgometa_1aa4eb536c534b39deeacd8a125783aa06">UniqueId</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_structalgometa_1a274c658db80008354bec46e3ae6c3439">Source</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_structalgometa_1a2fd3db49a59da0a714617b887a4e9e4e">Tag</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_structalgometa_1a14d4bf441ba211e54559e3139fa5cf7b">HedgeTag</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_structalgometa_1a409e57556841767dcdd7b4e5bc6d9057">CoverTag</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_structalgometa_1a829f711177bdd6e44ca5e25d1d0da7c7">PrimHdgTag</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_structalgometa_1afc0c8beea8b2e08aac8b46f4035f7851">CanHedge</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_structalgometa_1a008fb747a64bb101a0e359413480e7ce">Symbol</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_structalgometa_1a8ccb0757953bdac38e340d34ec784bdc">Exch</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_structalgometa_1a3cb6abe7405358924e8955379b66d0f6">Position</link></para>
+</listitem>
+            <listitem><para><link linkend="_struct_user_info">UserInfo</link> <link linkend="_structalgometa_1aff0f70028d6395d1510fe2983f0ff95f">userinfo</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Structure representing algorithm metadata. </para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structalgometa_1afc0c8beea8b2e08aac8b46f4035f7851"/><section>
+    <title>CanHedge</title>
+<indexterm><primary>CanHedge</primary><secondary>algometa</secondary></indexterm>
+<indexterm><primary>algometa</primary><secondary>CanHedge</secondary></indexterm>
+<para><computeroutput>bool algometa::CanHedge</computeroutput></para>
+<para>Flag indicating if hedging is allowed. </para>
+</section>
+<anchor xml:id="_structalgometa_1a409e57556841767dcdd7b4e5bc6d9057"/><section>
+    <title>CoverTag</title>
+<indexterm><primary>CoverTag</primary><secondary>algometa</secondary></indexterm>
+<indexterm><primary>algometa</primary><secondary>CoverTag</secondary></indexterm>
+<para><computeroutput>std::string algometa::CoverTag</computeroutput></para>
+<para>The cover tag. </para>
+</section>
+<anchor xml:id="_structalgometa_1a71aa3c76a331d480388f43e216b86ba1"/><section>
+    <title>Enabled</title>
+<indexterm><primary>Enabled</primary><secondary>algometa</secondary></indexterm>
+<indexterm><primary>algometa</primary><secondary>Enabled</secondary></indexterm>
+<para><computeroutput>int algometa::Enabled</computeroutput></para>
+<para>Flag indicating if the algorithm is enabled. </para>
+<para>
+Referenced by <link linkend="_l00411">KTN::MultiSpreaderV3::Enable()</link>, <link linkend="_l00506">KTN::Skewer::Enable()</link>, <link linkend="_l00511">KTN::SkewTrader::Enable()</link>, <link linkend="_l00461">KTN::Stacker::Enable()</link>, <link linkend="_l00374">KTN::StackerTimer::Enable()</link>, <link linkend="_l00426">KTN::Twap::Enable()</link>, <link linkend="_l00343">KTN::Waves::Enable()</link>, <link linkend="_l00044">KTN::MultiSpreaderV3::onJson()</link>, <link linkend="_l00066">KTN::Skewer::onJson()</link>, <link linkend="_l00071">KTN::SkewTrader::onJson()</link>, <link linkend="_l00066">KTN::Stacker::onJson()</link>, <link linkend="_l00052">KTN::StackerTimer::onJson()</link>, <link linkend="_l00053">KTN::Twap::onJson()</link>, <link linkend="_l00130">KTN::Waves::onJson()</link>, <link linkend="_l00030">KTN::AutoHedgeOB::onLaunch()</link>, <link linkend="_l00043">KTN::PLWatcher::onLaunch()</link>, <link linkend="_l00030">KTN::SqueezerOB::onLaunch()</link>, <link linkend="_l00012">AutoHedgeOB2Params::parse()</link>, <link linkend="_l00012">MS2Params::parse()</link>, <link linkend="_l00012">SkewerParams::parse()</link>, <link linkend="_l00012">SkewTraderParams::parse()</link>, <link linkend="_l00012">StackerParams::parse()</link>, <link linkend="_l00012">StackerTimerParams::parse()</link>, <link linkend="_l00012">TimedAvgParams::parse()</link>, <link linkend="_l00012">WavesParams::parse()</link>, <link linkend="_l00471">KTN::Skewer::ResetPosition()</link>, <link linkend="_l00470">KTN::SkewTrader::ResetPosition()</link>, <link linkend="_l00428">KTN::Stacker::ResetPosition()</link>, <link linkend="_l00339">KTN::StackerTimer::ResetPosition()</link>, and <link linkend="_l00391">KTN::Twap::ResetPosition()</link>.</para>
+</section>
+<anchor xml:id="_structalgometa_1a8ccb0757953bdac38e340d34ec784bdc"/><section>
+    <title>Exch</title>
+<indexterm><primary>Exch</primary><secondary>algometa</secondary></indexterm>
+<indexterm><primary>algometa</primary><secondary>Exch</secondary></indexterm>
+<para><computeroutput>std::string algometa::Exch</computeroutput></para>
+<para>The exchange. </para>
+</section>
+<anchor xml:id="_structalgometa_1a14d4bf441ba211e54559e3139fa5cf7b"/><section>
+    <title>HedgeTag</title>
+<indexterm><primary>HedgeTag</primary><secondary>algometa</secondary></indexterm>
+<indexterm><primary>algometa</primary><secondary>HedgeTag</secondary></indexterm>
+<para><computeroutput>std::string algometa::HedgeTag</computeroutput></para>
+<para>The hedge tag. </para>
+</section>
+<anchor xml:id="_structalgometa_1a3cb6abe7405358924e8955379b66d0f6"/><section>
+    <title>Position</title>
+<indexterm><primary>Position</primary><secondary>algometa</secondary></indexterm>
+<indexterm><primary>algometa</primary><secondary>Position</secondary></indexterm>
+<para><computeroutput>double algometa::Position</computeroutput></para>
+<para>The position. </para>
+</section>
+<anchor xml:id="_structalgometa_1a829f711177bdd6e44ca5e25d1d0da7c7"/><section>
+    <title>PrimHdgTag</title>
+<indexterm><primary>PrimHdgTag</primary><secondary>algometa</secondary></indexterm>
+<indexterm><primary>algometa</primary><secondary>PrimHdgTag</secondary></indexterm>
+<para><computeroutput>std::string algometa::PrimHdgTag</computeroutput></para>
+<para>The primary hedge tag. </para>
+</section>
+<anchor xml:id="_structalgometa_1a274c658db80008354bec46e3ae6c3439"/><section>
+    <title>Source</title>
+<indexterm><primary>Source</primary><secondary>algometa</secondary></indexterm>
+<indexterm><primary>algometa</primary><secondary>Source</secondary></indexterm>
+<para><computeroutput>std::string algometa::Source</computeroutput></para>
+<para>The source. </para>
+<para>
+Referenced by <link linkend="_l00014">KTN::AlgoBaseV3::AlgoBaseV3()</link>, <link linkend="_l00019">KTN::CME::CmeAlgo::CmeAlgo()</link>, <link linkend="_l00076">QuoterV3::Construct()</link>, <link linkend="_l00012">AutoHedgeOB2Params::parse()</link>, <link linkend="_l00012">MS2Params::parse()</link>, <link linkend="_l00012">SkewerParams::parse()</link>, <link linkend="_l00012">SkewTraderParams::parse()</link>, <link linkend="_l00012">StackerParams::parse()</link>, <link linkend="_l00012">StackerTimerParams::parse()</link>, <link linkend="_l00012">TimedAvgParams::parse()</link>, and <link linkend="_l00012">WavesParams::parse()</link>.</para>
+</section>
+<anchor xml:id="_structalgometa_1a6e952ca2e121b4b4aa934a00fdde3d90"/><section>
+    <title>Strategy</title>
+<indexterm><primary>Strategy</primary><secondary>algometa</secondary></indexterm>
+<indexterm><primary>algometa</primary><secondary>Strategy</secondary></indexterm>
+<para><computeroutput>std::string algometa::Strategy</computeroutput></para>
+<para>The strategy. </para>
+<para>
+Referenced by <link linkend="_l00076">QuoterV3::Construct()</link>, <link linkend="_l00015">KTN::ORD::OrderHandlerZmqV6::OrderHandlerZmqV6()</link>, <link linkend="_l00012">AutoHedgeOB2Params::parse()</link>, <link linkend="_l00012">MS2Params::parse()</link>, <link linkend="_l00012">SkewerParams::parse()</link>, <link linkend="_l00012">SkewTraderParams::parse()</link>, <link linkend="_l00012">StackerParams::parse()</link>, <link linkend="_l00012">StackerTimerParams::parse()</link>, <link linkend="_l00012">TimedAvgParams::parse()</link>, and <link linkend="_l00012">WavesParams::parse()</link>.</para>
+</section>
+<anchor xml:id="_structalgometa_1a0a93d2c70632c78c851d53113505192c"/><section>
+    <title>StratId</title>
+<indexterm><primary>StratId</primary><secondary>algometa</secondary></indexterm>
+<indexterm><primary>algometa</primary><secondary>StratId</secondary></indexterm>
+<para><computeroutput>int algometa::StratId</computeroutput></para>
+<para>The strategy ID. </para>
+<para>
+Referenced by <link linkend="_l00076">QuoterV3::Construct()</link>, <link linkend="_l00015">KTN::ORD::OrderHandlerZmqV6::OrderHandlerZmqV6()</link>, <link linkend="_l01140">KTN::Waves::OrderReceived()</link>, <link linkend="_l00012">MS2Params::parse()</link>, <link linkend="_l00012">SkewerParams::parse()</link>, <link linkend="_l00012">SkewTraderParams::parse()</link>, and <link linkend="_l00012">TimedAvgParams::parse()</link>.</para>
+</section>
+<anchor xml:id="_structalgometa_1a008fb747a64bb101a0e359413480e7ce"/><section>
+    <title>Symbol</title>
+<indexterm><primary>Symbol</primary><secondary>algometa</secondary></indexterm>
+<indexterm><primary>algometa</primary><secondary>Symbol</secondary></indexterm>
+<para><computeroutput>std::string algometa::Symbol</computeroutput></para>
+<para>The symbol. </para>
+</section>
+<anchor xml:id="_structalgometa_1a2fd3db49a59da0a714617b887a4e9e4e"/><section>
+    <title>Tag</title>
+<indexterm><primary>Tag</primary><secondary>algometa</secondary></indexterm>
+<indexterm><primary>algometa</primary><secondary>Tag</secondary></indexterm>
+<para><computeroutput>std::string algometa::Tag</computeroutput></para>
+<para>The tag. </para>
+<para>
+Referenced by <link linkend="_l00076">QuoterV3::Construct()</link>, <link linkend="_l00012">AutoHedgeOB2Params::parse()</link>, <link linkend="_l00012">MS2Params::parse()</link>, <link linkend="_l00012">SkewerParams::parse()</link>, <link linkend="_l00012">SkewTraderParams::parse()</link>, <link linkend="_l00012">StackerParams::parse()</link>, <link linkend="_l00012">StackerTimerParams::parse()</link>, <link linkend="_l00012">TimedAvgParams::parse()</link>, and <link linkend="_l00012">WavesParams::parse()</link>.</para>
+</section>
+<anchor xml:id="_structalgometa_1afc6f79dbd9b17a76510ae1a915f57e2e"/><section>
+    <title>TemplateName</title>
+<indexterm><primary>TemplateName</primary><secondary>algometa</secondary></indexterm>
+<indexterm><primary>algometa</primary><secondary>TemplateName</secondary></indexterm>
+<para><computeroutput>std::string algometa::TemplateName</computeroutput></para>
+<para>The template name. </para>
+<para>
+Referenced by <link linkend="_l00012">AutoHedgeOB2Params::parse()</link>, <link linkend="_l00012">MS2Params::parse()</link>, <link linkend="_l00012">SkewerParams::parse()</link>, <link linkend="_l00012">SkewTraderParams::parse()</link>, <link linkend="_l00012">StackerParams::parse()</link>, <link linkend="_l00012">StackerTimerParams::parse()</link>, <link linkend="_l00012">TimedAvgParams::parse()</link>, and <link linkend="_l00012">WavesParams::parse()</link>.</para>
+</section>
+<anchor xml:id="_structalgometa_1aa4eb536c534b39deeacd8a125783aa06"/><section>
+    <title>UniqueId</title>
+<indexterm><primary>UniqueId</primary><secondary>algometa</secondary></indexterm>
+<indexterm><primary>algometa</primary><secondary>UniqueId</secondary></indexterm>
+<para><computeroutput>std::string algometa::UniqueId</computeroutput></para>
+<para>The unique ID. </para>
+<para>
+Referenced by <link linkend="_l00076">QuoterV3::Construct()</link>, <link linkend="_l00015">KTN::ORD::OrderHandlerZmqV6::OrderHandlerZmqV6()</link>, <link linkend="_l00012">AutoHedgeOB2Params::parse()</link>, <link linkend="_l00012">MS2Params::parse()</link>, <link linkend="_l00012">SkewerParams::parse()</link>, <link linkend="_l00012">SkewTraderParams::parse()</link>, <link linkend="_l00012">StackerParams::parse()</link>, <link linkend="_l00012">StackerTimerParams::parse()</link>, <link linkend="_l00012">TimedAvgParams::parse()</link>, and <link linkend="_l00012">WavesParams::parse()</link>.</para>
+</section>
+<anchor xml:id="_structalgometa_1aff0f70028d6395d1510fe2983f0ff95f"/><section>
+    <title>userinfo</title>
+<indexterm><primary>userinfo</primary><secondary>algometa</secondary></indexterm>
+<indexterm><primary>algometa</primary><secondary>userinfo</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_user_info">UserInfo</link> algometa::userinfo</computeroutput></para>
+<para>The user information. </para>
+<para>
+Referenced by <link linkend="_l00076">QuoterV3::Construct()</link>, <link linkend="_l00012">AutoHedgeOB2Params::parse()</link>, <link linkend="_l00012">MS2Params::parse()</link>, <link linkend="_l00012">SkewerParams::parse()</link>, <link linkend="_l00012">SkewTraderParams::parse()</link>, <link linkend="_l00012">StackerParams::parse()</link>, <link linkend="_l00012">StackerTimerParams::parse()</link>, <link linkend="_l00012">TimedAvgParams::parse()</link>, and <link linkend="_l00012">WavesParams::parse()</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+AlgoSupport/algo_structs.hpp</section>
+</section>

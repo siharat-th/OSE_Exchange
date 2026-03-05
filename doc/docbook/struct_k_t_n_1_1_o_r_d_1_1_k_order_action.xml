@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_t_n_1_1_o_r_d_1_1_k_order_action" xml:lang="en-US">
+<title>KTN::ORD::KOrderAction Struct Reference</title>
+<indexterm><primary>KTN::ORD::KOrderAction</primary></indexterm>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <emphasis role="strong">Enum</emphasis> : uint8_t { <?linebreak?><emphasis role="strong">ACTION_NEW</emphasis> = 1
+, <emphasis role="strong">ACTION_MOD</emphasis> = 2
+, <emphasis role="strong">ACTION_CXL</emphasis> = 3
+, <emphasis role="strong">ACTION_CXL_ALL</emphasis> = 55
+, <?linebreak?><emphasis role="strong">ACTION_GETORDERS</emphasis> = 56
+, <emphasis role="strong">ACTION_CXL_ALL_SEG</emphasis> =57
+, <emphasis role="strong">ACTION_REJ</emphasis> = 73
+, <emphasis role="strong">ACTION_CXL_REJ</emphasis> = 74
+, <?linebreak?><emphasis role="strong">ACTION_CXL_REPL_REJ</emphasis> = 75
+, <emphasis role="strong">UNKNOWN</emphasis> = 0
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static KOrderAction::Enum <link linkend="_struct_k_t_n_1_1_o_r_d_1_1_k_order_action_1a4bb63a715544c5863c30d4b3408b964a">Value</link> (string action)</para>
+</listitem>
+            <listitem><para>static std::string <link linkend="_struct_k_t_n_1_1_o_r_d_1_1_k_order_action_1a625448a174d3e0c9676ac0970f9f0c12">toString</link> (Enum action)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_o_r_d_1_1_k_order_action_1a10c5054defb34034765975d0ad0fed45"/><section>
+    <title>Enum</title>
+<indexterm><primary>Enum</primary><secondary>KTN::ORD::KOrderAction</secondary></indexterm>
+<indexterm><primary>KTN::ORD::KOrderAction</primary><secondary>Enum</secondary></indexterm>
+<para><computeroutput>enum KTN::ORD::KOrderAction::Enum : uint8_t</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_o_r_d_1_1_k_order_action_1a625448a174d3e0c9676ac0970f9f0c12"/><section>
+    <title>toString()</title>
+<indexterm><primary>toString</primary><secondary>KTN::ORD::KOrderAction</secondary></indexterm>
+<indexterm><primary>KTN::ORD::KOrderAction</primary><secondary>toString</secondary></indexterm>
+<para><computeroutput>static std::string KTN::ORD::KOrderAction::toString (Enum action)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_o_r_d_1_1_k_order_action_1a4bb63a715544c5863c30d4b3408b964a"/><section>
+    <title>Value()</title>
+<indexterm><primary>Value</primary><secondary>KTN::ORD::KOrderAction</secondary></indexterm>
+<indexterm><primary>KTN::ORD::KOrderAction</primary><secondary>Value</secondary></indexterm>
+<para><computeroutput>static KOrderAction::Enum KTN::ORD::KOrderAction::Value (string action)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Orders/OrderEnumsV2.hpp</section>
+</section>

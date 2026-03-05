@@ -1,0 +1,709 @@
+\doxysection{moodycamel\+::Concurrent\+Queue\texorpdfstring{$<$}{<} T, Traits \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classmoodycamel_1_1_concurrent_queue}{}\label{classmoodycamel_1_1_concurrent_queue}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{structmoodycamel_1_1_producer_token}{\+::moodycamel\+::\+Producer\+Token}} \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_aef55f8a4f40df32a7975fc41f91792fe}{producer\+\_\+token\+\_\+t}}
+\item 
+typedef \mbox{\hyperlink{structmoodycamel_1_1_consumer_token}{\+::moodycamel\+::\+Consumer\+Token}} \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_a54772b1b423aaf79c925bb8e5609fc98}{consumer\+\_\+token\+\_\+t}}
+\item 
+typedef Traits\+::index\+\_\+t \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_ad68d536c896de4e839dd95225e7deea3}{index\+\_\+t}}
+\item 
+typedef Traits\+::size\+\_\+t \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_ac0b73313ed107d313b55c8a77be19b28}{size\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_a8dd7a33cf3174548a2b5f758331c5e48}{Concurrent\+Queue}} (size\+\_\+t capacity=32 \texorpdfstring{$\ast$}{*}BLOCK\+\_\+\+SIZE)
+\item 
+\mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_ad327feb7a7e861051d1dfd61e2ffa1df}{Concurrent\+Queue}} (size\+\_\+t min\+Capacity, size\+\_\+t max\+Explicit\+Producers, size\+\_\+t max\+Implicit\+Producers)
+\item 
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_a1b4b08c6b6db7bf0df041619d133171c}\label{classmoodycamel_1_1_concurrent_queue_a1b4b08c6b6db7bf0df041619d133171c} 
+{\bfseries Concurrent\+Queue} (\mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{Concurrent\+Queue}} const \&) MOODYCAMEL\+\_\+\+DELETE\+\_\+\+FUNCTION
+\item 
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_a378eb0bbe9ed755db54f93bd316d6c51}\label{classmoodycamel_1_1_concurrent_queue_a378eb0bbe9ed755db54f93bd316d6c51} 
+\mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{Concurrent\+Queue}} \& {\bfseries operator=} (\mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{Concurrent\+Queue}} const \&) MOODYCAMEL\+\_\+\+DELETE\+\_\+\+FUNCTION
+\item 
+\mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_ae908c026d0eb0591ca6f8f5518f7ffdf}{Concurrent\+Queue}} (\mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{Concurrent\+Queue}} \&\&other) MOODYCAMEL\+\_\+\+NOEXCEPT
+\item 
+\mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{Concurrent\+Queue}} \& \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_abce8e204950aa2f7668c0cb4af2cdfd8}{operator=}} (\mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{Concurrent\+Queue}} \&\&other) MOODYCAMEL\+\_\+\+NOEXCEPT
+\item 
+void \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_a7c1c42c76a8218896a4d76efed142b2c}{swap}} (\mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{Concurrent\+Queue}} \&other) MOODYCAMEL\+\_\+\+NOEXCEPT
+\item 
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_aceaa7271014aa901829e3ed1b1005d65}{enqueue}} (T const \&item)
+\item 
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_a4a36bd689aeaffd635416a4279566198}{enqueue}} (T \&\&item)
+\item 
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_a0b5882e6e7a053e27427709f11094dae}{enqueue}} (\mbox{\hyperlink{structmoodycamel_1_1_producer_token}{producer\+\_\+token\+\_\+t}} const \&token, T const \&item)
+\item 
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_a0e27b67c2aa7b4fc2eb0777fa6bd7cbc}{enqueue}} (\mbox{\hyperlink{structmoodycamel_1_1_producer_token}{producer\+\_\+token\+\_\+t}} const \&token, T \&\&item)
+\item 
+{\footnotesize template$<$typename It $>$ }\\bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_a57b0aa33a19538a7c97d839fbf0d8459}{enqueue\+\_\+bulk}} (It item\+First, size\+\_\+t count)
+\item 
+{\footnotesize template$<$typename It $>$ }\\bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_a61a4b16a77535cc57fa3c76fb5ee3fba}{enqueue\+\_\+bulk}} (\mbox{\hyperlink{structmoodycamel_1_1_producer_token}{producer\+\_\+token\+\_\+t}} const \&token, It item\+First, size\+\_\+t count)
+\item 
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_aaab76643a98e1094cecdd213fbb6e75d}{try\+\_\+enqueue}} (T const \&item)
+\item 
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_af63a4f51a8b8b6c59ea883ed97fff7a2}{try\+\_\+enqueue}} (T \&\&item)
+\item 
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_ad04237577ca981e18e23190773cf1644}{try\+\_\+enqueue}} (\mbox{\hyperlink{structmoodycamel_1_1_producer_token}{producer\+\_\+token\+\_\+t}} const \&token, T const \&item)
+\item 
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_a049a33d4127c66a614b717cf20bba330}{try\+\_\+enqueue}} (\mbox{\hyperlink{structmoodycamel_1_1_producer_token}{producer\+\_\+token\+\_\+t}} const \&token, T \&\&item)
+\item 
+{\footnotesize template$<$typename It $>$ }\\bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_aecbe38c03c23ea980d1bc1f9445d26c2}{try\+\_\+enqueue\+\_\+bulk}} (It item\+First, size\+\_\+t count)
+\item 
+{\footnotesize template$<$typename It $>$ }\\bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_a359380c0d6952e61f3ef4811808eb573}{try\+\_\+enqueue\+\_\+bulk}} (\mbox{\hyperlink{structmoodycamel_1_1_producer_token}{producer\+\_\+token\+\_\+t}} const \&token, It item\+First, size\+\_\+t count)
+\item 
+{\footnotesize template$<$typename U $>$ }\\bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_a1895c8a6120aef578fe01db53879517b}{try\+\_\+dequeue}} (U \&item)
+\item 
+{\footnotesize template$<$typename U $>$ }\\bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_ad9f25d247543755bdc1b477f2678455f}{try\+\_\+dequeue\+\_\+non\+\_\+interleaved}} (U \&item)
+\item 
+{\footnotesize template$<$typename U $>$ }\\bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_a67d5a2377539808015044acbb34216d1}{try\+\_\+dequeue}} (\mbox{\hyperlink{structmoodycamel_1_1_consumer_token}{consumer\+\_\+token\+\_\+t}} \&token, U \&item)
+\item 
+{\footnotesize template$<$typename It $>$ }\\size\+\_\+t \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_a816450a4b774c374ef8ee0234e7c4518}{try\+\_\+dequeue\+\_\+bulk}} (It item\+First, size\+\_\+t max)
+\item 
+{\footnotesize template$<$typename It $>$ }\\size\+\_\+t \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_a57e6b02051baed9cc1b3fb5e46743c03}{try\+\_\+dequeue\+\_\+bulk}} (\mbox{\hyperlink{structmoodycamel_1_1_consumer_token}{consumer\+\_\+token\+\_\+t}} \&token, It item\+First, size\+\_\+t max)
+\item 
+{\footnotesize template$<$typename U $>$ }\\bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_a609358c281fb44c88088f229c47e424d}{try\+\_\+dequeue\+\_\+from\+\_\+producer}} (\mbox{\hyperlink{structmoodycamel_1_1_producer_token}{producer\+\_\+token\+\_\+t}} const \&producer, U \&item)
+\item 
+{\footnotesize template$<$typename It $>$ }\\size\+\_\+t \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_a1cfc50210d50dba266431ff82b908da7}{try\+\_\+dequeue\+\_\+bulk\+\_\+from\+\_\+producer}} (\mbox{\hyperlink{structmoodycamel_1_1_producer_token}{producer\+\_\+token\+\_\+t}} const \&producer, It item\+First, size\+\_\+t max)
+\item 
+size\+\_\+t \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_aecab179b995f119c89da71f62b2d21a5}{size\+\_\+approx}} () const
+\item 
+\mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_a2c07fb51a9cd1baaec9d0f1a079d83cd}{Concurrent\+Queue}} (size\+\_\+t capacity=6 \texorpdfstring{$\ast$}{*}BLOCK\+\_\+\+SIZE)
+\item 
+\mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_ad327feb7a7e861051d1dfd61e2ffa1df}{Concurrent\+Queue}} (size\+\_\+t min\+Capacity, size\+\_\+t max\+Explicit\+Producers, size\+\_\+t max\+Implicit\+Producers)
+\item 
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_a1b4b08c6b6db7bf0df041619d133171c}\label{classmoodycamel_1_1_concurrent_queue_a1b4b08c6b6db7bf0df041619d133171c} 
+{\bfseries Concurrent\+Queue} (\mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{Concurrent\+Queue}} const \&) MOODYCAMEL\+\_\+\+DELETE\+\_\+\+FUNCTION
+\item 
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_a378eb0bbe9ed755db54f93bd316d6c51}\label{classmoodycamel_1_1_concurrent_queue_a378eb0bbe9ed755db54f93bd316d6c51} 
+\mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{Concurrent\+Queue}} \& {\bfseries operator=} (\mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{Concurrent\+Queue}} const \&) MOODYCAMEL\+\_\+\+DELETE\+\_\+\+FUNCTION
+\item 
+\mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_ae908c026d0eb0591ca6f8f5518f7ffdf}{Concurrent\+Queue}} (\mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{Concurrent\+Queue}} \&\&other) MOODYCAMEL\+\_\+\+NOEXCEPT
+\item 
+\mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{Concurrent\+Queue}} \& \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_abce8e204950aa2f7668c0cb4af2cdfd8}{operator=}} (\mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{Concurrent\+Queue}} \&\&other) MOODYCAMEL\+\_\+\+NOEXCEPT
+\item 
+void \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_a7c1c42c76a8218896a4d76efed142b2c}{swap}} (\mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{Concurrent\+Queue}} \&other) MOODYCAMEL\+\_\+\+NOEXCEPT
+\item 
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_aceaa7271014aa901829e3ed1b1005d65}{enqueue}} (T const \&item)
+\item 
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_a4a36bd689aeaffd635416a4279566198}{enqueue}} (T \&\&item)
+\item 
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_a0b5882e6e7a053e27427709f11094dae}{enqueue}} (\mbox{\hyperlink{structmoodycamel_1_1_producer_token}{producer\+\_\+token\+\_\+t}} const \&token, T const \&item)
+\item 
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_a0e27b67c2aa7b4fc2eb0777fa6bd7cbc}{enqueue}} (\mbox{\hyperlink{structmoodycamel_1_1_producer_token}{producer\+\_\+token\+\_\+t}} const \&token, T \&\&item)
+\item 
+{\footnotesize template$<$typename It $>$ }\\bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_a57b0aa33a19538a7c97d839fbf0d8459}{enqueue\+\_\+bulk}} (It item\+First, size\+\_\+t count)
+\item 
+{\footnotesize template$<$typename It $>$ }\\bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_a61a4b16a77535cc57fa3c76fb5ee3fba}{enqueue\+\_\+bulk}} (\mbox{\hyperlink{structmoodycamel_1_1_producer_token}{producer\+\_\+token\+\_\+t}} const \&token, It item\+First, size\+\_\+t count)
+\item 
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_aaab76643a98e1094cecdd213fbb6e75d}{try\+\_\+enqueue}} (T const \&item)
+\item 
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_af63a4f51a8b8b6c59ea883ed97fff7a2}{try\+\_\+enqueue}} (T \&\&item)
+\item 
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_ad04237577ca981e18e23190773cf1644}{try\+\_\+enqueue}} (\mbox{\hyperlink{structmoodycamel_1_1_producer_token}{producer\+\_\+token\+\_\+t}} const \&token, T const \&item)
+\item 
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_a049a33d4127c66a614b717cf20bba330}{try\+\_\+enqueue}} (\mbox{\hyperlink{structmoodycamel_1_1_producer_token}{producer\+\_\+token\+\_\+t}} const \&token, T \&\&item)
+\item 
+{\footnotesize template$<$typename It $>$ }\\bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_aecbe38c03c23ea980d1bc1f9445d26c2}{try\+\_\+enqueue\+\_\+bulk}} (It item\+First, size\+\_\+t count)
+\item 
+{\footnotesize template$<$typename It $>$ }\\bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_a359380c0d6952e61f3ef4811808eb573}{try\+\_\+enqueue\+\_\+bulk}} (\mbox{\hyperlink{structmoodycamel_1_1_producer_token}{producer\+\_\+token\+\_\+t}} const \&token, It item\+First, size\+\_\+t count)
+\item 
+{\footnotesize template$<$typename U $>$ }\\bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_a1895c8a6120aef578fe01db53879517b}{try\+\_\+dequeue}} (U \&item)
+\item 
+{\footnotesize template$<$typename U $>$ }\\bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_ad9f25d247543755bdc1b477f2678455f}{try\+\_\+dequeue\+\_\+non\+\_\+interleaved}} (U \&item)
+\item 
+{\footnotesize template$<$typename U $>$ }\\bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_a67d5a2377539808015044acbb34216d1}{try\+\_\+dequeue}} (\mbox{\hyperlink{structmoodycamel_1_1_consumer_token}{consumer\+\_\+token\+\_\+t}} \&token, U \&item)
+\item 
+{\footnotesize template$<$typename It $>$ }\\size\+\_\+t \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_a816450a4b774c374ef8ee0234e7c4518}{try\+\_\+dequeue\+\_\+bulk}} (It item\+First, size\+\_\+t max)
+\item 
+{\footnotesize template$<$typename It $>$ }\\size\+\_\+t \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_a57e6b02051baed9cc1b3fb5e46743c03}{try\+\_\+dequeue\+\_\+bulk}} (\mbox{\hyperlink{structmoodycamel_1_1_consumer_token}{consumer\+\_\+token\+\_\+t}} \&token, It item\+First, size\+\_\+t max)
+\item 
+{\footnotesize template$<$typename U $>$ }\\bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_a609358c281fb44c88088f229c47e424d}{try\+\_\+dequeue\+\_\+from\+\_\+producer}} (\mbox{\hyperlink{structmoodycamel_1_1_producer_token}{producer\+\_\+token\+\_\+t}} const \&producer, U \&item)
+\item 
+{\footnotesize template$<$typename It $>$ }\\size\+\_\+t \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_a1cfc50210d50dba266431ff82b908da7}{try\+\_\+dequeue\+\_\+bulk\+\_\+from\+\_\+producer}} (\mbox{\hyperlink{structmoodycamel_1_1_producer_token}{producer\+\_\+token\+\_\+t}} const \&producer, It item\+First, size\+\_\+t max)
+\item 
+size\+\_\+t \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_aecab179b995f119c89da71f62b2d21a5}{size\+\_\+approx}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_a926d7d31e785e36c61810d066ba4fba3}{is\+\_\+lock\+\_\+free}} ()
+\item 
+static bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_acf52b5f16906d4bd1d2cfee05dd0b517}{is\+\_\+lock\+\_\+free}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const size\+\_\+t \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_ad5dbdb9e79fa171f83bf598e5a0ae6ee}{BLOCK\+\_\+\+SIZE}} = static\+\_\+cast$<$size\+\_\+t$>$(Traits\+::\+BLOCK\+\_\+\+SIZE)
+\item 
+static const size\+\_\+t \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_a62395a235acef1310eade752cd7b4202}{EXPLICIT\+\_\+\+BLOCK\+\_\+\+EMPTY\+\_\+\+COUNTER\+\_\+\+THRESHOLD}} = static\+\_\+cast$<$size\+\_\+t$>$(Traits\+::\+EXPLICIT\+\_\+\+BLOCK\+\_\+\+EMPTY\+\_\+\+COUNTER\+\_\+\+THRESHOLD)
+\item 
+static const size\+\_\+t \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_a14b748827c74f78ed1849e8943499840}{EXPLICIT\+\_\+\+INITIAL\+\_\+\+INDEX\+\_\+\+SIZE}} = static\+\_\+cast$<$size\+\_\+t$>$(Traits\+::\+EXPLICIT\+\_\+\+INITIAL\+\_\+\+INDEX\+\_\+\+SIZE)
+\item 
+static const size\+\_\+t \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_a905d573fc84b96705a26548ad0d60896}{IMPLICIT\+\_\+\+INITIAL\+\_\+\+INDEX\+\_\+\+SIZE}} = static\+\_\+cast$<$size\+\_\+t$>$(Traits\+::\+IMPLICIT\+\_\+\+INITIAL\+\_\+\+INDEX\+\_\+\+SIZE)
+\item 
+static const size\+\_\+t \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_a6cd15a304107f907e4304935ea9058ae}{INITIAL\+\_\+\+IMPLICIT\+\_\+\+PRODUCER\+\_\+\+HASH\+\_\+\+SIZE}} = static\+\_\+cast$<$size\+\_\+t$>$(Traits\+::\+INITIAL\+\_\+\+IMPLICIT\+\_\+\+PRODUCER\+\_\+\+HASH\+\_\+\+SIZE)
+\item 
+static const std\+::uint32\+\_\+t \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_a9b0b153d8d01bd356e01cbe212895213}{EXPLICIT\+\_\+\+CONSUMER\+\_\+\+CONSUMPTION\+\_\+\+QUOTA\+\_\+\+BEFORE\+\_\+\+ROTATE}} = static\+\_\+cast$<$std\+::uint32\+\_\+t$>$(Traits\+::\+EXPLICIT\+\_\+\+CONSUMER\+\_\+\+CONSUMPTION\+\_\+\+QUOTA\+\_\+\+BEFORE\+\_\+\+ROTATE)
+\item 
+static const size\+\_\+t \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_afc457d111d100977f80e6e4e2650e9ae}{MAX\+\_\+\+SUBQUEUE\+\_\+\+SIZE}} = (\mbox{\hyperlink{structmoodycamel_1_1details_1_1const__numeric__max}{details\+::const\+\_\+numeric\+\_\+max}}$<$size\+\_\+t$>$\+::value -\/ static\+\_\+cast$<$size\+\_\+t$>$(Traits\+::\+MAX\+\_\+\+SUBQUEUE\+\_\+\+SIZE) $<$ BLOCK\+\_\+\+SIZE) ? \mbox{\hyperlink{structmoodycamel_1_1details_1_1const__numeric__max}{details\+::const\+\_\+numeric\+\_\+max}}$<$size\+\_\+t$>$\+::value \+: ((static\+\_\+cast$<$size\+\_\+t$>$(Traits\+::\+MAX\+\_\+\+SUBQUEUE\+\_\+\+SIZE) + (BLOCK\+\_\+\+SIZE -\/ 1)) / BLOCK\+\_\+\+SIZE \texorpdfstring{$\ast$}{*} BLOCK\+\_\+\+SIZE)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_a9ab163b49fd7151c8e67200709375c55}{Producer\+Token}}
+\item 
+struct \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_ad89a846fefec2b3c6dfdd85f89184f0e}{Consumer\+Token}}
+\item 
+struct \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_aebff8165e0e4f701b6b92f6717a202b7}{Explicit\+Producer}}
+\item 
+struct \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_ab79e82aa1a04eb71ff8297700ff94d58}{Implicit\+Producer}}
+\item 
+class \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue_affb081dec2a93f53a23878412f69c469}{Concurrent\+Queue\+Tests}}
+\item 
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_ad65cc3887b8b356dff18ac235c21d6fa}\label{classmoodycamel_1_1_concurrent_queue_ad65cc3887b8b356dff18ac235c21d6fa} 
+{\footnotesize template$<$typename XT , typename XTraits $>$ }\\void {\bfseries moodycamel\+::swap} (typename \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{Concurrent\+Queue}}$<$ XT, XTraits $>$\+::\+Implicit\+Producer\+KVP \&, typename \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{Concurrent\+Queue}}$<$ XT, XTraits $>$\+::\+Implicit\+Producer\+KVP \&) MOODYCAMEL\+\_\+\+NOEXCEPT
+\item 
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_ad65cc3887b8b356dff18ac235c21d6fa}\label{classmoodycamel_1_1_concurrent_queue_ad65cc3887b8b356dff18ac235c21d6fa} 
+{\footnotesize template$<$typename XT , typename XTraits $>$ }\\void {\bfseries moodycamel\+::swap} (typename \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{Concurrent\+Queue}}$<$ XT, XTraits $>$\+::\+Implicit\+Producer\+KVP \&, typename \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{Concurrent\+Queue}}$<$ XT, XTraits $>$\+::\+Implicit\+Producer\+KVP \&) MOODYCAMEL\+\_\+\+NOEXCEPT
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T, typename Traits = Concurrent\+Queue\+Default\+Traits$>$\newline
+class moodycamel\+::\+Concurrent\+Queue$<$ T, Traits $>$}
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_a54772b1b423aaf79c925bb8e5609fc98}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!consumer\_token\_t@{consumer\_token\_t}}
+\index{consumer\_token\_t@{consumer\_token\_t}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{consumer\_token\_t}{consumer\_token\_t}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_a54772b1b423aaf79c925bb8e5609fc98} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+typedef\+::moodycamel\+::\+Consumer\+Token \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::consumer\+\_\+token\+\_\+t}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_ad68d536c896de4e839dd95225e7deea3}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!index\_t@{index\_t}}
+\index{index\_t@{index\_t}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{index\_t}{index\_t}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_ad68d536c896de4e839dd95225e7deea3} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+typedef Traits\+::index\+\_\+t \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::index\+\_\+t}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_aef55f8a4f40df32a7975fc41f91792fe}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!producer\_token\_t@{producer\_token\_t}}
+\index{producer\_token\_t@{producer\_token\_t}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{producer\_token\_t}{producer\_token\_t}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_aef55f8a4f40df32a7975fc41f91792fe} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+typedef\+::moodycamel\+::\+Producer\+Token \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::producer\+\_\+token\+\_\+t}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_ac0b73313ed107d313b55c8a77be19b28}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!size\_t@{size\_t}}
+\index{size\_t@{size\_t}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{size\_t}{size\_t}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_ac0b73313ed107d313b55c8a77be19b28} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+typedef Traits\+::size\+\_\+t \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::size\+\_\+t}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_a8dd7a33cf3174548a2b5f758331c5e48}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!ConcurrentQueue@{ConcurrentQueue}}
+\index{ConcurrentQueue@{ConcurrentQueue}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{ConcurrentQueue()}{ConcurrentQueue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_a8dd7a33cf3174548a2b5f758331c5e48} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+\mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::\+Concurrent\+Queue (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{capacity}{ = {\ttfamily 32~\texorpdfstring{$\ast$}{*}~BLOCK\+\_\+SIZE}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_ad327feb7a7e861051d1dfd61e2ffa1df}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!ConcurrentQueue@{ConcurrentQueue}}
+\index{ConcurrentQueue@{ConcurrentQueue}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{ConcurrentQueue()}{ConcurrentQueue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_ad327feb7a7e861051d1dfd61e2ffa1df} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+\mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::\+Concurrent\+Queue (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{min\+Capacity}{, }\item[{size\+\_\+t}]{max\+Explicit\+Producers}{, }\item[{size\+\_\+t}]{max\+Implicit\+Producers}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_add203e2137970f317f16cf347471b2f7}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!````~ConcurrentQueue@{\texorpdfstring{$\sim$}{\string~}ConcurrentQueue}}
+\index{````~ConcurrentQueue@{\texorpdfstring{$\sim$}{\string~}ConcurrentQueue}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ConcurrentQueue()}{\string~ConcurrentQueue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_add203e2137970f317f16cf347471b2f7} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+\mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{Concurrent\+Queue}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_ae908c026d0eb0591ca6f8f5518f7ffdf}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!ConcurrentQueue@{ConcurrentQueue}}
+\index{ConcurrentQueue@{ConcurrentQueue}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{ConcurrentQueue()}{ConcurrentQueue()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_ae908c026d0eb0591ca6f8f5518f7ffdf} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+\mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::\+Concurrent\+Queue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{Concurrent\+Queue}}$<$ T, Traits $>$ \&\&}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_a2c07fb51a9cd1baaec9d0f1a079d83cd}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!ConcurrentQueue@{ConcurrentQueue}}
+\index{ConcurrentQueue@{ConcurrentQueue}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{ConcurrentQueue()}{ConcurrentQueue()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_a2c07fb51a9cd1baaec9d0f1a079d83cd} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+\mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::\+Concurrent\+Queue (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{capacity}{ = {\ttfamily 6~\texorpdfstring{$\ast$}{*}~BLOCK\+\_\+SIZE}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_ad327feb7a7e861051d1dfd61e2ffa1df}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!ConcurrentQueue@{ConcurrentQueue}}
+\index{ConcurrentQueue@{ConcurrentQueue}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{ConcurrentQueue()}{ConcurrentQueue()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_ad327feb7a7e861051d1dfd61e2ffa1df} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+\mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::\+Concurrent\+Queue (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{min\+Capacity}{, }\item[{size\+\_\+t}]{max\+Explicit\+Producers}{, }\item[{size\+\_\+t}]{max\+Implicit\+Producers}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_add203e2137970f317f16cf347471b2f7}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!````~ConcurrentQueue@{\texorpdfstring{$\sim$}{\string~}ConcurrentQueue}}
+\index{````~ConcurrentQueue@{\texorpdfstring{$\sim$}{\string~}ConcurrentQueue}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ConcurrentQueue()}{\string~ConcurrentQueue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_add203e2137970f317f16cf347471b2f7} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+\mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{Concurrent\+Queue}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_ae908c026d0eb0591ca6f8f5518f7ffdf}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!ConcurrentQueue@{ConcurrentQueue}}
+\index{ConcurrentQueue@{ConcurrentQueue}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{ConcurrentQueue()}{ConcurrentQueue()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_ae908c026d0eb0591ca6f8f5518f7ffdf} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+\mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::\+Concurrent\+Queue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{Concurrent\+Queue}}$<$ T, Traits $>$ \&\&}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_a0e27b67c2aa7b4fc2eb0777fa6bd7cbc}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!enqueue@{enqueue}}
+\index{enqueue@{enqueue}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{enqueue()}{enqueue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_a0e27b67c2aa7b4fc2eb0777fa6bd7cbc} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::enqueue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmoodycamel_1_1_producer_token}{producer\+\_\+token\+\_\+t}} const \&}]{token}{, }\item[{T \&\&}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_a0e27b67c2aa7b4fc2eb0777fa6bd7cbc}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!enqueue@{enqueue}}
+\index{enqueue@{enqueue}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{enqueue()}{enqueue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_a0e27b67c2aa7b4fc2eb0777fa6bd7cbc} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::enqueue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmoodycamel_1_1_producer_token}{producer\+\_\+token\+\_\+t}} const \&}]{token}{, }\item[{T \&\&}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_a0b5882e6e7a053e27427709f11094dae}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!enqueue@{enqueue}}
+\index{enqueue@{enqueue}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{enqueue()}{enqueue()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_a0b5882e6e7a053e27427709f11094dae} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::enqueue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmoodycamel_1_1_producer_token}{producer\+\_\+token\+\_\+t}} const \&}]{token}{, }\item[{T const \&}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_a0b5882e6e7a053e27427709f11094dae}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!enqueue@{enqueue}}
+\index{enqueue@{enqueue}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{enqueue()}{enqueue()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_a0b5882e6e7a053e27427709f11094dae} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::enqueue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmoodycamel_1_1_producer_token}{producer\+\_\+token\+\_\+t}} const \&}]{token}{, }\item[{T const \&}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_a4a36bd689aeaffd635416a4279566198}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!enqueue@{enqueue}}
+\index{enqueue@{enqueue}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{enqueue()}{enqueue()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_a4a36bd689aeaffd635416a4279566198} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::enqueue (\begin{DoxyParamCaption}\item[{T \&\&}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_a4a36bd689aeaffd635416a4279566198}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!enqueue@{enqueue}}
+\index{enqueue@{enqueue}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{enqueue()}{enqueue()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_a4a36bd689aeaffd635416a4279566198} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::enqueue (\begin{DoxyParamCaption}\item[{T \&\&}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_aceaa7271014aa901829e3ed1b1005d65}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!enqueue@{enqueue}}
+\index{enqueue@{enqueue}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{enqueue()}{enqueue()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_aceaa7271014aa901829e3ed1b1005d65} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::enqueue (\begin{DoxyParamCaption}\item[{T const \&}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_aceaa7271014aa901829e3ed1b1005d65}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!enqueue@{enqueue}}
+\index{enqueue@{enqueue}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{enqueue()}{enqueue()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_aceaa7271014aa901829e3ed1b1005d65} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::enqueue (\begin{DoxyParamCaption}\item[{T const \&}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_a57b0aa33a19538a7c97d839fbf0d8459}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!enqueue\_bulk@{enqueue\_bulk}}
+\index{enqueue\_bulk@{enqueue\_bulk}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{enqueue\_bulk()}{enqueue\_bulk()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_a57b0aa33a19538a7c97d839fbf0d8459} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+template$<$typename It $>$ \\
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::enqueue\+\_\+bulk (\begin{DoxyParamCaption}\item[{It}]{item\+First}{, }\item[{size\+\_\+t}]{count}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_a57b0aa33a19538a7c97d839fbf0d8459}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!enqueue\_bulk@{enqueue\_bulk}}
+\index{enqueue\_bulk@{enqueue\_bulk}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{enqueue\_bulk()}{enqueue\_bulk()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_a57b0aa33a19538a7c97d839fbf0d8459} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+template$<$typename It $>$ \\
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::enqueue\+\_\+bulk (\begin{DoxyParamCaption}\item[{It}]{item\+First}{, }\item[{size\+\_\+t}]{count}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_a61a4b16a77535cc57fa3c76fb5ee3fba}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!enqueue\_bulk@{enqueue\_bulk}}
+\index{enqueue\_bulk@{enqueue\_bulk}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{enqueue\_bulk()}{enqueue\_bulk()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_a61a4b16a77535cc57fa3c76fb5ee3fba} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+template$<$typename It $>$ \\
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::enqueue\+\_\+bulk (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmoodycamel_1_1_producer_token}{producer\+\_\+token\+\_\+t}} const \&}]{token}{, }\item[{It}]{item\+First}{, }\item[{size\+\_\+t}]{count}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_a61a4b16a77535cc57fa3c76fb5ee3fba}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!enqueue\_bulk@{enqueue\_bulk}}
+\index{enqueue\_bulk@{enqueue\_bulk}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{enqueue\_bulk()}{enqueue\_bulk()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_a61a4b16a77535cc57fa3c76fb5ee3fba} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+template$<$typename It $>$ \\
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::enqueue\+\_\+bulk (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmoodycamel_1_1_producer_token}{producer\+\_\+token\+\_\+t}} const \&}]{token}{, }\item[{It}]{item\+First}{, }\item[{size\+\_\+t}]{count}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_a926d7d31e785e36c61810d066ba4fba3}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!is\_lock\_free@{is\_lock\_free}}
+\index{is\_lock\_free@{is\_lock\_free}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{is\_lock\_free()}{is\_lock\_free()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_a926d7d31e785e36c61810d066ba4fba3} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+static constexpr bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::is\+\_\+lock\+\_\+free (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_acf52b5f16906d4bd1d2cfee05dd0b517}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!is\_lock\_free@{is\_lock\_free}}
+\index{is\_lock\_free@{is\_lock\_free}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{is\_lock\_free()}{is\_lock\_free()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_acf52b5f16906d4bd1d2cfee05dd0b517} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+static bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::is\+\_\+lock\+\_\+free (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_abce8e204950aa2f7668c0cb4af2cdfd8}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_abce8e204950aa2f7668c0cb4af2cdfd8} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+\mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{Concurrent\+Queue}} \& \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{Concurrent\+Queue}}$<$ T, Traits $>$ \&\&}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_abce8e204950aa2f7668c0cb4af2cdfd8}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_abce8e204950aa2f7668c0cb4af2cdfd8} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+\mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{Concurrent\+Queue}} \& \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{Concurrent\+Queue}}$<$ T, Traits $>$ \&\&}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_aecab179b995f119c89da71f62b2d21a5}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!size\_approx@{size\_approx}}
+\index{size\_approx@{size\_approx}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{size\_approx()}{size\_approx()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_aecab179b995f119c89da71f62b2d21a5} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+size\+\_\+t \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::size\+\_\+approx (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_aecab179b995f119c89da71f62b2d21a5}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!size\_approx@{size\_approx}}
+\index{size\_approx@{size\_approx}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{size\_approx()}{size\_approx()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_aecab179b995f119c89da71f62b2d21a5} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+size\+\_\+t \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::size\+\_\+approx (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_a7c1c42c76a8218896a4d76efed142b2c}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!swap@{swap}}
+\index{swap@{swap}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_a7c1c42c76a8218896a4d76efed142b2c} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+void \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{Concurrent\+Queue}}$<$ T, Traits $>$ \&}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_a7c1c42c76a8218896a4d76efed142b2c}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!swap@{swap}}
+\index{swap@{swap}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_a7c1c42c76a8218896a4d76efed142b2c} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+void \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{Concurrent\+Queue}}$<$ T, Traits $>$ \&}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_a67d5a2377539808015044acbb34216d1}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!try\_dequeue@{try\_dequeue}}
+\index{try\_dequeue@{try\_dequeue}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{try\_dequeue()}{try\_dequeue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_a67d5a2377539808015044acbb34216d1} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+template$<$typename U $>$ \\
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::try\+\_\+dequeue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmoodycamel_1_1_consumer_token}{consumer\+\_\+token\+\_\+t}} \&}]{token}{, }\item[{U \&}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_a67d5a2377539808015044acbb34216d1}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!try\_dequeue@{try\_dequeue}}
+\index{try\_dequeue@{try\_dequeue}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{try\_dequeue()}{try\_dequeue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_a67d5a2377539808015044acbb34216d1} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+template$<$typename U $>$ \\
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::try\+\_\+dequeue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmoodycamel_1_1_consumer_token}{consumer\+\_\+token\+\_\+t}} \&}]{token}{, }\item[{U \&}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_a1895c8a6120aef578fe01db53879517b}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!try\_dequeue@{try\_dequeue}}
+\index{try\_dequeue@{try\_dequeue}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{try\_dequeue()}{try\_dequeue()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_a1895c8a6120aef578fe01db53879517b} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+template$<$typename U $>$ \\
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::try\+\_\+dequeue (\begin{DoxyParamCaption}\item[{U \&}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_a1895c8a6120aef578fe01db53879517b}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!try\_dequeue@{try\_dequeue}}
+\index{try\_dequeue@{try\_dequeue}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{try\_dequeue()}{try\_dequeue()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_a1895c8a6120aef578fe01db53879517b} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+template$<$typename U $>$ \\
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::try\+\_\+dequeue (\begin{DoxyParamCaption}\item[{U \&}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_a57e6b02051baed9cc1b3fb5e46743c03}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!try\_dequeue\_bulk@{try\_dequeue\_bulk}}
+\index{try\_dequeue\_bulk@{try\_dequeue\_bulk}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{try\_dequeue\_bulk()}{try\_dequeue\_bulk()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_a57e6b02051baed9cc1b3fb5e46743c03} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+template$<$typename It $>$ \\
+size\+\_\+t \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::try\+\_\+dequeue\+\_\+bulk (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmoodycamel_1_1_consumer_token}{consumer\+\_\+token\+\_\+t}} \&}]{token}{, }\item[{It}]{item\+First}{, }\item[{size\+\_\+t}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_a57e6b02051baed9cc1b3fb5e46743c03}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!try\_dequeue\_bulk@{try\_dequeue\_bulk}}
+\index{try\_dequeue\_bulk@{try\_dequeue\_bulk}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{try\_dequeue\_bulk()}{try\_dequeue\_bulk()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_a57e6b02051baed9cc1b3fb5e46743c03} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+template$<$typename It $>$ \\
+size\+\_\+t \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::try\+\_\+dequeue\+\_\+bulk (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmoodycamel_1_1_consumer_token}{consumer\+\_\+token\+\_\+t}} \&}]{token}{, }\item[{It}]{item\+First}{, }\item[{size\+\_\+t}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_a816450a4b774c374ef8ee0234e7c4518}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!try\_dequeue\_bulk@{try\_dequeue\_bulk}}
+\index{try\_dequeue\_bulk@{try\_dequeue\_bulk}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{try\_dequeue\_bulk()}{try\_dequeue\_bulk()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_a816450a4b774c374ef8ee0234e7c4518} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+template$<$typename It $>$ \\
+size\+\_\+t \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::try\+\_\+dequeue\+\_\+bulk (\begin{DoxyParamCaption}\item[{It}]{item\+First}{, }\item[{size\+\_\+t}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_a816450a4b774c374ef8ee0234e7c4518}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!try\_dequeue\_bulk@{try\_dequeue\_bulk}}
+\index{try\_dequeue\_bulk@{try\_dequeue\_bulk}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{try\_dequeue\_bulk()}{try\_dequeue\_bulk()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_a816450a4b774c374ef8ee0234e7c4518} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+template$<$typename It $>$ \\
+size\+\_\+t \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::try\+\_\+dequeue\+\_\+bulk (\begin{DoxyParamCaption}\item[{It}]{item\+First}{, }\item[{size\+\_\+t}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_a1cfc50210d50dba266431ff82b908da7}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!try\_dequeue\_bulk\_from\_producer@{try\_dequeue\_bulk\_from\_producer}}
+\index{try\_dequeue\_bulk\_from\_producer@{try\_dequeue\_bulk\_from\_producer}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{try\_dequeue\_bulk\_from\_producer()}{try\_dequeue\_bulk\_from\_producer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_a1cfc50210d50dba266431ff82b908da7} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+template$<$typename It $>$ \\
+size\+\_\+t \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::try\+\_\+dequeue\+\_\+bulk\+\_\+from\+\_\+producer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmoodycamel_1_1_producer_token}{producer\+\_\+token\+\_\+t}} const \&}]{producer}{, }\item[{It}]{item\+First}{, }\item[{size\+\_\+t}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_a1cfc50210d50dba266431ff82b908da7}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!try\_dequeue\_bulk\_from\_producer@{try\_dequeue\_bulk\_from\_producer}}
+\index{try\_dequeue\_bulk\_from\_producer@{try\_dequeue\_bulk\_from\_producer}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{try\_dequeue\_bulk\_from\_producer()}{try\_dequeue\_bulk\_from\_producer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_a1cfc50210d50dba266431ff82b908da7} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+template$<$typename It $>$ \\
+size\+\_\+t \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::try\+\_\+dequeue\+\_\+bulk\+\_\+from\+\_\+producer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmoodycamel_1_1_producer_token}{producer\+\_\+token\+\_\+t}} const \&}]{producer}{, }\item[{It}]{item\+First}{, }\item[{size\+\_\+t}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_a609358c281fb44c88088f229c47e424d}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!try\_dequeue\_from\_producer@{try\_dequeue\_from\_producer}}
+\index{try\_dequeue\_from\_producer@{try\_dequeue\_from\_producer}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{try\_dequeue\_from\_producer()}{try\_dequeue\_from\_producer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_a609358c281fb44c88088f229c47e424d} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+template$<$typename U $>$ \\
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::try\+\_\+dequeue\+\_\+from\+\_\+producer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmoodycamel_1_1_producer_token}{producer\+\_\+token\+\_\+t}} const \&}]{producer}{, }\item[{U \&}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_a609358c281fb44c88088f229c47e424d}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!try\_dequeue\_from\_producer@{try\_dequeue\_from\_producer}}
+\index{try\_dequeue\_from\_producer@{try\_dequeue\_from\_producer}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{try\_dequeue\_from\_producer()}{try\_dequeue\_from\_producer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_a609358c281fb44c88088f229c47e424d} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+template$<$typename U $>$ \\
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::try\+\_\+dequeue\+\_\+from\+\_\+producer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmoodycamel_1_1_producer_token}{producer\+\_\+token\+\_\+t}} const \&}]{producer}{, }\item[{U \&}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_ad9f25d247543755bdc1b477f2678455f}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!try\_dequeue\_non\_interleaved@{try\_dequeue\_non\_interleaved}}
+\index{try\_dequeue\_non\_interleaved@{try\_dequeue\_non\_interleaved}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{try\_dequeue\_non\_interleaved()}{try\_dequeue\_non\_interleaved()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_ad9f25d247543755bdc1b477f2678455f} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+template$<$typename U $>$ \\
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::try\+\_\+dequeue\+\_\+non\+\_\+interleaved (\begin{DoxyParamCaption}\item[{U \&}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_ad9f25d247543755bdc1b477f2678455f}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!try\_dequeue\_non\_interleaved@{try\_dequeue\_non\_interleaved}}
+\index{try\_dequeue\_non\_interleaved@{try\_dequeue\_non\_interleaved}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{try\_dequeue\_non\_interleaved()}{try\_dequeue\_non\_interleaved()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_ad9f25d247543755bdc1b477f2678455f} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+template$<$typename U $>$ \\
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::try\+\_\+dequeue\+\_\+non\+\_\+interleaved (\begin{DoxyParamCaption}\item[{U \&}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_a049a33d4127c66a614b717cf20bba330}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!try\_enqueue@{try\_enqueue}}
+\index{try\_enqueue@{try\_enqueue}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{try\_enqueue()}{try\_enqueue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_a049a33d4127c66a614b717cf20bba330} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::try\+\_\+enqueue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmoodycamel_1_1_producer_token}{producer\+\_\+token\+\_\+t}} const \&}]{token}{, }\item[{T \&\&}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_a049a33d4127c66a614b717cf20bba330}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!try\_enqueue@{try\_enqueue}}
+\index{try\_enqueue@{try\_enqueue}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{try\_enqueue()}{try\_enqueue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_a049a33d4127c66a614b717cf20bba330} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::try\+\_\+enqueue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmoodycamel_1_1_producer_token}{producer\+\_\+token\+\_\+t}} const \&}]{token}{, }\item[{T \&\&}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_ad04237577ca981e18e23190773cf1644}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!try\_enqueue@{try\_enqueue}}
+\index{try\_enqueue@{try\_enqueue}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{try\_enqueue()}{try\_enqueue()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_ad04237577ca981e18e23190773cf1644} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::try\+\_\+enqueue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmoodycamel_1_1_producer_token}{producer\+\_\+token\+\_\+t}} const \&}]{token}{, }\item[{T const \&}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_ad04237577ca981e18e23190773cf1644}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!try\_enqueue@{try\_enqueue}}
+\index{try\_enqueue@{try\_enqueue}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{try\_enqueue()}{try\_enqueue()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_ad04237577ca981e18e23190773cf1644} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::try\+\_\+enqueue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmoodycamel_1_1_producer_token}{producer\+\_\+token\+\_\+t}} const \&}]{token}{, }\item[{T const \&}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_af63a4f51a8b8b6c59ea883ed97fff7a2}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!try\_enqueue@{try\_enqueue}}
+\index{try\_enqueue@{try\_enqueue}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{try\_enqueue()}{try\_enqueue()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_af63a4f51a8b8b6c59ea883ed97fff7a2} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::try\+\_\+enqueue (\begin{DoxyParamCaption}\item[{T \&\&}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_af63a4f51a8b8b6c59ea883ed97fff7a2}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!try\_enqueue@{try\_enqueue}}
+\index{try\_enqueue@{try\_enqueue}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{try\_enqueue()}{try\_enqueue()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_af63a4f51a8b8b6c59ea883ed97fff7a2} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::try\+\_\+enqueue (\begin{DoxyParamCaption}\item[{T \&\&}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_aaab76643a98e1094cecdd213fbb6e75d}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!try\_enqueue@{try\_enqueue}}
+\index{try\_enqueue@{try\_enqueue}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{try\_enqueue()}{try\_enqueue()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_aaab76643a98e1094cecdd213fbb6e75d} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::try\+\_\+enqueue (\begin{DoxyParamCaption}\item[{T const \&}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_aaab76643a98e1094cecdd213fbb6e75d}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!try\_enqueue@{try\_enqueue}}
+\index{try\_enqueue@{try\_enqueue}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{try\_enqueue()}{try\_enqueue()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_aaab76643a98e1094cecdd213fbb6e75d} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::try\+\_\+enqueue (\begin{DoxyParamCaption}\item[{T const \&}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_aecbe38c03c23ea980d1bc1f9445d26c2}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!try\_enqueue\_bulk@{try\_enqueue\_bulk}}
+\index{try\_enqueue\_bulk@{try\_enqueue\_bulk}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{try\_enqueue\_bulk()}{try\_enqueue\_bulk()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_aecbe38c03c23ea980d1bc1f9445d26c2} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+template$<$typename It $>$ \\
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::try\+\_\+enqueue\+\_\+bulk (\begin{DoxyParamCaption}\item[{It}]{item\+First}{, }\item[{size\+\_\+t}]{count}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_aecbe38c03c23ea980d1bc1f9445d26c2}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!try\_enqueue\_bulk@{try\_enqueue\_bulk}}
+\index{try\_enqueue\_bulk@{try\_enqueue\_bulk}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{try\_enqueue\_bulk()}{try\_enqueue\_bulk()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_aecbe38c03c23ea980d1bc1f9445d26c2} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+template$<$typename It $>$ \\
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::try\+\_\+enqueue\+\_\+bulk (\begin{DoxyParamCaption}\item[{It}]{item\+First}{, }\item[{size\+\_\+t}]{count}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_a359380c0d6952e61f3ef4811808eb573}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!try\_enqueue\_bulk@{try\_enqueue\_bulk}}
+\index{try\_enqueue\_bulk@{try\_enqueue\_bulk}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{try\_enqueue\_bulk()}{try\_enqueue\_bulk()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_a359380c0d6952e61f3ef4811808eb573} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+template$<$typename It $>$ \\
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::try\+\_\+enqueue\+\_\+bulk (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmoodycamel_1_1_producer_token}{producer\+\_\+token\+\_\+t}} const \&}]{token}{, }\item[{It}]{item\+First}{, }\item[{size\+\_\+t}]{count}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_a359380c0d6952e61f3ef4811808eb573}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!try\_enqueue\_bulk@{try\_enqueue\_bulk}}
+\index{try\_enqueue\_bulk@{try\_enqueue\_bulk}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{try\_enqueue\_bulk()}{try\_enqueue\_bulk()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_a359380c0d6952e61f3ef4811808eb573} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+template$<$typename It $>$ \\
+bool \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::try\+\_\+enqueue\+\_\+bulk (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmoodycamel_1_1_producer_token}{producer\+\_\+token\+\_\+t}} const \&}]{token}{, }\item[{It}]{item\+First}{, }\item[{size\+\_\+t}]{count}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_affb081dec2a93f53a23878412f69c469}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!ConcurrentQueueTests@{ConcurrentQueueTests}}
+\index{ConcurrentQueueTests@{ConcurrentQueueTests}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{ConcurrentQueueTests}{ConcurrentQueueTests}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_affb081dec2a93f53a23878412f69c469} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+Concurrent\+Queue\+Tests\hspace{0.3cm}{\ttfamily [friend]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_ad89a846fefec2b3c6dfdd85f89184f0e}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!ConsumerToken@{ConsumerToken}}
+\index{ConsumerToken@{ConsumerToken}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{ConsumerToken}{ConsumerToken}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_ad89a846fefec2b3c6dfdd85f89184f0e} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+\mbox{\hyperlink{structmoodycamel_1_1_consumer_token}{Consumer\+Token}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_aebff8165e0e4f701b6b92f6717a202b7}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!ExplicitProducer@{ExplicitProducer}}
+\index{ExplicitProducer@{ExplicitProducer}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{ExplicitProducer}{ExplicitProducer}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_aebff8165e0e4f701b6b92f6717a202b7} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+Explicit\+Producer\hspace{0.3cm}{\ttfamily [friend]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_ab79e82aa1a04eb71ff8297700ff94d58}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!ImplicitProducer@{ImplicitProducer}}
+\index{ImplicitProducer@{ImplicitProducer}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{ImplicitProducer}{ImplicitProducer}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_ab79e82aa1a04eb71ff8297700ff94d58} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+friend struct Implicit\+Producer\hspace{0.3cm}{\ttfamily [friend]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_a9ab163b49fd7151c8e67200709375c55}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!ProducerToken@{ProducerToken}}
+\index{ProducerToken@{ProducerToken}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{ProducerToken}{ProducerToken}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_a9ab163b49fd7151c8e67200709375c55} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+\mbox{\hyperlink{structmoodycamel_1_1_producer_token}{Producer\+Token}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_ad5dbdb9e79fa171f83bf598e5a0ae6ee}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!BLOCK\_SIZE@{BLOCK\_SIZE}}
+\index{BLOCK\_SIZE@{BLOCK\_SIZE}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{BLOCK\_SIZE}{BLOCK\_SIZE}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_ad5dbdb9e79fa171f83bf598e5a0ae6ee} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+static const size\+\_\+t \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::\+BLOCK\+\_\+\+SIZE = static\+\_\+cast$<$size\+\_\+t$>$(Traits\+::\+BLOCK\+\_\+\+SIZE)\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_a62395a235acef1310eade752cd7b4202}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!EXPLICIT\_BLOCK\_EMPTY\_COUNTER\_THRESHOLD@{EXPLICIT\_BLOCK\_EMPTY\_COUNTER\_THRESHOLD}}
+\index{EXPLICIT\_BLOCK\_EMPTY\_COUNTER\_THRESHOLD@{EXPLICIT\_BLOCK\_EMPTY\_COUNTER\_THRESHOLD}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{EXPLICIT\_BLOCK\_EMPTY\_COUNTER\_THRESHOLD}{EXPLICIT\_BLOCK\_EMPTY\_COUNTER\_THRESHOLD}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_a62395a235acef1310eade752cd7b4202} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+static const size\+\_\+t \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::\+EXPLICIT\+\_\+\+BLOCK\+\_\+\+EMPTY\+\_\+\+COUNTER\+\_\+\+THRESHOLD = static\+\_\+cast$<$size\+\_\+t$>$(Traits\+::\+EXPLICIT\+\_\+\+BLOCK\+\_\+\+EMPTY\+\_\+\+COUNTER\+\_\+\+THRESHOLD)\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_a9b0b153d8d01bd356e01cbe212895213}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!EXPLICIT\_CONSUMER\_CONSUMPTION\_QUOTA\_BEFORE\_ROTATE@{EXPLICIT\_CONSUMER\_CONSUMPTION\_QUOTA\_BEFORE\_ROTATE}}
+\index{EXPLICIT\_CONSUMER\_CONSUMPTION\_QUOTA\_BEFORE\_ROTATE@{EXPLICIT\_CONSUMER\_CONSUMPTION\_QUOTA\_BEFORE\_ROTATE}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{EXPLICIT\_CONSUMER\_CONSUMPTION\_QUOTA\_BEFORE\_ROTATE}{EXPLICIT\_CONSUMER\_CONSUMPTION\_QUOTA\_BEFORE\_ROTATE}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_a9b0b153d8d01bd356e01cbe212895213} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+static const std\+::uint32\+\_\+t \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::\+EXPLICIT\+\_\+\+CONSUMER\+\_\+\+CONSUMPTION\+\_\+\+QUOTA\+\_\+\+BEFORE\+\_\+\+ROTATE = static\+\_\+cast$<$std\+::uint32\+\_\+t$>$(Traits\+::\+EXPLICIT\+\_\+\+CONSUMER\+\_\+\+CONSUMPTION\+\_\+\+QUOTA\+\_\+\+BEFORE\+\_\+\+ROTATE)\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_a14b748827c74f78ed1849e8943499840}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!EXPLICIT\_INITIAL\_INDEX\_SIZE@{EXPLICIT\_INITIAL\_INDEX\_SIZE}}
+\index{EXPLICIT\_INITIAL\_INDEX\_SIZE@{EXPLICIT\_INITIAL\_INDEX\_SIZE}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{EXPLICIT\_INITIAL\_INDEX\_SIZE}{EXPLICIT\_INITIAL\_INDEX\_SIZE}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_a14b748827c74f78ed1849e8943499840} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+static const size\+\_\+t \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::\+EXPLICIT\+\_\+\+INITIAL\+\_\+\+INDEX\+\_\+\+SIZE = static\+\_\+cast$<$size\+\_\+t$>$(Traits\+::\+EXPLICIT\+\_\+\+INITIAL\+\_\+\+INDEX\+\_\+\+SIZE)\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_a905d573fc84b96705a26548ad0d60896}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!IMPLICIT\_INITIAL\_INDEX\_SIZE@{IMPLICIT\_INITIAL\_INDEX\_SIZE}}
+\index{IMPLICIT\_INITIAL\_INDEX\_SIZE@{IMPLICIT\_INITIAL\_INDEX\_SIZE}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{IMPLICIT\_INITIAL\_INDEX\_SIZE}{IMPLICIT\_INITIAL\_INDEX\_SIZE}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_a905d573fc84b96705a26548ad0d60896} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+static const size\+\_\+t \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::\+IMPLICIT\+\_\+\+INITIAL\+\_\+\+INDEX\+\_\+\+SIZE = static\+\_\+cast$<$size\+\_\+t$>$(Traits\+::\+IMPLICIT\+\_\+\+INITIAL\+\_\+\+INDEX\+\_\+\+SIZE)\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_a6cd15a304107f907e4304935ea9058ae}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!INITIAL\_IMPLICIT\_PRODUCER\_HASH\_SIZE@{INITIAL\_IMPLICIT\_PRODUCER\_HASH\_SIZE}}
+\index{INITIAL\_IMPLICIT\_PRODUCER\_HASH\_SIZE@{INITIAL\_IMPLICIT\_PRODUCER\_HASH\_SIZE}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{INITIAL\_IMPLICIT\_PRODUCER\_HASH\_SIZE}{INITIAL\_IMPLICIT\_PRODUCER\_HASH\_SIZE}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_a6cd15a304107f907e4304935ea9058ae} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+static const size\+\_\+t \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::\+INITIAL\+\_\+\+IMPLICIT\+\_\+\+PRODUCER\+\_\+\+HASH\+\_\+\+SIZE = static\+\_\+cast$<$size\+\_\+t$>$(Traits\+::\+INITIAL\+\_\+\+IMPLICIT\+\_\+\+PRODUCER\+\_\+\+HASH\+\_\+\+SIZE)\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classmoodycamel_1_1_concurrent_queue_afc457d111d100977f80e6e4e2650e9ae}\index{moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}!MAX\_SUBQUEUE\_SIZE@{MAX\_SUBQUEUE\_SIZE}}
+\index{MAX\_SUBQUEUE\_SIZE@{MAX\_SUBQUEUE\_SIZE}!moodycamel::ConcurrentQueue$<$ T, Traits $>$@{moodycamel::ConcurrentQueue$<$ T, Traits $>$}}
+\doxysubsubsection{\texorpdfstring{MAX\_SUBQUEUE\_SIZE}{MAX\_SUBQUEUE\_SIZE}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_concurrent_queue_afc457d111d100977f80e6e4e2650e9ae} 
+template$<$typename T , typename Traits  = Concurrent\+Queue\+Default\+Traits$>$ \\
+static const size\+\_\+t \mbox{\hyperlink{classmoodycamel_1_1_concurrent_queue}{moodycamel\+::\+Concurrent\+Queue}}$<$ T, Traits $>$\+::\+MAX\+\_\+\+SUBQUEUE\+\_\+\+SIZE = (\mbox{\hyperlink{structmoodycamel_1_1details_1_1const__numeric__max}{details\+::const\+\_\+numeric\+\_\+max}}$<$size\+\_\+t$>$\+::value -\/ static\+\_\+cast$<$size\+\_\+t$>$(Traits\+::\+MAX\+\_\+\+SUBQUEUE\+\_\+\+SIZE) $<$ BLOCK\+\_\+\+SIZE) ? \mbox{\hyperlink{structmoodycamel_1_1details_1_1const__numeric__max}{details\+::const\+\_\+numeric\+\_\+max}}$<$size\+\_\+t$>$\+::value \+: ((static\+\_\+cast$<$size\+\_\+t$>$(Traits\+::\+MAX\+\_\+\+SUBQUEUE\+\_\+\+SIZE) + (BLOCK\+\_\+\+SIZE -\/ 1)) / BLOCK\+\_\+\+SIZE \texorpdfstring{$\ast$}{*} BLOCK\+\_\+\+SIZE)\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sgaer/source/repos/katanafinancial/\+Occam\+CME4/\+Occam\+CME4/src/external/camel/concurrentqueue.\+h\item 
+C\+:/\+Users/sgaer/source/repos/katanafinancial/\+Occam\+CME4/\+Occam\+CME4/src/external/camel/concurrentqueue2.\+h\end{DoxyCompactItemize}

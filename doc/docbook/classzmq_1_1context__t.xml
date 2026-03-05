@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classzmq_1_1context__t" xml:lang="en-US">
+<title>zmq::context_t Class Reference</title>
+<indexterm><primary>zmq::context_t</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classzmq_1_1context__t_1a098638e33374e811b8d394d6b56627c4">context_t</link> (int io_threads_, int max_sockets_=ZMQ_MAX_SOCKETS_DFLT)</para>
+</listitem>
+            <listitem><para>int <link linkend="_classzmq_1_1context__t_1a1b7abe34787b406c3ca612ec4728f7f6">setctxopt</link> (int option_, int optval_)</para>
+</listitem>
+            <listitem><para>int <link linkend="_classzmq_1_1context__t_1a7500b2611c32e6432548728126050490">getctxopt</link> (int option_)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classzmq_1_1context__t_1a99eb7ea424d4f0c2ed0b6d3065abc55c">close</link> () ZMQ_NOTHROW</para>
+</listitem>
+            <listitem><para>void <link linkend="_classzmq_1_1context__t_1a2996d4c1ff97062753a5610fd54ca49f">shutdown</link> () ZMQ_NOTHROW</para>
+</listitem>
+            <listitem><para>ZMQ_EXPLICIT <link linkend="_classzmq_1_1context__t_1a1514a5b0e8392ee4578b6436faa154cf">operator void *</link> () ZMQ_NOTHROW</para>
+</listitem>
+            <listitem><para>ZMQ_EXPLICIT <link linkend="_classzmq_1_1context__t_1a59e0dbf76d97ee0794f35e6760e7b287">operator void const *</link> () const ZMQ_NOTHROW</para>
+</listitem>
+            <listitem><para><link linkend="_classzmq_1_1context__t_1aef5455f8cb8d044d695258f881547c8f">operator bool</link> () const ZMQ_NOTHROW</para>
+</listitem>
+            <listitem><para>void <link linkend="_classzmq_1_1context__t_1a2ae3caec030a250b3896f8b6154d024f">swap</link> (<link linkend="_classzmq_1_1context__t">context_t</link> &amp;other) ZMQ_NOTHROW</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classzmq_1_1context__t_1a363a609b7e045e4efb0989504d660a4e"/><section>
+    <title>context_t()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>context_t</primary><secondary>zmq::context_t</secondary></indexterm>
+<indexterm><primary>zmq::context_t</primary><secondary>context_t</secondary></indexterm>
+<para><computeroutput>zmq::context_t::context_t ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1context__t_1a098638e33374e811b8d394d6b56627c4"/><section>
+    <title>context_t()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>context_t</primary><secondary>zmq::context_t</secondary></indexterm>
+<indexterm><primary>zmq::context_t</primary><secondary>context_t</secondary></indexterm>
+<para><computeroutput>zmq::context_t::context_t (int io_threads_, int max_sockets_ = <computeroutput>ZMQ_MAX_SOCKETS_DFLT</computeroutput>
+)<computeroutput>[inline]</computeroutput>, <computeroutput>[explicit]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1context__t_1abf547547891e507adcc751fbc2454a83"/><section>
+    <title>~context_t()</title>
+<indexterm><primary>~context_t</primary><secondary>zmq::context_t</secondary></indexterm>
+<indexterm><primary>zmq::context_t</primary><secondary>~context_t</secondary></indexterm>
+<para><computeroutput>zmq::context_t::~context_t ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classzmq_1_1context__t_1a99eb7ea424d4f0c2ed0b6d3065abc55c"/><section>
+    <title>close()</title>
+<indexterm><primary>close</primary><secondary>zmq::context_t</secondary></indexterm>
+<indexterm><primary>zmq::context_t</primary><secondary>close</secondary></indexterm>
+<para><computeroutput>void zmq::context_t::close ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1context__t_1a7500b2611c32e6432548728126050490"/><section>
+    <title>getctxopt()</title>
+<indexterm><primary>getctxopt</primary><secondary>zmq::context_t</secondary></indexterm>
+<indexterm><primary>zmq::context_t</primary><secondary>getctxopt</secondary></indexterm>
+<para><computeroutput>int zmq::context_t::getctxopt (int option_)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1context__t_1aef5455f8cb8d044d695258f881547c8f"/><section>
+    <title>operator bool()</title>
+<indexterm><primary>operator bool</primary><secondary>zmq::context_t</secondary></indexterm>
+<indexterm><primary>zmq::context_t</primary><secondary>operator bool</secondary></indexterm>
+<para><computeroutput>zmq::context_t::operator bool ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1context__t_1a1514a5b0e8392ee4578b6436faa154cf"/><section>
+    <title>operator void *()</title>
+<indexterm><primary>operator void *</primary><secondary>zmq::context_t</secondary></indexterm>
+<indexterm><primary>zmq::context_t</primary><secondary>operator void *</secondary></indexterm>
+<para><computeroutput>ZMQ_EXPLICIT zmq::context_t::operator void * ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1context__t_1a59e0dbf76d97ee0794f35e6760e7b287"/><section>
+    <title>operator void const *()</title>
+<indexterm><primary>operator void const *</primary><secondary>zmq::context_t</secondary></indexterm>
+<indexterm><primary>zmq::context_t</primary><secondary>operator void const *</secondary></indexterm>
+<para><computeroutput>ZMQ_EXPLICIT zmq::context_t::operator void const * ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1context__t_1a1b7abe34787b406c3ca612ec4728f7f6"/><section>
+    <title>setctxopt()</title>
+<indexterm><primary>setctxopt</primary><secondary>zmq::context_t</secondary></indexterm>
+<indexterm><primary>zmq::context_t</primary><secondary>setctxopt</secondary></indexterm>
+<para><computeroutput>int zmq::context_t::setctxopt (int option_, int optval_)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1context__t_1a2996d4c1ff97062753a5610fd54ca49f"/><section>
+    <title>shutdown()</title>
+<indexterm><primary>shutdown</primary><secondary>zmq::context_t</secondary></indexterm>
+<indexterm><primary>zmq::context_t</primary><secondary>shutdown</secondary></indexterm>
+<para><computeroutput>void zmq::context_t::shutdown ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classzmq_1_1context__t_1a2ae3caec030a250b3896f8b6154d024f"/><section>
+    <title>swap()</title>
+<indexterm><primary>swap</primary><secondary>zmq::context_t</secondary></indexterm>
+<indexterm><primary>zmq::context_t</primary><secondary>swap</secondary></indexterm>
+<para><computeroutput>void zmq::context_t::swap (<link linkend="_classzmq_1_1context__t">context_t</link> &amp; other)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+ZMQ/zmq.hpp</section>
+</section>

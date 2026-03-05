@@ -1,0 +1,277 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_t_n_1_1_z_f_1_1zf__client__state" xml:lang="en-US">
+<title>KTN::ZF::zf_client_state Struct Reference</title>
+<indexterm><primary>KTN::ZF::zf_client_state</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1ab6a57dd021363741109f36dbdc4054d9">segid</link></para>
+</listitem>
+            <listitem><para>unsigned <link linkend="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a334528cbd9daf0ead1f5a8919675a4f0">alarm_usec</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a68d6ec266e8f16f234a34f00cb878e69">alarm</link></para>
+</listitem>
+            <listitem><para>struct zf_stack * <link linkend="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1afe4bc69d7a84b7af5282539735f23aec">stack</link></para>
+</listitem>
+            <listitem><para>struct zft * <link linkend="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1ab1c4a7c06b06f768af3ffc4142b007d5">tcp_sock</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1ac541f96e8b79459ce68c2a77a6cf0c6b">udp_sock</link></para>
+</listitem>
+            <listitem><para>ef_pd <link linkend="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a663e7fc4b80d96fe2bba4732fd2ff2ae">pd</link></para>
+</listitem>
+            <listitem><para>ef_pio <link linkend="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a36e7d7a1455ff4a073903d167fa88245">pio</link></para>
+</listitem>
+            <listitem><para>ef_driver_handle <link linkend="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1ab12f80cb674fdc3a87e79275a4629bb8">dh</link></para>
+</listitem>
+            <listitem><para>ef_vi <link linkend="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1ac7150a72620f46dd7c5ba614d25be79b">vi</link></para>
+</listitem>
+            <listitem><para>unsigned <link linkend="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1ab654d1aba8aba440dc705a7c7cc27671">rx_prefix_len</link></para>
+</listitem>
+            <listitem><para>char * <link linkend="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a28ed113d35302cd5f3291184d07b66fd">msg_buf</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a3f8eb6f1e03756d55d9c633f72ef1dd5">msg_len</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1adf9ad9dea1772b58a35f4ccff0ebaff1">pio_pkt_len</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1abc6313df601d481e0005bff77c4e1321">pio_in_use</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a45c7860204db545a489ac458f9776d16">use_ctpio</link></para>
+</listitem>
+            <listitem><para>struct zf_ds <link linkend="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1ae716a7c1bc9d6a83fc878aff0bcc9c91">zfds</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structpkt__buf">pkt_buf</link> * <link linkend="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a6b4d2d7d20882c34ae19aa7eb78688de">pkt_bufs</link> [N_RX_BUFS+N_TX_BUFS]</para>
+</listitem>
+            <listitem><para>ef_memreg <link linkend="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a18093d47b3374ce78d9e1ac061843aa3">memreg</link></para>
+</listitem>
+            <listitem><para>char <link linkend="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a6dfe73b93823ac02464072304977b6ee">recv_buf</link> [MTU]</para>
+</listitem>
+            <listitem><para>unsigned <link linkend="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a9ed253fe9494b6b1a05a4013ea0761be">rx_posted</link></para>
+</listitem>
+            <listitem><para>unsigned <link linkend="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1afa44d7a79dfb751b44f58ae99b4595e8">rx_completed</link></para>
+</listitem>
+            <listitem><para><link linkend="_structef__rx__sentinel__cfg">ef_rx_sentinel_cfg</link> <link linkend="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a39dea4605c539a513a583cdaea770cf1">rx_stnl_cfg</link></para>
+</listitem>
+            <listitem><para><link linkend="_structef__rx__sentinel">ef_rx_sentinel</link> <link linkend="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1afc49f5761eeb7be87bce02b0488a0225">rx_stnl</link></para>
+</listitem>
+            <listitem><para>unsigned <link linkend="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a8c6bf9b406657067013c6f7a866719ab">rx_msg_len</link></para>
+</listitem>
+            <listitem><para>unsigned <link linkend="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1ade3f89acf4c758d5e9084894c301da8f">rx_msg_consumed</link></para>
+</listitem>
+            <listitem><para>const char * <link linkend="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a50e0b9fe82419a639e270ae15570ee3b">rx_msg</link></para>
+</listitem>
+            <listitem><para>unsigned <link linkend="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a0d44f7243442d37f08133b7b3991dcf9">rx_csum</link></para>
+</listitem>
+            <listitem><para>unsigned <link linkend="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a1587cf450280d75e9c34e25f545fd7a4">n_tx_todo</link></para>
+</listitem>
+            <listitem><para>enum poll_state <link linkend="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a6c3e6859ea389a6588df7423cf2ff839">poll_state</link></para>
+</listitem>
+            <listitem><para>unsigned <link linkend="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a431d5a445d31934ab6c34d1f67b14e6c">n_normal_sends</link></para>
+</listitem>
+            <listitem><para>unsigned <link linkend="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a1ed119e5e789d48e4be6696c19c30dda">n_delegated_sends</link></para>
+</listitem>
+            <listitem><para>unsigned <link linkend="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a468dcd05b6f475960cf8004465d5d1e4">n_ctpio_sends</link></para>
+</listitem>
+            <listitem><para>unsigned <link linkend="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a0ec803ebb8fab2670bd4e37ee84df95c">n_fp_give_up</link></para>
+</listitem>
+            <listitem><para>unsigned <link linkend="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1afb99f12ffda269995a65745b24836567">n_fp_success</link></para>
+</listitem>
+            <listitem><para>unsigned <link linkend="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a5bd863adc7c2368efc4f5bc92ef8feda">n_slow</link></para>
+</listitem>
+            <listitem><para>unsigned <link linkend="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a03e8f053fb4c16692fc0c8a55129496a">n_rx_err</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a68d6ec266e8f16f234a34f00cb878e69"/><section>
+    <title>alarm</title>
+<indexterm><primary>alarm</primary><secondary>KTN::ZF::zf_client_state</secondary></indexterm>
+<indexterm><primary>KTN::ZF::zf_client_state</primary><secondary>alarm</secondary></indexterm>
+<para><computeroutput>bool KTN::ZF::zf_client_state::alarm</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a334528cbd9daf0ead1f5a8919675a4f0"/><section>
+    <title>alarm_usec</title>
+<indexterm><primary>alarm_usec</primary><secondary>KTN::ZF::zf_client_state</secondary></indexterm>
+<indexterm><primary>KTN::ZF::zf_client_state</primary><secondary>alarm_usec</secondary></indexterm>
+<para><computeroutput>unsigned KTN::ZF::zf_client_state::alarm_usec</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1ab12f80cb674fdc3a87e79275a4629bb8"/><section>
+    <title>dh</title>
+<indexterm><primary>dh</primary><secondary>KTN::ZF::zf_client_state</secondary></indexterm>
+<indexterm><primary>KTN::ZF::zf_client_state</primary><secondary>dh</secondary></indexterm>
+<para><computeroutput>ef_driver_handle KTN::ZF::zf_client_state::dh</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a18093d47b3374ce78d9e1ac061843aa3"/><section>
+    <title>memreg</title>
+<indexterm><primary>memreg</primary><secondary>KTN::ZF::zf_client_state</secondary></indexterm>
+<indexterm><primary>KTN::ZF::zf_client_state</primary><secondary>memreg</secondary></indexterm>
+<para><computeroutput>ef_memreg KTN::ZF::zf_client_state::memreg</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a28ed113d35302cd5f3291184d07b66fd"/><section>
+    <title>msg_buf</title>
+<indexterm><primary>msg_buf</primary><secondary>KTN::ZF::zf_client_state</secondary></indexterm>
+<indexterm><primary>KTN::ZF::zf_client_state</primary><secondary>msg_buf</secondary></indexterm>
+<para><computeroutput>char* KTN::ZF::zf_client_state::msg_buf</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a3f8eb6f1e03756d55d9c633f72ef1dd5"/><section>
+    <title>msg_len</title>
+<indexterm><primary>msg_len</primary><secondary>KTN::ZF::zf_client_state</secondary></indexterm>
+<indexterm><primary>KTN::ZF::zf_client_state</primary><secondary>msg_len</secondary></indexterm>
+<para><computeroutput>int KTN::ZF::zf_client_state::msg_len</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a468dcd05b6f475960cf8004465d5d1e4"/><section>
+    <title>n_ctpio_sends</title>
+<indexterm><primary>n_ctpio_sends</primary><secondary>KTN::ZF::zf_client_state</secondary></indexterm>
+<indexterm><primary>KTN::ZF::zf_client_state</primary><secondary>n_ctpio_sends</secondary></indexterm>
+<para><computeroutput>unsigned KTN::ZF::zf_client_state::n_ctpio_sends</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a1ed119e5e789d48e4be6696c19c30dda"/><section>
+    <title>n_delegated_sends</title>
+<indexterm><primary>n_delegated_sends</primary><secondary>KTN::ZF::zf_client_state</secondary></indexterm>
+<indexterm><primary>KTN::ZF::zf_client_state</primary><secondary>n_delegated_sends</secondary></indexterm>
+<para><computeroutput>unsigned KTN::ZF::zf_client_state::n_delegated_sends</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a0ec803ebb8fab2670bd4e37ee84df95c"/><section>
+    <title>n_fp_give_up</title>
+<indexterm><primary>n_fp_give_up</primary><secondary>KTN::ZF::zf_client_state</secondary></indexterm>
+<indexterm><primary>KTN::ZF::zf_client_state</primary><secondary>n_fp_give_up</secondary></indexterm>
+<para><computeroutput>unsigned KTN::ZF::zf_client_state::n_fp_give_up</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1afb99f12ffda269995a65745b24836567"/><section>
+    <title>n_fp_success</title>
+<indexterm><primary>n_fp_success</primary><secondary>KTN::ZF::zf_client_state</secondary></indexterm>
+<indexterm><primary>KTN::ZF::zf_client_state</primary><secondary>n_fp_success</secondary></indexterm>
+<para><computeroutput>unsigned KTN::ZF::zf_client_state::n_fp_success</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a431d5a445d31934ab6c34d1f67b14e6c"/><section>
+    <title>n_normal_sends</title>
+<indexterm><primary>n_normal_sends</primary><secondary>KTN::ZF::zf_client_state</secondary></indexterm>
+<indexterm><primary>KTN::ZF::zf_client_state</primary><secondary>n_normal_sends</secondary></indexterm>
+<para><computeroutput>unsigned KTN::ZF::zf_client_state::n_normal_sends</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a03e8f053fb4c16692fc0c8a55129496a"/><section>
+    <title>n_rx_err</title>
+<indexterm><primary>n_rx_err</primary><secondary>KTN::ZF::zf_client_state</secondary></indexterm>
+<indexterm><primary>KTN::ZF::zf_client_state</primary><secondary>n_rx_err</secondary></indexterm>
+<para><computeroutput>unsigned KTN::ZF::zf_client_state::n_rx_err</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a5bd863adc7c2368efc4f5bc92ef8feda"/><section>
+    <title>n_slow</title>
+<indexterm><primary>n_slow</primary><secondary>KTN::ZF::zf_client_state</secondary></indexterm>
+<indexterm><primary>KTN::ZF::zf_client_state</primary><secondary>n_slow</secondary></indexterm>
+<para><computeroutput>unsigned KTN::ZF::zf_client_state::n_slow</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a1587cf450280d75e9c34e25f545fd7a4"/><section>
+    <title>n_tx_todo</title>
+<indexterm><primary>n_tx_todo</primary><secondary>KTN::ZF::zf_client_state</secondary></indexterm>
+<indexterm><primary>KTN::ZF::zf_client_state</primary><secondary>n_tx_todo</secondary></indexterm>
+<para><computeroutput>unsigned KTN::ZF::zf_client_state::n_tx_todo</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a663e7fc4b80d96fe2bba4732fd2ff2ae"/><section>
+    <title>pd</title>
+<indexterm><primary>pd</primary><secondary>KTN::ZF::zf_client_state</secondary></indexterm>
+<indexterm><primary>KTN::ZF::zf_client_state</primary><secondary>pd</secondary></indexterm>
+<para><computeroutput>ef_pd KTN::ZF::zf_client_state::pd</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a36e7d7a1455ff4a073903d167fa88245"/><section>
+    <title>pio</title>
+<indexterm><primary>pio</primary><secondary>KTN::ZF::zf_client_state</secondary></indexterm>
+<indexterm><primary>KTN::ZF::zf_client_state</primary><secondary>pio</secondary></indexterm>
+<para><computeroutput>ef_pio KTN::ZF::zf_client_state::pio</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1abc6313df601d481e0005bff77c4e1321"/><section>
+    <title>pio_in_use</title>
+<indexterm><primary>pio_in_use</primary><secondary>KTN::ZF::zf_client_state</secondary></indexterm>
+<indexterm><primary>KTN::ZF::zf_client_state</primary><secondary>pio_in_use</secondary></indexterm>
+<para><computeroutput>bool KTN::ZF::zf_client_state::pio_in_use</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1adf9ad9dea1772b58a35f4ccff0ebaff1"/><section>
+    <title>pio_pkt_len</title>
+<indexterm><primary>pio_pkt_len</primary><secondary>KTN::ZF::zf_client_state</secondary></indexterm>
+<indexterm><primary>KTN::ZF::zf_client_state</primary><secondary>pio_pkt_len</secondary></indexterm>
+<para><computeroutput>int KTN::ZF::zf_client_state::pio_pkt_len</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a6b4d2d7d20882c34ae19aa7eb78688de"/><section>
+    <title>pkt_bufs</title>
+<indexterm><primary>pkt_bufs</primary><secondary>KTN::ZF::zf_client_state</secondary></indexterm>
+<indexterm><primary>KTN::ZF::zf_client_state</primary><secondary>pkt_bufs</secondary></indexterm>
+<para><computeroutput>struct <link linkend="_structpkt__buf">pkt_buf</link>* KTN::ZF::zf_client_state::pkt_bufs[N_RX_BUFS+N_TX_BUFS]</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a6c3e6859ea389a6588df7423cf2ff839"/><section>
+    <title>poll_state</title>
+<indexterm><primary>poll_state</primary><secondary>KTN::ZF::zf_client_state</secondary></indexterm>
+<indexterm><primary>KTN::ZF::zf_client_state</primary><secondary>poll_state</secondary></indexterm>
+<para><computeroutput>enum poll_state KTN::ZF::zf_client_state::poll_state</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a6dfe73b93823ac02464072304977b6ee"/><section>
+    <title>recv_buf</title>
+<indexterm><primary>recv_buf</primary><secondary>KTN::ZF::zf_client_state</secondary></indexterm>
+<indexterm><primary>KTN::ZF::zf_client_state</primary><secondary>recv_buf</secondary></indexterm>
+<para><computeroutput>char KTN::ZF::zf_client_state::recv_buf[MTU]</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1afa44d7a79dfb751b44f58ae99b4595e8"/><section>
+    <title>rx_completed</title>
+<indexterm><primary>rx_completed</primary><secondary>KTN::ZF::zf_client_state</secondary></indexterm>
+<indexterm><primary>KTN::ZF::zf_client_state</primary><secondary>rx_completed</secondary></indexterm>
+<para><computeroutput>unsigned KTN::ZF::zf_client_state::rx_completed</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a0d44f7243442d37f08133b7b3991dcf9"/><section>
+    <title>rx_csum</title>
+<indexterm><primary>rx_csum</primary><secondary>KTN::ZF::zf_client_state</secondary></indexterm>
+<indexterm><primary>KTN::ZF::zf_client_state</primary><secondary>rx_csum</secondary></indexterm>
+<para><computeroutput>unsigned KTN::ZF::zf_client_state::rx_csum</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a50e0b9fe82419a639e270ae15570ee3b"/><section>
+    <title>rx_msg</title>
+<indexterm><primary>rx_msg</primary><secondary>KTN::ZF::zf_client_state</secondary></indexterm>
+<indexterm><primary>KTN::ZF::zf_client_state</primary><secondary>rx_msg</secondary></indexterm>
+<para><computeroutput>const char* KTN::ZF::zf_client_state::rx_msg</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1ade3f89acf4c758d5e9084894c301da8f"/><section>
+    <title>rx_msg_consumed</title>
+<indexterm><primary>rx_msg_consumed</primary><secondary>KTN::ZF::zf_client_state</secondary></indexterm>
+<indexterm><primary>KTN::ZF::zf_client_state</primary><secondary>rx_msg_consumed</secondary></indexterm>
+<para><computeroutput>unsigned KTN::ZF::zf_client_state::rx_msg_consumed</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a8c6bf9b406657067013c6f7a866719ab"/><section>
+    <title>rx_msg_len</title>
+<indexterm><primary>rx_msg_len</primary><secondary>KTN::ZF::zf_client_state</secondary></indexterm>
+<indexterm><primary>KTN::ZF::zf_client_state</primary><secondary>rx_msg_len</secondary></indexterm>
+<para><computeroutput>unsigned KTN::ZF::zf_client_state::rx_msg_len</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a9ed253fe9494b6b1a05a4013ea0761be"/><section>
+    <title>rx_posted</title>
+<indexterm><primary>rx_posted</primary><secondary>KTN::ZF::zf_client_state</secondary></indexterm>
+<indexterm><primary>KTN::ZF::zf_client_state</primary><secondary>rx_posted</secondary></indexterm>
+<para><computeroutput>unsigned KTN::ZF::zf_client_state::rx_posted</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1ab654d1aba8aba440dc705a7c7cc27671"/><section>
+    <title>rx_prefix_len</title>
+<indexterm><primary>rx_prefix_len</primary><secondary>KTN::ZF::zf_client_state</secondary></indexterm>
+<indexterm><primary>KTN::ZF::zf_client_state</primary><secondary>rx_prefix_len</secondary></indexterm>
+<para><computeroutput>unsigned KTN::ZF::zf_client_state::rx_prefix_len</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1afc49f5761eeb7be87bce02b0488a0225"/><section>
+    <title>rx_stnl</title>
+<indexterm><primary>rx_stnl</primary><secondary>KTN::ZF::zf_client_state</secondary></indexterm>
+<indexterm><primary>KTN::ZF::zf_client_state</primary><secondary>rx_stnl</secondary></indexterm>
+<para><computeroutput><link linkend="_structef__rx__sentinel">ef_rx_sentinel</link> KTN::ZF::zf_client_state::rx_stnl</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a39dea4605c539a513a583cdaea770cf1"/><section>
+    <title>rx_stnl_cfg</title>
+<indexterm><primary>rx_stnl_cfg</primary><secondary>KTN::ZF::zf_client_state</secondary></indexterm>
+<indexterm><primary>KTN::ZF::zf_client_state</primary><secondary>rx_stnl_cfg</secondary></indexterm>
+<para><computeroutput><link linkend="_structef__rx__sentinel__cfg">ef_rx_sentinel_cfg</link> KTN::ZF::zf_client_state::rx_stnl_cfg</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1ab6a57dd021363741109f36dbdc4054d9"/><section>
+    <title>segid</title>
+<indexterm><primary>segid</primary><secondary>KTN::ZF::zf_client_state</secondary></indexterm>
+<indexterm><primary>KTN::ZF::zf_client_state</primary><secondary>segid</secondary></indexterm>
+<para><computeroutput>int KTN::ZF::zf_client_state::segid</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1afe4bc69d7a84b7af5282539735f23aec"/><section>
+    <title>stack</title>
+<indexterm><primary>stack</primary><secondary>KTN::ZF::zf_client_state</secondary></indexterm>
+<indexterm><primary>KTN::ZF::zf_client_state</primary><secondary>stack</secondary></indexterm>
+<para><computeroutput>struct zf_stack* KTN::ZF::zf_client_state::stack</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1ab1c4a7c06b06f768af3ffc4142b007d5"/><section>
+    <title>tcp_sock</title>
+<indexterm><primary>tcp_sock</primary><secondary>KTN::ZF::zf_client_state</secondary></indexterm>
+<indexterm><primary>KTN::ZF::zf_client_state</primary><secondary>tcp_sock</secondary></indexterm>
+<para><computeroutput>struct zft* KTN::ZF::zf_client_state::tcp_sock</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1ac541f96e8b79459ce68c2a77a6cf0c6b"/><section>
+    <title>udp_sock</title>
+<indexterm><primary>udp_sock</primary><secondary>KTN::ZF::zf_client_state</secondary></indexterm>
+<indexterm><primary>KTN::ZF::zf_client_state</primary><secondary>udp_sock</secondary></indexterm>
+<para><computeroutput>int KTN::ZF::zf_client_state::udp_sock</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1a45c7860204db545a489ac458f9776d16"/><section>
+    <title>use_ctpio</title>
+<indexterm><primary>use_ctpio</primary><secondary>KTN::ZF::zf_client_state</secondary></indexterm>
+<indexterm><primary>KTN::ZF::zf_client_state</primary><secondary>use_ctpio</secondary></indexterm>
+<para><computeroutput>bool KTN::ZF::zf_client_state::use_ctpio</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1ac7150a72620f46dd7c5ba614d25be79b"/><section>
+    <title>vi</title>
+<indexterm><primary>vi</primary><secondary>KTN::ZF::zf_client_state</secondary></indexterm>
+<indexterm><primary>KTN::ZF::zf_client_state</primary><secondary>vi</secondary></indexterm>
+<para><computeroutput>ef_vi KTN::ZF::zf_client_state::vi</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_z_f_1_1zf__client__state_1ae716a7c1bc9d6a83fc878aff0bcc9c91"/><section>
+    <title>zfds</title>
+<indexterm><primary>zfds</primary><secondary>KTN::ZF::zf_client_state</secondary></indexterm>
+<indexterm><primary>KTN::ZF::zf_client_state</primary><secondary>zfds</secondary></indexterm>
+<para><computeroutput>struct zf_ds KTN::ZF::zf_client_state::zfds</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Net/tcpdirect_structs.hpp</section>
+</section>

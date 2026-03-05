@@ -1,0 +1,157 @@
+\doxysection{KTN\+::ORD\+::Order\+Handler\+Zmq\+V6 Class Reference}
+\hypertarget{class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6}{}\label{class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6}\index{KTN::ORD::OrderHandlerZmqV6@{KTN::ORD::OrderHandlerZmqV6}}
+
+
+The \doxylink{class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6}{Order\+Handler\+Zmq\+V6} class handles the ZMQ communication for order handling. It implements the \doxylink{class_k_t_n_1_1_session_callback}{Session\+Callback} and \doxylink{class_i_zmq_subscriber}{IZmq\+Subscriber} interfaces.  
+
+
+
+
+{\ttfamily \#include $<$Order\+Handler\+Zmq\+V6.\+hpp$>$}
+
+Inheritance diagram for KTN\+::ORD\+::Order\+Handler\+Zmq\+V6\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6_ad06ef3befdfd94ac6010e9231f6098e0}{Order\+Handler\+Zmq\+V6}} (\mbox{\hyperlink{class_i_exchange_sender}{IExchange\+Sender}} \&exch, int cbid)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6}{Order\+Handler\+Zmq\+V6} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6_a3fd04b33cc11222a397eae74c2a258fe}{\texorpdfstring{$\sim$}{\string~}\+Order\+Handler\+Zmq\+V6}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6}{Order\+Handler\+Zmq\+V6} object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6_ab29604a9e90d87dba254582f072d4d75}{Register\+Order\+Template}} (\mbox{\hyperlink{struct_k_t_n_1_1_order}{Order}} \&ord)
+\begin{DoxyCompactList}\small\item\em Registers an order template. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6_a436b79f178310a0d5c7dd70cec83fb99}{Stop}} ()
+\begin{DoxyCompactList}\small\item\em Stops the order handler. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6_aec23491d7e3e69433dd90d4d98d8918d}{Print}} ()
+\begin{DoxyCompactList}\small\item\em Prints the order handler. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6_afa4b3db3eee9678d60843649a0a8b27d}{Load\+Tas\+Orders}} ()
+\begin{DoxyCompactList}\small\item\em Loads TAS orders. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6_a9d8efe1dd99680394d02840a4bf0fb74}{Clear}} ()
+\begin{DoxyCompactList}\small\item\em Clears the order handler. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_k_t_n_1_1_session_callback}{KTN\+::\+Session\+Callback}}}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_i_zmq_subscriber}{IZmq\+Subscriber}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_i_zmq_subscriber_af2e2a88cb831d644dd32edc238cce65d}{on\+Pub\+Msg}} (string topic, string payload)=0
+\begin{DoxyCompactList}\small\item\em Called when a message is received. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6}{Order\+Handler\+Zmq\+V6} class handles the ZMQ communication for order handling. It implements the \doxylink{class_k_t_n_1_1_session_callback}{Session\+Callback} and \doxylink{class_i_zmq_subscriber}{IZmq\+Subscriber} interfaces. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6_ad06ef3befdfd94ac6010e9231f6098e0}\index{KTN::ORD::OrderHandlerZmqV6@{KTN::ORD::OrderHandlerZmqV6}!OrderHandlerZmqV6@{OrderHandlerZmqV6}}
+\index{OrderHandlerZmqV6@{OrderHandlerZmqV6}!KTN::ORD::OrderHandlerZmqV6@{KTN::ORD::OrderHandlerZmqV6}}
+\doxysubsubsection{\texorpdfstring{OrderHandlerZmqV6()}{OrderHandlerZmqV6()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6_ad06ef3befdfd94ac6010e9231f6098e0} 
+KTN\+::\+Order\+Handler\+Zmq\+V6\+::\+Order\+Handler\+Zmq\+V6 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_exchange_sender}{IExchange\+Sender}} \&}]{exch}{, }\item[{int}]{cbid}{}\end{DoxyParamCaption})}
+
+
+
+Constructs an \doxylink{class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6}{Order\+Handler\+Zmq\+V6} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em exch} & The exchange sender object. \\
+\hline
+{\em cbid} & The callback ID. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00123}{Settings\+::get()}}, \mbox{\hyperlink{l00029}{Cme\+Settings\+Helper\+::\+Get\+Bool()}}, \mbox{\hyperlink{l00193}{Settings\+::get\+Boolean()}}, \mbox{\hyperlink{l00133}{Settings\+::get\+Integer()}}, \mbox{\hyperlink{l00145}{KT01\+::\+MSGW\+::\+Cme\+Msgw\+::\+Load\+Product\+Gateway\+File()}}, \mbox{\hyperlink{l00256}{algometa\+::\+Strategy}}, \mbox{\hyperlink{l00257}{algometa\+::\+Strat\+Id}}, \mbox{\hyperlink{l00261}{algometa\+::\+Unique\+Id}}, and \mbox{\hyperlink{l00025}{Order\+Manager\+V5\+::\+Update\+Meta\+Params()}}.
+
+\Hypertarget{class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6_a3fd04b33cc11222a397eae74c2a258fe}\index{KTN::ORD::OrderHandlerZmqV6@{KTN::ORD::OrderHandlerZmqV6}!````~OrderHandlerZmqV6@{\texorpdfstring{$\sim$}{\string~}OrderHandlerZmqV6}}
+\index{````~OrderHandlerZmqV6@{\texorpdfstring{$\sim$}{\string~}OrderHandlerZmqV6}!KTN::ORD::OrderHandlerZmqV6@{KTN::ORD::OrderHandlerZmqV6}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}OrderHandlerZmqV6()}{\string~OrderHandlerZmqV6()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6_a3fd04b33cc11222a397eae74c2a258fe} 
+KTN\+::\+Order\+Handler\+Zmq\+V6\+::\texorpdfstring{$\sim$}{\string~}\+Order\+Handler\+Zmq\+V6 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destroys the \doxylink{class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6}{Order\+Handler\+Zmq\+V6} object. 
+
+
+
+References \mbox{\hyperlink{l00044}{Order\+Manager\+V5\+::\+Stop()}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6_a9d8efe1dd99680394d02840a4bf0fb74}\index{KTN::ORD::OrderHandlerZmqV6@{KTN::ORD::OrderHandlerZmqV6}!Clear@{Clear}}
+\index{Clear@{Clear}!KTN::ORD::OrderHandlerZmqV6@{KTN::ORD::OrderHandlerZmqV6}}
+\doxysubsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6_a9d8efe1dd99680394d02840a4bf0fb74} 
+void KTN\+::\+ORD\+::\+Order\+Handler\+Zmq\+V6\+::\+Clear (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Clears the order handler. 
+
+\Hypertarget{class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6_afa4b3db3eee9678d60843649a0a8b27d}\index{KTN::ORD::OrderHandlerZmqV6@{KTN::ORD::OrderHandlerZmqV6}!LoadTasOrders@{LoadTasOrders}}
+\index{LoadTasOrders@{LoadTasOrders}!KTN::ORD::OrderHandlerZmqV6@{KTN::ORD::OrderHandlerZmqV6}}
+\doxysubsubsection{\texorpdfstring{LoadTasOrders()}{LoadTasOrders()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6_afa4b3db3eee9678d60843649a0a8b27d} 
+void KTN\+::\+Order\+Handler\+Zmq\+V6\+::\+Load\+Tas\+Orders (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Loads TAS orders. 
+
+
+
+References \mbox{\hyperlink{class_i_exchange_sender_a4a6ed326c485630d21eebcd1c9ffd0d4}{IExchange\+Sender\+::\+Bank\+Tas()}}, \mbox{\hyperlink{l00049}{KTN\+::\+Order\+Pod\+::callbackid}}, \mbox{\hyperlink{l00054}{KTN\+::\+Order\+Pod\+::cert}}, \mbox{\hyperlink{l00123}{Settings\+::get()}}, \mbox{\hyperlink{l00133}{Settings\+::get\+Integer()}}, \mbox{\hyperlink{l00174}{KT01\+::\+MSGW\+::\+Cme\+Msgw\+::get\+Prod\+Seg\+Id()}}, \mbox{\hyperlink{l00049}{User\+Info\+::groupname}}, \mbox{\hyperlink{l00053}{KTN\+::\+Order\+Pod\+::is\+Manual}}, \mbox{\hyperlink{l00042}{KTN\+::\+Order\+Pod\+::leavesqty}}, \mbox{\hyperlink{l00050}{KTN\+::\+Order\+Pod\+::mktsegid}}, \mbox{\hyperlink{l00366}{Order\+Manager\+V5\+::on\+Sent\+Order\+Ordbook()}}, \mbox{\hyperlink{l00059}{KTN\+::\+Order\+Pod\+::\+Ord\+Action}}, \mbox{\hyperlink{l00064}{KTN\+::\+Order\+Pod\+::\+Ord\+Algo\+Trig}}, \mbox{\hyperlink{l00032}{KTN\+::\+Order\+Pod\+::ordernum}}, \mbox{\hyperlink{l00037}{KTN\+::\+Order\+Pod\+::order\+Req\+Id}}, \mbox{\hyperlink{l00056}{KTN\+::\+Order\+Pod\+::\+Ord\+Exch}}, \mbox{\hyperlink{l00060}{KTN\+::\+Order\+Pod\+::\+Ord\+Side}}, \mbox{\hyperlink{l00061}{KTN\+::\+Order\+Pod\+::\+Ord\+Status}}, \mbox{\hyperlink{l00058}{KTN\+::\+Order\+Pod\+::\+Ord\+Tif}}, \mbox{\hyperlink{l00057}{KTN\+::\+Order\+Pod\+::\+Ord\+Type}}, \mbox{\hyperlink{l00048}{User\+Info\+::org}}, \mbox{\hyperlink{l00034}{KTN\+::\+Order\+Pod\+::price}}, \mbox{\hyperlink{l00041}{KTN\+::\+Order\+Pod\+::quantity}}, \mbox{\hyperlink{l00033}{File\+Order\+Loader\+V3\+::\+Read\+File()}}, \mbox{\hyperlink{l00040}{KTN\+::\+Order\+Pod\+::secid}}, \mbox{\hyperlink{l00046}{KTN\+::\+Order\+Pod\+::stratid}}, and \mbox{\hyperlink{l00047}{User\+Info\+::user}}.
+
+\Hypertarget{class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6_aec23491d7e3e69433dd90d4d98d8918d}\index{KTN::ORD::OrderHandlerZmqV6@{KTN::ORD::OrderHandlerZmqV6}!Print@{Print}}
+\index{Print@{Print}!KTN::ORD::OrderHandlerZmqV6@{KTN::ORD::OrderHandlerZmqV6}}
+\doxysubsubsection{\texorpdfstring{Print()}{Print()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6_aec23491d7e3e69433dd90d4d98d8918d} 
+void KTN\+::\+Order\+Handler\+Zmq\+V6\+::\+Print (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Prints the order handler. 
+
+
+
+References \mbox{\hyperlink{l00077}{Order\+Manager\+V5\+::\+Print()}}.
+
+\Hypertarget{class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6_ab29604a9e90d87dba254582f072d4d75}\index{KTN::ORD::OrderHandlerZmqV6@{KTN::ORD::OrderHandlerZmqV6}!RegisterOrderTemplate@{RegisterOrderTemplate}}
+\index{RegisterOrderTemplate@{RegisterOrderTemplate}!KTN::ORD::OrderHandlerZmqV6@{KTN::ORD::OrderHandlerZmqV6}}
+\doxysubsubsection{\texorpdfstring{RegisterOrderTemplate()}{RegisterOrderTemplate()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6_ab29604a9e90d87dba254582f072d4d75} 
+void KTN\+::\+Order\+Handler\+Zmq\+V6\+::\+Register\+Order\+Template (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order}{Order}} \&}]{ord}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Registers an order template. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ord} & The order template to register. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6_a436b79f178310a0d5c7dd70cec83fb99}\index{KTN::ORD::OrderHandlerZmqV6@{KTN::ORD::OrderHandlerZmqV6}!Stop@{Stop}}
+\index{Stop@{Stop}!KTN::ORD::OrderHandlerZmqV6@{KTN::ORD::OrderHandlerZmqV6}}
+\doxysubsubsection{\texorpdfstring{Stop()}{Stop()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6_a436b79f178310a0d5c7dd70cec83fb99} 
+void KTN\+::\+Order\+Handler\+Zmq\+V6\+::\+Stop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Stops the order handler. 
+
+
+
+Referenced by \mbox{\hyperlink{l00146}{Raptor2\+::\+Stop()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Orders/Order\+Handler\+Zmq\+V6.\+hpp\item 
+Orders/Order\+Handler\+Zmq\+V6.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,251 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structtcp__settings" xml:lang="en-US">
+<title>tcp_settings Struct Reference</title>
+<indexterm><primary>tcp_settings</primary></indexterm>
+<para>
+
+<para>Struct representing TCP settings. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;NetSettings.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static void <link linkend="_structtcp__settings_1a426dc33021283f08a42c1bfc38790fcf">Load</link> (<link linkend="_structtcp__settings">tcp_settings</link> &amp;ef)</para>
+
+<para>Load the TCP settings from the configuration file. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_structtcp__settings_1a2f38a0a1a48afb809bfbf225364391a3">Affinity</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structtcp__settings_1a82c9476b64136e655fd81c0a806f9cb5">EventPollMax</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_structtcp__settings_1af8c34ff1108590fc1ae3071d9dca9b49">UseDelSends</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_structtcp__settings_1af11aa16e354091106601fd39f16807b6">CalcLatency</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_structtcp__settings_1a9213542fdf8260e39b0c0bf68485ca6a">UseCtpio</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structtcp__settings_1a6fc380a80a8a864c3ee37e4e96cb2381">Offset</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structtcp__settings_1a6da9ddab84bf9f41110ec4ce2dc26bd1">RxPollCnt</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structtcp__settings_1ab1f59b15a88c916133ed0984bcf803b3">PollWaitNs</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structtcp__settings_1afee8fb885dc36a7785012ad1848f3b21">RxCapacity</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structtcp__settings_1a94695cc5b18b3597493a300538f2d8ad">RxBatchSize</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structtcp__settings_1a16ac029998e7deaa6b0f181ab153529f">MsgBufSize</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structtcp__settings_1a1af3e28e5246e39dc8d2eb8944e42b9f">Timeout</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_structtcp__settings_1a30e1d7c5c12c7897f5cba2dfcefaa5ac">IntfA</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_structtcp__settings_1a16c9fb37949028cd8ee5e70151798fff">IntfB</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_structtcp__settings_1a344029b6030a5826a1cd46310cf6c70f">IntfNameA</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_structtcp__settings_1ab38ddfd3252927736edb53e601b69ee0">IntfNameB</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Struct representing TCP settings. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_structtcp__settings_1a426dc33021283f08a42c1bfc38790fcf"/><section>
+    <title>Load()</title>
+<indexterm><primary>Load</primary><secondary>tcp_settings</secondary></indexterm>
+<indexterm><primary>tcp_settings</primary><secondary>Load</secondary></indexterm>
+<para><computeroutput>static void tcp_settings::Load (<link linkend="_structtcp__settings">tcp_settings</link> &amp; ef)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Load the TCP settings from the configuration file. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ef</entry><entry>
+<para>The TCP settings object to load. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00020">Affinity</link>, <link linkend="_l00023">CalcLatency</link>, <link linkend="_l00021">EventPollMax</link>, <link linkend="_l00123">Settings::get()</link>, <link linkend="_l00193">Settings::getBoolean()</link>, <link linkend="_l00133">Settings::getInteger()</link>, <link linkend="_l00033">IntfA</link>, <link linkend="_l00034">IntfB</link>, <link linkend="_l00035">IntfNameA</link>, <link linkend="_l00036">IntfNameB</link>, <link linkend="_l00030">MsgBufSize</link>, <link linkend="_l00025">Offset</link>, <link linkend="_l00027">PollWaitNs</link>, <link linkend="_l00029">RxBatchSize</link>, <link linkend="_l00028">RxCapacity</link>, <link linkend="_l00026">RxPollCnt</link>, <link linkend="_l00031">Timeout</link>, <link linkend="_l00024">UseCtpio</link>, and <link linkend="_l00022">UseDelSends</link>.</para>
+<para>
+Referenced by <link linkend="_l00060">KTN::TCP::EFVITcpV2::Init()</link>, and <link linkend="_l00032">KTN::TCP::EFVITcpV5::Init()</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structtcp__settings_1a2f38a0a1a48afb809bfbf225364391a3"/><section>
+    <title>Affinity</title>
+<indexterm><primary>Affinity</primary><secondary>tcp_settings</secondary></indexterm>
+<indexterm><primary>tcp_settings</primary><secondary>Affinity</secondary></indexterm>
+<para><computeroutput>int tcp_settings::Affinity</computeroutput></para>
+<para>The affinity value. </para>
+<para>
+Referenced by <link linkend="_l00042">Load()</link>.</para>
+</section>
+<anchor xml:id="_structtcp__settings_1af11aa16e354091106601fd39f16807b6"/><section>
+    <title>CalcLatency</title>
+<indexterm><primary>CalcLatency</primary><secondary>tcp_settings</secondary></indexterm>
+<indexterm><primary>tcp_settings</primary><secondary>CalcLatency</secondary></indexterm>
+<para><computeroutput>bool tcp_settings::CalcLatency</computeroutput></para>
+<para>Flag indicating whether to calculate latency. </para>
+<para>
+Referenced by <link linkend="_l00042">Load()</link>.</para>
+</section>
+<anchor xml:id="_structtcp__settings_1a82c9476b64136e655fd81c0a806f9cb5"/><section>
+    <title>EventPollMax</title>
+<indexterm><primary>EventPollMax</primary><secondary>tcp_settings</secondary></indexterm>
+<indexterm><primary>tcp_settings</primary><secondary>EventPollMax</secondary></indexterm>
+<para><computeroutput>int tcp_settings::EventPollMax</computeroutput></para>
+<para>The maximum event poll value. </para>
+<para>
+Referenced by <link linkend="_l00042">Load()</link>.</para>
+</section>
+<anchor xml:id="_structtcp__settings_1a30e1d7c5c12c7897f5cba2dfcefaa5ac"/><section>
+    <title>IntfA</title>
+<indexterm><primary>IntfA</primary><secondary>tcp_settings</secondary></indexterm>
+<indexterm><primary>tcp_settings</primary><secondary>IntfA</secondary></indexterm>
+<para><computeroutput>string tcp_settings::IntfA</computeroutput></para>
+<para>The interface A. </para>
+<para>
+Referenced by <link linkend="_l00060">KTN::TCP::EFVITcpV2::Init()</link>, <link linkend="_l00032">KTN::TCP::EFVITcpV5::Init()</link>, and <link linkend="_l00042">Load()</link>.</para>
+</section>
+<anchor xml:id="_structtcp__settings_1a16c9fb37949028cd8ee5e70151798fff"/><section>
+    <title>IntfB</title>
+<indexterm><primary>IntfB</primary><secondary>tcp_settings</secondary></indexterm>
+<indexterm><primary>tcp_settings</primary><secondary>IntfB</secondary></indexterm>
+<para><computeroutput>string tcp_settings::IntfB</computeroutput></para>
+<para>The interface B. </para>
+<para>
+Referenced by <link linkend="_l00060">KTN::TCP::EFVITcpV2::Init()</link>, <link linkend="_l00032">KTN::TCP::EFVITcpV5::Init()</link>, and <link linkend="_l00042">Load()</link>.</para>
+</section>
+<anchor xml:id="_structtcp__settings_1a344029b6030a5826a1cd46310cf6c70f"/><section>
+    <title>IntfNameA</title>
+<indexterm><primary>IntfNameA</primary><secondary>tcp_settings</secondary></indexterm>
+<indexterm><primary>tcp_settings</primary><secondary>IntfNameA</secondary></indexterm>
+<para><computeroutput>string tcp_settings::IntfNameA</computeroutput></para>
+<para>The interface name A. </para>
+<para>
+Referenced by <link linkend="_l00060">KTN::TCP::EFVITcpV2::Init()</link>, <link linkend="_l00032">KTN::TCP::EFVITcpV5::Init()</link>, and <link linkend="_l00042">Load()</link>.</para>
+</section>
+<anchor xml:id="_structtcp__settings_1ab38ddfd3252927736edb53e601b69ee0"/><section>
+    <title>IntfNameB</title>
+<indexterm><primary>IntfNameB</primary><secondary>tcp_settings</secondary></indexterm>
+<indexterm><primary>tcp_settings</primary><secondary>IntfNameB</secondary></indexterm>
+<para><computeroutput>string tcp_settings::IntfNameB</computeroutput></para>
+<para>The interface name B. </para>
+<para>
+Referenced by <link linkend="_l00060">KTN::TCP::EFVITcpV2::Init()</link>, <link linkend="_l00032">KTN::TCP::EFVITcpV5::Init()</link>, and <link linkend="_l00042">Load()</link>.</para>
+</section>
+<anchor xml:id="_structtcp__settings_1a16ac029998e7deaa6b0f181ab153529f"/><section>
+    <title>MsgBufSize</title>
+<indexterm><primary>MsgBufSize</primary><secondary>tcp_settings</secondary></indexterm>
+<indexterm><primary>tcp_settings</primary><secondary>MsgBufSize</secondary></indexterm>
+<para><computeroutput>int tcp_settings::MsgBufSize</computeroutput></para>
+<para>The message buffer size. </para>
+<para>
+Referenced by <link linkend="_l00125">KTN::TCP::EFVITcpV2::EFVI_TCP_Start()</link>, and <link linkend="_l00042">Load()</link>.</para>
+</section>
+<anchor xml:id="_structtcp__settings_1a6fc380a80a8a864c3ee37e4e96cb2381"/><section>
+    <title>Offset</title>
+<indexterm><primary>Offset</primary><secondary>tcp_settings</secondary></indexterm>
+<indexterm><primary>tcp_settings</primary><secondary>Offset</secondary></indexterm>
+<para><computeroutput>int tcp_settings::Offset</computeroutput></para>
+<para>The offset value. </para>
+<para>
+Referenced by <link linkend="_l00042">Load()</link>.</para>
+</section>
+<anchor xml:id="_structtcp__settings_1ab1f59b15a88c916133ed0984bcf803b3"/><section>
+    <title>PollWaitNs</title>
+<indexterm><primary>PollWaitNs</primary><secondary>tcp_settings</secondary></indexterm>
+<indexterm><primary>tcp_settings</primary><secondary>PollWaitNs</secondary></indexterm>
+<para><computeroutput>int tcp_settings::PollWaitNs</computeroutput></para>
+<para>The poll wait time in nanoseconds. </para>
+<para>
+Referenced by <link linkend="_l00042">Load()</link>.</para>
+</section>
+<anchor xml:id="_structtcp__settings_1a94695cc5b18b3597493a300538f2d8ad"/><section>
+    <title>RxBatchSize</title>
+<indexterm><primary>RxBatchSize</primary><secondary>tcp_settings</secondary></indexterm>
+<indexterm><primary>tcp_settings</primary><secondary>RxBatchSize</secondary></indexterm>
+<para><computeroutput>int tcp_settings::RxBatchSize</computeroutput></para>
+<para>The receive batch size. </para>
+<para>
+Referenced by <link linkend="_l00042">Load()</link>.</para>
+</section>
+<anchor xml:id="_structtcp__settings_1afee8fb885dc36a7785012ad1848f3b21"/><section>
+    <title>RxCapacity</title>
+<indexterm><primary>RxCapacity</primary><secondary>tcp_settings</secondary></indexterm>
+<indexterm><primary>tcp_settings</primary><secondary>RxCapacity</secondary></indexterm>
+<para><computeroutput>int tcp_settings::RxCapacity</computeroutput></para>
+<para>The receive capacity. </para>
+<para>
+Referenced by <link linkend="_l00125">KTN::TCP::EFVITcpV2::EFVI_TCP_Start()</link>, and <link linkend="_l00042">Load()</link>.</para>
+</section>
+<anchor xml:id="_structtcp__settings_1a6da9ddab84bf9f41110ec4ce2dc26bd1"/><section>
+    <title>RxPollCnt</title>
+<indexterm><primary>RxPollCnt</primary><secondary>tcp_settings</secondary></indexterm>
+<indexterm><primary>tcp_settings</primary><secondary>RxPollCnt</secondary></indexterm>
+<para><computeroutput>int tcp_settings::RxPollCnt</computeroutput></para>
+<para>The receive poll count. </para>
+<para>
+Referenced by <link linkend="_l00042">Load()</link>.</para>
+</section>
+<anchor xml:id="_structtcp__settings_1a1af3e28e5246e39dc8d2eb8944e42b9f"/><section>
+    <title>Timeout</title>
+<indexterm><primary>Timeout</primary><secondary>tcp_settings</secondary></indexterm>
+<indexterm><primary>tcp_settings</primary><secondary>Timeout</secondary></indexterm>
+<para><computeroutput>int tcp_settings::Timeout</computeroutput></para>
+<para>The timeout value. </para>
+<para>
+Referenced by <link linkend="_l00042">Load()</link>.</para>
+</section>
+<anchor xml:id="_structtcp__settings_1a9213542fdf8260e39b0c0bf68485ca6a"/><section>
+    <title>UseCtpio</title>
+<indexterm><primary>UseCtpio</primary><secondary>tcp_settings</secondary></indexterm>
+<indexterm><primary>tcp_settings</primary><secondary>UseCtpio</secondary></indexterm>
+<para><computeroutput>bool tcp_settings::UseCtpio</computeroutput></para>
+<para>Flag indicating whether to use Ctpio. </para>
+<para>
+Referenced by <link linkend="_l00060">KTN::TCP::EFVITcpV2::Init()</link>, <link linkend="_l00032">KTN::TCP::EFVITcpV5::Init()</link>, and <link linkend="_l00042">Load()</link>.</para>
+</section>
+<anchor xml:id="_structtcp__settings_1af8c34ff1108590fc1ae3071d9dca9b49"/><section>
+    <title>UseDelSends</title>
+<indexterm><primary>UseDelSends</primary><secondary>tcp_settings</secondary></indexterm>
+<indexterm><primary>tcp_settings</primary><secondary>UseDelSends</secondary></indexterm>
+<para><computeroutput>bool tcp_settings::UseDelSends</computeroutput></para>
+<para>Flag indicating whether to use delegated sends. </para>
+<para>
+Referenced by <link linkend="_l00060">KTN::TCP::EFVITcpV2::Init()</link>, and <link linkend="_l00042">Load()</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+KtnEfvi/NetSettings.hpp</section>
+</section>

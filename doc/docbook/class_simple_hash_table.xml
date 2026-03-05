@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_simple_hash_table" xml:lang="en-US">
+<title>SimpleHashTable Class Reference</title>
+<indexterm><primary>SimpleHashTable</primary></indexterm>
+<para>
+
+<para>A simple implementation of a hash table. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;SimpleHashTable.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_simple_hash_table_1a1d4277e0b195a935460523364938dcc0">SimpleHashTable</link> (size_t size)</para>
+
+<para>Constructs a <link linkend="_class_simple_hash_table">SimpleHashTable</link> object with the specified size. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_simple_hash_table_1a74ccc058ff8f5edefa5997ff20962830">~SimpleHashTable</link> ()</para>
+
+<para>Destroys the <link linkend="_class_simple_hash_table">SimpleHashTable</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_simple_hash_table_1a0744f78e361e7f98e9f564a786c5ce08">insert</link> (const string &amp;key, const uint64_t &amp;value)</para>
+
+<para>Inserts a key-value pair into the hash table. </para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_class_simple_hash_table_1a501babaaeea00f38548a5696456d1828">lookup</link> (const string &amp;key)</para>
+
+<para>Looks up the value associated with the specified key. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_simple_hash_table_1af464f9ec07fc90bfd16d2254b8d8dd50">erase</link> (const string &amp;key)</para>
+
+<para>Removes the key-value pair with the specified key from the hash table. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_simple_hash_table_1a015c08c780b019d69c867d6c17d71709">clear</link> ()</para>
+
+<para>Clears the hash table, removing all key-value pairs. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>static constexpr float <link linkend="_class_simple_hash_table_1a59e1f71a1bd3d83b10613ef8754b8c97">LOAD_FACTOR</link> = 0.75f</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>A simple implementation of a hash table. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_simple_hash_table_1a1d4277e0b195a935460523364938dcc0"/><section>
+    <title>SimpleHashTable()</title>
+<indexterm><primary>SimpleHashTable</primary><secondary>SimpleHashTable</secondary></indexterm>
+<indexterm><primary>SimpleHashTable</primary><secondary>SimpleHashTable</secondary></indexterm>
+<para><computeroutput>SimpleHashTable::SimpleHashTable (size_t size)</computeroutput></para><para>
+
+<para>Constructs a <link linkend="_class_simple_hash_table">SimpleHashTable</link> object with the specified size. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>size</entry><entry>
+<para>The size of the hash table. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_simple_hash_table_1a74ccc058ff8f5edefa5997ff20962830"/><section>
+    <title>~SimpleHashTable()</title>
+<indexterm><primary>~SimpleHashTable</primary><secondary>SimpleHashTable</secondary></indexterm>
+<indexterm><primary>SimpleHashTable</primary><secondary>~SimpleHashTable</secondary></indexterm>
+<para><computeroutput>SimpleHashTable::~SimpleHashTable ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Destroys the <link linkend="_class_simple_hash_table">SimpleHashTable</link> object. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_simple_hash_table_1a015c08c780b019d69c867d6c17d71709"/><section>
+    <title>clear()</title>
+<indexterm><primary>clear</primary><secondary>SimpleHashTable</secondary></indexterm>
+<indexterm><primary>SimpleHashTable</primary><secondary>clear</secondary></indexterm>
+<para><computeroutput>void SimpleHashTable::clear ( )</computeroutput></para><para>
+
+<para>Clears the hash table, removing all key-value pairs. </para>
+</para>
+</section>
+<anchor xml:id="_class_simple_hash_table_1af464f9ec07fc90bfd16d2254b8d8dd50"/><section>
+    <title>erase()</title>
+<indexterm><primary>erase</primary><secondary>SimpleHashTable</secondary></indexterm>
+<indexterm><primary>SimpleHashTable</primary><secondary>erase</secondary></indexterm>
+<para><computeroutput>void SimpleHashTable::erase (const string &amp; key)</computeroutput></para><para>
+
+<para>Removes the key-value pair with the specified key from the hash table. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>key</entry><entry>
+<para>The key to remove. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_simple_hash_table_1a0744f78e361e7f98e9f564a786c5ce08"/><section>
+    <title>insert()</title>
+<indexterm><primary>insert</primary><secondary>SimpleHashTable</secondary></indexterm>
+<indexterm><primary>SimpleHashTable</primary><secondary>insert</secondary></indexterm>
+<para><computeroutput>void SimpleHashTable::insert (const string &amp; key, const uint64_t &amp; value)</computeroutput></para><para>
+
+<para>Inserts a key-value pair into the hash table. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>key</entry><entry>
+<para>The key to insert. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>value</entry><entry>
+<para>The value to insert. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_simple_hash_table_1a501babaaeea00f38548a5696456d1828"/><section>
+    <title>lookup()</title>
+<indexterm><primary>lookup</primary><secondary>SimpleHashTable</secondary></indexterm>
+<indexterm><primary>SimpleHashTable</primary><secondary>lookup</secondary></indexterm>
+<para><computeroutput>uint64_t SimpleHashTable::lookup (const string &amp; key)</computeroutput></para><para>
+
+<para>Looks up the value associated with the specified key. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>key</entry><entry>
+<para>The key to look up. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The value associated with the key, or 0 if the key is not found. </para>
+</formalpara>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_simple_hash_table_1a59e1f71a1bd3d83b10613ef8754b8c97"/><section>
+    <title>LOAD_FACTOR</title>
+<indexterm><primary>LOAD_FACTOR</primary><secondary>SimpleHashTable</secondary></indexterm>
+<indexterm><primary>SimpleHashTable</primary><secondary>LOAD_FACTOR</secondary></indexterm>
+<para><computeroutput>float SimpleHashTable::LOAD_FACTOR = 0.75f<computeroutput>[static]</computeroutput>, <computeroutput>[constexpr]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Core/SimpleHashTable.hppCore/SimpleHashTable.cpp</section>
+</section>

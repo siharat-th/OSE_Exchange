@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_spread_hedge_circ_buff" xml:lang="en-US">
+<title>SpreadHedgeCircBuff Class Reference</title>
+<indexterm><primary>SpreadHedgeCircBuff</primary></indexterm>
+<para>
+
+<para>Circular buffer implementation for storing spread hedge data. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;SpreadHedgeCircBuff.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_spread_hedge_circ_buff_1a77dc6b53709bb1ade00ee3af5d531e72">SpreadHedgeCircBuff</link> ()</para>
+
+<para>Default constructor for <link linkend="_class_spread_hedge_circ_buff">SpreadHedgeCircBuff</link>. </para>
+</listitem>
+            <listitem><para>std::vector&lt; <link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3">SpreadHedgeV3</link> &gt; &amp; <link linkend="_class_spread_hedge_circ_buff_1afa197a6e37a12677686327aa639ebf5c">operator[]</link> (uint64_t reqid)</para>
+
+<para>Overloaded operator to access the spread hedge data by request ID. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_spread_hedge_circ_buff_1a01371e19c5159375216e7e1816e9c8df">clear</link> ()</para>
+
+<para>Clear the circular buffer. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_spread_hedge_circ_buff_1affd48b4b7ba34dcc3c47488c62af0713">remove</link> (uint64_t reqid)</para>
+
+<para>Remove the spread hedge data with the given request ID from the buffer. </para>
+</listitem>
+            <listitem><para>std::vector&lt; <link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3">SpreadHedgeV3</link> &gt; <link linkend="_class_spread_hedge_circ_buff_1af4e40dff2638d0c9a3c7b429b194ab6f">find</link> (uint64_t reqid)</para>
+
+<para>Find the spread hedge data with the given request ID in the buffer. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Circular buffer implementation for storing spread hedge data. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_spread_hedge_circ_buff_1a77dc6b53709bb1ade00ee3af5d531e72"/><section>
+    <title>SpreadHedgeCircBuff()</title>
+<indexterm><primary>SpreadHedgeCircBuff</primary><secondary>SpreadHedgeCircBuff</secondary></indexterm>
+<indexterm><primary>SpreadHedgeCircBuff</primary><secondary>SpreadHedgeCircBuff</secondary></indexterm>
+<para><computeroutput>SpreadHedgeCircBuff::SpreadHedgeCircBuff ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Default constructor for <link linkend="_class_spread_hedge_circ_buff">SpreadHedgeCircBuff</link>. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_spread_hedge_circ_buff_1a01371e19c5159375216e7e1816e9c8df"/><section>
+    <title>clear()</title>
+<indexterm><primary>clear</primary><secondary>SpreadHedgeCircBuff</secondary></indexterm>
+<indexterm><primary>SpreadHedgeCircBuff</primary><secondary>clear</secondary></indexterm>
+<para><computeroutput>void SpreadHedgeCircBuff::clear ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Clear the circular buffer. </para>
+</para>
+<para>
+Referenced by <link linkend="_l00170">KTN::CME::CmeAlgo::ClearMaps()</link>, and <link linkend="_l00166">KTN::CME::CmeGT5::ClearMaps()</link>.</para>
+</section>
+<anchor xml:id="_class_spread_hedge_circ_buff_1af4e40dff2638d0c9a3c7b429b194ab6f"/><section>
+    <title>find()</title>
+<indexterm><primary>find</primary><secondary>SpreadHedgeCircBuff</secondary></indexterm>
+<indexterm><primary>SpreadHedgeCircBuff</primary><secondary>find</secondary></indexterm>
+<para><computeroutput>std::vector&lt; <link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3">SpreadHedgeV3</link> &gt; SpreadHedgeCircBuff::find (uint64_t reqid)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Find the spread hedge data with the given request ID in the buffer. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>reqid</entry><entry>
+<para>The request ID </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The spread hedge data vector if found, an empty vector otherwise </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_spread_hedge_circ_buff_1afa197a6e37a12677686327aa639ebf5c"/><section>
+    <title>operator[]()</title>
+<indexterm><primary>operator[]</primary><secondary>SpreadHedgeCircBuff</secondary></indexterm>
+<indexterm><primary>SpreadHedgeCircBuff</primary><secondary>operator[]</secondary></indexterm>
+<para><computeroutput>std::vector&lt; <link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3">SpreadHedgeV3</link> &gt; &amp; SpreadHedgeCircBuff::operator[] (uint64_t reqid)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Overloaded operator to access the spread hedge data by request ID. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>reqid</entry><entry>
+<para>The request ID </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A reference to the spread hedge data vector </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_spread_hedge_circ_buff_1affd48b4b7ba34dcc3c47488c62af0713"/><section>
+    <title>remove()</title>
+<indexterm><primary>remove</primary><secondary>SpreadHedgeCircBuff</secondary></indexterm>
+<indexterm><primary>SpreadHedgeCircBuff</primary><secondary>remove</secondary></indexterm>
+<para><computeroutput>bool SpreadHedgeCircBuff::remove (uint64_t reqid)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Remove the spread hedge data with the given request ID from the buffer. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>reqid</entry><entry>
+<para>The request ID </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the spread hedge data was successfully removed, false otherwise </para>
+</formalpara>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Maps/SpreadHedgeCircBuff.hpp</section>
+</section>

@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2" xml:lang="en-US">
+<title>KTN::CME::IL3::AppMessageFactoryFastV2 Class Reference</title>
+<indexterm><primary>KTN::CME::IL3::AppMessageFactoryFastV2</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1a56e84a57ce3dfffa7dd9585a74514f6a">Init</link> (string settingsfile)</para>
+</listitem>
+            <listitem><para><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_single_msg">NewOrderSingleMsg</link> * <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1aa613da1e7a17fd042bead260c3f60830">NewOrderMsgAuto</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg">OrderCancelReplaceRequestMsg</link> * <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1a3372cd19212320600cecc5d472384e33">ModOrderMsgAuto</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1aa2953dbe693f6e650be90278222c02be">NewOrderEncodeMan</link> (const <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord, uint64_t ordreqid, uint32_t seqnum, <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf">KTNBuf</link> &amp;msg)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1a11d887044fc8958f5fc09f9d8354d5a6">ModifyOrderEncodeMan</link> (const <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord, uint32_t seqnum, <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf">KTNBuf</link> &amp;msg)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1af4e1b6e01122ea127f9bbf8f737a9306">CancelOrderEncodeMan</link> (const <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord, uint32_t seqnum, <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf">KTNBuf</link> &amp;container)</para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1a9107ea2c91d0f2eaf90ad642c920129b">ModifyOrderEncodeAutoV4</link> (const <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord, uint32_t seqnum, char *&amp;buf)</para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1a94592dd4c51b41a0c3363515627c691f">NewOrderEncodeAutoV42</link> (char *clordid, uint32_t qty, int32_t px, int32_t secid, KOrderSide::Enum side, uint64_t ordreqid, uint32_t seqnum, char *&amp;buf)</para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1a69c5c145dd7ba522797b94d4702c0cbb">NewOrderMsgEncode</link> (<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_single_msg">NewOrderSingleMsg</link> *msg, char *&amp;buf)</para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1a16358c69da0bff2e6b9aa3aa98df5dd6">ModifyOrderMsgEncode</link> (<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg">OrderCancelReplaceRequestMsg</link> *msg, char *&amp;buf)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1a23ee88cfe4510ae6e543703cbaeba3c8">CancelOrderEncodeAuto</link> (const <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord, uint32_t seqnum, <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf">KTNBuf</link> &amp;container)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1a36b9abe5b46b4149c6492abb4f47fdce">PreSerializeNewOrders</link> (vector&lt; <link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> &gt; *ords, <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf">KTNBuf</link> &amp;msg, uint32_t seqnum, uint64_t startreqid, int segid)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1ac9b46f93465c7aa70d35db1800a3a988">PreSerializeNewOrders2</link> (vector&lt; <link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> &gt; *ords, <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf">KTNBuf</link> &amp;msg, uint32_t seqnum, int segid)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1a999e8c9a8646f1bf3d97792b69c8b06d">SerializeBatch</link> (<link linkend="_struct_msg_batch">MsgBatch</link> *batch, <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf">KTNBuf</link> &amp;msg, uint32_t seqnum, int segid)</para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1a29662cbdba1d7fa823916a632fdedbf6">SerializeTas</link> (vector&lt; <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &gt; ords, char *&amp;buf, uint32_t seqnum, int segid)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1ac1fd4b05596e516ed21ef4bf87415abf">UpdateMsg</link> (<link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf">KTNBuf</link> &amp;msg, uint32_t qty, uint32_t seq, uint64_t reqid)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1adcfb997f46423e23521c97440cc0805d">GetNewOrderTemplate</link> (<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_single_msg">NewOrderSingleMsg</link> *&amp;msg)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1ac87e45d41249fa00e6153a562e6f295a">GetModOrderTemplate</link> (<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg">OrderCancelReplaceRequestMsg</link> *&amp;msg)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1a0259d04e3bba2f00aa4f9e55a6e2d61c">GetCxlOrderTemplate</link> (<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_request_msg">OrderCancelRequestMsg</link> *&amp;msg)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1aa503601ed8460831a011bf0bb328f520">UpdateClock</link> ()</para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1a4a2fd1ba6661011819d5e5f57e593b92">GetTimestamp</link> ()</para>
+</listitem>
+            <listitem><para>template&lt;EnumSideReq Side&gt; </para><para>uint16_t <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1ae8b1ca2f2e34bf4cf577c6c32795921f">ModifyOrderEncodeAutoV4</link> (const <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord, uint64_t ordreqid, uint32_t seqnum, char *&amp;buf)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1aee673bd14572ff9326b9c94e557b237c"/><section>
+    <title>AppMessageFactoryFastV2()</title>
+<indexterm><primary>AppMessageFactoryFastV2</primary><secondary>KTN::CME::IL3::AppMessageFactoryFastV2</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::AppMessageFactoryFastV2</primary><secondary>AppMessageFactoryFastV2</secondary></indexterm>
+<para><computeroutput>AppMessageFactoryFastV2::AppMessageFactoryFastV2 ( )</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1a473bcc3d7bce5ba878557d3750d42a18"/><section>
+    <title>~AppMessageFactoryFastV2()</title>
+<indexterm><primary>~AppMessageFactoryFastV2</primary><secondary>KTN::CME::IL3::AppMessageFactoryFastV2</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::AppMessageFactoryFastV2</primary><secondary>~AppMessageFactoryFastV2</secondary></indexterm>
+<para><computeroutput>AppMessageFactoryFastV2::~AppMessageFactoryFastV2 ( )<computeroutput>[virtual]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1a23ee88cfe4510ae6e543703cbaeba3c8"/><section>
+    <title>CancelOrderEncodeAuto()</title>
+<indexterm><primary>CancelOrderEncodeAuto</primary><secondary>KTN::CME::IL3::AppMessageFactoryFastV2</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::AppMessageFactoryFastV2</primary><secondary>CancelOrderEncodeAuto</secondary></indexterm>
+<para><computeroutput>void AppMessageFactoryFastV2::CancelOrderEncodeAuto (const <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp; ord, uint32_t seqnum, <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf">KTNBuf</link> &amp; container)</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1af4e1b6e01122ea127f9bbf8f737a9306"/><section>
+    <title>CancelOrderEncodeMan()</title>
+<indexterm><primary>CancelOrderEncodeMan</primary><secondary>KTN::CME::IL3::AppMessageFactoryFastV2</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::AppMessageFactoryFastV2</primary><secondary>CancelOrderEncodeMan</secondary></indexterm>
+<para><computeroutput>void AppMessageFactoryFastV2::CancelOrderEncodeMan (const <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp; ord, uint32_t seqnum, <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf">KTNBuf</link> &amp; container)</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1a0259d04e3bba2f00aa4f9e55a6e2d61c"/><section>
+    <title>GetCxlOrderTemplate()</title>
+<indexterm><primary>GetCxlOrderTemplate</primary><secondary>KTN::CME::IL3::AppMessageFactoryFastV2</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::AppMessageFactoryFastV2</primary><secondary>GetCxlOrderTemplate</secondary></indexterm>
+<para><computeroutput>void AppMessageFactoryFastV2::GetCxlOrderTemplate (<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_request_msg">OrderCancelRequestMsg</link> *&amp; msg)</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1ac87e45d41249fa00e6153a562e6f295a"/><section>
+    <title>GetModOrderTemplate()</title>
+<indexterm><primary>GetModOrderTemplate</primary><secondary>KTN::CME::IL3::AppMessageFactoryFastV2</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::AppMessageFactoryFastV2</primary><secondary>GetModOrderTemplate</secondary></indexterm>
+<para><computeroutput>void AppMessageFactoryFastV2::GetModOrderTemplate (<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg">OrderCancelReplaceRequestMsg</link> *&amp; msg)</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1adcfb997f46423e23521c97440cc0805d"/><section>
+    <title>GetNewOrderTemplate()</title>
+<indexterm><primary>GetNewOrderTemplate</primary><secondary>KTN::CME::IL3::AppMessageFactoryFastV2</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::AppMessageFactoryFastV2</primary><secondary>GetNewOrderTemplate</secondary></indexterm>
+<para><computeroutput>void AppMessageFactoryFastV2::GetNewOrderTemplate (<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_single_msg">NewOrderSingleMsg</link> *&amp; msg)</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1a4a2fd1ba6661011819d5e5f57e593b92"/><section>
+    <title>GetTimestamp()</title>
+<indexterm><primary>GetTimestamp</primary><secondary>KTN::CME::IL3::AppMessageFactoryFastV2</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::AppMessageFactoryFastV2</primary><secondary>GetTimestamp</secondary></indexterm>
+<para><computeroutput>uint64_t KTN::CME::IL3::AppMessageFactoryFastV2::GetTimestamp ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1a56e84a57ce3dfffa7dd9585a74514f6a"/><section>
+    <title>Init()</title>
+<indexterm><primary>Init</primary><secondary>KTN::CME::IL3::AppMessageFactoryFastV2</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::AppMessageFactoryFastV2</primary><secondary>Init</secondary></indexterm>
+<para><computeroutput>void AppMessageFactoryFastV2::Init (string settingsfile)</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1a9107ea2c91d0f2eaf90ad642c920129b"/><section>
+    <title>ModifyOrderEncodeAutoV4()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>ModifyOrderEncodeAutoV4</primary><secondary>KTN::CME::IL3::AppMessageFactoryFastV2</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::AppMessageFactoryFastV2</primary><secondary>ModifyOrderEncodeAutoV4</secondary></indexterm>
+<para><computeroutput>uint16_t AppMessageFactoryFastV2::ModifyOrderEncodeAutoV4 (const <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp; ord, uint32_t seqnum, char *&amp; buf)</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1ae8b1ca2f2e34bf4cf577c6c32795921f"/><section>
+    <title>ModifyOrderEncodeAutoV4()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>ModifyOrderEncodeAutoV4</primary><secondary>KTN::CME::IL3::AppMessageFactoryFastV2</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::AppMessageFactoryFastV2</primary><secondary>ModifyOrderEncodeAutoV4</secondary></indexterm>
+<computeroutput>template&lt;EnumSideReq Side&gt; </computeroutput><para><computeroutput>uint16_t KTN::CME::IL3::AppMessageFactoryFastV2::ModifyOrderEncodeAutoV4 (const <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp; ord, uint64_t ordreqid, uint32_t seqnum, char *&amp; buf)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1a11d887044fc8958f5fc09f9d8354d5a6"/><section>
+    <title>ModifyOrderEncodeMan()</title>
+<indexterm><primary>ModifyOrderEncodeMan</primary><secondary>KTN::CME::IL3::AppMessageFactoryFastV2</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::AppMessageFactoryFastV2</primary><secondary>ModifyOrderEncodeMan</secondary></indexterm>
+<para><computeroutput>void AppMessageFactoryFastV2::ModifyOrderEncodeMan (const <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp; ord, uint32_t seqnum, <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf">KTNBuf</link> &amp; msg)</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1a16358c69da0bff2e6b9aa3aa98df5dd6"/><section>
+    <title>ModifyOrderMsgEncode()</title>
+<indexterm><primary>ModifyOrderMsgEncode</primary><secondary>KTN::CME::IL3::AppMessageFactoryFastV2</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::AppMessageFactoryFastV2</primary><secondary>ModifyOrderMsgEncode</secondary></indexterm>
+<para><computeroutput>uint16_t AppMessageFactoryFastV2::ModifyOrderMsgEncode (<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg">OrderCancelReplaceRequestMsg</link> * msg, char *&amp; buf)</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1a3372cd19212320600cecc5d472384e33"/><section>
+    <title>ModOrderMsgAuto()</title>
+<indexterm><primary>ModOrderMsgAuto</primary><secondary>KTN::CME::IL3::AppMessageFactoryFastV2</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::AppMessageFactoryFastV2</primary><secondary>ModOrderMsgAuto</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg">OrderCancelReplaceRequestMsg</link> * KTN::CME::IL3::AppMessageFactoryFastV2::ModOrderMsgAuto ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1a94592dd4c51b41a0c3363515627c691f"/><section>
+    <title>NewOrderEncodeAutoV42()</title>
+<indexterm><primary>NewOrderEncodeAutoV42</primary><secondary>KTN::CME::IL3::AppMessageFactoryFastV2</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::AppMessageFactoryFastV2</primary><secondary>NewOrderEncodeAutoV42</secondary></indexterm>
+<para><computeroutput>uint16_t AppMessageFactoryFastV2::NewOrderEncodeAutoV42 (char * clordid, uint32_t qty, int32_t px, int32_t secid, KOrderSide::Enum side, uint64_t ordreqid, uint32_t seqnum, char *&amp; buf)</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1aa2953dbe693f6e650be90278222c02be"/><section>
+    <title>NewOrderEncodeMan()</title>
+<indexterm><primary>NewOrderEncodeMan</primary><secondary>KTN::CME::IL3::AppMessageFactoryFastV2</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::AppMessageFactoryFastV2</primary><secondary>NewOrderEncodeMan</secondary></indexterm>
+<para><computeroutput>void AppMessageFactoryFastV2::NewOrderEncodeMan (const <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp; ord, uint64_t ordreqid, uint32_t seqnum, <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf">KTNBuf</link> &amp; msg)</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1aa613da1e7a17fd042bead260c3f60830"/><section>
+    <title>NewOrderMsgAuto()</title>
+<indexterm><primary>NewOrderMsgAuto</primary><secondary>KTN::CME::IL3::AppMessageFactoryFastV2</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::AppMessageFactoryFastV2</primary><secondary>NewOrderMsgAuto</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_single_msg">NewOrderSingleMsg</link> * KTN::CME::IL3::AppMessageFactoryFastV2::NewOrderMsgAuto ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1a69c5c145dd7ba522797b94d4702c0cbb"/><section>
+    <title>NewOrderMsgEncode()</title>
+<indexterm><primary>NewOrderMsgEncode</primary><secondary>KTN::CME::IL3::AppMessageFactoryFastV2</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::AppMessageFactoryFastV2</primary><secondary>NewOrderMsgEncode</secondary></indexterm>
+<para><computeroutput>uint16_t AppMessageFactoryFastV2::NewOrderMsgEncode (<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_single_msg">NewOrderSingleMsg</link> * msg, char *&amp; buf)</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1a36b9abe5b46b4149c6492abb4f47fdce"/><section>
+    <title>PreSerializeNewOrders()</title>
+<indexterm><primary>PreSerializeNewOrders</primary><secondary>KTN::CME::IL3::AppMessageFactoryFastV2</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::AppMessageFactoryFastV2</primary><secondary>PreSerializeNewOrders</secondary></indexterm>
+<para><computeroutput>void AppMessageFactoryFastV2::PreSerializeNewOrders (vector&lt; <link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> &gt; * ords, <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf">KTNBuf</link> &amp; msg, uint32_t seqnum, uint64_t startreqid, int segid)</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1ac9b46f93465c7aa70d35db1800a3a988"/><section>
+    <title>PreSerializeNewOrders2()</title>
+<indexterm><primary>PreSerializeNewOrders2</primary><secondary>KTN::CME::IL3::AppMessageFactoryFastV2</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::AppMessageFactoryFastV2</primary><secondary>PreSerializeNewOrders2</secondary></indexterm>
+<para><computeroutput>void AppMessageFactoryFastV2::PreSerializeNewOrders2 (vector&lt; <link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> &gt; * ords, <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf">KTNBuf</link> &amp; msg, uint32_t seqnum, int segid)</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1a999e8c9a8646f1bf3d97792b69c8b06d"/><section>
+    <title>SerializeBatch()</title>
+<indexterm><primary>SerializeBatch</primary><secondary>KTN::CME::IL3::AppMessageFactoryFastV2</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::AppMessageFactoryFastV2</primary><secondary>SerializeBatch</secondary></indexterm>
+<para><computeroutput>void AppMessageFactoryFastV2::SerializeBatch (<link linkend="_struct_msg_batch">MsgBatch</link> * batch, <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf">KTNBuf</link> &amp; msg, uint32_t seqnum, int segid)</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1a29662cbdba1d7fa823916a632fdedbf6"/><section>
+    <title>SerializeTas()</title>
+<indexterm><primary>SerializeTas</primary><secondary>KTN::CME::IL3::AppMessageFactoryFastV2</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::AppMessageFactoryFastV2</primary><secondary>SerializeTas</secondary></indexterm>
+<para><computeroutput>uint16_t AppMessageFactoryFastV2::SerializeTas (vector&lt; <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &gt; ords, char *&amp; buf, uint32_t seqnum, int segid)</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1aa503601ed8460831a011bf0bb328f520"/><section>
+    <title>UpdateClock()</title>
+<indexterm><primary>UpdateClock</primary><secondary>KTN::CME::IL3::AppMessageFactoryFastV2</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::AppMessageFactoryFastV2</primary><secondary>UpdateClock</secondary></indexterm>
+<para><computeroutput>void KTN::CME::IL3::AppMessageFactoryFastV2::UpdateClock ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2_1ac1fd4b05596e516ed21ef4bf87415abf"/><section>
+    <title>UpdateMsg()</title>
+<indexterm><primary>UpdateMsg</primary><secondary>KTN::CME::IL3::AppMessageFactoryFastV2</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::AppMessageFactoryFastV2</primary><secondary>UpdateMsg</secondary></indexterm>
+<para><computeroutput>void AppMessageFactoryFastV2::UpdateMsg (<link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf">KTNBuf</link> &amp; msg, uint32_t qty, uint32_t seq, uint64_t reqid)</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+exchsupport/cme/factory/AppMessageFactoryFastV2.hppexchsupport/cme/factory/AppMessageFactoryFastV2.cpp</section>
+</section>

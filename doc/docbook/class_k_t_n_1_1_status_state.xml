@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_status_state" xml:lang="en-US">
+<title>KTN::StatusState Class Reference</title>
+<indexterm><primary>KTN::StatusState</primary></indexterm>
+<para>
+<computeroutput>#include &lt;Order.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>const std::string <link linkend="_class_k_t_n_1_1_status_state_1adeeb89b24390a75df38ff45a33f9fcce">QUOTE_SENT_STATUS</link> =&quot;SENT&quot;</para>
+</listitem>
+            <listitem><para>const std::string <link linkend="_class_k_t_n_1_1_status_state_1a6186aee17082ca14c8be6022f130332e">QUOTE_ACK_STATUS</link> =&quot;NEW&quot;</para>
+</listitem>
+            <listitem><para>const std::string <link linkend="_class_k_t_n_1_1_status_state_1a626d037acdc281bda842f341abaaf5b7">QUOTE_UPDATED_STATUS</link> =&quot;MODIFIED&quot;</para>
+</listitem>
+            <listitem><para>const std::string <link linkend="_class_k_t_n_1_1_status_state_1a308a58ed24eb8419a5a65275cb96a897">QUOTE_PARTIAL_STATUS</link> =&quot;PARTIAL&quot;</para>
+</listitem>
+            <listitem><para>const std::string <link linkend="_class_k_t_n_1_1_status_state_1a44854aba80406f615fecdaf9947ff3f7">QUOTE_FILLED_STATUS</link> =&quot;FILLED&quot;</para>
+</listitem>
+            <listitem><para>const std::string <link linkend="_class_k_t_n_1_1_status_state_1a6d8d1354417a585b176ff5d2d6bd4cb3">QUOTE_CANCELLED_STATUS</link> =&quot;CANCELED&quot;</para>
+</listitem>
+            <listitem><para>const std::string <link linkend="_class_k_t_n_1_1_status_state_1a94fc5386313410f1a7d44966070c8ff2">QUOTE_REJECTED_STATUS</link> = &quot;REJECTED&quot;</para>
+</listitem>
+            <listitem><para>const std::string <link linkend="_class_k_t_n_1_1_status_state_1aeddf520bcd9ebc376113cfb6d8db69d5">QUOTE_STATE_ACTIVE</link> =&quot;ACTIVE&quot;</para>
+</listitem>
+            <listitem><para>const std::string <link linkend="_class_k_t_n_1_1_status_state_1a6e8cdbb9f9bbe847ca03c4089dcfd2b0">QUOTE_STATE_COMPLETE</link> =&quot;COMPLETE&quot;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Class defining status states for orders. </para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_status_state_1a6186aee17082ca14c8be6022f130332e"/><section>
+    <title>QUOTE_ACK_STATUS</title>
+<indexterm><primary>QUOTE_ACK_STATUS</primary><secondary>KTN::StatusState</secondary></indexterm>
+<indexterm><primary>KTN::StatusState</primary><secondary>QUOTE_ACK_STATUS</secondary></indexterm>
+<para><computeroutput>const std::string KTN::StatusState::QUOTE_ACK_STATUS =&quot;NEW&quot;</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_status_state_1a6d8d1354417a585b176ff5d2d6bd4cb3"/><section>
+    <title>QUOTE_CANCELLED_STATUS</title>
+<indexterm><primary>QUOTE_CANCELLED_STATUS</primary><secondary>KTN::StatusState</secondary></indexterm>
+<indexterm><primary>KTN::StatusState</primary><secondary>QUOTE_CANCELLED_STATUS</secondary></indexterm>
+<para><computeroutput>const std::string KTN::StatusState::QUOTE_CANCELLED_STATUS =&quot;CANCELED&quot;</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_status_state_1a44854aba80406f615fecdaf9947ff3f7"/><section>
+    <title>QUOTE_FILLED_STATUS</title>
+<indexterm><primary>QUOTE_FILLED_STATUS</primary><secondary>KTN::StatusState</secondary></indexterm>
+<indexterm><primary>KTN::StatusState</primary><secondary>QUOTE_FILLED_STATUS</secondary></indexterm>
+<para><computeroutput>const std::string KTN::StatusState::QUOTE_FILLED_STATUS =&quot;FILLED&quot;</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_status_state_1a308a58ed24eb8419a5a65275cb96a897"/><section>
+    <title>QUOTE_PARTIAL_STATUS</title>
+<indexterm><primary>QUOTE_PARTIAL_STATUS</primary><secondary>KTN::StatusState</secondary></indexterm>
+<indexterm><primary>KTN::StatusState</primary><secondary>QUOTE_PARTIAL_STATUS</secondary></indexterm>
+<para><computeroutput>const std::string KTN::StatusState::QUOTE_PARTIAL_STATUS =&quot;PARTIAL&quot;</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_status_state_1a94fc5386313410f1a7d44966070c8ff2"/><section>
+    <title>QUOTE_REJECTED_STATUS</title>
+<indexterm><primary>QUOTE_REJECTED_STATUS</primary><secondary>KTN::StatusState</secondary></indexterm>
+<indexterm><primary>KTN::StatusState</primary><secondary>QUOTE_REJECTED_STATUS</secondary></indexterm>
+<para><computeroutput>const std::string KTN::StatusState::QUOTE_REJECTED_STATUS = &quot;REJECTED&quot;</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_status_state_1adeeb89b24390a75df38ff45a33f9fcce"/><section>
+    <title>QUOTE_SENT_STATUS</title>
+<indexterm><primary>QUOTE_SENT_STATUS</primary><secondary>KTN::StatusState</secondary></indexterm>
+<indexterm><primary>KTN::StatusState</primary><secondary>QUOTE_SENT_STATUS</secondary></indexterm>
+<para><computeroutput>const std::string KTN::StatusState::QUOTE_SENT_STATUS =&quot;SENT&quot;</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_status_state_1aeddf520bcd9ebc376113cfb6d8db69d5"/><section>
+    <title>QUOTE_STATE_ACTIVE</title>
+<indexterm><primary>QUOTE_STATE_ACTIVE</primary><secondary>KTN::StatusState</secondary></indexterm>
+<indexterm><primary>KTN::StatusState</primary><secondary>QUOTE_STATE_ACTIVE</secondary></indexterm>
+<para><computeroutput>const std::string KTN::StatusState::QUOTE_STATE_ACTIVE =&quot;ACTIVE&quot;</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_status_state_1a6e8cdbb9f9bbe847ca03c4089dcfd2b0"/><section>
+    <title>QUOTE_STATE_COMPLETE</title>
+<indexterm><primary>QUOTE_STATE_COMPLETE</primary><secondary>KTN::StatusState</secondary></indexterm>
+<indexterm><primary>KTN::StatusState</primary><secondary>QUOTE_STATE_COMPLETE</secondary></indexterm>
+<para><computeroutput>const std::string KTN::StatusState::QUOTE_STATE_COMPLETE =&quot;COMPLETE&quot;</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_status_state_1a626d037acdc281bda842f341abaaf5b7"/><section>
+    <title>QUOTE_UPDATED_STATUS</title>
+<indexterm><primary>QUOTE_UPDATED_STATUS</primary><secondary>KTN::StatusState</secondary></indexterm>
+<indexterm><primary>KTN::StatusState</primary><secondary>QUOTE_UPDATED_STATUS</secondary></indexterm>
+<para><computeroutput>const std::string KTN::StatusState::QUOTE_UPDATED_STATUS =&quot;MODIFIED&quot;</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Orders/Order.hpp</section>
+</section>

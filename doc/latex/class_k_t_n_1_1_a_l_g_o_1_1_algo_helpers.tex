@@ -1,0 +1,115 @@
+\doxysection{KTN\+::ALGO\+::Algo\+Helpers Class Reference}
+\hypertarget{class_k_t_n_1_1_a_l_g_o_1_1_algo_helpers}{}\label{class_k_t_n_1_1_a_l_g_o_1_1_algo_helpers}\index{KTN::ALGO::AlgoHelpers@{KTN::ALGO::AlgoHelpers}}
+
+
+Helper class for various algorithmic functions and calculations.  
+
+
+
+
+{\ttfamily \#include $<$algo\+\_\+helpers.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_k_t_n_1_1_a_l_g_o_1_1_algo_helpers_aaee216a937b38e0122a126c4729fbb01}{round\+Up}} (int num\+To\+Round, int multiple)
+\begin{DoxyCompactList}\small\item\em Rounds up a number to the nearest multiple. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_k_t_n_1_1_a_l_g_o_1_1_algo_helpers_a18ea17b7fb28ab0d501b1ecec9f0c653}{get\+Side}} (std\+::string side)
+\begin{DoxyCompactList}\small\item\em Gets the side value based on the given string. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_k_t_n_1_1_a_l_g_o_1_1_algo_helpers_ac08ce8a0113353f3172beabff86ef795}{avg}} (std\+::vector$<$ double $>$ px)
+\begin{DoxyCompactList}\small\item\em Calculates the average of a vector of doubles. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_k_t_n_1_1_a_l_g_o_1_1_algo_helpers_af158216a36753c72f97fb91bf2e0ee67}{compute\+Mean}} (const vector$<$ double $>$ \&v)
+\begin{DoxyCompactList}\small\item\em Computes the mean of a vector of doubles. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Helper class for various algorithmic functions and calculations. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_a_l_g_o_1_1_algo_helpers_ac08ce8a0113353f3172beabff86ef795}\index{KTN::ALGO::AlgoHelpers@{KTN::ALGO::AlgoHelpers}!avg@{avg}}
+\index{avg@{avg}!KTN::ALGO::AlgoHelpers@{KTN::ALGO::AlgoHelpers}}
+\doxysubsubsection{\texorpdfstring{avg()}{avg()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_a_l_g_o_1_1_algo_helpers_ac08ce8a0113353f3172beabff86ef795} 
+double KTN\+::\+ALGO\+::\+Algo\+Helpers\+::avg (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{px}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calculates the average of a vector of doubles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em px} & The vector of doubles. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The average value. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00081}{avg()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00081}{avg()}}.
+
+\Hypertarget{class_k_t_n_1_1_a_l_g_o_1_1_algo_helpers_af158216a36753c72f97fb91bf2e0ee67}\index{KTN::ALGO::AlgoHelpers@{KTN::ALGO::AlgoHelpers}!computeMean@{computeMean}}
+\index{computeMean@{computeMean}!KTN::ALGO::AlgoHelpers@{KTN::ALGO::AlgoHelpers}}
+\doxysubsubsection{\texorpdfstring{computeMean()}{computeMean()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_a_l_g_o_1_1_algo_helpers_af158216a36753c72f97fb91bf2e0ee67} 
+double KTN\+::\+ALGO\+::\+Algo\+Helpers\+::compute\+Mean (\begin{DoxyParamCaption}\item[{const vector$<$ double $>$ \&}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Computes the mean of a vector of doubles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & The vector of doubles. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The mean value. 
+\end{DoxyReturn}
+\Hypertarget{class_k_t_n_1_1_a_l_g_o_1_1_algo_helpers_a18ea17b7fb28ab0d501b1ecec9f0c653}\index{KTN::ALGO::AlgoHelpers@{KTN::ALGO::AlgoHelpers}!getSide@{getSide}}
+\index{getSide@{getSide}!KTN::ALGO::AlgoHelpers@{KTN::ALGO::AlgoHelpers}}
+\doxysubsubsection{\texorpdfstring{getSide()}{getSide()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_a_l_g_o_1_1_algo_helpers_a18ea17b7fb28ab0d501b1ecec9f0c653} 
+int KTN\+::\+ALGO\+::\+Algo\+Helpers\+::get\+Side (\begin{DoxyParamCaption}\item[{std\+::string}]{side}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the side value based on the given string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em side} & The side string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The side value (-\/1 for \textquotesingle{}S\textquotesingle{}, 1 for \textquotesingle{}B\textquotesingle{}, 0 otherwise). 
+\end{DoxyReturn}
+\Hypertarget{class_k_t_n_1_1_a_l_g_o_1_1_algo_helpers_aaee216a937b38e0122a126c4729fbb01}\index{KTN::ALGO::AlgoHelpers@{KTN::ALGO::AlgoHelpers}!roundUp@{roundUp}}
+\index{roundUp@{roundUp}!KTN::ALGO::AlgoHelpers@{KTN::ALGO::AlgoHelpers}}
+\doxysubsubsection{\texorpdfstring{roundUp()}{roundUp()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_a_l_g_o_1_1_algo_helpers_aaee216a937b38e0122a126c4729fbb01} 
+int KTN\+::\+ALGO\+::\+Algo\+Helpers\+::round\+Up (\begin{DoxyParamCaption}\item[{int}]{num\+To\+Round}{, }\item[{int}]{multiple}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Rounds up a number to the nearest multiple. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+To\+Round} & The number to round up. \\
+\hline
+{\em multiple} & The multiple to round up to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The rounded up number. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Algo\+Support/algo\+\_\+helpers.\+hpp\end{DoxyCompactItemize}

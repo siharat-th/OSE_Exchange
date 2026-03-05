@@ -1,0 +1,85 @@
+\doxysection{Json\+Order\+Decoders Class Reference}
+\hypertarget{class_json_order_decoders}{}\label{class_json_order_decoders}\index{JsonOrderDecoders@{JsonOrderDecoders}}
+
+
+The \doxylink{class_json_order_decoders}{Json\+Order\+Decoders} class provides static methods for decoding JSON orders.  
+
+
+
+
+{\ttfamily \#include $<$Json\+Order\+Decoders.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_k_t_n_1_1_json_header}{Json\+Header}} \mbox{\hyperlink{class_json_order_decoders_ac5a73074d7c1d35afd40ee451eface00}{Check\+Json\+Header}} (string json)
+\begin{DoxyCompactList}\small\item\em Checks the JSON header and returns the header information. \end{DoxyCompactList}\item 
+static std\+::string \mbox{\hyperlink{class_json_order_decoders_af476fc90aed9ae12ac76aa55f7977dd3}{Check\+Order\+Source}} (string json)
+\begin{DoxyCompactList}\small\item\em Checks the order source in the JSON and returns the source. \end{DoxyCompactList}\item 
+static std\+::vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} $>$ \mbox{\hyperlink{class_json_order_decoders_afa9d95f32130b89ad17b28f672eb056f}{Decode\+Order}} (std\+::string json)
+\begin{DoxyCompactList}\small\item\em Decodes the JSON order and returns a vector of Order objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_json_order_decoders}{Json\+Order\+Decoders} class provides static methods for decoding JSON orders. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_json_order_decoders_ac5a73074d7c1d35afd40ee451eface00}\index{JsonOrderDecoders@{JsonOrderDecoders}!CheckJsonHeader@{CheckJsonHeader}}
+\index{CheckJsonHeader@{CheckJsonHeader}!JsonOrderDecoders@{JsonOrderDecoders}}
+\doxysubsubsection{\texorpdfstring{CheckJsonHeader()}{CheckJsonHeader()}}
+{\footnotesize\ttfamily \label{class_json_order_decoders_ac5a73074d7c1d35afd40ee451eface00} 
+static \mbox{\hyperlink{struct_k_t_n_1_1_json_header}{Json\+Header}} Json\+Order\+Decoders\+::\+Check\+Json\+Header (\begin{DoxyParamCaption}\item[{string}]{json}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Checks the JSON header and returns the header information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & The JSON string to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Json\+Header struct containing the header information. 
+\end{DoxyReturn}
+\Hypertarget{class_json_order_decoders_af476fc90aed9ae12ac76aa55f7977dd3}\index{JsonOrderDecoders@{JsonOrderDecoders}!CheckOrderSource@{CheckOrderSource}}
+\index{CheckOrderSource@{CheckOrderSource}!JsonOrderDecoders@{JsonOrderDecoders}}
+\doxysubsubsection{\texorpdfstring{CheckOrderSource()}{CheckOrderSource()}}
+{\footnotesize\ttfamily \label{class_json_order_decoders_af476fc90aed9ae12ac76aa55f7977dd3} 
+static std\+::string Json\+Order\+Decoders\+::\+Check\+Order\+Source (\begin{DoxyParamCaption}\item[{string}]{json}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Checks the order source in the JSON and returns the source. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & The JSON string to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The order source. 
+\end{DoxyReturn}
+\Hypertarget{class_json_order_decoders_afa9d95f32130b89ad17b28f672eb056f}\index{JsonOrderDecoders@{JsonOrderDecoders}!DecodeOrder@{DecodeOrder}}
+\index{DecodeOrder@{DecodeOrder}!JsonOrderDecoders@{JsonOrderDecoders}}
+\doxysubsubsection{\texorpdfstring{DecodeOrder()}{DecodeOrder()}}
+{\footnotesize\ttfamily \label{class_json_order_decoders_afa9d95f32130b89ad17b28f672eb056f} 
+static std\+::vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} $>$ Json\+Order\+Decoders\+::\+Decode\+Order (\begin{DoxyParamCaption}\item[{std\+::string}]{json}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Decodes the JSON order and returns a vector of Order objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & The JSON string to decode. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of Order objects. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Json/Json\+Order\+Decoders.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,273 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_zmq_subscriber_v5" xml:lang="en-US">
+<title>ZmqSubscriberV5 Class Reference</title>
+<indexterm><primary>ZmqSubscriberV5</primary></indexterm>
+<para>
+
+<para>A ZMQ subscriber class. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;ZmqSubscriberV5.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for ZmqSubscriberV5:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_zmq_subscriber_v5.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_zmq_subscriber_v5_1a88923abda981ef5728015222d6507b60">ZmqSubscriberV5</link> (<link linkend="_class_i_zmq_subscriber">IZmqSubscriber</link> *sub, const string &amp;server, int port, const string &amp;name, vector&lt; string &gt; topics)</para>
+
+<para>Constructs a <link linkend="_class_zmq_subscriber_v5">ZmqSubscriberV5</link> object. </para>
+</listitem>
+            <listitem><para><link linkend="_class_zmq_subscriber_v5_1a415da35c7aff2c5b068bef7258f8ccee">ZmqSubscriberV5</link> (<link linkend="_class_i_zmq_subscriber">IZmqSubscriber</link> *sub, const string &amp;server, int port, const string &amp;name, const string &amp;filename, const string &amp;key)</para>
+
+<para>Constructs a <link linkend="_class_zmq_subscriber_v5">ZmqSubscriberV5</link> object. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_zmq_subscriber_v5_1a02f3a95d575ef5e77983b47a74970b6b">~ZmqSubscriberV5</link> ()</para>
+
+<para>Destroys the <link linkend="_class_zmq_subscriber_v5">ZmqSubscriberV5</link> object. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_zmq_subscriber_v5_1a40fecdb12b1934a1a7aa0c67107ebaba">AddTopic</link> (string szTopic)</para>
+
+<para>Adds a topic to subscribe to. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_zmq_subscriber_v5_1ad3d571a6f24e598fe90db278a9c25b75">LoadTopics</link> (const string &amp;filename, const string &amp;key)</para>
+
+<para>Loads topics from a file. </para>
+</listitem>
+            <listitem><para>const vector&lt; string &gt; <link linkend="_class_zmq_subscriber_v5_1a21399ebb4a26e128ae23610ce13b64aa">Topics</link> () const</para>
+
+<para>Gets the list of subscribed topics. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>A ZMQ subscriber class. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_zmq_subscriber_v5_1a88923abda981ef5728015222d6507b60"/><section>
+    <title>ZmqSubscriberV5()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>ZmqSubscriberV5</primary><secondary>ZmqSubscriberV5</secondary></indexterm>
+<indexterm><primary>ZmqSubscriberV5</primary><secondary>ZmqSubscriberV5</secondary></indexterm>
+<para><computeroutput>ZmqSubscriberV5::ZmqSubscriberV5 (<link linkend="_class_i_zmq_subscriber">IZmqSubscriber</link> * sub, const string &amp; server, int port, const string &amp; name, vector&lt; string &gt; topics)<computeroutput>[explicit]</computeroutput></computeroutput></para><para>
+
+<para>Constructs a <link linkend="_class_zmq_subscriber_v5">ZmqSubscriberV5</link> object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>sub</entry><entry>
+<para>The <link linkend="_class_i_zmq_subscriber">IZmqSubscriber</link> object to handle received messages. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>server</entry><entry>
+<para>The ZMQ server address. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>port</entry><entry>
+<para>The ZMQ server port. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>name</entry><entry>
+<para>The name of the subscriber. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>topics</entry><entry>
+<para>The initial topics to subscribe to. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00018">NamedThread::CreateAndRun()</link>.</para>
+</section>
+<anchor xml:id="_class_zmq_subscriber_v5_1a415da35c7aff2c5b068bef7258f8ccee"/><section>
+    <title>ZmqSubscriberV5()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>ZmqSubscriberV5</primary><secondary>ZmqSubscriberV5</secondary></indexterm>
+<indexterm><primary>ZmqSubscriberV5</primary><secondary>ZmqSubscriberV5</secondary></indexterm>
+<para><computeroutput>ZmqSubscriberV5::ZmqSubscriberV5 (<link linkend="_class_i_zmq_subscriber">IZmqSubscriber</link> * sub, const string &amp; server, int port, const string &amp; name, const string &amp; filename, const string &amp; key)<computeroutput>[explicit]</computeroutput></computeroutput></para><para>
+
+<para>Constructs a <link linkend="_class_zmq_subscriber_v5">ZmqSubscriberV5</link> object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>sub</entry><entry>
+<para>The <link linkend="_class_i_zmq_subscriber">IZmqSubscriber</link> object to handle received messages. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>server</entry><entry>
+<para>The ZMQ server address. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>port</entry><entry>
+<para>The ZMQ server port. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>name</entry><entry>
+<para>The name of the subscriber. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>filename</entry><entry>
+<para>The name of the file containing the topics to subscribe to. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>key</entry><entry>
+<para>The key to access the topics in the file. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00018">NamedThread::CreateAndRun()</link>, and <link linkend="_l00035">LoadTopics()</link>.</para>
+</section>
+<anchor xml:id="_class_zmq_subscriber_v5_1a02f3a95d575ef5e77983b47a74970b6b"/><section>
+    <title>~ZmqSubscriberV5()</title>
+<indexterm><primary>~ZmqSubscriberV5</primary><secondary>ZmqSubscriberV5</secondary></indexterm>
+<indexterm><primary>ZmqSubscriberV5</primary><secondary>~ZmqSubscriberV5</secondary></indexterm>
+<para><computeroutput>ZmqSubscriberV5::~ZmqSubscriberV5 ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Destroys the <link linkend="_class_zmq_subscriber_v5">ZmqSubscriberV5</link> object. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_zmq_subscriber_v5_1a40fecdb12b1934a1a7aa0c67107ebaba"/><section>
+    <title>AddTopic()</title>
+<indexterm><primary>AddTopic</primary><secondary>ZmqSubscriberV5</secondary></indexterm>
+<indexterm><primary>ZmqSubscriberV5</primary><secondary>AddTopic</secondary></indexterm>
+<para><computeroutput>bool ZmqSubscriberV5::AddTopic (string szTopic)</computeroutput></para><para>
+
+<para>Adds a topic to subscribe to. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>szTopic</entry><entry>
+<para>The topic to add. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the topic was added successfully, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_zmq_subscriber_v5_1ad3d571a6f24e598fe90db278a9c25b75"/><section>
+    <title>LoadTopics()</title>
+<indexterm><primary>LoadTopics</primary><secondary>ZmqSubscriberV5</secondary></indexterm>
+<indexterm><primary>ZmqSubscriberV5</primary><secondary>LoadTopics</secondary></indexterm>
+<para><computeroutput>void ZmqSubscriberV5::LoadTopics (const string &amp; filename, const string &amp; key)</computeroutput></para><para>
+
+<para>Loads topics from a file. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>filename</entry><entry>
+<para>The name of the file containing the topics. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>key</entry><entry>
+<para>The key to access the topics in the file. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00203">Settings::getListCsv()</link>.</para>
+<para>
+Referenced by <link linkend="_l00012">ZmqSubscriberV5()</link>.</para>
+</section>
+<anchor xml:id="_class_zmq_subscriber_v5_1a21399ebb4a26e128ae23610ce13b64aa"/><section>
+    <title>Topics()</title>
+<indexterm><primary>Topics</primary><secondary>ZmqSubscriberV5</secondary></indexterm>
+<indexterm><primary>ZmqSubscriberV5</primary><secondary>Topics</secondary></indexterm>
+<para><computeroutput>const vector&lt; string &gt; ZmqSubscriberV5::Topics ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Gets the list of subscribed topics. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The list of subscribed topics. </para>
+</formalpara>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+ZMQ/ZmqSubscriberV5.hppZMQ/ZmqSubscriberV5.cpp</section>
+</section>

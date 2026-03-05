@@ -1,0 +1,294 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_p_l_monitor" xml:lang="en-US">
+<title>PLMonitor Class Reference</title>
+<indexterm><primary>PLMonitor</primary></indexterm>
+<para>
+
+<para>Class responsible for monitoring and managing profit and loss calculations for positions. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;PLMonitor.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_p_l_monitor_1a846d1dc92fc88373ab7385ba42228f56">PLMonitor</link> (<link linkend="_class_algo_p_l_callback">AlgoPLCallback</link> &amp;sender, string guid)</para>
+
+<para>Constructor for <link linkend="_class_p_l_monitor">PLMonitor</link> class. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_p_l_monitor_1a7f4646814dd3e1505b8d1780cc9a46ff">~PLMonitor</link> ()</para>
+
+<para>Destructor for <link linkend="_class_p_l_monitor">PLMonitor</link> class. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_p_l_monitor_1ad1e3e69b81a29301bc1abaced28a807a">Start</link> ()</para>
+
+<para>Starts the <link linkend="_class_p_l_monitor">PLMonitor</link>. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_p_l_monitor_1a94b9d65f56ffc393109ad1d536c9cff8">Stop</link> ()</para>
+
+<para>Stops the <link linkend="_class_p_l_monitor">PLMonitor</link>. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_p_l_monitor_1a195ec49ee8f2d6cf6f6c7ad9a0a41d22">Register</link> (<link linkend="_struct_position">Position</link> &amp;pos)</para>
+
+<para>Registers a position for profit and loss monitoring. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_p_l_monitor_1a505ad21b2200b1a923d37553e4ee6fea">DeRegister</link> (<link linkend="_struct_position">Position</link> &amp;pos)</para>
+
+<para>Deregisters a position from profit and loss monitoring. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_p_l_monitor_1a2bc90c5574bacf076622eca6803ba310">AdjustRisk</link> (<link linkend="_struct_engine_command">EngineCommand</link> cmd)</para>
+
+<para>Adjusts the risk for the positions. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_p_l_monitor_1ae5c0e6617eb4c2e650fbafc11f395646">onMarketData</link> (const <link linkend="_structalgomd">algomd</link> &amp;md)</para>
+
+<para>Handles market data updates. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_p_l_monitor_1a39c77fad86681ac901c99f9295293fdb">Running</link> ()</para>
+
+<para>Checks if the <link linkend="_class_p_l_monitor">PLMonitor</link> is running. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_p_l_monitor_1a68c581eb07010c32b9bec61277818966">Print</link> ()</para>
+
+<para>Prints the current positions. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Class responsible for monitoring and managing profit and loss calculations for positions. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_p_l_monitor_1a846d1dc92fc88373ab7385ba42228f56"/><section>
+    <title>PLMonitor()</title>
+<indexterm><primary>PLMonitor</primary><secondary>PLMonitor</secondary></indexterm>
+<indexterm><primary>PLMonitor</primary><secondary>PLMonitor</secondary></indexterm>
+<para><computeroutput>PLMonitor::PLMonitor (<link linkend="_class_algo_p_l_callback">AlgoPLCallback</link> &amp; sender, string guid)</computeroutput></para><para>
+
+<para>Constructor for <link linkend="_class_p_l_monitor">PLMonitor</link> class. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>sender</entry><entry>
+<para>The <link linkend="_class_algo_p_l_callback">AlgoPLCallback</link> object used for sending profit and loss updates. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>guid</entry><entry>
+<para>The unique identifier for the <link linkend="_class_p_l_monitor">PLMonitor</link> instance. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_p_l_monitor_1a7f4646814dd3e1505b8d1780cc9a46ff"/><section>
+    <title>~PLMonitor()</title>
+<indexterm><primary>~PLMonitor</primary><secondary>PLMonitor</secondary></indexterm>
+<indexterm><primary>PLMonitor</primary><secondary>~PLMonitor</secondary></indexterm>
+<para><computeroutput>PLMonitor::~PLMonitor ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Destructor for <link linkend="_class_p_l_monitor">PLMonitor</link> class. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_p_l_monitor_1a2bc90c5574bacf076622eca6803ba310"/><section>
+    <title>AdjustRisk()</title>
+<indexterm><primary>AdjustRisk</primary><secondary>PLMonitor</secondary></indexterm>
+<indexterm><primary>PLMonitor</primary><secondary>AdjustRisk</secondary></indexterm>
+<para><computeroutput>void PLMonitor::AdjustRisk (<link linkend="_struct_engine_command">EngineCommand</link> cmd)</computeroutput></para><para>
+
+<para>Adjusts the risk for the positions. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>cmd</entry><entry>
+<para>The <link linkend="_struct_engine_command">EngineCommand</link> object containing the risk adjustment command. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Referenced by <link linkend="_l00169">KTN::PLWatcher::onEngineJson()</link>.</para>
+</section>
+<anchor xml:id="_class_p_l_monitor_1a505ad21b2200b1a923d37553e4ee6fea"/><section>
+    <title>DeRegister()</title>
+<indexterm><primary>DeRegister</primary><secondary>PLMonitor</secondary></indexterm>
+<indexterm><primary>PLMonitor</primary><secondary>DeRegister</secondary></indexterm>
+<para><computeroutput>void PLMonitor::DeRegister (<link linkend="_struct_position">Position</link> &amp; pos)</computeroutput></para><para>
+
+<para>Deregisters a position from profit and loss monitoring. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>pos</entry><entry>
+<para>The <link linkend="_struct_position">Position</link> object to deregister. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_p_l_monitor_1ae5c0e6617eb4c2e650fbafc11f395646"/><section>
+    <title>onMarketData()</title>
+<indexterm><primary>onMarketData</primary><secondary>PLMonitor</secondary></indexterm>
+<indexterm><primary>PLMonitor</primary><secondary>onMarketData</secondary></indexterm>
+<para><computeroutput>void PLMonitor::onMarketData (const <link linkend="_structalgomd">algomd</link> &amp; md)</computeroutput></para><para>
+
+<para>Handles market data updates. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>md</entry><entry>
+<para>The algomd object containing the market data. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Referenced by <link linkend="_l00345">KTN::PLWatcher::onMktData()</link>.</para>
+</section>
+<anchor xml:id="_class_p_l_monitor_1a68c581eb07010c32b9bec61277818966"/><section>
+    <title>Print()</title>
+<indexterm><primary>Print</primary><secondary>PLMonitor</secondary></indexterm>
+<indexterm><primary>PLMonitor</primary><secondary>Print</secondary></indexterm>
+<para><computeroutput>void PLMonitor::Print ( )</computeroutput></para><para>
+
+<para>Prints the current positions. </para>
+</para>
+<para>
+Referenced by <link linkend="_l00175">KTN::PLWatcher::Print()</link>.</para>
+</section>
+<anchor xml:id="_class_p_l_monitor_1a195ec49ee8f2d6cf6f6c7ad9a0a41d22"/><section>
+    <title>Register()</title>
+<indexterm><primary>Register</primary><secondary>PLMonitor</secondary></indexterm>
+<indexterm><primary>PLMonitor</primary><secondary>Register</secondary></indexterm>
+<para><computeroutput>void PLMonitor::Register (<link linkend="_struct_position">Position</link> &amp; pos)</computeroutput></para><para>
+
+<para>Registers a position for profit and loss monitoring. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>pos</entry><entry>
+<para>The <link linkend="_struct_position">Position</link> object to register. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Referenced by <link linkend="_l00062">KTN::PLWatcher::onJson()</link>.</para>
+</section>
+<anchor xml:id="_class_p_l_monitor_1a39c77fad86681ac901c99f9295293fdb"/><section>
+    <title>Running()</title>
+<indexterm><primary>Running</primary><secondary>PLMonitor</secondary></indexterm>
+<indexterm><primary>PLMonitor</primary><secondary>Running</secondary></indexterm>
+<para><computeroutput>bool PLMonitor::Running ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Checks if the <link linkend="_class_p_l_monitor">PLMonitor</link> is running. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>True if the <link linkend="_class_p_l_monitor">PLMonitor</link> is running, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_p_l_monitor_1ad1e3e69b81a29301bc1abaced28a807a"/><section>
+    <title>Start()</title>
+<indexterm><primary>Start</primary><secondary>PLMonitor</secondary></indexterm>
+<indexterm><primary>PLMonitor</primary><secondary>Start</secondary></indexterm>
+<para><computeroutput>void PLMonitor::Start ( )</computeroutput></para><para>
+
+<para>Starts the <link linkend="_class_p_l_monitor">PLMonitor</link>. </para>
+</para>
+<para>
+Referenced by <link linkend="_l00043">KTN::PLWatcher::onLaunch()</link>.</para>
+</section>
+<anchor xml:id="_class_p_l_monitor_1a94b9d65f56ffc393109ad1d536c9cff8"/><section>
+    <title>Stop()</title>
+<indexterm><primary>Stop</primary><secondary>PLMonitor</secondary></indexterm>
+<indexterm><primary>PLMonitor</primary><secondary>Stop</secondary></indexterm>
+<para><computeroutput>void PLMonitor::Stop ( )</computeroutput></para><para>
+
+<para>Stops the <link linkend="_class_p_l_monitor">PLMonitor</link>. </para>
+</para>
+<para>
+Referenced by <link linkend="_l00028">KTN::PLWatcher::~PLWatcher()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+AlgoEngines/PLMonitor.hppAlgoEngines/PLMonitor.cpp</section>
+</section>

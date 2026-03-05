@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_zmq_sub_listener" xml:lang="en-US">
+<title>ZmqSubListener Class Reference</title>
+<indexterm><primary>ZmqSubListener</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_zmq_sub_listener">ZmqSubListener</link> class is an abstract base class for ZMQ subscriber listeners. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;ZmqSubscriber.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_zmq_sub_listener_1ab7d3b76ba03ba28eb8cd9c2f7edf9170">onPubMsg</link> (std::string szTopic, std::string szMsg)=0</para>
+
+<para>onPubMsg is a pure virtual function that is called when a new message is received. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_zmq_sub_listener">ZmqSubListener</link> class is an abstract base class for ZMQ subscriber listeners. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_zmq_sub_listener_1aabca9baee369d8f77694f000d1b5d7b6"/><section>
+    <title>~ZmqSubListener()</title>
+<indexterm><primary>~ZmqSubListener</primary><secondary>ZmqSubListener</secondary></indexterm>
+<indexterm><primary>ZmqSubListener</primary><secondary>~ZmqSubListener</secondary></indexterm>
+<para><computeroutput>virtual ZmqSubListener::~ZmqSubListener ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_zmq_sub_listener_1ab7d3b76ba03ba28eb8cd9c2f7edf9170"/><section>
+    <title>onPubMsg()</title>
+<indexterm><primary>onPubMsg</primary><secondary>ZmqSubListener</secondary></indexterm>
+<indexterm><primary>ZmqSubListener</primary><secondary>onPubMsg</secondary></indexterm>
+<para><computeroutput>virtual void ZmqSubListener::onPubMsg (std::string szTopic, std::string szMsg)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>onPubMsg is a pure virtual function that is called when a new message is received. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>szTopic</entry><entry>
+<para>The topic of the received message. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>szMsg</entry><entry>
+<para>The content of the received message. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+ZMQ/ZmqSubscriber.h</section>
+</section>

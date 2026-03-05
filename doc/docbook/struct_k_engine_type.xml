@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_engine_type" xml:lang="en-US">
+<title>KEngineType Struct Reference</title>
+<indexterm><primary>KEngineType</primary></indexterm>
+<para>
+
+<para>Enumeration for the engine types. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;engine_structs.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_struct_k_engine_type_1a5ce479e529f2e621a260e88a5309655a">Enum</link> : uint8_t { <link linkend="_struct_k_engine_type_1a5ce479e529f2e621a260e88a5309655aab574fda0dbae730a28a4ef7b2345cf3b">NONE</link>
+, <link linkend="_struct_k_engine_type_1a5ce479e529f2e621a260e88a5309655aa6e8f44c50c7a45f852a849ccc46d5f20">PLMON</link>
+, <link linkend="_struct_k_engine_type_1a5ce479e529f2e621a260e88a5309655aa7f58eb66686e3c5ba185c227cfa5fd8a">SPREADPRICER</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_struct_k_engine_type_1a5ce479e529f2e621a260e88a5309655a">KEngineType::Enum</link> <link linkend="_struct_k_engine_type_1af439c01a2a35dc1c173662adf7f60a80">Value</link> (string cmd)</para>
+
+<para>Converts a string engine type to the corresponding enumeration value. </para>
+</listitem>
+            <listitem><para>static <link linkend="_struct_k_engine_type_1a5ce479e529f2e621a260e88a5309655a">KEngineType::Enum</link> <link linkend="_struct_k_engine_type_1a453379a037ed24e64fa99e03b1634ad7">Value</link> (int cmd)</para>
+
+<para>Converts an integer engine type to the corresponding enumeration value. </para>
+</listitem>
+            <listitem><para>static std::string <link linkend="_struct_k_engine_type_1a81d663f4e967b4f90411533f46764f0e">toString</link> (<link linkend="_struct_k_engine_type_1a5ce479e529f2e621a260e88a5309655a">Enum</link> engine)</para>
+
+<para>Converts an enumeration value to its string representation. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Enumeration for the engine types. </para>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_struct_k_engine_type_1a5ce479e529f2e621a260e88a5309655a"/><section>
+    <title>Enum</title>
+<indexterm><primary>Enum</primary><secondary>KEngineType</secondary></indexterm>
+<indexterm><primary>KEngineType</primary><secondary>Enum</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_struct_k_engine_type_1a5ce479e529f2e621a260e88a5309655a">KEngineType::Enum</link> : uint8_t</computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>NONE</primary><secondary>KEngineType</secondary></indexterm>
+<indexterm><primary>KEngineType</primary><secondary>NONE</secondary></indexterm>
+<anchor xml:id="_struct_k_engine_type_1a5ce479e529f2e621a260e88a5309655aab574fda0dbae730a28a4ef7b2345cf3b"/>NONE</entry><entry>
+<para>No engine type </para>
+</entry></row><row><entry><indexterm><primary>PLMON</primary><secondary>KEngineType</secondary></indexterm>
+<indexterm><primary>KEngineType</primary><secondary>PLMON</secondary></indexterm>
+<anchor xml:id="_struct_k_engine_type_1a5ce479e529f2e621a260e88a5309655aa6e8f44c50c7a45f852a849ccc46d5f20"/>PLMON</entry><entry>
+<para>PLMON engine type </para>
+</entry></row><row><entry><indexterm><primary>SPREADPRICER</primary><secondary>KEngineType</secondary></indexterm>
+<indexterm><primary>KEngineType</primary><secondary>SPREADPRICER</secondary></indexterm>
+<anchor xml:id="_struct_k_engine_type_1a5ce479e529f2e621a260e88a5309655aa7f58eb66686e3c5ba185c227cfa5fd8a"/>SPREADPRICER</entry><entry>
+<para>SPREADPRICER engine type </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_k_engine_type_1a81d663f4e967b4f90411533f46764f0e"/><section>
+    <title>toString()</title>
+<indexterm><primary>toString</primary><secondary>KEngineType</secondary></indexterm>
+<indexterm><primary>KEngineType</primary><secondary>toString</secondary></indexterm>
+<para><computeroutput>static std::string KEngineType::toString (<link linkend="_struct_k_engine_type_1a5ce479e529f2e621a260e88a5309655a">Enum</link> engine)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Converts an enumeration value to its string representation. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>engine</entry><entry>
+<para>The enumeration value. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The string representation of the enumeration value. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00150">PLMON</link>, and <link linkend="_l00151">SPREADPRICER</link>.</para>
+</section>
+<anchor xml:id="_struct_k_engine_type_1a453379a037ed24e64fa99e03b1634ad7"/><section>
+    <title>Value()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>Value</primary><secondary>KEngineType</secondary></indexterm>
+<indexterm><primary>KEngineType</primary><secondary>Value</secondary></indexterm>
+<para><computeroutput>static <link linkend="_struct_k_engine_type_1a5ce479e529f2e621a260e88a5309655a">KEngineType::Enum</link> KEngineType::Value (int cmd)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Converts an integer engine type to the corresponding enumeration value. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>cmd</entry><entry>
+<para>The integer engine type. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The corresponding enumeration value. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00149">NONE</link>, <link linkend="_l00150">PLMON</link>, and <link linkend="_l00151">SPREADPRICER</link>.</para>
+</section>
+<anchor xml:id="_struct_k_engine_type_1af439c01a2a35dc1c173662adf7f60a80"/><section>
+    <title>Value()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>Value</primary><secondary>KEngineType</secondary></indexterm>
+<indexterm><primary>KEngineType</primary><secondary>Value</secondary></indexterm>
+<para><computeroutput>static <link linkend="_struct_k_engine_type_1a5ce479e529f2e621a260e88a5309655a">KEngineType::Enum</link> KEngineType::Value (string cmd)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Converts a string engine type to the corresponding enumeration value. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>cmd</entry><entry>
+<para>The string engine type. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The corresponding enumeration value. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00149">NONE</link>, <link linkend="_l00150">PLMON</link>, and <link linkend="_l00151">SPREADPRICER</link>.</para>
+<para>
+Referenced by <link linkend="_l00283">AlgoFactory::ParseEngineCommand()</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+AlgoEngines/engine_structs.hpp</section>
+</section>

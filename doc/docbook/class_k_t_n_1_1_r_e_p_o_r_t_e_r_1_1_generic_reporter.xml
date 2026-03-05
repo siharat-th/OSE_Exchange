@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_generic_reporter" xml:lang="en-US">
+<title>KTN::REPORTER::GenericReporter Class Reference</title>
+<indexterm><primary>KTN::REPORTER::GenericReporter</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_generic_reporter">GenericReporter</link> class is responsible for reporting data. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;GenericReporter.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for KTN::REPORTER::GenericReporter:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_generic_reporter.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_generic_reporter_1abe018ecdbe746f622bf568e2d9db13a8">GenericReporter</link> ()</para>
+
+<para>Constructs a new <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_generic_reporter">GenericReporter</link> object. </para>
+</listitem>
+            <listitem><para><link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_generic_reporter_1acc989d8524a22aa7948839c80efcbc56">~GenericReporter</link> ()</para>
+
+<para>Destroys the <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_generic_reporter">GenericReporter</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_generic_reporter_1a697ba2dda6c433bfc746a83bbe5eb7cc">Report</link> (const string &amp;json)</para>
+
+<para>Reports the given JSON data. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_generic_reporter_1a236e7f2d4a7e4c49414a0dbe2a7ef105">DoWork</link> ()</para>
+
+<para>Performs the work. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_generic_reporter_1a74ba6d849607b300a6dc12f53290d064">StopWork</link> ()</para>
+
+<para>Stops the work. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_generic_reporter">GenericReporter</link> class is responsible for reporting data. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_generic_reporter_1abe018ecdbe746f622bf568e2d9db13a8"/><section>
+    <title>GenericReporter()</title>
+<indexterm><primary>GenericReporter</primary><secondary>KTN::REPORTER::GenericReporter</secondary></indexterm>
+<indexterm><primary>KTN::REPORTER::GenericReporter</primary><secondary>GenericReporter</secondary></indexterm>
+<para><computeroutput>GenericReporter::GenericReporter ( )</computeroutput></para><para>
+
+<para>Constructs a new <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_generic_reporter">GenericReporter</link> object. </para>
+</para>
+<para>
+References <link linkend="_l00027">KTN::REPORTER::ReporterBase::Start()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_generic_reporter_1acc989d8524a22aa7948839c80efcbc56"/><section>
+    <title>~GenericReporter()</title>
+<indexterm><primary>~GenericReporter</primary><secondary>KTN::REPORTER::GenericReporter</secondary></indexterm>
+<indexterm><primary>KTN::REPORTER::GenericReporter</primary><secondary>~GenericReporter</secondary></indexterm>
+<para><computeroutput>GenericReporter::~GenericReporter ( )</computeroutput></para><para>
+
+<para>Destroys the <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_generic_reporter">GenericReporter</link> object. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_generic_reporter_1a236e7f2d4a7e4c49414a0dbe2a7ef105"/><section>
+    <title>DoWork()</title>
+<indexterm><primary>DoWork</primary><secondary>KTN::REPORTER::GenericReporter</secondary></indexterm>
+<indexterm><primary>KTN::REPORTER::GenericReporter</primary><secondary>DoWork</secondary></indexterm>
+<para><computeroutput>void GenericReporter::DoWork ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Performs the work. </para>
+</para>
+<para>
+Implements <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_1a449d2ccb3be9222bd06fef3b5155e3af">KTN::REPORTER::ReporterBase</link>.</para>
+<para>
+References <link linkend="_l00120">KTN::REPORTER::ReporterBase::SendJson()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_generic_reporter_1a697ba2dda6c433bfc746a83bbe5eb7cc"/><section>
+    <title>Report()</title>
+<indexterm><primary>Report</primary><secondary>KTN::REPORTER::GenericReporter</secondary></indexterm>
+<indexterm><primary>KTN::REPORTER::GenericReporter</primary><secondary>Report</secondary></indexterm>
+<para><computeroutput>void GenericReporter::Report (const string &amp; json)</computeroutput></para><para>
+
+<para>Reports the given JSON data. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>json</entry><entry>
+<para>The JSON data to be reported. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_generic_reporter_1a74ba6d849607b300a6dc12f53290d064"/><section>
+    <title>StopWork()</title>
+<indexterm><primary>StopWork</primary><secondary>KTN::REPORTER::GenericReporter</secondary></indexterm>
+<indexterm><primary>KTN::REPORTER::GenericReporter</primary><secondary>StopWork</secondary></indexterm>
+<para><computeroutput>void GenericReporter::StopWork ( )</computeroutput></para><para>
+
+<para>Stops the work. </para>
+</para>
+<para>
+References <link linkend="_l00049">KTN::REPORTER::ReporterBase::Stop()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Reporters/GenericReporter.hppReporters/GenericReporter.cpp</section>
+</section>

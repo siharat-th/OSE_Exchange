@@ -1,0 +1,187 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_t_c_p_1_1_epoller" xml:lang="en-US">
+<title>KTN::TCP::Epoller Class Reference</title>
+<indexterm><primary>KTN::TCP::Epoller</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_k_t_n_1_1_t_c_p_1_1_epoller">Epoller</link> class handles epoll operations for TCP sockets. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;Epoller.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_t_c_p_1_1_epoller_1a06ef0dcac3d8b9e801c9695c43d5459e">Epoller</link> ()</para>
+
+<para>Default constructor for the <link linkend="_class_k_t_n_1_1_t_c_p_1_1_epoller">Epoller</link> class. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_k_t_n_1_1_t_c_p_1_1_epoller_1a15a045fc6d08662d4b80c26f34a3b416">~Epoller</link> ()</para>
+
+<para>Destructor for the <link linkend="_class_k_t_n_1_1_t_c_p_1_1_epoller">Epoller</link> class. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_t_c_p_1_1_epoller_1a74b0e118f853b48bcbde445a2bf4473d">CreateEpoll</link> (int numfeeds)</para>
+
+<para>Creates an epoll instance with the specified number of feeds. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_t_c_p_1_1_epoller_1acac43475941edd46c77e4d9bab598df2">AddSocket</link> (int fd, int source)</para>
+
+<para>Adds a socket to the epoll instance. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_t_c_p_1_1_epoller_1aa5e08f4b1ee7bc586d48e29670ddf8dc">RemoveSocketFromEpoll</link> (int fd)</para>
+
+<para>Removes a socket from the epoll instance. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_struct_k_t_n_1_1_t_c_p_1_1pollbase">pollbase</link> <link linkend="_class_k_t_n_1_1_t_c_p_1_1_epoller_1a2ffaea37e2d35f856641580973254f69">_eps</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_k_t_n_1_1_t_c_p_1_1_epoller">Epoller</link> class handles epoll operations for TCP sockets. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_epoller_1a06ef0dcac3d8b9e801c9695c43d5459e"/><section>
+    <title>Epoller()</title>
+<indexterm><primary>Epoller</primary><secondary>KTN::TCP::Epoller</secondary></indexterm>
+<indexterm><primary>KTN::TCP::Epoller</primary><secondary>Epoller</secondary></indexterm>
+<para><computeroutput>Epoller::Epoller ( )</computeroutput></para><para>
+
+<para>Default constructor for the <link linkend="_class_k_t_n_1_1_t_c_p_1_1_epoller">Epoller</link> class. </para>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_epoller_1a15a045fc6d08662d4b80c26f34a3b416"/><section>
+    <title>~Epoller()</title>
+<indexterm><primary>~Epoller</primary><secondary>KTN::TCP::Epoller</secondary></indexterm>
+<indexterm><primary>KTN::TCP::Epoller</primary><secondary>~Epoller</secondary></indexterm>
+<para><computeroutput>Epoller::~Epoller ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Destructor for the <link linkend="_class_k_t_n_1_1_t_c_p_1_1_epoller">Epoller</link> class. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_epoller_1acac43475941edd46c77e4d9bab598df2"/><section>
+    <title>AddSocket()</title>
+<indexterm><primary>AddSocket</primary><secondary>KTN::TCP::Epoller</secondary></indexterm>
+<indexterm><primary>KTN::TCP::Epoller</primary><secondary>AddSocket</secondary></indexterm>
+<para><computeroutput>void Epoller::AddSocket (int fd, int source = <computeroutput>0</computeroutput>
+)</computeroutput></para><para>
+
+<para>Adds a socket to the epoll instance. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>fd</entry><entry>
+<para>The file descriptor of the socket to add. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>source</entry><entry>
+<para>The source identifier of the socket. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Referenced by <link linkend="_l00060">KTN::TCP::EFVITcpV2::Init()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_epoller_1a74b0e118f853b48bcbde445a2bf4473d"/><section>
+    <title>CreateEpoll()</title>
+<indexterm><primary>CreateEpoll</primary><secondary>KTN::TCP::Epoller</secondary></indexterm>
+<indexterm><primary>KTN::TCP::Epoller</primary><secondary>CreateEpoll</secondary></indexterm>
+<para><computeroutput>void Epoller::CreateEpoll (int numfeeds)</computeroutput></para><para>
+
+<para>Creates an epoll instance with the specified number of feeds. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>numfeeds</entry><entry>
+<para>The number of feeds for the epoll instance. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Referenced by <link linkend="_l00060">KTN::TCP::EFVITcpV2::Init()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_epoller_1aa5e08f4b1ee7bc586d48e29670ddf8dc"/><section>
+    <title>RemoveSocketFromEpoll()</title>
+<indexterm><primary>RemoveSocketFromEpoll</primary><secondary>KTN::TCP::Epoller</secondary></indexterm>
+<indexterm><primary>KTN::TCP::Epoller</primary><secondary>RemoveSocketFromEpoll</secondary></indexterm>
+<para><computeroutput>void Epoller::RemoveSocketFromEpoll (int fd)</computeroutput></para><para>
+
+<para>Removes a socket from the epoll instance. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>fd</entry><entry>
+<para>The file descriptor of the socket to remove. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_epoller_1a2ffaea37e2d35f856641580973254f69"/><section>
+    <title>_eps</title>
+<indexterm><primary>_eps</primary><secondary>KTN::TCP::Epoller</secondary></indexterm>
+<indexterm><primary>KTN::TCP::Epoller</primary><secondary>_eps</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_k_t_n_1_1_t_c_p_1_1pollbase">pollbase</link> KTN::TCP::Epoller::_eps</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Net/Epoller.hppNet/Epoller.cpp</section>
+</section>

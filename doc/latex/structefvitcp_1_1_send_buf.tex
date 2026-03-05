@@ -1,0 +1,86 @@
+\doxysection{efvitcp\+::Send\+Buf Struct Reference}
+\hypertarget{structefvitcp_1_1_send_buf}{}\label{structefvitcp_1_1_send_buf}\index{efvitcp::SendBuf@{efvitcp::SendBuf}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structefvitcp_1_1_send_buf_ab56eccd1685a0d8603cc1537ce3c7fce}{set\+Opt\+Data\+Len}} (uint16\+\_\+t len, \mbox{\hyperlink{structefvitcp_1_1_c_sum}{CSum}} ipsum, \mbox{\hyperlink{structefvitcp_1_1_c_sum}{CSum}} tcpsum)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+ef\+\_\+addr \mbox{\hyperlink{structefvitcp_1_1_send_buf_af1af04a40b1d947dd6fe7a38b72b80b9}{post\+\_\+addr}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structefvitcp_1_1_send_buf_a74aef4945373b80cc3e75cb6d1a9b5db}{send\+\_\+ts}}
+\item 
+bool \mbox{\hyperlink{structefvitcp_1_1_send_buf_ab9724c6ef26db7868eafb52cd2022240}{avail}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structefvitcp_1_1_send_buf_a9e404a7fb70cf17c2e7848715c16d58e}{pad}}
+\item 
+\mbox{\hyperlink{structefvitcp_1_1_ether_header}{Ether\+Header}} \mbox{\hyperlink{structefvitcp_1_1_send_buf_ad14d3ef1d7c79e49a234cfbceb668dea}{eth\+\_\+hdr}}
+\item 
+\mbox{\hyperlink{structefvitcp_1_1_ip_header}{Ip\+Header}} \mbox{\hyperlink{structefvitcp_1_1_send_buf_a5e7246e06b28fc746784073fa2e72dfa}{ip\+\_\+hdr}}
+\item 
+\mbox{\hyperlink{structefvitcp_1_1_tcp_header}{Tcp\+Header}} \mbox{\hyperlink{structefvitcp_1_1_send_buf_aa78fbfef726b98887d1322d20b898c8d}{tcp\+\_\+hdr}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structefvitcp_1_1_send_buf_ab56eccd1685a0d8603cc1537ce3c7fce}\index{efvitcp::SendBuf@{efvitcp::SendBuf}!setOptDataLen@{setOptDataLen}}
+\index{setOptDataLen@{setOptDataLen}!efvitcp::SendBuf@{efvitcp::SendBuf}}
+\doxysubsubsection{\texorpdfstring{setOptDataLen()}{setOptDataLen()}}
+{\footnotesize\ttfamily \label{structefvitcp_1_1_send_buf_ab56eccd1685a0d8603cc1537ce3c7fce} 
+void efvitcp\+::\+Send\+Buf\+::set\+Opt\+Data\+Len (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{len}{, }\item[{\mbox{\hyperlink{structefvitcp_1_1_c_sum}{CSum}}}]{ipsum}{, }\item[{\mbox{\hyperlink{structefvitcp_1_1_c_sum}{CSum}}}]{tcpsum}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structefvitcp_1_1_send_buf_ab9724c6ef26db7868eafb52cd2022240}\index{efvitcp::SendBuf@{efvitcp::SendBuf}!avail@{avail}}
+\index{avail@{avail}!efvitcp::SendBuf@{efvitcp::SendBuf}}
+\doxysubsubsection{\texorpdfstring{avail}{avail}}
+{\footnotesize\ttfamily \label{structefvitcp_1_1_send_buf_ab9724c6ef26db7868eafb52cd2022240} 
+bool efvitcp\+::\+Send\+Buf\+::avail}
+
+\Hypertarget{structefvitcp_1_1_send_buf_ad14d3ef1d7c79e49a234cfbceb668dea}\index{efvitcp::SendBuf@{efvitcp::SendBuf}!eth\_hdr@{eth\_hdr}}
+\index{eth\_hdr@{eth\_hdr}!efvitcp::SendBuf@{efvitcp::SendBuf}}
+\doxysubsubsection{\texorpdfstring{eth\_hdr}{eth\_hdr}}
+{\footnotesize\ttfamily \label{structefvitcp_1_1_send_buf_ad14d3ef1d7c79e49a234cfbceb668dea} 
+\mbox{\hyperlink{structefvitcp_1_1_ether_header}{Ether\+Header}} efvitcp\+::\+Send\+Buf\+::eth\+\_\+hdr}
+
+\Hypertarget{structefvitcp_1_1_send_buf_a5e7246e06b28fc746784073fa2e72dfa}\index{efvitcp::SendBuf@{efvitcp::SendBuf}!ip\_hdr@{ip\_hdr}}
+\index{ip\_hdr@{ip\_hdr}!efvitcp::SendBuf@{efvitcp::SendBuf}}
+\doxysubsubsection{\texorpdfstring{ip\_hdr}{ip\_hdr}}
+{\footnotesize\ttfamily \label{structefvitcp_1_1_send_buf_a5e7246e06b28fc746784073fa2e72dfa} 
+\mbox{\hyperlink{structefvitcp_1_1_ip_header}{Ip\+Header}} efvitcp\+::\+Send\+Buf\+::ip\+\_\+hdr}
+
+\Hypertarget{structefvitcp_1_1_send_buf_a9e404a7fb70cf17c2e7848715c16d58e}\index{efvitcp::SendBuf@{efvitcp::SendBuf}!pad@{pad}}
+\index{pad@{pad}!efvitcp::SendBuf@{efvitcp::SendBuf}}
+\doxysubsubsection{\texorpdfstring{pad}{pad}}
+{\footnotesize\ttfamily \label{structefvitcp_1_1_send_buf_a9e404a7fb70cf17c2e7848715c16d58e} 
+uint8\+\_\+t efvitcp\+::\+Send\+Buf\+::pad}
+
+\Hypertarget{structefvitcp_1_1_send_buf_af1af04a40b1d947dd6fe7a38b72b80b9}\index{efvitcp::SendBuf@{efvitcp::SendBuf}!post\_addr@{post\_addr}}
+\index{post\_addr@{post\_addr}!efvitcp::SendBuf@{efvitcp::SendBuf}}
+\doxysubsubsection{\texorpdfstring{post\_addr}{post\_addr}}
+{\footnotesize\ttfamily \label{structefvitcp_1_1_send_buf_af1af04a40b1d947dd6fe7a38b72b80b9} 
+ef\+\_\+addr efvitcp\+::\+Send\+Buf\+::post\+\_\+addr}
+
+\Hypertarget{structefvitcp_1_1_send_buf_a74aef4945373b80cc3e75cb6d1a9b5db}\index{efvitcp::SendBuf@{efvitcp::SendBuf}!send\_ts@{send\_ts}}
+\index{send\_ts@{send\_ts}!efvitcp::SendBuf@{efvitcp::SendBuf}}
+\doxysubsubsection{\texorpdfstring{send\_ts}{send\_ts}}
+{\footnotesize\ttfamily \label{structefvitcp_1_1_send_buf_a74aef4945373b80cc3e75cb6d1a9b5db} 
+uint32\+\_\+t efvitcp\+::\+Send\+Buf\+::send\+\_\+ts}
+
+\Hypertarget{structefvitcp_1_1_send_buf_aa78fbfef726b98887d1322d20b898c8d}\index{efvitcp::SendBuf@{efvitcp::SendBuf}!tcp\_hdr@{tcp\_hdr}}
+\index{tcp\_hdr@{tcp\_hdr}!efvitcp::SendBuf@{efvitcp::SendBuf}}
+\doxysubsubsection{\texorpdfstring{tcp\_hdr}{tcp\_hdr}}
+{\footnotesize\ttfamily \label{structefvitcp_1_1_send_buf_aa78fbfef726b98887d1322d20b898c8d} 
+\mbox{\hyperlink{structefvitcp_1_1_tcp_header}{Tcp\+Header}} efvitcp\+::\+Send\+Buf\+::tcp\+\_\+hdr}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sgaer/source/repos/katanafinancial/\+Occam\+CME4/\+Occam\+CME4/src/external/pollnet/efvitcp/Core.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,140 @@
+\doxysection{Simple\+Hash\+Table Class Reference}
+\hypertarget{class_simple_hash_table}{}\label{class_simple_hash_table}\index{SimpleHashTable@{SimpleHashTable}}
+
+
+A simple implementation of a hash table.  
+
+
+
+
+{\ttfamily \#include $<$Simple\+Hash\+Table.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_simple_hash_table_a1d4277e0b195a935460523364938dcc0}{Simple\+Hash\+Table}} (size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_simple_hash_table}{Simple\+Hash\+Table} object with the specified size. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_simple_hash_table_a74ccc058ff8f5edefa5997ff20962830}{\texorpdfstring{$\sim$}{\string~}\+Simple\+Hash\+Table}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{class_simple_hash_table}{Simple\+Hash\+Table} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_simple_hash_table_a0744f78e361e7f98e9f564a786c5ce08}{insert}} (const string \&key, const uint64\+\_\+t \&value)
+\begin{DoxyCompactList}\small\item\em Inserts a key-\/value pair into the hash table. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{class_simple_hash_table_a501babaaeea00f38548a5696456d1828}{lookup}} (const string \&key)
+\begin{DoxyCompactList}\small\item\em Looks up the value associated with the specified key. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_simple_hash_table_af464f9ec07fc90bfd16d2254b8d8dd50}{erase}} (const string \&key)
+\begin{DoxyCompactList}\small\item\em Removes the key-\/value pair with the specified key from the hash table. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_simple_hash_table_a015c08c780b019d69c867d6c17d71709}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Clears the hash table, removing all key-\/value pairs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr float \mbox{\hyperlink{class_simple_hash_table_a59e1f71a1bd3d83b10613ef8754b8c97}{LOAD\+\_\+\+FACTOR}} = 0.\+75f
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A simple implementation of a hash table. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_simple_hash_table_a1d4277e0b195a935460523364938dcc0}\index{SimpleHashTable@{SimpleHashTable}!SimpleHashTable@{SimpleHashTable}}
+\index{SimpleHashTable@{SimpleHashTable}!SimpleHashTable@{SimpleHashTable}}
+\doxysubsubsection{\texorpdfstring{SimpleHashTable()}{SimpleHashTable()}}
+{\footnotesize\ttfamily \label{class_simple_hash_table_a1d4277e0b195a935460523364938dcc0} 
+Simple\+Hash\+Table\+::\+Simple\+Hash\+Table (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_simple_hash_table}{Simple\+Hash\+Table} object with the specified size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & The size of the hash table. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_simple_hash_table_a74ccc058ff8f5edefa5997ff20962830}\index{SimpleHashTable@{SimpleHashTable}!````~SimpleHashTable@{\texorpdfstring{$\sim$}{\string~}SimpleHashTable}}
+\index{````~SimpleHashTable@{\texorpdfstring{$\sim$}{\string~}SimpleHashTable}!SimpleHashTable@{SimpleHashTable}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}SimpleHashTable()}{\string~SimpleHashTable()}}
+{\footnotesize\ttfamily \label{class_simple_hash_table_a74ccc058ff8f5edefa5997ff20962830} 
+Simple\+Hash\+Table\+::\texorpdfstring{$\sim$}{\string~}\+Simple\+Hash\+Table (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destroys the \doxylink{class_simple_hash_table}{Simple\+Hash\+Table} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_simple_hash_table_a015c08c780b019d69c867d6c17d71709}\index{SimpleHashTable@{SimpleHashTable}!clear@{clear}}
+\index{clear@{clear}!SimpleHashTable@{SimpleHashTable}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \label{class_simple_hash_table_a015c08c780b019d69c867d6c17d71709} 
+void Simple\+Hash\+Table\+::clear (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Clears the hash table, removing all key-\/value pairs. 
+
+\Hypertarget{class_simple_hash_table_af464f9ec07fc90bfd16d2254b8d8dd50}\index{SimpleHashTable@{SimpleHashTable}!erase@{erase}}
+\index{erase@{erase}!SimpleHashTable@{SimpleHashTable}}
+\doxysubsubsection{\texorpdfstring{erase()}{erase()}}
+{\footnotesize\ttfamily \label{class_simple_hash_table_af464f9ec07fc90bfd16d2254b8d8dd50} 
+void Simple\+Hash\+Table\+::erase (\begin{DoxyParamCaption}\item[{const string \&}]{key}{}\end{DoxyParamCaption})}
+
+
+
+Removes the key-\/value pair with the specified key from the hash table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to remove. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_simple_hash_table_a0744f78e361e7f98e9f564a786c5ce08}\index{SimpleHashTable@{SimpleHashTable}!insert@{insert}}
+\index{insert@{insert}!SimpleHashTable@{SimpleHashTable}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily \label{class_simple_hash_table_a0744f78e361e7f98e9f564a786c5ce08} 
+void Simple\+Hash\+Table\+::insert (\begin{DoxyParamCaption}\item[{const string \&}]{key}{, }\item[{const uint64\+\_\+t \&}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Inserts a key-\/value pair into the hash table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to insert. \\
+\hline
+{\em value} & The value to insert. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_simple_hash_table_a501babaaeea00f38548a5696456d1828}\index{SimpleHashTable@{SimpleHashTable}!lookup@{lookup}}
+\index{lookup@{lookup}!SimpleHashTable@{SimpleHashTable}}
+\doxysubsubsection{\texorpdfstring{lookup()}{lookup()}}
+{\footnotesize\ttfamily \label{class_simple_hash_table_a501babaaeea00f38548a5696456d1828} 
+uint64\+\_\+t Simple\+Hash\+Table\+::lookup (\begin{DoxyParamCaption}\item[{const string \&}]{key}{}\end{DoxyParamCaption})}
+
+
+
+Looks up the value associated with the specified key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to look up. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value associated with the key, or 0 if the key is not found. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_simple_hash_table_a59e1f71a1bd3d83b10613ef8754b8c97}\index{SimpleHashTable@{SimpleHashTable}!LOAD\_FACTOR@{LOAD\_FACTOR}}
+\index{LOAD\_FACTOR@{LOAD\_FACTOR}!SimpleHashTable@{SimpleHashTable}}
+\doxysubsubsection{\texorpdfstring{LOAD\_FACTOR}{LOAD\_FACTOR}}
+{\footnotesize\ttfamily \label{class_simple_hash_table_a59e1f71a1bd3d83b10613ef8754b8c97} 
+float Simple\+Hash\+Table\+::\+LOAD\+\_\+\+FACTOR = 0.\+75f\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Core/Simple\+Hash\+Table.\+hpp\item 
+Core/Simple\+Hash\+Table.\+cpp\end{DoxyCompactItemize}

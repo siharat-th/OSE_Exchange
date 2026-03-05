@@ -1,0 +1,220 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_exchange_manager" xml:lang="en-US">
+<title>KTN::ExchangeManager Class Reference</title>
+<indexterm><primary>KTN::ExchangeManager</primary></indexterm>
+<para>
+<computeroutput>#include &lt;ExchangeManager.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for KTN::ExchangeManager:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_k_t_n_1_1_exchange_manager.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_exchange_manager_1a0a85bc16e850b8f6c3362b223b45fad6">ExchangeManager</link> (tbb::concurrent_queue&lt; <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &gt; &amp;qords, const string &amp;settingsfile)</para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_k_t_n_1_1_exchange_manager_1aaee74b0b7085d6285206174432c6089e">~ExchangeManager</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_exchange_manager_1a8e13dfc55d6f21a3eb32b0749d613590">onCommand</link> (const <link linkend="_struct_instruction">Instruction</link> &amp;cmd)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_exchange_manager_1aa3e0ad72fbf75b496abaec2520617734">Send</link> (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_exchange_manager_1a4664b7f9f0263b681940d91b2dfa850f">SendOrderWithHedge</link> (<link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_order_with_hedge">OrderWithHedge</link> &amp;oh)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_exchange_manager_1a1bb3e122b0712f0f20eaff8717e196a2">SendHedgeInstruction</link> (uint64_t ordereqid, const vector&lt; <link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3">SpreadHedgeV3</link> &gt; &amp;hdg)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_class_named_thread">NamedThread</link>        <itemizedlist>
+            <listitem><para><link linkend="_class_named_thread_1a891fabdc2d824048ec05c82e7ef8c69a">NamedThread</link> ()</para>
+
+<para>Default constructor. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_named_thread_1a018dadb59e5af98ee734301a1baa50cb">~NamedThread</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_named_thread_1a9fa42542ff43c89fb9bbc33de9c87e34">CreateAndRun</link> (string name, int core)</para>
+
+<para>Creates and runs the named thread on the specified core. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_named_thread_1ad4809c571171be13f0f91f540d5c196f">Join</link> ()</para>
+
+<para>Joins the named thread. </para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+
+<para>Class Name: <link linkend="_class_k_t_n_1_1_exchange_manager">ExchangeManager</link> Purpose: Container class for exchange handlers. This class will spawn a thread for polling of exchange handler You can also pass messages/commands to the exchange handler via queues </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_exchange_manager_1a0a85bc16e850b8f6c3362b223b45fad6"/><section>
+    <title>ExchangeManager()</title>
+<indexterm><primary>ExchangeManager</primary><secondary>KTN::ExchangeManager</secondary></indexterm>
+<indexterm><primary>KTN::ExchangeManager</primary><secondary>ExchangeManager</secondary></indexterm>
+<para><computeroutput>ExchangeManager::ExchangeManager (tbb::concurrent_queue&lt; <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &gt; &amp; qords, const string &amp; settingsfile)</computeroutput></para>
+<para>Constructor for <link linkend="_class_k_t_n_1_1_exchange_manager">ExchangeManager</link> class. 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>qords</entry><entry>
+<para>The concurrent queue for storing order pods. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>settingsfile</entry><entry>
+<para>The settings file for the exchange manager. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00018">NamedThread::CreateAndRun()</link>, <link linkend="_l00123">Settings::get()</link>, <link linkend="_l00133">Settings::getInteger()</link>, and <link linkend="_l00019">StringSplitter::Split()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_exchange_manager_1aaee74b0b7085d6285206174432c6089e"/><section>
+    <title>~ExchangeManager()</title>
+<indexterm><primary>~ExchangeManager</primary><secondary>KTN::ExchangeManager</secondary></indexterm>
+<indexterm><primary>KTN::ExchangeManager</primary><secondary>~ExchangeManager</secondary></indexterm>
+<para><computeroutput>ExchangeManager::~ExchangeManager ( )<computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>Destructor for <link linkend="_class_k_t_n_1_1_exchange_manager">ExchangeManager</link> class. </para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_exchange_manager_1a8e13dfc55d6f21a3eb32b0749d613590"/><section>
+    <title>onCommand()</title>
+<indexterm><primary>onCommand</primary><secondary>KTN::ExchangeManager</secondary></indexterm>
+<indexterm><primary>KTN::ExchangeManager</primary><secondary>onCommand</secondary></indexterm>
+<para><computeroutput>void ExchangeManager::onCommand (const <link linkend="_struct_instruction">Instruction</link> &amp; cmd)</computeroutput></para>
+<para>Handles the command received by the exchange manager. 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>cmd</entry><entry>
+<para>The instruction/command to be handled. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Referenced by <link linkend="_l00102">Raptor2::Run()</link>, <link linkend="_l00455">Raptor2::Send()</link>, <link linkend="_l00507">Raptor2::SendHedgeInstruction()</link>, <link linkend="_l00475">Raptor2::SendOrderWithHedge()</link>, and <link linkend="_l00146">Raptor2::Stop()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_exchange_manager_1aa3e0ad72fbf75b496abaec2520617734"/><section>
+    <title>Send()</title>
+<indexterm><primary>Send</primary><secondary>KTN::ExchangeManager</secondary></indexterm>
+<indexterm><primary>KTN::ExchangeManager</primary><secondary>Send</secondary></indexterm>
+<para><computeroutput>void KTN::ExchangeManager::Send (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp; ord)</computeroutput></para>
+<para>Sends an order pod to the exchange. 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ord</entry><entry>
+<para>The order pod to be sent. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_exchange_manager_1a1bb3e122b0712f0f20eaff8717e196a2"/><section>
+    <title>SendHedgeInstruction()</title>
+<indexterm><primary>SendHedgeInstruction</primary><secondary>KTN::ExchangeManager</secondary></indexterm>
+<indexterm><primary>KTN::ExchangeManager</primary><secondary>SendHedgeInstruction</secondary></indexterm>
+<para><computeroutput>void KTN::ExchangeManager::SendHedgeInstruction (uint64_t ordereqid, const vector&lt; <link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3">SpreadHedgeV3</link> &gt; &amp; hdg)</computeroutput></para>
+<para>Sends a hedge instruction to the exchange. 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ordereqid</entry><entry>
+<para>The order request ID. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>hdg</entry><entry>
+<para>The vector of spread hedge instructions. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_exchange_manager_1a4664b7f9f0263b681940d91b2dfa850f"/><section>
+    <title>SendOrderWithHedge()</title>
+<indexterm><primary>SendOrderWithHedge</primary><secondary>KTN::ExchangeManager</secondary></indexterm>
+<indexterm><primary>KTN::ExchangeManager</primary><secondary>SendOrderWithHedge</secondary></indexterm>
+<para><computeroutput>void KTN::ExchangeManager::SendOrderWithHedge (<link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_order_with_hedge">OrderWithHedge</link> &amp; oh)</computeroutput></para>
+<para>Sends an order with hedge to the exchange. 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>oh</entry><entry>
+<para>The order with hedge to be sent. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+ExchangeHandlers2/ExchangeManager.hppExchangeHandlers2/ExchangeManager.cpp</section>
+</section>

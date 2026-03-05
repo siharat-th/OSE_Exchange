@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_menu" xml:lang="en-US">
+<title>Menu Class Reference</title>
+<indexterm><primary>Menu</primary></indexterm>
+<para>
+
+<para>Represents a menu that can be displayed and interacted with. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;Menu.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_menu_1a4dc01e650b7794e919e01f35fa52ae74">Menu</link> (<link linkend="_class_menu_callback">MenuCallback</link> &amp;callback, std::string file, std::string name)</para>
+
+<para>Constructs a <link linkend="_class_menu">Menu</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_menu_1ab0a5186c5eb791c80a3658148e99a590">DisplayAndWait</link> ()</para>
+
+<para>Displays the menu and waits for user input. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Represents a menu that can be displayed and interacted with. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_menu_1a4dc01e650b7794e919e01f35fa52ae74"/><section>
+    <title>Menu()</title>
+<indexterm><primary>Menu</primary><secondary>Menu</secondary></indexterm>
+<indexterm><primary>Menu</primary><secondary>Menu</secondary></indexterm>
+<para><computeroutput>Menu::Menu (<link linkend="_class_menu_callback">MenuCallback</link> &amp; callback, std::string file, std::string name)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Constructs a <link linkend="_class_menu">Menu</link> object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>callback</entry><entry>
+<para>The callback function to be executed when a menu option is selected. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>file</entry><entry>
+<para>The file associated with the menu. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>name</entry><entry>
+<para>The name of the menu. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00030">MenuFactory::createMenu()</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_menu_1ab0a5186c5eb791c80a3658148e99a590"/><section>
+    <title>DisplayAndWait()</title>
+<indexterm><primary>DisplayAndWait</primary><secondary>Menu</secondary></indexterm>
+<indexterm><primary>Menu</primary><secondary>DisplayAndWait</secondary></indexterm>
+<para><computeroutput>void Menu::DisplayAndWait ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Displays the menu and waits for user input. </para>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Menu/Menu.hpp</section>
+</section>

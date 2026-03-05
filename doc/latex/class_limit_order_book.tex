@@ -1,0 +1,363 @@
+\doxysection{Limit\+Order\+Book Class Reference}
+\hypertarget{class_limit_order_book}{}\label{class_limit_order_book}\index{LimitOrderBook@{LimitOrderBook}}
+
+
+Represents a limit order book.  
+
+
+
+
+{\ttfamily \#include $<$circular\+\_\+book\+\_\+array.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_limit_order_book_ad99c13f2e45fa518220274c5e6733532}{Limit\+Order\+Book}} (int precision, int depth)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{class_limit_order_book}{Limit\+Order\+Book}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_limit_order_book_a1bbac02b75eea670106bda7ff8cd73a4}{add\+\_\+order}} (const \mbox{\hyperlink{class_md_order}{Md\+Order}} \&order, bool is\+\_\+bid)
+\begin{DoxyCompactList}\small\item\em Adds an order to the order book. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_limit_order_book_af4a27931853de1103c4e388b9182b30c}{update\+\_\+order}} (const \mbox{\hyperlink{class_md_order}{Md\+Order}} \&order, bool is\+\_\+bid)
+\begin{DoxyCompactList}\small\item\em Updates an order in the order book. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_limit_order_book_acb663d556d8a30c4f0996573527cd382}{delete\+\_\+order}} (const \mbox{\hyperlink{class_md_order}{Md\+Order}} \&order, bool is\+\_\+bid)
+\begin{DoxyCompactList}\small\item\em Deletes an order from the order book. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_md_order}{Md\+Order}} \mbox{\hyperlink{class_limit_order_book_a99df373a85001f771ab082c11d932518}{find\+\_\+order\+\_\+by\+\_\+id}} (int order\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Finds an order in the order book by its ID. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_md_order}{Md\+Order}} \mbox{\hyperlink{class_limit_order_book_a185a6cb890650582276bed0785ba8578}{get\+\_\+best\+\_\+bid}} ()
+\begin{DoxyCompactList}\small\item\em Gets the best bid order in the order book. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_md_order}{Md\+Order}} \mbox{\hyperlink{class_limit_order_book_a4198b5eae81013071c120796f679cebf}{get\+\_\+lowest\+\_\+bid}} ()
+\begin{DoxyCompactList}\small\item\em Gets the lowest bid order in the order book. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_md_order}{Md\+Order}} \mbox{\hyperlink{class_limit_order_book_adfba6ee4734aabe0460e68abc06f2ace}{get\+\_\+best\+\_\+offer}} ()
+\begin{DoxyCompactList}\small\item\em Gets the best offer order in the order book. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_md_order}{Md\+Order}} \mbox{\hyperlink{class_limit_order_book_ab2210ccf5440abe95ecb885ba4e6c51b}{get\+\_\+highest\+\_\+offer}} ()
+\begin{DoxyCompactList}\small\item\em Gets the highest offer order in the order book. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_limit_order_book_a498b2ab131fc890bd1cbec208f952ade}{print\+\_\+bids}} ()
+\begin{DoxyCompactList}\small\item\em Prints the bid orders in the order book. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_limit_order_book_ad0565a52ad1a13a2e3f273951cf4f999}{print\+\_\+offers}} ()
+\begin{DoxyCompactList}\small\item\em Prints the offer orders in the order book. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_limit_order_book_a0f893b3bcd1fc17b1fd54596f087f153}{price\+\_\+to\+\_\+index}} (int32\+\_\+t price, bool is\+\_\+bid, bool update\+\_\+pointers=true)
+\begin{DoxyCompactList}\small\item\em Converts a price to its corresponding index in the order book. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_limit_order_book_a922a4ca7246dd65496bf0e928b31e38b}{order\+\_\+id\+\_\+to\+\_\+index}} (int order\+\_\+id, bool is\+\_\+bid)
+\begin{DoxyCompactList}\small\item\em Converts an order ID to its corresponding index in the order book. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_md_order}{Md\+Order}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_limit_order_book_af146af389f7862331f695f022eade708}{ptr\+\_\+bid\+\_\+ini}}
+\item 
+\mbox{\hyperlink{class_md_order}{Md\+Order}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_limit_order_book_a766eb6a2bd32ac0fa766e3706df44b9d}{ptr\+\_\+bid\+\_\+end}}
+\item 
+\mbox{\hyperlink{class_md_order}{Md\+Order}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_limit_order_book_a12c0a4f4768a23688d3b58e5237f5f0a}{ptr\+\_\+offer\+\_\+ini}}
+\item 
+\mbox{\hyperlink{class_md_order}{Md\+Order}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_limit_order_book_af6ed946b7278f08c8e069e6ca92317dc}{ptr\+\_\+offer\+\_\+end}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a limit order book. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_limit_order_book_ad99c13f2e45fa518220274c5e6733532}\index{LimitOrderBook@{LimitOrderBook}!LimitOrderBook@{LimitOrderBook}}
+\index{LimitOrderBook@{LimitOrderBook}!LimitOrderBook@{LimitOrderBook}}
+\doxysubsubsection{\texorpdfstring{LimitOrderBook()}{LimitOrderBook()}}
+{\footnotesize\ttfamily \label{class_limit_order_book_ad99c13f2e45fa518220274c5e6733532} 
+Limit\+Order\+Book\+::\+Limit\+Order\+Book (\begin{DoxyParamCaption}\item[{int}]{precision}{, }\item[{int}]{depth}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor for \doxylink{class_limit_order_book}{Limit\+Order\+Book}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em precision} & The precision of the order prices. \\
+\hline
+{\em depth} & The depth of the order book. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00067}{ptr\+\_\+bid\+\_\+end}}, \mbox{\hyperlink{l00066}{ptr\+\_\+bid\+\_\+ini}}, \mbox{\hyperlink{l00069}{ptr\+\_\+offer\+\_\+end}}, and \mbox{\hyperlink{l00068}{ptr\+\_\+offer\+\_\+ini}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_limit_order_book_a1bbac02b75eea670106bda7ff8cd73a4}\index{LimitOrderBook@{LimitOrderBook}!add\_order@{add\_order}}
+\index{add\_order@{add\_order}!LimitOrderBook@{LimitOrderBook}}
+\doxysubsubsection{\texorpdfstring{add\_order()}{add\_order()}}
+{\footnotesize\ttfamily \label{class_limit_order_book_a1bbac02b75eea670106bda7ff8cd73a4} 
+virtual void Limit\+Order\+Book\+::add\+\_\+order (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_md_order}{Md\+Order}} \&}]{order}{, }\item[{bool}]{is\+\_\+bid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Adds an order to the order book. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order} & The order to add. \\
+\hline
+{\em is\+\_\+bid} & Flag indicating if the order is a bid order. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00023}{Md\+Order\+::price}}, and \mbox{\hyperlink{l00078}{price\+\_\+to\+\_\+index()}}.
+
+\Hypertarget{class_limit_order_book_acb663d556d8a30c4f0996573527cd382}\index{LimitOrderBook@{LimitOrderBook}!delete\_order@{delete\_order}}
+\index{delete\_order@{delete\_order}!LimitOrderBook@{LimitOrderBook}}
+\doxysubsubsection{\texorpdfstring{delete\_order()}{delete\_order()}}
+{\footnotesize\ttfamily \label{class_limit_order_book_acb663d556d8a30c4f0996573527cd382} 
+void Limit\+Order\+Book\+::delete\+\_\+order (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_md_order}{Md\+Order}} \&}]{order}{, }\item[{bool}]{is\+\_\+bid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes an order from the order book. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order} & The order to delete. \\
+\hline
+{\em is\+\_\+bid} & Flag indicating if the order is a bid order. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00023}{Md\+Order\+::price}}, and \mbox{\hyperlink{l00078}{price\+\_\+to\+\_\+index()}}.
+
+\Hypertarget{class_limit_order_book_a99df373a85001f771ab082c11d932518}\index{LimitOrderBook@{LimitOrderBook}!find\_order\_by\_id@{find\_order\_by\_id}}
+\index{find\_order\_by\_id@{find\_order\_by\_id}!LimitOrderBook@{LimitOrderBook}}
+\doxysubsubsection{\texorpdfstring{find\_order\_by\_id()}{find\_order\_by\_id()}}
+{\footnotesize\ttfamily \label{class_limit_order_book_a99df373a85001f771ab082c11d932518} 
+\mbox{\hyperlink{class_md_order}{Md\+Order}} Limit\+Order\+Book\+::find\+\_\+order\+\_\+by\+\_\+id (\begin{DoxyParamCaption}\item[{int}]{order\+\_\+id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Finds an order in the order book by its ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order\+\_\+id} & The ID of the order to find. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The order with the given ID, or a default order if not found. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00089}{order\+\_\+id\+\_\+to\+\_\+index()}}.
+
+\Hypertarget{class_limit_order_book_a185a6cb890650582276bed0785ba8578}\index{LimitOrderBook@{LimitOrderBook}!get\_best\_bid@{get\_best\_bid}}
+\index{get\_best\_bid@{get\_best\_bid}!LimitOrderBook@{LimitOrderBook}}
+\doxysubsubsection{\texorpdfstring{get\_best\_bid()}{get\_best\_bid()}}
+{\footnotesize\ttfamily \label{class_limit_order_book_a185a6cb890650582276bed0785ba8578} 
+virtual \mbox{\hyperlink{class_md_order}{Md\+Order}} Limit\+Order\+Book\+::get\+\_\+best\+\_\+bid (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets the best bid order in the order book. 
+
+\begin{DoxyReturn}{Returns}
+The best bid order. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00067}{ptr\+\_\+bid\+\_\+end}}.
+
+\Hypertarget{class_limit_order_book_adfba6ee4734aabe0460e68abc06f2ace}\index{LimitOrderBook@{LimitOrderBook}!get\_best\_offer@{get\_best\_offer}}
+\index{get\_best\_offer@{get\_best\_offer}!LimitOrderBook@{LimitOrderBook}}
+\doxysubsubsection{\texorpdfstring{get\_best\_offer()}{get\_best\_offer()}}
+{\footnotesize\ttfamily \label{class_limit_order_book_adfba6ee4734aabe0460e68abc06f2ace} 
+\mbox{\hyperlink{class_md_order}{Md\+Order}} Limit\+Order\+Book\+::get\+\_\+best\+\_\+offer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the best offer order in the order book. 
+
+\begin{DoxyReturn}{Returns}
+The best offer order. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00068}{ptr\+\_\+offer\+\_\+ini}}.
+
+\Hypertarget{class_limit_order_book_ab2210ccf5440abe95ecb885ba4e6c51b}\index{LimitOrderBook@{LimitOrderBook}!get\_highest\_offer@{get\_highest\_offer}}
+\index{get\_highest\_offer@{get\_highest\_offer}!LimitOrderBook@{LimitOrderBook}}
+\doxysubsubsection{\texorpdfstring{get\_highest\_offer()}{get\_highest\_offer()}}
+{\footnotesize\ttfamily \label{class_limit_order_book_ab2210ccf5440abe95ecb885ba4e6c51b} 
+\mbox{\hyperlink{class_md_order}{Md\+Order}} Limit\+Order\+Book\+::get\+\_\+highest\+\_\+offer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the highest offer order in the order book. 
+
+\begin{DoxyReturn}{Returns}
+The highest offer order. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00069}{ptr\+\_\+offer\+\_\+end}}.
+
+\Hypertarget{class_limit_order_book_a4198b5eae81013071c120796f679cebf}\index{LimitOrderBook@{LimitOrderBook}!get\_lowest\_bid@{get\_lowest\_bid}}
+\index{get\_lowest\_bid@{get\_lowest\_bid}!LimitOrderBook@{LimitOrderBook}}
+\doxysubsubsection{\texorpdfstring{get\_lowest\_bid()}{get\_lowest\_bid()}}
+{\footnotesize\ttfamily \label{class_limit_order_book_a4198b5eae81013071c120796f679cebf} 
+\mbox{\hyperlink{class_md_order}{Md\+Order}} Limit\+Order\+Book\+::get\+\_\+lowest\+\_\+bid (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the lowest bid order in the order book. 
+
+\begin{DoxyReturn}{Returns}
+The lowest bid order. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00066}{ptr\+\_\+bid\+\_\+ini}}.
+
+\Hypertarget{class_limit_order_book_a922a4ca7246dd65496bf0e928b31e38b}\index{LimitOrderBook@{LimitOrderBook}!order\_id\_to\_index@{order\_id\_to\_index}}
+\index{order\_id\_to\_index@{order\_id\_to\_index}!LimitOrderBook@{LimitOrderBook}}
+\doxysubsubsection{\texorpdfstring{order\_id\_to\_index()}{order\_id\_to\_index()}}
+{\footnotesize\ttfamily \label{class_limit_order_book_a922a4ca7246dd65496bf0e928b31e38b} 
+int Limit\+Order\+Book\+::order\+\_\+id\+\_\+to\+\_\+index (\begin{DoxyParamCaption}\item[{int}]{order\+\_\+id}{, }\item[{bool}]{is\+\_\+bid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Converts an order ID to its corresponding index in the order book. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order\+\_\+id} & The order ID to convert. \\
+\hline
+{\em is\+\_\+bid} & Flag indicating if the order is a bid order. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The index of the order ID in the order book. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00168}{find\+\_\+order\+\_\+by\+\_\+id()}}.
+
+\Hypertarget{class_limit_order_book_a0f893b3bcd1fc17b1fd54596f087f153}\index{LimitOrderBook@{LimitOrderBook}!price\_to\_index@{price\_to\_index}}
+\index{price\_to\_index@{price\_to\_index}!LimitOrderBook@{LimitOrderBook}}
+\doxysubsubsection{\texorpdfstring{price\_to\_index()}{price\_to\_index()}}
+{\footnotesize\ttfamily \label{class_limit_order_book_a0f893b3bcd1fc17b1fd54596f087f153} 
+int Limit\+Order\+Book\+::price\+\_\+to\+\_\+index (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{price}{, }\item[{bool}]{is\+\_\+bid}{, }\item[{bool}]{update\+\_\+pointers}{ = {\ttfamily true}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Converts a price to its corresponding index in the order book. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em price} & The price to convert. \\
+\hline
+{\em is\+\_\+bid} & Flag indicating if the price is for a bid order. \\
+\hline
+{\em update\+\_\+pointers} & Flag indicating if the order book pointers should be updated. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The index of the price in the order book. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00119}{add\+\_\+order()}}, \mbox{\hyperlink{l00152}{delete\+\_\+order()}}, and \mbox{\hyperlink{l00136}{update\+\_\+order()}}.
+
+\Hypertarget{class_limit_order_book_a498b2ab131fc890bd1cbec208f952ade}\index{LimitOrderBook@{LimitOrderBook}!print\_bids@{print\_bids}}
+\index{print\_bids@{print\_bids}!LimitOrderBook@{LimitOrderBook}}
+\doxysubsubsection{\texorpdfstring{print\_bids()}{print\_bids()}}
+{\footnotesize\ttfamily \label{class_limit_order_book_a498b2ab131fc890bd1cbec208f952ade} 
+void Limit\+Order\+Book\+::print\+\_\+bids (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prints the bid orders in the order book. 
+
+
+
+References \mbox{\hyperlink{l00023}{Md\+Order\+::price}}, \mbox{\hyperlink{l00067}{ptr\+\_\+bid\+\_\+end}}, and \mbox{\hyperlink{l00066}{ptr\+\_\+bid\+\_\+ini}}.
+
+\Hypertarget{class_limit_order_book_ad0565a52ad1a13a2e3f273951cf4f999}\index{LimitOrderBook@{LimitOrderBook}!print\_offers@{print\_offers}}
+\index{print\_offers@{print\_offers}!LimitOrderBook@{LimitOrderBook}}
+\doxysubsubsection{\texorpdfstring{print\_offers()}{print\_offers()}}
+{\footnotesize\ttfamily \label{class_limit_order_book_ad0565a52ad1a13a2e3f273951cf4f999} 
+void Limit\+Order\+Book\+::print\+\_\+offers (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prints the offer orders in the order book. 
+
+
+
+References \mbox{\hyperlink{l00023}{Md\+Order\+::price}}, \mbox{\hyperlink{l00069}{ptr\+\_\+offer\+\_\+end}}, and \mbox{\hyperlink{l00068}{ptr\+\_\+offer\+\_\+ini}}.
+
+\Hypertarget{class_limit_order_book_af4a27931853de1103c4e388b9182b30c}\index{LimitOrderBook@{LimitOrderBook}!update\_order@{update\_order}}
+\index{update\_order@{update\_order}!LimitOrderBook@{LimitOrderBook}}
+\doxysubsubsection{\texorpdfstring{update\_order()}{update\_order()}}
+{\footnotesize\ttfamily \label{class_limit_order_book_af4a27931853de1103c4e388b9182b30c} 
+void Limit\+Order\+Book\+::update\+\_\+order (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_md_order}{Md\+Order}} \&}]{order}{, }\item[{bool}]{is\+\_\+bid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates an order in the order book. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order} & The order to update. \\
+\hline
+{\em is\+\_\+bid} & Flag indicating if the order is a bid order. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00023}{Md\+Order\+::price}}, and \mbox{\hyperlink{l00078}{price\+\_\+to\+\_\+index()}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_limit_order_book_a766eb6a2bd32ac0fa766e3706df44b9d}\index{LimitOrderBook@{LimitOrderBook}!ptr\_bid\_end@{ptr\_bid\_end}}
+\index{ptr\_bid\_end@{ptr\_bid\_end}!LimitOrderBook@{LimitOrderBook}}
+\doxysubsubsection{\texorpdfstring{ptr\_bid\_end}{ptr\_bid\_end}}
+{\footnotesize\ttfamily \label{class_limit_order_book_a766eb6a2bd32ac0fa766e3706df44b9d} 
+\mbox{\hyperlink{class_md_order}{Md\+Order}}\texorpdfstring{$\ast$}{*} Limit\+Order\+Book\+::ptr\+\_\+bid\+\_\+end\hspace{0.3cm}{\ttfamily [protected]}}
+
+Pointer to the end bid order. 
+
+Referenced by \mbox{\hyperlink{l00185}{get\+\_\+best\+\_\+bid()}}, \mbox{\hyperlink{l00106}{Limit\+Order\+Book()}}, and \mbox{\hyperlink{l00216}{print\+\_\+bids()}}.
+
+\Hypertarget{class_limit_order_book_af146af389f7862331f695f022eade708}\index{LimitOrderBook@{LimitOrderBook}!ptr\_bid\_ini@{ptr\_bid\_ini}}
+\index{ptr\_bid\_ini@{ptr\_bid\_ini}!LimitOrderBook@{LimitOrderBook}}
+\doxysubsubsection{\texorpdfstring{ptr\_bid\_ini}{ptr\_bid\_ini}}
+{\footnotesize\ttfamily \label{class_limit_order_book_af146af389f7862331f695f022eade708} 
+\mbox{\hyperlink{class_md_order}{Md\+Order}}\texorpdfstring{$\ast$}{*} Limit\+Order\+Book\+::ptr\+\_\+bid\+\_\+ini\hspace{0.3cm}{\ttfamily [protected]}}
+
+Pointer to the initial bid order. 
+
+Referenced by \mbox{\hyperlink{l00193}{get\+\_\+lowest\+\_\+bid()}}, \mbox{\hyperlink{l00106}{Limit\+Order\+Book()}}, and \mbox{\hyperlink{l00216}{print\+\_\+bids()}}.
+
+\Hypertarget{class_limit_order_book_af6ed946b7278f08c8e069e6ca92317dc}\index{LimitOrderBook@{LimitOrderBook}!ptr\_offer\_end@{ptr\_offer\_end}}
+\index{ptr\_offer\_end@{ptr\_offer\_end}!LimitOrderBook@{LimitOrderBook}}
+\doxysubsubsection{\texorpdfstring{ptr\_offer\_end}{ptr\_offer\_end}}
+{\footnotesize\ttfamily \label{class_limit_order_book_af6ed946b7278f08c8e069e6ca92317dc} 
+\mbox{\hyperlink{class_md_order}{Md\+Order}}\texorpdfstring{$\ast$}{*} Limit\+Order\+Book\+::ptr\+\_\+offer\+\_\+end\hspace{0.3cm}{\ttfamily [protected]}}
+
+Pointer to the end offer order. 
+
+Referenced by \mbox{\hyperlink{l00209}{get\+\_\+highest\+\_\+offer()}}, \mbox{\hyperlink{l00106}{Limit\+Order\+Book()}}, and \mbox{\hyperlink{l00229}{print\+\_\+offers()}}.
+
+\Hypertarget{class_limit_order_book_a12c0a4f4768a23688d3b58e5237f5f0a}\index{LimitOrderBook@{LimitOrderBook}!ptr\_offer\_ini@{ptr\_offer\_ini}}
+\index{ptr\_offer\_ini@{ptr\_offer\_ini}!LimitOrderBook@{LimitOrderBook}}
+\doxysubsubsection{\texorpdfstring{ptr\_offer\_ini}{ptr\_offer\_ini}}
+{\footnotesize\ttfamily \label{class_limit_order_book_a12c0a4f4768a23688d3b58e5237f5f0a} 
+\mbox{\hyperlink{class_md_order}{Md\+Order}}\texorpdfstring{$\ast$}{*} Limit\+Order\+Book\+::ptr\+\_\+offer\+\_\+ini\hspace{0.3cm}{\ttfamily [protected]}}
+
+Pointer to the initial offer order. 
+
+Referenced by \mbox{\hyperlink{l00201}{get\+\_\+best\+\_\+offer()}}, \mbox{\hyperlink{l00106}{Limit\+Order\+Book()}}, and \mbox{\hyperlink{l00229}{print\+\_\+offers()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Core/circular\+\_\+book\+\_\+array.\+hpp\end{DoxyCompactItemize}

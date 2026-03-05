@@ -1,0 +1,149 @@
+\doxysection{moodycamel\+::Concurrent\+Queue\+Default\+Traits Struct Reference}
+\hypertarget{structmoodycamel_1_1_concurrent_queue_default_traits}{}\label{structmoodycamel_1_1_concurrent_queue_default_traits}\index{moodycamel::ConcurrentQueueDefaultTraits@{moodycamel::ConcurrentQueueDefaultTraits}}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::size\+\_\+t \mbox{\hyperlink{structmoodycamel_1_1_concurrent_queue_default_traits_aedbe74aec1f4656b054cdaccf4785f2c}{size\+\_\+t}}
+\item 
+typedef std\+::size\+\_\+t \mbox{\hyperlink{structmoodycamel_1_1_concurrent_queue_default_traits_a7fdbfca41e530465588aa4094f1e9b32}{index\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structmoodycamel_1_1_concurrent_queue_default_traits_a0e7970954fe4d0d826702f576ea370e2}{malloc}} (size\+\_\+t size)
+\item 
+static void \mbox{\hyperlink{structmoodycamel_1_1_concurrent_queue_default_traits_a14038cd9299cd88b74d9ae5371a637d8}{free}} (void \texorpdfstring{$\ast$}{*}ptr)
+\item 
+static void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structmoodycamel_1_1_concurrent_queue_default_traits_a0e7970954fe4d0d826702f576ea370e2}{malloc}} (size\+\_\+t size)
+\item 
+static void \mbox{\hyperlink{structmoodycamel_1_1_concurrent_queue_default_traits_a14038cd9299cd88b74d9ae5371a637d8}{free}} (void \texorpdfstring{$\ast$}{*}ptr)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const size\+\_\+t \mbox{\hyperlink{structmoodycamel_1_1_concurrent_queue_default_traits_a8fa79925436f59f30f463ee6fb455211}{BLOCK\+\_\+\+SIZE}} = 32
+\item 
+static const size\+\_\+t \mbox{\hyperlink{structmoodycamel_1_1_concurrent_queue_default_traits_a9ba01e3abe5332bead7617b90aca7ed7}{EXPLICIT\+\_\+\+BLOCK\+\_\+\+EMPTY\+\_\+\+COUNTER\+\_\+\+THRESHOLD}} = 32
+\item 
+static const size\+\_\+t \mbox{\hyperlink{structmoodycamel_1_1_concurrent_queue_default_traits_a0027732e36807cf199f8a064ba31464d}{EXPLICIT\+\_\+\+INITIAL\+\_\+\+INDEX\+\_\+\+SIZE}} = 32
+\item 
+static const size\+\_\+t \mbox{\hyperlink{structmoodycamel_1_1_concurrent_queue_default_traits_aeee974147f3fd589cd6e7b62c74a17bb}{IMPLICIT\+\_\+\+INITIAL\+\_\+\+INDEX\+\_\+\+SIZE}} = 32
+\item 
+static const size\+\_\+t \mbox{\hyperlink{structmoodycamel_1_1_concurrent_queue_default_traits_a390c8adce6e52989000a25e663a7e704}{INITIAL\+\_\+\+IMPLICIT\+\_\+\+PRODUCER\+\_\+\+HASH\+\_\+\+SIZE}} = 32
+\item 
+static const std\+::uint32\+\_\+t \mbox{\hyperlink{structmoodycamel_1_1_concurrent_queue_default_traits_a995ad4874283b6376632e1eb22e6dce0}{EXPLICIT\+\_\+\+CONSUMER\+\_\+\+CONSUMPTION\+\_\+\+QUOTA\+\_\+\+BEFORE\+\_\+\+ROTATE}} = 256
+\item 
+static const size\+\_\+t \mbox{\hyperlink{structmoodycamel_1_1_concurrent_queue_default_traits_a43120643b7dc02cf65fc9aac56711562}{MAX\+\_\+\+SUBQUEUE\+\_\+\+SIZE}} = \mbox{\hyperlink{structmoodycamel_1_1details_1_1const__numeric__max}{details\+::const\+\_\+numeric\+\_\+max}}$<$size\+\_\+t$>$\+::value
+\item 
+static const int \mbox{\hyperlink{structmoodycamel_1_1_concurrent_queue_default_traits_a9958ef4aedba8d60285737bd4be8e6e2}{MAX\+\_\+\+SEMA\+\_\+\+SPINS}} = 10000
+\item 
+static const bool \mbox{\hyperlink{structmoodycamel_1_1_concurrent_queue_default_traits_ae64c9f072761caf5dfac9058c49ceac2}{RECYCLE\+\_\+\+ALLOCATED\+\_\+\+BLOCKS}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{structmoodycamel_1_1_concurrent_queue_default_traits_a7fdbfca41e530465588aa4094f1e9b32}\index{moodycamel::ConcurrentQueueDefaultTraits@{moodycamel::ConcurrentQueueDefaultTraits}!index\_t@{index\_t}}
+\index{index\_t@{index\_t}!moodycamel::ConcurrentQueueDefaultTraits@{moodycamel::ConcurrentQueueDefaultTraits}}
+\doxysubsubsection{\texorpdfstring{index\_t}{index\_t}}
+{\footnotesize\ttfamily \label{structmoodycamel_1_1_concurrent_queue_default_traits_a7fdbfca41e530465588aa4094f1e9b32} 
+typedef std\+::size\+\_\+t moodycamel\+::\+Concurrent\+Queue\+Default\+Traits\+::index\+\_\+t}
+
+\Hypertarget{structmoodycamel_1_1_concurrent_queue_default_traits_aedbe74aec1f4656b054cdaccf4785f2c}\index{moodycamel::ConcurrentQueueDefaultTraits@{moodycamel::ConcurrentQueueDefaultTraits}!size\_t@{size\_t}}
+\index{size\_t@{size\_t}!moodycamel::ConcurrentQueueDefaultTraits@{moodycamel::ConcurrentQueueDefaultTraits}}
+\doxysubsubsection{\texorpdfstring{size\_t}{size\_t}}
+{\footnotesize\ttfamily \label{structmoodycamel_1_1_concurrent_queue_default_traits_aedbe74aec1f4656b054cdaccf4785f2c} 
+typedef std\+::size\+\_\+t moodycamel\+::\+Concurrent\+Queue\+Default\+Traits\+::size\+\_\+t}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structmoodycamel_1_1_concurrent_queue_default_traits_a14038cd9299cd88b74d9ae5371a637d8}\index{moodycamel::ConcurrentQueueDefaultTraits@{moodycamel::ConcurrentQueueDefaultTraits}!free@{free}}
+\index{free@{free}!moodycamel::ConcurrentQueueDefaultTraits@{moodycamel::ConcurrentQueueDefaultTraits}}
+\doxysubsubsection{\texorpdfstring{free()}{free()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{structmoodycamel_1_1_concurrent_queue_default_traits_a14038cd9299cd88b74d9ae5371a637d8} 
+static void moodycamel\+::\+Concurrent\+Queue\+Default\+Traits\+::free (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{ptr}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{structmoodycamel_1_1_concurrent_queue_default_traits_a14038cd9299cd88b74d9ae5371a637d8}\index{moodycamel::ConcurrentQueueDefaultTraits@{moodycamel::ConcurrentQueueDefaultTraits}!free@{free}}
+\index{free@{free}!moodycamel::ConcurrentQueueDefaultTraits@{moodycamel::ConcurrentQueueDefaultTraits}}
+\doxysubsubsection{\texorpdfstring{free()}{free()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{structmoodycamel_1_1_concurrent_queue_default_traits_a14038cd9299cd88b74d9ae5371a637d8} 
+static void moodycamel\+::\+Concurrent\+Queue\+Default\+Traits\+::free (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{ptr}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{structmoodycamel_1_1_concurrent_queue_default_traits_a0e7970954fe4d0d826702f576ea370e2}\index{moodycamel::ConcurrentQueueDefaultTraits@{moodycamel::ConcurrentQueueDefaultTraits}!malloc@{malloc}}
+\index{malloc@{malloc}!moodycamel::ConcurrentQueueDefaultTraits@{moodycamel::ConcurrentQueueDefaultTraits}}
+\doxysubsubsection{\texorpdfstring{malloc()}{malloc()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{structmoodycamel_1_1_concurrent_queue_default_traits_a0e7970954fe4d0d826702f576ea370e2} 
+static void \texorpdfstring{$\ast$}{*} moodycamel\+::\+Concurrent\+Queue\+Default\+Traits\+::malloc (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{structmoodycamel_1_1_concurrent_queue_default_traits_a0e7970954fe4d0d826702f576ea370e2}\index{moodycamel::ConcurrentQueueDefaultTraits@{moodycamel::ConcurrentQueueDefaultTraits}!malloc@{malloc}}
+\index{malloc@{malloc}!moodycamel::ConcurrentQueueDefaultTraits@{moodycamel::ConcurrentQueueDefaultTraits}}
+\doxysubsubsection{\texorpdfstring{malloc()}{malloc()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{structmoodycamel_1_1_concurrent_queue_default_traits_a0e7970954fe4d0d826702f576ea370e2} 
+static void \texorpdfstring{$\ast$}{*} moodycamel\+::\+Concurrent\+Queue\+Default\+Traits\+::malloc (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structmoodycamel_1_1_concurrent_queue_default_traits_a8fa79925436f59f30f463ee6fb455211}\index{moodycamel::ConcurrentQueueDefaultTraits@{moodycamel::ConcurrentQueueDefaultTraits}!BLOCK\_SIZE@{BLOCK\_SIZE}}
+\index{BLOCK\_SIZE@{BLOCK\_SIZE}!moodycamel::ConcurrentQueueDefaultTraits@{moodycamel::ConcurrentQueueDefaultTraits}}
+\doxysubsubsection{\texorpdfstring{BLOCK\_SIZE}{BLOCK\_SIZE}}
+{\footnotesize\ttfamily \label{structmoodycamel_1_1_concurrent_queue_default_traits_a8fa79925436f59f30f463ee6fb455211} 
+static const size\+\_\+t moodycamel\+::\+Concurrent\+Queue\+Default\+Traits\+::\+BLOCK\+\_\+\+SIZE = 32\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{structmoodycamel_1_1_concurrent_queue_default_traits_a9ba01e3abe5332bead7617b90aca7ed7}\index{moodycamel::ConcurrentQueueDefaultTraits@{moodycamel::ConcurrentQueueDefaultTraits}!EXPLICIT\_BLOCK\_EMPTY\_COUNTER\_THRESHOLD@{EXPLICIT\_BLOCK\_EMPTY\_COUNTER\_THRESHOLD}}
+\index{EXPLICIT\_BLOCK\_EMPTY\_COUNTER\_THRESHOLD@{EXPLICIT\_BLOCK\_EMPTY\_COUNTER\_THRESHOLD}!moodycamel::ConcurrentQueueDefaultTraits@{moodycamel::ConcurrentQueueDefaultTraits}}
+\doxysubsubsection{\texorpdfstring{EXPLICIT\_BLOCK\_EMPTY\_COUNTER\_THRESHOLD}{EXPLICIT\_BLOCK\_EMPTY\_COUNTER\_THRESHOLD}}
+{\footnotesize\ttfamily \label{structmoodycamel_1_1_concurrent_queue_default_traits_a9ba01e3abe5332bead7617b90aca7ed7} 
+static const size\+\_\+t moodycamel\+::\+Concurrent\+Queue\+Default\+Traits\+::\+EXPLICIT\+\_\+\+BLOCK\+\_\+\+EMPTY\+\_\+\+COUNTER\+\_\+\+THRESHOLD = 32\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{structmoodycamel_1_1_concurrent_queue_default_traits_a995ad4874283b6376632e1eb22e6dce0}\index{moodycamel::ConcurrentQueueDefaultTraits@{moodycamel::ConcurrentQueueDefaultTraits}!EXPLICIT\_CONSUMER\_CONSUMPTION\_QUOTA\_BEFORE\_ROTATE@{EXPLICIT\_CONSUMER\_CONSUMPTION\_QUOTA\_BEFORE\_ROTATE}}
+\index{EXPLICIT\_CONSUMER\_CONSUMPTION\_QUOTA\_BEFORE\_ROTATE@{EXPLICIT\_CONSUMER\_CONSUMPTION\_QUOTA\_BEFORE\_ROTATE}!moodycamel::ConcurrentQueueDefaultTraits@{moodycamel::ConcurrentQueueDefaultTraits}}
+\doxysubsubsection{\texorpdfstring{EXPLICIT\_CONSUMER\_CONSUMPTION\_QUOTA\_BEFORE\_ROTATE}{EXPLICIT\_CONSUMER\_CONSUMPTION\_QUOTA\_BEFORE\_ROTATE}}
+{\footnotesize\ttfamily \label{structmoodycamel_1_1_concurrent_queue_default_traits_a995ad4874283b6376632e1eb22e6dce0} 
+static const std\+::uint32\+\_\+t moodycamel\+::\+Concurrent\+Queue\+Default\+Traits\+::\+EXPLICIT\+\_\+\+CONSUMER\+\_\+\+CONSUMPTION\+\_\+\+QUOTA\+\_\+\+BEFORE\+\_\+\+ROTATE = 256\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{structmoodycamel_1_1_concurrent_queue_default_traits_a0027732e36807cf199f8a064ba31464d}\index{moodycamel::ConcurrentQueueDefaultTraits@{moodycamel::ConcurrentQueueDefaultTraits}!EXPLICIT\_INITIAL\_INDEX\_SIZE@{EXPLICIT\_INITIAL\_INDEX\_SIZE}}
+\index{EXPLICIT\_INITIAL\_INDEX\_SIZE@{EXPLICIT\_INITIAL\_INDEX\_SIZE}!moodycamel::ConcurrentQueueDefaultTraits@{moodycamel::ConcurrentQueueDefaultTraits}}
+\doxysubsubsection{\texorpdfstring{EXPLICIT\_INITIAL\_INDEX\_SIZE}{EXPLICIT\_INITIAL\_INDEX\_SIZE}}
+{\footnotesize\ttfamily \label{structmoodycamel_1_1_concurrent_queue_default_traits_a0027732e36807cf199f8a064ba31464d} 
+static const size\+\_\+t moodycamel\+::\+Concurrent\+Queue\+Default\+Traits\+::\+EXPLICIT\+\_\+\+INITIAL\+\_\+\+INDEX\+\_\+\+SIZE = 32\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{structmoodycamel_1_1_concurrent_queue_default_traits_aeee974147f3fd589cd6e7b62c74a17bb}\index{moodycamel::ConcurrentQueueDefaultTraits@{moodycamel::ConcurrentQueueDefaultTraits}!IMPLICIT\_INITIAL\_INDEX\_SIZE@{IMPLICIT\_INITIAL\_INDEX\_SIZE}}
+\index{IMPLICIT\_INITIAL\_INDEX\_SIZE@{IMPLICIT\_INITIAL\_INDEX\_SIZE}!moodycamel::ConcurrentQueueDefaultTraits@{moodycamel::ConcurrentQueueDefaultTraits}}
+\doxysubsubsection{\texorpdfstring{IMPLICIT\_INITIAL\_INDEX\_SIZE}{IMPLICIT\_INITIAL\_INDEX\_SIZE}}
+{\footnotesize\ttfamily \label{structmoodycamel_1_1_concurrent_queue_default_traits_aeee974147f3fd589cd6e7b62c74a17bb} 
+static const size\+\_\+t moodycamel\+::\+Concurrent\+Queue\+Default\+Traits\+::\+IMPLICIT\+\_\+\+INITIAL\+\_\+\+INDEX\+\_\+\+SIZE = 32\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{structmoodycamel_1_1_concurrent_queue_default_traits_a390c8adce6e52989000a25e663a7e704}\index{moodycamel::ConcurrentQueueDefaultTraits@{moodycamel::ConcurrentQueueDefaultTraits}!INITIAL\_IMPLICIT\_PRODUCER\_HASH\_SIZE@{INITIAL\_IMPLICIT\_PRODUCER\_HASH\_SIZE}}
+\index{INITIAL\_IMPLICIT\_PRODUCER\_HASH\_SIZE@{INITIAL\_IMPLICIT\_PRODUCER\_HASH\_SIZE}!moodycamel::ConcurrentQueueDefaultTraits@{moodycamel::ConcurrentQueueDefaultTraits}}
+\doxysubsubsection{\texorpdfstring{INITIAL\_IMPLICIT\_PRODUCER\_HASH\_SIZE}{INITIAL\_IMPLICIT\_PRODUCER\_HASH\_SIZE}}
+{\footnotesize\ttfamily \label{structmoodycamel_1_1_concurrent_queue_default_traits_a390c8adce6e52989000a25e663a7e704} 
+static const size\+\_\+t moodycamel\+::\+Concurrent\+Queue\+Default\+Traits\+::\+INITIAL\+\_\+\+IMPLICIT\+\_\+\+PRODUCER\+\_\+\+HASH\+\_\+\+SIZE = 32\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{structmoodycamel_1_1_concurrent_queue_default_traits_a9958ef4aedba8d60285737bd4be8e6e2}\index{moodycamel::ConcurrentQueueDefaultTraits@{moodycamel::ConcurrentQueueDefaultTraits}!MAX\_SEMA\_SPINS@{MAX\_SEMA\_SPINS}}
+\index{MAX\_SEMA\_SPINS@{MAX\_SEMA\_SPINS}!moodycamel::ConcurrentQueueDefaultTraits@{moodycamel::ConcurrentQueueDefaultTraits}}
+\doxysubsubsection{\texorpdfstring{MAX\_SEMA\_SPINS}{MAX\_SEMA\_SPINS}}
+{\footnotesize\ttfamily \label{structmoodycamel_1_1_concurrent_queue_default_traits_a9958ef4aedba8d60285737bd4be8e6e2} 
+const int moodycamel\+::\+Concurrent\+Queue\+Default\+Traits\+::\+MAX\+\_\+\+SEMA\+\_\+\+SPINS = 10000\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{structmoodycamel_1_1_concurrent_queue_default_traits_a43120643b7dc02cf65fc9aac56711562}\index{moodycamel::ConcurrentQueueDefaultTraits@{moodycamel::ConcurrentQueueDefaultTraits}!MAX\_SUBQUEUE\_SIZE@{MAX\_SUBQUEUE\_SIZE}}
+\index{MAX\_SUBQUEUE\_SIZE@{MAX\_SUBQUEUE\_SIZE}!moodycamel::ConcurrentQueueDefaultTraits@{moodycamel::ConcurrentQueueDefaultTraits}}
+\doxysubsubsection{\texorpdfstring{MAX\_SUBQUEUE\_SIZE}{MAX\_SUBQUEUE\_SIZE}}
+{\footnotesize\ttfamily \label{structmoodycamel_1_1_concurrent_queue_default_traits_a43120643b7dc02cf65fc9aac56711562} 
+static const size\+\_\+t moodycamel\+::\+Concurrent\+Queue\+Default\+Traits\+::\+MAX\+\_\+\+SUBQUEUE\+\_\+\+SIZE = \mbox{\hyperlink{structmoodycamel_1_1details_1_1const__numeric__max}{details\+::const\+\_\+numeric\+\_\+max}}$<$size\+\_\+t$>$\+::value\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{structmoodycamel_1_1_concurrent_queue_default_traits_ae64c9f072761caf5dfac9058c49ceac2}\index{moodycamel::ConcurrentQueueDefaultTraits@{moodycamel::ConcurrentQueueDefaultTraits}!RECYCLE\_ALLOCATED\_BLOCKS@{RECYCLE\_ALLOCATED\_BLOCKS}}
+\index{RECYCLE\_ALLOCATED\_BLOCKS@{RECYCLE\_ALLOCATED\_BLOCKS}!moodycamel::ConcurrentQueueDefaultTraits@{moodycamel::ConcurrentQueueDefaultTraits}}
+\doxysubsubsection{\texorpdfstring{RECYCLE\_ALLOCATED\_BLOCKS}{RECYCLE\_ALLOCATED\_BLOCKS}}
+{\footnotesize\ttfamily \label{structmoodycamel_1_1_concurrent_queue_default_traits_ae64c9f072761caf5dfac9058c49ceac2} 
+const bool moodycamel\+::\+Concurrent\+Queue\+Default\+Traits\+::\+RECYCLE\+\_\+\+ALLOCATED\+\_\+\+BLOCKS = false\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sgaer/source/repos/katanafinancial/\+Occam\+CME4/\+Occam\+CME4/src/external/camel/concurrentqueue.\+h\item 
+C\+:/\+Users/sgaer/source/repos/katanafinancial/\+Occam\+CME4/\+Occam\+CME4/src/external/camel/concurrentqueue2.\+h\end{DoxyCompactItemize}

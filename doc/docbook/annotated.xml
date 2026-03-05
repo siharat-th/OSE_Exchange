@@ -1,0 +1,402 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_annotated" xml:lang="en-US">
+<title>Class List</title>
+Here are the classes, structs, unions and interfaces with brief descriptions:<link linkend="_structzmq_1_1from__handle__t_1_1__private">zmq::from_handle_t::_private</link><link linkend="_struct_k_t_n_1_1_mdp3_1_1_admin_heartbeat312">KTN::Mdp3::AdminHeartbeat312</link><link linkend="_struct_k_t_n_1_1_mdp3_1_1_admin_login315">KTN::Mdp3::AdminLogin315</link><link linkend="_struct_k_t_n_1_1_mdp3_1_1_admin_logout316">KTN::Mdp3::AdminLogout316</link><link linkend="_class_k_t_n_1_1_algo_base_v3">KTN::AlgoBaseV3</link>
+<para>The base class for algos, implementing market data callbacks and session management </para>
+<link linkend="_class_algo_factory">AlgoFactory</link>
+<para>Factory class responsible for launching various algorithms </para>
+<link linkend="_class_algo_hdg_encoder">AlgoHdgEncoder</link><link linkend="_struct_algo_header">AlgoHeader</link>
+<para>Structure representing the header of an algorithm </para>
+<link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_algo_helpers">KTN::ALGO::AlgoHelpers</link>
+<para>Helper class for various algorithmic functions and calculations </para>
+<link linkend="_struct_algo_initializer">AlgoInitializer</link>
+<para>The <link linkend="_struct_algo_initializer">AlgoInitializer</link> struct represents the parameters required to initialize the algorithm </para>
+<link linkend="_structalgoinstr">algoinstr</link>
+<para>Structure representing a plain instrument </para>
+<link linkend="_class_algo_json">AlgoJson</link>
+<para>Static method to format algorithm statistics into JSON </para>
+<link linkend="_structalgoleg">algoleg</link>
+<para>Structure representing an algorithm leg </para>
+<link linkend="_structalgomd">algomd</link>
+<para>Structure representing algorithm market data </para>
+<link linkend="_structalgometa">algometa</link>
+<para>Structure representing algorithm metadata </para>
+<link linkend="_class_k_t_n_1_1_algo_mkt_data_callback">KTN::AlgoMktDataCallback</link>
+<para>Abstract base class that defines the interface for receiving market data updates </para>
+<link linkend="_class_algo_p_l_callback">AlgoPLCallback</link>
+<para>Abstract class that defines the interface for handling profit and loss events </para>
+<link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_p_l_reporter">KTN::REPORTER::AlgoPLReporter</link>
+<para>Responsible for reporting the position data </para>
+<link linkend="_class_k_t_n_1_1_algo_service_broker_v3">KTN::AlgoServiceBrokerV3</link>
+<para>Routes messages to and from child instances of <link linkend="_class_k_t_n_1_1_algo_base_v3">AlgoBaseV3</link> </para>
+<link linkend="_struct_algo_state">AlgoState</link>
+<para>Represents the state of an algorithm </para>
+<link linkend="_struct_algo_stats">AlgoStats</link>
+<para>Structure representing the types of algorithm statistics </para>
+<link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter">KTN::REPORTER::AlgoV3Reporter</link>
+<para>Responsible for reporting generic statistics </para>
+<link linkend="_class_k_t_n_1_1_core_1_1_allocator_base">KTN::Core::AllocatorBase&lt; T &gt;</link>
+<para>The <link linkend="_class_k_t_n_1_1_core_1_1_allocator_base">AllocatorBase</link> class is a generic allocator class that provides different allocator types based on the selected options </para>
+<link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_factory_fast_v2">KTN::CME::IL3::AppMessageFactoryFastV2</link><link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen">KTN::CME::IL3::AppMessageGen</link>
+<para>This class is used to generate CME IL3 application messages and provide pre-filled templates for them </para>
+<link linkend="_class_app_msg_proc">AppMsgProc</link>
+<para>This class handles the processing of CME iLink3 application messages </para>
+<link linkend="_structatomicquote">atomicquote</link>
+<para>Structure representing an atomic quote </para>
+<link linkend="_class_audit_trail_writer">AuditTrailWriter</link>
+<para>This class is responsible for writing audit trail logs </para>
+<link linkend="_class_audit_trail_writer_v3">AuditTrailWriterV3</link>
+<para>Represents a ultra low latency class for writing audit trail logs using SPSC RingBuffer Queues </para>
+<link linkend="_class_k_t_n_1_1_auto_hedge_o_b">KTN::AutoHedgeOB</link><link linkend="_struct_auto_hedge_o_b2_params">AutoHedgeOB2Params</link>
+<para>Struct representing the parameters for AutoHedgeOB2 algorithm </para>
+<link linkend="_class_k_t_n_1_1_core_1_1_batch_pool">KTN::Core::BatchPool</link>
+<para>A class that represents a pool of message batches </para>
+<link linkend="_struct_block_data">BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_business_reject_msg_1_1_block_data">KTN::CME::IL3::BusinessRejectMsg::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establishment_ack_msg_1_1_block_data">KTN::CME::IL3::EstablishmentAckMsg::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establishment_reject_msg_1_1_block_data">KTN::CME::IL3::EstablishmentRejectMsg::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_ack_msg_1_1_block_data">KTN::CME::IL3::ExecutionAckMsg::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_cancel_msg_1_1_block_data">KTN::CME::IL3::ExecutionReportCancelMsg::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_elimination_msg_1_1_block_data">KTN::CME::IL3::ExecutionReportEliminationMsg::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_modify_msg_1_1_block_data">KTN::CME::IL3::ExecutionReportModifyMsg::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_new_msg_1_1_block_data">KTN::CME::IL3::ExecutionReportNewMsg::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_reject_msg_1_1_block_data">KTN::CME::IL3::ExecutionReportRejectMsg::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_status_msg_1_1_block_data">KTN::CME::IL3::ExecutionReportStatusMsg::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data">KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_spread_leg_msg_1_1_block_data">KTN::CME::IL3::ExecutionReportTradeAddendumSpreadLegMsg::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_spread_msg_1_1_block_data">KTN::CME::IL3::ExecutionReportTradeAddendumSpreadMsg::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_outright_msg_1_1_block_data">KTN::CME::IL3::ExecutionReportTradeOutrightMsg::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_spread_leg_msg_1_1_block_data">KTN::CME::IL3::ExecutionReportTradeSpreadLegMsg::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_spread_msg_1_1_block_data">KTN::CME::IL3::ExecutionReportTradeSpreadMsg::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_affected_orders_mass_action_report_1_1_block_data">KTN::CME::IL3::GrpAffectedOrdersMassActionReport::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_legs560_1_1_block_data">KTN::CME::IL3::GrpLegs560::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_legs_1_1_block_data">KTN::CME::IL3::GrpLegs::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_outright_fill_event_1_1_block_data">KTN::CME::IL3::GrpOutrightFillEvent::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_outright_order_event_1_1_block_data">KTN::CME::IL3::GrpOutrightOrderEvent::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_party_details519_1_1_block_data">KTN::CME::IL3::GrpPartyDetails519::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_party_details_list_report_1_1_block_data">KTN::CME::IL3::GrpPartyDetailsListReport::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_party_i_ds_1_1_block_data">KTN::CME::IL3::GrpPartyIDs::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_quote_entries_1_1_block_data">KTN::CME::IL3::GrpQuoteEntries::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_quote_entries_mass_quote_ack_1_1_block_data">KTN::CME::IL3::GrpQuoteEntriesMassQuoteAck::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_quote_sets_1_1_block_data">KTN::CME::IL3::GrpQuoteSets::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_related_sym_1_1_block_data">KTN::CME::IL3::GrpRelatedSym::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_requesting_party_i_ds_1_1_block_data">KTN::CME::IL3::GrpRequestingPartyIDs::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_sides_1_1_block_data">KTN::CME::IL3::GrpSides::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_spread_fill_event_1_1_block_data">KTN::CME::IL3::GrpSpreadFillEvent::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_spread_fill_leg_event_1_1_block_data">KTN::CME::IL3::GrpSpreadFillLegEvent::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_spread_fill_order_event_1_1_block_data">KTN::CME::IL3::GrpSpreadFillOrderEvent::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_spread_leg_fill_event_1_1_block_data">KTN::CME::IL3::GrpSpreadLegFillEvent::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_spread_leg_fill_order_event_1_1_block_data">KTN::CME::IL3::GrpSpreadLegFillOrderEvent::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_trd_reg_publications519_1_1_block_data">KTN::CME::IL3::GrpTrdRegPublications519::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_trd_reg_publications_list_report_1_1_block_data">KTN::CME::IL3::GrpTrdRegPublicationsListReport::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_mass_quote_ack_msg_1_1_block_data">KTN::CME::IL3::MassQuoteAckMsg::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiation_reject_msg_1_1_block_data">KTN::CME::IL3::NegotiationRejectMsg::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiation_response_msg_1_1_block_data">KTN::CME::IL3::NegotiationResponseMsg::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_cross_msg_1_1_block_data">KTN::CME::IL3::NewOrderCrossMsg::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_not_applied_msg_1_1_block_data">KTN::CME::IL3::NotAppliedMsg::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_reject_msg_1_1_block_data">KTN::CME::IL3::OrderCancelRejectMsg::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg_1_1_block_data">KTN::CME::IL3::OrderCancelReplaceRejectMsg::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data">KTN::CME::IL3::OrderMassActionReportMsg::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_ack_msg_1_1_block_data">KTN::CME::IL3::PartyDetailsDefinitionRequestAckMsg::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg_1_1_block_data">KTN::CME::IL3::PartyDetailsListReportMsg::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_quote_cancel_ack_msg_1_1_block_data">KTN::CME::IL3::QuoteCancelAckMsg::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_quote_cancel_msg_1_1_block_data">KTN::CME::IL3::QuoteCancelMsg::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_request_for_quote_ack_msg_1_1_block_data">KTN::CME::IL3::RequestForQuoteAckMsg::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_request_for_quote_msg_1_1_block_data">KTN::CME::IL3::RequestForQuoteMsg::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_retransmission_msg_1_1_block_data">KTN::CME::IL3::RetransmissionMsg::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_retransmit_reject_msg_1_1_block_data">KTN::CME::IL3::RetransmitRejectMsg::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_security_definition_request_msg_1_1_block_data">KTN::CME::IL3::SecurityDefinitionRequestMsg::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_security_definition_response_msg_1_1_block_data">KTN::CME::IL3::SecurityDefinitionResponseMsg::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_sequence_recv_msg_1_1_block_data">KTN::CME::IL3::SequenceRecvMsg::BlockData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_terminate_recv_msg_1_1_block_data">KTN::CME::IL3::TerminateRecvMsg::BlockData</link><link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book">KTN::BOOKS::Book</link><link linkend="_structbookmd">bookmd</link>
+<para>Structure representing book market data </para>
+<link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule">KTN::BOOKS::BookMolecule</link><link linkend="_class_k_t_n_1_1_core_1_1_buffer_pool">KTN::Core::BufferPool</link>
+<para>Pool of buffers </para>
+<link linkend="_class_k_t_n_1_1_core_1_1_buffer_pool_v2">KTN::Core::BufferPoolV2</link>
+<para>Buffer pool for managing KTNPktBuf objects </para>
+<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_business_reject_meta">KTN::CME::IL3::META::BusinessRejectMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_business_reject_msg">KTN::CME::IL3::BusinessRejectMsg</link><link linkend="_class_k_t_n_1_1_n_e_t_1_1_byte_writer">KTN::NET::ByteWriter</link>
+<para>Class for writing bytes to a buffer </para>
+<link linkend="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1channel">KTN::Feeds::CME::channel</link><link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_algo">KTN::CME::CmeAlgo</link><link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5">KTN::CME::CmeGT5</link>
+<para><link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5">CmeGT5</link> class represents the 5th Generation CmeHandler. Low latency order template creation; memory pool usage and custom maps and memory management. It provides better, faster, and stronger functionality for handling CME exchange iLink3 Messages </para>
+<link linkend="_class_k_t01_1_1_m_s_g_w_1_1_cme_msgw">KT01::MSGW::CmeMsgw</link>
+<para>CME Message Gateway </para>
+<link linkend="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_prod_def">KT01::SECDEF::CmeProdDef</link>
+<para>Class representing the CME product definition </para>
+<link linkend="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_def">KT01::SECDEF::CmeSecDef</link>
+<para>Class representing the CME security definition </para>
+<link linkend="_class_k_t01_1_1_s_e_c_d_e_f_1_1_cme_sec_master">KT01::SECDEF::CmeSecMaster</link>
+<para>Class that loads and indexes CME Security Definitions. This is a singleton class </para>
+<link linkend="_struct_cme_session_settings">CmeSessionSettings</link>
+<para>Represents the settings for a CME session </para>
+<link linkend="_class_cme_settings_helper">CmeSettingsHelper</link><link linkend="_structcombopath">combopath</link>
+<para>Structure representing a combination path </para>
+<link linkend="_struct_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1_1_conf">KTN::TCP::EFVITcpV5::Conf</link><link linkend="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration">KTN::Feeds::CME::Configuration</link><link linkend="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1connection">KTN::Feeds::CME::connection</link><link linkend="_struct_k_t_n_1_1_conn_state">KTN::ConnState</link><link linkend="_class_console_logger">ConsoleLogger</link>
+<para>Responsible for logging messages to the console </para>
+<link linkend="_classzmq_1_1context__t">zmq::context_t</link><link linkend="_struct_k_t_n_1_1_e_f_v_i_1_1csmlatholder">KTN::EFVI::csmlatholder</link><link linkend="_class_custom_hash_table">CustomHashTable&lt; K, V &gt;</link>
+<para>A custom hash table implementation </para>
+<link linkend="_class_custom_h_f_t_map">CustomHFTMap</link>
+<para><link linkend="_class_custom_h_f_t_map">CustomHFTMap</link> class represents a custom ultra low latency hash map implementation </para>
+<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_d_a_t_a">KTN::CME::IL3::DATA</link><link linkend="_struct_k_t_n_1_1_mdp3_1_1_decimal32">KTN::Mdp3::Decimal32</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_decimal32_n_u_l_l">KTN::CME::IL3::Decimal32NULL</link><link linkend="_struct_k_t_n_1_1_mdp3_1_1_decimal64">KTN::Mdp3::Decimal64</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_decimal64_n_u_l_l">KTN::CME::IL3::Decimal64NULL</link><link linkend="_struct_algo_hdg_encoder_1_1_decoded_data">AlgoHdgEncoder::DecodedData</link><link linkend="_struct_k_t_n_1_1_id_gen_1_1_decoded_data">KTN::IdGen::DecodedData</link><link linkend="_struct_edge_struct">EdgeStruct</link>
+<para>Structure representing the edge information </para>
+<link linkend="_structef__rx__sentinel">ef_rx_sentinel</link><link linkend="_structef__rx__sentinel__cfg">ef_rx_sentinel_cfg</link><link linkend="_structefvi__tcp__client__state">efvi_tcp_client_state</link><link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v2">KTN::TCP::EFVITcpV2</link>
+<para>TCP client making use of OpenOnload, TCP socket EPOLL, and EFVI. The class was originally designed for TAS order release </para>
+<link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5">KTN::TCP::EFVITcpV5</link>
+<para>Represents the <link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5">EFVITcpV5</link> class. This is our main TCP class. This class is a true EFVI TCP implementation </para>
+<link linkend="_class_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v6">KTN::TCP::EFVITcpV6</link><link linkend="_class_k_t_n_1_1_n_e_t_1_1_e_f_v_i_udp_v3">KTN::NET::EFVIUdpV3</link><link linkend="_class_k_t_n_1_1_n_e_t_1_1_e_f_v_i_udp_v4">KTN::NET::EFVIUdpV4</link><link linkend="_struct_engine_command">EngineCommand</link><link linkend="_class_k_t_n_1_1_enum_base">KTN::EnumBase&lt; Enum, Derived &gt;</link>
+<para>Base class for creating enum classes with string conversion support </para>
+<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_enum_session_state">KTN::CME::IL3::EnumSessionState</link><link linkend="_class_k_t_n_1_1_core_1_1_epoch_nanos">KTN::Core::EpochNanos</link>
+<para>Class that quickly computes the nanos since epoch timestamp </para>
+<link linkend="_class_k_t_n_1_1_t_c_p_1_1_epoller">KTN::TCP::Epoller</link>
+<para>Handles epoll operations for TCP sockets </para>
+<link linkend="_classzmq_1_1error__t">zmq::error_t</link><link linkend="_class_error_codes">ErrorCodes</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_establishment_ack_meta">KTN::CME::IL3::META::EstablishmentAckMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establishment_ack_msg">KTN::CME::IL3::EstablishmentAckMsg</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_establishment_reject_meta">KTN::CME::IL3::META::EstablishmentRejectMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establishment_reject_msg">KTN::CME::IL3::EstablishmentRejectMsg</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_establish_meta">KTN::CME::IL3::META::EstablishMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_establish_msg">KTN::CME::IL3::EstablishMsg</link><link linkend="_struct_k_t_n_1_1_exch">KTN::Exch</link><link linkend="_class_k_t_n_1_1_exchange_base2">KTN::ExchangeBase2</link>
+<para>Represents the base class for an exchange handler </para>
+<link linkend="_class_k_t_n_1_1_exchange_manager">KTN::ExchangeManager</link><link linkend="_struct_exch_cmd">ExchCmd</link><link linkend="_class_exch_handler_log_svc">ExchHandlerLogSvc</link>
+<para>This class handles logging for the exchange handler </para>
+<link linkend="_structexchinst">exchinst</link>
+<para>Structure representing an exchange instrument </para>
+<link linkend="_struct_exch_state">ExchState</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_execution_ack_meta">KTN::CME::IL3::META::ExecutionAckMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_ack_msg">KTN::CME::IL3::ExecutionAckMsg</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_execution_report_cancel_meta">KTN::CME::IL3::META::ExecutionReportCancelMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_cancel_msg">KTN::CME::IL3::ExecutionReportCancelMsg</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_execution_report_elimination_meta">KTN::CME::IL3::META::ExecutionReportEliminationMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_elimination_msg">KTN::CME::IL3::ExecutionReportEliminationMsg</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_execution_report_modify_meta">KTN::CME::IL3::META::ExecutionReportModifyMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_modify_msg">KTN::CME::IL3::ExecutionReportModifyMsg</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_execution_report_new_meta">KTN::CME::IL3::META::ExecutionReportNewMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_new_msg">KTN::CME::IL3::ExecutionReportNewMsg</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_execution_report_reject_meta">KTN::CME::IL3::META::ExecutionReportRejectMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_reject_msg">KTN::CME::IL3::ExecutionReportRejectMsg</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_execution_report_status_meta">KTN::CME::IL3::META::ExecutionReportStatusMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_status_msg">KTN::CME::IL3::ExecutionReportStatusMsg</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_execution_report_trade_addendum_outright_meta">KTN::CME::IL3::META::ExecutionReportTradeAddendumOutrightMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg">KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_execution_report_trade_addendum_spread_leg_meta">KTN::CME::IL3::META::ExecutionReportTradeAddendumSpreadLegMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_spread_leg_msg">KTN::CME::IL3::ExecutionReportTradeAddendumSpreadLegMsg</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_execution_report_trade_addendum_spread_meta">KTN::CME::IL3::META::ExecutionReportTradeAddendumSpreadMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_spread_msg">KTN::CME::IL3::ExecutionReportTradeAddendumSpreadMsg</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_execution_report_trade_outright_meta">KTN::CME::IL3::META::ExecutionReportTradeOutrightMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_outright_msg">KTN::CME::IL3::ExecutionReportTradeOutrightMsg</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_execution_report_trade_spread_leg_meta">KTN::CME::IL3::META::ExecutionReportTradeSpreadLegMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_spread_leg_msg">KTN::CME::IL3::ExecutionReportTradeSpreadLegMsg</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_execution_report_trade_spread_meta">KTN::CME::IL3::META::ExecutionReportTradeSpreadMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_spread_msg">KTN::CME::IL3::ExecutionReportTradeSpreadMsg</link><link linkend="_class_execution_timer">ExecutionTimer&lt; Resolution &gt;</link><link linkend="_struct_k_t_n_1_1_e_f_v_i_1_1feeddata">KTN::EFVI::feeddata</link><link linkend="_struct_k_t_n_1_1_t_c_p_1_1feeddata">KTN::TCP::feeddata</link><link linkend="_class_file_logger">FileLogger</link>
+<para>A class for logging messages to a file </para>
+<link linkend="_class_file_order_loader_v3">FileOrderLoaderV3</link>
+<para>A Legacy class for loading order data from a file. Mainly used for testing or for TAS order loading </para>
+<link linkend="_struct_k_t_n_1_1_fill">KTN::Fill</link><link linkend="_class_formatter_base">FormatterBase</link>
+<para>Base class for JSON formatters </para>
+<link linkend="_structzmq_1_1from__handle__t">zmq::from_handle_t</link><link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_generic_reporter">KTN::REPORTER::GenericReporter</link>
+<para>Responsible for reporting data </para>
+<link linkend="_classgenericstats">genericstats</link>
+<para>Class representing generic statistics </para>
+<link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_good_to_go_result">KTN::ALGO::GoodToGoResult</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1group_size">KTN::CME::IL3::groupSize</link><link linkend="_struct_k_t_n_1_1_mdp3_1_1group_size">KTN::Mdp3::groupSize</link><link linkend="_struct_k_t_n_1_1_mdp3_1_1group_size8_byte">KTN::Mdp3::groupSize8Byte</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1group_size_encoding">KTN::CME::IL3::groupSizeEncoding</link><link linkend="_struct_k_t_n_1_1_mdp3_1_1group_size_encoding">KTN::Mdp3::groupSizeEncoding</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_affected_orders_mass_action_report">KTN::CME::IL3::GrpAffectedOrdersMassActionReport</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_legs">KTN::CME::IL3::GrpLegs</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_legs560">KTN::CME::IL3::GrpLegs560</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_outright_fill_event">KTN::CME::IL3::GrpOutrightFillEvent</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_outright_order_event">KTN::CME::IL3::GrpOutrightOrderEvent</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_party_detail">KTN::CME::IL3::GrpPartyDetail</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_party_details519">KTN::CME::IL3::GrpPartyDetails519</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_party_details_list_report">KTN::CME::IL3::GrpPartyDetailsListReport</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_party_i_ds">KTN::CME::IL3::GrpPartyIDs</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_quote_entries">KTN::CME::IL3::GrpQuoteEntries</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_quote_entries_mass_quote_ack">KTN::CME::IL3::GrpQuoteEntriesMassQuoteAck</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_quote_sets">KTN::CME::IL3::GrpQuoteSets</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_related_sym">KTN::CME::IL3::GrpRelatedSym</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_requesting_party_i_ds">KTN::CME::IL3::GrpRequestingPartyIDs</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_sides">KTN::CME::IL3::GrpSides</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_spread_fill_event">KTN::CME::IL3::GrpSpreadFillEvent</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_spread_fill_leg_event">KTN::CME::IL3::GrpSpreadFillLegEvent</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_spread_fill_order_event">KTN::CME::IL3::GrpSpreadFillOrderEvent</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_spread_leg_fill_event">KTN::CME::IL3::GrpSpreadLegFillEvent</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_spread_leg_fill_order_event">KTN::CME::IL3::GrpSpreadLegFillOrderEvent</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_trd_reg_publication">KTN::CME::IL3::GrpTrdRegPublication</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_trd_reg_publications519">KTN::CME::IL3::GrpTrdRegPublications519</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_grp_trd_reg_publications_list_report">KTN::CME::IL3::GrpTrdRegPublicationsListReport</link><link linkend="_structstd_1_1hash_3_01sole_1_1uuid_01_4">std::hash&lt; sole::uuid &gt;</link><link linkend="_class_hash_map">HashMap&lt; Key, Value, TableSize &gt;</link>
+<para>A hash map implementation that maps keys to values </para>
+<link linkend="_class_k_t_n_1_1_core_1_1_heartbeat_monitor">KTN::Core::HeartbeatMonitor</link>
+<para>Responsible for monitoring the heartbeat of a system </para>
+<link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_hedge_state">KTN::ALGO::HedgeState</link><link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_hedge_type">KTN::ALGO::PRICING::HedgeType</link><link linkend="_class_k_t_n_1_1_core_1_1_huge_page_allocator">KTN::Core::HugePageAllocator&lt; T &gt;</link><link linkend="_class_i_buffer_sender">IBufferSender</link>
+<para>The interface for sending buffer to the exchange </para>
+<link linkend="_struct_iceberg_params">IcebergParams</link><link linkend="_struct_ice_ord_param">IceOrdParam</link><link linkend="_class_k_t_n_1_1_id_gen">KTN::IdGen</link><link linkend="_class_i_exchange_sender">IExchangeSender</link>
+<para>The interface for sending messages to the exchange </para>
+<link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_app_helpers">KTN::CME::IL3::IL3AppHelpers</link>
+<para>Helper functions for the IL3 application </para>
+<link linkend="_class_i_l3_app_msg_callback">IL3AppMsgCallback</link>
+<para>Abstract base class that defines the interface for handling various CME iLink3 execution report messages and other related application level messages </para>
+<link linkend="_class_i_l3_cert_helpers">IL3CertHelpers</link>
+<para>Helper class for working with IL3 certification environments. FOR TESTING ONLY </para>
+<link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_login_helpers">KTN::CME::IL3::IL3LoginHelpers</link><link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_i_l3_meta_map">KTN::CME::IL3::META::IL3MetaMap</link><link linkend="_class_i_logger">ILogger</link>
+<para>Interface for logging messages </para>
+<link linkend="_class_i_menu">IMenu</link>
+<para>Interface for menu classes </para>
+<link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_implied_pricer">KTN::ALGO::PRICING::ImpliedPricer</link>
+<para>Pricing strategy that calculates implied prices based on given orders </para>
+<link linkend="_struct_instruction">Instruction</link><link linkend="_structinstrument">instrument</link>
+<para>Structure representing an instrument </para>
+<link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_interval_timer">KTN::ALGO::IntervalTimer</link>
+<para>Timer that triggers at regular intervals </para>
+<link linkend="_struct_i_o_b_params">IOBParams</link><link linkend="_class_k_t_n_1_1_o_r_d_1_1_i_order_handler">KTN::ORD::IOrderHandler</link>
+<para>Interface for handling order-related operations </para>
+<link linkend="_struct_i_params">IParams</link><link linkend="_class_i_zmq_subscriber">IZmqSubscriber</link>
+<para>The interface for a ZMQ subscriber </para>
+<link linkend="_struct_k_t_n_1_1_json_header">KTN::JsonHeader</link><link linkend="_class_json_order_decoders">JsonOrderDecoders</link>
+<para>Static methods for decoding JSON orders </para>
+<link linkend="_class_json_url_poster">JsonUrlPoster</link><link linkend="_class_json_url_reader">JsonUrlReader</link>
+<para>Responsible for reading JSON data from a URL </para>
+<link linkend="_struct_k_engine_command">KEngineCommand</link>
+<para>Enumeration for the algo engine commands </para>
+<link linkend="_struct_k_engine_item">KEngineItem</link>
+<para>Enumeration for the engine items </para>
+<link linkend="_struct_k_engine_type">KEngineType</link>
+<para>Enumeration for the engine types </para>
+<link linkend="_struct_k_t_n_1_1_o_r_d_1_1_k_order_action">KTN::ORD::KOrderAction</link><link linkend="_struct_k_t_n_1_1_o_r_d_1_1_k_order_algo_trigger">KTN::ORD::KOrderAlgoTrigger</link><link linkend="_struct_k_t_n_1_1_o_r_d_1_1_k_order_exchange">KTN::ORD::KOrderExchange</link><link linkend="_struct_k_t_n_1_1_o_r_d_1_1_k_order_fill_type">KTN::ORD::KOrderFillType</link><link linkend="_struct_k_t_n_1_1_o_r_d_1_1_k_order_prod_type">KTN::ORD::KOrderProdType</link><link linkend="_struct_k_t_n_1_1_o_r_d_1_1_k_order_put_call">KTN::ORD::KOrderPutCall</link><link linkend="_struct_k_t_n_1_1_o_r_d_1_1_k_order_side">KTN::ORD::KOrderSide</link><link linkend="_struct_k_t_n_1_1_o_r_d_1_1_k_order_state">KTN::ORD::KOrderState</link><link linkend="_struct_k_t_n_1_1_o_r_d_1_1_k_order_status">KTN::ORD::KOrderStatus</link><link linkend="_struct_k_t_n_1_1_o_r_d_1_1_k_order_tif">KTN::ORD::KOrderTif</link><link linkend="_struct_k_t_n_1_1_o_r_d_1_1_k_order_type">KTN::ORD::KOrderType</link><link linkend="_struct_k_pos_status">KPosStatus</link><link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g">KTN::NET::KTN_MSG</link>
+<para>Structure representing a KTN binary message container </para>
+<link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf">KTN::NET::KTNBuf</link>
+<para>Structure representing a KTN buffer </para>
+<link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf8t">KTN::NET::KTNBuf8t</link>
+<para>Structure representing a KTN buffer with 8-bit data </para>
+<link linkend="_class_ktn_cme_mbo">KtnCmeMbo</link>
+<para>Represents a class that handles CME market by order (MBO) data </para>
+<link linkend="_class_ktn_cme_mdp_v4">KtnCmeMdpV4</link>
+<para>Represents a class that handles CME MDP3 market data </para>
+<link linkend="_class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf">KTN::NET::KTNPktBuf</link>
+<para>Represents a packet buffer used in the <link linkend="_class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf">KTNPktBuf</link> class </para>
+<link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n_simp">KTN::NET::KTNSimp</link>
+<para>Structure representing a simple KTN buffer </para>
+<link linkend="_struct_k_t_n_1_1_e_f_v_i_1_1latholder">KTN::EFVI::latholder</link><link linkend="_class_leg_param_parser">LegParamParser</link>
+<para>Methods to parse and retrieve leg parameters </para>
+<link linkend="_struct_leg_prices">LegPrices</link>
+<para>Structure representing the prices of a leg </para>
+<link linkend="_class_k_t_n_1_1_m_d_1_1_limit_order_book">KTN::MD::LimitOrderBook</link><link linkend="_class_limit_order_book">LimitOrderBook</link>
+<para>Represents a limit order book </para>
+<link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_little_imp">KTN::ALGO::PRICING::LittleImp</link><link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_little_imp_side">KTN::ALGO::PRICING::LittleImpSide</link><link linkend="_class_k_t_n_1_1_m_d_1_1_lock_free_limit_order_book">KTN::MD::LockFreeLimitOrderBook</link>
+<para>Represents a lock-free implementation of a limit order book </para>
+<link linkend="_class_log">Log</link>
+<para><link linkend="_class_singleton">Singleton</link> logger for logging messages </para>
+<link linkend="_class_logger_factory">LoggerFactory</link>
+<para>Factory class for creating loggers based on the configuration settings </para>
+<link linkend="_struct_log_level">LogLevel</link>
+<para>The <link linkend="_struct_log_level">LogLevel</link> struct represents the different levels of log messages </para>
+<link linkend="_struct_log_msg">LogMsg</link>
+<para>Struct representing a log message </para>
+<link linkend="_class_log_svc">LogSvc</link>
+<para>Responsible for logging messages. This is a thread-safe class that offloads messages to a ring buffer and then logs them to the console or another dstination </para>
+<link linkend="_struct_k_t_n_1_1_margin_borrow_amount">KTN::MarginBorrowAmount</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_mass_quote_ack_meta">KTN::CME::IL3::META::MassQuoteAckMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_mass_quote_ack_msg">KTN::CME::IL3::MassQuoteAckMsg</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_mass_quote_meta">KTN::CME::IL3::META::MassQuoteMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_mass_quote_msg">KTN::CME::IL3::MassQuoteMsg</link><link linkend="_class_k_t_n_1_1_mdp3_1_1_match_event_indicator_bits_enum">KTN::Mdp3::MatchEventIndicatorBitsEnum</link><link linkend="_class_matrix_gen">MatrixGen</link>
+<para>Responsible for generating spread and outright matrices from the input data </para>
+<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_maturity_month_year">KTN::CME::IL3::MaturityMonthYear</link><link linkend="_struct_k_t_n_1_1_mdp3_1_1_maturity_month_year">KTN::Mdp3::MaturityMonthYear</link><link linkend="_structmbomd">mbomd</link>
+<para>Structure representing market-by-order market data </para>
+<link linkend="_struct_k_t_n_1_1_mdp3_1_1_m_d_incremental_refresh_book46">KTN::Mdp3::MDIncrementalRefreshBook46</link><link linkend="_struct_k_t_n_1_1_mdp3_1_1_m_d_incremental_refresh_book46_entry">KTN::Mdp3::MDIncrementalRefreshBook46Entry</link><link linkend="_struct_k_t_n_1_1_mdp3_1_1_m_d_incremental_refresh_book46_order_details">KTN::Mdp3::MDIncrementalRefreshBook46OrderDetails</link><link linkend="_struct_k_t_n_1_1_mdp3_1_1_m_d_incremental_refresh_book47">KTN::Mdp3::MDIncrementalRefreshBook47</link><link linkend="_struct_k_t_n_1_1_mdp3_1_1_m_d_incremental_refresh_book47_entry">KTN::Mdp3::MDIncrementalRefreshBook47Entry</link><link linkend="_struct_k_t_n_1_1_mdp3_1_1_m_d_incremental_refresh_trade_summary48">KTN::Mdp3::MDIncrementalRefreshTradeSummary48</link><link linkend="_struct_k_t_n_1_1_mdp3_1_1_m_d_incremental_refresh_volume37">KTN::Mdp3::MDIncrementalRefreshVolume37</link><link linkend="_class_k_t_n_1_1_m_d_1_1_md_order">KTN::MD::MdOrder</link><link linkend="_class_md_order">MdOrder</link>
+<para>Represents a market data order </para>
+<link linkend="_struct_k_t_n_1_1_mdp3_1_1_md_order_book_entry46">KTN::Mdp3::MdOrderBookEntry46</link><link linkend="_class_k_t_n_1_1_mdp3_1_1_mdp3_message_printer">KTN::Mdp3::Mdp3MessagePrinter</link><link linkend="_struct_k_t_n_1_1_mdp3_1_1_m_d_trade_entry">KTN::Mdp3::MDTradeEntry</link><link linkend="_struct_k_t_n_1_1_mdp3_1_1_m_d_trade_entry_order_details">KTN::Mdp3::MDTradeEntryOrderDetails</link><link linkend="_struct_k_t_n_1_1_mdp3_1_1_m_d_volume_entry">KTN::Mdp3::MDVolumeEntry</link><link linkend="_class_k_t_n_1_1_core_1_1_mem_pool">KTN::Core::MemPool&lt; T &gt;</link>
+<para>A memory pool implementation for efficient object allocation and deallocation </para>
+<link linkend="_class_menu">Menu</link>
+<para>Represents a menu that can be displayed and interacted with </para>
+<link linkend="_class_menu_callback">MenuCallback</link>
+<para>Abstract base class that defines the interface for menu callbacks </para>
+<link linkend="_class_menu_factory">MenuFactory</link>
+<para>Responsible for creating instances of <link linkend="_class_i_menu">IMenu</link> based on the logger type </para>
+<link linkend="_classzmq_1_1message__t">zmq::message_t</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1message_header">KTN::CME::IL3::messageHeader</link><link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_message_printer">KTN::CME::IL3::MessagePrinter</link>
+<para>Audit Trail and Textual Representation of IL3 Messages </para>
+<link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_meta_data">KTN::BOOKS::MetaData</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_i_l3_meta_map_1_1_meta_data">KTN::CME::IL3::META::IL3MetaMap::MetaData</link>
+<para>Struct to hold metadata information </para>
+<link linkend="_class_mod_ord_pool">ModOrdPool</link>
+<para>ILink3 Modify Order Pool pre-allocates a pool of OrderCancelReplaceRequestMsg objects to be used by the ILink3 handler </para>
+<link linkend="_classzmq_1_1monitor__t">zmq::monitor_t</link><link linkend="_struct_m_s2_params">MS2Params</link>
+<para>The struct representing the parameters for the MultiSpreader2 algorithm </para>
+<link linkend="_struct_msg_batch">MsgBatch</link><link linkend="_structmsgevents">msgevents</link><link linkend="_struct_k_t_n_1_1_mdp3_1_1_msg_header">KTN::Mdp3::MsgHeader</link><link linkend="_struct_k_t_n_1_1notify_1_1_msg_level">KTN::notify::MsgLevel</link><link linkend="_structmsgrate">msgrate</link><link linkend="_structmsgstats">msgstats</link>
+<para>Structure representing messaging statistics </para>
+<link linkend="_struct_k_t_n_1_1notify_1_1_msg_type">KTN::notify::MsgType</link><link linkend="_class_k_t01_1_1_m_s_g_w_1_1_msgw">KT01::MSGW::Msgw</link><link linkend="_class_k_t_n_1_1_multi_spreader_v3">KTN::MultiSpreaderV3</link>
+<para>Derived class of <link linkend="_class_k_t_n_1_1_algo_base_v3">AlgoBaseV3</link> and implements an automated multi-leg spread trading algorithm </para>
+<link linkend="_class_named_thread">NamedThread</link>
+<para>Represents a named thread with affinity to a specific core </para>
+<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_negotiate_meta">KTN::CME::IL3::META::NegotiateMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiate_msg">KTN::CME::IL3::NegotiateMsg</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_negotiation_reject_meta">KTN::CME::IL3::META::NegotiationRejectMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiation_reject_msg">KTN::CME::IL3::NegotiationRejectMsg</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_negotiation_response_meta">KTN::CME::IL3::META::NegotiationResponseMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_negotiation_response_msg">KTN::CME::IL3::NegotiationResponseMsg</link><link linkend="_class_net_helpers">NetHelpers</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_new_order_cross_meta">KTN::CME::IL3::META::NewOrderCrossMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_cross_msg">KTN::CME::IL3::NewOrderCrossMsg</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_new_order_single_meta">KTN::CME::IL3::META::NewOrderSingleMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_single_msg">KTN::CME::IL3::NewOrderSingleMsg</link><link linkend="_class_new_ord_pool">NewOrdPool</link>
+<para>ILink3 New Order Pool pre-allocates a pool of NewOrderSingleMsg objects to be used by the ILink3 handler </para>
+<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_not_applied_meta">KTN::CME::IL3::META::NotAppliedMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_not_applied_msg">KTN::CME::IL3::NotAppliedMsg</link><link linkend="_struct_k_t_n_1_1notify_1_1_notification">KTN::notify::Notification</link><link linkend="_class_k_t_n_1_1notify_1_1_notifier_rest">KTN::notify::NotifierRest</link>
+<para>Responsible for sending notifications via REST </para>
+<link linkend="_class_k_t_n_1_1_core_1_1_object_pool">KTN::Core::ObjectPool&lt; T &gt;</link>
+<para>A generic object pool implementation </para>
+<link linkend="_struct_k_t_n_1_1_options_fields">KTN::OptionsFields</link><link linkend="_struct_k_t_n_1_1_order">KTN::Order</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_order_cancel_reject_meta">KTN::CME::IL3::META::OrderCancelRejectMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_reject_msg">KTN::CME::IL3::OrderCancelRejectMsg</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_order_cancel_replace_reject_meta">KTN::CME::IL3::META::OrderCancelReplaceRejectMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_reject_msg">KTN::CME::IL3::OrderCancelReplaceRejectMsg</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_order_cancel_replace_request_meta">KTN::CME::IL3::META::OrderCancelReplaceRequestMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg">KTN::CME::IL3::OrderCancelReplaceRequestMsg</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_order_cancel_request_meta">KTN::CME::IL3::META::OrderCancelRequestMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_request_msg">KTN::CME::IL3::OrderCancelRequestMsg</link><link linkend="_struct_k_t_n_1_1_order_exception">KTN::OrderException</link><link linkend="_class_k_t_n_1_1_order_formatter">KTN::OrderFormatter</link><link linkend="_class_k_t_n_1_1_o_r_d_1_1_order_handler_zmq_v6">KTN::ORD::OrderHandlerZmqV6</link>
+<para>Handles the ZMQ communication for order handling. It implements the <link linkend="_class_k_t_n_1_1_session_callback">SessionCallback</link> and <link linkend="_class_i_zmq_subscriber">IZmqSubscriber</link> interfaces </para>
+<link linkend="_class_order_hash_table">OrderHashTable</link>
+<para>A hash table implementation for storing orders </para>
+<link linkend="_struct_k_t_n_1_1_order_hedge">KTN::OrderHedge</link><link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_order_loader">KTN::ALGO::OrderLoader</link>
+<para>Responsible for loading orders from a file and providing various order-related functionalities </para>
+<link linkend="_class_order_manager_v5">OrderManagerV5</link>
+<para>Responsible for managing orders and their execution. It implements the IOrderHandler interface and inherits from the <link linkend="_class_named_thread">NamedThread</link> class </para>
+<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_order_mass_action_report_meta">KTN::CME::IL3::META::OrderMassActionReportMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg">KTN::CME::IL3::OrderMassActionReportMsg</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_order_mass_action_request_meta">KTN::CME::IL3::META::OrderMassActionRequestMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_request_msg">KTN::CME::IL3::OrderMassActionRequestMsg</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_order_mass_status_request_meta">KTN::CME::IL3::META::OrderMassStatusRequestMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_status_request_msg">KTN::CME::IL3::OrderMassStatusRequestMsg</link><link linkend="_class_order_nums">OrderNums</link>
+<para><link linkend="_class_singleton">Singleton</link> class for generating order numbers and request IDs </para>
+<link linkend="_class_order_parser">OrderParser</link>
+<para>Parses JSON order data and converts it into Order objects </para>
+<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link>
+<para>Represents an order in the system </para>
+<link linkend="_class_k_t_n_1_1_core_1_1_order_pod_pool">KTN::Core::OrderPodPool</link>
+<para>Pool of <link linkend="_struct_k_t_n_1_1_order_pod">OrderPod</link> objects </para>
+<link linkend="_class_k_t_n_1_1_core_1_1_order_pod_pool2">KTN::Core::OrderPodPool2</link>
+<para>A pool of <link linkend="_struct_k_t_n_1_1_order_pod">OrderPod</link> objects for efficient memory management </para>
+<link linkend="_struct_k_t_n_1_1_order_pool">KTN::OrderPool</link><link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5">KTN::REPORTER::OrderReporterV5</link>
+<para>Responsible for reporting orders </para>
+<link linkend="_class_order_ring_buffer">OrderRingBuffer</link>
+<para>A ring buffer implementation for storing orders </para>
+<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_order_status_request_meta">KTN::CME::IL3::META::OrderStatusRequestMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_status_request_msg">KTN::CME::IL3::OrderStatusRequestMsg</link><link linkend="_class_order_utils">OrderUtils</link><link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_order_with_hedge">KTN::ALGO::PRICING::OrderWithHedge</link><link linkend="_structordlvl">ordlvl</link>
+<para>Structure representing an order level </para>
+<link linkend="_struct_k_t_n_1_1_mdp3_1_1_packet_header">KTN::Mdp3::PacketHeader</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_party_details_definition_request_ack_meta">KTN::CME::IL3::META::PartyDetailsDefinitionRequestAckMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_ack_msg">KTN::CME::IL3::PartyDetailsDefinitionRequestAckMsg</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_party_details_definition_request_meta">KTN::CME::IL3::META::PartyDetailsDefinitionRequestMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_definition_request_msg">KTN::CME::IL3::PartyDetailsDefinitionRequestMsg</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_party_details_list_report_meta">KTN::CME::IL3::META::PartyDetailsListReportMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_report_msg">KTN::CME::IL3::PartyDetailsListReportMsg</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_party_details_list_request_meta">KTN::CME::IL3::META::PartyDetailsListRequestMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_party_details_list_request_msg">KTN::CME::IL3::PartyDetailsListRequestMsg</link><link linkend="_class_performance_counter">PerformanceCounter</link><link linkend="_class_performance_tracker">PerformanceTracker</link>
+<para>Class for tracking performance measurements </para>
+<link linkend="_class_perf_timer">PerfTimer</link>
+<para>High-resolution performance counter </para>
+<link linkend="_structpkt__buf">pkt_buf</link><link linkend="_class_p_l_monitor">PLMonitor</link>
+<para>Class responsible for monitoring and managing profit and loss calculations for positions </para>
+<link linkend="_struct_p_l_params">PLParams</link>
+<para>The <link linkend="_struct_p_l_params">PLParams</link> struct represents the parameters for the PL algorithm </para>
+<link linkend="_struct_p_l_position">PLPosition</link>
+<para>The <link linkend="_struct_p_l_position">PLPosition</link> struct represents the position parameters for the PLWatcher algorithm </para>
+<link linkend="_class_k_t_n_1_1_p_l_watcher">KTN::PLWatcher</link>
+<para>Responsible for monitoring the profit and loss of a trading algorithm </para>
+<link linkend="_struct_p_l_watcher_params">PLWatcherParams</link>
+<para>The <link linkend="_struct_p_l_watcher_params">PLWatcherParams</link> struct represents the parameters for the PLWatcher algorithm </para>
+<link linkend="_struct_k_t_n_1_1_e_f_v_i_1_1pollbase">KTN::EFVI::pollbase</link><link linkend="_struct_k_t_n_1_1_t_c_p_1_1pollbase">KTN::TCP::pollbase</link><link linkend="_struct_position">Position</link><link linkend="_class_position_json_converter">PositionJsonConverter</link><link linkend="_struct_position_leg">PositionLeg</link><link linkend="_struct_position_simple">PositionSimple</link><link linkend="_struct_pos_net">PosNet</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_p_r_i_c_e9">KTN::CME::IL3::PRICE9</link><link linkend="_struct_k_t_n_1_1_mdp3_1_1_p_r_i_c_e9">KTN::Mdp3::PRICE9</link><link linkend="_class_price_converters">PriceConverters</link>
+<para>Utility functions for converting prices </para>
+<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_p_r_i_c_e_n_u_l_l9">KTN::CME::IL3::PRICENULL9</link><link linkend="_struct_k_t_n_1_1_mdp3_1_1_p_r_i_c_e_n_u_l_l9">KTN::Mdp3::PRICENULL9</link><link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base">KTN::ALGO::PRICING::PricingStrategyBase</link>
+<para>The base class for pricing strategies </para>
+<link linkend="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1product">KTN::Feeds::CME::product</link><link linkend="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1productgroup">KTN::Feeds::CME::productgroup</link><link linkend="_class_k_t01_1_1_m_s_g_w_1_1_product_gw">KT01::MSGW::ProductGw</link><link linkend="_struct_profit_loss_side">ProfitLossSide</link>
+<para>Structure representing the profit and loss of a side of a trade (Buy or Sell) </para>
+<link linkend="_structpxlvl">pxlvl</link>
+<para>Structure representing a price level </para>
+<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_quote_cancel_ack_meta">KTN::CME::IL3::META::QuoteCancelAckMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_quote_cancel_ack_msg">KTN::CME::IL3::QuoteCancelAckMsg</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_quote_cancel_meta">KTN::CME::IL3::META::QuoteCancelMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_quote_cancel_msg">KTN::CME::IL3::QuoteCancelMsg</link><link linkend="_class_quoter_v3">QuoterV3</link>
+<para>Represents a <link linkend="_class_quoter_v3">QuoterV3</link> class that manages quoting orders and functions </para>
+<link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_quote_state">KTN::ALGO::QuoteState</link><link linkend="_class_raptor2">Raptor2</link>
+<para>Represents the <link linkend="_class_raptor2">Raptor2</link> Main Exchange Handler class that extends <link linkend="_class_named_thread">NamedThread</link>, <link linkend="_class_menu_callback">MenuCallback</link>, and <link linkend="_class_i_exchange_sender">IExchangeSender</link> </para>
+<link linkend="_struct_r_c">RC</link><link linkend="_class_l_w_t_1_1core_1_1_registration">LWT::core::Registration</link>
+<para><link linkend="_class_l_w_t_1_1core_1_1_registration">Registration</link> </para>
+<link linkend="_class_k_t_n_1_1_t_e_m_p_l_a_t_e_1_1_reporter">KTN::TEMPLATE::Reporter&lt; T &gt;</link>
+<para>The <link linkend="_class_k_t_n_1_1_t_e_m_p_l_a_t_e_1_1_reporter">Reporter</link> class is responsible for reporting data of type T </para>
+<link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base">KTN::REPORTER::ReporterBase</link>
+<para>The base class for all reporters </para>
+<link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_request_for_quote_ack_meta">KTN::CME::IL3::META::RequestForQuoteAckMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_request_for_quote_ack_msg">KTN::CME::IL3::RequestForQuoteAckMsg</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_request_for_quote_meta">KTN::CME::IL3::META::RequestForQuoteMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_request_for_quote_msg">KTN::CME::IL3::RequestForQuoteMsg</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_retransmission_meta">KTN::CME::IL3::META::RetransmissionMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_retransmission_msg">KTN::CME::IL3::RetransmissionMsg</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_retransmit_reject_meta">KTN::CME::IL3::META::RetransmitRejectMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_retransmit_reject_msg">KTN::CME::IL3::RetransmitRejectMsg</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_retransmit_request_meta">KTN::CME::IL3::META::RetransmitRequestMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_retransmit_request_msg">KTN::CME::IL3::RetransmitRequestMsg</link><link linkend="_struct_risk_base">RiskBase</link>
+<para>Struct representing the risk parameters for an algorithm </para>
+<link linkend="_struct_risk_limit">RiskLimit</link>
+<para>Struct representing a risk limit </para>
+<link linkend="_class_risk_limit_checker">RiskLimitChecker</link>
+<para>Class for checking risk limits for orders </para>
+<link linkend="_class_risk_limits">RiskLimits</link>
+<para>Risk limits for a particular trading account </para>
+<link linkend="_class_k_t_n_1_1_risk_manager">KTN::RiskManager</link>
+<para>Handles risk management operations </para>
+<link linkend="_struct_k_t_n_1_1_z_f_1_1rx__msg">KTN::ZF::rx_msg</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_s_b_e_header">KTN::CME::IL3::SBEHeader</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_security_definition_request_meta">KTN::CME::IL3::META::SecurityDefinitionRequestMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_security_definition_request_msg">KTN::CME::IL3::SecurityDefinitionRequestMsg</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_security_definition_response_meta">KTN::CME::IL3::META::SecurityDefinitionResponseMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_security_definition_response_msg">KTN::CME::IL3::SecurityDefinitionResponseMsg</link><link linkend="_struct_k_t_n_1_1_mdp3_1_1_security_status30">KTN::Mdp3::SecurityStatus30</link><link linkend="_struct_k_t_n_1_1_mdp3_1_1_security_status30_fast">KTN::Mdp3::SecurityStatus30Fast</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_sequence_meta">KTN::CME::IL3::META::SequenceMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_sequence_msg">KTN::CME::IL3::SequenceMsg</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_sequence_recv_msg">KTN::CME::IL3::SequenceRecvMsg</link><link linkend="_struct_l_w_t_1_1core_1_1_service">LWT::core::Service</link>
+<para>The <link linkend="_struct_l_w_t_1_1core_1_1_service">Service</link> struct represents a service </para>
+<link linkend="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor">KTN::TCP::ServiceDescriptor</link>
+<para>Network service parameter set </para>
+<link linkend="_class_k_t_n_1_1_session_callback">KTN::SessionCallback</link>
+<para>Abstract base class that defines the interface for session callbacks. Session callbacks are used to handle various events and actions related to a trading session </para>
+<link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory">KTN::CME::IL3::SessionMessageFactory</link>
+<para>Responsible for creating various session messages </para>
+<link linkend="_struct_session_settings">SessionSettings</link>
+<para>Struct representing session settings </para>
+<link linkend="_class_session_state_manager">SessionStateManager</link>
+<para>Manages the state of a session </para>
+<link linkend="_class_session_status">SessionStatus</link>
+<para>Represents the status of a session </para>
+<link linkend="_class_session_status_formatter">SessionStatusFormatter</link>
+<para>Static method to format a <link linkend="_class_session_status">SessionStatus</link> object into a JSON string </para>
+<link linkend="_class_session_status_json_formatter">SessionStatusJsonFormatter</link>
+<para>Formatter class for converting <link linkend="_class_session_status">SessionStatus</link> objects to JSON format </para>
+<link linkend="_struct_sess_state_msg">SessStateMsg</link><link linkend="_class_sess_svc">SessSvc</link>
+<para>CME session service.We use this service for persisting session state </para>
+<link linkend="_class_settings">Settings</link>
+<para><link linkend="_class_settings">Settings</link> collection </para>
+<link linkend="_structsidestate">sidestate</link>
+<para>Structure representing the state of a side </para>
+<link linkend="_struct_simple_edge">SimpleEdge</link><link linkend="_class_simple_hash_table">SimpleHashTable</link>
+<para>A simple implementation of a hash table </para>
+<link linkend="_class_k_t_n_1_1_core_1_1_simple_map">KTN::Core::SimpleMap&lt; K, T &gt;</link>
+<para>A simple map implementation that associates keys with values </para>
+<link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_simple_timer">KTN::ALGO::SimpleTimer</link>
+<para>Simple timer that can be started, stopped, and paused </para>
+<link linkend="_class_singleton">Singleton&lt; T &gt;</link><link linkend="_class_k_t_n_1_1_skewer">KTN::Skewer</link>
+<para>Implementation of an order book skew trading algorithm </para>
+<link linkend="_struct_skewer_params">SkewerParams</link>
+<para>The <link linkend="_struct_skewer_params">SkewerParams</link> struct represents the parameters for the Skewer algorithm </para>
+<link linkend="_class_k_t_n_1_1_skew_trader">KTN::SkewTrader</link><link linkend="_struct_skew_trader_params">SkewTraderParams</link>
+<para>The <link linkend="_struct_skew_trader_params">SkewTraderParams</link> struct represents the parameters for the SkewTrader algorithm </para>
+<link linkend="_struct_k_t_n_1_1notify_1_1slackbot">KTN::notify::slackbot</link>
+<para>Structure representing a Slack bot </para>
+<link linkend="_class_k_t_n_1_1notify_1_1_slacker">KTN::notify::Slacker</link>
+<para>Class representing a Slack-enabled messaging class for alerts and notifications </para>
+<link linkend="_struct_k_t_n_1_1notify_1_1slackmsg">KTN::notify::slackmsg</link>
+<para>Structure representing a Slack message </para>
+<link linkend="_struct_k_t_n_1_1_mdp3_1_1_snapshot_full_refresh52">KTN::Mdp3::SnapshotFullRefresh52</link><link linkend="_struct_k_t_n_1_1_mdp3_1_1_snapshot_full_refresh_entry">KTN::Mdp3::SnapshotFullRefreshEntry</link><link linkend="_struct_k_t_n_1_1_mdp3_1_1_snapshot_full_refresh_order_book53">KTN::Mdp3::SnapshotFullRefreshOrderBook53</link><link linkend="_struct_k_t_n_1_1_mdp3_1_1_snapshot_full_refresh_order_book_entry">KTN::Mdp3::SnapshotFullRefreshOrderBookEntry</link><link linkend="_struct_k_t_n_1_1_mdp3_1_1_snapshot_refresh_top_orders59">KTN::Mdp3::SnapshotRefreshTopOrders59</link>
+<para><link linkend="_struct_k_t_n_1_1_mdp3_1_1_snapshot_refresh_top_orders59">SnapshotRefreshTopOrders59</link> </para>
+<link linkend="_struct_k_t_n_1_1_mdp3_1_1_snapshot_refresh_top_orders_entry">KTN::Mdp3::SnapshotRefreshTopOrdersEntry</link><link linkend="_classzmq_1_1detail_1_1socket__base">zmq::detail::socket_base</link><link linkend="_classzmq_1_1socket__ref">zmq::socket_ref</link><link linkend="_classzmq_1_1socket__t">zmq::socket_t</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_s_o_f_h">KTN::CME::IL3::SOFH</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1sofh_header">KTN::CME::IL3::sofhHeader</link><link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge">KTN::ALGO::PRICING::SpreadHedge</link><link linkend="_class_spread_hedge_circ_buff">SpreadHedgeCircBuff</link>
+<para>Circular buffer implementation for storing spread hedge data </para>
+<link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3">KTN::ALGO::PRICING::SpreadHedgeV3</link><link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_pricer">KTN::ALGO::PRICING::SpreadPricer</link>
+<para>Pricing strategy for calculating spread prices </para>
+<link linkend="_class_k_t_n_1_1_core_1_1_s_p_s_c_ring_buffer">KTN::Core::SPSCRingBuffer&lt; T &gt;</link>
+<para>A single-producer, single-consumer ring buffer implementation </para>
+<link linkend="_class_k_t_n_1_1_squeezer_o_b">KTN::SqueezerOB</link>
+<para>Implementation of the <link linkend="_class_k_t_n_1_1_squeezer_o_b">SqueezerOB</link> algorithm. THe <link linkend="_class_k_t_n_1_1_squeezer_o_b">SqueezerOB</link> algorithm is akin to an OCO order that rests on the order book and watches a &quot;Squeez&quot; price. Once the quantity at the price is lower than the threshold, the order is then modified and moves to the target price. This is the same functionality as &quot;leaning&quot; on an limit order at a price, and acting when the price is &quot;squeezed&quot; by decreases in quantity or the ratio of bid/ask quantity </para>
+<link linkend="_struct_squeezer_params">SqueezerParams</link>
+<para>The <link linkend="_struct_squeezer_params">SqueezerParams</link> struct represents the parameters for the Squeezer algorithm </para>
+<link linkend="_struct_sqz_ord_param">SqzOrdParam</link>
+<para>The <link linkend="_struct_sqz_ord_param">SqzOrdParam</link> struct represents the parameters for a Squeezer order </para>
+<link linkend="_class_k_t_n_1_1_stacker">KTN::Stacker</link>
+<para>Derived class of <link linkend="_class_k_t_n_1_1_algo_base_v3">AlgoBaseV3</link> and implements the stacking algorithm. This algorithm &quot;seeds&quot; price levels in an automated fashion based on input parameters and current market conditions </para>
+<link linkend="_struct_stacker_params">StackerParams</link>
+<para>The <link linkend="_struct_stacker_params">StackerParams</link> struct represents the parameters for the Stacker algorithm </para>
+<link linkend="_class_k_t_n_1_1_stacker_timer">KTN::StackerTimer</link>
+<para>Derived class of <link linkend="_class_k_t_n_1_1_algo_base_v3">AlgoBaseV3</link> and <link linkend="_class_timer_callback">TimerCallback</link>. It implements various methods for managing a stacker timer algorithm </para>
+<link linkend="_struct_stacker_timer_params">StackerTimerParams</link>
+<para>The <link linkend="_struct_stacker_timer_params">StackerTimerParams</link> struct represents the parameters for the StackerTimer algorithm </para>
+<link linkend="_class_standard_menu">StandardMenu</link>
+<para>Standard menu implementation </para>
+<link linkend="_classstats">stats</link>
+<para>Class representing algorithm statistics </para>
+<link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter">KTN::REPORTER::StatusReporter</link>
+<para>Responsible for reporting session status </para>
+<link linkend="_class_k_t_n_1_1_status_state">KTN::StatusState</link><link linkend="_class_string_splitter">StringSplitter</link><link linkend="_class_string_utils">StringUtils</link>
+<para>A utility class for string manipulation </para>
+<link linkend="_struct_l_w_t_1_1_n_e_t_1_1detail_1_1_swap_endian_struct">LWT::NET::detail::SwapEndianStruct&lt; T, SIZE &gt;</link><link linkend="_struct_l_w_t_1_1_n_e_t_1_1detail_1_1_swap_endian_struct_3_01_t_00_011_01_4">LWT::NET::detail::SwapEndianStruct&lt; T, 1 &gt;</link><link linkend="_struct_l_w_t_1_1_n_e_t_1_1detail_1_1_swap_endian_struct_3_01_t_00_012_01_4">LWT::NET::detail::SwapEndianStruct&lt; T, 2 &gt;</link><link linkend="_struct_l_w_t_1_1_n_e_t_1_1detail_1_1_swap_endian_struct_3_01_t_00_014_01_4">LWT::NET::detail::SwapEndianStruct&lt; T, 4 &gt;</link><link linkend="_struct_l_w_t_1_1_n_e_t_1_1detail_1_1_swap_endian_struct_3_01_t_00_018_01_4">LWT::NET::detail::SwapEndianStruct&lt; T, 8 &gt;</link><link linkend="_structtcp__settings">tcp_settings</link>
+<para>Struct representing TCP settings </para>
+<link linkend="_class_k_t_n_1_1_t_c_p_1_1_tcp_callback">KTN::TCP::TcpCallback</link>
+<para>Abstract base class for TCP callbacks </para>
+<link linkend="_class_k_t_n_1_1_t_c_p_1_1_tcp_callback8t">KTN::TCP::TcpCallback8t</link>
+<para>Abstract base class for TCP callbacks with 8-bit data </para>
+<link linkend="_struct_tcp_err">TcpErr</link><link linkend="_class_k_t_n_1_1_t_c_p_1_1_tcp_feed_base">KTN::TCP::TcpFeedBase</link>
+<para>The base class for TCP feed </para>
+<link linkend="_class_k_t_n_1_1_t_c_p_1_1_tcp_socket">KTN::TCP::TcpSocket</link><link linkend="_class_k_t_n_1_1_mdp3_1_1_template">KTN::Mdp3::Template</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_m_e_t_a_1_1_terminate_meta">KTN::CME::IL3::META::TerminateMeta</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_terminate_msg">KTN::CME::IL3::TerminateMsg</link><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_terminate_recv_msg">KTN::CME::IL3::TerminateRecvMsg</link><link linkend="_struct_timed_avg_params">TimedAvgParams</link>
+<para>Struct representing the parameters for the Timed Average algorithm </para>
+<link linkend="_class_timer_callback">TimerCallback</link>
+<para>Abstract base class for timer callback functionality </para>
+<link linkend="_struct_timer_interval">TimerInterval</link><link linkend="_struct_timer_state">TimerState</link><link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_trade_molecule">KTN::BOOKS::TradeMolecule</link><link linkend="_class_k_t_n_1_1_twap">KTN::Twap</link>
+<para>TWAP (Time-Weighted Average Price) algorithm </para>
+<link linkend="_structudp__settings">udp_settings</link>
+<para>Struct representing UDP settings </para>
+<link linkend="_class_udp_callback">UdpCallback</link>
+<para>Represents a callback interface for UDP data reception </para>
+<link linkend="_class_udp_callback_v3">UdpCallbackV3</link>
+<para>Represents a callback interface for UDP data reception (version 3) </para>
+<link linkend="_class_k_t_n_1_1_t_c_p_1_1_udp_socket">KTN::TCP::UdpSocket</link>
+<para>UDP socket </para>
+<link linkend="_struct_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1_1_conf_1_1_user_data">KTN::TCP::EFVITcpV5::Conf::UserData</link><link linkend="_struct_user_info">UserInfo</link>
+<para>Struct representing user information </para>
+<link linkend="_structsole_1_1uuid">sole::uuid</link><link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_volume_molecule">KTN::BOOKS::VolumeMolecule</link><link linkend="_class_k_t_n_1_1_waves">KTN::Waves</link>
+<para>Weighted Average algorithm class derived from <link linkend="_class_k_t_n_1_1_algo_base_v3">AlgoBaseV3</link> </para>
+<link linkend="_struct_waves_params">WavesParams</link>
+<para>Struct representing the parameters for the Waves algorithm </para>
+<link linkend="_struct_wavg_calc">WavgCalc</link>
+<para>Structure representing the weighted average calculation </para>
+<link linkend="_class_wavg_calc_multi">WavgCalcMulti</link>
+<para>Class for calculating weighted averages and performing related operations </para>
+<link linkend="_struct_wavg_edge_struct">WavgEdgeStruct</link>
+<para>Structure representing the weighted average edge information </para>
+<link linkend="_class_weighted_average_calculator">WeightedAverageCalculator</link>
+<para>Calculates the weighted average based on price and size </para>
+<link linkend="_struct_k_t_n_1_1_z_f_1_1zf__client__state">KTN::ZF::zf_client_state</link><link linkend="_structzmq__event__t">zmq_event_t</link><link linkend="_class_zmq_logger">ZmqLogger</link>
+<para>Responsible for logging messages using ZeroMQ </para>
+<link linkend="_class_zmq_menu">ZmqMenu</link>
+<para><link linkend="_class_menu">Menu</link> that uses ZeroMQ for communication </para>
+<link linkend="_class_zmq_message">ZmqMessage</link>
+<para>ZMQ message </para>
+<link linkend="_class_zmq_push">ZmqPush</link>
+<para>Represents a ZMQ push socket for sending messages to a ZMQ pull socket </para>
+<link linkend="_class_zmq_sub_listener">ZmqSubListener</link>
+<para>Abstract base class for ZMQ subscriber listeners </para>
+<link linkend="_class_zmq_subscriber">ZmqSubscriber</link>
+<para>ZMQ subscriber </para>
+<link linkend="_class_zmq_subscriber_v5">ZmqSubscriberV5</link>
+<para>A ZMQ subscriber class </para>
+</section>

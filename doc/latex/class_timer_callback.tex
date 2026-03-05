@@ -1,0 +1,88 @@
+\doxysection{Timer\+Callback Class Reference}
+\hypertarget{class_timer_callback}{}\label{class_timer_callback}\index{TimerCallback@{TimerCallback}}
+
+
+The \doxylink{class_timer_callback}{Timer\+Callback} class is an abstract base class for timer callback functionality.  
+
+
+
+
+{\ttfamily \#include $<$Timer\+Callback.\+hpp$>$}
+
+Inheritance diagram for Timer\+Callback\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_timer_callback}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_timer_callback_a3e292c3cd07a5bcd4794e235ca263afb}{on\+Timer\+State\+Change}} (Timer\+State\+::\+Enum state)=0
+\begin{DoxyCompactList}\small\item\em This method is called when the timer state changes. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_timer_callback_a4e6f6e42bd47fe8427b65eb667253646}{on\+Timer\+Interval}} (Timer\+Interval\+::\+Enum interval)=0
+\begin{DoxyCompactList}\small\item\em This method is called when the timer interval changes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_timer_callback}{Timer\+Callback} class is an abstract base class for timer callback functionality. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_timer_callback_a860376964afb427fdc695a68a6a1b601}\index{TimerCallback@{TimerCallback}!TimerCallback@{TimerCallback}}
+\index{TimerCallback@{TimerCallback}!TimerCallback@{TimerCallback}}
+\doxysubsubsection{\texorpdfstring{TimerCallback()}{TimerCallback()}}
+{\footnotesize\ttfamily \label{class_timer_callback_a860376964afb427fdc695a68a6a1b601} 
+Timer\+Callback\+::\+Timer\+Callback (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_timer_callback_adcddd0aa662aaa0d16104c54e506de87}\index{TimerCallback@{TimerCallback}!````~TimerCallback@{\texorpdfstring{$\sim$}{\string~}TimerCallback}}
+\index{````~TimerCallback@{\texorpdfstring{$\sim$}{\string~}TimerCallback}!TimerCallback@{TimerCallback}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}TimerCallback()}{\string~TimerCallback()}}
+{\footnotesize\ttfamily \label{class_timer_callback_adcddd0aa662aaa0d16104c54e506de87} 
+virtual Timer\+Callback\+::\texorpdfstring{$\sim$}{\string~}\+Timer\+Callback (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_timer_callback_a4e6f6e42bd47fe8427b65eb667253646}\index{TimerCallback@{TimerCallback}!onTimerInterval@{onTimerInterval}}
+\index{onTimerInterval@{onTimerInterval}!TimerCallback@{TimerCallback}}
+\doxysubsubsection{\texorpdfstring{onTimerInterval()}{onTimerInterval()}}
+{\footnotesize\ttfamily \label{class_timer_callback_a4e6f6e42bd47fe8427b65eb667253646} 
+virtual void Timer\+Callback\+::on\+Timer\+Interval (\begin{DoxyParamCaption}\item[{Timer\+Interval\+::\+Enum}]{interval}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This method is called when the timer interval changes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em interval} & The new interval of the timer. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_k_t_n_1_1_skewer_a65da6b87d05b0ef9705838719d260d46}{KTN\+::\+Skewer}}, \mbox{\hyperlink{class_k_t_n_1_1_skew_trader_aa5cba2d21d4fd301c6fbc03d14ee09b1}{KTN\+::\+Skew\+Trader}}, \mbox{\hyperlink{class_k_t_n_1_1_stacker_timer_a03224634bd7cb53a334172df87c0dfa2}{KTN\+::\+Stacker\+Timer}}, and \mbox{\hyperlink{class_k_t_n_1_1_twap_a0f87653959286724c5fc4d6ede817da6}{KTN\+::\+Twap}}.
+
+\Hypertarget{class_timer_callback_a3e292c3cd07a5bcd4794e235ca263afb}\index{TimerCallback@{TimerCallback}!onTimerStateChange@{onTimerStateChange}}
+\index{onTimerStateChange@{onTimerStateChange}!TimerCallback@{TimerCallback}}
+\doxysubsubsection{\texorpdfstring{onTimerStateChange()}{onTimerStateChange()}}
+{\footnotesize\ttfamily \label{class_timer_callback_a3e292c3cd07a5bcd4794e235ca263afb} 
+virtual void Timer\+Callback\+::on\+Timer\+State\+Change (\begin{DoxyParamCaption}\item[{Timer\+State\+::\+Enum}]{state}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This method is called when the timer state changes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & The new state of the timer. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_k_t_n_1_1_skewer_ac91e2faed627a58b79d242ea5cab9886}{KTN\+::\+Skewer}}, \mbox{\hyperlink{class_k_t_n_1_1_skew_trader_a30390e85c7023b1bb7b30dca4780cfb6}{KTN\+::\+Skew\+Trader}}, \mbox{\hyperlink{class_k_t_n_1_1_stacker_timer_ab5fc8b864084270043f88a41033caced}{KTN\+::\+Stacker\+Timer}}, and \mbox{\hyperlink{class_k_t_n_1_1_twap_a8ea10fc97baa293388f333423f3e7ead}{KTN\+::\+Twap}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Algo\+Calculators/Timer\+Callback.\+hpp\end{DoxyCompactItemize}

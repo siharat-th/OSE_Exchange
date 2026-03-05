@@ -1,0 +1,150 @@
+\doxysection{KTN\+::ALGO\+::Order\+Loader Class Reference}
+\hypertarget{class_k_t_n_1_1_a_l_g_o_1_1_order_loader}{}\label{class_k_t_n_1_1_a_l_g_o_1_1_order_loader}\index{KTN::ALGO::OrderLoader@{KTN::ALGO::OrderLoader}}
+
+
+The \doxylink{class_k_t_n_1_1_a_l_g_o_1_1_order_loader}{Order\+Loader} class is responsible for loading orders from a file and providing various order-\/related functionalities.  
+
+
+
+
+{\ttfamily \#include $<$Order\+Loader.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} $>$ \mbox{\hyperlink{class_k_t_n_1_1_a_l_g_o_1_1_order_loader_a924b7018d4956ec36d7f6f17a91bc98f}{Get\+Orders}} (string filename, string tag, string strat, string source, string guid, \mbox{\hyperlink{struct_user_info}{User\+Info}} info)
+\begin{DoxyCompactList}\small\item\em Get\+Orders loads orders from a file based on the provided parameters. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_k_t_n_1_1_a_l_g_o_1_1_order_loader_a196f49a6a8eeaa32ae161bbcf6035093}{Next\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Next\+Id generates the next ID for an order. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} $>$ \mbox{\hyperlink{class_k_t_n_1_1_a_l_g_o_1_1_order_loader_a3120c6cd6ddcb85558c8f61cde3a44a5}{Load\+File}} (string filename)
+\begin{DoxyCompactList}\small\item\em Load\+File loads orders from a file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} \mbox{\hyperlink{class_k_t_n_1_1_a_l_g_o_1_1_order_loader_a53220eb868117f7de249e4248ffe9df5}{New\+Order\+Builder}} (\mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} orig)
+\begin{DoxyCompactList}\small\item\em New\+Order\+Builder builds a new order based on the provided original order. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_k_t_n_1_1_a_l_g_o_1_1_order_loader}{Order\+Loader} class is responsible for loading orders from a file and providing various order-\/related functionalities. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_k_t_n_1_1_a_l_g_o_1_1_order_loader_a981fc8e7512e86aba7dae530ac48c91e}\index{KTN::ALGO::OrderLoader@{KTN::ALGO::OrderLoader}!OrderLoader@{OrderLoader}}
+\index{OrderLoader@{OrderLoader}!KTN::ALGO::OrderLoader@{KTN::ALGO::OrderLoader}}
+\doxysubsubsection{\texorpdfstring{OrderLoader()}{OrderLoader()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_a_l_g_o_1_1_order_loader_a981fc8e7512e86aba7dae530ac48c91e} 
+Order\+Loader\+::\+Order\+Loader (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_k_t_n_1_1_a_l_g_o_1_1_order_loader_a20838ed47fbae975ac9c7b9f6d7872be}\index{KTN::ALGO::OrderLoader@{KTN::ALGO::OrderLoader}!````~OrderLoader@{\texorpdfstring{$\sim$}{\string~}OrderLoader}}
+\index{````~OrderLoader@{\texorpdfstring{$\sim$}{\string~}OrderLoader}!KTN::ALGO::OrderLoader@{KTN::ALGO::OrderLoader}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}OrderLoader()}{\string~OrderLoader()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_a_l_g_o_1_1_order_loader_a20838ed47fbae975ac9c7b9f6d7872be} 
+Order\+Loader\+::\texorpdfstring{$\sim$}{\string~}\+Order\+Loader (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_a_l_g_o_1_1_order_loader_a924b7018d4956ec36d7f6f17a91bc98f}\index{KTN::ALGO::OrderLoader@{KTN::ALGO::OrderLoader}!GetOrders@{GetOrders}}
+\index{GetOrders@{GetOrders}!KTN::ALGO::OrderLoader@{KTN::ALGO::OrderLoader}}
+\doxysubsubsection{\texorpdfstring{GetOrders()}{GetOrders()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_a_l_g_o_1_1_order_loader_a924b7018d4956ec36d7f6f17a91bc98f} 
+vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} $>$ Order\+Loader\+::\+Get\+Orders (\begin{DoxyParamCaption}\item[{string}]{filename}{, }\item[{string}]{tag}{, }\item[{string}]{strat}{, }\item[{string}]{source}{, }\item[{string}]{guid}{, }\item[{\mbox{\hyperlink{struct_user_info}{User\+Info}}}]{info}{}\end{DoxyParamCaption})}
+
+
+
+Get\+Orders loads orders from a file based on the provided parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file to load orders from. \\
+\hline
+{\em tag} & The tag associated with the orders. \\
+\hline
+{\em strat} & The strategy associated with the orders. \\
+\hline
+{\em source} & The source of the orders. \\
+\hline
+{\em guid} & The GUID associated with the orders. \\
+\hline
+{\em info} & The user information associated with the orders. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of orders loaded from the file. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00075}{Load\+File()}}.
+
+\Hypertarget{class_k_t_n_1_1_a_l_g_o_1_1_order_loader_a3120c6cd6ddcb85558c8f61cde3a44a5}\index{KTN::ALGO::OrderLoader@{KTN::ALGO::OrderLoader}!LoadFile@{LoadFile}}
+\index{LoadFile@{LoadFile}!KTN::ALGO::OrderLoader@{KTN::ALGO::OrderLoader}}
+\doxysubsubsection{\texorpdfstring{LoadFile()}{LoadFile()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_a_l_g_o_1_1_order_loader_a3120c6cd6ddcb85558c8f61cde3a44a5} 
+vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} $>$ Order\+Loader\+::\+Load\+File (\begin{DoxyParamCaption}\item[{string}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Load\+File loads orders from a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file to load orders from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of orders loaded from the file. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00175}{New\+Order\+Builder()}}, and \mbox{\hyperlink{l00019}{String\+Splitter\+::\+Split()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00017}{Get\+Orders()}}.
+
+\Hypertarget{class_k_t_n_1_1_a_l_g_o_1_1_order_loader_a53220eb868117f7de249e4248ffe9df5}\index{KTN::ALGO::OrderLoader@{KTN::ALGO::OrderLoader}!NewOrderBuilder@{NewOrderBuilder}}
+\index{NewOrderBuilder@{NewOrderBuilder}!KTN::ALGO::OrderLoader@{KTN::ALGO::OrderLoader}}
+\doxysubsubsection{\texorpdfstring{NewOrderBuilder()}{NewOrderBuilder()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_a_l_g_o_1_1_order_loader_a53220eb868117f7de249e4248ffe9df5} 
+\mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} Order\+Loader\+::\+New\+Order\+Builder (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}}}]{orig}{}\end{DoxyParamCaption})}
+
+
+
+New\+Order\+Builder builds a new order based on the provided original order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em orig} & The original order. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new order built based on the original order. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00049}{User\+Info\+::groupname}}, \mbox{\hyperlink{l00063}{Next\+Id()}}, \mbox{\hyperlink{l00048}{User\+Info\+::org}}, and \mbox{\hyperlink{l00047}{User\+Info\+::user}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00075}{Load\+File()}}.
+
+\Hypertarget{class_k_t_n_1_1_a_l_g_o_1_1_order_loader_a196f49a6a8eeaa32ae161bbcf6035093}\index{KTN::ALGO::OrderLoader@{KTN::ALGO::OrderLoader}!NextId@{NextId}}
+\index{NextId@{NextId}!KTN::ALGO::OrderLoader@{KTN::ALGO::OrderLoader}}
+\doxysubsubsection{\texorpdfstring{NextId()}{NextId()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_a_l_g_o_1_1_order_loader_a196f49a6a8eeaa32ae161bbcf6035093} 
+std\+::string Order\+Loader\+::\+Next\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Next\+Id generates the next ID for an order. 
+
+\begin{DoxyReturn}{Returns}
+The next ID for an order. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00175}{New\+Order\+Builder()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Algo\+Engines/Order\+Loader.\+hpp\item 
+Algo\+Engines/Order\+Loader.\+cpp\end{DoxyCompactItemize}

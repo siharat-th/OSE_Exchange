@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structefvitcp_1_1_tcp_header" xml:lang="en-US">
+<title>efvitcp::TcpHeader Struct Reference</title>
+<indexterm><primary>efvitcp::TcpHeader</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>uint16_t <link linkend="_structefvitcp_1_1_tcp_header_1a731d8ca5ff86635fd645ae14d9758492">src_port</link></para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_structefvitcp_1_1_tcp_header_1a832ab6410083dab955aa5144a3297b76">dst_port</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_structefvitcp_1_1_tcp_header_1afcbd3a7eb1e87e32fea68deb51898969">seq_num</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_structefvitcp_1_1_tcp_header_1a85f8a74db34542f53597d3f5154a83ef">ack_num</link></para>
+</listitem>
+            <listitem><para><anchor xml:id="_structefvitcp_1_1_tcp_header_1a7e95bfc5bb4c3a4503c639f84c506919"/>union {</para>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_unionefvitcp_1_1_tcp_header_1_1_0d18_1ae786c7b25357c6baa646527158d37573"/>&#160;&#160;&#160;struct {</para>
+        <itemizedlist>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;uint16_t <link linkend="_structefvitcp_1_1_tcp_header_1a91ec29cf19f1bb5b9a856e18adec91c7">reserved</link>: 4</para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;uint16_t <link linkend="_structefvitcp_1_1_tcp_header_1ad09e1fe92749e1d31e3cca185068253e">data_offset</link>: 4</para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;uint16_t <link linkend="_structefvitcp_1_1_tcp_header_1a09e6ed3748e93b1a983999504715eabf">fin</link>: 1</para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;uint16_t <link linkend="_structefvitcp_1_1_tcp_header_1a3dd2b570048fbdfbd4015db3a54ddf9b">syn</link>: 1</para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;uint16_t <link linkend="_structefvitcp_1_1_tcp_header_1a0195f40ba8466746fa6c65d24d0c579c">rst</link>: 1</para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;uint16_t <link linkend="_structefvitcp_1_1_tcp_header_1a7f296d5fc20151e39340964e4cbc8646">psh</link>: 1</para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;&#160;&#160;&#160;uint16_t <link linkend="_structefvitcp_1_1_tcp_header_1adb72746c122c1e5427cb0ae8099f9dae">ack</link>: 1</para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;} </para>
+</listitem>
+            <listitem><para>&#160;&#160;&#160;uint16_t <link linkend="_structefvitcp_1_1_tcp_header_1a22a641ee3ad3cded61f23e073a5b6e9e">offset_flags</link></para>
+</listitem>
+        </itemizedlist>
+</listitem>
+            <listitem><para>}; </para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_structefvitcp_1_1_tcp_header_1a6a69e5c0c02522f30629e6a94da96af5">window_size</link></para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_structefvitcp_1_1_tcp_header_1a0ffcb1e868e7939b193f929cfe4fc62e">checksum</link></para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_structefvitcp_1_1_tcp_header_1abda0d56519e1a029b14a7226feada28d">urgent_pointer</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structefvitcp_1_1_tcp_header_1adb72746c122c1e5427cb0ae8099f9dae"/><section>
+    <title>ack</title>
+<indexterm><primary>ack</primary><secondary>efvitcp::TcpHeader</secondary></indexterm>
+<indexterm><primary>efvitcp::TcpHeader</primary><secondary>ack</secondary></indexterm>
+<para><computeroutput>uint16_t efvitcp::TcpHeader::ack</computeroutput></para></section>
+<anchor xml:id="_structefvitcp_1_1_tcp_header_1a85f8a74db34542f53597d3f5154a83ef"/><section>
+    <title>ack_num</title>
+<indexterm><primary>ack_num</primary><secondary>efvitcp::TcpHeader</secondary></indexterm>
+<indexterm><primary>efvitcp::TcpHeader</primary><secondary>ack_num</secondary></indexterm>
+<para><computeroutput>uint32_t efvitcp::TcpHeader::ack_num</computeroutput></para></section>
+<anchor xml:id="_structefvitcp_1_1_tcp_header_1a0ffcb1e868e7939b193f929cfe4fc62e"/><section>
+    <title>checksum</title>
+<indexterm><primary>checksum</primary><secondary>efvitcp::TcpHeader</secondary></indexterm>
+<indexterm><primary>efvitcp::TcpHeader</primary><secondary>checksum</secondary></indexterm>
+<para><computeroutput>uint16_t efvitcp::TcpHeader::checksum</computeroutput></para></section>
+<anchor xml:id="_structefvitcp_1_1_tcp_header_1ad09e1fe92749e1d31e3cca185068253e"/><section>
+    <title>data_offset</title>
+<indexterm><primary>data_offset</primary><secondary>efvitcp::TcpHeader</secondary></indexterm>
+<indexterm><primary>efvitcp::TcpHeader</primary><secondary>data_offset</secondary></indexterm>
+<para><computeroutput>uint16_t efvitcp::TcpHeader::data_offset</computeroutput></para></section>
+<anchor xml:id="_structefvitcp_1_1_tcp_header_1a832ab6410083dab955aa5144a3297b76"/><section>
+    <title>dst_port</title>
+<indexterm><primary>dst_port</primary><secondary>efvitcp::TcpHeader</secondary></indexterm>
+<indexterm><primary>efvitcp::TcpHeader</primary><secondary>dst_port</secondary></indexterm>
+<para><computeroutput>uint16_t efvitcp::TcpHeader::dst_port</computeroutput></para></section>
+<anchor xml:id="_structefvitcp_1_1_tcp_header_1a09e6ed3748e93b1a983999504715eabf"/><section>
+    <title>fin</title>
+<indexterm><primary>fin</primary><secondary>efvitcp::TcpHeader</secondary></indexterm>
+<indexterm><primary>efvitcp::TcpHeader</primary><secondary>fin</secondary></indexterm>
+<para><computeroutput>uint16_t efvitcp::TcpHeader::fin</computeroutput></para></section>
+<anchor xml:id="_structefvitcp_1_1_tcp_header_1a22a641ee3ad3cded61f23e073a5b6e9e"/><section>
+    <title>offset_flags</title>
+<indexterm><primary>offset_flags</primary><secondary>efvitcp::TcpHeader</secondary></indexterm>
+<indexterm><primary>efvitcp::TcpHeader</primary><secondary>offset_flags</secondary></indexterm>
+<para><computeroutput>uint16_t efvitcp::TcpHeader::offset_flags</computeroutput></para></section>
+<anchor xml:id="_structefvitcp_1_1_tcp_header_1a7f296d5fc20151e39340964e4cbc8646"/><section>
+    <title>psh</title>
+<indexterm><primary>psh</primary><secondary>efvitcp::TcpHeader</secondary></indexterm>
+<indexterm><primary>efvitcp::TcpHeader</primary><secondary>psh</secondary></indexterm>
+<para><computeroutput>uint16_t efvitcp::TcpHeader::psh</computeroutput></para></section>
+<anchor xml:id="_structefvitcp_1_1_tcp_header_1a91ec29cf19f1bb5b9a856e18adec91c7"/><section>
+    <title>reserved</title>
+<indexterm><primary>reserved</primary><secondary>efvitcp::TcpHeader</secondary></indexterm>
+<indexterm><primary>efvitcp::TcpHeader</primary><secondary>reserved</secondary></indexterm>
+<para><computeroutput>uint16_t efvitcp::TcpHeader::reserved</computeroutput></para></section>
+<anchor xml:id="_structefvitcp_1_1_tcp_header_1a0195f40ba8466746fa6c65d24d0c579c"/><section>
+    <title>rst</title>
+<indexterm><primary>rst</primary><secondary>efvitcp::TcpHeader</secondary></indexterm>
+<indexterm><primary>efvitcp::TcpHeader</primary><secondary>rst</secondary></indexterm>
+<para><computeroutput>uint16_t efvitcp::TcpHeader::rst</computeroutput></para></section>
+<anchor xml:id="_structefvitcp_1_1_tcp_header_1afcbd3a7eb1e87e32fea68deb51898969"/><section>
+    <title>seq_num</title>
+<indexterm><primary>seq_num</primary><secondary>efvitcp::TcpHeader</secondary></indexterm>
+<indexterm><primary>efvitcp::TcpHeader</primary><secondary>seq_num</secondary></indexterm>
+<para><computeroutput>uint32_t efvitcp::TcpHeader::seq_num</computeroutput></para></section>
+<anchor xml:id="_structefvitcp_1_1_tcp_header_1a731d8ca5ff86635fd645ae14d9758492"/><section>
+    <title>src_port</title>
+<indexterm><primary>src_port</primary><secondary>efvitcp::TcpHeader</secondary></indexterm>
+<indexterm><primary>efvitcp::TcpHeader</primary><secondary>src_port</secondary></indexterm>
+<para><computeroutput>uint16_t efvitcp::TcpHeader::src_port</computeroutput></para></section>
+<anchor xml:id="_structefvitcp_1_1_tcp_header_1a3dd2b570048fbdfbd4015db3a54ddf9b"/><section>
+    <title>syn</title>
+<indexterm><primary>syn</primary><secondary>efvitcp::TcpHeader</secondary></indexterm>
+<indexterm><primary>efvitcp::TcpHeader</primary><secondary>syn</secondary></indexterm>
+<para><computeroutput>uint16_t efvitcp::TcpHeader::syn</computeroutput></para></section>
+<anchor xml:id="_structefvitcp_1_1_tcp_header_1abda0d56519e1a029b14a7226feada28d"/><section>
+    <title>urgent_pointer</title>
+<indexterm><primary>urgent_pointer</primary><secondary>efvitcp::TcpHeader</secondary></indexterm>
+<indexterm><primary>efvitcp::TcpHeader</primary><secondary>urgent_pointer</secondary></indexterm>
+<para><computeroutput>uint16_t efvitcp::TcpHeader::urgent_pointer</computeroutput></para></section>
+<anchor xml:id="_structefvitcp_1_1_tcp_header_1a6a69e5c0c02522f30629e6a94da96af5"/><section>
+    <title>window_size</title>
+<indexterm><primary>window_size</primary><secondary>efvitcp::TcpHeader</secondary></indexterm>
+<indexterm><primary>efvitcp::TcpHeader</primary><secondary>window_size</secondary></indexterm>
+<para><computeroutput>uint16_t efvitcp::TcpHeader::window_size</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+C:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/external/pollnet/efvitcp/Core.h</section>
+</section>

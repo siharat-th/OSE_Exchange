@@ -1,0 +1,73 @@
+\doxysection{KTN\+::CME\+::IL3\+::IL3\+App\+Helpers Class Reference}
+\hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_app_helpers}{}\label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_app_helpers}\index{KTN::CME::IL3::IL3AppHelpers@{KTN::CME::IL3::IL3AppHelpers}}
+
+
+The \doxylink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_app_helpers}{IL3\+App\+Helpers} class provides helper functions for the IL3 application.  
+
+
+
+
+{\ttfamily \#include $<$IL3\+App\+Helpers.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_app_helpers_a80840ab75cf9a4acda1528fbf5f31c86}{Get\+Nanoseconds\+Since\+Epoch\+Optimized}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current time in nanoseconds since the epoch. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static uint64\+\_\+t \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_app_helpers_a70bb13866d30e0c778e4ab0630728483}{Gen\+Ord\+Timestamp}} ()
+\begin{DoxyCompactList}\small\item\em Generates an order timestamp in nanoseconds since the epoch. \end{DoxyCompactList}\item 
+static uint64\+\_\+t \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_app_helpers_aff2d2c3e345547f131df9e1c0009fb49}{Gen\+Fast\+Timestamp}} ()
+\begin{DoxyCompactList}\small\item\em Generates a fast timestamp using the timestamp counter on x86\+\_\+64 architecture. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_app_helpers}{IL3\+App\+Helpers} class provides helper functions for the IL3 application. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_app_helpers_aff2d2c3e345547f131df9e1c0009fb49}\index{KTN::CME::IL3::IL3AppHelpers@{KTN::CME::IL3::IL3AppHelpers}!GenFastTimestamp@{GenFastTimestamp}}
+\index{GenFastTimestamp@{GenFastTimestamp}!KTN::CME::IL3::IL3AppHelpers@{KTN::CME::IL3::IL3AppHelpers}}
+\doxysubsubsection{\texorpdfstring{GenFastTimestamp()}{GenFastTimestamp()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_app_helpers_aff2d2c3e345547f131df9e1c0009fb49} 
+static uint64\+\_\+t KTN\+::\+CME\+::\+IL3\+::\+IL3\+App\+Helpers\+::\+Gen\+Fast\+Timestamp (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Generates a fast timestamp using the timestamp counter on x86\+\_\+64 architecture. 
+
+\begin{DoxyReturn}{Returns}
+The generated fast timestamp. 
+\end{DoxyReturn}
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_app_helpers_a70bb13866d30e0c778e4ab0630728483}\index{KTN::CME::IL3::IL3AppHelpers@{KTN::CME::IL3::IL3AppHelpers}!GenOrdTimestamp@{GenOrdTimestamp}}
+\index{GenOrdTimestamp@{GenOrdTimestamp}!KTN::CME::IL3::IL3AppHelpers@{KTN::CME::IL3::IL3AppHelpers}}
+\doxysubsubsection{\texorpdfstring{GenOrdTimestamp()}{GenOrdTimestamp()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_app_helpers_a70bb13866d30e0c778e4ab0630728483} 
+static uint64\+\_\+t KTN\+::\+CME\+::\+IL3\+::\+IL3\+App\+Helpers\+::\+Gen\+Ord\+Timestamp (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Generates an order timestamp in nanoseconds since the epoch. 
+
+\begin{DoxyReturn}{Returns}
+The generated order timestamp. 
+\end{DoxyReturn}
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_app_helpers_a80840ab75cf9a4acda1528fbf5f31c86}\index{KTN::CME::IL3::IL3AppHelpers@{KTN::CME::IL3::IL3AppHelpers}!GetNanosecondsSinceEpochOptimized@{GetNanosecondsSinceEpochOptimized}}
+\index{GetNanosecondsSinceEpochOptimized@{GetNanosecondsSinceEpochOptimized}!KTN::CME::IL3::IL3AppHelpers@{KTN::CME::IL3::IL3AppHelpers}}
+\doxysubsubsection{\texorpdfstring{GetNanosecondsSinceEpochOptimized()}{GetNanosecondsSinceEpochOptimized()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_app_helpers_a80840ab75cf9a4acda1528fbf5f31c86} 
+uint64\+\_\+t KTN\+::\+CME\+::\+IL3\+::\+IL3\+App\+Helpers\+::\+Get\+Nanoseconds\+Since\+Epoch\+Optimized (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the current time in nanoseconds since the epoch. 
+
+\begin{DoxyReturn}{Returns}
+The current time in nanoseconds since the epoch. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+exchsupport/cme/il3/IL3\+App\+Helpers.\+hpp\end{DoxyCompactItemize}

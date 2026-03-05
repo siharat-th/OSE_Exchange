@@ -1,0 +1,81 @@
+\doxysection{moodycamel\+::spsc\+\_\+sema\+::Lightweight\+Semaphore Class Reference}
+\hypertarget{classmoodycamel_1_1spsc__sema_1_1_lightweight_semaphore}{}\label{classmoodycamel_1_1spsc__sema_1_1_lightweight_semaphore}\index{moodycamel::spsc\_sema::LightweightSemaphore@{moodycamel::spsc\_sema::LightweightSemaphore}}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::make\+\_\+signed$<$ std\+::size\+\_\+t $>$\+::type \mbox{\hyperlink{classmoodycamel_1_1spsc__sema_1_1_lightweight_semaphore_a46841836a5dc89e3df10bca12f66b655}{ssize\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+AE\+\_\+\+NO\+\_\+\+TSAN \mbox{\hyperlink{classmoodycamel_1_1spsc__sema_1_1_lightweight_semaphore_a833100d00f5b67ed874ce48e713b0276}{Lightweight\+Semaphore}} (ssize\+\_\+t initial\+Count=0)
+\item 
+bool \mbox{\hyperlink{classmoodycamel_1_1spsc__sema_1_1_lightweight_semaphore_ac9705d28d2493140483112a1ac899f31}{try\+Wait}} () AE\+\_\+\+NO\+\_\+\+TSAN
+\item 
+bool \mbox{\hyperlink{classmoodycamel_1_1spsc__sema_1_1_lightweight_semaphore_ac26eb31ae596d2ca72f470c643641c7b}{wait}} () AE\+\_\+\+NO\+\_\+\+TSAN
+\item 
+bool \mbox{\hyperlink{classmoodycamel_1_1spsc__sema_1_1_lightweight_semaphore_a00003253988c9368df080951b37ffa1c}{wait}} (std\+::int64\+\_\+t timeout\+\_\+usecs) AE\+\_\+\+NO\+\_\+\+TSAN
+\item 
+void \mbox{\hyperlink{classmoodycamel_1_1spsc__sema_1_1_lightweight_semaphore_a4f6ac02af433e5a097d266aa9d27eceb}{signal}} (ssize\+\_\+t count=1) AE\+\_\+\+NO\+\_\+\+TSAN
+\item 
+ssize\+\_\+t \mbox{\hyperlink{classmoodycamel_1_1spsc__sema_1_1_lightweight_semaphore_ad2167590fb21fa46109bbe2c2445ee68}{available\+Approx}} () const AE\+\_\+\+NO\+\_\+\+TSAN
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classmoodycamel_1_1spsc__sema_1_1_lightweight_semaphore_a46841836a5dc89e3df10bca12f66b655}\index{moodycamel::spsc\_sema::LightweightSemaphore@{moodycamel::spsc\_sema::LightweightSemaphore}!ssize\_t@{ssize\_t}}
+\index{ssize\_t@{ssize\_t}!moodycamel::spsc\_sema::LightweightSemaphore@{moodycamel::spsc\_sema::LightweightSemaphore}}
+\doxysubsubsection{\texorpdfstring{ssize\_t}{ssize\_t}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1spsc__sema_1_1_lightweight_semaphore_a46841836a5dc89e3df10bca12f66b655} 
+std\+::make\+\_\+signed$<$std\+::size\+\_\+t$>$\+::type moodycamel\+::spsc\+\_\+sema\+::\+Lightweight\+Semaphore\+::ssize\+\_\+t}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classmoodycamel_1_1spsc__sema_1_1_lightweight_semaphore_a833100d00f5b67ed874ce48e713b0276}\index{moodycamel::spsc\_sema::LightweightSemaphore@{moodycamel::spsc\_sema::LightweightSemaphore}!LightweightSemaphore@{LightweightSemaphore}}
+\index{LightweightSemaphore@{LightweightSemaphore}!moodycamel::spsc\_sema::LightweightSemaphore@{moodycamel::spsc\_sema::LightweightSemaphore}}
+\doxysubsubsection{\texorpdfstring{LightweightSemaphore()}{LightweightSemaphore()}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1spsc__sema_1_1_lightweight_semaphore_a833100d00f5b67ed874ce48e713b0276} 
+AE\+\_\+\+NO\+\_\+\+TSAN moodycamel\+::spsc\+\_\+sema\+::\+Lightweight\+Semaphore\+::\+Lightweight\+Semaphore (\begin{DoxyParamCaption}\item[{ssize\+\_\+t}]{initial\+Count}{ = {\ttfamily 0}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmoodycamel_1_1spsc__sema_1_1_lightweight_semaphore_ad2167590fb21fa46109bbe2c2445ee68}\index{moodycamel::spsc\_sema::LightweightSemaphore@{moodycamel::spsc\_sema::LightweightSemaphore}!availableApprox@{availableApprox}}
+\index{availableApprox@{availableApprox}!moodycamel::spsc\_sema::LightweightSemaphore@{moodycamel::spsc\_sema::LightweightSemaphore}}
+\doxysubsubsection{\texorpdfstring{availableApprox()}{availableApprox()}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1spsc__sema_1_1_lightweight_semaphore_ad2167590fb21fa46109bbe2c2445ee68} 
+ssize\+\_\+t moodycamel\+::spsc\+\_\+sema\+::\+Lightweight\+Semaphore\+::available\+Approx (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1spsc__sema_1_1_lightweight_semaphore_a4f6ac02af433e5a097d266aa9d27eceb}\index{moodycamel::spsc\_sema::LightweightSemaphore@{moodycamel::spsc\_sema::LightweightSemaphore}!signal@{signal}}
+\index{signal@{signal}!moodycamel::spsc\_sema::LightweightSemaphore@{moodycamel::spsc\_sema::LightweightSemaphore}}
+\doxysubsubsection{\texorpdfstring{signal()}{signal()}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1spsc__sema_1_1_lightweight_semaphore_a4f6ac02af433e5a097d266aa9d27eceb} 
+void moodycamel\+::spsc\+\_\+sema\+::\+Lightweight\+Semaphore\+::signal (\begin{DoxyParamCaption}\item[{ssize\+\_\+t}]{count}{ = {\ttfamily 1}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1spsc__sema_1_1_lightweight_semaphore_ac9705d28d2493140483112a1ac899f31}\index{moodycamel::spsc\_sema::LightweightSemaphore@{moodycamel::spsc\_sema::LightweightSemaphore}!tryWait@{tryWait}}
+\index{tryWait@{tryWait}!moodycamel::spsc\_sema::LightweightSemaphore@{moodycamel::spsc\_sema::LightweightSemaphore}}
+\doxysubsubsection{\texorpdfstring{tryWait()}{tryWait()}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1spsc__sema_1_1_lightweight_semaphore_ac9705d28d2493140483112a1ac899f31} 
+bool moodycamel\+::spsc\+\_\+sema\+::\+Lightweight\+Semaphore\+::try\+Wait (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1spsc__sema_1_1_lightweight_semaphore_ac26eb31ae596d2ca72f470c643641c7b}\index{moodycamel::spsc\_sema::LightweightSemaphore@{moodycamel::spsc\_sema::LightweightSemaphore}!wait@{wait}}
+\index{wait@{wait}!moodycamel::spsc\_sema::LightweightSemaphore@{moodycamel::spsc\_sema::LightweightSemaphore}}
+\doxysubsubsection{\texorpdfstring{wait()}{wait()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1spsc__sema_1_1_lightweight_semaphore_ac26eb31ae596d2ca72f470c643641c7b} 
+bool moodycamel\+::spsc\+\_\+sema\+::\+Lightweight\+Semaphore\+::wait (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1spsc__sema_1_1_lightweight_semaphore_a00003253988c9368df080951b37ffa1c}\index{moodycamel::spsc\_sema::LightweightSemaphore@{moodycamel::spsc\_sema::LightweightSemaphore}!wait@{wait}}
+\index{wait@{wait}!moodycamel::spsc\_sema::LightweightSemaphore@{moodycamel::spsc\_sema::LightweightSemaphore}}
+\doxysubsubsection{\texorpdfstring{wait()}{wait()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1spsc__sema_1_1_lightweight_semaphore_a00003253988c9368df080951b37ffa1c} 
+bool moodycamel\+::spsc\+\_\+sema\+::\+Lightweight\+Semaphore\+::wait (\begin{DoxyParamCaption}\item[{std\+::int64\+\_\+t}]{timeout\+\_\+usecs}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sgaer/source/repos/katanafinancial/\+Occam\+CME4/\+Occam\+CME4/src/external/camel/atomicops.\+h\end{DoxyCompactItemize}

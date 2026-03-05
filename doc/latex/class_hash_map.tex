@@ -1,0 +1,152 @@
+\doxysection{Hash\+Map\texorpdfstring{$<$}{<} Key, Value, Table\+Size \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_hash_map}{}\label{class_hash_map}\index{HashMap$<$ Key, Value, TableSize $>$@{HashMap$<$ Key, Value, TableSize $>$}}
+
+
+A hash map implementation that maps keys to values.  
+
+
+
+
+{\ttfamily \#include $<$Hash\+Map.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_hash_map_ae4e4ee0b7075004bb85db35bc72a3408}{Hash\+Map}} ()
+\begin{DoxyCompactList}\small\item\em Constructs an empty hash map. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_hash_map_a9cb8f461aa7b0606db37505e32c6828b}{size}} () const
+\begin{DoxyCompactList}\small\item\em Returns the number of key-\/value pairs in the hash map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_hash_map_ad53de12a16d16f99b649cd8a2e828565}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Removes all key-\/value pairs from the hash map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_hash_map_ad6d65def00859bae80834c39e8165515}{insert}} (const Key \&key, const Value \&value)
+\begin{DoxyCompactList}\small\item\em Inserts a key-\/value pair into the hash map. \end{DoxyCompactList}\item 
+Value \& \mbox{\hyperlink{class_hash_map_a805b24caa5b67dded42066c15cf2779d}{lookup}} (const Key \&key)
+\begin{DoxyCompactList}\small\item\em Looks up the value associated with the given key in the hash map. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_hash_map_aa1c5d5999d642e5b5181a01e2dd4ed51}{find}} (const Key \&key)
+\begin{DoxyCompactList}\small\item\em Checks if the given key exists in the hash map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Key, typename Value, size\+\_\+t Table\+Size$>$\newline
+class Hash\+Map$<$ Key, Value, Table\+Size $>$}
+A hash map implementation that maps keys to values. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Key} & The type of the keys in the hash map. \\
+\hline
+{\em Value} & The type of the values in the hash map. \\
+\hline
+{\em Table\+Size} & The size of the hash map table. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_hash_map_ae4e4ee0b7075004bb85db35bc72a3408}\index{HashMap$<$ Key, Value, TableSize $>$@{HashMap$<$ Key, Value, TableSize $>$}!HashMap@{HashMap}}
+\index{HashMap@{HashMap}!HashMap$<$ Key, Value, TableSize $>$@{HashMap$<$ Key, Value, TableSize $>$}}
+\doxysubsubsection{\texorpdfstring{HashMap()}{HashMap()}}
+{\footnotesize\ttfamily \label{class_hash_map_ae4e4ee0b7075004bb85db35bc72a3408} 
+template$<$typename Key , typename Value , size\+\_\+t Table\+Size$>$ \\
+\mbox{\hyperlink{class_hash_map}{Hash\+Map}}$<$ Key, Value, Table\+Size $>$\mbox{\hyperlink{class_hash_map}{\+::\+Hash\+Map}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs an empty hash map. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_hash_map_ad53de12a16d16f99b649cd8a2e828565}\index{HashMap$<$ Key, Value, TableSize $>$@{HashMap$<$ Key, Value, TableSize $>$}!clear@{clear}}
+\index{clear@{clear}!HashMap$<$ Key, Value, TableSize $>$@{HashMap$<$ Key, Value, TableSize $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \label{class_hash_map_ad53de12a16d16f99b649cd8a2e828565} 
+template$<$typename Key , typename Value , size\+\_\+t Table\+Size$>$ \\
+void \mbox{\hyperlink{class_hash_map}{Hash\+Map}}$<$ Key, Value, Table\+Size $>$\+::clear (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes all key-\/value pairs from the hash map. 
+
+
+
+Referenced by \mbox{\hyperlink{l00170}{KTN\+::\+CME\+::\+Cme\+Algo\+::\+Clear\+Maps()}}, and \mbox{\hyperlink{l00166}{KTN\+::\+CME\+::\+Cme\+GT5\+::\+Clear\+Maps()}}.
+
+\Hypertarget{class_hash_map_aa1c5d5999d642e5b5181a01e2dd4ed51}\index{HashMap$<$ Key, Value, TableSize $>$@{HashMap$<$ Key, Value, TableSize $>$}!find@{find}}
+\index{find@{find}!HashMap$<$ Key, Value, TableSize $>$@{HashMap$<$ Key, Value, TableSize $>$}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily \label{class_hash_map_aa1c5d5999d642e5b5181a01e2dd4ed51} 
+template$<$typename Key , typename Value , size\+\_\+t Table\+Size$>$ \\
+bool \mbox{\hyperlink{class_hash_map}{Hash\+Map}}$<$ Key, Value, Table\+Size $>$\+::find (\begin{DoxyParamCaption}\item[{const Key \&}]{key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the given key exists in the hash map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the key exists, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_hash_map_ad6d65def00859bae80834c39e8165515}\index{HashMap$<$ Key, Value, TableSize $>$@{HashMap$<$ Key, Value, TableSize $>$}!insert@{insert}}
+\index{insert@{insert}!HashMap$<$ Key, Value, TableSize $>$@{HashMap$<$ Key, Value, TableSize $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily \label{class_hash_map_ad6d65def00859bae80834c39e8165515} 
+template$<$typename Key , typename Value , size\+\_\+t Table\+Size$>$ \\
+void \mbox{\hyperlink{class_hash_map}{Hash\+Map}}$<$ Key, Value, Table\+Size $>$\+::insert (\begin{DoxyParamCaption}\item[{const Key \&}]{key}{, }\item[{const Value \&}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inserts a key-\/value pair into the hash map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to insert. \\
+\hline
+{\em value} & The value to insert. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_hash_map_a805b24caa5b67dded42066c15cf2779d}\index{HashMap$<$ Key, Value, TableSize $>$@{HashMap$<$ Key, Value, TableSize $>$}!lookup@{lookup}}
+\index{lookup@{lookup}!HashMap$<$ Key, Value, TableSize $>$@{HashMap$<$ Key, Value, TableSize $>$}}
+\doxysubsubsection{\texorpdfstring{lookup()}{lookup()}}
+{\footnotesize\ttfamily \label{class_hash_map_a805b24caa5b67dded42066c15cf2779d} 
+template$<$typename Key , typename Value , size\+\_\+t Table\+Size$>$ \\
+Value \& \mbox{\hyperlink{class_hash_map}{Hash\+Map}}$<$ Key, Value, Table\+Size $>$\+::lookup (\begin{DoxyParamCaption}\item[{const Key \&}]{key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Looks up the value associated with the given key in the hash map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to look up. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the value associated with the key. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+If the key is not found, a default-\/constructed value is returned. 
+\end{DoxyNote}
+\Hypertarget{class_hash_map_a9cb8f461aa7b0606db37505e32c6828b}\index{HashMap$<$ Key, Value, TableSize $>$@{HashMap$<$ Key, Value, TableSize $>$}!size@{size}}
+\index{size@{size}!HashMap$<$ Key, Value, TableSize $>$@{HashMap$<$ Key, Value, TableSize $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily \label{class_hash_map_a9cb8f461aa7b0606db37505e32c6828b} 
+template$<$typename Key , typename Value , size\+\_\+t Table\+Size$>$ \\
+size\+\_\+t \mbox{\hyperlink{class_hash_map}{Hash\+Map}}$<$ Key, Value, Table\+Size $>$\+::size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the number of key-\/value pairs in the hash map. 
+
+\begin{DoxyReturn}{Returns}
+The number of key-\/value pairs in the hash map. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Maps/Hash\+Map.\+hpp\end{DoxyCompactItemize}

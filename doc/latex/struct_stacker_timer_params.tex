@@ -1,0 +1,252 @@
+\doxysection{Stacker\+Timer\+Params Struct Reference}
+\hypertarget{struct_stacker_timer_params}{}\label{struct_stacker_timer_params}\index{StackerTimerParams@{StackerTimerParams}}
+
+
+The \doxylink{struct_stacker_timer_params}{Stacker\+Timer\+Params} struct represents the parameters for the Stacker\+Timer algorithm.  
+
+
+
+
+{\ttfamily \#include $<$Stacker\+Timer\+Params.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_stacker_timer_params}{Stacker\+Timer\+Params}} \mbox{\hyperlink{struct_stacker_timer_params_adaf1734022848b5318ca9e03ec7cbcd1}{parse}} (const std\+::string \&json\+\_\+str)
+\begin{DoxyCompactList}\small\item\em parse the JSON string and create a \doxylink{struct_stacker_timer_params}{Stacker\+Timer\+Params} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{struct_stacker_timer_params_aa555a06450537c79823677ecdd5129b1}{Valid\+Json}}
+\item 
+\mbox{\hyperlink{structalgometa}{algometa}} \mbox{\hyperlink{struct_stacker_timer_params_a96a1696242505eceb72abc211b1f5388}{meta}}
+\item 
+string \mbox{\hyperlink{struct_stacker_timer_params_aec88bb5a53281f8c9dcf278a36021591}{subid}}
+\item 
+tr1\+::unordered\+\_\+map$<$ int, \mbox{\hyperlink{structinstrument}{instrument}} $>$ \mbox{\hyperlink{struct_stacker_timer_params_a989a69766c9b2b15a06455b57952c2b2}{Leg\+Sec\+Id\+Map}}
+\item 
+\mbox{\hyperlink{structinstrument}{instrument}} \mbox{\hyperlink{struct_stacker_timer_params_a6f86327d299612ee4e474b0952f239bc}{Legs}} \mbox{[}4\mbox{]}
+\item 
+int \mbox{\hyperlink{struct_stacker_timer_params_ae39c5f4ceb1a54bfc9a12ab864c2fea9}{Leg\+Count}}
+\item 
+int \mbox{\hyperlink{struct_stacker_timer_params_ac6e84595d2a3c8fcac53aa99933d8bdc}{Order\+Qty}}
+\item 
+int \mbox{\hyperlink{struct_stacker_timer_params_a3b865d5327361c80ee7df89369ce485d}{Total\+Qty}}
+\item 
+int \mbox{\hyperlink{struct_stacker_timer_params_a968bcf6049c1c3ce1431a18a745c5d1b}{Total\+Exec}}
+\item 
+int \mbox{\hyperlink{struct_stacker_timer_params_ac9db0f1812078870341a27a7a2ee29c4}{Net\+Position}}
+\item 
+bool \mbox{\hyperlink{struct_stacker_timer_params_a2caa0a2dd5de81f7ccd4b6b8b88b8e52}{Reset}}
+\item 
+int \mbox{\hyperlink{struct_stacker_timer_params_a12eda5eb85a2ccdb4e2f1da0fc878259}{Stack\+Levels}}
+\item 
+int \mbox{\hyperlink{struct_stacker_timer_params_a16320a24b0665c1305e6cc3fc8f0a397}{Stack\+Offset\+Ticks}}
+\item 
+string \mbox{\hyperlink{struct_stacker_timer_params_a6243e581f135bf5c0990c9260b04da2f}{Stack\+Side}}
+\item 
+KOrder\+Side\+::\+Enum \mbox{\hyperlink{struct_stacker_timer_params_a5fee3d108143006b1e50f5ca7962c35b}{Ord\+Side}}
+\item 
+bool \mbox{\hyperlink{struct_stacker_timer_params_a8a58d41d9ccf1b9d91c26735a6f818a8}{Enable\+Puke}}
+\item 
+double \mbox{\hyperlink{struct_stacker_timer_params_a1edcee37e79b97a8fe45e2cc479ceed8}{Puke\+Ratio}}
+\item 
+double \mbox{\hyperlink{struct_stacker_timer_params_a83535bd541fe5dc793b07788a0c79b47}{Squeeze\+Ratio}}
+\item 
+int \mbox{\hyperlink{struct_stacker_timer_params_ae9a82cfa2feef74812d0384230bd1f4b}{Puke\+Qty}}
+\item 
+bool \mbox{\hyperlink{struct_stacker_timer_params_a59e97cfc58b6779b62d35a172e113d67}{Pull\+On\+Large\+Trade}}
+\item 
+int \mbox{\hyperlink{struct_stacker_timer_params_a936ddd2e14624ddc4db132c07a68e682}{Large\+Trade\+Qty}}
+\item 
+bool \mbox{\hyperlink{struct_stacker_timer_params_ab557555857c43dcd3f792c82db4e4b3b}{Cover\+At\+Close}}
+\item 
+string \mbox{\hyperlink{struct_stacker_timer_params_ad7da196ec1cea95550ad77ef4a500380}{Close\+Start\+Time}}
+\item 
+string \mbox{\hyperlink{struct_stacker_timer_params_acd1dee5c16633ef8e0c8376ac2d20b86}{Close\+End\+Time}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{struct_stacker_timer_params}{Stacker\+Timer\+Params} struct represents the parameters for the Stacker\+Timer algorithm. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_stacker_timer_params_adaf1734022848b5318ca9e03ec7cbcd1}\index{StackerTimerParams@{StackerTimerParams}!parse@{parse}}
+\index{parse@{parse}!StackerTimerParams@{StackerTimerParams}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily \label{struct_stacker_timer_params_adaf1734022848b5318ca9e03ec7cbcd1} 
+\mbox{\hyperlink{struct_stacker_timer_params}{Stacker\+Timer\+Params}} Stacker\+Timer\+Params\+::parse (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{json\+\_\+str}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+parse the JSON string and create a \doxylink{struct_stacker_timer_params}{Stacker\+Timer\+Params} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json\+\_\+str} & The JSON string to parse. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The parsed \doxylink{struct_stacker_timer_params}{Stacker\+Timer\+Params} object. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00260}{algometa\+::\+Enabled}}, \mbox{\hyperlink{l00049}{User\+Info\+::groupname}}, \mbox{\hyperlink{l00048}{User\+Info\+::org}}, \mbox{\hyperlink{l00262}{algometa\+::\+Source}}, \mbox{\hyperlink{l00256}{algometa\+::\+Strategy}}, \mbox{\hyperlink{l00264}{algometa\+::\+Tag}}, \mbox{\hyperlink{l00258}{algometa\+::\+Template\+Name}}, \mbox{\hyperlink{l00261}{algometa\+::\+Unique\+Id}}, \mbox{\hyperlink{l00047}{User\+Info\+::user}}, and \mbox{\hyperlink{l00279}{algometa\+::userinfo}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00042}{KTN\+::\+Stacker\+Timer\+::on\+Launch()}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_stacker_timer_params_acd1dee5c16633ef8e0c8376ac2d20b86}\index{StackerTimerParams@{StackerTimerParams}!CloseEndTime@{CloseEndTime}}
+\index{CloseEndTime@{CloseEndTime}!StackerTimerParams@{StackerTimerParams}}
+\doxysubsubsection{\texorpdfstring{CloseEndTime}{CloseEndTime}}
+{\footnotesize\ttfamily \label{struct_stacker_timer_params_acd1dee5c16633ef8e0c8376ac2d20b86} 
+string Stacker\+Timer\+Params\+::\+Close\+End\+Time}
+
+\Hypertarget{struct_stacker_timer_params_ad7da196ec1cea95550ad77ef4a500380}\index{StackerTimerParams@{StackerTimerParams}!CloseStartTime@{CloseStartTime}}
+\index{CloseStartTime@{CloseStartTime}!StackerTimerParams@{StackerTimerParams}}
+\doxysubsubsection{\texorpdfstring{CloseStartTime}{CloseStartTime}}
+{\footnotesize\ttfamily \label{struct_stacker_timer_params_ad7da196ec1cea95550ad77ef4a500380} 
+string Stacker\+Timer\+Params\+::\+Close\+Start\+Time}
+
+\Hypertarget{struct_stacker_timer_params_ab557555857c43dcd3f792c82db4e4b3b}\index{StackerTimerParams@{StackerTimerParams}!CoverAtClose@{CoverAtClose}}
+\index{CoverAtClose@{CoverAtClose}!StackerTimerParams@{StackerTimerParams}}
+\doxysubsubsection{\texorpdfstring{CoverAtClose}{CoverAtClose}}
+{\footnotesize\ttfamily \label{struct_stacker_timer_params_ab557555857c43dcd3f792c82db4e4b3b} 
+bool Stacker\+Timer\+Params\+::\+Cover\+At\+Close}
+
+\Hypertarget{struct_stacker_timer_params_a8a58d41d9ccf1b9d91c26735a6f818a8}\index{StackerTimerParams@{StackerTimerParams}!EnablePuke@{EnablePuke}}
+\index{EnablePuke@{EnablePuke}!StackerTimerParams@{StackerTimerParams}}
+\doxysubsubsection{\texorpdfstring{EnablePuke}{EnablePuke}}
+{\footnotesize\ttfamily \label{struct_stacker_timer_params_a8a58d41d9ccf1b9d91c26735a6f818a8} 
+bool Stacker\+Timer\+Params\+::\+Enable\+Puke}
+
+\Hypertarget{struct_stacker_timer_params_a936ddd2e14624ddc4db132c07a68e682}\index{StackerTimerParams@{StackerTimerParams}!LargeTradeQty@{LargeTradeQty}}
+\index{LargeTradeQty@{LargeTradeQty}!StackerTimerParams@{StackerTimerParams}}
+\doxysubsubsection{\texorpdfstring{LargeTradeQty}{LargeTradeQty}}
+{\footnotesize\ttfamily \label{struct_stacker_timer_params_a936ddd2e14624ddc4db132c07a68e682} 
+int Stacker\+Timer\+Params\+::\+Large\+Trade\+Qty}
+
+\Hypertarget{struct_stacker_timer_params_ae39c5f4ceb1a54bfc9a12ab864c2fea9}\index{StackerTimerParams@{StackerTimerParams}!LegCount@{LegCount}}
+\index{LegCount@{LegCount}!StackerTimerParams@{StackerTimerParams}}
+\doxysubsubsection{\texorpdfstring{LegCount}{LegCount}}
+{\footnotesize\ttfamily \label{struct_stacker_timer_params_ae39c5f4ceb1a54bfc9a12ab864c2fea9} 
+int Stacker\+Timer\+Params\+::\+Leg\+Count}
+
+\Hypertarget{struct_stacker_timer_params_a6f86327d299612ee4e474b0952f239bc}\index{StackerTimerParams@{StackerTimerParams}!Legs@{Legs}}
+\index{Legs@{Legs}!StackerTimerParams@{StackerTimerParams}}
+\doxysubsubsection{\texorpdfstring{Legs}{Legs}}
+{\footnotesize\ttfamily \label{struct_stacker_timer_params_a6f86327d299612ee4e474b0952f239bc} 
+\mbox{\hyperlink{structinstrument}{instrument}} Stacker\+Timer\+Params\+::\+Legs\mbox{[}4\mbox{]}}
+
+\Hypertarget{struct_stacker_timer_params_a989a69766c9b2b15a06455b57952c2b2}\index{StackerTimerParams@{StackerTimerParams}!LegSecIdMap@{LegSecIdMap}}
+\index{LegSecIdMap@{LegSecIdMap}!StackerTimerParams@{StackerTimerParams}}
+\doxysubsubsection{\texorpdfstring{LegSecIdMap}{LegSecIdMap}}
+{\footnotesize\ttfamily \label{struct_stacker_timer_params_a989a69766c9b2b15a06455b57952c2b2} 
+tr1\+::unordered\+\_\+map$<$int, \mbox{\hyperlink{structinstrument}{instrument}}$>$ Stacker\+Timer\+Params\+::\+Leg\+Sec\+Id\+Map}
+
+\Hypertarget{struct_stacker_timer_params_a96a1696242505eceb72abc211b1f5388}\index{StackerTimerParams@{StackerTimerParams}!meta@{meta}}
+\index{meta@{meta}!StackerTimerParams@{StackerTimerParams}}
+\doxysubsubsection{\texorpdfstring{meta}{meta}}
+{\footnotesize\ttfamily \label{struct_stacker_timer_params_a96a1696242505eceb72abc211b1f5388} 
+\mbox{\hyperlink{structalgometa}{algometa}} Stacker\+Timer\+Params\+::meta}
+
+\Hypertarget{struct_stacker_timer_params_ac9db0f1812078870341a27a7a2ee29c4}\index{StackerTimerParams@{StackerTimerParams}!NetPosition@{NetPosition}}
+\index{NetPosition@{NetPosition}!StackerTimerParams@{StackerTimerParams}}
+\doxysubsubsection{\texorpdfstring{NetPosition}{NetPosition}}
+{\footnotesize\ttfamily \label{struct_stacker_timer_params_ac9db0f1812078870341a27a7a2ee29c4} 
+int Stacker\+Timer\+Params\+::\+Net\+Position}
+
+\Hypertarget{struct_stacker_timer_params_ac6e84595d2a3c8fcac53aa99933d8bdc}\index{StackerTimerParams@{StackerTimerParams}!OrderQty@{OrderQty}}
+\index{OrderQty@{OrderQty}!StackerTimerParams@{StackerTimerParams}}
+\doxysubsubsection{\texorpdfstring{OrderQty}{OrderQty}}
+{\footnotesize\ttfamily \label{struct_stacker_timer_params_ac6e84595d2a3c8fcac53aa99933d8bdc} 
+int Stacker\+Timer\+Params\+::\+Order\+Qty}
+
+\Hypertarget{struct_stacker_timer_params_a5fee3d108143006b1e50f5ca7962c35b}\index{StackerTimerParams@{StackerTimerParams}!OrdSide@{OrdSide}}
+\index{OrdSide@{OrdSide}!StackerTimerParams@{StackerTimerParams}}
+\doxysubsubsection{\texorpdfstring{OrdSide}{OrdSide}}
+{\footnotesize\ttfamily \label{struct_stacker_timer_params_a5fee3d108143006b1e50f5ca7962c35b} 
+KOrder\+Side\+::\+Enum Stacker\+Timer\+Params\+::\+Ord\+Side}
+
+\Hypertarget{struct_stacker_timer_params_ae9a82cfa2feef74812d0384230bd1f4b}\index{StackerTimerParams@{StackerTimerParams}!PukeQty@{PukeQty}}
+\index{PukeQty@{PukeQty}!StackerTimerParams@{StackerTimerParams}}
+\doxysubsubsection{\texorpdfstring{PukeQty}{PukeQty}}
+{\footnotesize\ttfamily \label{struct_stacker_timer_params_ae9a82cfa2feef74812d0384230bd1f4b} 
+int Stacker\+Timer\+Params\+::\+Puke\+Qty}
+
+\Hypertarget{struct_stacker_timer_params_a1edcee37e79b97a8fe45e2cc479ceed8}\index{StackerTimerParams@{StackerTimerParams}!PukeRatio@{PukeRatio}}
+\index{PukeRatio@{PukeRatio}!StackerTimerParams@{StackerTimerParams}}
+\doxysubsubsection{\texorpdfstring{PukeRatio}{PukeRatio}}
+{\footnotesize\ttfamily \label{struct_stacker_timer_params_a1edcee37e79b97a8fe45e2cc479ceed8} 
+double Stacker\+Timer\+Params\+::\+Puke\+Ratio}
+
+\Hypertarget{struct_stacker_timer_params_a59e97cfc58b6779b62d35a172e113d67}\index{StackerTimerParams@{StackerTimerParams}!PullOnLargeTrade@{PullOnLargeTrade}}
+\index{PullOnLargeTrade@{PullOnLargeTrade}!StackerTimerParams@{StackerTimerParams}}
+\doxysubsubsection{\texorpdfstring{PullOnLargeTrade}{PullOnLargeTrade}}
+{\footnotesize\ttfamily \label{struct_stacker_timer_params_a59e97cfc58b6779b62d35a172e113d67} 
+bool Stacker\+Timer\+Params\+::\+Pull\+On\+Large\+Trade}
+
+\Hypertarget{struct_stacker_timer_params_a2caa0a2dd5de81f7ccd4b6b8b88b8e52}\index{StackerTimerParams@{StackerTimerParams}!Reset@{Reset}}
+\index{Reset@{Reset}!StackerTimerParams@{StackerTimerParams}}
+\doxysubsubsection{\texorpdfstring{Reset}{Reset}}
+{\footnotesize\ttfamily \label{struct_stacker_timer_params_a2caa0a2dd5de81f7ccd4b6b8b88b8e52} 
+bool Stacker\+Timer\+Params\+::\+Reset}
+
+\Hypertarget{struct_stacker_timer_params_a83535bd541fe5dc793b07788a0c79b47}\index{StackerTimerParams@{StackerTimerParams}!SqueezeRatio@{SqueezeRatio}}
+\index{SqueezeRatio@{SqueezeRatio}!StackerTimerParams@{StackerTimerParams}}
+\doxysubsubsection{\texorpdfstring{SqueezeRatio}{SqueezeRatio}}
+{\footnotesize\ttfamily \label{struct_stacker_timer_params_a83535bd541fe5dc793b07788a0c79b47} 
+double Stacker\+Timer\+Params\+::\+Squeeze\+Ratio}
+
+\Hypertarget{struct_stacker_timer_params_a12eda5eb85a2ccdb4e2f1da0fc878259}\index{StackerTimerParams@{StackerTimerParams}!StackLevels@{StackLevels}}
+\index{StackLevels@{StackLevels}!StackerTimerParams@{StackerTimerParams}}
+\doxysubsubsection{\texorpdfstring{StackLevels}{StackLevels}}
+{\footnotesize\ttfamily \label{struct_stacker_timer_params_a12eda5eb85a2ccdb4e2f1da0fc878259} 
+int Stacker\+Timer\+Params\+::\+Stack\+Levels}
+
+\Hypertarget{struct_stacker_timer_params_a16320a24b0665c1305e6cc3fc8f0a397}\index{StackerTimerParams@{StackerTimerParams}!StackOffsetTicks@{StackOffsetTicks}}
+\index{StackOffsetTicks@{StackOffsetTicks}!StackerTimerParams@{StackerTimerParams}}
+\doxysubsubsection{\texorpdfstring{StackOffsetTicks}{StackOffsetTicks}}
+{\footnotesize\ttfamily \label{struct_stacker_timer_params_a16320a24b0665c1305e6cc3fc8f0a397} 
+int Stacker\+Timer\+Params\+::\+Stack\+Offset\+Ticks}
+
+\Hypertarget{struct_stacker_timer_params_a6243e581f135bf5c0990c9260b04da2f}\index{StackerTimerParams@{StackerTimerParams}!StackSide@{StackSide}}
+\index{StackSide@{StackSide}!StackerTimerParams@{StackerTimerParams}}
+\doxysubsubsection{\texorpdfstring{StackSide}{StackSide}}
+{\footnotesize\ttfamily \label{struct_stacker_timer_params_a6243e581f135bf5c0990c9260b04da2f} 
+string Stacker\+Timer\+Params\+::\+Stack\+Side}
+
+\Hypertarget{struct_stacker_timer_params_aec88bb5a53281f8c9dcf278a36021591}\index{StackerTimerParams@{StackerTimerParams}!subid@{subid}}
+\index{subid@{subid}!StackerTimerParams@{StackerTimerParams}}
+\doxysubsubsection{\texorpdfstring{subid}{subid}}
+{\footnotesize\ttfamily \label{struct_stacker_timer_params_aec88bb5a53281f8c9dcf278a36021591} 
+string Stacker\+Timer\+Params\+::subid}
+
+\Hypertarget{struct_stacker_timer_params_a968bcf6049c1c3ce1431a18a745c5d1b}\index{StackerTimerParams@{StackerTimerParams}!TotalExec@{TotalExec}}
+\index{TotalExec@{TotalExec}!StackerTimerParams@{StackerTimerParams}}
+\doxysubsubsection{\texorpdfstring{TotalExec}{TotalExec}}
+{\footnotesize\ttfamily \label{struct_stacker_timer_params_a968bcf6049c1c3ce1431a18a745c5d1b} 
+int Stacker\+Timer\+Params\+::\+Total\+Exec}
+
+\Hypertarget{struct_stacker_timer_params_a3b865d5327361c80ee7df89369ce485d}\index{StackerTimerParams@{StackerTimerParams}!TotalQty@{TotalQty}}
+\index{TotalQty@{TotalQty}!StackerTimerParams@{StackerTimerParams}}
+\doxysubsubsection{\texorpdfstring{TotalQty}{TotalQty}}
+{\footnotesize\ttfamily \label{struct_stacker_timer_params_a3b865d5327361c80ee7df89369ce485d} 
+int Stacker\+Timer\+Params\+::\+Total\+Qty}
+
+\Hypertarget{struct_stacker_timer_params_aa555a06450537c79823677ecdd5129b1}\index{StackerTimerParams@{StackerTimerParams}!ValidJson@{ValidJson}}
+\index{ValidJson@{ValidJson}!StackerTimerParams@{StackerTimerParams}}
+\doxysubsubsection{\texorpdfstring{ValidJson}{ValidJson}}
+{\footnotesize\ttfamily \label{struct_stacker_timer_params_aa555a06450537c79823677ecdd5129b1} 
+bool Stacker\+Timer\+Params\+::\+Valid\+Json}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Algo\+Params/Stacker\+Timer\+Params.\+hpp\item 
+Algo\+Params/Stacker\+Timer\+Params.\+cpp\end{DoxyCompactItemize}

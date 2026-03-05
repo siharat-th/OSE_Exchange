@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_t_n_1_1_o_r_d_1_1_k_order_side" xml:lang="en-US">
+<title>KTN::ORD::KOrderSide Struct Reference</title>
+<indexterm><primary>KTN::ORD::KOrderSide</primary></indexterm>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <emphasis role="strong">Enum</emphasis> : int8_t { <emphasis role="strong">BUY</emphasis> =1
+, <emphasis role="strong">SELL</emphasis> =-1
+, <emphasis role="strong">UNKNOWN</emphasis> = 0
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>Enum &amp; <link linkend="_struct_k_t_n_1_1_o_r_d_1_1_k_order_side_1a8d71ddc24fdc2a895c38c6e3e8030e3d">operator=</link> (const int8_t &amp;value)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static KOrderSide::Enum <link linkend="_struct_k_t_n_1_1_o_r_d_1_1_k_order_side_1a0cd206f79ba9ccf23ea93e1fd2f3fa6b">Value</link> (string side)</para>
+</listitem>
+            <listitem><para>static KOrderSide::Enum <link linkend="_struct_k_t_n_1_1_o_r_d_1_1_k_order_side_1a800a03062c0d31aa888d3a30f90e445f">Value</link> (int side)</para>
+</listitem>
+            <listitem><para>static KOrderSide::Enum <link linkend="_struct_k_t_n_1_1_o_r_d_1_1_k_order_side_1a2a88ba17f8c33d252f6c6e9b9b77e5bf">Not</link> (Enum side)</para>
+</listitem>
+            <listitem><para>static KOrderSide::Enum <link linkend="_struct_k_t_n_1_1_o_r_d_1_1_k_order_side_1ac8430de24147bc3ce652102206edf116">Not</link> (string side)</para>
+</listitem>
+            <listitem><para>static std::string <link linkend="_struct_k_t_n_1_1_o_r_d_1_1_k_order_side_1a7c573c3cefa2379d11c1ee402b1d50c2">toString</link> (Enum side)</para>
+</listitem>
+            <listitem><para>static std::string <link linkend="_struct_k_t_n_1_1_o_r_d_1_1_k_order_side_1a51240474676302ea8cb5f009e28bd665">toOrdStructString</link> (Enum side)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_o_r_d_1_1_k_order_side_1acbacc1d4ea1dde23307e2d00a782535b"/><section>
+    <title>Enum</title>
+<indexterm><primary>Enum</primary><secondary>KTN::ORD::KOrderSide</secondary></indexterm>
+<indexterm><primary>KTN::ORD::KOrderSide</primary><secondary>Enum</secondary></indexterm>
+<para><computeroutput>enum KTN::ORD::KOrderSide::Enum : int8_t</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_o_r_d_1_1_k_order_side_1a2a88ba17f8c33d252f6c6e9b9b77e5bf"/><section>
+    <title>Not()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>Not</primary><secondary>KTN::ORD::KOrderSide</secondary></indexterm>
+<indexterm><primary>KTN::ORD::KOrderSide</primary><secondary>Not</secondary></indexterm>
+<para><computeroutput>static KOrderSide::Enum KTN::ORD::KOrderSide::Not (Enum side)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_o_r_d_1_1_k_order_side_1ac8430de24147bc3ce652102206edf116"/><section>
+    <title>Not()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>Not</primary><secondary>KTN::ORD::KOrderSide</secondary></indexterm>
+<indexterm><primary>KTN::ORD::KOrderSide</primary><secondary>Not</secondary></indexterm>
+<para><computeroutput>static KOrderSide::Enum KTN::ORD::KOrderSide::Not (string side)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_o_r_d_1_1_k_order_side_1a8d71ddc24fdc2a895c38c6e3e8030e3d"/><section>
+    <title>operator=()</title>
+<indexterm><primary>operator=</primary><secondary>KTN::ORD::KOrderSide</secondary></indexterm>
+<indexterm><primary>KTN::ORD::KOrderSide</primary><secondary>operator=</secondary></indexterm>
+<para><computeroutput>Enum &amp; KTN::ORD::KOrderSide::operator= (const int8_t &amp; value)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_o_r_d_1_1_k_order_side_1a51240474676302ea8cb5f009e28bd665"/><section>
+    <title>toOrdStructString()</title>
+<indexterm><primary>toOrdStructString</primary><secondary>KTN::ORD::KOrderSide</secondary></indexterm>
+<indexterm><primary>KTN::ORD::KOrderSide</primary><secondary>toOrdStructString</secondary></indexterm>
+<para><computeroutput>static std::string KTN::ORD::KOrderSide::toOrdStructString (Enum side)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_o_r_d_1_1_k_order_side_1a7c573c3cefa2379d11c1ee402b1d50c2"/><section>
+    <title>toString()</title>
+<indexterm><primary>toString</primary><secondary>KTN::ORD::KOrderSide</secondary></indexterm>
+<indexterm><primary>KTN::ORD::KOrderSide</primary><secondary>toString</secondary></indexterm>
+<para><computeroutput>static std::string KTN::ORD::KOrderSide::toString (Enum side)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_o_r_d_1_1_k_order_side_1a800a03062c0d31aa888d3a30f90e445f"/><section>
+    <title>Value()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>Value</primary><secondary>KTN::ORD::KOrderSide</secondary></indexterm>
+<indexterm><primary>KTN::ORD::KOrderSide</primary><secondary>Value</secondary></indexterm>
+<para><computeroutput>static KOrderSide::Enum KTN::ORD::KOrderSide::Value (int side)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_o_r_d_1_1_k_order_side_1a0cd206f79ba9ccf23ea93e1fd2f3fa6b"/><section>
+    <title>Value()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>Value</primary><secondary>KTN::ORD::KOrderSide</secondary></indexterm>
+<indexterm><primary>KTN::ORD::KOrderSide</primary><secondary>Value</secondary></indexterm>
+<para><computeroutput>static KOrderSide::Enum KTN::ORD::KOrderSide::Value (string side)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Orders/OrderEnumsV2.hpp</section>
+</section>

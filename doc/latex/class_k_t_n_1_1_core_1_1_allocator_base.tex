@@ -1,0 +1,93 @@
+\doxysection{KTN\+::Core\+::Allocator\+Base\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_k_t_n_1_1_core_1_1_allocator_base}{}\label{class_k_t_n_1_1_core_1_1_allocator_base}\index{KTN::Core::AllocatorBase$<$ T $>$@{KTN::Core::AllocatorBase$<$ T $>$}}
+
+
+The \doxylink{class_k_t_n_1_1_core_1_1_allocator_base}{Allocator\+Base} class is a generic allocator class that provides different allocator types based on the selected options.  
+
+
+
+
+{\ttfamily \#include $<$Allocator\+Base.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_allocator_base_a62ed35cc530ff5a292ac09c554b2db93}{Allocator\+Type}} = std\+::allocator$<$T$>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_core_1_1_allocator_base_a7a6c3fd0f881f4589c84a79be4f7ed07}{Allocator\+Base}} (size\+\_\+t capacity)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{class_k_t_n_1_1_core_1_1_allocator_base}{Allocator\+Base} object with the specified capacity. \end{DoxyCompactList}\item 
+T \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_allocator_base_a3c7d4cc69a244f09768de77eca18add2}{get}} ()
+\begin{DoxyCompactList}\small\item\em Returns a pointer to the allocated memory. \end{DoxyCompactList}\item 
+\Hypertarget{class_k_t_n_1_1_core_1_1_allocator_base_a83a4b08298377f4bf2e57cd188620fbb}\label{class_k_t_n_1_1_core_1_1_allocator_base_a83a4b08298377f4bf2e57cd188620fbb} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Allocator\+Base} ()=default
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{class_k_t_n_1_1_core_1_1_allocator_base}{Allocator\+Base} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class KTN\+::\+Core\+::\+Allocator\+Base$<$ T $>$}
+The \doxylink{class_k_t_n_1_1_core_1_1_allocator_base}{Allocator\+Base} class is a generic allocator class that provides different allocator types based on the selected options. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of the elements to be allocated. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{class_k_t_n_1_1_core_1_1_allocator_base_a62ed35cc530ff5a292ac09c554b2db93}\index{KTN::Core::AllocatorBase$<$ T $>$@{KTN::Core::AllocatorBase$<$ T $>$}!AllocatorType@{AllocatorType}}
+\index{AllocatorType@{AllocatorType}!KTN::Core::AllocatorBase$<$ T $>$@{KTN::Core::AllocatorBase$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{AllocatorType}{AllocatorType}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_allocator_base_a62ed35cc530ff5a292ac09c554b2db93} 
+template$<$typename T $>$ \\
+using \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_allocator_base}{KTN\+::\+Core\+::\+Allocator\+Base}}$<$ T $>$\+::\+Allocator\+Type = std\+::allocator$<$T$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_k_t_n_1_1_core_1_1_allocator_base_a7a6c3fd0f881f4589c84a79be4f7ed07}\index{KTN::Core::AllocatorBase$<$ T $>$@{KTN::Core::AllocatorBase$<$ T $>$}!AllocatorBase@{AllocatorBase}}
+\index{AllocatorBase@{AllocatorBase}!KTN::Core::AllocatorBase$<$ T $>$@{KTN::Core::AllocatorBase$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{AllocatorBase()}{AllocatorBase()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_allocator_base_a7a6c3fd0f881f4589c84a79be4f7ed07} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{class_k_t_n_1_1_core_1_1_allocator_base}{KTN\+::\+Core\+::\+Allocator\+Base}}$<$ T $>$\+::\+Allocator\+Base (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{capacity}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs an \doxylink{class_k_t_n_1_1_core_1_1_allocator_base}{Allocator\+Base} object with the specified capacity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em capacity} & The capacity of the allocator. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_core_1_1_allocator_base_a3c7d4cc69a244f09768de77eca18add2}\index{KTN::Core::AllocatorBase$<$ T $>$@{KTN::Core::AllocatorBase$<$ T $>$}!get@{get}}
+\index{get@{get}!KTN::Core::AllocatorBase$<$ T $>$@{KTN::Core::AllocatorBase$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_allocator_base_a3c7d4cc69a244f09768de77eca18add2} 
+template$<$typename T $>$ \\
+T \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_allocator_base}{KTN\+::\+Core\+::\+Allocator\+Base}}$<$ T $>$\+::get (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a pointer to the allocated memory. 
+
+\begin{DoxyReturn}{Returns}
+T\texorpdfstring{$\ast$}{*} A pointer to the allocated memory. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00095}{KTN\+::\+Core\+::\+Simple\+Map$<$ K, T $>$\+::at()}}, \mbox{\hyperlink{l00124}{KTN\+::\+Core\+::\+Simple\+Map$<$ K, T $>$\+::erase()}}, \mbox{\hyperlink{l00056}{KTN\+::\+Core\+::\+Simple\+Map$<$ K, T $>$\+::get()}}, and \mbox{\hyperlink{l00041}{KTN\+::\+Core\+::\+Simple\+Map$<$ K, T $>$\+::insert()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Maps/Allocator\+Base.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_t_s_c_n_s" xml:lang="en-US">
+<title>TSCNS Class Reference</title>
+<indexterm><primary>TSCNS</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_t_s_c_n_s_1a9d8f06c6a8c5deae3ab1c3cd5fd5d0b4">init</link> (int64_t init_calibrate_ns=20000000, int64_t calibrate_interval_ns=3 *NsPerSec)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_t_s_c_n_s_1adc1b7428aa1d9bba84b027c89b48cdbc">calibrate</link> ()</para>
+</listitem>
+            <listitem><para>int64_t <link linkend="_class_t_s_c_n_s_1ac17dd50f3a5ca98322946b45d939ea1d">tsc2ns</link> (int64_t tsc) const</para>
+</listitem>
+            <listitem><para>int64_t <link linkend="_class_t_s_c_n_s_1abb46ce8ec9414fb665c2192ccf0e6643">rdns</link> () const</para>
+</listitem>
+            <listitem><para>double <link linkend="_class_t_s_c_n_s_1a0b1598e6b497ee8a1f21f52ca0cfa90d">getTscGhz</link> () const</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_t_s_c_n_s_1a97256856679759658689c1b77c17fc54">saveParam</link> (int64_t base_tsc, int64_t base_ns, int64_t sys_ns, double new_ns_per_tsc)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static int64_t <link linkend="_class_t_s_c_n_s_1a88dd3c1b13b54460d474a62e4b4ee81e">rdtsc</link> ()</para>
+</listitem>
+            <listitem><para>static int64_t <link linkend="_class_t_s_c_n_s_1a2a8b74737438bd8ba67c3b20fd41a9e9">rdsysns</link> ()</para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_t_s_c_n_s_1a0abf6d65933748824ad95ba8b6bf0eae">syncTime</link> (int64_t &amp;tsc_out, int64_t &amp;ns_out)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>std::atomic&lt; uint32_t &gt; <link linkend="_class_t_s_c_n_s_1a9f794941dfdfa43030285220d9a73e81">param_seq_</link> = 0</para>
+</listitem>
+            <listitem><para>double <link linkend="_class_t_s_c_n_s_1a20fe54d566dc3592d9aafbe9dfb7fa87">ns_per_tsc_</link></para>
+</listitem>
+            <listitem><para>int64_t <link linkend="_class_t_s_c_n_s_1aaa4aa1c1d47f938e1eedde064d96bb3f">base_tsc_</link></para>
+</listitem>
+            <listitem><para>int64_t <link linkend="_class_t_s_c_n_s_1a6599f4a706d67c2d97826b25d3496872">base_ns_</link></para>
+</listitem>
+            <listitem><para>int64_t <link linkend="_class_t_s_c_n_s_1aa883af2ba0e54a6eefe24df60c9c5bd8">calibate_interval_ns_</link></para>
+</listitem>
+            <listitem><para>int64_t <link linkend="_class_t_s_c_n_s_1a7d4e1fae4d66946996f2d333052cbf13">base_ns_err_</link></para>
+</listitem>
+            <listitem><para>int64_t <link linkend="_class_t_s_c_n_s_1a0833479cf49c54f238b8e5e48a440aed">next_calibrate_tsc_</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>static const int64_t <link linkend="_class_t_s_c_n_s_1aeddd431252e4b6a689c48564ddbd0775">NsPerSec</link> = 1000000000</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_t_s_c_n_s_1adc1b7428aa1d9bba84b027c89b48cdbc"/><section>
+    <title>calibrate()</title>
+<indexterm><primary>calibrate</primary><secondary>TSCNS</secondary></indexterm>
+<indexterm><primary>TSCNS</primary><secondary>calibrate</secondary></indexterm>
+<para><computeroutput>void TSCNS::calibrate ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_t_s_c_n_s_1a0b1598e6b497ee8a1f21f52ca0cfa90d"/><section>
+    <title>getTscGhz()</title>
+<indexterm><primary>getTscGhz</primary><secondary>TSCNS</secondary></indexterm>
+<indexterm><primary>TSCNS</primary><secondary>getTscGhz</secondary></indexterm>
+<para><computeroutput>double TSCNS::getTscGhz ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_t_s_c_n_s_1a9d8f06c6a8c5deae3ab1c3cd5fd5d0b4"/><section>
+    <title>init()</title>
+<indexterm><primary>init</primary><secondary>TSCNS</secondary></indexterm>
+<indexterm><primary>TSCNS</primary><secondary>init</secondary></indexterm>
+<para><computeroutput>void TSCNS::init (int64_t init_calibrate_ns = <computeroutput>20000000</computeroutput>
+, int64_t calibrate_interval_ns = <computeroutput>3&#160;*&#160;NsPerSec</computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_t_s_c_n_s_1abb46ce8ec9414fb665c2192ccf0e6643"/><section>
+    <title>rdns()</title>
+<indexterm><primary>rdns</primary><secondary>TSCNS</secondary></indexterm>
+<indexterm><primary>TSCNS</primary><secondary>rdns</secondary></indexterm>
+<para><computeroutput>int64_t TSCNS::rdns ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_t_s_c_n_s_1a2a8b74737438bd8ba67c3b20fd41a9e9"/><section>
+    <title>rdsysns()</title>
+<indexterm><primary>rdsysns</primary><secondary>TSCNS</secondary></indexterm>
+<indexterm><primary>TSCNS</primary><secondary>rdsysns</secondary></indexterm>
+<para><computeroutput>static int64_t TSCNS::rdsysns ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_t_s_c_n_s_1a88dd3c1b13b54460d474a62e4b4ee81e"/><section>
+    <title>rdtsc()</title>
+<indexterm><primary>rdtsc</primary><secondary>TSCNS</secondary></indexterm>
+<indexterm><primary>TSCNS</primary><secondary>rdtsc</secondary></indexterm>
+<para><computeroutput>static int64_t TSCNS::rdtsc ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_t_s_c_n_s_1a97256856679759658689c1b77c17fc54"/><section>
+    <title>saveParam()</title>
+<indexterm><primary>saveParam</primary><secondary>TSCNS</secondary></indexterm>
+<indexterm><primary>TSCNS</primary><secondary>saveParam</secondary></indexterm>
+<para><computeroutput>void TSCNS::saveParam (int64_t base_tsc, int64_t base_ns, int64_t sys_ns, double new_ns_per_tsc)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_t_s_c_n_s_1a0abf6d65933748824ad95ba8b6bf0eae"/><section>
+    <title>syncTime()</title>
+<indexterm><primary>syncTime</primary><secondary>TSCNS</secondary></indexterm>
+<indexterm><primary>TSCNS</primary><secondary>syncTime</secondary></indexterm>
+<para><computeroutput>static void TSCNS::syncTime (int64_t &amp; tsc_out, int64_t &amp; ns_out)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_t_s_c_n_s_1ac17dd50f3a5ca98322946b45d939ea1d"/><section>
+    <title>tsc2ns()</title>
+<indexterm><primary>tsc2ns</primary><secondary>TSCNS</secondary></indexterm>
+<indexterm><primary>TSCNS</primary><secondary>tsc2ns</secondary></indexterm>
+<para><computeroutput>int64_t TSCNS::tsc2ns (int64_t tsc) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_t_s_c_n_s_1a6599f4a706d67c2d97826b25d3496872"/><section>
+    <title>base_ns_</title>
+<indexterm><primary>base_ns_</primary><secondary>TSCNS</secondary></indexterm>
+<indexterm><primary>TSCNS</primary><secondary>base_ns_</secondary></indexterm>
+<para><computeroutput>int64_t TSCNS::base_ns_</computeroutput></para></section>
+<anchor xml:id="_class_t_s_c_n_s_1a7d4e1fae4d66946996f2d333052cbf13"/><section>
+    <title>base_ns_err_</title>
+<indexterm><primary>base_ns_err_</primary><secondary>TSCNS</secondary></indexterm>
+<indexterm><primary>TSCNS</primary><secondary>base_ns_err_</secondary></indexterm>
+<para><computeroutput>int64_t TSCNS::base_ns_err_</computeroutput></para></section>
+<anchor xml:id="_class_t_s_c_n_s_1aaa4aa1c1d47f938e1eedde064d96bb3f"/><section>
+    <title>base_tsc_</title>
+<indexterm><primary>base_tsc_</primary><secondary>TSCNS</secondary></indexterm>
+<indexterm><primary>TSCNS</primary><secondary>base_tsc_</secondary></indexterm>
+<para><computeroutput>int64_t TSCNS::base_tsc_</computeroutput></para></section>
+<anchor xml:id="_class_t_s_c_n_s_1aa883af2ba0e54a6eefe24df60c9c5bd8"/><section>
+    <title>calibate_interval_ns_</title>
+<indexterm><primary>calibate_interval_ns_</primary><secondary>TSCNS</secondary></indexterm>
+<indexterm><primary>TSCNS</primary><secondary>calibate_interval_ns_</secondary></indexterm>
+<para><computeroutput>int64_t TSCNS::calibate_interval_ns_</computeroutput></para></section>
+<anchor xml:id="_class_t_s_c_n_s_1a0833479cf49c54f238b8e5e48a440aed"/><section>
+    <title>next_calibrate_tsc_</title>
+<indexterm><primary>next_calibrate_tsc_</primary><secondary>TSCNS</secondary></indexterm>
+<indexterm><primary>TSCNS</primary><secondary>next_calibrate_tsc_</secondary></indexterm>
+<para><computeroutput>int64_t TSCNS::next_calibrate_tsc_</computeroutput></para></section>
+<anchor xml:id="_class_t_s_c_n_s_1a20fe54d566dc3592d9aafbe9dfb7fa87"/><section>
+    <title>ns_per_tsc_</title>
+<indexterm><primary>ns_per_tsc_</primary><secondary>TSCNS</secondary></indexterm>
+<indexterm><primary>TSCNS</primary><secondary>ns_per_tsc_</secondary></indexterm>
+<para><computeroutput>double TSCNS::ns_per_tsc_</computeroutput></para></section>
+<anchor xml:id="_class_t_s_c_n_s_1aeddd431252e4b6a689c48564ddbd0775"/><section>
+    <title>NsPerSec</title>
+<indexterm><primary>NsPerSec</primary><secondary>TSCNS</secondary></indexterm>
+<indexterm><primary>TSCNS</primary><secondary>NsPerSec</secondary></indexterm>
+<para><computeroutput>const int64_t TSCNS::NsPerSec = 1000000000<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_t_s_c_n_s_1a9f794941dfdfa43030285220d9a73e81"/><section>
+    <title>param_seq_</title>
+<indexterm><primary>param_seq_</primary><secondary>TSCNS</secondary></indexterm>
+<indexterm><primary>TSCNS</primary><secondary>param_seq_</secondary></indexterm>
+<para><computeroutput>std::atomic&lt;uint32_t&gt; TSCNS::param_seq_ = 0</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/external/tscns/tscns.h</section>
+</section>

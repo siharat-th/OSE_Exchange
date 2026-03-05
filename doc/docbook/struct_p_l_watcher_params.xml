@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_p_l_watcher_params" xml:lang="en-US">
+<title>PLWatcherParams Struct Reference</title>
+<indexterm><primary>PLWatcherParams</primary></indexterm>
+<para>
+
+<para>The <link linkend="_struct_p_l_watcher_params">PLWatcherParams</link> struct represents the parameters for the PLWatcher algorithm. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;PLWatcherParams.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_struct_p_l_watcher_params">PLWatcherParams</link> <link linkend="_struct_p_l_watcher_params_1a91c968c007d11781492bd7ecb8b89cf9">parse</link> (const std::string &amp;json_str)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_struct_p_l_watcher_params_1ab20e92d93d8267eafd5ad0891dde595e">ValidJson</link></para>
+</listitem>
+            <listitem><para><link linkend="_structalgometa">algometa</link> <link linkend="_struct_p_l_watcher_params_1ab98d9633e9b850296c995d4d5142154c">meta</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_p_l_watcher_params_1ace37eadc404fa3a8f8afcd3d66516f43">subid</link></para>
+</listitem>
+            <listitem><para>std::unordered_map&lt; int, <link linkend="_structinstrument">instrument</link> &gt; <link linkend="_struct_p_l_watcher_params_1a560bdf626cfe944b73fb8d98c875282f">LegSecIdMap</link></para>
+</listitem>
+            <listitem><para><link linkend="_structinstrument">instrument</link> <link linkend="_struct_p_l_watcher_params_1a5d0df6784c5488748264891f6eaf8f6e">Legs</link> [24]</para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_p_l_watcher_params_1a3421544b18bafc72012d541ef9febc61">LegCount</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_struct_p_l_watcher_params">PLWatcherParams</link> struct represents the parameters for the PLWatcher algorithm. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_p_l_watcher_params_1a91c968c007d11781492bd7ecb8b89cf9"/><section>
+    <title>parse()</title>
+<indexterm><primary>parse</primary><secondary>PLWatcherParams</secondary></indexterm>
+<indexterm><primary>PLWatcherParams</primary><secondary>parse</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_p_l_watcher_params">PLWatcherParams</link> PLWatcherParams::parse (const std::string &amp; json_str)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_p_l_watcher_params_1a3421544b18bafc72012d541ef9febc61"/><section>
+    <title>LegCount</title>
+<indexterm><primary>LegCount</primary><secondary>PLWatcherParams</secondary></indexterm>
+<indexterm><primary>PLWatcherParams</primary><secondary>LegCount</secondary></indexterm>
+<para><computeroutput>int PLWatcherParams::LegCount</computeroutput></para></section>
+<anchor xml:id="_struct_p_l_watcher_params_1a5d0df6784c5488748264891f6eaf8f6e"/><section>
+    <title>Legs</title>
+<indexterm><primary>Legs</primary><secondary>PLWatcherParams</secondary></indexterm>
+<indexterm><primary>PLWatcherParams</primary><secondary>Legs</secondary></indexterm>
+<para><computeroutput><link linkend="_structinstrument">instrument</link> PLWatcherParams::Legs[24]</computeroutput></para></section>
+<anchor xml:id="_struct_p_l_watcher_params_1a560bdf626cfe944b73fb8d98c875282f"/><section>
+    <title>LegSecIdMap</title>
+<indexterm><primary>LegSecIdMap</primary><secondary>PLWatcherParams</secondary></indexterm>
+<indexterm><primary>PLWatcherParams</primary><secondary>LegSecIdMap</secondary></indexterm>
+<para><computeroutput>std::unordered_map&lt;int, <link linkend="_structinstrument">instrument</link>&gt; PLWatcherParams::LegSecIdMap</computeroutput></para></section>
+<anchor xml:id="_struct_p_l_watcher_params_1ab98d9633e9b850296c995d4d5142154c"/><section>
+    <title>meta</title>
+<indexterm><primary>meta</primary><secondary>PLWatcherParams</secondary></indexterm>
+<indexterm><primary>PLWatcherParams</primary><secondary>meta</secondary></indexterm>
+<para><computeroutput><link linkend="_structalgometa">algometa</link> PLWatcherParams::meta</computeroutput></para></section>
+<anchor xml:id="_struct_p_l_watcher_params_1ace37eadc404fa3a8f8afcd3d66516f43"/><section>
+    <title>subid</title>
+<indexterm><primary>subid</primary><secondary>PLWatcherParams</secondary></indexterm>
+<indexterm><primary>PLWatcherParams</primary><secondary>subid</secondary></indexterm>
+<para><computeroutput>string PLWatcherParams::subid</computeroutput></para></section>
+<anchor xml:id="_struct_p_l_watcher_params_1ab20e92d93d8267eafd5ad0891dde595e"/><section>
+    <title>ValidJson</title>
+<indexterm><primary>ValidJson</primary><secondary>PLWatcherParams</secondary></indexterm>
+<indexterm><primary>PLWatcherParams</primary><secondary>ValidJson</secondary></indexterm>
+<para><computeroutput>bool PLWatcherParams::ValidJson</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following files:</para>
+AlgoParams/PLWatcherParams.hppAlgoParams/PLWatcherParams.cpp</section>
+</section>

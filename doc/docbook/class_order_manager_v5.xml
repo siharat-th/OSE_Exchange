@@ -1,0 +1,1566 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_order_manager_v5" xml:lang="en-US">
+<title>OrderManagerV5 Class Reference</title>
+<indexterm><primary>OrderManagerV5</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_order_manager_v5">OrderManagerV5</link> class is responsible for managing orders and their execution. It implements the IOrderHandler interface and inherits from the <link linkend="_class_named_thread">NamedThread</link> class. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;OrderManagerV5.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for OrderManagerV5:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_order_manager_v5.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_order_manager_v5_1a161442e0a07f65a25a46849f89a01e5d">OrderManagerV5</link> (int core, string owner)</para>
+
+<para>Constructs an <link linkend="_class_order_manager_v5">OrderManagerV5</link> object. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_order_manager_v5_1aaed32ead22f67a16a291064553557169">~OrderManagerV5</link> ()</para>
+
+<para>Destroys the <link linkend="_class_order_manager_v5">OrderManagerV5</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_order_manager_v5_1a912ac95209615aec8d920bd04b889019">Stop</link> ()</para>
+
+<para>Stops the order manager. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_order_manager_v5_1a229be736c037f9e11069dce5adba966e">LoadTemplate</link> (const <link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> &amp;ord)</para>
+
+<para>Loads a template order. </para>
+</listitem>
+            <listitem><para>string <link linkend="_class_order_manager_v5_1a2af638875e63cc0e22b8322e5d020331">NewId</link> (const string &amp;prefix)</para>
+
+<para>Generates a new order ID with the given prefix. </para>
+</listitem>
+            <listitem><para><link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> <link linkend="_class_order_manager_v5_1a2c667d57687009396c40d89f20dc21ac">GetOrder</link> (uint64_t reqid)</para>
+
+<para>Gets the order with the specified request ID. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_order_manager_v5_1a4f39113f56d62e73b85e63a101ab0663">Exists</link> (uint64_t reqid)</para>
+
+<para>Checks if an order with the specified request ID exists. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_order_manager_v5_1a8a9f55c42486467ffa17fbe4116a4dad">Clear</link> ()</para>
+
+<para>Clears all orders. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_order_manager_v5_1ad41f90cc9aabf22f3c24f26e4991d0e8">ClearDeadOrders</link> ()</para>
+
+<para>Clears all dead orders. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_order_manager_v5_1ab593941e8bc1d249d8fdbb35820a5424">Count</link> ()</para>
+
+<para>Gets the count of orders. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_order_manager_v5_1ab81ade820db4150c599dd7459eecb2d3">Print</link> ()</para>
+
+<para>Prints the orders. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_order_manager_v5_1a4daacf157cb30b0bba100558e91dbab2">UpdateMetaParams</link> (const <link linkend="_structalgometa">algometa</link> &amp;meta, bool certnr)</para>
+
+<para>Updates the meta parameters with the given algorithm metadata. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_order_manager_v5_1ac3aff31c02a41a96aa83da07dc63773a">EnableOrderReporter</link> (bool value)</para>
+
+<para>Enables or disables the order reporter. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_order_manager_v5_1a2cd5e8d7c0fd3d0c44cb4a022258658f">ProcessSpreadLegs</link> (bool value)</para>
+
+<para>Sets whether to process spread legs. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_order_manager_v5_1a5ecce4a76ee814136ea22ce02f7fdd00">onBankedOrder</link> (<link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> &amp;ord)</para>
+
+<para>Handles a banked order. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_order_manager_v5_1ad66c1fb8a86fa2252e4d404ae16e6079">onSentOrderNew</link> (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord)</para>
+
+<para>Handles a new sent order. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_order_manager_v5_1ad10084bd7047b5074ef71d0dd11b412a">onSentOrderMod</link> (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord)</para>
+
+<para>Handles a modified sent order. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_order_manager_v5_1afb78110182a4d7e61da791e26dee4804">onSentOrderCxl</link> (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord)</para>
+
+<para>Handles a canceled sent order. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_order_manager_v5_1a39625b942a94f1c95584dda6cd61ec12">onSentOrderFast</link> (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord)</para>
+
+<para>Handles a fast sent order. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_order_manager_v5_1aba0b61a527510b3efd8b8ec9b7323d38">onSentOrderOrdbook</link> (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord, <link linkend="_struct_user_info">UserInfo</link> &amp;info)</para>
+
+<para>Handles an order book sent order. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_order_manager_v5_1a6d03ba0ff3bc0d552d891caeabc7aeb5">UpdateOrder</link> (uint64_t reqid, uint64_t exchordid, KOrderStatus::Enum status, KOrderState::Enum state, uint32_t qty, uint64_t timestamp)</para>
+
+<para>Updates an order with the specified request ID. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_order_manager_v5_1a8d4c7976403acb8a9e108a81ce480b78">minOrderAck</link> (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord)</para>
+
+<para>Handles a minimum order acknowledgment. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_order_manager_v5_1a3ef0e3e520af9287a228138e3dbecc0d">minOrderCancel</link> (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord)</para>
+
+<para>Handles a minimum order cancellation. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_order_manager_v5_1a1822e620817b1316377c2453c9851c94">minOrderModify</link> (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord)</para>
+
+<para>Handles a minimum order modification. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_order_manager_v5_1a1d72effb40164d3f2ddaec91ddb926bd">UpdateExecution</link> (uint64_t reqid, uint64_t exchordid, KOrderStatus::Enum status, KOrderState::Enum state, KOrderFillType::Enum filltype, int64_t lastpx, uint32_t lastqty, uint32_t lvs, uint64_t timestamp, string execid)</para>
+
+<para>Updates the execution of an order with the specified request ID. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_order_manager_v5_1a6ba7a58b65651a659bcbf29c725b92c8">UpdateSpreadLegExecution</link> (uint64_t exchordid, KOrderSide::Enum side, int32_t secid, int64_t lastpx, uint32_t lastqty, uint64_t timestamp, string execid)</para>
+
+<para>Updates the execution of a spread leg order with the specified CME ID. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_order_manager_v5_1a9a1823f61e2770beb11526d9004eb736">minOrderExecution</link> (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord, bool hedgeSent)</para>
+
+<para>Handles the execution of a minimum order. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_order_manager_v5_1af6aaed4be937adb109d4deefb78085cd">minOrderExecSpreadLeg</link> (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord)</para>
+
+<para>Handles the execution of a minimum order spread leg. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_order_manager_v5_1af10d06b20720405530e8d3ecde614bca">minOrderReject</link> (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord, const string &amp;text)</para>
+
+<para>Handles the rejection of a minimum order. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_order_manager_v5_1a7813dd64999ebdec3c8294a8d105f76a">minOrderCancelReject</link> (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord, const string &amp;text)</para>
+
+<para>Handles the rejection of a minimum order cancellation. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_order_manager_v5_1a293ca659c8ec0459bf315c8991b12c47">minOrderCancelReplaceReject</link> (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord, const string &amp;text)</para>
+
+<para>Handles the rejection of a minimum order cancel/replace. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_order_manager_v5_1a3c2efb71d798d9d6da7e26c6033348f5">ProcessOrderID</link> (uint64_t ordid)</para>
+
+<para>Process the order ID. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_order_manager_v5_1a645bc9bb5d6724ff14073b03948a0fa8">ProcessOrder</link> (<link linkend="_struct_k_t_n_1_1_order_pod">OrderPod</link> &amp;ord)</para>
+
+<para>Process the order. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_order_manager_v5_1a88cb299300df75f849674f6aa5f1e296">ProcessFill</link> (<link linkend="_struct_k_t_n_1_1_order_pod">OrderPod</link> &amp;ord)</para>
+
+<para>Process the fill. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_order_manager_v5_1a43512c55a3fe9472d66401f0fadf22ca">ProcessSentOrder</link> (<link linkend="_struct_k_t_n_1_1_order_pod">OrderPod</link> &amp;ord)</para>
+
+<para>Process the sent order. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_order_manager_v5_1a7427c8594b22f65d05a86a007e53aaa2">ProcessRejectedOrder</link> (<link linkend="_struct_k_t_n_1_1_order_pod">OrderPod</link> &amp;ord, const string &amp;text)</para>
+
+<para>Process the rejected order. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_order_manager_v5_1a435d221b404b1a9238d1ffaf634f429e">RegisterOrderTemplate</link> (<link linkend="_struct_k_t_n_1_1_order">Order</link> &amp;ord)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_order_manager_v5_1aaba686d7f3a7c5d20a92cdf7da3cc5a9">GetByOrdernum</link> (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord, const string &amp;ordernum)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_order_manager_v5_1ac1e7d893ed46126e667217d64bb627f3">GetByExchId</link> (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord, uint64_t exchordid)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_order_manager_v5_1af8c317ab99fadbe7fd355153f3dcf067">Get</link> (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord, uint64_t reqid)</para>
+</listitem>
+            <listitem><para>vector&lt; <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &gt; <link linkend="_class_order_manager_v5_1ac54d398606773431c29d62cc127ebda4">GetAll</link> ()</para>
+</listitem>
+            <listitem><para>vector&lt; <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &gt; <link linkend="_class_order_manager_v5_1a1ced22cc4ffec89f0a82cc7a1b670271">GetWorking</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_order_manager_v5_1a971c39c59abdd2a3b85c4a19adcd9b22">GetBySecIdSideStrat</link> (vector&lt; <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &gt; &amp;ords, int32_t secid, const KOrderSide::Enum side, int stratid)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_order_manager_v5_1a2bceb69c55aec8f1da14ec8dc383c710">GetBySecIdSideStrat</link> (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord, int32_t secid, const KOrderSide::Enum side, int stratid)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_order_manager_v5_1a4727429517c138f008b4bea75e3d9031">GetByStratId</link> (vector&lt; <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &gt; &amp;ords, int stratid)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_order_manager_v5_1af4730a8bd80ebbfc2ea56e823572a8cb">GetByAlgoTrigger</link> (vector&lt; <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &gt; &amp;ords, const KOrderAlgoTrigger::Enum trig)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_order_manager_v5_1a479c910477ae3f46521e393521dc71b5">GetByAlgoTriggerSecId</link> (vector&lt; <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &gt; &amp;ords, const KOrderAlgoTrigger::Enum trig, int32_t secid)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_order_manager_v5_1aeb51e68d3d0b307151aeeb952afe250e">GetByAlgoTriggerPrice</link> (vector&lt; <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &gt; &amp;ords, const KOrderAlgoTrigger::Enum trig, int32_t secid, int32_t price)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_order_manager_v5_1a47bbfc7f5f53352722a2750cfbf1a0e8">GetAtPrice</link> (vector&lt; <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &gt; &amp;orders, int32_t secid, KOrderSide::Enum side, int32_t price, KOrderAlgoTrigger::Enum trig)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_order_manager_v5_1a4ecd3f8782be2292645c832634c8244e">GetSideExposure</link> (int32_t secid, KOrderSide::Enum side, KOrderAlgoTrigger::Enum trig)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_order_manager_v5_1a8d3785e68b41805f527e83de8bc05095">HasInflight</link> (const string &amp;tag)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_order_manager_v5_1a9a55b3c9933e6e897ea8568c1950da60">HasInflight</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_order_manager_v5_1a1d564b7022e7c830faeb647c447ea77f">ClearInflight</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_class_k_t_n_1_1_o_r_d_1_1_i_order_handler">KTN::ORD::IOrderHandler</link>Public Member Functions inherited from <link linkend="_class_named_thread">NamedThread</link>        <itemizedlist>
+            <listitem><para><link linkend="_class_named_thread_1a891fabdc2d824048ec05c82e7ef8c69a">NamedThread</link> ()</para>
+
+<para>Default constructor. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_named_thread_1a018dadb59e5af98ee734301a1baa50cb">~NamedThread</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_named_thread_1a9fa42542ff43c89fb9bbc33de9c87e34">CreateAndRun</link> (string name, int core)</para>
+
+<para>Creates and runs the named thread on the specified core. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_named_thread_1ad4809c571171be13f0f91f540d5c196f">Join</link> ()</para>
+
+<para>Joins the named thread. </para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_order_manager_v5">OrderManagerV5</link> class is responsible for managing orders and their execution. It implements the IOrderHandler interface and inherits from the <link linkend="_class_named_thread">NamedThread</link> class. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_order_manager_v5_1a161442e0a07f65a25a46849f89a01e5d"/><section>
+    <title>OrderManagerV5()</title>
+<indexterm><primary>OrderManagerV5</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>OrderManagerV5</secondary></indexterm>
+<para><computeroutput>OrderManagerV5::OrderManagerV5 (int core, string owner)</computeroutput></para><para>
+
+<para>Constructs an <link linkend="_class_order_manager_v5">OrderManagerV5</link> object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>core</entry><entry>
+<para>The core number. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>owner</entry><entry>
+<para>The owner of the order manager. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_order_manager_v5_1aaed32ead22f67a16a291064553557169"/><section>
+    <title>~OrderManagerV5()</title>
+<indexterm><primary>~OrderManagerV5</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>~OrderManagerV5</secondary></indexterm>
+<para><computeroutput>OrderManagerV5::~OrderManagerV5 ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Destroys the <link linkend="_class_order_manager_v5">OrderManagerV5</link> object. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_order_manager_v5_1a8a9f55c42486467ffa17fbe4116a4dad"/><section>
+    <title>Clear()</title>
+<indexterm><primary>Clear</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>Clear</secondary></indexterm>
+<para><computeroutput>void OrderManagerV5::Clear ( )</computeroutput></para><para>
+
+<para>Clears all orders. </para>
+</para>
+<para>
+References <link linkend="_l00040">CustomHFTMap::clear()</link>.</para>
+</section>
+<anchor xml:id="_class_order_manager_v5_1ad41f90cc9aabf22f3c24f26e4991d0e8"/><section>
+    <title>ClearDeadOrders()</title>
+<indexterm><primary>ClearDeadOrders</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>ClearDeadOrders</secondary></indexterm>
+<para><computeroutput>void OrderManagerV5::ClearDeadOrders ( )</computeroutput></para><para>
+
+<para>Clears all dead orders. </para>
+</para>
+<para>
+References <link linkend="_l00050">CustomHFTMap::cleardead()</link>.</para>
+<para>
+Referenced by <link linkend="_l00411">KTN::MultiSpreaderV3::Enable()</link>, <link linkend="_l00506">KTN::Skewer::Enable()</link>, <link linkend="_l00511">KTN::SkewTrader::Enable()</link>, <link linkend="_l00461">KTN::Stacker::Enable()</link>, <link linkend="_l00374">KTN::StackerTimer::Enable()</link>, and <link linkend="_l00426">KTN::Twap::Enable()</link>.</para>
+</section>
+<anchor xml:id="_class_order_manager_v5_1a1d564b7022e7c830faeb647c447ea77f"/><section>
+    <title>ClearInflight()</title>
+<indexterm><primary>ClearInflight</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>ClearInflight</secondary></indexterm>
+<para><computeroutput>void OrderManagerV5::ClearInflight ( )</computeroutput></para></section>
+<anchor xml:id="_class_order_manager_v5_1ab593941e8bc1d249d8fdbb35820a5424"/><section>
+    <title>Count()</title>
+<indexterm><primary>Count</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>Count</secondary></indexterm>
+<para><computeroutput>int OrderManagerV5::Count ( )</computeroutput></para><para>
+
+<para>Gets the count of orders. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The count of orders. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00052">CustomHFTMap::size()</link>.</para>
+<para>
+Referenced by <link linkend="_l00077">Print()</link>.</para>
+</section>
+<anchor xml:id="_class_order_manager_v5_1ac3aff31c02a41a96aa83da07dc63773a"/><section>
+    <title>EnableOrderReporter()</title>
+<indexterm><primary>EnableOrderReporter</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>EnableOrderReporter</secondary></indexterm>
+<para><computeroutput>void OrderManagerV5::EnableOrderReporter (bool value)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Enables or disables the order reporter. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>value</entry><entry>
+<para>True to enable the order reporter, false to disable it. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_order_manager_v5_1a4f39113f56d62e73b85e63a101ab0663"/><section>
+    <title>Exists()</title>
+<indexterm><primary>Exists</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>Exists</secondary></indexterm>
+<para><computeroutput>bool OrderManagerV5::Exists (uint64_t reqid)</computeroutput></para><para>
+
+<para>Checks if an order with the specified request ID exists. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>reqid</entry><entry>
+<para>The request ID of the order. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if an order with the specified request ID exists, false otherwise. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00075">CustomHFTMap::find()</link>.</para>
+</section>
+<anchor xml:id="_class_order_manager_v5_1af8c317ab99fadbe7fd355153f3dcf067"/><section>
+    <title>Get()</title>
+<indexterm><primary>Get</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>Get</secondary></indexterm>
+<para><computeroutput>void OrderManagerV5::Get (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp; ord, uint64_t reqid)</computeroutput></para></section>
+<anchor xml:id="_class_order_manager_v5_1ac54d398606773431c29d62cc127ebda4"/><section>
+    <title>GetAll()</title>
+<indexterm><primary>GetAll</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>GetAll</secondary></indexterm>
+<para><computeroutput>vector&lt; <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &gt; OrderManagerV5::GetAll ( )</computeroutput></para></section>
+<anchor xml:id="_class_order_manager_v5_1a47bbfc7f5f53352722a2750cfbf1a0e8"/><section>
+    <title>GetAtPrice()</title>
+<indexterm><primary>GetAtPrice</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>GetAtPrice</secondary></indexterm>
+<para><computeroutput>bool OrderManagerV5::GetAtPrice (vector&lt; <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &gt; &amp; orders, int32_t secid, KOrderSide::Enum side, int32_t price, KOrderAlgoTrigger::Enum trig)</computeroutput></para></section>
+<anchor xml:id="_class_order_manager_v5_1af4730a8bd80ebbfc2ea56e823572a8cb"/><section>
+    <title>GetByAlgoTrigger()</title>
+<indexterm><primary>GetByAlgoTrigger</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>GetByAlgoTrigger</secondary></indexterm>
+<para><computeroutput>void OrderManagerV5::GetByAlgoTrigger (vector&lt; <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &gt; &amp; ords, const KOrderAlgoTrigger::Enum trig)</computeroutput></para></section>
+<anchor xml:id="_class_order_manager_v5_1aeb51e68d3d0b307151aeeb952afe250e"/><section>
+    <title>GetByAlgoTriggerPrice()</title>
+<indexterm><primary>GetByAlgoTriggerPrice</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>GetByAlgoTriggerPrice</secondary></indexterm>
+<para><computeroutput>void OrderManagerV5::GetByAlgoTriggerPrice (vector&lt; <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &gt; &amp; ords, const KOrderAlgoTrigger::Enum trig, int32_t secid, int32_t price)</computeroutput></para></section>
+<anchor xml:id="_class_order_manager_v5_1a479c910477ae3f46521e393521dc71b5"/><section>
+    <title>GetByAlgoTriggerSecId()</title>
+<indexterm><primary>GetByAlgoTriggerSecId</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>GetByAlgoTriggerSecId</secondary></indexterm>
+<para><computeroutput>void OrderManagerV5::GetByAlgoTriggerSecId (vector&lt; <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &gt; &amp; ords, const KOrderAlgoTrigger::Enum trig, int32_t secid)</computeroutput></para></section>
+<anchor xml:id="_class_order_manager_v5_1ac1e7d893ed46126e667217d64bb627f3"/><section>
+    <title>GetByExchId()</title>
+<indexterm><primary>GetByExchId</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>GetByExchId</secondary></indexterm>
+<para><computeroutput>bool OrderManagerV5::GetByExchId (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp; ord, uint64_t exchordid)</computeroutput></para></section>
+<anchor xml:id="_class_order_manager_v5_1aaba686d7f3a7c5d20a92cdf7da3cc5a9"/><section>
+    <title>GetByOrdernum()</title>
+<indexterm><primary>GetByOrdernum</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>GetByOrdernum</secondary></indexterm>
+<para><computeroutput>bool OrderManagerV5::GetByOrdernum (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp; ord, const string &amp; ordernum)</computeroutput></para></section>
+<anchor xml:id="_class_order_manager_v5_1a2bceb69c55aec8f1da14ec8dc383c710"/><section>
+    <title>GetBySecIdSideStrat()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>GetBySecIdSideStrat</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>GetBySecIdSideStrat</secondary></indexterm>
+<para><computeroutput>bool OrderManagerV5::GetBySecIdSideStrat (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp; ord, int32_t secid, const KOrderSide::Enum side, int stratid)</computeroutput></para></section>
+<anchor xml:id="_class_order_manager_v5_1a971c39c59abdd2a3b85c4a19adcd9b22"/><section>
+    <title>GetBySecIdSideStrat()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>GetBySecIdSideStrat</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>GetBySecIdSideStrat</secondary></indexterm>
+<para><computeroutput>void OrderManagerV5::GetBySecIdSideStrat (vector&lt; <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &gt; &amp; ords, int32_t secid, const KOrderSide::Enum side, int stratid)</computeroutput></para></section>
+<anchor xml:id="_class_order_manager_v5_1a4727429517c138f008b4bea75e3d9031"/><section>
+    <title>GetByStratId()</title>
+<indexterm><primary>GetByStratId</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>GetByStratId</secondary></indexterm>
+<para><computeroutput>void OrderManagerV5::GetByStratId (vector&lt; <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &gt; &amp; ords, int stratid)</computeroutput></para></section>
+<anchor xml:id="_class_order_manager_v5_1a2c667d57687009396c40d89f20dc21ac"/><section>
+    <title>GetOrder()</title>
+<indexterm><primary>GetOrder</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>GetOrder</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> OrderManagerV5::GetOrder (uint64_t reqid)</computeroutput></para><para>
+
+<para>Gets the order with the specified request ID. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>reqid</entry><entry>
+<para>The request ID of the order. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The order with the specified request ID. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00105">CustomHFTMap::get()</link>.</para>
+</section>
+<anchor xml:id="_class_order_manager_v5_1a4ecd3f8782be2292645c832634c8244e"/><section>
+    <title>GetSideExposure()</title>
+<indexterm><primary>GetSideExposure</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>GetSideExposure</secondary></indexterm>
+<para><computeroutput>int OrderManagerV5::GetSideExposure (int32_t secid, KOrderSide::Enum side, KOrderAlgoTrigger::Enum trig)</computeroutput></para></section>
+<anchor xml:id="_class_order_manager_v5_1a1ced22cc4ffec89f0a82cc7a1b670271"/><section>
+    <title>GetWorking()</title>
+<indexterm><primary>GetWorking</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>GetWorking</secondary></indexterm>
+<para><computeroutput>vector&lt; <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &gt; OrderManagerV5::GetWorking ( )</computeroutput></para></section>
+<anchor xml:id="_class_order_manager_v5_1a9a55b3c9933e6e897ea8568c1950da60"/><section>
+    <title>HasInflight()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>HasInflight</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>HasInflight</secondary></indexterm>
+<para><computeroutput>bool OrderManagerV5::HasInflight ( )</computeroutput></para></section>
+<anchor xml:id="_class_order_manager_v5_1a8d3785e68b41805f527e83de8bc05095"/><section>
+    <title>HasInflight()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>HasInflight</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>HasInflight</secondary></indexterm>
+<para><computeroutput>bool OrderManagerV5::HasInflight (const string &amp; tag)</computeroutput></para></section>
+<anchor xml:id="_class_order_manager_v5_1a229be736c037f9e11069dce5adba966e"/><section>
+    <title>LoadTemplate()</title>
+<indexterm><primary>LoadTemplate</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>LoadTemplate</secondary></indexterm>
+<para><computeroutput>void OrderManagerV5::LoadTemplate (const <link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> &amp; ord)</computeroutput></para><para>
+
+<para>Loads a template order. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ord</entry><entry>
+<para>The template order to load. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_order_manager_v5_1a8d4c7976403acb8a9e108a81ce480b78"/><section>
+    <title>minOrderAck()</title>
+<indexterm><primary>minOrderAck</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>minOrderAck</secondary></indexterm>
+<para><computeroutput>void OrderManagerV5::minOrderAck (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp; ord)</computeroutput></para><para>
+
+<para>Handles a minimum order acknowledgment. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ord</entry><entry>
+<para>The minimum order to acknowledge. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00038">KTN::OrderPod::exchordid</link>, <link linkend="_l00042">KTN::OrderPod::leavesqty</link>, <link linkend="_l00037">KTN::OrderPod::orderReqId</link>, <link linkend="_l00619">ProcessOrder()</link>, and <link linkend="_l00036">KTN::OrderPod::timestamp</link>.</para>
+<para>
+Referenced by <link linkend="_l00635">KTN::AlgoBaseV3::minOrderAck()</link>.</para>
+</section>
+<anchor xml:id="_class_order_manager_v5_1a3ef0e3e520af9287a228138e3dbecc0d"/><section>
+    <title>minOrderCancel()</title>
+<indexterm><primary>minOrderCancel</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>minOrderCancel</secondary></indexterm>
+<para><computeroutput>void OrderManagerV5::minOrderCancel (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp; ord)</computeroutput></para><para>
+
+<para>Handles a minimum order cancellation. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ord</entry><entry>
+<para>The minimum order to cancel. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00037">KTN::OrderPod::orderReqId</link>, <link linkend="_l00619">ProcessOrder()</link>, and <link linkend="_l00036">KTN::OrderPod::timestamp</link>.</para>
+<para>
+Referenced by <link linkend="_l00644">KTN::AlgoBaseV3::minOrderCancel()</link>, and <link linkend="_l01136">KTN::Stacker::minOrderCancel()</link>.</para>
+</section>
+<anchor xml:id="_class_order_manager_v5_1a7813dd64999ebdec3c8294a8d105f76a"/><section>
+    <title>minOrderCancelReject()</title>
+<indexterm><primary>minOrderCancelReject</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>minOrderCancelReject</secondary></indexterm>
+<para><computeroutput>void OrderManagerV5::minOrderCancelReject (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp; ord, const string &amp; text)</computeroutput></para><para>
+
+<para>Handles the rejection of a minimum order cancellation. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ord</entry><entry>
+<para>The minimum order cancellation to reject. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>text</entry><entry>
+<para>The rejection text. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00635">ProcessRejectedOrder()</link>.</para>
+</section>
+<anchor xml:id="_class_order_manager_v5_1a293ca659c8ec0459bf315c8991b12c47"/><section>
+    <title>minOrderCancelReplaceReject()</title>
+<indexterm><primary>minOrderCancelReplaceReject</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>minOrderCancelReplaceReject</secondary></indexterm>
+<para><computeroutput>void OrderManagerV5::minOrderCancelReplaceReject (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp; ord, const string &amp; text)</computeroutput></para><para>
+
+<para>Handles the rejection of a minimum order cancel/replace. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ord</entry><entry>
+<para>The minimum order cancel/replace to reject. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>text</entry><entry>
+<para>The rejection text. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00635">ProcessRejectedOrder()</link>.</para>
+</section>
+<anchor xml:id="_class_order_manager_v5_1af6aaed4be937adb109d4deefb78085cd"/><section>
+    <title>minOrderExecSpreadLeg()</title>
+<indexterm><primary>minOrderExecSpreadLeg</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>minOrderExecSpreadLeg</secondary></indexterm>
+<para><computeroutput>void OrderManagerV5::minOrderExecSpreadLeg (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp; ord)</computeroutput></para><para>
+
+<para>Handles the execution of a minimum order spread leg. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ord</entry><entry>
+<para>The minimum order spread leg to execute. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00038">KTN::OrderPod::exchordid</link>, <link linkend="_l00031">KTN::OrderPod::execid</link>, <link linkend="_l00105">CustomHFTMap::get()</link>, <link linkend="_l00035">KTN::OrderPod::lastpx</link>, <link linkend="_l00044">KTN::OrderPod::lastqty</link>, <link linkend="_l00064">KTN::OrderPod::OrdAlgoTrig</link>, <link linkend="_l00032">KTN::OrderPod::ordernum</link>, <link linkend="_l00037">KTN::OrderPod::orderReqId</link>, <link linkend="_l00063">KTN::OrderPod::OrdFillType</link>, <link linkend="_l00060">KTN::OrderPod::OrdSide</link>, <link linkend="_l00062">KTN::OrderPod::OrdState</link>, <link linkend="_l00058">KTN::OrderPod::OrdTif</link>, <link linkend="_l00057">KTN::OrderPod::OrdType</link>, <link linkend="_l00034">KTN::OrderPod::price</link>, <link linkend="_l00624">ProcessFill()</link>, <link linkend="_l00041">KTN::OrderPod::quantity</link>, <link linkend="_l00040">KTN::OrderPod::secid</link>, and <link linkend="_l00046">KTN::OrderPod::stratid</link>.</para>
+<para>
+Referenced by <link linkend="_l00759">KTN::MultiSpreaderV3::minOrderExecution()</link>, <link linkend="_l01043">KTN::Skewer::minOrderExecution()</link>, <link linkend="_l01041">KTN::SkewTrader::minOrderExecution()</link>, <link linkend="_l01098">KTN::Stacker::minOrderExecution()</link>, <link linkend="_l00885">KTN::StackerTimer::minOrderExecution()</link>, and <link linkend="_l00975">KTN::Twap::minOrderExecution()</link>.</para>
+</section>
+<anchor xml:id="_class_order_manager_v5_1a9a1823f61e2770beb11526d9004eb736"/><section>
+    <title>minOrderExecution()</title>
+<indexterm><primary>minOrderExecution</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>minOrderExecution</secondary></indexterm>
+<para><computeroutput>void OrderManagerV5::minOrderExecution (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp; ord, bool hedgeSent)</computeroutput></para><para>
+
+<para>Handles the execution of a minimum order. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ord</entry><entry>
+<para>The minimum order to execute. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>hedgeSent</entry><entry>
+<para>The flag indicating whether the hedge order was sent. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00038">KTN::OrderPod::exchordid</link>, <link linkend="_l00105">CustomHFTMap::get()</link>, <link linkend="_l00035">KTN::OrderPod::lastpx</link>, <link linkend="_l00044">KTN::OrderPod::lastqty</link>, <link linkend="_l00042">KTN::OrderPod::leavesqty</link>, <link linkend="_l00064">KTN::OrderPod::OrdAlgoTrig</link>, <link linkend="_l00037">KTN::OrderPod::orderReqId</link>, <link linkend="_l00063">KTN::OrderPod::OrdFillType</link>, <link linkend="_l00062">KTN::OrderPod::OrdState</link>, <link linkend="_l00061">KTN::OrderPod::OrdStatus</link>, <link linkend="_l00034">KTN::OrderPod::price</link>, <link linkend="_l00624">ProcessFill()</link>, <link linkend="_l00040">KTN::OrderPod::secid</link>, <link linkend="_l00046">KTN::OrderPod::stratid</link>, and <link linkend="_l00036">KTN::OrderPod::timestamp</link>.</para>
+<para>
+Referenced by <link linkend="_l00360">KTN::AutoHedgeOB::minOrderExecution()</link>, <link linkend="_l00759">KTN::MultiSpreaderV3::minOrderExecution()</link>, <link linkend="_l00419">KTN::PLWatcher::minOrderExecution()</link>, <link linkend="_l01043">KTN::Skewer::minOrderExecution()</link>, <link linkend="_l01041">KTN::SkewTrader::minOrderExecution()</link>, <link linkend="_l00504">KTN::SqueezerOB::minOrderExecution()</link>, <link linkend="_l01098">KTN::Stacker::minOrderExecution()</link>, <link linkend="_l00885">KTN::StackerTimer::minOrderExecution()</link>, <link linkend="_l00975">KTN::Twap::minOrderExecution()</link>, and <link linkend="_l00902">KTN::Waves::minOrderExecution()</link>.</para>
+</section>
+<anchor xml:id="_class_order_manager_v5_1a1822e620817b1316377c2453c9851c94"/><section>
+    <title>minOrderModify()</title>
+<indexterm><primary>minOrderModify</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>minOrderModify</secondary></indexterm>
+<para><computeroutput>void OrderManagerV5::minOrderModify (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp; ord)</computeroutput></para><para>
+
+<para>Handles a minimum order modification. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ord</entry><entry>
+<para>The minimum order to modify. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00042">KTN::OrderPod::leavesqty</link>, <link linkend="_l00037">KTN::OrderPod::orderReqId</link>, <link linkend="_l00619">ProcessOrder()</link>, and <link linkend="_l00036">KTN::OrderPod::timestamp</link>.</para>
+<para>
+Referenced by <link linkend="_l00653">KTN::AlgoBaseV3::minOrderModify()</link>.</para>
+</section>
+<anchor xml:id="_class_order_manager_v5_1af10d06b20720405530e8d3ecde614bca"/><section>
+    <title>minOrderReject()</title>
+<indexterm><primary>minOrderReject</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>minOrderReject</secondary></indexterm>
+<para><computeroutput>void OrderManagerV5::minOrderReject (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp; ord, const string &amp; text)</computeroutput></para><para>
+
+<para>Handles the rejection of a minimum order. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ord</entry><entry>
+<para>The minimum order to reject. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>text</entry><entry>
+<para>The rejection text. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00635">ProcessRejectedOrder()</link>.</para>
+<para>
+Referenced by <link linkend="_l01154">KTN::Stacker::minOrderCancelReject()</link>, <link linkend="_l01171">KTN::Stacker::minOrderCancelReplaceReject()</link>, and <link linkend="_l00667">KTN::AlgoBaseV3::minOrderReject()</link>.</para>
+</section>
+<anchor xml:id="_class_order_manager_v5_1a2af638875e63cc0e22b8322e5d020331"/><section>
+    <title>NewId()</title>
+<indexterm><primary>NewId</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>NewId</secondary></indexterm>
+<para><computeroutput>std::string OrderManagerV5::NewId (const string &amp; prefix)</computeroutput></para><para>
+
+<para>Generates a new order ID with the given prefix. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>prefix</entry><entry>
+<para>The prefix for the new order ID. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The new order ID. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_order_manager_v5_1a5ecce4a76ee814136ea22ce02f7fdd00"/><section>
+    <title>onBankedOrder()</title>
+<indexterm><primary>onBankedOrder</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>onBankedOrder</secondary></indexterm>
+<para><computeroutput>void OrderManagerV5::onBankedOrder (<link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> &amp; ord)</computeroutput></para><para>
+
+<para>Handles a banked order. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ord</entry><entry>
+<para>The banked order to handle. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_order_manager_v5_1afb78110182a4d7e61da791e26dee4804"/><section>
+    <title>onSentOrderCxl()</title>
+<indexterm><primary>onSentOrderCxl</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>onSentOrderCxl</secondary></indexterm>
+<para><computeroutput>void OrderManagerV5::onSentOrderCxl (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp; ord)</computeroutput></para><para>
+
+<para>Handles a canceled sent order. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ord</entry><entry>
+<para>The canceled sent order to handle. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00037">KTN::OrderPod::orderReqId</link>.</para>
+<para>
+Referenced by <link linkend="_l00198">KTN::PLWatcher::OrderReceived()</link>, and <link linkend="_l01140">KTN::Waves::OrderReceived()</link>.</para>
+</section>
+<anchor xml:id="_class_order_manager_v5_1a39625b942a94f1c95584dda6cd61ec12"/><section>
+    <title>onSentOrderFast()</title>
+<indexterm><primary>onSentOrderFast</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>onSentOrderFast</secondary></indexterm>
+<para><computeroutput>void OrderManagerV5::onSentOrderFast (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp; ord)</computeroutput></para><para>
+
+<para>Handles a fast sent order. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ord</entry><entry>
+<para>The fast sent order to handle. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00037">KTN::OrderPod::orderReqId</link>.</para>
+<para>
+Referenced by <link linkend="_l00803">KTN::MultiSpreaderV3::onHedgeOrderSent()</link>, <link linkend="_l01169">KTN::SkewTrader::onHedgeOrderSent()</link>, <link linkend="_l01180">KTN::Stacker::onHedgeOrderSent()</link>, <link linkend="_l00378">KTN::Waves::onHedgeOrderSent()</link>, <link linkend="_l00045">KTN::SqueezerOB::onJson()</link>, <link linkend="_l00838">KTN::MultiSpreaderV3::onOrderSent()</link>, <link linkend="_l01205">KTN::SkewTrader::onOrderSent()</link>, <link linkend="_l01215">KTN::Stacker::onOrderSent()</link>, <link linkend="_l00451">KTN::Waves::onOrderSent()</link>, <link linkend="_l00379">KTN::PLWatcher::onPL()</link>, and <link linkend="_l00198">KTN::PLWatcher::OrderReceived()</link>.</para>
+</section>
+<anchor xml:id="_class_order_manager_v5_1ad10084bd7047b5074ef71d0dd11b412a"/><section>
+    <title>onSentOrderMod()</title>
+<indexterm><primary>onSentOrderMod</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>onSentOrderMod</secondary></indexterm>
+<para><computeroutput>void OrderManagerV5::onSentOrderMod (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp; ord)</computeroutput></para><para>
+
+<para>Handles a modified sent order. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ord</entry><entry>
+<para>The modified sent order to handle. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00037">KTN::OrderPod::orderReqId</link>.</para>
+<para>
+Referenced by <link linkend="_l00198">KTN::PLWatcher::OrderReceived()</link>, and <link linkend="_l01140">KTN::Waves::OrderReceived()</link>.</para>
+</section>
+<anchor xml:id="_class_order_manager_v5_1ad66c1fb8a86fa2252e4d404ae16e6079"/><section>
+    <title>onSentOrderNew()</title>
+<indexterm><primary>onSentOrderNew</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>onSentOrderNew</secondary></indexterm>
+<para><computeroutput>void OrderManagerV5::onSentOrderNew (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp; ord)</computeroutput></para><para>
+
+<para>Handles a new sent order. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ord</entry><entry>
+<para>The new sent order to handle. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00037">KTN::OrderPod::orderReqId</link>.</para>
+</section>
+<anchor xml:id="_class_order_manager_v5_1aba0b61a527510b3efd8b8ec9b7323d38"/><section>
+    <title>onSentOrderOrdbook()</title>
+<indexterm><primary>onSentOrderOrdbook</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>onSentOrderOrdbook</secondary></indexterm>
+<para><computeroutput>void OrderManagerV5::onSentOrderOrdbook (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp; ord, <link linkend="_struct_user_info">UserInfo</link> &amp; info)</computeroutput></para><para>
+
+<para>Handles an order book sent order. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ord</entry><entry>
+<para>The order book sent order to handle. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>info</entry><entry>
+<para>The user info associated with the order. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00037">KTN::OrderPod::orderReqId</link>.</para>
+<para>
+Referenced by <link linkend="_l00550">KTN::ORD::OrderHandlerZmqV6::LoadTasOrders()</link>.</para>
+</section>
+<anchor xml:id="_class_order_manager_v5_1ab81ade820db4150c599dd7459eecb2d3"/><section>
+    <title>Print()</title>
+<indexterm><primary>Print</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>Print</secondary></indexterm>
+<para><computeroutput>void OrderManagerV5::Print ( )</computeroutput></para><para>
+
+<para>Prints the orders. </para>
+</para>
+<para>
+References <link linkend="_l00049">Count()</link>.</para>
+<para>
+Referenced by <link linkend="_l00339">KTN::AlgoBaseV3::Print()</link>, <link linkend="_l00299">KTN::MultiSpreaderV3::Print()</link>, <link linkend="_l00259">KTN::ORD::OrderHandlerZmqV6::Print()</link>, <link linkend="_l00328">KTN::Skewer::Print()</link>, <link linkend="_l00331">KTN::SkewTrader::Print()</link>, <link linkend="_l00341">KTN::Stacker::Print()</link>, <link linkend="_l00320">KTN::StackerTimer::Print()</link>, <link linkend="_l00307">KTN::Twap::Print()</link>, <link linkend="_l00826">KTN::CME::CmeAlgo::PrintLatencies()</link>, <link linkend="_l00192">KTN::AlgoBaseV3::ToggleCommand()</link>, and <link linkend="_l00892">KTN::Waves::ToggleCommand()</link>.</para>
+</section>
+<anchor xml:id="_class_order_manager_v5_1a88cb299300df75f849674f6aa5f1e296"/><section>
+    <title>ProcessFill()</title>
+<indexterm><primary>ProcessFill</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>ProcessFill</secondary></indexterm>
+<para><computeroutput>void OrderManagerV5::ProcessFill (<link linkend="_struct_k_t_n_1_1_order_pod">OrderPod</link> &amp; ord)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Process the fill. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ord</entry><entry>
+<para>The fill to process. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implements <link linkend="_class_k_t_n_1_1_o_r_d_1_1_i_order_handler_1a141f40ff19ff873f9d4ffeddb30d9717">KTN::ORD::IOrderHandler</link>.</para>
+<para>
+Referenced by <link linkend="_l00557">minOrderExecSpreadLeg()</link>, <link linkend="_l00460">minOrderExecution()</link>, <link linkend="_l00494">UpdateExecution()</link>, and <link linkend="_l00523">UpdateSpreadLegExecution()</link>.</para>
+</section>
+<anchor xml:id="_class_order_manager_v5_1a645bc9bb5d6724ff14073b03948a0fa8"/><section>
+    <title>ProcessOrder()</title>
+<indexterm><primary>ProcessOrder</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>ProcessOrder</secondary></indexterm>
+<para><computeroutput>void OrderManagerV5::ProcessOrder (<link linkend="_struct_k_t_n_1_1_order_pod">OrderPod</link> &amp; ord)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Process the order. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ord</entry><entry>
+<para>The order to process. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implements <link linkend="_class_k_t_n_1_1_o_r_d_1_1_i_order_handler_1a9ccd75ac68157508d9c5d360692b6d63">KTN::ORD::IOrderHandler</link>.</para>
+<para>
+Referenced by <link linkend="_l00392">minOrderAck()</link>, <link linkend="_l00408">minOrderCancel()</link>, and <link linkend="_l00430">minOrderModify()</link>.</para>
+</section>
+<anchor xml:id="_class_order_manager_v5_1a3c2efb71d798d9d6da7e26c6033348f5"/><section>
+    <title>ProcessOrderID()</title>
+<indexterm><primary>ProcessOrderID</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>ProcessOrderID</secondary></indexterm>
+<para><computeroutput>void OrderManagerV5::ProcessOrderID (uint64_t ordid)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Process the order ID. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ordid</entry><entry>
+<para>The order ID to process. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implements <link linkend="_class_k_t_n_1_1_o_r_d_1_1_i_order_handler_1a6f79de7ce6abebc6e9c55aef7b948d45">KTN::ORD::IOrderHandler</link>.</para>
+<para>
+References <link linkend="_l00062">KTN::Core::SPSCRingBuffer&lt; T &gt;::enqueue()</link>.</para>
+<para>
+Referenced by <link linkend="_l00440">UpdateOrder()</link>.</para>
+</section>
+<anchor xml:id="_class_order_manager_v5_1a7427c8594b22f65d05a86a007e53aaa2"/><section>
+    <title>ProcessRejectedOrder()</title>
+<indexterm><primary>ProcessRejectedOrder</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>ProcessRejectedOrder</secondary></indexterm>
+<para><computeroutput>void OrderManagerV5::ProcessRejectedOrder (<link linkend="_struct_k_t_n_1_1_order_pod">OrderPod</link> &amp; ord, const string &amp; text)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Process the rejected order. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ord</entry><entry>
+<para>The rejected order to process. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>text</entry><entry>
+<para>The rejection text. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implements <link linkend="_class_k_t_n_1_1_o_r_d_1_1_i_order_handler_1a2cff128da83c1cc54c7c8dd8b7ff8f74">KTN::ORD::IOrderHandler</link>.</para>
+<para>
+Referenced by <link linkend="_l00604">minOrderCancelReject()</link>, <link linkend="_l00609">minOrderCancelReplaceReject()</link>, and <link linkend="_l00599">minOrderReject()</link>.</para>
+</section>
+<anchor xml:id="_class_order_manager_v5_1a43512c55a3fe9472d66401f0fadf22ca"/><section>
+    <title>ProcessSentOrder()</title>
+<indexterm><primary>ProcessSentOrder</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>ProcessSentOrder</secondary></indexterm>
+<para><computeroutput>void OrderManagerV5::ProcessSentOrder (<link linkend="_struct_k_t_n_1_1_order_pod">OrderPod</link> &amp; ord)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Process the sent order. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ord</entry><entry>
+<para>The sent order to process. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implements <link linkend="_class_k_t_n_1_1_o_r_d_1_1_i_order_handler_1a06dee577b900a917b66e60af98fa9251">KTN::ORD::IOrderHandler</link>.</para>
+</section>
+<anchor xml:id="_class_order_manager_v5_1a2cd5e8d7c0fd3d0c44cb4a022258658f"/><section>
+    <title>ProcessSpreadLegs()</title>
+<indexterm><primary>ProcessSpreadLegs</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>ProcessSpreadLegs</secondary></indexterm>
+<para><computeroutput>void OrderManagerV5::ProcessSpreadLegs (bool value)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Sets whether to process spread legs. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>value</entry><entry>
+<para>True to process spread legs, false otherwise. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_order_manager_v5_1a435d221b404b1a9238d1ffaf634f429e"/><section>
+    <title>RegisterOrderTemplate()</title>
+<indexterm><primary>RegisterOrderTemplate</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>RegisterOrderTemplate</secondary></indexterm>
+<para><computeroutput>void OrderManagerV5::RegisterOrderTemplate (<link linkend="_struct_k_t_n_1_1_order">Order</link> &amp; ord)<computeroutput>[virtual]</computeroutput></computeroutput></para>
+<para>This function is new in V5 to handle OrderPod conversion. Going forward we will only use the large format order for reporting back to database/monitoring systems that are not critical path </para>
+<para>
+Implements <link linkend="_class_k_t_n_1_1_o_r_d_1_1_i_order_handler_1aefdbb0a1ca024675cc9ed52842cd1bad">KTN::ORD::IOrderHandler</link>.</para>
+</section>
+<anchor xml:id="_class_order_manager_v5_1a912ac95209615aec8d920bd04b889019"/><section>
+    <title>Stop()</title>
+<indexterm><primary>Stop</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>Stop</secondary></indexterm>
+<para><computeroutput>void OrderManagerV5::Stop ( )</computeroutput></para><para>
+
+<para>Stops the order manager. </para>
+</para>
+<para>
+Referenced by <link linkend="_l00096">KTN::AlgoBaseV3::Shutdown()</link>, and <link linkend="_l00043">KTN::ORD::OrderHandlerZmqV6::~OrderHandlerZmqV6()</link>.</para>
+</section>
+<anchor xml:id="_class_order_manager_v5_1a1d72effb40164d3f2ddaec91ddb926bd"/><section>
+    <title>UpdateExecution()</title>
+<indexterm><primary>UpdateExecution</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>UpdateExecution</secondary></indexterm>
+<para><computeroutput>void OrderManagerV5::UpdateExecution (uint64_t reqid, uint64_t exchordid, KOrderStatus::Enum status, KOrderState::Enum state, KOrderFillType::Enum filltype, int64_t lastpx, uint32_t lastqty, uint32_t lvs, uint64_t timestamp, string execid)</computeroutput></para><para>
+
+<para>Updates the execution of an order with the specified request ID. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>reqid</entry><entry>
+<para>The request ID of the order. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>exchordid</entry><entry>
+<para>The CME ID of the order. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>status</entry><entry>
+<para>The status of the order. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>state</entry><entry>
+<para>The state of the order. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>filltype</entry><entry>
+<para>The fill type of the order. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>lastpx</entry><entry>
+<para>The last price of the order. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>lastqty</entry><entry>
+<para>The last quantity of the order. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>lvs</entry><entry>
+<para>The leaves quantity of the order. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>timestamp</entry><entry>
+<para>The timestamp of the execution update. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>execid</entry><entry>
+<para>The execution ID of the order. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00105">CustomHFTMap::get()</link>, and <link linkend="_l00624">ProcessFill()</link>.</para>
+</section>
+<anchor xml:id="_class_order_manager_v5_1a4daacf157cb30b0bba100558e91dbab2"/><section>
+    <title>UpdateMetaParams()</title>
+<indexterm><primary>UpdateMetaParams</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>UpdateMetaParams</secondary></indexterm>
+<para><computeroutput>void OrderManagerV5::UpdateMetaParams (const <link linkend="_structalgometa">algometa</link> &amp; meta, bool certnr)</computeroutput></para><para>
+
+<para>Updates the meta parameters with the given algorithm metadata. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>meta</entry><entry>
+<para>The algorithm metadata. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>certnr</entry><entry>
+<para>The flag indicating whether the algorithm is certified. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00018">NamedThread::CreateAndRun()</link>.</para>
+<para>
+Referenced by <link linkend="_l00015">KTN::ORD::OrderHandlerZmqV6::OrderHandlerZmqV6()</link>.</para>
+</section>
+<anchor xml:id="_class_order_manager_v5_1a6d03ba0ff3bc0d552d891caeabc7aeb5"/><section>
+    <title>UpdateOrder()</title>
+<indexterm><primary>UpdateOrder</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>UpdateOrder</secondary></indexterm>
+<para><computeroutput>int OrderManagerV5::UpdateOrder (uint64_t reqid, uint64_t exchordid, KOrderStatus::Enum status, KOrderState::Enum state, uint32_t qty, uint64_t timestamp)</computeroutput></para><para>
+
+<para>Updates an order with the specified request ID. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>reqid</entry><entry>
+<para>The request ID of the order. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>exchordid</entry><entry>
+<para>The CME ID of the order. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>status</entry><entry>
+<para>The status of the order. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>state</entry><entry>
+<para>The state of the order. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>qty</entry><entry>
+<para>The quantity of the order. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>timestamp</entry><entry>
+<para>The timestamp of the order update. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The number of orders updated. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00614">ProcessOrderID()</link>.</para>
+</section>
+<anchor xml:id="_class_order_manager_v5_1a6ba7a58b65651a659bcbf29c725b92c8"/><section>
+    <title>UpdateSpreadLegExecution()</title>
+<indexterm><primary>UpdateSpreadLegExecution</primary><secondary>OrderManagerV5</secondary></indexterm>
+<indexterm><primary>OrderManagerV5</primary><secondary>UpdateSpreadLegExecution</secondary></indexterm>
+<para><computeroutput>void OrderManagerV5::UpdateSpreadLegExecution (uint64_t exchordid, KOrderSide::Enum side, int32_t secid, int64_t lastpx, uint32_t lastqty, uint64_t timestamp, string execid)</computeroutput></para><para>
+
+<para>Updates the execution of a spread leg order with the specified CME ID. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>exchordid</entry><entry>
+<para>The CME ID of the order. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>side</entry><entry>
+<para>The side of the order. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>secid</entry><entry>
+<para>The security ID of the order. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>lastpx</entry><entry>
+<para>The last price of the order. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>lastqty</entry><entry>
+<para>The last quantity of the order. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>timestamp</entry><entry>
+<para>The timestamp of the execution update. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>execid</entry><entry>
+<para>The execution ID of the order. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00031">KTN::OrderPod::execid</link>, <link linkend="_l00043">KTN::OrderPod::fillqty</link>, <link linkend="_l00105">CustomHFTMap::get()</link>, <link linkend="_l00035">KTN::OrderPod::lastpx</link>, <link linkend="_l00044">KTN::OrderPod::lastqty</link>, <link linkend="_l00042">KTN::OrderPod::leavesqty</link>, <link linkend="_l00063">KTN::OrderPod::OrdFillType</link>, <link linkend="_l00060">KTN::OrderPod::OrdSide</link>, <link linkend="_l00062">KTN::OrderPod::OrdState</link>, <link linkend="_l00061">KTN::OrderPod::OrdStatus</link>, <link linkend="_l00624">ProcessFill()</link>, <link linkend="_l00040">KTN::OrderPod::secid</link>, and <link linkend="_l00036">KTN::OrderPod::timestamp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Orders/OrderManagerV5.hppOrders/OrderManagerV5.cpp</section>
+</section>

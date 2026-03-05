@@ -1,0 +1,283 @@
+\doxysection{Profit\+Loss\+Side Struct Reference}
+\hypertarget{struct_profit_loss_side}{}\label{struct_profit_loss_side}\index{ProfitLossSide@{ProfitLossSide}}
+
+
+Structure representing the profit and loss of a side of a trade (Buy or Sell)  
+
+
+
+
+{\ttfamily \#include $<$algo\+\_\+pl.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{struct_profit_loss_side_ad10bee35fa092e7950177054d85f6d84}{Print}} ()
+\begin{DoxyCompactList}\small\item\em Prints the profit and loss side information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_profit_loss_side}{Profit\+Loss\+Side}} \mbox{\hyperlink{struct_profit_loss_side_a0530cb20bc4ace405ed3f6449ad745b4}{get\+Pl\+Molecule}} (const vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} $>$ \&fills, double bidprice, double askprice, double tick)
+\begin{DoxyCompactList}\small\item\em Calculates the profit and loss side based on the fills, bid price, ask price, and tick value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{struct_profit_loss_side_aa8703869c8db40c696b029953a1c7c5c}{iside}}
+\item 
+double \mbox{\hyperlink{struct_profit_loss_side_a6c40b2bb652d24f55d648ce58a0f2002}{bid}}
+\item 
+double \mbox{\hyperlink{struct_profit_loss_side_a641844ab61b2844b47a2a3ab2b16735d}{ask}}
+\item 
+double \mbox{\hyperlink{struct_profit_loss_side_a7aa01ca7d15e368766d80aea6fbc1ace}{totqty}}
+\item 
+double \mbox{\hyperlink{struct_profit_loss_side_a1268a77e01c28ff65dbfba339adf3dfa}{totbuys}}
+\item 
+double \mbox{\hyperlink{struct_profit_loss_side_ab0d9442b8c53e04771ac8701962f0e94}{totsells}}
+\item 
+double \mbox{\hyperlink{struct_profit_loss_side_a6db7a6cf201e7f5f90bd74ef0037e9f4}{netpos}}
+\item 
+double \mbox{\hyperlink{struct_profit_loss_side_ad47b1852604d11715bd204c8e6555c95}{sumpx}}
+\item 
+double \mbox{\hyperlink{struct_profit_loss_side_a2ebb552c10f2df1f2968e16706330c14}{avgpx}}
+\item 
+double \mbox{\hyperlink{struct_profit_loss_side_a03195e73bbf750640f73b99e206ec5ef}{buyavgpx}}
+\item 
+double \mbox{\hyperlink{struct_profit_loss_side_a23b55ad894620f4064e0323b5a88fadf}{sellavgpx}}
+\item 
+double \mbox{\hyperlink{struct_profit_loss_side_a27f88c7a68dd58d7e3e397b515fb1eb0}{realized}}
+\item 
+double \mbox{\hyperlink{struct_profit_loss_side_aea47c5f16fd9cb6552ce9511c307a48a}{unrealized}}
+\item 
+double \mbox{\hyperlink{struct_profit_loss_side_af15623ac8f0da9dc12ac6a957f8dc23f}{tickvalue}}
+\item 
+double \mbox{\hyperlink{struct_profit_loss_side_af70b796a37b6dee34565e8c20401a5cb}{pl}}
+\item 
+double \mbox{\hyperlink{struct_profit_loss_side_afa9468ae9c4a8e752af3402e8a0399b1}{plprice}}
+\item 
+int \mbox{\hyperlink{struct_profit_loss_side_a4a77cd5b5eaa8a129d7a1498592e7e7e}{fillcount}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure representing the profit and loss of a side of a trade (Buy or Sell) 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_profit_loss_side_a0530cb20bc4ace405ed3f6449ad745b4}\index{ProfitLossSide@{ProfitLossSide}!getPlMolecule@{getPlMolecule}}
+\index{getPlMolecule@{getPlMolecule}!ProfitLossSide@{ProfitLossSide}}
+\doxysubsubsection{\texorpdfstring{getPlMolecule()}{getPlMolecule()}}
+{\footnotesize\ttfamily \label{struct_profit_loss_side_a0530cb20bc4ace405ed3f6449ad745b4} 
+static \mbox{\hyperlink{struct_profit_loss_side}{Profit\+Loss\+Side}} Profit\+Loss\+Side\+::get\+Pl\+Molecule (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} $>$ \&}]{fills}{, }\item[{double}]{bidprice}{, }\item[{double}]{askprice}{, }\item[{double}]{tick}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Calculates the profit and loss side based on the fills, bid price, ask price, and tick value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fills} & The vector of fills \\
+\hline
+{\em bidprice} & The bid price \\
+\hline
+{\em askprice} & The ask price \\
+\hline
+{\em tick} & The tick value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The calculated profit and loss side 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00030}{ask}}, \mbox{\hyperlink{l00036}{avgpx}}, \mbox{\hyperlink{l00029}{bid}}, \mbox{\hyperlink{l00038}{buyavgpx}}, \mbox{\hyperlink{l00047}{fillcount}}, \mbox{\hyperlink{l00034}{netpos}}, \mbox{\hyperlink{l00045}{pl}}, \mbox{\hyperlink{l00046}{plprice}}, \mbox{\hyperlink{l00041}{realized}}, \mbox{\hyperlink{l00039}{sellavgpx}}, \mbox{\hyperlink{l00035}{sumpx}}, \mbox{\hyperlink{l00044}{tickvalue}}, \mbox{\hyperlink{l00032}{totbuys}}, \mbox{\hyperlink{l00031}{totqty}}, \mbox{\hyperlink{l00033}{totsells}}, and \mbox{\hyperlink{l00042}{unrealized}}.
+
+\Hypertarget{struct_profit_loss_side_ad10bee35fa092e7950177054d85f6d84}\index{ProfitLossSide@{ProfitLossSide}!Print@{Print}}
+\index{Print@{Print}!ProfitLossSide@{ProfitLossSide}}
+\doxysubsubsection{\texorpdfstring{Print()}{Print()}}
+{\footnotesize\ttfamily \label{struct_profit_loss_side_ad10bee35fa092e7950177054d85f6d84} 
+string Profit\+Loss\+Side\+::\+Print (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prints the profit and loss side information. 
+
+\begin{DoxyReturn}{Returns}
+The formatted string representation of the profit and loss side 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00036}{avgpx}}, \mbox{\hyperlink{l00045}{pl}}, \mbox{\hyperlink{l00035}{sumpx}}, and \mbox{\hyperlink{l00031}{totqty}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_profit_loss_side_a641844ab61b2844b47a2a3ab2b16735d}\index{ProfitLossSide@{ProfitLossSide}!ask@{ask}}
+\index{ask@{ask}!ProfitLossSide@{ProfitLossSide}}
+\doxysubsubsection{\texorpdfstring{ask}{ask}}
+{\footnotesize\ttfamily \label{struct_profit_loss_side_a641844ab61b2844b47a2a3ab2b16735d} 
+double Profit\+Loss\+Side\+::ask}
+
+The ask price 
+
+Referenced by \mbox{\hyperlink{l00069}{get\+Pl\+Molecule()}}.
+
+\Hypertarget{struct_profit_loss_side_a2ebb552c10f2df1f2968e16706330c14}\index{ProfitLossSide@{ProfitLossSide}!avgpx@{avgpx}}
+\index{avgpx@{avgpx}!ProfitLossSide@{ProfitLossSide}}
+\doxysubsubsection{\texorpdfstring{avgpx}{avgpx}}
+{\footnotesize\ttfamily \label{struct_profit_loss_side_a2ebb552c10f2df1f2968e16706330c14} 
+double Profit\+Loss\+Side\+::avgpx}
+
+The average price 
+
+Referenced by \mbox{\hyperlink{l00069}{get\+Pl\+Molecule()}}, and \mbox{\hyperlink{l00053}{Print()}}.
+
+\Hypertarget{struct_profit_loss_side_a6c40b2bb652d24f55d648ce58a0f2002}\index{ProfitLossSide@{ProfitLossSide}!bid@{bid}}
+\index{bid@{bid}!ProfitLossSide@{ProfitLossSide}}
+\doxysubsubsection{\texorpdfstring{bid}{bid}}
+{\footnotesize\ttfamily \label{struct_profit_loss_side_a6c40b2bb652d24f55d648ce58a0f2002} 
+double Profit\+Loss\+Side\+::bid}
+
+The bid price 
+
+Referenced by \mbox{\hyperlink{l00069}{get\+Pl\+Molecule()}}.
+
+\Hypertarget{struct_profit_loss_side_a03195e73bbf750640f73b99e206ec5ef}\index{ProfitLossSide@{ProfitLossSide}!buyavgpx@{buyavgpx}}
+\index{buyavgpx@{buyavgpx}!ProfitLossSide@{ProfitLossSide}}
+\doxysubsubsection{\texorpdfstring{buyavgpx}{buyavgpx}}
+{\footnotesize\ttfamily \label{struct_profit_loss_side_a03195e73bbf750640f73b99e206ec5ef} 
+double Profit\+Loss\+Side\+::buyavgpx}
+
+The average buy price 
+
+Referenced by \mbox{\hyperlink{l00069}{get\+Pl\+Molecule()}}.
+
+\Hypertarget{struct_profit_loss_side_a4a77cd5b5eaa8a129d7a1498592e7e7e}\index{ProfitLossSide@{ProfitLossSide}!fillcount@{fillcount}}
+\index{fillcount@{fillcount}!ProfitLossSide@{ProfitLossSide}}
+\doxysubsubsection{\texorpdfstring{fillcount}{fillcount}}
+{\footnotesize\ttfamily \label{struct_profit_loss_side_a4a77cd5b5eaa8a129d7a1498592e7e7e} 
+int Profit\+Loss\+Side\+::fillcount}
+
+The number of fills 
+
+Referenced by \mbox{\hyperlink{l00069}{get\+Pl\+Molecule()}}.
+
+\Hypertarget{struct_profit_loss_side_aa8703869c8db40c696b029953a1c7c5c}\index{ProfitLossSide@{ProfitLossSide}!iside@{iside}}
+\index{iside@{iside}!ProfitLossSide@{ProfitLossSide}}
+\doxysubsubsection{\texorpdfstring{iside}{iside}}
+{\footnotesize\ttfamily \label{struct_profit_loss_side_aa8703869c8db40c696b029953a1c7c5c} 
+int Profit\+Loss\+Side\+::iside}
+
+The side of the trade \Hypertarget{struct_profit_loss_side_a6db7a6cf201e7f5f90bd74ef0037e9f4}\index{ProfitLossSide@{ProfitLossSide}!netpos@{netpos}}
+\index{netpos@{netpos}!ProfitLossSide@{ProfitLossSide}}
+\doxysubsubsection{\texorpdfstring{netpos}{netpos}}
+{\footnotesize\ttfamily \label{struct_profit_loss_side_a6db7a6cf201e7f5f90bd74ef0037e9f4} 
+double Profit\+Loss\+Side\+::netpos}
+
+The net position 
+
+Referenced by \mbox{\hyperlink{l00069}{get\+Pl\+Molecule()}}.
+
+\Hypertarget{struct_profit_loss_side_af70b796a37b6dee34565e8c20401a5cb}\index{ProfitLossSide@{ProfitLossSide}!pl@{pl}}
+\index{pl@{pl}!ProfitLossSide@{ProfitLossSide}}
+\doxysubsubsection{\texorpdfstring{pl}{pl}}
+{\footnotesize\ttfamily \label{struct_profit_loss_side_af70b796a37b6dee34565e8c20401a5cb} 
+double Profit\+Loss\+Side\+::pl}
+
+The profit/loss 
+
+Referenced by \mbox{\hyperlink{l00069}{get\+Pl\+Molecule()}}, and \mbox{\hyperlink{l00053}{Print()}}.
+
+\Hypertarget{struct_profit_loss_side_afa9468ae9c4a8e752af3402e8a0399b1}\index{ProfitLossSide@{ProfitLossSide}!plprice@{plprice}}
+\index{plprice@{plprice}!ProfitLossSide@{ProfitLossSide}}
+\doxysubsubsection{\texorpdfstring{plprice}{plprice}}
+{\footnotesize\ttfamily \label{struct_profit_loss_side_afa9468ae9c4a8e752af3402e8a0399b1} 
+double Profit\+Loss\+Side\+::plprice}
+
+The profit/loss price 
+
+Referenced by \mbox{\hyperlink{l00069}{get\+Pl\+Molecule()}}.
+
+\Hypertarget{struct_profit_loss_side_a27f88c7a68dd58d7e3e397b515fb1eb0}\index{ProfitLossSide@{ProfitLossSide}!realized@{realized}}
+\index{realized@{realized}!ProfitLossSide@{ProfitLossSide}}
+\doxysubsubsection{\texorpdfstring{realized}{realized}}
+{\footnotesize\ttfamily \label{struct_profit_loss_side_a27f88c7a68dd58d7e3e397b515fb1eb0} 
+double Profit\+Loss\+Side\+::realized}
+
+The realized profit/loss 
+
+Referenced by \mbox{\hyperlink{l00069}{get\+Pl\+Molecule()}}.
+
+\Hypertarget{struct_profit_loss_side_a23b55ad894620f4064e0323b5a88fadf}\index{ProfitLossSide@{ProfitLossSide}!sellavgpx@{sellavgpx}}
+\index{sellavgpx@{sellavgpx}!ProfitLossSide@{ProfitLossSide}}
+\doxysubsubsection{\texorpdfstring{sellavgpx}{sellavgpx}}
+{\footnotesize\ttfamily \label{struct_profit_loss_side_a23b55ad894620f4064e0323b5a88fadf} 
+double Profit\+Loss\+Side\+::sellavgpx}
+
+The average sell price 
+
+Referenced by \mbox{\hyperlink{l00069}{get\+Pl\+Molecule()}}.
+
+\Hypertarget{struct_profit_loss_side_ad47b1852604d11715bd204c8e6555c95}\index{ProfitLossSide@{ProfitLossSide}!sumpx@{sumpx}}
+\index{sumpx@{sumpx}!ProfitLossSide@{ProfitLossSide}}
+\doxysubsubsection{\texorpdfstring{sumpx}{sumpx}}
+{\footnotesize\ttfamily \label{struct_profit_loss_side_ad47b1852604d11715bd204c8e6555c95} 
+double Profit\+Loss\+Side\+::sumpx}
+
+The sum of prices 
+
+Referenced by \mbox{\hyperlink{l00069}{get\+Pl\+Molecule()}}, and \mbox{\hyperlink{l00053}{Print()}}.
+
+\Hypertarget{struct_profit_loss_side_af15623ac8f0da9dc12ac6a957f8dc23f}\index{ProfitLossSide@{ProfitLossSide}!tickvalue@{tickvalue}}
+\index{tickvalue@{tickvalue}!ProfitLossSide@{ProfitLossSide}}
+\doxysubsubsection{\texorpdfstring{tickvalue}{tickvalue}}
+{\footnotesize\ttfamily \label{struct_profit_loss_side_af15623ac8f0da9dc12ac6a957f8dc23f} 
+double Profit\+Loss\+Side\+::tickvalue}
+
+The tick value 
+
+Referenced by \mbox{\hyperlink{l00069}{get\+Pl\+Molecule()}}.
+
+\Hypertarget{struct_profit_loss_side_a1268a77e01c28ff65dbfba339adf3dfa}\index{ProfitLossSide@{ProfitLossSide}!totbuys@{totbuys}}
+\index{totbuys@{totbuys}!ProfitLossSide@{ProfitLossSide}}
+\doxysubsubsection{\texorpdfstring{totbuys}{totbuys}}
+{\footnotesize\ttfamily \label{struct_profit_loss_side_a1268a77e01c28ff65dbfba339adf3dfa} 
+double Profit\+Loss\+Side\+::totbuys}
+
+The total buy quantity 
+
+Referenced by \mbox{\hyperlink{l00069}{get\+Pl\+Molecule()}}.
+
+\Hypertarget{struct_profit_loss_side_a7aa01ca7d15e368766d80aea6fbc1ace}\index{ProfitLossSide@{ProfitLossSide}!totqty@{totqty}}
+\index{totqty@{totqty}!ProfitLossSide@{ProfitLossSide}}
+\doxysubsubsection{\texorpdfstring{totqty}{totqty}}
+{\footnotesize\ttfamily \label{struct_profit_loss_side_a7aa01ca7d15e368766d80aea6fbc1ace} 
+double Profit\+Loss\+Side\+::totqty}
+
+The total quantity 
+
+Referenced by \mbox{\hyperlink{l00069}{get\+Pl\+Molecule()}}, and \mbox{\hyperlink{l00053}{Print()}}.
+
+\Hypertarget{struct_profit_loss_side_ab0d9442b8c53e04771ac8701962f0e94}\index{ProfitLossSide@{ProfitLossSide}!totsells@{totsells}}
+\index{totsells@{totsells}!ProfitLossSide@{ProfitLossSide}}
+\doxysubsubsection{\texorpdfstring{totsells}{totsells}}
+{\footnotesize\ttfamily \label{struct_profit_loss_side_ab0d9442b8c53e04771ac8701962f0e94} 
+double Profit\+Loss\+Side\+::totsells}
+
+The total sell quantity 
+
+Referenced by \mbox{\hyperlink{l00069}{get\+Pl\+Molecule()}}.
+
+\Hypertarget{struct_profit_loss_side_aea47c5f16fd9cb6552ce9511c307a48a}\index{ProfitLossSide@{ProfitLossSide}!unrealized@{unrealized}}
+\index{unrealized@{unrealized}!ProfitLossSide@{ProfitLossSide}}
+\doxysubsubsection{\texorpdfstring{unrealized}{unrealized}}
+{\footnotesize\ttfamily \label{struct_profit_loss_side_aea47c5f16fd9cb6552ce9511c307a48a} 
+double Profit\+Loss\+Side\+::unrealized}
+
+The unrealized profit/loss 
+
+Referenced by \mbox{\hyperlink{l00069}{get\+Pl\+Molecule()}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Algo\+Support/algo\+\_\+pl.\+hpp\end{DoxyCompactItemize}

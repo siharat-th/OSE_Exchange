@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structi01_1_1net_1_1_s_f_c_pkt_buf_1_1_s_f_c_pkt_buf_p_o_d" xml:lang="en-US">
+<title>i01::net::SFCPktBuf::SFCPktBufPOD Struct Reference</title>
+<indexterm><primary>i01::net::SFCPktBuf::SFCPktBufPOD</primary></indexterm>
+<para>
+
+<para>Represents the Packet Buffer POD (Plain Old Data) structure. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;SFCPktBuf.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_structi01_1_1net_1_1_s_f_c_pkt_buf_1_1_s_f_c_pkt_buf_p_o_d_1acd8e7fb03ada6bd299bf57e7eefe31d0"/>char m_dma_buf[1] <emphasis role="strong">__attribute__</emphasis> ((aligned(EF_VI_DMA_ALIGN)))</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>ef_addr <link linkend="_structi01_1_1net_1_1_s_f_c_pkt_buf_1_1_s_f_c_pkt_buf_p_o_d_1a243a15d70294ac9d32730ca0f41916ba">m_addr</link></para>
+
+<para>Which SFCVirtualInterface owns this <link linkend="_classi01_1_1net_1_1_s_f_c_pkt_buf">SFCPktBuf</link>, for forward compatibility with RSS, etc. </para>
+</listitem>
+            <listitem><para>int <link linkend="_structi01_1_1net_1_1_s_f_c_pkt_buf_1_1_s_f_c_pkt_buf_p_o_d_1accd9422a526ccf1306999222dfbfe5d5">m_pool_id</link></para>
+</listitem>
+            <listitem><para>size_t <link linkend="_structi01_1_1net_1_1_s_f_c_pkt_buf_1_1_s_f_c_pkt_buf_p_o_d_1a707e98f118554c38967ce6e8022e184a">m_data_size</link></para>
+</listitem>
+            <listitem><para>char * <link linkend="_structi01_1_1net_1_1_s_f_c_pkt_buf_1_1_s_f_c_pkt_buf_p_o_d_1ac46fce1b136ade3ccbc2309f88c8f876">m_dma_buf_p</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Represents the Packet Buffer POD (Plain Old Data) structure. </para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structi01_1_1net_1_1_s_f_c_pkt_buf_1_1_s_f_c_pkt_buf_p_o_d_1a243a15d70294ac9d32730ca0f41916ba"/><section>
+    <title>m_addr</title>
+<indexterm><primary>m_addr</primary><secondary>i01::net::SFCPktBuf::SFCPktBufPOD</secondary></indexterm>
+<indexterm><primary>i01::net::SFCPktBuf::SFCPktBufPOD</primary><secondary>m_addr</secondary></indexterm>
+<para><computeroutput>ef_addr i01::net::SFCPktBuf::SFCPktBufPOD::m_addr</computeroutput></para><para>
+
+<para>Which SFCVirtualInterface owns this <link linkend="_classi01_1_1net_1_1_s_f_c_pkt_buf">SFCPktBuf</link>, for forward compatibility with RSS, etc. </para>
+</para>
+<para>
+Referenced by <link linkend="_l00042">i01::net::SFCPktBuf::addr()</link>, and <link linkend="_l00125">KTN::TCP::EFVITcpV2::EFVI_TCP_Start()</link>.</para>
+</section>
+<anchor xml:id="_structi01_1_1net_1_1_s_f_c_pkt_buf_1_1_s_f_c_pkt_buf_p_o_d_1a707e98f118554c38967ce6e8022e184a"/><section>
+    <title>m_data_size</title>
+<indexterm><primary>m_data_size</primary><secondary>i01::net::SFCPktBuf::SFCPktBufPOD</secondary></indexterm>
+<indexterm><primary>i01::net::SFCPktBuf::SFCPktBufPOD</primary><secondary>m_data_size</secondary></indexterm>
+<para><computeroutput>size_t i01::net::SFCPktBuf::SFCPktBufPOD::m_data_size</computeroutput></para></section>
+<anchor xml:id="_structi01_1_1net_1_1_s_f_c_pkt_buf_1_1_s_f_c_pkt_buf_p_o_d_1ac46fce1b136ade3ccbc2309f88c8f876"/><section>
+    <title>m_dma_buf_p</title>
+<indexterm><primary>m_dma_buf_p</primary><secondary>i01::net::SFCPktBuf::SFCPktBufPOD</secondary></indexterm>
+<indexterm><primary>i01::net::SFCPktBuf::SFCPktBufPOD</primary><secondary>m_dma_buf_p</secondary></indexterm>
+<para><computeroutput>char* i01::net::SFCPktBuf::SFCPktBufPOD::m_dma_buf_p</computeroutput></para></section>
+<anchor xml:id="_structi01_1_1net_1_1_s_f_c_pkt_buf_1_1_s_f_c_pkt_buf_p_o_d_1accd9422a526ccf1306999222dfbfe5d5"/><section>
+    <title>m_pool_id</title>
+<indexterm><primary>m_pool_id</primary><secondary>i01::net::SFCPktBuf::SFCPktBufPOD</secondary></indexterm>
+<indexterm><primary>i01::net::SFCPktBuf::SFCPktBufPOD</primary><secondary>m_pool_id</secondary></indexterm>
+<para><computeroutput>int i01::net::SFCPktBuf::SFCPktBufPOD::m_pool_id</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+C:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/i01_net/SFCPktBuf.hpp</section>
+</section>

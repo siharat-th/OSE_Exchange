@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_position" xml:lang="en-US">
+<title>Position Struct Reference</title>
+<indexterm><primary>Position</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_struct_position_1a2d9b10144502335bcb3d4949fe1f5eaf">addleg</link> (<link linkend="_struct_position_leg">PositionLeg</link> leg)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_struct_position_1a42a633dcd1d9c5ee2d9823cbb7f5ab28">erased</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_position_1aa65516fa88ae5a005fde889217d9033a">algoid</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_position_1aad24e8afa3a06cf390ec837c376ffb12">source</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_position_1abdb4686e6dfead9d7a70907b30d6273a">posid</link></para>
+</listitem>
+            <listitem><para><link linkend="_struct_risk_base">RiskBase</link> <link linkend="_struct_position_1a7fc38e64eabde69f6abc8aed509f6cd1">risk</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_position_1abb0e3cc5ab0375855cb884e088efac44">side</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_position_1a8aa313dfaad6f35a2822dd9961df3a4f">spreadpos</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_position_1aea9047d2db35b2e3a10157d2d142a368">totpl</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_position_1aa4cb51487530985cceeed59f0e50324b">plper</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_position_1ac4ae38829eeeba8166cf5a8cbe9e4452">price</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_position_1aba877f1e64ba01055795d6ac0d6882b1">mktprice</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_position_1afbe7a9a5821b8ce8ad1d8fd8f2695303">entrytime</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_position_1a6c26b6a9e1a52bbf4ebe8e5a8141d268">targetprice</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_position_1ab74ca7d8276f3c8b4d940aa0b1604a5f">stoprice</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_position_1a6fb9b11023558c5ded2b1e99c23444c4">pt_pl</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_position_1a3be3652295ebe4ff82de123ed6856a66">sl_pl</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_position_1a4d14fbe0ef9bf90082bb2a68c6e4e74b">ttl_secs</link></para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_struct_position_1a7ec27059d8aa91a7f3d908d95c1b6dac">ssboe</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_position_1a31afcf28d2fed9ae435fe7fc5a12ca8f">updatetime</link></para>
+</listitem>
+            <listitem><para>KPosStatus::Enum <link linkend="_struct_position_1a9e5ad9df24447fb7c701c65154e2c84e">status</link></para>
+</listitem>
+            <listitem><para>std::map&lt; int, <link linkend="_struct_position_leg">PositionLeg</link> &gt; <link linkend="_struct_position_1a640a5d56b9add7ef3c9eb57c86019638">legs</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_position_1a2d9b10144502335bcb3d4949fe1f5eaf"/><section>
+    <title>addleg()</title>
+<indexterm><primary>addleg</primary><secondary>Position</secondary></indexterm>
+<indexterm><primary>Position</primary><secondary>addleg</secondary></indexterm>
+<para><computeroutput>void Position::addleg (<link linkend="_struct_position_leg">PositionLeg</link> leg)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_position_1aa65516fa88ae5a005fde889217d9033a"/><section>
+    <title>algoid</title>
+<indexterm><primary>algoid</primary><secondary>Position</secondary></indexterm>
+<indexterm><primary>Position</primary><secondary>algoid</secondary></indexterm>
+<para><computeroutput>string Position::algoid</computeroutput></para></section>
+<anchor xml:id="_struct_position_1afbe7a9a5821b8ce8ad1d8fd8f2695303"/><section>
+    <title>entrytime</title>
+<indexterm><primary>entrytime</primary><secondary>Position</secondary></indexterm>
+<indexterm><primary>Position</primary><secondary>entrytime</secondary></indexterm>
+<para><computeroutput>string Position::entrytime</computeroutput></para></section>
+<anchor xml:id="_struct_position_1a42a633dcd1d9c5ee2d9823cbb7f5ab28"/><section>
+    <title>erased</title>
+<indexterm><primary>erased</primary><secondary>Position</secondary></indexterm>
+<indexterm><primary>Position</primary><secondary>erased</secondary></indexterm>
+<para><computeroutput>bool Position::erased</computeroutput></para></section>
+<anchor xml:id="_struct_position_1a640a5d56b9add7ef3c9eb57c86019638"/><section>
+    <title>legs</title>
+<indexterm><primary>legs</primary><secondary>Position</secondary></indexterm>
+<indexterm><primary>Position</primary><secondary>legs</secondary></indexterm>
+<para><computeroutput>std::map&lt;int, <link linkend="_struct_position_leg">PositionLeg</link>&gt; Position::legs</computeroutput></para></section>
+<anchor xml:id="_struct_position_1aba877f1e64ba01055795d6ac0d6882b1"/><section>
+    <title>mktprice</title>
+<indexterm><primary>mktprice</primary><secondary>Position</secondary></indexterm>
+<indexterm><primary>Position</primary><secondary>mktprice</secondary></indexterm>
+<para><computeroutput>double Position::mktprice</computeroutput></para></section>
+<anchor xml:id="_struct_position_1aa4cb51487530985cceeed59f0e50324b"/><section>
+    <title>plper</title>
+<indexterm><primary>plper</primary><secondary>Position</secondary></indexterm>
+<indexterm><primary>Position</primary><secondary>plper</secondary></indexterm>
+<para><computeroutput>double Position::plper</computeroutput></para></section>
+<anchor xml:id="_struct_position_1abdb4686e6dfead9d7a70907b30d6273a"/><section>
+    <title>posid</title>
+<indexterm><primary>posid</primary><secondary>Position</secondary></indexterm>
+<indexterm><primary>Position</primary><secondary>posid</secondary></indexterm>
+<para><computeroutput>string Position::posid</computeroutput></para></section>
+<anchor xml:id="_struct_position_1ac4ae38829eeeba8166cf5a8cbe9e4452"/><section>
+    <title>price</title>
+<indexterm><primary>price</primary><secondary>Position</secondary></indexterm>
+<indexterm><primary>Position</primary><secondary>price</secondary></indexterm>
+<para><computeroutput>double Position::price</computeroutput></para></section>
+<anchor xml:id="_struct_position_1a6fb9b11023558c5ded2b1e99c23444c4"/><section>
+    <title>pt_pl</title>
+<indexterm><primary>pt_pl</primary><secondary>Position</secondary></indexterm>
+<indexterm><primary>Position</primary><secondary>pt_pl</secondary></indexterm>
+<para><computeroutput>double Position::pt_pl</computeroutput></para></section>
+<anchor xml:id="_struct_position_1a7fc38e64eabde69f6abc8aed509f6cd1"/><section>
+    <title>risk</title>
+<indexterm><primary>risk</primary><secondary>Position</secondary></indexterm>
+<indexterm><primary>Position</primary><secondary>risk</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_risk_base">RiskBase</link> Position::risk</computeroutput></para></section>
+<anchor xml:id="_struct_position_1abb0e3cc5ab0375855cb884e088efac44"/><section>
+    <title>side</title>
+<indexterm><primary>side</primary><secondary>Position</secondary></indexterm>
+<indexterm><primary>Position</primary><secondary>side</secondary></indexterm>
+<para><computeroutput>int Position::side</computeroutput></para></section>
+<anchor xml:id="_struct_position_1a3be3652295ebe4ff82de123ed6856a66"/><section>
+    <title>sl_pl</title>
+<indexterm><primary>sl_pl</primary><secondary>Position</secondary></indexterm>
+<indexterm><primary>Position</primary><secondary>sl_pl</secondary></indexterm>
+<para><computeroutput>double Position::sl_pl</computeroutput></para></section>
+<anchor xml:id="_struct_position_1aad24e8afa3a06cf390ec837c376ffb12"/><section>
+    <title>source</title>
+<indexterm><primary>source</primary><secondary>Position</secondary></indexterm>
+<indexterm><primary>Position</primary><secondary>source</secondary></indexterm>
+<para><computeroutput>string Position::source</computeroutput></para></section>
+<anchor xml:id="_struct_position_1a8aa313dfaad6f35a2822dd9961df3a4f"/><section>
+    <title>spreadpos</title>
+<indexterm><primary>spreadpos</primary><secondary>Position</secondary></indexterm>
+<indexterm><primary>Position</primary><secondary>spreadpos</secondary></indexterm>
+<para><computeroutput>int Position::spreadpos</computeroutput></para></section>
+<anchor xml:id="_struct_position_1a7ec27059d8aa91a7f3d908d95c1b6dac"/><section>
+    <title>ssboe</title>
+<indexterm><primary>ssboe</primary><secondary>Position</secondary></indexterm>
+<indexterm><primary>Position</primary><secondary>ssboe</secondary></indexterm>
+<para><computeroutput>uint64_t Position::ssboe</computeroutput></para></section>
+<anchor xml:id="_struct_position_1a9e5ad9df24447fb7c701c65154e2c84e"/><section>
+    <title>status</title>
+<indexterm><primary>status</primary><secondary>Position</secondary></indexterm>
+<indexterm><primary>Position</primary><secondary>status</secondary></indexterm>
+<para><computeroutput>KPosStatus::Enum Position::status</computeroutput></para></section>
+<anchor xml:id="_struct_position_1ab74ca7d8276f3c8b4d940aa0b1604a5f"/><section>
+    <title>stoprice</title>
+<indexterm><primary>stoprice</primary><secondary>Position</secondary></indexterm>
+<indexterm><primary>Position</primary><secondary>stoprice</secondary></indexterm>
+<para><computeroutput>double Position::stoprice</computeroutput></para></section>
+<anchor xml:id="_struct_position_1a6c26b6a9e1a52bbf4ebe8e5a8141d268"/><section>
+    <title>targetprice</title>
+<indexterm><primary>targetprice</primary><secondary>Position</secondary></indexterm>
+<indexterm><primary>Position</primary><secondary>targetprice</secondary></indexterm>
+<para><computeroutput>double Position::targetprice</computeroutput></para></section>
+<anchor xml:id="_struct_position_1aea9047d2db35b2e3a10157d2d142a368"/><section>
+    <title>totpl</title>
+<indexterm><primary>totpl</primary><secondary>Position</secondary></indexterm>
+<indexterm><primary>Position</primary><secondary>totpl</secondary></indexterm>
+<para><computeroutput>double Position::totpl</computeroutput></para></section>
+<anchor xml:id="_struct_position_1a4d14fbe0ef9bf90082bb2a68c6e4e74b"/><section>
+    <title>ttl_secs</title>
+<indexterm><primary>ttl_secs</primary><secondary>Position</secondary></indexterm>
+<indexterm><primary>Position</primary><secondary>ttl_secs</secondary></indexterm>
+<para><computeroutput>int Position::ttl_secs</computeroutput></para></section>
+<anchor xml:id="_struct_position_1a31afcf28d2fed9ae435fe7fc5a12ca8f"/><section>
+    <title>updatetime</title>
+<indexterm><primary>updatetime</primary><secondary>Position</secondary></indexterm>
+<indexterm><primary>Position</primary><secondary>updatetime</secondary></indexterm>
+<para><computeroutput>string Position::updatetime</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+AlgoParams/Position.hpp</section>
+</section>

@@ -1,0 +1,248 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_algo_state" xml:lang="en-US">
+<title>AlgoState Struct Reference</title>
+<indexterm><primary>AlgoState</primary></indexterm>
+<para>
+
+<para>Represents the state of an algorithm. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;algo_state.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>QuoteState::Enum <link linkend="_struct_algo_state_1a1d4b9b02aeabb2d5825137882b5cfaeb">QuotingState</link></para>
+</listitem>
+            <listitem><para>HedgeState::Enum <link linkend="_struct_algo_state_1a22f6399f9584497dd50b2236798259a8">HedgingState</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_algo_state_1adc8cd1f3f906df1dbb0b66bfcaa9b249">Name</link></para>
+</listitem>
+            <listitem><para>volatile bool <link linkend="_struct_algo_state_1af175612d0f6c4fabff63b2a9140e2757">stopped</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_algo_state_1a2f2be01f89c07cc499cd788d5066d1fb">EXCH_CALLBACK_ID</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_algo_state_1af27a9f77aa293d5e59abeaed88bbcf97">GUID</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_algo_state_1a662be09f1b662e08671ece46759ce859">CERTNR</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_algo_state_1acb2ba3ed7a314c22678f2244586b2568">GOT_DATA</link></para>
+</listitem>
+            <listitem><para>long <link linkend="_struct_algo_state_1a9d1ac2511d1c339b04328c94ad1f89ef">DATA_TRIES</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_algo_state_1aee04897b9c0fffcc4a67c718abe1892b">WATCH_TRADES</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_algo_state_1a7b85c13ba360eadf17812e69752588bd">WATCH_VOLUME</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_algo_state_1a04d17f2cd953c9979ee71082d7ae8f5d">ENABLED</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_algo_state_1a9a5495f8d8e54eebb1129db6bd701f51">NETPOS</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_algo_state_1ad1c912bf2d197ee88f7bd908f8bbd725">TOTALEXEC</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_algo_state_1aa6aa22024900dada8196df74053d2230">USE_REPORTING_MSGS</link></para>
+</listitem>
+            <listitem><para>volatile bool <link linkend="_struct_algo_state_1a8d790bf2dd80a0a4ae757ab9ed36f3e8">RPT_ACTIVE</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_algo_state_1a1f095f41cb4f9f9f4e7068641988b8e6">USE_STOPS</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_algo_state_1afa078c48452bf73a3248e1da9540a435">VERBOSE</link></para>
+</listitem>
+            <listitem><para>HedgeType::Enum <link linkend="_struct_algo_state_1a6119222e6c45d45f5477d3e1438a995d">HDGTYPE</link></para>
+</listitem>
+            <listitem><para>NewOrderSingleMsg <link linkend="_struct_algo_state_1a2e5b3b5524309a60b78fbe9a319c4342">hdg_ords_BUY</link> [8]</para>
+</listitem>
+            <listitem><para>NewOrderSingleMsg <link linkend="_struct_algo_state_1ab54606261be4fb97bd8a7535ea2f869c">hdg_ords_SELL</link> [8]</para>
+</listitem>
+            <listitem><para>OrderCancelReplaceRequestMsg <link linkend="_struct_algo_state_1af664fa27cfe6bfbab3640d3bf282f02e">mod_ords_BUY</link> [8]</para>
+</listitem>
+            <listitem><para>OrderCancelReplaceRequestMsg <link linkend="_struct_algo_state_1a6cc07e6f05967b0db984466b3b56d325">mod_ords_SELL</link> [8]</para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_algo_state_1aaa52fb3c78d8fa76f221325d39d1fdee">inflight</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Represents the state of an algorithm. </para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_algo_state_1a662be09f1b662e08671ece46759ce859"/><section>
+    <title>CERTNR</title>
+<indexterm><primary>CERTNR</primary><secondary>AlgoState</secondary></indexterm>
+<indexterm><primary>AlgoState</primary><secondary>CERTNR</secondary></indexterm>
+<para><computeroutput>bool AlgoState::CERTNR</computeroutput></para>
+<para>Flag indicating if the algorithm is certified. </para>
+</section>
+<anchor xml:id="_struct_algo_state_1a9d1ac2511d1c339b04328c94ad1f89ef"/><section>
+    <title>DATA_TRIES</title>
+<indexterm><primary>DATA_TRIES</primary><secondary>AlgoState</secondary></indexterm>
+<indexterm><primary>AlgoState</primary><secondary>DATA_TRIES</secondary></indexterm>
+<para><computeroutput>long AlgoState::DATA_TRIES</computeroutput></para>
+<para>The number of tries to receive data. </para>
+</section>
+<anchor xml:id="_struct_algo_state_1a04d17f2cd953c9979ee71082d7ae8f5d"/><section>
+    <title>ENABLED</title>
+<indexterm><primary>ENABLED</primary><secondary>AlgoState</secondary></indexterm>
+<indexterm><primary>AlgoState</primary><secondary>ENABLED</secondary></indexterm>
+<para><computeroutput>bool AlgoState::ENABLED</computeroutput></para>
+<para>Flag indicating if the algorithm is enabled. </para>
+</section>
+<anchor xml:id="_struct_algo_state_1a2f2be01f89c07cc499cd788d5066d1fb"/><section>
+    <title>EXCH_CALLBACK_ID</title>
+<indexterm><primary>EXCH_CALLBACK_ID</primary><secondary>AlgoState</secondary></indexterm>
+<indexterm><primary>AlgoState</primary><secondary>EXCH_CALLBACK_ID</secondary></indexterm>
+<para><computeroutput>int AlgoState::EXCH_CALLBACK_ID</computeroutput></para>
+<para>The exchange callback ID. </para>
+<para>
+Referenced by <link linkend="_l00019">KTN::CME::CmeAlgo::CmeAlgo()</link>.</para>
+</section>
+<anchor xml:id="_struct_algo_state_1acb2ba3ed7a314c22678f2244586b2568"/><section>
+    <title>GOT_DATA</title>
+<indexterm><primary>GOT_DATA</primary><secondary>AlgoState</secondary></indexterm>
+<indexterm><primary>AlgoState</primary><secondary>GOT_DATA</secondary></indexterm>
+<para><computeroutput>bool AlgoState::GOT_DATA</computeroutput></para>
+<para>Flag indicating if the algorithm has received data. </para>
+</section>
+<anchor xml:id="_struct_algo_state_1af27a9f77aa293d5e59abeaed88bbcf97"/><section>
+    <title>GUID</title>
+<indexterm><primary>GUID</primary><secondary>AlgoState</secondary></indexterm>
+<indexterm><primary>AlgoState</primary><secondary>GUID</secondary></indexterm>
+<para><computeroutput>std::string AlgoState::GUID</computeroutput></para>
+<para>The GUID of the algorithm. </para>
+</section>
+<anchor xml:id="_struct_algo_state_1a2e5b3b5524309a60b78fbe9a319c4342"/><section>
+    <title>hdg_ords_BUY</title>
+<indexterm><primary>hdg_ords_BUY</primary><secondary>AlgoState</secondary></indexterm>
+<indexterm><primary>AlgoState</primary><secondary>hdg_ords_BUY</secondary></indexterm>
+<para><computeroutput>NewOrderSingleMsg AlgoState::hdg_ords_BUY[8]</computeroutput></para>
+<para>The buy hedge orders of the algorithm. </para>
+</section>
+<anchor xml:id="_struct_algo_state_1ab54606261be4fb97bd8a7535ea2f869c"/><section>
+    <title>hdg_ords_SELL</title>
+<indexterm><primary>hdg_ords_SELL</primary><secondary>AlgoState</secondary></indexterm>
+<indexterm><primary>AlgoState</primary><secondary>hdg_ords_SELL</secondary></indexterm>
+<para><computeroutput>NewOrderSingleMsg AlgoState::hdg_ords_SELL[8]</computeroutput></para>
+<para>The sell hedge orders of the algorithm. </para>
+</section>
+<anchor xml:id="_struct_algo_state_1a6119222e6c45d45f5477d3e1438a995d"/><section>
+    <title>HDGTYPE</title>
+<indexterm><primary>HDGTYPE</primary><secondary>AlgoState</secondary></indexterm>
+<indexterm><primary>AlgoState</primary><secondary>HDGTYPE</secondary></indexterm>
+<para><computeroutput>HedgeType::Enum AlgoState::HDGTYPE</computeroutput></para>
+<para>The hedge type of the algorithm. </para>
+</section>
+<anchor xml:id="_struct_algo_state_1a22f6399f9584497dd50b2236798259a8"/><section>
+    <title>HedgingState</title>
+<indexterm><primary>HedgingState</primary><secondary>AlgoState</secondary></indexterm>
+<indexterm><primary>AlgoState</primary><secondary>HedgingState</secondary></indexterm>
+<para><computeroutput>HedgeState::Enum AlgoState::HedgingState</computeroutput></para>
+<para>The hedging state of the algorithm. </para>
+<para>
+Referenced by <link linkend="_l00019">KTN::CME::CmeAlgo::CmeAlgo()</link>.</para>
+</section>
+<anchor xml:id="_struct_algo_state_1aaa52fb3c78d8fa76f221325d39d1fdee"/><section>
+    <title>inflight</title>
+<indexterm><primary>inflight</primary><secondary>AlgoState</secondary></indexterm>
+<indexterm><primary>AlgoState</primary><secondary>inflight</secondary></indexterm>
+<para><computeroutput>int AlgoState::inflight</computeroutput></para>
+<para>The number of inflight orders. </para>
+</section>
+<anchor xml:id="_struct_algo_state_1af664fa27cfe6bfbab3640d3bf282f02e"/><section>
+    <title>mod_ords_BUY</title>
+<indexterm><primary>mod_ords_BUY</primary><secondary>AlgoState</secondary></indexterm>
+<indexterm><primary>AlgoState</primary><secondary>mod_ords_BUY</secondary></indexterm>
+<para><computeroutput>OrderCancelReplaceRequestMsg AlgoState::mod_ords_BUY[8]</computeroutput></para>
+<para>The buy modified orders of the algorithm. </para>
+</section>
+<anchor xml:id="_struct_algo_state_1a6cc07e6f05967b0db984466b3b56d325"/><section>
+    <title>mod_ords_SELL</title>
+<indexterm><primary>mod_ords_SELL</primary><secondary>AlgoState</secondary></indexterm>
+<indexterm><primary>AlgoState</primary><secondary>mod_ords_SELL</secondary></indexterm>
+<para><computeroutput>OrderCancelReplaceRequestMsg AlgoState::mod_ords_SELL[8]</computeroutput></para>
+<para>The sell modified orders of the algorithm. </para>
+</section>
+<anchor xml:id="_struct_algo_state_1adc8cd1f3f906df1dbb0b66bfcaa9b249"/><section>
+    <title>Name</title>
+<indexterm><primary>Name</primary><secondary>AlgoState</secondary></indexterm>
+<indexterm><primary>AlgoState</primary><secondary>Name</secondary></indexterm>
+<para><computeroutput>std::string AlgoState::Name</computeroutput></para>
+<para>The name of the algorithm. </para>
+</section>
+<anchor xml:id="_struct_algo_state_1a9a5495f8d8e54eebb1129db6bd701f51"/><section>
+    <title>NETPOS</title>
+<indexterm><primary>NETPOS</primary><secondary>AlgoState</secondary></indexterm>
+<indexterm><primary>AlgoState</primary><secondary>NETPOS</secondary></indexterm>
+<para><computeroutput>double AlgoState::NETPOS</computeroutput></para>
+<para>The net position of the algorithm. </para>
+</section>
+<anchor xml:id="_struct_algo_state_1a1d4b9b02aeabb2d5825137882b5cfaeb"/><section>
+    <title>QuotingState</title>
+<indexterm><primary>QuotingState</primary><secondary>AlgoState</secondary></indexterm>
+<indexterm><primary>AlgoState</primary><secondary>QuotingState</secondary></indexterm>
+<para><computeroutput>QuoteState::Enum AlgoState::QuotingState</computeroutput></para>
+<para>The quoting state of the algorithm. </para>
+</section>
+<anchor xml:id="_struct_algo_state_1a8d790bf2dd80a0a4ae757ab9ed36f3e8"/><section>
+    <title>RPT_ACTIVE</title>
+<indexterm><primary>RPT_ACTIVE</primary><secondary>AlgoState</secondary></indexterm>
+<indexterm><primary>AlgoState</primary><secondary>RPT_ACTIVE</secondary></indexterm>
+<para><computeroutput>volatile bool AlgoState::RPT_ACTIVE</computeroutput></para>
+<para>Flag indicating if the reporting is active. </para>
+</section>
+<anchor xml:id="_struct_algo_state_1af175612d0f6c4fabff63b2a9140e2757"/><section>
+    <title>stopped</title>
+<indexterm><primary>stopped</primary><secondary>AlgoState</secondary></indexterm>
+<indexterm><primary>AlgoState</primary><secondary>stopped</secondary></indexterm>
+<para><computeroutput>volatile bool AlgoState::stopped</computeroutput></para>
+<para>Flag indicating if the algorithm is stopped. </para>
+</section>
+<anchor xml:id="_struct_algo_state_1ad1c912bf2d197ee88f7bd908f8bbd725"/><section>
+    <title>TOTALEXEC</title>
+<indexterm><primary>TOTALEXEC</primary><secondary>AlgoState</secondary></indexterm>
+<indexterm><primary>AlgoState</primary><secondary>TOTALEXEC</secondary></indexterm>
+<para><computeroutput>double AlgoState::TOTALEXEC</computeroutput></para>
+<para>The total execution of the algorithm. </para>
+</section>
+<anchor xml:id="_struct_algo_state_1aa6aa22024900dada8196df74053d2230"/><section>
+    <title>USE_REPORTING_MSGS</title>
+<indexterm><primary>USE_REPORTING_MSGS</primary><secondary>AlgoState</secondary></indexterm>
+<indexterm><primary>AlgoState</primary><secondary>USE_REPORTING_MSGS</secondary></indexterm>
+<para><computeroutput>bool AlgoState::USE_REPORTING_MSGS</computeroutput></para>
+<para>Flag indicating if the algorithm uses reporting messages. </para>
+</section>
+<anchor xml:id="_struct_algo_state_1a1f095f41cb4f9f9f4e7068641988b8e6"/><section>
+    <title>USE_STOPS</title>
+<indexterm><primary>USE_STOPS</primary><secondary>AlgoState</secondary></indexterm>
+<indexterm><primary>AlgoState</primary><secondary>USE_STOPS</secondary></indexterm>
+<para><computeroutput>bool AlgoState::USE_STOPS</computeroutput></para>
+<para>Flag indicating if the algorithm uses stops. </para>
+</section>
+<anchor xml:id="_struct_algo_state_1afa078c48452bf73a3248e1da9540a435"/><section>
+    <title>VERBOSE</title>
+<indexterm><primary>VERBOSE</primary><secondary>AlgoState</secondary></indexterm>
+<indexterm><primary>AlgoState</primary><secondary>VERBOSE</secondary></indexterm>
+<para><computeroutput>bool AlgoState::VERBOSE</computeroutput></para>
+<para>Flag indicating if the algorithm is in verbose mode. </para>
+</section>
+<anchor xml:id="_struct_algo_state_1aee04897b9c0fffcc4a67c718abe1892b"/><section>
+    <title>WATCH_TRADES</title>
+<indexterm><primary>WATCH_TRADES</primary><secondary>AlgoState</secondary></indexterm>
+<indexterm><primary>AlgoState</primary><secondary>WATCH_TRADES</secondary></indexterm>
+<para><computeroutput>bool AlgoState::WATCH_TRADES</computeroutput></para>
+<para>Flag indicating if the algorithm is watching trades. </para>
+</section>
+<anchor xml:id="_struct_algo_state_1a7b85c13ba360eadf17812e69752588bd"/><section>
+    <title>WATCH_VOLUME</title>
+<indexterm><primary>WATCH_VOLUME</primary><secondary>AlgoState</secondary></indexterm>
+<indexterm><primary>AlgoState</primary><secondary>WATCH_VOLUME</secondary></indexterm>
+<para><computeroutput>bool AlgoState::WATCH_VOLUME</computeroutput></para>
+<para>Flag indicating if the algorithm is watching volume. </para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Algos/algo_state.hpp</section>
+</section>

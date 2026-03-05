@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration" xml:lang="en-US">
+<title>KTN::Feeds::CME::Configuration Struct Reference</title>
+<indexterm><primary>KTN::Feeds::CME::Configuration</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_1a31510744b0b1c18ac8530272c5adb8d7">LogMe</link> (string msg, int color=LOG_WHITE)</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_1a288fa933b5908724f4a966b5b6fc283d">Info</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_1a4cd34784bed64ffd7a477141e3ad59bb">Print</link> (string chid)</para>
+</listitem>
+            <listitem><para><link linkend="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1channel">channel</link> <link linkend="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_1a63d5f310f6def7a0e8e55f7b9fa21ef8">GetChannel</link> (string chid)</para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_1ae88a77cf7edd98b903a53515912b7ede">GetChid</link> (string root, KOrderProdType::Enum prodtype)</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_1a4861ccd271b22f3ffb7196c1ed7e9025">AddChannel</link> (string id, string label)</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_1aadfeb43f357949e75693012406d57b6e">AddProduct</link> (string channelid, string code, <link linkend="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1productgroup">productgroup</link> pg)</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_1ab1a6e65407799139b387e9a2691e53e9">AddConnection</link> (string channelid, string id, string feed_type, string ip, string host_ip, string port, string feed, string proto)</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_1a607caecd07ff5900303bd0bca0407d38">Load</link> (std::string filename)</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_1a67f946348750e11247fb2b7ca532dad4">ParseConfigNode</link> (const rapidxml::xml_attribute&lt;&gt; *attr)</para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_1a72498823c8fc11e75698141db1f29d01">ParseChannelNode</link> (const rapidxml::xml_attribute&lt;&gt; *attr)</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_1ab8344e109224487030e6e8fd6743bc12">ParseProductNode</link> (const rapidxml::xml_attribute&lt;&gt; *attr, string chid)</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_1a0e16d1c09533dfa719088fad8a598c07">ParseConnectionNode</link> (const rapidxml::xml_node&lt;&gt; *node, string chid)</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_1a49a8b347388422bfe6bd203468d9e127">walk</link> (const rapidxml::xml_node&lt;&gt; *node, int indent=0, string chid=&quot;NONE&quot;)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_1a3a7d9266ad4f3e0c97597f82c35e163d">environment</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_1a33bcf63d0f47026a0f90e6f74bf078bb">updated</link></para>
+</listitem>
+            <listitem><para>std::unordered_map&lt; string, <link linkend="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1channel">channel</link> &gt; <link linkend="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_1a2092a374b6ee11509dfcf7effcfdb2fc">channels</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_1a4861ccd271b22f3ffb7196c1ed7e9025"/><section>
+    <title>AddChannel()</title>
+<indexterm><primary>AddChannel</primary><secondary>KTN::Feeds::CME::Configuration</secondary></indexterm>
+<indexterm><primary>KTN::Feeds::CME::Configuration</primary><secondary>AddChannel</secondary></indexterm>
+<para><computeroutput>void KTN::Feeds::CME::Configuration::AddChannel (string id, string label)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_1ab1a6e65407799139b387e9a2691e53e9"/><section>
+    <title>AddConnection()</title>
+<indexterm><primary>AddConnection</primary><secondary>KTN::Feeds::CME::Configuration</secondary></indexterm>
+<indexterm><primary>KTN::Feeds::CME::Configuration</primary><secondary>AddConnection</secondary></indexterm>
+<para><computeroutput>void KTN::Feeds::CME::Configuration::AddConnection (string channelid, string id, string feed_type, string ip, string host_ip, string port, string feed, string proto)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_1aadfeb43f357949e75693012406d57b6e"/><section>
+    <title>AddProduct()</title>
+<indexterm><primary>AddProduct</primary><secondary>KTN::Feeds::CME::Configuration</secondary></indexterm>
+<indexterm><primary>KTN::Feeds::CME::Configuration</primary><secondary>AddProduct</secondary></indexterm>
+<para><computeroutput>void KTN::Feeds::CME::Configuration::AddProduct (string channelid, string code, <link linkend="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1productgroup">productgroup</link> pg)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_1a63d5f310f6def7a0e8e55f7b9fa21ef8"/><section>
+    <title>GetChannel()</title>
+<indexterm><primary>GetChannel</primary><secondary>KTN::Feeds::CME::Configuration</secondary></indexterm>
+<indexterm><primary>KTN::Feeds::CME::Configuration</primary><secondary>GetChannel</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1channel">channel</link> KTN::Feeds::CME::Configuration::GetChannel (string chid)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_1ae88a77cf7edd98b903a53515912b7ede"/><section>
+    <title>GetChid()</title>
+<indexterm><primary>GetChid</primary><secondary>KTN::Feeds::CME::Configuration</secondary></indexterm>
+<indexterm><primary>KTN::Feeds::CME::Configuration</primary><secondary>GetChid</secondary></indexterm>
+<para><computeroutput>string KTN::Feeds::CME::Configuration::GetChid (string root, KOrderProdType::Enum prodtype)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_1a288fa933b5908724f4a966b5b6fc283d"/><section>
+    <title>Info()</title>
+<indexterm><primary>Info</primary><secondary>KTN::Feeds::CME::Configuration</secondary></indexterm>
+<indexterm><primary>KTN::Feeds::CME::Configuration</primary><secondary>Info</secondary></indexterm>
+<para><computeroutput>void KTN::Feeds::CME::Configuration::Info ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_1a607caecd07ff5900303bd0bca0407d38"/><section>
+    <title>Load()</title>
+<indexterm><primary>Load</primary><secondary>KTN::Feeds::CME::Configuration</secondary></indexterm>
+<indexterm><primary>KTN::Feeds::CME::Configuration</primary><secondary>Load</secondary></indexterm>
+<para><computeroutput>void KTN::Feeds::CME::Configuration::Load (std::string filename)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_1a31510744b0b1c18ac8530272c5adb8d7"/><section>
+    <title>LogMe()</title>
+<indexterm><primary>LogMe</primary><secondary>KTN::Feeds::CME::Configuration</secondary></indexterm>
+<indexterm><primary>KTN::Feeds::CME::Configuration</primary><secondary>LogMe</secondary></indexterm>
+<para><computeroutput>void KTN::Feeds::CME::Configuration::LogMe (string msg, int color = <computeroutput>LOG_WHITE</computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_1a72498823c8fc11e75698141db1f29d01"/><section>
+    <title>ParseChannelNode()</title>
+<indexterm><primary>ParseChannelNode</primary><secondary>KTN::Feeds::CME::Configuration</secondary></indexterm>
+<indexterm><primary>KTN::Feeds::CME::Configuration</primary><secondary>ParseChannelNode</secondary></indexterm>
+<para><computeroutput>string KTN::Feeds::CME::Configuration::ParseChannelNode (const rapidxml::xml_attribute&lt;&gt; * attr)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_1a67f946348750e11247fb2b7ca532dad4"/><section>
+    <title>ParseConfigNode()</title>
+<indexterm><primary>ParseConfigNode</primary><secondary>KTN::Feeds::CME::Configuration</secondary></indexterm>
+<indexterm><primary>KTN::Feeds::CME::Configuration</primary><secondary>ParseConfigNode</secondary></indexterm>
+<para><computeroutput>void KTN::Feeds::CME::Configuration::ParseConfigNode (const rapidxml::xml_attribute&lt;&gt; * attr)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_1a0e16d1c09533dfa719088fad8a598c07"/><section>
+    <title>ParseConnectionNode()</title>
+<indexterm><primary>ParseConnectionNode</primary><secondary>KTN::Feeds::CME::Configuration</secondary></indexterm>
+<indexterm><primary>KTN::Feeds::CME::Configuration</primary><secondary>ParseConnectionNode</secondary></indexterm>
+<para><computeroutput>void KTN::Feeds::CME::Configuration::ParseConnectionNode (const rapidxml::xml_node&lt;&gt; * node, string chid)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_1ab8344e109224487030e6e8fd6743bc12"/><section>
+    <title>ParseProductNode()</title>
+<indexterm><primary>ParseProductNode</primary><secondary>KTN::Feeds::CME::Configuration</secondary></indexterm>
+<indexterm><primary>KTN::Feeds::CME::Configuration</primary><secondary>ParseProductNode</secondary></indexterm>
+<para><computeroutput>void KTN::Feeds::CME::Configuration::ParseProductNode (const rapidxml::xml_attribute&lt;&gt; * attr, string chid)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_1a4cd34784bed64ffd7a477141e3ad59bb"/><section>
+    <title>Print()</title>
+<indexterm><primary>Print</primary><secondary>KTN::Feeds::CME::Configuration</secondary></indexterm>
+<indexterm><primary>KTN::Feeds::CME::Configuration</primary><secondary>Print</secondary></indexterm>
+<para><computeroutput>void KTN::Feeds::CME::Configuration::Print (string chid)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_1a49a8b347388422bfe6bd203468d9e127"/><section>
+    <title>walk()</title>
+<indexterm><primary>walk</primary><secondary>KTN::Feeds::CME::Configuration</secondary></indexterm>
+<indexterm><primary>KTN::Feeds::CME::Configuration</primary><secondary>walk</secondary></indexterm>
+<para><computeroutput>void KTN::Feeds::CME::Configuration::walk (const rapidxml::xml_node&lt;&gt; * node, int indent = <computeroutput>0</computeroutput>
+, string chid = <computeroutput>&quot;NONE&quot;</computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_1a2092a374b6ee11509dfcf7effcfdb2fc"/><section>
+    <title>channels</title>
+<indexterm><primary>channels</primary><secondary>KTN::Feeds::CME::Configuration</secondary></indexterm>
+<indexterm><primary>KTN::Feeds::CME::Configuration</primary><secondary>channels</secondary></indexterm>
+<para><computeroutput>std::unordered_map&lt;string, <link linkend="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1channel">channel</link>&gt; KTN::Feeds::CME::Configuration::channels</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_1a3a7d9266ad4f3e0c97597f82c35e163d"/><section>
+    <title>environment</title>
+<indexterm><primary>environment</primary><secondary>KTN::Feeds::CME::Configuration</secondary></indexterm>
+<indexterm><primary>KTN::Feeds::CME::Configuration</primary><secondary>environment</secondary></indexterm>
+<para><computeroutput>string KTN::Feeds::CME::Configuration::environment</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_feeds_1_1_c_m_e_1_1_configuration_1a33bcf63d0f47026a0f90e6f74bf078bb"/><section>
+    <title>updated</title>
+<indexterm><primary>updated</primary><secondary>KTN::Feeds::CME::Configuration</secondary></indexterm>
+<indexterm><primary>KTN::Feeds::CME::Configuration</primary><secondary>updated</secondary></indexterm>
+<para><computeroutput>string KTN::Feeds::CME::Configuration::updated</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+exchsupport/cme/ChannelStructs.hpp</section>
+</section>

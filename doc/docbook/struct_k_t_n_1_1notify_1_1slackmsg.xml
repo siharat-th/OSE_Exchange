@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_t_n_1_1notify_1_1slackmsg" xml:lang="en-US">
+<title>KTN::notify::slackmsg Struct Reference</title>
+<indexterm><primary>KTN::notify::slackmsg</primary></indexterm>
+<para>
+
+<para>Structure representing a Slack message. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;Slacker.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_struct_k_t_n_1_1notify_1_1slackmsg_1a319beac3f03a13cb19eb1a5ed8937899">preview</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_k_t_n_1_1notify_1_1slackmsg_1ad00f169c8148ce1e8c2393e573561982">topic</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_k_t_n_1_1notify_1_1slackmsg_1afcbc07fb939a188f1937974adf3a25c3">text</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1notify_1_1slackmsg_1ab1383f5ca42e67fb4dc96df50b369fa7">color</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Structure representing a Slack message. </para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1notify_1_1slackmsg_1ab1383f5ca42e67fb4dc96df50b369fa7"/><section>
+    <title>color</title>
+<indexterm><primary>color</primary><secondary>KTN::notify::slackmsg</secondary></indexterm>
+<indexterm><primary>KTN::notify::slackmsg</primary><secondary>color</secondary></indexterm>
+<para><computeroutput>int KTN::notify::slackmsg::color</computeroutput></para>
+<para>The color of the message. </para>
+<para>
+Referenced by <link linkend="_l01043">KTN::Skewer::minOrderExecution()</link>, <link linkend="_l00885">KTN::StackerTimer::minOrderExecution()</link>, <link linkend="_l00975">KTN::Twap::minOrderExecution()</link>, and <link linkend="_l00050">KTN::notify::Slacker::Send()</link>.</para>
+</section>
+<anchor xml:id="_struct_k_t_n_1_1notify_1_1slackmsg_1a319beac3f03a13cb19eb1a5ed8937899"/><section>
+    <title>preview</title>
+<indexterm><primary>preview</primary><secondary>KTN::notify::slackmsg</secondary></indexterm>
+<indexterm><primary>KTN::notify::slackmsg</primary><secondary>preview</secondary></indexterm>
+<para><computeroutput>string KTN::notify::slackmsg::preview</computeroutput></para>
+<para>The preview of the message. </para>
+<para>
+Referenced by <link linkend="_l01043">KTN::Skewer::minOrderExecution()</link>, <link linkend="_l00885">KTN::StackerTimer::minOrderExecution()</link>, <link linkend="_l00975">KTN::Twap::minOrderExecution()</link>, and <link linkend="_l00050">KTN::notify::Slacker::Send()</link>.</para>
+</section>
+<anchor xml:id="_struct_k_t_n_1_1notify_1_1slackmsg_1afcbc07fb939a188f1937974adf3a25c3"/><section>
+    <title>text</title>
+<indexterm><primary>text</primary><secondary>KTN::notify::slackmsg</secondary></indexterm>
+<indexterm><primary>KTN::notify::slackmsg</primary><secondary>text</secondary></indexterm>
+<para><computeroutput>string KTN::notify::slackmsg::text</computeroutput></para>
+<para>The text of the message. </para>
+<para>
+Referenced by <link linkend="_l01043">KTN::Skewer::minOrderExecution()</link>, <link linkend="_l00885">KTN::StackerTimer::minOrderExecution()</link>, <link linkend="_l00975">KTN::Twap::minOrderExecution()</link>, <link linkend="_l00074">KTN::notify::Slacker::Send()</link>, and <link linkend="_l00050">KTN::notify::Slacker::Send()</link>.</para>
+</section>
+<anchor xml:id="_struct_k_t_n_1_1notify_1_1slackmsg_1ad00f169c8148ce1e8c2393e573561982"/><section>
+    <title>topic</title>
+<indexterm><primary>topic</primary><secondary>KTN::notify::slackmsg</secondary></indexterm>
+<indexterm><primary>KTN::notify::slackmsg</primary><secondary>topic</secondary></indexterm>
+<para><computeroutput>string KTN::notify::slackmsg::topic</computeroutput></para>
+<para>The topic of the message. </para>
+<para>
+Referenced by <link linkend="_l00050">KTN::notify::Slacker::Send()</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Notifications/Slacker.hpp</section>
+</section>

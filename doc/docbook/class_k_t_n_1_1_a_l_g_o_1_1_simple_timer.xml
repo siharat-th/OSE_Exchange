@@ -1,0 +1,262 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_simple_timer" xml:lang="en-US">
+<title>KTN::ALGO::SimpleTimer Class Reference</title>
+<indexterm><primary>KTN::ALGO::SimpleTimer</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_simple_timer">SimpleTimer</link> class represents a simple timer that can be started, stopped, and paused. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;SimpleTimer.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for KTN::ALGO::SimpleTimer:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_k_t_n_1_1_a_l_g_o_1_1_simple_timer.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_simple_timer_1aa0e6459be6058dd692cda06559c415ac">SimpleTimer</link> (<link linkend="_class_timer_callback">TimerCallback</link> &amp;cb)</para>
+
+<para>Constructs a <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_simple_timer">SimpleTimer</link> object with the given <link linkend="_class_timer_callback">TimerCallback</link>. </para>
+</listitem>
+            <listitem><para><link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_simple_timer_1ad29e9a56c18bb1e378b0bd125e50c62a">~SimpleTimer</link> ()</para>
+
+<para>Destroys the <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_simple_timer">SimpleTimer</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_simple_timer_1a4dc66a2b8bcf754125f888585046d35e">Pause</link> (bool paused)</para>
+
+<para>Pauses or resumes the timer. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_simple_timer_1a47ae6c759bb8b66e2ef284d288ad871e">Start</link> (const std::string &amp;startTime, const std::string &amp;endTime)</para>
+
+<para>Starts the timer with the specified start and end times. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_simple_timer_1aecfe2ceef77e3549c1b02daa68832a10">Stop</link> ()</para>
+
+<para>Stops the timer. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_simple_timer_1a802350167226e681ef29fb92884daa1f">Triggered</link> ()</para>
+
+<para>Checks if the timer has been triggered. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_simple_timer_1aa7bc9cabb3bd0133736eac52e2a2cb8c">Started</link> ()</para>
+
+<para>Checks if the timer has been started. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_simple_timer_1a55f215c58d1644d1261d924e88b19bce">Expired</link> ()</para>
+
+<para>Checks if the timer has expired. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_class_named_thread">NamedThread</link>        <itemizedlist>
+            <listitem><para><link linkend="_class_named_thread_1a891fabdc2d824048ec05c82e7ef8c69a">NamedThread</link> ()</para>
+
+<para>Default constructor. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_named_thread_1a018dadb59e5af98ee734301a1baa50cb">~NamedThread</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_named_thread_1a9fa42542ff43c89fb9bbc33de9c87e34">CreateAndRun</link> (string name, int core)</para>
+
+<para>Creates and runs the named thread on the specified core. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_named_thread_1ad4809c571171be13f0f91f540d5c196f">Join</link> ()</para>
+
+<para>Joins the named thread. </para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_simple_timer">SimpleTimer</link> class represents a simple timer that can be started, stopped, and paused. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_simple_timer_1aa0e6459be6058dd692cda06559c415ac"/><section>
+    <title>SimpleTimer()</title>
+<indexterm><primary>SimpleTimer</primary><secondary>KTN::ALGO::SimpleTimer</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::SimpleTimer</primary><secondary>SimpleTimer</secondary></indexterm>
+<para><computeroutput>SimpleTimer::SimpleTimer (<link linkend="_class_timer_callback">TimerCallback</link> &amp; cb)</computeroutput></para><para>
+
+<para>Constructs a <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_simple_timer">SimpleTimer</link> object with the given <link linkend="_class_timer_callback">TimerCallback</link>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>cb</entry><entry>
+<para>The <link linkend="_class_timer_callback">TimerCallback</link> object to be associated with the timer. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_simple_timer_1ad29e9a56c18bb1e378b0bd125e50c62a"/><section>
+    <title>~SimpleTimer()</title>
+<indexterm><primary>~SimpleTimer</primary><secondary>KTN::ALGO::SimpleTimer</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::SimpleTimer</primary><secondary>~SimpleTimer</secondary></indexterm>
+<para><computeroutput>SimpleTimer::~SimpleTimer ( )</computeroutput></para><para>
+
+<para>Destroys the <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_simple_timer">SimpleTimer</link> object. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_simple_timer_1a55f215c58d1644d1261d924e88b19bce"/><section>
+    <title>Expired()</title>
+<indexterm><primary>Expired</primary><secondary>KTN::ALGO::SimpleTimer</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::SimpleTimer</primary><secondary>Expired</secondary></indexterm>
+<para><computeroutput>bool KTN::ALGO::SimpleTimer::Expired ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Checks if the timer has expired. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>True if the timer has expired, false otherwise. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00052">KTN::StackerTimer::onJson()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_simple_timer_1a4dc66a2b8bcf754125f888585046d35e"/><section>
+    <title>Pause()</title>
+<indexterm><primary>Pause</primary><secondary>KTN::ALGO::SimpleTimer</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::SimpleTimer</primary><secondary>Pause</secondary></indexterm>
+<para><computeroutput>void SimpleTimer::Pause (bool paused)</computeroutput></para><para>
+
+<para>Pauses or resumes the timer. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>paused</entry><entry>
+<para>If true, the timer will be paused. If false, the timer will be resumed. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Referenced by <link linkend="_l00374">KTN::StackerTimer::Enable()</link>, and <link linkend="_l00052">KTN::StackerTimer::onJson()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_simple_timer_1a47ae6c759bb8b66e2ef284d288ad871e"/><section>
+    <title>Start()</title>
+<indexterm><primary>Start</primary><secondary>KTN::ALGO::SimpleTimer</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::SimpleTimer</primary><secondary>Start</secondary></indexterm>
+<para><computeroutput>void SimpleTimer::Start (const std::string &amp; startTime, const std::string &amp; endTime)</computeroutput></para><para>
+
+<para>Starts the timer with the specified start and end times. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>startTime</entry><entry>
+<para>The start time of the timer in string format. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>endTime</entry><entry>
+<para>The end time of the timer in string format. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00018">NamedThread::CreateAndRun()</link>, and <link linkend="_l00082">Started()</link>.</para>
+<para>
+Referenced by <link linkend="_l00052">KTN::StackerTimer::onJson()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_simple_timer_1aa7bc9cabb3bd0133736eac52e2a2cb8c"/><section>
+    <title>Started()</title>
+<indexterm><primary>Started</primary><secondary>KTN::ALGO::SimpleTimer</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::SimpleTimer</primary><secondary>Started</secondary></indexterm>
+<para><computeroutput>bool KTN::ALGO::SimpleTimer::Started ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Checks if the timer has been started. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>True if the timer has been started, false otherwise. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00374">KTN::StackerTimer::Enable()</link>, <link linkend="_l00885">KTN::StackerTimer::minOrderExecution()</link>, <link linkend="_l00052">KTN::StackerTimer::onJson()</link>, <link linkend="_l00027">Start()</link>, and <link linkend="_l00036">KTN::StackerTimer::~StackerTimer()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_simple_timer_1aecfe2ceef77e3549c1b02daa68832a10"/><section>
+    <title>Stop()</title>
+<indexterm><primary>Stop</primary><secondary>KTN::ALGO::SimpleTimer</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::SimpleTimer</primary><secondary>Stop</secondary></indexterm>
+<para><computeroutput>void SimpleTimer::Stop ( )</computeroutput></para><para>
+
+<para>Stops the timer. </para>
+</para>
+<para>
+Referenced by <link linkend="_l00885">KTN::StackerTimer::minOrderExecution()</link>, <link linkend="_l00339">KTN::StackerTimer::ResetPosition()</link>, and <link linkend="_l00036">KTN::StackerTimer::~StackerTimer()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_simple_timer_1a802350167226e681ef29fb92884daa1f"/><section>
+    <title>Triggered()</title>
+<indexterm><primary>Triggered</primary><secondary>KTN::ALGO::SimpleTimer</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::SimpleTimer</primary><secondary>Triggered</secondary></indexterm>
+<para><computeroutput>bool KTN::ALGO::SimpleTimer::Triggered ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Checks if the timer has been triggered. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>True if the timer has been triggered, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+AlgoCalculators/SimpleTimer.hppAlgoCalculators/SimpleTimer.cpp</section>
+</section>

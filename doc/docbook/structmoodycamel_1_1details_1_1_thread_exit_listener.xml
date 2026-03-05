@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structmoodycamel_1_1details_1_1_thread_exit_listener" xml:lang="en-US">
+<title>moodycamel::details::ThreadExitListener Struct Reference</title>
+<indexterm><primary>moodycamel::details::ThreadExitListener</primary></indexterm>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>typedef void(*) <link linkend="_structmoodycamel_1_1details_1_1_thread_exit_listener_1a30243b344bd3d1039ec9d4d1619b4c97">callback_t</link>(void *)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>callback_t <link linkend="_structmoodycamel_1_1details_1_1_thread_exit_listener_1aaa8730c4d56ed6070d643a04e8001014">callback</link></para>
+</listitem>
+            <listitem><para>void * <link linkend="_structmoodycamel_1_1details_1_1_thread_exit_listener_1a7d02c89ef324228e06071bc17df66e02">userData</link></para>
+</listitem>
+            <listitem><para><link linkend="_structmoodycamel_1_1details_1_1_thread_exit_listener">ThreadExitListener</link> * <link linkend="_structmoodycamel_1_1details_1_1_thread_exit_listener_1aac919ff946c4aafe50d6703d8e6322ba">next</link></para>
+</listitem>
+            <listitem><para><link linkend="_classmoodycamel_1_1details_1_1_thread_exit_notifier">ThreadExitNotifier</link> * <link linkend="_structmoodycamel_1_1details_1_1_thread_exit_listener_1a942f764302ed1e3cfce795793138a586">chain</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Typedef Documentation</title>
+<anchor xml:id="_structmoodycamel_1_1details_1_1_thread_exit_listener_1a30243b344bd3d1039ec9d4d1619b4c97"/><section>
+    <title>callback_t</title>
+<indexterm><primary>callback_t</primary><secondary>moodycamel::details::ThreadExitListener</secondary></indexterm>
+<indexterm><primary>moodycamel::details::ThreadExitListener</primary><secondary>callback_t</secondary></indexterm>
+<para><computeroutput>void(*) moodycamel::details::ThreadExitListener::callback_t(void *)</computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structmoodycamel_1_1details_1_1_thread_exit_listener_1aaa8730c4d56ed6070d643a04e8001014"/><section>
+    <title>callback</title>
+<indexterm><primary>callback</primary><secondary>moodycamel::details::ThreadExitListener</secondary></indexterm>
+<indexterm><primary>moodycamel::details::ThreadExitListener</primary><secondary>callback</secondary></indexterm>
+<para><computeroutput>callback_t moodycamel::details::ThreadExitListener::callback</computeroutput></para></section>
+<anchor xml:id="_structmoodycamel_1_1details_1_1_thread_exit_listener_1a942f764302ed1e3cfce795793138a586"/><section>
+    <title>chain</title>
+<indexterm><primary>chain</primary><secondary>moodycamel::details::ThreadExitListener</secondary></indexterm>
+<indexterm><primary>moodycamel::details::ThreadExitListener</primary><secondary>chain</secondary></indexterm>
+<para><computeroutput><link linkend="_classmoodycamel_1_1details_1_1_thread_exit_notifier">ThreadExitNotifier</link>* moodycamel::details::ThreadExitListener::chain</computeroutput></para></section>
+<anchor xml:id="_structmoodycamel_1_1details_1_1_thread_exit_listener_1aac919ff946c4aafe50d6703d8e6322ba"/><section>
+    <title>next</title>
+<indexterm><primary>next</primary><secondary>moodycamel::details::ThreadExitListener</secondary></indexterm>
+<indexterm><primary>moodycamel::details::ThreadExitListener</primary><secondary>next</secondary></indexterm>
+<para><computeroutput><link linkend="_structmoodycamel_1_1details_1_1_thread_exit_listener">ThreadExitListener</link>* moodycamel::details::ThreadExitListener::next</computeroutput></para></section>
+<anchor xml:id="_structmoodycamel_1_1details_1_1_thread_exit_listener_1a7d02c89ef324228e06071bc17df66e02"/><section>
+    <title>userData</title>
+<indexterm><primary>userData</primary><secondary>moodycamel::details::ThreadExitListener</secondary></indexterm>
+<indexterm><primary>moodycamel::details::ThreadExitListener</primary><secondary>userData</secondary></indexterm>
+<para><computeroutput>void* moodycamel::details::ThreadExitListener::userData</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+C:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/external/camel/concurrentqueue.h</section>
+</section>

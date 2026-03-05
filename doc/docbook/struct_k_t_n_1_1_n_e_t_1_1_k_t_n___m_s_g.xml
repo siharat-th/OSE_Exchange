@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g" xml:lang="en-US">
+<title>KTN::NET::KTN_MSG Struct Reference</title>
+<indexterm><primary>KTN::NET::KTN_MSG</primary></indexterm>
+<para>
+
+<para>Structure representing a KTN binary message container. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;netstructs.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>uint64_t <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g_1aa8c40bada7610ccaefbe571faf66f3ca">uuid</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g_1a1d967456fe108d3b244278508b105794">buffer_length</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g_1add86307403f54a8b55482bc5ad455d81">num_msgs</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g_1a5f0d82a07099077cf7c09b7f1b8e9cb6">segid</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g_1a41c43e3fd072d0f358722bbce60da256">seqnum</link></para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g_1a44e4ad2343ef1fc795744172ba367012">fd</link></para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g_1a0108f0cad0bffcbfb8c1e1c5b6dbac6e">msgtype</link></para>
+</listitem>
+            <listitem><para>int16_t <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g_1ae11eab8d86773eaf9b2bbc6c3596dac8">dir</link></para>
+</listitem>
+            <listitem><para>int16_t <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g_1a3ae6d5e2b814581c91e3f8c56deb1201">slot</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g_1a2998a161918795c98bb7e0ae05688729">isA</link></para>
+</listitem>
+            <listitem><para>char * <link linkend="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g_1a27feb3adacfb4fac83cb361bb061ccc2">buffer</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Structure representing a KTN binary message container. </para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g_1a27feb3adacfb4fac83cb361bb061ccc2"/><section>
+    <title>buffer</title>
+<indexterm><primary>buffer</primary><secondary>KTN::NET::KTN_MSG</secondary></indexterm>
+<indexterm><primary>KTN::NET::KTN_MSG</primary><secondary>buffer</secondary></indexterm>
+<para><computeroutput>char* KTN::NET::KTN_MSG::buffer</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g_1a1d967456fe108d3b244278508b105794"/><section>
+    <title>buffer_length</title>
+<indexterm><primary>buffer_length</primary><secondary>KTN::NET::KTN_MSG</secondary></indexterm>
+<indexterm><primary>KTN::NET::KTN_MSG</primary><secondary>buffer_length</secondary></indexterm>
+<para><computeroutput>uint32_t KTN::NET::KTN_MSG::buffer_length</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g_1ae11eab8d86773eaf9b2bbc6c3596dac8"/><section>
+    <title>dir</title>
+<indexterm><primary>dir</primary><secondary>KTN::NET::KTN_MSG</secondary></indexterm>
+<indexterm><primary>KTN::NET::KTN_MSG</primary><secondary>dir</secondary></indexterm>
+<para><computeroutput>int16_t KTN::NET::KTN_MSG::dir</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g_1a44e4ad2343ef1fc795744172ba367012"/><section>
+    <title>fd</title>
+<indexterm><primary>fd</primary><secondary>KTN::NET::KTN_MSG</secondary></indexterm>
+<indexterm><primary>KTN::NET::KTN_MSG</primary><secondary>fd</secondary></indexterm>
+<para><computeroutput>uint16_t KTN::NET::KTN_MSG::fd</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g_1a2998a161918795c98bb7e0ae05688729"/><section>
+    <title>isA</title>
+<indexterm><primary>isA</primary><secondary>KTN::NET::KTN_MSG</secondary></indexterm>
+<indexterm><primary>KTN::NET::KTN_MSG</primary><secondary>isA</secondary></indexterm>
+<para><computeroutput>bool KTN::NET::KTN_MSG::isA</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g_1a0108f0cad0bffcbfb8c1e1c5b6dbac6e"/><section>
+    <title>msgtype</title>
+<indexterm><primary>msgtype</primary><secondary>KTN::NET::KTN_MSG</secondary></indexterm>
+<indexterm><primary>KTN::NET::KTN_MSG</primary><secondary>msgtype</secondary></indexterm>
+<para><computeroutput>uint16_t KTN::NET::KTN_MSG::msgtype</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g_1add86307403f54a8b55482bc5ad455d81"/><section>
+    <title>num_msgs</title>
+<indexterm><primary>num_msgs</primary><secondary>KTN::NET::KTN_MSG</secondary></indexterm>
+<indexterm><primary>KTN::NET::KTN_MSG</primary><secondary>num_msgs</secondary></indexterm>
+<para><computeroutput>int KTN::NET::KTN_MSG::num_msgs</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g_1a5f0d82a07099077cf7c09b7f1b8e9cb6"/><section>
+    <title>segid</title>
+<indexterm><primary>segid</primary><secondary>KTN::NET::KTN_MSG</secondary></indexterm>
+<indexterm><primary>KTN::NET::KTN_MSG</primary><secondary>segid</secondary></indexterm>
+<para><computeroutput>int KTN::NET::KTN_MSG::segid</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g_1a41c43e3fd072d0f358722bbce60da256"/><section>
+    <title>seqnum</title>
+<indexterm><primary>seqnum</primary><secondary>KTN::NET::KTN_MSG</secondary></indexterm>
+<indexterm><primary>KTN::NET::KTN_MSG</primary><secondary>seqnum</secondary></indexterm>
+<para><computeroutput>uint32_t KTN::NET::KTN_MSG::seqnum</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g_1a3ae6d5e2b814581c91e3f8c56deb1201"/><section>
+    <title>slot</title>
+<indexterm><primary>slot</primary><secondary>KTN::NET::KTN_MSG</secondary></indexterm>
+<indexterm><primary>KTN::NET::KTN_MSG</primary><secondary>slot</secondary></indexterm>
+<para><computeroutput>int16_t KTN::NET::KTN_MSG::slot</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g_1aa8c40bada7610ccaefbe571faf66f3ca"/><section>
+    <title>uuid</title>
+<indexterm><primary>uuid</primary><secondary>KTN::NET::KTN_MSG</secondary></indexterm>
+<indexterm><primary>KTN::NET::KTN_MSG</primary><secondary>uuid</secondary></indexterm>
+<para><computeroutput>uint64_t KTN::NET::KTN_MSG::uuid</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+exchsupport/cme/net/netstructs.hpp</section>
+</section>

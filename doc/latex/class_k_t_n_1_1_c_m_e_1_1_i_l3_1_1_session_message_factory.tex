@@ -1,0 +1,263 @@
+\doxysection{KTN\+::CME\+::IL3\+::Session\+Message\+Factory Class Reference}
+\hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory}{}\label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory}\index{KTN::CME::IL3::SessionMessageFactory@{KTN::CME::IL3::SessionMessageFactory}}
+
+
+The \doxylink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory}{Session\+Message\+Factory} class is responsible for creating various session messages.  
+
+
+
+
+{\ttfamily \#include $<$Session\+Message\+Factory.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory_a8478d4648e81f8080e28f0daa28f2b3e}{Init}} (string settingsfile)
+\begin{DoxyCompactList}\small\item\em Initializes the \doxylink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory}{Session\+Message\+Factory} with the specified settings file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g}{KTN\+\_\+\+MSG}} \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory_a609368c0e23b1a204c5b10e818e79111}{Sofh\+Encode}} (uint16\+\_\+t msglen)
+\begin{DoxyCompactList}\small\item\em Encodes the \doxylink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_s_o_f_h}{SOFH} (Start of Frame Header) for the given message length. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g}{KTN\+\_\+\+MSG}} \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory_a204b3a09f15032b2bd8a47b658d93016}{Negotiate\+Encode}} (uint64\+\_\+t uuid)
+\begin{DoxyCompactList}\small\item\em Encodes the Negotiate message with the specified UUID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf}{KTNBuf}} \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory_ab1e462ed27d1b5117286c1094bf03d8b}{Establish\+Encode}} (uint64\+\_\+t uuid, uint64\+\_\+t seqid)
+\begin{DoxyCompactList}\small\item\em Encodes the Establish message with the specified UUID and sequence ID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g}{KTN\+\_\+\+MSG}} \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory_ae5ecd54e09f8878d120ceeb6ed6e014a}{Sequence\+Encode}} (uint64\+\_\+t uuid, uint64\+\_\+t seqid, bool primary, bool lapse)
+\begin{DoxyCompactList}\small\item\em Encodes the Sequence message with the specified UUID, sequence ID, primary flag, and lapse flag. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf}{KTNBuf}} \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory_aedb0566a6995845253e4905046980459}{Terminate\+Encode}} (uint64\+\_\+t uuid, string reason, int errorcodes)
+\begin{DoxyCompactList}\small\item\em Encodes the Terminate message with the specified UUID, reason, and error codes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g}{KTN\+\_\+\+MSG}} \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory_a3eb1481997b3009b68b44a6e5ea85037}{Retrans\+Request\+Encode}} (uint64\+\_\+t uuid, uint32\+\_\+t From\+Seq\+No, uint16\+\_\+t Msg\+Count, u\+Int64\+NULL lastuuid)
+\begin{DoxyCompactList}\small\item\em Encodes the Retrans\+Request message with the specified UUID, From\+Seq\+No, Msg\+Count, and last UUID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g}{KTN\+\_\+\+MSG}} \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory_a7de7d849e46d9feca398c86f43b89591}{Party\+Details\+Def\+Encode}} (uint64\+\_\+t uuid, uint64\+\_\+t seqid, uint64\+\_\+t party\+Details\+List\+Req\+ID, uint64\+\_\+t selfmatch\+Id, string account, string firmid, string traderid)
+\begin{DoxyCompactList}\small\item\em Encodes the Party\+Details\+Def message with the specified UUID, sequence ID, party\+Details\+List\+Req\+ID, selfmatch\+Id, account, firmid, and traderid. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static uint64\+\_\+t \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory_a392dd4864c6ac7981337395de10cceba}{get\+Sending\+Time\+Epoch}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current sending time epoch. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory}{Session\+Message\+Factory} class is responsible for creating various session messages. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory_ab1e462ed27d1b5117286c1094bf03d8b}\index{KTN::CME::IL3::SessionMessageFactory@{KTN::CME::IL3::SessionMessageFactory}!EstablishEncode@{EstablishEncode}}
+\index{EstablishEncode@{EstablishEncode}!KTN::CME::IL3::SessionMessageFactory@{KTN::CME::IL3::SessionMessageFactory}}
+\doxysubsubsection{\texorpdfstring{EstablishEncode()}{EstablishEncode()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory_ab1e462ed27d1b5117286c1094bf03d8b} 
+\mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf}{KTNBuf}} Session\+Message\+Factory\+::\+Establish\+Encode (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{uuid}{, }\item[{uint64\+\_\+t}]{seqid}{ = {\ttfamily 1}}\end{DoxyParamCaption})}
+
+
+
+Encodes the Establish message with the specified UUID and sequence ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uuid} & The UUID for the message. \\
+\hline
+{\em seqid} & The sequence ID for the message. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The encoded Establish message. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00149}{KTN\+::\+NET\+::\+Byte\+Writer\+::cur()}}.
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory_a392dd4864c6ac7981337395de10cceba}\index{KTN::CME::IL3::SessionMessageFactory@{KTN::CME::IL3::SessionMessageFactory}!getSendingTimeEpoch@{getSendingTimeEpoch}}
+\index{getSendingTimeEpoch@{getSendingTimeEpoch}!KTN::CME::IL3::SessionMessageFactory@{KTN::CME::IL3::SessionMessageFactory}}
+\doxysubsubsection{\texorpdfstring{getSendingTimeEpoch()}{getSendingTimeEpoch()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory_a392dd4864c6ac7981337395de10cceba} 
+static uint64\+\_\+t KTN\+::\+CME\+::\+IL3\+::\+Session\+Message\+Factory\+::get\+Sending\+Time\+Epoch (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Gets the current sending time epoch. 
+
+\begin{DoxyReturn}{Returns}
+The current sending time epoch. 
+\end{DoxyReturn}
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory_a8478d4648e81f8080e28f0daa28f2b3e}\index{KTN::CME::IL3::SessionMessageFactory@{KTN::CME::IL3::SessionMessageFactory}!Init@{Init}}
+\index{Init@{Init}!KTN::CME::IL3::SessionMessageFactory@{KTN::CME::IL3::SessionMessageFactory}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory_a8478d4648e81f8080e28f0daa28f2b3e} 
+void Session\+Message\+Factory\+::\+Init (\begin{DoxyParamCaption}\item[{string}]{settingsfile}{}\end{DoxyParamCaption})}
+
+
+
+Initializes the \doxylink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory}{Session\+Message\+Factory} with the specified settings file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em settingsfile} & The path to the settings file. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00065}{Cme\+Session\+Settings\+::\+Load()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00019}{KTN\+::\+CME\+::\+Cme\+Algo\+::\+Cme\+Algo()}}, and \mbox{\hyperlink{l00019}{KTN\+::\+CME\+::\+Cme\+GT5\+::\+Cme\+GT5()}}.
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory_a204b3a09f15032b2bd8a47b658d93016}\index{KTN::CME::IL3::SessionMessageFactory@{KTN::CME::IL3::SessionMessageFactory}!NegotiateEncode@{NegotiateEncode}}
+\index{NegotiateEncode@{NegotiateEncode}!KTN::CME::IL3::SessionMessageFactory@{KTN::CME::IL3::SessionMessageFactory}}
+\doxysubsubsection{\texorpdfstring{NegotiateEncode()}{NegotiateEncode()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory_a204b3a09f15032b2bd8a47b658d93016} 
+\mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g}{KTN\+\_\+\+MSG}} Session\+Message\+Factory\+::\+Negotiate\+Encode (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{uuid}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+
+
+Encodes the Negotiate message with the specified UUID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uuid} & The UUID for the message. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The encoded Negotiate message. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00149}{KTN\+::\+NET\+::\+Byte\+Writer\+::cur()}}.
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory_a7de7d849e46d9feca398c86f43b89591}\index{KTN::CME::IL3::SessionMessageFactory@{KTN::CME::IL3::SessionMessageFactory}!PartyDetailsDefEncode@{PartyDetailsDefEncode}}
+\index{PartyDetailsDefEncode@{PartyDetailsDefEncode}!KTN::CME::IL3::SessionMessageFactory@{KTN::CME::IL3::SessionMessageFactory}}
+\doxysubsubsection{\texorpdfstring{PartyDetailsDefEncode()}{PartyDetailsDefEncode()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory_a7de7d849e46d9feca398c86f43b89591} 
+\mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g}{KTN\+\_\+\+MSG}} KTN\+::\+CME\+::\+IL3\+::\+Session\+Message\+Factory\+::\+Party\+Details\+Def\+Encode (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{uuid}{, }\item[{uint64\+\_\+t}]{seqid}{, }\item[{uint64\+\_\+t}]{party\+Details\+List\+Req\+ID}{, }\item[{uint64\+\_\+t}]{selfmatch\+Id}{, }\item[{string}]{account}{, }\item[{string}]{firmid}{, }\item[{string}]{traderid}{}\end{DoxyParamCaption})}
+
+
+
+Encodes the Party\+Details\+Def message with the specified UUID, sequence ID, party\+Details\+List\+Req\+ID, selfmatch\+Id, account, firmid, and traderid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uuid} & The UUID for the message. \\
+\hline
+{\em seqid} & The sequence ID for the message. \\
+\hline
+{\em party\+Details\+List\+Req\+ID} & The party\+Details\+List\+Req\+ID for the message. \\
+\hline
+{\em selfmatch\+Id} & The selfmatch\+Id for the message. \\
+\hline
+{\em account} & The account for the message. \\
+\hline
+{\em firmid} & The firmid for the message. \\
+\hline
+{\em traderid} & The traderid for the message. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The encoded Party\+Details\+Def message. 
+\end{DoxyReturn}
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory_a3eb1481997b3009b68b44a6e5ea85037}\index{KTN::CME::IL3::SessionMessageFactory@{KTN::CME::IL3::SessionMessageFactory}!RetransRequestEncode@{RetransRequestEncode}}
+\index{RetransRequestEncode@{RetransRequestEncode}!KTN::CME::IL3::SessionMessageFactory@{KTN::CME::IL3::SessionMessageFactory}}
+\doxysubsubsection{\texorpdfstring{RetransRequestEncode()}{RetransRequestEncode()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory_a3eb1481997b3009b68b44a6e5ea85037} 
+\mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g}{KTN\+\_\+\+MSG}} Session\+Message\+Factory\+::\+Retrans\+Request\+Encode (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{uuid}{, }\item[{uint32\+\_\+t}]{From\+Seq\+No}{, }\item[{uint16\+\_\+t}]{Msg\+Count}{, }\item[{u\+Int64\+NULL}]{lastuuid}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+
+
+Encodes the Retrans\+Request message with the specified UUID, From\+Seq\+No, Msg\+Count, and last UUID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uuid} & The UUID for the message. \\
+\hline
+{\em From\+Seq\+No} & The starting sequence number for retransmission. \\
+\hline
+{\em Msg\+Count} & The number of messages to retransmit. \\
+\hline
+{\em lastuuid} & The last UUID for retransmission. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The encoded Retrans\+Request message. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00149}{KTN\+::\+NET\+::\+Byte\+Writer\+::cur()}}.
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory_ae5ecd54e09f8878d120ceeb6ed6e014a}\index{KTN::CME::IL3::SessionMessageFactory@{KTN::CME::IL3::SessionMessageFactory}!SequenceEncode@{SequenceEncode}}
+\index{SequenceEncode@{SequenceEncode}!KTN::CME::IL3::SessionMessageFactory@{KTN::CME::IL3::SessionMessageFactory}}
+\doxysubsubsection{\texorpdfstring{SequenceEncode()}{SequenceEncode()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory_ae5ecd54e09f8878d120ceeb6ed6e014a} 
+\mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g}{KTN\+\_\+\+MSG}} Session\+Message\+Factory\+::\+Sequence\+Encode (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{uuid}{, }\item[{uint64\+\_\+t}]{seqid}{, }\item[{bool}]{primary}{ = {\ttfamily true}, }\item[{bool}]{lapse}{ = {\ttfamily false}}\end{DoxyParamCaption})}
+
+
+
+Encodes the Sequence message with the specified UUID, sequence ID, primary flag, and lapse flag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uuid} & The UUID for the message. \\
+\hline
+{\em seqid} & The sequence ID for the message. \\
+\hline
+{\em primary} & The primary flag for the message. \\
+\hline
+{\em lapse} & The lapse flag for the message. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The encoded Sequence message. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00149}{KTN\+::\+NET\+::\+Byte\+Writer\+::cur()}}.
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory_a609368c0e23b1a204c5b10e818e79111}\index{KTN::CME::IL3::SessionMessageFactory@{KTN::CME::IL3::SessionMessageFactory}!SofhEncode@{SofhEncode}}
+\index{SofhEncode@{SofhEncode}!KTN::CME::IL3::SessionMessageFactory@{KTN::CME::IL3::SessionMessageFactory}}
+\doxysubsubsection{\texorpdfstring{SofhEncode()}{SofhEncode()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory_a609368c0e23b1a204c5b10e818e79111} 
+\mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n___m_s_g}{KTN\+\_\+\+MSG}} Session\+Message\+Factory\+::\+Sofh\+Encode (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{msglen}{}\end{DoxyParamCaption})}
+
+
+
+Encodes the \doxylink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_s_o_f_h}{SOFH} (Start of Frame Header) for the given message length. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msglen} & The length of the message. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The encoded \doxylink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_s_o_f_h}{SOFH} message. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00149}{KTN\+::\+NET\+::\+Byte\+Writer\+::cur()}}.
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory_aedb0566a6995845253e4905046980459}\index{KTN::CME::IL3::SessionMessageFactory@{KTN::CME::IL3::SessionMessageFactory}!TerminateEncode@{TerminateEncode}}
+\index{TerminateEncode@{TerminateEncode}!KTN::CME::IL3::SessionMessageFactory@{KTN::CME::IL3::SessionMessageFactory}}
+\doxysubsubsection{\texorpdfstring{TerminateEncode()}{TerminateEncode()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_session_message_factory_aedb0566a6995845253e4905046980459} 
+\mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf}{KTNBuf}} Session\+Message\+Factory\+::\+Terminate\+Encode (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{uuid}{, }\item[{string}]{reason}{, }\item[{int}]{errorcodes}{}\end{DoxyParamCaption})}
+
+
+
+Encodes the Terminate message with the specified UUID, reason, and error codes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uuid} & The UUID for the message. \\
+\hline
+{\em reason} & The reason for termination. \\
+\hline
+{\em errorcodes} & The error codes for the message. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The encoded Terminate message. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00149}{KTN\+::\+NET\+::\+Byte\+Writer\+::cur()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+exchsupport/cme/factory/Session\+Message\+Factory.\+hpp\item 
+exchsupport/cme/factory/Session\+Message\+Factory.\+cpp\end{DoxyCompactItemize}

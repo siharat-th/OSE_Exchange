@@ -1,0 +1,231 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf" xml:lang="en-US">
+<title>KTN::NET::KTNPktBuf Class Reference</title>
+<indexterm><primary>KTN::NET::KTNPktBuf</primary></indexterm>
+<para>
+
+<para>Represents a packet buffer used in the <link linkend="_class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf">KTNPktBuf</link> class. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;KTNPktBuf.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>size_t <link linkend="_class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf_1a00abdcf20176bc9a72a8935b090adf75">index</link> ()</para>
+
+<para>Returns the index of the packet buffer. </para>
+</listitem>
+            <listitem><para>size_t <link linkend="_class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf_1a08ade3e312f314a9857ff205d58781f0">size</link> ()</para>
+
+<para>Returns the size of the packet buffer. </para>
+</listitem>
+            <listitem><para>const char * <link linkend="_class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf_1aaf2fbc8e07eb5fd15e66ca8922a39cae">data</link> () const</para>
+
+<para>Returns a constant pointer to the data in the packet buffer. </para>
+</listitem>
+            <listitem><para>char * <link linkend="_class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf_1ac0963712e08684cef9a9a4c09c0cd1d2">data</link> ()</para>
+
+<para>Returns a pointer to the data in the packet buffer. </para>
+</listitem>
+            <listitem><para>const char * <link linkend="_class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf_1a4b28e66897548370ee84227bd85721a1">operator[]</link> (int n) const</para>
+
+<para>Returns a constant pointer to the data at the specified index in the packet buffer. </para>
+</listitem>
+            <listitem><para>char * <link linkend="_class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf_1a9be68fb53c524417c5eefff0b598716e">operator[]</link> (int n)</para>
+
+<para>Returns a pointer to the data at the specified index in the packet buffer. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static constexpr size_t <link linkend="_class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf_1a13b22f38d0a5a16ac279c14410f79ab6">capacity</link> ()</para>
+
+<para>Returns the capacity of the packet buffer. </para>
+</listitem>
+            <listitem><para>static constexpr size_t <link linkend="_class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf_1a56726ca29c5db8857d1336ea4e640a35">alloc_size</link> ()</para>
+
+<para>Returns the allocation size of the packet buffer. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Represents a packet buffer used in the <link linkend="_class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf">KTNPktBuf</link> class. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf_1a56726ca29c5db8857d1336ea4e640a35"/><section>
+    <title>alloc_size()</title>
+<indexterm><primary>alloc_size</primary><secondary>KTN::NET::KTNPktBuf</secondary></indexterm>
+<indexterm><primary>KTN::NET::KTNPktBuf</primary><secondary>alloc_size</secondary></indexterm>
+<para><computeroutput>static constexpr size_t KTN::NET::KTNPktBuf::alloc_size ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[constexpr]</computeroutput></computeroutput></para><para>
+
+<para>Returns the allocation size of the packet buffer. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The allocation size of the packet buffer. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf_1a13b22f38d0a5a16ac279c14410f79ab6"/><section>
+    <title>capacity()</title>
+<indexterm><primary>capacity</primary><secondary>KTN::NET::KTNPktBuf</secondary></indexterm>
+<indexterm><primary>KTN::NET::KTNPktBuf</primary><secondary>capacity</secondary></indexterm>
+<para><computeroutput>static constexpr size_t KTN::NET::KTNPktBuf::capacity ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[constexpr]</computeroutput></computeroutput></para><para>
+
+<para>Returns the capacity of the packet buffer. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The capacity of the packet buffer. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf_1ac0963712e08684cef9a9a4c09c0cd1d2"/><section>
+    <title>data()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>data</primary><secondary>KTN::NET::KTNPktBuf</secondary></indexterm>
+<indexterm><primary>KTN::NET::KTNPktBuf</primary><secondary>data</secondary></indexterm>
+<para><computeroutput>char * KTN::NET::KTNPktBuf::data ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Returns a pointer to the data in the packet buffer. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>A pointer to the data in the packet buffer. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf_1aaf2fbc8e07eb5fd15e66ca8922a39cae"/><section>
+    <title>data()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>data</primary><secondary>KTN::NET::KTNPktBuf</secondary></indexterm>
+<indexterm><primary>KTN::NET::KTNPktBuf</primary><secondary>data</secondary></indexterm>
+<para><computeroutput>const char * KTN::NET::KTNPktBuf::data ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Returns a constant pointer to the data in the packet buffer. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>A constant pointer to the data in the packet buffer. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00066">operator[]()</link>, and <link linkend="_l00059">operator[]()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf_1a00abdcf20176bc9a72a8935b090adf75"/><section>
+    <title>index()</title>
+<indexterm><primary>index</primary><secondary>KTN::NET::KTNPktBuf</secondary></indexterm>
+<indexterm><primary>KTN::NET::KTNPktBuf</primary><secondary>index</secondary></indexterm>
+<para><computeroutput>size_t KTN::NET::KTNPktBuf::index ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Returns the index of the packet buffer. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The index of the packet buffer. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf_1a9be68fb53c524417c5eefff0b598716e"/><section>
+    <title>operator[]()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>operator[]</primary><secondary>KTN::NET::KTNPktBuf</secondary></indexterm>
+<indexterm><primary>KTN::NET::KTNPktBuf</primary><secondary>operator[]</secondary></indexterm>
+<para><computeroutput>char * KTN::NET::KTNPktBuf::operator[] (int n)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Returns a pointer to the data at the specified index in the packet buffer. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>n</entry><entry>
+<para>The index of the data. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A pointer to the data at the specified index in the packet buffer. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00046">data()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf_1a4b28e66897548370ee84227bd85721a1"/><section>
+    <title>operator[]()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>operator[]</primary><secondary>KTN::NET::KTNPktBuf</secondary></indexterm>
+<indexterm><primary>KTN::NET::KTNPktBuf</primary><secondary>operator[]</secondary></indexterm>
+<para><computeroutput>const char * KTN::NET::KTNPktBuf::operator[] (int n) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Returns a constant pointer to the data at the specified index in the packet buffer. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>n</entry><entry>
+<para>The index of the data. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A constant pointer to the data at the specified index in the packet buffer. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00046">data()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_n_e_t_1_1_k_t_n_pkt_buf_1a08ade3e312f314a9857ff205d58781f0"/><section>
+    <title>size()</title>
+<indexterm><primary>size</primary><secondary>KTN::NET::KTNPktBuf</secondary></indexterm>
+<indexterm><primary>KTN::NET::KTNPktBuf</primary><secondary>size</secondary></indexterm>
+<para><computeroutput>size_t KTN::NET::KTNPktBuf::size ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Returns the size of the packet buffer. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The size of the packet buffer. </para>
+</formalpara>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Core/KTNPktBuf.hpp</section>
+</section>

@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_matrix_gen" xml:lang="en-US">
+<title>MatrixGen Class Reference</title>
+<indexterm><primary>MatrixGen</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_matrix_gen">MatrixGen</link> class is responsible for generating spread and outright matrices from the input data. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;MatrixGen.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_matrix_gen_1afcb529caaaa0e992a06c70df40db45c8">GenSpreadMatrix</link> (string Product, string StartMonth, int StartYear, int NumMonths)</para>
+
+<para>Generates the spread matrix. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_matrix_gen_1a74ed0da4eb357edf390a6060fea315b2">GenOutrightMatrix</link> (string product, string StartMont, int StartYear, int NumMonths)</para>
+
+<para>Generates the outright matrix. </para>
+</listitem>
+            <listitem><para>const map&lt; pair&lt; int, int &gt;, std::string &gt; &amp; <link linkend="_class_matrix_gen_1ae36ebcbbd8e3d0870adf9254a4453e86">GetGraphMap</link> () const</para>
+
+<para>Gets the graph map. </para>
+</listitem>
+            <listitem><para>const std::std::unordered_map&lt; std::string, <link linkend="_struct_r_c">RC</link> &gt; &amp; <link linkend="_class_matrix_gen_1a2552d2e2ec7b5f6fe3b3bd886080eb81">GetRcMap</link> () const</para>
+
+<para>Gets the row-column map. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_matrix_gen">MatrixGen</link> class is responsible for generating spread and outright matrices from the input data. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_matrix_gen_1a9affe2558b69f0161b0676519709d910"/><section>
+    <title>MatrixGen()</title>
+<indexterm><primary>MatrixGen</primary><secondary>MatrixGen</secondary></indexterm>
+<indexterm><primary>MatrixGen</primary><secondary>MatrixGen</secondary></indexterm>
+<para><computeroutput>MatrixGen::MatrixGen ( )</computeroutput></para></section>
+<anchor xml:id="_class_matrix_gen_1aaf4669c1aca53bca76fadffd47f63a11"/><section>
+    <title>~MatrixGen()</title>
+<indexterm><primary>~MatrixGen</primary><secondary>MatrixGen</secondary></indexterm>
+<indexterm><primary>MatrixGen</primary><secondary>~MatrixGen</secondary></indexterm>
+<para><computeroutput>MatrixGen::~MatrixGen ( )<computeroutput>[virtual]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_matrix_gen_1a74ed0da4eb357edf390a6060fea315b2"/><section>
+    <title>GenOutrightMatrix()</title>
+<indexterm><primary>GenOutrightMatrix</primary><secondary>MatrixGen</secondary></indexterm>
+<indexterm><primary>MatrixGen</primary><secondary>GenOutrightMatrix</secondary></indexterm>
+<para><computeroutput>void MatrixGen::GenOutrightMatrix (string product, string StartMont, int StartYear, int NumMonths)</computeroutput></para><para>
+
+<para>Generates the outright matrix. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>product</entry><entry>
+<para>The product name. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>StartMont</entry><entry>
+<para>The starting month. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>StartYear</entry><entry>
+<para>The starting year. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>NumMonths</entry><entry>
+<para>The number of months. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Referenced by <link linkend="_l00016">WavgCalcMulti::Init()</link>.</para>
+</section>
+<anchor xml:id="_class_matrix_gen_1afcb529caaaa0e992a06c70df40db45c8"/><section>
+    <title>GenSpreadMatrix()</title>
+<indexterm><primary>GenSpreadMatrix</primary><secondary>MatrixGen</secondary></indexterm>
+<indexterm><primary>MatrixGen</primary><secondary>GenSpreadMatrix</secondary></indexterm>
+<para><computeroutput>void MatrixGen::GenSpreadMatrix (string Product, string StartMonth, int StartYear, int NumMonths)</computeroutput></para><para>
+
+<para>Generates the spread matrix. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Product</entry><entry>
+<para>The product name. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>StartMonth</entry><entry>
+<para>The starting month. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>StartYear</entry><entry>
+<para>The starting year. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>NumMonths</entry><entry>
+<para>The number of months. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Referenced by <link linkend="_l00016">WavgCalcMulti::Init()</link>.</para>
+</section>
+<anchor xml:id="_class_matrix_gen_1ae36ebcbbd8e3d0870adf9254a4453e86"/><section>
+    <title>GetGraphMap()</title>
+<indexterm><primary>GetGraphMap</primary><secondary>MatrixGen</secondary></indexterm>
+<indexterm><primary>MatrixGen</primary><secondary>GetGraphMap</secondary></indexterm>
+<para><computeroutput>const map&lt; pair&lt; int, int &gt;, std::string &gt; &amp; MatrixGen::GetGraphMap ( ) const</computeroutput></para><para>
+
+<para>Gets the graph map. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The graph map. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00016">WavgCalcMulti::Init()</link>.</para>
+</section>
+<anchor xml:id="_class_matrix_gen_1a2552d2e2ec7b5f6fe3b3bd886080eb81"/><section>
+    <title>GetRcMap()</title>
+<indexterm><primary>GetRcMap</primary><secondary>MatrixGen</secondary></indexterm>
+<indexterm><primary>MatrixGen</primary><secondary>GetRcMap</secondary></indexterm>
+<para><computeroutput>const std::std::unordered_map&lt; std::string, <link linkend="_struct_r_c">RC</link> &gt; &amp; MatrixGen::GetRcMap ( ) const</computeroutput></para><para>
+
+<para>Gets the row-column map. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The row-column map. </para>
+</formalpara>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+AlgoEngines/MatrixGen.hppAlgoEngines/MatrixGen.cpp</section>
+</section>

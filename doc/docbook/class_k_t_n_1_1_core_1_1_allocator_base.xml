@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_core_1_1_allocator_base" xml:lang="en-US">
+<title>KTN::Core::AllocatorBase&lt; T &gt; Class Template Reference</title>
+<indexterm><primary>KTN::Core::AllocatorBase&lt; T &gt;</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_k_t_n_1_1_core_1_1_allocator_base">AllocatorBase</link> class is a generic allocator class that provides different allocator types based on the selected options. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;AllocatorBase.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>using <link linkend="_class_k_t_n_1_1_core_1_1_allocator_base_1a62ed35cc530ff5a292ac09c554b2db93">AllocatorType</link> = std::allocator&lt;T&gt;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_core_1_1_allocator_base_1a7a6c3fd0f881f4589c84a79be4f7ed07">AllocatorBase</link> (size_t capacity)</para>
+
+<para>Constructs an <link linkend="_class_k_t_n_1_1_core_1_1_allocator_base">AllocatorBase</link> object with the specified capacity. </para>
+</listitem>
+            <listitem><para>T * <link linkend="_class_k_t_n_1_1_core_1_1_allocator_base_1a3c7d4cc69a244f09768de77eca18add2">get</link> ()</para>
+
+<para>Returns a pointer to the allocated memory. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_k_t_n_1_1_core_1_1_allocator_base_1a83a4b08298377f4bf2e57cd188620fbb"/><emphasis role="strong">~AllocatorBase</emphasis> ()=default</para>
+
+<para>Destroys the <link linkend="_class_k_t_n_1_1_core_1_1_allocator_base">AllocatorBase</link> object. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;typename T&gt;<?linebreak?>class KTN::Core::AllocatorBase&lt; T &gt;</title></simplesect>
+
+<para>The <link linkend="_class_k_t_n_1_1_core_1_1_allocator_base">AllocatorBase</link> class is a generic allocator class that provides different allocator types based on the selected options. </para>
+
+
+
+<para>
+                <formalpara>
+                    <title>
+Template Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>T</entry><entry>
+<para>The type of the elements to be allocated. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<section>
+<title>Member Typedef Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_allocator_base_1a62ed35cc530ff5a292ac09c554b2db93"/><section>
+    <title>AllocatorType</title>
+<indexterm><primary>AllocatorType</primary><secondary>KTN::Core::AllocatorBase&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>KTN::Core::AllocatorBase&lt; T &gt;</primary><secondary>AllocatorType</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>using <link linkend="_class_k_t_n_1_1_core_1_1_allocator_base">KTN::Core::AllocatorBase</link>&lt; T &gt;::AllocatorType = std::allocator&lt;T&gt;</computeroutput></para></section>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_allocator_base_1a7a6c3fd0f881f4589c84a79be4f7ed07"/><section>
+    <title>AllocatorBase()</title>
+<indexterm><primary>AllocatorBase</primary><secondary>KTN::Core::AllocatorBase&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>KTN::Core::AllocatorBase&lt; T &gt;</primary><secondary>AllocatorBase</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput><link linkend="_class_k_t_n_1_1_core_1_1_allocator_base">KTN::Core::AllocatorBase</link>&lt; T &gt;::AllocatorBase (size_t capacity)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Constructs an <link linkend="_class_k_t_n_1_1_core_1_1_allocator_base">AllocatorBase</link> object with the specified capacity. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>capacity</entry><entry>
+<para>The capacity of the allocator. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_allocator_base_1a3c7d4cc69a244f09768de77eca18add2"/><section>
+    <title>get()</title>
+<indexterm><primary>get</primary><secondary>KTN::Core::AllocatorBase&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>KTN::Core::AllocatorBase&lt; T &gt;</primary><secondary>get</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>T * <link linkend="_class_k_t_n_1_1_core_1_1_allocator_base">KTN::Core::AllocatorBase</link>&lt; T &gt;::get ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Returns a pointer to the allocated memory. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>T* A pointer to the allocated memory. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00095">KTN::Core::SimpleMap&lt; K, T &gt;::at()</link>, <link linkend="_l00124">KTN::Core::SimpleMap&lt; K, T &gt;::erase()</link>, <link linkend="_l00056">KTN::Core::SimpleMap&lt; K, T &gt;::get()</link>, and <link linkend="_l00041">KTN::Core::SimpleMap&lt; K, T &gt;::insert()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Maps/AllocatorBase.hpp</section>
+</section>

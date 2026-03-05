@@ -1,0 +1,228 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structalgomd" xml:lang="en-US">
+<title>algomd Struct Reference</title>
+<indexterm><primary>algomd</primary></indexterm>
+<para>
+
+<para>Structure representing algorithm market data. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;algo_structs.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>uint8_t <link linkend="_structalgomd_1a853f9f53357aba49a591a28ac06ec8c0">lastagressor</link></para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_structalgomd_1a1e2a6d233c30aed46befce320bd3a602">index</link></para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_structalgomd_1a38805f85a2c898c8002d4f502fb52dcd">bid</link></para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_structalgomd_1abf8063317e8b55b86564fbbd052a1de6">ask</link></para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_structalgomd_1abd1d6e95e3f8a1e53522d25a6e785c71">bidsize</link></para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_structalgomd_1a62ef696bdf1223c997daae6622b16f74">asksize</link></para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_structalgomd_1abd2ff087d3f69b64e4f192fbd67a5045">ibid</link></para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_structalgomd_1a1d6d31f22db5a76a1c994d70a7327aa8">iask</link></para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_structalgomd_1aa9c6093c59d2fdc5211798cc4f101ee8">ibidsize</link></para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_structalgomd_1a40a4a501027e65fba109a2712d6a05b2">iasksize</link></para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_structalgomd_1acc73973681cc1bd1fc8f43f9f253db17">high</link></para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_structalgomd_1aea7baa973889794185a3108bb42b6f4f">low</link></para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_structalgomd_1a82d9a56c05b093e5881e4e11502a8c17">volume</link></para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_structalgomd_1a5ef4c5b327a7bdbbabcf1e23fdb3104b">last</link></para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_structalgomd_1adbe5e035cfff95be2788af832adc9111">lastsize</link></para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_structalgomd_1aa0c4a980a6b8e736701cc17f8de4c871">secid</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_structalgomd_1a263dcf25bd60c8e20d6c2e2a52382327">hasImpliedEnabled</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_structalgomd_1a09b219952b57c992dcdbecf7b3cea229">isBidImplied</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_structalgomd_1a2b2d3e629ebd944e084ce39c7039f696">isAskImplied</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_structalgomd_1a138beb978be976392dd4c6327107b534">isVolume</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Structure representing algorithm market data. </para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structalgomd_1abf8063317e8b55b86564fbbd052a1de6"/><section>
+    <title>ask</title>
+<indexterm><primary>ask</primary><secondary>algomd</secondary></indexterm>
+<indexterm><primary>algomd</primary><secondary>ask</secondary></indexterm>
+<para><computeroutput>int32_t algomd::ask</computeroutput></para>
+<para>The ask price. </para>
+<para>
+Referenced by <link linkend="_l00106">KTN::ALGO::PRICING::ImpliedPricer::CalculateSide()</link>, <link linkend="_l00048">KTN::ALGO::PRICING::SpreadPricer::CalculateSide2()</link>, <link linkend="_l00212">KTN::ALGO::PRICING::SpreadPricer::CalculateSide3()</link>, <link linkend="_l00369">KTN::ALGO::PRICING::SpreadPricer::CalculateSimple()</link>, <link linkend="_l00629">KTN::StackerTimer::onCalculate()</link>, <link linkend="_l00724">KTN::Twap::onCalculate()</link>, <link linkend="_l00361">KTN::AlgoBaseV3::onMktDataBidAsk()</link>, <link linkend="_l00372">KTN::AlgoBaseV3::onMktDataTrade()</link>, <link linkend="_l00379">KTN::PLWatcher::onPL()</link>, and <link linkend="_l00826">KTN::CME::CmeAlgo::PrintLatencies()</link>.</para>
+</section>
+<anchor xml:id="_structalgomd_1a62ef696bdf1223c997daae6622b16f74"/><section>
+    <title>asksize</title>
+<indexterm><primary>asksize</primary><secondary>algomd</secondary></indexterm>
+<indexterm><primary>algomd</primary><secondary>asksize</secondary></indexterm>
+<para><computeroutput>int32_t algomd::asksize</computeroutput></para>
+<para>The ask size. </para>
+<para>
+Referenced by <link linkend="_l00724">KTN::Twap::onCalculate()</link>, and <link linkend="_l00826">KTN::CME::CmeAlgo::PrintLatencies()</link>.</para>
+</section>
+<anchor xml:id="_structalgomd_1a38805f85a2c898c8002d4f502fb52dcd"/><section>
+    <title>bid</title>
+<indexterm><primary>bid</primary><secondary>algomd</secondary></indexterm>
+<indexterm><primary>algomd</primary><secondary>bid</secondary></indexterm>
+<para><computeroutput>int32_t algomd::bid</computeroutput></para>
+<para>The bid price. </para>
+<para>
+Referenced by <link linkend="_l00106">KTN::ALGO::PRICING::ImpliedPricer::CalculateSide()</link>, <link linkend="_l00048">KTN::ALGO::PRICING::SpreadPricer::CalculateSide2()</link>, <link linkend="_l00212">KTN::ALGO::PRICING::SpreadPricer::CalculateSide3()</link>, <link linkend="_l00369">KTN::ALGO::PRICING::SpreadPricer::CalculateSimple()</link>, <link linkend="_l00629">KTN::StackerTimer::onCalculate()</link>, <link linkend="_l00724">KTN::Twap::onCalculate()</link>, <link linkend="_l00361">KTN::AlgoBaseV3::onMktDataBidAsk()</link>, <link linkend="_l00372">KTN::AlgoBaseV3::onMktDataTrade()</link>, <link linkend="_l00379">KTN::PLWatcher::onPL()</link>, and <link linkend="_l00826">KTN::CME::CmeAlgo::PrintLatencies()</link>.</para>
+</section>
+<anchor xml:id="_structalgomd_1abd1d6e95e3f8a1e53522d25a6e785c71"/><section>
+    <title>bidsize</title>
+<indexterm><primary>bidsize</primary><secondary>algomd</secondary></indexterm>
+<indexterm><primary>algomd</primary><secondary>bidsize</secondary></indexterm>
+<para><computeroutput>int32_t algomd::bidsize</computeroutput></para>
+<para>The bid size. </para>
+<para>
+Referenced by <link linkend="_l00724">KTN::Twap::onCalculate()</link>, and <link linkend="_l00826">KTN::CME::CmeAlgo::PrintLatencies()</link>.</para>
+</section>
+<anchor xml:id="_structalgomd_1a263dcf25bd60c8e20d6c2e2a52382327"/><section>
+    <title>hasImpliedEnabled</title>
+<indexterm><primary>hasImpliedEnabled</primary><secondary>algomd</secondary></indexterm>
+<indexterm><primary>algomd</primary><secondary>hasImpliedEnabled</secondary></indexterm>
+<para><computeroutput>bool algomd::hasImpliedEnabled</computeroutput></para>
+<para>Flag indicating if implied is enabled. </para>
+<para>
+Referenced by <link linkend="_l00647">KtnCmeMbo::AddSymbol()</link>, and <link linkend="_l00671">KtnCmeMdpV4::AddSymbol()</link>.</para>
+</section>
+<anchor xml:id="_structalgomd_1acc73973681cc1bd1fc8f43f9f253db17"/><section>
+    <title>high</title>
+<indexterm><primary>high</primary><secondary>algomd</secondary></indexterm>
+<indexterm><primary>algomd</primary><secondary>high</secondary></indexterm>
+<para><computeroutput>int32_t algomd::high</computeroutput></para>
+<para>The high price. </para>
+</section>
+<anchor xml:id="_structalgomd_1a1d6d31f22db5a76a1c994d70a7327aa8"/><section>
+    <title>iask</title>
+<indexterm><primary>iask</primary><secondary>algomd</secondary></indexterm>
+<indexterm><primary>algomd</primary><secondary>iask</secondary></indexterm>
+<para><computeroutput>int32_t algomd::iask</computeroutput></para>
+<para>The implied ask price. </para>
+</section>
+<anchor xml:id="_structalgomd_1a40a4a501027e65fba109a2712d6a05b2"/><section>
+    <title>iasksize</title>
+<indexterm><primary>iasksize</primary><secondary>algomd</secondary></indexterm>
+<indexterm><primary>algomd</primary><secondary>iasksize</secondary></indexterm>
+<para><computeroutput>int32_t algomd::iasksize</computeroutput></para>
+<para>The implied ask size. </para>
+</section>
+<anchor xml:id="_structalgomd_1abd2ff087d3f69b64e4f192fbd67a5045"/><section>
+    <title>ibid</title>
+<indexterm><primary>ibid</primary><secondary>algomd</secondary></indexterm>
+<indexterm><primary>algomd</primary><secondary>ibid</secondary></indexterm>
+<para><computeroutput>int32_t algomd::ibid</computeroutput></para>
+<para>The implied bid price. </para>
+</section>
+<anchor xml:id="_structalgomd_1aa9c6093c59d2fdc5211798cc4f101ee8"/><section>
+    <title>ibidsize</title>
+<indexterm><primary>ibidsize</primary><secondary>algomd</secondary></indexterm>
+<indexterm><primary>algomd</primary><secondary>ibidsize</secondary></indexterm>
+<para><computeroutput>int32_t algomd::ibidsize</computeroutput></para>
+<para>The implied bid size. </para>
+</section>
+<anchor xml:id="_structalgomd_1a1e2a6d233c30aed46befce320bd3a602"/><section>
+    <title>index</title>
+<indexterm><primary>index</primary><secondary>algomd</secondary></indexterm>
+<indexterm><primary>algomd</primary><secondary>index</secondary></indexterm>
+<para><computeroutput>uint16_t algomd::index</computeroutput></para>
+<para>The index. </para>
+<para>
+Referenced by <link linkend="_l00647">KtnCmeMbo::AddSymbol()</link>, <link linkend="_l00671">KtnCmeMdpV4::AddSymbol()</link>, <link linkend="_l00361">KTN::AlgoBaseV3::onMktDataBidAsk()</link>, and <link linkend="_l00372">KTN::AlgoBaseV3::onMktDataTrade()</link>.</para>
+</section>
+<anchor xml:id="_structalgomd_1a2b2d3e629ebd944e084ce39c7039f696"/><section>
+    <title>isAskImplied</title>
+<indexterm><primary>isAskImplied</primary><secondary>algomd</secondary></indexterm>
+<indexterm><primary>algomd</primary><secondary>isAskImplied</secondary></indexterm>
+<para><computeroutput>bool algomd::isAskImplied</computeroutput></para>
+<para>Flag indicating if the ask is implied. </para>
+</section>
+<anchor xml:id="_structalgomd_1a09b219952b57c992dcdbecf7b3cea229"/><section>
+    <title>isBidImplied</title>
+<indexterm><primary>isBidImplied</primary><secondary>algomd</secondary></indexterm>
+<indexterm><primary>algomd</primary><secondary>isBidImplied</secondary></indexterm>
+<para><computeroutput>bool algomd::isBidImplied</computeroutput></para>
+<para>Flag indicating if the bid is implied. </para>
+</section>
+<anchor xml:id="_structalgomd_1a138beb978be976392dd4c6327107b534"/><section>
+    <title>isVolume</title>
+<indexterm><primary>isVolume</primary><secondary>algomd</secondary></indexterm>
+<indexterm><primary>algomd</primary><secondary>isVolume</secondary></indexterm>
+<para><computeroutput>bool algomd::isVolume</computeroutput></para>
+<para>Flag indicating if it is volume. </para>
+</section>
+<anchor xml:id="_structalgomd_1a5ef4c5b327a7bdbbabcf1e23fdb3104b"/><section>
+    <title>last</title>
+<indexterm><primary>last</primary><secondary>algomd</secondary></indexterm>
+<indexterm><primary>algomd</primary><secondary>last</secondary></indexterm>
+<para><computeroutput>int32_t algomd::last</computeroutput></para>
+<para>The last price. </para>
+<para>
+Referenced by <link linkend="_l00372">KTN::AlgoBaseV3::onMktDataTrade()</link>, and <link linkend="_l00826">KTN::CME::CmeAlgo::PrintLatencies()</link>.</para>
+</section>
+<anchor xml:id="_structalgomd_1a853f9f53357aba49a591a28ac06ec8c0"/><section>
+    <title>lastagressor</title>
+<indexterm><primary>lastagressor</primary><secondary>algomd</secondary></indexterm>
+<indexterm><primary>algomd</primary><secondary>lastagressor</secondary></indexterm>
+<para><computeroutput>uint8_t algomd::lastagressor</computeroutput></para>
+<para>The last aggressor. </para>
+<para>
+Referenced by <link linkend="_l00372">KTN::AlgoBaseV3::onMktDataTrade()</link>, and <link linkend="_l00826">KTN::CME::CmeAlgo::PrintLatencies()</link>.</para>
+</section>
+<anchor xml:id="_structalgomd_1adbe5e035cfff95be2788af832adc9111"/><section>
+    <title>lastsize</title>
+<indexterm><primary>lastsize</primary><secondary>algomd</secondary></indexterm>
+<indexterm><primary>algomd</primary><secondary>lastsize</secondary></indexterm>
+<para><computeroutput>int32_t algomd::lastsize</computeroutput></para>
+<para>The last size. </para>
+<para>
+Referenced by <link linkend="_l00372">KTN::AlgoBaseV3::onMktDataTrade()</link>, and <link linkend="_l00826">KTN::CME::CmeAlgo::PrintLatencies()</link>.</para>
+</section>
+<anchor xml:id="_structalgomd_1aea7baa973889794185a3108bb42b6f4f"/><section>
+    <title>low</title>
+<indexterm><primary>low</primary><secondary>algomd</secondary></indexterm>
+<indexterm><primary>algomd</primary><secondary>low</secondary></indexterm>
+<para><computeroutput>int32_t algomd::low</computeroutput></para>
+<para>The low price. </para>
+</section>
+<anchor xml:id="_structalgomd_1aa0c4a980a6b8e736701cc17f8de4c871"/><section>
+    <title>secid</title>
+<indexterm><primary>secid</primary><secondary>algomd</secondary></indexterm>
+<indexterm><primary>algomd</primary><secondary>secid</secondary></indexterm>
+<para><computeroutput>int32_t algomd::secid</computeroutput></para>
+<para>The security ID. </para>
+<para>
+Referenced by <link linkend="_l00647">KtnCmeMbo::AddSymbol()</link>, <link linkend="_l00671">KtnCmeMdpV4::AddSymbol()</link>, and <link linkend="_l00826">KTN::CME::CmeAlgo::PrintLatencies()</link>.</para>
+</section>
+<anchor xml:id="_structalgomd_1a82d9a56c05b093e5881e4e11502a8c17"/><section>
+    <title>volume</title>
+<indexterm><primary>volume</primary><secondary>algomd</secondary></indexterm>
+<indexterm><primary>algomd</primary><secondary>volume</secondary></indexterm>
+<para><computeroutput>int32_t algomd::volume</computeroutput></para>
+<para>The volume. </para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+AlgoSupport/algo_structs.hpp</section>
+</section>

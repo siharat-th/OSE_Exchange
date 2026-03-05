@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_menu_callback" xml:lang="en-US">
+<title>MenuCallback Class Reference</title>
+<indexterm><primary>MenuCallback</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_menu_callback">MenuCallback</link> class is an abstract base class that defines the interface for menu callbacks. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;MenuCallback.h&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for MenuCallback:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_menu_callback.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_menu_callback_1a7499f93b958439d57e7992315fd1b64a">MenuCallback</link> ()</para>
+
+<para>Constructs a <link linkend="_class_menu_callback">MenuCallback</link> object. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_menu_callback_1ac71ee2700dd7191eab65b00344d18865">~MenuCallback</link> ()</para>
+
+<para>Destroys the <link linkend="_class_menu_callback">MenuCallback</link> object. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_menu_callback_1a987f7022ef9680ecff369ed1f77b62ea">onMenuChoice</link> (int iKey)=0</para>
+
+<para>This method is called when a menu choice is made. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_menu_callback">MenuCallback</link> class is an abstract base class that defines the interface for menu callbacks. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_menu_callback_1a7499f93b958439d57e7992315fd1b64a"/><section>
+    <title>MenuCallback()</title>
+<indexterm><primary>MenuCallback</primary><secondary>MenuCallback</secondary></indexterm>
+<indexterm><primary>MenuCallback</primary><secondary>MenuCallback</secondary></indexterm>
+<para><computeroutput>MenuCallback::MenuCallback ( )</computeroutput></para><para>
+
+<para>Constructs a <link linkend="_class_menu_callback">MenuCallback</link> object. </para>
+</para>
+</section>
+<anchor xml:id="_class_menu_callback_1ac71ee2700dd7191eab65b00344d18865"/><section>
+    <title>~MenuCallback()</title>
+<indexterm><primary>~MenuCallback</primary><secondary>MenuCallback</secondary></indexterm>
+<indexterm><primary>MenuCallback</primary><secondary>~MenuCallback</secondary></indexterm>
+<para><computeroutput>MenuCallback::~MenuCallback ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Destroys the <link linkend="_class_menu_callback">MenuCallback</link> object. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_menu_callback_1a987f7022ef9680ecff369ed1f77b62ea"/><section>
+    <title>onMenuChoice()</title>
+<indexterm><primary>onMenuChoice</primary><secondary>MenuCallback</secondary></indexterm>
+<indexterm><primary>MenuCallback</primary><secondary>onMenuChoice</secondary></indexterm>
+<para><computeroutput>virtual void MenuCallback::onMenuChoice (int iKey)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>This method is called when a menu choice is made. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>iKey</entry><entry>
+<para>The key representing the selected menu choice. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Referenced by <link linkend="_l00031">StandardMenu::Run()</link>, and <link linkend="_l00031">ZmqMenu::Run()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Menu/MenuCallback.hMenu/MenuCallback.cpp</section>
+</section>

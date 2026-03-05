@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_algo_hdg_encoder" xml:lang="en-US">
+<title>AlgoHdgEncoder Class Reference</title>
+<indexterm><primary>AlgoHdgEncoder</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_algo_hdg_encoder_1_1_decoded_data">DecodedData</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static uint64_t <link linkend="_class_algo_hdg_encoder_1a3eb420be553d6d3b4d19c9bb8e128da0">encodeData</link> (uint8_t callbackid, int32_t secid, int16_t differential, uint8_t multiplier, uint32_t sequencing)</para>
+</listitem>
+            <listitem><para>static <link linkend="_struct_algo_hdg_encoder_1_1_decoded_data">DecodedData</link> <link linkend="_class_algo_hdg_encoder_1a290d5184ac7fd9532fe576c0ad78d454">decodeData</link> (uint64_t encodedValue)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_algo_hdg_encoder_1a290d5184ac7fd9532fe576c0ad78d454"/><section>
+    <title>decodeData()</title>
+<indexterm><primary>decodeData</primary><secondary>AlgoHdgEncoder</secondary></indexterm>
+<indexterm><primary>AlgoHdgEncoder</primary><secondary>decodeData</secondary></indexterm>
+<para><computeroutput>static <link linkend="_struct_algo_hdg_encoder_1_1_decoded_data">DecodedData</link> AlgoHdgEncoder::decodeData (uint64_t encodedValue)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para>
+<para>Decodes the given 64-bit value into its individual data components.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>encodedValue</entry><entry>
+<para>The encoded 64-bit value. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The decoded data structure. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_algo_hdg_encoder_1a3eb420be553d6d3b4d19c9bb8e128da0"/><section>
+    <title>encodeData()</title>
+<indexterm><primary>encodeData</primary><secondary>AlgoHdgEncoder</secondary></indexterm>
+<indexterm><primary>AlgoHdgEncoder</primary><secondary>encodeData</secondary></indexterm>
+<para><computeroutput>static uint64_t AlgoHdgEncoder::encodeData (uint8_t callbackid, int32_t secid, int16_t differential, uint8_t multiplier, uint32_t sequencing)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para>
+<para>Encodes the given data into a 64-bit value. This is a super important concept- we encode some of our callback and hedge data into a 64-bit value and pass it as part of the order to the exchange. This is a way to pass data to the exchange, have the exchange persist it, and then have it sent back to us in the execution report. We can encode various data into this 64-bit value and then decode it when we get it back in the execution report. We like this because we use a 64-bit integer rather than a string, which is orders of magnitude slower to decode/decipher and make quick decisions on. So, in CME, we use the OrderRequestId field to pass this data back and forth, which is a 64-bit integer that we assign and it &quot;lives&quot; with the order throughout its order cycle, enabling us to efficiently pass data back and forth.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>callbackid</entry><entry>
+<para>The callback ID (8 bits). </para>
+</entry>
+                            </row>
+                            <row>
+<entry>secid</entry><entry>
+<para>The security ID (12 bits). </para>
+</entry>
+                            </row>
+                            <row>
+<entry>differential</entry><entry>
+<para>The differential value (16 bits). </para>
+</entry>
+                            </row>
+                            <row>
+<entry>multiplier</entry><entry>
+<para>The multiplier value (8 bits). </para>
+</entry>
+                            </row>
+                            <row>
+<entry>sequencing</entry><entry>
+<para>The sequencing value (20 bits). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The encoded 64-bit value. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00051">QuoterV3::HedgeReqId()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+AlgoSupport/AlgoHdgEncoder.hpp</section>
+</section>

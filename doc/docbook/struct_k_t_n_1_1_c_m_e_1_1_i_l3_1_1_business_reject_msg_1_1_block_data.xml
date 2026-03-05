@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_business_reject_msg_1_1_block_data" xml:lang="en-US">
+<title>KTN::CME::IL3::BusinessRejectMsg::BlockData Struct Reference</title>
+<indexterm><primary>KTN::CME::IL3::BusinessRejectMsg::BlockData</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>uInt32 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_business_reject_msg_1_1_block_data_1a4824c2688c963f39b961d1856cb9f8a9">SeqNum</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_business_reject_msg_1_1_block_data_1a7b1f34a8cef4f260c374522055c2b6b0">UUID</link></para>
+</listitem>
+            <listitem><para>String256 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_business_reject_msg_1_1_block_data_1a9baf4d452a95e0b839bb671555b895df">Text</link></para>
+</listitem>
+            <listitem><para>String20 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_business_reject_msg_1_1_block_data_1adec8a712c0e84ad53eb0b2aa7cac9302">SenderID</link></para>
+</listitem>
+            <listitem><para>uInt64NULL <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_business_reject_msg_1_1_block_data_1a1bb2bc396281f3592cb596f94b4508e0">PartyDetailsListReqID</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_business_reject_msg_1_1_block_data_1a4e3dc69d67e00c855c53aa0114fca0a0">SendingTimeEpoch</link></para>
+</listitem>
+            <listitem><para>uInt64NULL <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_business_reject_msg_1_1_block_data_1a6134a86a839804fe12b58cf43377087e">BusinessRejectRefID</link></para>
+</listitem>
+            <listitem><para>String5 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_business_reject_msg_1_1_block_data_1a9428ba96de80797eace949c832f53d5e">Location</link></para>
+</listitem>
+            <listitem><para>uInt32NULL <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_business_reject_msg_1_1_block_data_1a5856f052461cbed2f9c02b236d0289b6">RefSeqNum</link></para>
+</listitem>
+            <listitem><para>uInt16NULL <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_business_reject_msg_1_1_block_data_1ab5a42c8bb15d80b864db24c0d56b4a23">RefTagID</link></para>
+</listitem>
+            <listitem><para>uInt16 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_business_reject_msg_1_1_block_data_1a09a881be686b756eb34ae6edcb06fc83">BusinessRejectReason</link></para>
+</listitem>
+            <listitem><para>String2 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_business_reject_msg_1_1_block_data_1a0e4af3b8b525af7df093fa0c810188a5">RefMsgType</link></para>
+</listitem>
+            <listitem><para>EnumBooleanFlag <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_business_reject_msg_1_1_block_data_1a119b2487dfef4d997b40dfdd0b65526b">PossRetransFlag</link></para>
+</listitem>
+            <listitem><para>EnumManualOrdInd <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_business_reject_msg_1_1_block_data_1a18edfca01aeeeea4b660c9952f8b0135">ManualOrderIndicator</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_business_reject_msg_1_1_block_data_1aedd1086730618354046c9a452de4c46a">SplitMsg</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_business_reject_msg_1_1_block_data_1a09a881be686b756eb34ae6edcb06fc83"/><section>
+    <title>BusinessRejectReason</title>
+<indexterm><primary>BusinessRejectReason</primary><secondary>KTN::CME::IL3::BusinessRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::BusinessRejectMsg::BlockData</primary><secondary>BusinessRejectReason</secondary></indexterm>
+<para><computeroutput>uInt16 KTN::CME::IL3::BusinessRejectMsg::BlockData::BusinessRejectReason</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_business_reject_msg_1_1_block_data_1a6134a86a839804fe12b58cf43377087e"/><section>
+    <title>BusinessRejectRefID</title>
+<indexterm><primary>BusinessRejectRefID</primary><secondary>KTN::CME::IL3::BusinessRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::BusinessRejectMsg::BlockData</primary><secondary>BusinessRejectRefID</secondary></indexterm>
+<para><computeroutput>uInt64NULL KTN::CME::IL3::BusinessRejectMsg::BlockData::BusinessRejectRefID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_business_reject_msg_1_1_block_data_1a9428ba96de80797eace949c832f53d5e"/><section>
+    <title>Location</title>
+<indexterm><primary>Location</primary><secondary>KTN::CME::IL3::BusinessRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::BusinessRejectMsg::BlockData</primary><secondary>Location</secondary></indexterm>
+<para><computeroutput>String5 KTN::CME::IL3::BusinessRejectMsg::BlockData::Location</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_business_reject_msg_1_1_block_data_1a18edfca01aeeeea4b660c9952f8b0135"/><section>
+    <title>ManualOrderIndicator</title>
+<indexterm><primary>ManualOrderIndicator</primary><secondary>KTN::CME::IL3::BusinessRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::BusinessRejectMsg::BlockData</primary><secondary>ManualOrderIndicator</secondary></indexterm>
+<para><computeroutput>EnumManualOrdInd KTN::CME::IL3::BusinessRejectMsg::BlockData::ManualOrderIndicator</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_business_reject_msg_1_1_block_data_1a1bb2bc396281f3592cb596f94b4508e0"/><section>
+    <title>PartyDetailsListReqID</title>
+<indexterm><primary>PartyDetailsListReqID</primary><secondary>KTN::CME::IL3::BusinessRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::BusinessRejectMsg::BlockData</primary><secondary>PartyDetailsListReqID</secondary></indexterm>
+<para><computeroutput>uInt64NULL KTN::CME::IL3::BusinessRejectMsg::BlockData::PartyDetailsListReqID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_business_reject_msg_1_1_block_data_1a119b2487dfef4d997b40dfdd0b65526b"/><section>
+    <title>PossRetransFlag</title>
+<indexterm><primary>PossRetransFlag</primary><secondary>KTN::CME::IL3::BusinessRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::BusinessRejectMsg::BlockData</primary><secondary>PossRetransFlag</secondary></indexterm>
+<para><computeroutput>EnumBooleanFlag KTN::CME::IL3::BusinessRejectMsg::BlockData::PossRetransFlag</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_business_reject_msg_1_1_block_data_1a0e4af3b8b525af7df093fa0c810188a5"/><section>
+    <title>RefMsgType</title>
+<indexterm><primary>RefMsgType</primary><secondary>KTN::CME::IL3::BusinessRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::BusinessRejectMsg::BlockData</primary><secondary>RefMsgType</secondary></indexterm>
+<para><computeroutput>String2 KTN::CME::IL3::BusinessRejectMsg::BlockData::RefMsgType</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_business_reject_msg_1_1_block_data_1a5856f052461cbed2f9c02b236d0289b6"/><section>
+    <title>RefSeqNum</title>
+<indexterm><primary>RefSeqNum</primary><secondary>KTN::CME::IL3::BusinessRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::BusinessRejectMsg::BlockData</primary><secondary>RefSeqNum</secondary></indexterm>
+<para><computeroutput>uInt32NULL KTN::CME::IL3::BusinessRejectMsg::BlockData::RefSeqNum</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_business_reject_msg_1_1_block_data_1ab5a42c8bb15d80b864db24c0d56b4a23"/><section>
+    <title>RefTagID</title>
+<indexterm><primary>RefTagID</primary><secondary>KTN::CME::IL3::BusinessRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::BusinessRejectMsg::BlockData</primary><secondary>RefTagID</secondary></indexterm>
+<para><computeroutput>uInt16NULL KTN::CME::IL3::BusinessRejectMsg::BlockData::RefTagID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_business_reject_msg_1_1_block_data_1adec8a712c0e84ad53eb0b2aa7cac9302"/><section>
+    <title>SenderID</title>
+<indexterm><primary>SenderID</primary><secondary>KTN::CME::IL3::BusinessRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::BusinessRejectMsg::BlockData</primary><secondary>SenderID</secondary></indexterm>
+<para><computeroutput>String20 KTN::CME::IL3::BusinessRejectMsg::BlockData::SenderID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_business_reject_msg_1_1_block_data_1a4e3dc69d67e00c855c53aa0114fca0a0"/><section>
+    <title>SendingTimeEpoch</title>
+<indexterm><primary>SendingTimeEpoch</primary><secondary>KTN::CME::IL3::BusinessRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::BusinessRejectMsg::BlockData</primary><secondary>SendingTimeEpoch</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::BusinessRejectMsg::BlockData::SendingTimeEpoch</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_business_reject_msg_1_1_block_data_1a4824c2688c963f39b961d1856cb9f8a9"/><section>
+    <title>SeqNum</title>
+<indexterm><primary>SeqNum</primary><secondary>KTN::CME::IL3::BusinessRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::BusinessRejectMsg::BlockData</primary><secondary>SeqNum</secondary></indexterm>
+<para><computeroutput>uInt32 KTN::CME::IL3::BusinessRejectMsg::BlockData::SeqNum</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_business_reject_msg_1_1_block_data_1aedd1086730618354046c9a452de4c46a"/><section>
+    <title>SplitMsg</title>
+<indexterm><primary>SplitMsg</primary><secondary>KTN::CME::IL3::BusinessRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::BusinessRejectMsg::BlockData</primary><secondary>SplitMsg</secondary></indexterm>
+<para><computeroutput>uint8_t KTN::CME::IL3::BusinessRejectMsg::BlockData::SplitMsg</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_business_reject_msg_1_1_block_data_1a9baf4d452a95e0b839bb671555b895df"/><section>
+    <title>Text</title>
+<indexterm><primary>Text</primary><secondary>KTN::CME::IL3::BusinessRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::BusinessRejectMsg::BlockData</primary><secondary>Text</secondary></indexterm>
+<para><computeroutput>String256 KTN::CME::IL3::BusinessRejectMsg::BlockData::Text</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_business_reject_msg_1_1_block_data_1a7b1f34a8cef4f260c374522055c2b6b0"/><section>
+    <title>UUID</title>
+<indexterm><primary>UUID</primary><secondary>KTN::CME::IL3::BusinessRejectMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::BusinessRejectMsg::BlockData</primary><secondary>UUID</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::BusinessRejectMsg::BlockData::UUID</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+exchsupport/cme/il3/IL3Messages2.hpp</section>
+</section>

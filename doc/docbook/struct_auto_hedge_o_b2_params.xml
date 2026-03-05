@@ -1,0 +1,212 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_auto_hedge_o_b2_params" xml:lang="en-US">
+<title>AutoHedgeOB2Params Struct Reference</title>
+<indexterm><primary>AutoHedgeOB2Params</primary></indexterm>
+<para>
+
+<para>Struct representing the parameters for AutoHedgeOB2 algorithm. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;AutoHedgeOB2Params.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_struct_auto_hedge_o_b2_params">AutoHedgeOB2Params</link> <link linkend="_struct_auto_hedge_o_b2_params_1a62637c18d2c66d589ff07e45469b9374">parse</link> (const std::string &amp;json_str)</para>
+
+<para>Parses the JSON string and returns an instance of <link linkend="_struct_auto_hedge_o_b2_params">AutoHedgeOB2Params</link>. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_struct_auto_hedge_o_b2_params_1abdaca75ff0a86c230365af868fff1c30">ValidJson</link></para>
+</listitem>
+            <listitem><para><link linkend="_structalgometa">algometa</link> <link linkend="_struct_auto_hedge_o_b2_params_1ad53a24f7f95552588e165411e36aa078">meta</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_auto_hedge_o_b2_params_1aaac64d01a6e7b369a700d782e56054fb">subid</link></para>
+</listitem>
+            <listitem><para>std::unordered_map&lt; int, <link linkend="_structinstrument">instrument</link> &gt; <link linkend="_struct_auto_hedge_o_b2_params_1a97acdf373d065b77fb955751ad692542">LegSecIdMap</link></para>
+</listitem>
+            <listitem><para><link linkend="_structinstrument">instrument</link> <link linkend="_struct_auto_hedge_o_b2_params_1a7cb6703583730dd08faf2d15bb20d655">Legs</link> [4]</para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_auto_hedge_o_b2_params_1a3cc96f2ebfa1399a42bbdb47832dc861">LegCount</link></para>
+</listitem>
+            <listitem><para>std::unordered_map&lt; string, <link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> &gt; <link linkend="_struct_auto_hedge_o_b2_params_1aee4de84cf1024e6e5d247e01d521db16">Ords</link></para>
+</listitem>
+            <listitem><para><link linkend="_structinstrument">instrument</link> <link linkend="_struct_auto_hedge_o_b2_params_1a4aec6b21c9f71170a5c8211a4b4c57b0">HedgeLeg</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_auto_hedge_o_b2_params_1af0b9ab8a3968c64c87d882f9fd3830d3">HdgSymbol</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_auto_hedge_o_b2_params_1a0843ddb3dd9cbfccdffa29db0bc196ee">HdgRatio</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_auto_hedge_o_b2_params_1a91f542b0807f1259ece8ff31ea4fc15e">HdgSecid</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_auto_hedge_o_b2_params_1a4f525ecf6a2db1b0c1cc060d43404a9a">HdgIndex</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_auto_hedge_o_b2_params_1a69242ad37eb9f3d9b921aef418466d96">TakeTicks</link></para>
+</listitem>
+            <listitem><para>KOrderSide::Enum <link linkend="_struct_auto_hedge_o_b2_params_1a888cddb1356e9ac82ec43aaf499876bf">HdgSide</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_auto_hedge_o_b2_params_1a491464750ee4ac2cc1163361ddfc673e">HdgSent</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_auto_hedge_o_b2_params_1a7a4c63182e03f7279df6625fbee89a28">HdgRemainder</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_auto_hedge_o_b2_params_1a1a07943a6d7df0c70247ecc9d37b32d1">ProfitTaking</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_auto_hedge_o_b2_params_1adb580e5eb1c7871c1403f26a0129f8c4">StopLoss</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_auto_hedge_o_b2_params_1a0efe1e7a7720ceb221be15cde06445c3">MinutesToLive</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Struct representing the parameters for AutoHedgeOB2 algorithm. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_auto_hedge_o_b2_params_1a62637c18d2c66d589ff07e45469b9374"/><section>
+    <title>parse()</title>
+<indexterm><primary>parse</primary><secondary>AutoHedgeOB2Params</secondary></indexterm>
+<indexterm><primary>AutoHedgeOB2Params</primary><secondary>parse</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_auto_hedge_o_b2_params">AutoHedgeOB2Params</link> AutoHedgeOB2Params::parse (const std::string &amp; json_str)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Parses the JSON string and returns an instance of <link linkend="_struct_auto_hedge_o_b2_params">AutoHedgeOB2Params</link>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>json_str</entry><entry>
+<para>The JSON string to parse. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>An instance of <link linkend="_struct_auto_hedge_o_b2_params">AutoHedgeOB2Params</link>. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00260">algometa::Enabled</link>, <link linkend="_l00049">UserInfo::groupname</link>, <link linkend="_l00048">UserInfo::org</link>, <link linkend="_l00262">algometa::Source</link>, <link linkend="_l00256">algometa::Strategy</link>, <link linkend="_l00264">algometa::Tag</link>, <link linkend="_l00258">algometa::TemplateName</link>, <link linkend="_l00261">algometa::UniqueId</link>, <link linkend="_l00047">UserInfo::user</link>, and <link linkend="_l00279">algometa::userinfo</link>.</para>
+<para>
+Referenced by <link linkend="_l00030">KTN::AutoHedgeOB::onLaunch()</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_auto_hedge_o_b2_params_1a4f525ecf6a2db1b0c1cc060d43404a9a"/><section>
+    <title>HdgIndex</title>
+<indexterm><primary>HdgIndex</primary><secondary>AutoHedgeOB2Params</secondary></indexterm>
+<indexterm><primary>AutoHedgeOB2Params</primary><secondary>HdgIndex</secondary></indexterm>
+<para><computeroutput>int AutoHedgeOB2Params::HdgIndex</computeroutput></para></section>
+<anchor xml:id="_struct_auto_hedge_o_b2_params_1a0843ddb3dd9cbfccdffa29db0bc196ee"/><section>
+    <title>HdgRatio</title>
+<indexterm><primary>HdgRatio</primary><secondary>AutoHedgeOB2Params</secondary></indexterm>
+<indexterm><primary>AutoHedgeOB2Params</primary><secondary>HdgRatio</secondary></indexterm>
+<para><computeroutput>double AutoHedgeOB2Params::HdgRatio</computeroutput></para></section>
+<anchor xml:id="_struct_auto_hedge_o_b2_params_1a7a4c63182e03f7279df6625fbee89a28"/><section>
+    <title>HdgRemainder</title>
+<indexterm><primary>HdgRemainder</primary><secondary>AutoHedgeOB2Params</secondary></indexterm>
+<indexterm><primary>AutoHedgeOB2Params</primary><secondary>HdgRemainder</secondary></indexterm>
+<para><computeroutput>double AutoHedgeOB2Params::HdgRemainder</computeroutput></para></section>
+<anchor xml:id="_struct_auto_hedge_o_b2_params_1a91f542b0807f1259ece8ff31ea4fc15e"/><section>
+    <title>HdgSecid</title>
+<indexterm><primary>HdgSecid</primary><secondary>AutoHedgeOB2Params</secondary></indexterm>
+<indexterm><primary>AutoHedgeOB2Params</primary><secondary>HdgSecid</secondary></indexterm>
+<para><computeroutput>int AutoHedgeOB2Params::HdgSecid</computeroutput></para></section>
+<anchor xml:id="_struct_auto_hedge_o_b2_params_1a491464750ee4ac2cc1163361ddfc673e"/><section>
+    <title>HdgSent</title>
+<indexterm><primary>HdgSent</primary><secondary>AutoHedgeOB2Params</secondary></indexterm>
+<indexterm><primary>AutoHedgeOB2Params</primary><secondary>HdgSent</secondary></indexterm>
+<para><computeroutput>int AutoHedgeOB2Params::HdgSent</computeroutput></para></section>
+<anchor xml:id="_struct_auto_hedge_o_b2_params_1a888cddb1356e9ac82ec43aaf499876bf"/><section>
+    <title>HdgSide</title>
+<indexterm><primary>HdgSide</primary><secondary>AutoHedgeOB2Params</secondary></indexterm>
+<indexterm><primary>AutoHedgeOB2Params</primary><secondary>HdgSide</secondary></indexterm>
+<para><computeroutput>KOrderSide::Enum AutoHedgeOB2Params::HdgSide</computeroutput></para></section>
+<anchor xml:id="_struct_auto_hedge_o_b2_params_1af0b9ab8a3968c64c87d882f9fd3830d3"/><section>
+    <title>HdgSymbol</title>
+<indexterm><primary>HdgSymbol</primary><secondary>AutoHedgeOB2Params</secondary></indexterm>
+<indexterm><primary>AutoHedgeOB2Params</primary><secondary>HdgSymbol</secondary></indexterm>
+<para><computeroutput>string AutoHedgeOB2Params::HdgSymbol</computeroutput></para></section>
+<anchor xml:id="_struct_auto_hedge_o_b2_params_1a4aec6b21c9f71170a5c8211a4b4c57b0"/><section>
+    <title>HedgeLeg</title>
+<indexterm><primary>HedgeLeg</primary><secondary>AutoHedgeOB2Params</secondary></indexterm>
+<indexterm><primary>AutoHedgeOB2Params</primary><secondary>HedgeLeg</secondary></indexterm>
+<para><computeroutput><link linkend="_structinstrument">instrument</link> AutoHedgeOB2Params::HedgeLeg</computeroutput></para></section>
+<anchor xml:id="_struct_auto_hedge_o_b2_params_1a3cc96f2ebfa1399a42bbdb47832dc861"/><section>
+    <title>LegCount</title>
+<indexterm><primary>LegCount</primary><secondary>AutoHedgeOB2Params</secondary></indexterm>
+<indexterm><primary>AutoHedgeOB2Params</primary><secondary>LegCount</secondary></indexterm>
+<para><computeroutput>int AutoHedgeOB2Params::LegCount</computeroutput></para></section>
+<anchor xml:id="_struct_auto_hedge_o_b2_params_1a7cb6703583730dd08faf2d15bb20d655"/><section>
+    <title>Legs</title>
+<indexterm><primary>Legs</primary><secondary>AutoHedgeOB2Params</secondary></indexterm>
+<indexterm><primary>AutoHedgeOB2Params</primary><secondary>Legs</secondary></indexterm>
+<para><computeroutput><link linkend="_structinstrument">instrument</link> AutoHedgeOB2Params::Legs[4]</computeroutput></para></section>
+<anchor xml:id="_struct_auto_hedge_o_b2_params_1a97acdf373d065b77fb955751ad692542"/><section>
+    <title>LegSecIdMap</title>
+<indexterm><primary>LegSecIdMap</primary><secondary>AutoHedgeOB2Params</secondary></indexterm>
+<indexterm><primary>AutoHedgeOB2Params</primary><secondary>LegSecIdMap</secondary></indexterm>
+<para><computeroutput>std::unordered_map&lt;int, <link linkend="_structinstrument">instrument</link>&gt; AutoHedgeOB2Params::LegSecIdMap</computeroutput></para></section>
+<anchor xml:id="_struct_auto_hedge_o_b2_params_1ad53a24f7f95552588e165411e36aa078"/><section>
+    <title>meta</title>
+<indexterm><primary>meta</primary><secondary>AutoHedgeOB2Params</secondary></indexterm>
+<indexterm><primary>AutoHedgeOB2Params</primary><secondary>meta</secondary></indexterm>
+<para><computeroutput><link linkend="_structalgometa">algometa</link> AutoHedgeOB2Params::meta</computeroutput></para></section>
+<anchor xml:id="_struct_auto_hedge_o_b2_params_1a0efe1e7a7720ceb221be15cde06445c3"/><section>
+    <title>MinutesToLive</title>
+<indexterm><primary>MinutesToLive</primary><secondary>AutoHedgeOB2Params</secondary></indexterm>
+<indexterm><primary>AutoHedgeOB2Params</primary><secondary>MinutesToLive</secondary></indexterm>
+<para><computeroutput>int AutoHedgeOB2Params::MinutesToLive</computeroutput></para></section>
+<anchor xml:id="_struct_auto_hedge_o_b2_params_1aee4de84cf1024e6e5d247e01d521db16"/><section>
+    <title>Ords</title>
+<indexterm><primary>Ords</primary><secondary>AutoHedgeOB2Params</secondary></indexterm>
+<indexterm><primary>AutoHedgeOB2Params</primary><secondary>Ords</secondary></indexterm>
+<para><computeroutput>std::unordered_map&lt;string, <link linkend="_struct_k_t_n_1_1_order">KTN::Order</link>&gt; AutoHedgeOB2Params::Ords</computeroutput></para></section>
+<anchor xml:id="_struct_auto_hedge_o_b2_params_1a1a07943a6d7df0c70247ecc9d37b32d1"/><section>
+    <title>ProfitTaking</title>
+<indexterm><primary>ProfitTaking</primary><secondary>AutoHedgeOB2Params</secondary></indexterm>
+<indexterm><primary>AutoHedgeOB2Params</primary><secondary>ProfitTaking</secondary></indexterm>
+<para><computeroutput>int AutoHedgeOB2Params::ProfitTaking</computeroutput></para></section>
+<anchor xml:id="_struct_auto_hedge_o_b2_params_1adb580e5eb1c7871c1403f26a0129f8c4"/><section>
+    <title>StopLoss</title>
+<indexterm><primary>StopLoss</primary><secondary>AutoHedgeOB2Params</secondary></indexterm>
+<indexterm><primary>AutoHedgeOB2Params</primary><secondary>StopLoss</secondary></indexterm>
+<para><computeroutput>int AutoHedgeOB2Params::StopLoss</computeroutput></para></section>
+<anchor xml:id="_struct_auto_hedge_o_b2_params_1aaac64d01a6e7b369a700d782e56054fb"/><section>
+    <title>subid</title>
+<indexterm><primary>subid</primary><secondary>AutoHedgeOB2Params</secondary></indexterm>
+<indexterm><primary>AutoHedgeOB2Params</primary><secondary>subid</secondary></indexterm>
+<para><computeroutput>string AutoHedgeOB2Params::subid</computeroutput></para></section>
+<anchor xml:id="_struct_auto_hedge_o_b2_params_1a69242ad37eb9f3d9b921aef418466d96"/><section>
+    <title>TakeTicks</title>
+<indexterm><primary>TakeTicks</primary><secondary>AutoHedgeOB2Params</secondary></indexterm>
+<indexterm><primary>AutoHedgeOB2Params</primary><secondary>TakeTicks</secondary></indexterm>
+<para><computeroutput>int AutoHedgeOB2Params::TakeTicks</computeroutput></para></section>
+<anchor xml:id="_struct_auto_hedge_o_b2_params_1abdaca75ff0a86c230365af868fff1c30"/><section>
+    <title>ValidJson</title>
+<indexterm><primary>ValidJson</primary><secondary>AutoHedgeOB2Params</secondary></indexterm>
+<indexterm><primary>AutoHedgeOB2Params</primary><secondary>ValidJson</secondary></indexterm>
+<para><computeroutput>bool AutoHedgeOB2Params::ValidJson</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following files:</para>
+AlgoParams/AutoHedgeOB2Params.hppAlgoParams/AutoHedgeOB2Params.cpp</section>
+</section>

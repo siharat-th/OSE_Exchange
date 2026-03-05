@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_string_splitter" xml:lang="en-US">
+<title>StringSplitter Class Reference</title>
+<indexterm><primary>StringSplitter</primary></indexterm>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static std::vector&lt; std::string &gt; <link linkend="_class_string_splitter_1a0bc5aa76f2af6e737f7432c0ae3e5d72">Split</link> (const std::string &amp;src, const std::string &amp;delim)</para>
+</listitem>
+            <listitem><para>static bool <link linkend="_class_string_splitter_1a6c80145dc59ea3e4fea9a6c959cc275b">CheckDelim</link> (std::string szLine, std::string szDelim)</para>
+</listitem>
+            <listitem><para>static std::vector&lt; std::string &gt; <link linkend="_class_string_splitter_1a44f31b676a3c228f56de57c1cf32a5ac">SplitStream</link> (std::string input, char delim)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_string_splitter_1ab247fe25825bf685b0b2f7c1ca94fc55">toUpperCase</link> (std::string &amp;s)</para>
+</listitem>
+            <listitem><para>static std::string <link linkend="_class_string_splitter_1a95eace7ea1718a158b3b821bd06ead4f">join</link> (const std::vector&lt; std::string &gt; &amp;strings, const std::string &amp;delimiter)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_string_splitter_1a6c80145dc59ea3e4fea9a6c959cc275b"/><section>
+    <title>CheckDelim()</title>
+<indexterm><primary>CheckDelim</primary><secondary>StringSplitter</secondary></indexterm>
+<indexterm><primary>StringSplitter</primary><secondary>CheckDelim</secondary></indexterm>
+<para><computeroutput>static bool StringSplitter::CheckDelim (std::string szLine, std::string szDelim)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para>
+<para>Checks if a string contains a specific delimiter.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>szLine</entry><entry>
+<para>The string to check. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>szDelim</entry><entry>
+<para>The delimiter to search for. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the delimiter is found, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_string_splitter_1a95eace7ea1718a158b3b821bd06ead4f"/><section>
+    <title>join()</title>
+<indexterm><primary>join</primary><secondary>StringSplitter</secondary></indexterm>
+<indexterm><primary>StringSplitter</primary><secondary>join</secondary></indexterm>
+<para><computeroutput>static std::string StringSplitter::join (const std::vector&lt; std::string &gt; &amp; strings, const std::string &amp; delimiter)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para>
+<para>Joins a vector of strings into a single string using a delimiter.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>strings</entry><entry>
+<para>The vector of strings to join. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>delimiter</entry><entry>
+<para>The delimiter to insert between the strings. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The joined string. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_string_splitter_1a0bc5aa76f2af6e737f7432c0ae3e5d72"/><section>
+    <title>Split()</title>
+<indexterm><primary>Split</primary><secondary>StringSplitter</secondary></indexterm>
+<indexterm><primary>StringSplitter</primary><secondary>Split</secondary></indexterm>
+<para><computeroutput>static std::vector&lt; std::string &gt; StringSplitter::Split (const std::string &amp; src, const std::string &amp; delim)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para>
+<para>Splits a string into multiple tokens based on a delimiter.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>src</entry><entry>
+<para>The source string to split. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>delim</entry><entry>
+<para>The delimiter to split the string by. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A vector of strings containing the tokens. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00019">KTN::CME::CmeAlgo::CmeAlgo()</link>, <link linkend="_l00019">KTN::CME::CmeGT5::CmeGT5()</link>, <link linkend="_l00011">KTN::ExchangeManager::ExchangeManager()</link>, <link linkend="_l00203">Settings::getListCsv()</link>, <link linkend="_l00034">KT01::MSGW::CmeMsgw::Load()</link>, <link linkend="_l00075">KTN::ALGO::OrderLoader::LoadFile()</link>, <link linkend="_l00145">KT01::MSGW::CmeMsgw::LoadProductGatewayFile()</link>, <link linkend="_l00031">StandardMenu::Run()</link>, and <link linkend="_l00031">ZmqMenu::Run()</link>.</para>
+</section>
+<anchor xml:id="_class_string_splitter_1a44f31b676a3c228f56de57c1cf32a5ac"/><section>
+    <title>SplitStream()</title>
+<indexterm><primary>SplitStream</primary><secondary>StringSplitter</secondary></indexterm>
+<indexterm><primary>StringSplitter</primary><secondary>SplitStream</secondary></indexterm>
+<para><computeroutput>static std::vector&lt; std::string &gt; StringSplitter::SplitStream (std::string input, char delim)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para>
+<para>Splits a string into multiple tokens based on a single character delimiter.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>input</entry><entry>
+<para>The input string to split. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>delim</entry><entry>
+<para>The delimiter character to split the string by. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A vector of strings containing the tokens. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_string_splitter_1ab247fe25825bf685b0b2f7c1ca94fc55"/><section>
+    <title>toUpperCase()</title>
+<indexterm><primary>toUpperCase</primary><secondary>StringSplitter</secondary></indexterm>
+<indexterm><primary>StringSplitter</primary><secondary>toUpperCase</secondary></indexterm>
+<para><computeroutput>static void StringSplitter::toUpperCase (std::string &amp; s)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para>
+<para>Converts a string to uppercase.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>s</entry><entry>
+<para>The string to convert. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Core/StringSplitter.hpp</section>
+</section>

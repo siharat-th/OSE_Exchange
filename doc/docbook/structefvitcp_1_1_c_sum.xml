@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structefvitcp_1_1_c_sum" xml:lang="en-US">
+<title>efvitcp::CSum Struct Reference</title>
+<indexterm><primary>efvitcp::CSum</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_structefvitcp_1_1_c_sum_1a6c6b18a0da16ca7d6fefc5b215f1140c">CSum</link> (uint32_t s=0)</para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_structefvitcp_1_1_c_sum_1ab2b91057cc38473d614f977b9d1f966b">fold</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_structefvitcp_1_1_c_sum_1a4ac1a4b62fe4b104c03253827263fa46">add</link> (uint16_t a)</para>
+</listitem>
+            <listitem><para>void <link linkend="_structefvitcp_1_1_c_sum_1a09161eba4c4a8f7d5199975ed0447692">add</link> (uint32_t a)</para>
+</listitem>
+            <listitem><para>void <link linkend="_structefvitcp_1_1_c_sum_1a56c22223ece3c898abf3b878816519c0">add</link> (<link linkend="_structefvitcp_1_1_c_sum">CSum</link> s)</para>
+</listitem>
+            <listitem><para>template&lt;uint32_t Len&gt; </para><para>void <link linkend="_structefvitcp_1_1_c_sum_1afb669b18edd7c54023196ec63ab16649">add</link> (const void *p)</para>
+</listitem>
+            <listitem><para>void <link linkend="_structefvitcp_1_1_c_sum_1abbfa0a4c9025e672612808390eeca7e3">sub</link> (uint16_t a)</para>
+</listitem>
+            <listitem><para>void <link linkend="_structefvitcp_1_1_c_sum_1a762ffc4a9bc61e0db5d090ff323cd61a">sub</link> (uint32_t a)</para>
+</listitem>
+            <listitem><para>template&lt;bool reset, typename T &gt; </para><para>void <link linkend="_structefvitcp_1_1_c_sum_1ab7937fb941bbfe4b124b7a2c5f306cca">setVar</link> (T &amp;var, T val)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>uint32_t <link linkend="_structefvitcp_1_1_c_sum_1a9568b911bf12875e52beb818eb128001">sum</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_structefvitcp_1_1_c_sum_1a6c6b18a0da16ca7d6fefc5b215f1140c"/><section>
+    <title>CSum()</title>
+<indexterm><primary>CSum</primary><secondary>efvitcp::CSum</secondary></indexterm>
+<indexterm><primary>efvitcp::CSum</primary><secondary>CSum</secondary></indexterm>
+<para><computeroutput>efvitcp::CSum::CSum (uint32_t s = <computeroutput>0</computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_structefvitcp_1_1_c_sum_1afb669b18edd7c54023196ec63ab16649"/><section>
+    <title>add()<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>add</primary><secondary>efvitcp::CSum</secondary></indexterm>
+<indexterm><primary>efvitcp::CSum</primary><secondary>add</secondary></indexterm>
+<computeroutput>template&lt;uint32_t Len&gt; </computeroutput><para><computeroutput>void efvitcp::CSum::add (const void * p)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structefvitcp_1_1_c_sum_1a56c22223ece3c898abf3b878816519c0"/><section>
+    <title>add()<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>add</primary><secondary>efvitcp::CSum</secondary></indexterm>
+<indexterm><primary>efvitcp::CSum</primary><secondary>add</secondary></indexterm>
+<para><computeroutput>void efvitcp::CSum::add (<link linkend="_structefvitcp_1_1_c_sum">CSum</link> s)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structefvitcp_1_1_c_sum_1a4ac1a4b62fe4b104c03253827263fa46"/><section>
+    <title>add()<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>add</primary><secondary>efvitcp::CSum</secondary></indexterm>
+<indexterm><primary>efvitcp::CSum</primary><secondary>add</secondary></indexterm>
+<para><computeroutput>void efvitcp::CSum::add (uint16_t a)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structefvitcp_1_1_c_sum_1a09161eba4c4a8f7d5199975ed0447692"/><section>
+    <title>add()<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>add</primary><secondary>efvitcp::CSum</secondary></indexterm>
+<indexterm><primary>efvitcp::CSum</primary><secondary>add</secondary></indexterm>
+<para><computeroutput>void efvitcp::CSum::add (uint32_t a)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structefvitcp_1_1_c_sum_1ab2b91057cc38473d614f977b9d1f966b"/><section>
+    <title>fold()</title>
+<indexterm><primary>fold</primary><secondary>efvitcp::CSum</secondary></indexterm>
+<indexterm><primary>efvitcp::CSum</primary><secondary>fold</secondary></indexterm>
+<para><computeroutput>uint16_t efvitcp::CSum::fold ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structefvitcp_1_1_c_sum_1ab7937fb941bbfe4b124b7a2c5f306cca"/><section>
+    <title>setVar()</title>
+<indexterm><primary>setVar</primary><secondary>efvitcp::CSum</secondary></indexterm>
+<indexterm><primary>efvitcp::CSum</primary><secondary>setVar</secondary></indexterm>
+<computeroutput>template&lt;bool reset, typename T &gt; </computeroutput><para><computeroutput>void efvitcp::CSum::setVar (T &amp; var, T val)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structefvitcp_1_1_c_sum_1abbfa0a4c9025e672612808390eeca7e3"/><section>
+    <title>sub()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>sub</primary><secondary>efvitcp::CSum</secondary></indexterm>
+<indexterm><primary>efvitcp::CSum</primary><secondary>sub</secondary></indexterm>
+<para><computeroutput>void efvitcp::CSum::sub (uint16_t a)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structefvitcp_1_1_c_sum_1a762ffc4a9bc61e0db5d090ff323cd61a"/><section>
+    <title>sub()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>sub</primary><secondary>efvitcp::CSum</secondary></indexterm>
+<indexterm><primary>efvitcp::CSum</primary><secondary>sub</secondary></indexterm>
+<para><computeroutput>void efvitcp::CSum::sub (uint32_t a)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structefvitcp_1_1_c_sum_1a9568b911bf12875e52beb818eb128001"/><section>
+    <title>sum</title>
+<indexterm><primary>sum</primary><secondary>efvitcp::CSum</secondary></indexterm>
+<indexterm><primary>efvitcp::CSum</primary><secondary>sum</secondary></indexterm>
+<para><computeroutput>uint32_t efvitcp::CSum::sum</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+C:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/external/pollnet/efvitcp/Core.h</section>
+</section>

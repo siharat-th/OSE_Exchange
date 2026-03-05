@@ -1,0 +1,225 @@
+\doxysection{Algo\+State Struct Reference}
+\hypertarget{struct_algo_state}{}\label{struct_algo_state}\index{AlgoState@{AlgoState}}
+
+
+Represents the state of an algorithm.  
+
+
+
+
+{\ttfamily \#include $<$algo\+\_\+state.\+hpp$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Quote\+State\+::\+Enum \mbox{\hyperlink{struct_algo_state_a1d4b9b02aeabb2d5825137882b5cfaeb}{Quoting\+State}}
+\item 
+Hedge\+State\+::\+Enum \mbox{\hyperlink{struct_algo_state_a22f6399f9584497dd50b2236798259a8}{Hedging\+State}}
+\item 
+std\+::string \mbox{\hyperlink{struct_algo_state_adc8cd1f3f906df1dbb0b66bfcaa9b249}{Name}}
+\item 
+volatile bool \mbox{\hyperlink{struct_algo_state_af175612d0f6c4fabff63b2a9140e2757}{stopped}}
+\item 
+int \mbox{\hyperlink{struct_algo_state_a2f2be01f89c07cc499cd788d5066d1fb}{EXCH\+\_\+\+CALLBACK\+\_\+\+ID}}
+\item 
+std\+::string \mbox{\hyperlink{struct_algo_state_af27a9f77aa293d5e59abeaed88bbcf97}{GUID}}
+\item 
+bool \mbox{\hyperlink{struct_algo_state_a662be09f1b662e08671ece46759ce859}{CERTNR}}
+\item 
+bool \mbox{\hyperlink{struct_algo_state_acb2ba3ed7a314c22678f2244586b2568}{GOT\+\_\+\+DATA}}
+\item 
+long \mbox{\hyperlink{struct_algo_state_a9d1ac2511d1c339b04328c94ad1f89ef}{DATA\+\_\+\+TRIES}}
+\item 
+bool \mbox{\hyperlink{struct_algo_state_aee04897b9c0fffcc4a67c718abe1892b}{WATCH\+\_\+\+TRADES}}
+\item 
+bool \mbox{\hyperlink{struct_algo_state_a7b85c13ba360eadf17812e69752588bd}{WATCH\+\_\+\+VOLUME}}
+\item 
+bool \mbox{\hyperlink{struct_algo_state_a04d17f2cd953c9979ee71082d7ae8f5d}{ENABLED}}
+\item 
+double \mbox{\hyperlink{struct_algo_state_a9a5495f8d8e54eebb1129db6bd701f51}{NETPOS}}
+\item 
+double \mbox{\hyperlink{struct_algo_state_ad1c912bf2d197ee88f7bd908f8bbd725}{TOTALEXEC}}
+\item 
+bool \mbox{\hyperlink{struct_algo_state_aa6aa22024900dada8196df74053d2230}{USE\+\_\+\+REPORTING\+\_\+\+MSGS}}
+\item 
+volatile bool \mbox{\hyperlink{struct_algo_state_a8d790bf2dd80a0a4ae757ab9ed36f3e8}{RPT\+\_\+\+ACTIVE}}
+\item 
+bool \mbox{\hyperlink{struct_algo_state_a1f095f41cb4f9f9f4e7068641988b8e6}{USE\+\_\+\+STOPS}}
+\item 
+bool \mbox{\hyperlink{struct_algo_state_afa078c48452bf73a3248e1da9540a435}{VERBOSE}}
+\item 
+Hedge\+Type\+::\+Enum \mbox{\hyperlink{struct_algo_state_a6119222e6c45d45f5477d3e1438a995d}{HDGTYPE}}
+\item 
+New\+Order\+Single\+Msg \mbox{\hyperlink{struct_algo_state_a2e5b3b5524309a60b78fbe9a319c4342}{hdg\+\_\+ords\+\_\+\+BUY}} \mbox{[}8\mbox{]}
+\item 
+New\+Order\+Single\+Msg \mbox{\hyperlink{struct_algo_state_ab54606261be4fb97bd8a7535ea2f869c}{hdg\+\_\+ords\+\_\+\+SELL}} \mbox{[}8\mbox{]}
+\item 
+Order\+Cancel\+Replace\+Request\+Msg \mbox{\hyperlink{struct_algo_state_af664fa27cfe6bfbab3640d3bf282f02e}{mod\+\_\+ords\+\_\+\+BUY}} \mbox{[}8\mbox{]}
+\item 
+Order\+Cancel\+Replace\+Request\+Msg \mbox{\hyperlink{struct_algo_state_a6cc07e6f05967b0db984466b3b56d325}{mod\+\_\+ords\+\_\+\+SELL}} \mbox{[}8\mbox{]}
+\item 
+int \mbox{\hyperlink{struct_algo_state_aaa52fb3c78d8fa76f221325d39d1fdee}{inflight}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the state of an algorithm. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_algo_state_a662be09f1b662e08671ece46759ce859}\index{AlgoState@{AlgoState}!CERTNR@{CERTNR}}
+\index{CERTNR@{CERTNR}!AlgoState@{AlgoState}}
+\doxysubsubsection{\texorpdfstring{CERTNR}{CERTNR}}
+{\footnotesize\ttfamily \label{struct_algo_state_a662be09f1b662e08671ece46759ce859} 
+bool Algo\+State\+::\+CERTNR}
+
+Flag indicating if the algorithm is certified. \Hypertarget{struct_algo_state_a9d1ac2511d1c339b04328c94ad1f89ef}\index{AlgoState@{AlgoState}!DATA\_TRIES@{DATA\_TRIES}}
+\index{DATA\_TRIES@{DATA\_TRIES}!AlgoState@{AlgoState}}
+\doxysubsubsection{\texorpdfstring{DATA\_TRIES}{DATA\_TRIES}}
+{\footnotesize\ttfamily \label{struct_algo_state_a9d1ac2511d1c339b04328c94ad1f89ef} 
+long Algo\+State\+::\+DATA\+\_\+\+TRIES}
+
+The number of tries to receive data. \Hypertarget{struct_algo_state_a04d17f2cd953c9979ee71082d7ae8f5d}\index{AlgoState@{AlgoState}!ENABLED@{ENABLED}}
+\index{ENABLED@{ENABLED}!AlgoState@{AlgoState}}
+\doxysubsubsection{\texorpdfstring{ENABLED}{ENABLED}}
+{\footnotesize\ttfamily \label{struct_algo_state_a04d17f2cd953c9979ee71082d7ae8f5d} 
+bool Algo\+State\+::\+ENABLED}
+
+Flag indicating if the algorithm is enabled. \Hypertarget{struct_algo_state_a2f2be01f89c07cc499cd788d5066d1fb}\index{AlgoState@{AlgoState}!EXCH\_CALLBACK\_ID@{EXCH\_CALLBACK\_ID}}
+\index{EXCH\_CALLBACK\_ID@{EXCH\_CALLBACK\_ID}!AlgoState@{AlgoState}}
+\doxysubsubsection{\texorpdfstring{EXCH\_CALLBACK\_ID}{EXCH\_CALLBACK\_ID}}
+{\footnotesize\ttfamily \label{struct_algo_state_a2f2be01f89c07cc499cd788d5066d1fb} 
+int Algo\+State\+::\+EXCH\+\_\+\+CALLBACK\+\_\+\+ID}
+
+The exchange callback ID. 
+
+Referenced by \mbox{\hyperlink{l00019}{KTN\+::\+CME\+::\+Cme\+Algo\+::\+Cme\+Algo()}}.
+
+\Hypertarget{struct_algo_state_acb2ba3ed7a314c22678f2244586b2568}\index{AlgoState@{AlgoState}!GOT\_DATA@{GOT\_DATA}}
+\index{GOT\_DATA@{GOT\_DATA}!AlgoState@{AlgoState}}
+\doxysubsubsection{\texorpdfstring{GOT\_DATA}{GOT\_DATA}}
+{\footnotesize\ttfamily \label{struct_algo_state_acb2ba3ed7a314c22678f2244586b2568} 
+bool Algo\+State\+::\+GOT\+\_\+\+DATA}
+
+Flag indicating if the algorithm has received data. \Hypertarget{struct_algo_state_af27a9f77aa293d5e59abeaed88bbcf97}\index{AlgoState@{AlgoState}!GUID@{GUID}}
+\index{GUID@{GUID}!AlgoState@{AlgoState}}
+\doxysubsubsection{\texorpdfstring{GUID}{GUID}}
+{\footnotesize\ttfamily \label{struct_algo_state_af27a9f77aa293d5e59abeaed88bbcf97} 
+std\+::string Algo\+State\+::\+GUID}
+
+The GUID of the algorithm. \Hypertarget{struct_algo_state_a2e5b3b5524309a60b78fbe9a319c4342}\index{AlgoState@{AlgoState}!hdg\_ords\_BUY@{hdg\_ords\_BUY}}
+\index{hdg\_ords\_BUY@{hdg\_ords\_BUY}!AlgoState@{AlgoState}}
+\doxysubsubsection{\texorpdfstring{hdg\_ords\_BUY}{hdg\_ords\_BUY}}
+{\footnotesize\ttfamily \label{struct_algo_state_a2e5b3b5524309a60b78fbe9a319c4342} 
+New\+Order\+Single\+Msg Algo\+State\+::hdg\+\_\+ords\+\_\+\+BUY\mbox{[}8\mbox{]}}
+
+The buy hedge orders of the algorithm. \Hypertarget{struct_algo_state_ab54606261be4fb97bd8a7535ea2f869c}\index{AlgoState@{AlgoState}!hdg\_ords\_SELL@{hdg\_ords\_SELL}}
+\index{hdg\_ords\_SELL@{hdg\_ords\_SELL}!AlgoState@{AlgoState}}
+\doxysubsubsection{\texorpdfstring{hdg\_ords\_SELL}{hdg\_ords\_SELL}}
+{\footnotesize\ttfamily \label{struct_algo_state_ab54606261be4fb97bd8a7535ea2f869c} 
+New\+Order\+Single\+Msg Algo\+State\+::hdg\+\_\+ords\+\_\+\+SELL\mbox{[}8\mbox{]}}
+
+The sell hedge orders of the algorithm. \Hypertarget{struct_algo_state_a6119222e6c45d45f5477d3e1438a995d}\index{AlgoState@{AlgoState}!HDGTYPE@{HDGTYPE}}
+\index{HDGTYPE@{HDGTYPE}!AlgoState@{AlgoState}}
+\doxysubsubsection{\texorpdfstring{HDGTYPE}{HDGTYPE}}
+{\footnotesize\ttfamily \label{struct_algo_state_a6119222e6c45d45f5477d3e1438a995d} 
+Hedge\+Type\+::\+Enum Algo\+State\+::\+HDGTYPE}
+
+The hedge type of the algorithm. \Hypertarget{struct_algo_state_a22f6399f9584497dd50b2236798259a8}\index{AlgoState@{AlgoState}!HedgingState@{HedgingState}}
+\index{HedgingState@{HedgingState}!AlgoState@{AlgoState}}
+\doxysubsubsection{\texorpdfstring{HedgingState}{HedgingState}}
+{\footnotesize\ttfamily \label{struct_algo_state_a22f6399f9584497dd50b2236798259a8} 
+Hedge\+State\+::\+Enum Algo\+State\+::\+Hedging\+State}
+
+The hedging state of the algorithm. 
+
+Referenced by \mbox{\hyperlink{l00019}{KTN\+::\+CME\+::\+Cme\+Algo\+::\+Cme\+Algo()}}.
+
+\Hypertarget{struct_algo_state_aaa52fb3c78d8fa76f221325d39d1fdee}\index{AlgoState@{AlgoState}!inflight@{inflight}}
+\index{inflight@{inflight}!AlgoState@{AlgoState}}
+\doxysubsubsection{\texorpdfstring{inflight}{inflight}}
+{\footnotesize\ttfamily \label{struct_algo_state_aaa52fb3c78d8fa76f221325d39d1fdee} 
+int Algo\+State\+::inflight}
+
+The number of inflight orders. \Hypertarget{struct_algo_state_af664fa27cfe6bfbab3640d3bf282f02e}\index{AlgoState@{AlgoState}!mod\_ords\_BUY@{mod\_ords\_BUY}}
+\index{mod\_ords\_BUY@{mod\_ords\_BUY}!AlgoState@{AlgoState}}
+\doxysubsubsection{\texorpdfstring{mod\_ords\_BUY}{mod\_ords\_BUY}}
+{\footnotesize\ttfamily \label{struct_algo_state_af664fa27cfe6bfbab3640d3bf282f02e} 
+Order\+Cancel\+Replace\+Request\+Msg Algo\+State\+::mod\+\_\+ords\+\_\+\+BUY\mbox{[}8\mbox{]}}
+
+The buy modified orders of the algorithm. \Hypertarget{struct_algo_state_a6cc07e6f05967b0db984466b3b56d325}\index{AlgoState@{AlgoState}!mod\_ords\_SELL@{mod\_ords\_SELL}}
+\index{mod\_ords\_SELL@{mod\_ords\_SELL}!AlgoState@{AlgoState}}
+\doxysubsubsection{\texorpdfstring{mod\_ords\_SELL}{mod\_ords\_SELL}}
+{\footnotesize\ttfamily \label{struct_algo_state_a6cc07e6f05967b0db984466b3b56d325} 
+Order\+Cancel\+Replace\+Request\+Msg Algo\+State\+::mod\+\_\+ords\+\_\+\+SELL\mbox{[}8\mbox{]}}
+
+The sell modified orders of the algorithm. \Hypertarget{struct_algo_state_adc8cd1f3f906df1dbb0b66bfcaa9b249}\index{AlgoState@{AlgoState}!Name@{Name}}
+\index{Name@{Name}!AlgoState@{AlgoState}}
+\doxysubsubsection{\texorpdfstring{Name}{Name}}
+{\footnotesize\ttfamily \label{struct_algo_state_adc8cd1f3f906df1dbb0b66bfcaa9b249} 
+std\+::string Algo\+State\+::\+Name}
+
+The name of the algorithm. \Hypertarget{struct_algo_state_a9a5495f8d8e54eebb1129db6bd701f51}\index{AlgoState@{AlgoState}!NETPOS@{NETPOS}}
+\index{NETPOS@{NETPOS}!AlgoState@{AlgoState}}
+\doxysubsubsection{\texorpdfstring{NETPOS}{NETPOS}}
+{\footnotesize\ttfamily \label{struct_algo_state_a9a5495f8d8e54eebb1129db6bd701f51} 
+double Algo\+State\+::\+NETPOS}
+
+The net position of the algorithm. \Hypertarget{struct_algo_state_a1d4b9b02aeabb2d5825137882b5cfaeb}\index{AlgoState@{AlgoState}!QuotingState@{QuotingState}}
+\index{QuotingState@{QuotingState}!AlgoState@{AlgoState}}
+\doxysubsubsection{\texorpdfstring{QuotingState}{QuotingState}}
+{\footnotesize\ttfamily \label{struct_algo_state_a1d4b9b02aeabb2d5825137882b5cfaeb} 
+Quote\+State\+::\+Enum Algo\+State\+::\+Quoting\+State}
+
+The quoting state of the algorithm. \Hypertarget{struct_algo_state_a8d790bf2dd80a0a4ae757ab9ed36f3e8}\index{AlgoState@{AlgoState}!RPT\_ACTIVE@{RPT\_ACTIVE}}
+\index{RPT\_ACTIVE@{RPT\_ACTIVE}!AlgoState@{AlgoState}}
+\doxysubsubsection{\texorpdfstring{RPT\_ACTIVE}{RPT\_ACTIVE}}
+{\footnotesize\ttfamily \label{struct_algo_state_a8d790bf2dd80a0a4ae757ab9ed36f3e8} 
+volatile bool Algo\+State\+::\+RPT\+\_\+\+ACTIVE}
+
+Flag indicating if the reporting is active. \Hypertarget{struct_algo_state_af175612d0f6c4fabff63b2a9140e2757}\index{AlgoState@{AlgoState}!stopped@{stopped}}
+\index{stopped@{stopped}!AlgoState@{AlgoState}}
+\doxysubsubsection{\texorpdfstring{stopped}{stopped}}
+{\footnotesize\ttfamily \label{struct_algo_state_af175612d0f6c4fabff63b2a9140e2757} 
+volatile bool Algo\+State\+::stopped}
+
+Flag indicating if the algorithm is stopped. \Hypertarget{struct_algo_state_ad1c912bf2d197ee88f7bd908f8bbd725}\index{AlgoState@{AlgoState}!TOTALEXEC@{TOTALEXEC}}
+\index{TOTALEXEC@{TOTALEXEC}!AlgoState@{AlgoState}}
+\doxysubsubsection{\texorpdfstring{TOTALEXEC}{TOTALEXEC}}
+{\footnotesize\ttfamily \label{struct_algo_state_ad1c912bf2d197ee88f7bd908f8bbd725} 
+double Algo\+State\+::\+TOTALEXEC}
+
+The total execution of the algorithm. \Hypertarget{struct_algo_state_aa6aa22024900dada8196df74053d2230}\index{AlgoState@{AlgoState}!USE\_REPORTING\_MSGS@{USE\_REPORTING\_MSGS}}
+\index{USE\_REPORTING\_MSGS@{USE\_REPORTING\_MSGS}!AlgoState@{AlgoState}}
+\doxysubsubsection{\texorpdfstring{USE\_REPORTING\_MSGS}{USE\_REPORTING\_MSGS}}
+{\footnotesize\ttfamily \label{struct_algo_state_aa6aa22024900dada8196df74053d2230} 
+bool Algo\+State\+::\+USE\+\_\+\+REPORTING\+\_\+\+MSGS}
+
+Flag indicating if the algorithm uses reporting messages. \Hypertarget{struct_algo_state_a1f095f41cb4f9f9f4e7068641988b8e6}\index{AlgoState@{AlgoState}!USE\_STOPS@{USE\_STOPS}}
+\index{USE\_STOPS@{USE\_STOPS}!AlgoState@{AlgoState}}
+\doxysubsubsection{\texorpdfstring{USE\_STOPS}{USE\_STOPS}}
+{\footnotesize\ttfamily \label{struct_algo_state_a1f095f41cb4f9f9f4e7068641988b8e6} 
+bool Algo\+State\+::\+USE\+\_\+\+STOPS}
+
+Flag indicating if the algorithm uses stops. \Hypertarget{struct_algo_state_afa078c48452bf73a3248e1da9540a435}\index{AlgoState@{AlgoState}!VERBOSE@{VERBOSE}}
+\index{VERBOSE@{VERBOSE}!AlgoState@{AlgoState}}
+\doxysubsubsection{\texorpdfstring{VERBOSE}{VERBOSE}}
+{\footnotesize\ttfamily \label{struct_algo_state_afa078c48452bf73a3248e1da9540a435} 
+bool Algo\+State\+::\+VERBOSE}
+
+Flag indicating if the algorithm is in verbose mode. \Hypertarget{struct_algo_state_aee04897b9c0fffcc4a67c718abe1892b}\index{AlgoState@{AlgoState}!WATCH\_TRADES@{WATCH\_TRADES}}
+\index{WATCH\_TRADES@{WATCH\_TRADES}!AlgoState@{AlgoState}}
+\doxysubsubsection{\texorpdfstring{WATCH\_TRADES}{WATCH\_TRADES}}
+{\footnotesize\ttfamily \label{struct_algo_state_aee04897b9c0fffcc4a67c718abe1892b} 
+bool Algo\+State\+::\+WATCH\+\_\+\+TRADES}
+
+Flag indicating if the algorithm is watching trades. \Hypertarget{struct_algo_state_a7b85c13ba360eadf17812e69752588bd}\index{AlgoState@{AlgoState}!WATCH\_VOLUME@{WATCH\_VOLUME}}
+\index{WATCH\_VOLUME@{WATCH\_VOLUME}!AlgoState@{AlgoState}}
+\doxysubsubsection{\texorpdfstring{WATCH\_VOLUME}{WATCH\_VOLUME}}
+{\footnotesize\ttfamily \label{struct_algo_state_a7b85c13ba360eadf17812e69752588bd} 
+bool Algo\+State\+::\+WATCH\+\_\+\+VOLUME}
+
+Flag indicating if the algorithm is watching volume. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Algos/algo\+\_\+state.\+hpp\end{DoxyCompactItemize}

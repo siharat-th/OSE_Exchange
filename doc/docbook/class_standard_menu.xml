@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_standard_menu" xml:lang="en-US">
+<title>StandardMenu Class Reference</title>
+<indexterm><primary>StandardMenu</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_standard_menu">StandardMenu</link> class represents a standard menu implementation. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;StandardMenu.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for StandardMenu:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_standard_menu.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_standard_menu_1ab484fae7deb778de9ba107b932ee6ecf">StandardMenu</link> (<link linkend="_class_menu_callback">MenuCallback</link> &amp;callback, std::string file, std::string name)</para>
+
+<para>Constructs a new <link linkend="_class_standard_menu">StandardMenu</link> object. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_standard_menu_1a076826ba870fa025cc2208f7d96ce587">~StandardMenu</link> ()</para>
+
+<para>Destroys the <link linkend="_class_standard_menu">StandardMenu</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_standard_menu_1a8a183b7bfadff568145c7e7465fa6dea">DisplayAndWait</link> ()</para>
+
+<para>Displays the menu and waits for user input. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_standard_menu_1a69ce47fefe06675d22b2c03a7bb6797c">Run</link> () override</para>
+
+<para>Runs the menu in a separate thread. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_class_i_menu">IMenu</link>        <itemizedlist>
+            <listitem><para>virtual <emphasis role="strong">~IMenu</emphasis> ()=default</para>
+
+<para>Virtual destructor. </para>
+</listitem>
+        </itemizedlist>
+Public Member Functions inherited from <link linkend="_class_named_thread">NamedThread</link>        <itemizedlist>
+            <listitem><para><link linkend="_class_named_thread_1a891fabdc2d824048ec05c82e7ef8c69a">NamedThread</link> ()</para>
+
+<para>Default constructor. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_named_thread_1a018dadb59e5af98ee734301a1baa50cb">~NamedThread</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_named_thread_1a9fa42542ff43c89fb9bbc33de9c87e34">CreateAndRun</link> (string name, int core)</para>
+
+<para>Creates and runs the named thread on the specified core. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_named_thread_1ad4809c571171be13f0f91f540d5c196f">Join</link> ()</para>
+
+<para>Joins the named thread. </para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_standard_menu">StandardMenu</link> class represents a standard menu implementation. </para>
+
+
+
+<para>This class inherits from the <link linkend="_class_i_menu">IMenu</link> interface and the <link linkend="_class_named_thread">NamedThread</link> class. It provides functionality to display and interact with a menu. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_standard_menu_1ab484fae7deb778de9ba107b932ee6ecf"/><section>
+    <title>StandardMenu()</title>
+<indexterm><primary>StandardMenu</primary><secondary>StandardMenu</secondary></indexterm>
+<indexterm><primary>StandardMenu</primary><secondary>StandardMenu</secondary></indexterm>
+<para><computeroutput>StandardMenu::StandardMenu (<link linkend="_class_menu_callback">MenuCallback</link> &amp; callback, std::string file, std::string name)</computeroutput></para><para>
+
+<para>Constructs a new <link linkend="_class_standard_menu">StandardMenu</link> object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>callback</entry><entry>
+<para>The <link linkend="_class_menu_callback">MenuCallback</link> object to handle menu events. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>file</entry><entry>
+<para>The file associated with the menu. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>name</entry><entry>
+<para>The name of the menu. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_standard_menu_1a076826ba870fa025cc2208f7d96ce587"/><section>
+    <title>~StandardMenu()</title>
+<indexterm><primary>~StandardMenu</primary><secondary>StandardMenu</secondary></indexterm>
+<indexterm><primary>StandardMenu</primary><secondary>~StandardMenu</secondary></indexterm>
+<para><computeroutput>StandardMenu::~StandardMenu ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Destroys the <link linkend="_class_standard_menu">StandardMenu</link> object. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_standard_menu_1a8a183b7bfadff568145c7e7465fa6dea"/><section>
+    <title>DisplayAndWait()</title>
+<indexterm><primary>DisplayAndWait</primary><secondary>StandardMenu</secondary></indexterm>
+<indexterm><primary>StandardMenu</primary><secondary>DisplayAndWait</secondary></indexterm>
+<para><computeroutput>void StandardMenu::DisplayAndWait ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Displays the menu and waits for user input. </para>
+</para>
+<para>
+Implements <link linkend="_class_i_menu_1a20bb56f784595e326d76b2f08612a106">IMenu</link>.</para>
+<para>
+References <link linkend="_l00018">NamedThread::CreateAndRun()</link>.</para>
+</section>
+<anchor xml:id="_class_standard_menu_1a69ce47fefe06675d22b2c03a7bb6797c"/><section>
+    <title>Run()</title>
+<indexterm><primary>Run</primary><secondary>StandardMenu</secondary></indexterm>
+<indexterm><primary>StandardMenu</primary><secondary>Run</secondary></indexterm>
+<para><computeroutput>void StandardMenu::Run ( )<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Runs the menu in a separate thread. </para>
+</para>
+<para>
+Implements <link linkend="_class_named_thread">NamedThread</link>.</para>
+<para>
+References <link linkend="_class_menu_callback_1a987f7022ef9680ecff369ed1f77b62ea">MenuCallback::onMenuChoice()</link>, and <link linkend="_l00019">StringSplitter::Split()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Menu/StandardMenu.hppMenu/StandardMenu.cpp</section>
+</section>

@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_efvi_tcp_client_1_1_conn" xml:lang="en-US">
+<title>EfviTcpClient&lt; Conf &gt;::Conn Struct Reference</title>
+<indexterm><primary>EfviTcpClient&lt; Conf &gt;::Conn</primary></indexterm>
+<para>Inheritance diagram for EfviTcpClient&lt; Conf &gt;::Conn:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="struct_efvi_tcp_client_1_1_conn.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_struct_efvi_tcp_client_1_1_conn_1a8455eac2fe817e0956c441ed370c7b2e">isConnected</link> ()</para>
+</listitem>
+            <listitem><para>const char * <link linkend="_struct_efvi_tcp_client_1_1_conn_1a8926f0d17237f7e034ccc47e348c144f">getLastError</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_efvi_tcp_client_1_1_conn_1a11911b01b443658c7adb6d5d5cad96ec">close</link> (const char *reason)</para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_efvi_tcp_client_1_1_conn_1accd48d8889666bad7e05a6e437eae533">writeSome</link> (const void *data, uint32_t size, bool more=false)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_efvi_tcp_client_1_1_conn_1ad8167dfa2081873f979eb836cecf4c12">writeNonblock</link> (const void *data, uint32_t size, bool more=false)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;typename Conf&gt;<?linebreak?>struct EfviTcpClient&lt; Conf &gt;::Conn</title></simplesect>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_efvi_tcp_client_1_1_conn_1a11911b01b443658c7adb6d5d5cad96ec"/><section>
+    <title>close()</title>
+<indexterm><primary>close</primary><secondary>EfviTcpClient&lt; Conf &gt;::Conn</secondary></indexterm>
+<indexterm><primary>EfviTcpClient&lt; Conf &gt;::Conn</primary><secondary>close</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>void <link linkend="_class_efvi_tcp_client">EfviTcpClient</link>&lt; Conf &gt;::Conn::close (const char * reason)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_efvi_tcp_client_1_1_conn_1a8926f0d17237f7e034ccc47e348c144f"/><section>
+    <title>getLastError()</title>
+<indexterm><primary>getLastError</primary><secondary>EfviTcpClient&lt; Conf &gt;::Conn</secondary></indexterm>
+<indexterm><primary>EfviTcpClient&lt; Conf &gt;::Conn</primary><secondary>getLastError</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>const char * <link linkend="_class_efvi_tcp_client">EfviTcpClient</link>&lt; Conf &gt;::Conn::getLastError ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_efvi_tcp_client_1_1_conn_1a8455eac2fe817e0956c441ed370c7b2e"/><section>
+    <title>isConnected()</title>
+<indexterm><primary>isConnected</primary><secondary>EfviTcpClient&lt; Conf &gt;::Conn</secondary></indexterm>
+<indexterm><primary>EfviTcpClient&lt; Conf &gt;::Conn</primary><secondary>isConnected</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>bool <link linkend="_class_efvi_tcp_client">EfviTcpClient</link>&lt; Conf &gt;::Conn::isConnected ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_efvi_tcp_client_1_1_conn_1ad8167dfa2081873f979eb836cecf4c12"/><section>
+    <title>writeNonblock()</title>
+<indexterm><primary>writeNonblock</primary><secondary>EfviTcpClient&lt; Conf &gt;::Conn</secondary></indexterm>
+<indexterm><primary>EfviTcpClient&lt; Conf &gt;::Conn</primary><secondary>writeNonblock</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>bool <link linkend="_class_efvi_tcp_client">EfviTcpClient</link>&lt; Conf &gt;::Conn::writeNonblock (const void * data, uint32_t size, bool more = <computeroutput>false</computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_efvi_tcp_client_1_1_conn_1accd48d8889666bad7e05a6e437eae533"/><section>
+    <title>writeSome()</title>
+<indexterm><primary>writeSome</primary><secondary>EfviTcpClient&lt; Conf &gt;::Conn</secondary></indexterm>
+<indexterm><primary>EfviTcpClient&lt; Conf &gt;::Conn</primary><secondary>writeSome</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>int <link linkend="_class_efvi_tcp_client">EfviTcpClient</link>&lt; Conf &gt;::Conn::writeSome (const void * data, uint32_t size, bool more = <computeroutput>false</computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+C:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/external/pollnet/efvitcp/EfviTcp.h</section>
+</section>

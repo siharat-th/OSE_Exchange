@@ -1,0 +1,1043 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_risk_manager" xml:lang="en-US">
+<title>KTN::RiskManager Class Reference</title>
+<indexterm><primary>KTN::RiskManager</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_k_t_n_1_1_risk_manager">RiskManager</link> class handles risk management operations. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;RiskManager.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_risk_manager_1adf7e1e90a8ae1ab2d4b4e064dce456f7">RiskManager</link> ()</para>
+
+<para><link linkend="_class_k_t_n_1_1_risk_manager">RiskManager</link> constructor. </para>
+</listitem>
+            <listitem><para><link linkend="_class_k_t_n_1_1_risk_manager_1aaa33ab1a40688d1ed021d6a2ca1b7f2a">~RiskManager</link> ()</para>
+
+<para><link linkend="_class_k_t_n_1_1_risk_manager">RiskManager</link> destructor. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_risk_manager_1a1ef6ef6ae59a44f7d16afeecfa0033e5">Init</link> (std::string key, std::string account, std::string source, std::string argoserver, int argosubport, int argopushport, int affinity)</para>
+
+<para>Initializes the <link linkend="_class_k_t_n_1_1_risk_manager">RiskManager</link> with the provided parameters. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_risk_manager_1abbaf306d2d83afad5a554a43b9815a26">ProcessLimits</link> (std::string szXml)</para>
+
+<para>Processes the limits using the provided XML string. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_risk_manager_1a001ddef0cf129f14b3ae94438d0a53fd">HandleRiskLimitsJSON</link> (std::string szJson)</para>
+
+<para>Handles the risk limits using the provided JSON string. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_risk_manager_1aadb15917e5b3de0cbfd92585b648507d">GetLimits</link> ()</para>
+
+<para>Retrieves the limits. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_risk_manager_1ac84c61b165b4b91e92a02179c21668f5">SendToRMS</link> (<link linkend="_struct_k_t_n_1_1_order">Order</link> ord, int iStatus, int iReportType, bool bResend, bool bUseJsonArray)</para>
+
+<para>Sends the order to the Risk Management System (RMS). </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_risk_manager_1a374829e8b8d12970bba7ca7ee5c7d932">SendToRMS</link> (std::vector&lt; <link linkend="_struct_k_t_n_1_1_order">Order</link> &gt; ords)</para>
+
+<para>Sends the orders to the Risk Management System (RMS). </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_risk_manager_1af9a86b933b2abe32013587df430e5841">UpdateLimitsOnOrder</link> (<link linkend="_struct_k_t_n_1_1_order">Order</link> ord)</para>
+
+<para>Updates the limits on the given order. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_risk_manager_1a52d7c6d8c1b5e221758c45b055d13d35">SendRaw</link> (std::string szJson)</para>
+
+<para>Sends the raw JSON string to the Risk Management System (RMS). </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_risk_manager_1ab0abf5fb9e1c03e9056826a1528c7763">OK</link> (std::string key)</para>
+
+<para>Checks if the provided key is valid. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t_n_1_1_risk_manager_1ac5938662b6cf58696d63e9b1e34c4590">MaxOrdQty</link> (std::string key)</para>
+
+<para>Retrieves the maximum order quantity for the provided key. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_risk_manager_1a89636aacfe6ce88b2602d55f6764ba4e">OrderSizeOK</link> (std::string key, int ordqty, bool bIsBuy, std::string &amp;reason, int oldqty=0)</para>
+
+<para>Checks if the order size is valid for the provided key. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_risk_manager_1a8a46e31fba53134b4857203a965ac5fe">HandleException</link> (const std::exception &amp;e, std::string sz)</para>
+
+<para>Handles the exception with the provided message. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_risk_manager_1a5e11887b4630b960a1f112b45545f1d8">onLimitsUpdate</link> ()</para>
+
+<para>Handles the update of the risk limits. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_risk_manager_1aa2e02120c5b2034da183053e2c164801">GotLimits</link> ()</para>
+
+<para>Checks if the risk limits are available. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_risk_manager_1a3b5253984d1b1ba2736da4de8ac74ed0">Print</link> ()</para>
+
+<para>Prints the <link linkend="_class_k_t_n_1_1_risk_manager">RiskManager</link> information. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_risk_manager_1adc215680886f037797483ae62a01aae7">onPnlUpdate</link> (double sl, double tp)</para>
+
+<para>Handles the update of the profit and loss (PnL). </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_risk_manager_1a31128d6a6cae39d7970a91e12a0e3ffc">setEnable</link> (<link linkend="_class_risk_limits">RiskLimits</link> &amp;rl)</para>
+
+<para>Sets the enable flag for the provided risk limits. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_risk_manager_1a7c73918a2c8894b1ea01544b5e080cb0">panicMode</link> (int secsToClose)</para>
+
+<para>Activates the panic mode for the specified number of seconds. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_risk_manager_1a743ecbcfbfae97f8d9b93cf2c1718510">closePositions</link> ()</para>
+
+<para>Closes all positions. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_risk_manager_1ab64b5748ef4db931b2f9ce208695c823">closePositionsByGroup</link> (const char *const *groupIds, int groupCount)</para>
+
+<para>Closes positions by the provided group IDs. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_risk_manager_1ab9af76040494cc23c642965f4e650fc7">cancelOrders</link> ()</para>
+
+<para>Cancels all orders. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_risk_manager_1a0598e1538118640b0fe99e0fa6d5d679">cancelOrders</link> (const char *const *orderIds, int orderCount)</para>
+
+<para>Cancels orders by the provided order IDs. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_risk_manager_1aaba8ab1ce64238c0480d525b12d814d5">cancelOrdersByGroup</link> (const char *const *groupIds, int groupCount)</para>
+
+<para>Cancels orders by the provided group IDs. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_risk_manager_1ae42183aecac541761acd015b8fe5cb71">shutdown</link> ()</para>
+
+<para>Shuts down the <link linkend="_class_k_t_n_1_1_risk_manager">RiskManager</link>. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_risk_manager_1a7976c146725628264c28f1859d5d5d57">onError</link> (const char *text)</para>
+
+<para>Handles the error with the provided text. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_risk_manager_1a1be9af052381795ec0844466d2e9fc77">onDisconnected</link> ()</para>
+
+<para>Handles the disconnection event. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_risk_manager_1a96a5ad162cdc6ac2bd84b3a9612ee517">ResetPosition</link> (std::string sessionId, std::string symbol, std::string szBatsId)</para>
+
+<para>Resets the position for the specified session, symbol, and Bats ID. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_risk_manager_1ae4c4dd7df4215e8679502a36981f08d3">PositionChange</link> (std::string szBatsId, int netchange)</para>
+
+<para>Changes the position for the specified Bats ID by the provided net change. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_k_t_n_1_1_risk_manager_1aab2b025cfd31e55eb136318d1f9d0355"/>void <emphasis role="strong">Positions</emphasis> ()</para>
+
+<para>Retrieves the positions. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t_n_1_1_risk_manager_1aa10653d312ff6efdcc2061decbc5b6ed">NetPosition</link> (std::string szBatsId)</para>
+
+<para>Retrieves the net position for the specified Bats ID. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_k_t_n_1_1_risk_manager">RiskManager</link> class handles risk management operations. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_risk_manager_1adf7e1e90a8ae1ab2d4b4e064dce456f7"/><section>
+    <title>RiskManager()</title>
+<indexterm><primary>RiskManager</primary><secondary>KTN::RiskManager</secondary></indexterm>
+<indexterm><primary>KTN::RiskManager</primary><secondary>RiskManager</secondary></indexterm>
+<para><computeroutput>RiskManager::RiskManager ( )</computeroutput></para><para>
+
+<para><link linkend="_class_k_t_n_1_1_risk_manager">RiskManager</link> constructor. </para>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_risk_manager_1aaa33ab1a40688d1ed021d6a2ca1b7f2a"/><section>
+    <title>~RiskManager()</title>
+<indexterm><primary>~RiskManager</primary><secondary>KTN::RiskManager</secondary></indexterm>
+<indexterm><primary>KTN::RiskManager</primary><secondary>~RiskManager</secondary></indexterm>
+<para><computeroutput>RiskManager::~RiskManager ( )</computeroutput></para><para>
+
+<para><link linkend="_class_k_t_n_1_1_risk_manager">RiskManager</link> destructor. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_risk_manager_1ab9af76040494cc23c642965f4e650fc7"/><section>
+    <title>cancelOrders()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>cancelOrders</primary><secondary>KTN::RiskManager</secondary></indexterm>
+<indexterm><primary>KTN::RiskManager</primary><secondary>cancelOrders</secondary></indexterm>
+<para><computeroutput>void RiskManager::cancelOrders ( )</computeroutput></para><para>
+
+<para>Cancels all orders. </para>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_risk_manager_1a0598e1538118640b0fe99e0fa6d5d679"/><section>
+    <title>cancelOrders()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>cancelOrders</primary><secondary>KTN::RiskManager</secondary></indexterm>
+<indexterm><primary>KTN::RiskManager</primary><secondary>cancelOrders</secondary></indexterm>
+<para><computeroutput>void RiskManager::cancelOrders (const char *const * orderIds, int orderCount)</computeroutput></para><para>
+
+<para>Cancels orders by the provided order IDs. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>orderIds</entry><entry>
+<para>The array of order IDs to cancel. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>orderCount</entry><entry>
+<para>The number of order IDs in the array. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_risk_manager_1aaba8ab1ce64238c0480d525b12d814d5"/><section>
+    <title>cancelOrdersByGroup()</title>
+<indexterm><primary>cancelOrdersByGroup</primary><secondary>KTN::RiskManager</secondary></indexterm>
+<indexterm><primary>KTN::RiskManager</primary><secondary>cancelOrdersByGroup</secondary></indexterm>
+<para><computeroutput>void RiskManager::cancelOrdersByGroup (const char *const * groupIds, int groupCount)</computeroutput></para><para>
+
+<para>Cancels orders by the provided group IDs. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>groupIds</entry><entry>
+<para>The array of group IDs to cancel orders for. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>groupCount</entry><entry>
+<para>The number of group IDs in the array. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_risk_manager_1a743ecbcfbfae97f8d9b93cf2c1718510"/><section>
+    <title>closePositions()</title>
+<indexterm><primary>closePositions</primary><secondary>KTN::RiskManager</secondary></indexterm>
+<indexterm><primary>KTN::RiskManager</primary><secondary>closePositions</secondary></indexterm>
+<para><computeroutput>void RiskManager::closePositions ( )</computeroutput></para><para>
+
+<para>Closes all positions. </para>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_risk_manager_1ab64b5748ef4db931b2f9ce208695c823"/><section>
+    <title>closePositionsByGroup()</title>
+<indexterm><primary>closePositionsByGroup</primary><secondary>KTN::RiskManager</secondary></indexterm>
+<indexterm><primary>KTN::RiskManager</primary><secondary>closePositionsByGroup</secondary></indexterm>
+<para><computeroutput>void RiskManager::closePositionsByGroup (const char *const * groupIds, int groupCount)</computeroutput></para><para>
+
+<para>Closes positions by the provided group IDs. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>groupIds</entry><entry>
+<para>The array of group IDs to close positions for. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>groupCount</entry><entry>
+<para>The number of group IDs in the array. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_risk_manager_1aadb15917e5b3de0cbfd92585b648507d"/><section>
+    <title>GetLimits()</title>
+<indexterm><primary>GetLimits</primary><secondary>KTN::RiskManager</secondary></indexterm>
+<indexterm><primary>KTN::RiskManager</primary><secondary>GetLimits</secondary></indexterm>
+<para><computeroutput>void RiskManager::GetLimits ( )</computeroutput></para><para>
+
+<para>Retrieves the limits. </para>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_risk_manager_1aa2e02120c5b2034da183053e2c164801"/><section>
+    <title>GotLimits()</title>
+<indexterm><primary>GotLimits</primary><secondary>KTN::RiskManager</secondary></indexterm>
+<indexterm><primary>KTN::RiskManager</primary><secondary>GotLimits</secondary></indexterm>
+<para><computeroutput>bool RiskManager::GotLimits ( )</computeroutput></para><para>
+
+<para>Checks if the risk limits are available. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>True if the risk limits are available, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_risk_manager_1a8a46e31fba53134b4857203a965ac5fe"/><section>
+    <title>HandleException()</title>
+<indexterm><primary>HandleException</primary><secondary>KTN::RiskManager</secondary></indexterm>
+<indexterm><primary>KTN::RiskManager</primary><secondary>HandleException</secondary></indexterm>
+<para><computeroutput>void RiskManager::HandleException (const std::exception &amp; e, std::string sz)</computeroutput></para><para>
+
+<para>Handles the exception with the provided message. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>e</entry><entry>
+<para>The exception object. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>sz</entry><entry>
+<para>The exception message. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_risk_manager_1a001ddef0cf129f14b3ae94438d0a53fd"/><section>
+    <title>HandleRiskLimitsJSON()</title>
+<indexterm><primary>HandleRiskLimitsJSON</primary><secondary>KTN::RiskManager</secondary></indexterm>
+<indexterm><primary>KTN::RiskManager</primary><secondary>HandleRiskLimitsJSON</secondary></indexterm>
+<para><computeroutput>void RiskManager::HandleRiskLimitsJSON (std::string szJson)</computeroutput></para><para>
+
+<para>Handles the risk limits using the provided JSON string. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>szJson</entry><entry>
+<para>The JSON string. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00027">RiskLimits::Print()</link>, and <link linkend="_l00595">setEnable()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_risk_manager_1a1ef6ef6ae59a44f7d16afeecfa0033e5"/><section>
+    <title>Init()</title>
+<indexterm><primary>Init</primary><secondary>KTN::RiskManager</secondary></indexterm>
+<indexterm><primary>KTN::RiskManager</primary><secondary>Init</secondary></indexterm>
+<para><computeroutput>void RiskManager::Init (std::string key, std::string account, std::string source, std::string argoserver, int argosubport, int argopushport, int affinity)</computeroutput></para><para>
+
+<para>Initializes the <link linkend="_class_k_t_n_1_1_risk_manager">RiskManager</link> with the provided parameters. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>key</entry><entry>
+<para>The key parameter. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>account</entry><entry>
+<para>The account parameter. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>source</entry><entry>
+<para>The source parameter. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>argoserver</entry><entry>
+<para>The argoserver parameter. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>argosubport</entry><entry>
+<para>The argosubport parameter. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>argopushport</entry><entry>
+<para>The argopushport parameter. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>affinity</entry><entry>
+<para>The affinity parameter. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_risk_manager_1ac5938662b6cf58696d63e9b1e34c4590"/><section>
+    <title>MaxOrdQty()</title>
+<indexterm><primary>MaxOrdQty</primary><secondary>KTN::RiskManager</secondary></indexterm>
+<indexterm><primary>KTN::RiskManager</primary><secondary>MaxOrdQty</secondary></indexterm>
+<para><computeroutput>int RiskManager::MaxOrdQty (std::string key)</computeroutput></para><para>
+
+<para>Retrieves the maximum order quantity for the provided key. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>key</entry><entry>
+<para>The key to retrieve the maximum order quantity for. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The maximum order quantity. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_risk_manager_1aa10653d312ff6efdcc2061decbc5b6ed"/><section>
+    <title>NetPosition()</title>
+<indexterm><primary>NetPosition</primary><secondary>KTN::RiskManager</secondary></indexterm>
+<indexterm><primary>KTN::RiskManager</primary><secondary>NetPosition</secondary></indexterm>
+<para><computeroutput>int KTN::RiskManager::NetPosition (std::string szBatsId)</computeroutput></para><para>
+
+<para>Retrieves the net position for the specified Bats ID. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>szBatsId</entry><entry>
+<para>The Bats ID. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The net position. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_risk_manager_1ab0abf5fb9e1c03e9056826a1528c7763"/><section>
+    <title>OK()</title>
+<indexterm><primary>OK</primary><secondary>KTN::RiskManager</secondary></indexterm>
+<indexterm><primary>KTN::RiskManager</primary><secondary>OK</secondary></indexterm>
+<para><computeroutput>bool RiskManager::OK (std::string key)</computeroutput></para><para>
+
+<para>Checks if the provided key is valid. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>key</entry><entry>
+<para>The key to check. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the key is valid, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_risk_manager_1a1be9af052381795ec0844466d2e9fc77"/><section>
+    <title>onDisconnected()</title>
+<indexterm><primary>onDisconnected</primary><secondary>KTN::RiskManager</secondary></indexterm>
+<indexterm><primary>KTN::RiskManager</primary><secondary>onDisconnected</secondary></indexterm>
+<para><computeroutput>void RiskManager::onDisconnected ( )</computeroutput></para><para>
+
+<para>Handles the disconnection event. </para>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_risk_manager_1a7976c146725628264c28f1859d5d5d57"/><section>
+    <title>onError()</title>
+<indexterm><primary>onError</primary><secondary>KTN::RiskManager</secondary></indexterm>
+<indexterm><primary>KTN::RiskManager</primary><secondary>onError</secondary></indexterm>
+<para><computeroutput>void RiskManager::onError (const char * text)</computeroutput></para><para>
+
+<para>Handles the error with the provided text. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>text</entry><entry>
+<para>The error text. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_risk_manager_1a5e11887b4630b960a1f112b45545f1d8"/><section>
+    <title>onLimitsUpdate()</title>
+<indexterm><primary>onLimitsUpdate</primary><secondary>KTN::RiskManager</secondary></indexterm>
+<indexterm><primary>KTN::RiskManager</primary><secondary>onLimitsUpdate</secondary></indexterm>
+<para><computeroutput>void RiskManager::onLimitsUpdate ( )</computeroutput></para><para>
+
+<para>Handles the update of the risk limits. </para>
+</para>
+<para>
+References <link linkend="_l00595">setEnable()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_risk_manager_1adc215680886f037797483ae62a01aae7"/><section>
+    <title>onPnlUpdate()</title>
+<indexterm><primary>onPnlUpdate</primary><secondary>KTN::RiskManager</secondary></indexterm>
+<indexterm><primary>KTN::RiskManager</primary><secondary>onPnlUpdate</secondary></indexterm>
+<para><computeroutput>void RiskManager::onPnlUpdate (double sl, double tp)</computeroutput></para><para>
+
+<para>Handles the update of the profit and loss (PnL). </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>sl</entry><entry>
+<para>The stop loss value. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>tp</entry><entry>
+<para>The take profit value. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_risk_manager_1a89636aacfe6ce88b2602d55f6764ba4e"/><section>
+    <title>OrderSizeOK()</title>
+<indexterm><primary>OrderSizeOK</primary><secondary>KTN::RiskManager</secondary></indexterm>
+<indexterm><primary>KTN::RiskManager</primary><secondary>OrderSizeOK</secondary></indexterm>
+<para><computeroutput>bool RiskManager::OrderSizeOK (std::string key, int ordqty, bool bIsBuy, std::string &amp; reason, int oldqty = <computeroutput>0</computeroutput>
+)</computeroutput></para><para>
+
+<para>Checks if the order size is valid for the provided key. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>key</entry><entry>
+<para>The key to check the order size for. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>ordqty</entry><entry>
+<para>The order quantity. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>bIsBuy</entry><entry>
+<para>The flag indicating whether the order is a buy order. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>reason</entry><entry>
+<para>The reason for the order size validation result. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>oldqty</entry><entry>
+<para>The old order quantity. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the order size is valid, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_risk_manager_1a7c73918a2c8894b1ea01544b5e080cb0"/><section>
+    <title>panicMode()</title>
+<indexterm><primary>panicMode</primary><secondary>KTN::RiskManager</secondary></indexterm>
+<indexterm><primary>KTN::RiskManager</primary><secondary>panicMode</secondary></indexterm>
+<para><computeroutput>void RiskManager::panicMode (int secsToClose)</computeroutput></para><para>
+
+<para>Activates the panic mode for the specified number of seconds. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>secsToClose</entry><entry>
+<para>The number of seconds to activate the panic mode for. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_risk_manager_1ae4c4dd7df4215e8679502a36981f08d3"/><section>
+    <title>PositionChange()</title>
+<indexterm><primary>PositionChange</primary><secondary>KTN::RiskManager</secondary></indexterm>
+<indexterm><primary>KTN::RiskManager</primary><secondary>PositionChange</secondary></indexterm>
+<para><computeroutput>void KTN::RiskManager::PositionChange (std::string szBatsId, int netchange)</computeroutput></para><para>
+
+<para>Changes the position for the specified Bats ID by the provided net change. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>szBatsId</entry><entry>
+<para>The Bats ID. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>netchange</entry><entry>
+<para>The net change. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_risk_manager_1a3b5253984d1b1ba2736da4de8ac74ed0"/><section>
+    <title>Print()</title>
+<indexterm><primary>Print</primary><secondary>KTN::RiskManager</secondary></indexterm>
+<indexterm><primary>KTN::RiskManager</primary><secondary>Print</secondary></indexterm>
+<para><computeroutput>void RiskManager::Print ( )</computeroutput></para><para>
+
+<para>Prints the <link linkend="_class_k_t_n_1_1_risk_manager">RiskManager</link> information. </para>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_risk_manager_1abbaf306d2d83afad5a554a43b9815a26"/><section>
+    <title>ProcessLimits()</title>
+<indexterm><primary>ProcessLimits</primary><secondary>KTN::RiskManager</secondary></indexterm>
+<indexterm><primary>KTN::RiskManager</primary><secondary>ProcessLimits</secondary></indexterm>
+<para><computeroutput>void KTN::RiskManager::ProcessLimits (std::string szXml)</computeroutput></para><para>
+
+<para>Processes the limits using the provided XML string. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>szXml</entry><entry>
+<para>The XML string. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_risk_manager_1a96a5ad162cdc6ac2bd84b3a9612ee517"/><section>
+    <title>ResetPosition()</title>
+<indexterm><primary>ResetPosition</primary><secondary>KTN::RiskManager</secondary></indexterm>
+<indexterm><primary>KTN::RiskManager</primary><secondary>ResetPosition</secondary></indexterm>
+<para><computeroutput>void KTN::RiskManager::ResetPosition (std::string sessionId, std::string symbol, std::string szBatsId)</computeroutput></para><para>
+
+<para>Resets the position for the specified session, symbol, and Bats ID. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>sessionId</entry><entry>
+<para>The session ID. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>symbol</entry><entry>
+<para>The symbol. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>szBatsId</entry><entry>
+<para>The Bats ID. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_risk_manager_1a52d7c6d8c1b5e221758c45b055d13d35"/><section>
+    <title>SendRaw()</title>
+<indexterm><primary>SendRaw</primary><secondary>KTN::RiskManager</secondary></indexterm>
+<indexterm><primary>KTN::RiskManager</primary><secondary>SendRaw</secondary></indexterm>
+<para><computeroutput>void RiskManager::SendRaw (std::string szJson)</computeroutput></para><para>
+
+<para>Sends the raw JSON string to the Risk Management System (RMS). </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>szJson</entry><entry>
+<para>The raw JSON string to send. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_risk_manager_1ac84c61b165b4b91e92a02179c21668f5"/><section>
+    <title>SendToRMS()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>SendToRMS</primary><secondary>KTN::RiskManager</secondary></indexterm>
+<indexterm><primary>KTN::RiskManager</primary><secondary>SendToRMS</secondary></indexterm>
+<para><computeroutput>void RiskManager::SendToRMS (<link linkend="_struct_k_t_n_1_1_order">Order</link> ord, int iStatus, int iReportType, bool bResend, bool bUseJsonArray)</computeroutput></para><para>
+
+<para>Sends the order to the Risk Management System (RMS). </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ord</entry><entry>
+<para>The order to send. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>iStatus</entry><entry>
+<para>The status parameter. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>iReportType</entry><entry>
+<para>The report type parameter. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>bResend</entry><entry>
+<para>The resend flag. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>bUseJsonArray</entry><entry>
+<para>The flag indicating whether to use JSON array. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_risk_manager_1a374829e8b8d12970bba7ca7ee5c7d932"/><section>
+    <title>SendToRMS()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>SendToRMS</primary><secondary>KTN::RiskManager</secondary></indexterm>
+<indexterm><primary>KTN::RiskManager</primary><secondary>SendToRMS</secondary></indexterm>
+<para><computeroutput>void RiskManager::SendToRMS (std::vector&lt; <link linkend="_struct_k_t_n_1_1_order">Order</link> &gt; ords)</computeroutput></para><para>
+
+<para>Sends the orders to the Risk Management System (RMS). </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ords</entry><entry>
+<para>The vector of orders to send. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_risk_manager_1a31128d6a6cae39d7970a91e12a0e3ffc"/><section>
+    <title>setEnable()</title>
+<indexterm><primary>setEnable</primary><secondary>KTN::RiskManager</secondary></indexterm>
+<indexterm><primary>KTN::RiskManager</primary><secondary>setEnable</secondary></indexterm>
+<para><computeroutput>void RiskManager::setEnable (<link linkend="_class_risk_limits">RiskLimits</link> &amp; rl)</computeroutput></para><para>
+
+<para>Sets the enable flag for the provided risk limits. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>rl</entry><entry>
+<para>The risk limits to set the enable flag for. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00119">RiskLimits::SetEnable()</link>.</para>
+<para>
+Referenced by <link linkend="_l00453">HandleRiskLimitsJSON()</link>, and <link linkend="_l00570">onLimitsUpdate()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_risk_manager_1ae42183aecac541761acd015b8fe5cb71"/><section>
+    <title>shutdown()</title>
+<indexterm><primary>shutdown</primary><secondary>KTN::RiskManager</secondary></indexterm>
+<indexterm><primary>KTN::RiskManager</primary><secondary>shutdown</secondary></indexterm>
+<para><computeroutput>void RiskManager::shutdown ( )</computeroutput></para><para>
+
+<para>Shuts down the <link linkend="_class_k_t_n_1_1_risk_manager">RiskManager</link>. </para>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_risk_manager_1af9a86b933b2abe32013587df430e5841"/><section>
+    <title>UpdateLimitsOnOrder()</title>
+<indexterm><primary>UpdateLimitsOnOrder</primary><secondary>KTN::RiskManager</secondary></indexterm>
+<indexterm><primary>KTN::RiskManager</primary><secondary>UpdateLimitsOnOrder</secondary></indexterm>
+<para><computeroutput>void RiskManager::UpdateLimitsOnOrder (<link linkend="_struct_k_t_n_1_1_order">Order</link> ord)</computeroutput></para><para>
+
+<para>Updates the limits on the given order. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ord</entry><entry>
+<para>The order to update the limits on. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00179">RiskLimits::GotFill()</link>, and <link linkend="_l00156">RiskLimits::GotOrder()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Risk/RiskManager.hRisk/RiskManager.cpp</section>
+</section>

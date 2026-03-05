@@ -1,0 +1,108 @@
+\doxysection{KTN\+::CME\+::IL3\+::App\+Message\+Gen Class Reference}
+\hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen}{}\label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen}\index{KTN::CME::IL3::AppMessageGen@{KTN::CME::IL3::AppMessageGen}}
+
+
+This class is used to generate CME IL3 application messages and provide pre-\/filled templates for them.  
+
+
+
+
+{\ttfamily \#include $<$App\+Message\+Gen.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Message\+Type $>$ }\\static \mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf}{KTNBuf}} \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_ac6901e99f6ad3d7020fd2aefd1c22da4}{Msg\+Template}} (const string \&settingsfile, bool is\+Mkt, bool is\+Manual)
+\item 
+{\footnotesize template$<$typename Message\+Type $>$ }\\static void \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_a98e21900faaa2ddc002932c81bbbe3f4}{Update\+Msg\+Seq}} (char \texorpdfstring{$\ast$}{*}\&buf, uint32\+\_\+t new\+Seq\+Num)
+\item 
+{\footnotesize template$<$typename Message\+Type $>$ }\\static void \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_aa34adc5a4f473296960f09bfcf5a03ee}{Update\+Msg\+Price}} (char \texorpdfstring{$\ast$}{*}\&buf, uint32\+\_\+t new\+Seq\+Num, uint64\+\_\+t price)
+\item 
+static \mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf}{KTNBuf}} \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_a417600a503fadace7c2d918305ccd5e8}{New\+Order\+Template}} (const string \&settingsfile, bool is\+Mkt, bool is\+Manual)
+\item 
+static \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_single_msg}{New\+Order\+Single\+Msg}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_a8772f755733f89475fcd42de1134e7a4}{New\+Order\+Single\+Msg\+Auto\+Template}} (const string \&settingsfile, bool is\+Mkt, bool is\+Manual)
+\item 
+static \mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf}{KTNBuf}} \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_a844dea726e996e8ed0e988d326cd87dd}{Modify\+Order\+Template}} (const string \&settingsfile, bool is\+Mkt, bool is\+Manual)
+\item 
+static \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg}{Order\+Cancel\+Replace\+Request\+Msg}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_a42416d05253f35f4cca66c146b8203d7}{Mod\+Order\+Msg\+Auto\+Template}} (const string \&settingsfile, bool is\+Mkt, bool is\+Manual)
+\item 
+static \mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf}{KTNBuf}} \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_a0779724fb6622eb4e17a925d5aa94b91}{Cancel\+Order\+Template}} (const string \&settingsfile, bool is\+Manual)
+\item 
+static \mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf}{KTNBuf}} \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_af96dc4c24ca72468b503d6208d976020}{Party\+Details\+Def\+Encode}} (const \mbox{\hyperlink{struct_cme_session_settings}{Cme\+Session\+Settings}} \&sess, uint32\+\_\+t seqnum)
+\item 
+static \mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf}{KTNBuf}} \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_ac235ea176358f64d136e929404fec93e}{Mass\+Action\+Encode}} (const \mbox{\hyperlink{struct_cme_session_settings}{Cme\+Session\+Settings}} \&sess, const Enum\+Mass\+Action\+Scope scope, int id, uint64\+\_\+t ordreqid, uint32\+\_\+t seqnum)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is used to generate CME IL3 application messages and provide pre-\/filled templates for them. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_a0779724fb6622eb4e17a925d5aa94b91}\index{KTN::CME::IL3::AppMessageGen@{KTN::CME::IL3::AppMessageGen}!CancelOrderTemplate@{CancelOrderTemplate}}
+\index{CancelOrderTemplate@{CancelOrderTemplate}!KTN::CME::IL3::AppMessageGen@{KTN::CME::IL3::AppMessageGen}}
+\doxysubsubsection{\texorpdfstring{CancelOrderTemplate()}{CancelOrderTemplate()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_a0779724fb6622eb4e17a925d5aa94b91} 
+static \mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf}{KTNBuf}} KTN\+::\+CME\+::\+IL3\+::\+App\+Message\+Gen\+::\+Cancel\+Order\+Template (\begin{DoxyParamCaption}\item[{const string \&}]{settingsfile}{, }\item[{bool}]{is\+Manual}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_ac235ea176358f64d136e929404fec93e}\index{KTN::CME::IL3::AppMessageGen@{KTN::CME::IL3::AppMessageGen}!MassActionEncode@{MassActionEncode}}
+\index{MassActionEncode@{MassActionEncode}!KTN::CME::IL3::AppMessageGen@{KTN::CME::IL3::AppMessageGen}}
+\doxysubsubsection{\texorpdfstring{MassActionEncode()}{MassActionEncode()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_ac235ea176358f64d136e929404fec93e} 
+static \mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf}{KTNBuf}} KTN\+::\+CME\+::\+IL3\+::\+App\+Message\+Gen\+::\+Mass\+Action\+Encode (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_cme_session_settings}{Cme\+Session\+Settings}} \&}]{sess}{, }\item[{const Enum\+Mass\+Action\+Scope}]{scope}{, }\item[{int}]{id}{, }\item[{uint64\+\_\+t}]{ordreqid}{, }\item[{uint32\+\_\+t}]{seqnum}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_a844dea726e996e8ed0e988d326cd87dd}\index{KTN::CME::IL3::AppMessageGen@{KTN::CME::IL3::AppMessageGen}!ModifyOrderTemplate@{ModifyOrderTemplate}}
+\index{ModifyOrderTemplate@{ModifyOrderTemplate}!KTN::CME::IL3::AppMessageGen@{KTN::CME::IL3::AppMessageGen}}
+\doxysubsubsection{\texorpdfstring{ModifyOrderTemplate()}{ModifyOrderTemplate()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_a844dea726e996e8ed0e988d326cd87dd} 
+static \mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf}{KTNBuf}} KTN\+::\+CME\+::\+IL3\+::\+App\+Message\+Gen\+::\+Modify\+Order\+Template (\begin{DoxyParamCaption}\item[{const string \&}]{settingsfile}{, }\item[{bool}]{is\+Mkt}{, }\item[{bool}]{is\+Manual}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_a42416d05253f35f4cca66c146b8203d7}\index{KTN::CME::IL3::AppMessageGen@{KTN::CME::IL3::AppMessageGen}!ModOrderMsgAutoTemplate@{ModOrderMsgAutoTemplate}}
+\index{ModOrderMsgAutoTemplate@{ModOrderMsgAutoTemplate}!KTN::CME::IL3::AppMessageGen@{KTN::CME::IL3::AppMessageGen}}
+\doxysubsubsection{\texorpdfstring{ModOrderMsgAutoTemplate()}{ModOrderMsgAutoTemplate()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_a42416d05253f35f4cca66c146b8203d7} 
+static \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_cancel_replace_request_msg}{Order\+Cancel\+Replace\+Request\+Msg}} \texorpdfstring{$\ast$}{*} KTN\+::\+CME\+::\+IL3\+::\+App\+Message\+Gen\+::\+Mod\+Order\+Msg\+Auto\+Template (\begin{DoxyParamCaption}\item[{const string \&}]{settingsfile}{, }\item[{bool}]{is\+Mkt}{, }\item[{bool}]{is\+Manual}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_ac6901e99f6ad3d7020fd2aefd1c22da4}\index{KTN::CME::IL3::AppMessageGen@{KTN::CME::IL3::AppMessageGen}!MsgTemplate@{MsgTemplate}}
+\index{MsgTemplate@{MsgTemplate}!KTN::CME::IL3::AppMessageGen@{KTN::CME::IL3::AppMessageGen}}
+\doxysubsubsection{\texorpdfstring{MsgTemplate()}{MsgTemplate()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_ac6901e99f6ad3d7020fd2aefd1c22da4} 
+template$<$typename Message\+Type $>$ \\
+static \mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf}{KTNBuf}} KTN\+::\+CME\+::\+IL3\+::\+App\+Message\+Gen\+::\+Msg\+Template (\begin{DoxyParamCaption}\item[{const string \&}]{settingsfile}{, }\item[{bool}]{is\+Mkt}{, }\item[{bool}]{is\+Manual}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_a8772f755733f89475fcd42de1134e7a4}\index{KTN::CME::IL3::AppMessageGen@{KTN::CME::IL3::AppMessageGen}!NewOrderSingleMsgAutoTemplate@{NewOrderSingleMsgAutoTemplate}}
+\index{NewOrderSingleMsgAutoTemplate@{NewOrderSingleMsgAutoTemplate}!KTN::CME::IL3::AppMessageGen@{KTN::CME::IL3::AppMessageGen}}
+\doxysubsubsection{\texorpdfstring{NewOrderSingleMsgAutoTemplate()}{NewOrderSingleMsgAutoTemplate()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_a8772f755733f89475fcd42de1134e7a4} 
+static \mbox{\hyperlink{struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_single_msg}{New\+Order\+Single\+Msg}} \texorpdfstring{$\ast$}{*} KTN\+::\+CME\+::\+IL3\+::\+App\+Message\+Gen\+::\+New\+Order\+Single\+Msg\+Auto\+Template (\begin{DoxyParamCaption}\item[{const string \&}]{settingsfile}{, }\item[{bool}]{is\+Mkt}{, }\item[{bool}]{is\+Manual}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_a417600a503fadace7c2d918305ccd5e8}\index{KTN::CME::IL3::AppMessageGen@{KTN::CME::IL3::AppMessageGen}!NewOrderTemplate@{NewOrderTemplate}}
+\index{NewOrderTemplate@{NewOrderTemplate}!KTN::CME::IL3::AppMessageGen@{KTN::CME::IL3::AppMessageGen}}
+\doxysubsubsection{\texorpdfstring{NewOrderTemplate()}{NewOrderTemplate()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_a417600a503fadace7c2d918305ccd5e8} 
+static \mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf}{KTNBuf}} KTN\+::\+CME\+::\+IL3\+::\+App\+Message\+Gen\+::\+New\+Order\+Template (\begin{DoxyParamCaption}\item[{const string \&}]{settingsfile}{, }\item[{bool}]{is\+Mkt}{, }\item[{bool}]{is\+Manual}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_af96dc4c24ca72468b503d6208d976020}\index{KTN::CME::IL3::AppMessageGen@{KTN::CME::IL3::AppMessageGen}!PartyDetailsDefEncode@{PartyDetailsDefEncode}}
+\index{PartyDetailsDefEncode@{PartyDetailsDefEncode}!KTN::CME::IL3::AppMessageGen@{KTN::CME::IL3::AppMessageGen}}
+\doxysubsubsection{\texorpdfstring{PartyDetailsDefEncode()}{PartyDetailsDefEncode()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_af96dc4c24ca72468b503d6208d976020} 
+static \mbox{\hyperlink{struct_k_t_n_1_1_n_e_t_1_1_k_t_n_buf}{KTNBuf}} KTN\+::\+CME\+::\+IL3\+::\+App\+Message\+Gen\+::\+Party\+Details\+Def\+Encode (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_cme_session_settings}{Cme\+Session\+Settings}} \&}]{sess}{, }\item[{uint32\+\_\+t}]{seqnum}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_aa34adc5a4f473296960f09bfcf5a03ee}\index{KTN::CME::IL3::AppMessageGen@{KTN::CME::IL3::AppMessageGen}!UpdateMsgPrice@{UpdateMsgPrice}}
+\index{UpdateMsgPrice@{UpdateMsgPrice}!KTN::CME::IL3::AppMessageGen@{KTN::CME::IL3::AppMessageGen}}
+\doxysubsubsection{\texorpdfstring{UpdateMsgPrice()}{UpdateMsgPrice()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_aa34adc5a4f473296960f09bfcf5a03ee} 
+template$<$typename Message\+Type $>$ \\
+static void KTN\+::\+CME\+::\+IL3\+::\+App\+Message\+Gen\+::\+Update\+Msg\+Price (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}\&}]{buf}{, }\item[{uint32\+\_\+t}]{new\+Seq\+Num}{, }\item[{uint64\+\_\+t}]{price}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_a98e21900faaa2ddc002932c81bbbe3f4}\index{KTN::CME::IL3::AppMessageGen@{KTN::CME::IL3::AppMessageGen}!UpdateMsgSeq@{UpdateMsgSeq}}
+\index{UpdateMsgSeq@{UpdateMsgSeq}!KTN::CME::IL3::AppMessageGen@{KTN::CME::IL3::AppMessageGen}}
+\doxysubsubsection{\texorpdfstring{UpdateMsgSeq()}{UpdateMsgSeq()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_app_message_gen_a98e21900faaa2ddc002932c81bbbe3f4} 
+template$<$typename Message\+Type $>$ \\
+static void KTN\+::\+CME\+::\+IL3\+::\+App\+Message\+Gen\+::\+Update\+Msg\+Seq (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}\&}]{buf}{, }\item[{uint32\+\_\+t}]{new\+Seq\+Num}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+exchsupport/cme/factory/App\+Message\+Gen.\+hpp\end{DoxyCompactItemize}

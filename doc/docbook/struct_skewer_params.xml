@@ -1,0 +1,275 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_skewer_params" xml:lang="en-US">
+<title>SkewerParams Struct Reference</title>
+<indexterm><primary>SkewerParams</primary></indexterm>
+<para>
+
+<para>The <link linkend="_struct_skewer_params">SkewerParams</link> struct represents the parameters for the Skewer algorithm. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;SkewerParams.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_struct_skewer_params">SkewerParams</link> <link linkend="_struct_skewer_params_1ad05c7a489603424cd336d9252e550515">parse</link> (const std::string &amp;json_str)</para>
+
+<para>parse the JSON string and create a <link linkend="_struct_skewer_params">SkewerParams</link> object. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_struct_skewer_params_1aa8160c06d8cc9471ee245a515679b120">ValidJson</link></para>
+</listitem>
+            <listitem><para><link linkend="_structalgometa">algometa</link> <link linkend="_struct_skewer_params_1ad7ed2b366e0e1e7f30a843e2a3a1d686">meta</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_skewer_params_1a5cccfa9d53dd3229ded4d8e41cffca8a">subid</link></para>
+</listitem>
+            <listitem><para>std::unordered_map&lt; int, <link linkend="_structinstrument">instrument</link> &gt; <link linkend="_struct_skewer_params_1abd5ae35adc9d27bca602fa4994a8c90c">LegSecIdMap</link></para>
+</listitem>
+            <listitem><para><link linkend="_structinstrument">instrument</link> <link linkend="_struct_skewer_params_1aa67f3ed6938322fe00dc77df4ef31416">Legs</link> [4]</para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_skewer_params_1aa959759663649d5daf66a12301124fdf">LegCount</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_skewer_params_1a6ba68e53c57f55a3c046679693aabd66">StartTime</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_skewer_params_1afe0997717c7abdc94fd6525457b6ae0a">EndTime</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_skewer_params_1abe3fb775c0917d1aa6a22f3cfe1628f5">OrderQty</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_skewer_params_1a77eeaa5a5b13753f489679a0991825fa">TotalQty</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_skewer_params_1a9836bfb4b6e46b8322f534bf30b99912">IntervalSecs</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_skewer_params_1a15abdeeb59af14d592383f62a715945b">SqueezeRatio</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_skewer_params_1a3d8cac8b8dce18417c1d8fc0a72e4bc2">SqueezeQty</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_skewer_params_1a19094ed80728f0b7b2b8bfd115335722">Randomize</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_skewer_params_1ad2b26cc2321fcb0f7a542f4976c02b10">SkewThreshold</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_skewer_params_1a5ad1367d05517a5ac41486ddccdbfe84">SkewMax</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_skewer_params_1ac0891502ab765cba93ec3ea9169460fe">SkewMaxQty</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_skewer_params_1aadc2c34db7a7a098149914c03faaed53">SkewLevels</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_skewer_params_1a0f72d99ce137d29aa063ffd10a061d6d">Aggressive</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_skewer_params_1af00ee570453d5fc40bb30c3ee7022c28">NetPosition</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_skewer_params_1a2292396145c2cbf88540d4dd2c230e5b">TotalExec</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_skewer_params_1a1e0a80164c7660089f3aba5965f98ba1">TotalBuys</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_skewer_params_1ad034dab57d92a8a77958b81de5f5f400">TotalSells</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_skewer_params_1a40b1f092d55a6daf32d5bb2bf481a5be">TotalBuyPrice</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_skewer_params_1a260874b41b183362c114b96ab55f5063">TotalSellPrice</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_skewer_params_1a13cf3ab016d189f2bf9fff3c128cfec1">AvgBuyPrice</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_skewer_params_1ae03de2439dd793930e1f7378a5c110bc">AvgSellPrice</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_skewer_params_1acc4fa3978e45e71e86bb0c7fb57aac81">Reset</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_struct_skewer_params">SkewerParams</link> struct represents the parameters for the Skewer algorithm. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_skewer_params_1ad05c7a489603424cd336d9252e550515"/><section>
+    <title>parse()</title>
+<indexterm><primary>parse</primary><secondary>SkewerParams</secondary></indexterm>
+<indexterm><primary>SkewerParams</primary><secondary>parse</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_skewer_params">SkewerParams</link> SkewerParams::parse (const std::string &amp; json_str)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>parse the JSON string and create a <link linkend="_struct_skewer_params">SkewerParams</link> object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>json_str</entry><entry>
+<para>the JSON string to parse. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>the parsed <link linkend="_struct_skewer_params">SkewerParams</link> object. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00260">algometa::Enabled</link>, <link linkend="_l00049">UserInfo::groupname</link>, <link linkend="_l00048">UserInfo::org</link>, <link linkend="_l00262">algometa::Source</link>, <link linkend="_l00256">algometa::Strategy</link>, <link linkend="_l00257">algometa::StratId</link>, <link linkend="_l00264">algometa::Tag</link>, <link linkend="_l00258">algometa::TemplateName</link>, <link linkend="_l00261">algometa::UniqueId</link>, <link linkend="_l00047">UserInfo::user</link>, and <link linkend="_l00279">algometa::userinfo</link>.</para>
+<para>
+Referenced by <link linkend="_l00052">KTN::Skewer::onLaunch()</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_skewer_params_1a0f72d99ce137d29aa063ffd10a061d6d"/><section>
+    <title>Aggressive</title>
+<indexterm><primary>Aggressive</primary><secondary>SkewerParams</secondary></indexterm>
+<indexterm><primary>SkewerParams</primary><secondary>Aggressive</secondary></indexterm>
+<para><computeroutput>bool SkewerParams::Aggressive</computeroutput></para></section>
+<anchor xml:id="_struct_skewer_params_1a13cf3ab016d189f2bf9fff3c128cfec1"/><section>
+    <title>AvgBuyPrice</title>
+<indexterm><primary>AvgBuyPrice</primary><secondary>SkewerParams</secondary></indexterm>
+<indexterm><primary>SkewerParams</primary><secondary>AvgBuyPrice</secondary></indexterm>
+<para><computeroutput>double SkewerParams::AvgBuyPrice</computeroutput></para></section>
+<anchor xml:id="_struct_skewer_params_1ae03de2439dd793930e1f7378a5c110bc"/><section>
+    <title>AvgSellPrice</title>
+<indexterm><primary>AvgSellPrice</primary><secondary>SkewerParams</secondary></indexterm>
+<indexterm><primary>SkewerParams</primary><secondary>AvgSellPrice</secondary></indexterm>
+<para><computeroutput>double SkewerParams::AvgSellPrice</computeroutput></para></section>
+<anchor xml:id="_struct_skewer_params_1afe0997717c7abdc94fd6525457b6ae0a"/><section>
+    <title>EndTime</title>
+<indexterm><primary>EndTime</primary><secondary>SkewerParams</secondary></indexterm>
+<indexterm><primary>SkewerParams</primary><secondary>EndTime</secondary></indexterm>
+<para><computeroutput>string SkewerParams::EndTime</computeroutput></para></section>
+<anchor xml:id="_struct_skewer_params_1a9836bfb4b6e46b8322f534bf30b99912"/><section>
+    <title>IntervalSecs</title>
+<indexterm><primary>IntervalSecs</primary><secondary>SkewerParams</secondary></indexterm>
+<indexterm><primary>SkewerParams</primary><secondary>IntervalSecs</secondary></indexterm>
+<para><computeroutput>int SkewerParams::IntervalSecs</computeroutput></para></section>
+<anchor xml:id="_struct_skewer_params_1aa959759663649d5daf66a12301124fdf"/><section>
+    <title>LegCount</title>
+<indexterm><primary>LegCount</primary><secondary>SkewerParams</secondary></indexterm>
+<indexterm><primary>SkewerParams</primary><secondary>LegCount</secondary></indexterm>
+<para><computeroutput>int SkewerParams::LegCount</computeroutput></para></section>
+<anchor xml:id="_struct_skewer_params_1aa67f3ed6938322fe00dc77df4ef31416"/><section>
+    <title>Legs</title>
+<indexterm><primary>Legs</primary><secondary>SkewerParams</secondary></indexterm>
+<indexterm><primary>SkewerParams</primary><secondary>Legs</secondary></indexterm>
+<para><computeroutput><link linkend="_structinstrument">instrument</link> SkewerParams::Legs[4]</computeroutput></para></section>
+<anchor xml:id="_struct_skewer_params_1abd5ae35adc9d27bca602fa4994a8c90c"/><section>
+    <title>LegSecIdMap</title>
+<indexterm><primary>LegSecIdMap</primary><secondary>SkewerParams</secondary></indexterm>
+<indexterm><primary>SkewerParams</primary><secondary>LegSecIdMap</secondary></indexterm>
+<para><computeroutput>std::unordered_map&lt;int, <link linkend="_structinstrument">instrument</link>&gt; SkewerParams::LegSecIdMap</computeroutput></para></section>
+<anchor xml:id="_struct_skewer_params_1ad7ed2b366e0e1e7f30a843e2a3a1d686"/><section>
+    <title>meta</title>
+<indexterm><primary>meta</primary><secondary>SkewerParams</secondary></indexterm>
+<indexterm><primary>SkewerParams</primary><secondary>meta</secondary></indexterm>
+<para><computeroutput><link linkend="_structalgometa">algometa</link> SkewerParams::meta</computeroutput></para></section>
+<anchor xml:id="_struct_skewer_params_1af00ee570453d5fc40bb30c3ee7022c28"/><section>
+    <title>NetPosition</title>
+<indexterm><primary>NetPosition</primary><secondary>SkewerParams</secondary></indexterm>
+<indexterm><primary>SkewerParams</primary><secondary>NetPosition</secondary></indexterm>
+<para><computeroutput>int SkewerParams::NetPosition</computeroutput></para></section>
+<anchor xml:id="_struct_skewer_params_1abe3fb775c0917d1aa6a22f3cfe1628f5"/><section>
+    <title>OrderQty</title>
+<indexterm><primary>OrderQty</primary><secondary>SkewerParams</secondary></indexterm>
+<indexterm><primary>SkewerParams</primary><secondary>OrderQty</secondary></indexterm>
+<para><computeroutput>double SkewerParams::OrderQty</computeroutput></para></section>
+<anchor xml:id="_struct_skewer_params_1a19094ed80728f0b7b2b8bfd115335722"/><section>
+    <title>Randomize</title>
+<indexterm><primary>Randomize</primary><secondary>SkewerParams</secondary></indexterm>
+<indexterm><primary>SkewerParams</primary><secondary>Randomize</secondary></indexterm>
+<para><computeroutput>bool SkewerParams::Randomize</computeroutput></para></section>
+<anchor xml:id="_struct_skewer_params_1acc4fa3978e45e71e86bb0c7fb57aac81"/><section>
+    <title>Reset</title>
+<indexterm><primary>Reset</primary><secondary>SkewerParams</secondary></indexterm>
+<indexterm><primary>SkewerParams</primary><secondary>Reset</secondary></indexterm>
+<para><computeroutput>bool SkewerParams::Reset</computeroutput></para></section>
+<anchor xml:id="_struct_skewer_params_1aadc2c34db7a7a098149914c03faaed53"/><section>
+    <title>SkewLevels</title>
+<indexterm><primary>SkewLevels</primary><secondary>SkewerParams</secondary></indexterm>
+<indexterm><primary>SkewerParams</primary><secondary>SkewLevels</secondary></indexterm>
+<para><computeroutput>int SkewerParams::SkewLevels</computeroutput></para></section>
+<anchor xml:id="_struct_skewer_params_1a5ad1367d05517a5ac41486ddccdbfe84"/><section>
+    <title>SkewMax</title>
+<indexterm><primary>SkewMax</primary><secondary>SkewerParams</secondary></indexterm>
+<indexterm><primary>SkewerParams</primary><secondary>SkewMax</secondary></indexterm>
+<para><computeroutput>double SkewerParams::SkewMax</computeroutput></para></section>
+<anchor xml:id="_struct_skewer_params_1ac0891502ab765cba93ec3ea9169460fe"/><section>
+    <title>SkewMaxQty</title>
+<indexterm><primary>SkewMaxQty</primary><secondary>SkewerParams</secondary></indexterm>
+<indexterm><primary>SkewerParams</primary><secondary>SkewMaxQty</secondary></indexterm>
+<para><computeroutput>int SkewerParams::SkewMaxQty</computeroutput></para></section>
+<anchor xml:id="_struct_skewer_params_1ad2b26cc2321fcb0f7a542f4976c02b10"/><section>
+    <title>SkewThreshold</title>
+<indexterm><primary>SkewThreshold</primary><secondary>SkewerParams</secondary></indexterm>
+<indexterm><primary>SkewerParams</primary><secondary>SkewThreshold</secondary></indexterm>
+<para><computeroutput>double SkewerParams::SkewThreshold</computeroutput></para></section>
+<anchor xml:id="_struct_skewer_params_1a3d8cac8b8dce18417c1d8fc0a72e4bc2"/><section>
+    <title>SqueezeQty</title>
+<indexterm><primary>SqueezeQty</primary><secondary>SkewerParams</secondary></indexterm>
+<indexterm><primary>SkewerParams</primary><secondary>SqueezeQty</secondary></indexterm>
+<para><computeroutput>int SkewerParams::SqueezeQty</computeroutput></para></section>
+<anchor xml:id="_struct_skewer_params_1a15abdeeb59af14d592383f62a715945b"/><section>
+    <title>SqueezeRatio</title>
+<indexterm><primary>SqueezeRatio</primary><secondary>SkewerParams</secondary></indexterm>
+<indexterm><primary>SkewerParams</primary><secondary>SqueezeRatio</secondary></indexterm>
+<para><computeroutput>double SkewerParams::SqueezeRatio</computeroutput></para></section>
+<anchor xml:id="_struct_skewer_params_1a6ba68e53c57f55a3c046679693aabd66"/><section>
+    <title>StartTime</title>
+<indexterm><primary>StartTime</primary><secondary>SkewerParams</secondary></indexterm>
+<indexterm><primary>SkewerParams</primary><secondary>StartTime</secondary></indexterm>
+<para><computeroutput>string SkewerParams::StartTime</computeroutput></para></section>
+<anchor xml:id="_struct_skewer_params_1a5cccfa9d53dd3229ded4d8e41cffca8a"/><section>
+    <title>subid</title>
+<indexterm><primary>subid</primary><secondary>SkewerParams</secondary></indexterm>
+<indexterm><primary>SkewerParams</primary><secondary>subid</secondary></indexterm>
+<para><computeroutput>string SkewerParams::subid</computeroutput></para></section>
+<anchor xml:id="_struct_skewer_params_1a40b1f092d55a6daf32d5bb2bf481a5be"/><section>
+    <title>TotalBuyPrice</title>
+<indexterm><primary>TotalBuyPrice</primary><secondary>SkewerParams</secondary></indexterm>
+<indexterm><primary>SkewerParams</primary><secondary>TotalBuyPrice</secondary></indexterm>
+<para><computeroutput>double SkewerParams::TotalBuyPrice</computeroutput></para></section>
+<anchor xml:id="_struct_skewer_params_1a1e0a80164c7660089f3aba5965f98ba1"/><section>
+    <title>TotalBuys</title>
+<indexterm><primary>TotalBuys</primary><secondary>SkewerParams</secondary></indexterm>
+<indexterm><primary>SkewerParams</primary><secondary>TotalBuys</secondary></indexterm>
+<para><computeroutput>int SkewerParams::TotalBuys</computeroutput></para></section>
+<anchor xml:id="_struct_skewer_params_1a2292396145c2cbf88540d4dd2c230e5b"/><section>
+    <title>TotalExec</title>
+<indexterm><primary>TotalExec</primary><secondary>SkewerParams</secondary></indexterm>
+<indexterm><primary>SkewerParams</primary><secondary>TotalExec</secondary></indexterm>
+<para><computeroutput>int SkewerParams::TotalExec</computeroutput></para></section>
+<anchor xml:id="_struct_skewer_params_1a77eeaa5a5b13753f489679a0991825fa"/><section>
+    <title>TotalQty</title>
+<indexterm><primary>TotalQty</primary><secondary>SkewerParams</secondary></indexterm>
+<indexterm><primary>SkewerParams</primary><secondary>TotalQty</secondary></indexterm>
+<para><computeroutput>double SkewerParams::TotalQty</computeroutput></para></section>
+<anchor xml:id="_struct_skewer_params_1a260874b41b183362c114b96ab55f5063"/><section>
+    <title>TotalSellPrice</title>
+<indexterm><primary>TotalSellPrice</primary><secondary>SkewerParams</secondary></indexterm>
+<indexterm><primary>SkewerParams</primary><secondary>TotalSellPrice</secondary></indexterm>
+<para><computeroutput>double SkewerParams::TotalSellPrice</computeroutput></para></section>
+<anchor xml:id="_struct_skewer_params_1ad034dab57d92a8a77958b81de5f5f400"/><section>
+    <title>TotalSells</title>
+<indexterm><primary>TotalSells</primary><secondary>SkewerParams</secondary></indexterm>
+<indexterm><primary>SkewerParams</primary><secondary>TotalSells</secondary></indexterm>
+<para><computeroutput>int SkewerParams::TotalSells</computeroutput></para></section>
+<anchor xml:id="_struct_skewer_params_1aa8160c06d8cc9471ee245a515679b120"/><section>
+    <title>ValidJson</title>
+<indexterm><primary>ValidJson</primary><secondary>SkewerParams</secondary></indexterm>
+<indexterm><primary>SkewerParams</primary><secondary>ValidJson</secondary></indexterm>
+<para><computeroutput>bool SkewerParams::ValidJson</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following files:</para>
+AlgoParams/SkewerParams.hppAlgoParams/SkewerParams.cpp</section>
+</section>

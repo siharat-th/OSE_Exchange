@@ -1,0 +1,25 @@
+var class_k_t_n_1_1_exchange_base2 =
+[
+    [ "ExchangeBase2", "class_k_t_n_1_1_exchange_base2.html#ac8cff2c312e11492aaf84fa948985ba3", null ],
+    [ "~ExchangeBase2", "class_k_t_n_1_1_exchange_base2.html#a1aaa796870fbd3e877e591162dd91acd", null ],
+    [ "AlgoJson", "class_k_t_n_1_1_exchange_base2.html#a8004561a90abb64af280cf4692e430ad", null ],
+    [ "ChangeName", "class_k_t_n_1_1_exchange_base2.html#ad28c9111fb5ebbac595ecd657aecee52", null ],
+    [ "ClearMaps", "class_k_t_n_1_1_exchange_base2.html#ac2201df8037a75fbaf0619ecf8684e8a", null ],
+    [ "Command", "class_k_t_n_1_1_exchange_base2.html#abc7051e6780afdbb0ee227548a6b6564", null ],
+    [ "fastCopy2", "class_k_t_n_1_1_exchange_base2.html#a924d04a8225331c72fc26e7f62e8338c", null ],
+    [ "LogMe", "class_k_t_n_1_1_exchange_base2.html#ab8bccf95f1f0b8e5e117923104d31c75", null ],
+    [ "MsgSent", "class_k_t_n_1_1_exchange_base2.html#a41f8f46ef5cb13108b86b23433f9c57c", null ],
+    [ "Name", "class_k_t_n_1_1_exchange_base2.html#acefbf50e1593eaa77c555da52e06ddd1", null ],
+    [ "needhb", "class_k_t_n_1_1_exchange_base2.html#a5fde3aacdf5f50b70162b2213d0359b1", null ],
+    [ "Poll", "class_k_t_n_1_1_exchange_base2.html#ad48b506ce66acbbff141641f003cca99", null ],
+    [ "PrintLatencies", "class_k_t_n_1_1_exchange_base2.html#a5c433c74f81d16e7f45df711692cd7d4", null ],
+    [ "PrintMsgRatios", "class_k_t_n_1_1_exchange_base2.html#ae91c14c6b3ade61bb1af7b253ebe7319", null ],
+    [ "ReportStatus", "class_k_t_n_1_1_exchange_base2.html#a9bc40ada22590f70a55abdc06c56c486", null ],
+    [ "Reset", "class_k_t_n_1_1_exchange_base2.html#aea11c9501a1207b83af80c6c7abbd4fe", null ],
+    [ "Send", "class_k_t_n_1_1_exchange_base2.html#a561385a2be9f113e775efed5aeb64163", null ],
+    [ "SendHedgeInstruction", "class_k_t_n_1_1_exchange_base2.html#aa01ce3c26302432c51131c24f315e144", null ],
+    [ "SendMassAction", "class_k_t_n_1_1_exchange_base2.html#ad75278174244955c2693e21e738f7e7a", null ],
+    [ "SettFile", "class_k_t_n_1_1_exchange_base2.html#a905bc64ef29aff02280d769cde3c594c", null ],
+    [ "Stop", "class_k_t_n_1_1_exchange_base2.html#aef0e3d1c9bc59575fb88df7240e0c8ef", null ],
+    [ "StopBase", "class_k_t_n_1_1_exchange_base2.html#ac4da9f4a137e7c255276ca9a4120510f", null ]
+];

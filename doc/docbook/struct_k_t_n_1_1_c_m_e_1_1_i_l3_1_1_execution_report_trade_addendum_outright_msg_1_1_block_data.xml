@@ -1,0 +1,214 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data" xml:lang="en-US">
+<title>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData Struct Reference</title>
+<indexterm><primary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>uInt32 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1af9b3bb45909d71fbe1af79662fafd8c5">SeqNum</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1a6c57e668d88bb85b87bc476b1b28a08e">UUID</link></para>
+</listitem>
+            <listitem><para>String40 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1af164581847eaad29d8fef727218967a3">ExecID</link></para>
+</listitem>
+            <listitem><para>String20Req <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1a0fdc35db73bc59a399158dfb402e6d45">SenderID</link></para>
+</listitem>
+            <listitem><para>String20Req <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1aba2fef59c8d71678ddae6983c2dfa30b">ClOrdID</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1a26127ebfb598a608aa4793a32d8fbd1c">PartyDetailsListReqID</link></para>
+</listitem>
+            <listitem><para><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_p_r_i_c_e9">PRICE9</link> <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1a03faf8da0110cc559fbcc0b9eaed3918">LastPx</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1a463d8917d74c7f274540ad34513ddc60">OrderID</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1a38937914c65b1fecabc7d497a5cc20ed">TransactTime</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1abf33f79b49261ef2a9aef3a2ce0d752b">SendingTimeEpoch</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1af7834fd00830c1cb82e13ac30284c53c">SecExecID</link></para>
+</listitem>
+            <listitem><para>uInt64NULL <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1aae9d80df984ad05b84f65e72f2c4cd9f">OrigSecondaryExecutionID</link></para>
+</listitem>
+            <listitem><para>String5Req <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1a99c472e6883cffb59d3ee1cced025114">Location</link></para>
+</listitem>
+            <listitem><para>Int32 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1a8dbb54e9c1d6992d3d916499da75050c">SecurityID</link></para>
+</listitem>
+            <listitem><para>uInt32 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1a23716eb8685a1be1b8ccccaa850b41a3">LastQty</link></para>
+</listitem>
+            <listitem><para>uInt32 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1a08f0fbc34d3a23f40095890f3e039eda">SideTradeID</link></para>
+</listitem>
+            <listitem><para>uInt32NULL <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1a216fb2258a384a290de6f89b31f5b921">OrigSideTradeID</link></para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1ac75f1907dee70fadf85e485d2844827a">TradeDate</link></para>
+</listitem>
+            <listitem><para>EnumOrdStatusTrdCxl <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1a5e9d8bd1293713cf86367fd567650da5">OrdStatus</link></para>
+</listitem>
+            <listitem><para>EnumExecTypTrdCxl <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1aee86000c3f11a59a0c45d88ee8b9edc7">ExecType</link></para>
+</listitem>
+            <listitem><para>EnumSideReq <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1a0b70d5b2f93cdb206f2b3f8ab326dbea">Side</link></para>
+</listitem>
+            <listitem><para>EnumManualOrdIndReq <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1ac2910d328529feefa28f827f8f58eb7e">ManualOrderIndicator</link></para>
+</listitem>
+            <listitem><para>EnumBooleanFlag <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1a075ea5d88b7783a3f34cd909fe9e6eb5">PossRetransFlag</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1af40ffe8a571156744762743952318b4a">SplitMsg</link></para>
+</listitem>
+            <listitem><para>EnumExecMode <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1ab23487e938340f19daf48d1cfc1226ea">ExecutionMode</link></para>
+</listitem>
+            <listitem><para>EnumBooleanNULL <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1a6f354f0d3ed71d83fe015fe22b953391">LiquidityFlag</link></para>
+</listitem>
+            <listitem><para>EnumBooleanNULL <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1afac883d0ae44014878985e0a2f608949">ManagedOrder</link></para>
+</listitem>
+            <listitem><para>EnumShortSaleType <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1a08793de0bd724905717af99fe48c97f3">ShortSaleType</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1aba2fef59c8d71678ddae6983c2dfa30b"/><section>
+    <title>ClOrdID</title>
+<indexterm><primary>ClOrdID</primary><secondary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</primary><secondary>ClOrdID</secondary></indexterm>
+<para><computeroutput>String20Req KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData::ClOrdID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1af164581847eaad29d8fef727218967a3"/><section>
+    <title>ExecID</title>
+<indexterm><primary>ExecID</primary><secondary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</primary><secondary>ExecID</secondary></indexterm>
+<para><computeroutput>String40 KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData::ExecID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1aee86000c3f11a59a0c45d88ee8b9edc7"/><section>
+    <title>ExecType</title>
+<indexterm><primary>ExecType</primary><secondary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</primary><secondary>ExecType</secondary></indexterm>
+<para><computeroutput>EnumExecTypTrdCxl KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData::ExecType</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1ab23487e938340f19daf48d1cfc1226ea"/><section>
+    <title>ExecutionMode</title>
+<indexterm><primary>ExecutionMode</primary><secondary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</primary><secondary>ExecutionMode</secondary></indexterm>
+<para><computeroutput>EnumExecMode KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData::ExecutionMode</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1a03faf8da0110cc559fbcc0b9eaed3918"/><section>
+    <title>LastPx</title>
+<indexterm><primary>LastPx</primary><secondary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</primary><secondary>LastPx</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_p_r_i_c_e9">PRICE9</link> KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData::LastPx</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1a23716eb8685a1be1b8ccccaa850b41a3"/><section>
+    <title>LastQty</title>
+<indexterm><primary>LastQty</primary><secondary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</primary><secondary>LastQty</secondary></indexterm>
+<para><computeroutput>uInt32 KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData::LastQty</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1a6f354f0d3ed71d83fe015fe22b953391"/><section>
+    <title>LiquidityFlag</title>
+<indexterm><primary>LiquidityFlag</primary><secondary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</primary><secondary>LiquidityFlag</secondary></indexterm>
+<para><computeroutput>EnumBooleanNULL KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData::LiquidityFlag</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1a99c472e6883cffb59d3ee1cced025114"/><section>
+    <title>Location</title>
+<indexterm><primary>Location</primary><secondary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</primary><secondary>Location</secondary></indexterm>
+<para><computeroutput>String5Req KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData::Location</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1afac883d0ae44014878985e0a2f608949"/><section>
+    <title>ManagedOrder</title>
+<indexterm><primary>ManagedOrder</primary><secondary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</primary><secondary>ManagedOrder</secondary></indexterm>
+<para><computeroutput>EnumBooleanNULL KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData::ManagedOrder</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1ac2910d328529feefa28f827f8f58eb7e"/><section>
+    <title>ManualOrderIndicator</title>
+<indexterm><primary>ManualOrderIndicator</primary><secondary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</primary><secondary>ManualOrderIndicator</secondary></indexterm>
+<para><computeroutput>EnumManualOrdIndReq KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData::ManualOrderIndicator</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1a463d8917d74c7f274540ad34513ddc60"/><section>
+    <title>OrderID</title>
+<indexterm><primary>OrderID</primary><secondary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</primary><secondary>OrderID</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData::OrderID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1a5e9d8bd1293713cf86367fd567650da5"/><section>
+    <title>OrdStatus</title>
+<indexterm><primary>OrdStatus</primary><secondary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</primary><secondary>OrdStatus</secondary></indexterm>
+<para><computeroutput>EnumOrdStatusTrdCxl KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData::OrdStatus</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1aae9d80df984ad05b84f65e72f2c4cd9f"/><section>
+    <title>OrigSecondaryExecutionID</title>
+<indexterm><primary>OrigSecondaryExecutionID</primary><secondary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</primary><secondary>OrigSecondaryExecutionID</secondary></indexterm>
+<para><computeroutput>uInt64NULL KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData::OrigSecondaryExecutionID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1a216fb2258a384a290de6f89b31f5b921"/><section>
+    <title>OrigSideTradeID</title>
+<indexterm><primary>OrigSideTradeID</primary><secondary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</primary><secondary>OrigSideTradeID</secondary></indexterm>
+<para><computeroutput>uInt32NULL KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData::OrigSideTradeID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1a26127ebfb598a608aa4793a32d8fbd1c"/><section>
+    <title>PartyDetailsListReqID</title>
+<indexterm><primary>PartyDetailsListReqID</primary><secondary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</primary><secondary>PartyDetailsListReqID</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData::PartyDetailsListReqID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1a075ea5d88b7783a3f34cd909fe9e6eb5"/><section>
+    <title>PossRetransFlag</title>
+<indexterm><primary>PossRetransFlag</primary><secondary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</primary><secondary>PossRetransFlag</secondary></indexterm>
+<para><computeroutput>EnumBooleanFlag KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData::PossRetransFlag</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1af7834fd00830c1cb82e13ac30284c53c"/><section>
+    <title>SecExecID</title>
+<indexterm><primary>SecExecID</primary><secondary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</primary><secondary>SecExecID</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData::SecExecID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1a8dbb54e9c1d6992d3d916499da75050c"/><section>
+    <title>SecurityID</title>
+<indexterm><primary>SecurityID</primary><secondary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</primary><secondary>SecurityID</secondary></indexterm>
+<para><computeroutput>Int32 KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData::SecurityID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1a0fdc35db73bc59a399158dfb402e6d45"/><section>
+    <title>SenderID</title>
+<indexterm><primary>SenderID</primary><secondary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</primary><secondary>SenderID</secondary></indexterm>
+<para><computeroutput>String20Req KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData::SenderID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1abf33f79b49261ef2a9aef3a2ce0d752b"/><section>
+    <title>SendingTimeEpoch</title>
+<indexterm><primary>SendingTimeEpoch</primary><secondary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</primary><secondary>SendingTimeEpoch</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData::SendingTimeEpoch</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1af9b3bb45909d71fbe1af79662fafd8c5"/><section>
+    <title>SeqNum</title>
+<indexterm><primary>SeqNum</primary><secondary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</primary><secondary>SeqNum</secondary></indexterm>
+<para><computeroutput>uInt32 KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData::SeqNum</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1a08793de0bd724905717af99fe48c97f3"/><section>
+    <title>ShortSaleType</title>
+<indexterm><primary>ShortSaleType</primary><secondary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</primary><secondary>ShortSaleType</secondary></indexterm>
+<para><computeroutput>EnumShortSaleType KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData::ShortSaleType</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1a0b70d5b2f93cdb206f2b3f8ab326dbea"/><section>
+    <title>Side</title>
+<indexterm><primary>Side</primary><secondary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</primary><secondary>Side</secondary></indexterm>
+<para><computeroutput>EnumSideReq KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData::Side</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1a08f0fbc34d3a23f40095890f3e039eda"/><section>
+    <title>SideTradeID</title>
+<indexterm><primary>SideTradeID</primary><secondary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</primary><secondary>SideTradeID</secondary></indexterm>
+<para><computeroutput>uInt32 KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData::SideTradeID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1af40ffe8a571156744762743952318b4a"/><section>
+    <title>SplitMsg</title>
+<indexterm><primary>SplitMsg</primary><secondary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</primary><secondary>SplitMsg</secondary></indexterm>
+<para><computeroutput>uint8_t KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData::SplitMsg</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1ac75f1907dee70fadf85e485d2844827a"/><section>
+    <title>TradeDate</title>
+<indexterm><primary>TradeDate</primary><secondary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</primary><secondary>TradeDate</secondary></indexterm>
+<para><computeroutput>uint16_t KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData::TradeDate</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1a38937914c65b1fecabc7d497a5cc20ed"/><section>
+    <title>TransactTime</title>
+<indexterm><primary>TransactTime</primary><secondary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</primary><secondary>TransactTime</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData::TransactTime</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_execution_report_trade_addendum_outright_msg_1_1_block_data_1a6c57e668d88bb85b87bc476b1b28a08e"/><section>
+    <title>UUID</title>
+<indexterm><primary>UUID</primary><secondary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData</primary><secondary>UUID</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::ExecutionReportTradeAddendumOutrightMsg::BlockData::UUID</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+exchsupport/cme/il3/IL3Messages2.hpp</section>
+</section>

@@ -1,0 +1,236 @@
+\doxysection{moodycamel\+::Reader\+Writer\+Queue\texorpdfstring{$<$}{<} T, MAX\+\_\+\+BLOCK\+\_\+\+SIZE \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classmoodycamel_1_1_reader_writer_queue}{}\label{classmoodycamel_1_1_reader_writer_queue}\index{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$@{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$}}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries Allocation\+Mode} \{ {\bfseries Can\+Alloc}
+, {\bfseries Cannot\+Alloc}
+ \}
+\item 
+typedef T \mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue_a014128f580a36df0b4ddd8bf00306743}{value\+\_\+type}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+AE\+\_\+\+NO\+\_\+\+TSAN \mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue_abca43e01f2222ac593b93cc3e872ec3b}{Reader\+Writer\+Queue}} (size\+\_\+t size=15)
+\item 
+AE\+\_\+\+NO\+\_\+\+TSAN \mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue_ae555698e1b3663ac2e55ea6eb2353b42}{Reader\+Writer\+Queue}} (\mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue}{Reader\+Writer\+Queue}} \&\&other)
+\item 
+\mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue}{Reader\+Writer\+Queue}} \& \mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue_a904ac3498d28e569d0e9280c70e9ea04}{operator=}} (\mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue}{Reader\+Writer\+Queue}} \&\&other) AE\+\_\+\+NO\+\_\+\+TSAN
+\item 
+AE\+\_\+\+FORCEINLINE bool \mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue_aeb3308da51543c0e1409b5886134fd47}{try\+\_\+enqueue}} (T const \&element) AE\+\_\+\+NO\+\_\+\+TSAN
+\item 
+AE\+\_\+\+FORCEINLINE bool \mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue_aaab2a5b4c81e1481fbe1ff6f898306fb}{try\+\_\+enqueue}} (T \&\&element) AE\+\_\+\+NO\+\_\+\+TSAN
+\item 
+{\footnotesize template$<$typename... Args$>$ }\\AE\+\_\+\+FORCEINLINE bool \mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue_afd246118fccc23207d3201ad70d58d98}{try\+\_\+emplace}} (Args \&\&... args) AE\+\_\+\+NO\+\_\+\+TSAN
+\item 
+AE\+\_\+\+FORCEINLINE bool \mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue_a916e4d19af1692aa8cb5e3cab06974a1}{enqueue}} (T const \&element) AE\+\_\+\+NO\+\_\+\+TSAN
+\item 
+AE\+\_\+\+FORCEINLINE bool \mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue_a04bd825545946d74a4c1faf8f87991d1}{enqueue}} (T \&\&element) AE\+\_\+\+NO\+\_\+\+TSAN
+\item 
+{\footnotesize template$<$typename... Args$>$ }\\AE\+\_\+\+FORCEINLINE bool \mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue_a1f5836c71041cb94f197b24049095ec3}{emplace}} (Args \&\&... args) AE\+\_\+\+NO\+\_\+\+TSAN
+\item 
+{\footnotesize template$<$typename U $>$ }\\bool \mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue_a77969aaf96e16d7df26ab47e45b4ea4b}{try\+\_\+dequeue}} (U \&result) AE\+\_\+\+NO\+\_\+\+TSAN
+\item 
+T \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue_a0cb9f4032a3b9633810cf9290ee42e1b}{peek}} () const AE\+\_\+\+NO\+\_\+\+TSAN
+\item 
+bool \mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue_ab0705da9d31dcc086b747f40456ec451}{pop}} () AE\+\_\+\+NO\+\_\+\+TSAN
+\item 
+size\+\_\+t \mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue_a6713c73630617f77b43c7c65c220c34c}{size\+\_\+approx}} () const AE\+\_\+\+NO\+\_\+\+TSAN
+\item 
+size\+\_\+t \mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue_acbee4ea74cc19aa04dcb366046dee59b}{max\+\_\+capacity}} () const
+\item 
+{\footnotesize template$<$Allocation\+Mode can\+Alloc, typename... Args$>$ }\\bool \mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue_a3005e1a64793cd30078f741b22ca3f0c}{inner\+\_\+enqueue}} (Args \&\&... args) AE\+\_\+\+NO\+\_\+\+TSAN
+\item 
+\mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue_a2d416e6ca925306a4895f66936796880}{Reader\+Writer\+Queue}} (\mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue}{Reader\+Writer\+Queue}} const \&)
+\item 
+\mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue}{Reader\+Writer\+Queue}} \& \mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue_ae3bcaf00163d4a9ae97577ef7d543d38}{operator=}} (\mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue}{Reader\+Writer\+Queue}} const \&)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static AE\+\_\+\+FORCEINLINE size\+\_\+t \mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue_a84c7235bb25e6e3a874cc43480f5b676}{ceil\+To\+Pow2}} (size\+\_\+t x)
+\item 
+{\footnotesize template$<$typename U $>$ }\\static AE\+\_\+\+FORCEINLINE char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue_a57a64ce7fda588808511ad99a9ef20f7}{align\+\_\+for}} (char \texorpdfstring{$\ast$}{*}ptr) AE\+\_\+\+NO\+\_\+\+TSAN
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T, size\+\_\+t MAX\+\_\+\+BLOCK\+\_\+\+SIZE = 512$>$\newline
+class moodycamel\+::\+Reader\+Writer\+Queue$<$ T, MAX\+\_\+\+BLOCK\+\_\+\+SIZE $>$}
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classmoodycamel_1_1_reader_writer_queue_a014128f580a36df0b4ddd8bf00306743}\index{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$@{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$}!value\_type@{value\_type}}
+\index{value\_type@{value\_type}!moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$@{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$}}
+\doxysubsubsection{\texorpdfstring{value\_type}{value\_type}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_reader_writer_queue_a014128f580a36df0b4ddd8bf00306743} 
+template$<$typename T , size\+\_\+t MAX\+\_\+\+BLOCK\+\_\+\+SIZE = 512$>$ \\
+T \mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue}{moodycamel\+::\+Reader\+Writer\+Queue}}$<$ T, MAX\+\_\+\+BLOCK\+\_\+\+SIZE $>$\+::value\+\_\+type}
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{classmoodycamel_1_1_reader_writer_queue_aeebe85330f9048b83de00bd1b9955bf2}\index{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$@{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$}!AllocationMode@{AllocationMode}}
+\index{AllocationMode@{AllocationMode}!moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$@{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$}}
+\doxysubsubsection{\texorpdfstring{AllocationMode}{AllocationMode}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_reader_writer_queue_aeebe85330f9048b83de00bd1b9955bf2} 
+template$<$typename T , size\+\_\+t MAX\+\_\+\+BLOCK\+\_\+\+SIZE = 512$>$ \\
+enum moodycamel\+::\+Reader\+Writer\+Queue\+::\+Allocation\+Mode}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classmoodycamel_1_1_reader_writer_queue_abca43e01f2222ac593b93cc3e872ec3b}\index{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$@{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$}!ReaderWriterQueue@{ReaderWriterQueue}}
+\index{ReaderWriterQueue@{ReaderWriterQueue}!moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$@{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$}}
+\doxysubsubsection{\texorpdfstring{ReaderWriterQueue()}{ReaderWriterQueue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_reader_writer_queue_abca43e01f2222ac593b93cc3e872ec3b} 
+template$<$typename T , size\+\_\+t MAX\+\_\+\+BLOCK\+\_\+\+SIZE = 512$>$ \\
+AE\+\_\+\+NO\+\_\+\+TSAN \mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue}{moodycamel\+::\+Reader\+Writer\+Queue}}$<$ T, MAX\+\_\+\+BLOCK\+\_\+\+SIZE $>$\+::\+Reader\+Writer\+Queue (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size}{ = {\ttfamily 15}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\Hypertarget{classmoodycamel_1_1_reader_writer_queue_ae555698e1b3663ac2e55ea6eb2353b42}\index{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$@{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$}!ReaderWriterQueue@{ReaderWriterQueue}}
+\index{ReaderWriterQueue@{ReaderWriterQueue}!moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$@{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$}}
+\doxysubsubsection{\texorpdfstring{ReaderWriterQueue()}{ReaderWriterQueue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_reader_writer_queue_ae555698e1b3663ac2e55ea6eb2353b42} 
+template$<$typename T , size\+\_\+t MAX\+\_\+\+BLOCK\+\_\+\+SIZE = 512$>$ \\
+AE\+\_\+\+NO\+\_\+\+TSAN \mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue}{moodycamel\+::\+Reader\+Writer\+Queue}}$<$ T, MAX\+\_\+\+BLOCK\+\_\+\+SIZE $>$\+::\+Reader\+Writer\+Queue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue}{Reader\+Writer\+Queue}}$<$ T, MAX\+\_\+\+BLOCK\+\_\+\+SIZE $>$ \&\&}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_reader_writer_queue_aa55e1814d303422af6c7063b81c2d5bc}\index{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$@{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$}!````~ReaderWriterQueue@{\texorpdfstring{$\sim$}{\string~}ReaderWriterQueue}}
+\index{````~ReaderWriterQueue@{\texorpdfstring{$\sim$}{\string~}ReaderWriterQueue}!moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$@{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ReaderWriterQueue()}{\string~ReaderWriterQueue()}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_reader_writer_queue_aa55e1814d303422af6c7063b81c2d5bc} 
+template$<$typename T , size\+\_\+t MAX\+\_\+\+BLOCK\+\_\+\+SIZE = 512$>$ \\
+AE\+\_\+\+NO\+\_\+\+TSAN \mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue}{moodycamel\+::\+Reader\+Writer\+Queue}}$<$ T, MAX\+\_\+\+BLOCK\+\_\+\+SIZE $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue}{Reader\+Writer\+Queue}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_reader_writer_queue_a2d416e6ca925306a4895f66936796880}\index{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$@{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$}!ReaderWriterQueue@{ReaderWriterQueue}}
+\index{ReaderWriterQueue@{ReaderWriterQueue}!moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$@{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$}}
+\doxysubsubsection{\texorpdfstring{ReaderWriterQueue()}{ReaderWriterQueue()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_reader_writer_queue_a2d416e6ca925306a4895f66936796880} 
+template$<$typename T , size\+\_\+t MAX\+\_\+\+BLOCK\+\_\+\+SIZE = 512$>$ \\
+\mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue}{moodycamel\+::\+Reader\+Writer\+Queue}}$<$ T, MAX\+\_\+\+BLOCK\+\_\+\+SIZE $>$\+::\+Reader\+Writer\+Queue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue}{Reader\+Writer\+Queue}}$<$ T, MAX\+\_\+\+BLOCK\+\_\+\+SIZE $>$ const \&}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmoodycamel_1_1_reader_writer_queue_a57a64ce7fda588808511ad99a9ef20f7}\index{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$@{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$}!align\_for@{align\_for}}
+\index{align\_for@{align\_for}!moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$@{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$}}
+\doxysubsubsection{\texorpdfstring{align\_for()}{align\_for()}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_reader_writer_queue_a57a64ce7fda588808511ad99a9ef20f7} 
+template$<$typename T , size\+\_\+t MAX\+\_\+\+BLOCK\+\_\+\+SIZE = 512$>$ \\
+template$<$typename U $>$ \\
+static AE\+\_\+\+FORCEINLINE char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue}{moodycamel\+::\+Reader\+Writer\+Queue}}$<$ T, MAX\+\_\+\+BLOCK\+\_\+\+SIZE $>$\+::align\+\_\+for (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{ptr}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{classmoodycamel_1_1_reader_writer_queue_a84c7235bb25e6e3a874cc43480f5b676}\index{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$@{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$}!ceilToPow2@{ceilToPow2}}
+\index{ceilToPow2@{ceilToPow2}!moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$@{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$}}
+\doxysubsubsection{\texorpdfstring{ceilToPow2()}{ceilToPow2()}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_reader_writer_queue_a84c7235bb25e6e3a874cc43480f5b676} 
+template$<$typename T , size\+\_\+t MAX\+\_\+\+BLOCK\+\_\+\+SIZE = 512$>$ \\
+static AE\+\_\+\+FORCEINLINE size\+\_\+t \mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue}{moodycamel\+::\+Reader\+Writer\+Queue}}$<$ T, MAX\+\_\+\+BLOCK\+\_\+\+SIZE $>$\+::ceil\+To\+Pow2 (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{x}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{classmoodycamel_1_1_reader_writer_queue_a1f5836c71041cb94f197b24049095ec3}\index{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$@{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$}!emplace@{emplace}}
+\index{emplace@{emplace}!moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$@{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$}}
+\doxysubsubsection{\texorpdfstring{emplace()}{emplace()}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_reader_writer_queue_a1f5836c71041cb94f197b24049095ec3} 
+template$<$typename T , size\+\_\+t MAX\+\_\+\+BLOCK\+\_\+\+SIZE = 512$>$ \\
+template$<$typename... Args$>$ \\
+AE\+\_\+\+FORCEINLINE bool \mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue}{moodycamel\+::\+Reader\+Writer\+Queue}}$<$ T, MAX\+\_\+\+BLOCK\+\_\+\+SIZE $>$\+::emplace (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_reader_writer_queue_a04bd825545946d74a4c1faf8f87991d1}\index{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$@{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$}!enqueue@{enqueue}}
+\index{enqueue@{enqueue}!moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$@{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$}}
+\doxysubsubsection{\texorpdfstring{enqueue()}{enqueue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_reader_writer_queue_a04bd825545946d74a4c1faf8f87991d1} 
+template$<$typename T , size\+\_\+t MAX\+\_\+\+BLOCK\+\_\+\+SIZE = 512$>$ \\
+AE\+\_\+\+FORCEINLINE bool \mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue}{moodycamel\+::\+Reader\+Writer\+Queue}}$<$ T, MAX\+\_\+\+BLOCK\+\_\+\+SIZE $>$\+::enqueue (\begin{DoxyParamCaption}\item[{T \&\&}]{element}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_reader_writer_queue_a916e4d19af1692aa8cb5e3cab06974a1}\index{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$@{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$}!enqueue@{enqueue}}
+\index{enqueue@{enqueue}!moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$@{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$}}
+\doxysubsubsection{\texorpdfstring{enqueue()}{enqueue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_reader_writer_queue_a916e4d19af1692aa8cb5e3cab06974a1} 
+template$<$typename T , size\+\_\+t MAX\+\_\+\+BLOCK\+\_\+\+SIZE = 512$>$ \\
+AE\+\_\+\+FORCEINLINE bool \mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue}{moodycamel\+::\+Reader\+Writer\+Queue}}$<$ T, MAX\+\_\+\+BLOCK\+\_\+\+SIZE $>$\+::enqueue (\begin{DoxyParamCaption}\item[{T const \&}]{element}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_reader_writer_queue_a3005e1a64793cd30078f741b22ca3f0c}\index{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$@{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$}!inner\_enqueue@{inner\_enqueue}}
+\index{inner\_enqueue@{inner\_enqueue}!moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$@{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$}}
+\doxysubsubsection{\texorpdfstring{inner\_enqueue()}{inner\_enqueue()}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_reader_writer_queue_a3005e1a64793cd30078f741b22ca3f0c} 
+template$<$typename T , size\+\_\+t MAX\+\_\+\+BLOCK\+\_\+\+SIZE = 512$>$ \\
+template$<$Allocation\+Mode can\+Alloc, typename... Args$>$ \\
+bool \mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue}{moodycamel\+::\+Reader\+Writer\+Queue}}$<$ T, MAX\+\_\+\+BLOCK\+\_\+\+SIZE $>$\+::inner\+\_\+enqueue (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_reader_writer_queue_acbee4ea74cc19aa04dcb366046dee59b}\index{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$@{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$}!max\_capacity@{max\_capacity}}
+\index{max\_capacity@{max\_capacity}!moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$@{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$}}
+\doxysubsubsection{\texorpdfstring{max\_capacity()}{max\_capacity()}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_reader_writer_queue_acbee4ea74cc19aa04dcb366046dee59b} 
+template$<$typename T , size\+\_\+t MAX\+\_\+\+BLOCK\+\_\+\+SIZE = 512$>$ \\
+size\+\_\+t \mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue}{moodycamel\+::\+Reader\+Writer\+Queue}}$<$ T, MAX\+\_\+\+BLOCK\+\_\+\+SIZE $>$\+::max\+\_\+capacity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_reader_writer_queue_a904ac3498d28e569d0e9280c70e9ea04}\index{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$@{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$@{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_reader_writer_queue_a904ac3498d28e569d0e9280c70e9ea04} 
+template$<$typename T , size\+\_\+t MAX\+\_\+\+BLOCK\+\_\+\+SIZE = 512$>$ \\
+\mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue}{Reader\+Writer\+Queue}} \& \mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue}{moodycamel\+::\+Reader\+Writer\+Queue}}$<$ T, MAX\+\_\+\+BLOCK\+\_\+\+SIZE $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue}{Reader\+Writer\+Queue}}$<$ T, MAX\+\_\+\+BLOCK\+\_\+\+SIZE $>$ \&\&}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_reader_writer_queue_ae3bcaf00163d4a9ae97577ef7d543d38}\index{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$@{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$@{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_reader_writer_queue_ae3bcaf00163d4a9ae97577ef7d543d38} 
+template$<$typename T , size\+\_\+t MAX\+\_\+\+BLOCK\+\_\+\+SIZE = 512$>$ \\
+\mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue}{Reader\+Writer\+Queue}} \& \mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue}{moodycamel\+::\+Reader\+Writer\+Queue}}$<$ T, MAX\+\_\+\+BLOCK\+\_\+\+SIZE $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue}{Reader\+Writer\+Queue}}$<$ T, MAX\+\_\+\+BLOCK\+\_\+\+SIZE $>$ const \&}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_reader_writer_queue_a0cb9f4032a3b9633810cf9290ee42e1b}\index{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$@{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$}!peek@{peek}}
+\index{peek@{peek}!moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$@{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$}}
+\doxysubsubsection{\texorpdfstring{peek()}{peek()}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_reader_writer_queue_a0cb9f4032a3b9633810cf9290ee42e1b} 
+template$<$typename T , size\+\_\+t MAX\+\_\+\+BLOCK\+\_\+\+SIZE = 512$>$ \\
+T \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue}{moodycamel\+::\+Reader\+Writer\+Queue}}$<$ T, MAX\+\_\+\+BLOCK\+\_\+\+SIZE $>$\+::peek (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_reader_writer_queue_ab0705da9d31dcc086b747f40456ec451}\index{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$@{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$}!pop@{pop}}
+\index{pop@{pop}!moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$@{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$}}
+\doxysubsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_reader_writer_queue_ab0705da9d31dcc086b747f40456ec451} 
+template$<$typename T , size\+\_\+t MAX\+\_\+\+BLOCK\+\_\+\+SIZE = 512$>$ \\
+bool \mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue}{moodycamel\+::\+Reader\+Writer\+Queue}}$<$ T, MAX\+\_\+\+BLOCK\+\_\+\+SIZE $>$\+::pop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_reader_writer_queue_a6713c73630617f77b43c7c65c220c34c}\index{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$@{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$}!size\_approx@{size\_approx}}
+\index{size\_approx@{size\_approx}!moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$@{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$}}
+\doxysubsubsection{\texorpdfstring{size\_approx()}{size\_approx()}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_reader_writer_queue_a6713c73630617f77b43c7c65c220c34c} 
+template$<$typename T , size\+\_\+t MAX\+\_\+\+BLOCK\+\_\+\+SIZE = 512$>$ \\
+size\+\_\+t \mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue}{moodycamel\+::\+Reader\+Writer\+Queue}}$<$ T, MAX\+\_\+\+BLOCK\+\_\+\+SIZE $>$\+::size\+\_\+approx (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_reader_writer_queue_a77969aaf96e16d7df26ab47e45b4ea4b}\index{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$@{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$}!try\_dequeue@{try\_dequeue}}
+\index{try\_dequeue@{try\_dequeue}!moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$@{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$}}
+\doxysubsubsection{\texorpdfstring{try\_dequeue()}{try\_dequeue()}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_reader_writer_queue_a77969aaf96e16d7df26ab47e45b4ea4b} 
+template$<$typename T , size\+\_\+t MAX\+\_\+\+BLOCK\+\_\+\+SIZE = 512$>$ \\
+template$<$typename U $>$ \\
+bool \mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue}{moodycamel\+::\+Reader\+Writer\+Queue}}$<$ T, MAX\+\_\+\+BLOCK\+\_\+\+SIZE $>$\+::try\+\_\+dequeue (\begin{DoxyParamCaption}\item[{U \&}]{result}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_reader_writer_queue_afd246118fccc23207d3201ad70d58d98}\index{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$@{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$}!try\_emplace@{try\_emplace}}
+\index{try\_emplace@{try\_emplace}!moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$@{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$}}
+\doxysubsubsection{\texorpdfstring{try\_emplace()}{try\_emplace()}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_reader_writer_queue_afd246118fccc23207d3201ad70d58d98} 
+template$<$typename T , size\+\_\+t MAX\+\_\+\+BLOCK\+\_\+\+SIZE = 512$>$ \\
+template$<$typename... Args$>$ \\
+AE\+\_\+\+FORCEINLINE bool \mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue}{moodycamel\+::\+Reader\+Writer\+Queue}}$<$ T, MAX\+\_\+\+BLOCK\+\_\+\+SIZE $>$\+::try\+\_\+emplace (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_reader_writer_queue_aaab2a5b4c81e1481fbe1ff6f898306fb}\index{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$@{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$}!try\_enqueue@{try\_enqueue}}
+\index{try\_enqueue@{try\_enqueue}!moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$@{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$}}
+\doxysubsubsection{\texorpdfstring{try\_enqueue()}{try\_enqueue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_reader_writer_queue_aaab2a5b4c81e1481fbe1ff6f898306fb} 
+template$<$typename T , size\+\_\+t MAX\+\_\+\+BLOCK\+\_\+\+SIZE = 512$>$ \\
+AE\+\_\+\+FORCEINLINE bool \mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue}{moodycamel\+::\+Reader\+Writer\+Queue}}$<$ T, MAX\+\_\+\+BLOCK\+\_\+\+SIZE $>$\+::try\+\_\+enqueue (\begin{DoxyParamCaption}\item[{T \&\&}]{element}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classmoodycamel_1_1_reader_writer_queue_aeb3308da51543c0e1409b5886134fd47}\index{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$@{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$}!try\_enqueue@{try\_enqueue}}
+\index{try\_enqueue@{try\_enqueue}!moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$@{moodycamel::ReaderWriterQueue$<$ T, MAX\_BLOCK\_SIZE $>$}}
+\doxysubsubsection{\texorpdfstring{try\_enqueue()}{try\_enqueue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classmoodycamel_1_1_reader_writer_queue_aeb3308da51543c0e1409b5886134fd47} 
+template$<$typename T , size\+\_\+t MAX\+\_\+\+BLOCK\+\_\+\+SIZE = 512$>$ \\
+AE\+\_\+\+FORCEINLINE bool \mbox{\hyperlink{classmoodycamel_1_1_reader_writer_queue}{moodycamel\+::\+Reader\+Writer\+Queue}}$<$ T, MAX\+\_\+\+BLOCK\+\_\+\+SIZE $>$\+::try\+\_\+enqueue (\begin{DoxyParamCaption}\item[{T const \&}]{element}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sgaer/source/repos/katanafinancial/\+Occam\+CME4/\+Occam\+CME4/src/external/camel/readerwriterqueue.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_status_request_msg" xml:lang="en-US">
+<title>KTN::CME::IL3::OrderStatusRequestMsg Struct Reference</title>
+<indexterm><primary>KTN::CME::IL3::OrderStatusRequestMsg</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_status_request_msg_1a88772267e08ca7ae5565200131314d96">Construct</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>std::uint16_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_status_request_msg_1a7edbb65cbadd9e87d15328ee5718414a">msgSize</link></para>
+</listitem>
+            <listitem><para>std::uint16_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_status_request_msg_1a4c19b6aa630c77bcbb7109c6fbae3fa8">enodingType_</link></para>
+</listitem>
+            <listitem><para>std::uint16_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_status_request_msg_1acb9ba103df66be9a890c954113e3c9d7">blockLength_</link></para>
+</listitem>
+            <listitem><para>std::uint16_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_status_request_msg_1ad89653d41b28b7f3ac1d1258e1c837eb">templateId_</link></para>
+</listitem>
+            <listitem><para>std::uint16_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_status_request_msg_1a9c2ecf3d56f2f40c87cdca95501d6b53">schemaId_</link></para>
+</listitem>
+            <listitem><para>std::uint16_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_status_request_msg_1a3611b1d1207c75e5f44631619402c85d">version_</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_status_request_msg_1ae61cbe26ee7cd4ada9f74320918d6994">PartyDetailsListReqID</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_status_request_msg_1adf443bacedee4ff49485710457d67981">OrdStatusReqID</link></para>
+</listitem>
+            <listitem><para>EnumManualOrdIndReq <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_status_request_msg_1a88bf797ffffce7a080c907fe3a8827d0">ManualOrderIndicator</link></para>
+</listitem>
+            <listitem><para>uInt32 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_status_request_msg_1a652c402f45e0813f350769ebb3baffa3">SeqNum</link></para>
+</listitem>
+            <listitem><para>String20Req <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_status_request_msg_1a7b4a672a382ec059a7ed855286e2567c">SenderID</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_status_request_msg_1aed352f1e1de8b2b1e7fdf9af988e445b">OrderID</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_status_request_msg_1a6a46e193586f9ec185764facda395a7f">SendingTimeEpoch</link></para>
+</listitem>
+            <listitem><para>String5Req <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_status_request_msg_1aebf77f238c01508673046f881f268850">Location</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_status_request_msg_1a88772267e08ca7ae5565200131314d96"/><section>
+    <title>Construct()</title>
+<indexterm><primary>Construct</primary><secondary>KTN::CME::IL3::OrderStatusRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderStatusRequestMsg</primary><secondary>Construct</secondary></indexterm>
+<para><computeroutput>void KTN::CME::IL3::OrderStatusRequestMsg::Construct ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_status_request_msg_1acb9ba103df66be9a890c954113e3c9d7"/><section>
+    <title>blockLength_</title>
+<indexterm><primary>blockLength_</primary><secondary>KTN::CME::IL3::OrderStatusRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderStatusRequestMsg</primary><secondary>blockLength_</secondary></indexterm>
+<para><computeroutput>std::uint16_t KTN::CME::IL3::OrderStatusRequestMsg::blockLength_</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_status_request_msg_1a4c19b6aa630c77bcbb7109c6fbae3fa8"/><section>
+    <title>enodingType_</title>
+<indexterm><primary>enodingType_</primary><secondary>KTN::CME::IL3::OrderStatusRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderStatusRequestMsg</primary><secondary>enodingType_</secondary></indexterm>
+<para><computeroutput>std::uint16_t KTN::CME::IL3::OrderStatusRequestMsg::enodingType_</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_status_request_msg_1aebf77f238c01508673046f881f268850"/><section>
+    <title>Location</title>
+<indexterm><primary>Location</primary><secondary>KTN::CME::IL3::OrderStatusRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderStatusRequestMsg</primary><secondary>Location</secondary></indexterm>
+<para><computeroutput>String5Req KTN::CME::IL3::OrderStatusRequestMsg::Location</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_status_request_msg_1a88bf797ffffce7a080c907fe3a8827d0"/><section>
+    <title>ManualOrderIndicator</title>
+<indexterm><primary>ManualOrderIndicator</primary><secondary>KTN::CME::IL3::OrderStatusRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderStatusRequestMsg</primary><secondary>ManualOrderIndicator</secondary></indexterm>
+<para><computeroutput>EnumManualOrdIndReq KTN::CME::IL3::OrderStatusRequestMsg::ManualOrderIndicator</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_status_request_msg_1a7edbb65cbadd9e87d15328ee5718414a"/><section>
+    <title>msgSize</title>
+<indexterm><primary>msgSize</primary><secondary>KTN::CME::IL3::OrderStatusRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderStatusRequestMsg</primary><secondary>msgSize</secondary></indexterm>
+<para><computeroutput>std::uint16_t KTN::CME::IL3::OrderStatusRequestMsg::msgSize</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_status_request_msg_1aed352f1e1de8b2b1e7fdf9af988e445b"/><section>
+    <title>OrderID</title>
+<indexterm><primary>OrderID</primary><secondary>KTN::CME::IL3::OrderStatusRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderStatusRequestMsg</primary><secondary>OrderID</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::OrderStatusRequestMsg::OrderID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_status_request_msg_1adf443bacedee4ff49485710457d67981"/><section>
+    <title>OrdStatusReqID</title>
+<indexterm><primary>OrdStatusReqID</primary><secondary>KTN::CME::IL3::OrderStatusRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderStatusRequestMsg</primary><secondary>OrdStatusReqID</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::OrderStatusRequestMsg::OrdStatusReqID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_status_request_msg_1ae61cbe26ee7cd4ada9f74320918d6994"/><section>
+    <title>PartyDetailsListReqID</title>
+<indexterm><primary>PartyDetailsListReqID</primary><secondary>KTN::CME::IL3::OrderStatusRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderStatusRequestMsg</primary><secondary>PartyDetailsListReqID</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::OrderStatusRequestMsg::PartyDetailsListReqID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_status_request_msg_1a9c2ecf3d56f2f40c87cdca95501d6b53"/><section>
+    <title>schemaId_</title>
+<indexterm><primary>schemaId_</primary><secondary>KTN::CME::IL3::OrderStatusRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderStatusRequestMsg</primary><secondary>schemaId_</secondary></indexterm>
+<para><computeroutput>std::uint16_t KTN::CME::IL3::OrderStatusRequestMsg::schemaId_</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_status_request_msg_1a7b4a672a382ec059a7ed855286e2567c"/><section>
+    <title>SenderID</title>
+<indexterm><primary>SenderID</primary><secondary>KTN::CME::IL3::OrderStatusRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderStatusRequestMsg</primary><secondary>SenderID</secondary></indexterm>
+<para><computeroutput>String20Req KTN::CME::IL3::OrderStatusRequestMsg::SenderID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_status_request_msg_1a6a46e193586f9ec185764facda395a7f"/><section>
+    <title>SendingTimeEpoch</title>
+<indexterm><primary>SendingTimeEpoch</primary><secondary>KTN::CME::IL3::OrderStatusRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderStatusRequestMsg</primary><secondary>SendingTimeEpoch</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::OrderStatusRequestMsg::SendingTimeEpoch</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_status_request_msg_1a652c402f45e0813f350769ebb3baffa3"/><section>
+    <title>SeqNum</title>
+<indexterm><primary>SeqNum</primary><secondary>KTN::CME::IL3::OrderStatusRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderStatusRequestMsg</primary><secondary>SeqNum</secondary></indexterm>
+<para><computeroutput>uInt32 KTN::CME::IL3::OrderStatusRequestMsg::SeqNum</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_status_request_msg_1ad89653d41b28b7f3ac1d1258e1c837eb"/><section>
+    <title>templateId_</title>
+<indexterm><primary>templateId_</primary><secondary>KTN::CME::IL3::OrderStatusRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderStatusRequestMsg</primary><secondary>templateId_</secondary></indexterm>
+<para><computeroutput>std::uint16_t KTN::CME::IL3::OrderStatusRequestMsg::templateId_</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_status_request_msg_1a3611b1d1207c75e5f44631619402c85d"/><section>
+    <title>version_</title>
+<indexterm><primary>version_</primary><secondary>KTN::CME::IL3::OrderStatusRequestMsg</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderStatusRequestMsg</primary><secondary>version_</secondary></indexterm>
+<para><computeroutput>std::uint16_t KTN::CME::IL3::OrderStatusRequestMsg::version_</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+exchsupport/cme/il3/IL3Messages2.hpp</section>
+</section>

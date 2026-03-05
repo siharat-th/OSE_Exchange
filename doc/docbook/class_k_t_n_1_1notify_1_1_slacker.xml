@@ -1,0 +1,233 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1notify_1_1_slacker" xml:lang="en-US">
+<title>KTN::notify::Slacker Class Reference</title>
+<indexterm><primary>KTN::notify::Slacker</primary></indexterm>
+<para>
+
+<para>Class representing a Slack-enabled messaging class for alerts and notifications. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;Slacker.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for KTN::notify::Slacker:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_k_t_n_1_1notify_1_1_slacker.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1notify_1_1_slacker_1ac8e52c4b87a0b11f8518739b7de2b29d">Slacker</link> ()</para>
+
+<para>Default constructor for <link linkend="_class_k_t_n_1_1notify_1_1_slacker">Slacker</link>. </para>
+</listitem>
+            <listitem><para><link linkend="_class_k_t_n_1_1notify_1_1_slacker_1a006e3d07e21e8266de4dae817a1df409">~Slacker</link> ()</para>
+
+<para>Destructor for <link linkend="_class_k_t_n_1_1notify_1_1_slacker">Slacker</link>. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1notify_1_1_slacker_1a9488f2c8f2609db9e71ac28490acf58c">InitAndRun</link> ()</para>
+
+<para>Initializes and runs the <link linkend="_class_k_t_n_1_1notify_1_1_slacker">Slacker</link>. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1notify_1_1_slacker_1ad3b0170243470f28069787caf3f81cd0">Send</link> (string preview, string topic, string msg, int color, bool force)</para>
+
+<para>Sends a Slack message. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1notify_1_1_slacker_1aa98847b40ba8e354fac9b6de9d1378bf">Send</link> (<link linkend="_struct_k_t_n_1_1notify_1_1slackmsg">slackmsg</link> &amp;msg)</para>
+
+<para>Sends a Slack message. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1notify_1_1_slacker_1a8525cf590872d41a9fecafaac9c59a76">Enable</link> (bool sendmessages)</para>
+
+<para>Enables or disables sending messages. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_class_named_thread">NamedThread</link>        <itemizedlist>
+            <listitem><para><link linkend="_class_named_thread_1a891fabdc2d824048ec05c82e7ef8c69a">NamedThread</link> ()</para>
+
+<para>Default constructor. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_named_thread_1a018dadb59e5af98ee734301a1baa50cb">~NamedThread</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_named_thread_1a9fa42542ff43c89fb9bbc33de9c87e34">CreateAndRun</link> (string name, int core)</para>
+
+<para>Creates and runs the named thread on the specified core. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_named_thread_1ad4809c571171be13f0f91f540d5c196f">Join</link> ()</para>
+
+<para>Joins the named thread. </para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+
+<para>Class representing a Slack-enabled messaging class for alerts and notifications. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1notify_1_1_slacker_1ac8e52c4b87a0b11f8518739b7de2b29d"/><section>
+    <title>Slacker()</title>
+<indexterm><primary>Slacker</primary><secondary>KTN::notify::Slacker</secondary></indexterm>
+<indexterm><primary>KTN::notify::Slacker</primary><secondary>Slacker</secondary></indexterm>
+<para><computeroutput>Slacker::Slacker ( )</computeroutput></para><para>
+
+<para>Default constructor for <link linkend="_class_k_t_n_1_1notify_1_1_slacker">Slacker</link>. </para>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1notify_1_1_slacker_1a006e3d07e21e8266de4dae817a1df409"/><section>
+    <title>~Slacker()</title>
+<indexterm><primary>~Slacker</primary><secondary>KTN::notify::Slacker</secondary></indexterm>
+<indexterm><primary>KTN::notify::Slacker</primary><secondary>~Slacker</secondary></indexterm>
+<para><computeroutput>Slacker::~Slacker ( )</computeroutput></para><para>
+
+<para>Destructor for <link linkend="_class_k_t_n_1_1notify_1_1_slacker">Slacker</link>. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1notify_1_1_slacker_1a8525cf590872d41a9fecafaac9c59a76"/><section>
+    <title>Enable()</title>
+<indexterm><primary>Enable</primary><secondary>KTN::notify::Slacker</secondary></indexterm>
+<indexterm><primary>KTN::notify::Slacker</primary><secondary>Enable</secondary></indexterm>
+<para><computeroutput>void Slacker::Enable (bool sendmessages)</computeroutput></para><para>
+
+<para>Enables or disables sending messages. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>sendmessages</entry><entry>
+<para>A flag indicating whether to enable sending messages. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1notify_1_1_slacker_1a9488f2c8f2609db9e71ac28490acf58c"/><section>
+    <title>InitAndRun()</title>
+<indexterm><primary>InitAndRun</primary><secondary>KTN::notify::Slacker</secondary></indexterm>
+<indexterm><primary>KTN::notify::Slacker</primary><secondary>InitAndRun</secondary></indexterm>
+<para><computeroutput>void Slacker::InitAndRun ( )</computeroutput></para><para>
+
+<para>Initializes and runs the <link linkend="_class_k_t_n_1_1notify_1_1_slacker">Slacker</link>. </para>
+</para>
+<para>
+References <link linkend="_l00065">KTN::notify::slackbot::baseurl</link>, <link linkend="_l00067">KTN::notify::slackbot::channel</link>, <link linkend="_l00068">KTN::notify::slackbot::color</link>, <link linkend="_l00018">NamedThread::CreateAndRun()</link>, <link linkend="_l00123">Settings::get()</link>, <link linkend="_l00075">KTN::notify::slackbot::Print()</link>, <link linkend="_l00064">KTN::notify::slackbot::token</link>, and <link linkend="_l00069">KTN::notify::slackbot::username</link>.</para>
+<para>
+Referenced by <link linkend="_l00013">KTN::Skewer::Skewer()</link>, <link linkend="_l00013">KTN::SkewTrader::SkewTrader()</link>, <link linkend="_l00013">KTN::Stacker::Stacker()</link>, <link linkend="_l00013">KTN::StackerTimer::StackerTimer()</link>, and <link linkend="_l00013">KTN::Twap::Twap()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1notify_1_1_slacker_1aa98847b40ba8e354fac9b6de9d1378bf"/><section>
+    <title>Send()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>Send</primary><secondary>KTN::notify::Slacker</secondary></indexterm>
+<indexterm><primary>KTN::notify::Slacker</primary><secondary>Send</secondary></indexterm>
+<para><computeroutput>void Slacker::Send (<link linkend="_struct_k_t_n_1_1notify_1_1slackmsg">slackmsg</link> &amp; msg)</computeroutput></para><para>
+
+<para>Sends a Slack message. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>msg</entry><entry>
+<para>The Slack message to send. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00055">KTN::notify::slackmsg::text</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1notify_1_1_slacker_1ad3b0170243470f28069787caf3f81cd0"/><section>
+    <title>Send()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>Send</primary><secondary>KTN::notify::Slacker</secondary></indexterm>
+<indexterm><primary>KTN::notify::Slacker</primary><secondary>Send</secondary></indexterm>
+<para><computeroutput>void Slacker::Send (string preview, string topic, string msg, int color = <computeroutput>LOG_WHITE</computeroutput>
+, bool force = <computeroutput>false</computeroutput>
+)</computeroutput></para><para>
+
+<para>Sends a Slack message. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>preview</entry><entry>
+<para>The preview of the message. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>topic</entry><entry>
+<para>The topic of the message. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>msg</entry><entry>
+<para>The text of the message. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>color</entry><entry>
+<para>The color of the message. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>force</entry><entry>
+<para>A flag indicating whether to force sending the message. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00056">KTN::notify::slackmsg::color</link>, <link linkend="_l00053">KTN::notify::slackmsg::preview</link>, <link linkend="_l00055">KTN::notify::slackmsg::text</link>, and <link linkend="_l00054">KTN::notify::slackmsg::topic</link>.</para>
+<para>
+Referenced by <link linkend="_l01043">KTN::Skewer::minOrderExecution()</link>, <link linkend="_l00885">KTN::StackerTimer::minOrderExecution()</link>, and <link linkend="_l00975">KTN::Twap::minOrderExecution()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Notifications/Slacker.hppNotifications/Slacker.cpp</section>
+</section>

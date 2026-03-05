@@ -1,0 +1,93 @@
+\doxysection{IL3\+Cert\+Helpers Class Reference}
+\hypertarget{class_i_l3_cert_helpers}{}\label{class_i_l3_cert_helpers}\index{IL3CertHelpers@{IL3CertHelpers}}
+
+
+Helper class for working with IL3 certification environments. FOR TESTING ONLY.  
+
+
+
+
+{\ttfamily \#include $<$IL3\+Cert\+Helpers.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static long \mbox{\hyperlink{class_i_l3_cert_helpers_aaae325f9663391c60e2ba3a6078c6e38}{Cert\+Sec\+Id}} (string symbol)
+\begin{DoxyCompactList}\small\item\em Get the cert environment security ID for a given symbol. FOR TESTING ONLY. \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_i_l3_cert_helpers_aac3f8cd11933ecb9c7041b68489b6088}{Cert\+Symbol}} (long secid)
+\begin{DoxyCompactList}\small\item\em Get the certification environment symbol for a given security ID. FOR TESTING ONLY. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Helper class for working with IL3 certification environments. FOR TESTING ONLY. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_i_l3_cert_helpers_aaf1900f4d467cd0cbe1ddf46b64ee231}\index{IL3CertHelpers@{IL3CertHelpers}!IL3CertHelpers@{IL3CertHelpers}}
+\index{IL3CertHelpers@{IL3CertHelpers}!IL3CertHelpers@{IL3CertHelpers}}
+\doxysubsubsection{\texorpdfstring{IL3CertHelpers()}{IL3CertHelpers()}}
+{\footnotesize\ttfamily \label{class_i_l3_cert_helpers_aaf1900f4d467cd0cbe1ddf46b64ee231} 
+IL3\+Cert\+Helpers\+::\+IL3\+Cert\+Helpers (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_i_l3_cert_helpers_a4dbf2e91636c85a8b8b27129edb27cb9}\index{IL3CertHelpers@{IL3CertHelpers}!````~IL3CertHelpers@{\texorpdfstring{$\sim$}{\string~}IL3CertHelpers}}
+\index{````~IL3CertHelpers@{\texorpdfstring{$\sim$}{\string~}IL3CertHelpers}!IL3CertHelpers@{IL3CertHelpers}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}IL3CertHelpers()}{\string~IL3CertHelpers()}}
+{\footnotesize\ttfamily \label{class_i_l3_cert_helpers_a4dbf2e91636c85a8b8b27129edb27cb9} 
+IL3\+Cert\+Helpers\+::\texorpdfstring{$\sim$}{\string~}\+IL3\+Cert\+Helpers (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_i_l3_cert_helpers_aaae325f9663391c60e2ba3a6078c6e38}\index{IL3CertHelpers@{IL3CertHelpers}!CertSecId@{CertSecId}}
+\index{CertSecId@{CertSecId}!IL3CertHelpers@{IL3CertHelpers}}
+\doxysubsubsection{\texorpdfstring{CertSecId()}{CertSecId()}}
+{\footnotesize\ttfamily \label{class_i_l3_cert_helpers_aaae325f9663391c60e2ba3a6078c6e38} 
+static long IL3\+Cert\+Helpers\+::\+Cert\+Sec\+Id (\begin{DoxyParamCaption}\item[{string}]{symbol}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get the cert environment security ID for a given symbol. FOR TESTING ONLY. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em symbol} & The cert symbol of the contract. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The security ID. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00052}{Json\+Url\+Reader\+::\+Get()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00146}{KTN\+::\+ALGO\+::\+PRICING\+::\+Pricing\+Strategy\+Base\+::get\+Cert\+Sec\+Id()}}.
+
+\Hypertarget{class_i_l3_cert_helpers_aac3f8cd11933ecb9c7041b68489b6088}\index{IL3CertHelpers@{IL3CertHelpers}!CertSymbol@{CertSymbol}}
+\index{CertSymbol@{CertSymbol}!IL3CertHelpers@{IL3CertHelpers}}
+\doxysubsubsection{\texorpdfstring{CertSymbol()}{CertSymbol()}}
+{\footnotesize\ttfamily \label{class_i_l3_cert_helpers_aac3f8cd11933ecb9c7041b68489b6088} 
+static string IL3\+Cert\+Helpers\+::\+Cert\+Symbol (\begin{DoxyParamCaption}\item[{long}]{secid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get the certification environment symbol for a given security ID. FOR TESTING ONLY. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em secid} & The security ID. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The symbol of the certificate. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00052}{Json\+Url\+Reader\+::\+Get()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+exchsupport/cme/il3/IL3\+Cert\+Helpers.\+hpp\item 
+exchsupport/cme/il3/IL3\+Cert\+Helpers.\+cpp\end{DoxyCompactItemize}

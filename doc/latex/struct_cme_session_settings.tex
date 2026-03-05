@@ -1,0 +1,275 @@
+\doxysection{Cme\+Session\+Settings Struct Reference}
+\hypertarget{struct_cme_session_settings}{}\label{struct_cme_session_settings}\index{CmeSessionSettings@{CmeSessionSettings}}
+
+
+Represents the settings for a CME session.  
+
+
+
+
+{\ttfamily \#include $<$Cme\+Session\+Settings.\+hpp$>$}
+
+Inheritance diagram for Cme\+Session\+Settings\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{struct_cme_session_settings}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{struct_cme_session_settings_a76afb4945701cda96b06c27e3a39ce1d}{Load}} (const string \&filename)
+\begin{DoxyCompactList}\small\item\em Loads the session settings from the specified file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{struct_cme_session_settings_a727c624d06e87e44b234748cae1833c0}{Trader\+Id}}
+\item 
+string \mbox{\hyperlink{struct_cme_session_settings_a4f0005bf838a1efba873a4c88598c9f1}{Session\+Id}}
+\item 
+string \mbox{\hyperlink{struct_cme_session_settings_a70acc2c53a0b0a49e63950f097b86ee2}{Firm\+Id}}
+\item 
+string \mbox{\hyperlink{struct_cme_session_settings_ad904c36cf5133a45695919bfc681f571}{Access\+Key}}
+\item 
+string \mbox{\hyperlink{struct_cme_session_settings_a1b0fb276e484b80ba644013d468a1b40}{Secret\+Key}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{struct_cme_session_settings_ae3cb440b363a34048f378e130b75184c}{Self\+Match\+Id}}
+\item 
+int \mbox{\hyperlink{struct_cme_session_settings_afd5bcaf3a9aba689082e0ef471fd1d3f}{Port}}
+\item 
+int \mbox{\hyperlink{struct_cme_session_settings_a221aaf12c73c695dcacd28f574fead27}{Backup\+Port}}
+\item 
+int \mbox{\hyperlink{struct_cme_session_settings_a7d6936403875b773350baf80b9719e6f}{Party\+List\+Id}}
+\item 
+int \mbox{\hyperlink{struct_cme_session_settings_a8863d37c9acea388cecc460be6e6fb5b}{Keep\+Alive\+Secs}}
+\item 
+bool \mbox{\hyperlink{struct_cme_session_settings_a36623c280694e1b0532c44862a8dcbdb}{Fault\+Tolerance}}
+\item 
+std\+::string \mbox{\hyperlink{struct_cme_session_settings_ab6e9061329bee9af35a7cb6e0102c81c}{Source}}
+\item 
+std\+::string \mbox{\hyperlink{struct_cme_session_settings_a75d1b0e0a6b7c69b2d4a02131e183507}{Exch\+Name}}
+\item 
+std\+::string \mbox{\hyperlink{struct_cme_session_settings_a766ed84327da11f4f5dc769688552003}{Org}}
+\item 
+std\+::string \mbox{\hyperlink{struct_cme_session_settings_adc915922f8768421d2185527bfaa8169}{Account}}
+\item 
+int \mbox{\hyperlink{struct_cme_session_settings_a226cb5082ee59e5ff1ba07a854fb328e}{Cust\+Ord\+Capacity}}
+\item 
+std\+::string \mbox{\hyperlink{struct_cme_session_settings_a9f5b804fcd098f72ba4457ae06331095}{Location}}
+\item 
+std\+::string \mbox{\hyperlink{struct_cme_session_settings_a4249399af2dc5432dfd2b33a635ca5cc}{Tag50\+\_\+\+Manual}}
+\item 
+std\+::string \mbox{\hyperlink{struct_cme_session_settings_ae7becf23a75285fe42595a93125762ab}{Tag50\+\_\+\+Auto}}
+\item 
+bool \mbox{\hyperlink{struct_cme_session_settings_aebb25540bb25e0600d8d7c25e159f079}{Cert\+Nr}}
+\item 
+std\+::string \mbox{\hyperlink{struct_cme_session_settings_ab628ca5d3df5124b3d295b40b98b6870}{System\+Name}}
+\item 
+std\+::string \mbox{\hyperlink{struct_cme_session_settings_a401ef0f5f946efdb93046fea914c5fd9}{System\+Version\+Id}}
+\item 
+std\+::string \mbox{\hyperlink{struct_cme_session_settings_af273f1307920f98c6bde0f0be76b6822}{System\+Vendor}}
+\item 
+bool \mbox{\hyperlink{struct_cme_session_settings_a83a74d953ddac7a35260ec23e03bc563}{Use\+Feed\+\_\+A}}
+\item 
+int \mbox{\hyperlink{struct_cme_session_settings_ac2582e84a2ec9c8f322791664d7925dd}{Affinity}}
+\item 
+string \mbox{\hyperlink{struct_cme_session_settings_ae969051eb902cc40251d29a3fc50ce95}{Filename}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{struct_session_settings}{Session\+Settings}}}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{struct_session_settings_af7dafea725963eb415b285606c280647}{Filename}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the settings for a CME session. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_cme_session_settings_a76afb4945701cda96b06c27e3a39ce1d}\index{CmeSessionSettings@{CmeSessionSettings}!Load@{Load}}
+\index{Load@{Load}!CmeSessionSettings@{CmeSessionSettings}}
+\doxysubsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily \label{struct_cme_session_settings_a76afb4945701cda96b06c27e3a39ce1d} 
+void Cme\+Session\+Settings\+::\+Load (\begin{DoxyParamCaption}\item[{const string \&}]{filename}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Loads the session settings from the specified file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file containing the session settings. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00123}{Settings\+::get()}}, \mbox{\hyperlink{l00193}{Settings\+::get\+Boolean()}}, \mbox{\hyperlink{l00133}{Settings\+::get\+Integer()}}, and \mbox{\hyperlink{l00153}{Settings\+::get\+Long()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00019}{KTN\+::\+CME\+::\+Cme\+Algo\+::\+Cme\+Algo()}}, \mbox{\hyperlink{l00019}{KTN\+::\+CME\+::\+Cme\+GT5\+::\+Cme\+GT5()}}, and \mbox{\hyperlink{l00021}{KTN\+::\+CME\+::\+IL3\+::\+Session\+Message\+Factory\+::\+Init()}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_cme_session_settings_ad904c36cf5133a45695919bfc681f571}\index{CmeSessionSettings@{CmeSessionSettings}!AccessKey@{AccessKey}}
+\index{AccessKey@{AccessKey}!CmeSessionSettings@{CmeSessionSettings}}
+\doxysubsubsection{\texorpdfstring{AccessKey}{AccessKey}}
+{\footnotesize\ttfamily \label{struct_cme_session_settings_ad904c36cf5133a45695919bfc681f571} 
+string Cme\+Session\+Settings\+::\+Access\+Key}
+
+\Hypertarget{struct_cme_session_settings_adc915922f8768421d2185527bfaa8169}\index{CmeSessionSettings@{CmeSessionSettings}!Account@{Account}}
+\index{Account@{Account}!CmeSessionSettings@{CmeSessionSettings}}
+\doxysubsubsection{\texorpdfstring{Account}{Account}}
+{\footnotesize\ttfamily \label{struct_cme_session_settings_adc915922f8768421d2185527bfaa8169} 
+std\+::string Cme\+Session\+Settings\+::\+Account}
+
+\Hypertarget{struct_cme_session_settings_ac2582e84a2ec9c8f322791664d7925dd}\index{CmeSessionSettings@{CmeSessionSettings}!Affinity@{Affinity}}
+\index{Affinity@{Affinity}!CmeSessionSettings@{CmeSessionSettings}}
+\doxysubsubsection{\texorpdfstring{Affinity}{Affinity}}
+{\footnotesize\ttfamily \label{struct_cme_session_settings_ac2582e84a2ec9c8f322791664d7925dd} 
+int Cme\+Session\+Settings\+::\+Affinity}
+
+\Hypertarget{struct_cme_session_settings_a221aaf12c73c695dcacd28f574fead27}\index{CmeSessionSettings@{CmeSessionSettings}!BackupPort@{BackupPort}}
+\index{BackupPort@{BackupPort}!CmeSessionSettings@{CmeSessionSettings}}
+\doxysubsubsection{\texorpdfstring{BackupPort}{BackupPort}}
+{\footnotesize\ttfamily \label{struct_cme_session_settings_a221aaf12c73c695dcacd28f574fead27} 
+int Cme\+Session\+Settings\+::\+Backup\+Port}
+
+\Hypertarget{struct_cme_session_settings_aebb25540bb25e0600d8d7c25e159f079}\index{CmeSessionSettings@{CmeSessionSettings}!CertNr@{CertNr}}
+\index{CertNr@{CertNr}!CmeSessionSettings@{CmeSessionSettings}}
+\doxysubsubsection{\texorpdfstring{CertNr}{CertNr}}
+{\footnotesize\ttfamily \label{struct_cme_session_settings_aebb25540bb25e0600d8d7c25e159f079} 
+bool Cme\+Session\+Settings\+::\+Cert\+Nr}
+
+\Hypertarget{struct_cme_session_settings_a226cb5082ee59e5ff1ba07a854fb328e}\index{CmeSessionSettings@{CmeSessionSettings}!CustOrdCapacity@{CustOrdCapacity}}
+\index{CustOrdCapacity@{CustOrdCapacity}!CmeSessionSettings@{CmeSessionSettings}}
+\doxysubsubsection{\texorpdfstring{CustOrdCapacity}{CustOrdCapacity}}
+{\footnotesize\ttfamily \label{struct_cme_session_settings_a226cb5082ee59e5ff1ba07a854fb328e} 
+int Cme\+Session\+Settings\+::\+Cust\+Ord\+Capacity}
+
+\Hypertarget{struct_cme_session_settings_a75d1b0e0a6b7c69b2d4a02131e183507}\index{CmeSessionSettings@{CmeSessionSettings}!ExchName@{ExchName}}
+\index{ExchName@{ExchName}!CmeSessionSettings@{CmeSessionSettings}}
+\doxysubsubsection{\texorpdfstring{ExchName}{ExchName}}
+{\footnotesize\ttfamily \label{struct_cme_session_settings_a75d1b0e0a6b7c69b2d4a02131e183507} 
+std\+::string Cme\+Session\+Settings\+::\+Exch\+Name}
+
+\Hypertarget{struct_cme_session_settings_a36623c280694e1b0532c44862a8dcbdb}\index{CmeSessionSettings@{CmeSessionSettings}!FaultTolerance@{FaultTolerance}}
+\index{FaultTolerance@{FaultTolerance}!CmeSessionSettings@{CmeSessionSettings}}
+\doxysubsubsection{\texorpdfstring{FaultTolerance}{FaultTolerance}}
+{\footnotesize\ttfamily \label{struct_cme_session_settings_a36623c280694e1b0532c44862a8dcbdb} 
+bool Cme\+Session\+Settings\+::\+Fault\+Tolerance}
+
+\Hypertarget{struct_cme_session_settings_ae969051eb902cc40251d29a3fc50ce95}\index{CmeSessionSettings@{CmeSessionSettings}!Filename@{Filename}}
+\index{Filename@{Filename}!CmeSessionSettings@{CmeSessionSettings}}
+\doxysubsubsection{\texorpdfstring{Filename}{Filename}}
+{\footnotesize\ttfamily \label{struct_cme_session_settings_ae969051eb902cc40251d29a3fc50ce95} 
+string Cme\+Session\+Settings\+::\+Filename}
+
+\Hypertarget{struct_cme_session_settings_a70acc2c53a0b0a49e63950f097b86ee2}\index{CmeSessionSettings@{CmeSessionSettings}!FirmId@{FirmId}}
+\index{FirmId@{FirmId}!CmeSessionSettings@{CmeSessionSettings}}
+\doxysubsubsection{\texorpdfstring{FirmId}{FirmId}}
+{\footnotesize\ttfamily \label{struct_cme_session_settings_a70acc2c53a0b0a49e63950f097b86ee2} 
+string Cme\+Session\+Settings\+::\+Firm\+Id}
+
+\Hypertarget{struct_cme_session_settings_a8863d37c9acea388cecc460be6e6fb5b}\index{CmeSessionSettings@{CmeSessionSettings}!KeepAliveSecs@{KeepAliveSecs}}
+\index{KeepAliveSecs@{KeepAliveSecs}!CmeSessionSettings@{CmeSessionSettings}}
+\doxysubsubsection{\texorpdfstring{KeepAliveSecs}{KeepAliveSecs}}
+{\footnotesize\ttfamily \label{struct_cme_session_settings_a8863d37c9acea388cecc460be6e6fb5b} 
+int Cme\+Session\+Settings\+::\+Keep\+Alive\+Secs}
+
+\Hypertarget{struct_cme_session_settings_a9f5b804fcd098f72ba4457ae06331095}\index{CmeSessionSettings@{CmeSessionSettings}!Location@{Location}}
+\index{Location@{Location}!CmeSessionSettings@{CmeSessionSettings}}
+\doxysubsubsection{\texorpdfstring{Location}{Location}}
+{\footnotesize\ttfamily \label{struct_cme_session_settings_a9f5b804fcd098f72ba4457ae06331095} 
+std\+::string Cme\+Session\+Settings\+::\+Location}
+
+\Hypertarget{struct_cme_session_settings_a766ed84327da11f4f5dc769688552003}\index{CmeSessionSettings@{CmeSessionSettings}!Org@{Org}}
+\index{Org@{Org}!CmeSessionSettings@{CmeSessionSettings}}
+\doxysubsubsection{\texorpdfstring{Org}{Org}}
+{\footnotesize\ttfamily \label{struct_cme_session_settings_a766ed84327da11f4f5dc769688552003} 
+std\+::string Cme\+Session\+Settings\+::\+Org}
+
+\Hypertarget{struct_cme_session_settings_a7d6936403875b773350baf80b9719e6f}\index{CmeSessionSettings@{CmeSessionSettings}!PartyListId@{PartyListId}}
+\index{PartyListId@{PartyListId}!CmeSessionSettings@{CmeSessionSettings}}
+\doxysubsubsection{\texorpdfstring{PartyListId}{PartyListId}}
+{\footnotesize\ttfamily \label{struct_cme_session_settings_a7d6936403875b773350baf80b9719e6f} 
+int Cme\+Session\+Settings\+::\+Party\+List\+Id}
+
+\Hypertarget{struct_cme_session_settings_afd5bcaf3a9aba689082e0ef471fd1d3f}\index{CmeSessionSettings@{CmeSessionSettings}!Port@{Port}}
+\index{Port@{Port}!CmeSessionSettings@{CmeSessionSettings}}
+\doxysubsubsection{\texorpdfstring{Port}{Port}}
+{\footnotesize\ttfamily \label{struct_cme_session_settings_afd5bcaf3a9aba689082e0ef471fd1d3f} 
+int Cme\+Session\+Settings\+::\+Port}
+
+\Hypertarget{struct_cme_session_settings_a1b0fb276e484b80ba644013d468a1b40}\index{CmeSessionSettings@{CmeSessionSettings}!SecretKey@{SecretKey}}
+\index{SecretKey@{SecretKey}!CmeSessionSettings@{CmeSessionSettings}}
+\doxysubsubsection{\texorpdfstring{SecretKey}{SecretKey}}
+{\footnotesize\ttfamily \label{struct_cme_session_settings_a1b0fb276e484b80ba644013d468a1b40} 
+string Cme\+Session\+Settings\+::\+Secret\+Key}
+
+\Hypertarget{struct_cme_session_settings_ae3cb440b363a34048f378e130b75184c}\index{CmeSessionSettings@{CmeSessionSettings}!SelfMatchId@{SelfMatchId}}
+\index{SelfMatchId@{SelfMatchId}!CmeSessionSettings@{CmeSessionSettings}}
+\doxysubsubsection{\texorpdfstring{SelfMatchId}{SelfMatchId}}
+{\footnotesize\ttfamily \label{struct_cme_session_settings_ae3cb440b363a34048f378e130b75184c} 
+uint64\+\_\+t Cme\+Session\+Settings\+::\+Self\+Match\+Id}
+
+\Hypertarget{struct_cme_session_settings_a4f0005bf838a1efba873a4c88598c9f1}\index{CmeSessionSettings@{CmeSessionSettings}!SessionId@{SessionId}}
+\index{SessionId@{SessionId}!CmeSessionSettings@{CmeSessionSettings}}
+\doxysubsubsection{\texorpdfstring{SessionId}{SessionId}}
+{\footnotesize\ttfamily \label{struct_cme_session_settings_a4f0005bf838a1efba873a4c88598c9f1} 
+string Cme\+Session\+Settings\+::\+Session\+Id}
+
+\Hypertarget{struct_cme_session_settings_ab6e9061329bee9af35a7cb6e0102c81c}\index{CmeSessionSettings@{CmeSessionSettings}!Source@{Source}}
+\index{Source@{Source}!CmeSessionSettings@{CmeSessionSettings}}
+\doxysubsubsection{\texorpdfstring{Source}{Source}}
+{\footnotesize\ttfamily \label{struct_cme_session_settings_ab6e9061329bee9af35a7cb6e0102c81c} 
+std\+::string Cme\+Session\+Settings\+::\+Source}
+
+\Hypertarget{struct_cme_session_settings_ab628ca5d3df5124b3d295b40b98b6870}\index{CmeSessionSettings@{CmeSessionSettings}!SystemName@{SystemName}}
+\index{SystemName@{SystemName}!CmeSessionSettings@{CmeSessionSettings}}
+\doxysubsubsection{\texorpdfstring{SystemName}{SystemName}}
+{\footnotesize\ttfamily \label{struct_cme_session_settings_ab628ca5d3df5124b3d295b40b98b6870} 
+std\+::string Cme\+Session\+Settings\+::\+System\+Name}
+
+\Hypertarget{struct_cme_session_settings_af273f1307920f98c6bde0f0be76b6822}\index{CmeSessionSettings@{CmeSessionSettings}!SystemVendor@{SystemVendor}}
+\index{SystemVendor@{SystemVendor}!CmeSessionSettings@{CmeSessionSettings}}
+\doxysubsubsection{\texorpdfstring{SystemVendor}{SystemVendor}}
+{\footnotesize\ttfamily \label{struct_cme_session_settings_af273f1307920f98c6bde0f0be76b6822} 
+std\+::string Cme\+Session\+Settings\+::\+System\+Vendor}
+
+\Hypertarget{struct_cme_session_settings_a401ef0f5f946efdb93046fea914c5fd9}\index{CmeSessionSettings@{CmeSessionSettings}!SystemVersionId@{SystemVersionId}}
+\index{SystemVersionId@{SystemVersionId}!CmeSessionSettings@{CmeSessionSettings}}
+\doxysubsubsection{\texorpdfstring{SystemVersionId}{SystemVersionId}}
+{\footnotesize\ttfamily \label{struct_cme_session_settings_a401ef0f5f946efdb93046fea914c5fd9} 
+std\+::string Cme\+Session\+Settings\+::\+System\+Version\+Id}
+
+\Hypertarget{struct_cme_session_settings_ae7becf23a75285fe42595a93125762ab}\index{CmeSessionSettings@{CmeSessionSettings}!Tag50\_Auto@{Tag50\_Auto}}
+\index{Tag50\_Auto@{Tag50\_Auto}!CmeSessionSettings@{CmeSessionSettings}}
+\doxysubsubsection{\texorpdfstring{Tag50\_Auto}{Tag50\_Auto}}
+{\footnotesize\ttfamily \label{struct_cme_session_settings_ae7becf23a75285fe42595a93125762ab} 
+std\+::string Cme\+Session\+Settings\+::\+Tag50\+\_\+\+Auto}
+
+\Hypertarget{struct_cme_session_settings_a4249399af2dc5432dfd2b33a635ca5cc}\index{CmeSessionSettings@{CmeSessionSettings}!Tag50\_Manual@{Tag50\_Manual}}
+\index{Tag50\_Manual@{Tag50\_Manual}!CmeSessionSettings@{CmeSessionSettings}}
+\doxysubsubsection{\texorpdfstring{Tag50\_Manual}{Tag50\_Manual}}
+{\footnotesize\ttfamily \label{struct_cme_session_settings_a4249399af2dc5432dfd2b33a635ca5cc} 
+std\+::string Cme\+Session\+Settings\+::\+Tag50\+\_\+\+Manual}
+
+\Hypertarget{struct_cme_session_settings_a727c624d06e87e44b234748cae1833c0}\index{CmeSessionSettings@{CmeSessionSettings}!TraderId@{TraderId}}
+\index{TraderId@{TraderId}!CmeSessionSettings@{CmeSessionSettings}}
+\doxysubsubsection{\texorpdfstring{TraderId}{TraderId}}
+{\footnotesize\ttfamily \label{struct_cme_session_settings_a727c624d06e87e44b234748cae1833c0} 
+std\+::string Cme\+Session\+Settings\+::\+Trader\+Id}
+
+\Hypertarget{struct_cme_session_settings_a83a74d953ddac7a35260ec23e03bc563}\index{CmeSessionSettings@{CmeSessionSettings}!UseFeed\_A@{UseFeed\_A}}
+\index{UseFeed\_A@{UseFeed\_A}!CmeSessionSettings@{CmeSessionSettings}}
+\doxysubsubsection{\texorpdfstring{UseFeed\_A}{UseFeed\_A}}
+{\footnotesize\ttfamily \label{struct_cme_session_settings_a83a74d953ddac7a35260ec23e03bc563} 
+bool Cme\+Session\+Settings\+::\+Use\+Feed\+\_\+A}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+exchsupport/cme/il3/Cme\+Session\+Settings.\+hpp\end{DoxyCompactItemize}

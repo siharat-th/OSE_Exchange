@@ -1,0 +1,225 @@
+\doxysection{KTN\+::REPORTER\+::Reporter\+Base Class Reference}
+\hypertarget{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base}{}\label{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base}\index{KTN::REPORTER::ReporterBase@{KTN::REPORTER::ReporterBase}}
+
+
+The base class for all reporters.  
+
+
+
+
+{\ttfamily \#include $<$Reporter\+Base.\+hpp$>$}
+
+Inheritance diagram for KTN\+::REPORTER\+::Reporter\+Base\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.272727cm]{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_ae538964cbe64b3a7a3877438a169a4a7}{Reporter\+Base}} (string name, int sleepms)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base}{Reporter\+Base} object with the given name and sleep time. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_af73ae6003c5a7567553a12a0b4bdd502}{\texorpdfstring{$\sim$}{\string~}\+Reporter\+Base}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base}{Reporter\+Base} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_a74466d64a850d317a5325c3a029974a0}{Stop}} ()
+\begin{DoxyCompactList}\small\item\em Stops the reporter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_a0646f3f3c1b0e07726ec0897bc757a47}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Starts the reporter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_a449d2ccb3be9222bd06fef3b5155e3af}{Do\+Work}} ()=0
+\begin{DoxyCompactList}\small\item\em Performs the work of the reporter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_a8c00d5eb02a709d57aedaed3f937873b}{Send\+Json}} (string json)
+\begin{DoxyCompactList}\small\item\em Sends the given JSON string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_ab7b241b406b6cafe6af4f26227a12bff}{Log\+Me}} (std\+::string sz\+Msg, int i\+Color=LOG\+\_\+\+WHITE)
+\begin{DoxyCompactList}\small\item\em Logs the given message. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_a2d9b093cec33ea34546f95b7c6e1012b}{get\+Time\+String}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current time as a string. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_ade147373e730bf48fd5bf54a9986e1f7}{get\+Ssboe\+Us}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current system time in microseconds since the epoch. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::atomic$<$ bool $>$ \mbox{\hyperlink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_abcbf2f7f44ac10b559ece8412050690a}{\+\_\+\+ACTIVE}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The base class for all reporters. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_ae538964cbe64b3a7a3877438a169a4a7}\index{KTN::REPORTER::ReporterBase@{KTN::REPORTER::ReporterBase}!ReporterBase@{ReporterBase}}
+\index{ReporterBase@{ReporterBase}!KTN::REPORTER::ReporterBase@{KTN::REPORTER::ReporterBase}}
+\doxysubsubsection{\texorpdfstring{ReporterBase()}{ReporterBase()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_ae538964cbe64b3a7a3877438a169a4a7} 
+Reporter\+Base\+::\+Reporter\+Base (\begin{DoxyParamCaption}\item[{string}]{name}{, }\item[{int}]{sleepms}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base}{Reporter\+Base} object with the given name and sleep time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the reporter. \\
+\hline
+{\em sleepms} & The sleep time in milliseconds. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_af73ae6003c5a7567553a12a0b4bdd502}\index{KTN::REPORTER::ReporterBase@{KTN::REPORTER::ReporterBase}!````~ReporterBase@{\texorpdfstring{$\sim$}{\string~}ReporterBase}}
+\index{````~ReporterBase@{\texorpdfstring{$\sim$}{\string~}ReporterBase}!KTN::REPORTER::ReporterBase@{KTN::REPORTER::ReporterBase}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ReporterBase()}{\string~ReporterBase()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_af73ae6003c5a7567553a12a0b4bdd502} 
+Reporter\+Base\+::\texorpdfstring{$\sim$}{\string~}\+Reporter\+Base (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor for the \doxylink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base}{Reporter\+Base} object. 
+
+
+
+References \mbox{\hyperlink{l00049}{Stop()}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_a449d2ccb3be9222bd06fef3b5155e3af}\index{KTN::REPORTER::ReporterBase@{KTN::REPORTER::ReporterBase}!DoWork@{DoWork}}
+\index{DoWork@{DoWork}!KTN::REPORTER::ReporterBase@{KTN::REPORTER::ReporterBase}}
+\doxysubsubsection{\texorpdfstring{DoWork()}{DoWork()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_a449d2ccb3be9222bd06fef3b5155e3af} 
+void Reporter\+Base\+::\+Do\+Work (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Performs the work of the reporter. 
+
+
+
+Implemented in \mbox{\hyperlink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_p_l_reporter_a854417d29a5bd36c6bec145e5025a3ef}{KTN\+::\+REPORTER\+::\+Algo\+PLReporter}}, \mbox{\hyperlink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter_ac380fffde0850e69473fbc6522ef62f4}{KTN\+::\+REPORTER\+::\+Algo\+V3\+Reporter}}, \mbox{\hyperlink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_generic_reporter_a236e7f2d4a7e4c49414a0dbe2a7ef105}{KTN\+::\+REPORTER\+::\+Generic\+Reporter}}, and \mbox{\hyperlink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5_a783cf5dcf27d1b89f63c349dfe7b11b2}{KTN\+::\+REPORTER\+::\+Order\+Reporter\+V5}}.
+
+
+
+References \mbox{\hyperlink{l00033}{Log\+Me()}}.
+
+\Hypertarget{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_ade147373e730bf48fd5bf54a9986e1f7}\index{KTN::REPORTER::ReporterBase@{KTN::REPORTER::ReporterBase}!getSsboeUs@{getSsboeUs}}
+\index{getSsboeUs@{getSsboeUs}!KTN::REPORTER::ReporterBase@{KTN::REPORTER::ReporterBase}}
+\doxysubsubsection{\texorpdfstring{getSsboeUs()}{getSsboeUs()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_ade147373e730bf48fd5bf54a9986e1f7} 
+uint64\+\_\+t KTN\+::\+REPORTER\+::\+Reporter\+Base\+::get\+Ssboe\+Us (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Gets the current system time in microseconds since the epoch. 
+
+\begin{DoxyReturn}{Returns}
+The current system time in microseconds since the epoch. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00036}{KTN\+::\+REPORTER\+::\+Algo\+PLReporter\+::\+Do\+Work()}}, and \mbox{\hyperlink{l00039}{KTN\+::\+REPORTER\+::\+Algo\+V3\+Reporter\+::\+Do\+Work()}}.
+
+\Hypertarget{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_a2d9b093cec33ea34546f95b7c6e1012b}\index{KTN::REPORTER::ReporterBase@{KTN::REPORTER::ReporterBase}!getTimeString@{getTimeString}}
+\index{getTimeString@{getTimeString}!KTN::REPORTER::ReporterBase@{KTN::REPORTER::ReporterBase}}
+\doxysubsubsection{\texorpdfstring{getTimeString()}{getTimeString()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_a2d9b093cec33ea34546f95b7c6e1012b} 
+string KTN\+::\+REPORTER\+::\+Reporter\+Base\+::get\+Time\+String (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Gets the current time as a string. 
+
+\begin{DoxyReturn}{Returns}
+The current time as a string. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00036}{KTN\+::\+REPORTER\+::\+Algo\+PLReporter\+::\+Do\+Work()}}, and \mbox{\hyperlink{l00039}{KTN\+::\+REPORTER\+::\+Algo\+V3\+Reporter\+::\+Do\+Work()}}.
+
+\Hypertarget{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_ab7b241b406b6cafe6af4f26227a12bff}\index{KTN::REPORTER::ReporterBase@{KTN::REPORTER::ReporterBase}!LogMe@{LogMe}}
+\index{LogMe@{LogMe}!KTN::REPORTER::ReporterBase@{KTN::REPORTER::ReporterBase}}
+\doxysubsubsection{\texorpdfstring{LogMe()}{LogMe()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_ab7b241b406b6cafe6af4f26227a12bff} 
+void Reporter\+Base\+::\+Log\+Me (\begin{DoxyParamCaption}\item[{std\+::string}]{sz\+Msg}{, }\item[{int}]{i\+Color}{ = {\ttfamily LOG\+\_\+WHITE}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Logs the given message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sz\+Msg} & The message to log. \\
+\hline
+{\em i\+Color} & The color of the log message. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{l00056}{KTN\+::\+REPORTER\+::\+Order\+Reporter\+V5\+::\+Do\+Work()}}, and \mbox{\hyperlink{l00060}{Do\+Work()}}.
+
+\Hypertarget{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_a8c00d5eb02a709d57aedaed3f937873b}\index{KTN::REPORTER::ReporterBase@{KTN::REPORTER::ReporterBase}!SendJson@{SendJson}}
+\index{SendJson@{SendJson}!KTN::REPORTER::ReporterBase@{KTN::REPORTER::ReporterBase}}
+\doxysubsubsection{\texorpdfstring{SendJson()}{SendJson()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_a8c00d5eb02a709d57aedaed3f937873b} 
+void KTN\+::\+REPORTER\+::\+Reporter\+Base\+::\+Send\+Json (\begin{DoxyParamCaption}\item[{string}]{json}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Sends the given JSON string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & The JSON string to send. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{l00036}{KTN\+::\+REPORTER\+::\+Algo\+PLReporter\+::\+Do\+Work()}}, \mbox{\hyperlink{l00039}{KTN\+::\+REPORTER\+::\+Generic\+Reporter\+::\+Do\+Work()}}, \mbox{\hyperlink{l00056}{KTN\+::\+REPORTER\+::\+Order\+Reporter\+V5\+::\+Do\+Work()}}, and \mbox{\hyperlink{l00087}{KTN\+::\+REPORTER\+::\+Algo\+V3\+Reporter\+::\+Send\+Message()}}.
+
+\Hypertarget{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_a0646f3f3c1b0e07726ec0897bc757a47}\index{KTN::REPORTER::ReporterBase@{KTN::REPORTER::ReporterBase}!Start@{Start}}
+\index{Start@{Start}!KTN::REPORTER::ReporterBase@{KTN::REPORTER::ReporterBase}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_a0646f3f3c1b0e07726ec0897bc757a47} 
+void Reporter\+Base\+::\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Starts the reporter. 
+
+
+
+References \mbox{\hyperlink{l00123}{Settings\+::get()}}, and \mbox{\hyperlink{l00133}{Settings\+::get\+Integer()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00014}{KTN\+::\+REPORTER\+::\+Algo\+PLReporter\+::\+Algo\+PLReporter()}}, \mbox{\hyperlink{l00014}{KTN\+::\+REPORTER\+::\+Algo\+V3\+Reporter\+::\+Algo\+V3\+Reporter()}}, \mbox{\hyperlink{l00014}{KTN\+::\+REPORTER\+::\+Generic\+Reporter\+::\+Generic\+Reporter()}}, and \mbox{\hyperlink{l00014}{KTN\+::\+REPORTER\+::\+Order\+Reporter\+V5\+::\+Order\+Reporter\+V5()}}.
+
+\Hypertarget{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_a74466d64a850d317a5325c3a029974a0}\index{KTN::REPORTER::ReporterBase@{KTN::REPORTER::ReporterBase}!Stop@{Stop}}
+\index{Stop@{Stop}!KTN::REPORTER::ReporterBase@{KTN::REPORTER::ReporterBase}}
+\doxysubsubsection{\texorpdfstring{Stop()}{Stop()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_a74466d64a850d317a5325c3a029974a0} 
+void Reporter\+Base\+::\+Stop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Stops the reporter. 
+
+
+
+Referenced by \mbox{\hyperlink{l00025}{KTN\+::\+REPORTER\+::\+Algo\+PLReporter\+::\+Stop\+Work()}}, \mbox{\hyperlink{l00034}{KTN\+::\+REPORTER\+::\+Algo\+V3\+Reporter\+::\+Stop\+Work()}}, \mbox{\hyperlink{l00031}{KTN\+::\+REPORTER\+::\+Generic\+Reporter\+::\+Stop\+Work()}}, \mbox{\hyperlink{l00051}{KTN\+::\+REPORTER\+::\+Order\+Reporter\+V5\+::\+Stop\+Work()}}, and \mbox{\hyperlink{l00022}{\texorpdfstring{$\sim$}{\string~}\+Reporter\+Base()}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_abcbf2f7f44ac10b559ece8412050690a}\index{KTN::REPORTER::ReporterBase@{KTN::REPORTER::ReporterBase}!\_ACTIVE@{\_ACTIVE}}
+\index{\_ACTIVE@{\_ACTIVE}!KTN::REPORTER::ReporterBase@{KTN::REPORTER::ReporterBase}}
+\doxysubsubsection{\texorpdfstring{\_ACTIVE}{\_ACTIVE}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_abcbf2f7f44ac10b559ece8412050690a} 
+std\+::atomic$<$bool$>$ KTN\+::\+REPORTER\+::\+Reporter\+Base\+::\+\_\+\+ACTIVE\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Reporters/Reporter\+Base.\+hpp\item 
+Reporters/Reporter\+Base.\+cpp\end{DoxyCompactItemize}

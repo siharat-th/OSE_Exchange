@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1_1_conf" xml:lang="en-US">
+<title>KTN::TCP::EFVITcpV5::Conf Struct Reference</title>
+<indexterm><primary>KTN::TCP::EFVITcpV5::Conf</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1_1_conf_1_1_user_data">UserData</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>static const uint32_t <link linkend="_struct_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1_1_conf_1a4ace1a223b524c35870f14aed4bc853c">ConnSendBufCnt</link> = 128</para>
+</listitem>
+            <listitem><para>static const bool <link linkend="_struct_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1_1_conf_1a8143b58072b277618cb5e2cfbfe15c62">SendBuf1K</link> = true</para>
+</listitem>
+            <listitem><para>static const uint32_t <link linkend="_struct_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1_1_conf_1a30457d1cd4d49c0afeceb11afe80a2eb">ConnRecvBufSize</link> = 40960</para>
+</listitem>
+            <listitem><para>static const uint32_t <link linkend="_struct_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1_1_conf_1a0c0913812f9088c079940924332482de">MaxConnCnt</link> = 1</para>
+</listitem>
+            <listitem><para>static const uint32_t <link linkend="_struct_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1_1_conf_1aad8a48ddb4b2317864f0460c09628665">MaxTimeWaitConnCnt</link> = 2</para>
+</listitem>
+            <listitem><para>static const uint32_t <link linkend="_struct_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1_1_conf_1a5bf0ed492f6e81946596e557e8dc6547">RecvBufCnt</link> = 128</para>
+</listitem>
+            <listitem><para>static const uint32_t <link linkend="_struct_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1_1_conf_1a053db45b704bea10bb0234b4e83c6e03">SynRetries</link> = 3</para>
+</listitem>
+            <listitem><para>static const uint32_t <link linkend="_struct_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1_1_conf_1a4581203bae7e084e885504f99ba0f30a">TcpRetries</link> = 10</para>
+</listitem>
+            <listitem><para>static const uint32_t <link linkend="_struct_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1_1_conf_1a9e5aa5e74ac9404446a86afa47ef0269">DelayedAckMS</link> = 10</para>
+</listitem>
+            <listitem><para>static const uint32_t <link linkend="_struct_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1_1_conf_1ab48a040f80097d931d634bc07948a7ba">MinRtoMS</link> = 100</para>
+</listitem>
+            <listitem><para>static const uint32_t <link linkend="_struct_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1_1_conf_1a58647cc0dfaf5fb91089c7031e282c4f">MaxRtoMS</link> = 30 * 1000</para>
+</listitem>
+            <listitem><para>static const bool <link linkend="_struct_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1_1_conf_1a828ad07c772becba7447f90f6b93f567">WindowScaleOption</link> = false</para>
+</listitem>
+            <listitem><para>static const bool <link linkend="_struct_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1_1_conf_1aa65c246cbd6c5b365861fa1ca70fe75b">TimestampOption</link> = false</para>
+</listitem>
+            <listitem><para>static const int <link linkend="_struct_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1_1_conf_1ad4f4072a24123804d63e83fb60944211">CongestionControlAlgo</link> = 0</para>
+</listitem>
+            <listitem><para>static const uint32_t <link linkend="_struct_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1_1_conf_1a108f6a5bf96f1e1467177257b63549e8">UserTimerCnt</link> = 2</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1_1_conf_1ad4f4072a24123804d63e83fb60944211"/><section>
+    <title>CongestionControlAlgo</title>
+<indexterm><primary>CongestionControlAlgo</primary><secondary>KTN::TCP::EFVITcpV5::Conf</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV5::Conf</primary><secondary>CongestionControlAlgo</secondary></indexterm>
+<para><computeroutput>const int KTN::TCP::EFVITcpV5::Conf::CongestionControlAlgo = 0<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1_1_conf_1a30457d1cd4d49c0afeceb11afe80a2eb"/><section>
+    <title>ConnRecvBufSize</title>
+<indexterm><primary>ConnRecvBufSize</primary><secondary>KTN::TCP::EFVITcpV5::Conf</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV5::Conf</primary><secondary>ConnRecvBufSize</secondary></indexterm>
+<para><computeroutput>const uint32_t KTN::TCP::EFVITcpV5::Conf::ConnRecvBufSize = 40960<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1_1_conf_1a4ace1a223b524c35870f14aed4bc853c"/><section>
+    <title>ConnSendBufCnt</title>
+<indexterm><primary>ConnSendBufCnt</primary><secondary>KTN::TCP::EFVITcpV5::Conf</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV5::Conf</primary><secondary>ConnSendBufCnt</secondary></indexterm>
+<para><computeroutput>const uint32_t KTN::TCP::EFVITcpV5::Conf::ConnSendBufCnt = 128<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1_1_conf_1a9e5aa5e74ac9404446a86afa47ef0269"/><section>
+    <title>DelayedAckMS</title>
+<indexterm><primary>DelayedAckMS</primary><secondary>KTN::TCP::EFVITcpV5::Conf</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV5::Conf</primary><secondary>DelayedAckMS</secondary></indexterm>
+<para><computeroutput>const uint32_t KTN::TCP::EFVITcpV5::Conf::DelayedAckMS = 10<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1_1_conf_1a0c0913812f9088c079940924332482de"/><section>
+    <title>MaxConnCnt</title>
+<indexterm><primary>MaxConnCnt</primary><secondary>KTN::TCP::EFVITcpV5::Conf</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV5::Conf</primary><secondary>MaxConnCnt</secondary></indexterm>
+<para><computeroutput>const uint32_t KTN::TCP::EFVITcpV5::Conf::MaxConnCnt = 1<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1_1_conf_1a58647cc0dfaf5fb91089c7031e282c4f"/><section>
+    <title>MaxRtoMS</title>
+<indexterm><primary>MaxRtoMS</primary><secondary>KTN::TCP::EFVITcpV5::Conf</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV5::Conf</primary><secondary>MaxRtoMS</secondary></indexterm>
+<para><computeroutput>const uint32_t KTN::TCP::EFVITcpV5::Conf::MaxRtoMS = 30 * 1000<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1_1_conf_1aad8a48ddb4b2317864f0460c09628665"/><section>
+    <title>MaxTimeWaitConnCnt</title>
+<indexterm><primary>MaxTimeWaitConnCnt</primary><secondary>KTN::TCP::EFVITcpV5::Conf</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV5::Conf</primary><secondary>MaxTimeWaitConnCnt</secondary></indexterm>
+<para><computeroutput>const uint32_t KTN::TCP::EFVITcpV5::Conf::MaxTimeWaitConnCnt = 2<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1_1_conf_1ab48a040f80097d931d634bc07948a7ba"/><section>
+    <title>MinRtoMS</title>
+<indexterm><primary>MinRtoMS</primary><secondary>KTN::TCP::EFVITcpV5::Conf</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV5::Conf</primary><secondary>MinRtoMS</secondary></indexterm>
+<para><computeroutput>const uint32_t KTN::TCP::EFVITcpV5::Conf::MinRtoMS = 100<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1_1_conf_1a5bf0ed492f6e81946596e557e8dc6547"/><section>
+    <title>RecvBufCnt</title>
+<indexterm><primary>RecvBufCnt</primary><secondary>KTN::TCP::EFVITcpV5::Conf</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV5::Conf</primary><secondary>RecvBufCnt</secondary></indexterm>
+<para><computeroutput>const uint32_t KTN::TCP::EFVITcpV5::Conf::RecvBufCnt = 128<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1_1_conf_1a8143b58072b277618cb5e2cfbfe15c62"/><section>
+    <title>SendBuf1K</title>
+<indexterm><primary>SendBuf1K</primary><secondary>KTN::TCP::EFVITcpV5::Conf</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV5::Conf</primary><secondary>SendBuf1K</secondary></indexterm>
+<para><computeroutput>const bool KTN::TCP::EFVITcpV5::Conf::SendBuf1K = true<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1_1_conf_1a053db45b704bea10bb0234b4e83c6e03"/><section>
+    <title>SynRetries</title>
+<indexterm><primary>SynRetries</primary><secondary>KTN::TCP::EFVITcpV5::Conf</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV5::Conf</primary><secondary>SynRetries</secondary></indexterm>
+<para><computeroutput>const uint32_t KTN::TCP::EFVITcpV5::Conf::SynRetries = 3<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1_1_conf_1a4581203bae7e084e885504f99ba0f30a"/><section>
+    <title>TcpRetries</title>
+<indexterm><primary>TcpRetries</primary><secondary>KTN::TCP::EFVITcpV5::Conf</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV5::Conf</primary><secondary>TcpRetries</secondary></indexterm>
+<para><computeroutput>const uint32_t KTN::TCP::EFVITcpV5::Conf::TcpRetries = 10<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1_1_conf_1aa65c246cbd6c5b365861fa1ca70fe75b"/><section>
+    <title>TimestampOption</title>
+<indexterm><primary>TimestampOption</primary><secondary>KTN::TCP::EFVITcpV5::Conf</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV5::Conf</primary><secondary>TimestampOption</secondary></indexterm>
+<para><computeroutput>const bool KTN::TCP::EFVITcpV5::Conf::TimestampOption = false<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1_1_conf_1a108f6a5bf96f1e1467177257b63549e8"/><section>
+    <title>UserTimerCnt</title>
+<indexterm><primary>UserTimerCnt</primary><secondary>KTN::TCP::EFVITcpV5::Conf</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV5::Conf</primary><secondary>UserTimerCnt</secondary></indexterm>
+<para><computeroutput>const uint32_t KTN::TCP::EFVITcpV5::Conf::UserTimerCnt = 2<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_t_c_p_1_1_e_f_v_i_tcp_v5_1_1_conf_1a828ad07c772becba7447f90f6b93f567"/><section>
+    <title>WindowScaleOption</title>
+<indexterm><primary>WindowScaleOption</primary><secondary>KTN::TCP::EFVITcpV5::Conf</secondary></indexterm>
+<indexterm><primary>KTN::TCP::EFVITcpV5::Conf</primary><secondary>WindowScaleOption</secondary></indexterm>
+<para><computeroutput>const bool KTN::TCP::EFVITcpV5::Conf::WindowScaleOption = false<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+KtnEfvi/EFVITcpV5.hpp</section>
+</section>

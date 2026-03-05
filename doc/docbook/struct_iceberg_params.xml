@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_iceberg_params" xml:lang="en-US">
+<title>IcebergParams Struct Reference</title>
+<indexterm><primary>IcebergParams</primary></indexterm>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_struct_iceberg_params">IcebergParams</link> <link linkend="_struct_iceberg_params_1a271a23ce841a616c42920522f3db781e">parse</link> (const std::string &amp;json_str)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_struct_iceberg_params_1af53fa58f15e2bc69c1c15d190a6e475f">ValidJson</link></para>
+</listitem>
+            <listitem><para><link linkend="_structalgometa">algometa</link> <link linkend="_struct_iceberg_params_1aa32c378eba41924e0f36dacc5a8e2720">meta</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_iceberg_params_1a827dbce9bcc3d5af87f63f12c062ba13">subid</link></para>
+</listitem>
+            <listitem><para>std::unordered_map&lt; int, <link linkend="_structinstrument">instrument</link> &gt; <link linkend="_struct_iceberg_params_1a5bec7bde7bbaac63920f7bbd9e578ec4">LegSecIdMap</link></para>
+</listitem>
+            <listitem><para><link linkend="_structinstrument">instrument</link> <link linkend="_struct_iceberg_params_1a951a424c475d02b2c101d6762fafc12c">Legs</link> [24]</para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_iceberg_params_1acf2133924f383cbbc1237c2ab4d164c5">LegCount</link></para>
+</listitem>
+            <listitem><para>std::unordered_map&lt; string, <link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> &gt; <link linkend="_struct_iceberg_params_1a6c95f3d6766e39dd08a97175429967b7">Ords</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_iceberg_params_1ae3292208bbc24eff5cc2c39609de534e">MinShowQty</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_iceberg_params_1a8d34da8b18f690417c18462278f7d035">MaxShowQty</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_iceberg_params_1a271a23ce841a616c42920522f3db781e"/><section>
+    <title>parse()</title>
+<indexterm><primary>parse</primary><secondary>IcebergParams</secondary></indexterm>
+<indexterm><primary>IcebergParams</primary><secondary>parse</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_iceberg_params">IcebergParams</link> IcebergParams::parse (const std::string &amp; json_str)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_iceberg_params_1acf2133924f383cbbc1237c2ab4d164c5"/><section>
+    <title>LegCount</title>
+<indexterm><primary>LegCount</primary><secondary>IcebergParams</secondary></indexterm>
+<indexterm><primary>IcebergParams</primary><secondary>LegCount</secondary></indexterm>
+<para><computeroutput>int IcebergParams::LegCount</computeroutput></para></section>
+<anchor xml:id="_struct_iceberg_params_1a951a424c475d02b2c101d6762fafc12c"/><section>
+    <title>Legs</title>
+<indexterm><primary>Legs</primary><secondary>IcebergParams</secondary></indexterm>
+<indexterm><primary>IcebergParams</primary><secondary>Legs</secondary></indexterm>
+<para><computeroutput><link linkend="_structinstrument">instrument</link> IcebergParams::Legs[24]</computeroutput></para></section>
+<anchor xml:id="_struct_iceberg_params_1a5bec7bde7bbaac63920f7bbd9e578ec4"/><section>
+    <title>LegSecIdMap</title>
+<indexterm><primary>LegSecIdMap</primary><secondary>IcebergParams</secondary></indexterm>
+<indexterm><primary>IcebergParams</primary><secondary>LegSecIdMap</secondary></indexterm>
+<para><computeroutput>std::unordered_map&lt;int, <link linkend="_structinstrument">instrument</link>&gt; IcebergParams::LegSecIdMap</computeroutput></para></section>
+<anchor xml:id="_struct_iceberg_params_1a8d34da8b18f690417c18462278f7d035"/><section>
+    <title>MaxShowQty</title>
+<indexterm><primary>MaxShowQty</primary><secondary>IcebergParams</secondary></indexterm>
+<indexterm><primary>IcebergParams</primary><secondary>MaxShowQty</secondary></indexterm>
+<para><computeroutput>int IcebergParams::MaxShowQty</computeroutput></para></section>
+<anchor xml:id="_struct_iceberg_params_1aa32c378eba41924e0f36dacc5a8e2720"/><section>
+    <title>meta</title>
+<indexterm><primary>meta</primary><secondary>IcebergParams</secondary></indexterm>
+<indexterm><primary>IcebergParams</primary><secondary>meta</secondary></indexterm>
+<para><computeroutput><link linkend="_structalgometa">algometa</link> IcebergParams::meta</computeroutput></para></section>
+<anchor xml:id="_struct_iceberg_params_1ae3292208bbc24eff5cc2c39609de534e"/><section>
+    <title>MinShowQty</title>
+<indexterm><primary>MinShowQty</primary><secondary>IcebergParams</secondary></indexterm>
+<indexterm><primary>IcebergParams</primary><secondary>MinShowQty</secondary></indexterm>
+<para><computeroutput>int IcebergParams::MinShowQty</computeroutput></para></section>
+<anchor xml:id="_struct_iceberg_params_1a6c95f3d6766e39dd08a97175429967b7"/><section>
+    <title>Ords</title>
+<indexterm><primary>Ords</primary><secondary>IcebergParams</secondary></indexterm>
+<indexterm><primary>IcebergParams</primary><secondary>Ords</secondary></indexterm>
+<para><computeroutput>std::unordered_map&lt;string, <link linkend="_struct_k_t_n_1_1_order">KTN::Order</link>&gt; IcebergParams::Ords</computeroutput></para></section>
+<anchor xml:id="_struct_iceberg_params_1a827dbce9bcc3d5af87f63f12c062ba13"/><section>
+    <title>subid</title>
+<indexterm><primary>subid</primary><secondary>IcebergParams</secondary></indexterm>
+<indexterm><primary>IcebergParams</primary><secondary>subid</secondary></indexterm>
+<para><computeroutput>string IcebergParams::subid</computeroutput></para></section>
+<anchor xml:id="_struct_iceberg_params_1af53fa58f15e2bc69c1c15d190a6e475f"/><section>
+    <title>ValidJson</title>
+<indexterm><primary>ValidJson</primary><secondary>IcebergParams</secondary></indexterm>
+<indexterm><primary>IcebergParams</primary><secondary>ValidJson</secondary></indexterm>
+<para><computeroutput>bool IcebergParams::ValidJson</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following files:</para>
+AlgoParams/IcebergParams.hppAlgoParams/IcebergParams.cpp</section>
+</section>

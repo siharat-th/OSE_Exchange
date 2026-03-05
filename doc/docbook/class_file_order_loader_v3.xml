@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_file_order_loader_v3" xml:lang="en-US">
+<title>FileOrderLoaderV3 Class Reference</title>
+<indexterm><primary>FileOrderLoaderV3</primary></indexterm>
+<para>
+
+<para>A Legacy class for loading order data from a file. Mainly used for testing or for TAS order loading. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;FileOrderLoaderV3.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>using <link linkend="_class_file_order_loader_v3_1abf1e854e5dc3c8171e8bfdd06d4da57e">DataVector</link> = std::vector&lt;std::unordered_map&lt;std::string, std::string&gt;&gt;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static DataVector <link linkend="_class_file_order_loader_v3_1a8b821bfbecba63def1321ad5f7dccac2">ReadFile</link> (const std::string &amp;filename)</para>
+
+<para>Reads the contents of a file and returns the data as a vector of unordered maps. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>A Legacy class for loading order data from a file. Mainly used for testing or for TAS order loading. </para>
+</section>
+<section>
+<title>Member Typedef Documentation</title>
+<anchor xml:id="_class_file_order_loader_v3_1abf1e854e5dc3c8171e8bfdd06d4da57e"/><section>
+    <title>DataVector</title>
+<indexterm><primary>DataVector</primary><secondary>FileOrderLoaderV3</secondary></indexterm>
+<indexterm><primary>FileOrderLoaderV3</primary><secondary>DataVector</secondary></indexterm>
+<para><computeroutput>using FileOrderLoaderV3::DataVector = std::vector&lt;std::unordered_map&lt;std::string, std::string&gt;&gt;</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_file_order_loader_v3_1a8b821bfbecba63def1321ad5f7dccac2"/><section>
+    <title>ReadFile()</title>
+<indexterm><primary>ReadFile</primary><secondary>FileOrderLoaderV3</secondary></indexterm>
+<indexterm><primary>FileOrderLoaderV3</primary><secondary>ReadFile</secondary></indexterm>
+<para><computeroutput>static DataVector FileOrderLoaderV3::ReadFile (const std::string &amp; filename)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Reads the contents of a file and returns the data as a vector of unordered maps. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>filename</entry><entry>
+<para>The name of the file to read. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The data read from the file as a vector of unordered maps. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00550">KTN::ORD::OrderHandlerZmqV6::LoadTasOrders()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Orders/FileOrderLoaderV3.hpp</section>
+</section>

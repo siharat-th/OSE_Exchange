@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_session_status_json_formatter" xml:lang="en-US">
+<title>SessionStatusJsonFormatter Class Reference</title>
+<indexterm><primary>SessionStatusJsonFormatter</primary></indexterm>
+<para>
+
+<para>Formatter class for converting <link linkend="_class_session_status">SessionStatus</link> objects to JSON format. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;SessionStatusFormatterV2.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for SessionStatusJsonFormatter:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_session_status_json_formatter.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>std::string <link linkend="_class_session_status_json_formatter_1a48e935472d7d0238358f4f20f7a31489">GetJson</link> (const void *data) const override</para>
+
+<para>Converts a <link linkend="_class_session_status">SessionStatus</link> object to JSON format. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_class_formatter_base">FormatterBase</link>        <itemizedlist>
+            <listitem><para>virtual <link linkend="_class_formatter_base_1a46f0eaeede8596813b927751c842e846">~FormatterBase</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+
+<para>Formatter class for converting <link linkend="_class_session_status">SessionStatus</link> objects to JSON format. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_session_status_json_formatter_1a48e935472d7d0238358f4f20f7a31489"/><section>
+    <title>GetJson()</title>
+<indexterm><primary>GetJson</primary><secondary>SessionStatusJsonFormatter</secondary></indexterm>
+<indexterm><primary>SessionStatusJsonFormatter</primary><secondary>GetJson</secondary></indexterm>
+<para><computeroutput>std::string SessionStatusJsonFormatter::GetJson (const void * data) const<computeroutput>[inline]</computeroutput>, <computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Converts a <link linkend="_class_session_status">SessionStatus</link> object to JSON format. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>data</entry><entry>
+<para>A pointer to the <link linkend="_class_session_status">SessionStatus</link> object. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The JSON representation of the <link linkend="_class_session_status">SessionStatus</link> object. </para>
+</formalpara>
+</para>
+<para>
+Implements <link linkend="_class_formatter_base_1a503ea9bae81f69cf83fd2447cbbed66c">FormatterBase</link>.</para>
+<para>
+References <link linkend="_l00033">SessionStatus::desc</link>, <link linkend="_l00036">SessionStatus::exch</link>, <link linkend="_l00027">SessionStatus::ipaddress</link>, <link linkend="_l00032">SessionStatus::mktsegid</link>, <link linkend="_l00026">SessionStatus::msgseqnum</link>, <link linkend="_l00024">SessionStatus::ok</link>, <link linkend="_l00028">SessionStatus::port</link>, <link linkend="_l00034">SessionStatus::protocol</link>, <link linkend="_l00025">SessionStatus::sessionstatus</link>, <link linkend="_l00022">SessionStatus::source</link>, <link linkend="_l00035">SessionStatus::state</link>, and <link linkend="_l00023">SessionStatus::subid</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Session/SessionStatusFormatterV2.hpp</section>
+</section>

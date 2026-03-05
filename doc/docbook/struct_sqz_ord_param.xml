@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_sqz_ord_param" xml:lang="en-US">
+<title>SqzOrdParam Struct Reference</title>
+<indexterm><primary>SqzOrdParam</primary></indexterm>
+<para>
+
+<para>The <link linkend="_struct_sqz_ord_param">SqzOrdParam</link> struct represents the parameters for a Squeezer order. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;SqueezerParams.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for SqzOrdParam:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="struct_sqz_ord_param.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_struct_sqz_ord_param_1a8674980f3bf80898f78518edfbce94af">index</link></para>
+</listitem>
+            <listitem><para>KOrderSide::Enum <link linkend="_struct_sqz_ord_param_1a50b4c9712c18815cddc2f344759a8790">side</link></para>
+</listitem>
+            <listitem><para>KOrderAlgoTrigger::Enum <link linkend="_struct_sqz_ord_param_1abf14d32f06359349fa0b90684dc20240">trig</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_sqz_ord_param_1a08c0a72479757751e618a92aa9583df1">symbol</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_sqz_ord_param_1a0edcf529aa76096ed5ab7d4716077548">secid</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_sqz_ord_param_1a2ea0939ab798db23d577a67da935023a">ordnum</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_sqz_ord_param_1ac621f587ae6edf7bc1d84b87350d7f75">sprdid</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_sqz_ord_param_1a3ddc0add8ee100559fb05e7d177a408a">sqzprice</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_sqz_ord_param_1a454fe0ccc18be7fa203ebd9ad1403151">sqzqty</link></para>
+</listitem>
+            <listitem><para>float <link linkend="_struct_sqz_ord_param_1a254e12c7af9b2330b6352d56f0506aa5">sqzratio</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_sqz_ord_param_1a1bf4cd23223bb90f83b757d55dd83df2">largetrade</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Attributes inherited from <link linkend="_struct_i_o_b_params">IOBParams</link>        <itemizedlist>
+            <listitem><para>int <link linkend="_struct_i_o_b_params_1a0b97f2aceef8480a988508e811ca12b6">paramindex</link></para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_struct_sqz_ord_param">SqzOrdParam</link> struct represents the parameters for a Squeezer order. </para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_sqz_ord_param_1a8674980f3bf80898f78518edfbce94af"/><section>
+    <title>index</title>
+<indexterm><primary>index</primary><secondary>SqzOrdParam</secondary></indexterm>
+<indexterm><primary>SqzOrdParam</primary><secondary>index</secondary></indexterm>
+<para><computeroutput>int SqzOrdParam::index</computeroutput></para></section>
+<anchor xml:id="_struct_sqz_ord_param_1a1bf4cd23223bb90f83b757d55dd83df2"/><section>
+    <title>largetrade</title>
+<indexterm><primary>largetrade</primary><secondary>SqzOrdParam</secondary></indexterm>
+<indexterm><primary>SqzOrdParam</primary><secondary>largetrade</secondary></indexterm>
+<para><computeroutput>int SqzOrdParam::largetrade</computeroutput></para></section>
+<anchor xml:id="_struct_sqz_ord_param_1a2ea0939ab798db23d577a67da935023a"/><section>
+    <title>ordnum</title>
+<indexterm><primary>ordnum</primary><secondary>SqzOrdParam</secondary></indexterm>
+<indexterm><primary>SqzOrdParam</primary><secondary>ordnum</secondary></indexterm>
+<para><computeroutput>string SqzOrdParam::ordnum</computeroutput></para></section>
+<anchor xml:id="_struct_sqz_ord_param_1a0edcf529aa76096ed5ab7d4716077548"/><section>
+    <title>secid</title>
+<indexterm><primary>secid</primary><secondary>SqzOrdParam</secondary></indexterm>
+<indexterm><primary>SqzOrdParam</primary><secondary>secid</secondary></indexterm>
+<para><computeroutput>int SqzOrdParam::secid</computeroutput></para></section>
+<anchor xml:id="_struct_sqz_ord_param_1a50b4c9712c18815cddc2f344759a8790"/><section>
+    <title>side</title>
+<indexterm><primary>side</primary><secondary>SqzOrdParam</secondary></indexterm>
+<indexterm><primary>SqzOrdParam</primary><secondary>side</secondary></indexterm>
+<para><computeroutput>KOrderSide::Enum SqzOrdParam::side</computeroutput></para></section>
+<anchor xml:id="_struct_sqz_ord_param_1ac621f587ae6edf7bc1d84b87350d7f75"/><section>
+    <title>sprdid</title>
+<indexterm><primary>sprdid</primary><secondary>SqzOrdParam</secondary></indexterm>
+<indexterm><primary>SqzOrdParam</primary><secondary>sprdid</secondary></indexterm>
+<para><computeroutput>string SqzOrdParam::sprdid</computeroutput></para></section>
+<anchor xml:id="_struct_sqz_ord_param_1a3ddc0add8ee100559fb05e7d177a408a"/><section>
+    <title>sqzprice</title>
+<indexterm><primary>sqzprice</primary><secondary>SqzOrdParam</secondary></indexterm>
+<indexterm><primary>SqzOrdParam</primary><secondary>sqzprice</secondary></indexterm>
+<para><computeroutput>int SqzOrdParam::sqzprice</computeroutput></para></section>
+<anchor xml:id="_struct_sqz_ord_param_1a454fe0ccc18be7fa203ebd9ad1403151"/><section>
+    <title>sqzqty</title>
+<indexterm><primary>sqzqty</primary><secondary>SqzOrdParam</secondary></indexterm>
+<indexterm><primary>SqzOrdParam</primary><secondary>sqzqty</secondary></indexterm>
+<para><computeroutput>int SqzOrdParam::sqzqty</computeroutput></para></section>
+<anchor xml:id="_struct_sqz_ord_param_1a254e12c7af9b2330b6352d56f0506aa5"/><section>
+    <title>sqzratio</title>
+<indexterm><primary>sqzratio</primary><secondary>SqzOrdParam</secondary></indexterm>
+<indexterm><primary>SqzOrdParam</primary><secondary>sqzratio</secondary></indexterm>
+<para><computeroutput>float SqzOrdParam::sqzratio</computeroutput></para></section>
+<anchor xml:id="_struct_sqz_ord_param_1a08c0a72479757751e618a92aa9583df1"/><section>
+    <title>symbol</title>
+<indexterm><primary>symbol</primary><secondary>SqzOrdParam</secondary></indexterm>
+<indexterm><primary>SqzOrdParam</primary><secondary>symbol</secondary></indexterm>
+<para><computeroutput>string SqzOrdParam::symbol</computeroutput></para></section>
+<anchor xml:id="_struct_sqz_ord_param_1abf14d32f06359349fa0b90684dc20240"/><section>
+    <title>trig</title>
+<indexterm><primary>trig</primary><secondary>SqzOrdParam</secondary></indexterm>
+<indexterm><primary>SqzOrdParam</primary><secondary>trig</secondary></indexterm>
+<para><computeroutput>KOrderAlgoTrigger::Enum SqzOrdParam::trig</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+AlgoParams/SqueezerParams.hpp</section>
+</section>

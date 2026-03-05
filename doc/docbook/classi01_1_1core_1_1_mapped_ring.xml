@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classi01_1_1core_1_1_mapped_ring" xml:lang="en-US">
+<title>i01::core::MappedRing&lt; T &gt; Class Template Reference</title>
+<indexterm><primary>i01::core::MappedRing&lt; T &gt;</primary></indexterm>
+<para>Inheritance diagram for i01::core::MappedRing&lt; T &gt;:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classi01_1_1core_1_1_mapped_ring.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>T * <link linkend="_classi01_1_1core_1_1_mapped_ring_1a3e5bf77254d24ac94eec1aca542a7bdf">write_address</link> ()</para>
+</listitem>
+            <listitem><para>const T * <link linkend="_classi01_1_1core_1_1_mapped_ring_1a33b104b820d0caf188df95c28a16f9c0">read_address</link> () const</para>
+</listitem>
+            <listitem><para><link linkend="_classi01_1_1core_1_1_mapped_ring_1ad594d19293ee7a1025f85fd230090b98">MappedRingBase</link> (int fd, std::uint64_t offset=0, std::uint8_t order=27)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;typename T&gt;<?linebreak?>class i01::core::MappedRing&lt; T &gt;</title></simplesect>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classi01_1_1core_1_1_mapped_ring_1ad594d19293ee7a1025f85fd230090b98"/><section>
+    <title>MappedRingBase()</title>
+<indexterm><primary>MappedRingBase</primary><secondary>i01::core::MappedRing&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>i01::core::MappedRing&lt; T &gt;</primary><secondary>MappedRingBase</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>i01::core::MappedRingBase::MappedRingBase (int fd, std::uint64_t offset = <computeroutput>0</computeroutput>
+, std::uint8_t order = <computeroutput>27</computeroutput>
+)</computeroutput></para>
+<para>Map a ring using file descriptor <computeroutput>fd</computeroutput>, starting at offset <computeroutput>offset</computeroutput>, in segments of size <computeroutput>2^(order)</computeroutput>. </para>
+</section>
+<anchor xml:id="_classi01_1_1core_1_1_mapped_ring_1a33b104b820d0caf188df95c28a16f9c0"/><section>
+    <title>read_address()</title>
+<indexterm><primary>read_address</primary><secondary>i01::core::MappedRing&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>i01::core::MappedRing&lt; T &gt;</primary><secondary>read_address</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>const T * <link linkend="_classi01_1_1core_1_1_mapped_ring">i01::core::MappedRing</link>&lt; T &gt;::read_address ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classi01_1_1core_1_1_mapped_ring_1a3e5bf77254d24ac94eec1aca542a7bdf"/><section>
+    <title>write_address()</title>
+<indexterm><primary>write_address</primary><secondary>i01::core::MappedRing&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>i01::core::MappedRing&lt; T &gt;</primary><secondary>write_address</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>T * <link linkend="_classi01_1_1core_1_1_mapped_ring">i01::core::MappedRing</link>&lt; T &gt;::write_address ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/i01_core/MappedRing.hpp</section>
+</section>

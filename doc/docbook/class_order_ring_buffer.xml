@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_order_ring_buffer" xml:lang="en-US">
+<title>OrderRingBuffer Class Reference</title>
+<indexterm><primary>OrderRingBuffer</primary></indexterm>
+<para>
+
+<para>A ring buffer implementation for storing orders. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;OrderRingBuffer.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_order_ring_buffer_1a00fa295fe7cddcfa0ef21963e0034cc7">OrderRingBuffer</link> (size_t capacity)</para>
+
+<para>Constructs an <link linkend="_class_order_ring_buffer">OrderRingBuffer</link> with the specified capacity. </para>
+</listitem>
+            <listitem><para><link linkend="_class_order_ring_buffer_1ae98aae0c701ecfbdfc5afb5396bbf1fa">~OrderRingBuffer</link> ()</para>
+
+<para>Destroys the <link linkend="_class_order_ring_buffer">OrderRingBuffer</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_order_ring_buffer_1afbcc87b34ff9eb75964ce333b1edb2da">insert</link> (const uint64_t &amp;key, const <link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> &amp;value)</para>
+
+<para>Inserts an order into the buffer with the specified key and value. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_order_ring_buffer_1a4a2eb2b98a8f581881d61a037a07cbba">lookup</link> (const uint64_t &amp;key, std::vector&lt; <link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> &gt; &amp;values) const</para>
+
+<para>Looks up orders in the buffer with the specified key. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>A ring buffer implementation for storing orders. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_order_ring_buffer_1a00fa295fe7cddcfa0ef21963e0034cc7"/><section>
+    <title>OrderRingBuffer()</title>
+<indexterm><primary>OrderRingBuffer</primary><secondary>OrderRingBuffer</secondary></indexterm>
+<indexterm><primary>OrderRingBuffer</primary><secondary>OrderRingBuffer</secondary></indexterm>
+<para><computeroutput>OrderRingBuffer::OrderRingBuffer (size_t capacity)</computeroutput></para><para>
+
+<para>Constructs an <link linkend="_class_order_ring_buffer">OrderRingBuffer</link> with the specified capacity. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>capacity</entry><entry>
+<para>The maximum number of orders that can be stored in the buffer. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_order_ring_buffer_1ae98aae0c701ecfbdfc5afb5396bbf1fa"/><section>
+    <title>~OrderRingBuffer()</title>
+<indexterm><primary>~OrderRingBuffer</primary><secondary>OrderRingBuffer</secondary></indexterm>
+<indexterm><primary>OrderRingBuffer</primary><secondary>~OrderRingBuffer</secondary></indexterm>
+<para><computeroutput>OrderRingBuffer::~OrderRingBuffer ( )</computeroutput></para><para>
+
+<para>Destroys the <link linkend="_class_order_ring_buffer">OrderRingBuffer</link> object. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_order_ring_buffer_1afbcc87b34ff9eb75964ce333b1edb2da"/><section>
+    <title>insert()</title>
+<indexterm><primary>insert</primary><secondary>OrderRingBuffer</secondary></indexterm>
+<indexterm><primary>OrderRingBuffer</primary><secondary>insert</secondary></indexterm>
+<para><computeroutput>void OrderRingBuffer::insert (const uint64_t &amp; key, const <link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> &amp; value)</computeroutput></para><para>
+
+<para>Inserts an order into the buffer with the specified key and value. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>key</entry><entry>
+<para>The key associated with the order. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>value</entry><entry>
+<para>The order to be inserted. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_order_ring_buffer_1a4a2eb2b98a8f581881d61a037a07cbba"/><section>
+    <title>lookup()</title>
+<indexterm><primary>lookup</primary><secondary>OrderRingBuffer</secondary></indexterm>
+<indexterm><primary>OrderRingBuffer</primary><secondary>lookup</secondary></indexterm>
+<para><computeroutput>bool OrderRingBuffer::lookup (const uint64_t &amp; key, std::vector&lt; <link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> &gt; &amp; values) const</computeroutput></para><para>
+
+<para>Looks up orders in the buffer with the specified key. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>key</entry><entry>
+<para>The key to search for. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>values</entry><entry>
+<para>The vector to store the matching orders. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if at least one order is found, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Maps/OrderRingBuffer.hppMaps/OrderRingBuffer.cpp</section>
+</section>

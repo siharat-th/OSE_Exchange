@@ -1,0 +1,333 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_algo_service_broker_v3" xml:lang="en-US">
+<title>KTN::AlgoServiceBrokerV3 Class Reference</title>
+<indexterm><primary>KTN::AlgoServiceBrokerV3</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_k_t_n_1_1_algo_service_broker_v3">AlgoServiceBrokerV3</link> class routes messages to and from child instances of <link linkend="_class_k_t_n_1_1_algo_base_v3">AlgoBaseV3</link>. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;AlgoServiceBrokerV3.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for KTN::AlgoServiceBrokerV3:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_k_t_n_1_1_algo_service_broker_v3.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_algo_service_broker_v3_1a713e842a39cdf47c5b977e0d495c5839">AlgoServiceBrokerV3</link> (<link linkend="_class_i_exchange_sender">IExchangeSender</link> *sess)</para>
+
+<para>Constructs an instance of <link linkend="_class_k_t_n_1_1_algo_service_broker_v3">AlgoServiceBrokerV3</link> with the given exchange sender. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_k_t_n_1_1_algo_service_broker_v3_1a06f942e0715b539b54ba0e8e94818d15">~AlgoServiceBrokerV3</link> ()</para>
+
+<para>Destroys the <link linkend="_class_k_t_n_1_1_algo_service_broker_v3">AlgoServiceBrokerV3</link> instance. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_algo_service_broker_v3_1aa618ec91fc0dd5c5b5a97f3ac99900d8">initZmq</link> (std::string ArgoServer, int ArgoPort)</para>
+
+<para>Initializes ZeroMQ with the specified server and port. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_algo_service_broker_v3_1a84f32591d74b0ee23c6244781cff1fc8">Print</link> ()</para>
+
+<para>Prints information about the broker. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_algo_service_broker_v3_1ac78fc0aa09c5c4dbaff161eefe56766f">StopAllAlgos</link> ()</para>
+
+<para>Stops all running algorithms. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_k_t_n_1_1_algo_service_broker_v3_1aa7d22449f87c05b3b2fc0400d82c6886"/>void <emphasis role="strong">ResetPositions</emphasis> ()</para>
+
+<para>Resets all positions. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_algo_service_broker_v3_1a3084857c16b8fbacaa8caedcc444eca0">ResetPositionSingle</link> (string uniqueid)</para>
+
+<para>Resets the position for a single algorithm with the specified unique ID. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_algo_service_broker_v3_1a543f1ccc4dd977b758d1b844346ed3f2">SendCommand</link> (int id)</para>
+
+<para>Sends a command to the broker with the specified ID. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_algo_service_broker_v3_1ab5157b9749732a33f59b5c3814ab96b3">onAlgoCommand</link> (const <link linkend="_struct_instruction">Instruction</link> &amp;cmd)</para>
+
+<para>Handles an algorithm command. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_algo_service_broker_v3_1a03d3c536d4e5e98a13ef4dc03688a783">onAlgoOrder</link> (const <link linkend="_struct_instruction">Instruction</link> &amp;cmd)</para>
+
+<para>Handles an algorithm order. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_class_i_zmq_subscriber">IZmqSubscriber</link>        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_i_zmq_subscriber_1af2e2a88cb831d644dd32edc238cce65d">onPubMsg</link> (string topic, string payload)=0</para>
+
+<para>Called when a message is received. </para>
+</listitem>
+        </itemizedlist>
+Public Member Functions inherited from <link linkend="_class_named_thread">NamedThread</link>        <itemizedlist>
+            <listitem><para><link linkend="_class_named_thread_1a891fabdc2d824048ec05c82e7ef8c69a">NamedThread</link> ()</para>
+
+<para>Default constructor. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_named_thread_1a018dadb59e5af98ee734301a1baa50cb">~NamedThread</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_named_thread_1a9fa42542ff43c89fb9bbc33de9c87e34">CreateAndRun</link> (string name, int core)</para>
+
+<para>Creates and runs the named thread on the specified core. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_named_thread_1ad4809c571171be13f0f91f540d5c196f">Join</link> ()</para>
+
+<para>Joins the named thread. </para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_k_t_n_1_1_algo_service_broker_v3">AlgoServiceBrokerV3</link> class routes messages to and from child instances of <link linkend="_class_k_t_n_1_1_algo_base_v3">AlgoBaseV3</link>. </para>
+
+
+
+<para>This class provides functionality for initializing ZeroMQ, printing information, stopping all algorithms, resetting positions, sending commands, and handling algorithm commands and orders. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_algo_service_broker_v3_1a713e842a39cdf47c5b977e0d495c5839"/><section>
+    <title>AlgoServiceBrokerV3()</title>
+<indexterm><primary>AlgoServiceBrokerV3</primary><secondary>KTN::AlgoServiceBrokerV3</secondary></indexterm>
+<indexterm><primary>KTN::AlgoServiceBrokerV3</primary><secondary>AlgoServiceBrokerV3</secondary></indexterm>
+<para><computeroutput>KTN::AlgoServiceBrokerV3::AlgoServiceBrokerV3 (<link linkend="_class_i_exchange_sender">IExchangeSender</link> * sess)<computeroutput>[explicit]</computeroutput></computeroutput></para><para>
+
+<para>Constructs an instance of <link linkend="_class_k_t_n_1_1_algo_service_broker_v3">AlgoServiceBrokerV3</link> with the given exchange sender. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>sess</entry><entry>
+<para>The exchange sender to be used by the broker. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00018">NamedThread::CreateAndRun()</link>, <link linkend="_l00123">Settings::get()</link>, <link linkend="_l00133">Settings::getInteger()</link>, and <link linkend="_l00094">initZmq()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_algo_service_broker_v3_1a06f942e0715b539b54ba0e8e94818d15"/><section>
+    <title>~AlgoServiceBrokerV3()</title>
+<indexterm><primary>~AlgoServiceBrokerV3</primary><secondary>KTN::AlgoServiceBrokerV3</secondary></indexterm>
+<indexterm><primary>KTN::AlgoServiceBrokerV3</primary><secondary>~AlgoServiceBrokerV3</secondary></indexterm>
+<para><computeroutput>KTN::AlgoServiceBrokerV3::~AlgoServiceBrokerV3 ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Destroys the <link linkend="_class_k_t_n_1_1_algo_service_broker_v3">AlgoServiceBrokerV3</link> instance. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_algo_service_broker_v3_1aa618ec91fc0dd5c5b5a97f3ac99900d8"/><section>
+    <title>initZmq()</title>
+<indexterm><primary>initZmq</primary><secondary>KTN::AlgoServiceBrokerV3</secondary></indexterm>
+<indexterm><primary>KTN::AlgoServiceBrokerV3</primary><secondary>initZmq</secondary></indexterm>
+<para><computeroutput>void KTN::AlgoServiceBrokerV3::initZmq (std::string ArgoServer, int ArgoPort)</computeroutput></para><para>
+
+<para>Initializes ZeroMQ with the specified server and port. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ArgoServer</entry><entry>
+<para>The server address for ZeroMQ. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>ArgoPort</entry><entry>
+<para>The port number for ZeroMQ. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Referenced by <link linkend="_l00023">AlgoServiceBrokerV3()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_algo_service_broker_v3_1ab5157b9749732a33f59b5c3814ab96b3"/><section>
+    <title>onAlgoCommand()</title>
+<indexterm><primary>onAlgoCommand</primary><secondary>KTN::AlgoServiceBrokerV3</secondary></indexterm>
+<indexterm><primary>KTN::AlgoServiceBrokerV3</primary><secondary>onAlgoCommand</secondary></indexterm>
+<para><computeroutput>void KTN::AlgoServiceBrokerV3::onAlgoCommand (const <link linkend="_struct_instruction">Instruction</link> &amp; cmd)</computeroutput></para><para>
+
+<para>Handles an algorithm command. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>cmd</entry><entry>
+<para>The instruction representing the algorithm command. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_class_i_exchange_sender_1a4e02139d13d7fc3c6347b357fabf4dee">IExchangeSender::AlgoJson()</link>, <link linkend="_l00068">AlgoFactory::LaunchAlgo()</link>, <link linkend="_l00209">AlgoFactory::ParseAlgoHeader()</link>, <link linkend="_l00253">AlgoFactory::ParseAlgoOrder()</link>, and <link linkend="_l00283">AlgoFactory::ParseEngineCommand()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_algo_service_broker_v3_1a03d3c536d4e5e98a13ef4dc03688a783"/><section>
+    <title>onAlgoOrder()</title>
+<indexterm><primary>onAlgoOrder</primary><secondary>KTN::AlgoServiceBrokerV3</secondary></indexterm>
+<indexterm><primary>KTN::AlgoServiceBrokerV3</primary><secondary>onAlgoOrder</secondary></indexterm>
+<para><computeroutput>void KTN::AlgoServiceBrokerV3::onAlgoOrder (const <link linkend="_struct_instruction">Instruction</link> &amp; cmd)</computeroutput></para><para>
+
+<para>Handles an algorithm order. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>cmd</entry><entry>
+<para>The instruction representing the algorithm order. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_algo_service_broker_v3_1a84f32591d74b0ee23c6244781cff1fc8"/><section>
+    <title>Print()</title>
+<indexterm><primary>Print</primary><secondary>KTN::AlgoServiceBrokerV3</secondary></indexterm>
+<indexterm><primary>KTN::AlgoServiceBrokerV3</primary><secondary>Print</secondary></indexterm>
+<para><computeroutput>void KTN::AlgoServiceBrokerV3::Print ( )</computeroutput></para><para>
+
+<para>Prints information about the broker. </para>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_algo_service_broker_v3_1a3084857c16b8fbacaa8caedcc444eca0"/><section>
+    <title>ResetPositionSingle()</title>
+<indexterm><primary>ResetPositionSingle</primary><secondary>KTN::AlgoServiceBrokerV3</secondary></indexterm>
+<indexterm><primary>KTN::AlgoServiceBrokerV3</primary><secondary>ResetPositionSingle</secondary></indexterm>
+<para><computeroutput>void KTN::AlgoServiceBrokerV3::ResetPositionSingle (string uniqueid)</computeroutput></para><para>
+
+<para>Resets the position for a single algorithm with the specified unique ID. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>uniqueid</entry><entry>
+<para>The unique ID of the algorithm to reset. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_algo_service_broker_v3_1a543f1ccc4dd977b758d1b844346ed3f2"/><section>
+    <title>SendCommand()</title>
+<indexterm><primary>SendCommand</primary><secondary>KTN::AlgoServiceBrokerV3</secondary></indexterm>
+<indexterm><primary>KTN::AlgoServiceBrokerV3</primary><secondary>SendCommand</secondary></indexterm>
+<para><computeroutput>void KTN::AlgoServiceBrokerV3::SendCommand (int id)</computeroutput></para><para>
+
+<para>Sends a command to the broker with the specified ID. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>id</entry><entry>
+<para>The ID of the command to send. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_algo_service_broker_v3_1ac78fc0aa09c5c4dbaff161eefe56766f"/><section>
+    <title>StopAllAlgos()</title>
+<indexterm><primary>StopAllAlgos</primary><secondary>KTN::AlgoServiceBrokerV3</secondary></indexterm>
+<indexterm><primary>KTN::AlgoServiceBrokerV3</primary><secondary>StopAllAlgos</secondary></indexterm>
+<para><computeroutput>void KTN::AlgoServiceBrokerV3::StopAllAlgos ( )</computeroutput></para><para>
+
+<para>Stops all running algorithms. </para>
+</para>
+<para>
+Referenced by <link linkend="_l00146">Raptor2::Stop()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Algos/AlgoServiceBrokerV3.hppAlgos/AlgoServiceBrokerV3.cpp</section>
+</section>

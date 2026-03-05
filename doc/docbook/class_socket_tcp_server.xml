@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_socket_tcp_server" xml:lang="en-US">
+<title>SocketTcpServer&lt; Conf &gt; Class Template Reference</title>
+<indexterm><primary>SocketTcpServer&lt; Conf &gt;</primary></indexterm>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>using <link linkend="_class_socket_tcp_server_1a481018e89fe949fe4c97684d82ee7f6b">Conn</link> = <link linkend="_class_socket_tcp_connection">SocketTcpConnection</link>&lt;Conf&gt;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_socket_tcp_server_1a64c03f40f33c4cf219d41bfebd0f62dd">init</link> (const char *interface, const char *server_ip, uint16_t server_port)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_socket_tcp_server_1a21c97ee0bffa8574165fe0ed18170244">close</link> (const char *reason)</para>
+</listitem>
+            <listitem><para>const char * <link linkend="_class_socket_tcp_server_1ab04fbf0769baf7d2477c6df56d0d9360">getLastError</link> ()</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_socket_tcp_server_1aada9eb34e078b12773540958cfb09ab8">isClosed</link> ()</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_class_socket_tcp_server_1a625a77978323dd339f304bd59f0d24d7">getConnCnt</link> ()</para>
+</listitem>
+            <listitem><para>template&lt;typename Handler &gt; </para><para>void <link linkend="_class_socket_tcp_server_1af676a25abb5a6a82c01ab90665879452">foreachConn</link> (Handler handler)</para>
+</listitem>
+            <listitem><para>template&lt;typename Handler &gt; </para><para>void <link linkend="_class_socket_tcp_server_1acfe139b1d46dfd875b096e6fdd75bdfa">poll</link> (Handler &amp;handler)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;typename Conf&gt;<?linebreak?>class SocketTcpServer&lt; Conf &gt;</title></simplesect>
+</section>
+<section>
+<title>Member Typedef Documentation</title>
+<anchor xml:id="_class_socket_tcp_server_1a481018e89fe949fe4c97684d82ee7f6b"/><section>
+    <title>Conn</title>
+<indexterm><primary>Conn</primary><secondary>SocketTcpServer&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>SocketTcpServer&lt; Conf &gt;</primary><secondary>Conn</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>using <link linkend="_class_socket_tcp_server">SocketTcpServer</link>&lt; Conf &gt;::Conn = <link linkend="_class_socket_tcp_connection">SocketTcpConnection</link>&lt;Conf&gt;</computeroutput></para></section>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_socket_tcp_server_1a09d5d48bddfea25e40d78b67863c0be1"/><section>
+    <title>~SocketTcpServer()</title>
+<indexterm><primary>~SocketTcpServer</primary><secondary>SocketTcpServer&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>SocketTcpServer&lt; Conf &gt;</primary><secondary>~SocketTcpServer</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput><link linkend="_class_socket_tcp_server">SocketTcpServer</link>&lt; Conf &gt;::~<link linkend="_class_socket_tcp_server">SocketTcpServer</link> ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_socket_tcp_server_1a21c97ee0bffa8574165fe0ed18170244"/><section>
+    <title>close()</title>
+<indexterm><primary>close</primary><secondary>SocketTcpServer&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>SocketTcpServer&lt; Conf &gt;</primary><secondary>close</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>void <link linkend="_class_socket_tcp_server">SocketTcpServer</link>&lt; Conf &gt;::close (const char * reason)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_socket_tcp_server_1af676a25abb5a6a82c01ab90665879452"/><section>
+    <title>foreachConn()</title>
+<indexterm><primary>foreachConn</primary><secondary>SocketTcpServer&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>SocketTcpServer&lt; Conf &gt;</primary><secondary>foreachConn</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><computeroutput>template&lt;typename Handler &gt; </computeroutput><para><computeroutput>void <link linkend="_class_socket_tcp_server">SocketTcpServer</link>&lt; Conf &gt;::foreachConn (Handler handler)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_socket_tcp_server_1a625a77978323dd339f304bd59f0d24d7"/><section>
+    <title>getConnCnt()</title>
+<indexterm><primary>getConnCnt</primary><secondary>SocketTcpServer&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>SocketTcpServer&lt; Conf &gt;</primary><secondary>getConnCnt</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>uint32_t <link linkend="_class_socket_tcp_server">SocketTcpServer</link>&lt; Conf &gt;::getConnCnt ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_socket_tcp_server_1ab04fbf0769baf7d2477c6df56d0d9360"/><section>
+    <title>getLastError()</title>
+<indexterm><primary>getLastError</primary><secondary>SocketTcpServer&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>SocketTcpServer&lt; Conf &gt;</primary><secondary>getLastError</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>const char * <link linkend="_class_socket_tcp_server">SocketTcpServer</link>&lt; Conf &gt;::getLastError ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_socket_tcp_server_1a64c03f40f33c4cf219d41bfebd0f62dd"/><section>
+    <title>init()</title>
+<indexterm><primary>init</primary><secondary>SocketTcpServer&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>SocketTcpServer&lt; Conf &gt;</primary><secondary>init</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>bool <link linkend="_class_socket_tcp_server">SocketTcpServer</link>&lt; Conf &gt;::init (const char * interface, const char * server_ip, uint16_t server_port)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_socket_tcp_server_1aada9eb34e078b12773540958cfb09ab8"/><section>
+    <title>isClosed()</title>
+<indexterm><primary>isClosed</primary><secondary>SocketTcpServer&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>SocketTcpServer&lt; Conf &gt;</primary><secondary>isClosed</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>bool <link linkend="_class_socket_tcp_server">SocketTcpServer</link>&lt; Conf &gt;::isClosed ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_socket_tcp_server_1acfe139b1d46dfd875b096e6fdd75bdfa"/><section>
+    <title>poll()</title>
+<indexterm><primary>poll</primary><secondary>SocketTcpServer&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>SocketTcpServer&lt; Conf &gt;</primary><secondary>poll</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><computeroutput>template&lt;typename Handler &gt; </computeroutput><para><computeroutput>void <link linkend="_class_socket_tcp_server">SocketTcpServer</link>&lt; Conf &gt;::poll (Handler &amp; handler)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/external/pollnet/Socket.h</section>
+</section>

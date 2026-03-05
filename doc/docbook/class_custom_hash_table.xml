@@ -1,0 +1,240 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_custom_hash_table" xml:lang="en-US">
+<title>CustomHashTable&lt; K, V &gt; Class Template Reference</title>
+<indexterm><primary>CustomHashTable&lt; K, V &gt;</primary></indexterm>
+<para>
+
+<para>A custom hash table implementation. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;CustomHashTable.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_custom_hash_table_1a8bc011e57b0d1a23803bd592a9b2e391">CustomHashTable</link> ()</para>
+
+<para>Default constructor. </para>
+</listitem>
+            <listitem><para><link linkend="_class_custom_hash_table_1a0a59b8a478987aec59cf2bdb69c52d99">CustomHashTable</link> (size_t size)</para>
+
+<para>Constructor with initial size. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_custom_hash_table_1a59e946306e57e93d1fe742fe59ef08c7">insert</link> (const K &amp;key, const V &amp;value)</para>
+
+<para>Insert a key-value pair into the hash table. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_custom_hash_table_1a7e3bfbbbe4000c1957b9cbd66dcdc723">lookup</link> (const K &amp;key, V &amp;value) const</para>
+
+<para>Lookup a value by key. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_custom_hash_table_1a05d8c160e60420fe0f65180e90506675">erase</link> (const K &amp;key)</para>
+
+<para>Erase a key-value pair from the hash table. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;typename K, typename V&gt;<?linebreak?>class CustomHashTable&lt; K, V &gt;</title></simplesect>
+
+<para>A custom hash table implementation. </para>
+
+
+
+<para>This class provides a custom hash table data structure that allows insertion, lookup, and deletion of key-value pairs.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Template Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>K</entry><entry>
+<para>The type of the keys in the hash table. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>V</entry><entry>
+<para>The type of the values in the hash table. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_custom_hash_table_1a8bc011e57b0d1a23803bd592a9b2e391"/><section>
+    <title>CustomHashTable()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>CustomHashTable</primary><secondary>CustomHashTable&lt; K, V &gt;</secondary></indexterm>
+<indexterm><primary>CustomHashTable&lt; K, V &gt;</primary><secondary>CustomHashTable</secondary></indexterm>
+<computeroutput>template&lt;typename K , typename V &gt; </computeroutput><para><computeroutput><link linkend="_class_custom_hash_table">CustomHashTable</link>&lt; K, V &gt;<link linkend="_class_custom_hash_table">::CustomHashTable</link> ( )</computeroutput></para><para>
+
+<para>Default constructor. </para>
+</para>
+
+<para>Constructs an empty hash table with a default size. </para>
+</section>
+<anchor xml:id="_class_custom_hash_table_1a0a59b8a478987aec59cf2bdb69c52d99"/><section>
+    <title>CustomHashTable()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>CustomHashTable</primary><secondary>CustomHashTable&lt; K, V &gt;</secondary></indexterm>
+<indexterm><primary>CustomHashTable&lt; K, V &gt;</primary><secondary>CustomHashTable</secondary></indexterm>
+<computeroutput>template&lt;typename K , typename V &gt; </computeroutput><para><computeroutput><link linkend="_class_custom_hash_table">CustomHashTable</link>&lt; K, V &gt;<link linkend="_class_custom_hash_table">::CustomHashTable</link> (size_t size)</computeroutput></para><para>
+
+<para>Constructor with initial size. </para>
+</para>
+
+<para>Constructs an empty hash table with the specified size.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>size</entry><entry>
+<para>The initial size of the hash table. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_custom_hash_table_1a05d8c160e60420fe0f65180e90506675"/><section>
+    <title>erase()</title>
+<indexterm><primary>erase</primary><secondary>CustomHashTable&lt; K, V &gt;</secondary></indexterm>
+<indexterm><primary>CustomHashTable&lt; K, V &gt;</primary><secondary>erase</secondary></indexterm>
+<computeroutput>template&lt;typename K , typename V &gt; </computeroutput><para><computeroutput>void <link linkend="_class_custom_hash_table">CustomHashTable</link>&lt; K, V &gt;::erase (const K &amp; key)</computeroutput></para><para>
+
+<para>Erase a key-value pair from the hash table. </para>
+</para>
+
+<para>Removes the key-value pair with the specified key from the hash table.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>key</entry><entry>
+<para>The key to erase. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_custom_hash_table_1a59e946306e57e93d1fe742fe59ef08c7"/><section>
+    <title>insert()</title>
+<indexterm><primary>insert</primary><secondary>CustomHashTable&lt; K, V &gt;</secondary></indexterm>
+<indexterm><primary>CustomHashTable&lt; K, V &gt;</primary><secondary>insert</secondary></indexterm>
+<computeroutput>template&lt;typename K , typename V &gt; </computeroutput><para><computeroutput>void <link linkend="_class_custom_hash_table">CustomHashTable</link>&lt; K, V &gt;::insert (const K &amp; key, const V &amp; value)</computeroutput></para><para>
+
+<para>Insert a key-value pair into the hash table. </para>
+</para>
+
+<para>Inserts the specified key-value pair into the hash table.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>key</entry><entry>
+<para>The key to insert. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>value</entry><entry>
+<para>The value to insert. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_custom_hash_table_1a7e3bfbbbe4000c1957b9cbd66dcdc723"/><section>
+    <title>lookup()</title>
+<indexterm><primary>lookup</primary><secondary>CustomHashTable&lt; K, V &gt;</secondary></indexterm>
+<indexterm><primary>CustomHashTable&lt; K, V &gt;</primary><secondary>lookup</secondary></indexterm>
+<computeroutput>template&lt;typename K , typename V &gt; </computeroutput><para><computeroutput>bool <link linkend="_class_custom_hash_table">CustomHashTable</link>&lt; K, V &gt;::lookup (const K &amp; key, V &amp; value) const</computeroutput></para><para>
+
+<para>Lookup a value by key. </para>
+</para>
+
+<para>Looks up the value associated with the specified key in the hash table.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>key</entry><entry>
+<para>The key to lookup. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>value</entry><entry>
+<para>The variable to store the found value. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the key was found, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Core/CustomHashTable.hppCore/CustomHashTable.cpp</section>
+</section>

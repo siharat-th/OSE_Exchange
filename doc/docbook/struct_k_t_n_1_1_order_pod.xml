@@ -1,0 +1,334 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_t_n_1_1_order_pod" xml:lang="en-US">
+<title>KTN::OrderPod Struct Reference</title>
+<indexterm><primary>KTN::OrderPod</primary></indexterm>
+<para>
+
+<para>Represents an order in the system. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;OrderPod.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>char <link linkend="_struct_k_t_n_1_1_order_pod_1a2deef8a444d9e7b9dee6d28e49f311ac">execid</link> [40]</para>
+</listitem>
+            <listitem><para>char <link linkend="_struct_k_t_n_1_1_order_pod_1a0f96ad0b2dc5108481a266b572a24636">ordernum</link> [20]</para>
+</listitem>
+            <listitem><para>int64_t <link linkend="_struct_k_t_n_1_1_order_pod_1a7305e58d82b53d012a5e9eecbcc97cb8">price</link></para>
+</listitem>
+            <listitem><para>int64_t <link linkend="_struct_k_t_n_1_1_order_pod_1a97d7accb865af260f93936bcce482609">lastpx</link></para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_struct_k_t_n_1_1_order_pod_1a20855b7cafce8ca50620f11c8e374df6">timestamp</link></para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_struct_k_t_n_1_1_order_pod_1ae26bb863a16b33faae5a7e9f0b69334a">orderReqId</link></para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_struct_k_t_n_1_1_order_pod_1aaebd67bcffdddb92e1d16dd0ce29f214">exchordid</link></para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_struct_k_t_n_1_1_order_pod_1a2bb58da9dd4a2ad9693c0dc0a09c55a0">secid</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_k_t_n_1_1_order_pod_1aa1892de1de88d68fb1d08492c78a27b1">quantity</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_k_t_n_1_1_order_pod_1af573bfb288d6d7ebe1c327b600343ed9">leavesqty</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_k_t_n_1_1_order_pod_1a5396b961579bcb0726e60f68f95e2d9f">fillqty</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_k_t_n_1_1_order_pod_1a4084578c32198787e6cb8f1b6da3e697">lastqty</link></para>
+</listitem>
+            <listitem><para>int16_t <link linkend="_struct_k_t_n_1_1_order_pod_1a7704d651276873b6a37616438de7cf15">stratid</link></para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_struct_k_t_n_1_1_order_pod_1ad1d7acce8f89080ef7eb44c082a55202">rejreason</link></para>
+</listitem>
+            <listitem><para>int8_t <link linkend="_struct_k_t_n_1_1_order_pod_1a438499f4619852b6df015ea920775b15">callbackid</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_struct_k_t_n_1_1_order_pod_1a41d88d0e243ca2d72358195aa04a5f8e">mktsegid</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_struct_k_t_n_1_1_order_pod_1ad22db86dbcd15f74106968be0081ec4c">instindex</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_k_t_n_1_1_order_pod_1a499d5d2fc1ee8a6c55d05032615b6202">isManual</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_k_t_n_1_1_order_pod_1a5461c440e2cac5531e9577759f429046">cert</link></para>
+</listitem>
+            <listitem><para>KOrderExchange::Enum <link linkend="_struct_k_t_n_1_1_order_pod_1a03bee215925d8af1a3544f91d284af03">OrdExch</link></para>
+</listitem>
+            <listitem><para>KOrderType::Enum <link linkend="_struct_k_t_n_1_1_order_pod_1a5dcc1ecc3a84e808aaa7e1d3c3d2796c">OrdType</link></para>
+</listitem>
+            <listitem><para>KOrderTif::Enum <link linkend="_struct_k_t_n_1_1_order_pod_1a50ccb8663cdc2c18b0121dedfbbb82d6">OrdTif</link></para>
+</listitem>
+            <listitem><para>KOrderAction::Enum <link linkend="_struct_k_t_n_1_1_order_pod_1ae8c476c03e60ed1383756fc5167fa15e">OrdAction</link></para>
+</listitem>
+            <listitem><para>KOrderSide::Enum <link linkend="_struct_k_t_n_1_1_order_pod_1a8bb9d6a5042378c0babba6f0c6ffc2d2">OrdSide</link></para>
+</listitem>
+            <listitem><para>KOrderStatus::Enum <link linkend="_struct_k_t_n_1_1_order_pod_1a7a4587fc1f3bfb4b54cafec605ea7402">OrdStatus</link></para>
+</listitem>
+            <listitem><para>KOrderState::Enum <link linkend="_struct_k_t_n_1_1_order_pod_1aca8dd025ef374f5018b729f1f5ad2924">OrdState</link></para>
+</listitem>
+            <listitem><para>KOrderFillType::Enum <link linkend="_struct_k_t_n_1_1_order_pod_1a63b9f5f063f422e11cb8a530c13e24f4">OrdFillType</link></para>
+</listitem>
+            <listitem><para>KOrderAlgoTrigger::Enum <link linkend="_struct_k_t_n_1_1_order_pod_1aa69b766d33a35e21668fc89aa82781f5">OrdAlgoTrig</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Represents an order in the system. </para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_order_pod_1a438499f4619852b6df015ea920775b15"/><section>
+    <title>callbackid</title>
+<indexterm><primary>callbackid</primary><secondary>KTN::OrderPod</secondary></indexterm>
+<indexterm><primary>KTN::OrderPod</primary><secondary>callbackid</secondary></indexterm>
+<para><computeroutput>int8_t KTN::OrderPod::callbackid</computeroutput></para>
+<para>The callback ID of the order. </para>
+<para>
+Referenced by <link linkend="_l00550">KTN::ORD::OrderHandlerZmqV6::LoadTasOrders()</link>, <link linkend="_l00198">KTN::PLWatcher::OrderReceived()</link>, and <link linkend="_l01140">KTN::Waves::OrderReceived()</link>.</para>
+</section>
+<anchor xml:id="_struct_k_t_n_1_1_order_pod_1a5461c440e2cac5531e9577759f429046"/><section>
+    <title>cert</title>
+<indexterm><primary>cert</primary><secondary>KTN::OrderPod</secondary></indexterm>
+<indexterm><primary>KTN::OrderPod</primary><secondary>cert</secondary></indexterm>
+<para><computeroutput>bool KTN::OrderPod::cert</computeroutput></para>
+<para>Indicates if the order is certified. </para>
+<para>
+Referenced by <link linkend="_l00550">KTN::ORD::OrderHandlerZmqV6::LoadTasOrders()</link>.</para>
+</section>
+<anchor xml:id="_struct_k_t_n_1_1_order_pod_1aaebd67bcffdddb92e1d16dd0ce29f214"/><section>
+    <title>exchordid</title>
+<indexterm><primary>exchordid</primary><secondary>KTN::OrderPod</secondary></indexterm>
+<indexterm><primary>KTN::OrderPod</primary><secondary>exchordid</secondary></indexterm>
+<para><computeroutput>uint64_t KTN::OrderPod::exchordid</computeroutput></para>
+<para>The CME ID of the order. </para>
+<para>
+Referenced by <link linkend="_l00392">OrderManagerV5::minOrderAck()</link>, <link linkend="_l00557">OrderManagerV5::minOrderExecSpreadLeg()</link>, <link linkend="_l00360">KTN::AutoHedgeOB::minOrderExecution()</link>, <link linkend="_l00759">KTN::MultiSpreaderV3::minOrderExecution()</link>, <link linkend="_l00419">KTN::PLWatcher::minOrderExecution()</link>, <link linkend="_l01043">KTN::Skewer::minOrderExecution()</link>, <link linkend="_l01041">KTN::SkewTrader::minOrderExecution()</link>, <link linkend="_l00504">KTN::SqueezerOB::minOrderExecution()</link>, <link linkend="_l01098">KTN::Stacker::minOrderExecution()</link>, <link linkend="_l00885">KTN::StackerTimer::minOrderExecution()</link>, <link linkend="_l00975">KTN::Twap::minOrderExecution()</link>, <link linkend="_l00902">KTN::Waves::minOrderExecution()</link>, <link linkend="_l00460">OrderManagerV5::minOrderExecution()</link>, <link linkend="_l00058">QuoterV3::NextMod()</link>, <link linkend="_l00047">KTN::AutoHedgeOB::onJson()</link>, <link linkend="_l00045">KTN::SqueezerOB::onJson()</link>, and <link linkend="_l00198">KTN::PLWatcher::OrderReceived()</link>.</para>
+</section>
+<anchor xml:id="_struct_k_t_n_1_1_order_pod_1a2deef8a444d9e7b9dee6d28e49f311ac"/><section>
+    <title>execid</title>
+<indexterm><primary>execid</primary><secondary>KTN::OrderPod</secondary></indexterm>
+<indexterm><primary>KTN::OrderPod</primary><secondary>execid</secondary></indexterm>
+<para><computeroutput>char KTN::OrderPod::execid[40]</computeroutput></para>
+<para>The execution ID of the order. </para>
+<para>
+Referenced by <link linkend="_l00557">OrderManagerV5::minOrderExecSpreadLeg()</link>, and <link linkend="_l00523">OrderManagerV5::UpdateSpreadLegExecution()</link>.</para>
+</section>
+<anchor xml:id="_struct_k_t_n_1_1_order_pod_1a5396b961579bcb0726e60f68f95e2d9f"/><section>
+    <title>fillqty</title>
+<indexterm><primary>fillqty</primary><secondary>KTN::OrderPod</secondary></indexterm>
+<indexterm><primary>KTN::OrderPod</primary><secondary>fillqty</secondary></indexterm>
+<para><computeroutput>uint32_t KTN::OrderPod::fillqty</computeroutput></para>
+<para>The fill quantity of the order. </para>
+<para>
+Referenced by <link linkend="_l00523">OrderManagerV5::UpdateSpreadLegExecution()</link>.</para>
+</section>
+<anchor xml:id="_struct_k_t_n_1_1_order_pod_1ad22db86dbcd15f74106968be0081ec4c"/><section>
+    <title>instindex</title>
+<indexterm><primary>instindex</primary><secondary>KTN::OrderPod</secondary></indexterm>
+<indexterm><primary>KTN::OrderPod</primary><secondary>instindex</secondary></indexterm>
+<para><computeroutput>uint8_t KTN::OrderPod::instindex</computeroutput></para>
+<para>The instrument index of the order. </para>
+<para>
+Referenced by <link linkend="_l01140">KTN::Waves::OrderReceived()</link>.</para>
+</section>
+<anchor xml:id="_struct_k_t_n_1_1_order_pod_1a499d5d2fc1ee8a6c55d05032615b6202"/><section>
+    <title>isManual</title>
+<indexterm><primary>isManual</primary><secondary>KTN::OrderPod</secondary></indexterm>
+<indexterm><primary>KTN::OrderPod</primary><secondary>isManual</secondary></indexterm>
+<para><computeroutput>bool KTN::OrderPod::isManual</computeroutput></para>
+<para>Indicates if the order is manual. </para>
+<para>
+Referenced by <link linkend="_l00550">KTN::ORD::OrderHandlerZmqV6::LoadTasOrders()</link>, <link linkend="_l01104">KTN::CME::CmeAlgo::Send()</link>, and <link linkend="_l00889">KTN::CME::CmeGT5::Send()</link>.</para>
+</section>
+<anchor xml:id="_struct_k_t_n_1_1_order_pod_1a97d7accb865af260f93936bcce482609"/><section>
+    <title>lastpx</title>
+<indexterm><primary>lastpx</primary><secondary>KTN::OrderPod</secondary></indexterm>
+<indexterm><primary>KTN::OrderPod</primary><secondary>lastpx</secondary></indexterm>
+<para><computeroutput>int64_t KTN::OrderPod::lastpx</computeroutput></para>
+<para>The last price of the order. </para>
+<para>
+Referenced by <link linkend="_l00557">OrderManagerV5::minOrderExecSpreadLeg()</link>, <link linkend="_l00360">KTN::AutoHedgeOB::minOrderExecution()</link>, <link linkend="_l00759">KTN::MultiSpreaderV3::minOrderExecution()</link>, <link linkend="_l00419">KTN::PLWatcher::minOrderExecution()</link>, <link linkend="_l01043">KTN::Skewer::minOrderExecution()</link>, <link linkend="_l01041">KTN::SkewTrader::minOrderExecution()</link>, <link linkend="_l00504">KTN::SqueezerOB::minOrderExecution()</link>, <link linkend="_l01098">KTN::Stacker::minOrderExecution()</link>, <link linkend="_l00885">KTN::StackerTimer::minOrderExecution()</link>, <link linkend="_l00975">KTN::Twap::minOrderExecution()</link>, <link linkend="_l00902">KTN::Waves::minOrderExecution()</link>, <link linkend="_l00460">OrderManagerV5::minOrderExecution()</link>, and <link linkend="_l00523">OrderManagerV5::UpdateSpreadLegExecution()</link>.</para>
+</section>
+<anchor xml:id="_struct_k_t_n_1_1_order_pod_1a4084578c32198787e6cb8f1b6da3e697"/><section>
+    <title>lastqty</title>
+<indexterm><primary>lastqty</primary><secondary>KTN::OrderPod</secondary></indexterm>
+<indexterm><primary>KTN::OrderPod</primary><secondary>lastqty</secondary></indexterm>
+<para><computeroutput>uint32_t KTN::OrderPod::lastqty</computeroutput></para>
+<para>The last quantity of the order. </para>
+<para>
+Referenced by <link linkend="_l00557">OrderManagerV5::minOrderExecSpreadLeg()</link>, <link linkend="_l00360">KTN::AutoHedgeOB::minOrderExecution()</link>, <link linkend="_l00759">KTN::MultiSpreaderV3::minOrderExecution()</link>, <link linkend="_l00419">KTN::PLWatcher::minOrderExecution()</link>, <link linkend="_l01043">KTN::Skewer::minOrderExecution()</link>, <link linkend="_l01041">KTN::SkewTrader::minOrderExecution()</link>, <link linkend="_l00504">KTN::SqueezerOB::minOrderExecution()</link>, <link linkend="_l01098">KTN::Stacker::minOrderExecution()</link>, <link linkend="_l00885">KTN::StackerTimer::minOrderExecution()</link>, <link linkend="_l00975">KTN::Twap::minOrderExecution()</link>, <link linkend="_l00902">KTN::Waves::minOrderExecution()</link>, <link linkend="_l00460">OrderManagerV5::minOrderExecution()</link>, and <link linkend="_l00523">OrderManagerV5::UpdateSpreadLegExecution()</link>.</para>
+</section>
+<anchor xml:id="_struct_k_t_n_1_1_order_pod_1af573bfb288d6d7ebe1c327b600343ed9"/><section>
+    <title>leavesqty</title>
+<indexterm><primary>leavesqty</primary><secondary>KTN::OrderPod</secondary></indexterm>
+<indexterm><primary>KTN::OrderPod</primary><secondary>leavesqty</secondary></indexterm>
+<para><computeroutput>uint32_t KTN::OrderPod::leavesqty</computeroutput></para>
+<para>The leaves quantity of the order. </para>
+<para>
+Referenced by <link linkend="_l00550">KTN::ORD::OrderHandlerZmqV6::LoadTasOrders()</link>, <link linkend="_l00392">OrderManagerV5::minOrderAck()</link>, <link linkend="_l00460">OrderManagerV5::minOrderExecution()</link>, <link linkend="_l00430">OrderManagerV5::minOrderModify()</link>, and <link linkend="_l00523">OrderManagerV5::UpdateSpreadLegExecution()</link>.</para>
+</section>
+<anchor xml:id="_struct_k_t_n_1_1_order_pod_1a41d88d0e243ca2d72358195aa04a5f8e"/><section>
+    <title>mktsegid</title>
+<indexterm><primary>mktsegid</primary><secondary>KTN::OrderPod</secondary></indexterm>
+<indexterm><primary>KTN::OrderPod</primary><secondary>mktsegid</secondary></indexterm>
+<para><computeroutput>uint8_t KTN::OrderPod::mktsegid</computeroutput></para>
+<para>The market segment ID of the order. </para>
+<para>
+Referenced by <link linkend="_l00550">KTN::ORD::OrderHandlerZmqV6::LoadTasOrders()</link>, <link linkend="_l01104">KTN::CME::CmeAlgo::Send()</link>, and <link linkend="_l00889">KTN::CME::CmeGT5::Send()</link>.</para>
+</section>
+<anchor xml:id="_struct_k_t_n_1_1_order_pod_1ae8c476c03e60ed1383756fc5167fa15e"/><section>
+    <title>OrdAction</title>
+<indexterm><primary>OrdAction</primary><secondary>KTN::OrderPod</secondary></indexterm>
+<indexterm><primary>KTN::OrderPod</primary><secondary>OrdAction</secondary></indexterm>
+<para><computeroutput>KOrderAction::Enum KTN::OrderPod::OrdAction</computeroutput></para>
+<para>The action of the order. </para>
+<para>
+Referenced by <link linkend="_l00550">KTN::ORD::OrderHandlerZmqV6::LoadTasOrders()</link>, <link linkend="_l00667">KTN::AlgoBaseV3::minOrderReject()</link>, <link linkend="_l00058">QuoterV3::NextMod()</link>, <link linkend="_l00033">QuoterV3::NextNew()</link>, <link linkend="_l00198">KTN::PLWatcher::OrderReceived()</link>, <link linkend="_l01140">KTN::Waves::OrderReceived()</link>, <link linkend="_l01104">KTN::CME::CmeAlgo::Send()</link>, and <link linkend="_l00889">KTN::CME::CmeGT5::Send()</link>.</para>
+</section>
+<anchor xml:id="_struct_k_t_n_1_1_order_pod_1aa69b766d33a35e21668fc89aa82781f5"/><section>
+    <title>OrdAlgoTrig</title>
+<indexterm><primary>OrdAlgoTrig</primary><secondary>KTN::OrderPod</secondary></indexterm>
+<indexterm><primary>KTN::OrderPod</primary><secondary>OrdAlgoTrig</secondary></indexterm>
+<para><computeroutput>KOrderAlgoTrigger::Enum KTN::OrderPod::OrdAlgoTrig</computeroutput></para>
+<para>The algorithm trigger of the order. </para>
+<para>
+Referenced by <link linkend="_l00550">KTN::ORD::OrderHandlerZmqV6::LoadTasOrders()</link>, <link linkend="_l01136">KTN::Stacker::minOrderCancel()</link>, <link linkend="_l01154">KTN::Stacker::minOrderCancelReject()</link>, <link linkend="_l00557">OrderManagerV5::minOrderExecSpreadLeg()</link>, <link linkend="_l00360">KTN::AutoHedgeOB::minOrderExecution()</link>, <link linkend="_l00759">KTN::MultiSpreaderV3::minOrderExecution()</link>, <link linkend="_l01043">KTN::Skewer::minOrderExecution()</link>, <link linkend="_l01041">KTN::SkewTrader::minOrderExecution()</link>, <link linkend="_l01098">KTN::Stacker::minOrderExecution()</link>, <link linkend="_l00885">KTN::StackerTimer::minOrderExecution()</link>, <link linkend="_l00975">KTN::Twap::minOrderExecution()</link>, <link linkend="_l00902">KTN::Waves::minOrderExecution()</link>, <link linkend="_l00460">OrderManagerV5::minOrderExecution()</link>, <link linkend="_l00629">KTN::StackerTimer::onCalculate()</link>, <link linkend="_l00803">KTN::MultiSpreaderV3::onHedgeOrderSent()</link>, <link linkend="_l01169">KTN::SkewTrader::onHedgeOrderSent()</link>, <link linkend="_l01180">KTN::Stacker::onHedgeOrderSent()</link>, <link linkend="_l00378">KTN::Waves::onHedgeOrderSent()</link>, <link linkend="_l00047">KTN::AutoHedgeOB::onJson()</link>, <link linkend="_l00838">KTN::MultiSpreaderV3::onOrderSent()</link>, <link linkend="_l01205">KTN::SkewTrader::onOrderSent()</link>, <link linkend="_l01215">KTN::Stacker::onOrderSent()</link>, <link linkend="_l00451">KTN::Waves::onOrderSent()</link>, and <link linkend="_l00379">KTN::PLWatcher::onPL()</link>.</para>
+</section>
+<anchor xml:id="_struct_k_t_n_1_1_order_pod_1a0f96ad0b2dc5108481a266b572a24636"/><section>
+    <title>ordernum</title>
+<indexterm><primary>ordernum</primary><secondary>KTN::OrderPod</secondary></indexterm>
+<indexterm><primary>KTN::OrderPod</primary><secondary>ordernum</secondary></indexterm>
+<para><computeroutput>char KTN::OrderPod::ordernum[20]</computeroutput></para>
+<para>The order number. </para>
+<para>
+Referenced by <link linkend="_l00550">KTN::ORD::OrderHandlerZmqV6::LoadTasOrders()</link>, <link linkend="_l00557">OrderManagerV5::minOrderExecSpreadLeg()</link>, <link linkend="_l00724">KTN::Twap::onCalculate()</link>, <link linkend="_l00803">KTN::MultiSpreaderV3::onHedgeOrderSent()</link>, <link linkend="_l01169">KTN::SkewTrader::onHedgeOrderSent()</link>, <link linkend="_l01180">KTN::Stacker::onHedgeOrderSent()</link>, <link linkend="_l00378">KTN::Waves::onHedgeOrderSent()</link>, <link linkend="_l00047">KTN::AutoHedgeOB::onJson()</link>, <link linkend="_l00045">KTN::SqueezerOB::onJson()</link>, <link linkend="_l00838">KTN::MultiSpreaderV3::onOrderSent()</link>, <link linkend="_l01205">KTN::SkewTrader::onOrderSent()</link>, <link linkend="_l01215">KTN::Stacker::onOrderSent()</link>, <link linkend="_l00451">KTN::Waves::onOrderSent()</link>, <link linkend="_l01140">KTN::Waves::OrderReceived()</link>, <link linkend="_l01104">KTN::CME::CmeAlgo::Send()</link>, and <link linkend="_l00889">KTN::CME::CmeGT5::Send()</link>.</para>
+</section>
+<anchor xml:id="_struct_k_t_n_1_1_order_pod_1ae26bb863a16b33faae5a7e9f0b69334a"/><section>
+    <title>orderReqId</title>
+<indexterm><primary>orderReqId</primary><secondary>KTN::OrderPod</secondary></indexterm>
+<indexterm><primary>KTN::OrderPod</primary><secondary>orderReqId</secondary></indexterm>
+<para><computeroutput>uint64_t KTN::OrderPod::orderReqId</computeroutput></para>
+<para>The order request ID. </para>
+<para>
+Referenced by <link linkend="_l00550">KTN::ORD::OrderHandlerZmqV6::LoadTasOrders()</link>, <link linkend="_l00392">OrderManagerV5::minOrderAck()</link>, <link linkend="_l00408">OrderManagerV5::minOrderCancel()</link>, <link linkend="_l00557">OrderManagerV5::minOrderExecSpreadLeg()</link>, <link linkend="_l00360">KTN::AutoHedgeOB::minOrderExecution()</link>, <link linkend="_l00759">KTN::MultiSpreaderV3::minOrderExecution()</link>, <link linkend="_l01043">KTN::Skewer::minOrderExecution()</link>, <link linkend="_l01041">KTN::SkewTrader::minOrderExecution()</link>, <link linkend="_l00504">KTN::SqueezerOB::minOrderExecution()</link>, <link linkend="_l01098">KTN::Stacker::minOrderExecution()</link>, <link linkend="_l00885">KTN::StackerTimer::minOrderExecution()</link>, <link linkend="_l00975">KTN::Twap::minOrderExecution()</link>, <link linkend="_l00460">OrderManagerV5::minOrderExecution()</link>, <link linkend="_l00430">OrderManagerV5::minOrderModify()</link>, <link linkend="_l00058">QuoterV3::NextMod()</link>, <link linkend="_l00724">KTN::Twap::onCalculate()</link>, <link linkend="_l00803">KTN::MultiSpreaderV3::onHedgeOrderSent()</link>, <link linkend="_l01169">KTN::SkewTrader::onHedgeOrderSent()</link>, <link linkend="_l01180">KTN::Stacker::onHedgeOrderSent()</link>, <link linkend="_l00378">KTN::Waves::onHedgeOrderSent()</link>, <link linkend="_l00047">KTN::AutoHedgeOB::onJson()</link>, <link linkend="_l00045">KTN::SqueezerOB::onJson()</link>, <link linkend="_l00838">KTN::MultiSpreaderV3::onOrderSent()</link>, <link linkend="_l01205">KTN::SkewTrader::onOrderSent()</link>, <link linkend="_l01215">KTN::Stacker::onOrderSent()</link>, <link linkend="_l00451">KTN::Waves::onOrderSent()</link>, <link linkend="_l00385">OrderManagerV5::onSentOrderCxl()</link>, <link linkend="_l00357">OrderManagerV5::onSentOrderFast()</link>, <link linkend="_l00379">OrderManagerV5::onSentOrderMod()</link>, <link linkend="_l00373">OrderManagerV5::onSentOrderNew()</link>, <link linkend="_l00366">OrderManagerV5::onSentOrderOrdbook()</link>, <link linkend="_l01104">KTN::CME::CmeAlgo::Send()</link>, <link linkend="_l00889">KTN::CME::CmeGT5::Send()</link>, and <link linkend="_l00475">Raptor2::SendOrderWithHedge()</link>.</para>
+</section>
+<anchor xml:id="_struct_k_t_n_1_1_order_pod_1a03bee215925d8af1a3544f91d284af03"/><section>
+    <title>OrdExch</title>
+<indexterm><primary>OrdExch</primary><secondary>KTN::OrderPod</secondary></indexterm>
+<indexterm><primary>KTN::OrderPod</primary><secondary>OrdExch</secondary></indexterm>
+<para><computeroutput>KOrderExchange::Enum KTN::OrderPod::OrdExch</computeroutput></para>
+<para>The exchange of the order. </para>
+<para>
+Referenced by <link linkend="_l00056">KTN::REPORTER::OrderReporterV5::DoWork()</link>, <link linkend="_l00550">KTN::ORD::OrderHandlerZmqV6::LoadTasOrders()</link>, <link linkend="_l00198">KTN::PLWatcher::OrderReceived()</link>, and <link linkend="_l01140">KTN::Waves::OrderReceived()</link>.</para>
+</section>
+<anchor xml:id="_struct_k_t_n_1_1_order_pod_1a63b9f5f063f422e11cb8a530c13e24f4"/><section>
+    <title>OrdFillType</title>
+<indexterm><primary>OrdFillType</primary><secondary>KTN::OrderPod</secondary></indexterm>
+<indexterm><primary>KTN::OrderPod</primary><secondary>OrdFillType</secondary></indexterm>
+<para><computeroutput>KOrderFillType::Enum KTN::OrderPod::OrdFillType</computeroutput></para>
+<para>The fill type of the order. </para>
+<para>
+Referenced by <link linkend="_l00557">OrderManagerV5::minOrderExecSpreadLeg()</link>, <link linkend="_l00360">KTN::AutoHedgeOB::minOrderExecution()</link>, <link linkend="_l00759">KTN::MultiSpreaderV3::minOrderExecution()</link>, <link linkend="_l01043">KTN::Skewer::minOrderExecution()</link>, <link linkend="_l01041">KTN::SkewTrader::minOrderExecution()</link>, <link linkend="_l01098">KTN::Stacker::minOrderExecution()</link>, <link linkend="_l00885">KTN::StackerTimer::minOrderExecution()</link>, <link linkend="_l00975">KTN::Twap::minOrderExecution()</link>, <link linkend="_l00902">KTN::Waves::minOrderExecution()</link>, <link linkend="_l00460">OrderManagerV5::minOrderExecution()</link>, and <link linkend="_l00523">OrderManagerV5::UpdateSpreadLegExecution()</link>.</para>
+</section>
+<anchor xml:id="_struct_k_t_n_1_1_order_pod_1a8bb9d6a5042378c0babba6f0c6ffc2d2"/><section>
+    <title>OrdSide</title>
+<indexterm><primary>OrdSide</primary><secondary>KTN::OrderPod</secondary></indexterm>
+<indexterm><primary>KTN::OrderPod</primary><secondary>OrdSide</secondary></indexterm>
+<para><computeroutput>KOrderSide::Enum KTN::OrderPod::OrdSide</computeroutput></para>
+<para>The side of the order. </para>
+<para>
+Referenced by <link linkend="_l00550">KTN::ORD::OrderHandlerZmqV6::LoadTasOrders()</link>, <link linkend="_l00557">OrderManagerV5::minOrderExecSpreadLeg()</link>, <link linkend="_l00360">KTN::AutoHedgeOB::minOrderExecution()</link>, <link linkend="_l00759">KTN::MultiSpreaderV3::minOrderExecution()</link>, <link linkend="_l00419">KTN::PLWatcher::minOrderExecution()</link>, <link linkend="_l01043">KTN::Skewer::minOrderExecution()</link>, <link linkend="_l01041">KTN::SkewTrader::minOrderExecution()</link>, <link linkend="_l00504">KTN::SqueezerOB::minOrderExecution()</link>, <link linkend="_l01098">KTN::Stacker::minOrderExecution()</link>, <link linkend="_l00885">KTN::StackerTimer::minOrderExecution()</link>, <link linkend="_l00975">KTN::Twap::minOrderExecution()</link>, <link linkend="_l00902">KTN::Waves::minOrderExecution()</link>, <link linkend="_l00058">QuoterV3::NextMod()</link>, <link linkend="_l00033">QuoterV3::NextNew()</link>, <link linkend="_l00047">KTN::AutoHedgeOB::onJson()</link>, <link linkend="_l01104">KTN::CME::CmeAlgo::Send()</link>, <link linkend="_l00889">KTN::CME::CmeGT5::Send()</link>, and <link linkend="_l00523">OrderManagerV5::UpdateSpreadLegExecution()</link>.</para>
+</section>
+<anchor xml:id="_struct_k_t_n_1_1_order_pod_1aca8dd025ef374f5018b729f1f5ad2924"/><section>
+    <title>OrdState</title>
+<indexterm><primary>OrdState</primary><secondary>KTN::OrderPod</secondary></indexterm>
+<indexterm><primary>KTN::OrderPod</primary><secondary>OrdState</secondary></indexterm>
+<para><computeroutput>KOrderState::Enum KTN::OrderPod::OrdState</computeroutput></para>
+<para>The state of the order. </para>
+<para>
+Referenced by <link linkend="_l00557">OrderManagerV5::minOrderExecSpreadLeg()</link>, <link linkend="_l00759">KTN::MultiSpreaderV3::minOrderExecution()</link>, <link linkend="_l01043">KTN::Skewer::minOrderExecution()</link>, <link linkend="_l01041">KTN::SkewTrader::minOrderExecution()</link>, <link linkend="_l01098">KTN::Stacker::minOrderExecution()</link>, <link linkend="_l00885">KTN::StackerTimer::minOrderExecution()</link>, <link linkend="_l00975">KTN::Twap::minOrderExecution()</link>, <link linkend="_l00460">OrderManagerV5::minOrderExecution()</link>, <link linkend="_l00198">KTN::PLWatcher::OrderReceived()</link>, <link linkend="_l01140">KTN::Waves::OrderReceived()</link>, and <link linkend="_l00523">OrderManagerV5::UpdateSpreadLegExecution()</link>.</para>
+</section>
+<anchor xml:id="_struct_k_t_n_1_1_order_pod_1a7a4587fc1f3bfb4b54cafec605ea7402"/><section>
+    <title>OrdStatus</title>
+<indexterm><primary>OrdStatus</primary><secondary>KTN::OrderPod</secondary></indexterm>
+<indexterm><primary>KTN::OrderPod</primary><secondary>OrdStatus</secondary></indexterm>
+<para><computeroutput>KOrderStatus::Enum KTN::OrderPod::OrdStatus</computeroutput></para>
+<para>The status of the order. </para>
+<para>
+Referenced by <link linkend="_l00550">KTN::ORD::OrderHandlerZmqV6::LoadTasOrders()</link>, <link linkend="_l00360">KTN::AutoHedgeOB::minOrderExecution()</link>, <link linkend="_l00759">KTN::MultiSpreaderV3::minOrderExecution()</link>, <link linkend="_l01041">KTN::SkewTrader::minOrderExecution()</link>, <link linkend="_l00504">KTN::SqueezerOB::minOrderExecution()</link>, <link linkend="_l00902">KTN::Waves::minOrderExecution()</link>, <link linkend="_l00460">OrderManagerV5::minOrderExecution()</link>, <link linkend="_l00058">QuoterV3::NextMod()</link>, <link linkend="_l00033">QuoterV3::NextNew()</link>, <link linkend="_l00198">KTN::PLWatcher::OrderReceived()</link>, <link linkend="_l01140">KTN::Waves::OrderReceived()</link>, and <link linkend="_l00523">OrderManagerV5::UpdateSpreadLegExecution()</link>.</para>
+</section>
+<anchor xml:id="_struct_k_t_n_1_1_order_pod_1a50ccb8663cdc2c18b0121dedfbbb82d6"/><section>
+    <title>OrdTif</title>
+<indexterm><primary>OrdTif</primary><secondary>KTN::OrderPod</secondary></indexterm>
+<indexterm><primary>KTN::OrderPod</primary><secondary>OrdTif</secondary></indexterm>
+<para><computeroutput>KOrderTif::Enum KTN::OrderPod::OrdTif</computeroutput></para>
+<para>The time-in-force of the order. </para>
+<para>
+Referenced by <link linkend="_l00550">KTN::ORD::OrderHandlerZmqV6::LoadTasOrders()</link>, and <link linkend="_l00557">OrderManagerV5::minOrderExecSpreadLeg()</link>.</para>
+</section>
+<anchor xml:id="_struct_k_t_n_1_1_order_pod_1a5dcc1ecc3a84e808aaa7e1d3c3d2796c"/><section>
+    <title>OrdType</title>
+<indexterm><primary>OrdType</primary><secondary>KTN::OrderPod</secondary></indexterm>
+<indexterm><primary>KTN::OrderPod</primary><secondary>OrdType</secondary></indexterm>
+<para><computeroutput>KOrderType::Enum KTN::OrderPod::OrdType</computeroutput></para>
+<para>The type of the order. </para>
+<para>
+Referenced by <link linkend="_l00550">KTN::ORD::OrderHandlerZmqV6::LoadTasOrders()</link>, and <link linkend="_l00557">OrderManagerV5::minOrderExecSpreadLeg()</link>.</para>
+</section>
+<anchor xml:id="_struct_k_t_n_1_1_order_pod_1a7305e58d82b53d012a5e9eecbcc97cb8"/><section>
+    <title>price</title>
+<indexterm><primary>price</primary><secondary>KTN::OrderPod</secondary></indexterm>
+<indexterm><primary>KTN::OrderPod</primary><secondary>price</secondary></indexterm>
+<para><computeroutput>int64_t KTN::OrderPod::price</computeroutput></para>
+<para>The price of the order. </para>
+<para>
+Referenced by <link linkend="_l00550">KTN::ORD::OrderHandlerZmqV6::LoadTasOrders()</link>, <link linkend="_l00557">OrderManagerV5::minOrderExecSpreadLeg()</link>, <link linkend="_l00460">OrderManagerV5::minOrderExecution()</link>, <link linkend="_l00058">QuoterV3::NextMod()</link>, <link linkend="_l00033">QuoterV3::NextNew()</link>, <link linkend="_l00198">KTN::PLWatcher::OrderReceived()</link>, <link linkend="_l01140">KTN::Waves::OrderReceived()</link>, <link linkend="_l01104">KTN::CME::CmeAlgo::Send()</link>, and <link linkend="_l00889">KTN::CME::CmeGT5::Send()</link>.</para>
+</section>
+<anchor xml:id="_struct_k_t_n_1_1_order_pod_1aa1892de1de88d68fb1d08492c78a27b1"/><section>
+    <title>quantity</title>
+<indexterm><primary>quantity</primary><secondary>KTN::OrderPod</secondary></indexterm>
+<indexterm><primary>KTN::OrderPod</primary><secondary>quantity</secondary></indexterm>
+<para><computeroutput>uint32_t KTN::OrderPod::quantity</computeroutput></para>
+<para>The quantity of the order. </para>
+<para>
+Referenced by <link linkend="_l00550">KTN::ORD::OrderHandlerZmqV6::LoadTasOrders()</link>, <link linkend="_l00557">OrderManagerV5::minOrderExecSpreadLeg()</link>, <link linkend="_l00058">QuoterV3::NextMod()</link>, <link linkend="_l00033">QuoterV3::NextNew()</link>, <link linkend="_l00198">KTN::PLWatcher::OrderReceived()</link>, <link linkend="_l01140">KTN::Waves::OrderReceived()</link>, <link linkend="_l01104">KTN::CME::CmeAlgo::Send()</link>, and <link linkend="_l00889">KTN::CME::CmeGT5::Send()</link>.</para>
+</section>
+<anchor xml:id="_struct_k_t_n_1_1_order_pod_1ad1d7acce8f89080ef7eb44c082a55202"/><section>
+    <title>rejreason</title>
+<indexterm><primary>rejreason</primary><secondary>KTN::OrderPod</secondary></indexterm>
+<indexterm><primary>KTN::OrderPod</primary><secondary>rejreason</secondary></indexterm>
+<para><computeroutput>uint16_t KTN::OrderPod::rejreason</computeroutput></para>
+<para>The rejection reason of the order. </para>
+</section>
+<anchor xml:id="_struct_k_t_n_1_1_order_pod_1a2bb58da9dd4a2ad9693c0dc0a09c55a0"/><section>
+    <title>secid</title>
+<indexterm><primary>secid</primary><secondary>KTN::OrderPod</secondary></indexterm>
+<indexterm><primary>KTN::OrderPod</primary><secondary>secid</secondary></indexterm>
+<para><computeroutput>int32_t KTN::OrderPod::secid</computeroutput></para>
+<para>The security ID of the order. </para>
+<para>
+Referenced by <link linkend="_l00056">KTN::REPORTER::OrderReporterV5::DoWork()</link>, <link linkend="_l00550">KTN::ORD::OrderHandlerZmqV6::LoadTasOrders()</link>, <link linkend="_l00557">OrderManagerV5::minOrderExecSpreadLeg()</link>, <link linkend="_l00360">KTN::AutoHedgeOB::minOrderExecution()</link>, <link linkend="_l00759">KTN::MultiSpreaderV3::minOrderExecution()</link>, <link linkend="_l00419">KTN::PLWatcher::minOrderExecution()</link>, <link linkend="_l01043">KTN::Skewer::minOrderExecution()</link>, <link linkend="_l01041">KTN::SkewTrader::minOrderExecution()</link>, <link linkend="_l00504">KTN::SqueezerOB::minOrderExecution()</link>, <link linkend="_l01098">KTN::Stacker::minOrderExecution()</link>, <link linkend="_l00885">KTN::StackerTimer::minOrderExecution()</link>, <link linkend="_l00975">KTN::Twap::minOrderExecution()</link>, <link linkend="_l00902">KTN::Waves::minOrderExecution()</link>, <link linkend="_l00460">OrderManagerV5::minOrderExecution()</link>, <link linkend="_l01104">KTN::CME::CmeAlgo::Send()</link>, <link linkend="_l00889">KTN::CME::CmeGT5::Send()</link>, and <link linkend="_l00523">OrderManagerV5::UpdateSpreadLegExecution()</link>.</para>
+</section>
+<anchor xml:id="_struct_k_t_n_1_1_order_pod_1a7704d651276873b6a37616438de7cf15"/><section>
+    <title>stratid</title>
+<indexterm><primary>stratid</primary><secondary>KTN::OrderPod</secondary></indexterm>
+<indexterm><primary>KTN::OrderPod</primary><secondary>stratid</secondary></indexterm>
+<para><computeroutput>int16_t KTN::OrderPod::stratid</computeroutput></para>
+<para>The strategy ID of the order. </para>
+<para>
+Referenced by <link linkend="_l00550">KTN::ORD::OrderHandlerZmqV6::LoadTasOrders()</link>, <link linkend="_l00557">OrderManagerV5::minOrderExecSpreadLeg()</link>, <link linkend="_l00460">OrderManagerV5::minOrderExecution()</link>, and <link linkend="_l01140">KTN::Waves::OrderReceived()</link>.</para>
+</section>
+<anchor xml:id="_struct_k_t_n_1_1_order_pod_1a20855b7cafce8ca50620f11c8e374df6"/><section>
+    <title>timestamp</title>
+<indexterm><primary>timestamp</primary><secondary>KTN::OrderPod</secondary></indexterm>
+<indexterm><primary>KTN::OrderPod</primary><secondary>timestamp</secondary></indexterm>
+<para><computeroutput>uint64_t KTN::OrderPod::timestamp</computeroutput></para>
+<para>The timestamp of the order. </para>
+<para>
+Referenced by <link linkend="_l00056">KTN::REPORTER::OrderReporterV5::DoWork()</link>, <link linkend="_l00392">OrderManagerV5::minOrderAck()</link>, <link linkend="_l00408">OrderManagerV5::minOrderCancel()</link>, <link linkend="_l00460">OrderManagerV5::minOrderExecution()</link>, <link linkend="_l00430">OrderManagerV5::minOrderModify()</link>, and <link linkend="_l00523">OrderManagerV5::UpdateSpreadLegExecution()</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Orders/OrderPod.hpp</section>
+</section>

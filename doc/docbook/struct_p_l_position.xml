@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_p_l_position" xml:lang="en-US">
+<title>PLPosition Struct Reference</title>
+<indexterm><primary>PLPosition</primary></indexterm>
+<para>
+
+<para>The <link linkend="_struct_p_l_position">PLPosition</link> struct represents the position parameters for the PLWatcher algorithm. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;PLWatcherParams.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for PLPosition:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="struct_p_l_position.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_struct_p_l_position_1a766373846e151ec122cfb5c3a0eec620">Calculate</link> (int newbid, int newask)</para>
+
+<para>Calculate the PL (Profit/Loss) for the position based on the new bid and ask prices. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_struct_i_o_b_params">IOBParams</link><simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_struct_p_l_position_1a420c7140638cfd902687cf5911d1a47d">index</link></para>
+</listitem>
+            <listitem><para>KOrderSide::Enum <link linkend="_struct_p_l_position_1aacd86f02e0528bb30763ae7857cb22db">side</link></para>
+</listitem>
+            <listitem><para>KOrderAlgoTrigger::Enum <link linkend="_struct_p_l_position_1a3045fc2dc2c8a452ee1774077e8133c6">trig</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_p_l_position_1ababb3a0f0fb62c086862b9e6c7bcc474">symbol</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_p_l_position_1ae1ca814f7d7a9879e698513ac3332827">secid</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_p_l_position_1a1ac6d35c3212babc8706c60a0631d561">qty</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_p_l_position_1adb5bedfb1aefb6c72419f5595feb84bb">price</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_p_l_position_1af211a9bc2abb44333b5028560161ae36">mintick</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_p_l_position_1ad9c35356ef57690d64caeb3250d1b901">bid</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_p_l_position_1aaf6b5e3bed07d4010a40395b2e06aace">ask</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_p_l_position_1a704daa6319b17cc0e5e891458faaa3c3">pl</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Attributes inherited from <link linkend="_struct_i_o_b_params">IOBParams</link>        <itemizedlist>
+            <listitem><para>int <link linkend="_struct_i_o_b_params_1a0b97f2aceef8480a988508e811ca12b6">paramindex</link></para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_struct_p_l_position">PLPosition</link> struct represents the position parameters for the PLWatcher algorithm. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_p_l_position_1a766373846e151ec122cfb5c3a0eec620"/><section>
+    <title>Calculate()</title>
+<indexterm><primary>Calculate</primary><secondary>PLPosition</secondary></indexterm>
+<indexterm><primary>PLPosition</primary><secondary>Calculate</secondary></indexterm>
+<para><computeroutput>void PLPosition::Calculate (int newbid, int newask)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Calculate the PL (Profit/Loss) for the position based on the new bid and ask prices. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>newbid</entry><entry>
+<para>The new bid price. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>newask</entry><entry>
+<para>The new ask price. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_p_l_position_1aaf6b5e3bed07d4010a40395b2e06aace"/><section>
+    <title>ask</title>
+<indexterm><primary>ask</primary><secondary>PLPosition</secondary></indexterm>
+<indexterm><primary>PLPosition</primary><secondary>ask</secondary></indexterm>
+<para><computeroutput>int PLPosition::ask</computeroutput></para></section>
+<anchor xml:id="_struct_p_l_position_1ad9c35356ef57690d64caeb3250d1b901"/><section>
+    <title>bid</title>
+<indexterm><primary>bid</primary><secondary>PLPosition</secondary></indexterm>
+<indexterm><primary>PLPosition</primary><secondary>bid</secondary></indexterm>
+<para><computeroutput>int PLPosition::bid</computeroutput></para></section>
+<anchor xml:id="_struct_p_l_position_1a420c7140638cfd902687cf5911d1a47d"/><section>
+    <title>index</title>
+<indexterm><primary>index</primary><secondary>PLPosition</secondary></indexterm>
+<indexterm><primary>PLPosition</primary><secondary>index</secondary></indexterm>
+<para><computeroutput>int PLPosition::index</computeroutput></para></section>
+<anchor xml:id="_struct_p_l_position_1af211a9bc2abb44333b5028560161ae36"/><section>
+    <title>mintick</title>
+<indexterm><primary>mintick</primary><secondary>PLPosition</secondary></indexterm>
+<indexterm><primary>PLPosition</primary><secondary>mintick</secondary></indexterm>
+<para><computeroutput>double PLPosition::mintick</computeroutput></para></section>
+<anchor xml:id="_struct_p_l_position_1a704daa6319b17cc0e5e891458faaa3c3"/><section>
+    <title>pl</title>
+<indexterm><primary>pl</primary><secondary>PLPosition</secondary></indexterm>
+<indexterm><primary>PLPosition</primary><secondary>pl</secondary></indexterm>
+<para><computeroutput>double PLPosition::pl</computeroutput></para></section>
+<anchor xml:id="_struct_p_l_position_1adb5bedfb1aefb6c72419f5595feb84bb"/><section>
+    <title>price</title>
+<indexterm><primary>price</primary><secondary>PLPosition</secondary></indexterm>
+<indexterm><primary>PLPosition</primary><secondary>price</secondary></indexterm>
+<para><computeroutput>double PLPosition::price</computeroutput></para></section>
+<anchor xml:id="_struct_p_l_position_1a1ac6d35c3212babc8706c60a0631d561"/><section>
+    <title>qty</title>
+<indexterm><primary>qty</primary><secondary>PLPosition</secondary></indexterm>
+<indexterm><primary>PLPosition</primary><secondary>qty</secondary></indexterm>
+<para><computeroutput>int PLPosition::qty</computeroutput></para></section>
+<anchor xml:id="_struct_p_l_position_1ae1ca814f7d7a9879e698513ac3332827"/><section>
+    <title>secid</title>
+<indexterm><primary>secid</primary><secondary>PLPosition</secondary></indexterm>
+<indexterm><primary>PLPosition</primary><secondary>secid</secondary></indexterm>
+<para><computeroutput>int PLPosition::secid</computeroutput></para></section>
+<anchor xml:id="_struct_p_l_position_1aacd86f02e0528bb30763ae7857cb22db"/><section>
+    <title>side</title>
+<indexterm><primary>side</primary><secondary>PLPosition</secondary></indexterm>
+<indexterm><primary>PLPosition</primary><secondary>side</secondary></indexterm>
+<para><computeroutput>KOrderSide::Enum PLPosition::side</computeroutput></para></section>
+<anchor xml:id="_struct_p_l_position_1ababb3a0f0fb62c086862b9e6c7bcc474"/><section>
+    <title>symbol</title>
+<indexterm><primary>symbol</primary><secondary>PLPosition</secondary></indexterm>
+<indexterm><primary>PLPosition</primary><secondary>symbol</secondary></indexterm>
+<para><computeroutput>string PLPosition::symbol</computeroutput></para></section>
+<anchor xml:id="_struct_p_l_position_1a3045fc2dc2c8a452ee1774077e8133c6"/><section>
+    <title>trig</title>
+<indexterm><primary>trig</primary><secondary>PLPosition</secondary></indexterm>
+<indexterm><primary>PLPosition</primary><secondary>trig</secondary></indexterm>
+<para><computeroutput>KOrderAlgoTrigger::Enum PLPosition::trig</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+AlgoParams/PLWatcherParams.hpp</section>
+</section>

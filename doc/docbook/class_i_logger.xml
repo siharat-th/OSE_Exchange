@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_i_logger" xml:lang="en-US">
+<title>ILogger Class Reference</title>
+<indexterm><primary>ILogger</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_i_logger">ILogger</link> class is an interface for logging messages. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;ILogger.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for ILogger:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_i_logger.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_i_logger_1ad5d37badb7f177d73bb0344109ff847d"/>virtual <emphasis role="strong">~ILogger</emphasis> ()=default</para>
+
+<para>Destructor for the <link linkend="_class_i_logger">ILogger</link> class. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_i_logger_1aad7dd43147c64f86da71bf6bfb488b36">WriteLine</link> (const std::string &amp;msg, const std::string &amp;topic, int color)=0</para>
+
+<para>Writes a line to the log with the specified message, topic, and color. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_i_logger">ILogger</link> class is an interface for logging messages. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_i_logger_1aad7dd43147c64f86da71bf6bfb488b36"/><section>
+    <title>WriteLine()</title>
+<indexterm><primary>WriteLine</primary><secondary>ILogger</secondary></indexterm>
+<indexterm><primary>ILogger</primary><secondary>WriteLine</secondary></indexterm>
+<para><computeroutput>virtual void ILogger::WriteLine (const std::string &amp; msg, const std::string &amp; topic, int color)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>Writes a line to the log with the specified message, topic, and color. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>msg</entry><entry>
+<para>The message to be logged. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>topic</entry><entry>
+<para>The topic of the log message. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>color</entry><entry>
+<para>The color of the log message. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implemented in <link linkend="_class_console_logger_1a6785e7847dd004a6c30574c2485648c0">ConsoleLogger</link>, and <link linkend="_class_zmq_logger_1ad990e9562dac546aee2d166056f8d56d">ZmqLogger</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Loggers/ILogger.hpp</section>
+</section>

@@ -1,0 +1,253 @@
+\chapter{Efvitcp}
+\hypertarget{md__c_1_2_users_2sgaer_2source_2repos_2katanafinancial_2_occam_c_m_e4_2_occam_c_m_e4_2src_2exter7253da91f16cb30ff9cbb16d01f0338c}{}\label{md__c_1_2_users_2sgaer_2source_2repos_2katanafinancial_2_occam_c_m_e4_2_occam_c_m_e4_2src_2exter7253da91f16cb30ff9cbb16d01f0338c}\index{Efvitcp@{Efvitcp}}
+\label{md__c_1_2_users_2sgaer_2source_2repos_2katanafinancial_2_occam_c_m_e4_2_occam_c_m_e4_2src_2exter7253da91f16cb30ff9cbb16d01f0338c_autotoc_md0}%
+\Hypertarget{md__c_1_2_users_2sgaer_2source_2repos_2katanafinancial_2_occam_c_m_e4_2_occam_c_m_e4_2src_2exter7253da91f16cb30ff9cbb16d01f0338c_autotoc_md0}%
+
+
+Efvitcp is a tcp library using Solarflare ef\+\_\+vi interface on linux, and also a tcp multiplexing framework for both C++ client and server program.
+
+As ef\+\_\+vi is a low-\/level interface passing Ethernet frames between applications and the network, efvitcp implements full tcp/ip stack on its own in user space while also taking advantage of ef\+\_\+vi\textquotesingle{}s zero-\/copy buffer delivering feature.
+
+On the user interface, efvitcp is a header-\/only C++ template for tcp client and server, using reactor model(like select/poll/epoll) and handling events for multiple connections in a single call.
+
+It opens a fast path directly between the user and the NIC, providing extremely efficient data processing performance. For example, on frame arrives the tcp payload memory could be directly handed over to the user which is written by the NIC on a DMA buffer.\hypertarget{md__c_1_2_users_2sgaer_2source_2repos_2katanafinancial_2_occam_c_m_e4_2_occam_c_m_e4_2src_2exter7253da91f16cb30ff9cbb16d01f0338c_autotoc_md1}{}\doxysection{\texorpdfstring{Why not use Tcpdirect?}{Why not use Tcpdirect?}}\label{md__c_1_2_users_2sgaer_2source_2repos_2katanafinancial_2_occam_c_m_e4_2_occam_c_m_e4_2src_2exter7253da91f16cb30ff9cbb16d01f0338c_autotoc_md1}
+While tcpdirect also provides a tcp implementation based on ef\+\_\+vi, it suffers from the maximum PIO number limitation the solarflare NIC provides\+: there can be no more than 12 instances on a host(onload is sharing the same PIO resource which makes it worse). And tcpdirect performs poorly in performance when onload is also in use, which I don\textquotesingle{}t know why. These problems make tcpdirect hard to use in practice, so an alternative approach is needed to make full use of solarflare NIC\textquotesingle{}s low-\/latency capacity for tcp applications.\hypertarget{md__c_1_2_users_2sgaer_2source_2repos_2katanafinancial_2_occam_c_m_e4_2_occam_c_m_e4_2src_2exter7253da91f16cb30ff9cbb16d01f0338c_autotoc_md2}{}\doxysection{\texorpdfstring{Features}{Features}}\label{md__c_1_2_users_2sgaer_2source_2repos_2katanafinancial_2_occam_c_m_e4_2_occam_c_m_e4_2src_2exter7253da91f16cb30ff9cbb16d01f0338c_autotoc_md2}
+
+\begin{DoxyItemize}
+\item Fast -\/ it makes good use of solarflare\textquotesingle{}s low-\/latency features including CTPIO, it\textquotesingle{}s even faster than tcpdirect especially for large segments.
+\item Headers only and no third-\/party dependences(except for ef\+\_\+vi).
+\item Reactor model with rich network and time events, giving finer control over a tcp connection.
+\item Highly configurable in compile-\/time.
+\item Non-\/blocking -\/ none of the apis blocks.
+\item No thread created internally.
+\item Supports user timers on each connection.
+\item Provides the same interface as other pollnet tcp libs, such as Socket and Tcpdirect.
+\end{DoxyItemize}\hypertarget{md__c_1_2_users_2sgaer_2source_2repos_2katanafinancial_2_occam_c_m_e4_2_occam_c_m_e4_2src_2exter7253da91f16cb30ff9cbb16d01f0338c_autotoc_md3}{}\doxysection{\texorpdfstring{Platform}{Platform}}\label{md__c_1_2_users_2sgaer_2source_2repos_2katanafinancial_2_occam_c_m_e4_2_occam_c_m_e4_2src_2exter7253da91f16cb30ff9cbb16d01f0338c_autotoc_md3}
+Linux and C++11 is required.\hypertarget{md__c_1_2_users_2sgaer_2source_2repos_2katanafinancial_2_occam_c_m_e4_2_occam_c_m_e4_2src_2exter7253da91f16cb30ff9cbb16d01f0338c_autotoc_md4}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md__c_1_2_users_2sgaer_2source_2repos_2katanafinancial_2_occam_c_m_e4_2_occam_c_m_e4_2src_2exter7253da91f16cb30ff9cbb16d01f0338c_autotoc_md4}
+efvitcp provides two class templates for tcp client and server\+: {\ttfamily \doxylink{classefvitcp_1_1_tcp_client}{efvitcp\+::\+Tcp\+Client}\texorpdfstring{$<$}{<}Conf\texorpdfstring{$>$}{>}} and {\ttfamily \doxylink{classefvitcp_1_1_tcp_server}{efvitcp\+::\+Tcp\+Server}\texorpdfstring{$<$}{<}Conf\texorpdfstring{$>$}{>}}, both taking a template argument used for configuration in compile time(we\textquotesingle{}ll cover it later).
+
+Take client for example, an instance can be declared as below\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ ++}
+\DoxyCodeLine{\textcolor{keyword}{struct\ }Conf\ \{}
+\DoxyCodeLine{...}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{\textcolor{keyword}{using\ }TcpClient\ =\ \mbox{\hyperlink{classefvitcp_1_1_tcp_client}{efvitcp::TcpClient<Conf>}};}
+\DoxyCodeLine{\textcolor{keyword}{using\ }TcpConn\ =\ TcpClient::Conn;}
+\DoxyCodeLine{}
+\DoxyCodeLine{TcpClient\ client;}
+
+\end{DoxyCode}
+ At first we need to call {\ttfamily init(interface)} for initialization\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ ++}
+\DoxyCodeLine{\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ err\ =\ client.init(\textcolor{stringliteral}{"{}p1p1"{}});}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (err)\ \{}
+\DoxyCodeLine{\ \ cout\ <<\ \textcolor{stringliteral}{"{}init\ failed:\ "{}}\ <<\ err\ <<\ endl;}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ cout\ <<\ \textcolor{stringliteral}{"{}init\ ok"{}}\ <<\ endl;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ To create a tcp connection we call {\ttfamily connect(server\+\_\+ip, server\+\_\+ip\mbox{[}, local\+\_\+port=0\mbox{]})}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ ++}
+\DoxyCodeLine{\textcolor{keywordflow}{if}((err\ =\ client.connect(\textcolor{stringliteral}{"{}192.168.20.15"{}},\ 1234))\ \{}
+\DoxyCodeLine{\ \ cout\ <<\ \textcolor{stringliteral}{"{}connect\ failed:\ "{}}\ <<\ err\ <<\ endl;}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ cout\ <<\ \textcolor{stringliteral}{"{}connect\ ok"{}}\ <<\ endl;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ Note that {\ttfamily connect()} not returning an error doesn\textquotesingle{}t mean the connection is established\+: it just indicate that a Syn is sent out without error(as it\textquotesingle{}s non-\/blocking), we still need to wait for the 3-\/way handshake to complete. As efvitcp won\textquotesingle{}t create a thread internally, we need to {\ttfamily poll()} it in the user thread, and as {\ttfamily poll()} is also non-\/blocking, we need to call it {\bfseries{repetitively}}.
+
+{\ttfamily poll()} is the core of muliplexing in the lib, all sorts of events will be triggered by this single call including whether or not the {\ttfamily connect()} is successful. How can user retrieve the events from {\ttfamily poll()}? A class with event handler functions(non-\/virtual) need to be defined and an instance be provided as the argument of {\ttfamily poll()}, and it\textquotesingle{}ll call those user defined callback functions when events occur. For completing a connection establishment, three events could be triggered\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ ++}
+\DoxyCodeLine{\textcolor{keyword}{struct\ }MyClient\ \{}
+\DoxyCodeLine{\ \ \textcolor{keywordtype}{void}\ onConnectionRefused()\ \{\ }
+\DoxyCodeLine{\ \ \ \ err\ =\ \textcolor{stringliteral}{"{}onConnectionRefused"{}};\ }
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{\ \ \textcolor{keywordtype}{void}\ onConnectionTimeout(TcpConn\&\ conn)\ \{\ }
+\DoxyCodeLine{\ \ \ \ err\ =\ \textcolor{stringliteral}{"{}onConnectionTimeout"{}};\ }
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{\ \ \textcolor{keywordtype}{void}\ onConnectionEstablished(TcpConn\&\ conn)\ \{\ }
+\DoxyCodeLine{\ \ \ \ pc\ =\ \&conn;}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{\ \ ...}
+\DoxyCodeLine{\ \ }
+\DoxyCodeLine{\ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ err\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\ \ TcpConn*\ pc\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\}\ my\_client;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordflow}{while}(!my\_client.err\ \&\&\ !my\_client.pc)\{}
+\DoxyCodeLine{\ \ client.poll(my\_client);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{keywordflow}{if}(my\_client.err)\ \{}
+\DoxyCodeLine{\ \ cout\ <<\ my\_client.err\ <<\ endl;}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ cout\ <<\ \textcolor{stringliteral}{"{}connection\ established"{}}\ <<\ endl;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ {\ttfamily poll()} also take an optional parameter {\ttfamily int64\+\_\+t ns} which is nanosecond timestamp of current time. If user maintains the timestamp in his application, it can be used by efvitcp so the latency of {\ttfamily poll()} can be reduced by a half(when idle). The nanosecond timestamp can be read by {\ttfamily clock\+\_\+gettime()} in below {\ttfamily getns()}, or by {\ttfamily tscns.\+rdns()}(\href{https://github.com/MengRao/tscns}{\texttt{ tscns}})\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ ++}
+\DoxyCodeLine{int64\_t\ getns()\ \{}
+\DoxyCodeLine{\ \ timespec\ ts;}
+\DoxyCodeLine{\ \ ::clock\_gettime(CLOCK\_REALTIME,\ \&ts);}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{return}\ ts.tv\_sec\ *\ 1000000000\ +\ ts.tv\_nsec;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Once connection is established on the callback {\ttfamily on\+Connection\+Established}, we can save the reference to the {\ttfamily Tcp\+Conn} parameter, because all operations on an established connection will be called on this object.
+
+For sending data, two functions of {\ttfamily Tcp\+Conn} can be used\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ ++}
+\DoxyCodeLine{\textcolor{comment}{//\ more\ is\ like\ MSG\_MORE\ flag\ in\ socket,\ indicating\ there're\ pending\ sends}}
+\DoxyCodeLine{uint32\_t\ send(\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ data,\ uint32\_t\ size,\ \textcolor{keywordtype}{bool}\ more\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{uint32\_t\ sendv(\textcolor{keyword}{const}\ iovec*\ iov,\ \textcolor{keywordtype}{int}\ iovcnt);}
+
+\end{DoxyCode}
+ Both calls return the number of bytes accepted(like socket send/writev call). User can also know previously the maxmium bytes the next send/sendv can accept by {\ttfamily get\+Sendable()}. Note that data being accepted doesn\textquotesingle{}t mean it has been sent out, it(or part of it) may be buffered to be sent later due to tcp flow control or congestion control limitations. Actually we can get the immediately sendable bytes in the next send/sendv by {\ttfamily get\+Immediately\+Sendable()}.
+
+When connection send buffer is full of unacked data, no more data will be sendable, user has to wait for new data to be acked for more sendable, there is a specific event assiciated with this need\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ ++}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ onMoreSendable(TcpConn\&\ conn)\ \{}
+\DoxyCodeLine{\ \ cout\ <<\ \textcolor{stringliteral}{"{}senable:\ "{}}<<\ conn.getSendable()\ <<\ endl;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+On the receiver side, when new data is received below event will occur\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ ++}
+\DoxyCodeLine{uint32\_t\ onData(TcpConn\&\ conn,\ uint8\_t*\ data,\ uint32\_t\ size)\ \{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{while}\ (size\ >=\ \textcolor{keyword}{sizeof}(Packet))\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ handle\ Packet...}}
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ data\ +=\ \textcolor{keyword}{sizeof}(Packet);}
+\DoxyCodeLine{\ \ \ \ size\ -\/=\ \textcolor{keyword}{sizeof}(Packet);}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{return}\ size;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ {\ttfamily on\+Data()} callback returns the remaining size not consumed by the user, probably because only a part of application packet has been recevied and more data is needed to proceed. In this case user don\textquotesingle{}t need to buffer the partial data himself but just return the remaining size. When new data is avaialble, it will be appended to the old data and handed together to the user in the next {\ttfamily on\+Data()}, this allows for elegant data processing code just as above.
+
+If user is done with sending and want to start or continue with the 4-\/way handshake closure, {\ttfamily send\+Fin()} can be called, this is analogous to {\ttfamily shutdown(fd, SHUT\+\_\+\+WR)}. On the other hand, when a connection received a Fin(the remote side is done sending), below event will trigger\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ ++}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ onFin(TcpConn\&\ conn,\ uint8\_t*\ data,\ uint32\_t\ size)\ \{\}}
+
+\end{DoxyCode}
+ where {\ttfamily data} and {\ttfamily size} are the last unconsumed data and {\ttfamily size} could be 0.
+
+When the 4-\/way handshake is complete and the connection enters into either CLOSED or TIME\+\_\+\+WAIT state, below event will trigger\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ ++}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ onConnectionClosed(TcpConn\&\ conn)\{\}}
+
+\end{DoxyCode}
+
+
+If user doesn\textquotesingle{}t want to go through the elegant tcp closure procedure and wish to close the connection immediately, he can call {\ttfamily close()} on the {\ttfamily Tcp\+Conn} and a Rst will be sent out and the connection goes into CLOSED status. On receiving a Rst, below event will trigger\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ ++}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ onConnectionReset(TcpConn\&\ conn)\ \{\}}
+
+\end{DoxyCode}
+ and the connection is closed. In addition, the {\ttfamily on\+Connection\+Timeout(Tcp\+Conn\& conn)} event can also occur on an established connection, indicating data retransmission time has exceeded some limit and the connection is automatically closed.
+
+Note that after a connection is closed(either by active {\ttfamily close()} or on events {\ttfamily on\+Connection\+Closed}/{\ttfamily on\+Connection\+Reset}/{\ttfamily on\+Connection\+Timeout}) the connection reference should not be used because it could be reused for a new connection.
+
+Lastly, efvitcp allows for user timers on a connection basis, and each connection can have multiple user timers concurrently. This is done by {\ttfamily void set\+User\+Timer(uint32\+\_\+t timer\+\_\+id, uint32\+\_\+t duration)} function on {\ttfamily Tcp\+Conn}, where {\ttfamily timer\+\_\+id} is the timer type starting from 0, with different timers having different {\ttfamily timer\+\_\+id}. {\ttfamily duration} is the timeout in milliseconds, currently the maximum possible duration is 65000(65 seconds). Setting a duration of 0 will delete a specific timer. When the connection is closed all users timers are deleted as well. When user timer expires below event will trigger\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ ++}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ onUserTimeout(TcpConn\&\ conn,\ uint32\_t\ timer\_id)\ \{\}}
+
+\end{DoxyCode}
+
+
+Some other information user can get from a Tcp\+Conn what may be helpful\+:
+\begin{DoxyItemize}
+\item A variable {\ttfamily user\+\_\+data} of user defined type. It can be any user data attached to a connection.
+\item {\ttfamily uint32\+\_\+t get\+Conn\+Id()}\+: Get connection ID starting from 0, the ID is auto assigned by the lib like fd in linux, it can be reused after the connection is closed.
+\item {\ttfamily void get\+Peername(struct sockaddr\+\_\+in\& addr)}\+: get network address of the remote peer.
+\item {\ttfamily bool is\+Established()}\+: Check if the connection is established, it may be useful in {\ttfamily on\+Connection\+Timeout()} callback because it can ocurr in both unestablished and established connection.
+\item {\ttfamily bool is\+Closed()}\+: Check if the connection is closed, if so the connection should not be used.
+\end{DoxyItemize}
+
+The interfaces of Tcp\+Server template is very similar to that of Tcp\+Client, with below differeces\+:
+\begin{DoxyItemize}
+\item The {\ttfamily connect()} function is replaced by {\ttfamily const char\texorpdfstring{$\ast$}{*} listen(uint16\+\_\+t server\+\_\+port)}.
+\item Tcp\+Server has two additionl functions\+: {\ttfamily get\+Conn\+Cnt()} and {\ttfamily foreach\+Conn(\+Handler handler)}.
+\item The {\ttfamily on\+Connection\+Refused()} event is replaced by {\ttfamily bool allow\+New\+Connection(uint32\+\_\+t ip, uint16\+\_\+t port\+\_\+be)}, this new event occurs when a new connection is being established(in Syn-\/\+Received state) and the user can decide whether to accept it or not according to its remote ip and port.
+\end{DoxyItemize}\hypertarget{md__c_1_2_users_2sgaer_2source_2repos_2katanafinancial_2_occam_c_m_e4_2_occam_c_m_e4_2src_2exter7253da91f16cb30ff9cbb16d01f0338c_autotoc_md5}{}\doxysection{\texorpdfstring{Configurations}{Configurations}}\label{md__c_1_2_users_2sgaer_2source_2repos_2katanafinancial_2_occam_c_m_e4_2_occam_c_m_e4_2src_2exter7253da91f16cb30ff9cbb16d01f0338c_autotoc_md5}
+Below is an example of configuration struct of Tcp\+Server, and Tcp\+Client uses almost the same config, we\textquotesingle{}ll go through them one by one. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ ++}
+\DoxyCodeLine{\textcolor{keyword}{struct\ }Conf}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ uint32\_t\ ConnSendBufCnt\ =\ 512;}
+\DoxyCodeLine{\ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ SendBuf1K\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ uint32\_t\ ConnRecvBufSize\ =\ 40960;}
+\DoxyCodeLine{\ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ uint32\_t\ MaxConnCnt\ =\ 200;}
+\DoxyCodeLine{\ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ uint32\_t\ MaxTimeWaitConnCnt\ =\ 100;}
+\DoxyCodeLine{\ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ uint32\_t\ RecvBufCnt\ =\ 512;}
+\DoxyCodeLine{\ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ uint32\_t\ SynRetries\ =\ 3;}
+\DoxyCodeLine{\ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ uint32\_t\ TcpRetries\ =\ 10;}
+\DoxyCodeLine{\ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ uint32\_t\ DelayedAckMS\ =\ 10;}
+\DoxyCodeLine{\ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ uint32\_t\ MinRtoMS\ =\ 100;}
+\DoxyCodeLine{\ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ uint32\_t\ MaxRtoMS\ =\ 30\ *\ 1000;}
+\DoxyCodeLine{\ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ WindowScaleOption\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ TimestampOption\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ CongestionControlAlgo\ =\ 0;\ \textcolor{comment}{//\ 0:\ no\ cwnd,\ 1:\ new\ reno,\ 2:\ cubic}}
+\DoxyCodeLine{\ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ uint32\_t\ UserTimerCnt\ =\ 1;}
+\DoxyCodeLine{\ \ \textcolor{keyword}{struct\ }UserData\{\};}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+
+\begin{DoxyItemize}
+\item {\ttfamily uint32\+\_\+t Conn\+Send\+Buf\+Cnt}\+: The number of DMA send buffers in one connection. Send buffer is used to hold unacked data in case it need to be resent, if the buffer is full no more data can be sendable.
+\item {\ttfamily bool Send\+Buf1K}\+: Whether to use 1024 bytes for a DMA send buffer. If set to false, 2048 bytes is used. ef\+\_\+vi requires that a DMA buffer be in a 4096 aligned block, and as typical MTU is 1500 bytes, using 2048 sized buffer will have 25\% memeory wasted. So setting {\ttfamily Send\+Buf1K} to true will maximize memory unilization but reducing the max SMSS to 960 bytes.
+\item {\ttfamily uint32\+\_\+t Conn\+Recv\+Buf\+Size}\+: Receving buffer size in bytes for each connection. It determines the maximum receive window advertised to the remote peer, and also used to hold unconsumed data(by remaining size returned by on\+Data) and out of sequence data received.
+\item {\ttfamily uint32\+\_\+t Max\+Conn\+Cnt}\+: Max number of connections supported. This is used only by Tcp\+Server.
+\item {\ttfamily uint32\+\_\+t Max\+Time\+Wait\+Conn\+Cnt}\+: Max number of TIME\+\_\+\+WAIT connections supported. Note that TIME\+\_\+\+WAIT connection is not included in {\ttfamily Max\+Conn\+Cnt}. A TIME\+\_\+\+WAIT connection uses much less memory than a normal connection. Also note that efvitcp doesn\textquotesingle{}t distinguish between active and passive closing, and all connections completing the 4-\/way handshake will enter into TIME\+\_\+\+WAIT.
+\item {\ttfamily uint32\+\_\+t Recv\+Buf\+Cnt}\+: The number of DMA receive buffers(one is 2048 bytes) shared by all connections. These DMA buffers are used to transfer network frames received by the NIC to the application, once efvitcp got a filled buffer it can be reused again immediately, so this config don\textquotesingle{}t need to be large, typically 512 is a good default value, the maxmium number ef\+\_\+vi can support is 4095.
+\item {\ttfamily uint32\+\_\+t Syn\+Retries}\+: Max number of SYN resents for an unestablished connection. When breached, on\+Connection\+Timeout will be triggered.
+\item {\ttfamily uint32\+\_\+t Tcp\+Retries}\+: Max number of data segment resents for an established connection. When breached, on\+Connection\+Timeout will be triggered.
+\item {\ttfamily uint32\+\_\+t Delayed\+Ack\+MS}\+: Timeout of delayed ack. Setting to 0 will disable delayed ack.
+\item {\ttfamily uint32\+\_\+t Min\+Rto\+MS}\+: Mininum retransmission timeout.
+\item {\ttfamily uint32\+\_\+t Max\+Rto\+MS}\+: Maximum retransmission timeout.
+\item {\ttfamily bool Window\+Scale\+Option}\+: Whether or not to enable tcp window scale option. This option is useful if window size could be larger than 65535 in either peer.
+\item {\ttfamily bool Timestamp\+Option}\+: Whether or not to enable tcp timestamp option. This option can be used to update rtt more precisely, recognize old duplicate packets more accurately and PAWS(\+Protection Against Wrapped Sequences). if {\ttfamily Window\+Scale\+Option} is used, {\ttfamily Timestamp\+Option} should also be enabled.
+\item {\ttfamily int Congestion\+Control\+Algo}\+: The congestion control algorithm to use. There\textquotesingle{}re three options available\+: "{}0"{}\+: no cwnd; "{}1"{}\+: new reno; "{}2"{}\+: cubic. The "{}no cwnd"{} option is almost equal to no congestion control, but fast retransmission is still used\+: the first unacked segment will be resent immediately on 3 duplicate acks or a partial ack in recover.
+\item {\ttfamily uint32\+\_\+t User\+Timer\+Cnt}\+: The number of user timers per connection. The timer\+\_\+id must be less than this value.
+\item {\ttfamily struct User\+Data \{int XXX;\};}\+: User defined type attached to each connection, which can be accessed directly by conn.\+XXX.
+\end{DoxyItemize}\hypertarget{md__c_1_2_users_2sgaer_2source_2repos_2katanafinancial_2_occam_c_m_e4_2_occam_c_m_e4_2src_2exter7253da91f16cb30ff9cbb16d01f0338c_autotoc_md6}{}\doxysection{\texorpdfstring{Memory Overhead}{Memory Overhead}}\label{md__c_1_2_users_2sgaer_2source_2repos_2katanafinancial_2_occam_c_m_e4_2_occam_c_m_e4_2src_2exter7253da91f16cb30ff9cbb16d01f0338c_autotoc_md6}
+Efvitcp won\textquotesingle{}t dynamically allocate memory, all memoery it uses is in the object user defines, so it\textquotesingle{}s pretty easy to check the memory overhead of efvitcp\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ ++}
+\DoxyCodeLine{\textcolor{comment}{//\ using\ the\ Conf\ defined\ in\ the\ above\ example}}
+\DoxyCodeLine{\textcolor{keyword}{using\ }TcpServer\ =\ \mbox{\hyperlink{classefvitcp_1_1_tcp_server}{efvitcp::TcpServer<Conf>}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{cout\ <<\ \textcolor{keyword}{sizeof}(TcpServer)\ <<\ endl;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ output:\ 114192400}}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2sgaer_2source_2repos_2katanafinancial_2_occam_c_m_e4_2_occam_c_m_e4_2src_2exter7253da91f16cb30ff9cbb16d01f0338c_autotoc_md7}{}\doxysection{\texorpdfstring{Thread Safety}{Thread Safety}}\label{md__c_1_2_users_2sgaer_2source_2repos_2katanafinancial_2_occam_c_m_e4_2_occam_c_m_e4_2src_2exter7253da91f16cb30ff9cbb16d01f0338c_autotoc_md7}
+Efvitcp is not thread safe, user should have the same thread polling Tcp\+Client/\+Tcp\+Server and operating on Tcp\+Conns. Multi-\/threading communication techniques can be used to pass data among the network thread and data processing threads.\hypertarget{md__c_1_2_users_2sgaer_2source_2repos_2katanafinancial_2_occam_c_m_e4_2_occam_c_m_e4_2src_2exter7253da91f16cb30ff9cbb16d01f0338c_autotoc_md8}{}\doxysection{\texorpdfstring{Pollnet Interface}{Pollnet Interface}}\label{md__c_1_2_users_2sgaer_2source_2repos_2katanafinancial_2_occam_c_m_e4_2_occam_c_m_e4_2src_2exter7253da91f16cb30ff9cbb16d01f0338c_autotoc_md8}
+Efvitcp also provides two wrapper classes {\ttfamily \doxylink{class_efvi_tcp_client}{Efvi\+Tcp\+Client}} and {\ttfamily \doxylink{class_efvi_tcp_server}{Efvi\+Tcp\+Server}} in {\ttfamily \doxylink{}{Efvi\+Tcp.\+h}} using the same interface as pollnet tcp client/server, except for the optional parameter {\ttfamily ns} in {\ttfamily poll()}. 

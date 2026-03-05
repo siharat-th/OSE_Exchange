@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_console_logger" xml:lang="en-US">
+<title>ConsoleLogger Class Reference</title>
+<indexterm><primary>ConsoleLogger</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_console_logger">ConsoleLogger</link> class is responsible for logging messages to the console. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;ConsoleLogger.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for ConsoleLogger:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_console_logger.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_console_logger_1a5dc25889c50a89a91bce5b1d4f3dd46a">ConsoleLogger</link> ()</para>
+
+<para>Constructs a new <link linkend="_class_console_logger">ConsoleLogger</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_console_logger_1a6785e7847dd004a6c30574c2485648c0">WriteLine</link> (const std::string &amp;msg, const std::string &amp;topic, int color)</para>
+
+<para>Writes a line to the console with the specified message, topic, and color. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_class_i_logger">ILogger</link>        <itemizedlist>
+            <listitem><para>virtual <emphasis role="strong">~ILogger</emphasis> ()=default</para>
+
+<para>Destructor for the <link linkend="_class_i_logger">ILogger</link> class. </para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_console_logger">ConsoleLogger</link> class is responsible for logging messages to the console. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_console_logger_1a5dc25889c50a89a91bce5b1d4f3dd46a"/><section>
+    <title>ConsoleLogger()</title>
+<indexterm><primary>ConsoleLogger</primary><secondary>ConsoleLogger</secondary></indexterm>
+<indexterm><primary>ConsoleLogger</primary><secondary>ConsoleLogger</secondary></indexterm>
+<para><computeroutput>ConsoleLogger::ConsoleLogger ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Constructs a new <link linkend="_class_console_logger">ConsoleLogger</link> object. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_console_logger_1a6785e7847dd004a6c30574c2485648c0"/><section>
+    <title>WriteLine()</title>
+<indexterm><primary>WriteLine</primary><secondary>ConsoleLogger</secondary></indexterm>
+<indexterm><primary>ConsoleLogger</primary><secondary>WriteLine</secondary></indexterm>
+<para><computeroutput>void ConsoleLogger::WriteLine (const std::string &amp; msg, const std::string &amp; topic, int color)<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Writes a line to the console with the specified message, topic, and color. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>msg</entry><entry>
+<para>The message to be logged. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>topic</entry><entry>
+<para>The topic of the log message. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>color</entry><entry>
+<para>The color of the log message. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implements <link linkend="_class_i_logger_1aad7dd43147c64f86da71bf6bfb488b36">ILogger</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Loggers/ConsoleLogger.hpp</section>
+</section>

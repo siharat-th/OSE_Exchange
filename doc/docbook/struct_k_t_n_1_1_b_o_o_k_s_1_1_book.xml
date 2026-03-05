@@ -1,0 +1,334 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book" xml:lang="en-US">
+<title>KTN::BOOKS::Book Struct Reference</title>
+<indexterm><primary>KTN::BOOKS::Book</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a22a4b1705492f7834bd8472404243ca2">index</link> (<link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule">BookMolecule</link> upd)</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a039f0953bdb9722de53255f7628f4d8c">resize</link> (int iside, int mapsize)</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1ad0b7ad58acc2139d2587f0ff0be44429">remove</link> (<link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule">BookMolecule</link> upd)</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1ad92651e3461b13ccd8a14a4b9525c07f">add</link> (<link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule">BookMolecule</link> upd)</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1adcd619941e25047345eab115025fd8bd">change</link> (<link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule">BookMolecule</link> upd)</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a049a901fd5ba0789366cd6f524c4fded">best</link> ()</para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a143261f36296614588da15b369e38b29">checksum</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a39c1867faaf8b1e856455dc8a852af6f">UpdateBook</link> (<link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule">BookMolecule</link> upd)</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1ad7ff5c89e4a7733e41b4bf84e4846edc">Print</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1ace8a80b641469008499ad7ba3468dbf8">PrintDepth</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a3c100e0944824635fdeb62d451f2bedb">Refresh</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1aab7d920fbd0d819bad3dae9cf31f71bc">isFullBook</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1aa696c00fa350aa4eca829fdfee7489cd">isEmpty</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1ab1d594fb5acac8b40b9c5cd35f088695">booktype</link></para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1ae7b2d7b3564c2d1de0b123aaa684213a">secid</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a853f09edc199147e120b04f3f0fa4657">prodtype</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a7a3ac7cf34b1e0f7a79292b512495f93">symbol</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a5658b6767c8fb38b87f3e3a635c94648">exch</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a396812876bdfc8030b0079c15c4f114f">product</link></para>
+</listitem>
+            <listitem><para>std::map&lt; int, <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule">BookMolecule</link> &gt; <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a4383c0b6f0c47d5c640878a84cbbac30">bids</link></para>
+</listitem>
+            <listitem><para>std::map&lt; int, <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule">BookMolecule</link> &gt; <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a7f5ff5a0901536ae5316eef4797098e8">asks</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a0c9ce06b78ae9c4c2449ca9be9929360">json</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a770683d542c016ca89fbd6094df20907">bidprice</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a9150842cc1afae1dd9740c3365f1f2d0">askprice</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a676829f368d463c680c1d3594fca972a">bidsize</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1aae558d71feb10dd4060bdc36be0d5ffa">asksize</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1aad609eaa959c8943c95215d683e9ede9">bidimp</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1aa7473a11f218ba7ad50e6e950c1c7b72">askimp</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a0145378f9fc87c07c483489d25973446">lastsize</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a45da4f80c334f27ca838ae411a4dfdfa">lastprice</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a5d9850cde078fdbc6af49b10b24b5242">lasttime</link></para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a5b240fb7ad7395d34329da8a0a953f06">lastssboe</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a1b5b0d1050eeea1aebb80996bc756822">lastaggressor</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a701babd4b5fc906a345b05b5cd5f66d1">lasttradeid</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a8de2f469f83917589b07444721207907">highprice</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1ac8c4207c9fb70ff527ba154a08da5da4">lowprice</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1aa6c7b877aa830763644c28614d68778a">volume</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a318ee08a0a809496f6a0037bd3ea26d0">update_time</link></para>
+</listitem>
+            <listitem><para>long <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1aaf129af63a35ef3bf14ed8745a4863a9">timestamp</link></para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a5f3d809aaf8127123b23588f7822497d">sendingtime</link></para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a2808a1dd99db4bcc9d8dece582121bf6">transacttime</link></para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a4a326ac9ee4b5fbd17c0d5168e35d1c0">receptiontime</link></para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a47497e05359763c72a075b7009b59e68">processed</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a8b0966280ba855644e59732b6156daeb">MAX_LEVELS</link> = 10</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1ad92651e3461b13ccd8a14a4b9525c07f"/><section>
+    <title>add()</title>
+<indexterm><primary>add</primary><secondary>KTN::BOOKS::Book</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::Book</primary><secondary>add</secondary></indexterm>
+<para><computeroutput>void KTN::BOOKS::Book::add (<link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule">BookMolecule</link> upd)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a049a901fd5ba0789366cd6f524c4fded"/><section>
+    <title>best()</title>
+<indexterm><primary>best</primary><secondary>KTN::BOOKS::Book</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::Book</primary><secondary>best</secondary></indexterm>
+<para><computeroutput>void KTN::BOOKS::Book::best ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1adcd619941e25047345eab115025fd8bd"/><section>
+    <title>change()</title>
+<indexterm><primary>change</primary><secondary>KTN::BOOKS::Book</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::Book</primary><secondary>change</secondary></indexterm>
+<para><computeroutput>void KTN::BOOKS::Book::change (<link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule">BookMolecule</link> upd)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a143261f36296614588da15b369e38b29"/><section>
+    <title>checksum()</title>
+<indexterm><primary>checksum</primary><secondary>KTN::BOOKS::Book</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::Book</primary><secondary>checksum</secondary></indexterm>
+<para><computeroutput>bool KTN::BOOKS::Book::checksum ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a22a4b1705492f7834bd8472404243ca2"/><section>
+    <title>index()</title>
+<indexterm><primary>index</primary><secondary>KTN::BOOKS::Book</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::Book</primary><secondary>index</secondary></indexterm>
+<para><computeroutput>int KTN::BOOKS::Book::index (<link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule">BookMolecule</link> upd)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1ad7ff5c89e4a7733e41b4bf84e4846edc"/><section>
+    <title>Print()</title>
+<indexterm><primary>Print</primary><secondary>KTN::BOOKS::Book</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::Book</primary><secondary>Print</secondary></indexterm>
+<para><computeroutput>void KTN::BOOKS::Book::Print ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1ace8a80b641469008499ad7ba3468dbf8"/><section>
+    <title>PrintDepth()</title>
+<indexterm><primary>PrintDepth</primary><secondary>KTN::BOOKS::Book</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::Book</primary><secondary>PrintDepth</secondary></indexterm>
+<para><computeroutput>void KTN::BOOKS::Book::PrintDepth ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a3c100e0944824635fdeb62d451f2bedb"/><section>
+    <title>Refresh()</title>
+<indexterm><primary>Refresh</primary><secondary>KTN::BOOKS::Book</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::Book</primary><secondary>Refresh</secondary></indexterm>
+<para><computeroutput>void KTN::BOOKS::Book::Refresh ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1ad0b7ad58acc2139d2587f0ff0be44429"/><section>
+    <title>remove()</title>
+<indexterm><primary>remove</primary><secondary>KTN::BOOKS::Book</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::Book</primary><secondary>remove</secondary></indexterm>
+<para><computeroutput>void KTN::BOOKS::Book::remove (<link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule">BookMolecule</link> upd)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a039f0953bdb9722de53255f7628f4d8c"/><section>
+    <title>resize()</title>
+<indexterm><primary>resize</primary><secondary>KTN::BOOKS::Book</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::Book</primary><secondary>resize</secondary></indexterm>
+<para><computeroutput>void KTN::BOOKS::Book::resize (int iside, int mapsize)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a39c1867faaf8b1e856455dc8a852af6f"/><section>
+    <title>UpdateBook()</title>
+<indexterm><primary>UpdateBook</primary><secondary>KTN::BOOKS::Book</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::Book</primary><secondary>UpdateBook</secondary></indexterm>
+<para><computeroutput>void KTN::BOOKS::Book::UpdateBook (<link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule">BookMolecule</link> upd)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1aa7473a11f218ba7ad50e6e950c1c7b72"/><section>
+    <title>askimp</title>
+<indexterm><primary>askimp</primary><secondary>KTN::BOOKS::Book</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::Book</primary><secondary>askimp</secondary></indexterm>
+<para><computeroutput>bool KTN::BOOKS::Book::askimp</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a9150842cc1afae1dd9740c3365f1f2d0"/><section>
+    <title>askprice</title>
+<indexterm><primary>askprice</primary><secondary>KTN::BOOKS::Book</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::Book</primary><secondary>askprice</secondary></indexterm>
+<para><computeroutput>double KTN::BOOKS::Book::askprice</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a7f5ff5a0901536ae5316eef4797098e8"/><section>
+    <title>asks</title>
+<indexterm><primary>asks</primary><secondary>KTN::BOOKS::Book</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::Book</primary><secondary>asks</secondary></indexterm>
+<para><computeroutput>std::map&lt;int, <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule">BookMolecule</link>&gt; KTN::BOOKS::Book::asks</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1aae558d71feb10dd4060bdc36be0d5ffa"/><section>
+    <title>asksize</title>
+<indexterm><primary>asksize</primary><secondary>KTN::BOOKS::Book</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::Book</primary><secondary>asksize</secondary></indexterm>
+<para><computeroutput>double KTN::BOOKS::Book::asksize</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1aad609eaa959c8943c95215d683e9ede9"/><section>
+    <title>bidimp</title>
+<indexterm><primary>bidimp</primary><secondary>KTN::BOOKS::Book</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::Book</primary><secondary>bidimp</secondary></indexterm>
+<para><computeroutput>bool KTN::BOOKS::Book::bidimp</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a770683d542c016ca89fbd6094df20907"/><section>
+    <title>bidprice</title>
+<indexterm><primary>bidprice</primary><secondary>KTN::BOOKS::Book</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::Book</primary><secondary>bidprice</secondary></indexterm>
+<para><computeroutput>double KTN::BOOKS::Book::bidprice</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a4383c0b6f0c47d5c640878a84cbbac30"/><section>
+    <title>bids</title>
+<indexterm><primary>bids</primary><secondary>KTN::BOOKS::Book</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::Book</primary><secondary>bids</secondary></indexterm>
+<para><computeroutput>std::map&lt;int, <link linkend="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_molecule">BookMolecule</link> &gt; KTN::BOOKS::Book::bids</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a676829f368d463c680c1d3594fca972a"/><section>
+    <title>bidsize</title>
+<indexterm><primary>bidsize</primary><secondary>KTN::BOOKS::Book</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::Book</primary><secondary>bidsize</secondary></indexterm>
+<para><computeroutput>double KTN::BOOKS::Book::bidsize</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1ab1d594fb5acac8b40b9c5cd35f088695"/><section>
+    <title>booktype</title>
+<indexterm><primary>booktype</primary><secondary>KTN::BOOKS::Book</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::Book</primary><secondary>booktype</secondary></indexterm>
+<para><computeroutput>int KTN::BOOKS::Book::booktype</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a5658b6767c8fb38b87f3e3a635c94648"/><section>
+    <title>exch</title>
+<indexterm><primary>exch</primary><secondary>KTN::BOOKS::Book</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::Book</primary><secondary>exch</secondary></indexterm>
+<para><computeroutput>std::string KTN::BOOKS::Book::exch</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a8de2f469f83917589b07444721207907"/><section>
+    <title>highprice</title>
+<indexterm><primary>highprice</primary><secondary>KTN::BOOKS::Book</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::Book</primary><secondary>highprice</secondary></indexterm>
+<para><computeroutput>double KTN::BOOKS::Book::highprice</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1aa696c00fa350aa4eca829fdfee7489cd"/><section>
+    <title>isEmpty</title>
+<indexterm><primary>isEmpty</primary><secondary>KTN::BOOKS::Book</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::Book</primary><secondary>isEmpty</secondary></indexterm>
+<para><computeroutput>bool KTN::BOOKS::Book::isEmpty</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1aab7d920fbd0d819bad3dae9cf31f71bc"/><section>
+    <title>isFullBook</title>
+<indexterm><primary>isFullBook</primary><secondary>KTN::BOOKS::Book</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::Book</primary><secondary>isFullBook</secondary></indexterm>
+<para><computeroutput>bool KTN::BOOKS::Book::isFullBook</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a0c9ce06b78ae9c4c2449ca9be9929360"/><section>
+    <title>json</title>
+<indexterm><primary>json</primary><secondary>KTN::BOOKS::Book</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::Book</primary><secondary>json</secondary></indexterm>
+<para><computeroutput>std::string KTN::BOOKS::Book::json</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a1b5b0d1050eeea1aebb80996bc756822"/><section>
+    <title>lastaggressor</title>
+<indexterm><primary>lastaggressor</primary><secondary>KTN::BOOKS::Book</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::Book</primary><secondary>lastaggressor</secondary></indexterm>
+<para><computeroutput>int KTN::BOOKS::Book::lastaggressor</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a45da4f80c334f27ca838ae411a4dfdfa"/><section>
+    <title>lastprice</title>
+<indexterm><primary>lastprice</primary><secondary>KTN::BOOKS::Book</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::Book</primary><secondary>lastprice</secondary></indexterm>
+<para><computeroutput>double KTN::BOOKS::Book::lastprice</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a0145378f9fc87c07c483489d25973446"/><section>
+    <title>lastsize</title>
+<indexterm><primary>lastsize</primary><secondary>KTN::BOOKS::Book</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::Book</primary><secondary>lastsize</secondary></indexterm>
+<para><computeroutput>double KTN::BOOKS::Book::lastsize</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a5b240fb7ad7395d34329da8a0a953f06"/><section>
+    <title>lastssboe</title>
+<indexterm><primary>lastssboe</primary><secondary>KTN::BOOKS::Book</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::Book</primary><secondary>lastssboe</secondary></indexterm>
+<para><computeroutput>uint64_t KTN::BOOKS::Book::lastssboe</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a5d9850cde078fdbc6af49b10b24b5242"/><section>
+    <title>lasttime</title>
+<indexterm><primary>lasttime</primary><secondary>KTN::BOOKS::Book</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::Book</primary><secondary>lasttime</secondary></indexterm>
+<para><computeroutput>std::string KTN::BOOKS::Book::lasttime</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a701babd4b5fc906a345b05b5cd5f66d1"/><section>
+    <title>lasttradeid</title>
+<indexterm><primary>lasttradeid</primary><secondary>KTN::BOOKS::Book</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::Book</primary><secondary>lasttradeid</secondary></indexterm>
+<para><computeroutput>int KTN::BOOKS::Book::lasttradeid</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1ac8c4207c9fb70ff527ba154a08da5da4"/><section>
+    <title>lowprice</title>
+<indexterm><primary>lowprice</primary><secondary>KTN::BOOKS::Book</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::Book</primary><secondary>lowprice</secondary></indexterm>
+<para><computeroutput>double KTN::BOOKS::Book::lowprice</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a8b0966280ba855644e59732b6156daeb"/><section>
+    <title>MAX_LEVELS</title>
+<indexterm><primary>MAX_LEVELS</primary><secondary>KTN::BOOKS::Book</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::Book</primary><secondary>MAX_LEVELS</secondary></indexterm>
+<para><computeroutput>int KTN::BOOKS::Book::MAX_LEVELS = 10</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a47497e05359763c72a075b7009b59e68"/><section>
+    <title>processed</title>
+<indexterm><primary>processed</primary><secondary>KTN::BOOKS::Book</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::Book</primary><secondary>processed</secondary></indexterm>
+<para><computeroutput>uint64_t KTN::BOOKS::Book::processed</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a853f09edc199147e120b04f3f0fa4657"/><section>
+    <title>prodtype</title>
+<indexterm><primary>prodtype</primary><secondary>KTN::BOOKS::Book</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::Book</primary><secondary>prodtype</secondary></indexterm>
+<para><computeroutput>std::string KTN::BOOKS::Book::prodtype</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a396812876bdfc8030b0079c15c4f114f"/><section>
+    <title>product</title>
+<indexterm><primary>product</primary><secondary>KTN::BOOKS::Book</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::Book</primary><secondary>product</secondary></indexterm>
+<para><computeroutput>std::string KTN::BOOKS::Book::product</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a4a326ac9ee4b5fbd17c0d5168e35d1c0"/><section>
+    <title>receptiontime</title>
+<indexterm><primary>receptiontime</primary><secondary>KTN::BOOKS::Book</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::Book</primary><secondary>receptiontime</secondary></indexterm>
+<para><computeroutput>uint64_t KTN::BOOKS::Book::receptiontime</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1ae7b2d7b3564c2d1de0b123aaa684213a"/><section>
+    <title>secid</title>
+<indexterm><primary>secid</primary><secondary>KTN::BOOKS::Book</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::Book</primary><secondary>secid</secondary></indexterm>
+<para><computeroutput>int32_t KTN::BOOKS::Book::secid</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a5f3d809aaf8127123b23588f7822497d"/><section>
+    <title>sendingtime</title>
+<indexterm><primary>sendingtime</primary><secondary>KTN::BOOKS::Book</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::Book</primary><secondary>sendingtime</secondary></indexterm>
+<para><computeroutput>uint64_t KTN::BOOKS::Book::sendingtime</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a7a3ac7cf34b1e0f7a79292b512495f93"/><section>
+    <title>symbol</title>
+<indexterm><primary>symbol</primary><secondary>KTN::BOOKS::Book</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::Book</primary><secondary>symbol</secondary></indexterm>
+<para><computeroutput>std::string KTN::BOOKS::Book::symbol</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1aaf129af63a35ef3bf14ed8745a4863a9"/><section>
+    <title>timestamp</title>
+<indexterm><primary>timestamp</primary><secondary>KTN::BOOKS::Book</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::Book</primary><secondary>timestamp</secondary></indexterm>
+<para><computeroutput>long KTN::BOOKS::Book::timestamp</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a2808a1dd99db4bcc9d8dece582121bf6"/><section>
+    <title>transacttime</title>
+<indexterm><primary>transacttime</primary><secondary>KTN::BOOKS::Book</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::Book</primary><secondary>transacttime</secondary></indexterm>
+<para><computeroutput>uint64_t KTN::BOOKS::Book::transacttime</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1a318ee08a0a809496f6a0037bd3ea26d0"/><section>
+    <title>update_time</title>
+<indexterm><primary>update_time</primary><secondary>KTN::BOOKS::Book</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::Book</primary><secondary>update_time</secondary></indexterm>
+<para><computeroutput>std::string KTN::BOOKS::Book::update_time</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_b_o_o_k_s_1_1_book_1aa6c7b877aa830763644c28614d68778a"/><section>
+    <title>volume</title>
+<indexterm><primary>volume</primary><secondary>KTN::BOOKS::Book</secondary></indexterm>
+<indexterm><primary>KTN::BOOKS::Book</primary><secondary>volume</secondary></indexterm>
+<para><computeroutput>double KTN::BOOKS::Book::volume</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Containers/KatanaBooks.hpp</section>
+</section>

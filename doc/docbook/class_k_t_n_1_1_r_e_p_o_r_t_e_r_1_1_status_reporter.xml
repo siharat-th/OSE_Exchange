@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter" xml:lang="en-US">
+<title>KTN::REPORTER::StatusReporter Class Reference</title>
+<indexterm><primary>KTN::REPORTER::StatusReporter</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter">StatusReporter</link> class is responsible for reporting session status. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;StatusReporter.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter_1a383303ac6254cd9ca0826adfe5375b23">StatusReporter</link> ()</para>
+
+<para>Default constructor for <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter">StatusReporter</link>. </para>
+</listitem>
+            <listitem><para><link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter_1ad4b933dcfa2efc606685d248556c7489">~StatusReporter</link> ()</para>
+
+<para>Destructor for <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter">StatusReporter</link>. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter_1a034bfd6bfd5812a7d98e6ee6a20a80bd">Stop</link> ()</para>
+
+<para>Stops the <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter">StatusReporter</link>. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter_1a1edbea2c90bf4d064bcdb82471e8911c">Report</link> (<link linkend="_class_session_status">SessionStatus</link> &amp;data)</para>
+
+<para>Reports the session status. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter_1a5c5fb9d2c63c2d902da2e773149d6862">is_active</link> ()</para>
+
+<para>Checks if the <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter">StatusReporter</link> is active. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter_1a0e21f93c37da6e838e0fcd768c9b47bb">status_queue_size</link> ()</para>
+
+<para>Gets the size of the status queue. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>moodycamel::ConcurrentQueue&lt; <link linkend="_class_session_status">SessionStatus</link> &gt; <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter_1a29c877c20ebe60316ecaaa6360c3d169">_qStatus</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter">StatusReporter</link> class is responsible for reporting session status. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter_1a383303ac6254cd9ca0826adfe5375b23"/><section>
+    <title>StatusReporter()</title>
+<indexterm><primary>StatusReporter</primary><secondary>KTN::REPORTER::StatusReporter</secondary></indexterm>
+<indexterm><primary>KTN::REPORTER::StatusReporter</primary><secondary>StatusReporter</secondary></indexterm>
+<para><computeroutput>StatusReporter::StatusReporter ( )</computeroutput></para><para>
+
+<para>Default constructor for <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter">StatusReporter</link>. </para>
+</para>
+<para>
+References <link linkend="_l00123">Settings::get()</link>, and <link linkend="_l00133">Settings::getInteger()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter_1ad4b933dcfa2efc606685d248556c7489"/><section>
+    <title>~StatusReporter()</title>
+<indexterm><primary>~StatusReporter</primary><secondary>KTN::REPORTER::StatusReporter</secondary></indexterm>
+<indexterm><primary>KTN::REPORTER::StatusReporter</primary><secondary>~StatusReporter</secondary></indexterm>
+<para><computeroutput>StatusReporter::~StatusReporter ( )</computeroutput></para><para>
+
+<para>Destructor for <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter">StatusReporter</link>. </para>
+</para>
+<para>
+References <link linkend="_l00044">Stop()</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter_1a5c5fb9d2c63c2d902da2e773149d6862"/><section>
+    <title>is_active()</title>
+<indexterm><primary>is_active</primary><secondary>KTN::REPORTER::StatusReporter</secondary></indexterm>
+<indexterm><primary>KTN::REPORTER::StatusReporter</primary><secondary>is_active</secondary></indexterm>
+<para><computeroutput>bool KTN::REPORTER::StatusReporter::is_active ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Checks if the <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter">StatusReporter</link> is active. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>True if the <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter">StatusReporter</link> is active, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter_1a1edbea2c90bf4d064bcdb82471e8911c"/><section>
+    <title>Report()</title>
+<indexterm><primary>Report</primary><secondary>KTN::REPORTER::StatusReporter</secondary></indexterm>
+<indexterm><primary>KTN::REPORTER::StatusReporter</primary><secondary>Report</secondary></indexterm>
+<para><computeroutput>void StatusReporter::Report (<link linkend="_class_session_status">SessionStatus</link> &amp; data)</computeroutput></para><para>
+
+<para>Reports the session status. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>data</entry><entry>
+<para>The session status to be reported. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter_1a0e21f93c37da6e838e0fcd768c9b47bb"/><section>
+    <title>status_queue_size()</title>
+<indexterm><primary>status_queue_size</primary><secondary>KTN::REPORTER::StatusReporter</secondary></indexterm>
+<indexterm><primary>KTN::REPORTER::StatusReporter</primary><secondary>status_queue_size</secondary></indexterm>
+<para><computeroutput>int KTN::REPORTER::StatusReporter::status_queue_size ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Gets the size of the status queue. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The size of the status queue. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter_1a034bfd6bfd5812a7d98e6ee6a20a80bd"/><section>
+    <title>Stop()</title>
+<indexterm><primary>Stop</primary><secondary>KTN::REPORTER::StatusReporter</secondary></indexterm>
+<indexterm><primary>KTN::REPORTER::StatusReporter</primary><secondary>Stop</secondary></indexterm>
+<para><computeroutput>void StatusReporter::Stop ( )</computeroutput></para><para>
+
+<para>Stops the <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter">StatusReporter</link>. </para>
+</para>
+<para>
+Referenced by <link linkend="_l00022">~StatusReporter()</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_status_reporter_1a29c877c20ebe60316ecaaa6360c3d169"/><section>
+    <title>_qStatus</title>
+<indexterm><primary>_qStatus</primary><secondary>KTN::REPORTER::StatusReporter</secondary></indexterm>
+<indexterm><primary>KTN::REPORTER::StatusReporter</primary><secondary>_qStatus</secondary></indexterm>
+<para><computeroutput>moodycamel::ConcurrentQueue&lt;<link linkend="_class_session_status">SessionStatus</link>&gt; KTN::REPORTER::StatusReporter::_qStatus</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Reporters/StatusReporter.hppReporters/StatusReporter.cpp</section>
+</section>

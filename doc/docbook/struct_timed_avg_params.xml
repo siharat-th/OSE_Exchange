@@ -1,0 +1,205 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_timed_avg_params" xml:lang="en-US">
+<title>TimedAvgParams Struct Reference</title>
+<indexterm><primary>TimedAvgParams</primary></indexterm>
+<para>
+
+<para>Struct representing the parameters for the Timed Average algorithm. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;TimedAvgParams.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_struct_timed_avg_params">TimedAvgParams</link> <link linkend="_struct_timed_avg_params_1a571d49dc9aeb928cb32ef30980a17a7c">parse</link> (const std::string &amp;json_str)</para>
+
+<para>Parses the JSON string and returns a <link linkend="_struct_timed_avg_params">TimedAvgParams</link> object. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_struct_timed_avg_params_1a5370544820fdfa31e6f424001d4b121a">ValidJson</link></para>
+</listitem>
+            <listitem><para><link linkend="_structalgometa">algometa</link> <link linkend="_struct_timed_avg_params_1a372c447d5a927926c634993158b98755">meta</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_timed_avg_params_1a71275915da17589a919d76f57f13d2b8">subid</link></para>
+</listitem>
+            <listitem><para>std::unordered_map&lt; int, <link linkend="_structinstrument">instrument</link> &gt; <link linkend="_struct_timed_avg_params_1aec279fb875c3bd9a412ecdd9755204d6">LegSecIdMap</link></para>
+</listitem>
+            <listitem><para><link linkend="_structinstrument">instrument</link> <link linkend="_struct_timed_avg_params_1a610cd05647cb7a44d0ed9e1a942f50d1">Legs</link> [4]</para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_timed_avg_params_1a4e55130581452697af06c2d229970309">LegCount</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_timed_avg_params_1abce1864996e909ca4de403c721ff08d6">StartTime</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_struct_timed_avg_params_1a52dae215331890d3767bc40282d18444">EndTime</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_timed_avg_params_1a65559e734fdd7de1014c92626f021d88">OrderQty</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_timed_avg_params_1a7c14aac501a8e67211a5f9c2ffd6834f">TotalQty</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_timed_avg_params_1a295a01b7ede209f8036ad7494753a5a2">IntervalSecs</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_timed_avg_params_1a578943e271dee16cf6e50f830f7157a0">MinWorkSecs</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_timed_avg_params_1af37fc6bc2b5063866d80555757be08d7">MaxWorkSecs</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_timed_avg_params_1aea61c9607c553a3600e4c8ddff5dc4a1">SqueezeRatio</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_timed_avg_params_1ab4e8fafd42017b226dad1ccb948f03ab">Randomize</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_timed_avg_params_1acde76a220f18ec5f88828302f161f570">NetPosition</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_timed_avg_params_1af7f59d341fa9ad01b4762a8e25528e48">TotalExec</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_timed_avg_params_1a5e512097e41a90c45655cbcd74c5e5af">Reset</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Struct representing the parameters for the Timed Average algorithm. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_struct_timed_avg_params_1a571d49dc9aeb928cb32ef30980a17a7c"/><section>
+    <title>parse()</title>
+<indexterm><primary>parse</primary><secondary>TimedAvgParams</secondary></indexterm>
+<indexterm><primary>TimedAvgParams</primary><secondary>parse</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_timed_avg_params">TimedAvgParams</link> TimedAvgParams::parse (const std::string &amp; json_str)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Parses the JSON string and returns a <link linkend="_struct_timed_avg_params">TimedAvgParams</link> object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>json_str</entry><entry>
+<para>The JSON string to parse. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A <link linkend="_struct_timed_avg_params">TimedAvgParams</link> object. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00260">algometa::Enabled</link>, <link linkend="_l00049">UserInfo::groupname</link>, <link linkend="_l00048">UserInfo::org</link>, <link linkend="_l00262">algometa::Source</link>, <link linkend="_l00256">algometa::Strategy</link>, <link linkend="_l00257">algometa::StratId</link>, <link linkend="_l00264">algometa::Tag</link>, <link linkend="_l00258">algometa::TemplateName</link>, <link linkend="_l00261">algometa::UniqueId</link>, <link linkend="_l00047">UserInfo::user</link>, and <link linkend="_l00279">algometa::userinfo</link>.</para>
+<para>
+Referenced by <link linkend="_l00043">KTN::Twap::onLaunch()</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_timed_avg_params_1a52dae215331890d3767bc40282d18444"/><section>
+    <title>EndTime</title>
+<indexterm><primary>EndTime</primary><secondary>TimedAvgParams</secondary></indexterm>
+<indexterm><primary>TimedAvgParams</primary><secondary>EndTime</secondary></indexterm>
+<para><computeroutput>string TimedAvgParams::EndTime</computeroutput></para></section>
+<anchor xml:id="_struct_timed_avg_params_1a295a01b7ede209f8036ad7494753a5a2"/><section>
+    <title>IntervalSecs</title>
+<indexterm><primary>IntervalSecs</primary><secondary>TimedAvgParams</secondary></indexterm>
+<indexterm><primary>TimedAvgParams</primary><secondary>IntervalSecs</secondary></indexterm>
+<para><computeroutput>int TimedAvgParams::IntervalSecs</computeroutput></para></section>
+<anchor xml:id="_struct_timed_avg_params_1a4e55130581452697af06c2d229970309"/><section>
+    <title>LegCount</title>
+<indexterm><primary>LegCount</primary><secondary>TimedAvgParams</secondary></indexterm>
+<indexterm><primary>TimedAvgParams</primary><secondary>LegCount</secondary></indexterm>
+<para><computeroutput>int TimedAvgParams::LegCount</computeroutput></para></section>
+<anchor xml:id="_struct_timed_avg_params_1a610cd05647cb7a44d0ed9e1a942f50d1"/><section>
+    <title>Legs</title>
+<indexterm><primary>Legs</primary><secondary>TimedAvgParams</secondary></indexterm>
+<indexterm><primary>TimedAvgParams</primary><secondary>Legs</secondary></indexterm>
+<para><computeroutput><link linkend="_structinstrument">instrument</link> TimedAvgParams::Legs[4]</computeroutput></para></section>
+<anchor xml:id="_struct_timed_avg_params_1aec279fb875c3bd9a412ecdd9755204d6"/><section>
+    <title>LegSecIdMap</title>
+<indexterm><primary>LegSecIdMap</primary><secondary>TimedAvgParams</secondary></indexterm>
+<indexterm><primary>TimedAvgParams</primary><secondary>LegSecIdMap</secondary></indexterm>
+<para><computeroutput>std::unordered_map&lt;int, <link linkend="_structinstrument">instrument</link>&gt; TimedAvgParams::LegSecIdMap</computeroutput></para></section>
+<anchor xml:id="_struct_timed_avg_params_1af37fc6bc2b5063866d80555757be08d7"/><section>
+    <title>MaxWorkSecs</title>
+<indexterm><primary>MaxWorkSecs</primary><secondary>TimedAvgParams</secondary></indexterm>
+<indexterm><primary>TimedAvgParams</primary><secondary>MaxWorkSecs</secondary></indexterm>
+<para><computeroutput>int TimedAvgParams::MaxWorkSecs</computeroutput></para></section>
+<anchor xml:id="_struct_timed_avg_params_1a372c447d5a927926c634993158b98755"/><section>
+    <title>meta</title>
+<indexterm><primary>meta</primary><secondary>TimedAvgParams</secondary></indexterm>
+<indexterm><primary>TimedAvgParams</primary><secondary>meta</secondary></indexterm>
+<para><computeroutput><link linkend="_structalgometa">algometa</link> TimedAvgParams::meta</computeroutput></para></section>
+<anchor xml:id="_struct_timed_avg_params_1a578943e271dee16cf6e50f830f7157a0"/><section>
+    <title>MinWorkSecs</title>
+<indexterm><primary>MinWorkSecs</primary><secondary>TimedAvgParams</secondary></indexterm>
+<indexterm><primary>TimedAvgParams</primary><secondary>MinWorkSecs</secondary></indexterm>
+<para><computeroutput>int TimedAvgParams::MinWorkSecs</computeroutput></para></section>
+<anchor xml:id="_struct_timed_avg_params_1acde76a220f18ec5f88828302f161f570"/><section>
+    <title>NetPosition</title>
+<indexterm><primary>NetPosition</primary><secondary>TimedAvgParams</secondary></indexterm>
+<indexterm><primary>TimedAvgParams</primary><secondary>NetPosition</secondary></indexterm>
+<para><computeroutput>int TimedAvgParams::NetPosition</computeroutput></para></section>
+<anchor xml:id="_struct_timed_avg_params_1a65559e734fdd7de1014c92626f021d88"/><section>
+    <title>OrderQty</title>
+<indexterm><primary>OrderQty</primary><secondary>TimedAvgParams</secondary></indexterm>
+<indexterm><primary>TimedAvgParams</primary><secondary>OrderQty</secondary></indexterm>
+<para><computeroutput>double TimedAvgParams::OrderQty</computeroutput></para></section>
+<anchor xml:id="_struct_timed_avg_params_1ab4e8fafd42017b226dad1ccb948f03ab"/><section>
+    <title>Randomize</title>
+<indexterm><primary>Randomize</primary><secondary>TimedAvgParams</secondary></indexterm>
+<indexterm><primary>TimedAvgParams</primary><secondary>Randomize</secondary></indexterm>
+<para><computeroutput>bool TimedAvgParams::Randomize</computeroutput></para></section>
+<anchor xml:id="_struct_timed_avg_params_1a5e512097e41a90c45655cbcd74c5e5af"/><section>
+    <title>Reset</title>
+<indexterm><primary>Reset</primary><secondary>TimedAvgParams</secondary></indexterm>
+<indexterm><primary>TimedAvgParams</primary><secondary>Reset</secondary></indexterm>
+<para><computeroutput>bool TimedAvgParams::Reset</computeroutput></para></section>
+<anchor xml:id="_struct_timed_avg_params_1aea61c9607c553a3600e4c8ddff5dc4a1"/><section>
+    <title>SqueezeRatio</title>
+<indexterm><primary>SqueezeRatio</primary><secondary>TimedAvgParams</secondary></indexterm>
+<indexterm><primary>TimedAvgParams</primary><secondary>SqueezeRatio</secondary></indexterm>
+<para><computeroutput>double TimedAvgParams::SqueezeRatio</computeroutput></para></section>
+<anchor xml:id="_struct_timed_avg_params_1abce1864996e909ca4de403c721ff08d6"/><section>
+    <title>StartTime</title>
+<indexterm><primary>StartTime</primary><secondary>TimedAvgParams</secondary></indexterm>
+<indexterm><primary>TimedAvgParams</primary><secondary>StartTime</secondary></indexterm>
+<para><computeroutput>string TimedAvgParams::StartTime</computeroutput></para></section>
+<anchor xml:id="_struct_timed_avg_params_1a71275915da17589a919d76f57f13d2b8"/><section>
+    <title>subid</title>
+<indexterm><primary>subid</primary><secondary>TimedAvgParams</secondary></indexterm>
+<indexterm><primary>TimedAvgParams</primary><secondary>subid</secondary></indexterm>
+<para><computeroutput>string TimedAvgParams::subid</computeroutput></para></section>
+<anchor xml:id="_struct_timed_avg_params_1af7f59d341fa9ad01b4762a8e25528e48"/><section>
+    <title>TotalExec</title>
+<indexterm><primary>TotalExec</primary><secondary>TimedAvgParams</secondary></indexterm>
+<indexterm><primary>TimedAvgParams</primary><secondary>TotalExec</secondary></indexterm>
+<para><computeroutput>int TimedAvgParams::TotalExec</computeroutput></para></section>
+<anchor xml:id="_struct_timed_avg_params_1a7c14aac501a8e67211a5f9c2ffd6834f"/><section>
+    <title>TotalQty</title>
+<indexterm><primary>TotalQty</primary><secondary>TimedAvgParams</secondary></indexterm>
+<indexterm><primary>TimedAvgParams</primary><secondary>TotalQty</secondary></indexterm>
+<para><computeroutput>double TimedAvgParams::TotalQty</computeroutput></para></section>
+<anchor xml:id="_struct_timed_avg_params_1a5370544820fdfa31e6f424001d4b121a"/><section>
+    <title>ValidJson</title>
+<indexterm><primary>ValidJson</primary><secondary>TimedAvgParams</secondary></indexterm>
+<indexterm><primary>TimedAvgParams</primary><secondary>ValidJson</secondary></indexterm>
+<para><computeroutput>bool TimedAvgParams::ValidJson</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following files:</para>
+AlgoParams/TimedAvgParams.hppAlgoParams/TimedAvgParams.cpp</section>
+</section>

@@ -1,0 +1,161 @@
+\doxysection{KTN\+::notify\+::Slacker Class Reference}
+\hypertarget{class_k_t_n_1_1notify_1_1_slacker}{}\label{class_k_t_n_1_1notify_1_1_slacker}\index{KTN::notify::Slacker@{KTN::notify::Slacker}}
+
+
+Class representing a Slack-\/enabled messaging class for alerts and notifications.  
+
+
+
+
+{\ttfamily \#include $<$Slacker.\+hpp$>$}
+
+Inheritance diagram for KTN\+::notify\+::Slacker\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_k_t_n_1_1notify_1_1_slacker}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1notify_1_1_slacker_ac8e52c4b87a0b11f8518739b7de2b29d}{Slacker}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{class_k_t_n_1_1notify_1_1_slacker}{Slacker}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_k_t_n_1_1notify_1_1_slacker_a006e3d07e21e8266de4dae817a1df409}{\texorpdfstring{$\sim$}{\string~}\+Slacker}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{class_k_t_n_1_1notify_1_1_slacker}{Slacker}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1notify_1_1_slacker_a9488f2c8f2609db9e71ac28490acf58c}{Init\+And\+Run}} ()
+\begin{DoxyCompactList}\small\item\em Initializes and runs the \doxylink{class_k_t_n_1_1notify_1_1_slacker}{Slacker}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1notify_1_1_slacker_ad3b0170243470f28069787caf3f81cd0}{Send}} (string preview, string topic, string msg, int color, bool force)
+\begin{DoxyCompactList}\small\item\em Sends a Slack message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1notify_1_1_slacker_aa98847b40ba8e354fac9b6de9d1378bf}{Send}} (\mbox{\hyperlink{struct_k_t_n_1_1notify_1_1slackmsg}{slackmsg}} \&msg)
+\begin{DoxyCompactList}\small\item\em Sends a Slack message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1notify_1_1_slacker_a8525cf590872d41a9fecafaac9c59a76}{Enable}} (bool sendmessages)
+\begin{DoxyCompactList}\small\item\em Enables or disables sending messages. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_named_thread}{Named\+Thread}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_named_thread_a891fabdc2d824048ec05c82e7ef8c69a}{Named\+Thread}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_named_thread_a018dadb59e5af98ee734301a1baa50cb}{\texorpdfstring{$\sim$}{\string~}\+Named\+Thread}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_named_thread_a9fa42542ff43c89fb9bbc33de9c87e34}{Create\+And\+Run}} (string name, int core)
+\begin{DoxyCompactList}\small\item\em Creates and runs the named thread on the specified core. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_named_thread_ad4809c571171be13f0f91f540d5c196f}{Join}} ()
+\begin{DoxyCompactList}\small\item\em Joins the named thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing a Slack-\/enabled messaging class for alerts and notifications. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_k_t_n_1_1notify_1_1_slacker_ac8e52c4b87a0b11f8518739b7de2b29d}\index{KTN::notify::Slacker@{KTN::notify::Slacker}!Slacker@{Slacker}}
+\index{Slacker@{Slacker}!KTN::notify::Slacker@{KTN::notify::Slacker}}
+\doxysubsubsection{\texorpdfstring{Slacker()}{Slacker()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1notify_1_1_slacker_ac8e52c4b87a0b11f8518739b7de2b29d} 
+Slacker\+::\+Slacker (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor for \doxylink{class_k_t_n_1_1notify_1_1_slacker}{Slacker}. 
+
+\Hypertarget{class_k_t_n_1_1notify_1_1_slacker_a006e3d07e21e8266de4dae817a1df409}\index{KTN::notify::Slacker@{KTN::notify::Slacker}!````~Slacker@{\texorpdfstring{$\sim$}{\string~}Slacker}}
+\index{````~Slacker@{\texorpdfstring{$\sim$}{\string~}Slacker}!KTN::notify::Slacker@{KTN::notify::Slacker}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Slacker()}{\string~Slacker()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1notify_1_1_slacker_a006e3d07e21e8266de4dae817a1df409} 
+Slacker\+::\texorpdfstring{$\sim$}{\string~}\+Slacker (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destructor for \doxylink{class_k_t_n_1_1notify_1_1_slacker}{Slacker}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1notify_1_1_slacker_a8525cf590872d41a9fecafaac9c59a76}\index{KTN::notify::Slacker@{KTN::notify::Slacker}!Enable@{Enable}}
+\index{Enable@{Enable}!KTN::notify::Slacker@{KTN::notify::Slacker}}
+\doxysubsubsection{\texorpdfstring{Enable()}{Enable()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1notify_1_1_slacker_a8525cf590872d41a9fecafaac9c59a76} 
+void Slacker\+::\+Enable (\begin{DoxyParamCaption}\item[{bool}]{sendmessages}{}\end{DoxyParamCaption})}
+
+
+
+Enables or disables sending messages. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sendmessages} & A flag indicating whether to enable sending messages. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1notify_1_1_slacker_a9488f2c8f2609db9e71ac28490acf58c}\index{KTN::notify::Slacker@{KTN::notify::Slacker}!InitAndRun@{InitAndRun}}
+\index{InitAndRun@{InitAndRun}!KTN::notify::Slacker@{KTN::notify::Slacker}}
+\doxysubsubsection{\texorpdfstring{InitAndRun()}{InitAndRun()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1notify_1_1_slacker_a9488f2c8f2609db9e71ac28490acf58c} 
+void Slacker\+::\+Init\+And\+Run (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Initializes and runs the \doxylink{class_k_t_n_1_1notify_1_1_slacker}{Slacker}. 
+
+
+
+References \mbox{\hyperlink{l00065}{KTN\+::notify\+::slackbot\+::baseurl}}, \mbox{\hyperlink{l00067}{KTN\+::notify\+::slackbot\+::channel}}, \mbox{\hyperlink{l00068}{KTN\+::notify\+::slackbot\+::color}}, \mbox{\hyperlink{l00018}{Named\+Thread\+::\+Create\+And\+Run()}}, \mbox{\hyperlink{l00123}{Settings\+::get()}}, \mbox{\hyperlink{l00075}{KTN\+::notify\+::slackbot\+::\+Print()}}, \mbox{\hyperlink{l00064}{KTN\+::notify\+::slackbot\+::token}}, and \mbox{\hyperlink{l00069}{KTN\+::notify\+::slackbot\+::username}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00013}{KTN\+::\+Skewer\+::\+Skewer()}}, \mbox{\hyperlink{l00013}{KTN\+::\+Skew\+Trader\+::\+Skew\+Trader()}}, \mbox{\hyperlink{l00013}{KTN\+::\+Stacker\+::\+Stacker()}}, \mbox{\hyperlink{l00013}{KTN\+::\+Stacker\+Timer\+::\+Stacker\+Timer()}}, and \mbox{\hyperlink{l00013}{KTN\+::\+Twap\+::\+Twap()}}.
+
+\Hypertarget{class_k_t_n_1_1notify_1_1_slacker_aa98847b40ba8e354fac9b6de9d1378bf}\index{KTN::notify::Slacker@{KTN::notify::Slacker}!Send@{Send}}
+\index{Send@{Send}!KTN::notify::Slacker@{KTN::notify::Slacker}}
+\doxysubsubsection{\texorpdfstring{Send()}{Send()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1notify_1_1_slacker_aa98847b40ba8e354fac9b6de9d1378bf} 
+void Slacker\+::\+Send (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1notify_1_1slackmsg}{slackmsg}} \&}]{msg}{}\end{DoxyParamCaption})}
+
+
+
+Sends a Slack message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The Slack message to send. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00055}{KTN\+::notify\+::slackmsg\+::text}}.
+
+\Hypertarget{class_k_t_n_1_1notify_1_1_slacker_ad3b0170243470f28069787caf3f81cd0}\index{KTN::notify::Slacker@{KTN::notify::Slacker}!Send@{Send}}
+\index{Send@{Send}!KTN::notify::Slacker@{KTN::notify::Slacker}}
+\doxysubsubsection{\texorpdfstring{Send()}{Send()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1notify_1_1_slacker_ad3b0170243470f28069787caf3f81cd0} 
+void Slacker\+::\+Send (\begin{DoxyParamCaption}\item[{string}]{preview}{, }\item[{string}]{topic}{, }\item[{string}]{msg}{, }\item[{int}]{color}{ = {\ttfamily LOG\+\_\+WHITE}, }\item[{bool}]{force}{ = {\ttfamily false}}\end{DoxyParamCaption})}
+
+
+
+Sends a Slack message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em preview} & The preview of the message. \\
+\hline
+{\em topic} & The topic of the message. \\
+\hline
+{\em msg} & The text of the message. \\
+\hline
+{\em color} & The color of the message. \\
+\hline
+{\em force} & A flag indicating whether to force sending the message. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00056}{KTN\+::notify\+::slackmsg\+::color}}, \mbox{\hyperlink{l00053}{KTN\+::notify\+::slackmsg\+::preview}}, \mbox{\hyperlink{l00055}{KTN\+::notify\+::slackmsg\+::text}}, and \mbox{\hyperlink{l00054}{KTN\+::notify\+::slackmsg\+::topic}}.
+
+
+
+Referenced by \mbox{\hyperlink{l01043}{KTN\+::\+Skewer\+::min\+Order\+Execution()}}, \mbox{\hyperlink{l00885}{KTN\+::\+Stacker\+Timer\+::min\+Order\+Execution()}}, and \mbox{\hyperlink{l00975}{KTN\+::\+Twap\+::min\+Order\+Execution()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Notifications/Slacker.\+hpp\item 
+Notifications/Slacker.\+cpp\end{DoxyCompactItemize}

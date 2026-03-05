@@ -1,0 +1,69 @@
+\doxysection{Efvi\+Tcp\+Client\texorpdfstring{$<$}{<} Conf \texorpdfstring{$>$}{>}\+::Conn Struct Reference}
+\hypertarget{struct_efvi_tcp_client_1_1_conn}{}\label{struct_efvi_tcp_client_1_1_conn}\index{EfviTcpClient$<$ Conf $>$::Conn@{EfviTcpClient$<$ Conf $>$::Conn}}
+Inheritance diagram for Efvi\+Tcp\+Client\texorpdfstring{$<$}{<} Conf \texorpdfstring{$>$}{>}\+::Conn\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{struct_efvi_tcp_client_1_1_conn}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{struct_efvi_tcp_client_1_1_conn_a8455eac2fe817e0956c441ed370c7b2e}{is\+Connected}} ()
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_efvi_tcp_client_1_1_conn_a8926f0d17237f7e034ccc47e348c144f}{get\+Last\+Error}} ()
+\item 
+void \mbox{\hyperlink{struct_efvi_tcp_client_1_1_conn_a11911b01b443658c7adb6d5d5cad96ec}{close}} (const char \texorpdfstring{$\ast$}{*}reason)
+\item 
+int \mbox{\hyperlink{struct_efvi_tcp_client_1_1_conn_accd48d8889666bad7e05a6e437eae533}{write\+Some}} (const void \texorpdfstring{$\ast$}{*}data, uint32\+\_\+t size, bool more=false)
+\item 
+bool \mbox{\hyperlink{struct_efvi_tcp_client_1_1_conn_ad8167dfa2081873f979eb836cecf4c12}{write\+Nonblock}} (const void \texorpdfstring{$\ast$}{*}data, uint32\+\_\+t size, bool more=false)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Conf$>$\newline
+struct Efvi\+Tcp\+Client$<$ Conf $>$\+::\+Conn}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_efvi_tcp_client_1_1_conn_a11911b01b443658c7adb6d5d5cad96ec}\index{EfviTcpClient$<$ Conf $>$::Conn@{EfviTcpClient$<$ Conf $>$::Conn}!close@{close}}
+\index{close@{close}!EfviTcpClient$<$ Conf $>$::Conn@{EfviTcpClient$<$ Conf $>$::Conn}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily \label{struct_efvi_tcp_client_1_1_conn_a11911b01b443658c7adb6d5d5cad96ec} 
+template$<$typename Conf $>$ \\
+void \mbox{\hyperlink{class_efvi_tcp_client}{Efvi\+Tcp\+Client}}$<$ Conf $>$\+::\+Conn\+::close (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{reason}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_efvi_tcp_client_1_1_conn_a8926f0d17237f7e034ccc47e348c144f}\index{EfviTcpClient$<$ Conf $>$::Conn@{EfviTcpClient$<$ Conf $>$::Conn}!getLastError@{getLastError}}
+\index{getLastError@{getLastError}!EfviTcpClient$<$ Conf $>$::Conn@{EfviTcpClient$<$ Conf $>$::Conn}}
+\doxysubsubsection{\texorpdfstring{getLastError()}{getLastError()}}
+{\footnotesize\ttfamily \label{struct_efvi_tcp_client_1_1_conn_a8926f0d17237f7e034ccc47e348c144f} 
+template$<$typename Conf $>$ \\
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_efvi_tcp_client}{Efvi\+Tcp\+Client}}$<$ Conf $>$\+::\+Conn\+::get\+Last\+Error (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_efvi_tcp_client_1_1_conn_a8455eac2fe817e0956c441ed370c7b2e}\index{EfviTcpClient$<$ Conf $>$::Conn@{EfviTcpClient$<$ Conf $>$::Conn}!isConnected@{isConnected}}
+\index{isConnected@{isConnected}!EfviTcpClient$<$ Conf $>$::Conn@{EfviTcpClient$<$ Conf $>$::Conn}}
+\doxysubsubsection{\texorpdfstring{isConnected()}{isConnected()}}
+{\footnotesize\ttfamily \label{struct_efvi_tcp_client_1_1_conn_a8455eac2fe817e0956c441ed370c7b2e} 
+template$<$typename Conf $>$ \\
+bool \mbox{\hyperlink{class_efvi_tcp_client}{Efvi\+Tcp\+Client}}$<$ Conf $>$\+::\+Conn\+::is\+Connected (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_efvi_tcp_client_1_1_conn_ad8167dfa2081873f979eb836cecf4c12}\index{EfviTcpClient$<$ Conf $>$::Conn@{EfviTcpClient$<$ Conf $>$::Conn}!writeNonblock@{writeNonblock}}
+\index{writeNonblock@{writeNonblock}!EfviTcpClient$<$ Conf $>$::Conn@{EfviTcpClient$<$ Conf $>$::Conn}}
+\doxysubsubsection{\texorpdfstring{writeNonblock()}{writeNonblock()}}
+{\footnotesize\ttfamily \label{struct_efvi_tcp_client_1_1_conn_ad8167dfa2081873f979eb836cecf4c12} 
+template$<$typename Conf $>$ \\
+bool \mbox{\hyperlink{class_efvi_tcp_client}{Efvi\+Tcp\+Client}}$<$ Conf $>$\+::\+Conn\+::write\+Nonblock (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{uint32\+\_\+t}]{size}{, }\item[{bool}]{more}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{struct_efvi_tcp_client_1_1_conn_accd48d8889666bad7e05a6e437eae533}\index{EfviTcpClient$<$ Conf $>$::Conn@{EfviTcpClient$<$ Conf $>$::Conn}!writeSome@{writeSome}}
+\index{writeSome@{writeSome}!EfviTcpClient$<$ Conf $>$::Conn@{EfviTcpClient$<$ Conf $>$::Conn}}
+\doxysubsubsection{\texorpdfstring{writeSome()}{writeSome()}}
+{\footnotesize\ttfamily \label{struct_efvi_tcp_client_1_1_conn_accd48d8889666bad7e05a6e437eae533} 
+template$<$typename Conf $>$ \\
+int \mbox{\hyperlink{class_efvi_tcp_client}{Efvi\+Tcp\+Client}}$<$ Conf $>$\+::\+Conn\+::write\+Some (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{uint32\+\_\+t}]{size}{, }\item[{bool}]{more}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sgaer/source/repos/katanafinancial/\+Occam\+CME4/\+Occam\+CME4/src/external/pollnet/efvitcp/Efvi\+Tcp.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,243 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor" xml:lang="en-US">
+<title>KTN::TCP::ServiceDescriptor Class Reference</title>
+<indexterm><primary>KTN::TCP::ServiceDescriptor</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor">ServiceDescriptor</link> class represents a network service parameter set. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;ServiceDescriptor.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor_1a18e78e84c574141558bf4bf4ca2dc8a2">ServiceDescriptor</link> ()</para>
+
+<para>Default constructor for <link linkend="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor">ServiceDescriptor</link>. </para>
+</listitem>
+            <listitem><para><link linkend="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor_1a4041fc0e32d00d52d73c53868dc9d03c">ServiceDescriptor</link> (std::string _address, unsigned _port, std::string _intf, std::string _intfname, int _feed, int _isrc)</para>
+
+<para>Constructor for <link linkend="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor">ServiceDescriptor</link>. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor_1afc486ca8470d1722103e196284e5f77b">~ServiceDescriptor</link> ()</para>
+
+<para>Destructor for <link linkend="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor">ServiceDescriptor</link>. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor_1a95c8d7bccb1ee8eb6ddfde2ad292075d"/>void <emphasis role="strong">Print</emphasis> ()</para>
+
+<para>Print the service descriptor. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>std::string <link linkend="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor_1a51b7ac0d5b96ae9373b273064480b9c7">address</link></para>
+</listitem>
+            <listitem><para>unsigned <link linkend="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor_1af3013c4535c99c1617cb6281c53cc69d">port</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor_1a2e758be8c2379adfd09e363c8097ae2b">localinterfacename</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor_1acb37545f482093deb424ceb81347e10e">localinterface</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor_1aaadb12a8d6e02a382ef0c9c1d6d99d3d">feedtype</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor_1a0e757b8444ff25d0e0c9af70e2df8446">iSource</link></para>
+</listitem>
+            <listitem><para>struct sockaddr_in <link linkend="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor_1ada0bf841042736033d6c65c283772d5c">sa_tcplocal</link></para>
+</listitem>
+            <listitem><para>struct sockaddr_in <link linkend="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor_1a9757eb5dfe6789cbb05cc47c88fb78e5">sa_tcpremote</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor_1a838273271183957e82609c5de33b0dc0">fd</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor_1a901b99386b59f7fd238b4e82a967ea93">index</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor_1a815db9e979f71fd42e02e05044a8f9ef">segid</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor">ServiceDescriptor</link> class represents a network service parameter set. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor_1a18e78e84c574141558bf4bf4ca2dc8a2"/><section>
+    <title>ServiceDescriptor()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>ServiceDescriptor</primary><secondary>KTN::TCP::ServiceDescriptor</secondary></indexterm>
+<indexterm><primary>KTN::TCP::ServiceDescriptor</primary><secondary>ServiceDescriptor</secondary></indexterm>
+<para><computeroutput>ServiceDescriptor::ServiceDescriptor ( )</computeroutput></para><para>
+
+<para>Default constructor for <link linkend="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor">ServiceDescriptor</link>. </para>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor_1a4041fc0e32d00d52d73c53868dc9d03c"/><section>
+    <title>ServiceDescriptor()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>ServiceDescriptor</primary><secondary>KTN::TCP::ServiceDescriptor</secondary></indexterm>
+<indexterm><primary>KTN::TCP::ServiceDescriptor</primary><secondary>ServiceDescriptor</secondary></indexterm>
+<para><computeroutput>ServiceDescriptor::ServiceDescriptor (std::string _address, unsigned _port, std::string _intf, std::string _intfname, int _feed, int _isrc)</computeroutput></para><para>
+
+<para>Constructor for <link linkend="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor">ServiceDescriptor</link>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>_address</entry><entry>
+<para>The address of the service. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_port</entry><entry>
+<para>The port of the service. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_intf</entry><entry>
+<para>The interface of the service. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_intfname</entry><entry>
+<para>The name of the interface of the service. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_feed</entry><entry>
+<para>The feed type of the service. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>_isrc</entry><entry>
+<para>The source of the service. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00072">address</link>, <link linkend="_l00077">feedtype</link>, <link linkend="_l00078">iSource</link>, <link linkend="_l00076">localinterface</link>, <link linkend="_l00075">localinterfacename</link>, and <link linkend="_l00073">port</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor_1afc486ca8470d1722103e196284e5f77b"/><section>
+    <title>~ServiceDescriptor()</title>
+<indexterm><primary>~ServiceDescriptor</primary><secondary>KTN::TCP::ServiceDescriptor</secondary></indexterm>
+<indexterm><primary>KTN::TCP::ServiceDescriptor</primary><secondary>~ServiceDescriptor</secondary></indexterm>
+<para><computeroutput>ServiceDescriptor::~ServiceDescriptor ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Destructor for <link linkend="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor">ServiceDescriptor</link>. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor_1a51b7ac0d5b96ae9373b273064480b9c7"/><section>
+    <title>address</title>
+<indexterm><primary>address</primary><secondary>KTN::TCP::ServiceDescriptor</secondary></indexterm>
+<indexterm><primary>KTN::TCP::ServiceDescriptor</primary><secondary>address</secondary></indexterm>
+<para><computeroutput>std::string KTN::TCP::ServiceDescriptor::address</computeroutput></para>
+<para>The address of the service. </para>
+<para>
+Referenced by <link linkend="_l00245">KTN::TCP::EFVITcpV2::createEfviTcpFeedFilter()</link>, <link linkend="_l00030">KTN::TCP::UdpSocket::CreateSocket()</link>, <link linkend="_l00032">KTN::TCP::EFVITcpV5::Init()</link>, and <link linkend="_l00020">ServiceDescriptor()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor_1a838273271183957e82609c5de33b0dc0"/><section>
+    <title>fd</title>
+<indexterm><primary>fd</primary><secondary>KTN::TCP::ServiceDescriptor</secondary></indexterm>
+<indexterm><primary>KTN::TCP::ServiceDescriptor</primary><secondary>fd</secondary></indexterm>
+<para><computeroutput>int KTN::TCP::ServiceDescriptor::fd</computeroutput></para>
+<para>The file descriptor. </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor_1aaadb12a8d6e02a382ef0c9c1d6d99d3d"/><section>
+    <title>feedtype</title>
+<indexterm><primary>feedtype</primary><secondary>KTN::TCP::ServiceDescriptor</secondary></indexterm>
+<indexterm><primary>KTN::TCP::ServiceDescriptor</primary><secondary>feedtype</secondary></indexterm>
+<para><computeroutput>int KTN::TCP::ServiceDescriptor::feedtype</computeroutput></para>
+<para>The feed type. </para>
+<para>
+Referenced by <link linkend="_l00060">KTN::TCP::EFVITcpV2::Init()</link>, <link linkend="_l00032">KTN::TCP::EFVITcpV5::Init()</link>, and <link linkend="_l00020">ServiceDescriptor()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor_1a901b99386b59f7fd238b4e82a967ea93"/><section>
+    <title>index</title>
+<indexterm><primary>index</primary><secondary>KTN::TCP::ServiceDescriptor</secondary></indexterm>
+<indexterm><primary>KTN::TCP::ServiceDescriptor</primary><secondary>index</secondary></indexterm>
+<para><computeroutput>int KTN::TCP::ServiceDescriptor::index</computeroutput></para>
+<para>The index. </para>
+<para>
+Referenced by <link linkend="_l00032">KTN::TCP::EFVITcpV5::Init()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor_1a0e757b8444ff25d0e0c9af70e2df8446"/><section>
+    <title>iSource</title>
+<indexterm><primary>iSource</primary><secondary>KTN::TCP::ServiceDescriptor</secondary></indexterm>
+<indexterm><primary>KTN::TCP::ServiceDescriptor</primary><secondary>iSource</secondary></indexterm>
+<para><computeroutput>int KTN::TCP::ServiceDescriptor::iSource</computeroutput></para>
+<para>The source. </para>
+<para>
+Referenced by <link linkend="_l00060">KTN::TCP::EFVITcpV2::Init()</link>, <link linkend="_l00032">KTN::TCP::EFVITcpV5::Init()</link>, and <link linkend="_l00020">ServiceDescriptor()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor_1acb37545f482093deb424ceb81347e10e"/><section>
+    <title>localinterface</title>
+<indexterm><primary>localinterface</primary><secondary>KTN::TCP::ServiceDescriptor</secondary></indexterm>
+<indexterm><primary>KTN::TCP::ServiceDescriptor</primary><secondary>localinterface</secondary></indexterm>
+<para><computeroutput>std::string KTN::TCP::ServiceDescriptor::localinterface</computeroutput></para>
+<para>The local interface. </para>
+<para>
+Referenced by <link linkend="_l00245">KTN::TCP::EFVITcpV2::createEfviTcpFeedFilter()</link>, <link linkend="_l00030">KTN::TCP::UdpSocket::CreateSocket()</link>, <link linkend="_l00060">KTN::TCP::EFVITcpV2::Init()</link>, <link linkend="_l00032">KTN::TCP::EFVITcpV5::Init()</link>, and <link linkend="_l00020">ServiceDescriptor()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor_1a2e758be8c2379adfd09e363c8097ae2b"/><section>
+    <title>localinterfacename</title>
+<indexterm><primary>localinterfacename</primary><secondary>KTN::TCP::ServiceDescriptor</secondary></indexterm>
+<indexterm><primary>KTN::TCP::ServiceDescriptor</primary><secondary>localinterfacename</secondary></indexterm>
+<para><computeroutput>std::string KTN::TCP::ServiceDescriptor::localinterfacename</computeroutput></para>
+<para>The name of the local interface. </para>
+<para>
+Referenced by <link linkend="_l00245">KTN::TCP::EFVITcpV2::createEfviTcpFeedFilter()</link>, <link linkend="_l00060">KTN::TCP::EFVITcpV2::Init()</link>, <link linkend="_l00032">KTN::TCP::EFVITcpV5::Init()</link>, and <link linkend="_l00020">ServiceDescriptor()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor_1af3013c4535c99c1617cb6281c53cc69d"/><section>
+    <title>port</title>
+<indexterm><primary>port</primary><secondary>KTN::TCP::ServiceDescriptor</secondary></indexterm>
+<indexterm><primary>KTN::TCP::ServiceDescriptor</primary><secondary>port</secondary></indexterm>
+<para><computeroutput>unsigned KTN::TCP::ServiceDescriptor::port</computeroutput></para>
+<para>The port of the service. </para>
+<para>
+Referenced by <link linkend="_l00245">KTN::TCP::EFVITcpV2::createEfviTcpFeedFilter()</link>, <link linkend="_l00032">KTN::TCP::EFVITcpV5::Init()</link>, and <link linkend="_l00020">ServiceDescriptor()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor_1ada0bf841042736033d6c65c283772d5c"/><section>
+    <title>sa_tcplocal</title>
+<indexterm><primary>sa_tcplocal</primary><secondary>KTN::TCP::ServiceDescriptor</secondary></indexterm>
+<indexterm><primary>KTN::TCP::ServiceDescriptor</primary><secondary>sa_tcplocal</secondary></indexterm>
+<para><computeroutput>struct sockaddr_in KTN::TCP::ServiceDescriptor::sa_tcplocal</computeroutput></para>
+<para>The TCP local socket address. </para>
+<para>
+Referenced by <link linkend="_l00245">KTN::TCP::EFVITcpV2::createEfviTcpFeedFilter()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor_1a9757eb5dfe6789cbb05cc47c88fb78e5"/><section>
+    <title>sa_tcpremote</title>
+<indexterm><primary>sa_tcpremote</primary><secondary>KTN::TCP::ServiceDescriptor</secondary></indexterm>
+<indexterm><primary>KTN::TCP::ServiceDescriptor</primary><secondary>sa_tcpremote</secondary></indexterm>
+<para><computeroutput>struct sockaddr_in KTN::TCP::ServiceDescriptor::sa_tcpremote</computeroutput></para>
+<para>The TCP remote socket address. </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor_1a815db9e979f71fd42e02e05044a8f9ef"/><section>
+    <title>segid</title>
+<indexterm><primary>segid</primary><secondary>KTN::TCP::ServiceDescriptor</secondary></indexterm>
+<indexterm><primary>KTN::TCP::ServiceDescriptor</primary><secondary>segid</secondary></indexterm>
+<para><computeroutput>int KTN::TCP::ServiceDescriptor::segid</computeroutput></para>
+<para>The segment ID. </para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Net/ServiceDescriptor.hppNet/ServiceDescriptor.cpp</section>
+</section>

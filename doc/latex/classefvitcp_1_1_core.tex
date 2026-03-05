@@ -1,0 +1,521 @@
+\doxysection{efvitcp\+::Core\texorpdfstring{$<$}{<} Conf \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classefvitcp_1_1_core}{}\label{classefvitcp_1_1_core}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classefvitcp_1_1_core_abab678c094c285b245e83da4733b2d92}\label{classefvitcp_1_1_core_abab678c094c285b245e83da4733b2d92} 
+{\bfseries Core} (const \mbox{\hyperlink{classefvitcp_1_1_core}{Core}} \&)=delete
+\item 
+\Hypertarget{classefvitcp_1_1_core_a58e893d73af0a052a9f60bb8237d649a}\label{classefvitcp_1_1_core_a58e893d73af0a052a9f60bb8237d649a} 
+\mbox{\hyperlink{classefvitcp_1_1_core}{Core}} \& {\bfseries operator=} (const \mbox{\hyperlink{classefvitcp_1_1_core}{Core}} \&)=delete
+\item 
+void \mbox{\hyperlink{classefvitcp_1_1_core_a635ebbb08bc97ecf726ae83c2f5a5e02}{destruct}} ()
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classefvitcp_1_1_core_aeb0d1b2d77fc92c1493b17b427558db1}{init}} (const char \texorpdfstring{$\ast$}{*}interface)
+\item 
+int64\+\_\+t \mbox{\hyperlink{classefvitcp_1_1_core_aaeb1431f601ed9a72812b9828b34c7c3}{getns}} ()
+\item 
+void \mbox{\hyperlink{classefvitcp_1_1_core_ac41ea217a2df1852c03074ec071530a8}{del\+Filter}} ()
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classefvitcp_1_1_core_afa171f6a8652003268d11f90489bb897}{set\+Client\+Filter}} (uint16\+\_\+t \&local\+\_\+port\+\_\+be, uint32\+\_\+t remote\+\_\+ip, uint16\+\_\+t remote\+\_\+port\+\_\+be)
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classefvitcp_1_1_core_a869b3ce0f6516f23207e4a6a24567a52}{auto\+Get\+Port}} (uint16\+\_\+t \&port)
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classefvitcp_1_1_core_ae0624833987ca753179cd39bcddf5989}{set\+Server\+Filter}} (uint16\+\_\+t local\+\_\+port\+\_\+be)
+\item 
+void \mbox{\hyperlink{classefvitcp_1_1_core_aa370e0702244c3a7d156e6cdf8bef459}{sum\+Rst}} (\mbox{\hyperlink{structefvitcp_1_1_send_buf}{Send\+Buf}} \texorpdfstring{$\ast$}{*}rst, bool has\+\_\+ts)
+\item 
+void \mbox{\hyperlink{classefvitcp_1_1_core_abceb96137b2943e95fcd5c6e68d1bf94}{rsp\+Rst}} (\mbox{\hyperlink{structefvitcp_1_1_ether_header}{Ether\+Header}} \texorpdfstring{$\ast$}{*}eth\+\_\+hdr)
+\item 
+void \mbox{\hyperlink{classefvitcp_1_1_core_a073bceaefa96f31095d0f3433e9a792e}{ack\+TW}} (\mbox{\hyperlink{structefvitcp_1_1_time_wait_conn}{Time\+Wait\+Conn}} \&tw)
+\item 
+void \mbox{\hyperlink{classefvitcp_1_1_core_ae2c8f2a98ec4f3e4dfd474ac82522fb2}{send}} (\mbox{\hyperlink{structefvitcp_1_1_send_buf}{Send\+Buf}} \texorpdfstring{$\ast$}{*}buf)
+\item 
+void \mbox{\hyperlink{classefvitcp_1_1_core_acd0cd936705edeea95d2a070c18074a1}{send\+\_\+warmup}} ()
+\item 
+{\footnotesize template$<$typename Recv\+Handler $>$ }\\void \mbox{\hyperlink{classefvitcp_1_1_core_a40d71470e3fc66e8a7152ff5d3de2beb}{poll\+Net}} (Recv\+Handler recv\+\_\+handler)
+\item 
+\mbox{\hyperlink{structefvitcp_1_1_send_buf}{Send\+Buf}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classefvitcp_1_1_core_aca0acb54a0a08674dde852874c1c9853}{get\+Send\+Buf}} (uint32\+\_\+t id)
+\item 
+\mbox{\hyperlink{structefvitcp_1_1_conn_hash_entry}{Conn\+Hash\+Entry}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classefvitcp_1_1_core_a5b7bbbc4d3fd131a9bfc5a665c2e83e2}{find\+Conn\+Entry}} (uint64\+\_\+t key)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classefvitcp_1_1_core_ad4e22b7656e3346839de55108aed22df}{get\+Tbl\+Size}} ()
+\item 
+void \mbox{\hyperlink{classefvitcp_1_1_core_af80cbb30c6ba3d51016e3a0865f815c6}{add\+Conn\+Entry}} (\mbox{\hyperlink{structefvitcp_1_1_conn_hash_entry}{Conn\+Hash\+Entry}} \texorpdfstring{$\ast$}{*}entry, uint64\+\_\+t key, uint32\+\_\+t conn\+\_\+id)
+\item 
+void \mbox{\hyperlink{classefvitcp_1_1_core_a8c59270b3bd86df3149ac2f2c3719d3b}{del\+Conn\+Entry}} (uint64\+\_\+t key)
+\item 
+void \mbox{\hyperlink{classefvitcp_1_1_core_a51ddebfeb87bbfccfc130d64e0e803d8}{enter\+TW}} (uint64\+\_\+t key, \mbox{\hyperlink{structefvitcp_1_1_send_buf}{Send\+Buf}} \texorpdfstring{$\ast$}{*}buf, bool has\+\_\+ts, uint32\+\_\+t tsecr)
+\item 
+void \mbox{\hyperlink{classefvitcp_1_1_core_ac4590bfb386cb3d36202fb4e965f8fca}{try\+Expand\+Conn\+Tbl}} ()
+\item 
+void \mbox{\hyperlink{classefvitcp_1_1_core_af9978cab11f6dcc6f67bc69276bb854b}{add\+Timer}} (uint32\+\_\+t duration\+\_\+ts, \mbox{\hyperlink{structefvitcp_1_1_timer_node}{Timer\+Node}} \texorpdfstring{$\ast$}{*}node)
+\item 
+{\footnotesize template$<$typename Timer\+Handler $>$ }\\void \mbox{\hyperlink{classefvitcp_1_1_core_aa22d519f166905f520e865e01d5b2b9c}{poll\+Time}} (Timer\+Handler handler, int64\+\_\+t ns=0)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classefvitcp_1_1_core_a8bd1f26d752831e1c3ee0dd49bf3f1be}{pkt\+\_\+buf\+\_\+blk}} \mbox{[}Total\+Buf\+Size+Total\+Buf\+Align\mbox{]} = \{\}
+\item 
+uint8\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classefvitcp_1_1_core_a28982d5eff1186b0bac4c98499ca2c11}{pkt\+\_\+buf}}
+\item 
+ef\+\_\+vi \mbox{\hyperlink{classefvitcp_1_1_core_a2f7104673868bf06fa086171436f8f22}{vi}} = \{\}
+\item 
+ef\+\_\+driver\+\_\+handle \mbox{\hyperlink{classefvitcp_1_1_core_ada3212ff40b6ecc5f288def6f13c6094}{dh}} = -\/1
+\item 
+ef\+\_\+pd \mbox{\hyperlink{classefvitcp_1_1_core_a796cef99ad8f49a058e51ae4a0798128}{pd}} = \{\}
+\item 
+ef\+\_\+memreg \mbox{\hyperlink{classefvitcp_1_1_core_a5e6e0735a4f86b8aadd0231b32591418}{memreg}} = \{\}
+\item 
+ef\+\_\+filter\+\_\+cookie \mbox{\hyperlink{classefvitcp_1_1_core_ab56739cb700d3b9f26ecc2b60541e983}{filter\+\_\+cookie}} = \{\}
+\item 
+bool \mbox{\hyperlink{classefvitcp_1_1_core_a11f8b41367bf6492190c96b0c76a647c}{use\+\_\+ctpio}} = false
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classefvitcp_1_1_core_abe24fd1b8584fd67e0fdd6ebc0cc78c0}{local\+\_\+mac}} \mbox{[}6\mbox{]}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classefvitcp_1_1_core_a1e0df66b480d860f563fda0dc5572633}{local\+\_\+ip}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classefvitcp_1_1_core_afdcf1f86ac2eb55cb5254efd193f3da2}{receive\+\_\+prefix\+\_\+len}}
+\item 
+\mbox{\hyperlink{structefvitcp_1_1_c_sum}{CSum}} \mbox{\hyperlink{classefvitcp_1_1_core_a251d65e6266eb256ef857920c03e4969}{rst\+\_\+ipsum}}
+\item 
+\mbox{\hyperlink{structefvitcp_1_1_c_sum}{CSum}} \mbox{\hyperlink{classefvitcp_1_1_core_ac3ca6da2a97397e371a0f77be9b94c3b}{rst\+\_\+tcpsum}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classefvitcp_1_1_core_a6ef1cffc12578a7628302ed13b24767f}{now\+\_\+ts}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classefvitcp_1_1_core_a96c2bef190f39581c57c36d1bc4f2389}{conn\+\_\+cnt}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classefvitcp_1_1_core_a260e19a18d8ee492d4ed59057c078755}{conns}} \mbox{[}Conf\+::\+Max\+Conn\+Cnt\mbox{]}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classefvitcp_1_1_core_ac5d70f7635c4577b2106db914def0e07}{tw\+\_\+cnt}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classefvitcp_1_1_core_a0e371879382cb1e488d74d440a5cd5d6}{tw\+\_\+ids}} \mbox{[}Conf\+::\+Max\+Time\+Wait\+Conn\+Cnt\mbox{]}
+\item 
+\mbox{\hyperlink{structefvitcp_1_1_time_wait_conn}{Time\+Wait\+Conn}} \mbox{\hyperlink{classefvitcp_1_1_core_a5dc28110ba08c75ab924d6efdadca577}{tws}} \mbox{[}Conf\+::\+Max\+Time\+Wait\+Conn\+Cnt\mbox{]}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classefvitcp_1_1_core_a9bce663af7a28a71789feaa5a11c2c1e}{tbl\+\_\+mask}}
+\item 
+\mbox{\hyperlink{structefvitcp_1_1_conn_hash_entry}{Conn\+Hash\+Entry}} \mbox{\hyperlink{classefvitcp_1_1_core_a97b59bb4e8e32671d07dd6f779ddcd86}{conn\+\_\+tbl}} \mbox{[}Total\+Table\+Size\mbox{]}
+\item 
+\mbox{\hyperlink{structefvitcp_1_1_timer_node}{Timer\+Node}} \mbox{\hyperlink{classefvitcp_1_1_core_a05067846debabab535315f5223083527}{timer\+\_\+slots}} \mbox{[}2\mbox{]}\mbox{[}Timer\+Slots\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const uint32\+\_\+t \mbox{\hyperlink{classefvitcp_1_1_core_af244c2e4c1064c23142704d0282af1a1}{Send\+Buf\+Size}} = Conf\+::\+Send\+Buf1K ? 1024 \+: 2048
+\item 
+static const uint32\+\_\+t \mbox{\hyperlink{classefvitcp_1_1_core_af3d54870267b80f34055dc12795fd111}{Max\+Send\+MTU}} = Send\+Buf\+Size -\/ (uint32\+\_\+t)(offsetof(\mbox{\hyperlink{structefvitcp_1_1_send_buf}{Send\+Buf}}, ip\+\_\+hdr))
+\item 
+static const uint32\+\_\+t \mbox{\hyperlink{classefvitcp_1_1_core_a81bdec360a7bef2f1a58f62904c763c9}{Send\+MTU}} = Max\+Send\+MTU $<$ 1500 ? Max\+Send\+MTU \+: 1500
+\item 
+static const uint32\+\_\+t \mbox{\hyperlink{classefvitcp_1_1_core_a2212e659bbb7d2b19917b3cf5902edf3}{Max\+Table\+Size}} = 1 $<$$<$ (1 + get\+MSB(Conf\+::\+Max\+Conn\+Cnt + Conf\+::\+Max\+Time\+Wait\+Conn\+Cnt))
+\item 
+static const uint32\+\_\+t \mbox{\hyperlink{classefvitcp_1_1_core_ab94e1179a1506d7ef800b393e4bc119a}{Total\+Table\+Size}} = Max\+Table\+Size + Conf\+::\+Max\+Conn\+Cnt + Conf\+::\+Max\+Time\+Wait\+Conn\+Cnt
+\item 
+static const uint64\+\_\+t \mbox{\hyperlink{classefvitcp_1_1_core_a2b1e0a4c39926c7f86a7825809544cf8}{Send\+Buf\+Cnt}} = Conf\+::\+Conn\+Send\+Buf\+Cnt \texorpdfstring{$\ast$}{*} Conf\+::\+Max\+Conn\+Cnt + 1
+\item 
+static const uint64\+\_\+t \mbox{\hyperlink{classefvitcp_1_1_core_a03bf24ca0ae27944fea87e9d486b42ba}{Total\+Buf\+Size}} = Recv\+Buf\+Size \texorpdfstring{$\ast$}{*} Conf\+::\+Recv\+Buf\+Cnt + Send\+Buf\+Size \texorpdfstring{$\ast$}{*} Send\+Buf\+Cnt
+\item 
+static const uint64\+\_\+t \mbox{\hyperlink{classefvitcp_1_1_core_a0d83ff5c0f0b85c225ca89f5e940dc71}{Total\+Buf\+Align}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Conf$>$\newline
+class efvitcp\+::\+Core$<$ Conf $>$}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classefvitcp_1_1_core_a7ce5390e150f5ca45f2d3899161cf607}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!````~Core@{\texorpdfstring{$\sim$}{\string~}Core}}
+\index{````~Core@{\texorpdfstring{$\sim$}{\string~}Core}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Core()}{\string~Core()}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_a7ce5390e150f5ca45f2d3899161cf607} 
+template$<$typename Conf $>$ \\
+\mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{classefvitcp_1_1_core}{Core}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classefvitcp_1_1_core_a073bceaefa96f31095d0f3433e9a792e}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!ackTW@{ackTW}}
+\index{ackTW@{ackTW}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{ackTW()}{ackTW()}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_a073bceaefa96f31095d0f3433e9a792e} 
+template$<$typename Conf $>$ \\
+void \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::ack\+TW (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structefvitcp_1_1_time_wait_conn}{Time\+Wait\+Conn}} \&}]{tw}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classefvitcp_1_1_core_af80cbb30c6ba3d51016e3a0865f815c6}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!addConnEntry@{addConnEntry}}
+\index{addConnEntry@{addConnEntry}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{addConnEntry()}{addConnEntry()}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_af80cbb30c6ba3d51016e3a0865f815c6} 
+template$<$typename Conf $>$ \\
+void \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::add\+Conn\+Entry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structefvitcp_1_1_conn_hash_entry}{Conn\+Hash\+Entry}} \texorpdfstring{$\ast$}{*}}]{entry}{, }\item[{uint64\+\_\+t}]{key}{, }\item[{uint32\+\_\+t}]{conn\+\_\+id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classefvitcp_1_1_core_af9978cab11f6dcc6f67bc69276bb854b}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!addTimer@{addTimer}}
+\index{addTimer@{addTimer}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{addTimer()}{addTimer()}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_af9978cab11f6dcc6f67bc69276bb854b} 
+template$<$typename Conf $>$ \\
+void \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::add\+Timer (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{duration\+\_\+ts}{, }\item[{\mbox{\hyperlink{structefvitcp_1_1_timer_node}{Timer\+Node}} \texorpdfstring{$\ast$}{*}}]{node}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classefvitcp_1_1_core_a869b3ce0f6516f23207e4a6a24567a52}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!autoGetPort@{autoGetPort}}
+\index{autoGetPort@{autoGetPort}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{autoGetPort()}{autoGetPort()}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_a869b3ce0f6516f23207e4a6a24567a52} 
+template$<$typename Conf $>$ \\
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::auto\+Get\+Port (\begin{DoxyParamCaption}\item[{uint16\+\_\+t \&}]{port}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classefvitcp_1_1_core_a8c59270b3bd86df3149ac2f2c3719d3b}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!delConnEntry@{delConnEntry}}
+\index{delConnEntry@{delConnEntry}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{delConnEntry()}{delConnEntry()}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_a8c59270b3bd86df3149ac2f2c3719d3b} 
+template$<$typename Conf $>$ \\
+void \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::del\+Conn\+Entry (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classefvitcp_1_1_core_ac41ea217a2df1852c03074ec071530a8}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!delFilter@{delFilter}}
+\index{delFilter@{delFilter}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{delFilter()}{delFilter()}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_ac41ea217a2df1852c03074ec071530a8} 
+template$<$typename Conf $>$ \\
+void \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::del\+Filter (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classefvitcp_1_1_core_a635ebbb08bc97ecf726ae83c2f5a5e02}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!destruct@{destruct}}
+\index{destruct@{destruct}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{destruct()}{destruct()}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_a635ebbb08bc97ecf726ae83c2f5a5e02} 
+template$<$typename Conf $>$ \\
+void \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::destruct (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classefvitcp_1_1_core_a51ddebfeb87bbfccfc130d64e0e803d8}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!enterTW@{enterTW}}
+\index{enterTW@{enterTW}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{enterTW()}{enterTW()}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_a51ddebfeb87bbfccfc130d64e0e803d8} 
+template$<$typename Conf $>$ \\
+void \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::enter\+TW (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{key}{, }\item[{\mbox{\hyperlink{structefvitcp_1_1_send_buf}{Send\+Buf}} \texorpdfstring{$\ast$}{*}}]{buf}{, }\item[{bool}]{has\+\_\+ts}{, }\item[{uint32\+\_\+t}]{tsecr}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classefvitcp_1_1_core_a5b7bbbc4d3fd131a9bfc5a665c2e83e2}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!findConnEntry@{findConnEntry}}
+\index{findConnEntry@{findConnEntry}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{findConnEntry()}{findConnEntry()}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_a5b7bbbc4d3fd131a9bfc5a665c2e83e2} 
+template$<$typename Conf $>$ \\
+\mbox{\hyperlink{structefvitcp_1_1_conn_hash_entry}{Conn\+Hash\+Entry}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::find\+Conn\+Entry (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classefvitcp_1_1_core_aaeb1431f601ed9a72812b9828b34c7c3}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!getns@{getns}}
+\index{getns@{getns}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{getns()}{getns()}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_aaeb1431f601ed9a72812b9828b34c7c3} 
+template$<$typename Conf $>$ \\
+int64\+\_\+t \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::getns (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classefvitcp_1_1_core_aca0acb54a0a08674dde852874c1c9853}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!getSendBuf@{getSendBuf}}
+\index{getSendBuf@{getSendBuf}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{getSendBuf()}{getSendBuf()}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_aca0acb54a0a08674dde852874c1c9853} 
+template$<$typename Conf $>$ \\
+\mbox{\hyperlink{structefvitcp_1_1_send_buf}{Send\+Buf}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::get\+Send\+Buf (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classefvitcp_1_1_core_ad4e22b7656e3346839de55108aed22df}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!getTblSize@{getTblSize}}
+\index{getTblSize@{getTblSize}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{getTblSize()}{getTblSize()}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_ad4e22b7656e3346839de55108aed22df} 
+template$<$typename Conf $>$ \\
+uint32\+\_\+t \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::get\+Tbl\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classefvitcp_1_1_core_aeb0d1b2d77fc92c1493b17b427558db1}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!init@{init}}
+\index{init@{init}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_aeb0d1b2d77fc92c1493b17b427558db1} 
+template$<$typename Conf $>$ \\
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::init (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{interface}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classefvitcp_1_1_core_a40d71470e3fc66e8a7152ff5d3de2beb}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!pollNet@{pollNet}}
+\index{pollNet@{pollNet}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{pollNet()}{pollNet()}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_a40d71470e3fc66e8a7152ff5d3de2beb} 
+template$<$typename Conf $>$ \\
+template$<$typename Recv\+Handler $>$ \\
+void \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::poll\+Net (\begin{DoxyParamCaption}\item[{Recv\+Handler}]{recv\+\_\+handler}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classefvitcp_1_1_core_aa22d519f166905f520e865e01d5b2b9c}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!pollTime@{pollTime}}
+\index{pollTime@{pollTime}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{pollTime()}{pollTime()}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_aa22d519f166905f520e865e01d5b2b9c} 
+template$<$typename Conf $>$ \\
+template$<$typename Timer\+Handler $>$ \\
+void \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::poll\+Time (\begin{DoxyParamCaption}\item[{Timer\+Handler}]{handler}{, }\item[{int64\+\_\+t}]{ns}{ = {\ttfamily 0}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classefvitcp_1_1_core_abceb96137b2943e95fcd5c6e68d1bf94}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!rspRst@{rspRst}}
+\index{rspRst@{rspRst}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{rspRst()}{rspRst()}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_abceb96137b2943e95fcd5c6e68d1bf94} 
+template$<$typename Conf $>$ \\
+void \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::rsp\+Rst (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structefvitcp_1_1_ether_header}{Ether\+Header}} \texorpdfstring{$\ast$}{*}}]{eth\+\_\+hdr}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classefvitcp_1_1_core_ae2c8f2a98ec4f3e4dfd474ac82522fb2}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!send@{send}}
+\index{send@{send}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_ae2c8f2a98ec4f3e4dfd474ac82522fb2} 
+template$<$typename Conf $>$ \\
+void \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::send (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structefvitcp_1_1_send_buf}{Send\+Buf}} \texorpdfstring{$\ast$}{*}}]{buf}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classefvitcp_1_1_core_acd0cd936705edeea95d2a070c18074a1}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!send\_warmup@{send\_warmup}}
+\index{send\_warmup@{send\_warmup}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{send\_warmup()}{send\_warmup()}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_acd0cd936705edeea95d2a070c18074a1} 
+template$<$typename Conf $>$ \\
+void \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::send\+\_\+warmup (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classefvitcp_1_1_core_afa171f6a8652003268d11f90489bb897}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!setClientFilter@{setClientFilter}}
+\index{setClientFilter@{setClientFilter}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{setClientFilter()}{setClientFilter()}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_afa171f6a8652003268d11f90489bb897} 
+template$<$typename Conf $>$ \\
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::set\+Client\+Filter (\begin{DoxyParamCaption}\item[{uint16\+\_\+t \&}]{local\+\_\+port\+\_\+be}{, }\item[{uint32\+\_\+t}]{remote\+\_\+ip}{, }\item[{uint16\+\_\+t}]{remote\+\_\+port\+\_\+be}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classefvitcp_1_1_core_ae0624833987ca753179cd39bcddf5989}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!setServerFilter@{setServerFilter}}
+\index{setServerFilter@{setServerFilter}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{setServerFilter()}{setServerFilter()}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_ae0624833987ca753179cd39bcddf5989} 
+template$<$typename Conf $>$ \\
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::set\+Server\+Filter (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{local\+\_\+port\+\_\+be}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classefvitcp_1_1_core_aa370e0702244c3a7d156e6cdf8bef459}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!sumRst@{sumRst}}
+\index{sumRst@{sumRst}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{sumRst()}{sumRst()}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_aa370e0702244c3a7d156e6cdf8bef459} 
+template$<$typename Conf $>$ \\
+void \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::sum\+Rst (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structefvitcp_1_1_send_buf}{Send\+Buf}} \texorpdfstring{$\ast$}{*}}]{rst}{, }\item[{bool}]{has\+\_\+ts}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classefvitcp_1_1_core_ac4590bfb386cb3d36202fb4e965f8fca}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!tryExpandConnTbl@{tryExpandConnTbl}}
+\index{tryExpandConnTbl@{tryExpandConnTbl}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{tryExpandConnTbl()}{tryExpandConnTbl()}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_ac4590bfb386cb3d36202fb4e965f8fca} 
+template$<$typename Conf $>$ \\
+void \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::try\+Expand\+Conn\+Tbl (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classefvitcp_1_1_core_a96c2bef190f39581c57c36d1bc4f2389}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!conn\_cnt@{conn\_cnt}}
+\index{conn\_cnt@{conn\_cnt}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{conn\_cnt}{conn\_cnt}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_a96c2bef190f39581c57c36d1bc4f2389} 
+template$<$typename Conf $>$ \\
+uint32\+\_\+t \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::conn\+\_\+cnt}
+
+\Hypertarget{classefvitcp_1_1_core_a97b59bb4e8e32671d07dd6f779ddcd86}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!conn\_tbl@{conn\_tbl}}
+\index{conn\_tbl@{conn\_tbl}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{conn\_tbl}{conn\_tbl}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_a97b59bb4e8e32671d07dd6f779ddcd86} 
+template$<$typename Conf $>$ \\
+\mbox{\hyperlink{structefvitcp_1_1_conn_hash_entry}{Conn\+Hash\+Entry}} \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::conn\+\_\+tbl\mbox{[}Total\+Table\+Size\mbox{]}}
+
+\Hypertarget{classefvitcp_1_1_core_a260e19a18d8ee492d4ed59057c078755}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!conns@{conns}}
+\index{conns@{conns}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{conns}{conns}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_a260e19a18d8ee492d4ed59057c078755} 
+template$<$typename Conf $>$ \\
+uint32\+\_\+t \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::conns\mbox{[}Conf\+::\+Max\+Conn\+Cnt\mbox{]}}
+
+\Hypertarget{classefvitcp_1_1_core_ada3212ff40b6ecc5f288def6f13c6094}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!dh@{dh}}
+\index{dh@{dh}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{dh}{dh}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_ada3212ff40b6ecc5f288def6f13c6094} 
+template$<$typename Conf $>$ \\
+ef\+\_\+driver\+\_\+handle \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::dh = -\/1}
+
+\Hypertarget{classefvitcp_1_1_core_ab56739cb700d3b9f26ecc2b60541e983}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!filter\_cookie@{filter\_cookie}}
+\index{filter\_cookie@{filter\_cookie}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{filter\_cookie}{filter\_cookie}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_ab56739cb700d3b9f26ecc2b60541e983} 
+template$<$typename Conf $>$ \\
+ef\+\_\+filter\+\_\+cookie \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::filter\+\_\+cookie = \{\}}
+
+\Hypertarget{classefvitcp_1_1_core_a1e0df66b480d860f563fda0dc5572633}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!local\_ip@{local\_ip}}
+\index{local\_ip@{local\_ip}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{local\_ip}{local\_ip}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_a1e0df66b480d860f563fda0dc5572633} 
+template$<$typename Conf $>$ \\
+uint32\+\_\+t \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::local\+\_\+ip}
+
+\Hypertarget{classefvitcp_1_1_core_abe24fd1b8584fd67e0fdd6ebc0cc78c0}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!local\_mac@{local\_mac}}
+\index{local\_mac@{local\_mac}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{local\_mac}{local\_mac}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_abe24fd1b8584fd67e0fdd6ebc0cc78c0} 
+template$<$typename Conf $>$ \\
+uint8\+\_\+t \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::local\+\_\+mac\mbox{[}6\mbox{]}}
+
+\Hypertarget{classefvitcp_1_1_core_af3d54870267b80f34055dc12795fd111}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!MaxSendMTU@{MaxSendMTU}}
+\index{MaxSendMTU@{MaxSendMTU}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{MaxSendMTU}{MaxSendMTU}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_af3d54870267b80f34055dc12795fd111} 
+template$<$typename Conf $>$ \\
+const uint32\+\_\+t \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::\+Max\+Send\+MTU = Send\+Buf\+Size -\/ (uint32\+\_\+t)(offsetof(\mbox{\hyperlink{structefvitcp_1_1_send_buf}{Send\+Buf}}, ip\+\_\+hdr))\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classefvitcp_1_1_core_a2212e659bbb7d2b19917b3cf5902edf3}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!MaxTableSize@{MaxTableSize}}
+\index{MaxTableSize@{MaxTableSize}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{MaxTableSize}{MaxTableSize}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_a2212e659bbb7d2b19917b3cf5902edf3} 
+template$<$typename Conf $>$ \\
+const uint32\+\_\+t \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::\+Max\+Table\+Size = 1 $<$$<$ (1 + get\+MSB(Conf\+::\+Max\+Conn\+Cnt + Conf\+::\+Max\+Time\+Wait\+Conn\+Cnt))\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classefvitcp_1_1_core_a5e6e0735a4f86b8aadd0231b32591418}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!memreg@{memreg}}
+\index{memreg@{memreg}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{memreg}{memreg}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_a5e6e0735a4f86b8aadd0231b32591418} 
+template$<$typename Conf $>$ \\
+ef\+\_\+memreg \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::memreg = \{\}}
+
+\Hypertarget{classefvitcp_1_1_core_a6ef1cffc12578a7628302ed13b24767f}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!now\_ts@{now\_ts}}
+\index{now\_ts@{now\_ts}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{now\_ts}{now\_ts}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_a6ef1cffc12578a7628302ed13b24767f} 
+template$<$typename Conf $>$ \\
+uint32\+\_\+t \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::now\+\_\+ts}
+
+\Hypertarget{classefvitcp_1_1_core_a796cef99ad8f49a058e51ae4a0798128}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!pd@{pd}}
+\index{pd@{pd}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{pd}{pd}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_a796cef99ad8f49a058e51ae4a0798128} 
+template$<$typename Conf $>$ \\
+ef\+\_\+pd \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::pd = \{\}}
+
+\Hypertarget{classefvitcp_1_1_core_a28982d5eff1186b0bac4c98499ca2c11}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!pkt\_buf@{pkt\_buf}}
+\index{pkt\_buf@{pkt\_buf}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{pkt\_buf}{pkt\_buf}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_a28982d5eff1186b0bac4c98499ca2c11} 
+template$<$typename Conf $>$ \\
+uint8\+\_\+t\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\mbox{\hyperlink{structpkt__buf}{\+::pkt\+\_\+buf}}}
+
+\Hypertarget{classefvitcp_1_1_core_a8bd1f26d752831e1c3ee0dd49bf3f1be}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!pkt\_buf\_blk@{pkt\_buf\_blk}}
+\index{pkt\_buf\_blk@{pkt\_buf\_blk}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{pkt\_buf\_blk}{pkt\_buf\_blk}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_a8bd1f26d752831e1c3ee0dd49bf3f1be} 
+template$<$typename Conf $>$ \\
+uint8\+\_\+t \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::pkt\+\_\+buf\+\_\+blk\mbox{[}Total\+Buf\+Size+Total\+Buf\+Align\mbox{]} = \{\}}
+
+\Hypertarget{classefvitcp_1_1_core_afdcf1f86ac2eb55cb5254efd193f3da2}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!receive\_prefix\_len@{receive\_prefix\_len}}
+\index{receive\_prefix\_len@{receive\_prefix\_len}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{receive\_prefix\_len}{receive\_prefix\_len}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_afdcf1f86ac2eb55cb5254efd193f3da2} 
+template$<$typename Conf $>$ \\
+uint32\+\_\+t \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::receive\+\_\+prefix\+\_\+len}
+
+\Hypertarget{classefvitcp_1_1_core_a251d65e6266eb256ef857920c03e4969}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!rst\_ipsum@{rst\_ipsum}}
+\index{rst\_ipsum@{rst\_ipsum}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{rst\_ipsum}{rst\_ipsum}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_a251d65e6266eb256ef857920c03e4969} 
+template$<$typename Conf $>$ \\
+\mbox{\hyperlink{structefvitcp_1_1_c_sum}{CSum}} \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::rst\+\_\+ipsum}
+
+\Hypertarget{classefvitcp_1_1_core_ac3ca6da2a97397e371a0f77be9b94c3b}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!rst\_tcpsum@{rst\_tcpsum}}
+\index{rst\_tcpsum@{rst\_tcpsum}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{rst\_tcpsum}{rst\_tcpsum}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_ac3ca6da2a97397e371a0f77be9b94c3b} 
+template$<$typename Conf $>$ \\
+\mbox{\hyperlink{structefvitcp_1_1_c_sum}{CSum}} \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::rst\+\_\+tcpsum}
+
+\Hypertarget{classefvitcp_1_1_core_a2b1e0a4c39926c7f86a7825809544cf8}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!SendBufCnt@{SendBufCnt}}
+\index{SendBufCnt@{SendBufCnt}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{SendBufCnt}{SendBufCnt}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_a2b1e0a4c39926c7f86a7825809544cf8} 
+template$<$typename Conf $>$ \\
+const uint64\+\_\+t \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::\+Send\+Buf\+Cnt = Conf\+::\+Conn\+Send\+Buf\+Cnt \texorpdfstring{$\ast$}{*} Conf\+::\+Max\+Conn\+Cnt + 1\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classefvitcp_1_1_core_af244c2e4c1064c23142704d0282af1a1}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!SendBufSize@{SendBufSize}}
+\index{SendBufSize@{SendBufSize}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{SendBufSize}{SendBufSize}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_af244c2e4c1064c23142704d0282af1a1} 
+template$<$typename Conf $>$ \\
+const uint32\+\_\+t \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::\+Send\+Buf\+Size = Conf\+::\+Send\+Buf1K ? 1024 \+: 2048\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classefvitcp_1_1_core_a81bdec360a7bef2f1a58f62904c763c9}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!SendMTU@{SendMTU}}
+\index{SendMTU@{SendMTU}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{SendMTU}{SendMTU}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_a81bdec360a7bef2f1a58f62904c763c9} 
+template$<$typename Conf $>$ \\
+const uint32\+\_\+t \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::\+Send\+MTU = Max\+Send\+MTU $<$ 1500 ? Max\+Send\+MTU \+: 1500\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classefvitcp_1_1_core_a9bce663af7a28a71789feaa5a11c2c1e}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!tbl\_mask@{tbl\_mask}}
+\index{tbl\_mask@{tbl\_mask}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{tbl\_mask}{tbl\_mask}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_a9bce663af7a28a71789feaa5a11c2c1e} 
+template$<$typename Conf $>$ \\
+uint64\+\_\+t \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::tbl\+\_\+mask}
+
+\Hypertarget{classefvitcp_1_1_core_a05067846debabab535315f5223083527}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!timer\_slots@{timer\_slots}}
+\index{timer\_slots@{timer\_slots}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{timer\_slots}{timer\_slots}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_a05067846debabab535315f5223083527} 
+template$<$typename Conf $>$ \\
+\mbox{\hyperlink{structefvitcp_1_1_timer_node}{Timer\+Node}} \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::timer\+\_\+slots\mbox{[}2\mbox{]}\mbox{[}Timer\+Slots\mbox{]}}
+
+\Hypertarget{classefvitcp_1_1_core_a0d83ff5c0f0b85c225ca89f5e940dc71}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!TotalBufAlign@{TotalBufAlign}}
+\index{TotalBufAlign@{TotalBufAlign}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{TotalBufAlign}{TotalBufAlign}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_a0d83ff5c0f0b85c225ca89f5e940dc71} 
+template$<$typename Conf $>$ \\
+const uint64\+\_\+t \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::\+Total\+Buf\+Align\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\ \ \ \ TotalBufSize\ <=\ 252444672}
+\DoxyCodeLine{\ \ \ \ \ \ ?\ (1\ <<\ 12)}
+\DoxyCodeLine{\ \ \ \ \ \ :\ (TotalBufSize\ <=\ 4039114752\ ?\ (1\ <<\ 16)\ :\ (TotalBufSize\ <=\ 64625836032\ ?\ (1\ <<\ 20)\ :\ (1\ <<\ 22)))}
+
+\end{DoxyCode}
+\Hypertarget{classefvitcp_1_1_core_a03bf24ca0ae27944fea87e9d486b42ba}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!TotalBufSize@{TotalBufSize}}
+\index{TotalBufSize@{TotalBufSize}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{TotalBufSize}{TotalBufSize}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_a03bf24ca0ae27944fea87e9d486b42ba} 
+template$<$typename Conf $>$ \\
+const uint64\+\_\+t \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::\+Total\+Buf\+Size = Recv\+Buf\+Size \texorpdfstring{$\ast$}{*} Conf\+::\+Recv\+Buf\+Cnt + Send\+Buf\+Size \texorpdfstring{$\ast$}{*} Send\+Buf\+Cnt\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classefvitcp_1_1_core_ab94e1179a1506d7ef800b393e4bc119a}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!TotalTableSize@{TotalTableSize}}
+\index{TotalTableSize@{TotalTableSize}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{TotalTableSize}{TotalTableSize}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_ab94e1179a1506d7ef800b393e4bc119a} 
+template$<$typename Conf $>$ \\
+const uint32\+\_\+t \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::\+Total\+Table\+Size = Max\+Table\+Size + Conf\+::\+Max\+Conn\+Cnt + Conf\+::\+Max\+Time\+Wait\+Conn\+Cnt\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classefvitcp_1_1_core_ac5d70f7635c4577b2106db914def0e07}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!tw\_cnt@{tw\_cnt}}
+\index{tw\_cnt@{tw\_cnt}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{tw\_cnt}{tw\_cnt}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_ac5d70f7635c4577b2106db914def0e07} 
+template$<$typename Conf $>$ \\
+uint32\+\_\+t \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::tw\+\_\+cnt}
+
+\Hypertarget{classefvitcp_1_1_core_a0e371879382cb1e488d74d440a5cd5d6}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!tw\_ids@{tw\_ids}}
+\index{tw\_ids@{tw\_ids}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{tw\_ids}{tw\_ids}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_a0e371879382cb1e488d74d440a5cd5d6} 
+template$<$typename Conf $>$ \\
+uint32\+\_\+t \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::tw\+\_\+ids\mbox{[}Conf\+::\+Max\+Time\+Wait\+Conn\+Cnt\mbox{]}}
+
+\Hypertarget{classefvitcp_1_1_core_a5dc28110ba08c75ab924d6efdadca577}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!tws@{tws}}
+\index{tws@{tws}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{tws}{tws}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_a5dc28110ba08c75ab924d6efdadca577} 
+template$<$typename Conf $>$ \\
+\mbox{\hyperlink{structefvitcp_1_1_time_wait_conn}{Time\+Wait\+Conn}} \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::tws\mbox{[}Conf\+::\+Max\+Time\+Wait\+Conn\+Cnt\mbox{]}}
+
+\Hypertarget{classefvitcp_1_1_core_a11f8b41367bf6492190c96b0c76a647c}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!use\_ctpio@{use\_ctpio}}
+\index{use\_ctpio@{use\_ctpio}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{use\_ctpio}{use\_ctpio}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_a11f8b41367bf6492190c96b0c76a647c} 
+template$<$typename Conf $>$ \\
+bool \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::use\+\_\+ctpio = false}
+
+\Hypertarget{classefvitcp_1_1_core_a2f7104673868bf06fa086171436f8f22}\index{efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}!vi@{vi}}
+\index{vi@{vi}!efvitcp::Core$<$ Conf $>$@{efvitcp::Core$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{vi}{vi}}
+{\footnotesize\ttfamily \label{classefvitcp_1_1_core_a2f7104673868bf06fa086171436f8f22} 
+template$<$typename Conf $>$ \\
+ef\+\_\+vi \mbox{\hyperlink{classefvitcp_1_1_core}{efvitcp\+::\+Core}}$<$ Conf $>$\+::vi = \{\}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sgaer/source/repos/katanafinancial/\+Occam\+CME4/\+Occam\+CME4/src/external/pollnet/efvitcp/Core.\+h\end{DoxyCompactItemize}

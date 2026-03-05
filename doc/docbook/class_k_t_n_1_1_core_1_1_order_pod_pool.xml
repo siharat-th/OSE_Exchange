@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_core_1_1_order_pod_pool" xml:lang="en-US">
+<title>KTN::Core::OrderPodPool Class Reference</title>
+<indexterm><primary>KTN::Core::OrderPodPool</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_k_t_n_1_1_core_1_1_order_pod_pool">OrderPodPool</link> class represents a pool of <link linkend="_struct_k_t_n_1_1_order_pod">OrderPod</link> objects. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;OrderPodPool.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_core_1_1_order_pod_pool_1ab8283836a90b26a0375e289e96559f10">OrderPodPool</link> (size_t pool_size)</para>
+
+<para>Constructs an <link linkend="_class_k_t_n_1_1_core_1_1_order_pod_pool">OrderPodPool</link> object with the specified pool size. </para>
+</listitem>
+            <listitem><para><link linkend="_class_k_t_n_1_1_core_1_1_order_pod_pool_1af0c415936a97dfd59b2134d66f2e2341">~OrderPodPool</link> ()</para>
+
+<para>Destroys the <link linkend="_class_k_t_n_1_1_core_1_1_order_pod_pool">OrderPodPool</link> object. </para>
+</listitem>
+            <listitem><para><link linkend="_struct_k_t_n_1_1_order_pod">OrderPod</link> * <link linkend="_class_k_t_n_1_1_core_1_1_order_pod_pool_1a58f4d2bd6aa53add3071ec13bed4a565">get</link> ()</para>
+
+<para>Retrieves an <link linkend="_struct_k_t_n_1_1_order_pod">OrderPod</link> object from the pool. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_core_1_1_order_pod_pool_1a62ec3e63c850d88a2b8bc21dc157d25d">put</link> (<link linkend="_struct_k_t_n_1_1_order_pod">OrderPod</link> *buffer)</para>
+
+<para>Puts an <link linkend="_struct_k_t_n_1_1_order_pod">OrderPod</link> object back into the pool. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_k_t_n_1_1_core_1_1_order_pod_pool">OrderPodPool</link> class represents a pool of <link linkend="_struct_k_t_n_1_1_order_pod">OrderPod</link> objects. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_order_pod_pool_1ab8283836a90b26a0375e289e96559f10"/><section>
+    <title>OrderPodPool()</title>
+<indexterm><primary>OrderPodPool</primary><secondary>KTN::Core::OrderPodPool</secondary></indexterm>
+<indexterm><primary>KTN::Core::OrderPodPool</primary><secondary>OrderPodPool</secondary></indexterm>
+<para><computeroutput>OrderPodPool::OrderPodPool (size_t pool_size)</computeroutput></para><para>
+
+<para>Constructs an <link linkend="_class_k_t_n_1_1_core_1_1_order_pod_pool">OrderPodPool</link> object with the specified pool size. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>pool_size</entry><entry>
+<para>The size of the pool. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_order_pod_pool_1af0c415936a97dfd59b2134d66f2e2341"/><section>
+    <title>~OrderPodPool()</title>
+<indexterm><primary>~OrderPodPool</primary><secondary>KTN::Core::OrderPodPool</secondary></indexterm>
+<indexterm><primary>KTN::Core::OrderPodPool</primary><secondary>~OrderPodPool</secondary></indexterm>
+<para><computeroutput>OrderPodPool::~OrderPodPool ( )</computeroutput></para><para>
+
+<para>Destroys the <link linkend="_class_k_t_n_1_1_core_1_1_order_pod_pool">OrderPodPool</link> object. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_order_pod_pool_1a58f4d2bd6aa53add3071ec13bed4a565"/><section>
+    <title>get()</title>
+<indexterm><primary>get</primary><secondary>KTN::Core::OrderPodPool</secondary></indexterm>
+<indexterm><primary>KTN::Core::OrderPodPool</primary><secondary>get</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_k_t_n_1_1_order_pod">OrderPod</link> * OrderPodPool::get ( )</computeroutput></para><para>
+
+<para>Retrieves an <link linkend="_struct_k_t_n_1_1_order_pod">OrderPod</link> object from the pool. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>A pointer to the retrieved <link linkend="_struct_k_t_n_1_1_order_pod">OrderPod</link> object, or nullptr if the pool is empty. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_order_pod_pool_1a62ec3e63c850d88a2b8bc21dc157d25d"/><section>
+    <title>put()</title>
+<indexterm><primary>put</primary><secondary>KTN::Core::OrderPodPool</secondary></indexterm>
+<indexterm><primary>KTN::Core::OrderPodPool</primary><secondary>put</secondary></indexterm>
+<para><computeroutput>bool OrderPodPool::put (<link linkend="_struct_k_t_n_1_1_order_pod">OrderPod</link> * buffer)</computeroutput></para><para>
+
+<para>Puts an <link linkend="_struct_k_t_n_1_1_order_pod">OrderPod</link> object back into the pool. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>buffer</entry><entry>
+<para>A pointer to the <link linkend="_struct_k_t_n_1_1_order_pod">OrderPod</link> object to be put back into the pool. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the <link linkend="_struct_k_t_n_1_1_order_pod">OrderPod</link> object was successfully put back into the pool, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Orders/OrderPodPool.hppOrders/OrderPodPool.cpp</section>
+</section>

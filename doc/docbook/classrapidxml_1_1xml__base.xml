@@ -1,0 +1,316 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classrapidxml_1_1xml__base" xml:lang="en-US">
+<title>rapidxml::xml_base&lt; Ch &gt; Class Template Reference</title>
+<indexterm><primary>rapidxml::xml_base&lt; Ch &gt;</primary></indexterm>
+<para>
+<computeroutput>#include &lt;rapidxml.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>Ch * <link linkend="_classrapidxml_1_1xml__base_1a72e6615cd5b3133ab6c8df72c2fdcd20">name</link> () const</para>
+</listitem>
+            <listitem><para>std::size_t <link linkend="_classrapidxml_1_1xml__base_1a20c8ffbe0c7a0b4231681ab8b99330a4">name_size</link> () const</para>
+</listitem>
+            <listitem><para>Ch * <link linkend="_classrapidxml_1_1xml__base_1af3a3d4534f4c88f151e0f063aef1c6de">value</link> () const</para>
+</listitem>
+            <listitem><para>std::size_t <link linkend="_classrapidxml_1_1xml__base_1a2eb123d471b1567fa4832b6ee2b75493">value_size</link> () const</para>
+</listitem>
+            <listitem><para>void <link linkend="_classrapidxml_1_1xml__base_1ae55060ae958c6e6465d6c8db852ec6ce">name</link> (const Ch *name, std::size_t size)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classrapidxml_1_1xml__base_1a4611ddc82ac83a527c65606600eb2a0d">name</link> (const Ch *name)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classrapidxml_1_1xml__base_1a3b183c2db7022a6d30494dd2f0ac11e9">value</link> (const Ch *value, std::size_t size)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classrapidxml_1_1xml__base_1a81e63ec4bfd2d7ef0a6c2ed49be6e623">value</link> (const Ch *value)</para>
+</listitem>
+            <listitem><para><link linkend="_classrapidxml_1_1xml__node">xml_node</link>&lt; Ch &gt; * <link linkend="_classrapidxml_1_1xml__base_1ad4b15506bec856966318905d5e854a14">parent</link> () const</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static Ch * <link linkend="_classrapidxml_1_1xml__base_1acfb4a8438a4334c9fc16b70533720f22">nullstr</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para>Ch * <link linkend="_classrapidxml_1_1xml__base_1afd9851ed43e14619db0d7075ef8e9e8a">m_name</link></para>
+</listitem>
+            <listitem><para>Ch * <link linkend="_classrapidxml_1_1xml__base_1a278a1ea63b0b70219b946cec47fa00ea">m_value</link></para>
+</listitem>
+            <listitem><para>std::size_t <link linkend="_classrapidxml_1_1xml__base_1a5a8c76a7274b4180213796422c4df76f">m_name_size</link></para>
+</listitem>
+            <listitem><para>std::size_t <link linkend="_classrapidxml_1_1xml__base_1aa3a49d8ceddb8a8d7edb773a2226b89c">m_value_size</link></para>
+</listitem>
+            <listitem><para><link linkend="_classrapidxml_1_1xml__node">xml_node</link>&lt; Ch &gt; * <link linkend="_classrapidxml_1_1xml__base_1a90d5f660f078f66563fd7b2d8387ccb0">m_parent</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;class Ch = char&gt;<?linebreak?>class rapidxml::xml_base&lt; Ch &gt;</title></simplesect>
+
+<para>Base class for <link linkend="_classrapidxml_1_1xml__node">xml_node</link> and <link linkend="_classrapidxml_1_1xml__attribute">xml_attribute</link> implementing common functions: <link linkend="_classrapidxml_1_1xml__base_1a72e6615cd5b3133ab6c8df72c2fdcd20">name()</link>, <link linkend="_classrapidxml_1_1xml__base_1a20c8ffbe0c7a0b4231681ab8b99330a4">name_size()</link>, <link linkend="_classrapidxml_1_1xml__base_1af3a3d4534f4c88f151e0f063aef1c6de">value()</link>, <link linkend="_classrapidxml_1_1xml__base_1a2eb123d471b1567fa4832b6ee2b75493">value_size()</link> and <link linkend="_classrapidxml_1_1xml__base_1ad4b15506bec856966318905d5e854a14">parent()</link>. 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Ch</entry><entry>
+<para>Character type to use </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classrapidxml_1_1xml__base_1a23e7f7aac02d17a0a01afb597e4b966b"/><section>
+    <title>xml_base()</title>
+<indexterm><primary>xml_base</primary><secondary>rapidxml::xml_base&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::xml_base&lt; Ch &gt;</primary><secondary>xml_base</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput><link linkend="_classrapidxml_1_1xml__base">rapidxml::xml_base</link>&lt; Ch &gt;::xml_base ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classrapidxml_1_1xml__base_1a72e6615cd5b3133ab6c8df72c2fdcd20"/><section>
+    <title>name()<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>name</primary><secondary>rapidxml::xml_base&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::xml_base&lt; Ch &gt;</primary><secondary>name</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput>Ch * <link linkend="_classrapidxml_1_1xml__base">rapidxml::xml_base</link>&lt; Ch &gt;::name ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Gets name of the node. Interpretation of name depends on type of node. Note that name will not be zero-terminated if rapidxml::parse_no_string_terminators option was selected during parse. <?linebreak?><?linebreak?> Use <link linkend="_classrapidxml_1_1xml__base_1a20c8ffbe0c7a0b4231681ab8b99330a4">name_size()</link> function to determine length of the name. <formalpara><title>Returns</title>
+
+<para>Name of node, or empty string if node has no name. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00454">rapidxml::memory_pool&lt; Ch &gt;::allocate_attribute()</link>, <link linkend="_l00422">rapidxml::memory_pool&lt; Ch &gt;::allocate_node()</link>, <link linkend="_l00504">rapidxml::memory_pool&lt; Ch &gt;::clone_node()</link>, <link linkend="_l00737">rapidxml::xml_base&lt; Ch &gt;::name()</link>, and <link linkend="_l00728">rapidxml::xml_base&lt; Ch &gt;::name()</link>.</para>
+</section>
+<anchor xml:id="_classrapidxml_1_1xml__base_1a4611ddc82ac83a527c65606600eb2a0d"/><section>
+    <title>name()<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>name</primary><secondary>rapidxml::xml_base&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::xml_base&lt; Ch &gt;</primary><secondary>name</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput>void <link linkend="_classrapidxml_1_1xml__base">rapidxml::xml_base</link>&lt; Ch &gt;::name (const Ch * name)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Sets name of node to a zero-terminated string. See also ownership_of_strings and xml_node::name(const Ch *, std::size_t). 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>name</entry><entry>
+<para>Name of node to set. Must be zero terminated. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00680">rapidxml::xml_base&lt; Ch &gt;::name()</link>.</para>
+</section>
+<anchor xml:id="_classrapidxml_1_1xml__base_1ae55060ae958c6e6465d6c8db852ec6ce"/><section>
+    <title>name()<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>name</primary><secondary>rapidxml::xml_base&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::xml_base&lt; Ch &gt;</primary><secondary>name</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput>void <link linkend="_classrapidxml_1_1xml__base">rapidxml::xml_base</link>&lt; Ch &gt;::name (const Ch * name, std::size_t size)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Sets name of node to a non zero-terminated string. See ownership_of_strings. <?linebreak?><?linebreak?> Note that node does not own its name or value, it only stores a pointer to it. It will not delete or otherwise free the pointer on destruction. It is reponsibility of the user to properly manage lifetime of the string. The easiest way to achieve it is to use <link linkend="_classrapidxml_1_1memory__pool">memory_pool</link> of the document to allocate the string - on destruction of the document the string will be automatically freed. <?linebreak?><?linebreak?> Size of name must be specified separately, because name does not have to be zero terminated. Use <link linkend="_classrapidxml_1_1xml__base_1a4611ddc82ac83a527c65606600eb2a0d">name(const Ch *)</link> function to have the length automatically calculated (string must be zero terminated). 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>name</entry><entry>
+<para>Name of node to set. Does not have to be zero terminated. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>size</entry><entry>
+<para>Size of name, in characters. This does not include zero terminator, if one is present. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00680">rapidxml::xml_base&lt; Ch &gt;::name()</link>.</para>
+</section>
+<anchor xml:id="_classrapidxml_1_1xml__base_1a20c8ffbe0c7a0b4231681ab8b99330a4"/><section>
+    <title>name_size()</title>
+<indexterm><primary>name_size</primary><secondary>rapidxml::xml_base&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::xml_base&lt; Ch &gt;</primary><secondary>name_size</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput>std::size_t <link linkend="_classrapidxml_1_1xml__base">rapidxml::xml_base</link>&lt; Ch &gt;::name_size ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Gets size of node name, not including terminator character. This function works correctly irrespective of whether name is or is not zero terminated. <formalpara><title>Returns</title>
+
+<para>Size of node name, in characters. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00504">rapidxml::memory_pool&lt; Ch &gt;::clone_node()</link>.</para>
+</section>
+<anchor xml:id="_classrapidxml_1_1xml__base_1acfb4a8438a4334c9fc16b70533720f22"/><section>
+    <title>nullstr()</title>
+<indexterm><primary>nullstr</primary><secondary>rapidxml::xml_base&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::xml_base&lt; Ch &gt;</primary><secondary>nullstr</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput>static Ch * <link linkend="_classrapidxml_1_1xml__base">rapidxml::xml_base</link>&lt; Ch &gt;::nullstr ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classrapidxml_1_1xml__base_1ad4b15506bec856966318905d5e854a14"/><section>
+    <title>parent()</title>
+<indexterm><primary>parent</primary><secondary>rapidxml::xml_base&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::xml_base&lt; Ch &gt;</primary><secondary>parent</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput><link linkend="_classrapidxml_1_1xml__node">xml_node</link>&lt; Ch &gt; * <link linkend="_classrapidxml_1_1xml__base">rapidxml::xml_base</link>&lt; Ch &gt;::parent ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Gets node parent. <formalpara><title>Returns</title>
+
+<para>Pointer to parent node, or 0 if there is no parent. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l01224">rapidxml::xml_node&lt; Ch &gt;::append_attribute()</link>, <link linkend="_l01104">rapidxml::xml_node&lt; Ch &gt;::append_node()</link>, <link linkend="_l00930">rapidxml::xml_node&lt; Ch &gt;::document()</link>, <link linkend="_l01246">rapidxml::xml_node&lt; Ch &gt;::insert_attribute()</link>, <link linkend="_l01126">rapidxml::xml_node&lt; Ch &gt;::insert_node()</link>, <link linkend="_l01204">rapidxml::xml_node&lt; Ch &gt;::prepend_attribute()</link>, <link linkend="_l01083">rapidxml::xml_node&lt; Ch &gt;::prepend_node()</link>, <link linkend="_l01300">rapidxml::xml_node&lt; Ch &gt;::remove_attribute()</link>, and <link linkend="_l01178">rapidxml::xml_node&lt; Ch &gt;::remove_node()</link>.</para>
+</section>
+<anchor xml:id="_classrapidxml_1_1xml__base_1af3a3d4534f4c88f151e0f063aef1c6de"/><section>
+    <title>value()<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>value</primary><secondary>rapidxml::xml_base&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::xml_base&lt; Ch &gt;</primary><secondary>value</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput>Ch * <link linkend="_classrapidxml_1_1xml__base">rapidxml::xml_base</link>&lt; Ch &gt;::value ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Gets value of node. Interpretation of value depends on type of node. Note that value will not be zero-terminated if rapidxml::parse_no_string_terminators option was selected during parse. <?linebreak?><?linebreak?> Use <link linkend="_classrapidxml_1_1xml__base_1a2eb123d471b1567fa4832b6ee2b75493">value_size()</link> function to determine length of the value. <formalpara><title>Returns</title>
+
+<para>Value of node, or empty string if node has no value. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00454">rapidxml::memory_pool&lt; Ch &gt;::allocate_attribute()</link>, <link linkend="_l00422">rapidxml::memory_pool&lt; Ch &gt;::allocate_node()</link>, <link linkend="_l00504">rapidxml::memory_pool&lt; Ch &gt;::clone_node()</link>, <link linkend="_l00767">rapidxml::xml_base&lt; Ch &gt;::value()</link>, and <link linkend="_l00758">rapidxml::xml_base&lt; Ch &gt;::value()</link>.</para>
+</section>
+<anchor xml:id="_classrapidxml_1_1xml__base_1a81e63ec4bfd2d7ef0a6c2ed49be6e623"/><section>
+    <title>value()<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>value</primary><secondary>rapidxml::xml_base&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::xml_base&lt; Ch &gt;</primary><secondary>value</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput>void <link linkend="_classrapidxml_1_1xml__base">rapidxml::xml_base</link>&lt; Ch &gt;::value (const Ch * value)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Sets value of node to a zero-terminated string. See also ownership_of_strings and xml_node::value(const Ch *, std::size_t). 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>value</entry><entry>
+<para>Vame of node to set. Must be zero terminated. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00699">rapidxml::xml_base&lt; Ch &gt;::value()</link>.</para>
+</section>
+<anchor xml:id="_classrapidxml_1_1xml__base_1a3b183c2db7022a6d30494dd2f0ac11e9"/><section>
+    <title>value()<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>value</primary><secondary>rapidxml::xml_base&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::xml_base&lt; Ch &gt;</primary><secondary>value</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput>void <link linkend="_classrapidxml_1_1xml__base">rapidxml::xml_base</link>&lt; Ch &gt;::value (const Ch * value, std::size_t size)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Sets value of node to a non zero-terminated string. See ownership_of_strings. <?linebreak?><?linebreak?> Note that node does not own its name or value, it only stores a pointer to it. It will not delete or otherwise free the pointer on destruction. It is reponsibility of the user to properly manage lifetime of the string. The easiest way to achieve it is to use <link linkend="_classrapidxml_1_1memory__pool">memory_pool</link> of the document to allocate the string - on destruction of the document the string will be automatically freed. <?linebreak?><?linebreak?> Size of value must be specified separately, because it does not have to be zero terminated. Use <link linkend="_classrapidxml_1_1xml__base_1a81e63ec4bfd2d7ef0a6c2ed49be6e623">value(const Ch *)</link> function to have the length automatically calculated (string must be zero terminated). <?linebreak?><?linebreak?> If an element has a child node of type node_data, it will take precedence over element value when printing. If you want to manipulate data of elements using values, use parser flag rapidxml::parse_no_data_nodes to prevent creation of data nodes by the parser. 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>value</entry><entry>
+<para>value of node to set. Does not have to be zero terminated. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>size</entry><entry>
+<para>Size of value, in characters. This does not include zero terminator, if one is present. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00699">rapidxml::xml_base&lt; Ch &gt;::value()</link>.</para>
+</section>
+<anchor xml:id="_classrapidxml_1_1xml__base_1a2eb123d471b1567fa4832b6ee2b75493"/><section>
+    <title>value_size()</title>
+<indexterm><primary>value_size</primary><secondary>rapidxml::xml_base&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::xml_base&lt; Ch &gt;</primary><secondary>value_size</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput>std::size_t <link linkend="_classrapidxml_1_1xml__base">rapidxml::xml_base</link>&lt; Ch &gt;::value_size ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Gets size of node value, not including terminator character. This function works correctly irrespective of whether value is or is not zero terminated. <formalpara><title>Returns</title>
+
+<para>Size of node value, in characters. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00504">rapidxml::memory_pool&lt; Ch &gt;::clone_node()</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classrapidxml_1_1xml__base_1afd9851ed43e14619db0d7075ef8e9e8a"/><section>
+    <title>m_name</title>
+<indexterm><primary>m_name</primary><secondary>rapidxml::xml_base&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::xml_base&lt; Ch &gt;</primary><secondary>m_name</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput>Ch* <link linkend="_classrapidxml_1_1xml__base">rapidxml::xml_base</link>&lt; Ch &gt;::m_name<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classrapidxml_1_1xml__base_1a5a8c76a7274b4180213796422c4df76f"/><section>
+    <title>m_name_size</title>
+<indexterm><primary>m_name_size</primary><secondary>rapidxml::xml_base&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::xml_base&lt; Ch &gt;</primary><secondary>m_name_size</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput>std::size_t <link linkend="_classrapidxml_1_1xml__base">rapidxml::xml_base</link>&lt; Ch &gt;::m_name_size<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classrapidxml_1_1xml__base_1a90d5f660f078f66563fd7b2d8387ccb0"/><section>
+    <title>m_parent</title>
+<indexterm><primary>m_parent</primary><secondary>rapidxml::xml_base&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::xml_base&lt; Ch &gt;</primary><secondary>m_parent</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput><link linkend="_classrapidxml_1_1xml__node">xml_node</link>&lt;Ch&gt;* <link linkend="_classrapidxml_1_1xml__base">rapidxml::xml_base</link>&lt; Ch &gt;::m_parent<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classrapidxml_1_1xml__base_1a278a1ea63b0b70219b946cec47fa00ea"/><section>
+    <title>m_value</title>
+<indexterm><primary>m_value</primary><secondary>rapidxml::xml_base&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::xml_base&lt; Ch &gt;</primary><secondary>m_value</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput>Ch* <link linkend="_classrapidxml_1_1xml__base">rapidxml::xml_base</link>&lt; Ch &gt;::m_value<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classrapidxml_1_1xml__base_1aa3a49d8ceddb8a8d7edb773a2226b89c"/><section>
+    <title>m_value_size</title>
+<indexterm><primary>m_value_size</primary><secondary>rapidxml::xml_base&lt; Ch &gt;</secondary></indexterm>
+<indexterm><primary>rapidxml::xml_base&lt; Ch &gt;</primary><secondary>m_value_size</secondary></indexterm>
+<computeroutput>template&lt;class Ch  = char&gt; </computeroutput><para><computeroutput>std::size_t <link linkend="_classrapidxml_1_1xml__base">rapidxml::xml_base</link>&lt; Ch &gt;::m_value_size<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/external/rapidxml/rapidxml.hpp</section>
+</section>

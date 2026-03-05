@@ -1,0 +1,77 @@
+\doxysection{KTN\+::TCP\+::Udp\+Socket Class Reference}
+\hypertarget{class_k_t_n_1_1_t_c_p_1_1_udp_socket}{}\label{class_k_t_n_1_1_t_c_p_1_1_udp_socket}\index{KTN::TCP::UdpSocket@{KTN::TCP::UdpSocket}}
+
+
+The \doxylink{class_k_t_n_1_1_t_c_p_1_1_udp_socket}{Udp\+Socket} class represents a UDP socket.  
+
+
+
+
+{\ttfamily \#include $<$Udp\+Socket.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_udp_socket_acd386cff2c60fcd786883c8cfa117df8}{Udp\+Socket}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_k_t_n_1_1_t_c_p_1_1_udp_socket}{Udp\+Socket} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_udp_socket_a802344296971400348894126257cf13c}{\texorpdfstring{$\sim$}{\string~}\+Udp\+Socket}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{class_k_t_n_1_1_t_c_p_1_1_udp_socket}{Udp\+Socket} object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_udp_socket_a1d8719576653635edb2649de77c9bc9d}{Create\+Socket}} (\mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_service_descriptor}{Service\+Descriptor}} feed)
+\begin{DoxyCompactList}\small\item\em Creates a UDP socket. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_k_t_n_1_1_t_c_p_1_1_udp_socket}{Udp\+Socket} class represents a UDP socket. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_udp_socket_acd386cff2c60fcd786883c8cfa117df8}\index{KTN::TCP::UdpSocket@{KTN::TCP::UdpSocket}!UdpSocket@{UdpSocket}}
+\index{UdpSocket@{UdpSocket}!KTN::TCP::UdpSocket@{KTN::TCP::UdpSocket}}
+\doxysubsubsection{\texorpdfstring{UdpSocket()}{UdpSocket()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_udp_socket_acd386cff2c60fcd786883c8cfa117df8} 
+Udp\+Socket\+::\+Udp\+Socket (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_k_t_n_1_1_t_c_p_1_1_udp_socket}{Udp\+Socket} object. 
+
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_udp_socket_a802344296971400348894126257cf13c}\index{KTN::TCP::UdpSocket@{KTN::TCP::UdpSocket}!````~UdpSocket@{\texorpdfstring{$\sim$}{\string~}UdpSocket}}
+\index{````~UdpSocket@{\texorpdfstring{$\sim$}{\string~}UdpSocket}!KTN::TCP::UdpSocket@{KTN::TCP::UdpSocket}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}UdpSocket()}{\string~UdpSocket()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_udp_socket_a802344296971400348894126257cf13c} 
+Udp\+Socket\+::\texorpdfstring{$\sim$}{\string~}\+Udp\+Socket (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destroys the \doxylink{class_k_t_n_1_1_t_c_p_1_1_udp_socket}{Udp\+Socket} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_t_c_p_1_1_udp_socket_a1d8719576653635edb2649de77c9bc9d}\index{KTN::TCP::UdpSocket@{KTN::TCP::UdpSocket}!CreateSocket@{CreateSocket}}
+\index{CreateSocket@{CreateSocket}!KTN::TCP::UdpSocket@{KTN::TCP::UdpSocket}}
+\doxysubsubsection{\texorpdfstring{CreateSocket()}{CreateSocket()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_t_c_p_1_1_udp_socket_a1d8719576653635edb2649de77c9bc9d} 
+int Udp\+Socket\+::\+Create\+Socket (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_k_t_n_1_1_t_c_p_1_1_service_descriptor}{Service\+Descriptor}}}]{feed}{}\end{DoxyParamCaption})}
+
+
+
+Creates a UDP socket. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em feed} & The service descriptor for the socket. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The socket file descriptor. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00072}{KTN\+::\+TCP\+::\+Service\+Descriptor\+::address}}, and \mbox{\hyperlink{l00076}{KTN\+::\+TCP\+::\+Service\+Descriptor\+::localinterface}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Net/Udp\+Socket.\+hpp\item 
+Net/Udp\+Socket.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,288 @@
+\doxysection{efvi\+\_\+tcp\+\_\+client\+\_\+state Struct Reference}
+\hypertarget{structefvi__tcp__client__state}{}\label{structefvi__tcp__client__state}\index{efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned \mbox{\hyperlink{structefvi__tcp__client__state_a945d9df8cb71aac6bcdc25604c856b30}{alarm\+\_\+usec}}
+\item 
+bool \mbox{\hyperlink{structefvi__tcp__client__state_a3911f9db71cbf86ed116187b8cc136a9}{alarm}}
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structefvi__tcp__client__state_a1be02096d51b4ac5afff91200826b953}{msg\+\_\+buf}}
+\item 
+int \mbox{\hyperlink{structefvi__tcp__client__state_a68c340559737399d40708525af4d565c}{msg\+\_\+len}}
+\item 
+unsigned \mbox{\hyperlink{structefvi__tcp__client__state_a8f978a9b31d9e4a39756e0b59e0db50d}{tx\+\_\+offset}}
+\item 
+int \mbox{\hyperlink{structefvi__tcp__client__state_a6f205108615197207a9fc05f0dee7d6c}{pio\+\_\+pkt\+\_\+len}}
+\item 
+volatile bool \mbox{\hyperlink{structefvi__tcp__client__state_a2175fcc71c5c0a15cfa2cde73766c829}{pio\+\_\+in\+\_\+use}}
+\item 
+volatile bool \mbox{\hyperlink{structefvi__tcp__client__state_a6c3b1582661c8b7213773c8d4f4a666c}{send\+\_\+is\+\_\+delegated}}
+\item 
+volatile bool \mbox{\hyperlink{structefvi__tcp__client__state_a68f9328359cebbd78148f9d7a36b46cd}{tas\+\_\+loaded}}
+\item 
+volatile bool \mbox{\hyperlink{structefvi__tcp__client__state_ab10ec6e9a8f8fe795ea37039eb0bcd0c}{use\+\_\+ctpio}}
+\item 
+struct onload\+\_\+delegated\+\_\+send \mbox{\hyperlink{structefvi__tcp__client__state_a38aa7f01de3bda108a0cf71385d3ffed}{ods}}
+\item 
+struct \mbox{\hyperlink{structpkt__buf}{pkt\+\_\+buf}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structefvi__tcp__client__state_a9a55409444546d1ac22ab9bfc9eb1470}{pkt\+\_\+bufs}} \mbox{[}N\+\_\+\+TX\+\_\+\+BUFS\mbox{]}
+\item 
+char \mbox{\hyperlink{structefvi__tcp__client__state_a8bd5bc3d111d296604740c4002f343da}{recv\+\_\+buf}} \mbox{[}MTU\mbox{]}
+\item 
+unsigned \mbox{\hyperlink{structefvi__tcp__client__state_a6a0ddb242a414a16f3081966b001977f}{n\+\_\+normal\+\_\+sends}}
+\item 
+unsigned \mbox{\hyperlink{structefvi__tcp__client__state_ad4bb9a3a964231695526fc80ef3551f8}{n\+\_\+delegated\+\_\+sends}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{structefvi__tcp__client__state_a9c41f4e9613af3d6e3e0e1b1262e452e}{n\+\_\+warmup\+\_\+sends}}
+\item 
+int \mbox{\hyperlink{structefvi__tcp__client__state_a07c78ab941983e00afc6d1be2c12d403}{rx\+\_\+prefix\+\_\+len}}
+\item 
+int \mbox{\hyperlink{structefvi__tcp__client__state_a912109776f3af15f132e7b6845b4bce6}{pktlen\+\_\+offset}}
+\item 
+int \mbox{\hyperlink{structefvi__tcp__client__state_a074b3ba3d5b3ebcc6a805947bae7fc70}{tx\+\_\+frame\+\_\+len}}
+\item 
+int \mbox{\hyperlink{structefvi__tcp__client__state_a17721e1a46e9bfdfd65b2bdfee4c3e7f}{last\+\_\+offset}}
+\item 
+int \mbox{\hyperlink{structefvi__tcp__client__state_ab4129b3cd3172dba93b9aa8b185305c9}{last\+\_\+dma\+\_\+req\+\_\+id}}
+\item 
+int \mbox{\hyperlink{structefvi__tcp__client__state_a2fd406b7bf4f8f4caaf6bf346887c524}{first\+\_\+tx\+\_\+buf}}
+\item 
+unsigned \mbox{\hyperlink{structefvi__tcp__client__state_a92d2766da455d4074bd7cb162a0c2741}{completed}}
+\item 
+unsigned \mbox{\hyperlink{structefvi__tcp__client__state_afffe250202043e592c5422247af835c3}{ctpio\+\_\+ok}}
+\item 
+unsigned \mbox{\hyperlink{structefvi__tcp__client__state_a08b6fbbee74f9b00bbcf134327c0bdc4}{ctpio\+\_\+ok\+\_\+total}}
+\item 
+int \mbox{\hyperlink{structefvi__tcp__client__state_ad2afe5bfe5179dfc73a6ac574a9fdba2}{n\+\_\+ctpio\+\_\+sends}}
+\item 
+struct iovec \mbox{\hyperlink{structefvi__tcp__client__state_aafebc8d31b9140ae089efaa38cded409}{iov}}
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structefvi__tcp__client__state_ad4eb1bc161737aea6dbb0c70738fd0fc}{tx\+\_\+buf}}
+\item 
+int \mbox{\hyperlink{structefvi__tcp__client__state_ad8e3db998ea951083b3f0f1fc023870b}{tx\+\_\+len}}
+\item 
+ef\+\_\+addr \mbox{\hyperlink{structefvi__tcp__client__state_af3faade60e00d370b5510073eddb1e02}{tx\+\_\+dma\+\_\+addr}}
+\item 
+uint8\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structefvi__tcp__client__state_a0170b29ed6f6ad75760ecd7dae9c8f3d}{bufs}}
+\item 
+unsigned \mbox{\hyperlink{structefvi__tcp__client__state_aaa5234b3bf3e2a9d7f9e73153467b998}{num\+\_\+bufs}}
+\item 
+bool \mbox{\hyperlink{structefvi__tcp__client__state_a6a7c06f2ed5dcf62d44d37d4d89fc59b}{cfg\+\_\+ctpio\+\_\+no\+\_\+poison}} = 0
+\item 
+unsigned \mbox{\hyperlink{structefvi__tcp__client__state_aa7c5a1907c469ccdcadb8e838c039131}{cfg\+\_\+ctpio\+\_\+thresh}} = 64
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structefvi__tcp__client__state_a3911f9db71cbf86ed116187b8cc136a9}\index{efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}!alarm@{alarm}}
+\index{alarm@{alarm}!efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}}
+\doxysubsubsection{\texorpdfstring{alarm}{alarm}}
+{\footnotesize\ttfamily \label{structefvi__tcp__client__state_a3911f9db71cbf86ed116187b8cc136a9} 
+bool efvi\+\_\+tcp\+\_\+client\+\_\+state\+::alarm}
+
+\Hypertarget{structefvi__tcp__client__state_a945d9df8cb71aac6bcdc25604c856b30}\index{efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}!alarm\_usec@{alarm\_usec}}
+\index{alarm\_usec@{alarm\_usec}!efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}}
+\doxysubsubsection{\texorpdfstring{alarm\_usec}{alarm\_usec}}
+{\footnotesize\ttfamily \label{structefvi__tcp__client__state_a945d9df8cb71aac6bcdc25604c856b30} 
+unsigned efvi\+\_\+tcp\+\_\+client\+\_\+state\+::alarm\+\_\+usec}
+
+\Hypertarget{structefvi__tcp__client__state_a0170b29ed6f6ad75760ecd7dae9c8f3d}\index{efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}!bufs@{bufs}}
+\index{bufs@{bufs}!efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}}
+\doxysubsubsection{\texorpdfstring{bufs}{bufs}}
+{\footnotesize\ttfamily \label{structefvi__tcp__client__state_a0170b29ed6f6ad75760ecd7dae9c8f3d} 
+uint8\+\_\+t\texorpdfstring{$\ast$}{*} efvi\+\_\+tcp\+\_\+client\+\_\+state\+::bufs}
+
+\Hypertarget{structefvi__tcp__client__state_a6a7c06f2ed5dcf62d44d37d4d89fc59b}\index{efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}!cfg\_ctpio\_no\_poison@{cfg\_ctpio\_no\_poison}}
+\index{cfg\_ctpio\_no\_poison@{cfg\_ctpio\_no\_poison}!efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}}
+\doxysubsubsection{\texorpdfstring{cfg\_ctpio\_no\_poison}{cfg\_ctpio\_no\_poison}}
+{\footnotesize\ttfamily \label{structefvi__tcp__client__state_a6a7c06f2ed5dcf62d44d37d4d89fc59b} 
+bool efvi\+\_\+tcp\+\_\+client\+\_\+state\+::cfg\+\_\+ctpio\+\_\+no\+\_\+poison = 0}
+
+\Hypertarget{structefvi__tcp__client__state_aa7c5a1907c469ccdcadb8e838c039131}\index{efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}!cfg\_ctpio\_thresh@{cfg\_ctpio\_thresh}}
+\index{cfg\_ctpio\_thresh@{cfg\_ctpio\_thresh}!efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}}
+\doxysubsubsection{\texorpdfstring{cfg\_ctpio\_thresh}{cfg\_ctpio\_thresh}}
+{\footnotesize\ttfamily \label{structefvi__tcp__client__state_aa7c5a1907c469ccdcadb8e838c039131} 
+unsigned efvi\+\_\+tcp\+\_\+client\+\_\+state\+::cfg\+\_\+ctpio\+\_\+thresh = 64}
+
+\Hypertarget{structefvi__tcp__client__state_a92d2766da455d4074bd7cb162a0c2741}\index{efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}!completed@{completed}}
+\index{completed@{completed}!efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}}
+\doxysubsubsection{\texorpdfstring{completed}{completed}}
+{\footnotesize\ttfamily \label{structefvi__tcp__client__state_a92d2766da455d4074bd7cb162a0c2741} 
+unsigned efvi\+\_\+tcp\+\_\+client\+\_\+state\+::completed}
+
+\Hypertarget{structefvi__tcp__client__state_afffe250202043e592c5422247af835c3}\index{efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}!ctpio\_ok@{ctpio\_ok}}
+\index{ctpio\_ok@{ctpio\_ok}!efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}}
+\doxysubsubsection{\texorpdfstring{ctpio\_ok}{ctpio\_ok}}
+{\footnotesize\ttfamily \label{structefvi__tcp__client__state_afffe250202043e592c5422247af835c3} 
+unsigned efvi\+\_\+tcp\+\_\+client\+\_\+state\+::ctpio\+\_\+ok}
+
+\Hypertarget{structefvi__tcp__client__state_a08b6fbbee74f9b00bbcf134327c0bdc4}\index{efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}!ctpio\_ok\_total@{ctpio\_ok\_total}}
+\index{ctpio\_ok\_total@{ctpio\_ok\_total}!efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}}
+\doxysubsubsection{\texorpdfstring{ctpio\_ok\_total}{ctpio\_ok\_total}}
+{\footnotesize\ttfamily \label{structefvi__tcp__client__state_a08b6fbbee74f9b00bbcf134327c0bdc4} 
+unsigned efvi\+\_\+tcp\+\_\+client\+\_\+state\+::ctpio\+\_\+ok\+\_\+total}
+
+\Hypertarget{structefvi__tcp__client__state_a2fd406b7bf4f8f4caaf6bf346887c524}\index{efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}!first\_tx\_buf@{first\_tx\_buf}}
+\index{first\_tx\_buf@{first\_tx\_buf}!efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}}
+\doxysubsubsection{\texorpdfstring{first\_tx\_buf}{first\_tx\_buf}}
+{\footnotesize\ttfamily \label{structefvi__tcp__client__state_a2fd406b7bf4f8f4caaf6bf346887c524} 
+int efvi\+\_\+tcp\+\_\+client\+\_\+state\+::first\+\_\+tx\+\_\+buf}
+
+\Hypertarget{structefvi__tcp__client__state_aafebc8d31b9140ae089efaa38cded409}\index{efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}!iov@{iov}}
+\index{iov@{iov}!efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}}
+\doxysubsubsection{\texorpdfstring{iov}{iov}}
+{\footnotesize\ttfamily \label{structefvi__tcp__client__state_aafebc8d31b9140ae089efaa38cded409} 
+struct iovec efvi\+\_\+tcp\+\_\+client\+\_\+state\+::iov}
+
+\Hypertarget{structefvi__tcp__client__state_ab4129b3cd3172dba93b9aa8b185305c9}\index{efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}!last\_dma\_req\_id@{last\_dma\_req\_id}}
+\index{last\_dma\_req\_id@{last\_dma\_req\_id}!efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}}
+\doxysubsubsection{\texorpdfstring{last\_dma\_req\_id}{last\_dma\_req\_id}}
+{\footnotesize\ttfamily \label{structefvi__tcp__client__state_ab4129b3cd3172dba93b9aa8b185305c9} 
+int efvi\+\_\+tcp\+\_\+client\+\_\+state\+::last\+\_\+dma\+\_\+req\+\_\+id}
+
+\Hypertarget{structefvi__tcp__client__state_a17721e1a46e9bfdfd65b2bdfee4c3e7f}\index{efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}!last\_offset@{last\_offset}}
+\index{last\_offset@{last\_offset}!efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}}
+\doxysubsubsection{\texorpdfstring{last\_offset}{last\_offset}}
+{\footnotesize\ttfamily \label{structefvi__tcp__client__state_a17721e1a46e9bfdfd65b2bdfee4c3e7f} 
+int efvi\+\_\+tcp\+\_\+client\+\_\+state\+::last\+\_\+offset}
+
+\Hypertarget{structefvi__tcp__client__state_a1be02096d51b4ac5afff91200826b953}\index{efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}!msg\_buf@{msg\_buf}}
+\index{msg\_buf@{msg\_buf}!efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}}
+\doxysubsubsection{\texorpdfstring{msg\_buf}{msg\_buf}}
+{\footnotesize\ttfamily \label{structefvi__tcp__client__state_a1be02096d51b4ac5afff91200826b953} 
+void\texorpdfstring{$\ast$}{*} efvi\+\_\+tcp\+\_\+client\+\_\+state\+::msg\+\_\+buf}
+
+\Hypertarget{structefvi__tcp__client__state_a68c340559737399d40708525af4d565c}\index{efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}!msg\_len@{msg\_len}}
+\index{msg\_len@{msg\_len}!efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}}
+\doxysubsubsection{\texorpdfstring{msg\_len}{msg\_len}}
+{\footnotesize\ttfamily \label{structefvi__tcp__client__state_a68c340559737399d40708525af4d565c} 
+int efvi\+\_\+tcp\+\_\+client\+\_\+state\+::msg\+\_\+len}
+
+\Hypertarget{structefvi__tcp__client__state_ad2afe5bfe5179dfc73a6ac574a9fdba2}\index{efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}!n\_ctpio\_sends@{n\_ctpio\_sends}}
+\index{n\_ctpio\_sends@{n\_ctpio\_sends}!efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}}
+\doxysubsubsection{\texorpdfstring{n\_ctpio\_sends}{n\_ctpio\_sends}}
+{\footnotesize\ttfamily \label{structefvi__tcp__client__state_ad2afe5bfe5179dfc73a6ac574a9fdba2} 
+int efvi\+\_\+tcp\+\_\+client\+\_\+state\+::n\+\_\+ctpio\+\_\+sends}
+
+\Hypertarget{structefvi__tcp__client__state_ad4bb9a3a964231695526fc80ef3551f8}\index{efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}!n\_delegated\_sends@{n\_delegated\_sends}}
+\index{n\_delegated\_sends@{n\_delegated\_sends}!efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}}
+\doxysubsubsection{\texorpdfstring{n\_delegated\_sends}{n\_delegated\_sends}}
+{\footnotesize\ttfamily \label{structefvi__tcp__client__state_ad4bb9a3a964231695526fc80ef3551f8} 
+unsigned efvi\+\_\+tcp\+\_\+client\+\_\+state\+::n\+\_\+delegated\+\_\+sends}
+
+\Hypertarget{structefvi__tcp__client__state_a6a0ddb242a414a16f3081966b001977f}\index{efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}!n\_normal\_sends@{n\_normal\_sends}}
+\index{n\_normal\_sends@{n\_normal\_sends}!efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}}
+\doxysubsubsection{\texorpdfstring{n\_normal\_sends}{n\_normal\_sends}}
+{\footnotesize\ttfamily \label{structefvi__tcp__client__state_a6a0ddb242a414a16f3081966b001977f} 
+unsigned efvi\+\_\+tcp\+\_\+client\+\_\+state\+::n\+\_\+normal\+\_\+sends}
+
+\Hypertarget{structefvi__tcp__client__state_a9c41f4e9613af3d6e3e0e1b1262e452e}\index{efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}!n\_warmup\_sends@{n\_warmup\_sends}}
+\index{n\_warmup\_sends@{n\_warmup\_sends}!efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}}
+\doxysubsubsection{\texorpdfstring{n\_warmup\_sends}{n\_warmup\_sends}}
+{\footnotesize\ttfamily \label{structefvi__tcp__client__state_a9c41f4e9613af3d6e3e0e1b1262e452e} 
+uint64\+\_\+t efvi\+\_\+tcp\+\_\+client\+\_\+state\+::n\+\_\+warmup\+\_\+sends}
+
+\Hypertarget{structefvi__tcp__client__state_aaa5234b3bf3e2a9d7f9e73153467b998}\index{efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}!num\_bufs@{num\_bufs}}
+\index{num\_bufs@{num\_bufs}!efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}}
+\doxysubsubsection{\texorpdfstring{num\_bufs}{num\_bufs}}
+{\footnotesize\ttfamily \label{structefvi__tcp__client__state_aaa5234b3bf3e2a9d7f9e73153467b998} 
+unsigned efvi\+\_\+tcp\+\_\+client\+\_\+state\+::num\+\_\+bufs}
+
+\Hypertarget{structefvi__tcp__client__state_a38aa7f01de3bda108a0cf71385d3ffed}\index{efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}!ods@{ods}}
+\index{ods@{ods}!efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}}
+\doxysubsubsection{\texorpdfstring{ods}{ods}}
+{\footnotesize\ttfamily \label{structefvi__tcp__client__state_a38aa7f01de3bda108a0cf71385d3ffed} 
+struct onload\+\_\+delegated\+\_\+send efvi\+\_\+tcp\+\_\+client\+\_\+state\+::ods}
+
+\Hypertarget{structefvi__tcp__client__state_a2175fcc71c5c0a15cfa2cde73766c829}\index{efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}!pio\_in\_use@{pio\_in\_use}}
+\index{pio\_in\_use@{pio\_in\_use}!efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}}
+\doxysubsubsection{\texorpdfstring{pio\_in\_use}{pio\_in\_use}}
+{\footnotesize\ttfamily \label{structefvi__tcp__client__state_a2175fcc71c5c0a15cfa2cde73766c829} 
+volatile bool efvi\+\_\+tcp\+\_\+client\+\_\+state\+::pio\+\_\+in\+\_\+use}
+
+\Hypertarget{structefvi__tcp__client__state_a6f205108615197207a9fc05f0dee7d6c}\index{efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}!pio\_pkt\_len@{pio\_pkt\_len}}
+\index{pio\_pkt\_len@{pio\_pkt\_len}!efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}}
+\doxysubsubsection{\texorpdfstring{pio\_pkt\_len}{pio\_pkt\_len}}
+{\footnotesize\ttfamily \label{structefvi__tcp__client__state_a6f205108615197207a9fc05f0dee7d6c} 
+int efvi\+\_\+tcp\+\_\+client\+\_\+state\+::pio\+\_\+pkt\+\_\+len}
+
+\Hypertarget{structefvi__tcp__client__state_a9a55409444546d1ac22ab9bfc9eb1470}\index{efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}!pkt\_bufs@{pkt\_bufs}}
+\index{pkt\_bufs@{pkt\_bufs}!efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}}
+\doxysubsubsection{\texorpdfstring{pkt\_bufs}{pkt\_bufs}}
+{\footnotesize\ttfamily \label{structefvi__tcp__client__state_a9a55409444546d1ac22ab9bfc9eb1470} 
+struct \mbox{\hyperlink{structpkt__buf}{pkt\+\_\+buf}}\texorpdfstring{$\ast$}{*} efvi\+\_\+tcp\+\_\+client\+\_\+state\+::pkt\+\_\+bufs\mbox{[}N\+\_\+\+TX\+\_\+\+BUFS\mbox{]}}
+
+\Hypertarget{structefvi__tcp__client__state_a912109776f3af15f132e7b6845b4bce6}\index{efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}!pktlen\_offset@{pktlen\_offset}}
+\index{pktlen\_offset@{pktlen\_offset}!efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}}
+\doxysubsubsection{\texorpdfstring{pktlen\_offset}{pktlen\_offset}}
+{\footnotesize\ttfamily \label{structefvi__tcp__client__state_a912109776f3af15f132e7b6845b4bce6} 
+int efvi\+\_\+tcp\+\_\+client\+\_\+state\+::pktlen\+\_\+offset}
+
+\Hypertarget{structefvi__tcp__client__state_a8bd5bc3d111d296604740c4002f343da}\index{efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}!recv\_buf@{recv\_buf}}
+\index{recv\_buf@{recv\_buf}!efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}}
+\doxysubsubsection{\texorpdfstring{recv\_buf}{recv\_buf}}
+{\footnotesize\ttfamily \label{structefvi__tcp__client__state_a8bd5bc3d111d296604740c4002f343da} 
+char efvi\+\_\+tcp\+\_\+client\+\_\+state\+::recv\+\_\+buf\mbox{[}MTU\mbox{]}}
+
+\Hypertarget{structefvi__tcp__client__state_a07c78ab941983e00afc6d1be2c12d403}\index{efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}!rx\_prefix\_len@{rx\_prefix\_len}}
+\index{rx\_prefix\_len@{rx\_prefix\_len}!efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}}
+\doxysubsubsection{\texorpdfstring{rx\_prefix\_len}{rx\_prefix\_len}}
+{\footnotesize\ttfamily \label{structefvi__tcp__client__state_a07c78ab941983e00afc6d1be2c12d403} 
+int efvi\+\_\+tcp\+\_\+client\+\_\+state\+::rx\+\_\+prefix\+\_\+len}
+
+\Hypertarget{structefvi__tcp__client__state_a6c3b1582661c8b7213773c8d4f4a666c}\index{efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}!send\_is\_delegated@{send\_is\_delegated}}
+\index{send\_is\_delegated@{send\_is\_delegated}!efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}}
+\doxysubsubsection{\texorpdfstring{send\_is\_delegated}{send\_is\_delegated}}
+{\footnotesize\ttfamily \label{structefvi__tcp__client__state_a6c3b1582661c8b7213773c8d4f4a666c} 
+volatile bool efvi\+\_\+tcp\+\_\+client\+\_\+state\+::send\+\_\+is\+\_\+delegated}
+
+\Hypertarget{structefvi__tcp__client__state_a68f9328359cebbd78148f9d7a36b46cd}\index{efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}!tas\_loaded@{tas\_loaded}}
+\index{tas\_loaded@{tas\_loaded}!efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}}
+\doxysubsubsection{\texorpdfstring{tas\_loaded}{tas\_loaded}}
+{\footnotesize\ttfamily \label{structefvi__tcp__client__state_a68f9328359cebbd78148f9d7a36b46cd} 
+volatile bool efvi\+\_\+tcp\+\_\+client\+\_\+state\+::tas\+\_\+loaded}
+
+\Hypertarget{structefvi__tcp__client__state_ad4eb1bc161737aea6dbb0c70738fd0fc}\index{efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}!tx\_buf@{tx\_buf}}
+\index{tx\_buf@{tx\_buf}!efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}}
+\doxysubsubsection{\texorpdfstring{tx\_buf}{tx\_buf}}
+{\footnotesize\ttfamily \label{structefvi__tcp__client__state_ad4eb1bc161737aea6dbb0c70738fd0fc} 
+void\texorpdfstring{$\ast$}{*} efvi\+\_\+tcp\+\_\+client\+\_\+state\+::tx\+\_\+buf}
+
+\Hypertarget{structefvi__tcp__client__state_af3faade60e00d370b5510073eddb1e02}\index{efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}!tx\_dma\_addr@{tx\_dma\_addr}}
+\index{tx\_dma\_addr@{tx\_dma\_addr}!efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}}
+\doxysubsubsection{\texorpdfstring{tx\_dma\_addr}{tx\_dma\_addr}}
+{\footnotesize\ttfamily \label{structefvi__tcp__client__state_af3faade60e00d370b5510073eddb1e02} 
+ef\+\_\+addr efvi\+\_\+tcp\+\_\+client\+\_\+state\+::tx\+\_\+dma\+\_\+addr}
+
+\Hypertarget{structefvi__tcp__client__state_a074b3ba3d5b3ebcc6a805947bae7fc70}\index{efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}!tx\_frame\_len@{tx\_frame\_len}}
+\index{tx\_frame\_len@{tx\_frame\_len}!efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}}
+\doxysubsubsection{\texorpdfstring{tx\_frame\_len}{tx\_frame\_len}}
+{\footnotesize\ttfamily \label{structefvi__tcp__client__state_a074b3ba3d5b3ebcc6a805947bae7fc70} 
+int efvi\+\_\+tcp\+\_\+client\+\_\+state\+::tx\+\_\+frame\+\_\+len}
+
+\Hypertarget{structefvi__tcp__client__state_ad8e3db998ea951083b3f0f1fc023870b}\index{efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}!tx\_len@{tx\_len}}
+\index{tx\_len@{tx\_len}!efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}}
+\doxysubsubsection{\texorpdfstring{tx\_len}{tx\_len}}
+{\footnotesize\ttfamily \label{structefvi__tcp__client__state_ad8e3db998ea951083b3f0f1fc023870b} 
+int efvi\+\_\+tcp\+\_\+client\+\_\+state\+::tx\+\_\+len}
+
+\Hypertarget{structefvi__tcp__client__state_a8f978a9b31d9e4a39756e0b59e0db50d}\index{efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}!tx\_offset@{tx\_offset}}
+\index{tx\_offset@{tx\_offset}!efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}}
+\doxysubsubsection{\texorpdfstring{tx\_offset}{tx\_offset}}
+{\footnotesize\ttfamily \label{structefvi__tcp__client__state_a8f978a9b31d9e4a39756e0b59e0db50d} 
+unsigned efvi\+\_\+tcp\+\_\+client\+\_\+state\+::tx\+\_\+offset}
+
+\Hypertarget{structefvi__tcp__client__state_ab10ec6e9a8f8fe795ea37039eb0bcd0c}\index{efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}!use\_ctpio@{use\_ctpio}}
+\index{use\_ctpio@{use\_ctpio}!efvi\_tcp\_client\_state@{efvi\_tcp\_client\_state}}
+\doxysubsubsection{\texorpdfstring{use\_ctpio}{use\_ctpio}}
+{\footnotesize\ttfamily \label{structefvi__tcp__client__state_ab10ec6e9a8f8fe795ea37039eb0bcd0c} 
+volatile bool efvi\+\_\+tcp\+\_\+client\+\_\+state\+::use\+\_\+ctpio}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Net/efvi\+\_\+tcp\+\_\+structs.\+hpp\end{DoxyCompactItemize}

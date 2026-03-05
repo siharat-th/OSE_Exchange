@@ -1,0 +1,167 @@
+\doxysection{KTN\+::notify\+::Notifier\+Rest Class Reference}
+\hypertarget{class_k_t_n_1_1notify_1_1_notifier_rest}{}\label{class_k_t_n_1_1notify_1_1_notifier_rest}\index{KTN::notify::NotifierRest@{KTN::notify::NotifierRest}}
+
+
+The \doxylink{class_k_t_n_1_1notify_1_1_notifier_rest}{Notifier\+Rest} class is responsible for sending notifications via REST.  
+
+
+
+
+{\ttfamily \#include $<$Notifier\+Rest.\+hpp$>$}
+
+Inheritance diagram for KTN\+::notify\+::Notifier\+Rest\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_k_t_n_1_1notify_1_1_notifier_rest}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1notify_1_1_notifier_rest_a648aa4398c0a6541e159eabb5efe3aa4}{Notifier\+Rest}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_k_t_n_1_1notify_1_1_notifier_rest}{Notifier\+Rest} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_k_t_n_1_1notify_1_1_notifier_rest_a3fce31924986232ba949a6aba953b3df}{\texorpdfstring{$\sim$}{\string~}\+Notifier\+Rest}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{class_k_t_n_1_1notify_1_1_notifier_rest}{Notifier\+Rest} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1notify_1_1_notifier_rest_a916bb74aee084b13a433a5bb6b229b1e}{Notify}} (std\+::string source, string exch, string org, string user, std\+::string text, Msg\+Level\+::\+Enum lvl, Msg\+Type\+::\+Enum msgtype)
+\begin{DoxyCompactList}\small\item\em Sends a notification with the specified parameters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1notify_1_1_notifier_rest_aef9304d5c61dd2b46a37e148dfcbdb89}{Notify}} (\mbox{\hyperlink{struct_k_t_n_1_1notify_1_1_notification}{Notification}} \&msg)
+\begin{DoxyCompactList}\small\item\em Sends a notification. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1notify_1_1_notifier_rest_a80bbe8222d8262bebdef277291253926}{Heartbeat}} (std\+::string source, std\+::string exch, string org)
+\begin{DoxyCompactList}\small\item\em Sends a heartbeat notification with the specified parameters. \end{DoxyCompactList}\item 
+\Hypertarget{class_k_t_n_1_1notify_1_1_notifier_rest_a8e47a434fcc50cd348dc79beb75d46e3}\label{class_k_t_n_1_1notify_1_1_notifier_rest_a8e47a434fcc50cd348dc79beb75d46e3} 
+void {\bfseries Start} ()
+\begin{DoxyCompactList}\small\item\em Starts the \doxylink{class_k_t_n_1_1notify_1_1_notifier_rest}{Notifier\+Rest} thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_named_thread}{Named\+Thread}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_named_thread_a891fabdc2d824048ec05c82e7ef8c69a}{Named\+Thread}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_named_thread_a018dadb59e5af98ee734301a1baa50cb}{\texorpdfstring{$\sim$}{\string~}\+Named\+Thread}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_named_thread_a9fa42542ff43c89fb9bbc33de9c87e34}{Create\+And\+Run}} (string name, int core)
+\begin{DoxyCompactList}\small\item\em Creates and runs the named thread on the specified core. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_named_thread_ad4809c571171be13f0f91f540d5c196f}{Join}} ()
+\begin{DoxyCompactList}\small\item\em Joins the named thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_singleton}{Singleton$<$ Notifier\+Rest $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+static I01\+\_\+\+API Notifier\+Rest \& \mbox{\hyperlink{class_singleton_a257c9c4633fa4e06bd93469e379f8eff}{instance}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_singleton}{Singleton$<$ Notifier\+Rest $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Singleton} (const \mbox{\hyperlink{class_singleton}{Singleton}} \&)=delete
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_k_t_n_1_1notify_1_1_notifier_rest}{Notifier\+Rest} class is responsible for sending notifications via REST. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_k_t_n_1_1notify_1_1_notifier_rest_a648aa4398c0a6541e159eabb5efe3aa4}\index{KTN::notify::NotifierRest@{KTN::notify::NotifierRest}!NotifierRest@{NotifierRest}}
+\index{NotifierRest@{NotifierRest}!KTN::notify::NotifierRest@{KTN::notify::NotifierRest}}
+\doxysubsubsection{\texorpdfstring{NotifierRest()}{NotifierRest()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1notify_1_1_notifier_rest_a648aa4398c0a6541e159eabb5efe3aa4} 
+Notifier\+Rest\+::\+Notifier\+Rest (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_k_t_n_1_1notify_1_1_notifier_rest}{Notifier\+Rest} object. 
+
+
+
+References \mbox{\hyperlink{l00018}{Named\+Thread\+::\+Create\+And\+Run()}}.
+
+\Hypertarget{class_k_t_n_1_1notify_1_1_notifier_rest_a3fce31924986232ba949a6aba953b3df}\index{KTN::notify::NotifierRest@{KTN::notify::NotifierRest}!````~NotifierRest@{\texorpdfstring{$\sim$}{\string~}NotifierRest}}
+\index{````~NotifierRest@{\texorpdfstring{$\sim$}{\string~}NotifierRest}!KTN::notify::NotifierRest@{KTN::notify::NotifierRest}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}NotifierRest()}{\string~NotifierRest()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1notify_1_1_notifier_rest_a3fce31924986232ba949a6aba953b3df} 
+Notifier\+Rest\+::\texorpdfstring{$\sim$}{\string~}\+Notifier\+Rest (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destroys the \doxylink{class_k_t_n_1_1notify_1_1_notifier_rest}{Notifier\+Rest} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1notify_1_1_notifier_rest_a80bbe8222d8262bebdef277291253926}\index{KTN::notify::NotifierRest@{KTN::notify::NotifierRest}!Heartbeat@{Heartbeat}}
+\index{Heartbeat@{Heartbeat}!KTN::notify::NotifierRest@{KTN::notify::NotifierRest}}
+\doxysubsubsection{\texorpdfstring{Heartbeat()}{Heartbeat()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1notify_1_1_notifier_rest_a80bbe8222d8262bebdef277291253926} 
+void Notifier\+Rest\+::\+Heartbeat (\begin{DoxyParamCaption}\item[{std\+::string}]{source}{, }\item[{std\+::string}]{exch}{, }\item[{string}]{org}{}\end{DoxyParamCaption})}
+
+
+
+Sends a heartbeat notification with the specified parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & The source of the heartbeat. \\
+\hline
+{\em exch} & The exchange of the heartbeat. \\
+\hline
+{\em org} & The organization of the heartbeat. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00036}{Notify()}}.
+
+\Hypertarget{class_k_t_n_1_1notify_1_1_notifier_rest_aef9304d5c61dd2b46a37e148dfcbdb89}\index{KTN::notify::NotifierRest@{KTN::notify::NotifierRest}!Notify@{Notify}}
+\index{Notify@{Notify}!KTN::notify::NotifierRest@{KTN::notify::NotifierRest}}
+\doxysubsubsection{\texorpdfstring{Notify()}{Notify()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1notify_1_1_notifier_rest_aef9304d5c61dd2b46a37e148dfcbdb89} 
+void Notifier\+Rest\+::\+Notify (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1notify_1_1_notification}{Notification}} \&}]{msg}{}\end{DoxyParamCaption})}
+
+
+
+Sends a notification. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The notification to send. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1notify_1_1_notifier_rest_a916bb74aee084b13a433a5bb6b229b1e}\index{KTN::notify::NotifierRest@{KTN::notify::NotifierRest}!Notify@{Notify}}
+\index{Notify@{Notify}!KTN::notify::NotifierRest@{KTN::notify::NotifierRest}}
+\doxysubsubsection{\texorpdfstring{Notify()}{Notify()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1notify_1_1_notifier_rest_a916bb74aee084b13a433a5bb6b229b1e} 
+void Notifier\+Rest\+::\+Notify (\begin{DoxyParamCaption}\item[{std\+::string}]{source}{, }\item[{string}]{exch}{, }\item[{string}]{org}{, }\item[{string}]{user}{, }\item[{std\+::string}]{text}{, }\item[{Msg\+Level\+::\+Enum}]{lvl}{, }\item[{Msg\+Type\+::\+Enum}]{msgtype}{}\end{DoxyParamCaption})}
+
+
+
+Sends a notification with the specified parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & The source of the notification. \\
+\hline
+{\em exch} & The exchange of the notification. \\
+\hline
+{\em org} & The organization of the notification. \\
+\hline
+{\em user} & The user of the notification. \\
+\hline
+{\em text} & The text of the notification. \\
+\hline
+{\em lvl} & The level of the notification. \\
+\hline
+{\em msgtype} & The type of the notification. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00036}{Notify()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00057}{Heartbeat()}}, and \mbox{\hyperlink{l00036}{Notify()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Notifications/Notifier\+Rest.\+hpp\item 
+Notifications/Notifier\+Rest.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_msg_batch" xml:lang="en-US">
+<title>MsgBatch Struct Reference</title>
+<indexterm><primary>MsgBatch</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_single_msg">KTN::CME::IL3::NewOrderSingleMsg</link> * <link linkend="_struct_msg_batch_1aff630e5d2d58e8e8333a0efe71dfbfaf">msg</link> [10]</para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_struct_msg_batch_1ad35b1669d0eb35a923205f4630ceec5c">reqid</link> [10]</para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_msg_batch_1a5615ef37c02f757a8e026c0ce5145c6c">ratio</link> [10]</para>
+</listitem>
+            <listitem><para>int16_t <link linkend="_struct_msg_batch_1aee3abe52ff704674732033442b4b26f1">taketicks</link> [10]</para>
+</listitem>
+            <listitem><para>size_t <link linkend="_struct_msg_batch_1a4823e654af4ae070ff8b7371228aba4d">len</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_struct_msg_batch_1a1e624c919008a451dc2f1d84a5f73128">segid</link> [10]</para>
+</listitem>
+            <listitem><para>int8_t <link linkend="_struct_msg_batch_1a2ec717098765bbde2ce7c8c1c8aa1f61">callbackid</link> [10]</para>
+</listitem>
+            <listitem><para>int8_t <link linkend="_struct_msg_batch_1a516e1d75a69195b0f9987480a9f43791">instindex</link> [10]</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_msg_batch_1a2ec717098765bbde2ce7c8c1c8aa1f61"/><section>
+    <title>callbackid</title>
+<indexterm><primary>callbackid</primary><secondary>MsgBatch</secondary></indexterm>
+<indexterm><primary>MsgBatch</primary><secondary>callbackid</secondary></indexterm>
+<para><computeroutput>int8_t MsgBatch::callbackid[10]</computeroutput></para></section>
+<anchor xml:id="_struct_msg_batch_1a516e1d75a69195b0f9987480a9f43791"/><section>
+    <title>instindex</title>
+<indexterm><primary>instindex</primary><secondary>MsgBatch</secondary></indexterm>
+<indexterm><primary>MsgBatch</primary><secondary>instindex</secondary></indexterm>
+<para><computeroutput>int8_t MsgBatch::instindex[10]</computeroutput></para></section>
+<anchor xml:id="_struct_msg_batch_1a4823e654af4ae070ff8b7371228aba4d"/><section>
+    <title>len</title>
+<indexterm><primary>len</primary><secondary>MsgBatch</secondary></indexterm>
+<indexterm><primary>MsgBatch</primary><secondary>len</secondary></indexterm>
+<para><computeroutput>size_t MsgBatch::len</computeroutput></para></section>
+<anchor xml:id="_struct_msg_batch_1aff630e5d2d58e8e8333a0efe71dfbfaf"/><section>
+    <title>msg</title>
+<indexterm><primary>msg</primary><secondary>MsgBatch</secondary></indexterm>
+<indexterm><primary>MsgBatch</primary><secondary>msg</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_new_order_single_msg">KTN::CME::IL3::NewOrderSingleMsg</link>* MsgBatch::msg[10]</computeroutput></para></section>
+<anchor xml:id="_struct_msg_batch_1a5615ef37c02f757a8e026c0ce5145c6c"/><section>
+    <title>ratio</title>
+<indexterm><primary>ratio</primary><secondary>MsgBatch</secondary></indexterm>
+<indexterm><primary>MsgBatch</primary><secondary>ratio</secondary></indexterm>
+<para><computeroutput>double MsgBatch::ratio[10]</computeroutput></para></section>
+<anchor xml:id="_struct_msg_batch_1ad35b1669d0eb35a923205f4630ceec5c"/><section>
+    <title>reqid</title>
+<indexterm><primary>reqid</primary><secondary>MsgBatch</secondary></indexterm>
+<indexterm><primary>MsgBatch</primary><secondary>reqid</secondary></indexterm>
+<para><computeroutput>uint64_t MsgBatch::reqid[10]</computeroutput></para></section>
+<anchor xml:id="_struct_msg_batch_1a1e624c919008a451dc2f1d84a5f73128"/><section>
+    <title>segid</title>
+<indexterm><primary>segid</primary><secondary>MsgBatch</secondary></indexterm>
+<indexterm><primary>MsgBatch</primary><secondary>segid</secondary></indexterm>
+<para><computeroutput>uint8_t MsgBatch::segid[10]</computeroutput></para></section>
+<anchor xml:id="_struct_msg_batch_1aee3abe52ff704674732033442b4b26f1"/><section>
+    <title>taketicks</title>
+<indexterm><primary>taketicks</primary><secondary>MsgBatch</secondary></indexterm>
+<indexterm><primary>MsgBatch</primary><secondary>taketicks</secondary></indexterm>
+<para><computeroutput>int16_t MsgBatch::taketicks[10]</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+exchsupport/cme/il3/IL3Pool.hpp</section>
+</section>

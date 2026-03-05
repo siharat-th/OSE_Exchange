@@ -1,0 +1,308 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_order_nums" xml:lang="en-US">
+<title>OrderNums Class Reference</title>
+<indexterm><primary>OrderNums</primary></indexterm>
+<para>
+
+<para><link linkend="_class_singleton">Singleton</link> class for generating order numbers and request IDs. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;OrderNums.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for OrderNums:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_order_nums.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_order_nums_1a44f558b1e35932a082807879bdcb4fff">OrderNums</link> ()</para>
+
+<para>Default constructor. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_order_nums_1a569aa59406fd13bede87f0ca0c522e15">~OrderNums</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para>string <link linkend="_class_order_nums_1ae860da2fde8d64fa3bf5d7ac91f932f9">NextOrderID</link> ()</para>
+
+<para>Generates the next order ID. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_order_nums_1ade01e45f7bc5a0e5870a6fd43b097aeb">NextOrderID</link> (char *&amp;ordernum, size_t len)</para>
+
+<para>Generates the next order ID and copies it to the provided character array. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_order_nums_1a5eb96872c5b5e050eaf3b4b01bf8f680">NextOrderID2</link> (char *ordernum, size_t len)</para>
+
+<para>Generates the next order ID and copies it to the provided character array. </para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_class_order_nums_1a3973d530f9a2025a66e7818d06360ab2">NextReqIdEncoded</link> (int callbackid)</para>
+
+<para>Generates the next encoded request ID. </para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_class_order_nums_1a7725505f4b323bd9b7fc0f11e035c628">NextReqId</link> ()</para>
+
+<para>Generates the next request ID. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_order_nums_1a9b08fe334667bfa09cc8f4503aab1b42">isLoaded</link> ()</para>
+
+<para>Checks if the order numbers have been loaded. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_order_nums_1aeebe2f5a7f61308f6dc3c359642d144a">OrdIdSize</link> ()</para>
+
+<para>Gets the size of the order ID queue. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_order_nums_1afcf6ab39379bf2b29bd5f0ae208f64a7">ReqIdSize</link> ()</para>
+
+<para>Gets the size of the request ID queue. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+Static Public Member Functions inherited from <link linkend="_class_singleton">Singleton&lt; OrderNums &gt;</link>        <itemizedlist>
+            <listitem><para>static KT01_API <link linkend="_class_order_nums">OrderNums</link> &amp; <link linkend="_class_singleton_1a257c9c4633fa4e06bd93469e379f8eff">instance</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Protected Member Functions inherited from <link linkend="_class_singleton">Singleton&lt; OrderNums &gt;</link>        <itemizedlist>
+            <listitem><para><emphasis role="strong">Singleton</emphasis> (const <link linkend="_class_singleton">Singleton</link> &amp;)=delete</para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+
+<para><link linkend="_class_singleton">Singleton</link> class for generating order numbers and request IDs. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_order_nums_1a44f558b1e35932a082807879bdcb4fff"/><section>
+    <title>OrderNums()</title>
+<indexterm><primary>OrderNums</primary><secondary>OrderNums</secondary></indexterm>
+<indexterm><primary>OrderNums</primary><secondary>OrderNums</secondary></indexterm>
+<para><computeroutput>OrderNums::OrderNums ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Default constructor. </para>
+</para>
+</section>
+<anchor xml:id="_class_order_nums_1a569aa59406fd13bede87f0ca0c522e15"/><section>
+    <title>~OrderNums()</title>
+<indexterm><primary>~OrderNums</primary><secondary>OrderNums</secondary></indexterm>
+<indexterm><primary>OrderNums</primary><secondary>~OrderNums</secondary></indexterm>
+<para><computeroutput>virtual OrderNums::~OrderNums ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Destructor. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_order_nums_1a9b08fe334667bfa09cc8f4503aab1b42"/><section>
+    <title>isLoaded()</title>
+<indexterm><primary>isLoaded</primary><secondary>OrderNums</secondary></indexterm>
+<indexterm><primary>OrderNums</primary><secondary>isLoaded</secondary></indexterm>
+<para><computeroutput>bool OrderNums::isLoaded ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Checks if the order numbers have been loaded. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>True if the order numbers have been loaded, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_order_nums_1ae860da2fde8d64fa3bf5d7ac91f932f9"/><section>
+    <title>NextOrderID()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>NextOrderID</primary><secondary>OrderNums</secondary></indexterm>
+<indexterm><primary>OrderNums</primary><secondary>NextOrderID</secondary></indexterm>
+<para><computeroutput>string OrderNums::NextOrderID ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Generates the next order ID. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The next order ID. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00105">KTN::Core::SPSCRingBuffer&lt; T &gt;::dequeue()</link>.</para>
+<para>
+Referenced by <link linkend="_l00019">KTN::CME::CmeAlgo::CmeAlgo()</link>, and <link linkend="_l00019">KTN::CME::CmeGT5::CmeGT5()</link>.</para>
+</section>
+<anchor xml:id="_class_order_nums_1ade01e45f7bc5a0e5870a6fd43b097aeb"/><section>
+    <title>NextOrderID()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>NextOrderID</primary><secondary>OrderNums</secondary></indexterm>
+<indexterm><primary>OrderNums</primary><secondary>NextOrderID</secondary></indexterm>
+<para><computeroutput>void OrderNums::NextOrderID (char *&amp; ordernum, size_t len)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Generates the next order ID and copies it to the provided character array. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ordernum</entry><entry>
+<para>The character array to copy the order ID to. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>len</entry><entry>
+<para>The length of the character array. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00105">KTN::Core::SPSCRingBuffer&lt; T &gt;::dequeue()</link>.</para>
+</section>
+<anchor xml:id="_class_order_nums_1a5eb96872c5b5e050eaf3b4b01bf8f680"/><section>
+    <title>NextOrderID2()</title>
+<indexterm><primary>NextOrderID2</primary><secondary>OrderNums</secondary></indexterm>
+<indexterm><primary>OrderNums</primary><secondary>NextOrderID2</secondary></indexterm>
+<para><computeroutput>void OrderNums::NextOrderID2 (char * ordernum, size_t len)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Generates the next order ID and copies it to the provided character array. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ordernum</entry><entry>
+<para>The character array to copy the order ID to. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>len</entry><entry>
+<para>The length of the character array. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00105">KTN::Core::SPSCRingBuffer&lt; T &gt;::dequeue()</link>.</para>
+</section>
+<anchor xml:id="_class_order_nums_1a7725505f4b323bd9b7fc0f11e035c628"/><section>
+    <title>NextReqId()</title>
+<indexterm><primary>NextReqId</primary><secondary>OrderNums</secondary></indexterm>
+<indexterm><primary>OrderNums</primary><secondary>NextReqId</secondary></indexterm>
+<para><computeroutput>uint32_t OrderNums::NextReqId ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Generates the next request ID. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The next request ID. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00105">KTN::Core::SPSCRingBuffer&lt; T &gt;::dequeue()</link>.</para>
+</section>
+<anchor xml:id="_class_order_nums_1a3973d530f9a2025a66e7818d06360ab2"/><section>
+    <title>NextReqIdEncoded()</title>
+<indexterm><primary>NextReqIdEncoded</primary><secondary>OrderNums</secondary></indexterm>
+<indexterm><primary>OrderNums</primary><secondary>NextReqIdEncoded</secondary></indexterm>
+<para><computeroutput>uint64_t OrderNums::NextReqIdEncoded (int callbackid)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Generates the next encoded request ID. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>callbackid</entry><entry>
+<para>The callback ID. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The next encoded request ID. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00105">KTN::Core::SPSCRingBuffer&lt; T &gt;::dequeue()</link>.</para>
+<para>
+Referenced by <link linkend="_l00019">KTN::CME::CmeAlgo::CmeAlgo()</link>, and <link linkend="_l00019">KTN::CME::CmeGT5::CmeGT5()</link>.</para>
+</section>
+<anchor xml:id="_class_order_nums_1aeebe2f5a7f61308f6dc3c359642d144a"/><section>
+    <title>OrdIdSize()</title>
+<indexterm><primary>OrdIdSize</primary><secondary>OrderNums</secondary></indexterm>
+<indexterm><primary>OrderNums</primary><secondary>OrdIdSize</secondary></indexterm>
+<para><computeroutput>int OrderNums::OrdIdSize ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Gets the size of the order ID queue. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The size of the order ID queue. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00158">KTN::Core::SPSCRingBuffer&lt; T &gt;::size()</link>.</para>
+</section>
+<anchor xml:id="_class_order_nums_1afcf6ab39379bf2b29bd5f0ae208f64a7"/><section>
+    <title>ReqIdSize()</title>
+<indexterm><primary>ReqIdSize</primary><secondary>OrderNums</secondary></indexterm>
+<indexterm><primary>OrderNums</primary><secondary>ReqIdSize</secondary></indexterm>
+<para><computeroutput>int OrderNums::ReqIdSize ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Gets the size of the request ID queue. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The size of the request ID queue. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00158">KTN::Core::SPSCRingBuffer&lt; T &gt;::size()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Orders/OrderNums.hpp</section>
+</section>

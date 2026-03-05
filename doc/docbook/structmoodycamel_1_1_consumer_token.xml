@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structmoodycamel_1_1_consumer_token" xml:lang="en-US">
+<title>moodycamel::ConsumerToken Struct Reference</title>
+<indexterm><primary>moodycamel::ConsumerToken</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>template&lt;typename T , typename Traits &gt; </para><para><link linkend="_structmoodycamel_1_1_consumer_token_1a45d0a4c22666b3e877573ef99e6ba707">ConsumerToken</link> (<link linkend="_classmoodycamel_1_1_concurrent_queue">ConcurrentQueue</link>&lt; T, Traits &gt; &amp;q)</para>
+</listitem>
+            <listitem><para>template&lt;typename T , typename Traits &gt; </para><para><link linkend="_structmoodycamel_1_1_consumer_token_1aed268cbb816fefe7c6f365b7ec3b5716">ConsumerToken</link> (<link linkend="_classmoodycamel_1_1_blocking_concurrent_queue">BlockingConcurrentQueue</link>&lt; T, Traits &gt; &amp;q)</para>
+</listitem>
+            <listitem><para><link linkend="_structmoodycamel_1_1_consumer_token_1aedf28befbd4a5d699ba5024b3b6f89b7">ConsumerToken</link> (<link linkend="_structmoodycamel_1_1_consumer_token">ConsumerToken</link> &amp;&amp;other) MOODYCAMEL_NOEXCEPT</para>
+</listitem>
+            <listitem><para><link linkend="_structmoodycamel_1_1_consumer_token">ConsumerToken</link> &amp; <link linkend="_structmoodycamel_1_1_consumer_token_1a62cb179d89db3b167c67c71e8c6986d3">operator=</link> (<link linkend="_structmoodycamel_1_1_consumer_token">ConsumerToken</link> &amp;&amp;other) MOODYCAMEL_NOEXCEPT</para>
+</listitem>
+            <listitem><para>void <link linkend="_structmoodycamel_1_1_consumer_token_1afb46600c622adbe5c82bb49a538f9fc0">swap</link> (<link linkend="_structmoodycamel_1_1_consumer_token">ConsumerToken</link> &amp;other) MOODYCAMEL_NOEXCEPT</para>
+</listitem>
+            <listitem><para><anchor xml:id="_structmoodycamel_1_1_consumer_token_1a3a1570469d08da707725d348f763c54a"/><emphasis role="strong">ConsumerToken</emphasis> (<link linkend="_structmoodycamel_1_1_consumer_token">ConsumerToken</link> const &amp;) MOODYCAMEL_DELETE_FUNCTION</para>
+</listitem>
+            <listitem><para><anchor xml:id="_structmoodycamel_1_1_consumer_token_1a96cb1805bd2b5b6eb45f2881e7ac9bbc"/><link linkend="_structmoodycamel_1_1_consumer_token">ConsumerToken</link> &amp; <emphasis role="strong">operator=</emphasis> (<link linkend="_structmoodycamel_1_1_consumer_token">ConsumerToken</link> const &amp;) MOODYCAMEL_DELETE_FUNCTION</para>
+</listitem>
+            <listitem><para><anchor xml:id="_structmoodycamel_1_1_consumer_token_1a45d0a4c22666b3e877573ef99e6ba707"/>template&lt;typename T , typename Traits &gt; </para><para><emphasis role="strong">ConsumerToken</emphasis> (<link linkend="_classmoodycamel_1_1_concurrent_queue">ConcurrentQueue</link>&lt; T, Traits &gt; &amp;q)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_structmoodycamel_1_1_consumer_token_1aed268cbb816fefe7c6f365b7ec3b5716"/>template&lt;typename T , typename Traits &gt; </para><para><emphasis role="strong">ConsumerToken</emphasis> (<link linkend="_classmoodycamel_1_1_blocking_concurrent_queue">BlockingConcurrentQueue</link>&lt; T, Traits &gt; &amp;q)</para>
+</listitem>
+            <listitem><para><link linkend="_structmoodycamel_1_1_consumer_token_1aedf28befbd4a5d699ba5024b3b6f89b7">ConsumerToken</link> (<link linkend="_structmoodycamel_1_1_consumer_token">ConsumerToken</link> &amp;&amp;other) MOODYCAMEL_NOEXCEPT</para>
+</listitem>
+            <listitem><para><link linkend="_structmoodycamel_1_1_consumer_token">ConsumerToken</link> &amp; <link linkend="_structmoodycamel_1_1_consumer_token_1a62cb179d89db3b167c67c71e8c6986d3">operator=</link> (<link linkend="_structmoodycamel_1_1_consumer_token">ConsumerToken</link> &amp;&amp;other) MOODYCAMEL_NOEXCEPT</para>
+</listitem>
+            <listitem><para>void <link linkend="_structmoodycamel_1_1_consumer_token_1afb46600c622adbe5c82bb49a538f9fc0">swap</link> (<link linkend="_structmoodycamel_1_1_consumer_token">ConsumerToken</link> &amp;other) MOODYCAMEL_NOEXCEPT</para>
+</listitem>
+            <listitem><para><anchor xml:id="_structmoodycamel_1_1_consumer_token_1a3a1570469d08da707725d348f763c54a"/><emphasis role="strong">ConsumerToken</emphasis> (<link linkend="_structmoodycamel_1_1_consumer_token">ConsumerToken</link> const &amp;) MOODYCAMEL_DELETE_FUNCTION</para>
+</listitem>
+            <listitem><para><anchor xml:id="_structmoodycamel_1_1_consumer_token_1a96cb1805bd2b5b6eb45f2881e7ac9bbc"/><link linkend="_structmoodycamel_1_1_consumer_token">ConsumerToken</link> &amp; <emphasis role="strong">operator=</emphasis> (<link linkend="_structmoodycamel_1_1_consumer_token">ConsumerToken</link> const &amp;) MOODYCAMEL_DELETE_FUNCTION</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Friends    </title>
+        <itemizedlist>
+            <listitem><para>template&lt;typename T , typename Traits &gt; </para><para>class <link linkend="_structmoodycamel_1_1_consumer_token_1ac77c3583af133c29d4e26d4bb8605ce4">ConcurrentQueue</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_structmoodycamel_1_1_consumer_token_1affb081dec2a93f53a23878412f69c469">ConcurrentQueueTests</link></para>
+</listitem>
+            <listitem><para>template&lt;typename T , typename Traits &gt; </para><para>class <link linkend="_structmoodycamel_1_1_consumer_token_1afd19ba23de3832f629868d09df6dbb2e">ConcurrentQueue</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_structmoodycamel_1_1_consumer_token_1a45d0a4c22666b3e877573ef99e6ba707"/><section>
+    <title>ConsumerToken()<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>ConsumerToken</primary><secondary>moodycamel::ConsumerToken</secondary></indexterm>
+<indexterm><primary>moodycamel::ConsumerToken</primary><secondary>ConsumerToken</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits &gt; </computeroutput><para><computeroutput>moodycamel::ConsumerToken::ConsumerToken (<link linkend="_classmoodycamel_1_1_concurrent_queue">ConcurrentQueue</link>&lt; T, Traits &gt; &amp; q)<computeroutput>[explicit]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structmoodycamel_1_1_consumer_token_1aed268cbb816fefe7c6f365b7ec3b5716"/><section>
+    <title>ConsumerToken()<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>ConsumerToken</primary><secondary>moodycamel::ConsumerToken</secondary></indexterm>
+<indexterm><primary>moodycamel::ConsumerToken</primary><secondary>ConsumerToken</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits &gt; </computeroutput><para><computeroutput>moodycamel::ConsumerToken::ConsumerToken (<link linkend="_classmoodycamel_1_1_blocking_concurrent_queue">BlockingConcurrentQueue</link>&lt; T, Traits &gt; &amp; q)<computeroutput>[explicit]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structmoodycamel_1_1_consumer_token_1aedf28befbd4a5d699ba5024b3b6f89b7"/><section>
+    <title>ConsumerToken()<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>ConsumerToken</primary><secondary>moodycamel::ConsumerToken</secondary></indexterm>
+<indexterm><primary>moodycamel::ConsumerToken</primary><secondary>ConsumerToken</secondary></indexterm>
+<para><computeroutput>moodycamel::ConsumerToken::ConsumerToken (<link linkend="_structmoodycamel_1_1_consumer_token">ConsumerToken</link> &amp;&amp; other)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structmoodycamel_1_1_consumer_token_1aedf28befbd4a5d699ba5024b3b6f89b7"/><section>
+    <title>ConsumerToken()<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>ConsumerToken</primary><secondary>moodycamel::ConsumerToken</secondary></indexterm>
+<indexterm><primary>moodycamel::ConsumerToken</primary><secondary>ConsumerToken</secondary></indexterm>
+<para><computeroutput>moodycamel::ConsumerToken::ConsumerToken (<link linkend="_structmoodycamel_1_1_consumer_token">ConsumerToken</link> &amp;&amp; other)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_structmoodycamel_1_1_consumer_token_1a62cb179d89db3b167c67c71e8c6986d3"/><section>
+    <title>operator=()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>operator=</primary><secondary>moodycamel::ConsumerToken</secondary></indexterm>
+<indexterm><primary>moodycamel::ConsumerToken</primary><secondary>operator=</secondary></indexterm>
+<para><computeroutput><link linkend="_structmoodycamel_1_1_consumer_token">ConsumerToken</link> &amp; moodycamel::ConsumerToken::operator= (<link linkend="_structmoodycamel_1_1_consumer_token">ConsumerToken</link> &amp;&amp; other)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structmoodycamel_1_1_consumer_token_1a62cb179d89db3b167c67c71e8c6986d3"/><section>
+    <title>operator=()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>operator=</primary><secondary>moodycamel::ConsumerToken</secondary></indexterm>
+<indexterm><primary>moodycamel::ConsumerToken</primary><secondary>operator=</secondary></indexterm>
+<para><computeroutput><link linkend="_structmoodycamel_1_1_consumer_token">ConsumerToken</link> &amp; moodycamel::ConsumerToken::operator= (<link linkend="_structmoodycamel_1_1_consumer_token">ConsumerToken</link> &amp;&amp; other)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structmoodycamel_1_1_consumer_token_1afb46600c622adbe5c82bb49a538f9fc0"/><section>
+    <title>swap()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>swap</primary><secondary>moodycamel::ConsumerToken</secondary></indexterm>
+<indexterm><primary>moodycamel::ConsumerToken</primary><secondary>swap</secondary></indexterm>
+<para><computeroutput>void moodycamel::ConsumerToken::swap (<link linkend="_structmoodycamel_1_1_consumer_token">ConsumerToken</link> &amp; other)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structmoodycamel_1_1_consumer_token_1afb46600c622adbe5c82bb49a538f9fc0"/><section>
+    <title>swap()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>swap</primary><secondary>moodycamel::ConsumerToken</secondary></indexterm>
+<indexterm><primary>moodycamel::ConsumerToken</primary><secondary>swap</secondary></indexterm>
+<para><computeroutput>void moodycamel::ConsumerToken::swap (<link linkend="_structmoodycamel_1_1_consumer_token">ConsumerToken</link> &amp; other)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Friends And Related Symbol Documentation</title>
+<anchor xml:id="_structmoodycamel_1_1_consumer_token_1ac77c3583af133c29d4e26d4bb8605ce4"/><section>
+    <title>ConcurrentQueue<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>ConcurrentQueue</primary><secondary>moodycamel::ConsumerToken</secondary></indexterm>
+<indexterm><primary>moodycamel::ConsumerToken</primary><secondary>ConcurrentQueue</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits &gt; </computeroutput><para><computeroutput>friend class <link linkend="_classmoodycamel_1_1_concurrent_queue">ConcurrentQueue</link><computeroutput>[friend]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structmoodycamel_1_1_consumer_token_1afd19ba23de3832f629868d09df6dbb2e"/><section>
+    <title>ConcurrentQueue<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>ConcurrentQueue</primary><secondary>moodycamel::ConsumerToken</secondary></indexterm>
+<indexterm><primary>moodycamel::ConsumerToken</primary><secondary>ConcurrentQueue</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits &gt; </computeroutput><para><computeroutput>class <link linkend="_classmoodycamel_1_1_concurrent_queue">ConcurrentQueue</link><computeroutput>[friend]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structmoodycamel_1_1_consumer_token_1affb081dec2a93f53a23878412f69c469"/><section>
+    <title>ConcurrentQueueTests</title>
+<indexterm><primary>ConcurrentQueueTests</primary><secondary>moodycamel::ConsumerToken</secondary></indexterm>
+<indexterm><primary>moodycamel::ConsumerToken</primary><secondary>ConcurrentQueueTests</secondary></indexterm>
+<para><computeroutput>ConcurrentQueueTests<computeroutput>[friend]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following files:</para>
+C:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/external/camel/concurrentqueue.hC:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/external/camel/concurrentqueue2.h</section>
+</section>

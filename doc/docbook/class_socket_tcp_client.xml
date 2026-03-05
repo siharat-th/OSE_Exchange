@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_socket_tcp_client" xml:lang="en-US">
+<title>SocketTcpClient&lt; Conf &gt; Class Template Reference</title>
+<indexterm><primary>SocketTcpClient&lt; Conf &gt;</primary></indexterm>
+<para>Inheritance diagram for SocketTcpClient&lt; Conf &gt;:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_socket_tcp_client.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>using <link linkend="_class_socket_tcp_client_1ac77d4f51674424f0a57ffe5893e1fc5e">Conn</link> = <link linkend="_class_socket_tcp_connection">SocketTcpConnection</link>&lt;Conf&gt;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_socket_tcp_client_1a5a17555622e4641bdf9991d751fd2c61">init</link> (const char *interface, const char *server_ip, uint16_t server_port, uint16_t local_port=0)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_socket_tcp_client_1a37f304a33312f196713dfc6e5a946b1b">allowReconnect</link> ()</para>
+</listitem>
+            <listitem><para>template&lt;typename Handler &gt; </para><para>void <link linkend="_class_socket_tcp_client_1ad53631d4971a8ed52b1089fe3900ed78">poll</link> (Handler &amp;handler)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_class_socket_tcp_connection">SocketTcpConnection&lt; Conf &gt;</link>        <itemizedlist>
+            <listitem><para>const char * <link linkend="_class_socket_tcp_connection_1ad6b726fdc61096127a060c6034b1a17c">getLastError</link> ()</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_socket_tcp_connection_1a94777a3ac14c4573e53eac27c3516d0d">isConnected</link> ()</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_socket_tcp_connection_1a28d8818b8cdce809e188e83f28ff4567">getPeername</link> (struct sockaddr_in &amp;addr)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_socket_tcp_connection_1af29c3ff7d0b8af58c2f7a8bc15fa6b19">close</link> (const char *reason, bool check_errno=false)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_socket_tcp_connection_1a9031ade4d79dd00d62a6dd3f8bf2250b">writeSome</link> (const void *data, uint32_t size, bool more=false)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_socket_tcp_connection_1aded9576b6fbe4c81b4c30b75321a0418">write</link> (const void *data_, uint32_t size, bool more=false)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_socket_tcp_connection_1a48321847688f68427ca7e3d1f057a1e6">writeNonblock</link> (const void *data, uint32_t size, bool more=false)</para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+Protected Member Functions inherited from <link linkend="_class_socket_tcp_connection">SocketTcpConnection&lt; Conf &gt;</link>        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_socket_tcp_connection_1acea69860f53c341ccf173167942668fa">connect</link> (struct sockaddr_in &amp;server_addr, uint16_t local_port_be)</para>
+</listitem>
+            <listitem><para>template&lt;typename Handler &gt; </para><para>void <link linkend="_class_socket_tcp_connection_1a8973b916e266a771ac13cb3bf683d590">pollConn</link> (int64_t now, Handler &amp;handler)</para>
+</listitem>
+            <listitem><para>template&lt;typename Handler &gt; </para><para>bool <link linkend="_class_socket_tcp_connection_1abae78585f0bb6d04ffbc46fb87d9c6d2">read</link> (Handler handler)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_socket_tcp_connection_1ac39fef35b7e87250e3c6e4d8f9e9a54f">open</link> (int64_t now, int fd)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_socket_tcp_connection_1ac69686e63adfc9f63c76f3e6f5e3eca7">saveError</link> (const char *msg, bool check_errno)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Protected Attributes inherited from <link linkend="_class_socket_tcp_connection">SocketTcpConnection&lt; Conf &gt;</link>        <itemizedlist>
+            <listitem><para>int <link linkend="_class_socket_tcp_connection_1a8910309e0763c8acdd4e46fa41fe9909">fd_</link> = -1</para>
+</listitem>
+            <listitem><para>int64_t <link linkend="_class_socket_tcp_connection_1a020a74dc1d6cd30981a97ae6d5c1b4a5">send_ts_</link> = 0</para>
+</listitem>
+            <listitem><para>int64_t <link linkend="_class_socket_tcp_connection_1a6e635f073e74634f0a4b7727a4b131db">expire_ts_</link> = 0</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_class_socket_tcp_connection_1a5a0861a5d43e805b0acdbf9630565071">head_</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_class_socket_tcp_connection_1a149f5b3944aee3722b3735d156e53ff1">tail_</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_class_socket_tcp_connection_1ae455ae759709fee7225f8bcf4057c00b">recvbuf_</link> [Conf::RecvBufSize]</para>
+</listitem>
+            <listitem><para>char <link linkend="_class_socket_tcp_connection_1a62bdf3a1596197f99205b4b2852c6516">last_error_</link> [64] = &quot;&quot;</para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;typename Conf&gt;<?linebreak?>class SocketTcpClient&lt; Conf &gt;</title></simplesect>
+</section>
+<section>
+<title>Member Typedef Documentation</title>
+<anchor xml:id="_class_socket_tcp_client_1ac77d4f51674424f0a57ffe5893e1fc5e"/><section>
+    <title>Conn</title>
+<indexterm><primary>Conn</primary><secondary>SocketTcpClient&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>SocketTcpClient&lt; Conf &gt;</primary><secondary>Conn</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>using <link linkend="_class_socket_tcp_client">SocketTcpClient</link>&lt; Conf &gt;::Conn = <link linkend="_class_socket_tcp_connection">SocketTcpConnection</link>&lt;Conf&gt;</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_socket_tcp_client_1a37f304a33312f196713dfc6e5a946b1b"/><section>
+    <title>allowReconnect()</title>
+<indexterm><primary>allowReconnect</primary><secondary>SocketTcpClient&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>SocketTcpClient&lt; Conf &gt;</primary><secondary>allowReconnect</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>void <link linkend="_class_socket_tcp_client">SocketTcpClient</link>&lt; Conf &gt;::allowReconnect ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_socket_tcp_client_1a5a17555622e4641bdf9991d751fd2c61"/><section>
+    <title>init()</title>
+<indexterm><primary>init</primary><secondary>SocketTcpClient&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>SocketTcpClient&lt; Conf &gt;</primary><secondary>init</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>bool <link linkend="_class_socket_tcp_client">SocketTcpClient</link>&lt; Conf &gt;::init (const char * interface, const char * server_ip, uint16_t server_port, uint16_t local_port = <computeroutput>0</computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_socket_tcp_client_1ad53631d4971a8ed52b1089fe3900ed78"/><section>
+    <title>poll()</title>
+<indexterm><primary>poll</primary><secondary>SocketTcpClient&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>SocketTcpClient&lt; Conf &gt;</primary><secondary>poll</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><computeroutput>template&lt;typename Handler &gt; </computeroutput><para><computeroutput>void <link linkend="_class_socket_tcp_client">SocketTcpClient</link>&lt; Conf &gt;::poll (Handler &amp; handler)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/external/pollnet/Socket.h</section>
+</section>

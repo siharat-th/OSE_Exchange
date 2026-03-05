@@ -1,0 +1,115 @@
+\doxysection{Socket\+Tcp\+Client\texorpdfstring{$<$}{<} Conf \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_socket_tcp_client}{}\label{class_socket_tcp_client}\index{SocketTcpClient$<$ Conf $>$@{SocketTcpClient$<$ Conf $>$}}
+Inheritance diagram for Socket\+Tcp\+Client\texorpdfstring{$<$}{<} Conf \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_socket_tcp_client}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{class_socket_tcp_client_ac77d4f51674424f0a57ffe5893e1fc5e}{Conn}} = \mbox{\hyperlink{class_socket_tcp_connection}{Socket\+Tcp\+Connection}}$<$Conf$>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_socket_tcp_client_a5a17555622e4641bdf9991d751fd2c61}{init}} (const char \texorpdfstring{$\ast$}{*}interface, const char \texorpdfstring{$\ast$}{*}server\+\_\+ip, uint16\+\_\+t server\+\_\+port, uint16\+\_\+t local\+\_\+port=0)
+\item 
+void \mbox{\hyperlink{class_socket_tcp_client_a37f304a33312f196713dfc6e5a946b1b}{allow\+Reconnect}} ()
+\item 
+{\footnotesize template$<$typename Handler $>$ }\\void \mbox{\hyperlink{class_socket_tcp_client_ad53631d4971a8ed52b1089fe3900ed78}{poll}} (Handler \&handler)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_socket_tcp_connection}{Socket\+Tcp\+Connection$<$ Conf $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_socket_tcp_connection_ad6b726fdc61096127a060c6034b1a17c}{get\+Last\+Error}} ()
+\item 
+bool \mbox{\hyperlink{class_socket_tcp_connection_a94777a3ac14c4573e53eac27c3516d0d}{is\+Connected}} ()
+\item 
+bool \mbox{\hyperlink{class_socket_tcp_connection_a28d8818b8cdce809e188e83f28ff4567}{get\+Peername}} (struct sockaddr\+\_\+in \&addr)
+\item 
+void \mbox{\hyperlink{class_socket_tcp_connection_af29c3ff7d0b8af58c2f7a8bc15fa6b19}{close}} (const char \texorpdfstring{$\ast$}{*}reason, bool check\+\_\+errno=false)
+\item 
+int \mbox{\hyperlink{class_socket_tcp_connection_a9031ade4d79dd00d62a6dd3f8bf2250b}{write\+Some}} (const void \texorpdfstring{$\ast$}{*}data, uint32\+\_\+t size, bool more=false)
+\item 
+bool \mbox{\hyperlink{class_socket_tcp_connection_aded9576b6fbe4c81b4c30b75321a0418}{write}} (const void \texorpdfstring{$\ast$}{*}data\+\_\+, uint32\+\_\+t size, bool more=false)
+\item 
+bool \mbox{\hyperlink{class_socket_tcp_connection_a48321847688f68427ca7e3d1f057a1e6}{write\+Nonblock}} (const void \texorpdfstring{$\ast$}{*}data, uint32\+\_\+t size, bool more=false)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_socket_tcp_connection}{Socket\+Tcp\+Connection$<$ Conf $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_socket_tcp_connection_acea69860f53c341ccf173167942668fa}{connect}} (struct sockaddr\+\_\+in \&server\+\_\+addr, uint16\+\_\+t local\+\_\+port\+\_\+be)
+\item 
+{\footnotesize template$<$typename Handler $>$ }\\void \mbox{\hyperlink{class_socket_tcp_connection_a8973b916e266a771ac13cb3bf683d590}{poll\+Conn}} (int64\+\_\+t now, Handler \&handler)
+\item 
+{\footnotesize template$<$typename Handler $>$ }\\bool \mbox{\hyperlink{class_socket_tcp_connection_abae78585f0bb6d04ffbc46fb87d9c6d2}{read}} (Handler handler)
+\item 
+bool \mbox{\hyperlink{class_socket_tcp_connection_ac39fef35b7e87250e3c6e4d8f9e9a54f}{open}} (int64\+\_\+t now, int fd)
+\item 
+void \mbox{\hyperlink{class_socket_tcp_connection_ac69686e63adfc9f63c76f3e6f5e3eca7}{save\+Error}} (const char \texorpdfstring{$\ast$}{*}msg, bool check\+\_\+errno)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_socket_tcp_connection}{Socket\+Tcp\+Connection$<$ Conf $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_socket_tcp_connection_a8910309e0763c8acdd4e46fa41fe9909}{fd\+\_\+}} = -\/1
+\item 
+int64\+\_\+t \mbox{\hyperlink{class_socket_tcp_connection_a020a74dc1d6cd30981a97ae6d5c1b4a5}{send\+\_\+ts\+\_\+}} = 0
+\item 
+int64\+\_\+t \mbox{\hyperlink{class_socket_tcp_connection_a6e635f073e74634f0a4b7727a4b131db}{expire\+\_\+ts\+\_\+}} = 0
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_socket_tcp_connection_a5a0861a5d43e805b0acdbf9630565071}{head\+\_\+}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_socket_tcp_connection_a149f5b3944aee3722b3735d156e53ff1}{tail\+\_\+}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_socket_tcp_connection_ae455ae759709fee7225f8bcf4057c00b}{recvbuf\+\_\+}} \mbox{[}Conf\+::\+Recv\+Buf\+Size\mbox{]}
+\item 
+char \mbox{\hyperlink{class_socket_tcp_connection_a62bdf3a1596197f99205b4b2852c6516}{last\+\_\+error\+\_\+}} \mbox{[}64\mbox{]} = "{}"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Conf$>$\newline
+class Socket\+Tcp\+Client$<$ Conf $>$}
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{class_socket_tcp_client_ac77d4f51674424f0a57ffe5893e1fc5e}\index{SocketTcpClient$<$ Conf $>$@{SocketTcpClient$<$ Conf $>$}!Conn@{Conn}}
+\index{Conn@{Conn}!SocketTcpClient$<$ Conf $>$@{SocketTcpClient$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{Conn}{Conn}}
+{\footnotesize\ttfamily \label{class_socket_tcp_client_ac77d4f51674424f0a57ffe5893e1fc5e} 
+template$<$typename Conf $>$ \\
+using \mbox{\hyperlink{class_socket_tcp_client}{Socket\+Tcp\+Client}}$<$ Conf $>$\+::\+Conn = \mbox{\hyperlink{class_socket_tcp_connection}{Socket\+Tcp\+Connection}}$<$Conf$>$}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_socket_tcp_client_a37f304a33312f196713dfc6e5a946b1b}\index{SocketTcpClient$<$ Conf $>$@{SocketTcpClient$<$ Conf $>$}!allowReconnect@{allowReconnect}}
+\index{allowReconnect@{allowReconnect}!SocketTcpClient$<$ Conf $>$@{SocketTcpClient$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{allowReconnect()}{allowReconnect()}}
+{\footnotesize\ttfamily \label{class_socket_tcp_client_a37f304a33312f196713dfc6e5a946b1b} 
+template$<$typename Conf $>$ \\
+void \mbox{\hyperlink{class_socket_tcp_client}{Socket\+Tcp\+Client}}$<$ Conf $>$\+::allow\+Reconnect (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_socket_tcp_client_a5a17555622e4641bdf9991d751fd2c61}\index{SocketTcpClient$<$ Conf $>$@{SocketTcpClient$<$ Conf $>$}!init@{init}}
+\index{init@{init}!SocketTcpClient$<$ Conf $>$@{SocketTcpClient$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \label{class_socket_tcp_client_a5a17555622e4641bdf9991d751fd2c61} 
+template$<$typename Conf $>$ \\
+bool \mbox{\hyperlink{class_socket_tcp_client}{Socket\+Tcp\+Client}}$<$ Conf $>$\+::init (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{interface}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{server\+\_\+ip}{, }\item[{uint16\+\_\+t}]{server\+\_\+port}{, }\item[{uint16\+\_\+t}]{local\+\_\+port}{ = {\ttfamily 0}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_socket_tcp_client_ad53631d4971a8ed52b1089fe3900ed78}\index{SocketTcpClient$<$ Conf $>$@{SocketTcpClient$<$ Conf $>$}!poll@{poll}}
+\index{poll@{poll}!SocketTcpClient$<$ Conf $>$@{SocketTcpClient$<$ Conf $>$}}
+\doxysubsubsection{\texorpdfstring{poll()}{poll()}}
+{\footnotesize\ttfamily \label{class_socket_tcp_client_ad53631d4971a8ed52b1089fe3900ed78} 
+template$<$typename Conf $>$ \\
+template$<$typename Handler $>$ \\
+void \mbox{\hyperlink{class_socket_tcp_client}{Socket\+Tcp\+Client}}$<$ Conf $>$\+::poll (\begin{DoxyParamCaption}\item[{Handler \&}]{handler}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sgaer/source/repos/katanafinancial/\+Occam\+CME4/\+Occam\+CME4/src/external/pollnet/Socket.\+h\end{DoxyCompactItemize}

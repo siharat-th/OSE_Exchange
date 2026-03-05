@@ -1,0 +1,114 @@
+\doxysection{Perf\+Timer Class Reference}
+\hypertarget{class_perf_timer}{}\label{class_perf_timer}\index{PerfTimer@{PerfTimer}}
+
+
+High-\/resolution performance counter.  
+
+
+
+
+{\ttfamily \#include $<$Perf\+Timer.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_perf_timer_a663b181ed2d6fe2041ea9f28c0703033}{Perf\+Timer}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_perf_timer}{Perf\+Timer} object with the given name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_perf_timer_ae62ad823fd00d0be308ae8b833cc205d}{Clear}} ()
+\begin{DoxyCompactList}\small\item\em Clears the measurements. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_perf_timer_ad6d11f24d3689040feea6827f5eb79c0}{start}} ()
+\begin{DoxyCompactList}\small\item\em Starts the timer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_perf_timer_ad02651b4558d127f8bb5aba24959e4ce}{stop}} ()
+\begin{DoxyCompactList}\small\item\em Stops the timer and records the elapsed time. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{class_perf_timer_a8f103953315cd7e8588626500375270c}{Current}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current timestamp. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_perf_timer_a2b28af8e6a64cc5f4084d8e2f6afcdc0}{Print}} ()
+\begin{DoxyCompactList}\small\item\em Prints the measurements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+High-\/resolution performance counter. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_perf_timer_a663b181ed2d6fe2041ea9f28c0703033}\index{PerfTimer@{PerfTimer}!PerfTimer@{PerfTimer}}
+\index{PerfTimer@{PerfTimer}!PerfTimer@{PerfTimer}}
+\doxysubsubsection{\texorpdfstring{PerfTimer()}{PerfTimer()}}
+{\footnotesize\ttfamily \label{class_perf_timer_a663b181ed2d6fe2041ea9f28c0703033} 
+Perf\+Timer\+::\+Perf\+Timer (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a \doxylink{class_perf_timer}{Perf\+Timer} object with the given name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the \doxylink{class_perf_timer}{Perf\+Timer}. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_perf_timer_ae62ad823fd00d0be308ae8b833cc205d}\index{PerfTimer@{PerfTimer}!Clear@{Clear}}
+\index{Clear@{Clear}!PerfTimer@{PerfTimer}}
+\doxysubsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily \label{class_perf_timer_ae62ad823fd00d0be308ae8b833cc205d} 
+void Perf\+Timer\+::\+Clear (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Clears the measurements. 
+
+\Hypertarget{class_perf_timer_a8f103953315cd7e8588626500375270c}\index{PerfTimer@{PerfTimer}!Current@{Current}}
+\index{Current@{Current}!PerfTimer@{PerfTimer}}
+\doxysubsubsection{\texorpdfstring{Current()}{Current()}}
+{\footnotesize\ttfamily \label{class_perf_timer_a8f103953315cd7e8588626500375270c} 
+uint64\+\_\+t Perf\+Timer\+::\+Current (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the current timestamp. 
+
+\begin{DoxyReturn}{Returns}
+The current timestamp. 
+\end{DoxyReturn}
+\Hypertarget{class_perf_timer_a2b28af8e6a64cc5f4084d8e2f6afcdc0}\index{PerfTimer@{PerfTimer}!Print@{Print}}
+\index{Print@{Print}!PerfTimer@{PerfTimer}}
+\doxysubsubsection{\texorpdfstring{Print()}{Print()}}
+{\footnotesize\ttfamily \label{class_perf_timer_a2b28af8e6a64cc5f4084d8e2f6afcdc0} 
+std\+::string Perf\+Timer\+::\+Print (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prints the measurements. 
+
+\begin{DoxyReturn}{Returns}
+A string representation of the measurements. 
+\end{DoxyReturn}
+\Hypertarget{class_perf_timer_ad6d11f24d3689040feea6827f5eb79c0}\index{PerfTimer@{PerfTimer}!start@{start}}
+\index{start@{start}!PerfTimer@{PerfTimer}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily \label{class_perf_timer_ad6d11f24d3689040feea6827f5eb79c0} 
+void Perf\+Timer\+::start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Starts the timer. 
+
+\begin{DoxyNote}{Note}
+If the timer is already started, an error message will be printed. 
+\end{DoxyNote}
+\Hypertarget{class_perf_timer_ad02651b4558d127f8bb5aba24959e4ce}\index{PerfTimer@{PerfTimer}!stop@{stop}}
+\index{stop@{stop}!PerfTimer@{PerfTimer}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily \label{class_perf_timer_ad02651b4558d127f8bb5aba24959e4ce} 
+void Perf\+Timer\+::stop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Stops the timer and records the elapsed time. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Core/Perf\+Timer.\+hpp\end{DoxyCompactItemize}

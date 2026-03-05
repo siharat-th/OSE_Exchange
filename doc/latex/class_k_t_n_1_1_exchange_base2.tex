@@ -1,0 +1,532 @@
+\doxysection{KTN\+::Exchange\+Base2 Class Reference}
+\hypertarget{class_k_t_n_1_1_exchange_base2}{}\label{class_k_t_n_1_1_exchange_base2}\index{KTN::ExchangeBase2@{KTN::ExchangeBase2}}
+
+
+Represents the base class for an exchange handler.  
+
+
+
+
+{\ttfamily \#include $<$Exchange\+Base2.\+hpp$>$}
+
+Inheritance diagram for KTN\+::Exchange\+Base2\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_k_t_n_1_1_exchange_base2}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_exchange_base2_ac8cff2c312e11492aaf84fa948985ba3}{Exchange\+Base2}} (const std\+::string \&settingsfile, const std\+::string \&source, const std\+::string \&exchname)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{class_k_t_n_1_1_exchange_base2}{Exchange\+Base2}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_k_t_n_1_1_exchange_base2_a1aaa796870fbd3e877e591162dd91acd}{\texorpdfstring{$\sim$}{\string~}\+Exchange\+Base2}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{class_k_t_n_1_1_exchange_base2}{Exchange\+Base2}. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_k_t_n_1_1_exchange_base2_acefbf50e1593eaa77c555da52e06ddd1}{Name}} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the exchange. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_exchange_base2_aef0e3d1c9bc59575fb88df7240e0c8ef}{Stop}} ()=0
+\begin{DoxyCompactList}\small\item\em Stops the exchange. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_exchange_base2_a561385a2be9f113e775efed5aeb64163}{Send}} (\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&order, int action)=0
+\begin{DoxyCompactList}\small\item\em Sends an order. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_exchange_base2_ad75278174244955c2693e21e738f7e7a}{Send\+Mass\+Action}} (\mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} \&order)=0
+\begin{DoxyCompactList}\small\item\em Sends a mass action. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_exchange_base2_aa01ce3c26302432c51131c24f315e144}{Send\+Hedge\+Instruction}} (uint64\+\_\+t ordereqid, const std\+::vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3}{Spread\+Hedge\+V3}} $>$ \&hdg)
+\begin{DoxyCompactList}\small\item\em Sends a hedge instruction. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_exchange_base2_a8004561a90abb64af280cf4692e430ad}{Algo\+Json}} (std\+::string json, Exch\+Cmd\+::\+Enum cmd)
+\begin{DoxyCompactList}\small\item\em Sends an algorithmic command in JSON format. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_exchange_base2_ac2201df8037a75fbaf0619ecf8684e8a}{Clear\+Maps}} ()
+\begin{DoxyCompactList}\small\item\em Clears the maps. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_exchange_base2_a5c433c74f81d16e7f45df711692cd7d4}{Print\+Latencies}} (bool clear)
+\begin{DoxyCompactList}\small\item\em Prints the latencies. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_exchange_base2_ae91c14c6b3ade61bb1af7b253ebe7319}{Print\+Msg\+Ratios}} ()
+\begin{DoxyCompactList}\small\item\em Prints the message ratios. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_exchange_base2_aea11c9501a1207b83af80c6c7abbd4fe}{Reset}} ()
+\begin{DoxyCompactList}\small\item\em Resets the exchange. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_exchange_base2_abc7051e6780afdbb0ee227548a6b6564}{Command}} (\mbox{\hyperlink{struct_instruction}{Instruction}} command)
+\begin{DoxyCompactList}\small\item\em Executes a command. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_exchange_base2_ad48b506ce66acbbff141641f003cca99}{Poll}} ()
+\begin{DoxyCompactList}\small\item\em Polls the exchange. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_k_t_n_1_1_exchange_base2_a905bc64ef29aff02280d769cde3c594c}{Sett\+File}} ()
+\begin{DoxyCompactList}\small\item\em Gets the settings file path. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_exchange_base2_ab8bccf95f1f0b8e5e117923104d31c75}{Log\+Me}} (const std\+::string \&sz\+Msg, int i\+Color=LOG\+\_\+\+WHITE)
+\begin{DoxyCompactList}\small\item\em Logs a message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_exchange_base2_ad28c9111fb5ebbac595ecd657aecee52}{Change\+Name}} (const std\+::string \&owner, const std\+::string \&source)
+\begin{DoxyCompactList}\small\item\em Changes the name of the exchange. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_exchange_base2_a9bc40ada22590f70a55abdc06c56c486}{Report\+Status}} (\mbox{\hyperlink{class_session_status}{Session\+Status}} s)
+\begin{DoxyCompactList}\small\item\em Reports the status of the session. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_exchange_base2_a41f8f46ef5cb13108b86b23433f9c57c}{Msg\+Sent}} (const std\+::string \&symb, int cnt, int volume, int event)
+\begin{DoxyCompactList}\small\item\em Logs a message indicating that a message was sent. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_exchange_base2_ac4da9f4a137e7c255276ca9a4120510f}{Stop\+Base}} ()
+\begin{DoxyCompactList}\small\item\em Stops the base exchange. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_exchange_base2_a924d04a8225331c72fc26e7f62e8338c}{fast\+Copy2}} (char \texorpdfstring{$\ast$}{*}dest, const char \texorpdfstring{$\ast$}{*}src, size\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em Fast copy function for copying memory. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_exchange_base2_a5fde3aacdf5f50b70162b2213d0359b1}{needhb}} ()
+\begin{DoxyCompactList}\small\item\em Checks if a heartbeat is needed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_exch_state}{Exch\+State}} \mbox{\hyperlink{class_k_t_n_1_1_exchange_base2_a7886a4389dc6aadf2ef4363d5090508e}{\+\_\+\+State}}
+\item 
+\mbox{\hyperlink{class_log_svc}{Log\+Svc}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_k_t_n_1_1_exchange_base2_a5433583addc6365cbe84c8d633b158b2}{\+\_\+logsvc}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{structmsgrate}{msgrate}} $>$ \mbox{\hyperlink{class_k_t_n_1_1_exchange_base2_a53c5d19661493033ff9a67dc35fc77b1}{\+\_\+msgratio}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{structmsgevents}{msgevents}} $>$ \mbox{\hyperlink{class_k_t_n_1_1_exchange_base2_a9e0644d5ec5c1c838f4fe3c90028ea02}{\+\_\+msgevents}}
+\item 
+\mbox{\hyperlink{class_hash_map}{Hash\+Map}}$<$ uint64\+\_\+t, std\+::vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} $>$, 1000 $>$ \mbox{\hyperlink{class_k_t_n_1_1_exchange_base2_aa7c788acbea7b004d77b2a462c356e17}{\+\_\+hedge\+Ords}}
+\item 
+\mbox{\hyperlink{class_spread_hedge_circ_buff}{Spread\+Hedge\+Circ\+Buff}} \mbox{\hyperlink{class_k_t_n_1_1_exchange_base2_a1dae76a622dbf06f70bd7572fcd3e0d3}{\+\_\+hedge\+Map}}
+\item 
+\mbox{\hyperlink{class_performance_tracker}{Performance\+Tracker}} \mbox{\hyperlink{class_k_t_n_1_1_exchange_base2_a52371b9708664b6e7d9b24e7e39f8bb8}{\+\_\+trk}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the base class for an exchange handler. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_k_t_n_1_1_exchange_base2_ac8cff2c312e11492aaf84fa948985ba3}\index{KTN::ExchangeBase2@{KTN::ExchangeBase2}!ExchangeBase2@{ExchangeBase2}}
+\index{ExchangeBase2@{ExchangeBase2}!KTN::ExchangeBase2@{KTN::ExchangeBase2}}
+\doxysubsubsection{\texorpdfstring{ExchangeBase2()}{ExchangeBase2()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_exchange_base2_ac8cff2c312e11492aaf84fa948985ba3} 
+Exchange\+Base2\+::\+Exchange\+Base2 (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{settingsfile}{, }\item[{const std\+::string \&}]{source}{, }\item[{const std\+::string \&}]{exchname}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for \doxylink{class_k_t_n_1_1_exchange_base2}{Exchange\+Base2}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em settingsfile} & The path to the settings file. \\
+\hline
+{\em source} & The source of the exchange. \\
+\hline
+{\em exchname} & The name of the exchange. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_exchange_base2_a1aaa796870fbd3e877e591162dd91acd}\index{KTN::ExchangeBase2@{KTN::ExchangeBase2}!````~ExchangeBase2@{\texorpdfstring{$\sim$}{\string~}ExchangeBase2}}
+\index{````~ExchangeBase2@{\texorpdfstring{$\sim$}{\string~}ExchangeBase2}!KTN::ExchangeBase2@{KTN::ExchangeBase2}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ExchangeBase2()}{\string~ExchangeBase2()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_exchange_base2_a1aaa796870fbd3e877e591162dd91acd} 
+Exchange\+Base2\+::\texorpdfstring{$\sim$}{\string~}\+Exchange\+Base2 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor for \doxylink{class_k_t_n_1_1_exchange_base2}{Exchange\+Base2}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_exchange_base2_a8004561a90abb64af280cf4692e430ad}\index{KTN::ExchangeBase2@{KTN::ExchangeBase2}!AlgoJson@{AlgoJson}}
+\index{AlgoJson@{AlgoJson}!KTN::ExchangeBase2@{KTN::ExchangeBase2}}
+\doxysubsubsection{\texorpdfstring{AlgoJson()}{AlgoJson()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_exchange_base2_a8004561a90abb64af280cf4692e430ad} 
+void Exchange\+Base2\+::\+Algo\+Json (\begin{DoxyParamCaption}\item[{std\+::string}]{json}{, }\item[{Exch\+Cmd\+::\+Enum}]{cmd}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sends an algorithmic command in JSON format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & The JSON string. \\
+\hline
+{\em cmd} & The command type.\\
+\hline
+\end{DoxyParams}
+\doxylink{class_algo_json}{Algo\+Json} reception IF Algo is integrated into handler. 
+\begin{DoxyParams}{Parameters}
+{\em json} & \\
+\hline
+{\em cmd} & \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00050}{Log\+Me()}}.
+
+\Hypertarget{class_k_t_n_1_1_exchange_base2_ad28c9111fb5ebbac595ecd657aecee52}\index{KTN::ExchangeBase2@{KTN::ExchangeBase2}!ChangeName@{ChangeName}}
+\index{ChangeName@{ChangeName}!KTN::ExchangeBase2@{KTN::ExchangeBase2}}
+\doxysubsubsection{\texorpdfstring{ChangeName()}{ChangeName()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_exchange_base2_ad28c9111fb5ebbac595ecd657aecee52} 
+void KTN\+::\+Exchange\+Base2\+::\+Change\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{owner}{, }\item[{const std\+::string \&}]{source}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Changes the name of the exchange. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em owner} & The owner of the exchange. \\
+\hline
+{\em source} & The source of the exchange. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_exchange_base2_ac2201df8037a75fbaf0619ecf8684e8a}\index{KTN::ExchangeBase2@{KTN::ExchangeBase2}!ClearMaps@{ClearMaps}}
+\index{ClearMaps@{ClearMaps}!KTN::ExchangeBase2@{KTN::ExchangeBase2}}
+\doxysubsubsection{\texorpdfstring{ClearMaps()}{ClearMaps()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_exchange_base2_ac2201df8037a75fbaf0619ecf8684e8a} 
+void Exchange\+Base2\+::\+Clear\+Maps (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Clears the maps. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_cme_algo_a1625d07eff160396acadbc6d0aa39381}{KTN\+::\+CME\+::\+Cme\+Algo}}, and \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_cme_g_t5_a9e1ec089c2b1877fb8d6b57106a583e6}{KTN\+::\+CME\+::\+Cme\+GT5}}.
+
+
+
+References \mbox{\hyperlink{l00050}{Log\+Me()}}.
+
+\Hypertarget{class_k_t_n_1_1_exchange_base2_abc7051e6780afdbb0ee227548a6b6564}\index{KTN::ExchangeBase2@{KTN::ExchangeBase2}!Command@{Command}}
+\index{Command@{Command}!KTN::ExchangeBase2@{KTN::ExchangeBase2}}
+\doxysubsubsection{\texorpdfstring{Command()}{Command()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_exchange_base2_abc7051e6780afdbb0ee227548a6b6564} 
+void Exchange\+Base2\+::\+Command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_instruction}{Instruction}}}]{command}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Executes a command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & The command to execute. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_cme_algo_ad97315d21479a9830c1c5d08bd4a58ee}{KTN\+::\+CME\+::\+Cme\+Algo}}, and \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_cme_g_t5_abe8b4161e522f010ddcb2b4147128196}{KTN\+::\+CME\+::\+Cme\+GT5}}.
+
+
+
+References \mbox{\hyperlink{l00050}{Log\+Me()}}.
+
+\Hypertarget{class_k_t_n_1_1_exchange_base2_a924d04a8225331c72fc26e7f62e8338c}\index{KTN::ExchangeBase2@{KTN::ExchangeBase2}!fastCopy2@{fastCopy2}}
+\index{fastCopy2@{fastCopy2}!KTN::ExchangeBase2@{KTN::ExchangeBase2}}
+\doxysubsubsection{\texorpdfstring{fastCopy2()}{fastCopy2()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_exchange_base2_a924d04a8225331c72fc26e7f62e8338c} 
+void KTN\+::\+Exchange\+Base2\+::fast\+Copy2 (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{dest}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{src}{, }\item[{size\+\_\+t}]{length}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Fast copy function for copying memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dest} & The destination memory address. \\
+\hline
+{\em src} & The source memory address. \\
+\hline
+{\em length} & The length of the memory to copy. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_exchange_base2_ab8bccf95f1f0b8e5e117923104d31c75}\index{KTN::ExchangeBase2@{KTN::ExchangeBase2}!LogMe@{LogMe}}
+\index{LogMe@{LogMe}!KTN::ExchangeBase2@{KTN::ExchangeBase2}}
+\doxysubsubsection{\texorpdfstring{LogMe()}{LogMe()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_exchange_base2_ab8bccf95f1f0b8e5e117923104d31c75} 
+void Exchange\+Base2\+::\+Log\+Me (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{sz\+Msg}{, }\item[{int}]{i\+Color}{ = {\ttfamily LOG\+\_\+WHITE}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Logs a message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sz\+Msg} & The message to log. \\
+\hline
+{\em i\+Color} & The color of the log message. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00027}{Log\+Svc\+::\+Log\+Me()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00035}{Algo\+Json()}}, \mbox{\hyperlink{l00170}{KTN\+::\+CME\+::\+Cme\+Algo\+::\+Clear\+Maps()}}, \mbox{\hyperlink{l00166}{KTN\+::\+CME\+::\+Cme\+GT5\+::\+Clear\+Maps()}}, \mbox{\hyperlink{l00045}{Clear\+Maps()}}, \mbox{\hyperlink{l00019}{KTN\+::\+CME\+::\+Cme\+Algo\+::\+Cme\+Algo()}}, \mbox{\hyperlink{l00019}{KTN\+::\+CME\+::\+Cme\+GT5\+::\+Cme\+GT5()}}, \mbox{\hyperlink{l00874}{KTN\+::\+CME\+::\+Cme\+Algo\+::\+Command()}}, \mbox{\hyperlink{l00822}{KTN\+::\+CME\+::\+Cme\+GT5\+::\+Command()}}, \mbox{\hyperlink{l00067}{Command()}}, \mbox{\hyperlink{l00369}{KTN\+::\+CME\+::\+Cme\+Algo\+::on\+Recv()}}, \mbox{\hyperlink{l00365}{KTN\+::\+CME\+::\+Cme\+GT5\+::on\+Recv()}}, \mbox{\hyperlink{l00826}{KTN\+::\+CME\+::\+Cme\+Algo\+::\+Print\+Latencies()}}, \mbox{\hyperlink{l00805}{KTN\+::\+CME\+::\+Cme\+GT5\+::\+Print\+Latencies()}}, \mbox{\hyperlink{l00111}{Print\+Latencies()}}, \mbox{\hyperlink{l00129}{Print\+Msg\+Ratios()}}, \mbox{\hyperlink{l00855}{KTN\+::\+CME\+::\+Cme\+GT5\+::\+Print\+Session\+Map()}}, \mbox{\hyperlink{l00116}{KTN\+::\+CME\+::\+Cme\+GT5\+::\+Processing\+Thread()}}, \mbox{\hyperlink{l00063}{Reset()}}, \mbox{\hyperlink{l01104}{KTN\+::\+CME\+::\+Cme\+Algo\+::\+Send()}}, \mbox{\hyperlink{l00889}{KTN\+::\+CME\+::\+Cme\+GT5\+::\+Send()}}, \mbox{\hyperlink{l00987}{KTN\+::\+CME\+::\+Cme\+GT5\+::\+Send\+Hedge\+Instruction()}}, \mbox{\hyperlink{l00040}{Send\+Hedge\+Instruction()}}, \mbox{\hyperlink{l00175}{KTN\+::\+CME\+::\+Cme\+GT5\+::\+Start()}}, \mbox{\hyperlink{l00151}{KTN\+::\+CME\+::\+Cme\+Algo\+::\+Stop()}}, and \mbox{\hyperlink{l00147}{KTN\+::\+CME\+::\+Cme\+GT5\+::\+Stop()}}.
+
+\Hypertarget{class_k_t_n_1_1_exchange_base2_a41f8f46ef5cb13108b86b23433f9c57c}\index{KTN::ExchangeBase2@{KTN::ExchangeBase2}!MsgSent@{MsgSent}}
+\index{MsgSent@{MsgSent}!KTN::ExchangeBase2@{KTN::ExchangeBase2}}
+\doxysubsubsection{\texorpdfstring{MsgSent()}{MsgSent()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_exchange_base2_a41f8f46ef5cb13108b86b23433f9c57c} 
+void Exchange\+Base2\+::\+Msg\+Sent (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{symb}{, }\item[{int}]{cnt}{, }\item[{int}]{volume}{, }\item[{int}]{event}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Logs a message indicating that a message was sent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em symb} & The symbol of the message. \\
+\hline
+{\em cnt} & The count of the message. \\
+\hline
+{\em volume} & The volume of the message. \\
+\hline
+{\em event} & The event of the message. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_exchange_base2_acefbf50e1593eaa77c555da52e06ddd1}\index{KTN::ExchangeBase2@{KTN::ExchangeBase2}!Name@{Name}}
+\index{Name@{Name}!KTN::ExchangeBase2@{KTN::ExchangeBase2}}
+\doxysubsubsection{\texorpdfstring{Name()}{Name()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_exchange_base2_acefbf50e1593eaa77c555da52e06ddd1} 
+const std\+::string \& KTN\+::\+Exchange\+Base2\+::\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the name of the exchange. 
+
+\begin{DoxyReturn}{Returns}
+The name of the exchange. 
+\end{DoxyReturn}
+\Hypertarget{class_k_t_n_1_1_exchange_base2_a5fde3aacdf5f50b70162b2213d0359b1}\index{KTN::ExchangeBase2@{KTN::ExchangeBase2}!needhb@{needhb}}
+\index{needhb@{needhb}!KTN::ExchangeBase2@{KTN::ExchangeBase2}}
+\doxysubsubsection{\texorpdfstring{needhb()}{needhb()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_exchange_base2_a5fde3aacdf5f50b70162b2213d0359b1} 
+bool KTN\+::\+Exchange\+Base2\+::needhb (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Checks if a heartbeat is needed. 
+
+\begin{DoxyReturn}{Returns}
+True if a heartbeat is needed, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_k_t_n_1_1_exchange_base2_ad48b506ce66acbbff141641f003cca99}\index{KTN::ExchangeBase2@{KTN::ExchangeBase2}!Poll@{Poll}}
+\index{Poll@{Poll}!KTN::ExchangeBase2@{KTN::ExchangeBase2}}
+\doxysubsubsection{\texorpdfstring{Poll()}{Poll()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_exchange_base2_ad48b506ce66acbbff141641f003cca99} 
+virtual void KTN\+::\+Exchange\+Base2\+::\+Poll (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Polls the exchange. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_cme_algo_a11a59d04213970bfee722d1afaf8b934}{KTN\+::\+CME\+::\+Cme\+Algo}}, and \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_cme_g_t5_a6fc669c58268b047ff913d47678ebdd4}{KTN\+::\+CME\+::\+Cme\+GT5}}.
+
+\Hypertarget{class_k_t_n_1_1_exchange_base2_a5c433c74f81d16e7f45df711692cd7d4}\index{KTN::ExchangeBase2@{KTN::ExchangeBase2}!PrintLatencies@{PrintLatencies}}
+\index{PrintLatencies@{PrintLatencies}!KTN::ExchangeBase2@{KTN::ExchangeBase2}}
+\doxysubsubsection{\texorpdfstring{PrintLatencies()}{PrintLatencies()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_exchange_base2_a5c433c74f81d16e7f45df711692cd7d4} 
+void Exchange\+Base2\+::\+Print\+Latencies (\begin{DoxyParamCaption}\item[{bool}]{clear}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Prints the latencies. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clear} & Indicates whether to clear the latencies after printing. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_cme_algo_acbcca72c86296c821fbbcf9d718b753f}{KTN\+::\+CME\+::\+Cme\+Algo}}, and \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_cme_g_t5_a13ed194414e8b13cccaf76ccd9539678}{KTN\+::\+CME\+::\+Cme\+GT5}}.
+
+
+
+References \mbox{\hyperlink{l00088}{Performance\+Tracker\+::clear()}}, \mbox{\hyperlink{l00050}{Log\+Me()}}, and \mbox{\hyperlink{l00052}{Performance\+Tracker\+::print\+Measurements()}}.
+
+\Hypertarget{class_k_t_n_1_1_exchange_base2_ae91c14c6b3ade61bb1af7b253ebe7319}\index{KTN::ExchangeBase2@{KTN::ExchangeBase2}!PrintMsgRatios@{PrintMsgRatios}}
+\index{PrintMsgRatios@{PrintMsgRatios}!KTN::ExchangeBase2@{KTN::ExchangeBase2}}
+\doxysubsubsection{\texorpdfstring{PrintMsgRatios()}{PrintMsgRatios()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_exchange_base2_ae91c14c6b3ade61bb1af7b253ebe7319} 
+void Exchange\+Base2\+::\+Print\+Msg\+Ratios (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Prints the message ratios. 
+
+
+
+References \mbox{\hyperlink{l00050}{Log\+Me()}}.
+
+\Hypertarget{class_k_t_n_1_1_exchange_base2_a9bc40ada22590f70a55abdc06c56c486}\index{KTN::ExchangeBase2@{KTN::ExchangeBase2}!ReportStatus@{ReportStatus}}
+\index{ReportStatus@{ReportStatus}!KTN::ExchangeBase2@{KTN::ExchangeBase2}}
+\doxysubsubsection{\texorpdfstring{ReportStatus()}{ReportStatus()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_exchange_base2_a9bc40ada22590f70a55abdc06c56c486} 
+void Exchange\+Base2\+::\+Report\+Status (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_session_status}{Session\+Status}}}]{s}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Reports the status of the session. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The session status. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_exchange_base2_aea11c9501a1207b83af80c6c7abbd4fe}\index{KTN::ExchangeBase2@{KTN::ExchangeBase2}!Reset@{Reset}}
+\index{Reset@{Reset}!KTN::ExchangeBase2@{KTN::ExchangeBase2}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_exchange_base2_aea11c9501a1207b83af80c6c7abbd4fe} 
+void Exchange\+Base2\+::\+Reset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Resets the exchange. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_cme_algo_ae3c1caae992f3908a0a9f32529b5a819}{KTN\+::\+CME\+::\+Cme\+Algo}}, and \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_cme_g_t5_ac380a3d7f69f63e6b0dcebcc417d188d}{KTN\+::\+CME\+::\+Cme\+GT5}}.
+
+
+
+References \mbox{\hyperlink{l00050}{Log\+Me()}}.
+
+\Hypertarget{class_k_t_n_1_1_exchange_base2_a561385a2be9f113e775efed5aeb64163}\index{KTN::ExchangeBase2@{KTN::ExchangeBase2}!Send@{Send}}
+\index{Send@{Send}!KTN::ExchangeBase2@{KTN::ExchangeBase2}}
+\doxysubsubsection{\texorpdfstring{Send()}{Send()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_exchange_base2_a561385a2be9f113e775efed5aeb64163} 
+virtual void KTN\+::\+Exchange\+Base2\+::\+Send (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}} \&}]{order}{, }\item[{int}]{action}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sends an order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order} & The order to send. \\
+\hline
+{\em action} & The action to perform. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_cme_algo_ad5f8d5ad0764407ebd8123d4ef97c7b5}{KTN\+::\+CME\+::\+Cme\+Algo}}, and \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_cme_g_t5_ab49a8e4c2a361fb9e5a596bc11eda8bb}{KTN\+::\+CME\+::\+Cme\+GT5}}.
+
+\Hypertarget{class_k_t_n_1_1_exchange_base2_aa01ce3c26302432c51131c24f315e144}\index{KTN::ExchangeBase2@{KTN::ExchangeBase2}!SendHedgeInstruction@{SendHedgeInstruction}}
+\index{SendHedgeInstruction@{SendHedgeInstruction}!KTN::ExchangeBase2@{KTN::ExchangeBase2}}
+\doxysubsubsection{\texorpdfstring{SendHedgeInstruction()}{SendHedgeInstruction()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_exchange_base2_aa01ce3c26302432c51131c24f315e144} 
+void Exchange\+Base2\+::\+Send\+Hedge\+Instruction (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{ordereqid}{, }\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3}{Spread\+Hedge\+V3}} $>$ \&}]{hdg}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sends a hedge instruction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ordereqid} & The order request ID. \\
+\hline
+{\em hdg} & The vector of spread hedge instructions. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00050}{Log\+Me()}}.
+
+\Hypertarget{class_k_t_n_1_1_exchange_base2_ad75278174244955c2693e21e738f7e7a}\index{KTN::ExchangeBase2@{KTN::ExchangeBase2}!SendMassAction@{SendMassAction}}
+\index{SendMassAction@{SendMassAction}!KTN::ExchangeBase2@{KTN::ExchangeBase2}}
+\doxysubsubsection{\texorpdfstring{SendMassAction()}{SendMassAction()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_exchange_base2_ad75278174244955c2693e21e738f7e7a} 
+virtual void KTN\+::\+Exchange\+Base2\+::\+Send\+Mass\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_k_t_n_1_1_order}{KTN\+::\+Order}} \&}]{order}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sends a mass action. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order} & The order to send. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_cme_algo_a0ceb37250c83003365c0821755a5930b}{KTN\+::\+CME\+::\+Cme\+Algo}}, and \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_cme_g_t5_a8bfc0d24ae690f4672dcbcc75d2a0b23}{KTN\+::\+CME\+::\+Cme\+GT5}}.
+
+\Hypertarget{class_k_t_n_1_1_exchange_base2_a905bc64ef29aff02280d769cde3c594c}\index{KTN::ExchangeBase2@{KTN::ExchangeBase2}!SettFile@{SettFile}}
+\index{SettFile@{SettFile}!KTN::ExchangeBase2@{KTN::ExchangeBase2}}
+\doxysubsubsection{\texorpdfstring{SettFile()}{SettFile()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_exchange_base2_a905bc64ef29aff02280d769cde3c594c} 
+std\+::string KTN\+::\+Exchange\+Base2\+::\+Sett\+File (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the settings file path. 
+
+\begin{DoxyReturn}{Returns}
+The settings file path. 
+\end{DoxyReturn}
+\Hypertarget{class_k_t_n_1_1_exchange_base2_aef0e3d1c9bc59575fb88df7240e0c8ef}\index{KTN::ExchangeBase2@{KTN::ExchangeBase2}!Stop@{Stop}}
+\index{Stop@{Stop}!KTN::ExchangeBase2@{KTN::ExchangeBase2}}
+\doxysubsubsection{\texorpdfstring{Stop()}{Stop()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_exchange_base2_aef0e3d1c9bc59575fb88df7240e0c8ef} 
+virtual void KTN\+::\+Exchange\+Base2\+::\+Stop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Stops the exchange. 
+
+
+
+Implemented in \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_cme_algo_aa9280100ccb7b88cd21ac14b95ff3355}{KTN\+::\+CME\+::\+Cme\+Algo}}, and \mbox{\hyperlink{class_k_t_n_1_1_c_m_e_1_1_cme_g_t5_a4a86ef6a99335d36d7be244acfe77068}{KTN\+::\+CME\+::\+Cme\+GT5}}.
+
+\Hypertarget{class_k_t_n_1_1_exchange_base2_ac4da9f4a137e7c255276ca9a4120510f}\index{KTN::ExchangeBase2@{KTN::ExchangeBase2}!StopBase@{StopBase}}
+\index{StopBase@{StopBase}!KTN::ExchangeBase2@{KTN::ExchangeBase2}}
+\doxysubsubsection{\texorpdfstring{StopBase()}{StopBase()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_exchange_base2_ac4da9f4a137e7c255276ca9a4120510f} 
+void Exchange\+Base2\+::\+Stop\+Base (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Stops the base exchange. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_k_t_n_1_1_exchange_base2_a1dae76a622dbf06f70bd7572fcd3e0d3}\index{KTN::ExchangeBase2@{KTN::ExchangeBase2}!\_hedgeMap@{\_hedgeMap}}
+\index{\_hedgeMap@{\_hedgeMap}!KTN::ExchangeBase2@{KTN::ExchangeBase2}}
+\doxysubsubsection{\texorpdfstring{\_hedgeMap}{\_hedgeMap}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_exchange_base2_a1dae76a622dbf06f70bd7572fcd3e0d3} 
+\mbox{\hyperlink{class_spread_hedge_circ_buff}{Spread\+Hedge\+Circ\+Buff}} KTN\+::\+Exchange\+Base2\+::\+\_\+hedge\+Map\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_k_t_n_1_1_exchange_base2_aa7c788acbea7b004d77b2a462c356e17}\index{KTN::ExchangeBase2@{KTN::ExchangeBase2}!\_hedgeOrds@{\_hedgeOrds}}
+\index{\_hedgeOrds@{\_hedgeOrds}!KTN::ExchangeBase2@{KTN::ExchangeBase2}}
+\doxysubsubsection{\texorpdfstring{\_hedgeOrds}{\_hedgeOrds}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_exchange_base2_aa7c788acbea7b004d77b2a462c356e17} 
+\mbox{\hyperlink{class_hash_map}{Hash\+Map}}$<$uint64\+\_\+t, std\+::vector$<$\mbox{\hyperlink{struct_k_t_n_1_1_order_pod}{KTN\+::\+Order\+Pod}}$>$, 1000$>$ KTN\+::\+Exchange\+Base2\+::\+\_\+hedge\+Ords\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_k_t_n_1_1_exchange_base2_a5433583addc6365cbe84c8d633b158b2}\index{KTN::ExchangeBase2@{KTN::ExchangeBase2}!\_logsvc@{\_logsvc}}
+\index{\_logsvc@{\_logsvc}!KTN::ExchangeBase2@{KTN::ExchangeBase2}}
+\doxysubsubsection{\texorpdfstring{\_logsvc}{\_logsvc}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_exchange_base2_a5433583addc6365cbe84c8d633b158b2} 
+\mbox{\hyperlink{class_log_svc}{Log\+Svc}}\texorpdfstring{$\ast$}{*} KTN\+::\+Exchange\+Base2\+::\+\_\+logsvc\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_k_t_n_1_1_exchange_base2_a9e0644d5ec5c1c838f4fe3c90028ea02}\index{KTN::ExchangeBase2@{KTN::ExchangeBase2}!\_msgevents@{\_msgevents}}
+\index{\_msgevents@{\_msgevents}!KTN::ExchangeBase2@{KTN::ExchangeBase2}}
+\doxysubsubsection{\texorpdfstring{\_msgevents}{\_msgevents}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_exchange_base2_a9e0644d5ec5c1c838f4fe3c90028ea02} 
+std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{structmsgevents}{msgevents}}$>$ KTN\+::\+Exchange\+Base2\+::\+\_\+msgevents\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_k_t_n_1_1_exchange_base2_a53c5d19661493033ff9a67dc35fc77b1}\index{KTN::ExchangeBase2@{KTN::ExchangeBase2}!\_msgratio@{\_msgratio}}
+\index{\_msgratio@{\_msgratio}!KTN::ExchangeBase2@{KTN::ExchangeBase2}}
+\doxysubsubsection{\texorpdfstring{\_msgratio}{\_msgratio}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_exchange_base2_a53c5d19661493033ff9a67dc35fc77b1} 
+std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{structmsgrate}{msgrate}}$>$ KTN\+::\+Exchange\+Base2\+::\+\_\+msgratio\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_k_t_n_1_1_exchange_base2_a7886a4389dc6aadf2ef4363d5090508e}\index{KTN::ExchangeBase2@{KTN::ExchangeBase2}!\_State@{\_State}}
+\index{\_State@{\_State}!KTN::ExchangeBase2@{KTN::ExchangeBase2}}
+\doxysubsubsection{\texorpdfstring{\_State}{\_State}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_exchange_base2_a7886a4389dc6aadf2ef4363d5090508e} 
+\mbox{\hyperlink{struct_exch_state}{Exch\+State}} KTN\+::\+Exchange\+Base2\+::\+\_\+\+State\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_k_t_n_1_1_exchange_base2_a52371b9708664b6e7d9b24e7e39f8bb8}\index{KTN::ExchangeBase2@{KTN::ExchangeBase2}!\_trk@{\_trk}}
+\index{\_trk@{\_trk}!KTN::ExchangeBase2@{KTN::ExchangeBase2}}
+\doxysubsubsection{\texorpdfstring{\_trk}{\_trk}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_exchange_base2_a52371b9708664b6e7d9b24e7e39f8bb8} 
+\mbox{\hyperlink{class_performance_tracker}{Performance\+Tracker}} KTN\+::\+Exchange\+Base2\+::\+\_\+trk\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Exchange\+Handlers2/Exchange\+Base2.\+hpp\item 
+Exchange\+Handlers2/Exchange\+Base2.\+cpp\end{DoxyCompactItemize}

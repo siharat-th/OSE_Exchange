@@ -1,0 +1,115 @@
+\doxysection{String\+Splitter Class Reference}
+\hypertarget{class_string_splitter}{}\label{class_string_splitter}\index{StringSplitter@{StringSplitter}}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_string_splitter_a0bc5aa76f2af6e737f7432c0ae3e5d72}{Split}} (const std\+::string \&src, const std\+::string \&delim)
+\item 
+static bool \mbox{\hyperlink{class_string_splitter_a6c80145dc59ea3e4fea9a6c959cc275b}{Check\+Delim}} (std\+::string sz\+Line, std\+::string sz\+Delim)
+\item 
+static std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_string_splitter_a44f31b676a3c228f56de57c1cf32a5ac}{Split\+Stream}} (std\+::string input, char delim)
+\item 
+static void \mbox{\hyperlink{class_string_splitter_ab247fe25825bf685b0b2f7c1ca94fc55}{to\+Upper\+Case}} (std\+::string \&s)
+\item 
+static std\+::string \mbox{\hyperlink{class_string_splitter_a95eace7ea1718a158b3b821bd06ead4f}{join}} (const std\+::vector$<$ std\+::string $>$ \&strings, const std\+::string \&delimiter)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_string_splitter_a6c80145dc59ea3e4fea9a6c959cc275b}\index{StringSplitter@{StringSplitter}!CheckDelim@{CheckDelim}}
+\index{CheckDelim@{CheckDelim}!StringSplitter@{StringSplitter}}
+\doxysubsubsection{\texorpdfstring{CheckDelim()}{CheckDelim()}}
+{\footnotesize\ttfamily \label{class_string_splitter_a6c80145dc59ea3e4fea9a6c959cc275b} 
+static bool String\+Splitter\+::\+Check\+Delim (\begin{DoxyParamCaption}\item[{std\+::string}]{sz\+Line}{, }\item[{std\+::string}]{sz\+Delim}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Checks if a string contains a specific delimiter.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sz\+Line} & The string to check. \\
+\hline
+{\em sz\+Delim} & The delimiter to search for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the delimiter is found, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_string_splitter_a95eace7ea1718a158b3b821bd06ead4f}\index{StringSplitter@{StringSplitter}!join@{join}}
+\index{join@{join}!StringSplitter@{StringSplitter}}
+\doxysubsubsection{\texorpdfstring{join()}{join()}}
+{\footnotesize\ttfamily \label{class_string_splitter_a95eace7ea1718a158b3b821bd06ead4f} 
+static std\+::string String\+Splitter\+::join (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{strings}{, }\item[{const std\+::string \&}]{delimiter}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Joins a vector of strings into a single string using a delimiter.
+
+
+\begin{DoxyParams}{Parameters}
+{\em strings} & The vector of strings to join. \\
+\hline
+{\em delimiter} & The delimiter to insert between the strings. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The joined string. 
+\end{DoxyReturn}
+\Hypertarget{class_string_splitter_a0bc5aa76f2af6e737f7432c0ae3e5d72}\index{StringSplitter@{StringSplitter}!Split@{Split}}
+\index{Split@{Split}!StringSplitter@{StringSplitter}}
+\doxysubsubsection{\texorpdfstring{Split()}{Split()}}
+{\footnotesize\ttfamily \label{class_string_splitter_a0bc5aa76f2af6e737f7432c0ae3e5d72} 
+static std\+::vector$<$ std\+::string $>$ String\+Splitter\+::\+Split (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{src}{, }\item[{const std\+::string \&}]{delim}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Splits a string into multiple tokens based on a delimiter.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & The source string to split. \\
+\hline
+{\em delim} & The delimiter to split the string by. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of strings containing the tokens. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00019}{KTN\+::\+CME\+::\+Cme\+Algo\+::\+Cme\+Algo()}}, \mbox{\hyperlink{l00019}{KTN\+::\+CME\+::\+Cme\+GT5\+::\+Cme\+GT5()}}, \mbox{\hyperlink{l00011}{KTN\+::\+Exchange\+Manager\+::\+Exchange\+Manager()}}, \mbox{\hyperlink{l00203}{Settings\+::get\+List\+Csv()}}, \mbox{\hyperlink{l00034}{KT01\+::\+MSGW\+::\+Cme\+Msgw\+::\+Load()}}, \mbox{\hyperlink{l00075}{KTN\+::\+ALGO\+::\+Order\+Loader\+::\+Load\+File()}}, \mbox{\hyperlink{l00145}{KT01\+::\+MSGW\+::\+Cme\+Msgw\+::\+Load\+Product\+Gateway\+File()}}, \mbox{\hyperlink{l00031}{Standard\+Menu\+::\+Run()}}, and \mbox{\hyperlink{l00031}{Zmq\+Menu\+::\+Run()}}.
+
+\Hypertarget{class_string_splitter_a44f31b676a3c228f56de57c1cf32a5ac}\index{StringSplitter@{StringSplitter}!SplitStream@{SplitStream}}
+\index{SplitStream@{SplitStream}!StringSplitter@{StringSplitter}}
+\doxysubsubsection{\texorpdfstring{SplitStream()}{SplitStream()}}
+{\footnotesize\ttfamily \label{class_string_splitter_a44f31b676a3c228f56de57c1cf32a5ac} 
+static std\+::vector$<$ std\+::string $>$ String\+Splitter\+::\+Split\+Stream (\begin{DoxyParamCaption}\item[{std\+::string}]{input}{, }\item[{char}]{delim}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Splits a string into multiple tokens based on a single character delimiter.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The input string to split. \\
+\hline
+{\em delim} & The delimiter character to split the string by. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of strings containing the tokens. 
+\end{DoxyReturn}
+\Hypertarget{class_string_splitter_ab247fe25825bf685b0b2f7c1ca94fc55}\index{StringSplitter@{StringSplitter}!toUpperCase@{toUpperCase}}
+\index{toUpperCase@{toUpperCase}!StringSplitter@{StringSplitter}}
+\doxysubsubsection{\texorpdfstring{toUpperCase()}{toUpperCase()}}
+{\footnotesize\ttfamily \label{class_string_splitter_ab247fe25825bf685b0b2f7c1ca94fc55} 
+static void String\+Splitter\+::to\+Upper\+Case (\begin{DoxyParamCaption}\item[{std\+::string \&}]{s}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Converts a string to uppercase.
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The string to convert. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Core/String\+Splitter.\+hpp\end{DoxyCompactItemize}

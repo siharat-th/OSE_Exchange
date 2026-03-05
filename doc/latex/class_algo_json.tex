@@ -1,0 +1,69 @@
+\doxysection{Algo\+Json Class Reference}
+\hypertarget{class_algo_json}{}\label{class_algo_json}\index{AlgoJson@{AlgoJson}}
+
+
+The \doxylink{class_algo_json}{Algo\+Json} class provides a static method to format algorithm statistics into JSON.  
+
+
+
+
+{\ttfamily \#include $<$Algo\+Json.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{class_algo_json_a750e91c9c60d23e8290b2f1f16c8180a}{Format\+Algo\+Stats}} (string msgtype, std\+::string source, int enabled, std\+::string templatename, std\+::string uniqueid, std\+::string text, std\+::string name, std\+::string symb, std\+::string exch, double pos, double totalexec)
+\begin{DoxyCompactList}\small\item\em Formats algorithm statistics into JSON. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_algo_json}{Algo\+Json} class provides a static method to format algorithm statistics into JSON. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_algo_json_a750e91c9c60d23e8290b2f1f16c8180a}\index{AlgoJson@{AlgoJson}!FormatAlgoStats@{FormatAlgoStats}}
+\index{FormatAlgoStats@{FormatAlgoStats}!AlgoJson@{AlgoJson}}
+\doxysubsubsection{\texorpdfstring{FormatAlgoStats()}{FormatAlgoStats()}}
+{\footnotesize\ttfamily \label{class_algo_json_a750e91c9c60d23e8290b2f1f16c8180a} 
+static std\+::string Algo\+Json\+::\+Format\+Algo\+Stats (\begin{DoxyParamCaption}\item[{string}]{msgtype}{, }\item[{std\+::string}]{source}{, }\item[{int}]{enabled}{, }\item[{std\+::string}]{templatename}{, }\item[{std\+::string}]{uniqueid}{, }\item[{std\+::string}]{text}{, }\item[{std\+::string}]{name}{, }\item[{std\+::string}]{symb}{, }\item[{std\+::string}]{exch}{, }\item[{double}]{pos}{, }\item[{double}]{totalexec}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Formats algorithm statistics into JSON. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msgtype} & The message type. \\
+\hline
+{\em source} & The source. \\
+\hline
+{\em enabled} & The enabled flag. \\
+\hline
+{\em templatename} & The template name. \\
+\hline
+{\em uniqueid} & The unique ID. \\
+\hline
+{\em text} & The text. \\
+\hline
+{\em name} & The instance name. \\
+\hline
+{\em symb} & The symbol. \\
+\hline
+{\em exch} & The exchange. \\
+\hline
+{\em pos} & The position. \\
+\hline
+{\em totalexec} & The total execution. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The formatted JSON string. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00087}{KTN\+::\+REPORTER\+::\+Algo\+V3\+Reporter\+::\+Send\+Message()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Algo\+Support/Algo\+Json.\+hpp\end{DoxyCompactItemize}

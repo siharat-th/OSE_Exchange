@@ -1,0 +1,284 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_order_hash_table" xml:lang="en-US">
+<title>OrderHashTable Class Reference</title>
+<indexterm><primary>OrderHashTable</primary></indexterm>
+<para>
+
+<para>A hash table implementation for storing orders. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;OrderHashTable.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_order_hash_table_1afeb7d65cefb23f0beb4cceae7b32991e">OrderHashTable</link> (size_t initial_size)</para>
+
+<para>Constructs an <link linkend="_class_order_hash_table">OrderHashTable</link> object with the specified initial size. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_order_hash_table_1a2e1a9150457f5cf5a5e4874b3d711c6d">~OrderHashTable</link> ()</para>
+
+<para>Destructor for the <link linkend="_class_order_hash_table">OrderHashTable</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_order_hash_table_1a6b75a0324496ea0053ee3cdaabbf2963">insert</link> (const string &amp;key, const <link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> &amp;value)</para>
+
+<para>Inserts an order into the hash table. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_order_hash_table_1a34bd98a0d8da05453fe590b4ccf532fa">lookup</link> (const string &amp;key, <link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> &amp;value) const</para>
+
+<para>Looks up an order in the hash table. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_order_hash_table_1aef11e574e490d320cdcab4f23f48b3f1">all</link> (vector&lt; <link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> &gt; &amp;result)</para>
+
+<para>Retrieves all orders stored in the hash table. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_order_hash_table_1a35b4d87abe0081d642742b2c71682278">erase</link> (const string &amp;key)</para>
+
+<para>Removes an order from the hash table. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_order_hash_table_1ae499bf678f2e521f48db5b2ce11a4a75">clear</link> ()</para>
+
+<para>Clears all orders from the hash table. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_order_hash_table_1a5b1c82487c0ac6390c654af2d2c26b35">count</link> ()</para>
+
+<para>Returns the number of orders in the hash table. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>static constexpr float <link linkend="_class_order_hash_table_1a08e55c5d4d01703db21bcf9271fcb66b">LOAD_FACTOR</link> = 0.75f</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>A hash table implementation for storing orders. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_order_hash_table_1afeb7d65cefb23f0beb4cceae7b32991e"/><section>
+    <title>OrderHashTable()</title>
+<indexterm><primary>OrderHashTable</primary><secondary>OrderHashTable</secondary></indexterm>
+<indexterm><primary>OrderHashTable</primary><secondary>OrderHashTable</secondary></indexterm>
+<para><computeroutput>OrderHashTable::OrderHashTable (size_t initial_size)</computeroutput></para><para>
+
+<para>Constructs an <link linkend="_class_order_hash_table">OrderHashTable</link> object with the specified initial size. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>initial_size</entry><entry>
+<para>The initial size of the hash table. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_order_hash_table_1a2e1a9150457f5cf5a5e4874b3d711c6d"/><section>
+    <title>~OrderHashTable()</title>
+<indexterm><primary>~OrderHashTable</primary><secondary>OrderHashTable</secondary></indexterm>
+<indexterm><primary>OrderHashTable</primary><secondary>~OrderHashTable</secondary></indexterm>
+<para><computeroutput>OrderHashTable::~OrderHashTable ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Destructor for the <link linkend="_class_order_hash_table">OrderHashTable</link> object. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_order_hash_table_1aef11e574e490d320cdcab4f23f48b3f1"/><section>
+    <title>all()</title>
+<indexterm><primary>all</primary><secondary>OrderHashTable</secondary></indexterm>
+<indexterm><primary>OrderHashTable</primary><secondary>all</secondary></indexterm>
+<para><computeroutput>bool OrderHashTable::all (vector&lt; <link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> &gt; &amp; result)</computeroutput></para><para>
+
+<para>Retrieves all orders stored in the hash table. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>result</entry><entry>
+<para>The vector to store the retrieved orders. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if there are orders in the hash table, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_order_hash_table_1ae499bf678f2e521f48db5b2ce11a4a75"/><section>
+    <title>clear()</title>
+<indexterm><primary>clear</primary><secondary>OrderHashTable</secondary></indexterm>
+<indexterm><primary>OrderHashTable</primary><secondary>clear</secondary></indexterm>
+<para><computeroutput>void OrderHashTable::clear ( )</computeroutput></para><para>
+
+<para>Clears all orders from the hash table. </para>
+</para>
+</section>
+<anchor xml:id="_class_order_hash_table_1a5b1c82487c0ac6390c654af2d2c26b35"/><section>
+    <title>count()</title>
+<indexterm><primary>count</primary><secondary>OrderHashTable</secondary></indexterm>
+<indexterm><primary>OrderHashTable</primary><secondary>count</secondary></indexterm>
+<para><computeroutput>int OrderHashTable::count ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Returns the number of orders in the hash table. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The number of orders in the hash table. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_order_hash_table_1a35b4d87abe0081d642742b2c71682278"/><section>
+    <title>erase()</title>
+<indexterm><primary>erase</primary><secondary>OrderHashTable</secondary></indexterm>
+<indexterm><primary>OrderHashTable</primary><secondary>erase</secondary></indexterm>
+<para><computeroutput>void OrderHashTable::erase (const string &amp; key)</computeroutput></para><para>
+
+<para>Removes an order from the hash table. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>key</entry><entry>
+<para>The key associated with the order to be removed. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_order_hash_table_1a6b75a0324496ea0053ee3cdaabbf2963"/><section>
+    <title>insert()</title>
+<indexterm><primary>insert</primary><secondary>OrderHashTable</secondary></indexterm>
+<indexterm><primary>OrderHashTable</primary><secondary>insert</secondary></indexterm>
+<para><computeroutput>void OrderHashTable::insert (const string &amp; key, const <link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> &amp; value)</computeroutput></para><para>
+
+<para>Inserts an order into the hash table. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>key</entry><entry>
+<para>The key associated with the order. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>value</entry><entry>
+<para>The order to be inserted. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_order_hash_table_1a34bd98a0d8da05453fe590b4ccf532fa"/><section>
+    <title>lookup()</title>
+<indexterm><primary>lookup</primary><secondary>OrderHashTable</secondary></indexterm>
+<indexterm><primary>OrderHashTable</primary><secondary>lookup</secondary></indexterm>
+<para><computeroutput>bool OrderHashTable::lookup (const string &amp; key, <link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> &amp; value) const</computeroutput></para><para>
+
+<para>Looks up an order in the hash table. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>key</entry><entry>
+<para>The key associated with the order. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>value</entry><entry>
+<para>The found order will be stored in this parameter. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the order was found, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_order_hash_table_1a08e55c5d4d01703db21bcf9271fcb66b"/><section>
+    <title>LOAD_FACTOR</title>
+<indexterm><primary>LOAD_FACTOR</primary><secondary>OrderHashTable</secondary></indexterm>
+<indexterm><primary>OrderHashTable</primary><secondary>LOAD_FACTOR</secondary></indexterm>
+<para><computeroutput>float OrderHashTable::LOAD_FACTOR = 0.75f<computeroutput>[static]</computeroutput>, <computeroutput>[constexpr]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Maps/OrderHashTable.hppMaps/OrderHashTable.cpp</section>
+</section>

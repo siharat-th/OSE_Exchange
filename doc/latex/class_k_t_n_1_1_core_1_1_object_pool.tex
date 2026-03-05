@@ -1,0 +1,115 @@
+\doxysection{KTN\+::Core\+::Object\+Pool\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_k_t_n_1_1_core_1_1_object_pool}{}\label{class_k_t_n_1_1_core_1_1_object_pool}\index{KTN::Core::ObjectPool$<$ T $>$@{KTN::Core::ObjectPool$<$ T $>$}}
+
+
+A generic object pool implementation.  
+
+
+
+
+{\ttfamily \#include $<$Object\+Pool.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_core_1_1_object_pool_a48723d5c01b43922621cf2ab37f3f242}{Object\+Pool}} (size\+\_\+t pool\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{class_k_t_n_1_1_core_1_1_object_pool}{Object\+Pool} with the specified pool size. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_k_t_n_1_1_core_1_1_object_pool_ab023da8399080d4b02a8b988650871f2}{\texorpdfstring{$\sim$}{\string~}\+Object\+Pool}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{class_k_t_n_1_1_core_1_1_object_pool}{Object\+Pool} and releases all allocated objects. \end{DoxyCompactList}\item 
+T \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_object_pool_ad28181ff0aa8c832b5b858ba979b2fb6}{get}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves an object from the pool. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_object_pool_ae8a06d1fa9f8d4e7ec7dc7c7966c7415}{put}} (T \texorpdfstring{$\ast$}{*}obj)
+\begin{DoxyCompactList}\small\item\em Returns an object to the pool. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class KTN\+::\+Core\+::\+Object\+Pool$<$ T $>$}
+A generic object pool implementation. 
+
+This class provides a thread-\/safe object pool that can be used to efficiently manage and reuse objects of a specific type. Objects are preallocated and added to the pool during construction, and can be obtained and returned to the pool as needed.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of objects to be managed by the pool. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_k_t_n_1_1_core_1_1_object_pool_a48723d5c01b43922621cf2ab37f3f242}\index{KTN::Core::ObjectPool$<$ T $>$@{KTN::Core::ObjectPool$<$ T $>$}!ObjectPool@{ObjectPool}}
+\index{ObjectPool@{ObjectPool}!KTN::Core::ObjectPool$<$ T $>$@{KTN::Core::ObjectPool$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ObjectPool()}{ObjectPool()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_object_pool_a48723d5c01b43922621cf2ab37f3f242} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{class_k_t_n_1_1_core_1_1_object_pool}{KTN\+::\+Core\+::\+Object\+Pool}}$<$ T $>$\+::\+Object\+Pool (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{pool\+\_\+size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs an \doxylink{class_k_t_n_1_1_core_1_1_object_pool}{Object\+Pool} with the specified pool size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pool\+\_\+size} & The number of objects to preallocate and add to the pool. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_core_1_1_object_pool_ab023da8399080d4b02a8b988650871f2}\index{KTN::Core::ObjectPool$<$ T $>$@{KTN::Core::ObjectPool$<$ T $>$}!````~ObjectPool@{\texorpdfstring{$\sim$}{\string~}ObjectPool}}
+\index{````~ObjectPool@{\texorpdfstring{$\sim$}{\string~}ObjectPool}!KTN::Core::ObjectPool$<$ T $>$@{KTN::Core::ObjectPool$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ObjectPool()}{\string~ObjectPool()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_object_pool_ab023da8399080d4b02a8b988650871f2} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{class_k_t_n_1_1_core_1_1_object_pool}{KTN\+::\+Core\+::\+Object\+Pool}}$<$ T $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{class_k_t_n_1_1_core_1_1_object_pool}{Object\+Pool}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destroys the \doxylink{class_k_t_n_1_1_core_1_1_object_pool}{Object\+Pool} and releases all allocated objects. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_core_1_1_object_pool_ad28181ff0aa8c832b5b858ba979b2fb6}\index{KTN::Core::ObjectPool$<$ T $>$@{KTN::Core::ObjectPool$<$ T $>$}!get@{get}}
+\index{get@{get}!KTN::Core::ObjectPool$<$ T $>$@{KTN::Core::ObjectPool$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_object_pool_ad28181ff0aa8c832b5b858ba979b2fb6} 
+template$<$typename T $>$ \\
+T \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_object_pool}{KTN\+::\+Core\+::\+Object\+Pool}}$<$ T $>$\+::get (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves an object from the pool. 
+
+If there are available objects in the pool, an object is obtained from the pool and returned. If the pool is empty, a new object is created and returned.
+
+\begin{DoxyReturn}{Returns}
+A pointer to the retrieved object. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00048}{KTN\+::\+ALGO\+::\+PRICING\+::\+Spread\+Pricer\+::\+Calculate\+Side2()}}, and \mbox{\hyperlink{l00212}{KTN\+::\+ALGO\+::\+PRICING\+::\+Spread\+Pricer\+::\+Calculate\+Side3()}}.
+
+\Hypertarget{class_k_t_n_1_1_core_1_1_object_pool_ae8a06d1fa9f8d4e7ec7dc7c7966c7415}\index{KTN::Core::ObjectPool$<$ T $>$@{KTN::Core::ObjectPool$<$ T $>$}!put@{put}}
+\index{put@{put}!KTN::Core::ObjectPool$<$ T $>$@{KTN::Core::ObjectPool$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{put()}{put()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_core_1_1_object_pool_ae8a06d1fa9f8d4e7ec7dc7c7966c7415} 
+template$<$typename T $>$ \\
+bool \mbox{\hyperlink{class_k_t_n_1_1_core_1_1_object_pool}{KTN\+::\+Core\+::\+Object\+Pool}}$<$ T $>$\+::put (\begin{DoxyParamCaption}\item[{T \texorpdfstring{$\ast$}{*}}]{obj}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns an object to the pool. 
+
+The specified object is returned to the pool for reuse.
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & A pointer to the object to be returned to the pool. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the object was successfully returned to the pool, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Core/Object\+Pool.\+hpp\end{DoxyCompactItemize}

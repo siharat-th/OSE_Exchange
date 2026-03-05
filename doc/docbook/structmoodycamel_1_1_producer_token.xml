@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structmoodycamel_1_1_producer_token" xml:lang="en-US">
+<title>moodycamel::ProducerToken Struct Reference</title>
+<indexterm><primary>moodycamel::ProducerToken</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>template&lt;typename T , typename Traits &gt; </para><para><link linkend="_structmoodycamel_1_1_producer_token_1a8f9cf4b0468280a54eeb63fa36ff90e7">ProducerToken</link> (<link linkend="_classmoodycamel_1_1_concurrent_queue">ConcurrentQueue</link>&lt; T, Traits &gt; &amp;queue)</para>
+</listitem>
+            <listitem><para>template&lt;typename T , typename Traits &gt; </para><para><link linkend="_structmoodycamel_1_1_producer_token_1a48e7eb3bf5a35b40777a822bf3583e57">ProducerToken</link> (<link linkend="_classmoodycamel_1_1_blocking_concurrent_queue">BlockingConcurrentQueue</link>&lt; T, Traits &gt; &amp;queue)</para>
+</listitem>
+            <listitem><para><link linkend="_structmoodycamel_1_1_producer_token_1af54d214dd87906f70a658937afa3fbf4">ProducerToken</link> (<link linkend="_structmoodycamel_1_1_producer_token">ProducerToken</link> &amp;&amp;other) MOODYCAMEL_NOEXCEPT</para>
+</listitem>
+            <listitem><para><link linkend="_structmoodycamel_1_1_producer_token">ProducerToken</link> &amp; <link linkend="_structmoodycamel_1_1_producer_token_1af5b3215747326cc33f1e1a1e5f33523b">operator=</link> (<link linkend="_structmoodycamel_1_1_producer_token">ProducerToken</link> &amp;&amp;other) MOODYCAMEL_NOEXCEPT</para>
+</listitem>
+            <listitem><para>void <link linkend="_structmoodycamel_1_1_producer_token_1ac811f7c5cb1d265f8d5e59549e547fee">swap</link> (<link linkend="_structmoodycamel_1_1_producer_token">ProducerToken</link> &amp;other) MOODYCAMEL_NOEXCEPT</para>
+</listitem>
+            <listitem><para>bool <link linkend="_structmoodycamel_1_1_producer_token_1a03ec48f736eb0c8048c2553e59a97e5a">valid</link> () const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_structmoodycamel_1_1_producer_token_1abf96005db180c25cdfef73461fe4407a"/><emphasis role="strong">ProducerToken</emphasis> (<link linkend="_structmoodycamel_1_1_producer_token">ProducerToken</link> const &amp;) MOODYCAMEL_DELETE_FUNCTION</para>
+</listitem>
+            <listitem><para><anchor xml:id="_structmoodycamel_1_1_producer_token_1a6e0789e9be11332d862ca8b989b9f62e"/><link linkend="_structmoodycamel_1_1_producer_token">ProducerToken</link> &amp; <emphasis role="strong">operator=</emphasis> (<link linkend="_structmoodycamel_1_1_producer_token">ProducerToken</link> const &amp;) MOODYCAMEL_DELETE_FUNCTION</para>
+</listitem>
+            <listitem><para><anchor xml:id="_structmoodycamel_1_1_producer_token_1a8f9cf4b0468280a54eeb63fa36ff90e7"/>template&lt;typename T , typename Traits &gt; </para><para><emphasis role="strong">ProducerToken</emphasis> (<link linkend="_classmoodycamel_1_1_concurrent_queue">ConcurrentQueue</link>&lt; T, Traits &gt; &amp;queue)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_structmoodycamel_1_1_producer_token_1a48e7eb3bf5a35b40777a822bf3583e57"/>template&lt;typename T , typename Traits &gt; </para><para><emphasis role="strong">ProducerToken</emphasis> (<link linkend="_classmoodycamel_1_1_blocking_concurrent_queue">BlockingConcurrentQueue</link>&lt; T, Traits &gt; &amp;queue)</para>
+</listitem>
+            <listitem><para><link linkend="_structmoodycamel_1_1_producer_token_1af54d214dd87906f70a658937afa3fbf4">ProducerToken</link> (<link linkend="_structmoodycamel_1_1_producer_token">ProducerToken</link> &amp;&amp;other) MOODYCAMEL_NOEXCEPT</para>
+</listitem>
+            <listitem><para><link linkend="_structmoodycamel_1_1_producer_token">ProducerToken</link> &amp; <link linkend="_structmoodycamel_1_1_producer_token_1af5b3215747326cc33f1e1a1e5f33523b">operator=</link> (<link linkend="_structmoodycamel_1_1_producer_token">ProducerToken</link> &amp;&amp;other) MOODYCAMEL_NOEXCEPT</para>
+</listitem>
+            <listitem><para>void <link linkend="_structmoodycamel_1_1_producer_token_1ac811f7c5cb1d265f8d5e59549e547fee">swap</link> (<link linkend="_structmoodycamel_1_1_producer_token">ProducerToken</link> &amp;other) MOODYCAMEL_NOEXCEPT</para>
+</listitem>
+            <listitem><para>bool <link linkend="_structmoodycamel_1_1_producer_token_1a03ec48f736eb0c8048c2553e59a97e5a">valid</link> () const</para>
+</listitem>
+            <listitem><para><anchor xml:id="_structmoodycamel_1_1_producer_token_1abf96005db180c25cdfef73461fe4407a"/><emphasis role="strong">ProducerToken</emphasis> (<link linkend="_structmoodycamel_1_1_producer_token">ProducerToken</link> const &amp;) MOODYCAMEL_DELETE_FUNCTION</para>
+</listitem>
+            <listitem><para><anchor xml:id="_structmoodycamel_1_1_producer_token_1a6e0789e9be11332d862ca8b989b9f62e"/><link linkend="_structmoodycamel_1_1_producer_token">ProducerToken</link> &amp; <emphasis role="strong">operator=</emphasis> (<link linkend="_structmoodycamel_1_1_producer_token">ProducerToken</link> const &amp;) MOODYCAMEL_DELETE_FUNCTION</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_structmoodycamel_1_1details_1_1_concurrent_queue_producer_typeless_base">details::ConcurrentQueueProducerTypelessBase</link> * <link linkend="_structmoodycamel_1_1_producer_token_1a6c41a37049f316f4ff3decab70789ca0">producer</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Friends    </title>
+        <itemizedlist>
+            <listitem><para>template&lt;typename T , typename Traits &gt; </para><para>class <link linkend="_structmoodycamel_1_1_producer_token_1ac77c3583af133c29d4e26d4bb8605ce4">ConcurrentQueue</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_structmoodycamel_1_1_producer_token_1affb081dec2a93f53a23878412f69c469">ConcurrentQueueTests</link></para>
+</listitem>
+            <listitem><para>template&lt;typename T , typename Traits &gt; </para><para>class <link linkend="_structmoodycamel_1_1_producer_token_1afd19ba23de3832f629868d09df6dbb2e">ConcurrentQueue</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_structmoodycamel_1_1_producer_token_1a8f9cf4b0468280a54eeb63fa36ff90e7"/><section>
+    <title>ProducerToken()<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>ProducerToken</primary><secondary>moodycamel::ProducerToken</secondary></indexterm>
+<indexterm><primary>moodycamel::ProducerToken</primary><secondary>ProducerToken</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits &gt; </computeroutput><para><computeroutput>moodycamel::ProducerToken::ProducerToken (<link linkend="_classmoodycamel_1_1_concurrent_queue">ConcurrentQueue</link>&lt; T, Traits &gt; &amp; queue)<computeroutput>[explicit]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structmoodycamel_1_1_producer_token_1a48e7eb3bf5a35b40777a822bf3583e57"/><section>
+    <title>ProducerToken()<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>ProducerToken</primary><secondary>moodycamel::ProducerToken</secondary></indexterm>
+<indexterm><primary>moodycamel::ProducerToken</primary><secondary>ProducerToken</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits &gt; </computeroutput><para><computeroutput>moodycamel::ProducerToken::ProducerToken (<link linkend="_classmoodycamel_1_1_blocking_concurrent_queue">BlockingConcurrentQueue</link>&lt; T, Traits &gt; &amp; queue)<computeroutput>[explicit]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structmoodycamel_1_1_producer_token_1af54d214dd87906f70a658937afa3fbf4"/><section>
+    <title>ProducerToken()<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>ProducerToken</primary><secondary>moodycamel::ProducerToken</secondary></indexterm>
+<indexterm><primary>moodycamel::ProducerToken</primary><secondary>ProducerToken</secondary></indexterm>
+<para><computeroutput>moodycamel::ProducerToken::ProducerToken (<link linkend="_structmoodycamel_1_1_producer_token">ProducerToken</link> &amp;&amp; other)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structmoodycamel_1_1_producer_token_1a21adfd4e253de5a115facd26c0c0eb72"/><section>
+    <title>~ProducerToken()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>~ProducerToken</primary><secondary>moodycamel::ProducerToken</secondary></indexterm>
+<indexterm><primary>moodycamel::ProducerToken</primary><secondary>~ProducerToken</secondary></indexterm>
+<para><computeroutput>moodycamel::ProducerToken::~ProducerToken ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structmoodycamel_1_1_producer_token_1af54d214dd87906f70a658937afa3fbf4"/><section>
+    <title>ProducerToken()<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>ProducerToken</primary><secondary>moodycamel::ProducerToken</secondary></indexterm>
+<indexterm><primary>moodycamel::ProducerToken</primary><secondary>ProducerToken</secondary></indexterm>
+<para><computeroutput>moodycamel::ProducerToken::ProducerToken (<link linkend="_structmoodycamel_1_1_producer_token">ProducerToken</link> &amp;&amp; other)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structmoodycamel_1_1_producer_token_1a21adfd4e253de5a115facd26c0c0eb72"/><section>
+    <title>~ProducerToken()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>~ProducerToken</primary><secondary>moodycamel::ProducerToken</secondary></indexterm>
+<indexterm><primary>moodycamel::ProducerToken</primary><secondary>~ProducerToken</secondary></indexterm>
+<para><computeroutput>moodycamel::ProducerToken::~ProducerToken ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_structmoodycamel_1_1_producer_token_1af5b3215747326cc33f1e1a1e5f33523b"/><section>
+    <title>operator=()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>operator=</primary><secondary>moodycamel::ProducerToken</secondary></indexterm>
+<indexterm><primary>moodycamel::ProducerToken</primary><secondary>operator=</secondary></indexterm>
+<para><computeroutput><link linkend="_structmoodycamel_1_1_producer_token">ProducerToken</link> &amp; moodycamel::ProducerToken::operator= (<link linkend="_structmoodycamel_1_1_producer_token">ProducerToken</link> &amp;&amp; other)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structmoodycamel_1_1_producer_token_1af5b3215747326cc33f1e1a1e5f33523b"/><section>
+    <title>operator=()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>operator=</primary><secondary>moodycamel::ProducerToken</secondary></indexterm>
+<indexterm><primary>moodycamel::ProducerToken</primary><secondary>operator=</secondary></indexterm>
+<para><computeroutput><link linkend="_structmoodycamel_1_1_producer_token">ProducerToken</link> &amp; moodycamel::ProducerToken::operator= (<link linkend="_structmoodycamel_1_1_producer_token">ProducerToken</link> &amp;&amp; other)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structmoodycamel_1_1_producer_token_1ac811f7c5cb1d265f8d5e59549e547fee"/><section>
+    <title>swap()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>swap</primary><secondary>moodycamel::ProducerToken</secondary></indexterm>
+<indexterm><primary>moodycamel::ProducerToken</primary><secondary>swap</secondary></indexterm>
+<para><computeroutput>void moodycamel::ProducerToken::swap (<link linkend="_structmoodycamel_1_1_producer_token">ProducerToken</link> &amp; other)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structmoodycamel_1_1_producer_token_1ac811f7c5cb1d265f8d5e59549e547fee"/><section>
+    <title>swap()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>swap</primary><secondary>moodycamel::ProducerToken</secondary></indexterm>
+<indexterm><primary>moodycamel::ProducerToken</primary><secondary>swap</secondary></indexterm>
+<para><computeroutput>void moodycamel::ProducerToken::swap (<link linkend="_structmoodycamel_1_1_producer_token">ProducerToken</link> &amp; other)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structmoodycamel_1_1_producer_token_1a03ec48f736eb0c8048c2553e59a97e5a"/><section>
+    <title>valid()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>valid</primary><secondary>moodycamel::ProducerToken</secondary></indexterm>
+<indexterm><primary>moodycamel::ProducerToken</primary><secondary>valid</secondary></indexterm>
+<para><computeroutput>bool moodycamel::ProducerToken::valid ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structmoodycamel_1_1_producer_token_1a03ec48f736eb0c8048c2553e59a97e5a"/><section>
+    <title>valid()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>valid</primary><secondary>moodycamel::ProducerToken</secondary></indexterm>
+<indexterm><primary>moodycamel::ProducerToken</primary><secondary>valid</secondary></indexterm>
+<para><computeroutput>bool moodycamel::ProducerToken::valid ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Friends And Related Symbol Documentation</title>
+<anchor xml:id="_structmoodycamel_1_1_producer_token_1ac77c3583af133c29d4e26d4bb8605ce4"/><section>
+    <title>ConcurrentQueue<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>ConcurrentQueue</primary><secondary>moodycamel::ProducerToken</secondary></indexterm>
+<indexterm><primary>moodycamel::ProducerToken</primary><secondary>ConcurrentQueue</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits &gt; </computeroutput><para><computeroutput>friend class <link linkend="_classmoodycamel_1_1_concurrent_queue">ConcurrentQueue</link><computeroutput>[friend]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structmoodycamel_1_1_producer_token_1afd19ba23de3832f629868d09df6dbb2e"/><section>
+    <title>ConcurrentQueue<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>ConcurrentQueue</primary><secondary>moodycamel::ProducerToken</secondary></indexterm>
+<indexterm><primary>moodycamel::ProducerToken</primary><secondary>ConcurrentQueue</secondary></indexterm>
+<computeroutput>template&lt;typename T , typename Traits &gt; </computeroutput><para><computeroutput>class <link linkend="_classmoodycamel_1_1_concurrent_queue">ConcurrentQueue</link><computeroutput>[friend]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_structmoodycamel_1_1_producer_token_1affb081dec2a93f53a23878412f69c469"/><section>
+    <title>ConcurrentQueueTests</title>
+<indexterm><primary>ConcurrentQueueTests</primary><secondary>moodycamel::ProducerToken</secondary></indexterm>
+<indexterm><primary>moodycamel::ProducerToken</primary><secondary>ConcurrentQueueTests</secondary></indexterm>
+<para><computeroutput>ConcurrentQueueTests<computeroutput>[friend]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structmoodycamel_1_1_producer_token_1a6c41a37049f316f4ff3decab70789ca0"/><section>
+    <title>producer</title>
+<indexterm><primary>producer</primary><secondary>moodycamel::ProducerToken</secondary></indexterm>
+<indexterm><primary>moodycamel::ProducerToken</primary><secondary>producer</secondary></indexterm>
+<para><computeroutput><link linkend="_structmoodycamel_1_1details_1_1_concurrent_queue_producer_typeless_base">details::ConcurrentQueueProducerTypelessBase</link> * moodycamel::ProducerToken::producer<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following files:</para>
+C:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/external/camel/concurrentqueue.hC:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/external/camel/concurrentqueue2.h</section>
+</section>

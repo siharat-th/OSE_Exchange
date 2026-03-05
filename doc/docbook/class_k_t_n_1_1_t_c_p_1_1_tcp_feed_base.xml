@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_t_c_p_1_1_tcp_feed_base" xml:lang="en-US">
+<title>KTN::TCP::TcpFeedBase Class Reference</title>
+<indexterm><primary>KTN::TCP::TcpFeedBase</primary></indexterm>
+<para>
+
+<para>The base class for TCP feed. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;TcpFeedBase.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_t_c_p_1_1_tcp_feed_base_1a4ddc7f9055c620e2fe2c0fe2b539e5ef">TcpFeedBase</link> ()</para>
+
+<para>Default constructor. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_k_t_n_1_1_t_c_p_1_1_tcp_feed_base_1a09931540193568f3724b7256c80a5db1">~TcpFeedBase</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_class_k_t_n_1_1_t_c_p_1_1_tcp_feed_base_1a482bc1c01ad9c6058e3e03cf019e70e1">Init</link> (<link linkend="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor">ServiceDescriptor</link> &amp;desc, bool isA)=0</para>
+
+<para>Initializes the TCP feed. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_t_c_p_1_1_tcp_feed_base_1ae3a5fca180ad7f38436806a3e778e0c2">Subscribe</link> (<link linkend="_class_k_t_n_1_1_t_c_p_1_1_tcp_callback">TcpCallback</link> *callback)=0</para>
+
+<para>Subscribes to the TCP feed. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_tcp_feed_base_1a5b9246b0771a132f5aed34ec75697594"/>virtual void <emphasis role="strong">Stop</emphasis> ()=0</para>
+
+<para>Stops the TCP feed. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_tcp_feed_base_1a7436d52ca5dccf02f2aee90066fa1706"/>virtual void <emphasis role="strong">Poll</emphasis> ()=0</para>
+
+<para>Polls the TCP feed. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_t_c_p_1_1_tcp_feed_base_1ab64bbc284c9ed281bb9baa34f832038d">SendMaster</link> (char *buffer, size_t buffer_length, bool send_delegated)=0</para>
+
+<para>Sends the master. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The base class for TCP feed. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_tcp_feed_base_1a4ddc7f9055c620e2fe2c0fe2b539e5ef"/><section>
+    <title>TcpFeedBase()</title>
+<indexterm><primary>TcpFeedBase</primary><secondary>KTN::TCP::TcpFeedBase</secondary></indexterm>
+<indexterm><primary>KTN::TCP::TcpFeedBase</primary><secondary>TcpFeedBase</secondary></indexterm>
+<para><computeroutput>TcpFeedBase::TcpFeedBase ( )</computeroutput></para><para>
+
+<para>Default constructor. </para>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_tcp_feed_base_1a09931540193568f3724b7256c80a5db1"/><section>
+    <title>~TcpFeedBase()</title>
+<indexterm><primary>~TcpFeedBase</primary><secondary>KTN::TCP::TcpFeedBase</secondary></indexterm>
+<indexterm><primary>KTN::TCP::TcpFeedBase</primary><secondary>~TcpFeedBase</secondary></indexterm>
+<para><computeroutput>TcpFeedBase::~TcpFeedBase ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Destructor. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_tcp_feed_base_1a482bc1c01ad9c6058e3e03cf019e70e1"/><section>
+    <title>Init()</title>
+<indexterm><primary>Init</primary><secondary>KTN::TCP::TcpFeedBase</secondary></indexterm>
+<indexterm><primary>KTN::TCP::TcpFeedBase</primary><secondary>Init</secondary></indexterm>
+<para><computeroutput>virtual bool KTN::TCP::TcpFeedBase::Init (<link linkend="_class_k_t_n_1_1_t_c_p_1_1_service_descriptor">ServiceDescriptor</link> &amp; desc, bool isA)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>Initializes the TCP feed. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>desc</entry><entry>
+<para>The service descriptor. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>isA</entry><entry>
+<para>A boolean indicating if it is A. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if initialization is successful, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_tcp_feed_base_1ab64bbc284c9ed281bb9baa34f832038d"/><section>
+    <title>SendMaster()</title>
+<indexterm><primary>SendMaster</primary><secondary>KTN::TCP::TcpFeedBase</secondary></indexterm>
+<indexterm><primary>KTN::TCP::TcpFeedBase</primary><secondary>SendMaster</secondary></indexterm>
+<para><computeroutput>virtual void KTN::TCP::TcpFeedBase::SendMaster (char * buffer, size_t buffer_length, bool send_delegated)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>Sends the master. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>buffer</entry><entry>
+<para>The buffer to send. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>buffer_length</entry><entry>
+<para>The length of the buffer. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>send_delegated</entry><entry>
+<para>A boolean indicating if it should send delegated. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_t_c_p_1_1_tcp_feed_base_1ae3a5fca180ad7f38436806a3e778e0c2"/><section>
+    <title>Subscribe()</title>
+<indexterm><primary>Subscribe</primary><secondary>KTN::TCP::TcpFeedBase</secondary></indexterm>
+<indexterm><primary>KTN::TCP::TcpFeedBase</primary><secondary>Subscribe</secondary></indexterm>
+<para><computeroutput>virtual void KTN::TCP::TcpFeedBase::Subscribe (<link linkend="_class_k_t_n_1_1_t_c_p_1_1_tcp_callback">TcpCallback</link> * callback)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>Subscribes to the TCP feed. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>callback</entry><entry>
+<para>The TCP callback. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+KtnEfvi/TcpFeedBase.hppKtnEfvi/TcpFeedBase.cpp</section>
+</section>

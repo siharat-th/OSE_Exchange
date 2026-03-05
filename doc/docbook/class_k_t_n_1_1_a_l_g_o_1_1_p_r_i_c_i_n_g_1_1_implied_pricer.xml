@@ -1,0 +1,325 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_implied_pricer" xml:lang="en-US">
+<title>KTN::ALGO::PRICING::ImpliedPricer Class Reference</title>
+<indexterm><primary>KTN::ALGO::PRICING::ImpliedPricer</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_implied_pricer">ImpliedPricer</link> class is a pricing strategy that calculates implied prices based on given orders. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;ImpliedPricer.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for KTN::ALGO::PRICING::ImpliedPricer:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_implied_pricer.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_implied_pricer_1a6385daa7a5a9f7482767123e17dc10a0">ImpliedPricer</link> ()</para>
+
+<para>Default constructor for the <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_implied_pricer">ImpliedPricer</link> class. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_implied_pricer_1a77ac7316d738f40468109a87164e1b80">~ImpliedPricer</link> ()</para>
+
+<para>Destructor for the <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_implied_pricer">ImpliedPricer</link> class. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_implied_pricer_1ada50fb83ee0658133ec7a8beef432cdc">LoadOrders</link> (int cbid, <link linkend="_structalgometa">algometa</link> meta)</para>
+
+<para>Load orders for the <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_implied_pricer">ImpliedPricer</link>. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_implied_pricer_1a427c647a7c31f7e161f6309dc8d83248">floydShortestPaths</link> (<link linkend="_struct_edge_struct">EdgeStruct</link>(&amp;adjMatrix)[MAX_SIZE][MAX_SIZE], bool isBid)</para>
+
+<para>Calculate the shortest paths using Floyd&apos;s algorithm. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_implied_pricer_1a12e8b394df8eec9eded20598ece40888">floydShortestPaths2</link> (<link linkend="_struct_edge_struct">EdgeStruct</link>(&amp;adjMatrix)[MAX_SIZE][MAX_SIZE], bool isBid)</para>
+
+<para>Calculate the shortest paths using Floyd&apos;s algorithm. </para>
+</listitem>
+            <listitem><para><link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_little_imp_side">LittleImpSide</link> <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_implied_pricer_1a3ec6a24997d61b7e0e7ba9c79d1ff9b3">CalculateSide</link> (int index, int spmult, bool isBid, double edge, const <link linkend="_structalgomd">algomd</link> *prices, bool testmode)</para>
+
+<para>Calculate the side based on the given parameters. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base">KTN::ALGO::PRICING::PricingStrategyBase</link>        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1a75beb5ffe6c1c339932e92ff40a433b8">PricingStrategyBase</link> ()</para>
+
+<para>Default constructor. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1af8b81d0f694cc0f9aff4e1a75e26da8c">~PricingStrategyBase</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1a9a75566b268951957f450d737c9bc4b1">Load</link> (<link linkend="_structinstrument">instrument</link> *legs, int len, bool certnr)</para>
+
+<para>Load the pricing strategy with the given legs. </para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>const float <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_implied_pricer_1ae2ba341c9246d8ab745bcf63f5dad07f">INF</link> = numeric_limits&lt;float&gt;::infinity()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>static const int <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_implied_pricer_1ac1d3fb242c3a806a49c56e7bebb1d1fd">MAX_SIZE</link> = 24</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+Protected Member Functions inherited from <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base">KTN::ALGO::PRICING::PricingStrategyBase</link>        <itemizedlist>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1ae02381733d6a7a895dfd726334504767">LogMe</link> (std::string szMsg, int iColor=LOG_WHITE)</para>
+
+<para><link linkend="_class_log">Log</link> a message. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1a56267f60212477d39e50572f71da7f97">roundToTick</link> (int value, int MINTICK, int side)</para>
+
+<para>Round a value to the nearest tick. </para>
+</listitem>
+            <listitem><para>float <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1a4201e238efe5497f21322efaea3f98e8">priceRoundConvert</link> (float px, int tickprecision, float mintick, bool roundUp=false)</para>
+
+<para>Round and convert a price value. </para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1a1a534d4a72848f8619b65ffab80749bb">getCertSecId</link> (string symbol)</para>
+
+<para>Get the certificate security ID for the given symbol. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Protected Attributes inherited from <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base">KTN::ALGO::PRICING::PricingStrategyBase</link>        <itemizedlist>
+            <listitem><para><link linkend="_structinstrument">instrument</link> <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1a48d69c6918de697bc3959db39a3b81f6">_legs</link> [24]</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1a694acfb9420d71f08fefa7d3cc7ab48f">_numLegs</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1aed71f8c822de0aa94ffc77d5135d2ac7">_priceround</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1a745b7cf9b22f4b18bad8ad9e94a32a95">_CERTNR</link></para>
+</listitem>
+            <listitem><para>std::unordered_map&lt; string, long &gt; <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1ac65f10c4cb81ff771a0164da9fa7a974">_certIdMap</link></para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_implied_pricer">ImpliedPricer</link> class is a pricing strategy that calculates implied prices based on given orders. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_implied_pricer_1a6385daa7a5a9f7482767123e17dc10a0"/><section>
+    <title>ImpliedPricer()</title>
+<indexterm><primary>ImpliedPricer</primary><secondary>KTN::ALGO::PRICING::ImpliedPricer</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::PRICING::ImpliedPricer</primary><secondary>ImpliedPricer</secondary></indexterm>
+<para><computeroutput>ImpliedPricer::ImpliedPricer ( )</computeroutput></para><para>
+
+<para>Default constructor for the <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_implied_pricer">ImpliedPricer</link> class. </para>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_implied_pricer_1a77ac7316d738f40468109a87164e1b80"/><section>
+    <title>~ImpliedPricer()</title>
+<indexterm><primary>~ImpliedPricer</primary><secondary>KTN::ALGO::PRICING::ImpliedPricer</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::PRICING::ImpliedPricer</primary><secondary>~ImpliedPricer</secondary></indexterm>
+<para><computeroutput>ImpliedPricer::~ImpliedPricer ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Destructor for the <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_implied_pricer">ImpliedPricer</link> class. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_implied_pricer_1a3ec6a24997d61b7e0e7ba9c79d1ff9b3"/><section>
+    <title>CalculateSide()</title>
+<indexterm><primary>CalculateSide</primary><secondary>KTN::ALGO::PRICING::ImpliedPricer</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::PRICING::ImpliedPricer</primary><secondary>CalculateSide</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_little_imp_side">LittleImpSide</link> ImpliedPricer::CalculateSide (int index, int spmult, bool isBid, double edge, const <link linkend="_structalgomd">algomd</link> * prices, bool testmode)</computeroutput></para><para>
+
+<para>Calculate the side based on the given parameters. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>index</entry><entry>
+<para>The index value. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>spmult</entry><entry>
+<para>The spmult value. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>isBid</entry><entry>
+<para>A flag indicating if it is a bid. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>edge</entry><entry>
+<para>The edge value. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>prices</entry><entry>
+<para>The prices array. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>testmode</entry><entry>
+<para>A flag indicating if it is in test mode. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The calculated <link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_little_imp_side">LittleImpSide</link>. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00159">algomd::ask</link>, <link linkend="_l00158">algomd::bid</link>, <link linkend="_l00075">instrument::index</link>, <link linkend="_l00019">KTN::ALGO::PRICING::PricingStrategyBase::LogMe()</link>, <link linkend="_l00067">instrument::mintick</link>, <link linkend="_l00064">instrument::pricemult</link>, <link linkend="_l00065">instrument::spreadmult</link>, and <link linkend="_l00113">instrument::symbol</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_implied_pricer_1a427c647a7c31f7e161f6309dc8d83248"/><section>
+    <title>floydShortestPaths()</title>
+<indexterm><primary>floydShortestPaths</primary><secondary>KTN::ALGO::PRICING::ImpliedPricer</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::PRICING::ImpliedPricer</primary><secondary>floydShortestPaths</secondary></indexterm>
+<para><computeroutput>void ImpliedPricer::floydShortestPaths (<link linkend="_struct_edge_struct">EdgeStruct</link>(&amp;) adjMatrix[MAX_SIZE][MAX_SIZE], bool isBid)</computeroutput></para><para>
+
+<para>Calculate the shortest paths using Floyd&apos;s algorithm. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>adjMatrix</entry><entry>
+<para>The adjacency matrix. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>isBid</entry><entry>
+<para>A flag indicating if it is a bid. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_implied_pricer_1a12e8b394df8eec9eded20598ece40888"/><section>
+    <title>floydShortestPaths2()</title>
+<indexterm><primary>floydShortestPaths2</primary><secondary>KTN::ALGO::PRICING::ImpliedPricer</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::PRICING::ImpliedPricer</primary><secondary>floydShortestPaths2</secondary></indexterm>
+<para><computeroutput>void ImpliedPricer::floydShortestPaths2 (<link linkend="_struct_edge_struct">EdgeStruct</link>(&amp;) adjMatrix[MAX_SIZE][MAX_SIZE], bool isBid)</computeroutput></para><para>
+
+<para>Calculate the shortest paths using Floyd&apos;s algorithm. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>adjMatrix</entry><entry>
+<para>The adjacency matrix. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>isBid</entry><entry>
+<para>A flag indicating if it is a bid. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_implied_pricer_1ada50fb83ee0658133ec7a8beef432cdc"/><section>
+    <title>LoadOrders()</title>
+<indexterm><primary>LoadOrders</primary><secondary>KTN::ALGO::PRICING::ImpliedPricer</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::PRICING::ImpliedPricer</primary><secondary>LoadOrders</secondary></indexterm>
+<para><computeroutput>void KTN::ALGO::PRICING::ImpliedPricer::LoadOrders (int cbid, <link linkend="_structalgometa">algometa</link> meta)</computeroutput></para><para>
+
+<para>Load orders for the <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_implied_pricer">ImpliedPricer</link>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>cbid</entry><entry>
+<para>The cbid value. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>meta</entry><entry>
+<para>The algometa value. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_implied_pricer_1ae2ba341c9246d8ab745bcf63f5dad07f"/><section>
+    <title>INF</title>
+<indexterm><primary>INF</primary><secondary>KTN::ALGO::PRICING::ImpliedPricer</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::PRICING::ImpliedPricer</primary><secondary>INF</secondary></indexterm>
+<para><computeroutput>const float KTN::ALGO::PRICING::ImpliedPricer::INF = numeric_limits&lt;float&gt;::infinity()</computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_implied_pricer_1ac1d3fb242c3a806a49c56e7bebb1d1fd"/><section>
+    <title>MAX_SIZE</title>
+<indexterm><primary>MAX_SIZE</primary><secondary>KTN::ALGO::PRICING::ImpliedPricer</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::PRICING::ImpliedPricer</primary><secondary>MAX_SIZE</secondary></indexterm>
+<para><computeroutput>const int KTN::ALGO::PRICING::ImpliedPricer::MAX_SIZE = 24<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+AlgoEngines/ImpliedPricer.hppAlgoEngines/ImpliedPricer.cpp</section>
+</section>

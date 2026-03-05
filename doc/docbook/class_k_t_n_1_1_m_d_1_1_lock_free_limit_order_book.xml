@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_m_d_1_1_lock_free_limit_order_book" xml:lang="en-US">
+<title>KTN::MD::LockFreeLimitOrderBook Class Reference</title>
+<indexterm><primary>KTN::MD::LockFreeLimitOrderBook</primary></indexterm>
+<para>
+
+<para>Represents a lock-free implementation of a limit order book. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;lockfree_limitorderbook.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for KTN::MD::LockFreeLimitOrderBook:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_k_t_n_1_1_m_d_1_1_lock_free_limit_order_book.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_m_d_1_1_lock_free_limit_order_book_1aef3e068fffa543d5552318c812b32e36">LockFreeLimitOrderBook</link> (int precision, int depth)</para>
+
+<para>Constructs a new <link linkend="_class_k_t_n_1_1_m_d_1_1_lock_free_limit_order_book">LockFreeLimitOrderBook</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_m_d_1_1_lock_free_limit_order_book_1ad58a4f200bc6db5587103c5a10a6e40f">add_order</link> (const <link linkend="_class_k_t_n_1_1_m_d_1_1_md_order">MdOrder</link> &amp;order, bool is_bid) override</para>
+
+<para>Adds an order to the limit order book. </para>
+</listitem>
+            <listitem><para><link linkend="_class_k_t_n_1_1_m_d_1_1_md_order">MdOrder</link> <link linkend="_class_k_t_n_1_1_m_d_1_1_lock_free_limit_order_book_1af292fd038277e99f2983eab54a08f3b2">get_best_bid</link> () override</para>
+
+<para>Gets the best bid order from the limit order book. </para>
+</listitem>
+            <listitem><para><link linkend="_class_k_t_n_1_1_m_d_1_1_md_order">MdOrder</link> <link linkend="_class_k_t_n_1_1_m_d_1_1_lock_free_limit_order_book_1a325a8ad61583cd8512824d09079f9681">get_best_offer</link> ()</para>
+
+<para>Gets the best offer order from the limit order book. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_class_k_t_n_1_1_m_d_1_1_limit_order_book">KTN::MD::LimitOrderBook</link>        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_m_d_1_1_limit_order_book_1aedadba5aa58bbd957305a5ef6d606619">LimitOrderBook</link> (int precision, int depth)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_m_d_1_1_limit_order_book_1a154dce1c2ce97cdbeaf259be9af07d16">update_order</link> (const <link linkend="_class_k_t_n_1_1_m_d_1_1_md_order">MdOrder</link> &amp;order, bool is_bid)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_m_d_1_1_limit_order_book_1a6fae2630dda0bd9c3515a3458e434575">delete_order</link> (const <link linkend="_class_k_t_n_1_1_m_d_1_1_md_order">MdOrder</link> &amp;order, bool is_bid)</para>
+</listitem>
+            <listitem><para><link linkend="_class_k_t_n_1_1_m_d_1_1_md_order">MdOrder</link> <link linkend="_class_k_t_n_1_1_m_d_1_1_limit_order_book_1afad5cb88ef2e3dee7ff1396aa7789d59">get_lowest_bid</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_k_t_n_1_1_m_d_1_1_md_order">MdOrder</link> <link linkend="_class_k_t_n_1_1_m_d_1_1_limit_order_book_1a59af9259c00b5b696c6ecf8d2f4e9c9a">get_best_offer</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_k_t_n_1_1_m_d_1_1_md_order">MdOrder</link> <link linkend="_class_k_t_n_1_1_m_d_1_1_limit_order_book_1ac2cb985e14462c788553114f3b59c390">get_highest_offer</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_m_d_1_1_limit_order_book_1af496b4db8f565183906258073e08a90a">print_bids</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_m_d_1_1_limit_order_book_1a3fa5f823ea2a3df82de53442ec56964b">print_offers</link> ()</para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+Protected Member Functions inherited from <link linkend="_class_k_t_n_1_1_m_d_1_1_limit_order_book">KTN::MD::LimitOrderBook</link>        <itemizedlist>
+            <listitem><para>int <link linkend="_class_k_t_n_1_1_m_d_1_1_limit_order_book_1a55c76f78bddb793af8f5336e7eb03d89">price_to_index</link> (int32_t price, bool is_bid, bool update_pointers=true)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Protected Attributes inherited from <link linkend="_class_k_t_n_1_1_m_d_1_1_limit_order_book">KTN::MD::LimitOrderBook</link>        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_m_d_1_1_md_order">MdOrder</link> * <link linkend="_class_k_t_n_1_1_m_d_1_1_limit_order_book_1afc5ff6663f1dcb8f296ddeee52c1d524">ptr_bid_ini</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_k_t_n_1_1_m_d_1_1_md_order">MdOrder</link> * <link linkend="_class_k_t_n_1_1_m_d_1_1_limit_order_book_1a473c69da77787a948d393cf4e8345490">ptr_bid_end</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_k_t_n_1_1_m_d_1_1_md_order">MdOrder</link> * <link linkend="_class_k_t_n_1_1_m_d_1_1_limit_order_book_1a94626f094f8e12e1bb6c9f9823301950">ptr_offer_ini</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_k_t_n_1_1_m_d_1_1_md_order">MdOrder</link> * <link linkend="_class_k_t_n_1_1_m_d_1_1_limit_order_book_1a3c201d8fa0d9c9205901bcbc852ddc7a">ptr_offer_end</link></para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+
+<para>Represents a lock-free implementation of a limit order book. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_m_d_1_1_lock_free_limit_order_book_1aef3e068fffa543d5552318c812b32e36"/><section>
+    <title>LockFreeLimitOrderBook()</title>
+<indexterm><primary>LockFreeLimitOrderBook</primary><secondary>KTN::MD::LockFreeLimitOrderBook</secondary></indexterm>
+<indexterm><primary>KTN::MD::LockFreeLimitOrderBook</primary><secondary>LockFreeLimitOrderBook</secondary></indexterm>
+<para><computeroutput>KTN::MD::LockFreeLimitOrderBook::LockFreeLimitOrderBook (int precision, int depth)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Constructs a new <link linkend="_class_k_t_n_1_1_m_d_1_1_lock_free_limit_order_book">LockFreeLimitOrderBook</link> object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>precision</entry><entry>
+<para>The precision of the limit order book. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>depth</entry><entry>
+<para>The depth of the limit order book. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_m_d_1_1_lock_free_limit_order_book_1ad58a4f200bc6db5587103c5a10a6e40f"/><section>
+    <title>add_order()</title>
+<indexterm><primary>add_order</primary><secondary>KTN::MD::LockFreeLimitOrderBook</secondary></indexterm>
+<indexterm><primary>KTN::MD::LockFreeLimitOrderBook</primary><secondary>add_order</secondary></indexterm>
+<para><computeroutput>void KTN::MD::LockFreeLimitOrderBook::add_order (const <link linkend="_class_k_t_n_1_1_m_d_1_1_md_order">MdOrder</link> &amp; order, bool is_bid)<computeroutput>[inline]</computeroutput>, <computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Adds an order to the limit order book. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>order</entry><entry>
+<para>The order to be added. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>is_bid</entry><entry>
+<para>A flag indicating whether the order is a bid or an offer. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Reimplemented from <link linkend="_class_k_t_n_1_1_m_d_1_1_limit_order_book">KTN::MD::LimitOrderBook</link>.</para>
+<para>
+References <link linkend="_l00027">KTN::MD::MdOrder::price</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_m_d_1_1_lock_free_limit_order_book_1af292fd038277e99f2983eab54a08f3b2"/><section>
+    <title>get_best_bid()</title>
+<indexterm><primary>get_best_bid</primary><secondary>KTN::MD::LockFreeLimitOrderBook</secondary></indexterm>
+<indexterm><primary>KTN::MD::LockFreeLimitOrderBook</primary><secondary>get_best_bid</secondary></indexterm>
+<para><computeroutput><link linkend="_class_k_t_n_1_1_m_d_1_1_md_order">MdOrder</link> KTN::MD::LockFreeLimitOrderBook::get_best_bid ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Gets the best bid order from the limit order book. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The best bid order. </para>
+</formalpara>
+</para>
+<para>
+Reimplemented from <link linkend="_class_k_t_n_1_1_m_d_1_1_limit_order_book">KTN::MD::LimitOrderBook</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_m_d_1_1_lock_free_limit_order_book_1a325a8ad61583cd8512824d09079f9681"/><section>
+    <title>get_best_offer()</title>
+<indexterm><primary>get_best_offer</primary><secondary>KTN::MD::LockFreeLimitOrderBook</secondary></indexterm>
+<indexterm><primary>KTN::MD::LockFreeLimitOrderBook</primary><secondary>get_best_offer</secondary></indexterm>
+<para><computeroutput><link linkend="_class_k_t_n_1_1_m_d_1_1_md_order">MdOrder</link> KTN::MD::LockFreeLimitOrderBook::get_best_offer ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Gets the best offer order from the limit order book. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The best offer order. </para>
+</formalpara>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+OrderBook/lockfree_limitorderbook.hpp</section>
+</section>

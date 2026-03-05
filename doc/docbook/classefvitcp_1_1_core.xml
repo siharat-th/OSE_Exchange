@@ -1,0 +1,413 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classefvitcp_1_1_core" xml:lang="en-US">
+<title>efvitcp::Core&lt; Conf &gt; Class Template Reference</title>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_classefvitcp_1_1_core_1abab678c094c285b245e83da4733b2d92"/><emphasis role="strong">Core</emphasis> (const <link linkend="_classefvitcp_1_1_core">Core</link> &amp;)=delete</para>
+</listitem>
+            <listitem><para><anchor xml:id="_classefvitcp_1_1_core_1a58e893d73af0a052a9f60bb8237d649a"/><link linkend="_classefvitcp_1_1_core">Core</link> &amp; <emphasis role="strong">operator=</emphasis> (const <link linkend="_classefvitcp_1_1_core">Core</link> &amp;)=delete</para>
+</listitem>
+            <listitem><para>void <link linkend="_classefvitcp_1_1_core_1a635ebbb08bc97ecf726ae83c2f5a5e02">destruct</link> ()</para>
+</listitem>
+            <listitem><para>const char * <link linkend="_classefvitcp_1_1_core_1aeb0d1b2d77fc92c1493b17b427558db1">init</link> (const char *interface)</para>
+</listitem>
+            <listitem><para>int64_t <link linkend="_classefvitcp_1_1_core_1aaeb1431f601ed9a72812b9828b34c7c3">getns</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classefvitcp_1_1_core_1ac41ea217a2df1852c03074ec071530a8">delFilter</link> ()</para>
+</listitem>
+            <listitem><para>const char * <link linkend="_classefvitcp_1_1_core_1afa171f6a8652003268d11f90489bb897">setClientFilter</link> (uint16_t &amp;local_port_be, uint32_t remote_ip, uint16_t remote_port_be)</para>
+</listitem>
+            <listitem><para>const char * <link linkend="_classefvitcp_1_1_core_1a869b3ce0f6516f23207e4a6a24567a52">autoGetPort</link> (uint16_t &amp;port)</para>
+</listitem>
+            <listitem><para>const char * <link linkend="_classefvitcp_1_1_core_1ae0624833987ca753179cd39bcddf5989">setServerFilter</link> (uint16_t local_port_be)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classefvitcp_1_1_core_1aa370e0702244c3a7d156e6cdf8bef459">sumRst</link> (<link linkend="_structefvitcp_1_1_send_buf">SendBuf</link> *rst, bool has_ts)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classefvitcp_1_1_core_1abceb96137b2943e95fcd5c6e68d1bf94">rspRst</link> (<link linkend="_structefvitcp_1_1_ether_header">EtherHeader</link> *eth_hdr)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classefvitcp_1_1_core_1a073bceaefa96f31095d0f3433e9a792e">ackTW</link> (<link linkend="_structefvitcp_1_1_time_wait_conn">TimeWaitConn</link> &amp;tw)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classefvitcp_1_1_core_1ae2c8f2a98ec4f3e4dfd474ac82522fb2">send</link> (<link linkend="_structefvitcp_1_1_send_buf">SendBuf</link> *buf)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classefvitcp_1_1_core_1acd0cd936705edeea95d2a070c18074a1">send_warmup</link> ()</para>
+</listitem>
+            <listitem><para>template&lt;typename RecvHandler &gt; </para><para>void <link linkend="_classefvitcp_1_1_core_1a40d71470e3fc66e8a7152ff5d3de2beb">pollNet</link> (RecvHandler recv_handler)</para>
+</listitem>
+            <listitem><para><link linkend="_structefvitcp_1_1_send_buf">SendBuf</link> * <link linkend="_classefvitcp_1_1_core_1aca0acb54a0a08674dde852874c1c9853">getSendBuf</link> (uint32_t id)</para>
+</listitem>
+            <listitem><para><link linkend="_structefvitcp_1_1_conn_hash_entry">ConnHashEntry</link> * <link linkend="_classefvitcp_1_1_core_1a5b7bbbc4d3fd131a9bfc5a665c2e83e2">findConnEntry</link> (uint64_t key)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_classefvitcp_1_1_core_1ad4e22b7656e3346839de55108aed22df">getTblSize</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classefvitcp_1_1_core_1af80cbb30c6ba3d51016e3a0865f815c6">addConnEntry</link> (<link linkend="_structefvitcp_1_1_conn_hash_entry">ConnHashEntry</link> *entry, uint64_t key, uint32_t conn_id)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classefvitcp_1_1_core_1a8c59270b3bd86df3149ac2f2c3719d3b">delConnEntry</link> (uint64_t key)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classefvitcp_1_1_core_1a51ddebfeb87bbfccfc130d64e0e803d8">enterTW</link> (uint64_t key, <link linkend="_structefvitcp_1_1_send_buf">SendBuf</link> *buf, bool has_ts, uint32_t tsecr)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classefvitcp_1_1_core_1ac4590bfb386cb3d36202fb4e965f8fca">tryExpandConnTbl</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classefvitcp_1_1_core_1af9978cab11f6dcc6f67bc69276bb854b">addTimer</link> (uint32_t duration_ts, <link linkend="_structefvitcp_1_1_timer_node">TimerNode</link> *node)</para>
+</listitem>
+            <listitem><para>template&lt;typename TimerHandler &gt; </para><para>void <link linkend="_classefvitcp_1_1_core_1aa22d519f166905f520e865e01d5b2b9c">pollTime</link> (TimerHandler handler, int64_t ns=0)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>uint8_t <link linkend="_classefvitcp_1_1_core_1a8bd1f26d752831e1c3ee0dd49bf3f1be">pkt_buf_blk</link> [TotalBufSize+TotalBufAlign] = {}</para>
+</listitem>
+            <listitem><para>uint8_t * <link linkend="_classefvitcp_1_1_core_1a28982d5eff1186b0bac4c98499ca2c11">pkt_buf</link></para>
+</listitem>
+            <listitem><para>ef_vi <link linkend="_classefvitcp_1_1_core_1a2f7104673868bf06fa086171436f8f22">vi</link> = {}</para>
+</listitem>
+            <listitem><para>ef_driver_handle <link linkend="_classefvitcp_1_1_core_1ada3212ff40b6ecc5f288def6f13c6094">dh</link> = -1</para>
+</listitem>
+            <listitem><para>ef_pd <link linkend="_classefvitcp_1_1_core_1a796cef99ad8f49a058e51ae4a0798128">pd</link> = {}</para>
+</listitem>
+            <listitem><para>ef_memreg <link linkend="_classefvitcp_1_1_core_1a5e6e0735a4f86b8aadd0231b32591418">memreg</link> = {}</para>
+</listitem>
+            <listitem><para>ef_filter_cookie <link linkend="_classefvitcp_1_1_core_1ab56739cb700d3b9f26ecc2b60541e983">filter_cookie</link> = {}</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classefvitcp_1_1_core_1a11f8b41367bf6492190c96b0c76a647c">use_ctpio</link> = false</para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_classefvitcp_1_1_core_1abe24fd1b8584fd67e0fdd6ebc0cc78c0">local_mac</link> [6]</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_classefvitcp_1_1_core_1a1e0df66b480d860f563fda0dc5572633">local_ip</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_classefvitcp_1_1_core_1afdcf1f86ac2eb55cb5254efd193f3da2">receive_prefix_len</link></para>
+</listitem>
+            <listitem><para><link linkend="_structefvitcp_1_1_c_sum">CSum</link> <link linkend="_classefvitcp_1_1_core_1a251d65e6266eb256ef857920c03e4969">rst_ipsum</link></para>
+</listitem>
+            <listitem><para><link linkend="_structefvitcp_1_1_c_sum">CSum</link> <link linkend="_classefvitcp_1_1_core_1ac3ca6da2a97397e371a0f77be9b94c3b">rst_tcpsum</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_classefvitcp_1_1_core_1a6ef1cffc12578a7628302ed13b24767f">now_ts</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_classefvitcp_1_1_core_1a96c2bef190f39581c57c36d1bc4f2389">conn_cnt</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_classefvitcp_1_1_core_1a260e19a18d8ee492d4ed59057c078755">conns</link> [Conf::MaxConnCnt]</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_classefvitcp_1_1_core_1ac5d70f7635c4577b2106db914def0e07">tw_cnt</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_classefvitcp_1_1_core_1a0e371879382cb1e488d74d440a5cd5d6">tw_ids</link> [Conf::MaxTimeWaitConnCnt]</para>
+</listitem>
+            <listitem><para><link linkend="_structefvitcp_1_1_time_wait_conn">TimeWaitConn</link> <link linkend="_classefvitcp_1_1_core_1a5dc28110ba08c75ab924d6efdadca577">tws</link> [Conf::MaxTimeWaitConnCnt]</para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_classefvitcp_1_1_core_1a9bce663af7a28a71789feaa5a11c2c1e">tbl_mask</link></para>
+</listitem>
+            <listitem><para><link linkend="_structefvitcp_1_1_conn_hash_entry">ConnHashEntry</link> <link linkend="_classefvitcp_1_1_core_1a97b59bb4e8e32671d07dd6f779ddcd86">conn_tbl</link> [TotalTableSize]</para>
+</listitem>
+            <listitem><para><link linkend="_structefvitcp_1_1_timer_node">TimerNode</link> <link linkend="_classefvitcp_1_1_core_1a05067846debabab535315f5223083527">timer_slots</link> [2][TimerSlots]</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>static const uint32_t <link linkend="_classefvitcp_1_1_core_1af244c2e4c1064c23142704d0282af1a1">SendBufSize</link> = Conf::SendBuf1K ? 1024 : 2048</para>
+</listitem>
+            <listitem><para>static const uint32_t <link linkend="_classefvitcp_1_1_core_1af3d54870267b80f34055dc12795fd111">MaxSendMTU</link> = SendBufSize - (uint32_t)(offsetof(<link linkend="_structefvitcp_1_1_send_buf">SendBuf</link>, ip_hdr))</para>
+</listitem>
+            <listitem><para>static const uint32_t <link linkend="_classefvitcp_1_1_core_1a81bdec360a7bef2f1a58f62904c763c9">SendMTU</link> = MaxSendMTU &lt; 1500 ? MaxSendMTU : 1500</para>
+</listitem>
+            <listitem><para>static const uint32_t <link linkend="_classefvitcp_1_1_core_1a2212e659bbb7d2b19917b3cf5902edf3">MaxTableSize</link> = 1 &lt;&lt; (1 + getMSB(Conf::MaxConnCnt + Conf::MaxTimeWaitConnCnt))</para>
+</listitem>
+            <listitem><para>static const uint32_t <link linkend="_classefvitcp_1_1_core_1ab94e1179a1506d7ef800b393e4bc119a">TotalTableSize</link> = MaxTableSize + Conf::MaxConnCnt + Conf::MaxTimeWaitConnCnt</para>
+</listitem>
+            <listitem><para>static const uint64_t <link linkend="_classefvitcp_1_1_core_1a2b1e0a4c39926c7f86a7825809544cf8">SendBufCnt</link> = Conf::ConnSendBufCnt * Conf::MaxConnCnt + 1</para>
+</listitem>
+            <listitem><para>static const uint64_t <link linkend="_classefvitcp_1_1_core_1a03bf24ca0ae27944fea87e9d486b42ba">TotalBufSize</link> = RecvBufSize * Conf::RecvBufCnt + SendBufSize * SendBufCnt</para>
+</listitem>
+            <listitem><para>static const uint64_t <link linkend="_classefvitcp_1_1_core_1a0d83ff5c0f0b85c225ca89f5e940dc71">TotalBufAlign</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;typename Conf&gt;<?linebreak?>class efvitcp::Core&lt; Conf &gt;</title></simplesect>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classefvitcp_1_1_core_1a7ce5390e150f5ca45f2d3899161cf607"/><section>
+    <title>~Core()</title>
+<indexterm><primary>~Core</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>~Core</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput><link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::~<link linkend="_classefvitcp_1_1_core">Core</link> ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classefvitcp_1_1_core_1a073bceaefa96f31095d0f3433e9a792e"/><section>
+    <title>ackTW()</title>
+<indexterm><primary>ackTW</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>ackTW</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>void <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::ackTW (<link linkend="_structefvitcp_1_1_time_wait_conn">TimeWaitConn</link> &amp; tw)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1af80cbb30c6ba3d51016e3a0865f815c6"/><section>
+    <title>addConnEntry()</title>
+<indexterm><primary>addConnEntry</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>addConnEntry</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>void <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::addConnEntry (<link linkend="_structefvitcp_1_1_conn_hash_entry">ConnHashEntry</link> * entry, uint64_t key, uint32_t conn_id)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1af9978cab11f6dcc6f67bc69276bb854b"/><section>
+    <title>addTimer()</title>
+<indexterm><primary>addTimer</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>addTimer</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>void <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::addTimer (uint32_t duration_ts, <link linkend="_structefvitcp_1_1_timer_node">TimerNode</link> * node)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1a869b3ce0f6516f23207e4a6a24567a52"/><section>
+    <title>autoGetPort()</title>
+<indexterm><primary>autoGetPort</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>autoGetPort</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>const char * <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::autoGetPort (uint16_t &amp; port)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1a8c59270b3bd86df3149ac2f2c3719d3b"/><section>
+    <title>delConnEntry()</title>
+<indexterm><primary>delConnEntry</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>delConnEntry</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>void <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::delConnEntry (uint64_t key)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1ac41ea217a2df1852c03074ec071530a8"/><section>
+    <title>delFilter()</title>
+<indexterm><primary>delFilter</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>delFilter</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>void <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::delFilter ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1a635ebbb08bc97ecf726ae83c2f5a5e02"/><section>
+    <title>destruct()</title>
+<indexterm><primary>destruct</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>destruct</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>void <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::destruct ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1a51ddebfeb87bbfccfc130d64e0e803d8"/><section>
+    <title>enterTW()</title>
+<indexterm><primary>enterTW</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>enterTW</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>void <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::enterTW (uint64_t key, <link linkend="_structefvitcp_1_1_send_buf">SendBuf</link> * buf, bool has_ts, uint32_t tsecr)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1a5b7bbbc4d3fd131a9bfc5a665c2e83e2"/><section>
+    <title>findConnEntry()</title>
+<indexterm><primary>findConnEntry</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>findConnEntry</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput><link linkend="_structefvitcp_1_1_conn_hash_entry">ConnHashEntry</link> * <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::findConnEntry (uint64_t key)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1aaeb1431f601ed9a72812b9828b34c7c3"/><section>
+    <title>getns()</title>
+<indexterm><primary>getns</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>getns</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>int64_t <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::getns ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1aca0acb54a0a08674dde852874c1c9853"/><section>
+    <title>getSendBuf()</title>
+<indexterm><primary>getSendBuf</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>getSendBuf</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput><link linkend="_structefvitcp_1_1_send_buf">SendBuf</link> * <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::getSendBuf (uint32_t id)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1ad4e22b7656e3346839de55108aed22df"/><section>
+    <title>getTblSize()</title>
+<indexterm><primary>getTblSize</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>getTblSize</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>uint32_t <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::getTblSize ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1aeb0d1b2d77fc92c1493b17b427558db1"/><section>
+    <title>init()</title>
+<indexterm><primary>init</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>init</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>const char * <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::init (const char * interface)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1a40d71470e3fc66e8a7152ff5d3de2beb"/><section>
+    <title>pollNet()</title>
+<indexterm><primary>pollNet</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>pollNet</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><computeroutput>template&lt;typename RecvHandler &gt; </computeroutput><para><computeroutput>void <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::pollNet (RecvHandler recv_handler)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1aa22d519f166905f520e865e01d5b2b9c"/><section>
+    <title>pollTime()</title>
+<indexterm><primary>pollTime</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>pollTime</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><computeroutput>template&lt;typename TimerHandler &gt; </computeroutput><para><computeroutput>void <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::pollTime (TimerHandler handler, int64_t ns = <computeroutput>0</computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1abceb96137b2943e95fcd5c6e68d1bf94"/><section>
+    <title>rspRst()</title>
+<indexterm><primary>rspRst</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>rspRst</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>void <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::rspRst (<link linkend="_structefvitcp_1_1_ether_header">EtherHeader</link> * eth_hdr)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1ae2c8f2a98ec4f3e4dfd474ac82522fb2"/><section>
+    <title>send()</title>
+<indexterm><primary>send</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>send</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>void <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::send (<link linkend="_structefvitcp_1_1_send_buf">SendBuf</link> * buf)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1acd0cd936705edeea95d2a070c18074a1"/><section>
+    <title>send_warmup()</title>
+<indexterm><primary>send_warmup</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>send_warmup</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>void <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::send_warmup ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1afa171f6a8652003268d11f90489bb897"/><section>
+    <title>setClientFilter()</title>
+<indexterm><primary>setClientFilter</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>setClientFilter</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>const char * <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::setClientFilter (uint16_t &amp; local_port_be, uint32_t remote_ip, uint16_t remote_port_be)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1ae0624833987ca753179cd39bcddf5989"/><section>
+    <title>setServerFilter()</title>
+<indexterm><primary>setServerFilter</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>setServerFilter</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>const char * <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::setServerFilter (uint16_t local_port_be)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1aa370e0702244c3a7d156e6cdf8bef459"/><section>
+    <title>sumRst()</title>
+<indexterm><primary>sumRst</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>sumRst</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>void <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::sumRst (<link linkend="_structefvitcp_1_1_send_buf">SendBuf</link> * rst, bool has_ts)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1ac4590bfb386cb3d36202fb4e965f8fca"/><section>
+    <title>tryExpandConnTbl()</title>
+<indexterm><primary>tryExpandConnTbl</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>tryExpandConnTbl</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>void <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::tryExpandConnTbl ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classefvitcp_1_1_core_1a96c2bef190f39581c57c36d1bc4f2389"/><section>
+    <title>conn_cnt</title>
+<indexterm><primary>conn_cnt</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>conn_cnt</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>uint32_t <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::conn_cnt</computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1a97b59bb4e8e32671d07dd6f779ddcd86"/><section>
+    <title>conn_tbl</title>
+<indexterm><primary>conn_tbl</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>conn_tbl</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput><link linkend="_structefvitcp_1_1_conn_hash_entry">ConnHashEntry</link> <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::conn_tbl[TotalTableSize]</computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1a260e19a18d8ee492d4ed59057c078755"/><section>
+    <title>conns</title>
+<indexterm><primary>conns</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>conns</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>uint32_t <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::conns[Conf::MaxConnCnt]</computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1ada3212ff40b6ecc5f288def6f13c6094"/><section>
+    <title>dh</title>
+<indexterm><primary>dh</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>dh</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>ef_driver_handle <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::dh = -1</computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1ab56739cb700d3b9f26ecc2b60541e983"/><section>
+    <title>filter_cookie</title>
+<indexterm><primary>filter_cookie</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>filter_cookie</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>ef_filter_cookie <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::filter_cookie = {}</computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1a1e0df66b480d860f563fda0dc5572633"/><section>
+    <title>local_ip</title>
+<indexterm><primary>local_ip</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>local_ip</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>uint32_t <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::local_ip</computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1abe24fd1b8584fd67e0fdd6ebc0cc78c0"/><section>
+    <title>local_mac</title>
+<indexterm><primary>local_mac</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>local_mac</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>uint8_t <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::local_mac[6]</computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1af3d54870267b80f34055dc12795fd111"/><section>
+    <title>MaxSendMTU</title>
+<indexterm><primary>MaxSendMTU</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>MaxSendMTU</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>const uint32_t <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::MaxSendMTU = SendBufSize - (uint32_t)(offsetof(<link linkend="_structefvitcp_1_1_send_buf">SendBuf</link>, ip_hdr))<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1a2212e659bbb7d2b19917b3cf5902edf3"/><section>
+    <title>MaxTableSize</title>
+<indexterm><primary>MaxTableSize</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>MaxTableSize</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>const uint32_t <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::MaxTableSize = 1 &lt;&lt; (1 + getMSB(Conf::MaxConnCnt + Conf::MaxTimeWaitConnCnt))<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1a5e6e0735a4f86b8aadd0231b32591418"/><section>
+    <title>memreg</title>
+<indexterm><primary>memreg</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>memreg</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>ef_memreg <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::memreg = {}</computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1a6ef1cffc12578a7628302ed13b24767f"/><section>
+    <title>now_ts</title>
+<indexterm><primary>now_ts</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>now_ts</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>uint32_t <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::now_ts</computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1a796cef99ad8f49a058e51ae4a0798128"/><section>
+    <title>pd</title>
+<indexterm><primary>pd</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>pd</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>ef_pd <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::pd = {}</computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1a28982d5eff1186b0bac4c98499ca2c11"/><section>
+    <title>pkt_buf</title>
+<indexterm><primary>pkt_buf</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>pkt_buf</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>uint8_t* <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;<link linkend="_structpkt__buf">::pkt_buf</link></computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1a8bd1f26d752831e1c3ee0dd49bf3f1be"/><section>
+    <title>pkt_buf_blk</title>
+<indexterm><primary>pkt_buf_blk</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>pkt_buf_blk</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>uint8_t <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::pkt_buf_blk[TotalBufSize+TotalBufAlign] = {}</computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1afdcf1f86ac2eb55cb5254efd193f3da2"/><section>
+    <title>receive_prefix_len</title>
+<indexterm><primary>receive_prefix_len</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>receive_prefix_len</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>uint32_t <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::receive_prefix_len</computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1a251d65e6266eb256ef857920c03e4969"/><section>
+    <title>rst_ipsum</title>
+<indexterm><primary>rst_ipsum</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>rst_ipsum</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput><link linkend="_structefvitcp_1_1_c_sum">CSum</link> <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::rst_ipsum</computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1ac3ca6da2a97397e371a0f77be9b94c3b"/><section>
+    <title>rst_tcpsum</title>
+<indexterm><primary>rst_tcpsum</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>rst_tcpsum</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput><link linkend="_structefvitcp_1_1_c_sum">CSum</link> <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::rst_tcpsum</computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1a2b1e0a4c39926c7f86a7825809544cf8"/><section>
+    <title>SendBufCnt</title>
+<indexterm><primary>SendBufCnt</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>SendBufCnt</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>const uint64_t <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::SendBufCnt = Conf::ConnSendBufCnt * Conf::MaxConnCnt + 1<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1af244c2e4c1064c23142704d0282af1a1"/><section>
+    <title>SendBufSize</title>
+<indexterm><primary>SendBufSize</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>SendBufSize</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>const uint32_t <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::SendBufSize = Conf::SendBuf1K ? 1024 : 2048<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1a81bdec360a7bef2f1a58f62904c763c9"/><section>
+    <title>SendMTU</title>
+<indexterm><primary>SendMTU</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>SendMTU</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>const uint32_t <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::SendMTU = MaxSendMTU &lt; 1500 ? MaxSendMTU : 1500<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1a9bce663af7a28a71789feaa5a11c2c1e"/><section>
+    <title>tbl_mask</title>
+<indexterm><primary>tbl_mask</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>tbl_mask</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>uint64_t <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::tbl_mask</computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1a05067846debabab535315f5223083527"/><section>
+    <title>timer_slots</title>
+<indexterm><primary>timer_slots</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>timer_slots</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput><link linkend="_structefvitcp_1_1_timer_node">TimerNode</link> <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::timer_slots[2][TimerSlots]</computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1a0d83ff5c0f0b85c225ca89f5e940dc71"/><section>
+    <title>TotalBufAlign</title>
+<indexterm><primary>TotalBufAlign</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>TotalBufAlign</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>const uint64_t <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::TotalBufAlign<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=
+&#32;&#32;&#32;&#32;TotalBufSize&#32;&lt;=&#32;252444672
+&#32;&#32;&#32;&#32;&#32;&#32;?&#32;(1&#32;&lt;&lt;&#32;12)
+&#32;&#32;&#32;&#32;&#32;&#32;:&#32;(TotalBufSize&#32;&lt;=&#32;4039114752&#32;?&#32;(1&#32;&lt;&lt;&#32;16)&#32;:&#32;(TotalBufSize&#32;&lt;=&#32;64625836032&#32;?&#32;(1&#32;&lt;&lt;&#32;20)&#32;:&#32;(1&#32;&lt;&lt;&#32;22)))
+</programlisting></section>
+<anchor xml:id="_classefvitcp_1_1_core_1a03bf24ca0ae27944fea87e9d486b42ba"/><section>
+    <title>TotalBufSize</title>
+<indexterm><primary>TotalBufSize</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>TotalBufSize</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>const uint64_t <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::TotalBufSize = RecvBufSize * Conf::RecvBufCnt + SendBufSize * SendBufCnt<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1ab94e1179a1506d7ef800b393e4bc119a"/><section>
+    <title>TotalTableSize</title>
+<indexterm><primary>TotalTableSize</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>TotalTableSize</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>const uint32_t <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::TotalTableSize = MaxTableSize + Conf::MaxConnCnt + Conf::MaxTimeWaitConnCnt<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1ac5d70f7635c4577b2106db914def0e07"/><section>
+    <title>tw_cnt</title>
+<indexterm><primary>tw_cnt</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>tw_cnt</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>uint32_t <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::tw_cnt</computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1a0e371879382cb1e488d74d440a5cd5d6"/><section>
+    <title>tw_ids</title>
+<indexterm><primary>tw_ids</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>tw_ids</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>uint32_t <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::tw_ids[Conf::MaxTimeWaitConnCnt]</computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1a5dc28110ba08c75ab924d6efdadca577"/><section>
+    <title>tws</title>
+<indexterm><primary>tws</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>tws</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput><link linkend="_structefvitcp_1_1_time_wait_conn">TimeWaitConn</link> <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::tws[Conf::MaxTimeWaitConnCnt]</computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1a11f8b41367bf6492190c96b0c76a647c"/><section>
+    <title>use_ctpio</title>
+<indexterm><primary>use_ctpio</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>use_ctpio</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>bool <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::use_ctpio = false</computeroutput></para></section>
+<anchor xml:id="_classefvitcp_1_1_core_1a2f7104673868bf06fa086171436f8f22"/><section>
+    <title>vi</title>
+<indexterm><primary>vi</primary><secondary>efvitcp::Core&lt; Conf &gt;</secondary></indexterm>
+<indexterm><primary>efvitcp::Core&lt; Conf &gt;</primary><secondary>vi</secondary></indexterm>
+<computeroutput>template&lt;typename Conf &gt; </computeroutput><para><computeroutput>ef_vi <link linkend="_classefvitcp_1_1_core">efvitcp::Core</link>&lt; Conf &gt;::vi = {}</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/sgaer/source/repos/katanafinancial/OccamCME4/OccamCME4/src/external/pollnet/efvitcp/Core.h</section>
+</section>

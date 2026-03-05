@@ -1,0 +1,50 @@
+\doxysection{IZmq\+Subscriber Class Reference}
+\hypertarget{class_i_zmq_subscriber}{}\label{class_i_zmq_subscriber}\index{IZmqSubscriber@{IZmqSubscriber}}
+
+
+The interface for a ZMQ subscriber.  
+
+
+
+
+{\ttfamily \#include $<$Zmq\+Subscriber\+V5.\+hpp$>$}
+
+Inheritance diagram for IZmq\+Subscriber\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_i_zmq_subscriber}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_i_zmq_subscriber_af2e2a88cb831d644dd32edc238cce65d}{on\+Pub\+Msg}} (string topic, string payload)=0
+\begin{DoxyCompactList}\small\item\em Called when a message is received. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The interface for a ZMQ subscriber. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_i_zmq_subscriber_af2e2a88cb831d644dd32edc238cce65d}\index{IZmqSubscriber@{IZmqSubscriber}!onPubMsg@{onPubMsg}}
+\index{onPubMsg@{onPubMsg}!IZmqSubscriber@{IZmqSubscriber}}
+\doxysubsubsection{\texorpdfstring{onPubMsg()}{onPubMsg()}}
+{\footnotesize\ttfamily \label{class_i_zmq_subscriber_af2e2a88cb831d644dd32edc238cce65d} 
+virtual void IZmq\+Subscriber\+::on\+Pub\+Msg (\begin{DoxyParamCaption}\item[{string}]{topic}{, }\item[{string}]{payload}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Called when a message is received. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em topic} & The topic of the message. \\
+\hline
+{\em payload} & The payload of the message. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+ZMQ/Zmq\+Subscriber\+V5.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_app_helpers" xml:lang="en-US">
+<title>KTN::CME::IL3::IL3AppHelpers Class Reference</title>
+<indexterm><primary>KTN::CME::IL3::IL3AppHelpers</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_app_helpers">IL3AppHelpers</link> class provides helper functions for the IL3 application. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;IL3AppHelpers.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>uint64_t <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_app_helpers_1a80840ab75cf9a4acda1528fbf5f31c86">GetNanosecondsSinceEpochOptimized</link> ()</para>
+
+<para>Gets the current time in nanoseconds since the epoch. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static uint64_t <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_app_helpers_1a70bb13866d30e0c778e4ab0630728483">GenOrdTimestamp</link> ()</para>
+
+<para>Generates an order timestamp in nanoseconds since the epoch. </para>
+</listitem>
+            <listitem><para>static uint64_t <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_app_helpers_1aff2d2c3e345547f131df9e1c0009fb49">GenFastTimestamp</link> ()</para>
+
+<para>Generates a fast timestamp using the timestamp counter on x86_64 architecture. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_app_helpers">IL3AppHelpers</link> class provides helper functions for the IL3 application. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_app_helpers_1aff2d2c3e345547f131df9e1c0009fb49"/><section>
+    <title>GenFastTimestamp()</title>
+<indexterm><primary>GenFastTimestamp</primary><secondary>KTN::CME::IL3::IL3AppHelpers</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::IL3AppHelpers</primary><secondary>GenFastTimestamp</secondary></indexterm>
+<para><computeroutput>static uint64_t KTN::CME::IL3::IL3AppHelpers::GenFastTimestamp ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Generates a fast timestamp using the timestamp counter on x86_64 architecture. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The generated fast timestamp. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_app_helpers_1a70bb13866d30e0c778e4ab0630728483"/><section>
+    <title>GenOrdTimestamp()</title>
+<indexterm><primary>GenOrdTimestamp</primary><secondary>KTN::CME::IL3::IL3AppHelpers</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::IL3AppHelpers</primary><secondary>GenOrdTimestamp</secondary></indexterm>
+<para><computeroutput>static uint64_t KTN::CME::IL3::IL3AppHelpers::GenOrdTimestamp ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Generates an order timestamp in nanoseconds since the epoch. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The generated order timestamp. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_i_l3_app_helpers_1a80840ab75cf9a4acda1528fbf5f31c86"/><section>
+    <title>GetNanosecondsSinceEpochOptimized()</title>
+<indexterm><primary>GetNanosecondsSinceEpochOptimized</primary><secondary>KTN::CME::IL3::IL3AppHelpers</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::IL3AppHelpers</primary><secondary>GetNanosecondsSinceEpochOptimized</secondary></indexterm>
+<para><computeroutput>uint64_t KTN::CME::IL3::IL3AppHelpers::GetNanosecondsSinceEpochOptimized ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Gets the current time in nanoseconds since the epoch. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The current time in nanoseconds since the epoch. </para>
+</formalpara>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+exchsupport/cme/il3/IL3AppHelpers.hpp</section>
+</section>

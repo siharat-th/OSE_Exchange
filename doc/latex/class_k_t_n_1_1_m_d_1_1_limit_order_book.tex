@@ -1,0 +1,162 @@
+\doxysection{KTN\+::MD\+::Limit\+Order\+Book Class Reference}
+\hypertarget{class_k_t_n_1_1_m_d_1_1_limit_order_book}{}\label{class_k_t_n_1_1_m_d_1_1_limit_order_book}\index{KTN::MD::LimitOrderBook@{KTN::MD::LimitOrderBook}}
+Inheritance diagram for KTN\+::MD\+::Limit\+Order\+Book\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_k_t_n_1_1_m_d_1_1_limit_order_book}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_limit_order_book_aedadba5aa58bbd957305a5ef6d606619}{Limit\+Order\+Book}} (int precision, int depth)
+\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_limit_order_book_a397f122c2e0c64e13956c60abec66751}{add\+\_\+order}} (const \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_md_order}{Md\+Order}} \&order, bool is\+\_\+bid)
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_limit_order_book_a154dce1c2ce97cdbeaf259be9af07d16}{update\+\_\+order}} (const \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_md_order}{Md\+Order}} \&order, bool is\+\_\+bid)
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_limit_order_book_a6fae2630dda0bd9c3515a3458e434575}{delete\+\_\+order}} (const \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_md_order}{Md\+Order}} \&order, bool is\+\_\+bid)
+\item 
+virtual \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_md_order}{Md\+Order}} \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_limit_order_book_afd01835759f6db8770479ef51a974ca2}{get\+\_\+best\+\_\+bid}} ()
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_md_order}{Md\+Order}} \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_limit_order_book_afad5cb88ef2e3dee7ff1396aa7789d59}{get\+\_\+lowest\+\_\+bid}} ()
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_md_order}{Md\+Order}} \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_limit_order_book_a59af9259c00b5b696c6ecf8d2f4e9c9a}{get\+\_\+best\+\_\+offer}} ()
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_md_order}{Md\+Order}} \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_limit_order_book_ac2cb985e14462c788553114f3b59c390}{get\+\_\+highest\+\_\+offer}} ()
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_limit_order_book_af496b4db8f565183906258073e08a90a}{print\+\_\+bids}} ()
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_limit_order_book_a3fa5f823ea2a3df82de53442ec56964b}{print\+\_\+offers}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_limit_order_book_a55c76f78bddb793af8f5336e7eb03d89}{price\+\_\+to\+\_\+index}} (int32\+\_\+t price, bool is\+\_\+bid, bool update\+\_\+pointers=true)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_md_order}{Md\+Order}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_limit_order_book_afc5ff6663f1dcb8f296ddeee52c1d524}{ptr\+\_\+bid\+\_\+ini}}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_md_order}{Md\+Order}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_limit_order_book_a473c69da77787a948d393cf4e8345490}{ptr\+\_\+bid\+\_\+end}}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_md_order}{Md\+Order}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_limit_order_book_a94626f094f8e12e1bb6c9f9823301950}{ptr\+\_\+offer\+\_\+ini}}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_md_order}{Md\+Order}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_limit_order_book_a3c201d8fa0d9c9205901bcbc852ddc7a}{ptr\+\_\+offer\+\_\+end}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_k_t_n_1_1_m_d_1_1_limit_order_book_aedadba5aa58bbd957305a5ef6d606619}\index{KTN::MD::LimitOrderBook@{KTN::MD::LimitOrderBook}!LimitOrderBook@{LimitOrderBook}}
+\index{LimitOrderBook@{LimitOrderBook}!KTN::MD::LimitOrderBook@{KTN::MD::LimitOrderBook}}
+\doxysubsubsection{\texorpdfstring{LimitOrderBook()}{LimitOrderBook()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_m_d_1_1_limit_order_book_aedadba5aa58bbd957305a5ef6d606619} 
+KTN\+::\+MD\+::\+Limit\+Order\+Book\+::\+Limit\+Order\+Book (\begin{DoxyParamCaption}\item[{int}]{precision}{, }\item[{int}]{depth}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_m_d_1_1_limit_order_book_a397f122c2e0c64e13956c60abec66751}\index{KTN::MD::LimitOrderBook@{KTN::MD::LimitOrderBook}!add\_order@{add\_order}}
+\index{add\_order@{add\_order}!KTN::MD::LimitOrderBook@{KTN::MD::LimitOrderBook}}
+\doxysubsubsection{\texorpdfstring{add\_order()}{add\_order()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_m_d_1_1_limit_order_book_a397f122c2e0c64e13956c60abec66751} 
+virtual void KTN\+::\+MD\+::\+Limit\+Order\+Book\+::add\+\_\+order (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_md_order}{Md\+Order}} \&}]{order}{, }\item[{bool}]{is\+\_\+bid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_lock_free_limit_order_book_ad58a4f200bc6db5587103c5a10a6e40f}{KTN\+::\+MD\+::\+Lock\+Free\+Limit\+Order\+Book}}.
+
+\Hypertarget{class_k_t_n_1_1_m_d_1_1_limit_order_book_a6fae2630dda0bd9c3515a3458e434575}\index{KTN::MD::LimitOrderBook@{KTN::MD::LimitOrderBook}!delete\_order@{delete\_order}}
+\index{delete\_order@{delete\_order}!KTN::MD::LimitOrderBook@{KTN::MD::LimitOrderBook}}
+\doxysubsubsection{\texorpdfstring{delete\_order()}{delete\_order()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_m_d_1_1_limit_order_book_a6fae2630dda0bd9c3515a3458e434575} 
+void KTN\+::\+MD\+::\+Limit\+Order\+Book\+::delete\+\_\+order (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_md_order}{Md\+Order}} \&}]{order}{, }\item[{bool}]{is\+\_\+bid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_k_t_n_1_1_m_d_1_1_limit_order_book_afd01835759f6db8770479ef51a974ca2}\index{KTN::MD::LimitOrderBook@{KTN::MD::LimitOrderBook}!get\_best\_bid@{get\_best\_bid}}
+\index{get\_best\_bid@{get\_best\_bid}!KTN::MD::LimitOrderBook@{KTN::MD::LimitOrderBook}}
+\doxysubsubsection{\texorpdfstring{get\_best\_bid()}{get\_best\_bid()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_m_d_1_1_limit_order_book_afd01835759f6db8770479ef51a974ca2} 
+virtual \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_md_order}{Md\+Order}} KTN\+::\+MD\+::\+Limit\+Order\+Book\+::get\+\_\+best\+\_\+bid (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_lock_free_limit_order_book_af292fd038277e99f2983eab54a08f3b2}{KTN\+::\+MD\+::\+Lock\+Free\+Limit\+Order\+Book}}.
+
+\Hypertarget{class_k_t_n_1_1_m_d_1_1_limit_order_book_a59af9259c00b5b696c6ecf8d2f4e9c9a}\index{KTN::MD::LimitOrderBook@{KTN::MD::LimitOrderBook}!get\_best\_offer@{get\_best\_offer}}
+\index{get\_best\_offer@{get\_best\_offer}!KTN::MD::LimitOrderBook@{KTN::MD::LimitOrderBook}}
+\doxysubsubsection{\texorpdfstring{get\_best\_offer()}{get\_best\_offer()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_m_d_1_1_limit_order_book_a59af9259c00b5b696c6ecf8d2f4e9c9a} 
+\mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_md_order}{Md\+Order}} KTN\+::\+MD\+::\+Limit\+Order\+Book\+::get\+\_\+best\+\_\+offer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_k_t_n_1_1_m_d_1_1_limit_order_book_ac2cb985e14462c788553114f3b59c390}\index{KTN::MD::LimitOrderBook@{KTN::MD::LimitOrderBook}!get\_highest\_offer@{get\_highest\_offer}}
+\index{get\_highest\_offer@{get\_highest\_offer}!KTN::MD::LimitOrderBook@{KTN::MD::LimitOrderBook}}
+\doxysubsubsection{\texorpdfstring{get\_highest\_offer()}{get\_highest\_offer()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_m_d_1_1_limit_order_book_ac2cb985e14462c788553114f3b59c390} 
+\mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_md_order}{Md\+Order}} KTN\+::\+MD\+::\+Limit\+Order\+Book\+::get\+\_\+highest\+\_\+offer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_k_t_n_1_1_m_d_1_1_limit_order_book_afad5cb88ef2e3dee7ff1396aa7789d59}\index{KTN::MD::LimitOrderBook@{KTN::MD::LimitOrderBook}!get\_lowest\_bid@{get\_lowest\_bid}}
+\index{get\_lowest\_bid@{get\_lowest\_bid}!KTN::MD::LimitOrderBook@{KTN::MD::LimitOrderBook}}
+\doxysubsubsection{\texorpdfstring{get\_lowest\_bid()}{get\_lowest\_bid()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_m_d_1_1_limit_order_book_afad5cb88ef2e3dee7ff1396aa7789d59} 
+\mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_md_order}{Md\+Order}} KTN\+::\+MD\+::\+Limit\+Order\+Book\+::get\+\_\+lowest\+\_\+bid (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_k_t_n_1_1_m_d_1_1_limit_order_book_a55c76f78bddb793af8f5336e7eb03d89}\index{KTN::MD::LimitOrderBook@{KTN::MD::LimitOrderBook}!price\_to\_index@{price\_to\_index}}
+\index{price\_to\_index@{price\_to\_index}!KTN::MD::LimitOrderBook@{KTN::MD::LimitOrderBook}}
+\doxysubsubsection{\texorpdfstring{price\_to\_index()}{price\_to\_index()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_m_d_1_1_limit_order_book_a55c76f78bddb793af8f5336e7eb03d89} 
+int KTN\+::\+MD\+::\+Limit\+Order\+Book\+::price\+\_\+to\+\_\+index (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{price}{, }\item[{bool}]{is\+\_\+bid}{, }\item[{bool}]{update\+\_\+pointers}{ = {\ttfamily true}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_k_t_n_1_1_m_d_1_1_limit_order_book_af496b4db8f565183906258073e08a90a}\index{KTN::MD::LimitOrderBook@{KTN::MD::LimitOrderBook}!print\_bids@{print\_bids}}
+\index{print\_bids@{print\_bids}!KTN::MD::LimitOrderBook@{KTN::MD::LimitOrderBook}}
+\doxysubsubsection{\texorpdfstring{print\_bids()}{print\_bids()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_m_d_1_1_limit_order_book_af496b4db8f565183906258073e08a90a} 
+void KTN\+::\+MD\+::\+Limit\+Order\+Book\+::print\+\_\+bids (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_k_t_n_1_1_m_d_1_1_limit_order_book_a3fa5f823ea2a3df82de53442ec56964b}\index{KTN::MD::LimitOrderBook@{KTN::MD::LimitOrderBook}!print\_offers@{print\_offers}}
+\index{print\_offers@{print\_offers}!KTN::MD::LimitOrderBook@{KTN::MD::LimitOrderBook}}
+\doxysubsubsection{\texorpdfstring{print\_offers()}{print\_offers()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_m_d_1_1_limit_order_book_a3fa5f823ea2a3df82de53442ec56964b} 
+void KTN\+::\+MD\+::\+Limit\+Order\+Book\+::print\+\_\+offers (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_k_t_n_1_1_m_d_1_1_limit_order_book_a154dce1c2ce97cdbeaf259be9af07d16}\index{KTN::MD::LimitOrderBook@{KTN::MD::LimitOrderBook}!update\_order@{update\_order}}
+\index{update\_order@{update\_order}!KTN::MD::LimitOrderBook@{KTN::MD::LimitOrderBook}}
+\doxysubsubsection{\texorpdfstring{update\_order()}{update\_order()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_m_d_1_1_limit_order_book_a154dce1c2ce97cdbeaf259be9af07d16} 
+void KTN\+::\+MD\+::\+Limit\+Order\+Book\+::update\+\_\+order (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_md_order}{Md\+Order}} \&}]{order}{, }\item[{bool}]{is\+\_\+bid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_k_t_n_1_1_m_d_1_1_limit_order_book_a473c69da77787a948d393cf4e8345490}\index{KTN::MD::LimitOrderBook@{KTN::MD::LimitOrderBook}!ptr\_bid\_end@{ptr\_bid\_end}}
+\index{ptr\_bid\_end@{ptr\_bid\_end}!KTN::MD::LimitOrderBook@{KTN::MD::LimitOrderBook}}
+\doxysubsubsection{\texorpdfstring{ptr\_bid\_end}{ptr\_bid\_end}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_m_d_1_1_limit_order_book_a473c69da77787a948d393cf4e8345490} 
+\mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_md_order}{Md\+Order}}\texorpdfstring{$\ast$}{*} KTN\+::\+MD\+::\+Limit\+Order\+Book\+::ptr\+\_\+bid\+\_\+end\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_k_t_n_1_1_m_d_1_1_limit_order_book_afc5ff6663f1dcb8f296ddeee52c1d524}\index{KTN::MD::LimitOrderBook@{KTN::MD::LimitOrderBook}!ptr\_bid\_ini@{ptr\_bid\_ini}}
+\index{ptr\_bid\_ini@{ptr\_bid\_ini}!KTN::MD::LimitOrderBook@{KTN::MD::LimitOrderBook}}
+\doxysubsubsection{\texorpdfstring{ptr\_bid\_ini}{ptr\_bid\_ini}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_m_d_1_1_limit_order_book_afc5ff6663f1dcb8f296ddeee52c1d524} 
+\mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_md_order}{Md\+Order}}\texorpdfstring{$\ast$}{*} KTN\+::\+MD\+::\+Limit\+Order\+Book\+::ptr\+\_\+bid\+\_\+ini\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_k_t_n_1_1_m_d_1_1_limit_order_book_a3c201d8fa0d9c9205901bcbc852ddc7a}\index{KTN::MD::LimitOrderBook@{KTN::MD::LimitOrderBook}!ptr\_offer\_end@{ptr\_offer\_end}}
+\index{ptr\_offer\_end@{ptr\_offer\_end}!KTN::MD::LimitOrderBook@{KTN::MD::LimitOrderBook}}
+\doxysubsubsection{\texorpdfstring{ptr\_offer\_end}{ptr\_offer\_end}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_m_d_1_1_limit_order_book_a3c201d8fa0d9c9205901bcbc852ddc7a} 
+\mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_md_order}{Md\+Order}}\texorpdfstring{$\ast$}{*} KTN\+::\+MD\+::\+Limit\+Order\+Book\+::ptr\+\_\+offer\+\_\+end\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_k_t_n_1_1_m_d_1_1_limit_order_book_a94626f094f8e12e1bb6c9f9823301950}\index{KTN::MD::LimitOrderBook@{KTN::MD::LimitOrderBook}!ptr\_offer\_ini@{ptr\_offer\_ini}}
+\index{ptr\_offer\_ini@{ptr\_offer\_ini}!KTN::MD::LimitOrderBook@{KTN::MD::LimitOrderBook}}
+\doxysubsubsection{\texorpdfstring{ptr\_offer\_ini}{ptr\_offer\_ini}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_m_d_1_1_limit_order_book_a94626f094f8e12e1bb6c9f9823301950} 
+\mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_md_order}{Md\+Order}}\texorpdfstring{$\ast$}{*} KTN\+::\+MD\+::\+Limit\+Order\+Book\+::ptr\+\_\+offer\+\_\+ini\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Order\+Book/circular\+\_\+array.\+hpp\end{DoxyCompactItemize}

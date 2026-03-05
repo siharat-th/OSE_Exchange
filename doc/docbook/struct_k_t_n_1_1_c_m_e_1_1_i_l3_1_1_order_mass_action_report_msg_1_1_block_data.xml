@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data" xml:lang="en-US">
+<title>KTN::CME::IL3::OrderMassActionReportMsg::BlockData Struct Reference</title>
+<indexterm><primary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>uInt32 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1aace35376c57fd81e911c5c5805b9d35e">SeqNum</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1a76145601990e8089c0a9d3e7f44a5c8a">UUID</link></para>
+</listitem>
+            <listitem><para>String20Req <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1af701646e977a2134603efac18e9aa642">SenderID</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1a966518f23499148a7e9892d8d59c2b54">PartyDetailsListReqID</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1ab40494e6786e59e3c4e66e7aa6267f08">TransactTime</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1adb6ba514c2747750cef802f99407e317">SendingTimeEpoch</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1a3fb7c0ac3c0f5bfcfa5357a8d5729106">OrderRequestID</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1a61e91fcc8df07b141128ed9455fc5b1a">MassActionReportID</link></para>
+</listitem>
+            <listitem><para>StringLength6 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1ad535130b73138f0badbb70e78e5e9dfb">SecurityGroup</link></para>
+</listitem>
+            <listitem><para>String5Req <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1a11753db1cbfc6c832d853f69d032dcab">Location</link></para>
+</listitem>
+            <listitem><para>Int32NULL <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1a06da1bf1bf0d1b8e2c69945c33d1fa6e">SecurityID</link></para>
+</listitem>
+            <listitem><para>uInt16NULL <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1a4f9291d3b533bf228fa1003815f39000">DelayDuration</link></para>
+</listitem>
+            <listitem><para>EnumMassActionResponse <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1a794b92fc3423634e30813bd531a654af">MassActionResponse</link></para>
+</listitem>
+            <listitem><para>EnumManualOrdIndReq <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1ac9975605aabbe54596683214eddabe19">ManualOrderIndicator</link></para>
+</listitem>
+            <listitem><para>EnumMassActionScope <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1a8a80e16a3482bbf90b28f0240c4e20dd">MassActionScope</link></para>
+</listitem>
+            <listitem><para>uInt32 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1a804e5b03f350af057aa7b661b98f7ebb">TotalAffectedOrders</link></para>
+</listitem>
+            <listitem><para>EnumBooleanFlag <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1ab6512062e1967625f5c6c28a4f7f3550">LastFragment</link></para>
+</listitem>
+            <listitem><para>uInt8NULL <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1a6bf90c05c05238c7c9e871c9f80ed95f">MassActionRejectReason</link></para>
+</listitem>
+            <listitem><para>uInt8NULL <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1a34220c1a6e027f323a228d58195f675a">MarketSegmentID</link></para>
+</listitem>
+            <listitem><para>EnumMassCxlReqTyp <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1ac49e38aac8234d2aae49cf0a4746f9b4">MassCancelRequestType</link></para>
+</listitem>
+            <listitem><para>EnumSideNULL <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1a767ecd38d536a7e07d4b299cc9af7932">Side</link></para>
+</listitem>
+            <listitem><para>EnumMassActionOrdTyp <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1a2558fb90c0a1662df11e61a6af0b5149">OrdType</link></para>
+</listitem>
+            <listitem><para>EnumMassCancelTIF <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1a72baf35808fc12f6b361474ff7ea6d63">TimeInForce</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1af71250c421ed2e4811f15ac97df70f98">SplitMsg</link></para>
+</listitem>
+            <listitem><para>EnumBooleanNULL <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1ac098211a67860d5dd5bf1cff515d7785">LiquidityFlag</link></para>
+</listitem>
+            <listitem><para>EnumBooleanFlag <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1af20fe02d30400a8b5de2fc06297bb728">PossRetransFlag</link></para>
+</listitem>
+            <listitem><para>uInt64NULL <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1abaf51c88094fbc6b578d9cd3b61d99ab">DelayToTime</link></para>
+</listitem>
+            <listitem><para>String8 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1aaed6748c5a6c6658cd480c5ab3a4bb8d">OrigOrderUser</link></para>
+</listitem>
+            <listitem><para>String8 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1a791039429984c19572c6d1a2f446391a">CancelText</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1a791039429984c19572c6d1a2f446391a"/><section>
+    <title>CancelText</title>
+<indexterm><primary>CancelText</primary><secondary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</primary><secondary>CancelText</secondary></indexterm>
+<para><computeroutput>String8 KTN::CME::IL3::OrderMassActionReportMsg::BlockData::CancelText</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1a4f9291d3b533bf228fa1003815f39000"/><section>
+    <title>DelayDuration</title>
+<indexterm><primary>DelayDuration</primary><secondary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</primary><secondary>DelayDuration</secondary></indexterm>
+<para><computeroutput>uInt16NULL KTN::CME::IL3::OrderMassActionReportMsg::BlockData::DelayDuration</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1abaf51c88094fbc6b578d9cd3b61d99ab"/><section>
+    <title>DelayToTime</title>
+<indexterm><primary>DelayToTime</primary><secondary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</primary><secondary>DelayToTime</secondary></indexterm>
+<para><computeroutput>uInt64NULL KTN::CME::IL3::OrderMassActionReportMsg::BlockData::DelayToTime</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1ab6512062e1967625f5c6c28a4f7f3550"/><section>
+    <title>LastFragment</title>
+<indexterm><primary>LastFragment</primary><secondary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</primary><secondary>LastFragment</secondary></indexterm>
+<para><computeroutput>EnumBooleanFlag KTN::CME::IL3::OrderMassActionReportMsg::BlockData::LastFragment</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1ac098211a67860d5dd5bf1cff515d7785"/><section>
+    <title>LiquidityFlag</title>
+<indexterm><primary>LiquidityFlag</primary><secondary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</primary><secondary>LiquidityFlag</secondary></indexterm>
+<para><computeroutput>EnumBooleanNULL KTN::CME::IL3::OrderMassActionReportMsg::BlockData::LiquidityFlag</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1a11753db1cbfc6c832d853f69d032dcab"/><section>
+    <title>Location</title>
+<indexterm><primary>Location</primary><secondary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</primary><secondary>Location</secondary></indexterm>
+<para><computeroutput>String5Req KTN::CME::IL3::OrderMassActionReportMsg::BlockData::Location</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1ac9975605aabbe54596683214eddabe19"/><section>
+    <title>ManualOrderIndicator</title>
+<indexterm><primary>ManualOrderIndicator</primary><secondary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</primary><secondary>ManualOrderIndicator</secondary></indexterm>
+<para><computeroutput>EnumManualOrdIndReq KTN::CME::IL3::OrderMassActionReportMsg::BlockData::ManualOrderIndicator</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1a34220c1a6e027f323a228d58195f675a"/><section>
+    <title>MarketSegmentID</title>
+<indexterm><primary>MarketSegmentID</primary><secondary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</primary><secondary>MarketSegmentID</secondary></indexterm>
+<para><computeroutput>uInt8NULL KTN::CME::IL3::OrderMassActionReportMsg::BlockData::MarketSegmentID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1a6bf90c05c05238c7c9e871c9f80ed95f"/><section>
+    <title>MassActionRejectReason</title>
+<indexterm><primary>MassActionRejectReason</primary><secondary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</primary><secondary>MassActionRejectReason</secondary></indexterm>
+<para><computeroutput>uInt8NULL KTN::CME::IL3::OrderMassActionReportMsg::BlockData::MassActionRejectReason</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1a61e91fcc8df07b141128ed9455fc5b1a"/><section>
+    <title>MassActionReportID</title>
+<indexterm><primary>MassActionReportID</primary><secondary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</primary><secondary>MassActionReportID</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::OrderMassActionReportMsg::BlockData::MassActionReportID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1a794b92fc3423634e30813bd531a654af"/><section>
+    <title>MassActionResponse</title>
+<indexterm><primary>MassActionResponse</primary><secondary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</primary><secondary>MassActionResponse</secondary></indexterm>
+<para><computeroutput>EnumMassActionResponse KTN::CME::IL3::OrderMassActionReportMsg::BlockData::MassActionResponse</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1a8a80e16a3482bbf90b28f0240c4e20dd"/><section>
+    <title>MassActionScope</title>
+<indexterm><primary>MassActionScope</primary><secondary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</primary><secondary>MassActionScope</secondary></indexterm>
+<para><computeroutput>EnumMassActionScope KTN::CME::IL3::OrderMassActionReportMsg::BlockData::MassActionScope</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1ac49e38aac8234d2aae49cf0a4746f9b4"/><section>
+    <title>MassCancelRequestType</title>
+<indexterm><primary>MassCancelRequestType</primary><secondary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</primary><secondary>MassCancelRequestType</secondary></indexterm>
+<para><computeroutput>EnumMassCxlReqTyp KTN::CME::IL3::OrderMassActionReportMsg::BlockData::MassCancelRequestType</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1a3fb7c0ac3c0f5bfcfa5357a8d5729106"/><section>
+    <title>OrderRequestID</title>
+<indexterm><primary>OrderRequestID</primary><secondary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</primary><secondary>OrderRequestID</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::OrderMassActionReportMsg::BlockData::OrderRequestID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1a2558fb90c0a1662df11e61a6af0b5149"/><section>
+    <title>OrdType</title>
+<indexterm><primary>OrdType</primary><secondary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</primary><secondary>OrdType</secondary></indexterm>
+<para><computeroutput>EnumMassActionOrdTyp KTN::CME::IL3::OrderMassActionReportMsg::BlockData::OrdType</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1aaed6748c5a6c6658cd480c5ab3a4bb8d"/><section>
+    <title>OrigOrderUser</title>
+<indexterm><primary>OrigOrderUser</primary><secondary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</primary><secondary>OrigOrderUser</secondary></indexterm>
+<para><computeroutput>String8 KTN::CME::IL3::OrderMassActionReportMsg::BlockData::OrigOrderUser</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1a966518f23499148a7e9892d8d59c2b54"/><section>
+    <title>PartyDetailsListReqID</title>
+<indexterm><primary>PartyDetailsListReqID</primary><secondary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</primary><secondary>PartyDetailsListReqID</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::OrderMassActionReportMsg::BlockData::PartyDetailsListReqID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1af20fe02d30400a8b5de2fc06297bb728"/><section>
+    <title>PossRetransFlag</title>
+<indexterm><primary>PossRetransFlag</primary><secondary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</primary><secondary>PossRetransFlag</secondary></indexterm>
+<para><computeroutput>EnumBooleanFlag KTN::CME::IL3::OrderMassActionReportMsg::BlockData::PossRetransFlag</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1ad535130b73138f0badbb70e78e5e9dfb"/><section>
+    <title>SecurityGroup</title>
+<indexterm><primary>SecurityGroup</primary><secondary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</primary><secondary>SecurityGroup</secondary></indexterm>
+<para><computeroutput>StringLength6 KTN::CME::IL3::OrderMassActionReportMsg::BlockData::SecurityGroup</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1a06da1bf1bf0d1b8e2c69945c33d1fa6e"/><section>
+    <title>SecurityID</title>
+<indexterm><primary>SecurityID</primary><secondary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</primary><secondary>SecurityID</secondary></indexterm>
+<para><computeroutput>Int32NULL KTN::CME::IL3::OrderMassActionReportMsg::BlockData::SecurityID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1af701646e977a2134603efac18e9aa642"/><section>
+    <title>SenderID</title>
+<indexterm><primary>SenderID</primary><secondary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</primary><secondary>SenderID</secondary></indexterm>
+<para><computeroutput>String20Req KTN::CME::IL3::OrderMassActionReportMsg::BlockData::SenderID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1adb6ba514c2747750cef802f99407e317"/><section>
+    <title>SendingTimeEpoch</title>
+<indexterm><primary>SendingTimeEpoch</primary><secondary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</primary><secondary>SendingTimeEpoch</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::OrderMassActionReportMsg::BlockData::SendingTimeEpoch</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1aace35376c57fd81e911c5c5805b9d35e"/><section>
+    <title>SeqNum</title>
+<indexterm><primary>SeqNum</primary><secondary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</primary><secondary>SeqNum</secondary></indexterm>
+<para><computeroutput>uInt32 KTN::CME::IL3::OrderMassActionReportMsg::BlockData::SeqNum</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1a767ecd38d536a7e07d4b299cc9af7932"/><section>
+    <title>Side</title>
+<indexterm><primary>Side</primary><secondary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</primary><secondary>Side</secondary></indexterm>
+<para><computeroutput>EnumSideNULL KTN::CME::IL3::OrderMassActionReportMsg::BlockData::Side</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1af71250c421ed2e4811f15ac97df70f98"/><section>
+    <title>SplitMsg</title>
+<indexterm><primary>SplitMsg</primary><secondary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</primary><secondary>SplitMsg</secondary></indexterm>
+<para><computeroutput>uint8_t KTN::CME::IL3::OrderMassActionReportMsg::BlockData::SplitMsg</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1a72baf35808fc12f6b361474ff7ea6d63"/><section>
+    <title>TimeInForce</title>
+<indexterm><primary>TimeInForce</primary><secondary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</primary><secondary>TimeInForce</secondary></indexterm>
+<para><computeroutput>EnumMassCancelTIF KTN::CME::IL3::OrderMassActionReportMsg::BlockData::TimeInForce</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1a804e5b03f350af057aa7b661b98f7ebb"/><section>
+    <title>TotalAffectedOrders</title>
+<indexterm><primary>TotalAffectedOrders</primary><secondary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</primary><secondary>TotalAffectedOrders</secondary></indexterm>
+<para><computeroutput>uInt32 KTN::CME::IL3::OrderMassActionReportMsg::BlockData::TotalAffectedOrders</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1ab40494e6786e59e3c4e66e7aa6267f08"/><section>
+    <title>TransactTime</title>
+<indexterm><primary>TransactTime</primary><secondary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</primary><secondary>TransactTime</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::OrderMassActionReportMsg::BlockData::TransactTime</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_order_mass_action_report_msg_1_1_block_data_1a76145601990e8089c0a9d3e7f44a5c8a"/><section>
+    <title>UUID</title>
+<indexterm><primary>UUID</primary><secondary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::OrderMassActionReportMsg::BlockData</primary><secondary>UUID</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::OrderMassActionReportMsg::BlockData::UUID</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+exchsupport/cme/il3/IL3Messages2.hpp</section>
+</section>

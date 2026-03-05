@@ -1,0 +1,150 @@
+\doxysection{KTN\+::MD\+::Lock\+Free\+Limit\+Order\+Book Class Reference}
+\hypertarget{class_k_t_n_1_1_m_d_1_1_lock_free_limit_order_book}{}\label{class_k_t_n_1_1_m_d_1_1_lock_free_limit_order_book}\index{KTN::MD::LockFreeLimitOrderBook@{KTN::MD::LockFreeLimitOrderBook}}
+
+
+Represents a lock-\/free implementation of a limit order book.  
+
+
+
+
+{\ttfamily \#include $<$lockfree\+\_\+limitorderbook.\+hpp$>$}
+
+Inheritance diagram for KTN\+::MD\+::Lock\+Free\+Limit\+Order\+Book\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_k_t_n_1_1_m_d_1_1_lock_free_limit_order_book}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_lock_free_limit_order_book_aef3e068fffa543d5552318c812b32e36}{Lock\+Free\+Limit\+Order\+Book}} (int precision, int depth)
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{class_k_t_n_1_1_m_d_1_1_lock_free_limit_order_book}{Lock\+Free\+Limit\+Order\+Book} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_lock_free_limit_order_book_ad58a4f200bc6db5587103c5a10a6e40f}{add\+\_\+order}} (const \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_md_order}{Md\+Order}} \&order, bool is\+\_\+bid) override
+\begin{DoxyCompactList}\small\item\em Adds an order to the limit order book. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_md_order}{Md\+Order}} \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_lock_free_limit_order_book_af292fd038277e99f2983eab54a08f3b2}{get\+\_\+best\+\_\+bid}} () override
+\begin{DoxyCompactList}\small\item\em Gets the best bid order from the limit order book. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_md_order}{Md\+Order}} \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_lock_free_limit_order_book_a325a8ad61583cd8512824d09079f9681}{get\+\_\+best\+\_\+offer}} ()
+\begin{DoxyCompactList}\small\item\em Gets the best offer order from the limit order book. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_limit_order_book}{KTN\+::\+MD\+::\+Limit\+Order\+Book}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_limit_order_book_aedadba5aa58bbd957305a5ef6d606619}{Limit\+Order\+Book}} (int precision, int depth)
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_limit_order_book_a154dce1c2ce97cdbeaf259be9af07d16}{update\+\_\+order}} (const \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_md_order}{Md\+Order}} \&order, bool is\+\_\+bid)
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_limit_order_book_a6fae2630dda0bd9c3515a3458e434575}{delete\+\_\+order}} (const \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_md_order}{Md\+Order}} \&order, bool is\+\_\+bid)
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_md_order}{Md\+Order}} \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_limit_order_book_afad5cb88ef2e3dee7ff1396aa7789d59}{get\+\_\+lowest\+\_\+bid}} ()
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_md_order}{Md\+Order}} \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_limit_order_book_a59af9259c00b5b696c6ecf8d2f4e9c9a}{get\+\_\+best\+\_\+offer}} ()
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_md_order}{Md\+Order}} \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_limit_order_book_ac2cb985e14462c788553114f3b59c390}{get\+\_\+highest\+\_\+offer}} ()
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_limit_order_book_af496b4db8f565183906258073e08a90a}{print\+\_\+bids}} ()
+\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_limit_order_book_a3fa5f823ea2a3df82de53442ec56964b}{print\+\_\+offers}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_limit_order_book}{KTN\+::\+MD\+::\+Limit\+Order\+Book}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_limit_order_book_a55c76f78bddb793af8f5336e7eb03d89}{price\+\_\+to\+\_\+index}} (int32\+\_\+t price, bool is\+\_\+bid, bool update\+\_\+pointers=true)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_limit_order_book}{KTN\+::\+MD\+::\+Limit\+Order\+Book}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_md_order}{Md\+Order}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_limit_order_book_afc5ff6663f1dcb8f296ddeee52c1d524}{ptr\+\_\+bid\+\_\+ini}}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_md_order}{Md\+Order}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_limit_order_book_a473c69da77787a948d393cf4e8345490}{ptr\+\_\+bid\+\_\+end}}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_md_order}{Md\+Order}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_limit_order_book_a94626f094f8e12e1bb6c9f9823301950}{ptr\+\_\+offer\+\_\+ini}}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_md_order}{Md\+Order}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_limit_order_book_a3c201d8fa0d9c9205901bcbc852ddc7a}{ptr\+\_\+offer\+\_\+end}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a lock-\/free implementation of a limit order book. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_k_t_n_1_1_m_d_1_1_lock_free_limit_order_book_aef3e068fffa543d5552318c812b32e36}\index{KTN::MD::LockFreeLimitOrderBook@{KTN::MD::LockFreeLimitOrderBook}!LockFreeLimitOrderBook@{LockFreeLimitOrderBook}}
+\index{LockFreeLimitOrderBook@{LockFreeLimitOrderBook}!KTN::MD::LockFreeLimitOrderBook@{KTN::MD::LockFreeLimitOrderBook}}
+\doxysubsubsection{\texorpdfstring{LockFreeLimitOrderBook()}{LockFreeLimitOrderBook()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_m_d_1_1_lock_free_limit_order_book_aef3e068fffa543d5552318c812b32e36} 
+KTN\+::\+MD\+::\+Lock\+Free\+Limit\+Order\+Book\+::\+Lock\+Free\+Limit\+Order\+Book (\begin{DoxyParamCaption}\item[{int}]{precision}{, }\item[{int}]{depth}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a new \doxylink{class_k_t_n_1_1_m_d_1_1_lock_free_limit_order_book}{Lock\+Free\+Limit\+Order\+Book} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em precision} & The precision of the limit order book. \\
+\hline
+{\em depth} & The depth of the limit order book. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_m_d_1_1_lock_free_limit_order_book_ad58a4f200bc6db5587103c5a10a6e40f}\index{KTN::MD::LockFreeLimitOrderBook@{KTN::MD::LockFreeLimitOrderBook}!add\_order@{add\_order}}
+\index{add\_order@{add\_order}!KTN::MD::LockFreeLimitOrderBook@{KTN::MD::LockFreeLimitOrderBook}}
+\doxysubsubsection{\texorpdfstring{add\_order()}{add\_order()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_m_d_1_1_lock_free_limit_order_book_ad58a4f200bc6db5587103c5a10a6e40f} 
+void KTN\+::\+MD\+::\+Lock\+Free\+Limit\+Order\+Book\+::add\+\_\+order (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_md_order}{Md\+Order}} \&}]{order}{, }\item[{bool}]{is\+\_\+bid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Adds an order to the limit order book. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order} & The order to be added. \\
+\hline
+{\em is\+\_\+bid} & A flag indicating whether the order is a bid or an offer. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_limit_order_book}{KTN\+::\+MD\+::\+Limit\+Order\+Book}}.
+
+
+
+References \mbox{\hyperlink{l00027}{KTN\+::\+MD\+::\+Md\+Order\+::price}}.
+
+\Hypertarget{class_k_t_n_1_1_m_d_1_1_lock_free_limit_order_book_af292fd038277e99f2983eab54a08f3b2}\index{KTN::MD::LockFreeLimitOrderBook@{KTN::MD::LockFreeLimitOrderBook}!get\_best\_bid@{get\_best\_bid}}
+\index{get\_best\_bid@{get\_best\_bid}!KTN::MD::LockFreeLimitOrderBook@{KTN::MD::LockFreeLimitOrderBook}}
+\doxysubsubsection{\texorpdfstring{get\_best\_bid()}{get\_best\_bid()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_m_d_1_1_lock_free_limit_order_book_af292fd038277e99f2983eab54a08f3b2} 
+\mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_md_order}{Md\+Order}} KTN\+::\+MD\+::\+Lock\+Free\+Limit\+Order\+Book\+::get\+\_\+best\+\_\+bid (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the best bid order from the limit order book. 
+
+\begin{DoxyReturn}{Returns}
+The best bid order. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_limit_order_book}{KTN\+::\+MD\+::\+Limit\+Order\+Book}}.
+
+\Hypertarget{class_k_t_n_1_1_m_d_1_1_lock_free_limit_order_book_a325a8ad61583cd8512824d09079f9681}\index{KTN::MD::LockFreeLimitOrderBook@{KTN::MD::LockFreeLimitOrderBook}!get\_best\_offer@{get\_best\_offer}}
+\index{get\_best\_offer@{get\_best\_offer}!KTN::MD::LockFreeLimitOrderBook@{KTN::MD::LockFreeLimitOrderBook}}
+\doxysubsubsection{\texorpdfstring{get\_best\_offer()}{get\_best\_offer()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_m_d_1_1_lock_free_limit_order_book_a325a8ad61583cd8512824d09079f9681} 
+\mbox{\hyperlink{class_k_t_n_1_1_m_d_1_1_md_order}{Md\+Order}} KTN\+::\+MD\+::\+Lock\+Free\+Limit\+Order\+Book\+::get\+\_\+best\+\_\+offer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the best offer order from the limit order book. 
+
+\begin{DoxyReturn}{Returns}
+The best offer order. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Order\+Book/lockfree\+\_\+limitorderbook.\+hpp\end{DoxyCompactItemize}

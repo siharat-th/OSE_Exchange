@@ -1,0 +1,628 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5" xml:lang="en-US">
+<title>KTN::CME::CmeGT5 Class Reference</title>
+<indexterm><primary>KTN::CME::CmeGT5</primary></indexterm>
+<para>
+
+<para><link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5">CmeGT5</link> class represents the 5th Generation CmeHandler. Low latency order template creation; memory pool usage and custom maps and memory management. It provides better, faster, and stronger functionality for handling CME exchange iLink3 Messages. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;CmeGT5.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for KTN::CME::CmeGT5:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_k_t_n_1_1_c_m_e_1_1_cme_g_t5.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5_1a697109065e30db49c181fc8dff0cece5">CmeGT5</link> (tbb::concurrent_queue&lt; <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &gt; &amp;qords, const std::string &amp;settingsfile, const std::string &amp;source)</para>
+
+<para>Constructor for <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5">CmeGT5</link> class. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5_1a8354e329925added550f663684a05aca">~CmeGT5</link> ()</para>
+
+<para>Destructor for <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5">CmeGT5</link> class. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5_1aa6cc68f8b1b63323239d222768e3db2d">Start</link> ()</para>
+
+<para>Start the <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5">CmeGT5</link> handler. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5_1a4a86ef6a99335d36d7be244acfe77068">Stop</link> ()</para>
+
+<para>Stop the <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5">CmeGT5</link> handler. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5_1a9e1ec089c2b1877fb8d6b57106a583e6">ClearMaps</link> ()</para>
+
+<para>Clear the maps used by the <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5">CmeGT5</link> handler. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5_1ac380a3d7f69f63e6b0dcebcc417d188d">Reset</link> ()</para>
+
+<para>Reset the <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5">CmeGT5</link> handler. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5_1abe8b4161e522f010ddcb2b4147128196">Command</link> (<link linkend="_struct_instruction">Instruction</link> cmd)</para>
+
+<para>Execute a command on the <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5">CmeGT5</link> handler. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5_1a13ed194414e8b13cccaf76ccd9539678">PrintLatencies</link> (bool clear)</para>
+
+<para>Print the latencies. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5_1a6fc669c58268b047ff913d47678ebdd4">Poll</link> ()</para>
+
+<para>Poll for new messages. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5_1a69e2f3963b23a431216a24e040255b2f">ProcessingThread</link> ()</para>
+
+<para>Processing thread for handling messages. </para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5_1a56a7f9ddcfb39b77238b2de0360857f1">onRecv</link> (byte_ptr data, int len, int segid, int index) override</para>
+
+<para>Callback function for receiving data. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5_1ab49a8e4c2a361fb9e5a596bc11eda8bb">Send</link> (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord, int action)</para>
+
+<para>Send an order. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5_1a8bfc0d24ae690f4672dcbcc75d2a0b23">SendMassAction</link> (<link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> &amp;ord)</para>
+
+<para>Send a mass action. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5_1af1a21d28b3d94dfdcc56577b531cd53d">SendHedgeInstruction</link> (uint64_t ordereqid, const vector&lt; <link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3">SpreadHedgeV3</link> &gt; &amp;hdg)</para>
+
+<para>Send a hedge instruction. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5_1a8919865f6cdfc201517f1e6205c32631">SendWarm</link> (int index)</para>
+
+<para>Send a warm message. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5_1a2c36d9fa79af3dca435c6b3e82d4f367">PrintSessionMap</link> (<link linkend="_struct_k_t_n_1_1_conn_state">ConnState</link>(&amp;conns)[4])</para>
+
+<para>Print the session map. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_class_k_t_n_1_1_exchange_base2">KTN::ExchangeBase2</link>        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_exchange_base2_1ac8cff2c312e11492aaf84fa948985ba3">ExchangeBase2</link> (const std::string &amp;settingsfile, const std::string &amp;source, const std::string &amp;exchname)</para>
+
+<para>Constructor for <link linkend="_class_k_t_n_1_1_exchange_base2">ExchangeBase2</link>. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_k_t_n_1_1_exchange_base2_1a1aaa796870fbd3e877e591162dd91acd">~ExchangeBase2</link> ()</para>
+
+<para>Destructor for <link linkend="_class_k_t_n_1_1_exchange_base2">ExchangeBase2</link>. </para>
+</listitem>
+            <listitem><para>const std::string &amp; <link linkend="_class_k_t_n_1_1_exchange_base2_1acefbf50e1593eaa77c555da52e06ddd1">Name</link> () const</para>
+
+<para>Gets the name of the exchange. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_exchange_base2_1aa01ce3c26302432c51131c24f315e144">SendHedgeInstruction</link> (uint64_t ordereqid, const std::vector&lt; <link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3">SpreadHedgeV3</link> &gt; &amp;hdg)</para>
+
+<para>Sends a hedge instruction. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_exchange_base2_1a8004561a90abb64af280cf4692e430ad">AlgoJson</link> (std::string json, ExchCmd::Enum cmd)</para>
+
+<para>Sends an algorithmic command in JSON format. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_exchange_base2_1ae91c14c6b3ade61bb1af7b253ebe7319">PrintMsgRatios</link> ()</para>
+
+<para>Prints the message ratios. </para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_k_t_n_1_1_exchange_base2_1a905bc64ef29aff02280d769cde3c594c">SettFile</link> ()</para>
+
+<para>Gets the settings file path. </para>
+</listitem>
+        </itemizedlist>
+Public Member Functions inherited from <link linkend="_class_k_t_n_1_1_t_c_p_1_1_tcp_callback8t">KTN::TCP::TcpCallback8t</link><simplesect>
+    <title>Additional Inherited Members    </title>
+Protected Member Functions inherited from <link linkend="_class_k_t_n_1_1_exchange_base2">KTN::ExchangeBase2</link>        <itemizedlist>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_exchange_base2_1ab8bccf95f1f0b8e5e117923104d31c75">LogMe</link> (const std::string &amp;szMsg, int iColor=LOG_WHITE)</para>
+
+<para>Logs a message. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_exchange_base2_1ad28c9111fb5ebbac595ecd657aecee52">ChangeName</link> (const std::string &amp;owner, const std::string &amp;source)</para>
+
+<para>Changes the name of the exchange. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_exchange_base2_1a9bc40ada22590f70a55abdc06c56c486">ReportStatus</link> (<link linkend="_class_session_status">SessionStatus</link> s)</para>
+
+<para>Reports the status of the session. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_exchange_base2_1a41f8f46ef5cb13108b86b23433f9c57c">MsgSent</link> (const std::string &amp;symb, int cnt, int volume, int event)</para>
+
+<para>Logs a message indicating that a message was sent. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_exchange_base2_1ac4da9f4a137e7c255276ca9a4120510f">StopBase</link> ()</para>
+
+<para>Stops the base exchange. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_exchange_base2_1a924d04a8225331c72fc26e7f62e8338c">fastCopy2</link> (char *dest, const char *src, size_t length)</para>
+
+<para>Fast copy function for copying memory. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_exchange_base2_1a5fde3aacdf5f50b70162b2213d0359b1">needhb</link> ()</para>
+
+<para>Checks if a heartbeat is needed. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Protected Attributes inherited from <link linkend="_class_k_t_n_1_1_exchange_base2">KTN::ExchangeBase2</link>        <itemizedlist>
+            <listitem><para><link linkend="_struct_exch_state">ExchState</link> <link linkend="_class_k_t_n_1_1_exchange_base2_1a7886a4389dc6aadf2ef4363d5090508e">_State</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_log_svc">LogSvc</link> * <link linkend="_class_k_t_n_1_1_exchange_base2_1a5433583addc6365cbe84c8d633b158b2">_logsvc</link></para>
+</listitem>
+            <listitem><para>std::unordered_map&lt; std::string, <link linkend="_structmsgrate">msgrate</link> &gt; <link linkend="_class_k_t_n_1_1_exchange_base2_1a53c5d19661493033ff9a67dc35fc77b1">_msgratio</link></para>
+</listitem>
+            <listitem><para>std::unordered_map&lt; std::string, <link linkend="_structmsgevents">msgevents</link> &gt; <link linkend="_class_k_t_n_1_1_exchange_base2_1a9e0644d5ec5c1c838f4fe3c90028ea02">_msgevents</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_hash_map">HashMap</link>&lt; uint64_t, std::vector&lt; <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &gt;, 1000 &gt; <link linkend="_class_k_t_n_1_1_exchange_base2_1aa7c788acbea7b004d77b2a462c356e17">_hedgeOrds</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_spread_hedge_circ_buff">SpreadHedgeCircBuff</link> <link linkend="_class_k_t_n_1_1_exchange_base2_1a1dae76a622dbf06f70bd7572fcd3e0d3">_hedgeMap</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_performance_tracker">PerformanceTracker</link> <link linkend="_class_k_t_n_1_1_exchange_base2_1a52371b9708664b6e7d9b24e7e39f8bb8">_trk</link></para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+
+<para><link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5">CmeGT5</link> class represents the 5th Generation CmeHandler. Low latency order template creation; memory pool usage and custom maps and memory management. It provides better, faster, and stronger functionality for handling CME exchange iLink3 Messages. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5_1a697109065e30db49c181fc8dff0cece5"/><section>
+    <title>CmeGT5()</title>
+<indexterm><primary>CmeGT5</primary><secondary>KTN::CME::CmeGT5</secondary></indexterm>
+<indexterm><primary>KTN::CME::CmeGT5</primary><secondary>CmeGT5</secondary></indexterm>
+<para><computeroutput>CmeGT5::CmeGT5 (tbb::concurrent_queue&lt; <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &gt; &amp; qords, const std::string &amp; settingsfile, const std::string &amp; source)<computeroutput>[explicit]</computeroutput></computeroutput></para><para>
+
+<para>Constructor for <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5">CmeGT5</link> class. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>qords</entry><entry>
+<para>The concurrent queue for order pods. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>settingsfile</entry><entry>
+<para>The path to the settings file. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>source</entry><entry>
+<para>The source of the CME exchange.</para>
+</entry>
+                            </row>
+                            <row>
+<entry>qords</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>settingsfile</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>source</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_class_log_svc_1ac6af8498311999f4ecb338e7eb354c43">LogSvc::ChangeName()</link>, <link linkend="_l00062">KTN::Core::SPSCRingBuffer&lt; T &gt;::enqueue()</link>, <link linkend="_l00123">Settings::get()</link>, <link linkend="_l00193">Settings::getBoolean()</link>, <link linkend="_l00133">Settings::getInteger()</link>, <link linkend="_l00153">Settings::getLong()</link>, <link linkend="_l00021">KTN::CME::IL3::SessionMessageFactory::Init()</link>, <link linkend="_l00039">AuditTrailWriterV3::InitFileForSeg()</link>, <link linkend="_l00065">CmeSessionSettings::Load()</link>, <link linkend="_l00034">KT01::MSGW::CmeMsgw::Load()</link>, <link linkend="_l00050">KTN::ExchangeBase2::LogMe()</link>, <link linkend="_l00050">OrderNums::NextOrderID()</link>, <link linkend="_l00086">OrderNums::NextReqIdEncoded()</link>, <link linkend="_l00116">ProcessingThread()</link>, <link linkend="_l00019">StringSplitter::Split()</link>, <link linkend="_l00021">AuditTrailWriterV3::Start()</link>, and <link linkend="_l00175">Start()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5_1a8354e329925added550f663684a05aca"/><section>
+    <title>~CmeGT5()</title>
+<indexterm><primary>~CmeGT5</primary><secondary>KTN::CME::CmeGT5</secondary></indexterm>
+<indexterm><primary>KTN::CME::CmeGT5</primary><secondary>~CmeGT5</secondary></indexterm>
+<para><computeroutput>CmeGT5::~CmeGT5 ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Destructor for <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5">CmeGT5</link> class. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5_1a9e1ec089c2b1877fb8d6b57106a583e6"/><section>
+    <title>ClearMaps()</title>
+<indexterm><primary>ClearMaps</primary><secondary>KTN::CME::CmeGT5</secondary></indexterm>
+<indexterm><primary>KTN::CME::CmeGT5</primary><secondary>ClearMaps</secondary></indexterm>
+<para><computeroutput>void CmeGT5::ClearMaps ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Clear the maps used by the <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5">CmeGT5</link> handler. </para>
+</para>
+<para>
+Reimplemented from <link linkend="_class_k_t_n_1_1_exchange_base2_1ac2201df8037a75fbaf0619ecf8684e8a">KTN::ExchangeBase2</link>.</para>
+<para>
+References <link linkend="_l00047">HashMap&lt; Key, Value, TableSize &gt;::clear()</link>, <link linkend="_l00106">SpreadHedgeCircBuff::clear()</link>, and <link linkend="_l00050">KTN::ExchangeBase2::LogMe()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5_1abe8b4161e522f010ddcb2b4147128196"/><section>
+    <title>Command()</title>
+<indexterm><primary>Command</primary><secondary>KTN::CME::CmeGT5</secondary></indexterm>
+<indexterm><primary>KTN::CME::CmeGT5</primary><secondary>Command</secondary></indexterm>
+<para><computeroutput>void CmeGT5::Command (<link linkend="_struct_instruction">Instruction</link> cmd)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Execute a command on the <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5">CmeGT5</link> handler. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>cmd</entry><entry>
+<para>The instruction command to execute. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Reimplemented from <link linkend="_class_k_t_n_1_1_exchange_base2_1abc7051e6780afdbb0ee227548a6b6564">KTN::ExchangeBase2</link>.</para>
+<para>
+References <link linkend="_l00050">KTN::ExchangeBase2::LogMe()</link>, and <link linkend="_l00084">KTN::Core::SPSCRingBuffer&lt; T &gt;::push()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5_1a56a7f9ddcfb39b77238b2de0360857f1"/><section>
+    <title>onRecv()</title>
+<indexterm><primary>onRecv</primary><secondary>KTN::CME::CmeGT5</secondary></indexterm>
+<indexterm><primary>KTN::CME::CmeGT5</primary><secondary>onRecv</secondary></indexterm>
+<para><computeroutput>uint16_t CmeGT5::onRecv (byte_ptr data, int len, int segid, int index)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Callback function for receiving data. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>data</entry><entry>
+<para>The received data. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>len</entry><entry>
+<para>The length of the data. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>segid</entry><entry>
+<para>The segment ID. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>index</entry><entry>
+<para>The index. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The number of bytes processed. </para>
+</formalpara>
+</para>
+<para>
+Implements <link linkend="_class_k_t_n_1_1_t_c_p_1_1_tcp_callback8t_1a611efc1c25fd7385ff42935d567a63b0">KTN::TCP::TcpCallback8t</link>.</para>
+<para>
+References <link linkend="_l00050">KTN::ExchangeBase2::LogMe()</link>, <link linkend="_l00033">PerformanceTracker::startMeasurement()</link>, <link linkend="_l00042">PerformanceTracker::stopMeasurement()</link>, and <link linkend="_l00111">AuditTrailWriterV3::Write()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5_1a6fc669c58268b047ff913d47678ebdd4"/><section>
+    <title>Poll()</title>
+<indexterm><primary>Poll</primary><secondary>KTN::CME::CmeGT5</secondary></indexterm>
+<indexterm><primary>KTN::CME::CmeGT5</primary><secondary>Poll</secondary></indexterm>
+<para><computeroutput>void CmeGT5::Poll ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Poll for new messages. </para>
+</para>
+
+<para>Poll the Tcp connection for events Note: We&apos;ve offloaded some event checking etc to the ProcessingThread function </para>
+<para>
+Reimplemented from <link linkend="_class_k_t_n_1_1_exchange_base2_1ad48b506ce66acbbff141641f003cca99">KTN::ExchangeBase2</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5_1a13ed194414e8b13cccaf76ccd9539678"/><section>
+    <title>PrintLatencies()</title>
+<indexterm><primary>PrintLatencies</primary><secondary>KTN::CME::CmeGT5</secondary></indexterm>
+<indexterm><primary>KTN::CME::CmeGT5</primary><secondary>PrintLatencies</secondary></indexterm>
+<para><computeroutput>void CmeGT5::PrintLatencies (bool clear)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Print the latencies. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>clear</entry><entry>
+<para>Flag indicating whether to clear the latencies after printing. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Reimplemented from <link linkend="_class_k_t_n_1_1_exchange_base2_1a5c433c74f81d16e7f45df711692cd7d4">KTN::ExchangeBase2</link>.</para>
+<para>
+References <link linkend="_l00088">PerformanceTracker::clear()</link>, <link linkend="_l00050">KTN::ExchangeBase2::LogMe()</link>, and <link linkend="_l00052">PerformanceTracker::printMeasurements()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5_1a2c36d9fa79af3dca435c6b3e82d4f367"/><section>
+    <title>PrintSessionMap()</title>
+<indexterm><primary>PrintSessionMap</primary><secondary>KTN::CME::CmeGT5</secondary></indexterm>
+<indexterm><primary>KTN::CME::CmeGT5</primary><secondary>PrintSessionMap</secondary></indexterm>
+<para><computeroutput>void CmeGT5::PrintSessionMap (<link linkend="_struct_k_t_n_1_1_conn_state">ConnState</link>(&amp;) conns[4])</computeroutput></para><para>
+
+<para>Print the session map. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>conns</entry><entry>
+<para>The array of connection states. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00023">KTN::CME::IL3::EnumSessionState::Disconnected</link>, <link linkend="_l00039">KTN::CME::IL3::EnumSessionState::Established</link>, and <link linkend="_l00050">KTN::ExchangeBase2::LogMe()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5_1a69e2f3963b23a431216a24e040255b2f"/><section>
+    <title>ProcessingThread()</title>
+<indexterm><primary>ProcessingThread</primary><secondary>KTN::CME::CmeGT5</secondary></indexterm>
+<indexterm><primary>KTN::CME::CmeGT5</primary><secondary>ProcessingThread</secondary></indexterm>
+<para><computeroutput>void CmeGT5::ProcessingThread ( )</computeroutput></para><para>
+
+<para>Processing thread for handling messages. </para>
+</para>
+<para>
+References <link linkend="_l00050">KTN::ExchangeBase2::LogMe()</link>.</para>
+<para>
+Referenced by <link linkend="_l00019">CmeGT5()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5_1ac380a3d7f69f63e6b0dcebcc417d188d"/><section>
+    <title>Reset()</title>
+<indexterm><primary>Reset</primary><secondary>KTN::CME::CmeGT5</secondary></indexterm>
+<indexterm><primary>KTN::CME::CmeGT5</primary><secondary>Reset</secondary></indexterm>
+<para><computeroutput>void CmeGT5::Reset ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Reset the <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5">CmeGT5</link> handler. </para>
+</para>
+<para>
+Reimplemented from <link linkend="_class_k_t_n_1_1_exchange_base2_1aea11c9501a1207b83af80c6c7abbd4fe">KTN::ExchangeBase2</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5_1ab49a8e4c2a361fb9e5a596bc11eda8bb"/><section>
+    <title>Send()</title>
+<indexterm><primary>Send</primary><secondary>KTN::CME::CmeGT5</secondary></indexterm>
+<indexterm><primary>KTN::CME::CmeGT5</primary><secondary>Send</secondary></indexterm>
+<para><computeroutput>void CmeGT5::Send (<link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp; ord, int action)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Send an order. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ord</entry><entry>
+<para>The order to send. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>action</entry><entry>
+<para>The action to perform. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implements <link linkend="_class_k_t_n_1_1_exchange_base2_1a561385a2be9f113e775efed5aeb64163">KTN::ExchangeBase2</link>.</para>
+<para>
+References <link linkend="_l00035">KTN::ConnState::connectionState</link>, <link linkend="_l00039">KTN::CME::IL3::EnumSessionState::Established</link>, <link linkend="_l00052">KTN::Core::BufferPool::get()</link>, <link linkend="_l00053">KTN::OrderPod::isManual</link>, <link linkend="_l00050">KTN::ExchangeBase2::LogMe()</link>, <link linkend="_l00050">KTN::OrderPod::mktsegid</link>, <link linkend="_l00059">KTN::OrderPod::OrdAction</link>, <link linkend="_l00032">KTN::OrderPod::ordernum</link>, <link linkend="_l00037">KTN::OrderPod::orderReqId</link>, <link linkend="_l00060">KTN::OrderPod::OrdSide</link>, <link linkend="_l00034">KTN::OrderPod::price</link>, <link linkend="_l00068">KTN::Core::BufferPool::put()</link>, <link linkend="_l00041">KTN::OrderPod::quantity</link>, <link linkend="_l00040">KTN::OrderPod::secid</link>, <link linkend="_l00328">KTN::TCP::EFVITcpV5::SendFastPath()</link>, <link linkend="_l00201">SessionStateManager::SeqOutAndAdvance()</link>, <link linkend="_l00034">KTN::ConnState::sessmgr</link>, <link linkend="_l00033">PerformanceTracker::startMeasurement()</link>, <link linkend="_l00042">PerformanceTracker::stopMeasurement()</link>, <link linkend="_l00033">KTN::ConnState::tcpHandler</link>, and <link linkend="_l00111">AuditTrailWriterV3::Write()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5_1af1a21d28b3d94dfdcc56577b531cd53d"/><section>
+    <title>SendHedgeInstruction()</title>
+<indexterm><primary>SendHedgeInstruction</primary><secondary>KTN::CME::CmeGT5</secondary></indexterm>
+<indexterm><primary>KTN::CME::CmeGT5</primary><secondary>SendHedgeInstruction</secondary></indexterm>
+<para><computeroutput>void CmeGT5::SendHedgeInstruction (uint64_t ordereqid, const vector&lt; <link linkend="_struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3">SpreadHedgeV3</link> &gt; &amp; hdg)</computeroutput></para><para>
+
+<para>Send a hedge instruction. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ordereqid</entry><entry>
+<para>The order request ID. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>hdg</entry><entry>
+<para>The vector of spread hedge instructions. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00050">KTN::ExchangeBase2::LogMe()</link>, <link linkend="_l00033">PerformanceTracker::startMeasurement()</link>, and <link linkend="_l00042">PerformanceTracker::stopMeasurement()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5_1a8bfc0d24ae690f4672dcbcc75d2a0b23"/><section>
+    <title>SendMassAction()</title>
+<indexterm><primary>SendMassAction</primary><secondary>KTN::CME::CmeGT5</secondary></indexterm>
+<indexterm><primary>KTN::CME::CmeGT5</primary><secondary>SendMassAction</secondary></indexterm>
+<para><computeroutput>void CmeGT5::SendMassAction (<link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> &amp; ord)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Send a mass action. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ord</entry><entry>
+<para>The order to perform the mass action on. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implements <link linkend="_class_k_t_n_1_1_exchange_base2_1ad75278174244955c2693e21e738f7e7a">KTN::ExchangeBase2</link>.</para>
+<para>
+References <link linkend="_l00084">KTN::Core::SPSCRingBuffer&lt; T &gt;::push()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5_1a8919865f6cdfc201517f1e6205c32631"/><section>
+    <title>SendWarm()</title>
+<indexterm><primary>SendWarm</primary><secondary>KTN::CME::CmeGT5</secondary></indexterm>
+<indexterm><primary>KTN::CME::CmeGT5</primary><secondary>SendWarm</secondary></indexterm>
+<para><computeroutput>void CmeGT5::SendWarm (int index)</computeroutput></para><para>
+
+<para>Send a warm message. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>index</entry><entry>
+<para>The index. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00335">KTN::TCP::EFVITcpV5::SendWarm()</link>, and <link linkend="_l00033">KTN::ConnState::tcpHandler</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5_1aa6cc68f8b1b63323239d222768e3db2d"/><section>
+    <title>Start()</title>
+<indexterm><primary>Start</primary><secondary>KTN::CME::CmeGT5</secondary></indexterm>
+<indexterm><primary>KTN::CME::CmeGT5</primary><secondary>Start</secondary></indexterm>
+<para><computeroutput>void CmeGT5::Start ( )</computeroutput></para><para>
+
+<para>Start the <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5">CmeGT5</link> handler. </para>
+</para>
+<para>
+References <link linkend="_l00035">KTN::ConnState::connectionState</link>, <link linkend="_l00023">KTN::CME::IL3::EnumSessionState::Disconnected</link>, <link linkend="_l00031">KTN::ConnState::index</link>, <link linkend="_l00050">KTN::ExchangeBase2::LogMe()</link>, <link linkend="_l00032">KTN::ConnState::segid</link>, and <link linkend="_l00033">KTN::ConnState::tcpHandler</link>.</para>
+<para>
+Referenced by <link linkend="_l00019">CmeGT5()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5_1a4a86ef6a99335d36d7be244acfe77068"/><section>
+    <title>Stop()</title>
+<indexterm><primary>Stop</primary><secondary>KTN::CME::CmeGT5</secondary></indexterm>
+<indexterm><primary>KTN::CME::CmeGT5</primary><secondary>Stop</secondary></indexterm>
+<para><computeroutput>void CmeGT5::Stop ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Stop the <link linkend="_class_k_t_n_1_1_c_m_e_1_1_cme_g_t5">CmeGT5</link> handler. </para>
+</para>
+<para>
+Implements <link linkend="_class_k_t_n_1_1_exchange_base2_1aef0e3d1c9bc59575fb88df7240e0c8ef">KTN::ExchangeBase2</link>.</para>
+<para>
+References <link linkend="_l00050">KTN::ExchangeBase2::LogMe()</link>, and <link linkend="_l00084">KTN::Core::SPSCRingBuffer&lt; T &gt;::push()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+ExchangeHandlers2/CmeGT5.hppExchangeHandlers2/CmeGT5.cpp</section>
+</section>

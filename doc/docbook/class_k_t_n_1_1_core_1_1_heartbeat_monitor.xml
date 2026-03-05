@@ -1,0 +1,202 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_core_1_1_heartbeat_monitor" xml:lang="en-US">
+<title>KTN::Core::HeartbeatMonitor Class Reference</title>
+<indexterm><primary>KTN::Core::HeartbeatMonitor</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_k_t_n_1_1_core_1_1_heartbeat_monitor">HeartbeatMonitor</link> class is responsible for monitoring the heartbeat of a system. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;HeartbeatMonitor.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for KTN::Core::HeartbeatMonitor:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_k_t_n_1_1_core_1_1_heartbeat_monitor.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_core_1_1_heartbeat_monitor_1ad5f3e00b740899ee991853ca196a9693">HeartbeatMonitor</link> ()</para>
+
+<para>Constructs a new <link linkend="_class_k_t_n_1_1_core_1_1_heartbeat_monitor">HeartbeatMonitor</link> object. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_k_t_n_1_1_core_1_1_heartbeat_monitor_1ac377df9d1ac2e1edc1250fc9925ffb80">~HeartbeatMonitor</link> ()</para>
+
+<para>Destroys the <link linkend="_class_k_t_n_1_1_core_1_1_heartbeat_monitor">HeartbeatMonitor</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_core_1_1_heartbeat_monitor_1a3fec4998aeddf98d11bceb4d7b12e0e8">Start</link> (int seconds, int segid, int bufferms)</para>
+
+<para>Starts the heartbeat monitoring with the specified parameters. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_core_1_1_heartbeat_monitor_1a2f35972980261dd0b0746491523f9da1">Stop</link> ()</para>
+
+<para>Stops the heartbeat monitoring. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_core_1_1_heartbeat_monitor_1a92f11a59ee69ba4d6485c2be4923ea4f">Reset</link> ()</para>
+
+<para>Resets the heartbeat monitoring. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_core_1_1_heartbeat_monitor_1abc9f27480e08ac7ea69c8e4beaa082f0">IsFlagSet</link> ()</para>
+
+<para>Checks if the flag is set. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_core_1_1_heartbeat_monitor_1a9586a02f2e175218bc648d2c8b267ecd">ResetFlag</link> ()</para>
+
+<para>Resets the flag. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_class_named_thread">NamedThread</link>        <itemizedlist>
+            <listitem><para><link linkend="_class_named_thread_1a891fabdc2d824048ec05c82e7ef8c69a">NamedThread</link> ()</para>
+
+<para>Default constructor. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_named_thread_1a018dadb59e5af98ee734301a1baa50cb">~NamedThread</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_named_thread_1a9fa42542ff43c89fb9bbc33de9c87e34">CreateAndRun</link> (string name, int core)</para>
+
+<para>Creates and runs the named thread on the specified core. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_named_thread_1ad4809c571171be13f0f91f540d5c196f">Join</link> ()</para>
+
+<para>Joins the named thread. </para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_k_t_n_1_1_core_1_1_heartbeat_monitor">HeartbeatMonitor</link> class is responsible for monitoring the heartbeat of a system. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_heartbeat_monitor_1ad5f3e00b740899ee991853ca196a9693"/><section>
+    <title>HeartbeatMonitor()</title>
+<indexterm><primary>HeartbeatMonitor</primary><secondary>KTN::Core::HeartbeatMonitor</secondary></indexterm>
+<indexterm><primary>KTN::Core::HeartbeatMonitor</primary><secondary>HeartbeatMonitor</secondary></indexterm>
+<para><computeroutput>HeartbeatMonitor::HeartbeatMonitor ( )</computeroutput></para><para>
+
+<para>Constructs a new <link linkend="_class_k_t_n_1_1_core_1_1_heartbeat_monitor">HeartbeatMonitor</link> object. </para>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_heartbeat_monitor_1ac377df9d1ac2e1edc1250fc9925ffb80"/><section>
+    <title>~HeartbeatMonitor()</title>
+<indexterm><primary>~HeartbeatMonitor</primary><secondary>KTN::Core::HeartbeatMonitor</secondary></indexterm>
+<indexterm><primary>KTN::Core::HeartbeatMonitor</primary><secondary>~HeartbeatMonitor</secondary></indexterm>
+<para><computeroutput>HeartbeatMonitor::~HeartbeatMonitor ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Destroys the <link linkend="_class_k_t_n_1_1_core_1_1_heartbeat_monitor">HeartbeatMonitor</link> object. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_heartbeat_monitor_1abc9f27480e08ac7ea69c8e4beaa082f0"/><section>
+    <title>IsFlagSet()</title>
+<indexterm><primary>IsFlagSet</primary><secondary>KTN::Core::HeartbeatMonitor</secondary></indexterm>
+<indexterm><primary>KTN::Core::HeartbeatMonitor</primary><secondary>IsFlagSet</secondary></indexterm>
+<para><computeroutput>bool KTN::Core::HeartbeatMonitor::IsFlagSet ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Checks if the flag is set. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>True if the flag is set, false otherwise. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00231">SessionStateManager::HbTriggered()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_heartbeat_monitor_1a92f11a59ee69ba4d6485c2be4923ea4f"/><section>
+    <title>Reset()</title>
+<indexterm><primary>Reset</primary><secondary>KTN::Core::HeartbeatMonitor</secondary></indexterm>
+<indexterm><primary>KTN::Core::HeartbeatMonitor</primary><secondary>Reset</secondary></indexterm>
+<para><computeroutput>void HeartbeatMonitor::Reset ( )</computeroutput></para><para>
+
+<para>Resets the heartbeat monitoring. </para>
+</para>
+<para>
+Referenced by <link linkend="_l00236">SessionStateManager::HbSent()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_heartbeat_monitor_1a9586a02f2e175218bc648d2c8b267ecd"/><section>
+    <title>ResetFlag()</title>
+<indexterm><primary>ResetFlag</primary><secondary>KTN::Core::HeartbeatMonitor</secondary></indexterm>
+<indexterm><primary>KTN::Core::HeartbeatMonitor</primary><secondary>ResetFlag</secondary></indexterm>
+<para><computeroutput>bool KTN::Core::HeartbeatMonitor::ResetFlag ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Resets the flag. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>True if the flag was reset, false otherwise. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_heartbeat_monitor_1a3fec4998aeddf98d11bceb4d7b12e0e8"/><section>
+    <title>Start()</title>
+<indexterm><primary>Start</primary><secondary>KTN::Core::HeartbeatMonitor</secondary></indexterm>
+<indexterm><primary>KTN::Core::HeartbeatMonitor</primary><secondary>Start</secondary></indexterm>
+<para><computeroutput>void HeartbeatMonitor::Start (int seconds, int segid, int bufferms)</computeroutput></para><para>
+
+<para>Starts the heartbeat monitoring with the specified parameters. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>seconds</entry><entry>
+<para>The interval in seconds between each heartbeat. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>segid</entry><entry>
+<para>The segment ID of the system. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>bufferms</entry><entry>
+<para>The buffer time in milliseconds. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00018">NamedThread::CreateAndRun()</link>.</para>
+<para>
+Referenced by <link linkend="_l00029">SessionStateManager::Init()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_core_1_1_heartbeat_monitor_1a2f35972980261dd0b0746491523f9da1"/><section>
+    <title>Stop()</title>
+<indexterm><primary>Stop</primary><secondary>KTN::Core::HeartbeatMonitor</secondary></indexterm>
+<indexterm><primary>KTN::Core::HeartbeatMonitor</primary><secondary>Stop</secondary></indexterm>
+<para><computeroutput>void HeartbeatMonitor::Stop ( )</computeroutput></para><para>
+
+<para>Stops the heartbeat monitoring. </para>
+</para>
+<para>
+Referenced by <link linkend="_l00126">SessionStateManager::Stop()</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Core/HeartbeatMonitor.hppCore/HeartbeatMonitor.cpp</section>
+</section>

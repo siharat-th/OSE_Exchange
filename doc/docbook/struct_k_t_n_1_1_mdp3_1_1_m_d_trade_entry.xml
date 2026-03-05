@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_t_n_1_1_mdp3_1_1_m_d_trade_entry" xml:lang="en-US">
+<title>KTN::Mdp3::MDTradeEntry Struct Reference</title>
+<indexterm><primary>KTN::Mdp3::MDTradeEntry</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_struct_k_t_n_1_1_mdp3_1_1_p_r_i_c_e_n_u_l_l9">PRICENULL9</link> <link linkend="_struct_k_t_n_1_1_mdp3_1_1_m_d_trade_entry_1ae20cb5677845153aae8ee39a05df1f94">MDEntryPx</link></para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_struct_k_t_n_1_1_mdp3_1_1_m_d_trade_entry_1ad2cd52ac687da0d7ee031fd53607eb5a">MDEntrySize</link></para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_struct_k_t_n_1_1_mdp3_1_1_m_d_trade_entry_1aeb2eb8173ff6c9225a9a7bc58707cfae">SecurityID</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_k_t_n_1_1_mdp3_1_1_m_d_trade_entry_1a4add56bd58eab603956ef3954e7f1371">RptSeq</link></para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_struct_k_t_n_1_1_mdp3_1_1_m_d_trade_entry_1a1a2575ce6c526a166600cf3dd845541e">NumberOfOrders</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_struct_k_t_n_1_1_mdp3_1_1_m_d_trade_entry_1a776fd7ed840cefde4d8a606e75241cdb">AggressorSide</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_struct_k_t_n_1_1_mdp3_1_1_m_d_trade_entry_1a5e3326af82f8b8d5837d7035e3abcc13">MDUpdateAction</link></para>
+</listitem>
+            <listitem><para>char <link linkend="_struct_k_t_n_1_1_mdp3_1_1_m_d_trade_entry_1a7ee14e348d040f84df430e9f8cbdc0e5">MDEntryType</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_struct_k_t_n_1_1_mdp3_1_1_m_d_trade_entry_1a1f23cbf8988602fd55922afa2927839a">MDTradeEntryID</link></para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_struct_k_t_n_1_1_mdp3_1_1_m_d_trade_entry_1a6ede0a6aabd3a199772d0e6d18c8d770">Padding</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_mdp3_1_1_m_d_trade_entry_1a776fd7ed840cefde4d8a606e75241cdb"/><section>
+    <title>AggressorSide</title>
+<indexterm><primary>AggressorSide</primary><secondary>KTN::Mdp3::MDTradeEntry</secondary></indexterm>
+<indexterm><primary>KTN::Mdp3::MDTradeEntry</primary><secondary>AggressorSide</secondary></indexterm>
+<para><computeroutput>uint8_t KTN::Mdp3::MDTradeEntry::AggressorSide</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_mdp3_1_1_m_d_trade_entry_1ae20cb5677845153aae8ee39a05df1f94"/><section>
+    <title>MDEntryPx</title>
+<indexterm><primary>MDEntryPx</primary><secondary>KTN::Mdp3::MDTradeEntry</secondary></indexterm>
+<indexterm><primary>KTN::Mdp3::MDTradeEntry</primary><secondary>MDEntryPx</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_k_t_n_1_1_mdp3_1_1_p_r_i_c_e_n_u_l_l9">PRICENULL9</link> KTN::Mdp3::MDTradeEntry::MDEntryPx</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_mdp3_1_1_m_d_trade_entry_1ad2cd52ac687da0d7ee031fd53607eb5a"/><section>
+    <title>MDEntrySize</title>
+<indexterm><primary>MDEntrySize</primary><secondary>KTN::Mdp3::MDTradeEntry</secondary></indexterm>
+<indexterm><primary>KTN::Mdp3::MDTradeEntry</primary><secondary>MDEntrySize</secondary></indexterm>
+<para><computeroutput>int32_t KTN::Mdp3::MDTradeEntry::MDEntrySize</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_mdp3_1_1_m_d_trade_entry_1a7ee14e348d040f84df430e9f8cbdc0e5"/><section>
+    <title>MDEntryType</title>
+<indexterm><primary>MDEntryType</primary><secondary>KTN::Mdp3::MDTradeEntry</secondary></indexterm>
+<indexterm><primary>KTN::Mdp3::MDTradeEntry</primary><secondary>MDEntryType</secondary></indexterm>
+<para><computeroutput>char KTN::Mdp3::MDTradeEntry::MDEntryType</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_mdp3_1_1_m_d_trade_entry_1a1f23cbf8988602fd55922afa2927839a"/><section>
+    <title>MDTradeEntryID</title>
+<indexterm><primary>MDTradeEntryID</primary><secondary>KTN::Mdp3::MDTradeEntry</secondary></indexterm>
+<indexterm><primary>KTN::Mdp3::MDTradeEntry</primary><secondary>MDTradeEntryID</secondary></indexterm>
+<para><computeroutput>uint32_t KTN::Mdp3::MDTradeEntry::MDTradeEntryID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_mdp3_1_1_m_d_trade_entry_1a5e3326af82f8b8d5837d7035e3abcc13"/><section>
+    <title>MDUpdateAction</title>
+<indexterm><primary>MDUpdateAction</primary><secondary>KTN::Mdp3::MDTradeEntry</secondary></indexterm>
+<indexterm><primary>KTN::Mdp3::MDTradeEntry</primary><secondary>MDUpdateAction</secondary></indexterm>
+<para><computeroutput>uint8_t KTN::Mdp3::MDTradeEntry::MDUpdateAction</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_mdp3_1_1_m_d_trade_entry_1a1a2575ce6c526a166600cf3dd845541e"/><section>
+    <title>NumberOfOrders</title>
+<indexterm><primary>NumberOfOrders</primary><secondary>KTN::Mdp3::MDTradeEntry</secondary></indexterm>
+<indexterm><primary>KTN::Mdp3::MDTradeEntry</primary><secondary>NumberOfOrders</secondary></indexterm>
+<para><computeroutput>int32_t KTN::Mdp3::MDTradeEntry::NumberOfOrders</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_mdp3_1_1_m_d_trade_entry_1a6ede0a6aabd3a199772d0e6d18c8d770"/><section>
+    <title>Padding</title>
+<indexterm><primary>Padding</primary><secondary>KTN::Mdp3::MDTradeEntry</secondary></indexterm>
+<indexterm><primary>KTN::Mdp3::MDTradeEntry</primary><secondary>Padding</secondary></indexterm>
+<para><computeroutput>uint8_t KTN::Mdp3::MDTradeEntry::Padding</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_mdp3_1_1_m_d_trade_entry_1a4add56bd58eab603956ef3954e7f1371"/><section>
+    <title>RptSeq</title>
+<indexterm><primary>RptSeq</primary><secondary>KTN::Mdp3::MDTradeEntry</secondary></indexterm>
+<indexterm><primary>KTN::Mdp3::MDTradeEntry</primary><secondary>RptSeq</secondary></indexterm>
+<para><computeroutput>uint32_t KTN::Mdp3::MDTradeEntry::RptSeq</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_mdp3_1_1_m_d_trade_entry_1aeb2eb8173ff6c9225a9a7bc58707cfae"/><section>
+    <title>SecurityID</title>
+<indexterm><primary>SecurityID</primary><secondary>KTN::Mdp3::MDTradeEntry</secondary></indexterm>
+<indexterm><primary>KTN::Mdp3::MDTradeEntry</primary><secondary>SecurityID</secondary></indexterm>
+<para><computeroutput>int32_t KTN::Mdp3::MDTradeEntry::SecurityID</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+exchsupport/cme/Mdp3Messages.hpp</section>
+</section>

@@ -1,0 +1,151 @@
+\doxysection{Efvi\+Receiver Class Reference}
+\hypertarget{class_efvi_receiver}{}\label{class_efvi_receiver}\index{EfviReceiver@{EfviReceiver}}
+Inheritance diagram for Efvi\+Receiver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_efvi_receiver}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_efvi_receiver_1_1pkt__buf}{pkt\+\_\+buf}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_efvi_receiver_af086c0e915299f09f4b92ada27a284a3}{get\+Last\+Error}} ()
+\item 
+bool \mbox{\hyperlink{class_efvi_receiver_a912f9e6fb7838632efb9dc6fdf36fb5b}{is\+Closed}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_efvi_receiver_ac99bf881e4d378a710f6686d4326db3b}{init}} (const char \texorpdfstring{$\ast$}{*}interface)
+\item 
+void \mbox{\hyperlink{class_efvi_receiver_ac1f92ad68888a8bd571fc9924a434ad2}{save\+Error}} (const char \texorpdfstring{$\ast$}{*}msg, int rc)
+\item 
+void \mbox{\hyperlink{class_efvi_receiver_ac24bc9736e80a09e1dc9898f87e1ec63}{close}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct ef\+\_\+vi \mbox{\hyperlink{class_efvi_receiver_a92eaf0fa1ea08848cab801cb1cbdfe95}{vi}}
+\item 
+uint8\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_efvi_receiver_a09d294d1e2a054a931b071fd2d9c8456}{pkt\+\_\+bufs}} = nullptr
+\item 
+ef\+\_\+driver\+\_\+handle \mbox{\hyperlink{class_efvi_receiver_ad7f010bb9f34f9f7c7d4013c401fb8ed}{dh}} = -\/1
+\item 
+struct ef\+\_\+pd \mbox{\hyperlink{class_efvi_receiver_a88f48f658ee8c728fbec32badee77f15}{pd}}
+\item 
+struct ef\+\_\+memreg \mbox{\hyperlink{class_efvi_receiver_a3bb80dc2020d2b746904ef4b64d6e3a2}{memreg}}
+\item 
+bool \mbox{\hyperlink{class_efvi_receiver_a3b83c202c592a6b65c3db8d03be4e8a4}{buf\+\_\+mmapped}}
+\item 
+char \mbox{\hyperlink{class_efvi_receiver_a6109ab17510347c1d40094c643ba70d9}{last\+\_\+error\+\_\+}} \mbox{[}64\mbox{]} = "{}"{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{class_efvi_receiver_a51e5dd458507323d361668eb5e78a225}{N\+\_\+\+BUF}} = 512
+\item 
+static const int \mbox{\hyperlink{class_efvi_receiver_ac7f0c514a454c7d12856b405ad451331}{PKT\+\_\+\+BUF\+\_\+\+SIZE}} = 2048
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_efvi_receiver_ac24bc9736e80a09e1dc9898f87e1ec63}\index{EfviReceiver@{EfviReceiver}!close@{close}}
+\index{close@{close}!EfviReceiver@{EfviReceiver}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily \label{class_efvi_receiver_ac24bc9736e80a09e1dc9898f87e1ec63} 
+void Efvi\+Receiver\+::close (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_efvi_receiver_af086c0e915299f09f4b92ada27a284a3}\index{EfviReceiver@{EfviReceiver}!getLastError@{getLastError}}
+\index{getLastError@{getLastError}!EfviReceiver@{EfviReceiver}}
+\doxysubsubsection{\texorpdfstring{getLastError()}{getLastError()}}
+{\footnotesize\ttfamily \label{class_efvi_receiver_af086c0e915299f09f4b92ada27a284a3} 
+const char \texorpdfstring{$\ast$}{*} Efvi\+Receiver\+::get\+Last\+Error (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_efvi_receiver_ac99bf881e4d378a710f6686d4326db3b}\index{EfviReceiver@{EfviReceiver}!init@{init}}
+\index{init@{init}!EfviReceiver@{EfviReceiver}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \label{class_efvi_receiver_ac99bf881e4d378a710f6686d4326db3b} 
+bool Efvi\+Receiver\+::init (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{interface}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_efvi_receiver_a912f9e6fb7838632efb9dc6fdf36fb5b}\index{EfviReceiver@{EfviReceiver}!isClosed@{isClosed}}
+\index{isClosed@{isClosed}!EfviReceiver@{EfviReceiver}}
+\doxysubsubsection{\texorpdfstring{isClosed()}{isClosed()}}
+{\footnotesize\ttfamily \label{class_efvi_receiver_a912f9e6fb7838632efb9dc6fdf36fb5b} 
+bool Efvi\+Receiver\+::is\+Closed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_efvi_receiver_ac1f92ad68888a8bd571fc9924a434ad2}\index{EfviReceiver@{EfviReceiver}!saveError@{saveError}}
+\index{saveError@{saveError}!EfviReceiver@{EfviReceiver}}
+\doxysubsubsection{\texorpdfstring{saveError()}{saveError()}}
+{\footnotesize\ttfamily \label{class_efvi_receiver_ac1f92ad68888a8bd571fc9924a434ad2} 
+void Efvi\+Receiver\+::save\+Error (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{msg}{, }\item[{int}]{rc}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_efvi_receiver_a3b83c202c592a6b65c3db8d03be4e8a4}\index{EfviReceiver@{EfviReceiver}!buf\_mmapped@{buf\_mmapped}}
+\index{buf\_mmapped@{buf\_mmapped}!EfviReceiver@{EfviReceiver}}
+\doxysubsubsection{\texorpdfstring{buf\_mmapped}{buf\_mmapped}}
+{\footnotesize\ttfamily \label{class_efvi_receiver_a3b83c202c592a6b65c3db8d03be4e8a4} 
+bool Efvi\+Receiver\+::buf\+\_\+mmapped\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_efvi_receiver_ad7f010bb9f34f9f7c7d4013c401fb8ed}\index{EfviReceiver@{EfviReceiver}!dh@{dh}}
+\index{dh@{dh}!EfviReceiver@{EfviReceiver}}
+\doxysubsubsection{\texorpdfstring{dh}{dh}}
+{\footnotesize\ttfamily \label{class_efvi_receiver_ad7f010bb9f34f9f7c7d4013c401fb8ed} 
+ef\+\_\+driver\+\_\+handle Efvi\+Receiver\+::dh = -\/1\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_efvi_receiver_a6109ab17510347c1d40094c643ba70d9}\index{EfviReceiver@{EfviReceiver}!last\_error\_@{last\_error\_}}
+\index{last\_error\_@{last\_error\_}!EfviReceiver@{EfviReceiver}}
+\doxysubsubsection{\texorpdfstring{last\_error\_}{last\_error\_}}
+{\footnotesize\ttfamily \label{class_efvi_receiver_a6109ab17510347c1d40094c643ba70d9} 
+char Efvi\+Receiver\+::last\+\_\+error\+\_\+\mbox{[}64\mbox{]} = "{}"{}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_efvi_receiver_a3bb80dc2020d2b746904ef4b64d6e3a2}\index{EfviReceiver@{EfviReceiver}!memreg@{memreg}}
+\index{memreg@{memreg}!EfviReceiver@{EfviReceiver}}
+\doxysubsubsection{\texorpdfstring{memreg}{memreg}}
+{\footnotesize\ttfamily \label{class_efvi_receiver_a3bb80dc2020d2b746904ef4b64d6e3a2} 
+struct ef\+\_\+memreg Efvi\+Receiver\+::memreg\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_efvi_receiver_a51e5dd458507323d361668eb5e78a225}\index{EfviReceiver@{EfviReceiver}!N\_BUF@{N\_BUF}}
+\index{N\_BUF@{N\_BUF}!EfviReceiver@{EfviReceiver}}
+\doxysubsubsection{\texorpdfstring{N\_BUF}{N\_BUF}}
+{\footnotesize\ttfamily \label{class_efvi_receiver_a51e5dd458507323d361668eb5e78a225} 
+const int Efvi\+Receiver\+::\+N\+\_\+\+BUF = 512\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_efvi_receiver_a88f48f658ee8c728fbec32badee77f15}\index{EfviReceiver@{EfviReceiver}!pd@{pd}}
+\index{pd@{pd}!EfviReceiver@{EfviReceiver}}
+\doxysubsubsection{\texorpdfstring{pd}{pd}}
+{\footnotesize\ttfamily \label{class_efvi_receiver_a88f48f658ee8c728fbec32badee77f15} 
+struct ef\+\_\+pd Efvi\+Receiver\+::pd\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_efvi_receiver_ac7f0c514a454c7d12856b405ad451331}\index{EfviReceiver@{EfviReceiver}!PKT\_BUF\_SIZE@{PKT\_BUF\_SIZE}}
+\index{PKT\_BUF\_SIZE@{PKT\_BUF\_SIZE}!EfviReceiver@{EfviReceiver}}
+\doxysubsubsection{\texorpdfstring{PKT\_BUF\_SIZE}{PKT\_BUF\_SIZE}}
+{\footnotesize\ttfamily \label{class_efvi_receiver_ac7f0c514a454c7d12856b405ad451331} 
+const int Efvi\+Receiver\+::\+PKT\+\_\+\+BUF\+\_\+\+SIZE = 2048\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_efvi_receiver_a09d294d1e2a054a931b071fd2d9c8456}\index{EfviReceiver@{EfviReceiver}!pkt\_bufs@{pkt\_bufs}}
+\index{pkt\_bufs@{pkt\_bufs}!EfviReceiver@{EfviReceiver}}
+\doxysubsubsection{\texorpdfstring{pkt\_bufs}{pkt\_bufs}}
+{\footnotesize\ttfamily \label{class_efvi_receiver_a09d294d1e2a054a931b071fd2d9c8456} 
+uint8\+\_\+t\texorpdfstring{$\ast$}{*} Efvi\+Receiver\+::pkt\+\_\+bufs = nullptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_efvi_receiver_a92eaf0fa1ea08848cab801cb1cbdfe95}\index{EfviReceiver@{EfviReceiver}!vi@{vi}}
+\index{vi@{vi}!EfviReceiver@{EfviReceiver}}
+\doxysubsubsection{\texorpdfstring{vi}{vi}}
+{\footnotesize\ttfamily \label{class_efvi_receiver_a92eaf0fa1ea08848cab801cb1cbdfe95} 
+struct ef\+\_\+vi Efvi\+Receiver\+::vi\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sgaer/source/repos/katanafinancial/\+Occam\+CME4/\+Occam\+CME4/src/external/pollnet/Efvi.\+h\end{DoxyCompactItemize}

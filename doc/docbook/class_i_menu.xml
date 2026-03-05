@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_i_menu" xml:lang="en-US">
+<title>IMenu Class Reference</title>
+<indexterm><primary>IMenu</primary></indexterm>
+<para>
+
+<para>Interface for menu classes. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;IMenu.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for IMenu:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_i_menu.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_i_menu_1a8b4196d657c327ac5894159cc717e687"/>virtual <emphasis role="strong">~IMenu</emphasis> ()=default</para>
+
+<para>Virtual destructor. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_i_menu_1a20bb56f784595e326d76b2f08612a106">DisplayAndWait</link> ()=0</para>
+
+<para>Displays the menu and waits for user input. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Interface for menu classes. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_i_menu_1a20bb56f784595e326d76b2f08612a106"/><section>
+    <title>DisplayAndWait()</title>
+<indexterm><primary>DisplayAndWait</primary><secondary>IMenu</secondary></indexterm>
+<indexterm><primary>IMenu</primary><secondary>DisplayAndWait</secondary></indexterm>
+<para><computeroutput>virtual void IMenu::DisplayAndWait ( )<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>Displays the menu and waits for user input. </para>
+</para>
+<para>
+Implemented in <link linkend="_class_standard_menu_1a8a183b7bfadff568145c7e7465fa6dea">StandardMenu</link>, and <link linkend="_class_zmq_menu_1a2177af9d4e12928eee5b9e9046645168">ZmqMenu</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Menu/IMenu.hpp</section>
+</section>

@@ -1,0 +1,116 @@
+\doxysection{Spread\+Hedge\+Circ\+Buff Class Reference}
+\hypertarget{class_spread_hedge_circ_buff}{}\label{class_spread_hedge_circ_buff}\index{SpreadHedgeCircBuff@{SpreadHedgeCircBuff}}
+
+
+Circular buffer implementation for storing spread hedge data.  
+
+
+
+
+{\ttfamily \#include $<$Spread\+Hedge\+Circ\+Buff.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_spread_hedge_circ_buff_a77dc6b53709bb1ade00ee3af5d531e72}{Spread\+Hedge\+Circ\+Buff}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{class_spread_hedge_circ_buff}{Spread\+Hedge\+Circ\+Buff}. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3}{Spread\+Hedge\+V3}} $>$ \& \mbox{\hyperlink{class_spread_hedge_circ_buff_afa197a6e37a12677686327aa639ebf5c}{operator\mbox{[}$\,$\mbox{]}}} (uint64\+\_\+t reqid)
+\begin{DoxyCompactList}\small\item\em Overloaded operator to access the spread hedge data by request ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_spread_hedge_circ_buff_a01371e19c5159375216e7e1816e9c8df}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Clear the circular buffer. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_spread_hedge_circ_buff_affd48b4b7ba34dcc3c47488c62af0713}{remove}} (uint64\+\_\+t reqid)
+\begin{DoxyCompactList}\small\item\em Remove the spread hedge data with the given request ID from the buffer. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3}{Spread\+Hedge\+V3}} $>$ \mbox{\hyperlink{class_spread_hedge_circ_buff_af4e40dff2638d0c9a3c7b429b194ab6f}{find}} (uint64\+\_\+t reqid)
+\begin{DoxyCompactList}\small\item\em Find the spread hedge data with the given request ID in the buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Circular buffer implementation for storing spread hedge data. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_spread_hedge_circ_buff_a77dc6b53709bb1ade00ee3af5d531e72}\index{SpreadHedgeCircBuff@{SpreadHedgeCircBuff}!SpreadHedgeCircBuff@{SpreadHedgeCircBuff}}
+\index{SpreadHedgeCircBuff@{SpreadHedgeCircBuff}!SpreadHedgeCircBuff@{SpreadHedgeCircBuff}}
+\doxysubsubsection{\texorpdfstring{SpreadHedgeCircBuff()}{SpreadHedgeCircBuff()}}
+{\footnotesize\ttfamily \label{class_spread_hedge_circ_buff_a77dc6b53709bb1ade00ee3af5d531e72} 
+Spread\+Hedge\+Circ\+Buff\+::\+Spread\+Hedge\+Circ\+Buff (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default constructor for \doxylink{class_spread_hedge_circ_buff}{Spread\+Hedge\+Circ\+Buff}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_spread_hedge_circ_buff_a01371e19c5159375216e7e1816e9c8df}\index{SpreadHedgeCircBuff@{SpreadHedgeCircBuff}!clear@{clear}}
+\index{clear@{clear}!SpreadHedgeCircBuff@{SpreadHedgeCircBuff}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \label{class_spread_hedge_circ_buff_a01371e19c5159375216e7e1816e9c8df} 
+void Spread\+Hedge\+Circ\+Buff\+::clear (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Clear the circular buffer. 
+
+
+
+Referenced by \mbox{\hyperlink{l00170}{KTN\+::\+CME\+::\+Cme\+Algo\+::\+Clear\+Maps()}}, and \mbox{\hyperlink{l00166}{KTN\+::\+CME\+::\+Cme\+GT5\+::\+Clear\+Maps()}}.
+
+\Hypertarget{class_spread_hedge_circ_buff_af4e40dff2638d0c9a3c7b429b194ab6f}\index{SpreadHedgeCircBuff@{SpreadHedgeCircBuff}!find@{find}}
+\index{find@{find}!SpreadHedgeCircBuff@{SpreadHedgeCircBuff}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily \label{class_spread_hedge_circ_buff_af4e40dff2638d0c9a3c7b429b194ab6f} 
+std\+::vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3}{Spread\+Hedge\+V3}} $>$ Spread\+Hedge\+Circ\+Buff\+::find (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{reqid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Find the spread hedge data with the given request ID in the buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reqid} & The request ID \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The spread hedge data vector if found, an empty vector otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_spread_hedge_circ_buff_afa197a6e37a12677686327aa639ebf5c}\index{SpreadHedgeCircBuff@{SpreadHedgeCircBuff}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!SpreadHedgeCircBuff@{SpreadHedgeCircBuff}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily \label{class_spread_hedge_circ_buff_afa197a6e37a12677686327aa639ebf5c} 
+std\+::vector$<$ \mbox{\hyperlink{struct_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_spread_hedge_v3}{Spread\+Hedge\+V3}} $>$ \& Spread\+Hedge\+Circ\+Buff\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{reqid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Overloaded operator to access the spread hedge data by request ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reqid} & The request ID \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the spread hedge data vector 
+\end{DoxyReturn}
+\Hypertarget{class_spread_hedge_circ_buff_affd48b4b7ba34dcc3c47488c62af0713}\index{SpreadHedgeCircBuff@{SpreadHedgeCircBuff}!remove@{remove}}
+\index{remove@{remove}!SpreadHedgeCircBuff@{SpreadHedgeCircBuff}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily \label{class_spread_hedge_circ_buff_affd48b4b7ba34dcc3c47488c62af0713} 
+bool Spread\+Hedge\+Circ\+Buff\+::remove (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{reqid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove the spread hedge data with the given request ID from the buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reqid} & The request ID \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the spread hedge data was successfully removed, false otherwise 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Maps/Spread\+Hedge\+Circ\+Buff.\+hpp\end{DoxyCompactItemize}

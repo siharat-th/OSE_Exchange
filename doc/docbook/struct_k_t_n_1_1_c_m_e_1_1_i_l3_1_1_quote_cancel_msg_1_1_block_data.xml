@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_quote_cancel_msg_1_1_block_data" xml:lang="en-US">
+<title>KTN::CME::IL3::QuoteCancelMsg::BlockData Struct Reference</title>
+<indexterm><primary>KTN::CME::IL3::QuoteCancelMsg::BlockData</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_quote_cancel_msg_1_1_block_data_1af47d0d673fbc1e3978ac593fdacd502b">PartyDetailsListReqID</link></para>
+</listitem>
+            <listitem><para>uInt64 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_quote_cancel_msg_1_1_block_data_1a34ea091a829a100d6ee402493beb5eb1">SendingTimeEpoch</link></para>
+</listitem>
+            <listitem><para>EnumManualOrdIndReq <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_quote_cancel_msg_1_1_block_data_1ac8eee41e21c65594bb748af0e6cbbb71">ManualOrderIndicator</link></para>
+</listitem>
+            <listitem><para>uInt32 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_quote_cancel_msg_1_1_block_data_1a4e21749246603da988021edcb34eaac4">SeqNum</link></para>
+</listitem>
+            <listitem><para>String20Req <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_quote_cancel_msg_1_1_block_data_1a7a2ee08b6f1ea002bee604128e64d4f6">SenderID</link></para>
+</listitem>
+            <listitem><para>String5Req <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_quote_cancel_msg_1_1_block_data_1acc9bb39c70cc0389e408dfb738af2083">Location</link></para>
+</listitem>
+            <listitem><para>uInt32 <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_quote_cancel_msg_1_1_block_data_1ab44c6a08ee1ac698604b144762543fb7">QuoteID</link></para>
+</listitem>
+            <listitem><para>EnumQuoteCxlTyp <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_quote_cancel_msg_1_1_block_data_1adf980bff43f8a2dc493806018c6a0f62">QuoteCancelType</link></para>
+</listitem>
+            <listitem><para>EnumBooleanNULL <link linkend="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_quote_cancel_msg_1_1_block_data_1a697fa480f1aca459a35f36d03439ba24">LiquidityFlag</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_quote_cancel_msg_1_1_block_data_1a697fa480f1aca459a35f36d03439ba24"/><section>
+    <title>LiquidityFlag</title>
+<indexterm><primary>LiquidityFlag</primary><secondary>KTN::CME::IL3::QuoteCancelMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::QuoteCancelMsg::BlockData</primary><secondary>LiquidityFlag</secondary></indexterm>
+<para><computeroutput>EnumBooleanNULL KTN::CME::IL3::QuoteCancelMsg::BlockData::LiquidityFlag</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_quote_cancel_msg_1_1_block_data_1acc9bb39c70cc0389e408dfb738af2083"/><section>
+    <title>Location</title>
+<indexterm><primary>Location</primary><secondary>KTN::CME::IL3::QuoteCancelMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::QuoteCancelMsg::BlockData</primary><secondary>Location</secondary></indexterm>
+<para><computeroutput>String5Req KTN::CME::IL3::QuoteCancelMsg::BlockData::Location</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_quote_cancel_msg_1_1_block_data_1ac8eee41e21c65594bb748af0e6cbbb71"/><section>
+    <title>ManualOrderIndicator</title>
+<indexterm><primary>ManualOrderIndicator</primary><secondary>KTN::CME::IL3::QuoteCancelMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::QuoteCancelMsg::BlockData</primary><secondary>ManualOrderIndicator</secondary></indexterm>
+<para><computeroutput>EnumManualOrdIndReq KTN::CME::IL3::QuoteCancelMsg::BlockData::ManualOrderIndicator</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_quote_cancel_msg_1_1_block_data_1af47d0d673fbc1e3978ac593fdacd502b"/><section>
+    <title>PartyDetailsListReqID</title>
+<indexterm><primary>PartyDetailsListReqID</primary><secondary>KTN::CME::IL3::QuoteCancelMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::QuoteCancelMsg::BlockData</primary><secondary>PartyDetailsListReqID</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::QuoteCancelMsg::BlockData::PartyDetailsListReqID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_quote_cancel_msg_1_1_block_data_1adf980bff43f8a2dc493806018c6a0f62"/><section>
+    <title>QuoteCancelType</title>
+<indexterm><primary>QuoteCancelType</primary><secondary>KTN::CME::IL3::QuoteCancelMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::QuoteCancelMsg::BlockData</primary><secondary>QuoteCancelType</secondary></indexterm>
+<para><computeroutput>EnumQuoteCxlTyp KTN::CME::IL3::QuoteCancelMsg::BlockData::QuoteCancelType</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_quote_cancel_msg_1_1_block_data_1ab44c6a08ee1ac698604b144762543fb7"/><section>
+    <title>QuoteID</title>
+<indexterm><primary>QuoteID</primary><secondary>KTN::CME::IL3::QuoteCancelMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::QuoteCancelMsg::BlockData</primary><secondary>QuoteID</secondary></indexterm>
+<para><computeroutput>uInt32 KTN::CME::IL3::QuoteCancelMsg::BlockData::QuoteID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_quote_cancel_msg_1_1_block_data_1a7a2ee08b6f1ea002bee604128e64d4f6"/><section>
+    <title>SenderID</title>
+<indexterm><primary>SenderID</primary><secondary>KTN::CME::IL3::QuoteCancelMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::QuoteCancelMsg::BlockData</primary><secondary>SenderID</secondary></indexterm>
+<para><computeroutput>String20Req KTN::CME::IL3::QuoteCancelMsg::BlockData::SenderID</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_quote_cancel_msg_1_1_block_data_1a34ea091a829a100d6ee402493beb5eb1"/><section>
+    <title>SendingTimeEpoch</title>
+<indexterm><primary>SendingTimeEpoch</primary><secondary>KTN::CME::IL3::QuoteCancelMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::QuoteCancelMsg::BlockData</primary><secondary>SendingTimeEpoch</secondary></indexterm>
+<para><computeroutput>uInt64 KTN::CME::IL3::QuoteCancelMsg::BlockData::SendingTimeEpoch</computeroutput></para></section>
+<anchor xml:id="_struct_k_t_n_1_1_c_m_e_1_1_i_l3_1_1_quote_cancel_msg_1_1_block_data_1a4e21749246603da988021edcb34eaac4"/><section>
+    <title>SeqNum</title>
+<indexterm><primary>SeqNum</primary><secondary>KTN::CME::IL3::QuoteCancelMsg::BlockData</secondary></indexterm>
+<indexterm><primary>KTN::CME::IL3::QuoteCancelMsg::BlockData</primary><secondary>SeqNum</secondary></indexterm>
+<para><computeroutput>uInt32 KTN::CME::IL3::QuoteCancelMsg::BlockData::SeqNum</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+exchsupport/cme/il3/IL3Messages2.hpp</section>
+</section>

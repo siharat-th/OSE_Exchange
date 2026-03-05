@@ -1,0 +1,149 @@
+\doxysection{KTN\+::REPORTER\+::Algo\+V3\+Reporter Class Reference}
+\hypertarget{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter}{}\label{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter}\index{KTN::REPORTER::AlgoV3Reporter@{KTN::REPORTER::AlgoV3Reporter}}
+
+
+The \doxylink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter}{Algo\+V3\+Reporter} class is responsible for reporting generic statistics.  
+
+
+
+
+{\ttfamily \#include $<$Algo\+V3\+Reporter.\+hpp$>$}
+
+Inheritance diagram for KTN\+::REPORTER\+::Algo\+V3\+Reporter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter_a512bd082c03deb77f5f282af8fc4dd2b}{Algo\+V3\+Reporter}} ()
+\begin{DoxyCompactList}\small\item\em Constructs an instance of \doxylink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter}{Algo\+V3\+Reporter}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter_a149bba5212e3a2e3e6cd5b96de9be2e3}{\texorpdfstring{$\sim$}{\string~}\+Algo\+V3\+Reporter}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter}{Algo\+V3\+Reporter} instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter_ad74d49f61f6d2b95d25bc0e00634db2e}{Report}} (const \mbox{\hyperlink{classgenericstats}{genericstats}} \&msg)
+\begin{DoxyCompactList}\small\item\em Reports the generic statistics. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter_ac380fffde0850e69473fbc6522ef62f4}{Do\+Work}} () override
+\begin{DoxyCompactList}\small\item\em Performs the work of the reporter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter_a4e454fafdccf321a457638d77fb121f9}{Stop\+Work}} ()
+\begin{DoxyCompactList}\small\item\em Stops the work of the reporter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter_a278768f4bc663ba82d49aea3ce109605}{Send\+Message}} (const \mbox{\hyperlink{classgenericstats}{genericstats}} \&gmsg, uint64\+\_\+t ssboe, const string \&updtime)
+\begin{DoxyCompactList}\small\item\em Sends a message with generic statistics, ssboe, and updtime. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter}{Algo\+V3\+Reporter} class is responsible for reporting generic statistics. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter_a512bd082c03deb77f5f282af8fc4dd2b}\index{KTN::REPORTER::AlgoV3Reporter@{KTN::REPORTER::AlgoV3Reporter}!AlgoV3Reporter@{AlgoV3Reporter}}
+\index{AlgoV3Reporter@{AlgoV3Reporter}!KTN::REPORTER::AlgoV3Reporter@{KTN::REPORTER::AlgoV3Reporter}}
+\doxysubsubsection{\texorpdfstring{AlgoV3Reporter()}{AlgoV3Reporter()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter_a512bd082c03deb77f5f282af8fc4dd2b} 
+Algo\+V3\+Reporter\+::\+Algo\+V3\+Reporter (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructs an instance of \doxylink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter}{Algo\+V3\+Reporter}. 
+
+
+
+References \mbox{\hyperlink{l00123}{Settings\+::get()}}, and \mbox{\hyperlink{l00027}{KTN\+::\+REPORTER\+::\+Reporter\+Base\+::\+Start()}}.
+
+\Hypertarget{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter_a149bba5212e3a2e3e6cd5b96de9be2e3}\index{KTN::REPORTER::AlgoV3Reporter@{KTN::REPORTER::AlgoV3Reporter}!````~AlgoV3Reporter@{\texorpdfstring{$\sim$}{\string~}AlgoV3Reporter}}
+\index{````~AlgoV3Reporter@{\texorpdfstring{$\sim$}{\string~}AlgoV3Reporter}!KTN::REPORTER::AlgoV3Reporter@{KTN::REPORTER::AlgoV3Reporter}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}AlgoV3Reporter()}{\string~AlgoV3Reporter()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter_a149bba5212e3a2e3e6cd5b96de9be2e3} 
+Algo\+V3\+Reporter\+::\texorpdfstring{$\sim$}{\string~}\+Algo\+V3\+Reporter (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destroys the \doxylink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter}{Algo\+V3\+Reporter} instance. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter_ac380fffde0850e69473fbc6522ef62f4}\index{KTN::REPORTER::AlgoV3Reporter@{KTN::REPORTER::AlgoV3Reporter}!DoWork@{DoWork}}
+\index{DoWork@{DoWork}!KTN::REPORTER::AlgoV3Reporter@{KTN::REPORTER::AlgoV3Reporter}}
+\doxysubsubsection{\texorpdfstring{DoWork()}{DoWork()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter_ac380fffde0850e69473fbc6522ef62f4} 
+void Algo\+V3\+Reporter\+::\+Do\+Work (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Performs the work of the reporter. 
+
+
+
+Implements \mbox{\hyperlink{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_a449d2ccb3be9222bd06fef3b5155e3af}{KTN\+::\+REPORTER\+::\+Reporter\+Base}}.
+
+
+
+References \mbox{\hyperlink{l00191}{KTN\+::\+Core\+::\+SPSCRing\+Buffer$<$ T $>$\+::empty()}}, \mbox{\hyperlink{l00436}{genericstats\+::enabled}}, \mbox{\hyperlink{l00108}{KTN\+::\+REPORTER\+::\+Reporter\+Base\+::get\+Ssboe\+Us()}}, \mbox{\hyperlink{l00089}{KTN\+::\+REPORTER\+::\+Reporter\+Base\+::get\+Time\+String()}}, \mbox{\hyperlink{l00445}{genericstats\+::msgtype}}, \mbox{\hyperlink{l00087}{Send\+Message()}}, \mbox{\hyperlink{l00451}{genericstats\+::ssboe}}, \mbox{\hyperlink{l00141}{KTN\+::\+Core\+::\+SPSCRing\+Buffer$<$ T $>$\+::try\+\_\+pop()}}, \mbox{\hyperlink{l00439}{genericstats\+::uniqueid}}, and \mbox{\hyperlink{l00452}{genericstats\+::updatetime}}.
+
+\Hypertarget{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter_ad74d49f61f6d2b95d25bc0e00634db2e}\index{KTN::REPORTER::AlgoV3Reporter@{KTN::REPORTER::AlgoV3Reporter}!Report@{Report}}
+\index{Report@{Report}!KTN::REPORTER::AlgoV3Reporter@{KTN::REPORTER::AlgoV3Reporter}}
+\doxysubsubsection{\texorpdfstring{Report()}{Report()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter_ad74d49f61f6d2b95d25bc0e00634db2e} 
+void Algo\+V3\+Reporter\+::\+Report (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgenericstats}{genericstats}} \&}]{msg}{}\end{DoxyParamCaption})}
+
+
+
+Reports the generic statistics. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The generic statistics to report. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00084}{KTN\+::\+Core\+::\+SPSCRing\+Buffer$<$ T $>$\+::push()}}.
+
+\Hypertarget{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter_a278768f4bc663ba82d49aea3ce109605}\index{KTN::REPORTER::AlgoV3Reporter@{KTN::REPORTER::AlgoV3Reporter}!SendMessage@{SendMessage}}
+\index{SendMessage@{SendMessage}!KTN::REPORTER::AlgoV3Reporter@{KTN::REPORTER::AlgoV3Reporter}}
+\doxysubsubsection{\texorpdfstring{SendMessage()}{SendMessage()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter_a278768f4bc663ba82d49aea3ce109605} 
+void Algo\+V3\+Reporter\+::\+Send\+Message (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgenericstats}{genericstats}} \&}]{gmsg}{, }\item[{uint64\+\_\+t}]{ssboe}{, }\item[{const string \&}]{updtime}{}\end{DoxyParamCaption})}
+
+
+
+Sends a message with generic statistics, ssboe, and updtime. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gmsg} & The generic statistics to send. \\
+\hline
+{\em ssboe} & The ssboe value. \\
+\hline
+{\em updtime} & The updtime value. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00436}{genericstats\+::enabled}}, \mbox{\hyperlink{l00442}{genericstats\+::exch}}, \mbox{\hyperlink{l00044}{Algo\+Json\+::\+Format\+Algo\+Stats()}}, \mbox{\hyperlink{l00445}{genericstats\+::msgtype}}, \mbox{\hyperlink{l00437}{genericstats\+::name}}, \mbox{\hyperlink{l00448}{genericstats\+::position}}, \mbox{\hyperlink{l00120}{KTN\+::\+REPORTER\+::\+Reporter\+Base\+::\+Send\+Json()}}, \mbox{\hyperlink{l00441}{genericstats\+::source}}, \mbox{\hyperlink{l00443}{genericstats\+::symbol}}, \mbox{\hyperlink{l00438}{genericstats\+::templatename}}, \mbox{\hyperlink{l00446}{genericstats\+::text}}, \mbox{\hyperlink{l00449}{genericstats\+::totalexec}}, and \mbox{\hyperlink{l00439}{genericstats\+::uniqueid}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00039}{Do\+Work()}}.
+
+\Hypertarget{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter_a4e454fafdccf321a457638d77fb121f9}\index{KTN::REPORTER::AlgoV3Reporter@{KTN::REPORTER::AlgoV3Reporter}!StopWork@{StopWork}}
+\index{StopWork@{StopWork}!KTN::REPORTER::AlgoV3Reporter@{KTN::REPORTER::AlgoV3Reporter}}
+\doxysubsubsection{\texorpdfstring{StopWork()}{StopWork()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter_a4e454fafdccf321a457638d77fb121f9} 
+void Algo\+V3\+Reporter\+::\+Stop\+Work (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Stops the work of the reporter. 
+
+
+
+References \mbox{\hyperlink{l00049}{KTN\+::\+REPORTER\+::\+Reporter\+Base\+::\+Stop()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Reporters/Algo\+V3\+Reporter.\+hpp\item 
+Reporters/Algo\+V3\+Reporter.\+cpp\end{DoxyCompactItemize}

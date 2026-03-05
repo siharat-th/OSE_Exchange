@@ -1,0 +1,238 @@
+\doxysection{Order\+Nums Class Reference}
+\hypertarget{class_order_nums}{}\label{class_order_nums}\index{OrderNums@{OrderNums}}
+
+
+\doxylink{class_singleton}{Singleton} class for generating order numbers and request IDs.  
+
+
+
+
+{\ttfamily \#include $<$Order\+Nums.\+hpp$>$}
+
+Inheritance diagram for Order\+Nums\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_order_nums}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_order_nums_a44f558b1e35932a082807879bdcb4fff}{Order\+Nums}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_order_nums_a569aa59406fd13bede87f0ca0c522e15}{\texorpdfstring{$\sim$}{\string~}\+Order\+Nums}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_order_nums_ae860da2fde8d64fa3bf5d7ac91f932f9}{Next\+Order\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Generates the next order ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_order_nums_ade01e45f7bc5a0e5870a6fd43b097aeb}{Next\+Order\+Id}} (char \texorpdfstring{$\ast$}{*}\&ordernum, size\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Generates the next order ID and copies it to the provided character array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_order_nums_a5eb96872c5b5e050eaf3b4b01bf8f680}{Next\+Order\+Id2}} (char \texorpdfstring{$\ast$}{*}ordernum, size\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Generates the next order ID and copies it to the provided character array. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{class_order_nums_a3973d530f9a2025a66e7818d06360ab2}{Next\+Req\+Id\+Encoded}} (int callbackid)
+\begin{DoxyCompactList}\small\item\em Generates the next encoded request ID. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{class_order_nums_a7725505f4b323bd9b7fc0f11e035c628}{Next\+Req\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Generates the next request ID. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_order_nums_a9b08fe334667bfa09cc8f4503aab1b42}{is\+Loaded}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the order numbers have been loaded. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_order_nums_aeebe2f5a7f61308f6dc3c359642d144a}{Ord\+Id\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Gets the size of the order ID queue. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_order_nums_afcf6ab39379bf2b29bd5f0ae208f64a7}{Req\+Id\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Gets the size of the request ID queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_singleton}{Singleton$<$ Order\+Nums $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+static I01\+\_\+\+API \mbox{\hyperlink{class_order_nums}{Order\+Nums}} \& \mbox{\hyperlink{class_singleton_a257c9c4633fa4e06bd93469e379f8eff}{instance}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_singleton}{Singleton$<$ Order\+Nums $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Singleton} (const \mbox{\hyperlink{class_singleton}{Singleton}} \&)=delete
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_singleton}{Singleton} class for generating order numbers and request IDs. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_order_nums_a44f558b1e35932a082807879bdcb4fff}\index{OrderNums@{OrderNums}!OrderNums@{OrderNums}}
+\index{OrderNums@{OrderNums}!OrderNums@{OrderNums}}
+\doxysubsubsection{\texorpdfstring{OrderNums()}{OrderNums()}}
+{\footnotesize\ttfamily \label{class_order_nums_a44f558b1e35932a082807879bdcb4fff} 
+Order\+Nums\+::\+Order\+Nums (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default constructor. 
+
+\Hypertarget{class_order_nums_a569aa59406fd13bede87f0ca0c522e15}\index{OrderNums@{OrderNums}!````~OrderNums@{\texorpdfstring{$\sim$}{\string~}OrderNums}}
+\index{````~OrderNums@{\texorpdfstring{$\sim$}{\string~}OrderNums}!OrderNums@{OrderNums}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}OrderNums()}{\string~OrderNums()}}
+{\footnotesize\ttfamily \label{class_order_nums_a569aa59406fd13bede87f0ca0c522e15} 
+virtual Order\+Nums\+::\texorpdfstring{$\sim$}{\string~}\+Order\+Nums (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_order_nums_a9b08fe334667bfa09cc8f4503aab1b42}\index{OrderNums@{OrderNums}!isLoaded@{isLoaded}}
+\index{isLoaded@{isLoaded}!OrderNums@{OrderNums}}
+\doxysubsubsection{\texorpdfstring{isLoaded()}{isLoaded()}}
+{\footnotesize\ttfamily \label{class_order_nums_a9b08fe334667bfa09cc8f4503aab1b42} 
+bool Order\+Nums\+::is\+Loaded (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the order numbers have been loaded. 
+
+\begin{DoxyReturn}{Returns}
+True if the order numbers have been loaded, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_order_nums_ae860da2fde8d64fa3bf5d7ac91f932f9}\index{OrderNums@{OrderNums}!NextOrderID@{NextOrderID}}
+\index{NextOrderID@{NextOrderID}!OrderNums@{OrderNums}}
+\doxysubsubsection{\texorpdfstring{NextOrderID()}{NextOrderID()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_order_nums_ae860da2fde8d64fa3bf5d7ac91f932f9} 
+string Order\+Nums\+::\+Next\+Order\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Generates the next order ID. 
+
+\begin{DoxyReturn}{Returns}
+The next order ID. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00105}{KTN\+::\+Core\+::\+SPSCRing\+Buffer$<$ T $>$\+::dequeue()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00019}{KTN\+::\+CME\+::\+Cme\+Algo\+::\+Cme\+Algo()}}, and \mbox{\hyperlink{l00019}{KTN\+::\+CME\+::\+Cme\+GT5\+::\+Cme\+GT5()}}.
+
+\Hypertarget{class_order_nums_ade01e45f7bc5a0e5870a6fd43b097aeb}\index{OrderNums@{OrderNums}!NextOrderID@{NextOrderID}}
+\index{NextOrderID@{NextOrderID}!OrderNums@{OrderNums}}
+\doxysubsubsection{\texorpdfstring{NextOrderID()}{NextOrderID()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_order_nums_ade01e45f7bc5a0e5870a6fd43b097aeb} 
+void Order\+Nums\+::\+Next\+Order\+Id (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}\&}]{ordernum}{, }\item[{size\+\_\+t}]{len}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Generates the next order ID and copies it to the provided character array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ordernum} & The character array to copy the order ID to. \\
+\hline
+{\em len} & The length of the character array. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00105}{KTN\+::\+Core\+::\+SPSCRing\+Buffer$<$ T $>$\+::dequeue()}}.
+
+\Hypertarget{class_order_nums_a5eb96872c5b5e050eaf3b4b01bf8f680}\index{OrderNums@{OrderNums}!NextOrderID2@{NextOrderID2}}
+\index{NextOrderID2@{NextOrderID2}!OrderNums@{OrderNums}}
+\doxysubsubsection{\texorpdfstring{NextOrderID2()}{NextOrderID2()}}
+{\footnotesize\ttfamily \label{class_order_nums_a5eb96872c5b5e050eaf3b4b01bf8f680} 
+void Order\+Nums\+::\+Next\+Order\+Id2 (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{ordernum}{, }\item[{size\+\_\+t}]{len}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Generates the next order ID and copies it to the provided character array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ordernum} & The character array to copy the order ID to. \\
+\hline
+{\em len} & The length of the character array. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00105}{KTN\+::\+Core\+::\+SPSCRing\+Buffer$<$ T $>$\+::dequeue()}}.
+
+\Hypertarget{class_order_nums_a7725505f4b323bd9b7fc0f11e035c628}\index{OrderNums@{OrderNums}!NextReqId@{NextReqId}}
+\index{NextReqId@{NextReqId}!OrderNums@{OrderNums}}
+\doxysubsubsection{\texorpdfstring{NextReqId()}{NextReqId()}}
+{\footnotesize\ttfamily \label{class_order_nums_a7725505f4b323bd9b7fc0f11e035c628} 
+uint32\+\_\+t Order\+Nums\+::\+Next\+Req\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Generates the next request ID. 
+
+\begin{DoxyReturn}{Returns}
+The next request ID. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00105}{KTN\+::\+Core\+::\+SPSCRing\+Buffer$<$ T $>$\+::dequeue()}}.
+
+\Hypertarget{class_order_nums_a3973d530f9a2025a66e7818d06360ab2}\index{OrderNums@{OrderNums}!NextReqIdEncoded@{NextReqIdEncoded}}
+\index{NextReqIdEncoded@{NextReqIdEncoded}!OrderNums@{OrderNums}}
+\doxysubsubsection{\texorpdfstring{NextReqIdEncoded()}{NextReqIdEncoded()}}
+{\footnotesize\ttfamily \label{class_order_nums_a3973d530f9a2025a66e7818d06360ab2} 
+uint64\+\_\+t Order\+Nums\+::\+Next\+Req\+Id\+Encoded (\begin{DoxyParamCaption}\item[{int}]{callbackid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Generates the next encoded request ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em callbackid} & The callback ID. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The next encoded request ID. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00105}{KTN\+::\+Core\+::\+SPSCRing\+Buffer$<$ T $>$\+::dequeue()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00019}{KTN\+::\+CME\+::\+Cme\+Algo\+::\+Cme\+Algo()}}, and \mbox{\hyperlink{l00019}{KTN\+::\+CME\+::\+Cme\+GT5\+::\+Cme\+GT5()}}.
+
+\Hypertarget{class_order_nums_aeebe2f5a7f61308f6dc3c359642d144a}\index{OrderNums@{OrderNums}!OrdIdSize@{OrdIdSize}}
+\index{OrdIdSize@{OrdIdSize}!OrderNums@{OrderNums}}
+\doxysubsubsection{\texorpdfstring{OrdIdSize()}{OrdIdSize()}}
+{\footnotesize\ttfamily \label{class_order_nums_aeebe2f5a7f61308f6dc3c359642d144a} 
+int Order\+Nums\+::\+Ord\+Id\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the size of the order ID queue. 
+
+\begin{DoxyReturn}{Returns}
+The size of the order ID queue. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00158}{KTN\+::\+Core\+::\+SPSCRing\+Buffer$<$ T $>$\+::size()}}.
+
+\Hypertarget{class_order_nums_afcf6ab39379bf2b29bd5f0ae208f64a7}\index{OrderNums@{OrderNums}!ReqIdSize@{ReqIdSize}}
+\index{ReqIdSize@{ReqIdSize}!OrderNums@{OrderNums}}
+\doxysubsubsection{\texorpdfstring{ReqIdSize()}{ReqIdSize()}}
+{\footnotesize\ttfamily \label{class_order_nums_afcf6ab39379bf2b29bd5f0ae208f64a7} 
+int Order\+Nums\+::\+Req\+Id\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the size of the request ID queue. 
+
+\begin{DoxyReturn}{Returns}
+The size of the request ID queue. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00158}{KTN\+::\+Core\+::\+SPSCRing\+Buffer$<$ T $>$\+::size()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Orders/Order\+Nums.\+hpp\end{DoxyCompactItemize}

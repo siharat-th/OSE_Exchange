@@ -1,0 +1,256 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structefvi__tcp__client__state" xml:lang="en-US">
+<title>efvi_tcp_client_state Struct Reference</title>
+<indexterm><primary>efvi_tcp_client_state</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>unsigned <link linkend="_structefvi__tcp__client__state_1a945d9df8cb71aac6bcdc25604c856b30">alarm_usec</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_structefvi__tcp__client__state_1a3911f9db71cbf86ed116187b8cc136a9">alarm</link></para>
+</listitem>
+            <listitem><para>void * <link linkend="_structefvi__tcp__client__state_1a1be02096d51b4ac5afff91200826b953">msg_buf</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structefvi__tcp__client__state_1a68c340559737399d40708525af4d565c">msg_len</link></para>
+</listitem>
+            <listitem><para>unsigned <link linkend="_structefvi__tcp__client__state_1a8f978a9b31d9e4a39756e0b59e0db50d">tx_offset</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structefvi__tcp__client__state_1a6f205108615197207a9fc05f0dee7d6c">pio_pkt_len</link></para>
+</listitem>
+            <listitem><para>volatile bool <link linkend="_structefvi__tcp__client__state_1a2175fcc71c5c0a15cfa2cde73766c829">pio_in_use</link></para>
+</listitem>
+            <listitem><para>volatile bool <link linkend="_structefvi__tcp__client__state_1a6c3b1582661c8b7213773c8d4f4a666c">send_is_delegated</link></para>
+</listitem>
+            <listitem><para>volatile bool <link linkend="_structefvi__tcp__client__state_1a68f9328359cebbd78148f9d7a36b46cd">tas_loaded</link></para>
+</listitem>
+            <listitem><para>volatile bool <link linkend="_structefvi__tcp__client__state_1ab10ec6e9a8f8fe795ea37039eb0bcd0c">use_ctpio</link></para>
+</listitem>
+            <listitem><para>struct onload_delegated_send <link linkend="_structefvi__tcp__client__state_1a38aa7f01de3bda108a0cf71385d3ffed">ods</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structpkt__buf">pkt_buf</link> * <link linkend="_structefvi__tcp__client__state_1a9a55409444546d1ac22ab9bfc9eb1470">pkt_bufs</link> [N_TX_BUFS]</para>
+</listitem>
+            <listitem><para>char <link linkend="_structefvi__tcp__client__state_1a8bd5bc3d111d296604740c4002f343da">recv_buf</link> [MTU]</para>
+</listitem>
+            <listitem><para>unsigned <link linkend="_structefvi__tcp__client__state_1a6a0ddb242a414a16f3081966b001977f">n_normal_sends</link></para>
+</listitem>
+            <listitem><para>unsigned <link linkend="_structefvi__tcp__client__state_1ad4bb9a3a964231695526fc80ef3551f8">n_delegated_sends</link></para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_structefvi__tcp__client__state_1a9c41f4e9613af3d6e3e0e1b1262e452e">n_warmup_sends</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structefvi__tcp__client__state_1a07c78ab941983e00afc6d1be2c12d403">rx_prefix_len</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structefvi__tcp__client__state_1a912109776f3af15f132e7b6845b4bce6">pktlen_offset</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structefvi__tcp__client__state_1a074b3ba3d5b3ebcc6a805947bae7fc70">tx_frame_len</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structefvi__tcp__client__state_1a17721e1a46e9bfdfd65b2bdfee4c3e7f">last_offset</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structefvi__tcp__client__state_1ab4129b3cd3172dba93b9aa8b185305c9">last_dma_req_id</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structefvi__tcp__client__state_1a2fd406b7bf4f8f4caaf6bf346887c524">first_tx_buf</link></para>
+</listitem>
+            <listitem><para>unsigned <link linkend="_structefvi__tcp__client__state_1a92d2766da455d4074bd7cb162a0c2741">completed</link></para>
+</listitem>
+            <listitem><para>unsigned <link linkend="_structefvi__tcp__client__state_1afffe250202043e592c5422247af835c3">ctpio_ok</link></para>
+</listitem>
+            <listitem><para>unsigned <link linkend="_structefvi__tcp__client__state_1a08b6fbbee74f9b00bbcf134327c0bdc4">ctpio_ok_total</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structefvi__tcp__client__state_1ad2afe5bfe5179dfc73a6ac574a9fdba2">n_ctpio_sends</link></para>
+</listitem>
+            <listitem><para>struct iovec <link linkend="_structefvi__tcp__client__state_1aafebc8d31b9140ae089efaa38cded409">iov</link></para>
+</listitem>
+            <listitem><para>void * <link linkend="_structefvi__tcp__client__state_1ad4eb1bc161737aea6dbb0c70738fd0fc">tx_buf</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structefvi__tcp__client__state_1ad8e3db998ea951083b3f0f1fc023870b">tx_len</link></para>
+</listitem>
+            <listitem><para>ef_addr <link linkend="_structefvi__tcp__client__state_1af3faade60e00d370b5510073eddb1e02">tx_dma_addr</link></para>
+</listitem>
+            <listitem><para>uint8_t * <link linkend="_structefvi__tcp__client__state_1a0170b29ed6f6ad75760ecd7dae9c8f3d">bufs</link></para>
+</listitem>
+            <listitem><para>unsigned <link linkend="_structefvi__tcp__client__state_1aaa5234b3bf3e2a9d7f9e73153467b998">num_bufs</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_structefvi__tcp__client__state_1a6a7c06f2ed5dcf62d44d37d4d89fc59b">cfg_ctpio_no_poison</link> = 0</para>
+</listitem>
+            <listitem><para>unsigned <link linkend="_structefvi__tcp__client__state_1aa7c5a1907c469ccdcadb8e838c039131">cfg_ctpio_thresh</link> = 64</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structefvi__tcp__client__state_1a3911f9db71cbf86ed116187b8cc136a9"/><section>
+    <title>alarm</title>
+<indexterm><primary>alarm</primary><secondary>efvi_tcp_client_state</secondary></indexterm>
+<indexterm><primary>efvi_tcp_client_state</primary><secondary>alarm</secondary></indexterm>
+<para><computeroutput>bool efvi_tcp_client_state::alarm</computeroutput></para></section>
+<anchor xml:id="_structefvi__tcp__client__state_1a945d9df8cb71aac6bcdc25604c856b30"/><section>
+    <title>alarm_usec</title>
+<indexterm><primary>alarm_usec</primary><secondary>efvi_tcp_client_state</secondary></indexterm>
+<indexterm><primary>efvi_tcp_client_state</primary><secondary>alarm_usec</secondary></indexterm>
+<para><computeroutput>unsigned efvi_tcp_client_state::alarm_usec</computeroutput></para></section>
+<anchor xml:id="_structefvi__tcp__client__state_1a0170b29ed6f6ad75760ecd7dae9c8f3d"/><section>
+    <title>bufs</title>
+<indexterm><primary>bufs</primary><secondary>efvi_tcp_client_state</secondary></indexterm>
+<indexterm><primary>efvi_tcp_client_state</primary><secondary>bufs</secondary></indexterm>
+<para><computeroutput>uint8_t* efvi_tcp_client_state::bufs</computeroutput></para></section>
+<anchor xml:id="_structefvi__tcp__client__state_1a6a7c06f2ed5dcf62d44d37d4d89fc59b"/><section>
+    <title>cfg_ctpio_no_poison</title>
+<indexterm><primary>cfg_ctpio_no_poison</primary><secondary>efvi_tcp_client_state</secondary></indexterm>
+<indexterm><primary>efvi_tcp_client_state</primary><secondary>cfg_ctpio_no_poison</secondary></indexterm>
+<para><computeroutput>bool efvi_tcp_client_state::cfg_ctpio_no_poison = 0</computeroutput></para></section>
+<anchor xml:id="_structefvi__tcp__client__state_1aa7c5a1907c469ccdcadb8e838c039131"/><section>
+    <title>cfg_ctpio_thresh</title>
+<indexterm><primary>cfg_ctpio_thresh</primary><secondary>efvi_tcp_client_state</secondary></indexterm>
+<indexterm><primary>efvi_tcp_client_state</primary><secondary>cfg_ctpio_thresh</secondary></indexterm>
+<para><computeroutput>unsigned efvi_tcp_client_state::cfg_ctpio_thresh = 64</computeroutput></para></section>
+<anchor xml:id="_structefvi__tcp__client__state_1a92d2766da455d4074bd7cb162a0c2741"/><section>
+    <title>completed</title>
+<indexterm><primary>completed</primary><secondary>efvi_tcp_client_state</secondary></indexterm>
+<indexterm><primary>efvi_tcp_client_state</primary><secondary>completed</secondary></indexterm>
+<para><computeroutput>unsigned efvi_tcp_client_state::completed</computeroutput></para></section>
+<anchor xml:id="_structefvi__tcp__client__state_1afffe250202043e592c5422247af835c3"/><section>
+    <title>ctpio_ok</title>
+<indexterm><primary>ctpio_ok</primary><secondary>efvi_tcp_client_state</secondary></indexterm>
+<indexterm><primary>efvi_tcp_client_state</primary><secondary>ctpio_ok</secondary></indexterm>
+<para><computeroutput>unsigned efvi_tcp_client_state::ctpio_ok</computeroutput></para></section>
+<anchor xml:id="_structefvi__tcp__client__state_1a08b6fbbee74f9b00bbcf134327c0bdc4"/><section>
+    <title>ctpio_ok_total</title>
+<indexterm><primary>ctpio_ok_total</primary><secondary>efvi_tcp_client_state</secondary></indexterm>
+<indexterm><primary>efvi_tcp_client_state</primary><secondary>ctpio_ok_total</secondary></indexterm>
+<para><computeroutput>unsigned efvi_tcp_client_state::ctpio_ok_total</computeroutput></para></section>
+<anchor xml:id="_structefvi__tcp__client__state_1a2fd406b7bf4f8f4caaf6bf346887c524"/><section>
+    <title>first_tx_buf</title>
+<indexterm><primary>first_tx_buf</primary><secondary>efvi_tcp_client_state</secondary></indexterm>
+<indexterm><primary>efvi_tcp_client_state</primary><secondary>first_tx_buf</secondary></indexterm>
+<para><computeroutput>int efvi_tcp_client_state::first_tx_buf</computeroutput></para></section>
+<anchor xml:id="_structefvi__tcp__client__state_1aafebc8d31b9140ae089efaa38cded409"/><section>
+    <title>iov</title>
+<indexterm><primary>iov</primary><secondary>efvi_tcp_client_state</secondary></indexterm>
+<indexterm><primary>efvi_tcp_client_state</primary><secondary>iov</secondary></indexterm>
+<para><computeroutput>struct iovec efvi_tcp_client_state::iov</computeroutput></para></section>
+<anchor xml:id="_structefvi__tcp__client__state_1ab4129b3cd3172dba93b9aa8b185305c9"/><section>
+    <title>last_dma_req_id</title>
+<indexterm><primary>last_dma_req_id</primary><secondary>efvi_tcp_client_state</secondary></indexterm>
+<indexterm><primary>efvi_tcp_client_state</primary><secondary>last_dma_req_id</secondary></indexterm>
+<para><computeroutput>int efvi_tcp_client_state::last_dma_req_id</computeroutput></para></section>
+<anchor xml:id="_structefvi__tcp__client__state_1a17721e1a46e9bfdfd65b2bdfee4c3e7f"/><section>
+    <title>last_offset</title>
+<indexterm><primary>last_offset</primary><secondary>efvi_tcp_client_state</secondary></indexterm>
+<indexterm><primary>efvi_tcp_client_state</primary><secondary>last_offset</secondary></indexterm>
+<para><computeroutput>int efvi_tcp_client_state::last_offset</computeroutput></para></section>
+<anchor xml:id="_structefvi__tcp__client__state_1a1be02096d51b4ac5afff91200826b953"/><section>
+    <title>msg_buf</title>
+<indexterm><primary>msg_buf</primary><secondary>efvi_tcp_client_state</secondary></indexterm>
+<indexterm><primary>efvi_tcp_client_state</primary><secondary>msg_buf</secondary></indexterm>
+<para><computeroutput>void* efvi_tcp_client_state::msg_buf</computeroutput></para></section>
+<anchor xml:id="_structefvi__tcp__client__state_1a68c340559737399d40708525af4d565c"/><section>
+    <title>msg_len</title>
+<indexterm><primary>msg_len</primary><secondary>efvi_tcp_client_state</secondary></indexterm>
+<indexterm><primary>efvi_tcp_client_state</primary><secondary>msg_len</secondary></indexterm>
+<para><computeroutput>int efvi_tcp_client_state::msg_len</computeroutput></para></section>
+<anchor xml:id="_structefvi__tcp__client__state_1ad2afe5bfe5179dfc73a6ac574a9fdba2"/><section>
+    <title>n_ctpio_sends</title>
+<indexterm><primary>n_ctpio_sends</primary><secondary>efvi_tcp_client_state</secondary></indexterm>
+<indexterm><primary>efvi_tcp_client_state</primary><secondary>n_ctpio_sends</secondary></indexterm>
+<para><computeroutput>int efvi_tcp_client_state::n_ctpio_sends</computeroutput></para></section>
+<anchor xml:id="_structefvi__tcp__client__state_1ad4bb9a3a964231695526fc80ef3551f8"/><section>
+    <title>n_delegated_sends</title>
+<indexterm><primary>n_delegated_sends</primary><secondary>efvi_tcp_client_state</secondary></indexterm>
+<indexterm><primary>efvi_tcp_client_state</primary><secondary>n_delegated_sends</secondary></indexterm>
+<para><computeroutput>unsigned efvi_tcp_client_state::n_delegated_sends</computeroutput></para></section>
+<anchor xml:id="_structefvi__tcp__client__state_1a6a0ddb242a414a16f3081966b001977f"/><section>
+    <title>n_normal_sends</title>
+<indexterm><primary>n_normal_sends</primary><secondary>efvi_tcp_client_state</secondary></indexterm>
+<indexterm><primary>efvi_tcp_client_state</primary><secondary>n_normal_sends</secondary></indexterm>
+<para><computeroutput>unsigned efvi_tcp_client_state::n_normal_sends</computeroutput></para></section>
+<anchor xml:id="_structefvi__tcp__client__state_1a9c41f4e9613af3d6e3e0e1b1262e452e"/><section>
+    <title>n_warmup_sends</title>
+<indexterm><primary>n_warmup_sends</primary><secondary>efvi_tcp_client_state</secondary></indexterm>
+<indexterm><primary>efvi_tcp_client_state</primary><secondary>n_warmup_sends</secondary></indexterm>
+<para><computeroutput>uint64_t efvi_tcp_client_state::n_warmup_sends</computeroutput></para></section>
+<anchor xml:id="_structefvi__tcp__client__state_1aaa5234b3bf3e2a9d7f9e73153467b998"/><section>
+    <title>num_bufs</title>
+<indexterm><primary>num_bufs</primary><secondary>efvi_tcp_client_state</secondary></indexterm>
+<indexterm><primary>efvi_tcp_client_state</primary><secondary>num_bufs</secondary></indexterm>
+<para><computeroutput>unsigned efvi_tcp_client_state::num_bufs</computeroutput></para></section>
+<anchor xml:id="_structefvi__tcp__client__state_1a38aa7f01de3bda108a0cf71385d3ffed"/><section>
+    <title>ods</title>
+<indexterm><primary>ods</primary><secondary>efvi_tcp_client_state</secondary></indexterm>
+<indexterm><primary>efvi_tcp_client_state</primary><secondary>ods</secondary></indexterm>
+<para><computeroutput>struct onload_delegated_send efvi_tcp_client_state::ods</computeroutput></para></section>
+<anchor xml:id="_structefvi__tcp__client__state_1a2175fcc71c5c0a15cfa2cde73766c829"/><section>
+    <title>pio_in_use</title>
+<indexterm><primary>pio_in_use</primary><secondary>efvi_tcp_client_state</secondary></indexterm>
+<indexterm><primary>efvi_tcp_client_state</primary><secondary>pio_in_use</secondary></indexterm>
+<para><computeroutput>volatile bool efvi_tcp_client_state::pio_in_use</computeroutput></para></section>
+<anchor xml:id="_structefvi__tcp__client__state_1a6f205108615197207a9fc05f0dee7d6c"/><section>
+    <title>pio_pkt_len</title>
+<indexterm><primary>pio_pkt_len</primary><secondary>efvi_tcp_client_state</secondary></indexterm>
+<indexterm><primary>efvi_tcp_client_state</primary><secondary>pio_pkt_len</secondary></indexterm>
+<para><computeroutput>int efvi_tcp_client_state::pio_pkt_len</computeroutput></para></section>
+<anchor xml:id="_structefvi__tcp__client__state_1a9a55409444546d1ac22ab9bfc9eb1470"/><section>
+    <title>pkt_bufs</title>
+<indexterm><primary>pkt_bufs</primary><secondary>efvi_tcp_client_state</secondary></indexterm>
+<indexterm><primary>efvi_tcp_client_state</primary><secondary>pkt_bufs</secondary></indexterm>
+<para><computeroutput>struct <link linkend="_structpkt__buf">pkt_buf</link>* efvi_tcp_client_state::pkt_bufs[N_TX_BUFS]</computeroutput></para></section>
+<anchor xml:id="_structefvi__tcp__client__state_1a912109776f3af15f132e7b6845b4bce6"/><section>
+    <title>pktlen_offset</title>
+<indexterm><primary>pktlen_offset</primary><secondary>efvi_tcp_client_state</secondary></indexterm>
+<indexterm><primary>efvi_tcp_client_state</primary><secondary>pktlen_offset</secondary></indexterm>
+<para><computeroutput>int efvi_tcp_client_state::pktlen_offset</computeroutput></para></section>
+<anchor xml:id="_structefvi__tcp__client__state_1a8bd5bc3d111d296604740c4002f343da"/><section>
+    <title>recv_buf</title>
+<indexterm><primary>recv_buf</primary><secondary>efvi_tcp_client_state</secondary></indexterm>
+<indexterm><primary>efvi_tcp_client_state</primary><secondary>recv_buf</secondary></indexterm>
+<para><computeroutput>char efvi_tcp_client_state::recv_buf[MTU]</computeroutput></para></section>
+<anchor xml:id="_structefvi__tcp__client__state_1a07c78ab941983e00afc6d1be2c12d403"/><section>
+    <title>rx_prefix_len</title>
+<indexterm><primary>rx_prefix_len</primary><secondary>efvi_tcp_client_state</secondary></indexterm>
+<indexterm><primary>efvi_tcp_client_state</primary><secondary>rx_prefix_len</secondary></indexterm>
+<para><computeroutput>int efvi_tcp_client_state::rx_prefix_len</computeroutput></para></section>
+<anchor xml:id="_structefvi__tcp__client__state_1a6c3b1582661c8b7213773c8d4f4a666c"/><section>
+    <title>send_is_delegated</title>
+<indexterm><primary>send_is_delegated</primary><secondary>efvi_tcp_client_state</secondary></indexterm>
+<indexterm><primary>efvi_tcp_client_state</primary><secondary>send_is_delegated</secondary></indexterm>
+<para><computeroutput>volatile bool efvi_tcp_client_state::send_is_delegated</computeroutput></para></section>
+<anchor xml:id="_structefvi__tcp__client__state_1a68f9328359cebbd78148f9d7a36b46cd"/><section>
+    <title>tas_loaded</title>
+<indexterm><primary>tas_loaded</primary><secondary>efvi_tcp_client_state</secondary></indexterm>
+<indexterm><primary>efvi_tcp_client_state</primary><secondary>tas_loaded</secondary></indexterm>
+<para><computeroutput>volatile bool efvi_tcp_client_state::tas_loaded</computeroutput></para></section>
+<anchor xml:id="_structefvi__tcp__client__state_1ad4eb1bc161737aea6dbb0c70738fd0fc"/><section>
+    <title>tx_buf</title>
+<indexterm><primary>tx_buf</primary><secondary>efvi_tcp_client_state</secondary></indexterm>
+<indexterm><primary>efvi_tcp_client_state</primary><secondary>tx_buf</secondary></indexterm>
+<para><computeroutput>void* efvi_tcp_client_state::tx_buf</computeroutput></para></section>
+<anchor xml:id="_structefvi__tcp__client__state_1af3faade60e00d370b5510073eddb1e02"/><section>
+    <title>tx_dma_addr</title>
+<indexterm><primary>tx_dma_addr</primary><secondary>efvi_tcp_client_state</secondary></indexterm>
+<indexterm><primary>efvi_tcp_client_state</primary><secondary>tx_dma_addr</secondary></indexterm>
+<para><computeroutput>ef_addr efvi_tcp_client_state::tx_dma_addr</computeroutput></para></section>
+<anchor xml:id="_structefvi__tcp__client__state_1a074b3ba3d5b3ebcc6a805947bae7fc70"/><section>
+    <title>tx_frame_len</title>
+<indexterm><primary>tx_frame_len</primary><secondary>efvi_tcp_client_state</secondary></indexterm>
+<indexterm><primary>efvi_tcp_client_state</primary><secondary>tx_frame_len</secondary></indexterm>
+<para><computeroutput>int efvi_tcp_client_state::tx_frame_len</computeroutput></para></section>
+<anchor xml:id="_structefvi__tcp__client__state_1ad8e3db998ea951083b3f0f1fc023870b"/><section>
+    <title>tx_len</title>
+<indexterm><primary>tx_len</primary><secondary>efvi_tcp_client_state</secondary></indexterm>
+<indexterm><primary>efvi_tcp_client_state</primary><secondary>tx_len</secondary></indexterm>
+<para><computeroutput>int efvi_tcp_client_state::tx_len</computeroutput></para></section>
+<anchor xml:id="_structefvi__tcp__client__state_1a8f978a9b31d9e4a39756e0b59e0db50d"/><section>
+    <title>tx_offset</title>
+<indexterm><primary>tx_offset</primary><secondary>efvi_tcp_client_state</secondary></indexterm>
+<indexterm><primary>efvi_tcp_client_state</primary><secondary>tx_offset</secondary></indexterm>
+<para><computeroutput>unsigned efvi_tcp_client_state::tx_offset</computeroutput></para></section>
+<anchor xml:id="_structefvi__tcp__client__state_1ab10ec6e9a8f8fe795ea37039eb0bcd0c"/><section>
+    <title>use_ctpio</title>
+<indexterm><primary>use_ctpio</primary><secondary>efvi_tcp_client_state</secondary></indexterm>
+<indexterm><primary>efvi_tcp_client_state</primary><secondary>use_ctpio</secondary></indexterm>
+<para><computeroutput>volatile bool efvi_tcp_client_state::use_ctpio</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Net/efvi_tcp_structs.hpp</section>
+</section>

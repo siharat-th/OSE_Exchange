@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structpkt__buf" xml:lang="en-US">
+<title>pkt_buf Struct Reference</title>
+<indexterm><primary>pkt_buf</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_structpkt__buf_1a9ccae6ac500307a3faf9c7279c87390f"/>char dma_start[1] <emphasis role="strong">EF_VI_ALIGN</emphasis> (EF_VI_DMA_ALIGN)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>ef_addr <link linkend="_structpkt__buf_1aa89efe6fd73e98c9b3c3c3bd1acc6e08">dma_addr</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structpkt__buf_1acda3ace0130e903e256a56845c8e1794">id</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structpkt__buf_1aa89efe6fd73e98c9b3c3c3bd1acc6e08"/><section>
+    <title>dma_addr</title>
+<indexterm><primary>dma_addr</primary><secondary>pkt_buf</secondary></indexterm>
+<indexterm><primary>pkt_buf</primary><secondary>dma_addr</secondary></indexterm>
+<para><computeroutput>ef_addr pkt_buf::dma_addr</computeroutput></para></section>
+<anchor xml:id="_structpkt__buf_1acda3ace0130e903e256a56845c8e1794"/><section>
+    <title>id</title>
+<indexterm><primary>id</primary><secondary>pkt_buf</secondary></indexterm>
+<indexterm><primary>pkt_buf</primary><secondary>id</secondary></indexterm>
+<para><computeroutput>int pkt_buf::id</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Net/tcp_utils.hpp</section>
+</section>

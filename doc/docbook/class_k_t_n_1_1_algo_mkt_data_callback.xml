@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_algo_mkt_data_callback" xml:lang="en-US">
+<title>KTN::AlgoMktDataCallback Class Reference</title>
+<indexterm><primary>KTN::AlgoMktDataCallback</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_k_t_n_1_1_algo_mkt_data_callback">AlgoMktDataCallback</link> class is an abstract base class that defines the interface for receiving market data updates. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;AlgoMktDataCallback.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for KTN::AlgoMktDataCallback:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_k_t_n_1_1_algo_mkt_data_callback.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_algo_mkt_data_callback_1a758e9e927074286b79fdac74a87376fc">AlgoMktDataCallback</link> ()</para>
+
+<para>Default constructor for <link linkend="_class_k_t_n_1_1_algo_mkt_data_callback">AlgoMktDataCallback</link>. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_k_t_n_1_1_algo_mkt_data_callback_1a38a45c5e4e5b4e64e264cbf4d7b21cb8">~AlgoMktDataCallback</link> ()</para>
+
+<para>Virtual destructor for <link linkend="_class_k_t_n_1_1_algo_mkt_data_callback">AlgoMktDataCallback</link>. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_algo_mkt_data_callback_1ab05b9837ca4811ef7abca271aa693218">onStateChange</link> (int state)</para>
+
+<para>This method is called when the state of the algorithm changes. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_algo_mkt_data_callback_1a48d3990c92f735d6ef6db45c9dc67f39">onMktDataBidAsk</link> (const <link linkend="_structalgomd">algomd</link> &amp;md)=0</para>
+
+<para>This method is called when a bid/ask market data update is received. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_algo_mkt_data_callback_1af1d6f3ae967bd219b7b13ec4b6ec2a77">onMktDataTrade</link> (const <link linkend="_structalgomd">algomd</link> &amp;md)=0</para>
+
+<para>This method is called when a trade market data update is received. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_k_t_n_1_1_algo_mkt_data_callback">AlgoMktDataCallback</link> class is an abstract base class that defines the interface for receiving market data updates. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_algo_mkt_data_callback_1a758e9e927074286b79fdac74a87376fc"/><section>
+    <title>AlgoMktDataCallback()</title>
+<indexterm><primary>AlgoMktDataCallback</primary><secondary>KTN::AlgoMktDataCallback</secondary></indexterm>
+<indexterm><primary>KTN::AlgoMktDataCallback</primary><secondary>AlgoMktDataCallback</secondary></indexterm>
+<para><computeroutput>KTN::AlgoMktDataCallback::AlgoMktDataCallback ( )</computeroutput></para><para>
+
+<para>Default constructor for <link linkend="_class_k_t_n_1_1_algo_mkt_data_callback">AlgoMktDataCallback</link>. </para>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_algo_mkt_data_callback_1a38a45c5e4e5b4e64e264cbf4d7b21cb8"/><section>
+    <title>~AlgoMktDataCallback()</title>
+<indexterm><primary>~AlgoMktDataCallback</primary><secondary>KTN::AlgoMktDataCallback</secondary></indexterm>
+<indexterm><primary>KTN::AlgoMktDataCallback</primary><secondary>~AlgoMktDataCallback</secondary></indexterm>
+<para><computeroutput>KTN::AlgoMktDataCallback::~AlgoMktDataCallback ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Virtual destructor for <link linkend="_class_k_t_n_1_1_algo_mkt_data_callback">AlgoMktDataCallback</link>. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_algo_mkt_data_callback_1a48d3990c92f735d6ef6db45c9dc67f39"/><section>
+    <title>onMktDataBidAsk()</title>
+<indexterm><primary>onMktDataBidAsk</primary><secondary>KTN::AlgoMktDataCallback</secondary></indexterm>
+<indexterm><primary>KTN::AlgoMktDataCallback</primary><secondary>onMktDataBidAsk</secondary></indexterm>
+<para><computeroutput>virtual void KTN::AlgoMktDataCallback::onMktDataBidAsk (const <link linkend="_structalgomd">algomd</link> &amp; md)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>This method is called when a bid/ask market data update is received. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>md</entry><entry>
+<para>The market data update. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implemented in <link linkend="_class_k_t_n_1_1_algo_base_v3_1a76a59c9484fb7f3638fccd93ad935da1">KTN::AlgoBaseV3</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_algo_mkt_data_callback_1af1d6f3ae967bd219b7b13ec4b6ec2a77"/><section>
+    <title>onMktDataTrade()</title>
+<indexterm><primary>onMktDataTrade</primary><secondary>KTN::AlgoMktDataCallback</secondary></indexterm>
+<indexterm><primary>KTN::AlgoMktDataCallback</primary><secondary>onMktDataTrade</secondary></indexterm>
+<para><computeroutput>virtual void KTN::AlgoMktDataCallback::onMktDataTrade (const <link linkend="_structalgomd">algomd</link> &amp; md)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>This method is called when a trade market data update is received. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>md</entry><entry>
+<para>The market data update. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implemented in <link linkend="_class_k_t_n_1_1_algo_base_v3_1ac29c33857d9a4cbc28c52c9bef3b2707">KTN::AlgoBaseV3</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_algo_mkt_data_callback_1ab05b9837ca4811ef7abca271aa693218"/><section>
+    <title>onStateChange()</title>
+<indexterm><primary>onStateChange</primary><secondary>KTN::AlgoMktDataCallback</secondary></indexterm>
+<indexterm><primary>KTN::AlgoMktDataCallback</primary><secondary>onStateChange</secondary></indexterm>
+<para><computeroutput>virtual void KTN::AlgoMktDataCallback::onStateChange (int state)<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>This method is called when the state of the algorithm changes. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>state</entry><entry>
+<para>The new state of the algorithm. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+AlgoSupport/AlgoMktDataCallback.hppAlgoSupport/AlgoMktDataCallback.cpp</section>
+</section>

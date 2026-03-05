@@ -1,0 +1,277 @@
+\doxysection{KTN\+::NET\+::Byte\+Writer Class Reference}
+\hypertarget{class_k_t_n_1_1_n_e_t_1_1_byte_writer}{}\label{class_k_t_n_1_1_n_e_t_1_1_byte_writer}\index{KTN::NET::ByteWriter@{KTN::NET::ByteWriter}}
+
+
+Class for writing bytes to a buffer.  
+
+
+
+
+{\ttfamily \#include $<$byte\+\_\+writer.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_n_e_t_1_1_byte_writer_a8336bc1a4eadce9edacdb986dcbee5e5}{Byte\+Writer}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_k_t_n_1_1_n_e_t_1_1_byte_writer_ad413b954db8922bd0c81072d286014c0}{Byte\+Writer}} (void \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_k_t_n_1_1_n_e_t_1_1_byte_writer_a1e7f6520aa7fd235028b936b6d127c8d}{data}}, uint32\+\_\+t total\+\_\+data\+\_\+length, uint32\+\_\+t \texorpdfstring{$\ast$}{*}output\+\_\+length)
+\begin{DoxyCompactList}\small\item\em Constructor that sets the initial buffer and length. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_k_t_n_1_1_n_e_t_1_1_byte_writer_a7749a5c081cc551f7876188aaff2efbb}{\texorpdfstring{$\sim$}{\string~}\+Byte\+Writer}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_n_e_t_1_1_byte_writer_a87387d28672f953a1b10326ea56ac666}{Set}} (void \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_k_t_n_1_1_n_e_t_1_1_byte_writer_a1e7f6520aa7fd235028b936b6d127c8d}{data}}, uint32\+\_\+t total\+\_\+data\+\_\+length, uint32\+\_\+t \texorpdfstring{$\ast$}{*}output\+\_\+length)
+\begin{DoxyCompactList}\small\item\em Sets the buffer and length for writing. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\bool \mbox{\hyperlink{class_k_t_n_1_1_n_e_t_1_1_byte_writer_a49bb64247edf64f7e0af351b20307412}{Write}} (const T \&val)
+\begin{DoxyCompactList}\small\item\em Writes a value to the buffer. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_n_e_t_1_1_byte_writer_ad69a2971f1fe74be50706ed0379d55d9}{Write}} (const void \texorpdfstring{$\ast$}{*}val, uint32\+\_\+t val\+\_\+length)
+\begin{DoxyCompactList}\small\item\em Writes a block of data to the buffer. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_n_e_t_1_1_byte_writer_affa46d2bd4c8406f1a1f8d209fe0a01c}{Seek}} (int32\+\_\+t bytes)
+\begin{DoxyCompactList}\small\item\em Moves the write position in the buffer by the specified number of bytes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_n_e_t_1_1_byte_writer_a06cab111fcff6d7138a1a956c3de9956}{Reset}} ()
+\begin{DoxyCompactList}\small\item\em Resets the write position to the beginning of the buffer. \end{DoxyCompactList}\item 
+uint8\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_k_t_n_1_1_n_e_t_1_1_byte_writer_a1e7f6520aa7fd235028b936b6d127c8d}{data}} ()
+\begin{DoxyCompactList}\small\item\em Gets a pointer to the buffer. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{class_k_t_n_1_1_n_e_t_1_1_byte_writer_ac47cad9b0fd468f12184dfd542dbc362}{bytes\+\_\+written}} ()
+\begin{DoxyCompactList}\small\item\em Gets the number of bytes that were written to the buffer. \end{DoxyCompactList}\item 
+uint8\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_k_t_n_1_1_n_e_t_1_1_byte_writer_a5ebc39e09618ef9b6a1a8d667104596c}{cur}} ()
+\begin{DoxyCompactList}\small\item\em Gets a pointer to the current write position in the buffer. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{class_k_t_n_1_1_n_e_t_1_1_byte_writer_a1518c49b9213eea7c2afcb963a3bce40}{bytes\+\_\+available}} ()
+\begin{DoxyCompactList}\small\item\em Gets the number of bytes left to write in the buffer. \end{DoxyCompactList}\item 
+uint32\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_k_t_n_1_1_n_e_t_1_1_byte_writer_a136d2cd02aaa761dee24f1477dedc04b}{cur\+\_\+length}} ()
+\begin{DoxyCompactList}\small\item\em Gets a pointer to the variable that stores the length of the written data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for writing bytes to a buffer. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_k_t_n_1_1_n_e_t_1_1_byte_writer_a8336bc1a4eadce9edacdb986dcbee5e5}\index{KTN::NET::ByteWriter@{KTN::NET::ByteWriter}!ByteWriter@{ByteWriter}}
+\index{ByteWriter@{ByteWriter}!KTN::NET::ByteWriter@{KTN::NET::ByteWriter}}
+\doxysubsubsection{\texorpdfstring{ByteWriter()}{ByteWriter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_n_e_t_1_1_byte_writer_a8336bc1a4eadce9edacdb986dcbee5e5} 
+KTN\+::\+NET\+::\+Byte\+Writer\+::\+Byte\+Writer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default constructor. 
+
+\Hypertarget{class_k_t_n_1_1_n_e_t_1_1_byte_writer_ad413b954db8922bd0c81072d286014c0}\index{KTN::NET::ByteWriter@{KTN::NET::ByteWriter}!ByteWriter@{ByteWriter}}
+\index{ByteWriter@{ByteWriter}!KTN::NET::ByteWriter@{KTN::NET::ByteWriter}}
+\doxysubsubsection{\texorpdfstring{ByteWriter()}{ByteWriter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_n_e_t_1_1_byte_writer_ad413b954db8922bd0c81072d286014c0} 
+KTN\+::\+NET\+::\+Byte\+Writer\+::\+Byte\+Writer (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{uint32\+\_\+t}]{total\+\_\+data\+\_\+length}{, }\item[{uint32\+\_\+t \texorpdfstring{$\ast$}{*}}]{output\+\_\+length}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor that sets the initial buffer and length. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Pointer to the buffer. \\
+\hline
+{\em total\+\_\+data\+\_\+length} & Total length of the buffer. \\
+\hline
+{\em output\+\_\+length} & Pointer to the variable that will store the length of the written data. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_n_e_t_1_1_byte_writer_a7749a5c081cc551f7876188aaff2efbb}\index{KTN::NET::ByteWriter@{KTN::NET::ByteWriter}!````~ByteWriter@{\texorpdfstring{$\sim$}{\string~}ByteWriter}}
+\index{````~ByteWriter@{\texorpdfstring{$\sim$}{\string~}ByteWriter}!KTN::NET::ByteWriter@{KTN::NET::ByteWriter}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ByteWriter()}{\string~ByteWriter()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_n_e_t_1_1_byte_writer_a7749a5c081cc551f7876188aaff2efbb} 
+virtual KTN\+::\+NET\+::\+Byte\+Writer\+::\texorpdfstring{$\sim$}{\string~}\+Byte\+Writer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_n_e_t_1_1_byte_writer_a1518c49b9213eea7c2afcb963a3bce40}\index{KTN::NET::ByteWriter@{KTN::NET::ByteWriter}!bytes\_available@{bytes\_available}}
+\index{bytes\_available@{bytes\_available}!KTN::NET::ByteWriter@{KTN::NET::ByteWriter}}
+\doxysubsubsection{\texorpdfstring{bytes\_available()}{bytes\_available()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_n_e_t_1_1_byte_writer_a1518c49b9213eea7c2afcb963a3bce40} 
+uint32\+\_\+t KTN\+::\+NET\+::\+Byte\+Writer\+::bytes\+\_\+available (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the number of bytes left to write in the buffer. 
+
+\begin{DoxyReturn}{Returns}
+The number of bytes available for writing. 
+\end{DoxyReturn}
+\Hypertarget{class_k_t_n_1_1_n_e_t_1_1_byte_writer_ac47cad9b0fd468f12184dfd542dbc362}\index{KTN::NET::ByteWriter@{KTN::NET::ByteWriter}!bytes\_written@{bytes\_written}}
+\index{bytes\_written@{bytes\_written}!KTN::NET::ByteWriter@{KTN::NET::ByteWriter}}
+\doxysubsubsection{\texorpdfstring{bytes\_written()}{bytes\_written()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_n_e_t_1_1_byte_writer_ac47cad9b0fd468f12184dfd542dbc362} 
+uint64\+\_\+t KTN\+::\+NET\+::\+Byte\+Writer\+::bytes\+\_\+written (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the number of bytes that were written to the buffer. 
+
+\begin{DoxyReturn}{Returns}
+The number of bytes written. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00129}{Reset()}}, and \mbox{\hyperlink{l00112}{Seek()}}.
+
+\Hypertarget{class_k_t_n_1_1_n_e_t_1_1_byte_writer_a5ebc39e09618ef9b6a1a8d667104596c}\index{KTN::NET::ByteWriter@{KTN::NET::ByteWriter}!cur@{cur}}
+\index{cur@{cur}!KTN::NET::ByteWriter@{KTN::NET::ByteWriter}}
+\doxysubsubsection{\texorpdfstring{cur()}{cur()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_n_e_t_1_1_byte_writer_a5ebc39e09618ef9b6a1a8d667104596c} 
+uint8\+\_\+t \texorpdfstring{$\ast$}{*} KTN\+::\+NET\+::\+Byte\+Writer\+::cur (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets a pointer to the current write position in the buffer. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the current write position. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00106}{KTN\+::\+CME\+::\+IL3\+::\+Session\+Message\+Factory\+::\+Establish\+Encode()}}, \mbox{\hyperlink{l00051}{KTN\+::\+CME\+::\+IL3\+::\+Session\+Message\+Factory\+::\+Negotiate\+Encode()}}, \mbox{\hyperlink{l00257}{KTN\+::\+CME\+::\+IL3\+::\+Session\+Message\+Factory\+::\+Retrans\+Request\+Encode()}}, \mbox{\hyperlink{l00174}{KTN\+::\+CME\+::\+IL3\+::\+Session\+Message\+Factory\+::\+Sequence\+Encode()}}, \mbox{\hyperlink{l00026}{KTN\+::\+CME\+::\+IL3\+::\+Session\+Message\+Factory\+::\+Sofh\+Encode()}}, and \mbox{\hyperlink{l00219}{KTN\+::\+CME\+::\+IL3\+::\+Session\+Message\+Factory\+::\+Terminate\+Encode()}}.
+
+\Hypertarget{class_k_t_n_1_1_n_e_t_1_1_byte_writer_a136d2cd02aaa761dee24f1477dedc04b}\index{KTN::NET::ByteWriter@{KTN::NET::ByteWriter}!cur\_length@{cur\_length}}
+\index{cur\_length@{cur\_length}!KTN::NET::ByteWriter@{KTN::NET::ByteWriter}}
+\doxysubsubsection{\texorpdfstring{cur\_length()}{cur\_length()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_n_e_t_1_1_byte_writer_a136d2cd02aaa761dee24f1477dedc04b} 
+uint32\+\_\+t \texorpdfstring{$\ast$}{*} KTN\+::\+NET\+::\+Byte\+Writer\+::cur\+\_\+length (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets a pointer to the variable that stores the length of the written data. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the variable that stores the length of the written data. 
+\end{DoxyReturn}
+\Hypertarget{class_k_t_n_1_1_n_e_t_1_1_byte_writer_a1e7f6520aa7fd235028b936b6d127c8d}\index{KTN::NET::ByteWriter@{KTN::NET::ByteWriter}!data@{data}}
+\index{data@{data}!KTN::NET::ByteWriter@{KTN::NET::ByteWriter}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_n_e_t_1_1_byte_writer_a1e7f6520aa7fd235028b936b6d127c8d} 
+uint8\+\_\+t \texorpdfstring{$\ast$}{*} KTN\+::\+NET\+::\+Byte\+Writer\+::data (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets a pointer to the buffer. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the buffer. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00061}{Set()}}.
+
+\Hypertarget{class_k_t_n_1_1_n_e_t_1_1_byte_writer_a06cab111fcff6d7138a1a956c3de9956}\index{KTN::NET::ByteWriter@{KTN::NET::ByteWriter}!Reset@{Reset}}
+\index{Reset@{Reset}!KTN::NET::ByteWriter@{KTN::NET::ByteWriter}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_n_e_t_1_1_byte_writer_a06cab111fcff6d7138a1a956c3de9956} 
+void KTN\+::\+NET\+::\+Byte\+Writer\+::\+Reset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Resets the write position to the beginning of the buffer. 
+
+
+
+References \mbox{\hyperlink{l00143}{bytes\+\_\+written()}}, and \mbox{\hyperlink{l00112}{Seek()}}.
+
+\Hypertarget{class_k_t_n_1_1_n_e_t_1_1_byte_writer_affa46d2bd4c8406f1a1f8d209fe0a01c}\index{KTN::NET::ByteWriter@{KTN::NET::ByteWriter}!Seek@{Seek}}
+\index{Seek@{Seek}!KTN::NET::ByteWriter@{KTN::NET::ByteWriter}}
+\doxysubsubsection{\texorpdfstring{Seek()}{Seek()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_n_e_t_1_1_byte_writer_affa46d2bd4c8406f1a1f8d209fe0a01c} 
+bool KTN\+::\+NET\+::\+Byte\+Writer\+::\+Seek (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{bytes}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Moves the write position in the buffer by the specified number of bytes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bytes} & The number of bytes to move the write position. Positive value moves forward, negative value moves backward. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the write position was successfully moved, false otherwise. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{l00143}{bytes\+\_\+written()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00129}{Reset()}}.
+
+\Hypertarget{class_k_t_n_1_1_n_e_t_1_1_byte_writer_a87387d28672f953a1b10326ea56ac666}\index{KTN::NET::ByteWriter@{KTN::NET::ByteWriter}!Set@{Set}}
+\index{Set@{Set}!KTN::NET::ByteWriter@{KTN::NET::ByteWriter}}
+\doxysubsubsection{\texorpdfstring{Set()}{Set()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_n_e_t_1_1_byte_writer_a87387d28672f953a1b10326ea56ac666} 
+void KTN\+::\+NET\+::\+Byte\+Writer\+::\+Set (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{uint32\+\_\+t}]{total\+\_\+data\+\_\+length}{, }\item[{uint32\+\_\+t \texorpdfstring{$\ast$}{*}}]{output\+\_\+length}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the buffer and length for writing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Pointer to the buffer. \\
+\hline
+{\em total\+\_\+data\+\_\+length} & Total length of the buffer. \\
+\hline
+{\em output\+\_\+length} & Pointer to the variable that will store the length of the written data. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00137}{data()}}.
+
+\Hypertarget{class_k_t_n_1_1_n_e_t_1_1_byte_writer_a49bb64247edf64f7e0af351b20307412}\index{KTN::NET::ByteWriter@{KTN::NET::ByteWriter}!Write@{Write}}
+\index{Write@{Write}!KTN::NET::ByteWriter@{KTN::NET::ByteWriter}}
+\doxysubsubsection{\texorpdfstring{Write()}{Write()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_n_e_t_1_1_byte_writer_a49bb64247edf64f7e0af351b20307412} 
+template$<$typename T $>$ \\
+bool KTN\+::\+NET\+::\+Byte\+Writer\+::\+Write (\begin{DoxyParamCaption}\item[{const T \&}]{val}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Writes a value to the buffer. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of the value to write. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em val} & The value to write. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the value was successfully written, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_k_t_n_1_1_n_e_t_1_1_byte_writer_ad69a2971f1fe74be50706ed0379d55d9}\index{KTN::NET::ByteWriter@{KTN::NET::ByteWriter}!Write@{Write}}
+\index{Write@{Write}!KTN::NET::ByteWriter@{KTN::NET::ByteWriter}}
+\doxysubsubsection{\texorpdfstring{Write()}{Write()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_n_e_t_1_1_byte_writer_ad69a2971f1fe74be50706ed0379d55d9} 
+bool KTN\+::\+NET\+::\+Byte\+Writer\+::\+Write (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{val}{, }\item[{uint32\+\_\+t}]{val\+\_\+length}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Writes a block of data to the buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & Pointer to the data to write. \\
+\hline
+{\em val\+\_\+length} & Length of the data to write. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the data was successfully written, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+exchsupport/cme/net/byte\+\_\+writer.\+hpp\end{DoxyCompactItemize}

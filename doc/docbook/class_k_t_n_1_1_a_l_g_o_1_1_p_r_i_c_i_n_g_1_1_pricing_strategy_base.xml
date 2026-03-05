@@ -1,0 +1,352 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base" xml:lang="en-US">
+<title>KTN::ALGO::PRICING::PricingStrategyBase Class Reference</title>
+<indexterm><primary>KTN::ALGO::PRICING::PricingStrategyBase</primary></indexterm>
+<para>
+
+<para>The base class for pricing strategies. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;PricingStrategyBase.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for KTN::ALGO::PRICING::PricingStrategyBase:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1a75beb5ffe6c1c339932e92ff40a433b8">PricingStrategyBase</link> ()</para>
+
+<para>Default constructor. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1af8b81d0f694cc0f9aff4e1a75e26da8c">~PricingStrategyBase</link> ()</para>
+
+<para>Destructor. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1a9a75566b268951957f450d737c9bc4b1">Load</link> (<link linkend="_structinstrument">instrument</link> *legs, int len, bool certnr)</para>
+
+<para>Load the pricing strategy with the given legs. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1ae02381733d6a7a895dfd726334504767">LogMe</link> (std::string szMsg, int iColor=LOG_WHITE)</para>
+
+<para><link linkend="_class_log">Log</link> a message. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1a56267f60212477d39e50572f71da7f97">roundToTick</link> (int value, int MINTICK, int side)</para>
+
+<para>Round a value to the nearest tick. </para>
+</listitem>
+            <listitem><para>float <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1a4201e238efe5497f21322efaea3f98e8">priceRoundConvert</link> (float px, int tickprecision, float mintick, bool roundUp=false)</para>
+
+<para>Round and convert a price value. </para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1a1a534d4a72848f8619b65ffab80749bb">getCertSecId</link> (string symbol)</para>
+
+<para>Get the certificate security ID for the given symbol. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_structinstrument">instrument</link> <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1a48d69c6918de697bc3959db39a3b81f6">_legs</link> [24]</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1a694acfb9420d71f08fefa7d3cc7ab48f">_numLegs</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1aed71f8c822de0aa94ffc77d5135d2ac7">_priceround</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1a745b7cf9b22f4b18bad8ad9e94a32a95">_CERTNR</link></para>
+</listitem>
+            <listitem><para>std::unordered_map&lt; string, long &gt; <link linkend="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1ac65f10c4cb81ff771a0164da9fa7a974">_certIdMap</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The base class for pricing strategies. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1a75beb5ffe6c1c339932e92ff40a433b8"/><section>
+    <title>PricingStrategyBase()</title>
+<indexterm><primary>PricingStrategyBase</primary><secondary>KTN::ALGO::PRICING::PricingStrategyBase</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::PRICING::PricingStrategyBase</primary><secondary>PricingStrategyBase</secondary></indexterm>
+<para><computeroutput>PricingStrategyBase::PricingStrategyBase ( )</computeroutput></para><para>
+
+<para>Default constructor. </para>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1af8b81d0f694cc0f9aff4e1a75e26da8c"/><section>
+    <title>~PricingStrategyBase()</title>
+<indexterm><primary>~PricingStrategyBase</primary><secondary>KTN::ALGO::PRICING::PricingStrategyBase</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::PRICING::PricingStrategyBase</primary><secondary>~PricingStrategyBase</secondary></indexterm>
+<para><computeroutput>PricingStrategyBase::~PricingStrategyBase ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Destructor. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1a1a534d4a72848f8619b65ffab80749bb"/><section>
+    <title>getCertSecId()</title>
+<indexterm><primary>getCertSecId</primary><secondary>KTN::ALGO::PRICING::PricingStrategyBase</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::PRICING::PricingStrategyBase</primary><secondary>getCertSecId</secondary></indexterm>
+<para><computeroutput>int32_t KTN::ALGO::PRICING::PricingStrategyBase::getCertSecId (string symbol)<computeroutput>[inline]</computeroutput>, <computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Get the certificate security ID for the given symbol. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>symbol</entry><entry>
+<para>The symbol for which to get the certificate security ID. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The certificate security ID. </para>
+</formalpara>
+</para>
+<para>
+References <link linkend="_l00039">IL3CertHelpers::CertSecId()</link>.</para>
+<para>
+Referenced by <link linkend="_l00024">Load()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1a9a75566b268951957f450d737c9bc4b1"/><section>
+    <title>Load()</title>
+<indexterm><primary>Load</primary><secondary>KTN::ALGO::PRICING::PricingStrategyBase</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::PRICING::PricingStrategyBase</primary><secondary>Load</secondary></indexterm>
+<para><computeroutput>void PricingStrategyBase::Load (<link linkend="_structinstrument">instrument</link> * legs, int len, bool certnr)</computeroutput></para><para>
+
+<para>Load the pricing strategy with the given legs. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>legs</entry><entry>
+<para>An array of instrument objects representing the legs. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>len</entry><entry>
+<para>The length of the legs array. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>certnr</entry><entry>
+<para>A flag indicating whether to use certificate number. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+References <link linkend="_l00146">getCertSecId()</link>, and <link linkend="_l00077">instrument::secid</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1ae02381733d6a7a895dfd726334504767"/><section>
+    <title>LogMe()</title>
+<indexterm><primary>LogMe</primary><secondary>KTN::ALGO::PRICING::PricingStrategyBase</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::PRICING::PricingStrategyBase</primary><secondary>LogMe</secondary></indexterm>
+<para><computeroutput>void PricingStrategyBase::LogMe (std::string szMsg, int iColor = <computeroutput>LOG_WHITE</computeroutput>
+)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para><link linkend="_class_log">Log</link> a message. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>szMsg</entry><entry>
+<para>The message to log. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>iColor</entry><entry>
+<para>The color of the log message (optional). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Referenced by <link linkend="_l00106">KTN::ALGO::PRICING::ImpliedPricer::CalculateSide()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1a4201e238efe5497f21322efaea3f98e8"/><section>
+    <title>priceRoundConvert()</title>
+<indexterm><primary>priceRoundConvert</primary><secondary>KTN::ALGO::PRICING::PricingStrategyBase</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::PRICING::PricingStrategyBase</primary><secondary>priceRoundConvert</secondary></indexterm>
+<para><computeroutput>float KTN::ALGO::PRICING::PricingStrategyBase::priceRoundConvert (float px, int tickprecision, float mintick, bool roundUp = <computeroutput>false</computeroutput>
+)<computeroutput>[inline]</computeroutput>, <computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Round and convert a price value. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>px</entry><entry>
+<para>The price value to round and convert. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>tickprecision</entry><entry>
+<para>The precision of the tick size. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>mintick</entry><entry>
+<para>The minimum tick size. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>roundUp</entry><entry>
+<para>Flag indicating whether to round up or down. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The rounded and converted price value. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1a56267f60212477d39e50572f71da7f97"/><section>
+    <title>roundToTick()</title>
+<indexterm><primary>roundToTick</primary><secondary>KTN::ALGO::PRICING::PricingStrategyBase</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::PRICING::PricingStrategyBase</primary><secondary>roundToTick</secondary></indexterm>
+<para><computeroutput>int KTN::ALGO::PRICING::PricingStrategyBase::roundToTick (int value, int MINTICK, int side)<computeroutput>[inline]</computeroutput>, <computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Round a value to the nearest tick. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>value</entry><entry>
+<para>The value to round. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>MINTICK</entry><entry>
+<para>The minimum tick size. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>side</entry><entry>
+<para>The rounding side (-1 for rounding up, 1 for rounding down). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The rounded value. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00212">KTN::ALGO::PRICING::SpreadPricer::CalculateSide3()</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1ac65f10c4cb81ff771a0164da9fa7a974"/><section>
+    <title>_certIdMap</title>
+<indexterm><primary>_certIdMap</primary><secondary>KTN::ALGO::PRICING::PricingStrategyBase</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::PRICING::PricingStrategyBase</primary><secondary>_certIdMap</secondary></indexterm>
+<para><computeroutput>std::unordered_map&lt;string, long&gt; KTN::ALGO::PRICING::PricingStrategyBase::_certIdMap<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1a745b7cf9b22f4b18bad8ad9e94a32a95"/><section>
+    <title>_CERTNR</title>
+<indexterm><primary>_CERTNR</primary><secondary>KTN::ALGO::PRICING::PricingStrategyBase</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::PRICING::PricingStrategyBase</primary><secondary>_CERTNR</secondary></indexterm>
+<para><computeroutput>bool KTN::ALGO::PRICING::PricingStrategyBase::_CERTNR<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1a48d69c6918de697bc3959db39a3b81f6"/><section>
+    <title>_legs</title>
+<indexterm><primary>_legs</primary><secondary>KTN::ALGO::PRICING::PricingStrategyBase</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::PRICING::PricingStrategyBase</primary><secondary>_legs</secondary></indexterm>
+<para><computeroutput><link linkend="_structinstrument">instrument</link> KTN::ALGO::PRICING::PricingStrategyBase::_legs[24]<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1a694acfb9420d71f08fefa7d3cc7ab48f"/><section>
+    <title>_numLegs</title>
+<indexterm><primary>_numLegs</primary><secondary>KTN::ALGO::PRICING::PricingStrategyBase</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::PRICING::PricingStrategyBase</primary><secondary>_numLegs</secondary></indexterm>
+<para><computeroutput>int KTN::ALGO::PRICING::PricingStrategyBase::_numLegs<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_k_t_n_1_1_a_l_g_o_1_1_p_r_i_c_i_n_g_1_1_pricing_strategy_base_1aed71f8c822de0aa94ffc77d5135d2ac7"/><section>
+    <title>_priceround</title>
+<indexterm><primary>_priceround</primary><secondary>KTN::ALGO::PRICING::PricingStrategyBase</secondary></indexterm>
+<indexterm><primary>KTN::ALGO::PRICING::PricingStrategyBase</primary><secondary>_priceround</secondary></indexterm>
+<para><computeroutput>bool KTN::ALGO::PRICING::PricingStrategyBase::_priceround<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+AlgoEngines/PricingStrategyBase.hppAlgoEngines/PricingStrategyBase.cpp</section>
+</section>

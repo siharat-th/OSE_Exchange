@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_order_utils" xml:lang="en-US">
+<title>OrderUtils Class Reference</title>
+<indexterm><primary>OrderUtils</primary></indexterm>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static string <link linkend="_class_order_utils_1a1c4c390200963862683e4d28c0b0bf23">ConvertCmeId</link> (uint64_t exchordid)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_order_utils_1ab2f168a7a95851764d7a5af84c59ac7b">fastCopy</link> (char *dest, const char *src, size_t length)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_order_utils_1ab1a42b0e47f200629564897a32415f37">Copy</link> (char *dest, const char *src)</para>
+</listitem>
+            <listitem><para>static string <link linkend="_class_order_utils_1a89804a5086d8cc48d4b33aeef9efc92c">toString</link> (const char *src)</para>
+</listitem>
+            <listitem><para>static std::string <link linkend="_class_order_utils_1a35832d700cc586651b7ef461fedf67ef">Print</link> (const <link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> &amp;ord)</para>
+</listitem>
+            <listitem><para>static std::string <link linkend="_class_order_utils_1a2e6ff12f9d5af2b55c511c100310a978">Print</link> (const <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp;ord)</para>
+</listitem>
+            <listitem><para>static std::string <link linkend="_class_order_utils_1a98fd1da39b680965b5c8181083562549">QuickPrint</link> (const <link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> &amp;ord)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_order_utils_1a8797a43399e6c486affb095c8a50c1b3">FillFields</link> (<link linkend="_struct_k_t_n_1_1_order">Order</link> &amp;ord, <link linkend="_struct_user_info">UserInfo</link> u, std::string algoid=&quot;&quot;)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_order_utils_1a45d84c4ae8be994177f0d2ace3081ed9">SetV2Fields</link> (<link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> &amp;ord, KOrderAction::Enum action, KOrderStatus::Enum status, bool inflight, bool ishedge=false, int callbackid=0)</para>
+</listitem>
+            <listitem><para>static <link linkend="_struct_user_info">UserInfo</link> <link linkend="_class_order_utils_1a335ddc02b69a3118d4ce489e2f692740">FillUserInfo</link> (<link linkend="_struct_k_t_n_1_1_order">Order</link> ord)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_order_utils_1a84885f36d9557910be874363cb369ade">Transpose</link> (<link linkend="_struct_k_t_n_1_1_order">Order</link> &amp;dest, const <link linkend="_struct_k_t_n_1_1_order_pod">OrderPod</link> &amp;src)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_order_utils_1ad1f6859016b6ff38439501f056eaff12">Update</link> (<link linkend="_struct_k_t_n_1_1_order_pod">OrderPod</link> &amp;dest, const <link linkend="_struct_k_t_n_1_1_order_pod">OrderPod</link> &amp;src)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_order_utils_1a677223e220a1c6883f228576ada3cd7e">Transpose</link> (<link linkend="_struct_k_t_n_1_1_order_pod">OrderPod</link> &amp;pod, const <link linkend="_struct_k_t_n_1_1_order">Order</link> &amp;ord, string clordid, bool certnr)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_order_utils_1a1c4c390200963862683e4d28c0b0bf23"/><section>
+    <title>ConvertCmeId()</title>
+<indexterm><primary>ConvertCmeId</primary><secondary>OrderUtils</secondary></indexterm>
+<indexterm><primary>OrderUtils</primary><secondary>ConvertCmeId</secondary></indexterm>
+<para><computeroutput>static string OrderUtils::ConvertCmeId (uint64_t exchordid)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_order_utils_1ab1a42b0e47f200629564897a32415f37"/><section>
+    <title>Copy()</title>
+<indexterm><primary>Copy</primary><secondary>OrderUtils</secondary></indexterm>
+<indexterm><primary>OrderUtils</primary><secondary>Copy</secondary></indexterm>
+<para><computeroutput>static void OrderUtils::Copy (char * dest, const char * src)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_order_utils_1ab2f168a7a95851764d7a5af84c59ac7b"/><section>
+    <title>fastCopy()</title>
+<indexterm><primary>fastCopy</primary><secondary>OrderUtils</secondary></indexterm>
+<indexterm><primary>OrderUtils</primary><secondary>fastCopy</secondary></indexterm>
+<para><computeroutput>static void OrderUtils::fastCopy (char * dest, const char * src, size_t length)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_order_utils_1a8797a43399e6c486affb095c8a50c1b3"/><section>
+    <title>FillFields()</title>
+<indexterm><primary>FillFields</primary><secondary>OrderUtils</secondary></indexterm>
+<indexterm><primary>OrderUtils</primary><secondary>FillFields</secondary></indexterm>
+<para><computeroutput>static void OrderUtils::FillFields (<link linkend="_struct_k_t_n_1_1_order">Order</link> &amp; ord, <link linkend="_struct_user_info">UserInfo</link> u, std::string algoid = <computeroutput>&quot;&quot;</computeroutput>
+)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_order_utils_1a335ddc02b69a3118d4ce489e2f692740"/><section>
+    <title>FillUserInfo()</title>
+<indexterm><primary>FillUserInfo</primary><secondary>OrderUtils</secondary></indexterm>
+<indexterm><primary>OrderUtils</primary><secondary>FillUserInfo</secondary></indexterm>
+<para><computeroutput>static <link linkend="_struct_user_info">UserInfo</link> OrderUtils::FillUserInfo (<link linkend="_struct_k_t_n_1_1_order">Order</link> ord)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_order_utils_1a35832d700cc586651b7ef461fedf67ef"/><section>
+    <title>Print()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>Print</primary><secondary>OrderUtils</secondary></indexterm>
+<indexterm><primary>OrderUtils</primary><secondary>Print</secondary></indexterm>
+<para><computeroutput>static std::string OrderUtils::Print (const <link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> &amp; ord)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_order_utils_1a2e6ff12f9d5af2b55c511c100310a978"/><section>
+    <title>Print()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>Print</primary><secondary>OrderUtils</secondary></indexterm>
+<indexterm><primary>OrderUtils</primary><secondary>Print</secondary></indexterm>
+<para><computeroutput>static std::string OrderUtils::Print (const <link linkend="_struct_k_t_n_1_1_order_pod">KTN::OrderPod</link> &amp; ord)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_order_utils_1a98fd1da39b680965b5c8181083562549"/><section>
+    <title>QuickPrint()</title>
+<indexterm><primary>QuickPrint</primary><secondary>OrderUtils</secondary></indexterm>
+<indexterm><primary>OrderUtils</primary><secondary>QuickPrint</secondary></indexterm>
+<para><computeroutput>static std::string OrderUtils::QuickPrint (const <link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> &amp; ord)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_order_utils_1a45d84c4ae8be994177f0d2ace3081ed9"/><section>
+    <title>SetV2Fields()</title>
+<indexterm><primary>SetV2Fields</primary><secondary>OrderUtils</secondary></indexterm>
+<indexterm><primary>OrderUtils</primary><secondary>SetV2Fields</secondary></indexterm>
+<para><computeroutput>static void OrderUtils::SetV2Fields (<link linkend="_struct_k_t_n_1_1_order">KTN::Order</link> &amp; ord, KOrderAction::Enum action, KOrderStatus::Enum status, bool inflight, bool ishedge = <computeroutput>false</computeroutput>
+, int callbackid = <computeroutput>0</computeroutput>
+)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_order_utils_1a89804a5086d8cc48d4b33aeef9efc92c"/><section>
+    <title>toString()</title>
+<indexterm><primary>toString</primary><secondary>OrderUtils</secondary></indexterm>
+<indexterm><primary>OrderUtils</primary><secondary>toString</secondary></indexterm>
+<para><computeroutput>static string OrderUtils::toString (const char * src)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_order_utils_1a84885f36d9557910be874363cb369ade"/><section>
+    <title>Transpose()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>Transpose</primary><secondary>OrderUtils</secondary></indexterm>
+<indexterm><primary>OrderUtils</primary><secondary>Transpose</secondary></indexterm>
+<para><computeroutput>static void OrderUtils::Transpose (<link linkend="_struct_k_t_n_1_1_order">Order</link> &amp; dest, const <link linkend="_struct_k_t_n_1_1_order_pod">OrderPod</link> &amp; src)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_order_utils_1a677223e220a1c6883f228576ada3cd7e"/><section>
+    <title>Transpose()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>Transpose</primary><secondary>OrderUtils</secondary></indexterm>
+<indexterm><primary>OrderUtils</primary><secondary>Transpose</secondary></indexterm>
+<para><computeroutput>static void OrderUtils::Transpose (<link linkend="_struct_k_t_n_1_1_order_pod">OrderPod</link> &amp; pod, const <link linkend="_struct_k_t_n_1_1_order">Order</link> &amp; ord, string clordid, bool certnr)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_order_utils_1ad1f6859016b6ff38439501f056eaff12"/><section>
+    <title>Update()</title>
+<indexterm><primary>Update</primary><secondary>OrderUtils</secondary></indexterm>
+<indexterm><primary>OrderUtils</primary><secondary>Update</secondary></indexterm>
+<para><computeroutput>static void OrderUtils::Update (<link linkend="_struct_k_t_n_1_1_order_pod">OrderPod</link> &amp; dest, const <link linkend="_struct_k_t_n_1_1_order_pod">OrderPod</link> &amp; src)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Orders/OrderUtils.hpp</section>
+</section>

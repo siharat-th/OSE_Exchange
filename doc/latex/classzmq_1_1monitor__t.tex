@@ -1,0 +1,199 @@
+\doxysection{zmq\+::monitor\+\_\+t Class Reference}
+\hypertarget{classzmq_1_1monitor__t}{}\label{classzmq_1_1monitor__t}\index{zmq::monitor\_t@{zmq::monitor\_t}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classzmq_1_1monitor__t_acbdb681dd8ff28fb02f77d309cfaf3fa}{monitor}} (\mbox{\hyperlink{classzmq_1_1socket__t}{socket\+\_\+t}} \&socket, std\+::string const \&addr, int events=ZMQ\+\_\+\+EVENT\+\_\+\+ALL)
+\item 
+void \mbox{\hyperlink{classzmq_1_1monitor__t_a1a4ef654948954440313fca07d12c2d7}{monitor}} (\mbox{\hyperlink{classzmq_1_1socket__t}{socket\+\_\+t}} \&socket, const char \texorpdfstring{$\ast$}{*}addr\+\_\+, int events=ZMQ\+\_\+\+EVENT\+\_\+\+ALL)
+\item 
+void \mbox{\hyperlink{classzmq_1_1monitor__t_a8f2ec16879d565b50a52d0b4fd943e6d}{init}} (\mbox{\hyperlink{classzmq_1_1socket__t}{socket\+\_\+t}} \&socket, std\+::string const \&addr, int events=ZMQ\+\_\+\+EVENT\+\_\+\+ALL)
+\item 
+void \mbox{\hyperlink{classzmq_1_1monitor__t_a359890c7a37565f581adef8e20f571fd}{init}} (\mbox{\hyperlink{classzmq_1_1socket__t}{socket\+\_\+t}} \&socket, const char \texorpdfstring{$\ast$}{*}addr\+\_\+, int events=ZMQ\+\_\+\+EVENT\+\_\+\+ALL)
+\item 
+bool \mbox{\hyperlink{classzmq_1_1monitor__t_a5dba87c6645536ff6dc245f48db16b39}{check\+\_\+event}} (int timeout=0)
+\item 
+virtual void \mbox{\hyperlink{classzmq_1_1monitor__t_aa1d8e99de259708c0cb489b199405648}{on\+\_\+monitor\+\_\+started}} ()
+\item 
+virtual void \mbox{\hyperlink{classzmq_1_1monitor__t_a386a369b907c577e37718880d3f9fa64}{on\+\_\+event\+\_\+connected}} (const \mbox{\hyperlink{structzmq__event__t}{zmq\+\_\+event\+\_\+t}} \&event\+\_\+, const char \texorpdfstring{$\ast$}{*}addr\+\_\+)
+\item 
+virtual void \mbox{\hyperlink{classzmq_1_1monitor__t_a70438a7986e72d98024997f4f2573047}{on\+\_\+event\+\_\+connect\+\_\+delayed}} (const \mbox{\hyperlink{structzmq__event__t}{zmq\+\_\+event\+\_\+t}} \&event\+\_\+, const char \texorpdfstring{$\ast$}{*}addr\+\_\+)
+\item 
+virtual void \mbox{\hyperlink{classzmq_1_1monitor__t_ac865cafcd211cf70da6134de7ccd4057}{on\+\_\+event\+\_\+connect\+\_\+retried}} (const \mbox{\hyperlink{structzmq__event__t}{zmq\+\_\+event\+\_\+t}} \&event\+\_\+, const char \texorpdfstring{$\ast$}{*}addr\+\_\+)
+\item 
+virtual void \mbox{\hyperlink{classzmq_1_1monitor__t_a1461e4d075e9edf590a62adb311f5cc2}{on\+\_\+event\+\_\+listening}} (const \mbox{\hyperlink{structzmq__event__t}{zmq\+\_\+event\+\_\+t}} \&event\+\_\+, const char \texorpdfstring{$\ast$}{*}addr\+\_\+)
+\item 
+virtual void \mbox{\hyperlink{classzmq_1_1monitor__t_a644f4dcc164c4320b20b59174cda6e29}{on\+\_\+event\+\_\+bind\+\_\+failed}} (const \mbox{\hyperlink{structzmq__event__t}{zmq\+\_\+event\+\_\+t}} \&event\+\_\+, const char \texorpdfstring{$\ast$}{*}addr\+\_\+)
+\item 
+virtual void \mbox{\hyperlink{classzmq_1_1monitor__t_af33e9e7a47623c8414422ab9789b52a9}{on\+\_\+event\+\_\+accepted}} (const \mbox{\hyperlink{structzmq__event__t}{zmq\+\_\+event\+\_\+t}} \&event\+\_\+, const char \texorpdfstring{$\ast$}{*}addr\+\_\+)
+\item 
+virtual void \mbox{\hyperlink{classzmq_1_1monitor__t_a542b526887b641a421cbdd5d9a80acb9}{on\+\_\+event\+\_\+accept\+\_\+failed}} (const \mbox{\hyperlink{structzmq__event__t}{zmq\+\_\+event\+\_\+t}} \&event\+\_\+, const char \texorpdfstring{$\ast$}{*}addr\+\_\+)
+\item 
+virtual void \mbox{\hyperlink{classzmq_1_1monitor__t_aaab9ff58fcdd4c65b2134a98a18e8f2b}{on\+\_\+event\+\_\+closed}} (const \mbox{\hyperlink{structzmq__event__t}{zmq\+\_\+event\+\_\+t}} \&event\+\_\+, const char \texorpdfstring{$\ast$}{*}addr\+\_\+)
+\item 
+virtual void \mbox{\hyperlink{classzmq_1_1monitor__t_a8be94a20f50536dca6d6414b33136c89}{on\+\_\+event\+\_\+close\+\_\+failed}} (const \mbox{\hyperlink{structzmq__event__t}{zmq\+\_\+event\+\_\+t}} \&event\+\_\+, const char \texorpdfstring{$\ast$}{*}addr\+\_\+)
+\item 
+virtual void \mbox{\hyperlink{classzmq_1_1monitor__t_ad959d1cc557290a6984fde2e7ae8f3a6}{on\+\_\+event\+\_\+disconnected}} (const \mbox{\hyperlink{structzmq__event__t}{zmq\+\_\+event\+\_\+t}} \&event\+\_\+, const char \texorpdfstring{$\ast$}{*}addr\+\_\+)
+\item 
+virtual void \mbox{\hyperlink{classzmq_1_1monitor__t_a4ea841ca3b449718020a2e627abb608c}{on\+\_\+event\+\_\+handshake\+\_\+failed\+\_\+no\+\_\+detail}} (const \mbox{\hyperlink{structzmq__event__t}{zmq\+\_\+event\+\_\+t}} \&event\+\_\+, const char \texorpdfstring{$\ast$}{*}addr\+\_\+)
+\item 
+virtual void \mbox{\hyperlink{classzmq_1_1monitor__t_a276b1ffb031e186e121babbefe088bfb}{on\+\_\+event\+\_\+handshake\+\_\+failed\+\_\+protocol}} (const \mbox{\hyperlink{structzmq__event__t}{zmq\+\_\+event\+\_\+t}} \&event\+\_\+, const char \texorpdfstring{$\ast$}{*}addr\+\_\+)
+\item 
+virtual void \mbox{\hyperlink{classzmq_1_1monitor__t_a1c49afab3b76b94c8f707f1e1afaf945}{on\+\_\+event\+\_\+handshake\+\_\+failed\+\_\+auth}} (const \mbox{\hyperlink{structzmq__event__t}{zmq\+\_\+event\+\_\+t}} \&event\+\_\+, const char \texorpdfstring{$\ast$}{*}addr\+\_\+)
+\item 
+virtual void \mbox{\hyperlink{classzmq_1_1monitor__t_a14b9b522ea4542e27084b7edd76a907a}{on\+\_\+event\+\_\+handshake\+\_\+succeeded}} (const \mbox{\hyperlink{structzmq__event__t}{zmq\+\_\+event\+\_\+t}} \&event\+\_\+, const char \texorpdfstring{$\ast$}{*}addr\+\_\+)
+\item 
+virtual void \mbox{\hyperlink{classzmq_1_1monitor__t_ac03905bb3a84d2f0f07861e1cc81f482}{on\+\_\+event\+\_\+unknown}} (const \mbox{\hyperlink{structzmq__event__t}{zmq\+\_\+event\+\_\+t}} \&event\+\_\+, const char \texorpdfstring{$\ast$}{*}addr\+\_\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classzmq_1_1monitor__t_a95d361f58af33e00c19168a1670b7e90}\index{zmq::monitor\_t@{zmq::monitor\_t}!monitor\_t@{monitor\_t}}
+\index{monitor\_t@{monitor\_t}!zmq::monitor\_t@{zmq::monitor\_t}}
+\doxysubsubsection{\texorpdfstring{monitor\_t()}{monitor\_t()}}
+{\footnotesize\ttfamily \label{classzmq_1_1monitor__t_a95d361f58af33e00c19168a1670b7e90} 
+zmq\+::monitor\+\_\+t\+::monitor\+\_\+t (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classzmq_1_1monitor__t_a51f636aa1e80e6e29f3cd623169c7acb}\index{zmq::monitor\_t@{zmq::monitor\_t}!````~monitor\_t@{\texorpdfstring{$\sim$}{\string~}monitor\_t}}
+\index{````~monitor\_t@{\texorpdfstring{$\sim$}{\string~}monitor\_t}!zmq::monitor\_t@{zmq::monitor\_t}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}monitor\_t()}{\string~monitor\_t()}}
+{\footnotesize\ttfamily \label{classzmq_1_1monitor__t_a51f636aa1e80e6e29f3cd623169c7acb} 
+virtual zmq\+::monitor\+\_\+t\+::\texorpdfstring{$\sim$}{\string~}monitor\+\_\+t (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classzmq_1_1monitor__t_a5dba87c6645536ff6dc245f48db16b39}\index{zmq::monitor\_t@{zmq::monitor\_t}!check\_event@{check\_event}}
+\index{check\_event@{check\_event}!zmq::monitor\_t@{zmq::monitor\_t}}
+\doxysubsubsection{\texorpdfstring{check\_event()}{check\_event()}}
+{\footnotesize\ttfamily \label{classzmq_1_1monitor__t_a5dba87c6645536ff6dc245f48db16b39} 
+bool zmq\+::monitor\+\_\+t\+::check\+\_\+event (\begin{DoxyParamCaption}\item[{int}]{timeout}{ = {\ttfamily 0}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classzmq_1_1monitor__t_a359890c7a37565f581adef8e20f571fd}\index{zmq::monitor\_t@{zmq::monitor\_t}!init@{init}}
+\index{init@{init}!zmq::monitor\_t@{zmq::monitor\_t}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classzmq_1_1monitor__t_a359890c7a37565f581adef8e20f571fd} 
+void zmq\+::monitor\+\_\+t\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classzmq_1_1socket__t}{socket\+\_\+t}} \&}]{socket}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{addr\+\_\+}{, }\item[{int}]{events}{ = {\ttfamily ZMQ\+\_\+EVENT\+\_\+ALL}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classzmq_1_1monitor__t_a8f2ec16879d565b50a52d0b4fd943e6d}\index{zmq::monitor\_t@{zmq::monitor\_t}!init@{init}}
+\index{init@{init}!zmq::monitor\_t@{zmq::monitor\_t}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classzmq_1_1monitor__t_a8f2ec16879d565b50a52d0b4fd943e6d} 
+void zmq\+::monitor\+\_\+t\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classzmq_1_1socket__t}{socket\+\_\+t}} \&}]{socket}{, }\item[{std\+::string const \&}]{addr}{, }\item[{int}]{events}{ = {\ttfamily ZMQ\+\_\+EVENT\+\_\+ALL}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classzmq_1_1monitor__t_a1a4ef654948954440313fca07d12c2d7}\index{zmq::monitor\_t@{zmq::monitor\_t}!monitor@{monitor}}
+\index{monitor@{monitor}!zmq::monitor\_t@{zmq::monitor\_t}}
+\doxysubsubsection{\texorpdfstring{monitor()}{monitor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classzmq_1_1monitor__t_a1a4ef654948954440313fca07d12c2d7} 
+void zmq\+::monitor\+\_\+t\+::monitor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classzmq_1_1socket__t}{socket\+\_\+t}} \&}]{socket}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{addr\+\_\+}{, }\item[{int}]{events}{ = {\ttfamily ZMQ\+\_\+EVENT\+\_\+ALL}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classzmq_1_1monitor__t_acbdb681dd8ff28fb02f77d309cfaf3fa}\index{zmq::monitor\_t@{zmq::monitor\_t}!monitor@{monitor}}
+\index{monitor@{monitor}!zmq::monitor\_t@{zmq::monitor\_t}}
+\doxysubsubsection{\texorpdfstring{monitor()}{monitor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classzmq_1_1monitor__t_acbdb681dd8ff28fb02f77d309cfaf3fa} 
+void zmq\+::monitor\+\_\+t\+::monitor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classzmq_1_1socket__t}{socket\+\_\+t}} \&}]{socket}{, }\item[{std\+::string const \&}]{addr}{, }\item[{int}]{events}{ = {\ttfamily ZMQ\+\_\+EVENT\+\_\+ALL}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classzmq_1_1monitor__t_a542b526887b641a421cbdd5d9a80acb9}\index{zmq::monitor\_t@{zmq::monitor\_t}!on\_event\_accept\_failed@{on\_event\_accept\_failed}}
+\index{on\_event\_accept\_failed@{on\_event\_accept\_failed}!zmq::monitor\_t@{zmq::monitor\_t}}
+\doxysubsubsection{\texorpdfstring{on\_event\_accept\_failed()}{on\_event\_accept\_failed()}}
+{\footnotesize\ttfamily \label{classzmq_1_1monitor__t_a542b526887b641a421cbdd5d9a80acb9} 
+virtual void zmq\+::monitor\+\_\+t\+::on\+\_\+event\+\_\+accept\+\_\+failed (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structzmq__event__t}{zmq\+\_\+event\+\_\+t}} \&}]{event\+\_\+}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{addr\+\_\+}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\Hypertarget{classzmq_1_1monitor__t_af33e9e7a47623c8414422ab9789b52a9}\index{zmq::monitor\_t@{zmq::monitor\_t}!on\_event\_accepted@{on\_event\_accepted}}
+\index{on\_event\_accepted@{on\_event\_accepted}!zmq::monitor\_t@{zmq::monitor\_t}}
+\doxysubsubsection{\texorpdfstring{on\_event\_accepted()}{on\_event\_accepted()}}
+{\footnotesize\ttfamily \label{classzmq_1_1monitor__t_af33e9e7a47623c8414422ab9789b52a9} 
+virtual void zmq\+::monitor\+\_\+t\+::on\+\_\+event\+\_\+accepted (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structzmq__event__t}{zmq\+\_\+event\+\_\+t}} \&}]{event\+\_\+}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{addr\+\_\+}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\Hypertarget{classzmq_1_1monitor__t_a644f4dcc164c4320b20b59174cda6e29}\index{zmq::monitor\_t@{zmq::monitor\_t}!on\_event\_bind\_failed@{on\_event\_bind\_failed}}
+\index{on\_event\_bind\_failed@{on\_event\_bind\_failed}!zmq::monitor\_t@{zmq::monitor\_t}}
+\doxysubsubsection{\texorpdfstring{on\_event\_bind\_failed()}{on\_event\_bind\_failed()}}
+{\footnotesize\ttfamily \label{classzmq_1_1monitor__t_a644f4dcc164c4320b20b59174cda6e29} 
+virtual void zmq\+::monitor\+\_\+t\+::on\+\_\+event\+\_\+bind\+\_\+failed (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structzmq__event__t}{zmq\+\_\+event\+\_\+t}} \&}]{event\+\_\+}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{addr\+\_\+}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\Hypertarget{classzmq_1_1monitor__t_a8be94a20f50536dca6d6414b33136c89}\index{zmq::monitor\_t@{zmq::monitor\_t}!on\_event\_close\_failed@{on\_event\_close\_failed}}
+\index{on\_event\_close\_failed@{on\_event\_close\_failed}!zmq::monitor\_t@{zmq::monitor\_t}}
+\doxysubsubsection{\texorpdfstring{on\_event\_close\_failed()}{on\_event\_close\_failed()}}
+{\footnotesize\ttfamily \label{classzmq_1_1monitor__t_a8be94a20f50536dca6d6414b33136c89} 
+virtual void zmq\+::monitor\+\_\+t\+::on\+\_\+event\+\_\+close\+\_\+failed (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structzmq__event__t}{zmq\+\_\+event\+\_\+t}} \&}]{event\+\_\+}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{addr\+\_\+}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\Hypertarget{classzmq_1_1monitor__t_aaab9ff58fcdd4c65b2134a98a18e8f2b}\index{zmq::monitor\_t@{zmq::monitor\_t}!on\_event\_closed@{on\_event\_closed}}
+\index{on\_event\_closed@{on\_event\_closed}!zmq::monitor\_t@{zmq::monitor\_t}}
+\doxysubsubsection{\texorpdfstring{on\_event\_closed()}{on\_event\_closed()}}
+{\footnotesize\ttfamily \label{classzmq_1_1monitor__t_aaab9ff58fcdd4c65b2134a98a18e8f2b} 
+virtual void zmq\+::monitor\+\_\+t\+::on\+\_\+event\+\_\+closed (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structzmq__event__t}{zmq\+\_\+event\+\_\+t}} \&}]{event\+\_\+}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{addr\+\_\+}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\Hypertarget{classzmq_1_1monitor__t_a70438a7986e72d98024997f4f2573047}\index{zmq::monitor\_t@{zmq::monitor\_t}!on\_event\_connect\_delayed@{on\_event\_connect\_delayed}}
+\index{on\_event\_connect\_delayed@{on\_event\_connect\_delayed}!zmq::monitor\_t@{zmq::monitor\_t}}
+\doxysubsubsection{\texorpdfstring{on\_event\_connect\_delayed()}{on\_event\_connect\_delayed()}}
+{\footnotesize\ttfamily \label{classzmq_1_1monitor__t_a70438a7986e72d98024997f4f2573047} 
+virtual void zmq\+::monitor\+\_\+t\+::on\+\_\+event\+\_\+connect\+\_\+delayed (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structzmq__event__t}{zmq\+\_\+event\+\_\+t}} \&}]{event\+\_\+}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{addr\+\_\+}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\Hypertarget{classzmq_1_1monitor__t_ac865cafcd211cf70da6134de7ccd4057}\index{zmq::monitor\_t@{zmq::monitor\_t}!on\_event\_connect\_retried@{on\_event\_connect\_retried}}
+\index{on\_event\_connect\_retried@{on\_event\_connect\_retried}!zmq::monitor\_t@{zmq::monitor\_t}}
+\doxysubsubsection{\texorpdfstring{on\_event\_connect\_retried()}{on\_event\_connect\_retried()}}
+{\footnotesize\ttfamily \label{classzmq_1_1monitor__t_ac865cafcd211cf70da6134de7ccd4057} 
+virtual void zmq\+::monitor\+\_\+t\+::on\+\_\+event\+\_\+connect\+\_\+retried (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structzmq__event__t}{zmq\+\_\+event\+\_\+t}} \&}]{event\+\_\+}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{addr\+\_\+}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\Hypertarget{classzmq_1_1monitor__t_a386a369b907c577e37718880d3f9fa64}\index{zmq::monitor\_t@{zmq::monitor\_t}!on\_event\_connected@{on\_event\_connected}}
+\index{on\_event\_connected@{on\_event\_connected}!zmq::monitor\_t@{zmq::monitor\_t}}
+\doxysubsubsection{\texorpdfstring{on\_event\_connected()}{on\_event\_connected()}}
+{\footnotesize\ttfamily \label{classzmq_1_1monitor__t_a386a369b907c577e37718880d3f9fa64} 
+virtual void zmq\+::monitor\+\_\+t\+::on\+\_\+event\+\_\+connected (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structzmq__event__t}{zmq\+\_\+event\+\_\+t}} \&}]{event\+\_\+}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{addr\+\_\+}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\Hypertarget{classzmq_1_1monitor__t_ad959d1cc557290a6984fde2e7ae8f3a6}\index{zmq::monitor\_t@{zmq::monitor\_t}!on\_event\_disconnected@{on\_event\_disconnected}}
+\index{on\_event\_disconnected@{on\_event\_disconnected}!zmq::monitor\_t@{zmq::monitor\_t}}
+\doxysubsubsection{\texorpdfstring{on\_event\_disconnected()}{on\_event\_disconnected()}}
+{\footnotesize\ttfamily \label{classzmq_1_1monitor__t_ad959d1cc557290a6984fde2e7ae8f3a6} 
+virtual void zmq\+::monitor\+\_\+t\+::on\+\_\+event\+\_\+disconnected (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structzmq__event__t}{zmq\+\_\+event\+\_\+t}} \&}]{event\+\_\+}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{addr\+\_\+}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\Hypertarget{classzmq_1_1monitor__t_a1c49afab3b76b94c8f707f1e1afaf945}\index{zmq::monitor\_t@{zmq::monitor\_t}!on\_event\_handshake\_failed\_auth@{on\_event\_handshake\_failed\_auth}}
+\index{on\_event\_handshake\_failed\_auth@{on\_event\_handshake\_failed\_auth}!zmq::monitor\_t@{zmq::monitor\_t}}
+\doxysubsubsection{\texorpdfstring{on\_event\_handshake\_failed\_auth()}{on\_event\_handshake\_failed\_auth()}}
+{\footnotesize\ttfamily \label{classzmq_1_1monitor__t_a1c49afab3b76b94c8f707f1e1afaf945} 
+virtual void zmq\+::monitor\+\_\+t\+::on\+\_\+event\+\_\+handshake\+\_\+failed\+\_\+auth (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structzmq__event__t}{zmq\+\_\+event\+\_\+t}} \&}]{event\+\_\+}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{addr\+\_\+}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\Hypertarget{classzmq_1_1monitor__t_a4ea841ca3b449718020a2e627abb608c}\index{zmq::monitor\_t@{zmq::monitor\_t}!on\_event\_handshake\_failed\_no\_detail@{on\_event\_handshake\_failed\_no\_detail}}
+\index{on\_event\_handshake\_failed\_no\_detail@{on\_event\_handshake\_failed\_no\_detail}!zmq::monitor\_t@{zmq::monitor\_t}}
+\doxysubsubsection{\texorpdfstring{on\_event\_handshake\_failed\_no\_detail()}{on\_event\_handshake\_failed\_no\_detail()}}
+{\footnotesize\ttfamily \label{classzmq_1_1monitor__t_a4ea841ca3b449718020a2e627abb608c} 
+virtual void zmq\+::monitor\+\_\+t\+::on\+\_\+event\+\_\+handshake\+\_\+failed\+\_\+no\+\_\+detail (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structzmq__event__t}{zmq\+\_\+event\+\_\+t}} \&}]{event\+\_\+}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{addr\+\_\+}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\Hypertarget{classzmq_1_1monitor__t_a276b1ffb031e186e121babbefe088bfb}\index{zmq::monitor\_t@{zmq::monitor\_t}!on\_event\_handshake\_failed\_protocol@{on\_event\_handshake\_failed\_protocol}}
+\index{on\_event\_handshake\_failed\_protocol@{on\_event\_handshake\_failed\_protocol}!zmq::monitor\_t@{zmq::monitor\_t}}
+\doxysubsubsection{\texorpdfstring{on\_event\_handshake\_failed\_protocol()}{on\_event\_handshake\_failed\_protocol()}}
+{\footnotesize\ttfamily \label{classzmq_1_1monitor__t_a276b1ffb031e186e121babbefe088bfb} 
+virtual void zmq\+::monitor\+\_\+t\+::on\+\_\+event\+\_\+handshake\+\_\+failed\+\_\+protocol (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structzmq__event__t}{zmq\+\_\+event\+\_\+t}} \&}]{event\+\_\+}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{addr\+\_\+}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\Hypertarget{classzmq_1_1monitor__t_a14b9b522ea4542e27084b7edd76a907a}\index{zmq::monitor\_t@{zmq::monitor\_t}!on\_event\_handshake\_succeeded@{on\_event\_handshake\_succeeded}}
+\index{on\_event\_handshake\_succeeded@{on\_event\_handshake\_succeeded}!zmq::monitor\_t@{zmq::monitor\_t}}
+\doxysubsubsection{\texorpdfstring{on\_event\_handshake\_succeeded()}{on\_event\_handshake\_succeeded()}}
+{\footnotesize\ttfamily \label{classzmq_1_1monitor__t_a14b9b522ea4542e27084b7edd76a907a} 
+virtual void zmq\+::monitor\+\_\+t\+::on\+\_\+event\+\_\+handshake\+\_\+succeeded (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structzmq__event__t}{zmq\+\_\+event\+\_\+t}} \&}]{event\+\_\+}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{addr\+\_\+}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\Hypertarget{classzmq_1_1monitor__t_a1461e4d075e9edf590a62adb311f5cc2}\index{zmq::monitor\_t@{zmq::monitor\_t}!on\_event\_listening@{on\_event\_listening}}
+\index{on\_event\_listening@{on\_event\_listening}!zmq::monitor\_t@{zmq::monitor\_t}}
+\doxysubsubsection{\texorpdfstring{on\_event\_listening()}{on\_event\_listening()}}
+{\footnotesize\ttfamily \label{classzmq_1_1monitor__t_a1461e4d075e9edf590a62adb311f5cc2} 
+virtual void zmq\+::monitor\+\_\+t\+::on\+\_\+event\+\_\+listening (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structzmq__event__t}{zmq\+\_\+event\+\_\+t}} \&}]{event\+\_\+}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{addr\+\_\+}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\Hypertarget{classzmq_1_1monitor__t_ac03905bb3a84d2f0f07861e1cc81f482}\index{zmq::monitor\_t@{zmq::monitor\_t}!on\_event\_unknown@{on\_event\_unknown}}
+\index{on\_event\_unknown@{on\_event\_unknown}!zmq::monitor\_t@{zmq::monitor\_t}}
+\doxysubsubsection{\texorpdfstring{on\_event\_unknown()}{on\_event\_unknown()}}
+{\footnotesize\ttfamily \label{classzmq_1_1monitor__t_ac03905bb3a84d2f0f07861e1cc81f482} 
+virtual void zmq\+::monitor\+\_\+t\+::on\+\_\+event\+\_\+unknown (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structzmq__event__t}{zmq\+\_\+event\+\_\+t}} \&}]{event\+\_\+}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{addr\+\_\+}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\Hypertarget{classzmq_1_1monitor__t_aa1d8e99de259708c0cb489b199405648}\index{zmq::monitor\_t@{zmq::monitor\_t}!on\_monitor\_started@{on\_monitor\_started}}
+\index{on\_monitor\_started@{on\_monitor\_started}!zmq::monitor\_t@{zmq::monitor\_t}}
+\doxysubsubsection{\texorpdfstring{on\_monitor\_started()}{on\_monitor\_started()}}
+{\footnotesize\ttfamily \label{classzmq_1_1monitor__t_aa1d8e99de259708c0cb489b199405648} 
+virtual void zmq\+::monitor\+\_\+t\+::on\+\_\+monitor\+\_\+started (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+ZMQ/zmq.\+hpp\end{DoxyCompactItemize}

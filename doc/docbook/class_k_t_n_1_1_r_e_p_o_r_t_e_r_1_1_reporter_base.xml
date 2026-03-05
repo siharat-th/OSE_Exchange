@@ -1,0 +1,285 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base" xml:lang="en-US">
+<title>KTN::REPORTER::ReporterBase Class Reference</title>
+<indexterm><primary>KTN::REPORTER::ReporterBase</primary></indexterm>
+<para>
+
+<para>The base class for all reporters. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;ReporterBase.hpp&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for KTN::REPORTER::ReporterBase:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_1ae538964cbe64b3a7a3877438a169a4a7">ReporterBase</link> (string name, int sleepms)</para>
+
+<para>Constructs a <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base">ReporterBase</link> object with the given name and sleep time. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_1af73ae6003c5a7567553a12a0b4bdd502">~ReporterBase</link> ()</para>
+
+<para>Destructor for the <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base">ReporterBase</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_1a74466d64a850d317a5325c3a029974a0">Stop</link> ()</para>
+
+<para>Stops the reporter. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_1a0646f3f3c1b0e07726ec0897bc757a47">Start</link> ()</para>
+
+<para>Starts the reporter. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_1a449d2ccb3be9222bd06fef3b5155e3af">DoWork</link> ()=0</para>
+
+<para>Performs the work of the reporter. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_1a8c00d5eb02a709d57aedaed3f937873b">SendJson</link> (string json)</para>
+
+<para>Sends the given JSON string. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_1ab7b241b406b6cafe6af4f26227a12bff">LogMe</link> (std::string szMsg, int iColor=LOG_WHITE)</para>
+
+<para>Logs the given message. </para>
+</listitem>
+            <listitem><para>string <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_1a2d9b093cec33ea34546f95b7c6e1012b">getTimeString</link> ()</para>
+
+<para>Gets the current time as a string. </para>
+</listitem>
+            <listitem><para>uint64_t <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_1ade147373e730bf48fd5bf54a9986e1f7">getSsboeUs</link> ()</para>
+
+<para>Gets the current system time in microseconds since the epoch. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para>std::atomic&lt; bool &gt; <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_1abcbf2f7f44ac10b559ece8412050690a">_ACTIVE</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The base class for all reporters. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_1ae538964cbe64b3a7a3877438a169a4a7"/><section>
+    <title>ReporterBase()</title>
+<indexterm><primary>ReporterBase</primary><secondary>KTN::REPORTER::ReporterBase</secondary></indexterm>
+<indexterm><primary>KTN::REPORTER::ReporterBase</primary><secondary>ReporterBase</secondary></indexterm>
+<para><computeroutput>ReporterBase::ReporterBase (string name, int sleepms)</computeroutput></para><para>
+
+<para>Constructs a <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base">ReporterBase</link> object with the given name and sleep time. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>name</entry><entry>
+<para>The name of the reporter. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>sleepms</entry><entry>
+<para>The sleep time in milliseconds. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_1af73ae6003c5a7567553a12a0b4bdd502"/><section>
+    <title>~ReporterBase()</title>
+<indexterm><primary>~ReporterBase</primary><secondary>KTN::REPORTER::ReporterBase</secondary></indexterm>
+<indexterm><primary>KTN::REPORTER::ReporterBase</primary><secondary>~ReporterBase</secondary></indexterm>
+<para><computeroutput>ReporterBase::~ReporterBase ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Destructor for the <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base">ReporterBase</link> object. </para>
+</para>
+<para>
+References <link linkend="_l00049">Stop()</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_1a449d2ccb3be9222bd06fef3b5155e3af"/><section>
+    <title>DoWork()</title>
+<indexterm><primary>DoWork</primary><secondary>KTN::REPORTER::ReporterBase</secondary></indexterm>
+<indexterm><primary>KTN::REPORTER::ReporterBase</primary><secondary>DoWork</secondary></indexterm>
+<para><computeroutput>void ReporterBase::DoWork ( )<computeroutput>[protected]</computeroutput>, <computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>Performs the work of the reporter. </para>
+</para>
+<para>
+Implemented in <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_p_l_reporter_1a854417d29a5bd36c6bec145e5025a3ef">KTN::REPORTER::AlgoPLReporter</link>, <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_algo_v3_reporter_1ac380fffde0850e69473fbc6522ef62f4">KTN::REPORTER::AlgoV3Reporter</link>, <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_generic_reporter_1a236e7f2d4a7e4c49414a0dbe2a7ef105">KTN::REPORTER::GenericReporter</link>, and <link linkend="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_order_reporter_v5_1a783cf5dcf27d1b89f63c349dfe7b11b2">KTN::REPORTER::OrderReporterV5</link>.</para>
+<para>
+References <link linkend="_l00033">LogMe()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_1ade147373e730bf48fd5bf54a9986e1f7"/><section>
+    <title>getSsboeUs()</title>
+<indexterm><primary>getSsboeUs</primary><secondary>KTN::REPORTER::ReporterBase</secondary></indexterm>
+<indexterm><primary>KTN::REPORTER::ReporterBase</primary><secondary>getSsboeUs</secondary></indexterm>
+<para><computeroutput>uint64_t KTN::REPORTER::ReporterBase::getSsboeUs ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Gets the current system time in microseconds since the epoch. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The current system time in microseconds since the epoch. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00036">KTN::REPORTER::AlgoPLReporter::DoWork()</link>, and <link linkend="_l00039">KTN::REPORTER::AlgoV3Reporter::DoWork()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_1a2d9b093cec33ea34546f95b7c6e1012b"/><section>
+    <title>getTimeString()</title>
+<indexterm><primary>getTimeString</primary><secondary>KTN::REPORTER::ReporterBase</secondary></indexterm>
+<indexterm><primary>KTN::REPORTER::ReporterBase</primary><secondary>getTimeString</secondary></indexterm>
+<para><computeroutput>string KTN::REPORTER::ReporterBase::getTimeString ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Gets the current time as a string. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The current time as a string. </para>
+</formalpara>
+</para>
+<para>
+Referenced by <link linkend="_l00036">KTN::REPORTER::AlgoPLReporter::DoWork()</link>, and <link linkend="_l00039">KTN::REPORTER::AlgoV3Reporter::DoWork()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_1ab7b241b406b6cafe6af4f26227a12bff"/><section>
+    <title>LogMe()</title>
+<indexterm><primary>LogMe</primary><secondary>KTN::REPORTER::ReporterBase</secondary></indexterm>
+<indexterm><primary>KTN::REPORTER::ReporterBase</primary><secondary>LogMe</secondary></indexterm>
+<para><computeroutput>void ReporterBase::LogMe (std::string szMsg, int iColor = <computeroutput>LOG_WHITE</computeroutput>
+)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Logs the given message. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>szMsg</entry><entry>
+<para>The message to log. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>iColor</entry><entry>
+<para>The color of the log message. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Referenced by <link linkend="_l00056">KTN::REPORTER::OrderReporterV5::DoWork()</link>, and <link linkend="_l00060">DoWork()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_1a8c00d5eb02a709d57aedaed3f937873b"/><section>
+    <title>SendJson()</title>
+<indexterm><primary>SendJson</primary><secondary>KTN::REPORTER::ReporterBase</secondary></indexterm>
+<indexterm><primary>KTN::REPORTER::ReporterBase</primary><secondary>SendJson</secondary></indexterm>
+<para><computeroutput>void KTN::REPORTER::ReporterBase::SendJson (string json)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Sends the given JSON string. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>json</entry><entry>
+<para>The JSON string to send. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Referenced by <link linkend="_l00036">KTN::REPORTER::AlgoPLReporter::DoWork()</link>, <link linkend="_l00039">KTN::REPORTER::GenericReporter::DoWork()</link>, <link linkend="_l00056">KTN::REPORTER::OrderReporterV5::DoWork()</link>, and <link linkend="_l00087">KTN::REPORTER::AlgoV3Reporter::SendMessage()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_1a0646f3f3c1b0e07726ec0897bc757a47"/><section>
+    <title>Start()</title>
+<indexterm><primary>Start</primary><secondary>KTN::REPORTER::ReporterBase</secondary></indexterm>
+<indexterm><primary>KTN::REPORTER::ReporterBase</primary><secondary>Start</secondary></indexterm>
+<para><computeroutput>void ReporterBase::Start ( )</computeroutput></para><para>
+
+<para>Starts the reporter. </para>
+</para>
+<para>
+References <link linkend="_l00123">Settings::get()</link>, and <link linkend="_l00133">Settings::getInteger()</link>.</para>
+<para>
+Referenced by <link linkend="_l00014">KTN::REPORTER::AlgoPLReporter::AlgoPLReporter()</link>, <link linkend="_l00014">KTN::REPORTER::AlgoV3Reporter::AlgoV3Reporter()</link>, <link linkend="_l00014">KTN::REPORTER::GenericReporter::GenericReporter()</link>, and <link linkend="_l00014">KTN::REPORTER::OrderReporterV5::OrderReporterV5()</link>.</para>
+</section>
+<anchor xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_1a74466d64a850d317a5325c3a029974a0"/><section>
+    <title>Stop()</title>
+<indexterm><primary>Stop</primary><secondary>KTN::REPORTER::ReporterBase</secondary></indexterm>
+<indexterm><primary>KTN::REPORTER::ReporterBase</primary><secondary>Stop</secondary></indexterm>
+<para><computeroutput>void ReporterBase::Stop ( )</computeroutput></para><para>
+
+<para>Stops the reporter. </para>
+</para>
+<para>
+Referenced by <link linkend="_l00025">KTN::REPORTER::AlgoPLReporter::StopWork()</link>, <link linkend="_l00034">KTN::REPORTER::AlgoV3Reporter::StopWork()</link>, <link linkend="_l00031">KTN::REPORTER::GenericReporter::StopWork()</link>, <link linkend="_l00051">KTN::REPORTER::OrderReporterV5::StopWork()</link>, and <link linkend="_l00022">~ReporterBase()</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_k_t_n_1_1_r_e_p_o_r_t_e_r_1_1_reporter_base_1abcbf2f7f44ac10b559ece8412050690a"/><section>
+    <title>_ACTIVE</title>
+<indexterm><primary>_ACTIVE</primary><secondary>KTN::REPORTER::ReporterBase</secondary></indexterm>
+<indexterm><primary>KTN::REPORTER::ReporterBase</primary><secondary>_ACTIVE</secondary></indexterm>
+<para><computeroutput>std::atomic&lt;bool&gt; KTN::REPORTER::ReporterBase::_ACTIVE<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Reporters/ReporterBase.hppReporters/ReporterBase.cpp</section>
+</section>

@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_leg_prices" xml:lang="en-US">
+<title>LegPrices Struct Reference</title>
+<indexterm><primary>LegPrices</primary></indexterm>
+<para>
+
+<para>Structure representing the prices of a leg. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;algo_structs.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>int32_t <link linkend="_struct_leg_prices_1a4340681a0dc3b782619de029656b8663">bid</link></para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_struct_leg_prices_1a9bb4ab794c3c9d39bac64f180d4c3d31">ask</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Structure representing the prices of a leg. </para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_leg_prices_1a9bb4ab794c3c9d39bac64f180d4c3d31"/><section>
+    <title>ask</title>
+<indexterm><primary>ask</primary><secondary>LegPrices</secondary></indexterm>
+<indexterm><primary>LegPrices</primary><secondary>ask</secondary></indexterm>
+<para><computeroutput>int32_t LegPrices::ask</computeroutput></para>
+<para>The ask price. </para>
+<para>
+Referenced by <link linkend="_l00037">WavesParams::init()</link>.</para>
+</section>
+<anchor xml:id="_struct_leg_prices_1a4340681a0dc3b782619de029656b8663"/><section>
+    <title>bid</title>
+<indexterm><primary>bid</primary><secondary>LegPrices</secondary></indexterm>
+<indexterm><primary>LegPrices</primary><secondary>bid</secondary></indexterm>
+<para><computeroutput>int32_t LegPrices::bid</computeroutput></para>
+<para>The bid price. </para>
+<para>
+Referenced by <link linkend="_l00037">WavesParams::init()</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+AlgoSupport/algo_structs.hpp</section>
+</section>

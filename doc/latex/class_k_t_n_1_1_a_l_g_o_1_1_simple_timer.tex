@@ -1,0 +1,192 @@
+\doxysection{KTN\+::ALGO\+::Simple\+Timer Class Reference}
+\hypertarget{class_k_t_n_1_1_a_l_g_o_1_1_simple_timer}{}\label{class_k_t_n_1_1_a_l_g_o_1_1_simple_timer}\index{KTN::ALGO::SimpleTimer@{KTN::ALGO::SimpleTimer}}
+
+
+The \doxylink{class_k_t_n_1_1_a_l_g_o_1_1_simple_timer}{Simple\+Timer} class represents a simple timer that can be started, stopped, and paused.  
+
+
+
+
+{\ttfamily \#include $<$Simple\+Timer.\+hpp$>$}
+
+Inheritance diagram for KTN\+::ALGO\+::Simple\+Timer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_k_t_n_1_1_a_l_g_o_1_1_simple_timer}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_k_t_n_1_1_a_l_g_o_1_1_simple_timer_aa0e6459be6058dd692cda06559c415ac}{Simple\+Timer}} (\mbox{\hyperlink{class_timer_callback}{Timer\+Callback}} \&cb)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_k_t_n_1_1_a_l_g_o_1_1_simple_timer}{Simple\+Timer} object with the given \doxylink{class_timer_callback}{Timer\+Callback}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_k_t_n_1_1_a_l_g_o_1_1_simple_timer_ad29e9a56c18bb1e378b0bd125e50c62a}{\texorpdfstring{$\sim$}{\string~}\+Simple\+Timer}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{class_k_t_n_1_1_a_l_g_o_1_1_simple_timer}{Simple\+Timer} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_a_l_g_o_1_1_simple_timer_a4dc66a2b8bcf754125f888585046d35e}{Pause}} (bool paused)
+\begin{DoxyCompactList}\small\item\em Pauses or resumes the timer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_a_l_g_o_1_1_simple_timer_a47ae6c759bb8b66e2ef284d288ad871e}{Start}} (const std\+::string \&start\+Time, const std\+::string \&end\+Time)
+\begin{DoxyCompactList}\small\item\em Starts the timer with the specified start and end times. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_k_t_n_1_1_a_l_g_o_1_1_simple_timer_aecfe2ceef77e3549c1b02daa68832a10}{Stop}} ()
+\begin{DoxyCompactList}\small\item\em Stops the timer. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_a_l_g_o_1_1_simple_timer_a802350167226e681ef29fb92884daa1f}{Triggered}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the timer has been triggered. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_a_l_g_o_1_1_simple_timer_aa7bc9cabb3bd0133736eac52e2a2cb8c}{Started}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the timer has been started. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_k_t_n_1_1_a_l_g_o_1_1_simple_timer_a55f215c58d1644d1261d924e88b19bce}{Expired}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the timer has expired. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_named_thread}{Named\+Thread}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_named_thread_a891fabdc2d824048ec05c82e7ef8c69a}{Named\+Thread}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_named_thread_a018dadb59e5af98ee734301a1baa50cb}{\texorpdfstring{$\sim$}{\string~}\+Named\+Thread}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_named_thread_a9fa42542ff43c89fb9bbc33de9c87e34}{Create\+And\+Run}} (string name, int core)
+\begin{DoxyCompactList}\small\item\em Creates and runs the named thread on the specified core. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_named_thread_ad4809c571171be13f0f91f540d5c196f}{Join}} ()
+\begin{DoxyCompactList}\small\item\em Joins the named thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_k_t_n_1_1_a_l_g_o_1_1_simple_timer}{Simple\+Timer} class represents a simple timer that can be started, stopped, and paused. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_k_t_n_1_1_a_l_g_o_1_1_simple_timer_aa0e6459be6058dd692cda06559c415ac}\index{KTN::ALGO::SimpleTimer@{KTN::ALGO::SimpleTimer}!SimpleTimer@{SimpleTimer}}
+\index{SimpleTimer@{SimpleTimer}!KTN::ALGO::SimpleTimer@{KTN::ALGO::SimpleTimer}}
+\doxysubsubsection{\texorpdfstring{SimpleTimer()}{SimpleTimer()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_a_l_g_o_1_1_simple_timer_aa0e6459be6058dd692cda06559c415ac} 
+Simple\+Timer\+::\+Simple\+Timer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_timer_callback}{Timer\+Callback}} \&}]{cb}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_k_t_n_1_1_a_l_g_o_1_1_simple_timer}{Simple\+Timer} object with the given \doxylink{class_timer_callback}{Timer\+Callback}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cb} & The \doxylink{class_timer_callback}{Timer\+Callback} object to be associated with the timer. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_k_t_n_1_1_a_l_g_o_1_1_simple_timer_ad29e9a56c18bb1e378b0bd125e50c62a}\index{KTN::ALGO::SimpleTimer@{KTN::ALGO::SimpleTimer}!````~SimpleTimer@{\texorpdfstring{$\sim$}{\string~}SimpleTimer}}
+\index{````~SimpleTimer@{\texorpdfstring{$\sim$}{\string~}SimpleTimer}!KTN::ALGO::SimpleTimer@{KTN::ALGO::SimpleTimer}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}SimpleTimer()}{\string~SimpleTimer()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_a_l_g_o_1_1_simple_timer_ad29e9a56c18bb1e378b0bd125e50c62a} 
+Simple\+Timer\+::\texorpdfstring{$\sim$}{\string~}\+Simple\+Timer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destroys the \doxylink{class_k_t_n_1_1_a_l_g_o_1_1_simple_timer}{Simple\+Timer} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_k_t_n_1_1_a_l_g_o_1_1_simple_timer_a55f215c58d1644d1261d924e88b19bce}\index{KTN::ALGO::SimpleTimer@{KTN::ALGO::SimpleTimer}!Expired@{Expired}}
+\index{Expired@{Expired}!KTN::ALGO::SimpleTimer@{KTN::ALGO::SimpleTimer}}
+\doxysubsubsection{\texorpdfstring{Expired()}{Expired()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_a_l_g_o_1_1_simple_timer_a55f215c58d1644d1261d924e88b19bce} 
+bool KTN\+::\+ALGO\+::\+Simple\+Timer\+::\+Expired (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the timer has expired. 
+
+\begin{DoxyReturn}{Returns}
+True if the timer has expired, false otherwise. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00052}{KTN\+::\+Stacker\+Timer\+::on\+Json()}}.
+
+\Hypertarget{class_k_t_n_1_1_a_l_g_o_1_1_simple_timer_a4dc66a2b8bcf754125f888585046d35e}\index{KTN::ALGO::SimpleTimer@{KTN::ALGO::SimpleTimer}!Pause@{Pause}}
+\index{Pause@{Pause}!KTN::ALGO::SimpleTimer@{KTN::ALGO::SimpleTimer}}
+\doxysubsubsection{\texorpdfstring{Pause()}{Pause()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_a_l_g_o_1_1_simple_timer_a4dc66a2b8bcf754125f888585046d35e} 
+void Simple\+Timer\+::\+Pause (\begin{DoxyParamCaption}\item[{bool}]{paused}{}\end{DoxyParamCaption})}
+
+
+
+Pauses or resumes the timer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em paused} & If true, the timer will be paused. If false, the timer will be resumed. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{l00374}{KTN\+::\+Stacker\+Timer\+::\+Enable()}}, and \mbox{\hyperlink{l00052}{KTN\+::\+Stacker\+Timer\+::on\+Json()}}.
+
+\Hypertarget{class_k_t_n_1_1_a_l_g_o_1_1_simple_timer_a47ae6c759bb8b66e2ef284d288ad871e}\index{KTN::ALGO::SimpleTimer@{KTN::ALGO::SimpleTimer}!Start@{Start}}
+\index{Start@{Start}!KTN::ALGO::SimpleTimer@{KTN::ALGO::SimpleTimer}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_a_l_g_o_1_1_simple_timer_a47ae6c759bb8b66e2ef284d288ad871e} 
+void Simple\+Timer\+::\+Start (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{start\+Time}{, }\item[{const std\+::string \&}]{end\+Time}{}\end{DoxyParamCaption})}
+
+
+
+Starts the timer with the specified start and end times. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Time} & The start time of the timer in string format. \\
+\hline
+{\em end\+Time} & The end time of the timer in string format. \\
+\hline
+\end{DoxyParams}
+
+
+References \mbox{\hyperlink{l00018}{Named\+Thread\+::\+Create\+And\+Run()}}, and \mbox{\hyperlink{l00082}{Started()}}.
+
+
+
+Referenced by \mbox{\hyperlink{l00052}{KTN\+::\+Stacker\+Timer\+::on\+Json()}}.
+
+\Hypertarget{class_k_t_n_1_1_a_l_g_o_1_1_simple_timer_aa7bc9cabb3bd0133736eac52e2a2cb8c}\index{KTN::ALGO::SimpleTimer@{KTN::ALGO::SimpleTimer}!Started@{Started}}
+\index{Started@{Started}!KTN::ALGO::SimpleTimer@{KTN::ALGO::SimpleTimer}}
+\doxysubsubsection{\texorpdfstring{Started()}{Started()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_a_l_g_o_1_1_simple_timer_aa7bc9cabb3bd0133736eac52e2a2cb8c} 
+bool KTN\+::\+ALGO\+::\+Simple\+Timer\+::\+Started (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the timer has been started. 
+
+\begin{DoxyReturn}{Returns}
+True if the timer has been started, false otherwise. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{l00374}{KTN\+::\+Stacker\+Timer\+::\+Enable()}}, \mbox{\hyperlink{l00885}{KTN\+::\+Stacker\+Timer\+::min\+Order\+Execution()}}, \mbox{\hyperlink{l00052}{KTN\+::\+Stacker\+Timer\+::on\+Json()}}, \mbox{\hyperlink{l00027}{Start()}}, and \mbox{\hyperlink{l00036}{KTN\+::\+Stacker\+Timer\+::\texorpdfstring{$\sim$}{\string~}\+Stacker\+Timer()}}.
+
+\Hypertarget{class_k_t_n_1_1_a_l_g_o_1_1_simple_timer_aecfe2ceef77e3549c1b02daa68832a10}\index{KTN::ALGO::SimpleTimer@{KTN::ALGO::SimpleTimer}!Stop@{Stop}}
+\index{Stop@{Stop}!KTN::ALGO::SimpleTimer@{KTN::ALGO::SimpleTimer}}
+\doxysubsubsection{\texorpdfstring{Stop()}{Stop()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_a_l_g_o_1_1_simple_timer_aecfe2ceef77e3549c1b02daa68832a10} 
+void Simple\+Timer\+::\+Stop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Stops the timer. 
+
+
+
+Referenced by \mbox{\hyperlink{l00885}{KTN\+::\+Stacker\+Timer\+::min\+Order\+Execution()}}, \mbox{\hyperlink{l00339}{KTN\+::\+Stacker\+Timer\+::\+Reset\+Position()}}, and \mbox{\hyperlink{l00036}{KTN\+::\+Stacker\+Timer\+::\texorpdfstring{$\sim$}{\string~}\+Stacker\+Timer()}}.
+
+\Hypertarget{class_k_t_n_1_1_a_l_g_o_1_1_simple_timer_a802350167226e681ef29fb92884daa1f}\index{KTN::ALGO::SimpleTimer@{KTN::ALGO::SimpleTimer}!Triggered@{Triggered}}
+\index{Triggered@{Triggered}!KTN::ALGO::SimpleTimer@{KTN::ALGO::SimpleTimer}}
+\doxysubsubsection{\texorpdfstring{Triggered()}{Triggered()}}
+{\footnotesize\ttfamily \label{class_k_t_n_1_1_a_l_g_o_1_1_simple_timer_a802350167226e681ef29fb92884daa1f} 
+bool KTN\+::\+ALGO\+::\+Simple\+Timer\+::\+Triggered (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the timer has been triggered. 
+
+\begin{DoxyReturn}{Returns}
+True if the timer has been triggered, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Algo\+Calculators/Simple\+Timer.\+hpp\item 
+Algo\+Calculators/Simple\+Timer.\+cpp\end{DoxyCompactItemize}
