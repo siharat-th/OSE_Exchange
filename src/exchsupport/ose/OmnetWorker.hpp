@@ -65,6 +65,13 @@ struct answer_instrument_ose_t
 };
 #pragma pack(pop)
 
+// Named struct IDs for DQ124 VIM parsing
+static constexpr uint16_t NS_DELTA_HEADER          = 37001;
+static constexpr uint16_t NS_REMOVE                = 37002;
+static constexpr uint16_t NS_INST_SERIES_BASIC     = 37301;
+static constexpr uint16_t NS_INST_SERIES_BASIC_SINGLE = 37302;
+static constexpr uint16_t NS_INST_SERIES_ID        = 37310;
+
 // Series info for cache
 struct SeriesInfo
 {
@@ -87,6 +94,7 @@ public:
 	// Pre-trade setup (called from OseGT after login)
 	bool QuerySeries();
 	bool QueryInstruments();
+	bool QueryInstrumentSeries();  // DQ124 — actual tradeable series with orderbook_id
 	bool SendReadyToTrade();
 
 	OmnetSession& GetSession() { return _session; }
@@ -103,8 +111,10 @@ private:
 	std::thread _thread;
 	std::atomic<bool> _active;
 	std::atomic<bool> _readyToTrade;
+	std::atomic<bool> _setupDone;
+	std::atomic<bool> _setupOk;
 
-	// Series cache (populated by DQ2, keyed by orderbook_id from SecMaster)
+	// Series cache (populated by DQ124, keyed by orderbook_id)
 	std::vector<SeriesInfo> _seriesCache;
 	std::unordered_map<uint32_t, size_t> _secidToSeriesIdx; // orderbook_id → index in _seriesCache
 

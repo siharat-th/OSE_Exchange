@@ -41,8 +41,22 @@ OmnetBdxThread::~OmnetBdxThread()
 
 bool OmnetBdxThread::Start()
 {
-	// Login with separate session for broadcast polling
-	if (!_session.Login(_sett, _sett.ForceLogin))
+	// Login with BDX credentials (separate user to avoid kicking worker session)
+	OseSessionSettings bdxSett = _sett;
+	if (!_sett.BdxLoginId.empty())
+	{
+		bdxSett.LoginId = _sett.BdxLoginId;
+		bdxSett.Password = _sett.BdxPassword;
+		bdxSett.GatewayHost = _sett.BdxGatewayHost;
+		bdxSett.GatewayPort = _sett.BdxGatewayPort;
+		KT01_LOG_INFO(__CLASS__, "BDX using separate user: " + bdxSett.LoginId);
+	}
+	else
+	{
+		KT01_LOG_INFO(__CLASS__, "BDX using same user as worker (may conflict with forced login!)");
+	}
+
+	if (!_session.Login(bdxSett, _sett.ForceLogin))
 	{
 		KT01_LOG_ERROR(__CLASS__, "Failed to login BDX session");
 		return false;

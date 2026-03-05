@@ -161,30 +161,39 @@ int OmnetSession::SendTransaction(const void* txbuf, size_t len, uint32 facility
 	if (!_loggedIn)
 		return OMNIAPI_NOT_LOGGED_IN;
 
-	// Allocate omni_message + payload (data follows the header at msg+1)
-	omni_message* msg = (omni_message*)malloc(sizeof(omni_message) + len);
+	// Allocate MAX_REQUEST_SIZE — API may write response back into the same buffer
+	omni_message* msg = (omni_message*)malloc(MAX_REQUEST_SIZE);
 	if (!msg)
 		return OMNIAPI_FAILURE;
 
+	memset(msg, 0, MAX_REQUEST_SIZE);
 	msg->length_u = (uint32)len;
 	memcpy((char*)(msg + 1), txbuf, len);
 
-	// Build pointer vector (single message)
-	omni_message* msgVec[1] = { msg };
-
 	int32 txstatus = 0;
-	uint32 localTxid = 0;
-	uint32 localOrdid = 0;
 
-	int32 status = omniapi_tx_ex(_hSession, &txstatus, facility, msgVec,
-	                             txid ? txid : &localTxid,
-	                             ordid ? ordid : &localOrdid);
+	// Use int[2] (8 bytes) for txid/ordid — example code uses int[2]
+	// API may write quad_word (8 bytes) despite uint32* signature
+	int txidBuf[2] = {0, 0};
+	int ordidBuf[2] = {0, 0};
+
+	int32 status = omniapi_tx_ex(_hSession, &txstatus, facility, &msg,
+	                             (uint32*)txidBuf, (uint32*)ordidBuf);
+
+	// Copy back to caller if requested
+	if (txid)
+		*txid = (uint32)txidBuf[0];
+	if (ordid)
+		*ordid = (uint32)ordidBuf[0];
 
 	if (status != OMNIAPI_SUCCESS)
 	{
 		std::string errmsg = GetErrorMessage(txstatus);
+		std::string statusmsg = GetErrorMessage(status);
 		KT01_LOG_ERROR(__CLASS__, "omniapi_tx_ex failed: status=" + std::to_string(status) +
-		               " txstatus=" + std::to_string(txstatus) + " msg=" + errmsg);
+		               " (" + statusmsg + ")" +
+		               " txstatus=" + std::to_string(txstatus) +
+		               " (" + errmsg + ")");
 	}
 
 	free(msg);
@@ -206,26 +215,21 @@ int OmnetSession::SendQuery(const void* qrybuf, size_t len,
 	sndmsg->length_u = (uint32)len;
 	memcpy((char*)(sndmsg + 1), qrybuf, len);
 
-	// Receive buffer (raw int8*)
-	char rcvbuffer[8192];
-	uint32 msglen = sizeof(rcvbuffer);
+	// Use caller's buffer directly (DQ124 VIM can be >8KB)
+	uint32 msglen = static_cast<uint32>(rcvlen);
 
 	int32 txstatus = 0;
 	uint32 localTxid = 0;
 	uint32 localOrdid = 0;
 
 	int32 status = omniapi_query_ex(_hSession, &txstatus, facility, sndmsg, 1,
-	                                (int8*)rcvbuffer, &msglen,
+	                                (int8*)rcvbuf, &msglen,
 	                                txid ? txid : &localTxid,
 	                                ordid ? ordid : &localOrdid);
 
 	if (status == OMNIAPI_SUCCESS)
 	{
-		size_t copylen = (size_t)msglen;
-		if (copylen > rcvlen)
-			copylen = rcvlen;
-		memcpy(rcvbuf, rcvbuffer, copylen);
-		rcvlen = copylen;
+		rcvlen = static_cast<size_t>(msglen);
 	}
 	else
 	{

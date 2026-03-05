@@ -53,6 +53,13 @@ struct OseSessionSettings : SessionSettings
 	std::string BackupHost;
 	int BackupPort;
 
+	// BDX session credentials (Level 3 - sessions/AKL02.conf, separate user)
+	std::string BdxUsername;
+	std::string BdxLoginId;
+	std::string BdxPassword;
+	std::string BdxGatewayHost;
+	int BdxGatewayPort;
+
 	void Load(const std::string& filename)
 	{
 		Filename = filename;
@@ -100,6 +107,25 @@ struct OseSessionSettings : SessionSettings
 		GatewayPort = sess.getInteger("OSE.GatewayPort");
 		BackupHost = sess.getString("OSE.BackupHost");
 		BackupPort = sess.getInteger("OSE.BackupPort");
+
+		// Level 3b: BDX session (separate user to avoid forced-login kick)
+		std::string bdxfile = settings.getString("OSE.BdxSessionFile");
+		if (!bdxfile.empty())
+		{
+			Settings bdxsess = Settings((dir + bdxfile));
+			BdxLoginId = bdxsess.getString("OSE.LoginId");
+			BdxPassword = bdxsess.getString("OSE.Password");
+			BdxGatewayHost = bdxsess.getString("OSE.GatewayHost");
+			BdxGatewayPort = bdxsess.getInteger("OSE.GatewayPort");
+		}
+		else
+		{
+			// Fallback: same as worker (will cause forced-login conflict!)
+			BdxLoginId = LoginId;
+			BdxPassword = Password;
+			BdxGatewayHost = GatewayHost;
+			BdxGatewayPort = GatewayPort;
+		}
 	}
 };
 

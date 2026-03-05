@@ -72,17 +72,13 @@ void OseGT::Start()
 
 	KT01_LOG_INFO(__CLASS__, "Starting OSE exchange handler...");
 
-	// Start worker (login + order submission thread)
+	// Start worker — login, pre-trade queries, subscribe, UI1 all happen on worker thread
+	// (OMnet API requires all calls on the same thread as login)
 	if (!_worker->Start())
 	{
 		KT01_LOG_ERROR(__CLASS__, "Failed to start worker");
 		return;
 	}
-
-	// Pre-trade activities
-	_worker->QuerySeries();
-	_worker->QueryInstruments();
-	_worker->SendReadyToTrade();
 
 	// Start BDX thread (login + broadcast polling)
 	if (!_bdx->Start())

@@ -8,7 +8,9 @@
 #include <KT01/Core/Log.hpp>
 #include <KT01/SecDefs/OseSecMaster.hpp>
 #include <Orders/OrderEnumsV2.hpp>
+#include <akl/Price.hpp>
 #include <cstring>
+#include <set>
 
 using namespace KT01::SECDEF::OSE;
 
@@ -19,6 +21,21 @@ using namespace KT01::SECDEF::OSE;
 static inline void PutInt64(int64_t& dest, const int64_t& src)
 {
 	swapint64_t(&dest, const_cast<int64_t*>(&src));
+}
+
+// Helper: hex dump for debug logging
+static std::string HexDump(const char* data, size_t len, size_t maxBytes = 64)
+{
+	std::string out;
+	size_t n = std::min(len, maxBytes);
+	char buf[4];
+	for (size_t i = 0; i < n; ++i)
+	{
+		snprintf(buf, sizeof(buf), "%02X ", (unsigned char)data[i]);
+		out += buf;
+	}
+	if (len > maxBytes) out += "...";
+	return out;
 }
 
 namespace KTN::OSE {
@@ -41,18 +58,23 @@ OmnetWorker::~OmnetWorker()
 
 bool OmnetWorker::Start()
 {
-	// Login to OMnet Gateway
-	if (!_session.Login(_sett, _sett.ForceLogin))
+	// Start worker thread — all OMnet API calls happen on this thread
+	_active.store(true, std::memory_order_release);
+	_setupDone.store(false, std::memory_order_release);
+	_setupOk.store(false, std::memory_order_release);
+	_thread = std::thread(&OmnetWorker::Run, this);
+
+	// Wait for setup to complete (login, queries, subscribe, UI1)
+	while (!_setupDone.load(std::memory_order_acquire))
+		std::this_thread::sleep_for(std::chrono::milliseconds(10));
+
+	if (!_setupOk.load(std::memory_order_acquire))
 	{
-		KT01_LOG_ERROR(__CLASS__, "Failed to login to OMnet Gateway");
+		KT01_LOG_ERROR(__CLASS__, "Worker setup failed");
 		return false;
 	}
 
-	// Start worker thread
-	_active.store(true, std::memory_order_release);
-	_thread = std::thread(&OmnetWorker::Run, this);
-
-	KT01_LOG_INFO(__CLASS__, "Worker thread started");
+	KT01_LOG_INFO(__CLASS__, "Worker thread started and ready");
 	return true;
 }
 
@@ -69,6 +91,32 @@ void OmnetWorker::Stop()
 
 void OmnetWorker::Run()
 {
+	// Phase 1: Setup — all OMnet API calls on this thread
+	if (!_session.Login(_sett, _sett.ForceLogin))
+	{
+		KT01_LOG_ERROR(__CLASS__, "Failed to login to OMnet Gateway");
+		_setupOk.store(false, std::memory_order_release);
+		_setupDone.store(true, std::memory_order_release);
+		return;
+	}
+
+	// Pre-trade queries
+	QueryInstruments();
+	QueryInstrumentSeries();
+
+	// Subscribe to broadcasts (required before sending orders)
+	_session.SubscribeAll();
+
+	// Ready-to-trade
+	SendReadyToTrade();
+
+	// Signal setup complete
+	_setupOk.store(true, std::memory_order_release);
+	_setupDone.store(true, std::memory_order_release);
+
+	KT01_LOG_INFO(__CLASS__, "Setup complete, entering order processing loop");
+
+	// Phase 2: Order processing loop
 	KTN::OrderPod ord;
 
 	while (_active.load(std::memory_order_acquire))
@@ -113,6 +161,18 @@ void OmnetWorker::ProcessOrder(KTN::OrderPod& ord)
 			PUTSHORT(trans->series.commodity_n, trans->series.commodity_n);
 			PUTSHORT(trans->series.expiration_date_n, trans->series.expiration_date_n);
 			PUTLONG(trans->series.strike_price_i, trans->series.strike_price_i);
+
+			if (_sett.DebugAppMsgs)
+			{
+				KT01_LOG_INFO(__CLASS__, "MO31 series: country=" + std::to_string(trans->series.country_c) +
+				              " market=" + std::to_string(trans->series.market_c) +
+				              " ig=" + std::to_string(trans->series.instrument_group_c) +
+				              " mod=" + std::to_string(trans->series.modifier_c) +
+				              " commodity=" + std::to_string(trans->series.commodity_n) +
+				              " expiry=" + std::to_string(trans->series.expiration_date_n) +
+				              " strike=" + std::to_string(trans->series.strike_price_i));
+				KT01_LOG_INFO(__CLASS__, "MO31 series hex: " + HexDump((const char*)&trans->series, sizeof(series_t), 16));
+			}
 		}
 		break;
 	case KOrderAction::ACTION_MOD:
@@ -152,6 +212,15 @@ void OmnetWorker::ProcessOrder(KTN::OrderPod& ord)
 		return;
 	}
 
+	// Debug: log struct size, EP0, and hex dump of first bytes
+	if (_sett.DebugAppMsgs)
+	{
+		KT01_LOG_INFO(__CLASS__, "TX: len=" + std::to_string(txlen) +
+		              " sizeof(hv_order_trans_t)=" + std::to_string(sizeof(hv_order_trans_t)) +
+		              " EP0=" + std::to_string(_session.GetFacilityEP0()));
+		KT01_LOG_INFO(__CLASS__, "TX hex: " + HexDump(txbuf, txlen, 80));
+	}
+
 	// Send blocking transaction
 	uint32 txid = 0;
 	uint32 ordid = 0;
@@ -171,6 +240,8 @@ void OmnetWorker::ProcessOrder(KTN::OrderPod& ord)
 	{
 		KT01_LOG_ERROR(__CLASS__, "TX failed: status=" + std::to_string(status));
 		ord.OrdStatus = KOrderStatus::REJECTED;
+		memset(ord.text, 0, sizeof(ord.text));
+		snprintf(ord.text, sizeof(ord.text) - 1, "omniapi_tx_ex=%d", status);
 		_responseQueue.enqueue(ord);
 	}
 }
@@ -308,6 +379,229 @@ bool OmnetWorker::QueryInstruments()
 	return true;
 }
 
+bool OmnetWorker::QueryInstrumentSeries()
+{
+	KT01_LOG_INFO(__CLASS__, "Querying instrument series (DQ124) -- building series cache...");
+
+	_seriesCache.clear();
+	_secidToSeriesIdx.clear();
+
+	// Build DQ124 query
+	query_delta_t query;
+	memset(&query, 0, sizeof(query));
+	query.transaction_type.central_module_c = 'D';
+	query.transaction_type.server_type_c = 'Q';
+	PUTSHORT(query.transaction_type.transaction_number_n, 124);
+
+	// country_c = 96 (Japan Exchange Group), rest = 0 (all markets/instruments)
+	query.series.country_c = 96;
+
+	// Full answer: download_ref_number = -1 (NO_VALUE)
+	int64_t noValue = -1;
+	PutInt64(query.download_ref_number_q, noValue);
+
+	// full_answer_timestamp = 0 (first-time full download)
+	query.full_answer_timestamp.tv_sec = 0;
+	query.full_answer_timestamp.tv_nsec = 0;
+
+	// Answer buffer -- OMnet API max is MAX_RESPONSE_SIZE (64000)
+	static constexpr size_t ANS_BUF_SIZE = MAX_RESPONSE_SIZE;
+	std::vector<char> ansBuf(ANS_BUF_SIZE);
+
+	uint16_t segment = 1;
+	int totalSeries = 0;
+	int mappedCount = 0;
+
+	while (true)
+	{
+		PUTSHORT(query.segment_number_n, segment);
+		size_t ansLen = ANS_BUF_SIZE;
+
+		int status = _session.SendQuery(&query, sizeof(query), ansBuf.data(), ansLen,
+		                                _session.GetFacilityEP0());
+
+		if (status != OMNIAPI_SUCCESS)
+		{
+			KT01_LOG_ERROR(__CLASS__, "DQ124 failed: status=" + std::to_string(status) +
+			               " segment=" + std::to_string(segment));
+			return false;
+		}
+
+		const char* base = ansBuf.data();
+		const char* end = base + ansLen;
+
+		if (ansLen < sizeof(answer_segment_hdr_t))
+		{
+			KT01_LOG_ERROR(__CLASS__, "DA124 answer too small: " + std::to_string(ansLen));
+			return false;
+		}
+
+		const answer_segment_hdr_t* hdr = (const answer_segment_hdr_t*)base;
+		uint16_t itemCount;
+		PUTSHORT(itemCount, hdr->items_n);
+		uint16_t msgSize;
+		PUTSHORT(msgSize, hdr->size_n);
+		uint16_t ansSegment;
+		PUTSHORT(ansSegment, hdr->segment_number_n);
+
+		KT01_LOG_INFO(__CLASS__, "DA124 seg=" + std::to_string(ansSegment) +
+		              " items=" + std::to_string(itemCount) +
+		              " size=" + std::to_string(msgSize) +
+		              " ansLen=" + std::to_string(ansLen));
+
+		const char* ptr = base + sizeof(answer_segment_hdr_t);
+
+		// VIM layout: each item has an item_hdr_t wrapper
+		//   item[0] = delta_header (skip)
+		//   item[1..N] = series (each contains sub_items: 37301, 37302, 37310, etc.)
+		// item_hdr_t.size_n includes the item_hdr itself (4 bytes)
+		// sub_item_hdr_t.size_n includes the sub_item_hdr itself (4 bytes)
+
+		for (uint16_t item = 0; item < itemCount && ptr + sizeof(item_hdr_t) <= end; ++item)
+		{
+			const item_hdr_t* ihdr = (const item_hdr_t*)ptr;
+			uint16_t iSize;
+			PUTSHORT(iSize, ihdr->size_n);
+
+			if (iSize < sizeof(item_hdr_t) || ptr + iSize > end)
+				break;
+
+			const char* itemEnd = ptr + iSize;
+			ptr = itemEnd; // advance to next item
+
+			if (item == 0)
+			{
+				if (segment == 1)
+				{
+					uint16_t iItems;
+					PUTSHORT(iItems, ihdr->items_n);
+					KT01_LOG_INFO(__CLASS__, "DA124 item[0] (delta): items_n=" +
+					              std::to_string(iItems) + " size_n=" + std::to_string(iSize));
+				}
+				continue; // skip delta_header item
+			}
+
+			// Debug first few items of first segment
+			if (segment == 1 && item <= 2)
+			{
+				uint16_t iItems;
+				PUTSHORT(iItems, ihdr->items_n);
+				KT01_LOG_INFO(__CLASS__, "DA124 item[" + std::to_string(item) +
+				              "]: items_n=" + std::to_string(iItems) +
+				              " size_n=" + std::to_string(iSize) +
+				              " offset=" + std::to_string((const char*)ihdr - base));
+			}
+
+			// Parse sub_items within this series item
+			series_t curSeries = {};
+			char curInsId[33] = {};
+			int32_t curObid = 0;
+			bool curHasSeries = false;
+			bool curHasObid = false;
+
+			const char* subPtr = ((const char*)ihdr) + sizeof(item_hdr_t);
+			while (subPtr + sizeof(sub_item_hdr_t) <= itemEnd)
+			{
+				const sub_item_hdr_t* subHdr = (const sub_item_hdr_t*)subPtr;
+				uint16_t nsId;
+				PUTSHORT(nsId, subHdr->named_struct_n);
+				uint16_t nsSize;
+				PUTSHORT(nsSize, subHdr->size_n);
+
+				// size_n includes the sub_item_hdr_t itself (4 bytes)
+				if (nsSize < sizeof(sub_item_hdr_t) || subPtr + nsSize > itemEnd)
+					break;
+
+				const char* nsData = subPtr + sizeof(sub_item_hdr_t);
+				uint16_t dataSize = nsSize - sizeof(sub_item_hdr_t);
+
+				subPtr += nsSize;
+
+				switch (nsId)
+				{
+				case NS_INST_SERIES_BASIC: // 37301
+				{
+					if (dataSize >= sizeof(ns_inst_series_basic_t))
+					{
+						const ns_inst_series_basic_t* basic = (const ns_inst_series_basic_t*)nsData;
+						curSeries = basic->series;
+						PUTSHORT(curSeries.commodity_n, curSeries.commodity_n);
+						PUTSHORT(curSeries.expiration_date_n, curSeries.expiration_date_n);
+						PUTLONG(curSeries.strike_price_i, curSeries.strike_price_i);
+
+						memcpy(curInsId, basic->ins_id_s, 32);
+						curInsId[32] = '\0';
+						for (int j = 31; j >= 0 && curInsId[j] == ' '; --j)
+							curInsId[j] = '\0';
+
+						curHasSeries = true;
+					}
+					break;
+				}
+				case NS_INST_SERIES_ID: // 37310 — orderbook_id
+				{
+					if (dataSize >= sizeof(ns_inst_series_id_t))
+					{
+						const ns_inst_series_id_t* sid = (const ns_inst_series_id_t*)nsData;
+						PUTLONG(curObid, sid->orderbook_id_i);
+						curHasObid = true;
+					}
+					break;
+				}
+				default:
+					break;
+				}
+			}
+
+			// Finalize this series
+			if (curHasSeries && curHasObid && curObid > 0)
+			{
+				uint32_t obid = static_cast<uint32_t>(curObid);
+
+				uint64_t seriesKey = ((uint64_t)curSeries.country_c << 56) |
+				                     ((uint64_t)curSeries.market_c << 48) |
+				                     ((uint64_t)curSeries.instrument_group_c << 40) |
+				                     ((uint64_t)curSeries.modifier_c << 32) |
+				                     ((uint64_t)curSeries.commodity_n << 16) |
+				                     ((uint64_t)curSeries.expiration_date_n);
+
+				OseSecMaster::instance().RegisterSeriesKey(seriesKey, obid);
+
+				SeriesInfo si;
+				si.series = curSeries;
+				memcpy(si.name, curInsId, 32);
+
+				_seriesCache.push_back(si);
+				_secidToSeriesIdx[obid] = _seriesCache.size() - 1;
+				++mappedCount;
+			}
+
+			if (totalSeries < 10 && curHasSeries)
+			{
+				KT01_LOG_INFO(__CLASS__, "DQ124[" + std::to_string(totalSeries) + "]: '" +
+				              std::string(curInsId) + "' obid=" + std::to_string(curObid) +
+				              " commodity=" + std::to_string(curSeries.commodity_n) +
+				              " expiry=" + std::to_string(curSeries.expiration_date_n));
+			}
+
+			if (curHasSeries) totalSeries++;
+		}
+
+		KT01_LOG_INFO(__CLASS__, "DA124 seg " + std::to_string(segment) +
+		              " done: " + std::to_string(totalSeries) + " series so far, " +
+		              std::to_string(mappedCount) + " mapped");
+
+		if (ansSegment == 0)
+			break;
+
+		++segment;
+	}
+
+	KT01_LOG_INFO(__CLASS__, "DQ124 complete: " + std::to_string(totalSeries) +
+	              " series, " + std::to_string(mappedCount) + " mapped (with orderbook_id)");
+	return true;
+}
+
 const series_t* OmnetWorker::FindSeries(uint32_t orderbook_id) const
 {
 	auto it = _secidToSeriesIdx.find(orderbook_id);
@@ -375,7 +669,9 @@ int OmnetWorker::BuildMO31(const KTN::OrderPod& ord, void* buf)
 	int64_t qty = ord.quantity;
 	PutInt64(trans->order_var.mp_quantity_i, qty);
 
-	int32_t price = static_cast<int32_t>(ord.price.AsShifted());
+	// Price: Internal Price stores ITCH value (×10^4) as unshifted.
+	// AsShifted() = ITCH_price × 10^9. Divide by Multiplier(10^9) to get premium_i.
+	int32_t price = static_cast<int32_t>(ord.price.AsShifted() / static_cast<int64_t>(akl::Price::Multiplier));
 	PUTLONG(trans->order_var.premium_i, price);
 
 	// Side: OMnet uses 1=Buy, 2=Sell
@@ -388,7 +684,7 @@ int OmnetWorker::BuildMO31(const KTN::OrderPod& ord, void* buf)
 	// Open/close: 0 = not specified
 	trans->order_var.open_close_req_c = 0;
 
-	// Time validity
+	// Time validity (OMnet format: 0x0100=Day, 0x0200=GTC, 0x0300=IOC, 0x0400=FOK)
 	uint16_t tif = 0x0100; // Default: Day
 	switch (ord.OrdTif)
 	{
@@ -403,12 +699,18 @@ int OmnetWorker::BuildMO31(const KTN::OrderPod& ord, void* buf)
 	// Order type: 1=Limit, 2=Market
 	trans->order_var.order_type_c = (ord.OrdType == KOrderType::MARKET) ? 2 : 1;
 
-	// Total volume (same as mp_quantity for new orders)
-	PutInt64(trans->total_volume_i, qty);
+	// Total volume: 0 = normal order (no hidden volume). Per MessRef p99.
+	// Do NOT set to qty — that triggers "hidden volume not allowed" on non-iceberg instruments.
+	trans->total_volume_i = 0; // already 0 from memset, explicit for clarity
 
 	// Customer info (ex_client) — store our order request ID for correlation
 	snprintf(trans->order_var.ex_client_s, sizeof(trans->order_var.ex_client_s),
 	         "%lu", (unsigned long)ord.orderReqId);
+
+	// Exchange info (ose_exchange_info_t overlay)
+	ose_exchange_info_t* exInfo = (ose_exchange_info_t*)trans->exchange_info_s;
+	exInfo->acc_type_c = '0';          // '0'=Client, '9'=House (per MessRef p284)
+	exInfo->tr_purpose_flag_c = ' ';   // must be space for orders
 
 	if (_sett.DebugAppMsgs)
 	{
@@ -437,7 +739,7 @@ int OmnetWorker::BuildMO33(const KTN::OrderPod& ord, void* buf)
 	int64_t qty = ord.quantity;
 	PutInt64(trans->order_var.mp_quantity_i, qty);
 
-	int32_t price = static_cast<int32_t>(ord.price.AsShifted());
+	int32_t price = static_cast<int32_t>(ord.price.AsShifted() / static_cast<int64_t>(akl::Price::Multiplier));
 	PUTLONG(trans->order_var.premium_i, price);
 
 	// Side
@@ -465,18 +767,23 @@ int OmnetWorker::BuildMO33(const KTN::OrderPod& ord, void* buf)
 	// Order type
 	trans->order_var.order_type_c = (ord.OrdType == KOrderType::MARKET) ? 2 : 1;
 
-	// Total volume
-	PutInt64(trans->total_volume_i, qty);
+	// Total volume: 0 = normal order (no hidden volume). Per MessRef p99/p103.
+	trans->total_volume_i = 0;
 
-	// Delta quantity: 0 = absolute quantity, 1 = delta
-	trans->delta_quantity_c = 0;
+	// Delta quantity: 1 = absolute, 2 = delta
+	trans->delta_quantity_c = 1; // absolute
 
-	// Balance quantity (remaining after alter)
-	PutInt64(trans->balance_quantity_i, qty);
+	// Balance quantity: 0 for alter (not used with absolute)
+	trans->balance_quantity_i = 0;
 
 	// Customer info
 	snprintf(trans->order_var.ex_client_s, sizeof(trans->order_var.ex_client_s),
 	         "%lu", (unsigned long)ord.orderReqId);
+
+	// Exchange info (ose_exchange_info_t overlay)
+	ose_exchange_info_t* exInfo = (ose_exchange_info_t*)trans->exchange_info_s;
+	exInfo->acc_type_c = '0';          // '0'=Client, '9'=House
+	exInfo->tr_purpose_flag_c = ' ';   // must be space for orders
 
 	if (_sett.DebugAppMsgs)
 	{
