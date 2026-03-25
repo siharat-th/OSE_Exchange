@@ -38,6 +38,7 @@ private:
 	const OseSessionSettings& _sett;
 	std::thread _thread;
 	std::atomic<bool> _active;
+	bool _notified_overflow = false; // Prevent flood — notify once
 
 	void Run();
 	void ParseBO5(const char* buf, size_t len);

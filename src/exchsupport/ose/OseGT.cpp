@@ -8,6 +8,7 @@
 #include <KT01/Core/Log.hpp>
 #include <KT01/SecDefs/OseSecMaster.hpp>
 #include <Orders/OrderEnumsV2.hpp>
+#include <Notifications/NotifierRest.hpp>
 #include <chrono>
 
 using namespace KT01::SECDEF::OSE;
@@ -26,6 +27,7 @@ OseGT::OseGT(tbb::concurrent_queue<KTN::OrderPod>& qords,
 {
 	// Load settings (two-level: exchange config + session credentials)
 	_sett.Load(settingsfile);
+	_sett.Source = source; // Pass source (e.g. "ODIN") for NotifierRest calls
 
 	// Configure base state
 	_State.EXCHNAME = _sett.ExchName;
@@ -77,6 +79,7 @@ void OseGT::Start()
 	if (!_worker->Start())
 	{
 		KT01_LOG_ERROR(__CLASS__, "Failed to start worker");
+		KTN::notify::NotifierRest::NotifyError(_sett.ExchName, _sett.Source, _sett.Org, "OSE Worker start failed");
 		return;
 	}
 
@@ -84,11 +87,13 @@ void OseGT::Start()
 	if (!_bdx->Start())
 	{
 		KT01_LOG_ERROR(__CLASS__, "Failed to start BDX thread");
+		KTN::notify::NotifierRest::NotifyError(_sett.ExchName, _sett.Source, _sett.Org, "OSE BDX start failed");
 		return;
 	}
 
 	_started.store(true);
 	KT01_LOG_INFO(__CLASS__, "OSE exchange handler started successfully");
+	KTN::notify::NotifierRest::NotifyInfo(_sett.ExchName, _sett.Source, _sett.Org, "OSE Exchange Handler STARTED");
 }
 
 void OseGT::Stop()
@@ -115,6 +120,7 @@ void OseGT::Send(KTN::OrderPod& order, int action)
 	if (!_started.load() || !_worker->IsReady())
 	{
 		KT01_LOG_ERROR(__CLASS__, "Cannot send order - not ready");
+		KTN::notify::NotifierRest::NotifyError(_sett.ExchName, _sett.Source, _sett.Org, "Order rejected: exchange not ready");
 		order.OrdStatus = KOrderStatus::REJECTED;
 		return;
 	}
@@ -126,6 +132,7 @@ void OseGT::Send(KTN::OrderPod& order, int action)
 	if (!_orderQueue.enqueue(order))
 	{
 		KT01_LOG_ERROR(__CLASS__, "Order queue full!");
+		KTN::notify::NotifierRest::NotifyError(_sett.ExchName, _sett.Source, _sett.Org, "Order rejected: queue full");
 		order.OrdStatus = KOrderStatus::REJECTED;
 		return;
 	}
@@ -195,6 +202,8 @@ void OseGT::ProcessResponses()
 		case KOrderStatus::REJECTED:
 			KT01_LOG_ERROR(__CLASS__, "Reject: reqid=" + std::to_string(ord.orderReqId) +
 			               " reason=" + std::string(ord.text));
+			KTN::notify::NotifierRest::NotifyError(_sett.ExchName, _sett.Source, _sett.Org,
+				"Order rejected: reqid=" + std::to_string(ord.orderReqId) + " " + std::string(ord.text));
 			break;
 
 		default:

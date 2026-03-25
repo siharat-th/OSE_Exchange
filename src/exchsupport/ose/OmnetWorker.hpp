@@ -113,6 +113,7 @@ private:
 	std::atomic<bool> _readyToTrade;
 	std::atomic<bool> _setupDone;
 	std::atomic<bool> _setupOk;
+	bool _notified_session_lost = false; // Prevent flood — notify once until reconnect
 
 	// Series cache (populated by DQ124, keyed by orderbook_id)
 	std::vector<SeriesInfo> _seriesCache;

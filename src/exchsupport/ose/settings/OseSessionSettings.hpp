@@ -18,6 +18,7 @@ struct OseSessionSettings : SessionSettings
 	// Exchange config (Level 2 - oseOmnet.conf)
 	std::string ExchName;
 	std::string Org;
+	std::string Source; // Set by OseGT from constructor param (e.g. "ODIN")
 	std::string Account;
 
 	bool ForceLogin;

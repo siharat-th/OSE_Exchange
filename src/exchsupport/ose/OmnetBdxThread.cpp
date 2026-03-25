@@ -8,6 +8,7 @@
 #include <KT01/Core/Log.hpp>
 #include <KT01/SecDefs/OseSecMaster.hpp>
 #include <Orders/OrderEnumsV2.hpp>
+#include <Notifications/NotifierRest.hpp>
 #include <cstring>
 #include <chrono>
 
@@ -59,6 +60,7 @@ bool OmnetBdxThread::Start()
 	if (!_session.Login(bdxSett, _sett.ForceLogin))
 	{
 		KT01_LOG_ERROR(__CLASS__, "Failed to login BDX session");
+		KTN::notify::NotifierRest::NotifyError(_sett.ExchName, _sett.Source, _sett.Org, "BDX login failed");
 		return false;
 	}
 
@@ -70,6 +72,7 @@ bool OmnetBdxThread::Start()
 	_thread = std::thread(&OmnetBdxThread::Run, this);
 
 	KT01_LOG_INFO(__CLASS__, "BDX polling thread started");
+	KTN::notify::NotifierRest::NotifyInfo(_sett.ExchName, _sett.Source, _sett.Org, "BDX LOGIN SUCCESSFUL");
 	return true;
 }
 
@@ -142,12 +145,18 @@ void OmnetBdxThread::Run()
 		else if (status == OMNIAPI_NOT_LOGGED_IN)
 		{
 			KT01_LOG_ERROR(__CLASS__, "Forced logout detected!");
+			KTN::notify::NotifierRest::NotifyError(_sett.ExchName, _sett.Source, _sett.Org, "BDX forced logout!");
 			_active.store(false);
 			break;
 		}
 		else if (status == OMNIAPI_OVERFLOW)
 		{
 			KT01_LOG_ERROR(__CLASS__, "Event buffer overflow - broadcasts may have been lost");
+			if (!_notified_overflow)
+			{
+				KTN::notify::NotifierRest::NotifyError(_sett.ExchName, _sett.Source, _sett.Org, "BDX event buffer overflow");
+				_notified_overflow = true;
+			}
 		}
 	}
 }
@@ -403,6 +412,7 @@ void OmnetBdxThread::ParseNetworkEvent(const char* buf, size_t len)
 		break;
 	case 4: // BN4 - Forced logout
 		KT01_LOG_ERROR(__CLASS__, "BN4: Network gateway forced logout!");
+		KTN::notify::NotifierRest::NotifyError(_sett.ExchName, _sett.Source, _sett.Org, "BN4 gateway forced logout!");
 		_active.store(false);
 		break;
 	default:

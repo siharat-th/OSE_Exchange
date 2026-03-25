@@ -8,6 +8,7 @@
 #include <KT01/Core/Log.hpp>
 #include <KT01/SecDefs/OseSecMaster.hpp>
 #include <Orders/OrderEnumsV2.hpp>
+#include <Notifications/NotifierRest.hpp>
 #include <akl/Price.hpp>
 #include <cstring>
 #include <set>
@@ -95,6 +96,7 @@ void OmnetWorker::Run()
 	if (!_session.Login(_sett, _sett.ForceLogin))
 	{
 		KT01_LOG_ERROR(__CLASS__, "Failed to login to OMnet Gateway");
+		KTN::notify::NotifierRest::NotifyError(_sett.ExchName, _sett.Source, _sett.Org, "Worker login failed");
 		_setupOk.store(false, std::memory_order_release);
 		_setupDone.store(true, std::memory_order_release);
 		return;
@@ -115,6 +117,7 @@ void OmnetWorker::Run()
 	_setupDone.store(true, std::memory_order_release);
 
 	KT01_LOG_INFO(__CLASS__, "Setup complete, entering order processing loop");
+	KTN::notify::NotifierRest::NotifyInfo(_sett.ExchName, _sett.Source, _sett.Org, "Worker LOGIN SUCCESSFUL");
 
 	// Phase 2: Order processing loop
 	KTN::OrderPod ord;
@@ -134,6 +137,11 @@ void OmnetWorker::Run()
 			if (!_session.IsLoggedIn())
 			{
 				KT01_LOG_ERROR(__CLASS__, "Session lost, attempting reconnect...");
+				if (!_notified_session_lost)
+				{
+					KTN::notify::NotifierRest::NotifyError(_sett.ExchName, _sett.Source, _sett.Org, "Worker session lost, reconnecting...");
+					_notified_session_lost = true;
+				}
 				if (Reconnect())
 					lastKeepalive = std::chrono::steady_clock::now();
 				else
@@ -154,6 +162,12 @@ void OmnetWorker::Run()
 				{
 					KT01_LOG_ERROR(__CLASS__, "Keepalive failed: " + std::to_string(rc) +
 					               " — session may be dead");
+					if (!_notified_session_lost)
+					{
+						KTN::notify::NotifierRest::NotifyError(_sett.ExchName, _sett.Source, _sett.Org,
+							"Worker keepalive failed: rc=" + std::to_string(rc));
+						_notified_session_lost = true;
+					}
 				}
 				lastKeepalive = now;
 			}
@@ -840,6 +854,8 @@ bool OmnetWorker::Reconnect()
 	}
 
 	KT01_LOG_INFO(__CLASS__, "Reconnect successful");
+	KTN::notify::NotifierRest::NotifyInfo(_sett.ExchName, _sett.Source, _sett.Org, "Worker RECONNECTED");
+	_notified_session_lost = false;
 	return true;
 }
 
