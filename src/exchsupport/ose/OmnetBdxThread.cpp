@@ -11,6 +11,7 @@
 #include <Notifications/NotifierRest.hpp>
 #include <cstring>
 #include <chrono>
+#include <cinttypes>
 
 using namespace KT01::SECDEF::OSE;
 
@@ -106,31 +107,25 @@ void OmnetBdxThread::Run()
 			{
 				broadcast_type_t* btype = (broadcast_type_t*)evbuf;
 
-				if (btype->central_module_c == 'B' && btype->server_type_c == 'O')
-				{
-					uint16_t txnum;
-					PUTSHORT(txnum, btype->transaction_number_n);
+				uint16_t txnum;
+				PUTSHORT(txnum, btype->transaction_number_n);
 
-					if (txnum == 5) // BO5 - Firm Order Book
-					{
-						ParseBO5(evbuf, evlen);
-					}
-					else if (_sett.DebugRecvBytes)
-					{
-						KT01_LOG_INFO(__CLASS__, "BDX: BO" + std::to_string(txnum) +
-						              " len=" + std::to_string(evlen));
-					}
-				}
-				else if (btype->central_module_c == 'B' && btype->server_type_c == 'N')
-				{
-					ParseNetworkEvent(evbuf, evlen);
-				}
-				else if (_sett.DebugRecvBytes)
+				if (_sett.DebugRecvBytes)
 				{
 					KT01_LOG_INFO(__CLASS__, "BDX: " +
 					              std::string(1, btype->central_module_c) +
 					              std::string(1, btype->server_type_c) +
+					              std::to_string(txnum) +
 					              " len=" + std::to_string(evlen));
+				}
+
+				if (btype->central_module_c == 'B' && btype->server_type_c == 'O' && txnum == 5)
+				{
+					ParseBO5(evbuf, evlen);
+				}
+				else if (btype->central_module_c == 'B' && btype->server_type_c == 'N')
+				{
+					ParseNetworkEvent(evbuf, evlen);
 				}
 			}
 		}
@@ -338,6 +333,31 @@ void OmnetBdxThread::ParseBO5(const char* buf, size_t len)
 			break;
 		}
 
+		case 34920: // order_trade_info — fill details with match_id (execid) + trade price
+		{
+			if (data + sizeof(order_trade_info_t) <= end)
+			{
+				const order_trade_info_t* ti = (const order_trade_info_t*)data;
+
+				// match_id = unique execution identifier from exchange
+				uint64_t execEvt;
+				uint32_t matchGrp, matchItem;
+				swapint64_t(&execEvt, const_cast<void*>((const void*)&ti->match_id.execution_event_nbr_u));
+				PUTLONG(matchGrp, ti->match_id.match_group_nbr_u);
+				PUTLONG(matchItem, ti->match_id.match_item_nbr_u);
+
+				snprintf(ord.execid, sizeof(ord.execid),
+				         "%" PRIu64 "-%" PRIu32 "-%" PRIu32,
+				         execEvt, matchGrp, matchItem);
+
+				// trade price (dec_in_premium=4)
+				int32_t tprice;
+				PUTLONG(tprice, ti->trade_price_i);
+				ord.lastpx = akl::Price::FromShifted((int64_t)tprice);
+			}
+			break;
+		}
+
 		case 34009: // alter_trans — simple alter
 		{
 			if (data + sizeof(alter_trans_t) <= end)
@@ -378,6 +398,17 @@ void OmnetBdxThread::ParseBO5(const char* buf, size_t len)
 		hasOrderInfo = true;
 	}
 
+	// Fallback: if this is a fill but 34920 (order_trade_info) was not present,
+	// generate synthetic execid so base publisher / UI don't discard it
+	if (hasChangeInfo && (changeReason == 4 || changeReason == 5) && ord.execid[0] == '\0')
+	{
+		uint64_t seq = _fillSeq.fetch_add(1, std::memory_order_relaxed);
+		snprintf(ord.execid, sizeof(ord.execid),
+		         "OSE-%" PRIu64 "-%" PRIu64, ord.exchordid, seq);
+		KT01_LOG_WARN(__CLASS__, "BO5 fill missing 34920 (order_trade_info), "
+		              "synthetic execid=" + std::string(ord.execid));
+	}
+
 	// Push to response queue if we have meaningful order info
 	if (hasOrderInfo || hasChangeInfo)
 	{
@@ -391,6 +422,8 @@ void OmnetBdxThread::ParseBO5(const char* buf, size_t len)
 			              " side=" + std::to_string((int)ord.OrdSide) +
 			              " qty=" + std::to_string(ord.quantity) +
 			              " leaves=" + std::to_string(ord.leavesqty) +
+			              " lastpx=" + std::to_string((double)ord.lastpx) +
+			              " execid=" + std::string(ord.execid) +
 			              " changeReason=" + std::to_string(changeReason));
 		}
 	}

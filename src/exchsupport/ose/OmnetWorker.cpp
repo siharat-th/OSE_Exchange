@@ -11,6 +11,7 @@
 #include <Notifications/NotifierRest.hpp>
 #include <akl/Price.hpp>
 #include <cstring>
+#include <cinttypes>
 #include <set>
 
 using namespace KT01::SECDEF::OSE;
@@ -310,10 +311,22 @@ void OmnetWorker::ProcessOrder(KTN::OrderPod& ord)
 			ord.lastqty = ord.quantity;
 			ord.leavesqty = 0;
 			ord.fillqty = ord.quantity;
+			ord.lastpx = ord.price;
+			{
+				uint64_t seq = _fillSeq.fetch_add(1, std::memory_order_relaxed);
+				snprintf(ord.execid, sizeof(ord.execid),
+				         "OSE-%" PRIu64 "-%" PRIu64, ord.exchordid, seq);
+			}
 			break;
 		case 3: // Partially traded, nothing in book (FAK)
 			ord.OrdStatus = KOrderStatus::PARTIALLY_FILLED;
 			ord.OrdState = KOrderState::COMPLETE;
+			ord.lastpx = ord.price;
+			{
+				uint64_t seq = _fillSeq.fetch_add(1, std::memory_order_relaxed);
+				snprintf(ord.execid, sizeof(ord.execid),
+				         "OSE-%" PRIu64 "-%" PRIu64, ord.exchordid, seq);
+			}
 			break;
 		case 4: // Whole order placed in orderbook
 			ord.OrdStatus = KOrderStatus::NEW;
@@ -323,6 +336,12 @@ void OmnetWorker::ProcessOrder(KTN::OrderPod& ord)
 		case 6: // Partially traded, rest in orderbook
 			ord.OrdStatus = KOrderStatus::PARTIALLY_FILLED;
 			ord.OrdState = KOrderState::WORKING;
+			ord.lastpx = ord.price;
+			{
+				uint64_t seq = _fillSeq.fetch_add(1, std::memory_order_relaxed);
+				snprintf(ord.execid, sizeof(ord.execid),
+				         "OSE-%" PRIu64 "-%" PRIu64, ord.exchordid, seq);
+			}
 			break;
 		case 1: // FOK rejected (no fill, no book)
 		case 17: // circuit breaker
@@ -389,9 +408,20 @@ void OmnetWorker::ProcessOrder(KTN::OrderPod& ord)
 					// Same txstatus handling as above
 					switch (txstatus)
 					{
-					case 2: ord.OrdStatus = KOrderStatus::FILLED; ord.OrdState = KOrderState::COMPLETE; break;
+					case 2:
+						ord.OrdStatus = KOrderStatus::FILLED; ord.OrdState = KOrderState::COMPLETE;
+						ord.lastqty = ord.quantity; ord.leavesqty = 0; ord.fillqty = ord.quantity;
+						ord.lastpx = ord.price;
+						{ uint64_t s = _fillSeq.fetch_add(1, std::memory_order_relaxed);
+						  snprintf(ord.execid, sizeof(ord.execid), "OSE-%" PRIu64 "-%" PRIu64, ord.exchordid, s); }
+						break;
 					case 4: ord.OrdStatus = KOrderStatus::NEW; ord.OrdState = KOrderState::WORKING; break;
-					case 6: ord.OrdStatus = KOrderStatus::PARTIALLY_FILLED; ord.OrdState = KOrderState::WORKING; break;
+					case 6:
+						ord.OrdStatus = KOrderStatus::PARTIALLY_FILLED; ord.OrdState = KOrderState::WORKING;
+						ord.lastpx = ord.price;
+						{ uint64_t s = _fillSeq.fetch_add(1, std::memory_order_relaxed);
+						  snprintf(ord.execid, sizeof(ord.execid), "OSE-%" PRIu64 "-%" PRIu64, ord.exchordid, s); }
+						break;
 					case 1: case 17: case 19: ord.OrdStatus = KOrderStatus::CANCELED; ord.OrdState = KOrderState::COMPLETE; break;
 					default:
 						if (ord.OrdAction == KOrderAction::ACTION_CXL) { ord.OrdStatus = KOrderStatus::CANCELED; ord.OrdState = KOrderState::COMPLETE; }
@@ -858,6 +888,9 @@ bool OmnetWorker::Reconnect()
 	_notified_session_lost = false;
 	return true;
 }
+
+// TODO: If production has BD6 broadcast (event types beyond 1,1001),
+// handle BD6 in BDX thread to update fills with real match_id + deal_price.
 
 int OmnetWorker::BuildMO31(const KTN::OrderPod& ord, void* buf)
 {

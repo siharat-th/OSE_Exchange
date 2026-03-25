@@ -273,18 +273,56 @@ int OmnetSession::SubscribeAll()
 	if (!_loggedIn)
 		return OMNIAPI_NOT_LOGGED_IN;
 
-	// Subscribe to all authorized broadcasts (NULL buffer = all)
-	int32 status = omniapi_set_event_ex(_hSession, 1, nullptr);
-	if (status != OMNIAPI_SUCCESS && status != OMNIAPI_ALR_SET)
+	// Step 1: Get all available event types (per apisample.c pattern)
+	uint32 buffSize = 256;
+	char* strBuffer = nullptr;
+	int32 status;
+
+	do
 	{
-		KT01_LOG_ERROR(__CLASS__, "omniapi_set_event_ex failed: " + std::to_string(status));
-	}
-	else
+		free(strBuffer);
+		strBuffer = (char*)malloc(buffSize);
+		uint32 sz = buffSize;
+		status = omniapi_read_event_ext_ex(_hSession, OMNI_EVTTYP_SHOW,
+		                                    (int8*)strBuffer, &sz, nullptr, 0);
+		if (status == OMNIAPI_TRUNCATED)
+			buffSize *= 2;
+	} while (status == OMNIAPI_TRUNCATED);
+
+	if (status != OMNIAPI_SUCCESS)
 	{
-		KT01_LOG_INFO(__CLASS__, "Subscribed to all broadcasts");
+		KT01_LOG_ERROR(__CLASS__, "Failed to get event types: " + std::to_string(status));
+		free(strBuffer);
+		return status;
 	}
 
-	return status;
+	// Step 2: Parse comma-separated event type list and subscribe to each
+	std::string eventList(strBuffer);
+	free(strBuffer);
+
+	KT01_LOG_INFO(__CLASS__, "Available event types: " + eventList);
+
+	char* ptr = &eventList[0];
+	int subscribed = 0;
+	while (*ptr != '\0')
+	{
+		uint32 eventType = strtoul(ptr, &ptr, 10);
+		if (eventType == 0)
+			break;
+
+		int32 rc = omniapi_set_event_ex(_hSession, eventType, nullptr);
+		if (rc == OMNIAPI_SUCCESS || rc == OMNIAPI_ALR_SET)
+			subscribed++;
+		else
+			KT01_LOG_WARN(__CLASS__, "Failed to subscribe event type " +
+			              std::to_string(eventType) + ": " + std::to_string(rc));
+
+		if (*ptr == ',')
+			ptr++; // skip comma delimiter
+	}
+
+	KT01_LOG_INFO(__CLASS__, "Subscribed to " + std::to_string(subscribed) + " event types");
+	return OMNIAPI_SUCCESS;
 }
 
 int OmnetSession::ReadEvent(void* buf, size_t& len, uint32 eventType, int32 flags)

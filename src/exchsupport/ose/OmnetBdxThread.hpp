@@ -39,6 +39,7 @@ private:
 	std::thread _thread;
 	std::atomic<bool> _active;
 	bool _notified_overflow = false; // Prevent flood — notify once
+	std::atomic<uint64_t> _fillSeq{0}; // Fallback execid counter when 34920 not present
 
 	void Run();
 	void ParseBO5(const char* buf, size_t len);

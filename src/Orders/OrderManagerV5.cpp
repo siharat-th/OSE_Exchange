@@ -496,6 +496,13 @@ void OrderManagerV5::minOrderExecution(KTN::OrderPod& ord, bool hedgeSent)
 	tgt.OrdFillType = ord.OrdFillType;
 	OrderUtils::fastCopy(tgt.execid, ord.execid, sizeof(ord.execid));
 
+	// Update exchordid if incoming has it (e.g. immediate fill without prior ACK)
+	if (ord.exchordid > 0)
+	{
+		tgt.exchordid = ord.exchordid;
+		_ords.updateExchOrdId(ord, ord.exchordid);
+	}
+
 	ProcessOrder(tgt);
 }
 
