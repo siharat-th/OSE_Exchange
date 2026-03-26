@@ -323,13 +323,36 @@ int OmnetSession::SubscribeAll()
 
 	KT01_LOG_INFO(__CLASS__, "Subscribed to " + std::to_string(subscribed) + " event types");
 
-	// Force-subscribe to Info Type 4 (BD6) and 8 (BO5) even if not in available list
-	const uint32 extraTypes[] = {4, 8};
-	for (uint32 et : extraTypes)
+	// Individual subscribe BD6 (per apisample APISAMPLE_SetEvent pattern)
 	{
-		int32 rc = omniapi_set_event_ex(_hSession, et, nullptr);
-		KT01_LOG_INFO(__CLASS__, "Force subscribe event type " + std::to_string(et) +
-		              ": rc=" + std::to_string(rc));
+		set_event_list_t list;
+		memset(&list, 0, sizeof(list));
+		list.buflen_i = sizeof(set_event_list_t);
+		infobj_t* bc = &list.subitm_x[0].infobj_x;
+		bc->infsrc_n = 43;
+		bc->inftyp_n = 4;  // dedicated
+		bc->brdcst_x.central_module_c = 'B';
+		bc->brdcst_x.server_type_c = 'D';
+		bc->brdcst_x.transaction_number_n = 6;
+		bc->attrib_x.dedicated_x.member_info_n = 0;
+		int32 rc = omniapi_set_event_ex(_hSession, 1, (char*)&list);
+		KT01_LOG_INFO(__CLASS__, "Individual subscribe BD6: rc=" + std::to_string(rc));
+	}
+
+	// BO5 (Info Type 8, instrument dedicated) — rc=-39 on all UAT HFT accounts
+	// Requires CDB authorization from OSE/JPX to enable
+	{
+		set_event_list_t list;
+		memset(&list, 0, sizeof(list));
+		list.buflen_i = sizeof(set_event_list_t);
+		infobj_t* bc = &list.subitm_x[0].infobj_x;
+		bc->infsrc_n = 43;
+		bc->inftyp_n = 8;
+		bc->brdcst_x.central_module_c = 'B';
+		bc->brdcst_x.server_type_c = 'O';
+		bc->brdcst_x.transaction_number_n = 5;
+		int32 rc = omniapi_set_event_ex(_hSession, 1, (char*)&list);
+		KT01_LOG_INFO(__CLASS__, "Individual subscribe BO5: rc=" + std::to_string(rc));
 	}
 
 	return OMNIAPI_SUCCESS;
