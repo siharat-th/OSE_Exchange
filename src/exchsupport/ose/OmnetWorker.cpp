@@ -284,71 +284,108 @@ void OmnetWorker::ProcessOrder(KTN::OrderPod& ord)
 		              " ordid=" + HexDump(ordidQw.quad_word, 8, 8) +
 		              " txstatus=" + std::to_string(txstatus));
 
-		// For MO33 (alter): exchange returns a new order_number.
-		// Send CANCEL for old exchordid first so UI removes old entry,
-		// then update exchordid to new value for the MODIFIED response.
-		uint64_t oldExchOrdId = ord.exchordid;
-
-		// Update exchordid with real exchange order_number (for NEW and MOD)
-		if (ord.OrdAction != KOrderAction::ACTION_CXL)
+		// For MO31 (NEW): ordid from tx_ex IS the order_number
+		// For MO33 (MOD): ordid from tx_ex is just txid (NOT new order_number!)
+		//   OMnet keeps the same order_number after alter — no update needed
+		// For MO4 (CXL): exchordid already set correctly
+		if (ord.OrdAction == KOrderAction::ACTION_NEW)
 			memcpy(&ord.exchordid, &ordidQw, sizeof(quad_word));
 
-		// For MOD: send a synthetic CANCEL for old exchordid so UI removes old entry
-		if (ord.OrdAction == KOrderAction::ACTION_MOD && oldExchOrdId != ord.exchordid)
-		{
-			KTN::OrderPod cxlPod = ord;
-			cxlPod.exchordid = oldExchOrdId;
-			cxlPod.OrdStatus = KOrderStatus::CANCELED;
-			cxlPod.OrdState = KOrderState::COMPLETE;
-			cxlPod.leavesqty = 0;
-			_responseQueue.enqueue(cxlPod);
-		}
+		// Fill txstatus (2,3,6) only applies to MO31 (NEW) — defer to BO5/BD6 for real execid
+		// For MO33/MO4: txstatus = number of contracts before change, NOT a fill indicator
+		bool isFillTx = (ord.OrdAction == KOrderAction::ACTION_NEW) &&
+		                (txstatus == 2 || txstatus == 3 || txstatus == 6);
 
-		// Fill txstatus (2,3,6): do NOT enqueue from TX response
-		// BO5/BD6 broadcast will provide real execid, fill price, fill qty
-		bool isFillTx = (txstatus == 2 || txstatus == 3 || txstatus == 6);
-
-		switch (txstatus)
+		// For MO33 (MOD) and MO4 (CXL): txstatus = number of contracts before change
+		// For MO31 (NEW): txstatus has specific meanings (1=FOK reject, 2=filled, 4=in book, etc.)
+		if (ord.OrdAction == KOrderAction::ACTION_MOD)
 		{
-		case 2: // Whole order traded (filled) — wait for BO5/BD6
-		case 3: // Partially traded, nothing in book (FAK) — wait for BO5/BD6
-		case 6: // Partially traded, rest in orderbook — wait for BO5/BD6
-			KT01_LOG_INFO(__CLASS__, "Fill txstatus=" + std::to_string(txstatus) +
-			              " — deferring to BO5/BD6 broadcast");
-			break;
-		case 4: // Whole order placed in orderbook
-			ord.OrdStatus = KOrderStatus::NEW;
-			ord.OrdState = KOrderState::WORKING;
-			ord.leavesqty = ord.quantity;
-			break;
-		case 1: // FOK rejected (no fill, no book)
-		case 17: // circuit breaker
-		case 19: // circuit breaker partial
-			ord.OrdStatus = KOrderStatus::CANCELED;
-			ord.OrdState = KOrderState::COMPLETE;
-			break;
-		default:
-			// For MO4/MO33, txstatus = number of contracts before change (or 0)
-			if (ord.OrdAction == KOrderAction::ACTION_CXL)
-			{
-				ord.OrdStatus = KOrderStatus::CANCELED;
-				ord.OrdState = KOrderState::COMPLETE;
-			}
-			else if (ord.OrdAction == KOrderAction::ACTION_MOD)
+			// MO33: txstatus >= 1 means success (N contracts before change)
+			// txstatus == 0 means order not found (should not happen if bid_or_ask set)
+			if (txstatus > 0)
 			{
 				ord.OrdStatus = KOrderStatus::MODIFIED;
 				ord.OrdState = KOrderState::WORKING;
+				ord.leavesqty = ord.quantity;
 			}
 			else
 			{
+				KT01_LOG_WARN(__CLASS__, "MO33 txstatus=0 — order not found, no modification");
+				ord.OrdStatus = KOrderStatus::REJECTED;
+				ord.OrdState = KOrderState::COMPLETE;
+				snprintf(ord.text, sizeof(ord.text) - 1, "MO33 order not found (txstatus=0)");
+			}
+		}
+		else if (ord.OrdAction == KOrderAction::ACTION_CXL)
+		{
+			// MO4: txstatus = contracts before delete (0 = success for single delete)
+			ord.OrdStatus = KOrderStatus::CANCELED;
+			ord.OrdState = KOrderState::COMPLETE;
+		}
+		else
+		{
+			// MO31 (NEW): txstatus has specific meanings
+			switch (txstatus)
+			{
+			case 2: // Whole order traded (filled) — wait for BO5/BD6
+			case 3: // Partially traded, nothing in book (FAK) — wait for BO5/BD6
+			case 6: // Partially traded, rest in orderbook — wait for BO5/BD6
+				KT01_LOG_INFO(__CLASS__, "Fill txstatus=" + std::to_string(txstatus) +
+				              " — deferring to BO5/BD6 broadcast");
+				isFillTx = true;
+				break;
+			case 4: // Whole order placed in orderbook
 				ord.OrdStatus = KOrderStatus::NEW;
 				ord.OrdState = KOrderState::WORKING;
+				ord.leavesqty = ord.quantity;
+				break;
+			case 1: // FOK rejected (no fill, no book)
+			case 17: // circuit breaker
+			case 19: // circuit breaker partial
+				ord.OrdStatus = KOrderStatus::CANCELED;
+				ord.OrdState = KOrderState::COMPLETE;
+				break;
+			default:
+				ord.OrdStatus = KOrderStatus::NEW;
+				ord.OrdState = KOrderState::WORKING;
+				break;
 			}
-			break;
 		}
 		if (!isFillTx)
 			_responseQueue.enqueue(ord);
 		// Fills come from BO5/BD6 broadcasts via BDX thread
+
+		// DEBUG: Poll for BO5 on THIS session (same thread that sent the tx)
+		// to check if Worker session receives broadcasts
+		{
+			char dbgEvBuf[8192];
+			for (int poll = 0; poll < 10; ++poll)
+			{
+				std::this_thread::sleep_for(std::chrono::milliseconds(50));
+				size_t dbgEvLen = sizeof(dbgEvBuf);
+				int evStatus = _session.ReadEvent(dbgEvBuf, dbgEvLen, OMNI_EVTTYP_ALL, READEV_OPTMSK_MANY);
+				if (evStatus == OMNIAPI_SUCCESS && dbgEvLen >= sizeof(broadcast_type_t))
+				{
+					broadcast_type_t* btype = (broadcast_type_t*)dbgEvBuf;
+					uint16_t txnum;
+					PUTSHORT(txnum, btype->transaction_number_n);
+					KT01_LOG_WARN(__CLASS__, "DEBUG Worker BO5 poll[" + std::to_string(poll) +
+					              "]: GOT event " + std::string(1, btype->central_module_c) +
+					              std::string(1, btype->server_type_c) + std::to_string(txnum) +
+					              " len=" + std::to_string(dbgEvLen) +
+					              " hex=" + HexDump(dbgEvBuf, std::min(dbgEvLen, (size_t)120), 120));
+				}
+				else if (evStatus == OMNIAPI_NOT_FOUND)
+				{
+					KT01_LOG_INFO(__CLASS__, "DEBUG Worker BO5 poll[" + std::to_string(poll) + "]: no events");
+				}
+				else
+				{
+					KT01_LOG_WARN(__CLASS__, "DEBUG Worker BO5 poll[" + std::to_string(poll) +
+					              "]: status=" + std::to_string(evStatus));
+				}
+			}
+		}
 	}
 	else
 	{
@@ -948,29 +985,30 @@ int OmnetWorker::BuildMO33(const KTN::OrderPod& ord, void* buf)
 	trans->transaction_type.server_type_c = 'O';
 	PUTSHORT(trans->transaction_type.transaction_number_n, 33);
 
-	// Order number — the exchange order ID to alter
+	// Order number — OMnet keeps same order_number after alter
 	memcpy(&trans->order_number_u, &ord.exchordid, sizeof(quad_word));
 
-	// Only set the fields we want to change (0 = don't change)
+	// bid_or_ask_c — REQUIRED for order lookup (order_number + series + side)
+	trans->order_var.bid_or_ask_c = (ord.OrdSide == KOrderSide::BUY) ? 1 : 2;
+
+	// Fields to change (0 = don't change, except premium: INT_MIN = don't change)
 	int64_t qty = ord.quantity;
 	PutInt64(trans->order_var.mp_quantity_i, qty);
 
 	int32_t price = static_cast<int32_t>(OSEConverter::ToWire(ord.price));
 	PUTLONG(trans->order_var.premium_i, price);
 
-	// All other order_var fields left as 0 = "don't change"
-
-	// Delta quantity: 1 = absolute quantity (not delta)
+	// delta_quantity_c — REQUIRED: 1 = absolute qty, 2 = delta qty
 	trans->delta_quantity_c = 1;
 
-	// Exchange info (ose_exchange_info_t overlay)
-	ose_exchange_info_t* exInfo = (ose_exchange_info_t*)trans->exchange_info_s;
-	exInfo->acc_type_c = '0';
-	exInfo->tr_purpose_flag_c = ' ';
+	// exchange_info: first byte 0 = preserve original (don't change)
+	// All other order_var fields left as 0 = "don't change"
 
 	if (_sett.DebugAppMsgs)
 	{
 		KT01_LOG_INFO(__CLASS__, "MO33: price=" + std::to_string(price) + " qty=" + std::to_string(qty) +
+		              " side=" + std::to_string(trans->order_var.bid_or_ask_c) +
+		              " delta_qty_c='" + std::string(1, trans->delta_quantity_c) + "'" +
 		              " ordid=" + HexDump((const char*)&trans->order_number_u, 8, 8));
 	}
 
@@ -987,7 +1025,7 @@ int OmnetWorker::BuildMO4(const KTN::OrderPod& ord, void* buf)
 	trans->transaction_type.server_type_c = 'O';
 	PUTSHORT(trans->transaction_type.transaction_number_n, 4);
 
-	// Order number — the exchange order ID to delete
+	// Order number — OMnet keeps same order_number after alter
 	memcpy(&trans->order_number_u, &ord.exchordid, sizeof(quad_word));
 
 	// Side: 0=both (mass cancel), 1=buy, 2=sell

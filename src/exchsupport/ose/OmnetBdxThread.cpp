@@ -244,13 +244,13 @@ void OmnetBdxThread::ParseBO5(const char* buf, size_t len)
 			break;
 		}
 
-		case 34005: // hv_order_trans — new order
+		case 34005: // hv_order_trans — order identity (used by fills too)
 		{
 			if (data + sizeof(hv_order_trans_t) <= end)
 			{
 				const hv_order_trans_t* ot = (const hv_order_trans_t*)data;
 
-				// Extract order fields
+				// Always parse order identity — fills need qty, side, reqId, secid
 				int32_t price;
 				PUTLONG(price, ot->order_var.premium_i);
 				int64_t qty = SwapInt64(&ot->order_var.mp_quantity_i);
@@ -259,13 +259,9 @@ void OmnetBdxThread::ParseBO5(const char* buf, size_t len)
 				ord.quantity = (uint32_t)qty;
 				ord.leavesqty = (uint32_t)qty;
 				ord.OrdSide = (ot->order_var.bid_or_ask_c == 1) ? KOrderSide::BUY : KOrderSide::SELL;
-				ord.OrdStatus = KOrderStatus::NEW;
-				ord.OrdState = KOrderState::WORKING;
-
-				// Extract order request ID from ex_client
 				ord.orderReqId = strtoull(ot->order_var.ex_client_s, nullptr, 10);
 
-				// Extract secid (orderbook_id) from series via OseSecMaster
+				// Extract secid from series
 				series_t s = ot->series;
 				PUTSHORT(s.commodity_n, s.commodity_n);
 				PUTSHORT(s.expiration_date_n, s.expiration_date_n);
@@ -277,33 +273,29 @@ void OmnetBdxThread::ParseBO5(const char* buf, size_t len)
 				                     ((uint64_t)s.expiration_date_n);
 				ord.secid = OseSecMaster::instance().GetOrderbookIdBySeriesKey(seriesKey);
 
-				hasOrderInfo = true;
+				// Do NOT set hasOrderInfo — standalone NEW already handled by tx_ex.
+				// Fill path (34920 present) will set hasChangeInfo to trigger enqueue.
 			}
 			break;
 		}
 
 		case 34010: // hv_alter_trans — order altered
 		{
-			if (data + sizeof(hv_alter_trans_t) <= end)
+			// MO33 alter already handled by Worker tx_ex response.
+			// BO5 34010 returns OLD order_number which would re-create stale order in UI.
+			// Skip enqueuing — just log for debug.
+			if (_sett.DebugAppMsgs && data + sizeof(hv_alter_trans_t) <= end)
 			{
 				const hv_alter_trans_t* at = (const hv_alter_trans_t*)data;
-
 				int32_t price;
 				PUTLONG(price, at->order_var.premium_i);
 				int64_t qty = SwapInt64(&at->order_var.mp_quantity_i);
 				int64_t balance = SwapInt64(&at->balance_quantity_i);
-
-				ord.price = OSEConverter::FromWire((int64_t)price);
-				ord.quantity = (uint32_t)qty;
-				ord.leavesqty = (uint32_t)balance;
-				ord.OrdSide = (at->order_var.bid_or_ask_c == 1) ? KOrderSide::BUY : KOrderSide::SELL;
-				ord.OrdStatus = KOrderStatus::MODIFIED;
-				ord.OrdState = KOrderState::WORKING;
-				memcpy(&ord.exchordid, &at->order_number_u, sizeof(quad_word));
-				ord.orderReqId = strtoull(at->order_var.ex_client_s, nullptr, 10);
-
-				hasOrderInfo = true;
+				KT01_LOG_INFO(__CLASS__, "BO5 34010 (alter, skipped): price=" + std::to_string(price) +
+				              " qty=" + std::to_string(qty) + " balance=" + std::to_string(balance) +
+				              " side=" + std::to_string(at->order_var.bid_or_ask_c));
 			}
+			// hasOrderInfo intentionally NOT set — do not enqueue
 			break;
 		}
 

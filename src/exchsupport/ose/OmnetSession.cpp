@@ -198,10 +198,26 @@ int OmnetSession::SendTransaction(const void* txbuf, size_t len, uint32 facility
 			snprintf(hbuf, sizeof(hbuf), "%02X ", (unsigned char)txidQw.quad_word[i]);
 			txHex += hbuf;
 		}
+		uint32 rspLen = msg ? msg->length_u : 0;
 		KT01_LOG_INFO(__CLASS__, "TX result: status=" + std::to_string(status) +
 		              " txstatus=" + std::to_string(txstatus) +
 		              " txid=" + txHex + " ordid=" + ordHex +
-		              " rsp_len=" + std::to_string(msg ? msg->length_u : 0));
+		              " rsp_len=" + std::to_string(rspLen));
+
+		// DEBUG: hex dump of response body to see what exchange returned
+		if (msg && rspLen > 0)
+		{
+			const char* rspData = (const char*)(msg + 1);
+			uint32 dumpLen = (rspLen > 200) ? 200 : rspLen;
+			std::string rspHex;
+			char h[4];
+			for (uint32 j = 0; j < dumpLen; ++j)
+			{
+				snprintf(h, sizeof(h), "%02X ", (unsigned char)rspData[j]);
+				rspHex += h;
+			}
+			KT01_LOG_INFO(__CLASS__, "TX response hex (" + std::to_string(rspLen) + "B): " + rspHex);
+		}
 	}
 
 	// Return txstatus to caller
@@ -323,6 +339,10 @@ int OmnetSession::SubscribeAll()
 
 	KT01_LOG_INFO(__CLASS__, "Subscribed to " + std::to_string(subscribed) + " event types");
 
+	// Individual subscribe BD6/BO5 — commented out for testing
+	// SubscribeAll event type 1 may already include these broadcasts
+	// TODO: verify if individual subscribe is needed after packed buffer fix
+	/*
 	// Individual subscribe BD6 (per apisample APISAMPLE_SetEvent pattern)
 	{
 		set_event_list_t list;
@@ -340,7 +360,6 @@ int OmnetSession::SubscribeAll()
 	}
 
 	// BO5 (Info Type 8, instrument dedicated) — rc=-39 on all UAT HFT accounts
-	// Requires CDB authorization from OSE/JPX to enable
 	{
 		set_event_list_t list;
 		memset(&list, 0, sizeof(list));
@@ -354,6 +373,7 @@ int OmnetSession::SubscribeAll()
 		int32 rc = omniapi_set_event_ex(_hSession, 1, (char*)&list);
 		KT01_LOG_INFO(__CLASS__, "Individual subscribe BO5: rc=" + std::to_string(rc));
 	}
+	*/
 
 	return OMNIAPI_SUCCESS;
 }

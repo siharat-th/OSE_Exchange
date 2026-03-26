@@ -120,6 +120,7 @@ private:
 	std::vector<SeriesInfo> _seriesCache;
 	std::unordered_map<uint32_t, size_t> _secidToSeriesIdx; // orderbook_id → index in _seriesCache
 
+
 	void Run();
 	void ProcessOrder(KTN::OrderPod& ord);
 	void PopulateSeries(KTN::OrderPod& ord, const series_t* series);
