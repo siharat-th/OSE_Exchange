@@ -322,6 +322,16 @@ int OmnetSession::SubscribeAll()
 	}
 
 	KT01_LOG_INFO(__CLASS__, "Subscribed to " + std::to_string(subscribed) + " event types");
+
+	// Force-subscribe to Info Type 4 (BD6) and 8 (BO5) even if not in available list
+	const uint32 extraTypes[] = {4, 8};
+	for (uint32 et : extraTypes)
+	{
+		int32 rc = omniapi_set_event_ex(_hSession, et, nullptr);
+		KT01_LOG_INFO(__CLASS__, "Force subscribe event type " + std::to_string(et) +
+		              ": rc=" + std::to_string(rc));
+	}
+
 	return OMNIAPI_SUCCESS;
 }
 
