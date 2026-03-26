@@ -10,6 +10,7 @@
 #include <Orders/OrderEnumsV2.hpp>
 #include <Notifications/NotifierRest.hpp>
 #include <akl/Price.hpp>
+#include <akl/PriceConverters.hpp>
 #include <cstring>
 #include <cinttypes>
 #include <set>
@@ -303,45 +304,22 @@ void OmnetWorker::ProcessOrder(KTN::OrderPod& ord)
 			_responseQueue.enqueue(cxlPod);
 		}
 
+		// Fill txstatus (2,3,6): do NOT enqueue from TX response
+		// BO5/BD6 broadcast will provide real execid, fill price, fill qty
+		bool isFillTx = (txstatus == 2 || txstatus == 3 || txstatus == 6);
+
 		switch (txstatus)
 		{
-		case 2: // Whole order traded (filled)
-			ord.OrdStatus = KOrderStatus::FILLED;
-			ord.OrdState = KOrderState::COMPLETE;
-			ord.lastqty = ord.quantity;
-			ord.leavesqty = 0;
-			ord.fillqty = ord.quantity;
-			ord.lastpx = ord.price;
-			{
-				uint64_t seq = _fillSeq.fetch_add(1, std::memory_order_relaxed);
-				snprintf(ord.execid, sizeof(ord.execid),
-				         "OSE-%" PRIu64 "-%" PRIu64, ord.exchordid, seq);
-			}
-			break;
-		case 3: // Partially traded, nothing in book (FAK)
-			ord.OrdStatus = KOrderStatus::PARTIALLY_FILLED;
-			ord.OrdState = KOrderState::COMPLETE;
-			ord.lastpx = ord.price;
-			{
-				uint64_t seq = _fillSeq.fetch_add(1, std::memory_order_relaxed);
-				snprintf(ord.execid, sizeof(ord.execid),
-				         "OSE-%" PRIu64 "-%" PRIu64, ord.exchordid, seq);
-			}
+		case 2: // Whole order traded (filled) — wait for BO5/BD6
+		case 3: // Partially traded, nothing in book (FAK) — wait for BO5/BD6
+		case 6: // Partially traded, rest in orderbook — wait for BO5/BD6
+			KT01_LOG_INFO(__CLASS__, "Fill txstatus=" + std::to_string(txstatus) +
+			              " — deferring to BO5/BD6 broadcast");
 			break;
 		case 4: // Whole order placed in orderbook
 			ord.OrdStatus = KOrderStatus::NEW;
 			ord.OrdState = KOrderState::WORKING;
 			ord.leavesqty = ord.quantity;
-			break;
-		case 6: // Partially traded, rest in orderbook
-			ord.OrdStatus = KOrderStatus::PARTIALLY_FILLED;
-			ord.OrdState = KOrderState::WORKING;
-			ord.lastpx = ord.price;
-			{
-				uint64_t seq = _fillSeq.fetch_add(1, std::memory_order_relaxed);
-				snprintf(ord.execid, sizeof(ord.execid),
-				         "OSE-%" PRIu64 "-%" PRIu64, ord.exchordid, seq);
-			}
 			break;
 		case 1: // FOK rejected (no fill, no book)
 		case 17: // circuit breaker
@@ -368,8 +346,9 @@ void OmnetWorker::ProcessOrder(KTN::OrderPod& ord)
 			}
 			break;
 		}
-		_responseQueue.enqueue(ord);
-		// BO5 broadcast will provide additional updates (fills, etc.)
+		if (!isFillTx)
+			_responseQueue.enqueue(ord);
+		// Fills come from BO5/BD6 broadcasts via BDX thread
 	}
 	else
 	{
@@ -908,7 +887,7 @@ int OmnetWorker::BuildMO31(const KTN::OrderPod& ord, void* buf)
 
 	// Price: Internal Price stores ITCH value (×10^4) as unshifted.
 	// AsShifted() = ITCH_price × 10^9. Divide by Multiplier(10^9) to get premium_i.
-	int32_t price = static_cast<int32_t>(ord.price.AsShifted() / static_cast<int64_t>(akl::Price::Multiplier));
+	int32_t price = static_cast<int32_t>(OSEConverter::ToWire(ord.price));
 	PUTLONG(trans->order_var.premium_i, price);
 
 	// Side: OMnet uses 1=Buy, 2=Sell
@@ -976,7 +955,7 @@ int OmnetWorker::BuildMO33(const KTN::OrderPod& ord, void* buf)
 	int64_t qty = ord.quantity;
 	PutInt64(trans->order_var.mp_quantity_i, qty);
 
-	int32_t price = static_cast<int32_t>(ord.price.AsShifted() / static_cast<int64_t>(akl::Price::Multiplier));
+	int32_t price = static_cast<int32_t>(OSEConverter::ToWire(ord.price));
 	PUTLONG(trans->order_var.premium_i, price);
 
 	// All other order_var fields left as 0 = "don't change"

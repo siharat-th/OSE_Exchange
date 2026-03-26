@@ -195,4 +195,35 @@ public:
 	}
 };
 
+/**
+ * @brief OSE/OMnet-specific price converter
+ * OMnet uses dec_in_premium=4 (premium_i = price × 10,000)
+ * Internal representation: Decimal<9> = premium_i × Multiplier(10^9)
+ * UI applies pricefactor=0.0001 to display actual JPY price
+ *
+ * Example: premium_i=1230400 → internal=1230400000000000 → UI displays 123.0400 JPY
+ */
+class OSEConverter {
+public:
+	static constexpr int64_t SCALE_FACTOR = akl::Price::Multiplier; // 10^9
+
+	/**
+	 * @brief Convert from OMnet wire format to internal Price
+	 * @param wire_price OMnet premium_i (e.g., 1230400)
+	 * @return Internal Price (1230400000000000)
+	 */
+	inline static akl::Price FromWire(int64_t wire_price) {
+		return akl::Price::FromShifted(wire_price * SCALE_FACTOR);
+	}
+
+	/**
+	 * @brief Convert from internal Price to OMnet wire format
+	 * @param price Internal Price
+	 * @return OMnet premium_i value
+	 */
+	inline static int64_t ToWire(const akl::Price& price) {
+		return price.AsShifted() / SCALE_FACTOR;
+	}
+};
+
 #endif /* SRC_EXCHSUPPORT_CME_PRICECONVERTERS_HPP_ */

@@ -8,6 +8,7 @@
 #include <KT01/Core/Log.hpp>
 #include <KT01/SecDefs/OseSecMaster.hpp>
 #include <Orders/OrderEnumsV2.hpp>
+#include <akl/PriceConverters.hpp>
 #include <Notifications/NotifierRest.hpp>
 #include <cstring>
 #include <chrono>
@@ -97,36 +98,58 @@ void OmnetBdxThread::Run()
 	{
 		evlen = sizeof(evbuf);
 
-		// Poll for events (non-blocking with READEV_OPTMSK_MANY)
+		// Poll for events
 		int status = _session.ReadEvent(evbuf, evlen, OMNI_EVTTYP_ALL, READEV_OPTMSK_MANY);
 
-		if (status == OMNIAPI_SUCCESS)
+		if (status == OMNIAPI_SUCCESS || status == OMNIAPI_ALLEVTS)
 		{
-			// Check broadcast type
-			if (evlen >= sizeof(broadcast_type_t))
-			{
-				broadcast_type_t* btype = (broadcast_type_t*)evbuf;
+			// READEV_OPTMSK_MANY returns packed events:
+			// [uint16 length][broadcast data][uint16 length][broadcast data]...
+			char* current = evbuf;
+			char* bufEnd = evbuf + evlen;
 
+			while (current + sizeof(uint16_t) + sizeof(broadcast_type_t) <= bufEnd)
+			{
+				uint16_t eventLength = *(uint16_t*)current;
+				current += sizeof(uint16_t);  // skip length prefix
+
+				if (eventLength == 0 || current + eventLength > bufEnd)
+					break;
+
+				broadcast_type_t* btype = (broadcast_type_t*)current;
 				uint16_t txnum;
 				PUTSHORT(txnum, btype->transaction_number_n);
 
 				if (_sett.DebugRecvBytes)
 				{
-					KT01_LOG_INFO(__CLASS__, "BDX: " +
-					              std::string(1, btype->central_module_c) +
-					              std::string(1, btype->server_type_c) +
-					              std::to_string(txnum) +
-					              " len=" + std::to_string(evlen));
+					// Only log BO5, BD6, and unknown — skip noisy market broadcasts
+					bool isBO5 = (btype->server_type_c == 'O' && txnum == 5);
+					bool isBD6 = (btype->server_type_c == 'D' && txnum == 6);
+					if (isBO5 || isBD6)
+					{
+						KT01_LOG_INFO(__CLASS__, "BDX: " +
+						              std::string(1, btype->central_module_c) +
+						              std::string(1, btype->server_type_c) +
+						              std::to_string(txnum) +
+						              " len=" + std::to_string(eventLength));
+					}
 				}
 
 				if (btype->central_module_c == 'B' && btype->server_type_c == 'O' && txnum == 5)
 				{
-					ParseBO5(evbuf, evlen);
+					ParseBO5(current, eventLength);
+				}
+				else if (btype->central_module_c == 'B' && btype->server_type_c == 'D' && txnum == 6)
+				{
+					KT01_LOG_INFO(__CLASS__, "BD6 received, len=" + std::to_string(eventLength));
+					ParseBD6(current, eventLength);
 				}
 				else if (btype->central_module_c == 'B' && btype->server_type_c == 'N')
 				{
-					ParseNetworkEvent(evbuf, evlen);
+					ParseNetworkEvent(current, eventLength);
 				}
+
+				current += eventLength;
 			}
 		}
 		else if (status == OMNIAPI_NOT_FOUND)
@@ -183,6 +206,7 @@ void OmnetBdxThread::ParseBO5(const char* buf, size_t len)
 	bool hasChangeInfo = false;
 	int32_t transAck = 0;
 	uint8_t changeReason = 0;
+	uint8_t dealSource = 0;
 
 	for (uint16_t i = 0; i < items && ptr < end; ++i)
 	{
@@ -231,7 +255,7 @@ void OmnetBdxThread::ParseBO5(const char* buf, size_t len)
 				PUTLONG(price, ot->order_var.premium_i);
 				int64_t qty = SwapInt64(&ot->order_var.mp_quantity_i);
 
-				ord.price = akl::Price::FromShifted((int64_t)price);
+				ord.price = OSEConverter::FromWire((int64_t)price);
 				ord.quantity = (uint32_t)qty;
 				ord.leavesqty = (uint32_t)qty;
 				ord.OrdSide = (ot->order_var.bid_or_ask_c == 1) ? KOrderSide::BUY : KOrderSide::SELL;
@@ -269,7 +293,7 @@ void OmnetBdxThread::ParseBO5(const char* buf, size_t len)
 				int64_t qty = SwapInt64(&at->order_var.mp_quantity_i);
 				int64_t balance = SwapInt64(&at->balance_quantity_i);
 
-				ord.price = akl::Price::FromShifted((int64_t)price);
+				ord.price = OSEConverter::FromWire((int64_t)price);
 				ord.quantity = (uint32_t)qty;
 				ord.leavesqty = (uint32_t)balance;
 				ord.OrdSide = (at->order_var.bid_or_ask_c == 1) ? KOrderSide::BUY : KOrderSide::SELL;
@@ -299,7 +323,7 @@ void OmnetBdxThread::ParseBO5(const char* buf, size_t len)
 			break;
 		}
 
-		case 34902: // order_change_combined — quantity change (fill/execution)
+		case 34902: // order_change_combined — quantity change (fill/execution/delete)
 		{
 			if (data + sizeof(order_change_combined_t) <= end)
 			{
@@ -309,24 +333,9 @@ void OmnetBdxThread::ParseBO5(const char* buf, size_t len)
 				changeReason = oc->change_reason_c;
 
 				// change_reason: 1=new, 2=change, 3=delete, 4=fill, 5=partial fill
-				if (changeReason == 4 || changeReason == 5)
-				{
-					// This is a fill/execution
-					ord.lastqty = ord.quantity - (uint32_t)newQty; // executed qty
-					ord.leavesqty = (uint32_t)newQty;
-					ord.fillqty = ord.quantity - (uint32_t)newQty;
-
-					if (newQty == 0)
-					{
-						ord.OrdStatus = KOrderStatus::FILLED;
-						ord.OrdState = KOrderState::COMPLETE;
-					}
-					else
-					{
-						ord.OrdStatus = KOrderStatus::PARTIALLY_FILLED;
-						ord.OrdState = KOrderState::WORKING;
-					}
-				}
+				// For fills: changeReason may be 3 (delete after full fill) or 4/5
+				// Fill detection is done later via 34920 presence
+				ord.leavesqty = (uint32_t)newQty;
 
 				hasChangeInfo = true;
 			}
@@ -350,10 +359,13 @@ void OmnetBdxThread::ParseBO5(const char* buf, size_t len)
 				         "%" PRIu64 "-%" PRIu32 "-%" PRIu32,
 				         execEvt, matchGrp, matchItem);
 
-				// trade price (dec_in_premium=4)
+				// trade price: OMnet int32 (dec_in_premium=4, e.g. 1230400 = 123.0400)
 				int32_t tprice;
 				PUTLONG(tprice, ti->trade_price_i);
-				ord.lastpx = akl::Price::FromShifted((int64_t)tprice);
+				ord.lastpx = OSEConverter::FromWire((int64_t)tprice);
+
+				// deal_source_c: 1=outright, 7=SCO(spread), 20=auction, 3/5=J-NET
+				dealSource = ti->deal_source_c;
 			}
 			break;
 		}
@@ -367,7 +379,7 @@ void OmnetBdxThread::ParseBO5(const char* buf, size_t len)
 				PUTLONG(price, at->order_var.premium_i);
 				int64_t qty = SwapInt64(&at->order_var.mp_quantity_i);
 
-				ord.price = akl::Price::FromShifted((int64_t)price);
+				ord.price = OSEConverter::FromWire((int64_t)price);
 				ord.quantity = (uint32_t)qty;
 				ord.OrdSide = (at->order_var.bid_or_ask_c == 1) ? KOrderSide::BUY : KOrderSide::SELL;
 				ord.OrdStatus = KOrderStatus::MODIFIED;
@@ -398,15 +410,36 @@ void OmnetBdxThread::ParseBO5(const char* buf, size_t len)
 		hasOrderInfo = true;
 	}
 
-	// Fallback: if this is a fill but 34920 (order_trade_info) was not present,
-	// generate synthetic execid so base publisher / UI don't discard it
-	if (hasChangeInfo && (changeReason == 4 || changeReason == 5) && ord.execid[0] == '\0')
+	// Detect fill: 34920 (order_trade_info) present means this BO5 contains a fill
+	// changeReason may be 3 (delete from book after full fill), 4 (fill), or 5 (partial fill)
+	bool isFill = (ord.execid[0] != '\0');  // 34920 sets execid
+
+	if (isFill)
 	{
-		uint64_t seq = _fillSeq.fetch_add(1, std::memory_order_relaxed);
-		snprintf(ord.execid, sizeof(ord.execid),
-		         "OSE-%" PRIu64 "-%" PRIu64, ord.exchordid, seq);
-		KT01_LOG_WARN(__CLASS__, "BO5 fill missing 34920 (order_trade_info), "
-		              "synthetic execid=" + std::string(ord.execid));
+		// Fill qty = original qty - remaining qty (from 34902)
+		ord.lastqty = ord.quantity - ord.leavesqty;
+		ord.fillqty = ord.lastqty;
+
+		// Fill type from deal_source_c: 7=SCO(spread leg), others=outright
+		ord.OrdFillType = (dealSource == 7)
+			? KOrderFillType::SPREAD_LEG_FILL
+			: KOrderFillType::OUTRIGHT_FILL;
+
+		// Set fill status based on remaining qty
+		if (ord.leavesqty == 0)
+		{
+			ord.OrdStatus = KOrderStatus::FILLED;
+			ord.OrdState = KOrderState::COMPLETE;
+		}
+		else
+		{
+			ord.OrdStatus = KOrderStatus::PARTIALLY_FILLED;
+			ord.OrdState = KOrderState::WORKING;
+		}
+
+		// Fill takes priority — suppress ack (34005) status
+		hasOrderInfo = false;
+		hasChangeInfo = true;
 	}
 
 	// Push to response queue if we have meaningful order info
@@ -426,6 +459,60 @@ void OmnetBdxThread::ParseBO5(const char* buf, size_t len)
 			              " execid=" + std::string(ord.execid) +
 			              " changeReason=" + std::to_string(changeReason));
 		}
+	}
+}
+
+void OmnetBdxThread::ParseBD6(const char* buf, size_t len)
+{
+	if (len < sizeof(broadcast_hdr_t))
+		return;
+
+	const broadcast_hdr_t* hdr = (const broadcast_hdr_t*)buf;
+	uint16_t numItems = hdr->items_n;
+
+	const uint8_t* ptr = (const uint8_t*)buf + sizeof(broadcast_hdr_t);
+	const uint8_t* end = (const uint8_t*)buf + len;
+
+	for (uint16_t i = 0; i < numItems && ptr + sizeof(sub_item_hdr_t) <= end; ++i)
+	{
+		const sub_item_hdr_t* subhdr = (const sub_item_hdr_t*)ptr;
+		uint16_t namedStruct;
+		uint16_t subSize;
+		PUTSHORT(namedStruct, subhdr->named_struct_n);
+		PUTSHORT(subSize, subhdr->size_n);
+
+		const uint8_t* data = ptr + sizeof(sub_item_hdr_t);
+
+		if (namedStruct == 3 && data + sizeof(cl_trade_base_api_t) <= end)
+		{
+			const cl_trade_base_api_t* trade = (const cl_trade_base_api_t*)data;
+
+			// Extract order_number (quad_word = 8 bytes)
+			uint64_t orderId = 0;
+			memcpy(&orderId, &trade->order_number_u, sizeof(uint64_t));
+
+			int32_t dealPrice = trade->deal_price_i;
+			int64_t tradeQty = trade->trade_quantity_i;
+			int32_t tradeNum = trade->trade_number_i;
+			int32_t dealNum = trade->deal_number_i;
+
+			// Build execid from match_id
+			char execid[40];
+			snprintf(execid, sizeof(execid), "%" PRIu64 "-%u-%u",
+			         trade->match_id.execution_event_nbr_u,
+			         trade->match_id.match_group_nbr_u,
+			         trade->match_id.match_item_nbr_u);
+
+			KT01_LOG_INFO(__CLASS__, "BD6 trade: ordid=" + std::to_string(orderId) +
+			              " price=" + std::to_string(dealPrice) +
+			              " qty=" + std::to_string(tradeQty) +
+			              " trade#=" + std::to_string(tradeNum) +
+			              " deal#=" + std::to_string(dealNum) +
+			              " execid=" + std::string(execid) +
+			              " side=" + std::to_string(trade->bought_or_sold_c));
+		}
+
+		ptr += subSize;
 	}
 }
 

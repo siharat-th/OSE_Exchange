@@ -43,6 +43,7 @@ private:
 
 	void Run();
 	void ParseBO5(const char* buf, size_t len);
+	void ParseBD6(const char* buf, size_t len);
 	void ParseNetworkEvent(const char* buf, size_t len);
 };
 
