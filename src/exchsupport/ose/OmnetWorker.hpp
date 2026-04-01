@@ -17,6 +17,7 @@
 #include <Maps/SPSCRingBuffer.hpp>
 #include <Orders/OrderPod.hpp>
 #include "OmnetSession.hpp"
+#include "SettlementCache.hpp"
 #include "settings/OseSessionSettings.hpp"
 
 namespace KTN::OSE {
@@ -71,6 +72,7 @@ static constexpr uint16_t NS_REMOVE                = 37002;
 static constexpr uint16_t NS_INST_SERIES_BASIC     = 37301;
 static constexpr uint16_t NS_INST_SERIES_BASIC_SINGLE = 37302;
 static constexpr uint16_t NS_INST_SERIES_ID        = 37310;
+static constexpr uint16_t NS_PRICE_VOLA_SETTL      = 20057;  // EB10 settlement item
 
 // Series info for cache
 struct SeriesInfo
@@ -84,7 +86,10 @@ class OmnetWorker
 public:
 	OmnetWorker(SPSCRingBuffer<KTN::OrderPod>& orderQueue,
 	            SPSCRingBuffer<KTN::OrderPod>& responseQueue,
-	            const OseSessionSettings& sett);
+	            const OseSessionSettings& sett,
+	            SettlementCache& settlCache,
+	            std::atomic<bool>& settlementReady,
+	            std::atomic<bool>& settlementQueryReq);
 	~OmnetWorker();
 
 	bool Start();
@@ -113,8 +118,17 @@ private:
 	std::atomic<bool> _readyToTrade;
 	std::atomic<bool> _setupDone;
 	std::atomic<bool> _setupOk;
+	// Reconnect backoff (CFE/EQT style: 15s → 300s cap)
+	static constexpr int RECONNECT_BACKOFF_MS[] = {15000, 30000, 60000, 120000, 240000, 300000};
+	static constexpr int RECONNECT_BACKOFF_COUNT = 6;
+	int _reconnectAttempt = 0;
 	bool _notified_session_lost = false; // Prevent flood — notify once until reconnect
 	std::atomic<uint64_t> _fillSeq{0}; // Synthetic execid counter for TX-path fills
+
+	// Settlement
+	SettlementCache& _settlCache;
+	std::atomic<bool>& _settlementReady;    // Set by BDX on BI7 type 100 → auto query
+	std::atomic<bool>& _settlementQueryReq; // Set by menu Command → manual query
 
 	// Series cache (populated by DQ124, keyed by orderbook_id)
 	std::vector<SeriesInfo> _seriesCache;
@@ -125,6 +139,7 @@ private:
 	void ProcessOrder(KTN::OrderPod& ord);
 	void PopulateSeries(KTN::OrderPod& ord, const series_t* series);
 	bool Reconnect();
+	bool QuerySettlement();  // RQ62 — settlement price query
 	int BuildMO31(const KTN::OrderPod& ord, void* buf);    // New order
 	int BuildMO33(const KTN::OrderPod& ord, void* buf);    // Alter
 	int BuildMO4(const KTN::OrderPod& ord, void* buf);     // Delete

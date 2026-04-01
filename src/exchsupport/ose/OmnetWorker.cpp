@@ -45,12 +45,18 @@ namespace KTN::OSE {
 
 OmnetWorker::OmnetWorker(SPSCRingBuffer<KTN::OrderPod>& orderQueue,
                            SPSCRingBuffer<KTN::OrderPod>& responseQueue,
-                           const OseSessionSettings& sett)
+                           const OseSessionSettings& sett,
+                           SettlementCache& settlCache,
+                           std::atomic<bool>& settlementReady,
+                           std::atomic<bool>& settlementQueryReq)
 	: _orderQueue(orderQueue)
 	, _responseQueue(responseQueue)
 	, _sett(sett)
 	, _active(false)
 	, _readyToTrade(false)
+	, _settlCache(settlCache)
+	, _settlementReady(settlementReady)
+	, _settlementQueryReq(settlementQueryReq)
 {
 }
 
@@ -139,16 +145,36 @@ void OmnetWorker::Run()
 			if (!_session.IsLoggedIn())
 			{
 				KT01_LOG_ERROR(__CLASS__, "Session lost, attempting reconnect...");
-				if (!_notified_session_lost)
+				// CFE-style notification throttle: notify on attempts 1,5,10,20,40,80,120, then every 40
+				bool shouldNotify = (_reconnectAttempt == 0 || _reconnectAttempt == 4 ||
+				                     _reconnectAttempt == 9 || _reconnectAttempt == 19 ||
+				                     _reconnectAttempt == 39 || _reconnectAttempt == 79 ||
+				                     _reconnectAttempt == 119 ||
+				                     (_reconnectAttempt > 119 && (_reconnectAttempt - 119) % 40 == 0));
+				if (shouldNotify)
 				{
-					KTN::notify::NotifierRest::NotifyError(_sett.ExchName, _sett.Source, _sett.Org, "Worker session lost, reconnecting...");
-					_notified_session_lost = true;
+					KTN::notify::NotifierRest::NotifyError(_sett.ExchName, _sett.Source, _sett.Org,
+						"Worker session lost, reconnect attempt " + std::to_string(_reconnectAttempt + 1));
 				}
-				if (Reconnect())
-					lastKeepalive = std::chrono::steady_clock::now();
-				else
-					std::this_thread::sleep_for(std::chrono::seconds(5));
+				Reconnect();  // backoff is inside Reconnect()
+				lastKeepalive = std::chrono::steady_clock::now();
 				continue;
+			}
+
+			// Auto-trigger RQ62 after BDX sees BI7 info_type=100
+			if (_settlementReady.load(std::memory_order_acquire))
+			{
+				KT01_LOG_INFO(__CLASS__, "BI7 settlement signal received — auto-querying RQ62");
+				_settlementReady.store(false, std::memory_order_release);
+				QuerySettlement();
+			}
+
+			// Manual query from menu (option 300)
+			if (_settlementQueryReq.load(std::memory_order_acquire))
+			{
+				KT01_LOG_INFO(__CLASS__, "Manual settlement query requested (menu)");
+				_settlementQueryReq.store(false, std::memory_order_release);
+				QuerySettlement();
 			}
 
 			// Periodic keepalive — prevent gateway timeout when idle
@@ -164,12 +190,9 @@ void OmnetWorker::Run()
 				{
 					KT01_LOG_ERROR(__CLASS__, "Keepalive failed: " + std::to_string(rc) +
 					               " — session may be dead");
-					if (!_notified_session_lost)
-					{
-						KTN::notify::NotifierRest::NotifyError(_sett.ExchName, _sett.Source, _sett.Org,
-							"Worker keepalive failed: rc=" + std::to_string(rc));
-						_notified_session_lost = true;
-					}
+					// Fatal errors: mark session dead so reconnect triggers on next iteration
+					if (rc == OMNIAPI_INTFAILURE || rc == OMNIAPI_NOT_LOGGED_IN || rc == OMNIAPI_NOTCONNECTED)
+						_session.MarkDead();
 				}
 				lastKeepalive = now;
 			}
@@ -869,19 +892,196 @@ bool OmnetWorker::SendReadyToTrade()
 	return false;
 }
 
+bool OmnetWorker::QuerySettlement()
+{
+	KT01_LOG_INFO(__CLASS__, "Querying settlement prices (RQ62)...");
+
+	// Collect unique market codes from series cache
+	std::set<uint8_t> markets;
+	for (const auto& si : _seriesCache)
+		markets.insert(si.series.market_c);
+
+	if (markets.empty())
+	{
+		KT01_LOG_ERROR(__CLASS__, "RQ62: no markets in series cache — cannot query");
+		return false;
+	}
+
+	// Business date = current date in JST (UTC+9)
+	char bizDate[8] = {};
+	{
+		auto now = std::chrono::system_clock::now();
+		auto utc_time = std::chrono::system_clock::to_time_t(now);
+		struct tm jst = {};
+		utc_time += 9 * 3600; // UTC → JST
+		gmtime_r(&utc_time, &jst);
+		snprintf(bizDate, sizeof(bizDate) + 1, "%04d%02d%02d",
+		         jst.tm_year + 1900, jst.tm_mon + 1, jst.tm_mday);
+		KT01_LOG_INFO(__CLASS__, "RQ62 using JST business_date=" + std::string(bizDate, 8));
+	}
+
+	KT01_LOG_INFO(__CLASS__, "RQ62: querying " + std::to_string(markets.size()) +
+	              " market(s) for date=" + std::string(bizDate, 8));
+
+	// EP4 = EP0 base + 4
+	uint32_t ep4 = _session.GetFacilityEP0() + 4;
+
+	static constexpr size_t ANS_BUF_SIZE = MAX_RESPONSE_SIZE;
+	std::vector<char> ansBuf(ANS_BUF_SIZE);
+	int totalItems = 0;
+
+	for (uint8_t mkt : markets)
+	{
+	query_price_vola_settl_t qry;
+	memset(&qry, 0, sizeof(qry));
+	qry.transaction_type.central_module_c = 'R';
+	qry.transaction_type.server_type_c = 'Q';
+	PUTSHORT(qry.transaction_type.transaction_number_n, 62);
+	qry.series.country_c = 96;
+	qry.series.market_c = mkt;
+	memcpy(qry.date_s, bizDate, 8);
+
+	uint16_t segment = 1;
+
+	while (true)
+	{
+		PUTSHORT(qry.segment_number_n, segment);
+		size_t ansLen = ANS_BUF_SIZE;
+
+		int status = _session.SendQuery(&qry, sizeof(qry), ansBuf.data(), ansLen, ep4);
+
+		if (status != OMNIAPI_SUCCESS)
+		{
+			KT01_LOG_ERROR(__CLASS__, "RQ62 failed for market=" + std::to_string(mkt) +
+			               " status=" + std::to_string(status) +
+			               " (settlement may not be ready yet — requires BI7 type 100)");
+			break; // next segment won't help, try next market
+		}
+
+		// Parse answer: answer_price_vola_settl_t header + items
+		const char* base = ansBuf.data();
+		const answer_price_vola_settl_t* ans = (const answer_price_vola_settl_t*)base;
+
+		uint16_t itemCount;
+		PUTSHORT(itemCount, ans->items_n);
+		uint16_t segNum;
+		PUTSHORT(segNum, ans->segment_number_n);
+
+		if (segment == 1 && _sett.DebugAppMsgs)
+		{
+			KT01_LOG_INFO(__CLASS__, "RQ62 market=" + std::to_string(mkt) +
+			              " type=" + std::string(SettlementPriceTypeName(ans->settlement_price_type_c)));
+		}
+
+		for (uint16_t i = 0; i < itemCount; ++i)
+		{
+			const answer_price_vola_settl_item_t& item = ans->item[i];
+
+			// Byte-swap series fields
+			uint16_t commodity, expiry;
+			PUTSHORT(commodity, item.series.commodity_n);
+			PUTSHORT(expiry, item.series.expiration_date_n);
+
+			int32_t settlePrice, lastPrice, theoPrice, actualVol;
+			PUTLONG(settlePrice, item.settle_price_i);
+			PUTLONG(lastPrice, item.last_price_i);
+			PUTLONG(theoPrice, item.theo_price_i);
+			PUTLONG(actualVol, item.actual_vol_i);
+
+			// Lookup symbol name from SecMaster
+			std::string sym = SettlementCache::ResolveSymbol(
+				item.series.country_c, item.series.market_c,
+				item.series.instrument_group_c, item.series.modifier_c,
+				commodity, expiry);
+
+			// Store in cache
+			SettlementData sd;
+			memset(&sd, 0, sizeof(sd));
+			sd.series = item.series;
+			sd.series.commodity_n = commodity;
+			sd.series.expiration_date_n = expiry;
+			if (!sym.empty())
+				strncpy(sd.name, sym.c_str(), sizeof(sd.name) - 1);
+			sd.settle_price = settlePrice;
+			sd.last_price = lastPrice;
+			sd.theo_price = theoPrice;
+			sd.implied_vol = 0;  // not in RQ62 answer struct
+			sd.actual_vol = actualVol;
+			sd.settlement_price_type = ans->settlement_price_type_c;
+			sd.received_at = std::chrono::steady_clock::now();
+
+			uint32_t key = SettlementCache::MakeKey(commodity, expiry);
+			_settlCache.Update(key, sd);
+
+			if (!sym.empty())
+			{
+				// Skip options — we only trade futures
+				auto& sm = OseSecMaster::instance();
+				uint32_t obid = sm.GetOrderbookIdBySeriesKey(
+					((uint64_t)item.series.country_c << 56) |
+					((uint64_t)item.series.market_c << 48) |
+					((uint64_t)item.series.instrument_group_c << 40) |
+					((uint64_t)item.series.modifier_c << 32) |
+					((uint64_t)commodity << 16) | (uint64_t)expiry);
+				if (obid != 0 && sm.Contains(obid) &&
+				    sm.getSecDef(obid).prodtype != KOrderProdType::OPTION)
+				{
+					KT01_LOG_INFO(__CLASS__, "RQ62 settle: " + sym +
+					              " settle=" + SettlementCache::PriceStr(settlePrice) +
+					              " last=" + SettlementCache::PriceStr(lastPrice) +
+					              " type=" + std::string(SettlementPriceTypeName(ans->settlement_price_type_c)));
+				}
+			}
+
+			totalItems++;
+		}
+
+		// Check if more segments
+		if (itemCount == 0)
+			break;
+		segment++;
+	} // while segments
+
+	} // for each market
+
+	KT01_LOG_INFO(__CLASS__, "RQ62 complete: " + std::to_string(totalItems) +
+	              " settlement entries loaded into cache");
+
+	if (totalItems > 0)
+	{
+		_settlCache.Print();
+		KTN::notify::NotifierRest::NotifyInfo(_sett.ExchName, _sett.Source, _sett.Org,
+			"Settlement query: " + std::to_string(totalItems) + " prices loaded");
+	}
+
+	return totalItems > 0;
+}
+
 bool OmnetWorker::Reconnect()
 {
-	KT01_LOG_INFO(__CLASS__, "Reconnecting: logout old session...");
 	_readyToTrade.store(false, std::memory_order_release);
 	_session.Logout();
 
-	// Wait before reconnect
-	std::this_thread::sleep_for(std::chrono::seconds(2));
+	// Exponential backoff (CFE/EQT style: 15s, 30s, 60s, 120s, 240s, 300s cap)
+	int backoffIdx = std::min(_reconnectAttempt, RECONNECT_BACKOFF_COUNT - 1);
+	int waitMs = RECONNECT_BACKOFF_MS[backoffIdx];
+	KT01_LOG_INFO(__CLASS__, "Reconnect attempt " + std::to_string(_reconnectAttempt + 1) +
+	              ", waiting " + std::to_string(waitMs / 1000) + "s...");
+
+	// Sleep in 1s increments so we can bail if _active goes false
+	auto deadline = std::chrono::steady_clock::now() + std::chrono::milliseconds(waitMs);
+	while (std::chrono::steady_clock::now() < deadline && _active.load(std::memory_order_acquire))
+		std::this_thread::sleep_for(std::chrono::seconds(1));
+
+	if (!_active.load(std::memory_order_acquire))
+		return false;
 
 	// Re-login (force login to break any stale session lock)
 	if (!_session.Login(_sett, true))
 	{
-		KT01_LOG_ERROR(__CLASS__, "Reconnect login failed");
+		KT01_LOG_ERROR(__CLASS__, "Reconnect login failed (attempt " +
+		               std::to_string(_reconnectAttempt + 1) + ")");
+		_reconnectAttempt++;
 		return false;
 	}
 
@@ -895,13 +1095,17 @@ bool OmnetWorker::Reconnect()
 	// Re-send ready-to-trade
 	if (!SendReadyToTrade())
 	{
-		KT01_LOG_ERROR(__CLASS__, "Reconnect UI1 failed");
+		KT01_LOG_ERROR(__CLASS__, "Reconnect UI1 failed (attempt " +
+		               std::to_string(_reconnectAttempt + 1) + ")");
+		_reconnectAttempt++;
 		return false;
 	}
 
-	KT01_LOG_INFO(__CLASS__, "Reconnect successful");
-	KTN::notify::NotifierRest::NotifyInfo(_sett.ExchName, _sett.Source, _sett.Org, "Worker RECONNECTED");
+	// Success — reset counters
+	_reconnectAttempt = 0;
 	_notified_session_lost = false;
+	KT01_LOG_INFO(__CLASS__, "Reconnect successful — session restored");
+	KTN::notify::NotifierRest::NotifyInfo(_sett.ExchName, _sett.Source, _sett.Org, "Worker RECONNECTED");
 	return true;
 }
 

@@ -30,6 +30,7 @@ public:
 	bool Login(const OseSessionSettings& sett, bool forceLogin = false);
 	void Logout();
 	bool IsLoggedIn() const { return _loggedIn; }
+	void MarkDead() { _loggedIn = false; }  // Called when keepalive detects dead session
 
 	// Blocking transaction (MO31, MO33, MO4, UI1, etc.)
 	// ordid is quad_word (8 bytes) — exchange order number

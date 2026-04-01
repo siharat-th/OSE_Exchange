@@ -30,10 +30,14 @@ static inline int64_t SwapInt64(const void* src)
 namespace KTN::OSE {
 
 OmnetBdxThread::OmnetBdxThread(SPSCRingBuffer<KTN::OrderPod>& responseQueue,
-                                 const OseSessionSettings& sett)
+                                 const OseSessionSettings& sett,
+                                 SettlementCache& settlCache,
+                                 std::atomic<bool>& settlementReady)
 	: _responseQueue(responseQueue)
 	, _sett(sett)
 	, _active(false)
+	, _settlCache(settlCache)
+	, _settlementReady(settlementReady)
 {
 }
 
@@ -87,6 +91,53 @@ void OmnetBdxThread::Stop()
 
 	_session.Logout();
 	KT01_LOG_INFO(__CLASS__, "BDX polling thread stopped");
+}
+
+bool OmnetBdxThread::Reconnect()
+{
+	_session.Logout();
+
+	// Exponential backoff (CFE/EQT style: 15s, 30s, 60s, 120s, 240s, 300s cap)
+	int backoffIdx = std::min(_reconnectAttempt, RECONNECT_BACKOFF_COUNT - 1);
+	int waitMs = RECONNECT_BACKOFF_MS[backoffIdx];
+	KT01_LOG_INFO(__CLASS__, "BDX reconnect attempt " + std::to_string(_reconnectAttempt + 1) +
+	              ", waiting " + std::to_string(waitMs / 1000) + "s...");
+
+	// Sleep in 1s increments so we can bail if _active goes false
+	auto deadline = std::chrono::steady_clock::now() + std::chrono::milliseconds(waitMs);
+	while (std::chrono::steady_clock::now() < deadline && _active.load(std::memory_order_acquire))
+		std::this_thread::sleep_for(std::chrono::seconds(1));
+
+	if (!_active.load(std::memory_order_acquire))
+		return false;
+
+	// Re-login with BDX credentials
+	OseSessionSettings bdxSett = _sett;
+	if (!_sett.BdxLoginId.empty())
+	{
+		bdxSett.LoginId = _sett.BdxLoginId;
+		bdxSett.Password = _sett.BdxPassword;
+		bdxSett.GatewayHost = _sett.BdxGatewayHost;
+		bdxSett.GatewayPort = _sett.BdxGatewayPort;
+	}
+
+	if (!_session.Login(bdxSett, _sett.ForceLogin))
+	{
+		KT01_LOG_ERROR(__CLASS__, "BDX reconnect login failed (attempt " +
+		               std::to_string(_reconnectAttempt + 1) + ")");
+		_reconnectAttempt++;
+		return false;
+	}
+
+	// Re-subscribe
+	_session.SubscribeAll();
+
+	// Success — reset counters
+	_reconnectAttempt = 0;
+	_notified_overflow = false;
+	KT01_LOG_INFO(__CLASS__, "BDX reconnect successful — session restored");
+	KTN::notify::NotifierRest::NotifyInfo(_sett.ExchName, _sett.Source, _sett.Org, "BDX RECONNECTED");
+	return true;
 }
 
 void OmnetBdxThread::Run()
@@ -144,6 +195,35 @@ void OmnetBdxThread::Run()
 					KT01_LOG_INFO(__CLASS__, "BD6 received, len=" + std::to_string(eventLength));
 					ParseBD6(current, eventLength);
 				}
+				else if (btype->central_module_c == 'E' && btype->server_type_c == 'B' && txnum == 10)
+				{
+					KT01_LOG_INFO(__CLASS__, "EB10 settlement broadcast received, len=" + std::to_string(eventLength));
+					ParseEB10(current, eventLength);
+				}
+				else if (btype->central_module_c == 'B' && btype->server_type_c == 'I' && txnum == 7)
+				{
+					// BI7 Signal Ready — check info_type
+					if (eventLength >= sizeof(info_ready_t))
+					{
+						const info_ready_t* sig = (const info_ready_t*)current;
+						int32_t infoType;
+						PUTLONG(infoType, sig->info_type_i);
+
+						char bizDate[9] = {};
+						memcpy(bizDate, sig->business_date_s, 8);
+
+						KT01_LOG_INFO(__CLASS__, "BI7 Signal Ready: info_type=" + std::to_string(infoType) +
+						              " date=" + std::string(bizDate));
+
+						if (infoType == 100)
+						{
+							KT01_LOG_INFO(__CLASS__, "BI7 type 100 — settlement data ready, signaling Worker for RQ62");
+							KTN::notify::NotifierRest::NotifyInfo(_sett.ExchName, _sett.Source, _sett.Org,
+								"BI7 Signal Ready type 100 — settlement available");
+							_settlementReady.store(true, std::memory_order_release);
+						}
+					}
+				}
 				else if (btype->central_module_c == 'B' && btype->server_type_c == 'N')
 				{
 					ParseNetworkEvent(current, eventLength);
@@ -160,12 +240,23 @@ void OmnetBdxThread::Run()
 			else
 				std::this_thread::yield();
 		}
-		else if (status == OMNIAPI_NOT_LOGGED_IN)
+		else if (status == OMNIAPI_NOT_LOGGED_IN || status == OMNIAPI_INTFAILURE || status == OMNIAPI_NOTCONNECTED)
 		{
-			KT01_LOG_ERROR(__CLASS__, "Forced logout detected!");
-			KTN::notify::NotifierRest::NotifyError(_sett.ExchName, _sett.Source, _sett.Org, "BDX forced logout!");
-			_active.store(false);
-			break;
+			KT01_LOG_ERROR(__CLASS__, "Session lost (status=" + std::to_string(status) +
+			               "), attempting reconnect...");
+			_session.MarkDead();
+			// CFE-style notification throttle
+			bool shouldNotify = (_reconnectAttempt == 0 || _reconnectAttempt == 4 ||
+			                     _reconnectAttempt == 9 || _reconnectAttempt == 19 ||
+			                     _reconnectAttempt == 39 || _reconnectAttempt == 79 ||
+			                     _reconnectAttempt == 119 ||
+			                     (_reconnectAttempt > 119 && (_reconnectAttempt - 119) % 40 == 0));
+			if (shouldNotify)
+			{
+				KTN::notify::NotifierRest::NotifyError(_sett.ExchName, _sett.Source, _sett.Org,
+					"BDX session lost, reconnect attempt " + std::to_string(_reconnectAttempt + 1));
+			}
+			Reconnect();
 		}
 		else if (status == OMNIAPI_OVERFLOW)
 		{
@@ -505,6 +596,108 @@ void OmnetBdxThread::ParseBD6(const char* buf, size_t len)
 		}
 
 		ptr += subSize;
+	}
+}
+
+void OmnetBdxThread::ParseEB10(const char* buf, size_t len)
+{
+	// EB10 VIB structure (same pattern as BD6):
+	// broadcast_hdr_t → sub_item_hdr_t[] → price_vola_settl_item_t (named struct 20057)
+	if (len < sizeof(broadcast_hdr_t))
+		return;
+
+	const broadcast_hdr_t* hdr = (const broadcast_hdr_t*)buf;
+	uint16_t numItems = hdr->items_n;
+
+	const uint8_t* ptr = (const uint8_t*)buf + sizeof(broadcast_hdr_t);
+	const uint8_t* end = (const uint8_t*)buf + len;
+
+	int parsed = 0;
+
+	for (uint16_t i = 0; i < numItems && ptr + sizeof(sub_item_hdr_t) <= end; ++i)
+	{
+		const sub_item_hdr_t* subhdr = (const sub_item_hdr_t*)ptr;
+		uint16_t namedStruct;
+		uint16_t subSize;
+		PUTSHORT(namedStruct, subhdr->named_struct_n);
+		PUTSHORT(subSize, subhdr->size_n);
+
+		if (subSize < sizeof(sub_item_hdr_t) || ptr + subSize > end)
+			break;
+
+		const uint8_t* data = ptr + sizeof(sub_item_hdr_t);
+
+		if (namedStruct == 20057 && data + sizeof(price_vola_settl_item_t) <= end)
+		{
+			const price_vola_settl_item_t* item = (const price_vola_settl_item_t*)data;
+
+			uint16_t commodity, expiry;
+			PUTSHORT(commodity, item->series.commodity_n);
+			PUTSHORT(expiry, item->series.expiration_date_n);
+
+			int32_t settlePrice, lastPrice, theoPrice, impliedVol, actualVol;
+			PUTLONG(settlePrice, item->settle_price_i);
+			PUTLONG(lastPrice, item->last_price_i);
+			PUTLONG(theoPrice, item->theo_price_i);
+			PUTLONG(impliedVol, item->implied_vol_i);
+			PUTLONG(actualVol, item->actual_vol_i);
+
+			// Lookup symbol from SecMaster
+			std::string sym = SettlementCache::ResolveSymbol(
+				item->series.country_c, item->series.market_c,
+				item->series.instrument_group_c, item->series.modifier_c,
+				commodity, expiry);
+
+			SettlementData sd;
+			memset(&sd, 0, sizeof(sd));
+			sd.series = item->series;
+			sd.series.commodity_n = commodity;
+			sd.series.expiration_date_n = expiry;
+			if (!sym.empty())
+				strncpy(sd.name, sym.c_str(), sizeof(sd.name) - 1);
+			sd.settle_price = settlePrice;
+			sd.last_price = lastPrice;
+			sd.theo_price = theoPrice;
+			sd.implied_vol = impliedVol;
+			sd.actual_vol = actualVol;
+			sd.settlement_price_type = item->settlement_price_type_c;
+			sd.received_at = std::chrono::steady_clock::now();
+
+			uint32_t key = SettlementCache::MakeKey(commodity, expiry);
+			_settlCache.Update(key, sd);
+
+			if (!sym.empty())
+			{
+				// Skip options — we only trade futures
+				auto& sm = KT01::SECDEF::OSE::OseSecMaster::instance();
+				uint64_t seriesKey = ((uint64_t)item->series.country_c << 56) |
+				                     ((uint64_t)item->series.market_c << 48) |
+				                     ((uint64_t)item->series.instrument_group_c << 40) |
+				                     ((uint64_t)item->series.modifier_c << 32) |
+				                     ((uint64_t)commodity << 16) | (uint64_t)expiry;
+				uint32_t obid = sm.GetOrderbookIdBySeriesKey(seriesKey);
+				if (obid != 0 && sm.Contains(obid) &&
+				    sm.getSecDef(obid).prodtype != KTN::ORD::KOrderProdType::OPTION)
+				{
+					KT01_LOG_INFO(__CLASS__, "EB10 settle: " + sym +
+					              " settle=" + SettlementCache::PriceStr(settlePrice) +
+					              " last=" + SettlementCache::PriceStr(lastPrice) +
+					              " type=" + std::string(SettlementPriceTypeName(item->settlement_price_type_c)));
+				}
+			}
+
+			parsed++;
+		}
+
+		ptr += subSize;
+	}
+
+	KT01_LOG_INFO(__CLASS__, "EB10 parsed " + std::to_string(parsed) + " settlement items");
+
+	if (parsed > 0)
+	{
+		KTN::notify::NotifierRest::NotifyInfo(_sett.ExchName, _sett.Source, _sett.Org,
+			"EB10 settlement broadcast: " + std::to_string(parsed) + " prices received");
 	}
 }
 

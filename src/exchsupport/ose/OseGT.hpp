@@ -15,6 +15,7 @@
 #include <Orders/OrderPod.hpp>
 #include "OmnetWorker.hpp"
 #include "OmnetBdxThread.hpp"
+#include "SettlementCache.hpp"
 #include "settings/OseSessionSettings.hpp"
 
 namespace KTN::OSE {
@@ -33,6 +34,7 @@ public:
 	void Send(KTN::OrderPod& order, int action) override;
 	void SendMassAction(KTN::Order& order) override;
 	void Poll() override;
+	void Command(Instruction cmd) override;
 
 private:
 	OseSessionSettings _sett;
@@ -44,6 +46,11 @@ private:
 	// SPSC queues (lock-free, cache-aligned)
 	SPSCRingBuffer<KTN::OrderPod> _orderQueue;     // Strategy → Worker
 	SPSCRingBuffer<KTN::OrderPod> _responseQueue;   // BDX/Worker → OseGT
+
+	// Settlement cache (shared between Worker + BDX)
+	SettlementCache _settlCache;
+	std::atomic<bool> _settlementReady{false};   // Set by BDX on BI7 type 100 → auto RQ62
+	std::atomic<bool> _settlementQueryReq{false}; // Set by menu Command → manual RQ62
 
 	// State
 	std::atomic<bool> _started;

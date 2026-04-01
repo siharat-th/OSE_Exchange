@@ -54,9 +54,11 @@ OseGT::OseGT(tbb::concurrent_queue<KTN::OrderPod>& qords,
 	KT01_LOG_INFO(__CLASS__, "User: " + _sett.LoginId);
 	KT01_LOG_INFO(__CLASS__, "Workers: " + std::to_string(_sett.WorkerCount));
 
-	// Create worker and BDX threads
-	_worker = std::make_unique<OmnetWorker>(_orderQueue, _responseQueue, _sett);
-	_bdx = std::make_unique<OmnetBdxThread>(_responseQueue, _sett);
+	// Create worker and BDX threads (pass settlement cache + flags)
+	_worker = std::make_unique<OmnetWorker>(_orderQueue, _responseQueue, _sett,
+	                                         _settlCache, _settlementReady, _settlementQueryReq);
+	_bdx = std::make_unique<OmnetBdxThread>(_responseQueue, _sett,
+	                                         _settlCache, _settlementReady);
 
 	// Start connections
 	Start();
@@ -214,6 +216,23 @@ void OseGT::ProcessResponses()
 
 		// Push to upper layer via tbb queue (same pattern as CME/CFE)
 		_qOrdsProc.push(ord);
+	}
+}
+
+void OseGT::Command(Instruction cmd)
+{
+	switch (cmd.command)
+	{
+	case ExchCmd::QUERY_SETTLEMENT:
+	{
+		KT01_LOG_INFO(__CLASS__, "Manual settlement query requested (RQ62)");
+		_settlementQueryReq.store(true, std::memory_order_release);
+	}
+	break;
+
+	default:
+		KT01_LOG_INFO(__CLASS__, "Unhandled command: " + ExchCmd::toString(cmd.command));
+		break;
 	}
 }
 

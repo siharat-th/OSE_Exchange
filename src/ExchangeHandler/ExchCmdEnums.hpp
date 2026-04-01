@@ -48,6 +48,8 @@ struct ExchCmd
 		ORD_SEND_WITH_HEDGE = 301,
 		ORD_SEND_HDG_INSTRUCT = 302,
 
+		QUERY_SETTLEMENT = 350,
+
 		RISK_RESET = 400,
 
 		ALGO_LAUNCH = 500,
@@ -105,6 +107,8 @@ struct ExchCmd
 	        return "ALGO_MESSAGE";
 	    case Enum::ALGO_KILLSWITCH:
 	        return "ALGO_KILLSWITCH";
+	    case Enum::QUERY_SETTLEMENT:
+	        return "QUERY_SETTLEMENT";
 	    case Enum::TERMINATE:
 	        return "TERMINATE";
 

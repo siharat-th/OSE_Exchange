@@ -245,6 +245,7 @@ std::map<int, std::string> Raptor2::GetMenuChoices() {
 		{200, "Start EQT Market Data Feed"},
 		{210, "Force TCP Reconnect (CFE)"},
 		{211, "Reset Reconnect Tracking (CFE)"},
+		{350, "OSE Query Settlement (RQ62)"},
 		{999, "Exit Program"}
 	};
 }
@@ -490,6 +491,17 @@ void Raptor2::MenuChoice(int choice)//, ExchangeManager* exchanges)
 
 			Instruction inst = {};
 			inst.command = ExchCmd::RESET_RECONNECT_TRACKING;
+			_exchanges->onCommand(inst);
+			usleep(1000);
+		}break;
+
+		case 350:
+		{
+			if (!_SERVICES.exchanges) break;
+			LogMe("OSE QUERY SETTLEMENT (RQ62)", LogLevel::INFO);
+
+			Instruction inst = {};
+			inst.command = ExchCmd::QUERY_SETTLEMENT;
 			_exchanges->onCommand(inst);
 			usleep(1000);
 		}break;
