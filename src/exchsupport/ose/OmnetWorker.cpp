@@ -377,38 +377,6 @@ void OmnetWorker::ProcessOrder(KTN::OrderPod& ord)
 		if (!isFillTx)
 			_responseQueue.enqueue(ord);
 		// Fills come from BO5/BD6 broadcasts via BDX thread
-
-		// DEBUG: Poll for BO5 on THIS session (same thread that sent the tx)
-		// to check if Worker session receives broadcasts
-		{
-			char dbgEvBuf[8192];
-			for (int poll = 0; poll < 10; ++poll)
-			{
-				std::this_thread::sleep_for(std::chrono::milliseconds(50));
-				size_t dbgEvLen = sizeof(dbgEvBuf);
-				int evStatus = _session.ReadEvent(dbgEvBuf, dbgEvLen, OMNI_EVTTYP_ALL, READEV_OPTMSK_MANY);
-				if (evStatus == OMNIAPI_SUCCESS && dbgEvLen >= sizeof(broadcast_type_t))
-				{
-					broadcast_type_t* btype = (broadcast_type_t*)dbgEvBuf;
-					uint16_t txnum;
-					PUTSHORT(txnum, btype->transaction_number_n);
-					KT01_LOG_WARN(__CLASS__, "DEBUG Worker BO5 poll[" + std::to_string(poll) +
-					              "]: GOT event " + std::string(1, btype->central_module_c) +
-					              std::string(1, btype->server_type_c) + std::to_string(txnum) +
-					              " len=" + std::to_string(dbgEvLen) +
-					              " hex=" + HexDump(dbgEvBuf, std::min(dbgEvLen, (size_t)120), 120));
-				}
-				else if (evStatus == OMNIAPI_NOT_FOUND)
-				{
-					KT01_LOG_INFO(__CLASS__, "DEBUG Worker BO5 poll[" + std::to_string(poll) + "]: no events");
-				}
-				else
-				{
-					KT01_LOG_WARN(__CLASS__, "DEBUG Worker BO5 poll[" + std::to_string(poll) +
-					              "]: status=" + std::to_string(evStatus));
-				}
-			}
-		}
 	}
 	else
 	{
