@@ -681,6 +681,7 @@ bool OmnetWorker::QueryInstrumentSeries()
 		uint16_t ansSegment;
 		PUTSHORT(ansSegment, hdr->segment_number_n);
 
+		if (_sett.DebugAppMsgs)
 		KT01_LOG_INFO(__CLASS__, "DA124 seg=" + std::to_string(ansSegment) +
 		              " items=" + std::to_string(itemCount) +
 		              " size=" + std::to_string(msgSize) +
@@ -790,7 +791,7 @@ bool OmnetWorker::QueryInstrumentSeries()
 				}
 			}
 
-			// Finalize this series
+			// Finalize this series — only keep if in SecMaster (secdef CSV)
 			if (curHasSeries && curHasObid && curObid > 0)
 			{
 				uint32_t obid = static_cast<uint32_t>(curObid);
@@ -802,15 +803,20 @@ bool OmnetWorker::QueryInstrumentSeries()
 				                     ((uint64_t)curSeries.commodity_n << 16) |
 				                     ((uint64_t)curSeries.expiration_date_n);
 
+				// Always register seriesKey → obid (needed for BO5/EB10 lookups)
 				OseSecMaster::instance().RegisterSeriesKey(seriesKey, obid);
 
-				SeriesInfo si;
-				si.series = curSeries;
-				memcpy(si.name, curInsId, 32);
+				// Only cache series that are in our secdef
+				if (OseSecMaster::instance().Contains(obid))
+				{
+					SeriesInfo si;
+					si.series = curSeries;
+					memcpy(si.name, curInsId, 32);
 
-				_seriesCache.push_back(si);
-				_secidToSeriesIdx[obid] = _seriesCache.size() - 1;
-				++mappedCount;
+					_seriesCache.push_back(si);
+					_secidToSeriesIdx[obid] = _seriesCache.size() - 1;
+					++mappedCount;
+				}
 			}
 
 			if (totalSeries < 10 && curHasSeries)
@@ -824,6 +830,7 @@ bool OmnetWorker::QueryInstrumentSeries()
 			if (curHasSeries) totalSeries++;
 		}
 
+		if (_sett.DebugAppMsgs || segment == 1)
 		KT01_LOG_INFO(__CLASS__, "DA124 seg " + std::to_string(segment) +
 		              " done: " + std::to_string(totalSeries) + " series so far, " +
 		              std::to_string(mappedCount) + " mapped");
