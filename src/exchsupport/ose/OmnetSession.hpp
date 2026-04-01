@@ -27,7 +27,7 @@ public:
 	~OmnetSession();
 
 	// Session lifecycle
-	bool Login(const OseSessionSettings& sett, bool forceLogin = false);
+	bool Login(const OseSessionSettings::SessionCreds& creds, bool forceLogin = false);
 	void Logout();
 	bool IsLoggedIn() const { return _loggedIn; }
 	void MarkDead() { _loggedIn = false; }  // Called when keepalive detects dead session

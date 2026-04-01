@@ -29,7 +29,7 @@ OmnetSession::~OmnetSession()
 		Logout();
 }
 
-bool OmnetSession::Login(const OseSessionSettings& sett, bool forceLogin)
+bool OmnetSession::Login(const OseSessionSettings::SessionCreds& sett, bool forceLogin)
 {
 	int32 txstatus = 0;
 

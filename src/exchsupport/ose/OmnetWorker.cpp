@@ -43,15 +43,20 @@ static std::string HexDump(const char* data, size_t len, size_t maxBytes = 64)
 
 namespace KTN::OSE {
 
-OmnetWorker::OmnetWorker(SPSCRingBuffer<KTN::OrderPod>& orderQueue,
+OmnetWorker::OmnetWorker(int workerId,
+                           SPSCRingBuffer<KTN::OrderPod>& orderQueue,
                            SPSCRingBuffer<KTN::OrderPod>& responseQueue,
                            const OseSessionSettings& sett,
+                           const OseSessionSettings::SessionCreds& creds,
                            SettlementCache& settlCache,
                            std::atomic<bool>& settlementReady,
                            std::atomic<bool>& settlementQueryReq)
-	: _orderQueue(orderQueue)
+	: _workerId(workerId)
+	, _logTag("OmnetWorker[" + std::to_string(workerId) + "]")
+	, _orderQueue(orderQueue)
 	, _responseQueue(responseQueue)
 	, _sett(sett)
+	, _creds(creds)
 	, _active(false)
 	, _readyToTrade(false)
 	, _settlCache(settlCache)
@@ -79,11 +84,11 @@ bool OmnetWorker::Start()
 
 	if (!_setupOk.load(std::memory_order_acquire))
 	{
-		KT01_LOG_ERROR(__CLASS__, "Worker setup failed");
+		KT01_LOG_ERROR(_logTag, "Worker setup failed");
 		return false;
 	}
 
-	KT01_LOG_INFO(__CLASS__, "Worker thread started and ready");
+	KT01_LOG_INFO(_logTag, "Worker thread started and ready — user=" + _creds.LoginId);
 	return true;
 }
 
@@ -95,24 +100,32 @@ void OmnetWorker::Stop()
 		_thread.join();
 
 	_session.Logout();
-	KT01_LOG_INFO(__CLASS__, "Worker thread stopped");
+	KT01_LOG_INFO(_logTag, "Worker thread stopped");
 }
 
 void OmnetWorker::Run()
 {
 	// Phase 1: Setup — all OMnet API calls on this thread
-	if (!_session.Login(_sett, _sett.ForceLogin))
+	if (!_session.Login(_creds, _sett.ForceLogin))
 	{
-		KT01_LOG_ERROR(__CLASS__, "Failed to login to OMnet Gateway");
-		KTN::notify::NotifierRest::NotifyError(_sett.ExchName, _sett.Source, _sett.Org, "Worker login failed");
+		KT01_LOG_ERROR(_logTag, "Failed to login to OMnet Gateway");
+		KTN::notify::NotifierRest::NotifyError(_sett.ExchName, _sett.Source, _sett.Org,
+			"Worker #" + std::to_string(_workerId + 1) + " login failed");
 		_setupOk.store(false, std::memory_order_release);
 		_setupDone.store(true, std::memory_order_release);
 		return;
 	}
 
-	// Pre-trade queries
-	QueryInstruments();
-	QueryInstrumentSeries();
+	// Pre-trade queries — only Worker[0] does DQ3/DQ124 (others reuse via SecMaster singleton)
+	if (_workerId == 0)
+	{
+		QueryInstruments();
+		QueryInstrumentSeries();
+	}
+	else
+	{
+		KT01_LOG_INFO(_logTag, "Skipping DQ3/DQ124 — reusing series from Worker[0]");
+	}
 
 	// Subscribe to broadcasts (required before sending orders)
 	_session.SubscribeAll();
@@ -124,8 +137,9 @@ void OmnetWorker::Run()
 	_setupOk.store(true, std::memory_order_release);
 	_setupDone.store(true, std::memory_order_release);
 
-	KT01_LOG_INFO(__CLASS__, "Setup complete, entering order processing loop");
-	KTN::notify::NotifierRest::NotifyInfo(_sett.ExchName, _sett.Source, _sett.Org, "Worker LOGIN SUCCESSFUL");
+	KT01_LOG_INFO(_logTag, "Setup complete, entering order processing loop");
+	KTN::notify::NotifierRest::NotifyInfo(_sett.ExchName, _sett.Source, _sett.Org,
+		"Worker #" + std::to_string(_workerId + 1) + " LOGIN SUCCESSFUL");
 
 	// Phase 2: Order processing loop
 	KTN::OrderPod ord;
@@ -144,7 +158,7 @@ void OmnetWorker::Run()
 			// Check session health
 			if (!_session.IsLoggedIn())
 			{
-				KT01_LOG_ERROR(__CLASS__, "Session lost, attempting reconnect...");
+				KT01_LOG_ERROR(_logTag, "Session lost, attempting reconnect...");
 				// CFE-style notification throttle: notify on attempts 1,5,10,20,40,80,120, then every 40
 				bool shouldNotify = (_reconnectAttempt == 0 || _reconnectAttempt == 4 ||
 				                     _reconnectAttempt == 9 || _reconnectAttempt == 19 ||
@@ -154,27 +168,31 @@ void OmnetWorker::Run()
 				if (shouldNotify)
 				{
 					KTN::notify::NotifierRest::NotifyError(_sett.ExchName, _sett.Source, _sett.Org,
-						"Worker session lost, reconnect attempt " + std::to_string(_reconnectAttempt + 1));
+						"Worker #" + std::to_string(_workerId + 1) + " session lost, reconnect attempt " + std::to_string(_reconnectAttempt + 1));
 				}
 				Reconnect();  // backoff is inside Reconnect()
 				lastKeepalive = std::chrono::steady_clock::now();
 				continue;
 			}
 
-			// Auto-trigger RQ62 after BDX sees BI7 info_type=100
-			if (_settlementReady.load(std::memory_order_acquire))
+			// Settlement queries only on Worker[0]
+			if (_workerId == 0)
 			{
-				KT01_LOG_INFO(__CLASS__, "BI7 settlement signal received — auto-querying RQ62");
-				_settlementReady.store(false, std::memory_order_release);
-				QuerySettlement();
-			}
+				// Auto-trigger RQ62 after BDX sees BI7 info_type=100
+				if (_settlementReady.load(std::memory_order_acquire))
+				{
+					KT01_LOG_INFO(_logTag, "BI7 settlement signal received — auto-querying RQ62");
+					_settlementReady.store(false, std::memory_order_release);
+					QuerySettlement();
+				}
 
-			// Manual query from menu (option 300)
-			if (_settlementQueryReq.load(std::memory_order_acquire))
-			{
-				KT01_LOG_INFO(__CLASS__, "Manual settlement query requested (menu)");
-				_settlementQueryReq.store(false, std::memory_order_release);
-				QuerySettlement();
+				// Manual query from menu (option 350)
+				if (_settlementQueryReq.load(std::memory_order_acquire))
+				{
+					KT01_LOG_INFO(_logTag, "Manual settlement query requested (menu)");
+					_settlementQueryReq.store(false, std::memory_order_release);
+					QuerySettlement();
+				}
 			}
 
 			// Periodic keepalive — prevent gateway timeout when idle
@@ -188,7 +206,7 @@ void OmnetWorker::Run()
 				                               (uint32)OMNI_INFTYP_TXTIMEOUT, &len, (void*)&dummy);
 				if (rc != OMNIAPI_SUCCESS)
 				{
-					KT01_LOG_ERROR(__CLASS__, "Keepalive failed: " + std::to_string(rc) +
+					KT01_LOG_ERROR(_logTag, "Keepalive failed: " + std::to_string(rc) +
 					               " — session may be dead");
 					// Fatal errors: mark session dead so reconnect triggers on next iteration
 					if (rc == OMNIAPI_INTFAILURE || rc == OMNIAPI_NOT_LOGGED_IN || rc == OMNIAPI_NOTCONNECTED)
@@ -212,7 +230,7 @@ void OmnetWorker::ProcessOrder(KTN::OrderPod& ord)
 	const series_t* series = FindSeries(static_cast<uint32_t>(ord.secid));
 	if (!series && ord.OrdAction != KOrderAction::ACTION_CXL)
 	{
-		KT01_LOG_ERROR(__CLASS__, "Series not found for secid=" + std::to_string(ord.secid));
+		KT01_LOG_ERROR(_logTag, "Series not found for secid=" + std::to_string(ord.secid));
 		ord.OrdStatus = KOrderStatus::REJECTED;
 		strncpy(ord.text, "Series not found", sizeof(ord.text) - 1);
 		_responseQueue.enqueue(ord);
@@ -234,14 +252,14 @@ void OmnetWorker::ProcessOrder(KTN::OrderPod& ord)
 
 			if (_sett.DebugAppMsgs)
 			{
-				KT01_LOG_INFO(__CLASS__, "MO31 series: country=" + std::to_string(trans->series.country_c) +
+				KT01_LOG_INFO(_logTag, "MO31 series: country=" + std::to_string(trans->series.country_c) +
 				              " market=" + std::to_string(trans->series.market_c) +
 				              " ig=" + std::to_string(trans->series.instrument_group_c) +
 				              " mod=" + std::to_string(trans->series.modifier_c) +
 				              " commodity=" + std::to_string(trans->series.commodity_n) +
 				              " expiry=" + std::to_string(trans->series.expiration_date_n) +
 				              " strike=" + std::to_string(trans->series.strike_price_i));
-				KT01_LOG_INFO(__CLASS__, "MO31 series hex: " + HexDump((const char*)&trans->series, sizeof(series_t), 16));
+				KT01_LOG_INFO(_logTag, "MO31 series hex: " + HexDump((const char*)&trans->series, sizeof(series_t), 16));
 			}
 		}
 		break;
@@ -268,7 +286,7 @@ void OmnetWorker::ProcessOrder(KTN::OrderPod& ord)
 		}
 		break;
 	default:
-		KT01_LOG_ERROR(__CLASS__, "Unknown order action: " + std::to_string((int)ord.OrdAction));
+		KT01_LOG_ERROR(_logTag, "Unknown order action: " + std::to_string((int)ord.OrdAction));
 		ord.OrdStatus = KOrderStatus::REJECTED;
 		_responseQueue.enqueue(ord);
 		return;
@@ -276,7 +294,7 @@ void OmnetWorker::ProcessOrder(KTN::OrderPod& ord)
 
 	if (txlen <= 0)
 	{
-		KT01_LOG_ERROR(__CLASS__, "Failed to build transaction message");
+		KT01_LOG_ERROR(_logTag, "Failed to build transaction message");
 		ord.OrdStatus = KOrderStatus::REJECTED;
 		_responseQueue.enqueue(ord);
 		return;
@@ -285,10 +303,10 @@ void OmnetWorker::ProcessOrder(KTN::OrderPod& ord)
 	// Debug: log struct size, EP0, and hex dump of first bytes
 	if (_sett.DebugAppMsgs)
 	{
-		KT01_LOG_INFO(__CLASS__, "TX: len=" + std::to_string(txlen) +
+		KT01_LOG_INFO(_logTag, "TX: len=" + std::to_string(txlen) +
 		              " sizeof(hv_order_trans_t)=" + std::to_string(sizeof(hv_order_trans_t)) +
 		              " EP0=" + std::to_string(_session.GetFacilityEP0()));
-		KT01_LOG_INFO(__CLASS__, "TX hex: " + HexDump(txbuf, txlen, 80));
+		KT01_LOG_INFO(_logTag, "TX hex: " + HexDump(txbuf, txlen, 80));
 	}
 
 	// Send blocking transaction
@@ -302,7 +320,7 @@ void OmnetWorker::ProcessOrder(KTN::OrderPod& ord)
 
 	if (status == OMNIAPI_SUCCESS)
 	{
-		KT01_LOG_INFO(__CLASS__, "TX sent ok: action=" + std::to_string((int)ord.OrdAction) +
+		KT01_LOG_INFO(_logTag, "TX sent ok: action=" + std::to_string((int)ord.OrdAction) +
 		              " txid=" + std::to_string(txid) +
 		              " ordid=" + HexDump(ordidQw.quad_word, 8, 8) +
 		              " txstatus=" + std::to_string(txstatus));
@@ -333,7 +351,7 @@ void OmnetWorker::ProcessOrder(KTN::OrderPod& ord)
 			}
 			else
 			{
-				KT01_LOG_WARN(__CLASS__, "MO33 txstatus=0 — order not found, no modification");
+				KT01_LOG_WARN(_logTag, "MO33 txstatus=0 — order not found, no modification");
 				ord.OrdStatus = KOrderStatus::REJECTED;
 				ord.OrdState = KOrderState::COMPLETE;
 				snprintf(ord.text, sizeof(ord.text) - 1, "MO33 order not found (txstatus=0)");
@@ -353,7 +371,7 @@ void OmnetWorker::ProcessOrder(KTN::OrderPod& ord)
 			case 2: // Whole order traded (filled) — wait for BO5/BD6
 			case 3: // Partially traded, nothing in book (FAK) — wait for BO5/BD6
 			case 6: // Partially traded, rest in orderbook — wait for BO5/BD6
-				KT01_LOG_INFO(__CLASS__, "Fill txstatus=" + std::to_string(txstatus) +
+				KT01_LOG_INFO(_logTag, "Fill txstatus=" + std::to_string(txstatus) +
 				              " — deferring to BO5/BD6 broadcast");
 				isFillTx = true;
 				break;
@@ -380,13 +398,13 @@ void OmnetWorker::ProcessOrder(KTN::OrderPod& ord)
 	}
 	else
 	{
-		KT01_LOG_ERROR(__CLASS__, "TX failed: status=" + std::to_string(status) +
+		KT01_LOG_ERROR(_logTag, "TX failed: status=" + std::to_string(status) +
 		               " txstatus=" + std::to_string(txstatus));
 
 		// Session dead (-2001 or -2008) — attempt reconnect and retry once
 		if (status == OMNIAPI_INTFAILURE || status == OMNIAPI_NOT_LOGGED_IN || status == OMNIAPI_NOTCONNECTED)
 		{
-			KT01_LOG_INFO(__CLASS__, "Session lost (status=" + std::to_string(status) +
+			KT01_LOG_INFO(_logTag, "Session lost (status=" + std::to_string(status) +
 			              "), attempting reconnect and retry...");
 			if (Reconnect())
 			{
@@ -408,7 +426,7 @@ void OmnetWorker::ProcessOrder(KTN::OrderPod& ord)
 				                                      &txid, &ordidQw, &txstatus);
 				if (retry == OMNIAPI_SUCCESS)
 				{
-					KT01_LOG_INFO(__CLASS__, "Retry TX ok: txid=" + std::to_string(txid) +
+					KT01_LOG_INFO(_logTag, "Retry TX ok: txid=" + std::to_string(txid) +
 					              " ordid=" + HexDump(ordidQw.quad_word, 8, 8) + " txstatus=" + std::to_string(txstatus));
 					if (ord.OrdAction != KOrderAction::ACTION_CXL)
 						memcpy(&ord.exchordid, &ordidQw, sizeof(quad_word));
@@ -439,7 +457,7 @@ void OmnetWorker::ProcessOrder(KTN::OrderPod& ord)
 					_responseQueue.enqueue(ord);
 					return;
 				}
-				KT01_LOG_ERROR(__CLASS__, "Retry TX also failed: status=" + std::to_string(retry));
+				KT01_LOG_ERROR(_logTag, "Retry TX also failed: status=" + std::to_string(retry));
 			}
 		}
 
@@ -455,7 +473,7 @@ bool OmnetWorker::QuerySeries()
 {
 	// Series mapping is now done in QueryInstruments (DQ3) which returns
 	// series_t + name_s for each instrument. DQ22 is not supported on J-GATE.
-	KT01_LOG_INFO(__CLASS__, "QuerySeries: series mapping deferred to DQ3");
+	KT01_LOG_INFO(_logTag, "QuerySeries: series mapping deferred to DQ3");
 	_seriesCache.clear();
 	_secidToSeriesIdx.clear();
 	return true;
@@ -463,7 +481,7 @@ bool OmnetWorker::QuerySeries()
 
 bool OmnetWorker::QueryInstruments()
 {
-	KT01_LOG_INFO(__CLASS__, "Querying instruments (DQ3) and building series cache...");
+	KT01_LOG_INFO(_logTag, "Querying instruments (DQ3) and building series cache...");
 
 	_seriesCache.clear();
 	_secidToSeriesIdx.clear();
@@ -491,7 +509,7 @@ bool OmnetWorker::QueryInstruments()
 
 		if (status != OMNIAPI_SUCCESS)
 		{
-			KT01_LOG_ERROR(__CLASS__, "DQ3 failed: status=" + std::to_string(status));
+			KT01_LOG_ERROR(_logTag, "DQ3 failed: status=" + std::to_string(status));
 			return false;
 		}
 
@@ -552,14 +570,14 @@ bool OmnetWorker::QueryInstruments()
 			{
 				if (obid != 0)
 				{
-					KT01_LOG_INFO(__CLASS__, "DQ3 mapped: '" + std::string(name) +
+					KT01_LOG_INFO(_logTag, "DQ3 mapped: '" + std::string(name) +
 					              "' → obid=" + std::to_string(obid) +
 					              " commodity=" + std::to_string(hostSeries.commodity_n) +
 					              " expiry=" + std::to_string(hostSeries.expiration_date_n));
 				}
-				else
+				else if (_sett.DebugAppMsgs)
 				{
-					KT01_LOG_INFO(__CLASS__, "DQ3 unmapped: '" + std::string(name) +
+					KT01_LOG_INFO(_logTag, "DQ3 unmapped: '" + std::string(name) +
 					              "' commodity=" + std::to_string(hostSeries.commodity_n) +
 					              " expiry=" + std::to_string(hostSeries.expiration_date_n));
 				}
@@ -568,7 +586,7 @@ bool OmnetWorker::QueryInstruments()
 
 		if (_sett.DebugAppMsgs)
 		{
-			KT01_LOG_INFO(__CLASS__, "DQ3 segment " + std::to_string(segment) +
+			KT01_LOG_INFO(_logTag, "DQ3 segment " + std::to_string(segment) +
 			              ": " + std::to_string(items) + " instruments");
 		}
 
@@ -579,14 +597,14 @@ bool OmnetWorker::QueryInstruments()
 		++segment;
 	}
 
-	KT01_LOG_INFO(__CLASS__, "DQ3 complete: " + std::to_string(totalInstruments) +
+	KT01_LOG_INFO(_logTag, "DQ3 complete: " + std::to_string(totalInstruments) +
 	              " instruments, " + std::to_string(mappedCount) + " mapped to SecMaster");
 	return true;
 }
 
 bool OmnetWorker::QueryInstrumentSeries()
 {
-	KT01_LOG_INFO(__CLASS__, "Querying instrument series (DQ124) -- building series cache...");
+	KT01_LOG_INFO(_logTag, "Querying instrument series (DQ124) -- building series cache...");
 
 	_seriesCache.clear();
 	_secidToSeriesIdx.clear();
@@ -627,7 +645,7 @@ bool OmnetWorker::QueryInstrumentSeries()
 
 		if (status != OMNIAPI_SUCCESS)
 		{
-			KT01_LOG_ERROR(__CLASS__, "DQ124 failed: status=" + std::to_string(status) +
+			KT01_LOG_ERROR(_logTag, "DQ124 failed: status=" + std::to_string(status) +
 			               " segment=" + std::to_string(segment));
 			return false;
 		}
@@ -637,7 +655,7 @@ bool OmnetWorker::QueryInstrumentSeries()
 
 		if (ansLen < sizeof(answer_segment_hdr_t))
 		{
-			KT01_LOG_ERROR(__CLASS__, "DA124 answer too small: " + std::to_string(ansLen));
+			KT01_LOG_ERROR(_logTag, "DA124 answer too small: " + std::to_string(ansLen));
 			return false;
 		}
 
@@ -650,7 +668,7 @@ bool OmnetWorker::QueryInstrumentSeries()
 		PUTSHORT(ansSegment, hdr->segment_number_n);
 
 		if (_sett.DebugAppMsgs)
-		KT01_LOG_INFO(__CLASS__, "DA124 seg=" + std::to_string(ansSegment) +
+		KT01_LOG_INFO(_logTag, "DA124 seg=" + std::to_string(ansSegment) +
 		              " items=" + std::to_string(itemCount) +
 		              " size=" + std::to_string(msgSize) +
 		              " ansLen=" + std::to_string(ansLen));
@@ -681,7 +699,7 @@ bool OmnetWorker::QueryInstrumentSeries()
 				{
 					uint16_t iItems;
 					PUTSHORT(iItems, ihdr->items_n);
-					KT01_LOG_INFO(__CLASS__, "DA124 item[0] (delta): items_n=" +
+					KT01_LOG_INFO(_logTag, "DA124 item[0] (delta): items_n=" +
 					              std::to_string(iItems) + " size_n=" + std::to_string(iSize));
 				}
 				continue; // skip delta_header item
@@ -692,7 +710,7 @@ bool OmnetWorker::QueryInstrumentSeries()
 			{
 				uint16_t iItems;
 				PUTSHORT(iItems, ihdr->items_n);
-				KT01_LOG_INFO(__CLASS__, "DA124 item[" + std::to_string(item) +
+				KT01_LOG_INFO(_logTag, "DA124 item[" + std::to_string(item) +
 				              "]: items_n=" + std::to_string(iItems) +
 				              " size_n=" + std::to_string(iSize) +
 				              " offset=" + std::to_string((const char*)ihdr - base));
@@ -789,7 +807,7 @@ bool OmnetWorker::QueryInstrumentSeries()
 
 			if (totalSeries < 10 && curHasSeries)
 			{
-				KT01_LOG_INFO(__CLASS__, "DQ124[" + std::to_string(totalSeries) + "]: '" +
+				KT01_LOG_INFO(_logTag, "DQ124[" + std::to_string(totalSeries) + "]: '" +
 				              std::string(curInsId) + "' obid=" + std::to_string(curObid) +
 				              " commodity=" + std::to_string(curSeries.commodity_n) +
 				              " expiry=" + std::to_string(curSeries.expiration_date_n));
@@ -799,7 +817,7 @@ bool OmnetWorker::QueryInstrumentSeries()
 		}
 
 		if (_sett.DebugAppMsgs || segment == 1)
-		KT01_LOG_INFO(__CLASS__, "DA124 seg " + std::to_string(segment) +
+		KT01_LOG_INFO(_logTag, "DA124 seg " + std::to_string(segment) +
 		              " done: " + std::to_string(totalSeries) + " series so far, " +
 		              std::to_string(mappedCount) + " mapped");
 
@@ -809,7 +827,7 @@ bool OmnetWorker::QueryInstrumentSeries()
 		++segment;
 	}
 
-	KT01_LOG_INFO(__CLASS__, "DQ124 complete: " + std::to_string(totalSeries) +
+	KT01_LOG_INFO(_logTag, "DQ124 complete: " + std::to_string(totalSeries) +
 	              " series, " + std::to_string(mappedCount) + " mapped (with orderbook_id)");
 	return true;
 }
@@ -832,11 +850,19 @@ const series_t* OmnetWorker::FindSeriesByName(const char* name) const
 	return nullptr;
 }
 
+void OmnetWorker::CopySeriesCache(const OmnetWorker& src)
+{
+	_seriesCache = src._seriesCache;
+	_secidToSeriesIdx = src._secidToSeriesIdx;
+	KT01_LOG_INFO(_logTag, "Copied series cache from Worker[0]: " +
+	              std::to_string(_seriesCache.size()) + " entries");
+}
+
 void OmnetWorker::PopulateSeries(KTN::OrderPod& ord, const series_t* series)
 {
 	if (!series)
 	{
-		KT01_LOG_ERROR(__CLASS__, "Series not found for secid=" + std::to_string(ord.secid));
+		KT01_LOG_ERROR(_logTag, "Series not found for secid=" + std::to_string(ord.secid));
 		return;
 	}
 }
@@ -859,17 +885,17 @@ bool OmnetWorker::SendReadyToTrade()
 	if (status == OMNIAPI_SUCCESS)
 	{
 		_readyToTrade.store(true, std::memory_order_release);
-		KT01_LOG_INFO(__CLASS__, "UI1 Ready-to-Trade sent successfully");
+		KT01_LOG_INFO(_logTag, "UI1 Ready-to-Trade sent successfully");
 		return true;
 	}
 
-	KT01_LOG_ERROR(__CLASS__, "UI1 Ready-to-Trade failed: " + std::to_string(status));
+	KT01_LOG_ERROR(_logTag, "UI1 Ready-to-Trade failed: " + std::to_string(status));
 	return false;
 }
 
 bool OmnetWorker::QuerySettlement()
 {
-	KT01_LOG_INFO(__CLASS__, "Querying settlement prices (RQ62)...");
+	KT01_LOG_INFO(_logTag, "Querying settlement prices (RQ62)...");
 
 	// Collect unique market codes from series cache
 	std::set<uint8_t> markets;
@@ -878,7 +904,7 @@ bool OmnetWorker::QuerySettlement()
 
 	if (markets.empty())
 	{
-		KT01_LOG_ERROR(__CLASS__, "RQ62: no markets in series cache — cannot query");
+		KT01_LOG_ERROR(_logTag, "RQ62: no markets in series cache — cannot query");
 		return false;
 	}
 
@@ -892,10 +918,10 @@ bool OmnetWorker::QuerySettlement()
 		gmtime_r(&utc_time, &jst);
 		snprintf(bizDate, sizeof(bizDate) + 1, "%04d%02d%02d",
 		         jst.tm_year + 1900, jst.tm_mon + 1, jst.tm_mday);
-		KT01_LOG_INFO(__CLASS__, "RQ62 using JST business_date=" + std::string(bizDate, 8));
+		KT01_LOG_INFO(_logTag, "RQ62 using JST business_date=" + std::string(bizDate, 8));
 	}
 
-	KT01_LOG_INFO(__CLASS__, "RQ62: querying " + std::to_string(markets.size()) +
+	KT01_LOG_INFO(_logTag, "RQ62: querying " + std::to_string(markets.size()) +
 	              " market(s) for date=" + std::string(bizDate, 8));
 
 	// EP4 = EP0 base + 4
@@ -927,7 +953,7 @@ bool OmnetWorker::QuerySettlement()
 
 		if (status != OMNIAPI_SUCCESS)
 		{
-			KT01_LOG_ERROR(__CLASS__, "RQ62 failed for market=" + std::to_string(mkt) +
+			KT01_LOG_ERROR(_logTag, "RQ62 failed for market=" + std::to_string(mkt) +
 			               " status=" + std::to_string(status) +
 			               " (settlement may not be ready yet — requires BI7 type 100)");
 			break; // next segment won't help, try next market
@@ -944,7 +970,7 @@ bool OmnetWorker::QuerySettlement()
 
 		if (segment == 1 && _sett.DebugAppMsgs)
 		{
-			KT01_LOG_INFO(__CLASS__, "RQ62 market=" + std::to_string(mkt) +
+			KT01_LOG_INFO(_logTag, "RQ62 market=" + std::to_string(mkt) +
 			              " type=" + std::string(SettlementPriceTypeName(ans->settlement_price_type_c)));
 		}
 
@@ -1001,7 +1027,7 @@ bool OmnetWorker::QuerySettlement()
 				if (obid != 0 && sm.Contains(obid) &&
 				    sm.getSecDef(obid).prodtype != KOrderProdType::OPTION)
 				{
-					KT01_LOG_INFO(__CLASS__, "RQ62 settle: " + sym +
+					KT01_LOG_INFO(_logTag, "RQ62 settle: " + sym +
 					              " settle=" + SettlementCache::PriceStr(settlePrice) +
 					              " last=" + SettlementCache::PriceStr(lastPrice) +
 					              " type=" + std::string(SettlementPriceTypeName(ans->settlement_price_type_c)));
@@ -1019,7 +1045,7 @@ bool OmnetWorker::QuerySettlement()
 
 	} // for each market
 
-	KT01_LOG_INFO(__CLASS__, "RQ62 complete: " + std::to_string(totalItems) +
+	KT01_LOG_INFO(_logTag, "RQ62 complete: " + std::to_string(totalItems) +
 	              " settlement entries loaded into cache");
 
 	if (totalItems > 0)
@@ -1040,7 +1066,7 @@ bool OmnetWorker::Reconnect()
 	// Exponential backoff (CFE/EQT style: 15s, 30s, 60s, 120s, 240s, 300s cap)
 	int backoffIdx = std::min(_reconnectAttempt, RECONNECT_BACKOFF_COUNT - 1);
 	int waitMs = RECONNECT_BACKOFF_MS[backoffIdx];
-	KT01_LOG_INFO(__CLASS__, "Reconnect attempt " + std::to_string(_reconnectAttempt + 1) +
+	KT01_LOG_INFO(_logTag, "Reconnect attempt " + std::to_string(_reconnectAttempt + 1) +
 	              ", waiting " + std::to_string(waitMs / 1000) + "s...");
 
 	// Sleep in 1s increments so we can bail if _active goes false
@@ -1052,17 +1078,20 @@ bool OmnetWorker::Reconnect()
 		return false;
 
 	// Re-login (force login to break any stale session lock)
-	if (!_session.Login(_sett, true))
+	if (!_session.Login(_creds, true))
 	{
-		KT01_LOG_ERROR(__CLASS__, "Reconnect login failed (attempt " +
+		KT01_LOG_ERROR(_logTag, "Reconnect login failed (attempt " +
 		               std::to_string(_reconnectAttempt + 1) + ")");
 		_reconnectAttempt++;
 		return false;
 	}
 
-	// Re-query instruments and series
-	QueryInstruments();
-	QueryInstrumentSeries();
+	// Re-query instruments and series (only Worker[0] — others already have cache)
+	if (_workerId == 0)
+	{
+		QueryInstruments();
+		QueryInstrumentSeries();
+	}
 
 	// Re-subscribe
 	_session.SubscribeAll();
@@ -1070,7 +1099,7 @@ bool OmnetWorker::Reconnect()
 	// Re-send ready-to-trade
 	if (!SendReadyToTrade())
 	{
-		KT01_LOG_ERROR(__CLASS__, "Reconnect UI1 failed (attempt " +
+		KT01_LOG_ERROR(_logTag, "Reconnect UI1 failed (attempt " +
 		               std::to_string(_reconnectAttempt + 1) + ")");
 		_reconnectAttempt++;
 		return false;
@@ -1079,8 +1108,9 @@ bool OmnetWorker::Reconnect()
 	// Success — reset counters
 	_reconnectAttempt = 0;
 	_notified_session_lost = false;
-	KT01_LOG_INFO(__CLASS__, "Reconnect successful — session restored");
-	KTN::notify::NotifierRest::NotifyInfo(_sett.ExchName, _sett.Source, _sett.Org, "Worker RECONNECTED");
+	KT01_LOG_INFO(_logTag, "Reconnect successful — session restored");
+	KTN::notify::NotifierRest::NotifyInfo(_sett.ExchName, _sett.Source, _sett.Org,
+		"Worker #" + std::to_string(_workerId + 1) + " RECONNECTED");
 	return true;
 }
 
@@ -1146,7 +1176,7 @@ int OmnetWorker::BuildMO31(const KTN::OrderPod& ord, void* buf)
 
 	if (_sett.DebugAppMsgs)
 	{
-		KT01_LOG_INFO(__CLASS__, "MO31: side=" + std::to_string(trans->order_var.bid_or_ask_c) +
+		KT01_LOG_INFO(_logTag, "MO31: side=" + std::to_string(trans->order_var.bid_or_ask_c) +
 		              " price=" + std::to_string(price) + " qty=" + std::to_string(qty) +
 		              " tif=0x" + std::to_string(tif) + " type=" + std::to_string(trans->order_var.order_type_c));
 	}
@@ -1185,7 +1215,7 @@ int OmnetWorker::BuildMO33(const KTN::OrderPod& ord, void* buf)
 
 	if (_sett.DebugAppMsgs)
 	{
-		KT01_LOG_INFO(__CLASS__, "MO33: price=" + std::to_string(price) + " qty=" + std::to_string(qty) +
+		KT01_LOG_INFO(_logTag, "MO33: price=" + std::to_string(price) + " qty=" + std::to_string(qty) +
 		              " side=" + std::to_string(trans->order_var.bid_or_ask_c) +
 		              " delta_qty_c='" + std::string(1, trans->delta_quantity_c) + "'" +
 		              " ordid=" + HexDump((const char*)&trans->order_number_u, 8, 8));
@@ -1221,7 +1251,7 @@ int OmnetWorker::BuildMO4(const KTN::OrderPod& ord, void* buf)
 
 	if (_sett.DebugAppMsgs)
 	{
-		KT01_LOG_INFO(__CLASS__, "MO4: side=" + std::to_string(trans->bid_or_ask_c) +
+		KT01_LOG_INFO(_logTag, "MO4: side=" + std::to_string(trans->bid_or_ask_c) +
 		              " exchordid=" + std::to_string(ord.exchordid));
 	}
 

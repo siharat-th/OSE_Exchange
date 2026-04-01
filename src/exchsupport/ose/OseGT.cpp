@@ -21,8 +21,7 @@ namespace KTN::OSE {
 OseGT::OseGT(tbb::concurrent_queue<KTN::OrderPod>& qords,
                const std::string& settingsfile, const std::string& source)
 	: ExchangeBase2(settingsfile, source, qords, "OseGT")
-	, _orderQueue(4096)
-	, _responseQueue(4096)
+	, _bdxResponseQueue(4096)
 	, _started(false)
 {
 	// Load settings (two-level: exchange config + session credentials)
@@ -49,15 +48,29 @@ OseGT::OseGT(tbb::concurrent_queue<KTN::OrderPod>& qords,
 	}
 	KT01_LOG_INFO(__CLASS__, "OSE SecMaster loaded");
 
-	KT01_LOG_INFO(__CLASS__, "OSE Exchange Handler initialized");
-	KT01_LOG_INFO(__CLASS__, "Gateway: " + _sett.GatewayHost + ":" + std::to_string(_sett.GatewayPort));
-	KT01_LOG_INFO(__CLASS__, "User: " + _sett.LoginId);
-	KT01_LOG_INFO(__CLASS__, "Workers: " + std::to_string(_sett.WorkerCount));
+	int N = _sett.WorkerCount;
+	KT01_LOG_INFO(__CLASS__, "OSE Exchange Handler initialized — " + std::to_string(N) + " worker(s)");
+	for (int i = 0; i < N; ++i)
+	{
+		KT01_LOG_INFO(__CLASS__, "Worker[" + std::to_string(i) + "]: " +
+		              _sett.WorkerSessions[i].LoginId + " @ " +
+		              _sett.WorkerSessions[i].GatewayHost + ":" +
+		              std::to_string(_sett.WorkerSessions[i].GatewayPort));
+	}
+	KT01_LOG_INFO(__CLASS__, "BDX: " + _sett.BdxSession.LoginId);
 
-	// Create worker and BDX threads (pass settlement cache + flags)
-	_worker = std::make_unique<OmnetWorker>(_orderQueue, _responseQueue, _sett,
-	                                         _settlCache, _settlementReady, _settlementQueryReq);
-	_bdx = std::make_unique<OmnetBdxThread>(_responseQueue, _sett,
+	// Create N workers + queues
+	for (int i = 0; i < N; ++i)
+	{
+		_orderQueues.push_back(std::make_unique<SPSCRingBuffer<KTN::OrderPod>>(4096));
+		_responseQueues.push_back(std::make_unique<SPSCRingBuffer<KTN::OrderPod>>(4096));
+		_workers.push_back(std::make_unique<OmnetWorker>(
+			i, *_orderQueues[i], *_responseQueues[i], _sett,
+			_sett.WorkerSessions[i], _settlCache, _settlementReady, _settlementQueryReq));
+	}
+
+	// Create BDX thread (uses bdxResponseQueue, not worker response queues)
+	_bdx = std::make_unique<OmnetBdxThread>(_bdxResponseQueue, _sett,
 	                                         _settlCache, _settlementReady);
 
 	// Start connections
@@ -76,13 +89,25 @@ void OseGT::Start()
 
 	KT01_LOG_INFO(__CLASS__, "Starting OSE exchange handler...");
 
-	// Start worker — login, pre-trade queries, subscribe, UI1 all happen on worker thread
-	// (OMnet API requires all calls on the same thread as login)
-	if (!_worker->Start())
+	// Start Worker[0] first — it does DQ3/DQ124 to build series cache
+	if (!_workers[0]->Start())
 	{
-		KT01_LOG_ERROR(__CLASS__, "Failed to start worker");
-		KTN::notify::NotifierRest::NotifyError(_sett.ExchName, _sett.Source, _sett.Org, "OSE Worker start failed");
+		KT01_LOG_ERROR(__CLASS__, "Failed to start worker[0]");
+		KTN::notify::NotifierRest::NotifyError(_sett.ExchName, _sett.Source, _sett.Org, "OSE Worker[0] start failed");
 		return;
+	}
+
+	// Start remaining workers — they copy series cache from Worker[0], skip DQ3/DQ124
+	for (size_t i = 1; i < _workers.size(); ++i)
+	{
+		_workers[i]->CopySeriesCache(*_workers[0]);
+		if (!_workers[i]->Start())
+		{
+			KT01_LOG_ERROR(__CLASS__, "Failed to start worker[" + std::to_string(i) + "]");
+			KTN::notify::NotifierRest::NotifyError(_sett.ExchName, _sett.Source, _sett.Org,
+				"OSE Worker[" + std::to_string(i) + "] start failed");
+			return;
+		}
 	}
 
 	// Start BDX thread (login + broadcast polling)
@@ -94,8 +119,10 @@ void OseGT::Start()
 	}
 
 	_started.store(true);
-	KT01_LOG_INFO(__CLASS__, "OSE exchange handler started successfully");
-	KTN::notify::NotifierRest::NotifyInfo(_sett.ExchName, _sett.Source, _sett.Org, "OSE Exchange Handler STARTED");
+	KT01_LOG_INFO(__CLASS__, "OSE exchange handler started — " +
+	              std::to_string(_workers.size()) + " worker(s) ready");
+	KTN::notify::NotifierRest::NotifyInfo(_sett.ExchName, _sett.Source, _sett.Org,
+		"OSE Exchange Handler STARTED (" + std::to_string(_workers.size()) + " workers)");
 }
 
 void OseGT::Stop()
@@ -105,9 +132,9 @@ void OseGT::Stop()
 
 	KT01_LOG_INFO(__CLASS__, "Stopping OSE exchange handler...");
 
-	// Stop worker first (finish pending orders)
-	if (_worker)
-		_worker->Stop();
+	// Stop all workers first (finish pending orders)
+	for (auto& w : _workers)
+		if (w) w->Stop();
 
 	// Then stop BDX thread
 	if (_bdx)
@@ -119,7 +146,12 @@ void OseGT::Stop()
 
 void OseGT::Send(KTN::OrderPod& order, int action)
 {
-	if (!_started.load() || !_worker->IsReady())
+	// Check any worker is ready
+	bool anyReady = false;
+	for (auto& w : _workers)
+		if (w->IsReady()) { anyReady = true; break; }
+
+	if (!_started.load() || !anyReady)
 	{
 		KT01_LOG_ERROR(__CLASS__, "Cannot send order - not ready");
 		KTN::notify::NotifierRest::NotifyError(_sett.ExchName, _sett.Source, _sett.Org, "Order rejected: exchange not ready");
@@ -130,20 +162,28 @@ void OseGT::Send(KTN::OrderPod& order, int action)
 	// Set action on order
 	order.OrdAction = static_cast<KOrderAction::Enum>(action);
 
-	// Enqueue to SPSC queue for worker thread
-	if (!_orderQueue.enqueue(order))
+	// Round-robin to a ready worker
+	uint32_t N = (uint32_t)_workers.size();
+	uint32_t start = _nextWorker.fetch_add(1, std::memory_order_relaxed) % N;
+	for (uint32_t attempt = 0; attempt < N; ++attempt)
 	{
-		KT01_LOG_ERROR(__CLASS__, "Order queue full!");
-		KTN::notify::NotifierRest::NotifyError(_sett.ExchName, _sett.Source, _sett.Org, "Order rejected: queue full");
-		order.OrdStatus = KOrderStatus::REJECTED;
-		return;
+		uint32_t idx = (start + attempt) % N;
+		if (_workers[idx]->IsReady() && _orderQueues[idx]->enqueue(order))
+		{
+			if (_sett.DebugAppMsgs)
+			{
+				KT01_LOG_INFO(__CLASS__, "Order enqueued: worker=" + std::to_string(idx) +
+				              " action=" + std::to_string(action) +
+				              " secid=" + std::to_string(order.secid));
+			}
+			return;
+		}
 	}
 
-	if (_sett.DebugAppMsgs)
-	{
-		KT01_LOG_INFO(__CLASS__, "Order enqueued: action=" + std::to_string(action) +
-		              " secid=" + std::to_string(order.secid));
-	}
+	// All queues full or no worker ready
+	KT01_LOG_ERROR(__CLASS__, "All order queues full!");
+	KTN::notify::NotifierRest::NotifyError(_sett.ExchName, _sett.Source, _sett.Org, "Order rejected: all queues full");
+	order.OrdStatus = KOrderStatus::REJECTED;
 }
 
 void OseGT::SendMassAction(KTN::Order& order)
@@ -163,7 +203,8 @@ void OseGT::ProcessResponses()
 {
 	KTN::OrderPod ord;
 
-	while (_responseQueue.dequeue(ord))
+	// Drain all worker response queues + BDX queue
+	auto processOne = [&](KTN::OrderPod& ord)
 	{
 		// Set exchange identifier
 		ord.OrdExch = KOrderExchange::OSE;
@@ -216,7 +257,16 @@ void OseGT::ProcessResponses()
 
 		// Push to upper layer via tbb queue (same pattern as CME/CFE)
 		_qOrdsProc.push(ord);
-	}
+	};
+
+	// Worker response queues
+	for (auto& q : _responseQueues)
+		while (q->dequeue(ord))
+			processOne(ord);
+
+	// BDX response queue
+	while (_bdxResponseQueue.dequeue(ord))
+		processOne(ord);
 }
 
 void OseGT::Command(Instruction cmd)

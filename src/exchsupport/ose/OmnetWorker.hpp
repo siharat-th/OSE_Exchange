@@ -84,9 +84,11 @@ struct SeriesInfo
 class OmnetWorker
 {
 public:
-	OmnetWorker(SPSCRingBuffer<KTN::OrderPod>& orderQueue,
+	OmnetWorker(int workerId,
+	            SPSCRingBuffer<KTN::OrderPod>& orderQueue,
 	            SPSCRingBuffer<KTN::OrderPod>& responseQueue,
 	            const OseSessionSettings& sett,
+	            const OseSessionSettings::SessionCreds& creds,
 	            SettlementCache& settlCache,
 	            std::atomic<bool>& settlementReady,
 	            std::atomic<bool>& settlementQueryReq);
@@ -108,8 +110,16 @@ public:
 	const series_t* FindSeries(uint32_t orderbook_id) const;
 	const series_t* FindSeriesByName(const char* name) const;
 
+	// Copy series cache from another worker (for Worker[1..N] to reuse Worker[0]'s data)
+	void CopySeriesCache(const OmnetWorker& src);
+
+	int GetWorkerId() const { return _workerId; }
+
 private:
+	int _workerId;
+	std::string _logTag;  // "OmnetWorker[0]"
 	OmnetSession _session;
+	OseSessionSettings::SessionCreds _creds;
 	SPSCRingBuffer<KTN::OrderPod>& _orderQueue;
 	SPSCRingBuffer<KTN::OrderPod>& _responseQueue;
 	const OseSessionSettings& _sett;

@@ -10,6 +10,8 @@
 #pragma once
 
 #include <string>
+#include <vector>
+#include <sstream>
 #include <KT01/Core/Settings.hpp>
 #include <ExchangeHandler/session/SessionSettings.hpp>
 
@@ -44,22 +46,52 @@ struct OseSessionSettings : SessionSettings
 	bool DebugAppMsgs;
 	bool DebugRecvBytes;
 
-	// Session credentials (Level 3 - sessions/AKL01.conf)
-	std::string Username;
-	std::string LoginId;
-	std::string Password;
-	std::string NewPassword;
-	std::string GatewayHost;
-	int GatewayPort;
-	std::string BackupHost;
-	int BackupPort;
+	// Per-session credentials (loaded from individual .conf files)
+	struct SessionCreds
+	{
+		std::string Username;
+		std::string LoginId;
+		std::string Password;
+		std::string NewPassword;
+		std::string GatewayHost;
+		int GatewayPort = 0;
+		std::string BackupHost;
+		int BackupPort = 0;
+	};
 
-	// BDX session credentials (Level 3 - sessions/AKL02.conf, separate user)
-	std::string BdxUsername;
-	std::string BdxLoginId;
-	std::string BdxPassword;
-	std::string BdxGatewayHost;
-	int BdxGatewayPort;
+	// Worker sessions (one per worker thread)
+	std::vector<SessionCreds> WorkerSessions;
+
+	// BDX session (separate user)
+	SessionCreds BdxSession;
+
+	// Legacy single-worker accessors (backward compat — returns WorkerSessions[0])
+	const std::string& Username() const { return WorkerSessions[0].Username; }
+	const std::string& LoginId() const { return WorkerSessions[0].LoginId; }
+	const std::string& Password() const { return WorkerSessions[0].Password; }
+	const std::string& GatewayHost() const { return WorkerSessions[0].GatewayHost; }
+	int GatewayPort() const { return WorkerSessions[0].GatewayPort; }
+
+	// BDX accessors
+	const std::string& BdxLoginId() const { return BdxSession.LoginId; }
+	const std::string& BdxPassword() const { return BdxSession.Password; }
+	const std::string& BdxGatewayHost() const { return BdxSession.GatewayHost; }
+	int BdxGatewayPort() const { return BdxSession.GatewayPort; }
+
+	static SessionCreds LoadSession(const std::string& path)
+	{
+		SessionCreds c;
+		Settings s = Settings(path);
+		c.Username = s.getString("OSE.Username");
+		c.LoginId = s.getString("OSE.LoginId");
+		c.Password = s.getString("OSE.Password");
+		c.NewPassword = s.getString("OSE.NewPassword");
+		c.GatewayHost = s.getString("OSE.GatewayHost");
+		c.GatewayPort = s.getInteger("OSE.GatewayPort");
+		c.BackupHost = s.getString("OSE.BackupHost");
+		c.BackupPort = s.getInteger("OSE.BackupPort");
+		return c;
+	}
 
 	void Load(const std::string& filename)
 	{
@@ -95,37 +127,48 @@ struct OseSessionSettings : SessionSettings
 		DebugAppMsgs = settings.getBoolean("OSE.DebugAppMsgs");
 		DebugRecvBytes = settings.getBoolean("OSE.DebugRecvBytes");
 
-		// Level 3: session credentials
+		// Level 3: worker session credentials
 		std::string dir = settings.getString("OSE.ConfigDir");
-		std::string sessfile = settings.getString("OSE.SessionFile");
-		Settings sess = Settings((dir + sessfile));
 
-		Username = sess.getString("OSE.Username");
-		LoginId = sess.getString("OSE.LoginId");
-		Password = sess.getString("OSE.Password");
-		NewPassword = sess.getString("OSE.NewPassword");
-		GatewayHost = sess.getString("OSE.GatewayHost");
-		GatewayPort = sess.getInteger("OSE.GatewayPort");
-		BackupHost = sess.getString("OSE.BackupHost");
-		BackupPort = sess.getInteger("OSE.BackupPort");
+		// Multi-worker: OSE.WorkerSessions = AKL01.conf,AKL02.conf
+		std::string workerSessions = settings.getString("OSE.WorkerSessions");
+		if (!workerSessions.empty())
+		{
+			std::istringstream ss(workerSessions);
+			std::string token;
+			while (std::getline(ss, token, ','))
+			{
+				// Trim whitespace
+				size_t start = token.find_first_not_of(" \t");
+				size_t end = token.find_last_not_of(" \t");
+				if (start == std::string::npos) continue;
+				token = token.substr(start, end - start + 1);
+
+				WorkerSessions.push_back(LoadSession(dir + token));
+			}
+		}
+
+		// Fallback: single worker from legacy OSE.SessionFile
+		if (WorkerSessions.empty())
+		{
+			std::string sessfile = settings.getString("OSE.SessionFile");
+			WorkerSessions.push_back(LoadSession(dir + sessfile));
+		}
+
+		// Clamp WorkerCount to available sessions
+		if (WorkerCount > (int)WorkerSessions.size())
+			WorkerCount = (int)WorkerSessions.size();
 
 		// Level 3b: BDX session (separate user to avoid forced-login kick)
 		std::string bdxfile = settings.getString("OSE.BdxSessionFile");
 		if (!bdxfile.empty())
 		{
-			Settings bdxsess = Settings((dir + bdxfile));
-			BdxLoginId = bdxsess.getString("OSE.LoginId");
-			BdxPassword = bdxsess.getString("OSE.Password");
-			BdxGatewayHost = bdxsess.getString("OSE.GatewayHost");
-			BdxGatewayPort = bdxsess.getInteger("OSE.GatewayPort");
+			BdxSession = LoadSession(dir + bdxfile);
 		}
 		else
 		{
-			// Fallback: same as worker (will cause forced-login conflict!)
-			BdxLoginId = LoginId;
-			BdxPassword = Password;
-			BdxGatewayHost = GatewayHost;
-			BdxGatewayPort = GatewayPort;
+			// Fallback: same as worker[0] (will cause forced-login conflict!)
+			BdxSession = WorkerSessions[0];
 		}
 	}
 };

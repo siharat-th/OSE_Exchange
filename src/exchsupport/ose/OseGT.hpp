@@ -39,13 +39,17 @@ public:
 private:
 	OseSessionSettings _sett;
 
-	// OMnet worker (order submission) + BDX thread (broadcast polling)
-	std::unique_ptr<OmnetWorker> _worker;
+	// OMnet workers (order submission) + BDX thread (broadcast polling)
+	std::vector<std::unique_ptr<OmnetWorker>> _workers;
 	std::unique_ptr<OmnetBdxThread> _bdx;
 
-	// SPSC queues (lock-free, cache-aligned)
-	SPSCRingBuffer<KTN::OrderPod> _orderQueue;     // Strategy → Worker
-	SPSCRingBuffer<KTN::OrderPod> _responseQueue;   // BDX/Worker → OseGT
+	// Per-worker SPSC queues (lock-free, no contention)
+	std::vector<std::unique_ptr<SPSCRingBuffer<KTN::OrderPod>>> _orderQueues;
+	std::vector<std::unique_ptr<SPSCRingBuffer<KTN::OrderPod>>> _responseQueues;
+	SPSCRingBuffer<KTN::OrderPod> _bdxResponseQueue; // BDX → OseGT
+
+	// Round-robin worker selection
+	std::atomic<uint32_t> _nextWorker{0};
 
 	// Settlement cache (shared between Worker + BDX)
 	SettlementCache _settlCache;

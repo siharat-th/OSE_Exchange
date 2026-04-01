@@ -48,22 +48,10 @@ OmnetBdxThread::~OmnetBdxThread()
 
 bool OmnetBdxThread::Start()
 {
-	// Login with BDX credentials (separate user to avoid kicking worker session)
-	OseSessionSettings bdxSett = _sett;
-	if (!_sett.BdxLoginId.empty())
-	{
-		bdxSett.LoginId = _sett.BdxLoginId;
-		bdxSett.Password = _sett.BdxPassword;
-		bdxSett.GatewayHost = _sett.BdxGatewayHost;
-		bdxSett.GatewayPort = _sett.BdxGatewayPort;
-		KT01_LOG_INFO(__CLASS__, "BDX using separate user: " + bdxSett.LoginId);
-	}
-	else
-	{
-		KT01_LOG_INFO(__CLASS__, "BDX using same user as worker (may conflict with forced login!)");
-	}
+	// Login with BDX credentials
+	KT01_LOG_INFO(__CLASS__, "BDX using user: " + _sett.BdxSession.LoginId);
 
-	if (!_session.Login(bdxSett, _sett.ForceLogin))
+	if (!_session.Login(_sett.BdxSession, _sett.ForceLogin))
 	{
 		KT01_LOG_ERROR(__CLASS__, "Failed to login BDX session");
 		KTN::notify::NotifierRest::NotifyError(_sett.ExchName, _sett.Source, _sett.Org, "BDX login failed");
@@ -112,16 +100,7 @@ bool OmnetBdxThread::Reconnect()
 		return false;
 
 	// Re-login with BDX credentials
-	OseSessionSettings bdxSett = _sett;
-	if (!_sett.BdxLoginId.empty())
-	{
-		bdxSett.LoginId = _sett.BdxLoginId;
-		bdxSett.Password = _sett.BdxPassword;
-		bdxSett.GatewayHost = _sett.BdxGatewayHost;
-		bdxSett.GatewayPort = _sett.BdxGatewayPort;
-	}
-
-	if (!_session.Login(bdxSett, _sett.ForceLogin))
+	if (!_session.Login(_sett.BdxSession, _sett.ForceLogin))
 	{
 		KT01_LOG_ERROR(__CLASS__, "BDX reconnect login failed (attempt " +
 		               std::to_string(_reconnectAttempt + 1) + ")");
