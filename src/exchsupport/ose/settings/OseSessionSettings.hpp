@@ -46,6 +46,9 @@ struct OseSessionSettings : SessionSettings
 	bool DebugAppMsgs;
 	bool DebugRecvBytes;
 
+	// DB settlement
+	std::string SettlementTable;
+
 	// Per-session credentials (loaded from individual .conf files)
 	struct SessionCreds
 	{
@@ -126,6 +129,9 @@ struct OseSessionSettings : SessionSettings
 		DebugSession = settings.getBoolean("OSE.DebugSession");
 		DebugAppMsgs = settings.getBoolean("OSE.DebugAppMsgs");
 		DebugRecvBytes = settings.getBoolean("OSE.DebugRecvBytes");
+
+		SettlementTable = settings.hasKey("OSE.SettlementTable")
+			? settings.getString("OSE.SettlementTable") : "stats_daily";
 
 		// Level 3: worker session credentials
 		std::string dir = settings.getString("OSE.ConfigDir");

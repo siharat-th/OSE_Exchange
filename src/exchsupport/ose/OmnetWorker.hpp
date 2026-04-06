@@ -19,6 +19,7 @@
 #include "OmnetSession.hpp"
 #include "SettlementCache.hpp"
 #include "settings/OseSessionSettings.hpp"
+#include <DatabaseProcessors/SettlementDbWriter.hpp>
 
 namespace KTN::OSE {
 
@@ -139,6 +140,8 @@ private:
 	SettlementCache& _settlCache;
 	std::atomic<bool>& _settlementReady;    // Set by BDX on BI7 type 100 → auto query
 	std::atomic<bool>& _settlementQueryReq; // Set by menu Command → manual query
+	SettlementDbWriter _settlDbWriter;      // Writes settlement to DB after RQ62
+
 
 	// Series cache (populated by DQ124, keyed by orderbook_id)
 	std::vector<SeriesInfo> _seriesCache;
@@ -149,7 +152,7 @@ private:
 	void ProcessOrder(KTN::OrderPod& ord);
 	void PopulateSeries(KTN::OrderPod& ord, const series_t* series);
 	bool Reconnect();
-	bool QuerySettlement();  // RQ62 — settlement price query
+	bool QuerySettlement();  // RQ62 — settlement price query + write to DB
 	int BuildMO31(const KTN::OrderPod& ord, void* buf);    // New order
 	int BuildMO33(const KTN::OrderPod& ord, void* buf);    // Alter
 	int BuildMO4(const KTN::OrderPod& ord, void* buf);     // Delete

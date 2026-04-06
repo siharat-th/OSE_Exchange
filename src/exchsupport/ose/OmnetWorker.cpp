@@ -931,6 +931,10 @@ bool OmnetWorker::QuerySettlement()
 	std::vector<char> ansBuf(ANS_BUF_SIZE);
 	int totalItems = 0;
 
+	// Collect DailyStats for DB writing
+	uint32_t tradeDate = SettlementDbWriter::BizDateToDaysSinceEpoch(bizDate);
+	std::vector<DailyStat> dbStats;
+
 	for (uint8_t mkt : markets)
 	{
 	query_price_vola_settl_t qry;
@@ -1031,6 +1035,21 @@ bool OmnetWorker::QuerySettlement()
 					              " settle=" + SettlementCache::PriceStr(settlePrice) +
 					              " last=" + SettlementCache::PriceStr(lastPrice) +
 					              " type=" + std::string(SettlementPriceTypeName(ans->settlement_price_type_c)));
+
+					// Collect for DB write
+					if (settlePrice != SettlementCache::NO_VALUE)
+					{
+						DailyStat stat = {};
+						stat.Symbol = sym;
+						stat.SecurityID = static_cast<int32_t>(obid);
+						stat.Price = static_cast<double>(settlePrice);
+						stat.Size = 0;
+						stat.UpdateType = '6';
+						stat.EntryType = "SettlementPrice";
+						stat.TradeDate = tradeDate;
+						stat.RptSeq = 0;
+						dbStats.push_back(stat);
+					}
 				}
 			}
 
@@ -1053,6 +1072,18 @@ bool OmnetWorker::QuerySettlement()
 		_settlCache.Print();
 		KTN::notify::NotifierRest::NotifyInfo(_sett.ExchName, _sett.Source, _sett.Org,
 			"Settlement query: " + std::to_string(totalItems) + " prices loaded");
+	}
+
+	// Write to DB
+	if (!dbStats.empty())
+	{
+		std::string table = _sett.SettlementTable;
+		if (table.empty())
+			table = "stats_daily";
+
+		KT01_LOG_INFO(_logTag, "Writing " + std::to_string(dbStats.size()) +
+		              " settlement prices to DB table=" + table);
+		_settlDbWriter.WriteDailyStats(dbStats, table);
 	}
 
 	return totalItems > 0;

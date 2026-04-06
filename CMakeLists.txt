@@ -46,6 +46,9 @@ include_directories(
     "/app/dev/onload/src/include"
     "/app/dev/tcpdirect/src/include"
     ${CMAKE_SOURCE_DIR}/deps/omnet/include
+    "/usr/local/mysql/connector-c++-9.1.0/include/jdbc"
+    "/app/dev/mysql-connector-cpp/build/include/jdb"
+    "/app/dev/mysql-connector-cpp/jdbc"
 )
 
 link_directories(
@@ -53,6 +56,8 @@ link_directories(
     "/app/dev/onload/build/gnu_x86_64/lib/onload_ext"
     "/app/dev/tcpdirect/build/gnu_x86_64/lib"
     ${CMAKE_SOURCE_DIR}/deps/omnet/lib
+    "/usr/lib64/mysql"
+    "/app/dev/mysql-connector-cpp/build/lib"
 )
 
 if (${AKL_TEST_MODE})
@@ -97,6 +102,7 @@ set(LIBS
 	zmq
 	cryptopp
 	readline
+	mysqlclient
 )
 
 # 🔹 Create executable
