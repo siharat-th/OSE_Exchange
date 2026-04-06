@@ -54,12 +54,14 @@ namespace KT01
 				uint32_t orderbook_id;
 				string symbol;
 				string short_symbol;
+				string exchange_symbol;
 				string product;
 				string exch;
 				KOrderProdType::Enum prodtype;
 				string description;
 
 				double mintick;
+				double tick_value;
 				double mult;
 				uint16_t price_decimals;
 				uint32_t expiration_date;
@@ -78,10 +80,12 @@ namespace KT01
 					d.AddMember("orderbook_id", def.orderbook_id, alloc);
 					d.AddMember("symbol", Value(def.symbol.c_str(), alloc), alloc);
 					d.AddMember("short_symbol", Value(def.short_symbol.c_str(), alloc), alloc);
+					d.AddMember("exchange_symbol", Value(def.exchange_symbol.c_str(), alloc), alloc);
 					d.AddMember("product", Value(def.product.c_str(), alloc), alloc);
 					d.AddMember("exch", Value(def.exch.c_str(), alloc), alloc);
 					d.AddMember("prodtype", Value(KOrderProdType::toString(def.prodtype).c_str(), alloc), alloc);
 					d.AddMember("mintick", def.mintick, alloc);
+					d.AddMember("tick_value", def.tick_value, alloc);
 					d.AddMember("price_decimals", def.price_decimals, alloc);
 					d.AddMember("expiration_date", def.expiration_date, alloc);
 					d.AddMember("test_symbol", def.test_symbol, alloc);

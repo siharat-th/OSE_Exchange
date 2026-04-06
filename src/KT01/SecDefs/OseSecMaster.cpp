@@ -100,15 +100,18 @@ void OseSecMaster::LoadFile(string filename)
 			def.exch = "OSE";
 			def.test_symbol = false;
 
-			// Primary symbol = short_symbol (e.g., "JBLM26")
-			// Long symbol kept for product extraction and DQ2 matching (e.g., "FUT_JBL_260615")
-			string long_symbol = fields[hdrmap["symbol"]];
-			if (hdrmap.find("short_symbol") != hdrmap.end() && !fields[hdrmap["short_symbol"]].empty())
-				def.symbol = fields[hdrmap["short_symbol"]];
-			else
-				def.symbol = long_symbol;
+			// New format: symbol=short, exchange_symbol=long, product=explicit
+			def.symbol = fields[hdrmap["symbol"]];
 			def.short_symbol = def.symbol;
-			def.description = long_symbol; // Store long_symbol for DQ2 ins_id_s matching
+			def.exchange_symbol = fields[hdrmap["exchange_symbol"]];
+			def.description = def.exchange_symbol; // for DQ2 ins_id_s matching
+			def.product = fields[hdrmap["product"]];
+
+			// tick_value (may be empty for Options/Spreads)
+			if (hdrmap.find("tick_value") != hdrmap.end())
+				def.tick_value = checkDouble(fields[hdrmap["tick_value"]]);
+			else
+				def.tick_value = 0.0;
 
 			// Financial product
 			string fp = fields[hdrmap["financial_product"]];
@@ -120,18 +123,6 @@ void OseSecMaster::LoadFile(string filename)
 				def.prodtype = KOrderProdType::OPTION;
 			else
 				def.prodtype = KOrderProdType::FUTURE;
-
-			// Extract product from long symbol (e.g., "FUT_JBL_260615" -> "JBL")
-			// For spreads: "FSPR_JBL_260313/JBL_260615" -> "JBL"
-			{
-				vector<string> parts = StringSplitter::Split(long_symbol, "_");
-				if (parts.size() >= 2 && (parts[0] == "FUT" || parts[0] == "FSPR"))
-					def.product = parts[1];
-				else if (parts.size() >= 2 && (parts[0] == "CAL" || parts[0] == "PUT"))
-					def.product = parts[1];
-				else
-					def.product = def.symbol;
-			}
 
 			def.price_decimals = static_cast<uint16_t>(checkInt(fields[hdrmap["price_decimals"]]));
 
@@ -195,8 +186,8 @@ void OseSecMaster::Add(OseSecDef def)
 	_secidmap[def.orderbook_id] = def.symbol;
 	_secdef_idmap[def.orderbook_id] = def;
 	_secdef_symbmap[def.symbol] = def;
-	// Also add long_symbol (description) as alternate key for DQ2 ins_id_s matching
-	if (!def.description.empty() && def.description != def.symbol)
-		_secdef_symbmap[def.description] = def;
+	// Also add exchange_symbol (long symbol) as alternate key for DQ2 ins_id_s matching
+	if (!def.exchange_symbol.empty() && def.exchange_symbol != def.symbol)
+		_secdef_symbmap[def.exchange_symbol] = def;
 	_secdef_prod2id[def.product].push_back(def.orderbook_id);
 }
